@@ -43,7 +43,7 @@ html {
 .contain {
   position: relative;
   margin: 0 auto;
-  min-height: 100%;
+  min-height: 100vh;
   padding-bottom: 100px;
 }
 </style>
