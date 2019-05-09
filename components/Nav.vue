@@ -1,41 +1,43 @@
 <template>
   <nav role="navigation" class="navbar">
-    <a class="logo" href="/" title="Back to home" />
-    <div class="nav-collapse">
-      <ul class="nav-links">
-        <li class="nav-links-li">
-          <a class="nav-link" title="Tutorials" href="/tutorials">Tutorials</a>
-        </li>
-        <li class="nav-links-li">
-          <a class="nav-link" title="API" href="/api">API</a>
-        </li>
-        <li class="nav-links-li">
-          <a class="nav-link" title="Resources" href="/resources">Resources</a>
-        </li>
-        <li class="nav-links-li">
-          <a class="nav-link" title="Plugins" href="/plugins">Plugins</a>
-        </li>
-        <li class="nav-links-li">
-          <a class="nav-link" title="Contribute" href="/contribute">Contribute</a>
-        </li>
-        <li class="nav-links-li">
-          <a class="nav-link" title="Updates" href="/updates">Updates</a>
-        </li>
-        <li class="nav-links-li">
-          <a class="nav-link" title="Help" href="/help">Help</a>
-        </li>
-      </ul>
+    <div class="nav-container">
+      <a class="logo" href="/" title="Back to home"/>
+      <div class="nav-collapse">
+        <ul class="nav-links">
+          <li class="nav-links-li">
+            <a class="nav-link" title="Tutorials" href="/tutorials">Tutorials</a>
+          </li>
+          <li class="nav-links-li">
+            <a class="nav-link" title="API" href="/api">API</a>
+          </li>
+          <li class="nav-links-li">
+            <a class="nav-link" title="Resources" href="/resources">Resources</a>
+          </li>
+          <li class="nav-links-li">
+            <a class="nav-link" title="Plugins" href="/plugins">Plugins</a>
+          </li>
+          <li class="nav-links-li">
+            <a class="nav-link" title="Contribute" href="/contribute">Contribute</a>
+          </li>
+          <li class="nav-links-li">
+            <a class="nav-link" title="Updates" href="/updates">Updates</a>
+          </li>
+          <li class="nav-links-li">
+            <a class="nav-link" title="Help" href="/help">Help</a>
+          </li>
+        </ul>
+      </div>
+      <a href="javascript:void(0);" class="hamburger">
+        <span class="hamburger-line hamburger-line-upper"/>
+        <span class="hamburger-line hamburger-line-middle"/>
+        <span class="hamburger-line hamburger-line-lower"/>
+      </a>
     </div>
-    <a href="javascript:void(0);" class="hamburger">
-      <span class="hamburger-line hamburger-line-upper" />
-      <span class="hamburger-line hamburger-line-middle" />
-      <span class="hamburger-line hamburger-line-lower" />
-    </a>
   </nav>
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
 <style lang="scss">
@@ -46,10 +48,16 @@ export default {}
   width: 100%;
   margin: 0 auto;
   padding: 10px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+
   background: #fff;
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1260px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {

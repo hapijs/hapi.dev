@@ -1,17 +1,41 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700");
 
    /* Colors */
 $orange: #f79727;
 $black: #333;
+$green: #87997D;
+$green-light: #C5E0B6;
+$green-lighter: lighten($green, 90%);
+$green-dark: darken($green, 30%);
+$gray: #333;
+$gray-light: lighten($gray, 35%);
+$gray-lighter: lighten($gray, 85%);
+$gray-dark: darken($gray, 50%);
+
+   /* Font Sizes */
+$font-size-h1: 2rem; 
+$font-size-h2: 1.75rem;
+$font-size-h3: 1.5rem;
+$font-size-h4: 1.25rem;
+$font-size-h5: 1rem;
+$font-size-h6: 0.875rem;
+
+$font-light: 300;
+$font-regular: 400;
+$font-monospaced-regular: 500;
+$font-bold: 700;
 
 html, body {
    margin: 0;
    padding: 0;
-   height: 100%
+   height: 100%;
+   font-family: "Open Sans", sans-serif;
 }
+
 
 @media screen and (max-width: 900px) {
 
    html {
       font-size: 14px;
    }
-}
+} 
