@@ -2,7 +2,6 @@
   "name": "hapi.dev",
   "version": "1.0.0",
   "description": "The hapi.dev developer portal",
-  "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
     "build": "nuxt build",
