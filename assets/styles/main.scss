@@ -1,0 +1,17 @@
+
+   /* Colors */
+$orange: #f79727;
+$black: #333;
+
+html, body {
+   margin: 0;
+   padding: 0;
+   height: 100%
+}
+
+@media screen and (max-width: 900px) {
+
+   html {
+      font-size: 14px;
+   }
+}
