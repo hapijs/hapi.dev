@@ -2,15 +2,18 @@
   <div class="contain">
     <Nav />
     <nuxt />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Nav from "~/components/Nav.vue"
+import Footer from "~/components/Footer.vue"
 
 export default {
   components: {
-    Nav
+    Nav,
+    Footer
   }
 }
 </script>
@@ -39,14 +42,7 @@ html {
   position: relative;
   margin: 0 auto;
   min-height: 100vh;
-  width: 100%;
-}
-
-.navbar {
-  position: fixed;
-  top: 0;
-  margin: 0 auto;
-  border-bottom: 1px solid #ddd;
+  padding-bottom: 100px;
 }
 
 </style>

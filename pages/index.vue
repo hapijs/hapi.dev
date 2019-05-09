@@ -16,9 +16,9 @@
       <span class="bold">out-of-the-box</span> functionality -
       <span class="bold">your code, your way</span>
     </div>
-    <button class="index-button" href="/tutorials">
+    <a class="index-button" href="/tutorials">
       Get started with hapi
-    </button>
+    </a>
     <div>
       Originally developed to handle Walmart’s
       <span class="bold">Black Friday scale</span>, hapi continues to be the
@@ -46,12 +46,10 @@
 
 <script>
 export default {
+  layout: 'home',
   components: {}
 }
 
-// let nav = document.querySelector('.navbar');
-// let content = document.querySelector('.container');
-// content.style.marginTop = nav.offsetHeight+'px';
 </script>
 
 <style lang="scss">
