@@ -21,10 +21,12 @@ export default {
 <style lang="scss">
 
 .container {
+  position: relative;
   width: 100%;
   max-width: 1260px;
   margin: 96px auto 0 auto;
   display: flex;
+  justify-content: space-between;
 }
 
 </style>

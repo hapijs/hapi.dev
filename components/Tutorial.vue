@@ -16,6 +16,10 @@ export default {
 <style lang="scss">
 @import "../assets/styles/main.scss";
 
+.tutorial-markdown-window {
+  width: 70%;
+}
+
 h1 {
   font-size: 3rem;
 }

@@ -36,19 +36,18 @@ export default {};
 <style lang="scss">
 @import "../assets/styles/main.scss";
 
-.container {
-  width: 100%;
-  max-width: 1260px;
-  margin: 96px auto 0 auto;
-  display: flex;
-}
-
 .tutorial-nav-window {
+  position: sticky;
+  top: 96px;
   width: 20%;
   max-height: 100vh;
   min-height: 100vh;
   overflow-y: auto;
   padding: 20px 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .tutorial-lang-wrapper {
@@ -72,6 +71,8 @@ export default {};
 
 .tutorial-select-link {
   cursor: pointer;
+  margin: 0;
+  list-style-type: none;
 }
 
 .tutorial-select-link:hover {
@@ -79,7 +80,4 @@ export default {};
   text-decoration: underline;
 }
 
-.tutorial-markdown-window {
-  width: 70%;
-}
 </style>
