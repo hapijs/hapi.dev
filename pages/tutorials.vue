@@ -1,10 +1,10 @@
 <template>
   <div class="container">
-    <TutorialNav />
+    <TutorialNav/>
     <div class="tutorial-markdown-window">
-      <Tutorial />
+      <Tutorial/>
     </div>
-  </div>  
+  </div>
 </template>
 
 <script>
@@ -15,10 +15,14 @@ export default {
     Tutorial,
     TutorialNav
   }
-}
+};
 </script>
 
 <style lang="scss">
+.spacer {
+  width: 100%;
+  height: 96px;
+}
 
 .container {
   position: relative;
@@ -29,4 +33,11 @@ export default {
   justify-content: space-between;
 }
 
+.tutorial-markdown-window {
+  position: relative;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin: 0;
+}
 </style>

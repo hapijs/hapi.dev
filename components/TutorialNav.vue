@@ -47,13 +47,15 @@ export default {};
   margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
 }
 
 .tutorial-lang-wrapper {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin: 0;
+  width: 100%;
 }
 
 .tutorial-lang-text {
@@ -67,6 +69,11 @@ export default {};
   font-size: 1.1em;
   color: $orange;
   line-height: 30px;
+  width: 100%;
+}
+
+.tutorial-select-list {
+  margin: 0;
 }
 
 .tutorial-select-link {

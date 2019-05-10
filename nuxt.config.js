@@ -38,6 +38,14 @@ module.exports = {
     '@nuxtjs/markdownit'
   ],
 
+  // [optional] markdownit options
+  // See https://github.com/markdown-it/markdown-it
+  markdownit: {
+    preset: 'default',
+    linkify: false,
+    breaks: true,
+  },
+
   /*
    ** Build configuration
    */

@@ -80,6 +80,7 @@ export default {};
 
 .nav-links-li {
   display: inline-block;
+  margin: 0;
 }
 
 .nav-link {
