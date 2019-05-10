@@ -11,11 +11,19 @@
         <li class="side-nav-select-link"><a href="/resources/#videos">Videos</a></li>
       </ul>
     </div>
+    <SideFooter />
   </div>
 </template>
 
 <script>
-export default {};
+import SideFooter from "~/components/Footers/SideFooter.vue"
+
+export default {
+  
+  components: {
+    SideFooter
+  }
+};
 </script>
 
 <style lang="scss">

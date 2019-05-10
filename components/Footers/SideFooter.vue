@@ -1,18 +1,16 @@
 <template>
-  <footer class="footer">
-    <div class="index-about">
-      <a hfre="/security" class="index-about-link">Security</a>
-      <span class="index-divider">|</span>
-      <a hfre="/quality" class="index-about-link">Quality</a>
-      <span class="index-divider">|</span>
-      <a hfre="/developersfirst" class="index-about-link">Developers First</a>
-      <span class="index-divider">|</span>
-      <a hfre="/predictability" class="index-about-link">Predictability</a>
-      <span class="index-divider">|</span>
-      <a hfre="/Extensibility" class="index-about-link">Extensibility</a>
-      <span class="index-divider">|</span>
-      <a hfre="/Support" class="index-about-link">Support</a>
-    </div>
+  <footer class="side-footer">
+    <ul class="footer-links">
+      <li class="footer-links-li">
+        <a class="footer-link" title="Github" href="https://github.com/hapijs/hapi">Github</a>
+      </li>
+      <li class="footer-links-li">
+        <a class="footer-link" title="Twitter" href="https://twitter.com/hapijs">Twitter</a>
+      </li>
+      <li class="footer-links-li">
+        <a class="footer-link" title="Slack" href="https://join.slack.com/t/hapihour/shared_invite/enQtNTA5MDUzOTAzOTU4LTUyZmFiYjkyMTBmNDcyMmI2MmRjMzg4Y2YzNTlmNzUzNjViN2U1NmYyY2NjYjhiYWU4MGE2OTFhZDRlYWMyZDY">Slack</a>
+      </li>
+    </ul>
     <div class="footer-text">
       hapi is maintained by the
       <a
@@ -49,6 +47,42 @@ a {
   text-decoration: none;
 }
 
+.footer-links {
+  list-style-type: none;
+  margin: 0 auto 5px auto;
+  width: 100%;
+  text-align: center;
+}
+
+.footer-links-li {
+  display: inline-block;
+  padding: 0 10px;
+  font-size: .8em;
+  margin: 0;
+}
+
+.footer-link:hover {
+  color: $orange;
+  text-decoration: underline;
+}
+
+.index-about {
+  font-weight: 700;
+  font-size: 0.75em;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  line-height: 30px;
+}
+
+.index-about-link:hover {
+  color: $orange;
+  text-decoration: underline;
+}
+
+.index-about:nth-child(-n + 5) {
+  padding-right: 10px;
+}
+
 .index-about-link {
   cursor: pointer;
 }
@@ -57,7 +91,7 @@ a {
   padding: 0 5px;
 }
 
-.footer {
+.side-footer {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -66,11 +100,12 @@ a {
   justify-content: center;
   align-items: center;
   height: 50px;
-  max-width: 735px;
+  max-width: 100%;
+  margin: 10px 10px 40px 10px;
 }
 
 .footer-text {
-  font-size: 0.8em;
+  font-size: 0.7em;
   text-align: center;
 }
 

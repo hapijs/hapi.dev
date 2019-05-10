@@ -3,12 +3,12 @@
 </template>
 
 <script>
-import page from '../static/lib/tutorials/en_US/getting-started.md';
+const pages = require('../static/lib/tutorials/en_US')
 
 export default {
     computed: {
       page() {
-        return page
+        return pages.gettingStarted.default
       }
     }
 };
