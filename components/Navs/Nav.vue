@@ -41,20 +41,18 @@ export default {};
 </script>
 
 <style lang="scss">
-@import "../assets/styles/main.scss";
+@import "../../assets/styles/main.scss";
 
 .navbar {
   position: relative;
   width: 100%;
   margin: 0 auto;
-  padding: 10px;
-
+  padding: 10px 50px;
   background: #fff;
 }
 
 .nav-container {
   width: 100%;
-  max-width: 1260px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -80,6 +78,7 @@ export default {};
 
 .nav-links-li {
   display: inline-block;
+  margin: 0;
 }
 
 .nav-link {
@@ -157,6 +156,7 @@ export default {};
   .logo {
     height: 50px;
     width: calc(100px * (2 / 3));
+    margin: 0 auto;
   }
 
   .nav-collapse {

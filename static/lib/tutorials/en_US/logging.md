@@ -14,15 +14,15 @@ _This tutorial is compatible with hapi v17_
 
 
 
-## <a name="overview" /> Overview
+## <a name="overview"></a> Overview
 
 As with any server software, logging is very important. hapi has some built in logging methods, as well as some basic capabilities for displaying these logs.
 
-## <a name="methods" /> Built-in Methods
+## <a name="methods"></a> Built-in Methods
 
 There are two nearly identical logging methods, `server.log(tags, [data, [timestamp]])`, and `request.log(tags, [data])`, which are to be called whenever you want to log an event in your application. 
 
-### <a name="request.log" /> request.log()
+### <a name="request.log"></a> request.log()
 
 You want to call `request.log()` whenever you want to log something in the context of a request, such as a route handler, request lifecycle extension, or authentication scheme. The method takes two argument:
 
@@ -45,7 +45,7 @@ server.route({
 ```
 In this example, if there is a request-specific event with a tag of `error`, the event will get logged. You also send a `data` parameter of `Event error`. This can be anything you want, such as an error message or any other details.  
 
-### <a name="server.log" /> server.log()
+### <a name="server.log"></a> server.log()
 
 `server.log()` is used when you have no specific request in scope, for instance, just after your server has started or inside a plugin's `register()` method.
 
@@ -59,7 +59,7 @@ server.log(['test', 'error'], 'Test event');
 ```
 In this example, you'll see that server will log an event with `tags` `'test'` and `'error'`. Since there is no specific request in scope in this example, you use `server.log()`.
 
-## <a name="display" /> Retrieving and Displaying Logs
+## <a name="display"></a> Retrieving and Displaying Logs
 
 The hapi server object emits events for each log event. You can use the standard EventEmitter API to listen for such events and display them however you wish.
 
@@ -91,7 +91,7 @@ server.route({
 });
 ```
 
-## <a name="debug" /> Debug Mode (development only)
+## <a name="debug"></a> Debug Mode (development only)
 
 hapi has a debug mode, which is a pain-free way to have your log events printed to the console, without configuring additional plugins or writing logging code yourself.
 
@@ -101,6 +101,6 @@ By default, the only errors debug mode will print to console are uncaught errors
 
 You can find more information on debug mode in the [API documentation](https://hapijs.com/api#-serveroptionsdebug).
 
-## <a name="plugins" /> Logging Plugins
+## <a name="plugins"></a> Logging Plugins
 
 The built-in methods provided by hapi for retrieving and printing logs are fairly minimal. For a more feature-rich logging experience, you can look into using a plugin like [good](https://github.com/hapijs/good), or any of the other [hapi logging plugins](https://hapijs.com/plugins#Logging/Metrics).

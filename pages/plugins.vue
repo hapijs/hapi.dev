@@ -1,19 +1,19 @@
 <template>
   <div class="container">
-    <TutorialNav/>
+    <PluginsNav />
     <div class="tutorial-markdown-window">
-      <Tutorial/>
+      <Plugins />
     </div>
   </div>
 </template>
 
 <script>
-import Tutorial from "~/components/Tutorial.vue";
-import TutorialNav from "~/components/Navs/TutorialNav.vue";
+import Plugins from "~/components/Plugins.vue";
+import PluginsNav from "~/components/Navs/PluginsNav.vue";
 export default {
   components: {
-    Tutorial,
-    TutorialNav
+    Plugins,
+    PluginsNav
   }
 };
 </script>

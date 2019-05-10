@@ -10,11 +10,11 @@
         
         
 
-## <a name="overview" /> Overview
+## <a name="overview"></a> Overview
 
 This tutorial will show how to set up a basic hapi server that displays "Hello World!" in your browser.
 
-## <a name="installing" /> Installing hapi
+## <a name="installing"></a> Installing hapi
 
 Create a new directory `myproject`, and from there:
 
@@ -24,7 +24,7 @@ Create a new directory `myproject`, and from there:
 
 - Run: `npm install hapi`, this will install the latest version of hapi as a dependency in your package.json.
 
-## <a name="server" /> Creating a Server
+## <a name="server"></a> Creating a Server
 
 A very basic hapi server looks like the following:
 
@@ -58,7 +58,7 @@ When creating a server, you can provide a hostname, IP address, a Unix socket fi
 
 The `host` property set to `localhost` is likely the safest choice. In a docker container, however, the localhost may not be accessible outside of the container and using `host: '0.0.0.0'` may be needed.
 
-## <a name="routes" /> Adding Routes
+## <a name="routes"></a> Adding Routes
 
 After you get the server up and running, its time to add a route that will display "Hello World!" in your browser.
 
@@ -104,6 +104,6 @@ The `path` property defines the path including parameters. It can contain option
 
 The `handler` function performs the main business logic of the route and sets the response. The `handler` must return a value, a promise, or throw an error.
 
-## <a name="everything" /> Everything Else
+## <a name="everything"></a> Everything Else
 
 hapi has many, many other capabilities and only a select few are documented in tutorials here. This tutorial was intentionally minimal, we highly recommend you to check out the [Plugins tutorial](/tutorials/plugins). It will give some more knowledge to better organize your hapi project. We also have other tutorials of interest, please use the list to your right to check them out. Everything else is documented in the [API reference](/api) and, as always, feel free to ask questions on [github](https://github.com/hapijs/discuss/issues) or just visit us on [slack](https://join.slack.com/t/hapihour/shared_invite/enQtNTA5MDUzOTAzOTU4LTUyZmFiYjkyMTBmNDcyMmI2MmRjMzg4Y2YzNTlmNzUzNjViN2U1NmYyY2NjYjhiYWU4MGE2OTFhZDRlYWMyZDY).

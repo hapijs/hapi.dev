@@ -14,11 +14,11 @@ _This tutorial is compatible with hapi v17_
 - [hapi-auth-cookie](#cookie)
 
 
-## <a name="overview" /> Overview
+## <a name="overview"></a> Overview
 
 Most modern web apps use some form of authentication. Authentication within hapi is based on the concept of `schemes` and `strategies`. `Schemes` are a way of handling authentication within hapi. For example, the `hapi-auth-basic` and `hapi-auth-cookie` plugins would be considered `schemes`. A `strategy` is a pre-configured instance of a `scheme`. You use `strategies` to implement authentication `schemes` into your application.  
 
-## <a name="schemes" /> Schemes
+## <a name="schemes"></a> Schemes
 
 A `scheme` is a method with the signature `function (server, options)`. The `server` parameter is a reference to the server the scheme is being added to, while the `options` parameter is the configuration object provided when registering a strategy that uses this scheme.
 
@@ -26,7 +26,7 @@ This method must return an object with *at least* the key `authenticate`. Other 
 
 You can either write your own authentication `scheme`, or use one of the many hapi auth plugins, such as `hapi-auth-basic` or `hapi-auth-cookie`.
 
-### <a name="authenticate" /> authenticate
+### <a name="authenticate"></a> authenticate
 
 The `authenticate` method has a signature of `function (request, h)`, and is the only *required* method in a scheme.
 
@@ -40,7 +40,7 @@ The `credentials` and `artifacts` properties can be accessed later (in a route h
 
 If authentication is unsuccessful, you can either throw an error or call and return `h.unauthenticated(error, [data])` where `error` is an authentication error and `data` is an optional object containing `credentials` and `artifacts`. There's no difference between calling `return h.unauthenticated(error)` or throwing an error if no `data` object is provided. The specifics of the error passed will affect the behavior. More information can be found in the API documentation for [`server.auth.scheme(name, scheme)`](https://hapijs.com/api#-serverauthschemename-scheme). It is recommend to use [boom](https://github.com/hapijs/boom) for errors.
 
-### <a name="payload" /> payload
+### <a name="payload"></a> payload
 
 The `payload` method has the signature `function (request, h)`.
 
@@ -48,7 +48,7 @@ Again, the standard hapi response toolkit is available here. To signal a failure
 
 To signal a successful authentication, return `h.continue`.
 
-### <a name="response" /> response
+### <a name="response"></a> response
 
 The `response` method also has the signature `function (request, h)` and utilizes the standard response toolkit.
 
@@ -58,7 +58,7 @@ Once any decoration is complete, you must return `h.continue`, and the response 
 
 If an error occurs, you should instead throw an error where the error is recommended to be a [boom](https://github.com/hapijs/boom).
 
-## <a name="strategies" /> Strategies
+## <a name="strategies"></a> Strategies
 
 Once you've registered your scheme, you need a way to use it. This is where strategies come in.
 
@@ -77,7 +77,7 @@ server.auth.strategy('session', 'cookie', {
 ```
 In the above example, you register the `strategy` with `server.auth.strategy()`. You name the `strategy` `session`, and say that you are using the `cookie` scheme. Lastly, you configure the `strategy` by giving it a `name`, `password`, and setting `isSecure: false`. 
 
-## <a name="default" /> Default Strategy
+## <a name="default"></a> Default Strategy
 
 You may set a default strategy by using `server.auth.default()`.
 
@@ -85,7 +85,7 @@ This method accepts one parameter, which may be either a string with the name of
 
 Note that any routes added *before* `server.auth.default()` is called will not have the default applied to them. If you need to make sure that all routes have the default strategy applied, you must either call `server.auth.default()` before adding any of your routes, or set the default mode when registering the strategy.
 
-## <a name="route" /> Route Configuration
+## <a name="route"></a> Route Configuration
 
 Authentication can also be configured on a route, by the `options.auth` parameter. If set to `false`, authentication is disabled for the route.
 
@@ -105,7 +105,7 @@ Lastly, the `payload` parameter can be set to `false` denoting the payload is no
 
 The `payload` parameter is only possible to use with a strategy that supports the `payload` method in its scheme.
 
-## <a name="basic" /> hapi-auth-basic
+## <a name="basic"></a> hapi-auth-basic
 
 The first `scheme` we will look at is the [hapi-auth-basic](https://github.com/hapijs/hapi-auth-basic) plugin. Just like the name says, the `hapi-auth-basic` plugin uses basic authentication to validate users. Here is an example of setting up `hapi-auth-basic`:
 
@@ -173,7 +173,7 @@ Once the plugin has been registered, you use [server.auth.strategy()](/api#serve
 
 The last thing you do is tell a route to use the strategy named `simple` for authentication.
 
-## <a name="cookie" /> hapi-auth-cookie
+## <a name="cookie"></a> hapi-auth-cookie
 
 [hapi-auth-cookie](https://github.com/hapijs/hapi-auth-cookie) is a plugin that will store a cookie in the users browser once they are authenticated. This has the option of keeping the user logged in, even after they leave the site. Here is an example of setting up `hapi-auth-cookie`:
 

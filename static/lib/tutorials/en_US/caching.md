@@ -15,17 +15,17 @@ _This tutorial is compatible with hapi v17_
 - [Client and Server Caching](#clientandserver)
 
 
-## <a name="overview" /> Overview
+## <a name="overview"></a> Overview
 
 One of the best ways to improve website performance is to configure caching on your server. hapi makes it easy to configure both client-side and server-side caching.
 
-## <a name="client-side" /> Client-side Caching
+## <a name="client-side"></a> Client-side Caching
 
 The HTTP protocol defines several HTTP headers to instruct how clients, such as browsers, should cache resources. To learn more about these headers and to decide which are suitable for your use-case check out this useful [guide put together by Google](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching).
 
 The first part of this tutorial shows how to easily configure hapi to send these headers to clients.
 
-### <a name="cache-control" /> Cache-Control
+### <a name="cache-control"></a> Cache-Control
 
 The `Cache-Control` header tells the browser and any intermediate caches if a resource is cacheable and for what duration. For example, `Cache-Control:max-age=30, must-revalidate, private` means that the browser can cache the associated resource for thirty seconds and `private` means it should not be cached by intermediate caches, only by the browser. `must-revalidate` means that once it expires it has to request the resource again from the server.
 
@@ -61,7 +61,7 @@ If you make a request to `/hapi` you'll receive the response header `cache-contr
 
 See [route-options](/api#route-options) for more information about common `cache` configuration options.
 
-### <a name="last-modified" /> Last-Modified
+### <a name="last-modified"></a> Last-Modified
 
 In some cases, the server can provide information about when a resource was last modified. When using the [inert](https://github.com/hapijs/inert) plugin for serving static content, a `Last-Modified` header is added automatically to every response.
 
@@ -87,11 +87,11 @@ return h.response(result).etag('xxxxxxxxx');
 
 Check the documentation of `etag` under the [response object](/api#response-object) for more details about the arguments and available options.
 
-## <a name="server-side" /> Server-side Caching
+## <a name="server-side"></a> Server-side Caching
 
 hapi provides powerful, convenient server-side caching via [catbox](https://www.github.com/hapijs/catbox). This tutorial section will help you understand how to use catbox.
 
-### <a name="catbox" /> catbox
+### <a name="catbox"></a> catbox
 
 [catbox](https://github.com/hapijs/catbox) is a multi-strategy key-value object store. It comes with extensions supporting a memory cache, [Redis](https://redis.io), [MongoDB](https://www.mongodb.com), [Memcached](http://memcached.org), and [Amazon S3](https://aws.amazon.com/s3).
 
@@ -99,7 +99,7 @@ In order to reduce module dependencies, catbox does not include the external cac
 
 catbox has two interfaces; client and policy.
 
-### <a name="client" /> Client
+### <a name="client"></a> Client
 
 [Client](https://github.com/hapijs/catbox#client) is a low-level interface that allows you set/get key-value pairs. It is initialized with one of the available adapters: ([Memory](https://github.com/hapijs/catbox-memory), [Redis](https://github.com/hapijs/catbox-redis), [mongoDB](https://github.com/hapijs/catbox-mongodb), [Memcached](https://github.com/hapijs/catbox-memcached), or [Riak](https://github.com/DanielBarnes/catbox-riak)).
 
@@ -195,7 +195,7 @@ The first parameter of the `sumCache.get()` function is an id, which may either 
 
 Look into catbox policy [options](https://github.com/hapijs/catbox#policy) and pay extra attention to `staleIn`, `staleTimeout`, `generateTimeout`, to leverage the full potential of catbox caching.
 
-### <a name="serverMethods" /> Server methods
+### <a name="serverMethods"></a> Server methods
 
 But it can get better than that! In 95% cases you will use [server methods](/tutorials/server-methods) for caching purposes, because it reduces boilerplate to minimum. Here's a rewrite of the previous example using a server method:
 
@@ -230,7 +230,7 @@ start();
 ```
 [server.method()](/api#-servermethodname-method-options) created a new [policy](https://github.com/hapijs/catbox#policy) with `segment: '#sum'` automatically for us. Also the unique item `id` (cache key) was automatically generated from parameters. By default, it handles `string`, `number` and `boolean` parameters. For more complex parameters, you have to provide your own `generateKey` function to create unique ids based on the parameters - check out the server methods [tutorial](/tutorials/server-methods) for more information.
 
-## <a name="clientandserver" /> Client and Server caching
+## <a name="clientandserver"></a> Client and Server caching
 
 Optionally, [Catbox Policy](https://github.com/hapijs/catbox#policy) can provide more information about the value retrieved from the cache. To enable this set the `getDecoratedValue` option to `true` when creating the policy. Any value returned from the server method will then be an object `{ value, cached, report }`. `value` is just the item from the cache, `cached` and `report` provides some extra details about the cache state of the item.
 

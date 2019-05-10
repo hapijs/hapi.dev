@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="home-container">
     <div class="index-header">
       <div class="index-header1">
         The Simple, Secure Framework
@@ -55,7 +55,7 @@ export default {
 <style lang="scss">
 @import "../assets/styles/main.scss";
 
-.container {
+.home-container {
   margin: 50px auto 0 auto;
   height: 100%;
   width: 100%;

@@ -19,11 +19,11 @@ _This tutorial is compatible with hapi v17_
 
 
 
-## <a name="overview" /> Overview
+## <a name="overview"></a> Overview
 
 Validating data can be very helpful in making sure that your application is stable and secure. hapi allows this functionality by using the module [Joi](https://github.com/hapijs/joi), which allows you to create your validations with a simple and clear object syntax.
 
-## <a name="joi" /> Joi
+## <a name="joi"></a> Joi
 
 [Joi](https://github.com/hapijs/joi) is an object schema description language and validator for JavaScript objects. Joi allows you to create blueprints or schemas for JavaScript objects to ensure validation of key information. To get started with joi, you must first install and add it as a dependency to your project:
 
@@ -33,7 +33,7 @@ Then, you must import it to your project:
 
 `const Joi = require('@hapi/joi');`
 
-## <a name="input" /> Input Validation
+## <a name="input"></a> Input Validation
 
 The first type of validation hapi can perform is input validation. This is defined in the `options` object on a route, and is able to validate headers, path parameters, query parameters, and payload data. Note: In the below examples, you'll see that we give a JS object to `route.options.validate`. Be aware that the `validate` option accepts either JS or `joi` objects for its properties. The latter allows you to set `joi` options for that particular schema. Here is a partial rewrite of the [Query Parameters](#queryparams) example:
 
@@ -48,7 +48,7 @@ options: {
 ```
 Look [here](https://github.com/hapijs/joi/blob/v14.3.1/API.md#anyoptionsoptions) for details about such options.
 
-### <a name="pathparams" /> Path parameters
+### <a name="pathparams"></a> Path parameters
 
 The first input type that `joi` can validate is path parameters. Consider the following:
 
@@ -84,7 +84,7 @@ With this configuration, if you make a request to `/hello/jennifer` you will get
 
 Likewise, if you were to make a request to `/hello/thisnameiswaytoolong`, you'd also get the same error.
 
-### <a name="queryparams" /> Query parameters
+### <a name="queryparams"></a> Query parameters
 
 To validate query parameters, you simply specify a `validate.query` option in the route's options, and you will get similar effects. By default hapi will not validate anything. If you specify a validator for even one query parameter, that means you *must* specify a validator for all possible query parameters that you would like to accept.
 
@@ -112,7 +112,7 @@ This makes sure that the `limit` query parameter is always an integer between 1 
 
 You get an error because the `offset` parameter is not allowed. That's because you didn't provide a validator for it, but you did provide one for the `limit` parameter.
 
-### <a name="payloadparams" /> Payload parameters
+### <a name="payloadparams"></a> Payload parameters
 
 Also valid is the `validate.payload` option, which will validate payload data sent to a route by the user. It works exactly the same way as query parameters, in that if you validate one key, you must validate them all. Here is an example: 
 
@@ -146,7 +146,7 @@ If any of payload fails validation, the following error will be thrown:
 }
 ```
 
-### <a name="headers" /> Headers
+### <a name="headers"></a> Headers
 
 You may validate incoming headers as well, with a `validate.headers` option. For example: 
 
@@ -172,7 +172,7 @@ server.route({
 ```
 Here, you are validating the cookie header as a string and making sure it is required. The `allowUnknown` option allows other incoming headers to be accepted without being validated.   
 
-## <a name="output" /> Output
+## <a name="output"></a> Output
 
 hapi can also validate responses before they are sent back to the client. This validation is defined in the `response` property of the route `options` object.
 
@@ -182,7 +182,7 @@ Output validation is useful for ensuring that your API is serving data that is c
 
 hapi supports quite a few options to fine-tune output validation. Here are a few of them:
 
-### <a name="failaction" /> response.failAction
+### <a name="failaction"></a> response.failAction
 
 You can choose what to do when response validation fails by setting `response.failAction` to one of the following:
 * `error`: send an Internal Server Error (500) response (default)
@@ -218,7 +218,7 @@ server.route({
 ```
 This is a route that will return a list of books. We can see that since `failAction` is set to `log`, the server will just log the error and send the response as-is.  
 
-### <a name="sample" /> response.sample
+### <a name="sample"></a> response.sample
 
 If performance is a concern, hapi can be configured to validate only a percentage of response. This can be achieved with the `response.sample` property of the route `options`. It should be set to a number between `0`-`100`, representing the percentage of responses that should be validated. Consider the following:
 
@@ -248,7 +248,7 @@ server.route({
 ```
 Looking at your book route again, you can see, the `sample` value is set to `50`. This means the server will validate one half of the responses.
 
-### <a name="status" /> response.status
+### <a name="status"></a> response.status
 
 Sometimes one endpoint can serve different response objects. For instance, a `POST` route may return one of the following:
 * `201` with the newly created resource if a new resource is created.
@@ -267,11 +267,11 @@ hapi supports this by allowing you to specify a different validation schema for 
 }
 ```
 
-### <a name="options" /> response.options
+### <a name="options"></a> response.options
 
 Options to pass to joi during validation. Useful to set global options such as `stripUnknown` or `abortEarly` (the complete list is available [here](https://github.com/hapijs/joi/blob/master/API.md#validatevalue-schema-options-callback)). If a custom validation function is defined via `schema` or `status` then `options` can an arbitrary object that will be passed to this function as the second argument.
 
-## <a name="alternatives" /> Alternatives to Joi
+## <a name="alternatives"></a> Alternatives to Joi
 
 We suggest using Joi for your validation, however each of the validation options hapi provides also accepts a few different options.
 

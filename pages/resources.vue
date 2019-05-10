@@ -1,19 +1,19 @@
 <template>
   <div class="container">
-    <TutorialNav/>
-    <div class="tutorial-markdown-window">
-      <Tutorial/>
+    <ResourcesNav/>
+    <div class="markdown-window">
+      <Resources/>
     </div>
   </div>
 </template>
 
 <script>
-import Tutorial from "~/components/Tutorial.vue";
-import TutorialNav from "~/components/Navs/TutorialNav.vue";
+import Resources from "~/components/Resources.vue";
+import ResourcesNav from "~/components/Navs/ResourcesNav.vue";
 export default {
   components: {
-    Tutorial,
-    TutorialNav
+    Resources,
+    ResourcesNav
   }
 };
 </script>
@@ -21,7 +21,7 @@ export default {
 <style lang="scss">
 @import "../assets/styles/main.scss";
 
-.tutorial-markdown-window {
+.markdown-window {
   position: relative;
   width: 100%;
   padding: 0 20px;

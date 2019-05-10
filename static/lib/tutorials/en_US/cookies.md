@@ -13,15 +13,15 @@ _This tutorial is compatible with hapi v17_
 - [Clearing a Cookie](#clearing)
 
 
-## <a name="overview" /> Overview
+## <a name="overview"></a> Overview
 
 When writing a web application, cookies are often used to keep state about a user between requests. With hapi, cookies are flexible, secure, and simple to use.  
 
-## <a name="server" /> Configuring the server
+## <a name="server"></a> Configuring the server
 
 hapi has several configurable options when dealing with cookies. The defaults are probably good for most cases, but can be changed when needed. To prepare a cookie, you first need to name it and configure a list of options. You do this by calling `server.state(name, [options])`.
 
-### <a name="server.state" /> server.state()
+### <a name="server.state"></a> server.state()
 
 To use a cookie, you first need to configure it by calling [`server.state(name, [options])`](/api#-serverstatename-options) where `name` is the name of the cookie, and `options` is an object used to configure the cookie.
 
@@ -49,7 +49,7 @@ By setting `clearInvalid` to `true`, it instructs the client to remove invalid c
 
 Last, you set `strictHeader` to `true` so that there are no violations of [RFC 6265](https://tools.ietf.org/html/rfc6265).
 
-### <a name="options.state" /> route.options.state()
+### <a name="options.state"></a> route.options.state()
 
 In addition to this, you can further configure cookie behavior at a route-level by specifying two properties at the route's `options.state` object.
 
@@ -69,11 +69,11 @@ The `parse` option determines if cookies are parsed and stored in `request.state
 
 The `failAction` options determines how cookie parsing errors will be handled.
 
-## <a name="setting" /> Setting a cookie
+## <a name="setting"></a> Setting a cookie
 
 Setting a cookie is done via the [response toolkit](/api#response-toolkit) in a request handler, pre-requisite, or request lifecycle extension point.
 
-### <a name="h.state" /> h.state()
+### <a name="h.state"></a> h.state()
 
 You set a cookie by calling [`h.state(name, value, [options]`](https://hapijs.com/api#h.state()). In the following example, you set a cookie in a route handler:
 
@@ -96,7 +96,7 @@ The `state()` method is also available on the [response object](/api#response-ob
 return h.response('Hello').state('data', { firstVisit: false });
 ```
 
-## <a name="override" /> Overriding options
+## <a name="override"></a> Overriding options
 
 When setting a cookie, you may also pass the same options available to `server.state()` as a third parameter, such as:
 
@@ -106,7 +106,7 @@ return h.response('Hello').state('data', 'test', { encoding: 'none' });
 
 In this example the cookie will simply be set to the string `"test"` with no encoding.
 
-## <a name="value" /> Getting a cookie value
+## <a name="value"></a> Getting a cookie value
 
 Access a cookie’s value via `request.state` in a route handler, pre-requisite, or request lifecycle extension point.
 
@@ -119,7 +119,7 @@ const value = request.state.data;
 // console.log(value) will give you { firstVisit : false }
 ```
 
-## <a name="clear" /> Clearing a cookie
+## <a name="clear"></a> Clearing a cookie
 
 The cookie can be cleared by calling the `unstate()` method on the [response toolkit](/api#response-toolkit) or [response object](/api#response-object):
 

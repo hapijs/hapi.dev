@@ -15,7 +15,7 @@ _This tutorial is compatible with hapi v17_
 - [404 Handling](#missing)
         
 
-## <a name="overview" /> Overview
+## <a name="overview"></a> Overview
 
 When defining a route in hapi, you need three basic elements: the path, the method, and a handler. These are passed to your server as an object, and can be as simple as the following:
 
@@ -30,7 +30,7 @@ server.route({
 });
 ```
 
-## <a name="methods" /> Methods
+## <a name="methods"></a> Methods
 
 The route above responds to a `GET` request to `/` with the string `Hello World!`. The method option can be any valid HTTP method, or an array of methods. Let's say you want the same response when your user sends either a `PUT` or a `POST` request, you could do that with the following:
 
@@ -45,7 +45,7 @@ server.route({
 });
 ```
 
-## <a name="path" /> Path
+## <a name="path"></a> Path
 
 The path option must be a string, though it can contain named parameters. To name a parameter in a path, simply wrap it with `{}`. For example:
 
@@ -61,7 +61,7 @@ server.route({
 ```
 As you can see above, you have the string `{user}` in your path, which means you're asking for that segment of the path to be assigned to a named parameter. These parameters are stored in the object `request.params` within the handler. Since you named your parameter user, you are able to access the value with the property `request.params.user`, after URI encoding it so as to prevent content injection attacks. For example, going to `/hello/ferris` in your browser, you will see `Hello ferris!`.
 
-## <a name="optionalParameters" /> Optional Parameters
+## <a name="optionalParameters"></a> Optional Parameters
 
 In the above example, the user parameter is required: a request to `/hello/bob` or `/hello/susan` will work, but a request to `/hello` will not. In order to make a parameter optional, put a question mark at the end of the parameter's name. Here is the same route, but updated to make the `user` parameter optional:
 
@@ -81,7 +81,7 @@ server.route({
 ```
 Now a request to `/hello/sloan` will reply with `Hello sloan!` and a request to just `/hello` will reply with `Hello stranger!`. It is important to be aware that only the last named parameter in a path can be optional. That means that `/{one?}/{two}/` is an invalid path, since in this case there is another parameter after the optional one. You may also have a named parameter covering only part of a segment of the path for instance `/{filename}.jpg` is valid. You may also have multiple parameters per segment provided there is non-parameter separator between them, meaning `/{filename}.{ext}` is valid whereas `/{filename}{ext}` is not.
 
-## <a name="multiParameters" /> Multi-Segment Parameters
+## <a name="multiParameters"></a> Multi-Segment Parameters
 
 Along with optional path parameters, you can also allow parameters that match multiple segments. In order to do this, you use an asterisk and a number. For example:
 
@@ -100,7 +100,7 @@ With this configuration, a request to `/hello/john/doe` will reply with the stri
 
 When determining what handler to use for a particular request, hapi searches paths in order from most specific to least specific. That means if you have two routes, one with the path `/filename.jpg` and a second route `/filename.{ext}` a request to `/filename.jpg` will match the first route, and not the second. This also means that a route with the path `/{files*}` will be the last route tested, and will only match if all other routes fail.
 
-## <a name="query" /> Query Parameters
+## <a name="query"></a> Query Parameters
 
 Query parameters are common way of sending data to the server. Query parameters are sent via the URL in a `key=value` format. For example:
 
@@ -186,7 +186,7 @@ Lastly, you returned the parsed query string, which would now be:
 ```
 Note: In the above example, you used the [qs](https://github.com/ljharb/qs) module to handle our parsing, but any parser will do, be it from `npm` or even custom. Just be aware that the method must return an object where each key is a parameter and matching value is the parameter value.  
 
-## <a name="requestpayload" /> Request Payload
+## <a name="requestpayload"></a> Request Payload
 
 Anytime you send request data to your API, you will be able to access this data in the route handler with `request.payload`. See the following:
 
@@ -207,7 +207,7 @@ In the above example, the handler receives data via `request.payload`. In this c
 
 Note: It's always best practice to validate the incoming payload, as it may contain unsafe data. See validation tutorial for more info.
 
-## <a name="handler" /> Handler
+## <a name="handler"></a> Handler
 
 The handler option is a function that accepts two parameters, `request`, and `h`.
 
@@ -221,7 +221,7 @@ The `handler` option must return a value, a promise, or throw an error.
 
 Note: handlers using a fat arrow style function cannot be bound to any `server.bind()` property. Instead, the bound context is available under [`h.context`](https://hapijs.com/api#h.context).
 
-## <a name="options" /> Options
+## <a name="options"></a> Options
 
 Aside from these three basic elements, you may also specify an `options` parameter for each route. This is where you configure things like [validation](/tutorials/validation), [authentication](/tutorials/auth), prerequisites, payload processing, and caching options. More details can be found in the linked tutorials, as well as the [API reference](/api#route-options).
 
@@ -251,7 +251,7 @@ The first property under `options` is `auth`. `auth` will set the authentication
 
 The second property is `validate`. This allows you to set validation rules for various request components, such as `headers`, `params`, `payload`, and `failAction`. You use the [joi](https://github.com/hapijs/joi) package to validate the `request.payload`. For more info, please check the [validation tutorial](/tutorials/validation).
 
-## <a name="missing" /> 404 Handling
+## <a name="missing"></a> 404 Handling
 
 404 errors will happen whenever your server can't find what was the resource that was requested. It is best practice to handle these errors the proper way. This is easy to do in hapi, by just employing a route that will catch everything your other routes will not. The following example shows how to setup a route to return a custom `404` response.
 
