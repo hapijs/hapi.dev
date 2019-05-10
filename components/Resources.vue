@@ -3,7 +3,7 @@
 </template>
 
 <script>
-const page = require('../static/lib/tutorials/');
+const page = require('../static/lib/resources.md');
 
 export default {
     computed: {

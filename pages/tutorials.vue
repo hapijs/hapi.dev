@@ -9,7 +9,7 @@
 
 <script>
 import Tutorial from "~/components/Tutorial.vue";
-import TutorialNav from "~/components/TutorialNav.vue";
+import TutorialNav from "~/components/Navs/TutorialNav.vue";
 export default {
   components: {
     Tutorial,
