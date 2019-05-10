@@ -9,11 +9,11 @@ _This tutorial is compatible with hapi v17_
     - [Registration Options](#registration)
 
 
-## <a name="overview" /> Overview
+## <a name="overview"></a> Overview
 
 hapi has an extensive and powerful plugin system that allows you to very easily break your application up into isolated pieces of business logic, and reusable utilities. You can either add an existing plugin to your application, or create your own.  
 
-## <a name="create" /> Creating a plugin
+## <a name="create"></a> Creating a plugin
 
 Plugins are very simple to write. At their core they are an object with a `register` property, that is a function with the signature `async function (server, options)`. Additionally the plugin object has a required `name` property and several optional properties including `version`.
 
@@ -79,7 +79,7 @@ Additionally, the plugin object may contain the property `multiple` that when se
 
 Another available property is `once`. When set to `true` will mean hapi ignores subsequent registers of the same plugin without throwing an error.
 
-### <a name="register" /> The register method
+### <a name="register"></a> The register method
 
 As we've seen above, the `register` method accepts two parameters, `server` and `options`.
 
@@ -128,7 +128,7 @@ const start = async function () {
 ```
 When you register the plugin, you can pass whatever options to it with `server.register(plugins, [options])`. Here you are passing `{  name: "Bob" }` to your plugin, which as you see above, can be accessed with the `options` object when you create the plugin. 
 
-## <a name="loading" /> Loading a plugin
+## <a name="loading"></a> Loading a plugin
 
 Plugins can be loaded one at a time, or as a group in an array, by the `server.register(plugins, [options])` method, for example:
 
@@ -180,7 +180,7 @@ const start = async function () {
 };
 ```
 
-### <a name="registration" /> Registration options
+### <a name="registration"></a> Registration options
 
 You may also pass a second optional parameter to `server.register()`. Documentation for this object can be found in the [API reference](/api#-await-serverregisterplugins-options).
 

@@ -16,11 +16,11 @@ _This tutorial is compatible with hapi v17_
     - [View handler](#viewhandler)
 
 
-## <a name="overview" /> Overview
+## <a name="overview"></a> Overview
 
 hapi has extensive support for template rendering, including the ability to load and leverage multiple templating engines, partials, helpers (functions used in templates to manipulate data), and layouts. These capabilities are provided by the [vision](https://github.com/hapijs/vision) plugin.
 
-## <a name="vision" /> Vision
+## <a name="vision"></a> Vision
 
 [Vision](https://github.com/hapijs/vision) is a templates rendering plugin for hapi.js. `Vision` decorates the `server`, `request`, and `h` response toolkit interfaces with additional methods for managing view engines that can be used to render templated responses. `Vision` also provides a built-in handler implementation for creating templated responses.  
 
@@ -28,7 +28,7 @@ hapi has extensive support for template rendering, including the ability to load
 
 For more info, please see [here](https://github.com/hapijs/vision).
 
-## <a name="server" /> Configuring the server
+## <a name="server"></a> Configuring the server
 
 To get started with views, first you have to configure at least one templating engine on the server. This is done by using the [`server.views()`](https://github.com/hapijs/vision/blob/master/API.md#serverviewsoptions) method provided by `vision`:
 
@@ -63,7 +63,7 @@ Secondly, you register the `handlebars` module as the engine responsible for ren
 
 Next, you tell the server that your templates are located in the `templates` directory. You indicate that this directory should be taken relative to the current directory by providing a `relativeTo` option. By default, hapi will look for templates relative to the current working directory.
 
-## <a name="options" /> server.views() Options
+## <a name="options"></a> server.views() Options
 
 There are many options available to the views engine in hapi. Full documentation can be found in the [vision API reference](https://github.com/hapijs/vision/blob/master/API.md#serverviewsoptions), but we'll go over some of them here as well.
 
@@ -81,7 +81,7 @@ server.views({
 });
 ```
 
-### <a name="engines" /> Engines
+### <a name="engines"></a> Engines
 
 In order to use views in hapi, you must register at least one templating engine with the server. Templating engines may be either synchronous, or asynchronous, and should be an object with an export named `compile`.
 
@@ -99,7 +99,7 @@ If only one templating engine is registered, it automatically becomes the defaul
 
 Another useful options is `isCached`. If set to `false`, hapi will not cache the result of templates and will instead read the template from file on each use. When developing your application, this can be very handy as it prevents you from having to restart your app while working on templates. It is recommended that you leave `isCached` to its default value of `true` in production, however.
 
-### <a name="paths" /> Paths
+### <a name="paths"></a> Paths
 
 Since views can have files in several different locations, hapi allows you to configure several paths to help find things. Those options are:
 
@@ -137,7 +137,7 @@ server.views({
 });
 ```
 
-### <a name="global" /> Global context
+### <a name="global"></a> Global context
 
 In the [rendering a view](#render) tutorial, you saw how to pass context directly into a view, but what if you have some default context that should *always* be available on all templates?
 
@@ -161,7 +161,7 @@ server.views({
 
 The default global context will be merged with any local context passed taking the lowest precedence and applied to your view.
 
-### <a name="helpers" /> View helpers
+### <a name="helpers"></a> View helpers
 
 JavaScript modules located in the defined `helpersPath` are available in templates. For this example, you will create a view helper `fortune` which will pick and print out one element out of an array of strings, when used in a template.
 
@@ -232,7 +232,7 @@ const start = async () => {
 start();
 ```
 
-### <a name="layouts" /> Layouts
+### <a name="layouts"></a> Layouts
 
 `Vision` includes built-in support for view layouts. It comes disabled by default, because it may conflict with other layout systems that specific view engines may provide. We recommend choosing only one layout system.
 
@@ -281,11 +281,11 @@ You can also specify a different layout per view:
 return h.view('myview', null, { layout: 'another_layout' });
 ```
 
-## <a name="render" /> Rendering a view
+## <a name="render"></a> Rendering a view
 
 There are two options for rendering a view, you can use either the [`h.view()`](https://github.com/hapijs/vision/blob/master/API.md#hviewtemplate-context-options) method, where `h` is the [response toolkit](/api#response-toolkit) or the view handler.
 
-### <a name="hview" /> h.view()
+### <a name="hview"></a> h.view()
 
 The first method of rendering a view we'll look at is `h.view()`. Here's what a route using this method would look like:
 
@@ -306,7 +306,7 @@ In order to pass context to `h.view()`, you pass an object as the second paramet
 return h.view('index', { title: 'My home page' });
 ```
 
-### <a name="viewhandler" /> View handler
+### <a name="viewhandler"></a> View handler
 
 The second method of rendering a view, is using hapi's built in view handler. That route would look like:
 

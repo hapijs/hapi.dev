@@ -10,12 +10,12 @@ _This tutorial is compatible with hapi v17_
 
 
 
-## <a name="overview" /> Overview
+## <a name="overview"></a> Overview
 Hapi is designed for creating robust, testable applications. To this end, Hapi includes the ability to test routes without having to actually start a server, completely avoiding the time overheads and added complexity of the TCP protocol.
 
 This tutorial goes into a basic setup for testing routes, and outlines one possible setup for a testable application using [lab](https://github.com/hapijs/lab) and [code](https://github.com/hapijs/code).
 
-## <a name="lab" /> lab
+## <a name="lab"></a> lab
 
 `lab` is a simple test utility for Node.js. Unlike other test utilities, lab uses only async/await features and includes everything you should expect from a modern Node.js test utility. `lab` works with any assertion library that throws an error when a condition isn't met. For this tutorial, you will be using the `code` assertion library.
 
@@ -23,7 +23,7 @@ To install `lab`, type the following in your terminal:
 
 `npm install --save-dev lab`
 
-## <a name="code" /> code
+## <a name="code"></a> code
 
 `code` is based on the `chai` assertions library. It was created to be a small, simple, and intuitive assertions library that could be run without plugins, extensions, and have low overhead.
 
@@ -31,7 +31,7 @@ To install `code`, type the following in your terminal:
 
 `npm install --save-dev code`
 
-## <a name="server" /> Server Setup
+## <a name="server"></a> Server Setup
 
 Taking the server example from the Getting Started tutorial, we make a minor modification to it, such that it doesn't automatically start when referenced from our tests. You might call this file `server.js` and place it in the `lib` directory of your project:
 
@@ -84,7 +84,7 @@ start();
 ```
 What you've created here is a way of starting the server normally by calling its start function in our entry-point, and exposing a port for external HTTP traffic, but you've also got a module which doesn't do anything by default, which you can use in our tests.
 
-## <a name="writingTest" /> Writing a Route Test
+## <a name="writingTest"></a> Writing a Route Test
 
 In this example you'll use [lab](https://github.com/hapijs/lab), but the same method can be used for any testing tool such as [Mocha](https://mochajs.org/), [Jest](https://jestjs.io/), [Tap](https://www.node-tap.org/), [Ava](https://github.com/avajs) etc.
 
