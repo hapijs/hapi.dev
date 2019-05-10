@@ -1,5 +1,13 @@
 @import "../assets/styles/main.scss";
 
+.markdown-wrapper {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 20px 0 20px 100px;
+}
+
 h1 {
   font-size: 2rem;
 }
@@ -26,6 +34,11 @@ a {
   cursor: pointer;
   color: $orange;
   text-decoration: none;
+}
+
+a:hover {
+  color: $orange;
+  text-decoration: underline;
 }
 
 p {
@@ -71,5 +84,11 @@ li {
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .markdown-wrapper {
+    padding: 0 20px 20px 20px ;
   }
 }

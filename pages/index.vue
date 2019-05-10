@@ -68,6 +68,10 @@ export default {
   font-size: 1.3em;
 }
 
+.navbar {
+  max-width: 1260px;
+}
+
 .index-header {
   font-size: 1.6em;
   font-weight: 700;
@@ -131,9 +135,10 @@ export default {
 }
 
 @media screen and (max-width: 900px) {
-  .container {
+  .home-container {
     margin-top: 70px;
     padding: 0 10px;
   }
 }
+
 </style>

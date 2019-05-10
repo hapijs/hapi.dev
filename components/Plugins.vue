@@ -19,12 +19,4 @@ export default {
 @import "../assets/styles/main.scss";
 @import "../assets/styles/markdown.scss";
 
-.markdown-wrapper {
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 20px 0 20px 100px;
-}
-
 </style>

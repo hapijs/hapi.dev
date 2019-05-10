@@ -28,6 +28,7 @@ $font-bold: 700;
 html, body {
    margin: 0;
    padding: 0;
+   font-size: 16px;
    height: 100%;
    font-family: "Open Sans", sans-serif;
 }
@@ -43,7 +44,7 @@ html, body {
 
 @media screen and (max-width: 900px) {
 
-   html {
-      font-size: 14px;
+   html, body {
+      font-size: 12px;
    }
 } 

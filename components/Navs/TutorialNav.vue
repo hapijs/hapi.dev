@@ -13,7 +13,7 @@
     </div>
     <div class="side-nav-select-wrapper">
       <ul class="side-nav-select-list">
-        <li class="side-nav-select-link">Getting Started</li>
+        <li class="side-nav-select-link side-nav-active">Getting Started</li>
         <li class="side-nav-select-link">Authentication</li>
         <li class="side-nav-select-link">Caching</li>
         <li class="side-nav-select-link">Cookies</li>
@@ -56,6 +56,19 @@ export default {
 .tutorial-lang-text {
   margin: 0 20px 0 0;
   font-size: 1.1em;
+}
+
+select {
+  width: 100px;
+  padding: 0px 5px 0px 5px;
+  border: 1px solid #ddd;
+  height: 30px;
+  font-size: .9em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(/down.png) 96% / 15% no-repeat #f8f8f8;
+  cursor: pointer;
 }
 
 </style>
