@@ -58,4 +58,17 @@ export default {
   font-size: 1.1em;
 }
 
+select {
+  width: 100px;
+  padding: 0px 5px 0px 5px;
+  border: 1px solid #ddd;
+  height: 30px;
+  font-size: .9em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(/down.png) 96% / 15% no-repeat #f8f8f8;
+  cursor: pointer;
+}
+
 </style>
