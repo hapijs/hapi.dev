@@ -46,3 +46,9 @@
   color: $orange;
   text-decoration: underline;
 }
+
+@media screen and (max-width: 900px) {
+  .side-nav-window {
+    display: none;
+  }
+}

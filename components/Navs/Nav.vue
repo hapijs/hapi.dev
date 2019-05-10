@@ -156,6 +156,7 @@ export default {};
   .logo {
     height: 50px;
     width: calc(100px * (2 / 3));
+    margin: 0 auto;
   }
 
   .nav-collapse {

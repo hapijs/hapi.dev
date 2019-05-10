@@ -1,6 +1,6 @@
 There are dozens of plugins for hapi, ranging from documentation to authentication, and much more. If you wrote or use a plugin that you don't see on this list, please send us a [pull request](https://github.com/hapijs/hapijs.com/blob/master/lib/plugins.js).
 
-## Authorization
+## <a name="authorization"></a> Authorization
 
 *   [hapi-acl-auth](https://github.com/charlesread/hapi-acl-auth)
 
@@ -22,7 +22,7 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     Filter response payloads based on credentials/roles
 
-## Authentication
+## <a name="authentication"></a> Authentication
 
 *   [bell](https://github.com/hapijs/bell)
 
@@ -104,7 +104,7 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     Just enough authentication to make an API private
 
-## Documentation
+## <a name="documentation"></a> Documentation
 
 *   [hapi-ending](https://github.com/desirable-objects/hapi-ending.git)
 
@@ -130,19 +130,19 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     A browsable documentation generator
 
-## Encoding
+## <a name="encoding"></a> Encoding
 
 *   [brok](https://github.com/kanongil/brok)
 
     Brotli encoder and decoder
 
-## Hypermedia
+## <a name="hypermedia"></a> Hypermedia
 
 *   [hapi-http-problem-details](https://github.com/PDMLab/hapi-http-problem-details)
 
     Create HTTP Problem Details (RFC7807) for hapi application errors
 
-## Localization/Internationalization
+## <a name="localization"></a> Localization/Internationalization
 
 *   [hapi-i18n](https://github.com/codeva/hapi-i18n)
 
@@ -160,7 +160,7 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     Configurable plugin to determine request language from URL, Cookie, Query and Header
 
-## Logging/Metrics
+## <a name="logging"></a> Logging/Metrics
 
 *   [airbrake-hapi](https://github.com/Wayfarer247/airbrake-hapi)
 
@@ -230,7 +230,7 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     Performance monitoring and error tracking - tailored for Hapi.js apps
 
-## Messaging
+## <a name="messaging"></a> Messaging
 
 *   [hapi-rabbit](https://github.com/aduis/hapi-rabbit)
 
@@ -252,7 +252,7 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     Wechat plugin for hapi
 
-## Security
+## <a name="security"></a> Security
 
 *   [blankie](https://github.com/nlf/blankie)
 
@@ -270,7 +270,7 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     Simple and minimal rate limiting and bruteforce protection
 
-## Session
+## <a name="session"></a> Session
 
 *   [hapi-server-session](https://github.com/btmorex/hapi-server-session)
 
@@ -280,7 +280,7 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     A hapi session plugin and cookie jar
 
-## Templating
+## <a name="templating"></a> Templating
 
 *   [hapi-dust](https://github.com/mikefrey/hapi-dust)
 
@@ -306,7 +306,7 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     Hapi route handler that makes react-router your isomorphic server side router
 
-## Utility
+## <a name="utility"></a> Utility
 
 *   [acquaint](https://github.com/genediazjr/acquaint)
 
@@ -756,7 +756,7 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     Directory based autoloader for routes
 
-## Validation
+## <a name="validation"></a> Validation
 
 *   [blaine](https://github.com/ruiquelhas/blaine)
 
@@ -810,7 +810,7 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     Seneca micro service for hapi
 
-## The extended hapi universe
+## <a name="universe"></a> The extended hapi universe
 
 *   [boom](https://github.com/hapijs/boom)
 

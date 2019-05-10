@@ -3,12 +3,12 @@
     <div class="side-nav-title">Resources</div>
     <div class="side-nav-select-wrapper">
       <ul class="side-nav-select-list">
-        <li class="side-nav-select-link">Books</li>
-        <li class="side-nav-select-link">Gists and code samples</li>
-        <li class="side-nav-select-link">Boilerplates</li>
-        <li class="side-nav-select-link">Projects built with hapi</li>
-        <li class="side-nav-select-link">Tutorials</li>
-        <li class="side-nav-select-link">Videos</li>
+        <li class="side-nav-select-link"><a href="/resources/#books">Books</a></li>
+        <li class="side-nav-select-link"><a href="/resources/#gists">Gists and code samples</a></li>
+        <li class="side-nav-select-link"><a href="/resources/#boilerplates">Boilerplates</a></li>
+        <li class="side-nav-select-link"><a href="/resources/#projects">Projects built with hapi</a></li>
+        <li class="side-nav-select-link"><a href="/resources/#tutorials">Tutorials</a></li>
+        <li class="side-nav-select-link"><a href="/resources/#videos">Videos</a></li>
       </ul>
     </div>
   </div>
