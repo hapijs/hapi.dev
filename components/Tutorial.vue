@@ -3,7 +3,7 @@
 </template>
 
 <script>
-const page = require('../static/lib/tutorials/');
+import page from '../static/lib/tutorials/en_US/auth.md';
 
 export default {
     computed: {

@@ -1,0 +1,44 @@
+@import "../../assets/styles/main.scss";
+
+.side-nav-window {
+  position: sticky;
+  top: 96px;
+  width: 20%;
+  max-height: 100vh;
+  min-height: 100vh;
+  overflow-y: auto;
+  padding: 20px 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.side-nav-title {
+  font-size: 1.5rem;
+  color: $black;
+}
+
+.side-nav-select-wrapper {
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 1.1em;
+  color: $orange;
+  line-height: 30px;
+  width: 100%;
+}
+
+.side-nav-select-list {
+  margin: 0;
+}
+
+.side-nav-select-link {
+  cursor: pointer;
+  margin: 0;
+  list-style-type: none;
+}
+
+.side-nav-select-link:hover {
+  color: $orange;
+  text-decoration: underline;
+}
