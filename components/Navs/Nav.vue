@@ -47,14 +47,12 @@ export default {};
   position: relative;
   width: 100%;
   margin: 0 auto;
-  padding: 10px;
-
+  padding: 10px 50px;
   background: #fff;
 }
 
 .nav-container {
   width: 100%;
-  max-width: 1260px;
   display: flex;
   justify-content: space-between;
   align-items: center;

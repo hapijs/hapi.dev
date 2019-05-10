@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import page from '../static/lib/tutorials/en_US/auth.md';
+import page from '../static/lib/tutorials/en_US/getting-started.md';
 
 export default {
     computed: {

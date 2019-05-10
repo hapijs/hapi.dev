@@ -1,7 +1,7 @@
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700");
 
    /* Colors */
-$orange: #f79727;
+$orange: #f6941e;
 $black: #333;
 $green: #87997D;
 $green-light: #C5E0B6;
@@ -31,6 +31,14 @@ html, body {
    height: 100%;
    font-family: "Open Sans", sans-serif;
 }
+
+.container {
+   position: relative;
+   width: 100%;
+   margin: 96px 0 0 0;
+   display: flex;
+   justify-content: space-between;
+ }
 
 
 @media screen and (max-width: 900px) {
