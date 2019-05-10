@@ -12,7 +12,7 @@
       </select>
     </div>
     <div class="side-nav-select-wrapper">
-      <ul class="tutorial-select-list">
+      <ul class="side-nav-select-list">
         <li class="side-nav-select-link">Getting Started</li>
         <li class="side-nav-select-link">Authentication</li>
         <li class="side-nav-select-link">Caching</li>
