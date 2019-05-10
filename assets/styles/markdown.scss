@@ -28,6 +28,11 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: $orange;
+  text-decoration: underline;
+}
+
 p {
   display: block;
   margin-block-start: 1em;

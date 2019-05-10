@@ -96,6 +96,7 @@ export default {};
 
 .nav-link:hover {
   color: $orange;
+  text-decoration: none;
 }
 
 .nav-link:before {
