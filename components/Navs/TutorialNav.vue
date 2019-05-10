@@ -13,7 +13,7 @@
     </div>
     <div class="side-nav-select-wrapper">
       <ul class="side-nav-select-list">
-        <li class="side-nav-select-link">Getting Started</li>
+        <li class="side-nav-select-link side-nav-active">Getting Started</li>
         <li class="side-nav-select-link">Authentication</li>
         <li class="side-nav-select-link">Caching</li>
         <li class="side-nav-select-link">Cookies</li>
