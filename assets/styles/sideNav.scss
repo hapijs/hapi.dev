@@ -34,11 +34,13 @@
 
 .side-nav-select-list {
   margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .side-nav-select-link {
   cursor: pointer;
-  margin: 0;
+  margin: 0 auto 0 0;
   list-style-type: none;
 }
 
