@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <TutorialNav/>
+    <TutorialNav :tutorial="tutorial" @clicked="onClickChild" :key="tutorial" />
     <div class="tutorial-markdown-window">
-      <Tutorial/>
+      <Tutorial :tutorial="tutorial" :language="language" />
     </div>
   </div>
 </template>
@@ -14,6 +14,17 @@ export default {
   components: {
     Tutorial,
     TutorialNav
+  },
+  data() {
+    return {
+      tutorial: "gettingStarted",
+      language: "en_US"
+    }
+  },
+  methods: {
+    onClickChild(value){
+      this.$data.tutorial = value;
+    }
   }
 };
 </script>
@@ -24,8 +35,17 @@ export default {
 .tutorial-markdown-window {
   position: relative;
   width: 100%;
+  max-width: calc(100vw - 390px);
   padding: 0 20px;
   box-sizing: border-box;
   margin: 0;
 }
+
+@media screen and (max-width: 900px){
+
+  .tutorial-markdown-window {
+    max-width: 100vw;
+  }
+}
+
 </style>

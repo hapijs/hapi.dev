@@ -5,6 +5,7 @@
   top: 96px;
   bottom: 0;
   width: 370px;
+  min-width: 370px;
   max-height: calc(100vh - 96px);
   min-height: calc(100vh - 96px);
   overflow-y: auto;
