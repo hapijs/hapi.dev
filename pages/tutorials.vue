@@ -24,9 +24,11 @@ export default {
   methods: {
     onClickChild(value){
       this.$data.tutorial = value;
+      window.scrollTo(0,0);
     },
     onChangeChild(value){
       this.$data.language = value;
+      window.scrollTo(0,0);
     }
   }
 };

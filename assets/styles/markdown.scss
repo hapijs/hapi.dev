@@ -36,6 +36,13 @@ h3 {
   font-size: 2rem;
 }
 
+h2 code, h3 code {
+  font-family: "inconsolata", menlo, consolas, monospace;
+  padding: 0.2rem 0.33rem;
+  color: #6f6f6f;
+  background-color: #f3f3f3;
+}
+
 .tutorial-markdown-window section {
   height: 100%;
 }
