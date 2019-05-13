@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <TutorialNav :tutorial="tutorial" @clicked="onClickChild" />
+    <TutorialNav :tutorial="tutorial" :language="language" @clicked="onClickChild" @changed="onChangeChild" />
     <div class="tutorial-markdown-window">
       <Tutorial :tutorial="tutorial" :language="language"/>
     </div>
@@ -24,6 +24,11 @@ export default {
   methods: {
     onClickChild(value){
       this.$data.tutorial = value;
+      window.scrollTo(0,0);
+    },
+    onChangeChild(value){
+      this.$data.language = value;
+      window.scrollTo(0,0);
     }
   }
 };

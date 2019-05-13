@@ -5,11 +5,11 @@
         <div class="side-nav-title">Tutorials</div>
         <div class="tutorial-lang-wrapper">
           <div class="tutorial-lang-text">Languages:</div>
-          <select class="tutorial-lang-select">
-            <option value="en_US">en_US</option>
+          <select @change="onChange($event)" class="tutorial-lang-select">
+            <option value="en_US" >en_US</option>
             <option value="pt_BR">pt_BR</option>
             <option value="ko_KR">ko_KR</option>
-            <option value="tr_TR">en_US</option>
+            <option value="tr_TR">tr_TR</option>
             <option value="zh_CN">zh_CN</option>
           </select>
         </div>
@@ -39,8 +39,11 @@
 import SideFooter from "~/components/Footers/SideFooter.vue";
 
 export default {
-  props: ["tutorial"],
+  props: ["tutorial", "language"],
   methods: {
+    onChange(event) {
+      this.$emit('changed', event.target.value)
+    },
     showDiv(ref) {
       this.$refs[this.tutorial].classList.remove('side-nav-active');
       this.$refs[ref].classList.add('side-nav-active');
