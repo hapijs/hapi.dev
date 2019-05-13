@@ -36,14 +36,14 @@ To get started with views, first you have to configure at least one templating e
 'use strict';
 
 const Path = require('path');
-const Hapi = require('hapi');
-const Hoek = require('hoek');
+const Hapi = require('@hapi/hapi');
+const Hoek = require('@hapi/hoek');
 
 const start = async () => {
 
     const server = Hapi.server();
 
-    await server.register(require('vision'));
+    await server.register(require('@hapi/vision'));
 
     server.views({
         engines: {
@@ -202,13 +202,13 @@ For reference, here is a complete server script that uses the fortune view helpe
 ```javascript
 'use strict';
 
-const Hapi = require('hapi');
+const Hapi = require('@hapi/hapi');
 
 const start = async () => {
 
     const server = Hapi.server({ port: 8080 });
 
-    await server.register(require('vision'));
+    await server.register(require('@hapi/vision'));
 
     server.views({
         engines: {
@@ -281,7 +281,7 @@ You can also specify a different layout per view:
 return h.view('myview', null, { layout: 'another_layout' });
 ```
 
-## <a name="render"></a> Rendering a view
+## <a name="render" /> Rendering a view
 
 There are two options for rendering a view, you can use either the [`h.view()`](https://github.com/hapijs/vision/blob/master/API.md#hviewtemplate-context-options) method, where `h` is the [response toolkit](/api#response-toolkit) or the view handler.
 

@@ -18,7 +18,7 @@ _This tutorial is compatible with hapi v17_
 
 As with any server software, logging is very important. hapi has some built in logging methods, as well as some basic capabilities for displaying these logs.
 
-## <a name="methods"></a> Built-in Methods
+## <a name="methods" /> Built-in Methods
 
 There are two nearly identical logging methods, `server.log(tags, [data, [timestamp]])`, and `request.log(tags, [data])`, which are to be called whenever you want to log an event in your application. 
 
@@ -52,7 +52,7 @@ In this example, if there is a request-specific event with a tag of `error`, the
 `server.log()` takes three parameters, `(tags, data, timestamp)`. The `tags` and `data` parameters are exactly the same as in `request.logs()`. The `timestamp` parameter defaults to `Date.now()` and should only be passed in if you need to override the default for some reason.  
 
 ```js
-const Hapi = require('hapi');
+const Hapi = require('@hapi/hapi');
 const server = Hapi.server({ port: 80 });
 
 server.log(['test', 'error'], 'Test event');
@@ -101,6 +101,6 @@ By default, the only errors debug mode will print to console are uncaught errors
 
 You can find more information on debug mode in the [API documentation](https://hapijs.com/api#-serveroptionsdebug).
 
-## <a name="plugins"></a> Logging Plugins
+## <a name="plugins"></a>Logging Plugins
 
 The built-in methods provided by hapi for retrieving and printing logs are fairly minimal. For a more feature-rich logging experience, you can look into using a plugin like [good](https://github.com/hapijs/good), or any of the other [hapi logging plugins](https://hapijs.com/plugins#Logging/Metrics).

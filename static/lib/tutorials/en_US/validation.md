@@ -182,7 +182,7 @@ Output validation is useful for ensuring that your API is serving data that is c
 
 hapi supports quite a few options to fine-tune output validation. Here are a few of them:
 
-### <a name="failaction"></a> response.failAction
+### <a name="failaction" /> response.failAction
 
 You can choose what to do when response validation fails by setting `response.failAction` to one of the following:
 * `error`: send an Internal Server Error (500) response (default)
@@ -267,7 +267,7 @@ hapi supports this by allowing you to specify a different validation schema for 
 }
 ```
 
-### <a name="options"></a> response.options
+### <a name="options" /> response.options
 
 Options to pass to joi during validation. Useful to set global options such as `stripUnknown` or `abortEarly` (the complete list is available [here](https://github.com/hapijs/joi/blob/master/API.md#validatevalue-schema-options-callback)). If a custom validation function is defined via `schema` or `status` then `options` can an arbitrary object that will be passed to this function as the second argument.
 
