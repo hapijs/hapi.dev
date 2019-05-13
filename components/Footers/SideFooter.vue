@@ -92,16 +92,12 @@ a {
 }
 
 .side-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 50px;
   max-width: 100%;
-  margin: 10px 10px 40px 10px;
+  margin: 10px;
 }
 
 .footer-text {

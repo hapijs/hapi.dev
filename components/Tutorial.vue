@@ -3,12 +3,14 @@
 </template>
 
 <script>
-const pages = require('../static/lib/tutorials/en_US')
+const pages = require('../static/lib/tutorials/')
+
 
 export default {
+    props: ["tutorial", "language"],
     computed: {
       page() {
-        return pages.gettingStarted.default
+        return pages[this.language][this.tutorial].default
       }
     }
 };

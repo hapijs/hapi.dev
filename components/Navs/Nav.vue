@@ -17,10 +17,7 @@
             <a class="nav-link" title="Plugins" href="/plugins">Plugins</a>
           </li>
           <li class="nav-links-li">
-            <a class="nav-link" title="Contribute" href="/contribute">Contribute</a>
-          </li>
-          <li class="nav-links-li">
-            <a class="nav-link" title="Updates" href="/updates">Updates</a>
+            <a class="nav-link" title="Contribute" href="/community">Community</a>
           </li>
           <li class="nav-links-li">
             <a class="nav-link" title="Help" href="/help">Help</a>
