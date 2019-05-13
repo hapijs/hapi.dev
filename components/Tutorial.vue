@@ -10,7 +10,7 @@ export default {
     props: ["tutorial", "language"],
     computed: {
       page() {
-        return pages[this.$props.language][this.$props.tutorial].default
+        return pages[this.language][this.tutorial].default
       }
     }
 };

@@ -42,8 +42,8 @@ export default {
   props: ["tutorial"],
   methods: {
     showDiv(ref) {
-      // await this.$refs[this.$props.tutorial].classList.remove('side-nav-active');
-      // await this.$refs[ref].classList.add('side-nav-active');
+      this.$refs[this.tutorial].classList.remove('side-nav-active');
+      this.$refs[ref].classList.add('side-nav-active');
       this.$emit('clicked', ref);
     }
   },

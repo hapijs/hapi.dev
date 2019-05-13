@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <TutorialNav :tutorial="tutorial" @clicked="onClickChild" :key="tutorial" />
+    <TutorialNav :tutorial="tutorial" @clicked="onClickChild" />
     <div class="tutorial-markdown-window">
-      <Tutorial :tutorial="tutorial" :language="language" />
+      <Tutorial :tutorial="tutorial" :language="language"/>
     </div>
   </div>
 </template>
