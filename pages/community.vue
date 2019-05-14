@@ -1,19 +1,24 @@
 <template>
   <div class="container">
-    <PluginsNav />
+    <CommunityNav :page="page" />
     <div class="tutorial-markdown-window">
-      <Plugins />
+      <Community />
     </div>
   </div>
 </template>
 
 <script>
-import Plugins from "~/components/Plugins.vue";
-import PluginsNav from "~/components/Navs/PluginsNav.vue";
+import Community from "~/components/Community.vue";
+import CommunityNav from "~/components/Navs/CommunityNav.vue";
 export default {
   components: {
-    Plugins,
-    PluginsNav
+    Community,
+    CommunityNav
+  },
+  data() {
+      return {
+          page: "Updates"
+      }
   },
   head() {
       return {
