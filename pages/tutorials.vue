@@ -15,6 +15,11 @@ export default {
     Tutorial,
     TutorialNav
   },
+  head() {
+    return {
+      title: this.$data.tutorial
+    }
+  },
   data() {
     return {
       tutorial: "gettingStarted",

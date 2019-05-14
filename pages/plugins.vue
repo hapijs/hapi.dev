@@ -14,6 +14,11 @@ export default {
   components: {
     Plugins,
     PluginsNav
+  },
+  head() {
+    return {
+      title: "Plugins"
+    }
   }
 };
 </script>
