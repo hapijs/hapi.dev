@@ -1,7 +1,7 @@
 <template>
   <div class="side-nav-window">
     <div class="side-nav-wrapper">
-      <div>
+      <div class="side-nav-inner-wrapper">
         <div class="side-nav-title">Tutorials</div>
         <div class="tutorial-lang-wrapper">
           <div class="tutorial-lang-text">Languages:</div>
@@ -47,7 +47,7 @@ export default {
     showDiv(ref) {
       this.$refs[this.tutorial].classList.remove('side-nav-active');
       this.$refs[ref].classList.add('side-nav-active');
-      this.$emit('clicked', ref);
+      this.$emit('clicked', { ref: ref, title: this.$refs[this.tutorial].innerText});
     }
   },
   components: {

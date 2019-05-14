@@ -14,6 +14,11 @@ export default {
   components: {
     Resources,
     ResourcesNav
+  },
+  head() {
+    return {
+      title: "Resources"
+    }
   }
 };
 </script>

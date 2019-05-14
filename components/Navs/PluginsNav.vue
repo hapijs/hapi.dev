@@ -1,7 +1,7 @@
 <template>
   <div class="side-nav-window">
     <div class="side-nav-wrapper">
-      <div>
+      <div class="side-nav-inner-wrapper">
         <div class="side-nav-title">Plugins</div>
         <div class="side-nav-select-wrapper">
           <ul class="side-nav-select-list">
