@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <CommunityNav :page="page"/>
+    <ApiNav />
     <div class="tutorial-markdown-window">
-      <Markdown :display="display" />
+      <Markdown :display="display"/>
     </div>
   </div>
 </template>
@@ -10,35 +10,24 @@
 <script>
 import axios from "axios";
 import Markdown from "~/components/Markdown.vue";
-import CommunityNav from "~/components/Navs/CommunityNav.vue";
+import ApiNav from "~/components/Navs/ApiNav.vue";
 
 export default {
   components: {
     Markdown,
-    CommunityNav
-  },
-  data() {
-    return {
-      page: "Updates",
-      display: "",
-      repos: {}
-    };
+    ApiNav
   },
   head() {
     return {
-      title: "Community"
+      title: "API"
     };
   },
-  methods: {
-    async getRepos() {
-      try {
-        const res = await axios.get("https://api.github.com/orgs/hapijs/repos");
-        this.repos = await res.data;
-      } catch (err) {
-        console.log(err);
-      }
-    },
-    async getStyle() {
+  data() {
+    return {
+      display: ""
+    }
+  },
+  async created() {
       const options = {
         headers: {
           accept: "application/vnd.github.3.html"
@@ -47,18 +36,13 @@ export default {
 
       try {
         const res = await axios.get(
-          "https://api.github.com/repos/hapijs/assets/contents/STYLE.md",
+          "https://api.github.com/repos/hapijs/hapi/contents/API.md",
           options
         );
         this.$data.display = await res.data;
       } catch (err) {
         console.log(err);
       }
-    }
-  },
-  created() {
-    this.getRepos();
-    this.getStyle();
   }
 };
 </script>

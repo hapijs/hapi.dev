@@ -2,12 +2,10 @@
   <div class="side-nav-window">
     <div class="side-nav-wrapper">
       <div class="side-nav-inner-wrapper">
-        <div class="side-nav-title">Community</div>
+        <div class="side-nav-title">API</div>
         <div class="side-nav-select-wrapper">
           <ul class="side-nav-select-list">
-            <li class="side-nav-select-link">Updates</li>
-            <li class="side-nav-select-link">Contributing</li>
-            <li class="side-nav-select-link">hapi Style Guide</li>
+            <li class="side-nav-select-link">API</li>
           </ul>
         </div>
       </div>
