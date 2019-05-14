@@ -17,6 +17,18 @@ h2 {
   font-size: 1.75rem;
 }
 
+h3 {
+  font-size: 1.55rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+h1, h2, h3, h4 {
+  margin: 1rem 0;
+}
+
 h2 a::before, h3 a::before {
   display: block; 
   content: " "; 
@@ -32,11 +44,7 @@ h3 a {
   cursor: auto;
 }
 
-h3 {
-  font-size: 2rem;
-}
-
-h2 code, h3 code {
+code {
   font-family: "inconsolata", menlo, consolas, monospace;
   padding: 0.2rem 0.33rem;
   color: #6f6f6f;

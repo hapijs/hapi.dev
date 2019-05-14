@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <TutorialNav :tutorial="tutorial" :language="language" @clicked="onClickChild" @changed="onChangeChild" />
+    <TutorialNav :tutorial="tutorial" :language="language" @clicked="onClickChild" @changed="onChangeChild"/>
     <div class="tutorial-markdown-window">
       <Tutorial :tutorial="tutorial" :language="language"/>
     </div>
@@ -17,18 +17,20 @@ export default {
   },
   head() {
     return {
-      title: this.$data.tutorial
+      title: this.tutorial.replace(/([A-Z])/g, ' $1').replace(/^./, function(str){ return str.toUpperCase(); })
     }
   },
   data() {
     return {
       tutorial: "gettingStarted",
-      language: "en_US"
+      language: "en_US",
+      test: "Getting Started"
     }
   },
   methods: {
     onClickChild(value){
-      this.$data.tutorial = value;
+      this.$data.test = value.title;
+      this.$data.tutorial = value.ref;
       window.scrollTo(0,0);
     },
     onChangeChild(value){

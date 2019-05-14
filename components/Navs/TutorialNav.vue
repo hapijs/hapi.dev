@@ -47,7 +47,7 @@ export default {
     showDiv(ref) {
       this.$refs[this.tutorial].classList.remove('side-nav-active');
       this.$refs[ref].classList.add('side-nav-active');
-      this.$emit('clicked', ref);
+      this.$emit('clicked', { ref: ref, title: this.$refs[this.tutorial].innerText});
     }
   },
   components: {

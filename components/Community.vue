@@ -1,20 +1,16 @@
 <template>
-  <div>
-      <StyleGuide />
+  <div class="markdown-wrapper" v-html="this.$props.display">
   </div>
 </template>
 
 <script>
-import axios from 'axios';
-import StyleGuide from './StyleGuide.vue'
 
 export default {
-    components: {
-        StyleGuide
-    },
-   props: ["page"],
+    props: ["display"],
    data() {
-       page: ""
+    return {
+        page: this.$props.display
+       }
    }
 };
 
@@ -23,5 +19,10 @@ export default {
 <style lang="scss">
 @import "../assets/styles/main.scss";
 @import "../assets/styles/markdown.scss";
+
+.octicon {
+    display: none;
+}
+
 
 </style>
