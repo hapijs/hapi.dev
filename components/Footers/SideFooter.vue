@@ -109,4 +109,12 @@ a {
   color: $orange;
   text-decoration: underline;
 }
+
+@media screen and (max-width: 900px) {
+
+  .side-footer {
+    display: none;
+  }
+
+}
 </style>

@@ -71,6 +71,22 @@
 
 @media screen and (max-width: 900px) {
   .side-nav-window {
-    display: none;
+    flex-direction: row;
+    position: relative;
+    top: 0;
+    min-height: auto;
+    max-height: auto;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
   }
+
+  .side-nav-select-list {
+    display: inline-block;
+  }
+
+  .side-nav-select-link {
+    display: inline-block;
+  }
+
 }

@@ -57,6 +57,12 @@ html, body {
       font-size: 12px;
    }
 
+   .container {
+      display: flex;
+      flex-direction: column;
+      margin-top: 50px;
+   }
+
    .tutorial-markdown-window {
       max-width: 100%;
    }

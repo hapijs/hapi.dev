@@ -17,6 +17,11 @@ export default {
     Markdown,
     ApiNav
   },
+  // computed() {
+  //   page() {
+  //     return this.page
+  //   }
+  // },
   head() {
     return {
       title: "API"
@@ -24,13 +29,14 @@ export default {
   },
   data() {
     return {
-      display: ""
+      display: "",
+      page: ""
     }
   },
   async created() {
       const options = {
         headers: {
-          accept: "application/vnd.github.3.html"
+          accept: "application/vnd.github.3.raw"
         }
       };
 

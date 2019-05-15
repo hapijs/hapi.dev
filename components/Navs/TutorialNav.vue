@@ -81,7 +81,7 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: url(/down.png) 96% / 15% no-repeat #fff;
+  background: url(/img/down.png) 96% / 15% no-repeat #fff;
   cursor: pointer;
 }
 </style>
