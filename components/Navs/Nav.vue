@@ -192,11 +192,11 @@ export default {
     top: 0px;
     left: -220px;
     width: 220px;
-    background: #fff;
+    min-height: 100vh;
+    background: #f8f8f8;
     border-right: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
     z-index: 10;
-    padding: 20px;
+    padding: 20px 0;
   }
 
   .show-nav {

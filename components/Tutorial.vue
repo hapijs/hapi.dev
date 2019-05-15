@@ -6,10 +6,10 @@
 const pages = require('../static/lib/tutorials/')
 
 export default {
-    props: ["language"],
+    props: ["display", "language"],
     computed: {
       page() {
-        return this.$store.getters.loadPage
+        return this.$props.display
       }
     }
 };
