@@ -7,7 +7,7 @@
           <ul class="side-nav-select-list">
             <li class="side-nav-select-link">Updates</li>
             <li class="side-nav-select-link">Contributing</li>
-            <li class="side-nav-select-link">hapi Style Guide</li>
+            <li class="side-nav-select-link">Style Guide</li>
           </ul>
         </div>
       </div>

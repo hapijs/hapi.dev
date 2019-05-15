@@ -2,23 +2,25 @@
   <div ref="nav" class="mobile-nav">
     <img src="/img/close.png" class="mobile-close" v-on:click="closeNav()"/>
     <ul class="mobile-links">
-      <li class="mobile-links-li mobile-border">
+      <li class="mobile-links-li">
         <a class="mobile-link" title="Home" href="/">Home</a>
       </li>
       <li class="mobile-links-li">
-        <div class="mobile-link" title="Tutorials">Tutorials</div>
-        <div class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('gettingStarted')" >Getting Started</div>
-        <div class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('auth')" >Authentication</div>
-        <div class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('caching')" >Caching</div>
-        <div class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('cookies')" >Cookies</div>
-        <div class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('logging')" >Logging</div>
-        <div class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('plugins')" >Plugins</div>
-        <div class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('routing')" >Routing</div>
-        <div class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('serverMethods')" >Server Methods</div>
-        <div class="mobile-link mobile-tutorial-link" title="Serving Files" append v-on:click="loadTutorial('servingFiles')" >Serving Static Files</div>
-        <div class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('testing')" >Testing</div>
-        <div class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('validation')" >Validation</div>
-        <div class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('views')" >Views</div>
+        <a class="mobile-link" title="Tutorials" v-on:click="loadTutorial('gettingStarted')">Tutorials</a>
+        <ul>
+          <li class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('gettingStarted')" >Getting Started</li>
+          <li class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('auth')" >Authentication</li>
+          <li class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('caching')" >Caching</li>
+          <li class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('cookies')" >Cookies</li>
+          <li class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('logging')" >Logging</li>
+          <li class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('plugins')" >Plugins</li>
+          <li class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('routing')" >Routing</li>
+          <li class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('serverMethods')" >Server Methods</li>
+          <li class="mobile-link mobile-tutorial-link" title="Serving Files" append v-on:click="loadTutorial('servingFiles')" >Serving Static Files</li>
+          <li class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('testing')" >Testing</li>
+          <li class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('validation')" >Validation</li>
+          <li class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('views')" >Views</li>
+        </ul>
       </li>
       <li class="mobile-links-li">
         <a class="mobile-link" title="API" href="/api">API</a>
@@ -31,11 +33,17 @@
       </li>
       <li class="mobile-links-li">
         <a class="mobile-link" title="Contribute" href="/community">Community</a>
+        <ul>
+          <li class="mobile-link mobile-tutorial-link" title="Updates">Updates</li>
+          <li class="mobile-link mobile-tutorial-link" title="Contributing">Contributing</li>
+          <li class="mobile-link mobile-tutorial-link" title="Style Guide">Style Guide</li>
+        </ul>
       </li>
       <li class="mobile-links-li">
         <a class="mobile-link" title="Help" href="/help">Help</a>
       </li>
     </ul>
+    <img class="mobile-helmet" src="../../static/img/helmet.png" />
   </div>
 </template>
 
@@ -65,7 +73,7 @@ export default {
   position: relative;
   width: 100%;
   height: auto;
-  padding: 20px 0;
+  padding: 20px 0 5px 0;
 }
 
 .mobile-close {
@@ -84,32 +92,36 @@ export default {
 
 .mobile-links-li {
   display: block;
-  padding: 5px 0;
-  margin: 0 0 10px 0;
+  padding: 10px 0;
   padding-right: 0px !important;
-}
-
-.mobile-border {
+  margin: 0;
   border-bottom: 1px solid #ddd;
 }
 
 .mobile-link {
   position: relative;
-  margin: 10px;
   color: $orange;
   font-size: 16px;
   font-weight: 400;
   box-sizing: border-box;
   border-radius: 6px;
-  padding: 5px 20px;
+  padding: 10px 20px;
+  margin: 0;
   text-decoration: none;
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
 }
 
 .mobile-tutorial-link {
-  margin-left: 20px;
   font-size: 14px;
+  list-style-type: none;
+  margin-left: 20px;
+}
+
+.mobile-helmet {
+  display: block;
+  width: 25px;
+  margin: 30px auto 0 auto;
 }
 
 </style>
