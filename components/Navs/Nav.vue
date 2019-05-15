@@ -63,6 +63,9 @@ export default {
 }
 
 .nav-container {
+  position: relative;
+  height: 100%;
+  top: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -167,7 +170,7 @@ export default {
     height: 50px;
     width: 100%;
     max-width: 100vw;
-    padding: 5px 0 0 0;
+    padding: 5px 0;
     border-bottom: 1px solid #ddd;
   }
 
@@ -192,11 +195,11 @@ export default {
     top: 0px;
     left: -220px;
     width: 220px;
-    min-height: 100vh;
+    height: 100vh;
     background: #f8f8f8;
     border-right: 1px solid #ddd;
     z-index: 10;
-    padding: 20px 0;
+    overflow-y: auto;
   }
 
   .show-nav {
@@ -206,7 +209,7 @@ export default {
   .hamburger {
     display: inline-block;
     left: 20px;
-    top: 12px;
+    top: 8px;
   }
 }
 </style>

@@ -51,6 +51,7 @@ export default {
     async loadTutorial(ref) {
       await this.$store.commit('setPage', tutorial.en_US[ref].default);
       await this.$nuxt.$router.push('tutorials')
+      window.scrollTo(0,0);
       this.closeNav();
     }
   }
@@ -61,7 +62,10 @@ export default {
 @import "../../assets/styles/main.scss";
 
 .mobile-nav {
+  position: relative;
   width: 100%;
+  height: auto;
+  padding: 20px 0;
 }
 
 .mobile-close {
