@@ -1,28 +1,8 @@
-// import Vuex from 'vuex'
-
-// const createStore = () => {
-//   return new Vuex.Store({
-//     state: {
-//       page: ""
-//     },
-//     mutations: {
-//       setPage(state, page){
-//         state.page = page
-//       }
-//     },
-//     actions: {},
-//     getters: {
-//       loadPage(state){
-//         return state.page
-//       }
-//     }
-//   })
-// }
-
-// export default createStore
+import start from '../static/lib/tutorials/en_US/'
 
 export const state = () => ({
-  page: ""
+  page: start.gettingStarted.default
+
 })
 
 export const mutations = {

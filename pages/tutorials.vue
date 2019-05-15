@@ -2,7 +2,7 @@
   <div class="container">
     <TutorialNav :tutorial="tutorial" :language="language" @clicked="onClickChild" @changed="onChangeChild"/>
     <div class="tutorial-markdown-window">
-      <Tutorial :language="language"/>
+      <Tutorial :display="getPage" :language="language"/>
     </div>
   </div>
 </template>
@@ -27,6 +27,11 @@ export default {
       language: "en_US",
     }
   },
+  computed: {
+    getPage() {
+      return this.$store.getters.loadPage
+    }
+  },
   methods: {
     onClickChild(value){
       this.$store.commit('setPage', page[this.language][value.ref].default);
@@ -38,9 +43,6 @@ export default {
       this.$store.commit('setPage', page[value][this.tutorial].default);
       window.scrollTo(0,0);
     }
-  },
-  beforeCreate() {
-    this.$store.commit('setPage', page.en_US.gettingStarted.default);
   }
 };
 </script>
