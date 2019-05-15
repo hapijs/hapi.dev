@@ -1,6 +1,7 @@
+import start from '../static/lib/tutorials/en_US/'
 
 export const state = () => ({
-  page: ""
+  page: start.gettingStarted.default
 
 })
 
