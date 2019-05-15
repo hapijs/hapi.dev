@@ -5,12 +5,11 @@
 <script>
 const pages = require('../static/lib/tutorials/')
 
-
 export default {
-    props: ["tutorial", "language"],
+    props: ["language"],
     computed: {
       page() {
-        return pages[this.language][this.tutorial].default
+        return this.$store.getters.loadPage
       }
     }
 };

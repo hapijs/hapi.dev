@@ -2,19 +2,19 @@
   <div class="container">
     <CommunityNav :page="page"/>
     <div class="tutorial-markdown-window">
-      <Community :display="display" />
+      <Markdown :display="display" />
     </div>
   </div>
 </template>
 
 <script>
 import axios from "axios";
-import Community from "~/components/Community.vue";
+import Markdown from "~/components/Markdown.vue";
 import CommunityNav from "~/components/Navs/CommunityNav.vue";
 
 export default {
   components: {
-    Community,
+    Markdown,
     CommunityNav
   },
   data() {

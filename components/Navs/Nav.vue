@@ -24,17 +24,31 @@
           </li>
         </ul>
       </div>
-      <a href="javascript:void(0);" class="hamburger">
+      <a href="javascript:void(0);" class="hamburger" v-on:click="showNav()">
         <span class="hamburger-line hamburger-line-upper"/>
         <span class="hamburger-line hamburger-line-middle"/>
         <span class="hamburger-line hamburger-line-lower"/>
       </a>
     </div>
+    <div ref="mobileNav" class="mobile-nav-wrapper">
+      <MobileNav/>
+    </div>
   </nav>
 </template>
 
 <script>
-export default {};
+import MobileNav from "./MobileNav.vue";
+
+export default {
+  components: {
+    MobileNav
+  },
+  methods: {
+    showNav() {
+      this.$refs.mobileNav.classList.add("show-nav");
+    }
+  }
+};
 </script>
 
 <style lang="scss">
@@ -55,8 +69,13 @@ export default {};
   align-items: center;
 }
 
+.mobile-nav-wrapper {
+  display: none;
+  transition: all 0.5s ease-in-out;
+}
+
 .logo {
-  background: url("/hapi.svg") no-repeat 0 0;
+  background: url("/img/hapi.svg") no-repeat 0 0;
   background-size: contain;
   height: 75px;
   width: 100px;
@@ -147,8 +166,13 @@ export default {};
     top: 0;
     height: 50px;
     width: 100%;
+    max-width: 100vw;
     padding: 5px 0 0 0;
     border-bottom: 1px solid #ddd;
+  }
+
+  .nav-container {
+    justify-content: center;
   }
 
   .logo {
@@ -159,6 +183,24 @@ export default {};
 
   .nav-collapse {
     display: none;
+  }
+
+  .mobile-nav-wrapper {
+    margin: 0;
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: -220px;
+    width: 220px;
+    background: #fff;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    z-index: 10;
+    padding: 20px;
+  }
+
+  .show-nav {
+    left: 0;
   }
 
   .hamburger {
