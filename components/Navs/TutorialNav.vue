@@ -37,6 +37,7 @@
 
 <script>
 import SideFooter from "~/components/Footers/SideFooter.vue";
+const page = require('../../static/lib/tutorials/')
 
 export default {
   props: ["tutorial", "language"],
@@ -47,7 +48,7 @@ export default {
     showDiv(ref) {
       this.$refs[this.tutorial].classList.remove('side-nav-active');
       this.$refs[ref].classList.add('side-nav-active');
-      this.$emit('clicked', { ref: ref, title: this.$refs[this.tutorial].innerText});
+      this.$emit('clicked', { ref: ref });
     }
   },
   components: {
