@@ -31,7 +31,8 @@ export default {
   async created() {
       const options = {
         headers: {
-          accept: "application/vnd.github.v3.raw+json"
+          accept: "application/vnd.github.v3.raw+json",
+          authorization: `token 17f33bd944f037667263c085077babfa4f6cdd78`
         }
       };
 
@@ -40,10 +41,10 @@ export default {
           "https://api.github.com/repos/hapijs/hapi/contents/API.md",
           options
         );
-        this.$data.display = await res.request.response
-        let here = await this.$data.display.toString()
-        let newer = await here.replace(/\/>/g, "></a>")
-        this.$data.display = await newer
+        let raw = await res.request.response
+        let rawSting = await this.$data.display.toString()
+        let finalDisplay = await rawSting.replace(/\/>/g, "></a>")
+        this.$data.display = await finalDisplay
       } catch (err) {
         console.log(err);
       }
