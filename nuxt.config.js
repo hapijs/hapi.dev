@@ -35,7 +35,7 @@ module.exports = {
    ** Nuxt.js modules
    */
   modules: [
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit', '@nuxtjs/axios'
   ],
 
   // [optional] markdownit options

@@ -8,7 +8,6 @@
 </template>
 
 <script>
-import axios from "axios";
 import Markdown from "~/components/Markdown.vue";
 import ApiNav from "~/components/Navs/ApiNav.vue";
 
@@ -32,17 +31,17 @@ export default {
       const options = {
         headers: {
           accept: "application/vnd.github.v3.raw+json",
-          authorization: `token 17f33bd944f037667263c085077babfa4f6cdd78`
+          authorization: `token e03d716892d09ba2cfc48c10d599726f2e19b22a`
         }
       };
 
       try {
-        const res = await axios.get(
+        const res = await this.$axios.$get(
           "https://api.github.com/repos/hapijs/hapi/contents/API.md",
           options
         );
-        let raw = await res.request.response
-        let rawSting = await this.$data.display.toString()
+        let raw = await res
+        let rawSting = await raw.toString()
         let finalDisplay = await rawSting.replace(/\/>/g, "></a>")
         this.$data.display = await finalDisplay
       } catch (err) {

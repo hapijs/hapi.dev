@@ -18,7 +18,7 @@
         <div class="update-issue-header">Merged pull requests</div>
       </div>
       <div class="update-closed-issues">
-        <div class="update-issue-header">Merged pull requests</div>
+        <div class="update-issue-header">Closed issues</div>
       </div>
     </div>
   </div>
