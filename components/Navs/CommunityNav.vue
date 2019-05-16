@@ -5,9 +5,9 @@
         <div class="side-nav-title">Community</div>
         <div class="side-nav-select-wrapper">
           <ul class="side-nav-select-list">
-            <li class="side-nav-select-link">Updates</li>
-            <li class="side-nav-select-link">Contributing</li>
-            <li class="side-nav-select-link">Style Guide</li>
+            <li class="side-nav-select-link" v-on:click="onChangePage('updates')">Updates</li>
+            <li class="side-nav-select-link" v-on:click="onChangePage('contribute')">Contributing</li>
+            <li class="side-nav-select-link" v-on:click="onChangePage('style')">Style Guide</li>
           </ul>
         </div>
       </div>
@@ -22,6 +22,11 @@ import SideFooter from "~/components/Footers/SideFooter.vue";
 export default {
   components: {
     SideFooter
+  },
+  methods: {
+    onChangePage(ref) {
+      this.$emit('changePage', ref);
+    }
   }
 };
 </script>

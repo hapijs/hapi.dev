@@ -1,28 +1,41 @@
 <template>
   <div class="container">
-    <CommunityNav :page="page"/>
+    <CommunityNav :page="page" @changePage="changePage"/>
     <div class="tutorial-markdown-window">
-      <Markdown :display="display" />
+    <Markdown v-if="page === 'style'" :display="display" />
+    <Updates v-if="page === 'updates'" :pullReqeusts="getPulls"/>
+    <Contribute v-if="page === 'contribute'" />
     </div>
   </div>
 </template>
 
 <script>
-import axios from "axios";
 import Markdown from "~/components/Markdown.vue";
+import Updates from "~/components/Updates.vue";
+import Contribute from "~/components/Contribute.vue";
 import CommunityNav from "~/components/Navs/CommunityNav.vue";
+let weekAgo = new Date();
+weekAgo.setDate(weekAgo.getDate() - 7);
+weekAgo = weekAgo.toISOString();
 
 export default {
   components: {
     Markdown,
+    Updates,
+    Contribute,
     CommunityNav
   },
   data() {
     return {
       page: "Updates",
       display: "",
-      repos: {}
+      page: "contribute"
     };
+  },
+  computed: {
+    getPulls() {
+      return this.$store.getters.getPullRequests
+    }
   },
   head() {
     return {
@@ -30,11 +43,25 @@ export default {
     };
   },
   methods: {
+    changePage (value) {
+      this.page = value;
+      console.log(value);
+    },
     async getRepos() {
       try {
-        const res = await axios.get("https://api.github.com/orgs/hapijs/repos");
+        const res = await this.$axios.get("https://api.github.com/orgs/hapijs/repos");
         this.repos = await res.data;
       } catch (err) {
+        console.log(err);
+      }
+    },
+    async getPullRequests() {
+      try {
+        const res = await this.$axios.$get(
+          "https://api.github.com/repos/hapijs/hapi/pulls?state=closed&since=" + weekAgo + "&direction=desc&sort=created"
+        );
+        this.$store.commit('setPullRequests', res.data)
+      } catch (err){
         console.log(err);
       }
     },
@@ -46,11 +73,11 @@ export default {
       };
 
       try {
-        const res = await axios.get(
+        const res = await this.$axios.$get(
           "https://api.github.com/repos/hapijs/assets/contents/STYLE.md",
           options
         );
-        this.$data.display = await res.data;
+        this.$data.display = await res;
       } catch (err) {
         console.log(err);
       }
@@ -59,6 +86,7 @@ export default {
   created() {
     this.getRepos();
     this.getStyle();
+    this.getPullRequests();
   }
 };
 </script>

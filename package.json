@@ -11,8 +11,8 @@
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.4.1",
     "@nuxtjs/markdownit": "^1.2.4",
-    "axios": "^0.18.0",
     "bulma": "^0.7.4",
     "cross-env": "^5.2.0",
     "hapi-nuxt": "^1.0.1",

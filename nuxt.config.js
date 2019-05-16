@@ -35,15 +35,16 @@ module.exports = {
    ** Nuxt.js modules
    */
   modules: [
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit', '@nuxtjs/axios'
   ],
 
   // [optional] markdownit options
   // See https://github.com/markdown-it/markdown-it
   markdownit: {
-    preset: 'default',
-    linkify: false,
+    linkify: true,
+    html: true,
     breaks: true,
+    injected: true
   },
 
   /*
