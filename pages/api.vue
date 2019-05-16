@@ -41,8 +41,10 @@ export default {
           options
         );
         let raw = await res
-        let rawSting = await raw.toString()
-        let finalDisplay = await rawSting.replace(/\/>/g, "></a>")
+        let rawString = await raw.toString()
+        let finalDisplay = await rawString.replace(/\/>/g, "></a>")
+        let finalMenu = await rawString.match(/->([\S\s]*?)<!/).pop();
+        await console.log(finalMenu);
         this.$data.display = await finalDisplay
       } catch (err) {
         console.log(err);
