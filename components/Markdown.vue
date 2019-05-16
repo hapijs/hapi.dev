@@ -1,5 +1,5 @@
 <template>
-  <div class="markdown-wrapper" v-html="this.$props.display">
+  <div class="markdown-wrapper" v-html="$md.render(this.$props.display)">
   </div>
 </template>
 

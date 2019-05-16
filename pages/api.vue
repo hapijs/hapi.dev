@@ -17,11 +17,6 @@ export default {
     Markdown,
     ApiNav
   },
-  // computed() {
-  //   page() {
-  //     return this.page
-  //   }
-  // },
   head() {
     return {
       title: "API"
@@ -36,7 +31,7 @@ export default {
   async created() {
       const options = {
         headers: {
-          accept: "application/vnd.github.3.raw"
+          accept: "application/vnd.github.v3.raw+json"
         }
       };
 
@@ -45,7 +40,10 @@ export default {
           "https://api.github.com/repos/hapijs/hapi/contents/API.md",
           options
         );
-        this.$data.display = await res.data;
+        this.$data.display = await res.request.response
+        let here = await this.$data.display.toString()
+        let newer = await here.replace(/\/>/g, "></a>")
+        this.$data.display = await newer
       } catch (err) {
         console.log(err);
       }

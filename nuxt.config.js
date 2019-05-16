@@ -41,9 +41,10 @@ module.exports = {
   // [optional] markdownit options
   // See https://github.com/markdown-it/markdown-it
   markdownit: {
-    preset: 'default',
-    linkify: false,
+    linkify: true,
+    html: true,
     breaks: true,
+    injected: true
   },
 
   /*
