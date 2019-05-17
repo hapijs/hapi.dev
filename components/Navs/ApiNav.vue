@@ -48,4 +48,16 @@ export default {
     width: 100%;
 }
 
+.api-nav-select-wrapper ul li ul{
+  display: none;
+}
+
+.api-nav-select-wrapper ul {
+  margin: 0;
+}
+
+.api-nav-select-wrapper ul li {
+  margin: 0;
+}
+
 </style>
