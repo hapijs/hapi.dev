@@ -3,7 +3,7 @@ import start from '../static/lib/tutorials/en_US/'
 export const state = () => ({
   page: start.gettingStarted.default,
   version: "18.3.1",
-  repos: {},
+  repos: [],
   issues: [],
   pullRequests: [],
   commits: [],
@@ -12,6 +12,9 @@ export const state = () => ({
 export const mutations = {
   setPage (state, page) {
     state.page = page
+  },
+  setRepos (state, repos) {
+    state.repos = repos
   },
   setVerion (state, version) {
     state.version = version
@@ -24,6 +27,9 @@ export const mutations = {
 export const getters = {
   loadPage (state) {
     return state.page
+  },
+  getRepos (state) {
+    return state.repos
   },
   getVersion (state) {
     return state.version

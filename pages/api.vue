@@ -52,8 +52,8 @@ export default {
         let rawString = await raw.toString();
         let finalDisplay = await rawString
           .replace(/\/>/g, "></a>")
-          .replace(/->([\S\s]*?)<!/, "");
-        let finalMenu = await rawString.match(/->([\S\s]*?)<!/).pop();
+          .replace(/-\s\[(?:.+[\n\r])+/, "");
+        let finalMenu = await rawString.match(/-\s\[(?:.+[\n\r])+/).pop();
         this.$data.menu = await finalMenu;
         this.$data.display = await finalDisplay;
       } catch (err) {

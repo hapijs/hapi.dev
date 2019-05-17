@@ -29,9 +29,9 @@ h1, h2, h3, h4 {
   margin: 1rem 0;
 }
 
-h2 a::before, h3 a::before {
+h2 a::before, h3 a::before , h4 a::before, h5 a::before{
   display: block; 
-  content: " "; 
+  content: ""; 
   margin-top: -116px; 
   height: 116px; 
   visibility: hidden; 
