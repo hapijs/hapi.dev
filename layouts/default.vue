@@ -38,7 +38,7 @@ html {
 .contain {
   position: relative;
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: calc(100vh - 116px);
   width: 100%;
 }
 

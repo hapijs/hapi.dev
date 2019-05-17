@@ -40,6 +40,23 @@
 export default {
   layout: "home",
   components: {},
+  created() {
+    this.$store.commit('setRepos', this.repos)
+  },
+  async asyncData({ $axios, params, store }) {
+    const options = {
+      headers: {
+        accept: "application/vnd.github.v3.raw+json",
+        authorization: `token 706875a0a47eff85e32ff0550fa5ff44942bd416`
+      }
+    };
+
+    let repos = await $axios.$get(
+      "https://api.github.com/orgs/hapijs/repos",
+      options
+    );
+    return { repos };
+  }
 };
 </script>
 

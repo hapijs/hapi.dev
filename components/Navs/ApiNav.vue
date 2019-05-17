@@ -9,11 +9,9 @@
             <option value="18.3.1">18.3.1</option>
             <option value="17.9.0">17.9.0</option>
             <option value="16.7.0">16.7.0</option>
-
           </select>
         </div>
-        <div class="api-nav-select-wrapper" v-html="$md.render(this.$props.menu)">
-        </div>
+        <div class="api-nav-select-wrapper" v-html="$md.render(this.$props.menu)"></div>
       </div>
       <SideFooter/>
     </div>
@@ -29,8 +27,22 @@ export default {
   },
   props: ["menu"],
   methods: {
-    onChange(event){
-      this.$emit('change', event.target.value)
+    onChange(event) {
+      this.$emit("change", event.target.value);
+    }
+  },
+  updated() {
+    let links = document.querySelectorAll(".api-nav-select-wrapper ul li a");
+    for (let link of links) {
+      link.classList.add("api-nav-link");
+    }
+    let lists = document.querySelectorAll(".api-nav-select-wrapper ul li");
+    for (let list of lists) {
+      list.classList.add("api-nav-list");
+      list.addEventListener("click", function(event) {
+        event.preventDefault();
+        list.children[1].classList.add("nav-display")
+      });
     }
   }
 };
@@ -41,15 +53,20 @@ export default {
 @import "../../assets/styles/apiMenu.scss";
 
 .api-nav-select-wrapper {
-    margin-top: 20px;
-    font-size: 1.1em;
-    color: #f6941e;
-    line-height: 30px;
-    width: 100%;
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: #f6941e;
+  line-height: 30px;
+  width: 100%;
 }
 
-.api-nav-select-wrapper ul li ul{
+.api-nav-select-wrapper ul li ul {
   display: none;
+}
+
+.nav-display {
+  display: block !important;
+  height: auto;
 }
 
 .api-nav-select-wrapper ul {
@@ -58,6 +75,6 @@ export default {
 
 .api-nav-select-wrapper ul li {
   margin: 0;
+  list-style-type: none;
 }
-
 </style>
