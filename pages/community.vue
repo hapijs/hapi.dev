@@ -2,9 +2,14 @@
   <div class="container">
     <CommunityNav :page="page" @changePage="changePage"/>
     <div class="tutorial-markdown-window">
-    <Markdown v-if="page === 'style'" :display="display" />
-    <Updates v-if="page === 'updates'" :pullReqeusts="getPulls"/>
-    <Contribute v-if="page === 'contribute'" />
+      <Markdown v-if="page === 'style'" :display="styleGuide"/>
+      <Updates
+        v-if="page === 'updates'"
+        :pullRequests="pullRequests"
+        :issues="issues"
+        :commits="commits"
+      />
+      <Contribute v-if="page === 'contribute'"/>
     </div>
   </div>
 </template>
@@ -27,66 +32,61 @@ export default {
   },
   data() {
     return {
-      page: "Updates",
-      display: "",
-      page: "contribute"
+      page: "updates",
+      display: ""
     };
-  },
-  computed: {
-    getPulls() {
-      return this.$store.getters.getPullRequests
-    }
   },
   head() {
     return {
       title: "Community"
     };
   },
-  methods: {
-    changePage (value) {
-      this.page = value;
-      console.log(value);
-    },
-    async getRepos() {
-      try {
-        const res = await this.$axios.get("https://api.github.com/orgs/hapijs/repos");
-        this.repos = await res.data;
-      } catch (err) {
-        console.log(err);
-      }
-    },
-    async getPullRequests() {
-      try {
-        const res = await this.$axios.$get(
-          "https://api.github.com/repos/hapijs/hapi/pulls?state=closed&since=" + weekAgo + "&direction=desc&sort=created"
-        );
-        this.$store.commit('setPullRequests', res.data)
-      } catch (err){
-        console.log(err);
-      }
-    },
-    async getStyle() {
-      const options = {
-        headers: {
-          accept: "application/vnd.github.3.html"
-        }
-      };
-
-      try {
-        const res = await this.$axios.$get(
-          "https://api.github.com/repos/hapijs/assets/contents/STYLE.md",
-          options
-        );
-        this.$data.display = await res;
-      } catch (err) {
-        console.log(err);
-      }
-    }
-  },
   created() {
-    this.getRepos();
-    this.getStyle();
-    this.getPullRequests();
+    console.log(this.$store.getters.getRepos);
+  },
+  async asyncData({ $axios, params, store }) {
+    const options = {
+      headers: {
+        accept: "application/vnd.github.v3.raw+json",
+        authorization: `token 706875a0a47eff85e32ff0550fa5ff44942bd416`
+      }
+    };
+
+    let pullRequests = await $axios.$get(
+      "https://api.github.com/repos/hapijs/hapi/pulls?state=closed&since=" +
+        weekAgo +
+        "&direction=desc&sort=created",
+      options
+    );
+
+    let issues = await $axios.$get(
+      "https://api.github.com/repos/hapijs/hapi/issues?state=closed&since=" +
+        weekAgo +
+        "&sort=created",
+      options
+    );
+
+    let styleGuide = await $axios.$get(
+      "https://api.github.com/repos/hapijs/assets/contents/STYLE.md",
+      options
+    );
+
+    let commits = await $axios.$get(
+      "https://api.github.com/repos/hapijs/hapi/commits",
+      options
+    );
+
+    return {
+      pullRequests,
+      issues,
+      commits,
+      styleGuide
+    };
+  },
+  methods: {
+    changePage(value) {
+      this.page = value;
+    }
   }
 };
 </script>

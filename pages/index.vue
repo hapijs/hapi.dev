@@ -1,12 +1,8 @@
 <template>
   <section class="home-container">
     <div class="index-header">
-      <div class="index-header1">
-        The Simple, Secure Framework
-      </div>
-      <div class="index-header2">
-        Developers Trust
-      </div>
+      <div class="index-header1">The Simple, Secure Framework</div>
+      <div class="index-header2">Developers Trust</div>
     </div>
     <div class="index-description">
       Build
@@ -16,18 +12,14 @@
       <span class="bold">out-of-the-box</span> functionality -
       <span class="bold">your code, your way</span>
     </div>
-    <a class="index-button" href="/tutorials">
-      Get started with hapi
-    </a>
+    <a class="index-button" href="/tutorials">Get started with hapi</a>
     <div>
       Originally developed to handle Walmart’s
       <span class="bold">Black Friday scale</span>, hapi continues to be the
       <span class="bold">proven</span> choice for
       <span class="bold">enterprise-grade</span> backend needs.
     </div>
-    <div class="index-about-header">
-      Continue to learn more about:
-    </div>
+    <div class="index-about-header">Continue to learn more about:</div>
     <div class="index-about">
       <a hfre="/security" class="index-about-link">Security</a>
       <span class="index-divider">|</span>
@@ -46,10 +38,26 @@
 
 <script>
 export default {
-  layout: 'home',
-  components: {}
-}
+  layout: "home",
+  components: {},
+  created() {
+    this.$store.commit('setRepos', this.repos)
+  },
+  async asyncData({ $axios, params, store }) {
+    const options = {
+      headers: {
+        accept: "application/vnd.github.v3.raw+json",
+        authorization: `token 706875a0a47eff85e32ff0550fa5ff44942bd416`
+      }
+    };
 
+    let repos = await $axios.$get(
+      "https://api.github.com/orgs/hapijs/repos",
+      options
+    );
+    return { repos };
+  }
+};
 </script>
 
 <style lang="scss">
@@ -140,5 +148,4 @@ export default {
     padding: 0 10px;
   }
 }
-
 </style>

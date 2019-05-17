@@ -3,8 +3,8 @@
     <div class="side-nav-wrapper">
       <div class="side-nav-inner-wrapper">
         <div class="side-nav-title">Tutorials</div>
-        <div class="tutorial-lang-wrapper">
-          <div class="tutorial-lang-text">Languages:</div>
+        <div class="lang-wrapper">
+          <div class="lang-text">Languages:</div>
           <select @change="onChange($event)" class="tutorial-lang-select">
             <option value="en_US" >en_US</option>
             <option value="pt_BR">pt_BR</option>
@@ -60,29 +60,4 @@ export default {
 <style lang="scss">
 @import "../../assets/styles/sideNav.scss";
 
-.tutorial-lang-wrapper {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 20px 0 0 0;
-  width: 100%;
-}
-
-.tutorial-lang-text {
-  margin: 0 20px 0 0;
-  font-size: 1.1em;
-}
-
-select {
-  width: 100px;
-  padding: 0px 5px 0px 5px;
-  border: 1px solid #ddd;
-  height: 30px;
-  font-size: 0.9em;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: url(/img/down.png) 96% / 15% no-repeat #fff;
-  cursor: pointer;
-}
 </style>

@@ -13,7 +13,7 @@
     </div>
     <div class="contribute-issue-wrapper">
       <div class="contribute-new">
-        <div class="contribute-issue-header">Issues for new contributers</div>
+        <div class="contribute-issue-header">Open issues</div>
       </div>
       <div class="contribute-help">
         <div class="contribute-issue-header">Help wanted</div>

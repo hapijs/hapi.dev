@@ -31,13 +31,42 @@
 }
 
 .side-nav-inner-wrapper {
-  margin: 0 0 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 0 0 10px;
 }
 
 .side-nav-title {
   font-size: 1.5rem;
   color: $black;
   margin: 0;
+}
+
+.lang-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px 0 0 0;
+  width: 100%;
+}
+
+.lang-text {
+  margin: 0 20px 0 0;
+  font-size: 1.1em;
+}
+
+select {
+  width: 100px;
+  padding: 0px 5px 0px 5px;
+  border: 1px solid #ddd;
+  height: 30px;
+  font-size: 0.9em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(/img/down.png) 96% / 15% no-repeat #fff;
+  cursor: pointer;
 }
 
 .side-nav-select-wrapper {

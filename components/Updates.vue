@@ -3,40 +3,59 @@
     <h2>Updates</h2>
     <div class="update-data">
       During the last week, we've closed
-      <span class="bold">{{closedIssues}} issues</span>, merged
-      <span class="bold">{{pull}} pull request</span> and pushed
-      <span class="bold">{{pushedCommits}} commits</span> to the master branch.
+      <span
+        class="bold"
+      >{{!issues ? "0" : issues.length}} issue{{issues.length === 1 ? "" : "s"}}</span>, merged
+      <span
+        class="bold"
+      >{{!pullRequests === null ? "0" : pullRequests.length}} pull request{{pullRequests.length === 1 ? "" : "s"}}</span> and pushed
+      <span
+        class="bold"
+      >{{!commits === null ? "0" : commits.length}} commit{{commits.length === 1 ? "" : "s"}}</span> to the master branch.
     </div>
     <div class="update-description">
-      If you want information about modules releases in the ecosystem other than 
-      the core hapi module, you can look into issues in their respective repositories. 
-      They are labelled with <span class="bold">release notes</span> or <span class="bold">breaking changes</span> for major releases, otherwise 
-      for the minor releases check the issues <span class="bold">milestones</span>.
+      If you want information about modules releases in the ecosystem other than
+      the core hapi module, you can look into issues in their respective repositories.
+      They are labelled with
+      <span class="bold">release notes</span> or
+      <span class="bold">breaking changes</span> for major releases, otherwise
+      for the minor releases check the issues
+      <span class="bold">milestones</span>.
     </div>
     <div class="update-issue-wrapper">
       <div class="update-pull-requests">
-        <div class="update-issue-header">Merged pull requests</div>
+        <div class="update-issue-header">
+          <div class="update-issue-header-text">Merged pull requests</div>
+          <a
+            href="https://github.com/hapijs/hapi/pulls"
+            target="__blank"
+            class="update-issue-header-link"
+          >See all</a>
+        </div>
+        <PullRequests v-for="pull in pullRequests.slice(0, 5)" v-bind:key="pull.number" :url="pull.html_url" :title="pull.title" :number="pull.number" />
       </div>
       <div class="update-closed-issues">
-        <div class="update-issue-header">Closed issues</div>
+        <div class="update-issue-header">
+          <div class="update-issue-header-text">Closed issues</div>
+          <a
+            href="https://github.com/hapijs/hapi/issues?q=is%3Aopen"
+            target="__blank"
+            class="update-issue-header-link"
+          >See all</a>
+        </div>
+        <PullRequests v-for="pull in issues.slice(0, 5)" v-bind:key="pull.number" :url="pull.html_url" :title="pull.title" :number="pull.number" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import PullRequests from "./community/PullRequests.vue";
 export default {
-  props: ["closedIssues", "pullRequests", "pushedCommits"],
-  data() {
-    return {
-      pull: this.$props.pullRequests
-    };
+  components: {
+    PullRequests
   },
-  computed: {
-    pullLength(){
-      return this.$props.pullRequests.length
-    }
-  }
+  props: ["issues", "pullRequests", "commits"]
 };
 </script>
 
@@ -54,7 +73,7 @@ export default {
 }
 
 .bold {
-  font-weight: 700
+  font-weight: 700;
 }
 
 .update-issue-wrapper {
@@ -64,7 +83,8 @@ export default {
   margin-top: 20px;
 }
 
-.update-pull-requests, .update-closed-issues {
+.update-pull-requests,
+.update-closed-issues {
   width: 45%;
 }
 
@@ -77,10 +97,22 @@ export default {
 }
 
 .update-issue-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 15px 0;
   font-size: 1.3rem;
   box-sizing: border-box;
   width: 100%;
   border-bottom: 1px solid #ddd;
+}
+
+.update-issue-header-text {
+  margin: 0;
+}
+
+.update-issue-header-link {
+  font-size: .8em;
+  margin: 0;
 }
 </style>
