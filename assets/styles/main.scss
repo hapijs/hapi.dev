@@ -7,7 +7,7 @@ $green: #87997D;
 $green-light: #C5E0B6;
 $green-lighter: lighten($green, 90%);
 $green-dark: darken($green, 30%);
-$gray: #333;
+$gray: #6f6f6f;
 $gray-light: lighten($gray, 35%);
 $gray-lighter: lighten($gray, 85%);
 $gray-dark: darken($gray, 50%);
@@ -49,6 +49,16 @@ html, body {
    padding: 0 20px;
    box-sizing: border-box;
    margin: 0;
+ }
+
+ .page-wrapper {
+   max-width: 1260px;
+   width: 100%;
+   margin: 0 auto 50px auto;
+ }
+
+ .bold {
+   font-weight: 700;
  }
 
 
