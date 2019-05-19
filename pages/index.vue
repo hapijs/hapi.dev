@@ -21,17 +21,17 @@
     </div>
     <div class="index-about-header">Continue to learn more about:</div>
     <div class="index-about">
-      <a hfre="/security" class="index-about-link">Security</a>
+      <a href="/security" class="index-about-link">Security</a>
       <span class="index-divider">|</span>
-      <a hfre="/quality" class="index-about-link">Quality</a>
+      <a href="/quality" class="index-about-link">Quality</a>
       <span class="index-divider">|</span>
-      <a hfre="/developersfirst" class="index-about-link">Developers First</a>
+      <a href="/developersfirst" class="index-about-link">Developers First</a>
       <span class="index-divider">|</span>
-      <a hfre="/predictability" class="index-about-link">Predictability</a>
+      <a href="/predictability" class="index-about-link">Predictability</a>
       <span class="index-divider">|</span>
-      <a hfre="/Extensibility" class="index-about-link">Extensibility</a>
+      <a href="/extensibility" class="index-about-link">Extensibility</a>
       <span class="index-divider">|</span>
-      <a hfre="/Support" class="index-about-link">Support</a>
+      <a href="/help" class="index-about-link">Support</a>
     </div>
   </section>
 </template>
@@ -47,7 +47,7 @@ export default {
     const options = {
       headers: {
         accept: "application/vnd.github.v3.raw+json",
-        authorization: `token 706875a0a47eff85e32ff0550fa5ff44942bd416`
+        authorization: `token d4ad552ad1242cb7e36d9eeca202a7f84012e715`
       }
     };
 

@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  layout: 'help'
+  layout: 'noSide'
 }
 </script>
 

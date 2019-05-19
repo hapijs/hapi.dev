@@ -38,7 +38,7 @@ export default {
       const options = {
         headers: {
           accept: "application/vnd.github.v3.raw+json",
-          authorization: `token 706875a0a47eff85e32ff0550fa5ff44942bd416`
+          authorization: `token d4ad552ad1242cb7e36d9eeca202a7f84012e715`
         }
       };
 

@@ -29,7 +29,7 @@ export default {
 .pull-link {
   padding: 3px 7px;
   margin: 0;
-  color: $gray-light;
+  color: $gray;
   background: $green-light;
   font-size: .9em;
 }

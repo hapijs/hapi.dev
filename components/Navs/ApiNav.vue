@@ -32,24 +32,33 @@ export default {
     }
   },
   updated() {
-    let links = document.querySelectorAll(".api-nav-select-wrapper ul li a");
+    let links = document.querySelectorAll(".api-nav-select-wrapper > ul > li");
     for (let link of links) {
-      link.classList.add("api-nav-link");
+      link.classList.add("api-nav-header");
+      link.addEventListener('click', function(event) {
+        link.childNodes[2].classList.toggle('nav-display')
+      })
     }
-    let lists = document.querySelectorAll(".api-nav-select-wrapper ul li");
-    for (let list of lists) {
-      list.classList.add("api-nav-list");
-      list.addEventListener("click", function(event) {
-        event.preventDefault();
-        list.children[1].classList.add("nav-display")
-      });
+    let code = document.querySelectorAll("code");
+    for (let c of code) {
+      c.classList.add("api-nav-code");
     }
+    // let lists = document.querySelectorAll(".api-nav-select-wrapper ul li");
+    // for (let list of lists) {
+    //   list.classList.add("api-nav-list");
+    //   list.addEventListener("click", function(event) {
+    //     event.preventDefault();
+    //     console.log(list.childNodes);
+    //   });
+    // }
+    
   }
 };
 </script>
 
 <style lang="scss">
 @import "../../assets/styles/sideNav.scss";
+@import "../../assets/styles/main.scss";
 @import "../../assets/styles/apiMenu.scss";
 
 .api-nav-select-wrapper {
@@ -60,13 +69,21 @@ export default {
   width: 100%;
 }
 
-.api-nav-select-wrapper ul li ul {
-  display: none;
+// .api-nav-header > ul {
+//   display: none;
+// }
+
+.api-nav-code {
+  background: #f8f8f8;
+  color: $gray;
+  font-family: "Open Sans", sans-serif;
+  font-size: .75em;
 }
 
 .nav-display {
   display: block !important;
   height: auto;
+  transition: all 0.3 ease;
 }
 
 .api-nav-select-wrapper ul {
