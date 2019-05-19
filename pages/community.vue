@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <CommunityNav @changePage="changePage"/>
+    <CommunityNav :page="page" @changePage="changePage"/>
     <div class="tutorial-markdown-window">
       <Markdown v-if="getCommunity === 'style'" :display="styleGuide"/>
       <Updates
@@ -32,7 +32,7 @@ export default {
   },
   data() {
     return {
-      page: "updated",
+      page: "updates",
       display: ""
     };
   },
@@ -87,6 +87,7 @@ export default {
   },
   methods: {
     changePage(value) {
+      this.$data.page = value;
       this.$store.commit("setCommunity", value);
       window.scrollTo(0, 0);
     }
