@@ -11,17 +11,23 @@
       </div>
       <div class="develop-content">
         Every hapi feature is designed to make the platform
-        <span class="bold">easier and more intuitive</span> to use. That means
+        <span
+          class="bold"
+        >easier and more intuitive</span> to use. That means
         there’s no need to hack things together, experiment to see what *might* work, or try to figure out
         hidden internals.
-        <span class="bold">There is no “magic”</span> – the code does what you expect with easy to follow internal
+        <span
+          class="bold"
+        >There is no “magic”</span> – the code does what you expect with easy to follow internal
         logic.
       </div>
       <div class="develop-content">
         hapi's a
         <span class="bold">clean and easy-to-learn interface</span> doesn’t take up too much space. It is designed for a small
         surface area, allowing you to build your applications as you see fit,
-        <span class="bold">using your style</span> and the
+        <span
+          class="bold"
+        >using your style</span> and the
         technologies of your choosing.
       </div>
       <div class="develop-content">
@@ -34,7 +40,12 @@
 
 <script>
 export default {
-  layout: "noSide"
+  layout: "noSide",
+  head() {
+    return {
+      title: "Developers First"
+    };
+  }
 };
 </script>
 

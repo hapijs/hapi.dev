@@ -6,7 +6,9 @@
       >Provides True Extensibility and Customization, Safely and Predictably</h2>
       <div class="extensibility-content">
         hapi comes pretty loaded out-of-the-box, but it also has the most
-        <span class="bold">mature and complete</span> set of
+        <span
+          class="bold"
+        >mature and complete</span> set of
         <span class="bold">extension points at every step</span> — including
         <span class="bold">authentication</span>,
         <span class="bold">authorization</span>, and
@@ -23,7 +25,9 @@
         <span class="bold">Framework plugins</span> — a
         <span class="bold">truly composable</span> way of breaking your application into logic components
         with a
-        <span class="bold">super-thin abstraction layer</span>.
+        <span
+          class="bold"
+        >super-thin abstraction layer</span>.
       </li>
       <li class="content-list">
         <span class="bold">Request lifecycle</span> — the exact order in which “stuff happens,” allowing you to choose the specific
@@ -48,14 +52,21 @@
       hapi doesn’t use middleware, because it’s a bad pattern. Instead of a generic, one-size-fits-all
       approach taken by almost every other framework, hapi provides a rich, laser-focused extensibility
       model that puts
-      <span class="bold">security and predictability first</span>.
+      <span
+        class="bold"
+      >security and predictability first</span>.
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  layout: "noSide"
+  layout: "noSide",
+  head() {
+    return {
+      title: "Extensibility"
+    };
+  }
 };
 </script>
 

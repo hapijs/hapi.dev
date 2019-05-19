@@ -56,7 +56,12 @@
 
 <script>
 export default {
-  layout: "noSide"
+  layout: "noSide",
+  head() {
+    return {
+      title: "Security"
+    };
+  }
 };
 </script>
 
@@ -81,5 +86,4 @@ export default {
 .security-heading {
   text-align: center;
 }
-
 </style>
