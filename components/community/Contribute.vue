@@ -66,4 +66,22 @@ export default {};
   border-bottom: 1px solid #ddd;
 }
 
+@media screen and (max-width: 900px) {
+
+  .contribute-wrapper {
+    padding: 5px 5px 10px 5px;
+  }
+
+  .contribute-issue-wrapper {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contribute-new,
+  .contribute-help {
+    width: 100%;
+    margin: 0;
+  }
+}
+
 </style>

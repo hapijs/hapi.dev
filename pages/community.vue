@@ -1,15 +1,15 @@
 <template>
   <div class="container">
-    <CommunityNav :page="page" @changePage="changePage"/>
+    <CommunityNav @changePage="changePage"/>
     <div class="tutorial-markdown-window">
-      <Markdown v-if="page === 'style'" :display="styleGuide"/>
+      <Markdown v-if="getCommunity === 'style'" :display="styleGuide"/>
       <Updates
-        v-if="page === 'updates'"
+        v-if="getCommunity === 'updates'"
         :pullRequests="pullRequests"
         :issues="issues"
         :commits="commits"
       />
-      <Contribute v-if="page === 'contribute'"/>
+      <Contribute v-if="getCommunity === 'contribute'"/>
     </div>
   </div>
 </template>
@@ -32,7 +32,7 @@ export default {
   },
   data() {
     return {
-      page: "updates",
+      page: "updated",
       display: ""
     };
   },
@@ -40,6 +40,11 @@ export default {
     return {
       title: "Community"
     };
+  },
+  computed: {
+    getCommunity() {
+      return this.$store.getters.loadCommunity;
+    }
   },
   async asyncData({ $axios, params, store }) {
     const options = {
@@ -82,7 +87,8 @@ export default {
   },
   methods: {
     changePage(value) {
-      this.page = value;
+      this.$store.commit("setCommunity", value);
+      window.scrollTo(0, 0);
     }
   }
 };

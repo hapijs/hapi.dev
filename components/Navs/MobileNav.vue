@@ -1,25 +1,78 @@
 <template>
   <div ref="nav" class="mobile-nav">
-    <img src="/img/close.png" class="mobile-close" v-on:click="closeNav()"/>
+    <img src="/img/close.png" class="mobile-close" v-on:click="closeNav()">
     <ul class="mobile-links">
       <li class="mobile-links-li">
         <a class="mobile-link" title="Home" href="/">Home</a>
       </li>
       <li class="mobile-links-li">
-        <a class="mobile-link" title="Tutorials" v-on:click="loadTutorial('gettingStarted')">Tutorials</a>
+        <a
+          class="mobile-link"
+          title="Tutorials"
+          v-on:click="loadTutorial('gettingStarted')"
+        >Tutorials</a>
         <ul>
-          <li class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('gettingStarted')" >Getting Started</li>
-          <li class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('auth')" >Authentication</li>
-          <li class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('caching')" >Caching</li>
-          <li class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('cookies')" >Cookies</li>
-          <li class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('logging')" >Logging</li>
-          <li class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('plugins')" >Plugins</li>
-          <li class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('routing')" >Routing</li>
-          <li class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('serverMethods')" >Server Methods</li>
-          <li class="mobile-link mobile-tutorial-link" title="Serving Files" append v-on:click="loadTutorial('servingFiles')" >Serving Static Files</li>
-          <li class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('testing')" >Testing</li>
-          <li class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('validation')" >Validation</li>
-          <li class="mobile-link mobile-tutorial-link" title="Getting Started" v-on:click="loadTutorial('views')" >Views</li>
+          <li
+            class="mobile-link mobile-tutorial-link"
+            title="Getting Started"
+            v-on:click="loadTutorial('gettingStarted')"
+          >Getting Started</li>
+          <li
+            class="mobile-link mobile-tutorial-link"
+            title="Getting Started"
+            v-on:click="loadTutorial('auth')"
+          >Authentication</li>
+          <li
+            class="mobile-link mobile-tutorial-link"
+            title="Getting Started"
+            v-on:click="loadTutorial('caching')"
+          >Caching</li>
+          <li
+            class="mobile-link mobile-tutorial-link"
+            title="Getting Started"
+            v-on:click="loadTutorial('cookies')"
+          >Cookies</li>
+          <li
+            class="mobile-link mobile-tutorial-link"
+            title="Getting Started"
+            v-on:click="loadTutorial('logging')"
+          >Logging</li>
+          <li
+            class="mobile-link mobile-tutorial-link"
+            title="Getting Started"
+            v-on:click="loadTutorial('plugins')"
+          >Plugins</li>
+          <li
+            class="mobile-link mobile-tutorial-link"
+            title="Getting Started"
+            v-on:click="loadTutorial('routing')"
+          >Routing</li>
+          <li
+            class="mobile-link mobile-tutorial-link"
+            title="Getting Started"
+            v-on:click="loadTutorial('serverMethods')"
+          >Server Methods</li>
+          <li
+            class="mobile-link mobile-tutorial-link"
+            title="Serving Files"
+            append
+            v-on:click="loadTutorial('servingFiles')"
+          >Serving Static Files</li>
+          <li
+            class="mobile-link mobile-tutorial-link"
+            title="Getting Started"
+            v-on:click="loadTutorial('testing')"
+          >Testing</li>
+          <li
+            class="mobile-link mobile-tutorial-link"
+            title="Getting Started"
+            v-on:click="loadTutorial('validation')"
+          >Validation</li>
+          <li
+            class="mobile-link mobile-tutorial-link"
+            title="Getting Started"
+            v-on:click="loadTutorial('views')"
+          >Views</li>
         </ul>
       </li>
       <li class="mobile-links-li">
@@ -34,32 +87,50 @@
       <li class="mobile-links-li">
         <a class="mobile-link" title="Contribute" href="/community">Community</a>
         <ul>
-          <li class="mobile-link mobile-tutorial-link" title="Updates">Updates</li>
-          <li class="mobile-link mobile-tutorial-link" title="Contributing">Contributing</li>
-          <li class="mobile-link mobile-tutorial-link" title="Style Guide">Style Guide</li>
+          <li
+            class="mobile-link mobile-tutorial-link"
+            title="Updates"
+            v-on:click="loadCommunity('updates')"
+          >Updates</li>
+          <li
+            class="mobile-link mobile-tutorial-link"
+            title="Contributing"
+            v-on:click="loadCommunity('contribute')"
+          >Contributing</li>
+          <li
+            class="mobile-link mobile-tutorial-link"
+            title="Contributing"
+            v-on:click="loadCommunity('style')"
+          >Style Guide</li>
         </ul>
       </li>
       <li class="mobile-links-li">
         <a class="mobile-link" title="Help" href="/help">Help</a>
       </li>
     </ul>
-    <img class="mobile-helmet" src="../../static/img/helmet.png" />
+    <img class="mobile-helmet" src="../../static/img/helmet.png">
   </div>
 </template>
 
 <script>
-const tutorial = require('../../static/lib/tutorials/');
-const page = require('../../static/lib/')
+const tutorial = require("../../static/lib/tutorials/");
+const page = require("../../static/lib/");
 
 export default {
   methods: {
     closeNav() {
       this.$refs.nav.parentNode.classList.remove("show-nav");
     },
+    async loadCommunity(ref) {
+      await this.$store.commit("setCommunity", ref);
+      await this.$nuxt.$router.push("community");
+      window.scrollTo(0, 0);
+      this.closeNav();
+    },
     async loadTutorial(ref) {
-      await this.$store.commit('setPage', tutorial.en_US[ref].default);
-      await this.$nuxt.$router.push('tutorials')
-      window.scrollTo(0,0);
+      await this.$store.commit("setPage", tutorial.en_US[ref].default);
+      await this.$nuxt.$router.push("tutorials");
+      window.scrollTo(0, 0);
       this.closeNav();
     }
   }
@@ -80,7 +151,6 @@ export default {
   margin: 0 0 20px 20px;
   width: 15px;
   cursor: pointer;
-  
 }
 
 .mobile-links {
@@ -123,5 +193,4 @@ export default {
   width: 25px;
   margin: 30px auto 0 auto;
 }
-
 </style>

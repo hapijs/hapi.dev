@@ -17,10 +17,14 @@
       If you want information about modules releases in the ecosystem other than
       the core hapi module, you can look into issues in their respective repositories.
       They are labelled with
-      <span class="bold">release notes</span> or
+      <span
+        class="bold"
+      >release notes</span> or
       <span class="bold">breaking changes</span> for major releases, otherwise
       for the minor releases check the issues
-      <span class="bold">milestones</span>.
+      <span
+        class="bold"
+      >milestones</span>.
     </div>
     <div class="update-issue-wrapper">
       <div class="update-pull-requests">
@@ -32,7 +36,13 @@
             class="update-issue-header-link"
           >See all</a>
         </div>
-        <PullRequests v-for="pull in pullRequests.slice(0, 5)" v-bind:key="pull.number" :url="pull.html_url" :title="pull.title" :number="pull.number" />
+        <PullRequests
+          v-for="pull in pullRequests.slice(0, 5)"
+          v-bind:key="pull.number"
+          :url="pull.html_url"
+          :title="pull.title"
+          :number="pull.number"
+        />
       </div>
       <div class="update-closed-issues">
         <div class="update-issue-header">
@@ -43,7 +53,13 @@
             class="update-issue-header-link"
           >See all</a>
         </div>
-        <PullRequests v-for="pull in issues.slice(0, 5)" v-bind:key="pull.number" :url="pull.html_url" :title="pull.title" :number="pull.number" />
+        <PullRequests
+          v-for="pull in issues.slice(0, 5)"
+          v-bind:key="pull.number"
+          :url="pull.html_url"
+          :title="pull.title"
+          :number="pull.number"
+        />
       </div>
     </div>
   </div>
@@ -112,7 +128,25 @@ export default {
 }
 
 .update-issue-header-link {
-  font-size: .8em;
+  font-size: 0.8em;
   margin: 0;
+}
+
+@media screen and (max-width: 900px) {
+
+  .update-wrapper {
+    padding: 5px 5px 10px 5px;
+  }
+
+  .update-issue-wrapper {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .update-pull-requests,
+  .update-closed-issues {
+    width: 100%;
+    margin: 0;
+  }
 }
 </style>
