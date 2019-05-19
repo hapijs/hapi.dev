@@ -16,9 +16,9 @@
 
 <script>
 import Markdown from "~/components/Markdown.vue";
-import Updates from "~/components/Updates.vue";
-import Contribute from "~/components/Contribute.vue";
-import CommunityNav from "~/components/Navs/CommunityNav.vue";
+import Updates from "~/components/community/Updates.vue";
+import Contribute from "~/components/community/Contribute.vue";
+import CommunityNav from "~/components/community/CommunityNav.vue";
 let weekAgo = new Date();
 weekAgo.setDate(weekAgo.getDate() - 7);
 weekAgo = weekAgo.toISOString();
@@ -40,9 +40,6 @@ export default {
     return {
       title: "Community"
     };
-  },
-  created() {
-    console.log(this.$store.getters.getRepos);
   },
   async asyncData({ $axios, params, store }) {
     const options = {

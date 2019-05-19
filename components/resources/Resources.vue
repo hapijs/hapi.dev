@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import page from '../static/lib/resources.md';
+import page from '../../static/lib/resources.md';
 
 export default {
     computed: {
@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../assets/styles/main.scss";
-@import "../assets/styles/markdown.scss";
+@import "../../assets/styles/main.scss";
+@import "../../assets/styles/markdown.scss";
 
 </style>

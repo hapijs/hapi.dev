@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import Tutorial from "~/components/Tutorial.vue";
-import TutorialNav from "~/components/Navs/TutorialNav.vue";
+import Tutorial from "~/components/tutorials/Tutorial.vue";
+import TutorialNav from "~/components/tutorials/TutorialNav.vue";
 const page = require('../static/lib/tutorials/')
 export default {
   components: {

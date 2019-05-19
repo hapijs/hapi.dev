@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import Resources from "~/components/Resources.vue";
-import ResourcesNav from "~/components/Navs/ResourcesNav.vue";
+import Resources from "~/components/resources/Resources.vue";
+import ResourcesNav from "~/components/resources/ResourcesNav.vue";
 export default {
   components: {
     Resources,

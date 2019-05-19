@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import PullRequests from "./community/PullRequests.vue";
+import PullRequests from "./PullRequests.vue";
 export default {
   components: {
     PullRequests
@@ -60,8 +60,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../assets/styles/main.scss";
-@import "../assets/styles/markdown.scss";
+@import "../../assets/styles/main.scss";
+@import "../../assets/styles/markdown.scss";
 
 .update-wrapper {
   width: 100%;

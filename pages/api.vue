@@ -9,7 +9,7 @@
 
 <script>
 import Markdown from "~/components/Markdown.vue";
-import ApiNav from "~/components/Navs/ApiNav.vue";
+import ApiNav from "~/components/api/ApiNav.vue";
 
 export default {
   components: {
