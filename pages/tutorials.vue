@@ -50,20 +50,4 @@ export default {
 <style lang="scss">
 @import "../assets/styles/main.scss";
 
-.tutorial-markdown-window {
-  position: relative;
-  width: 100%;
-  max-width: calc(100vw - 390px);
-  padding: 0 20px;
-  box-sizing: border-box;
-  margin: 0;
-}
-
-@media screen and (max-width: 900px){
-
-  .tutorial-markdown-window {
-    max-width: 100vw;
-  }
-}
-
 </style>
