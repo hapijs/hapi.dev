@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import Tutorial from "~/components/Tutorial.vue";
-import TutorialNav from "~/components/Navs/TutorialNav.vue";
+import Tutorial from "~/components/tutorials/Tutorial.vue";
+import TutorialNav from "~/components/tutorials/TutorialNav.vue";
 const page = require('../static/lib/tutorials/')
 export default {
   components: {
@@ -49,21 +49,5 @@ export default {
 
 <style lang="scss">
 @import "../assets/styles/main.scss";
-
-.tutorial-markdown-window {
-  position: relative;
-  width: 100%;
-  max-width: calc(100vw - 390px);
-  padding: 0 20px;
-  box-sizing: border-box;
-  margin: 0;
-}
-
-@media screen and (max-width: 900px){
-
-  .tutorial-markdown-window {
-    max-width: 100vw;
-  }
-}
 
 </style>

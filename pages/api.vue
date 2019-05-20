@@ -9,7 +9,7 @@
 
 <script>
 import Markdown from "~/components/Markdown.vue";
-import ApiNav from "~/components/Navs/ApiNav.vue";
+import ApiNav from "~/components/api/ApiNav.vue";
 
 export default {
   components: {
@@ -38,7 +38,7 @@ export default {
       const options = {
         headers: {
           accept: "application/vnd.github.v3.raw+json",
-          authorization: `token 706875a0a47eff85e32ff0550fa5ff44942bd416`
+          authorization: 'token ' + process.env.gitHub
         }
       };
 

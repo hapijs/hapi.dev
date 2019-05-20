@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import Plugins from "~/components/Plugins.vue";
-import PluginsNav from "~/components/Navs/PluginsNav.vue";
+import Plugins from "~/components/plugins/Plugins.vue";
+import PluginsNav from "~/components/plugins/PluginsNav.vue";
 export default {
   components: {
     Plugins,

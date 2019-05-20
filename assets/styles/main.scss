@@ -2,12 +2,13 @@
 
    /* Colors */
 $orange: #f6941e;
+$orange-light: lighten($orange, 30%);
 $black: #333;
 $green: #87997D;
 $green-light: #C5E0B6;
 $green-lighter: lighten($green, 90%);
 $green-dark: darken($green, 30%);
-$gray: #333;
+$gray: #6f6f6f;
 $gray-light: lighten($gray, 35%);
 $gray-lighter: lighten($gray, 85%);
 $gray-dark: darken($gray, 50%);
@@ -32,6 +33,7 @@ html, body {
    font-size: 16px;
    min-height: calc(100vh - 116px);
    font-family: "Open Sans", sans-serif;
+   color: #333;
 }
 
 .container {
@@ -51,6 +53,16 @@ html, body {
    margin: 0;
  }
 
+ .page-wrapper {
+   max-width: 1260px;
+   width: 100%;
+   margin: 0 auto 50px auto;
+ }
+
+ .bold {
+   font-weight: 700;
+ }
+
 
 @media screen and (max-width: 900px) {
 
@@ -65,6 +77,6 @@ html, body {
    }
 
    .tutorial-markdown-window {
-      max-width: 100%;
+      max-width: calc(100% - 40px);
    }
 } 

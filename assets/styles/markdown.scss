@@ -1,4 +1,4 @@
-@import "../assets/styles/main.scss";
+@import "./assets/styles/main.scss";
 
 .markdown-wrapper {
   position: relative;
@@ -22,7 +22,11 @@ h3 {
 }
 
 h4 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+}
+
+h5 {
+  font-size: 1.25rem;
 }
 
 h1, h2, h3, h4 {
@@ -112,6 +116,18 @@ li {
   }
 }
 
+.hljs-keyword {
+  color: #d73a49;
+}
+
+.hljs-built_in {
+  color: #009bdc;
+}
+
+.hljs-attr {
+  color: #6f42c1
+}
+
 @media screen and (max-width: 900px) {
 
   h2 a::before, h3 a::before {
@@ -120,6 +136,6 @@ li {
   }
   
   .markdown-wrapper {
-    padding: 0 20px 20px 20px ;
+    padding: 5px;
   }
 }
