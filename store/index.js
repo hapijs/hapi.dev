@@ -4,7 +4,7 @@ export const state = () => ({
   page: start.gettingStarted.default,
   community: "updates",
   version: "18.3.1",
-  repos: [],
+  repos: ["hello"],
   issues: [],
   pullRequests: [],
   commits: [],

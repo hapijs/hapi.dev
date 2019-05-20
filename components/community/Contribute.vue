@@ -13,17 +13,55 @@
     </div>
     <div class="contribute-issue-wrapper">
       <div class="contribute-new">
-        <div class="contribute-issue-header">Open issues</div>
+        <div class="contribute-header-wrapper">
+          <div class="contribute-issue-header-text">hapi open issues</div>
+          <a
+            href="https://github.com/hapijs/hapi/issues"
+            target="__blank"
+            class="contribute-issue-header-link"
+          >See all</a>
+        </div>
+        <OpenIssues
+          v-for="issue in hapiIssues.slice(0, 5)"
+          v-bind:key="issue.id"
+          :url="issue.html_url"
+          :title="issue.title"
+          :number="issue.number"
+        />
       </div>
       <div class="contribute-help">
-        <div class="contribute-issue-header">Help wanted</div>
+        <div class="contribute-header-wrapper">
+          <div class="contribute-issue-header-text">Ecosystem open issues</div>
+          <a
+            href="https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+user%3Ahapijs+"
+            target="__blank"
+            class="contribute-issue-header-link"
+          >See all</a>
+        </div>
+        <OpenIssues
+          v-for="issue in issues"
+          v-bind:key="issue.id"
+          :url="issue.html_url"
+          :title="issue.title"
+          :number="issue.number"
+          :repo="issue.repo"
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import OpenIssues from "./OpenIssues.vue";
+export default {
+  props: ["issues", "hapiIssues"],
+  components: {
+    OpenIssues
+  },
+  created() {
+    console.log(this.issues[0].url);
+  }
+};
 </script>
 
 <style lang="scss">
@@ -40,13 +78,14 @@ export default {};
 }
 
 .contribute-issue-wrapper {
-    display: flex;
+  display: flex;
   justify-content: space-around;
   width: 100%;
   margin-top: 20px;
 }
 
-.contribute-new, .contribute-help {
+.contribute-new,
+.contribute-help {
   width: 45%;
 }
 
@@ -58,7 +97,10 @@ export default {};
   margin-left: 5%;
 }
 
-.contribute-issue-header {
+.contribute-header-wrapper {
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 15px 0;
   font-size: 1.3rem;
   box-sizing: border-box;
@@ -66,8 +108,16 @@ export default {};
   border-bottom: 1px solid #ddd;
 }
 
-@media screen and (max-width: 900px) {
+.contribute-issue-header-text {
+  margin: 0;
+}
 
+.contribute-issue-header-link {
+  font-size: 0.8em;
+  margin: 0;
+}
+
+@media screen and (max-width: 900px) {
   .contribute-wrapper {
     padding: 5px 5px 10px 5px;
   }
@@ -83,5 +133,4 @@ export default {};
     margin: 0;
   }
 }
-
 </style>

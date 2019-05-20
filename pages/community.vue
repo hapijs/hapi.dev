@@ -2,14 +2,14 @@
   <div class="container">
     <CommunityNav :page="page" @changePage="changePage"/>
     <div class="tutorial-markdown-window">
-      <Markdown v-if="getCommunity === 'style'" :display="styleGuide"/>
+      <Markdown v-if="getCommunity === 'style'" :display="display"/>
       <Updates
         v-if="getCommunity === 'updates'"
         :pullRequests="pullRequests"
-        :issues="issues"
+        :issues="closedIssues"
         :commits="commits"
       />
-      <Contribute v-if="getCommunity === 'contribute'"/>
+      <Contribute v-if="getCommunity === 'contribute'" :issues="ecoIssues" :hapiIssues="openIssues" />
     </div>
   </div>
 </template>
@@ -19,6 +19,7 @@ import Markdown from "~/components/Markdown.vue";
 import Updates from "~/components/community/Updates.vue";
 import Contribute from "~/components/community/Contribute.vue";
 import CommunityNav from "~/components/community/CommunityNav.vue";
+import style from "~/static/lib/style.md";
 let weekAgo = new Date();
 weekAgo.setDate(weekAgo.getDate() - 7);
 weekAgo = weekAgo.toISOString();
@@ -33,7 +34,7 @@ export default {
   data() {
     return {
       page: "updates",
-      display: ""
+      display: style.toString()
     };
   },
   head() {
@@ -50,9 +51,36 @@ export default {
     const options = {
       headers: {
         accept: "application/vnd.github.v3.raw+json",
-        authorization: `token d4ad552ad1242cb7e36d9eeca202a7f84012e715`
+        authorization: "token " + process.env.gitHub
       }
     };
+
+    let repo = [];
+    let ecoIssues = [];
+    let repos = await $axios.$get(
+      "https://api.github.com/orgs/hapijs/repos",
+      options
+    );
+
+    for (let r of repos) {
+      repo.push(r.name);
+      if (r.name !== "hapi") {
+        let ecosystem = await $axios.$get(
+          "https://api.github.com/repos/hapijs/" +
+            r.name +
+            "/issues?since=" +
+            weekAgo,
+          options
+        );
+        if (ecosystem.length !== 0) {
+          ecosystem[0].repo = r.name;
+          ecoIssues.push(ecosystem[0]);
+          if (ecoIssues.length === 5) {
+            break;
+          }
+        }
+      }
+    }
 
     let pullRequests = await $axios.$get(
       "https://api.github.com/repos/hapijs/hapi/pulls?state=closed&since=" +
@@ -61,15 +89,15 @@ export default {
       options
     );
 
-    let issues = await $axios.$get(
-      "https://api.github.com/repos/hapijs/hapi/issues?state=closed&since=" +
-        weekAgo +
-        "&sort=created",
+    let openIssues = await $axios.$get(
+      "https://api.github.com/repos/hapijs/hapi/issues",
       options
     );
 
-    let styleGuide = await $axios.$get(
-      "https://api.github.com/repos/hapijs/assets/contents/STYLE.md",
+    let closedIssues = await $axios.$get(
+      "https://api.github.com/repos/hapijs/hapi/issues?state=closed&since=" +
+        weekAgo +
+        "&sort=created",
       options
     );
 
@@ -80,9 +108,10 @@ export default {
 
     return {
       pullRequests,
-      issues,
+      openIssues,
+      closedIssues,
       commits,
-      styleGuide
+      ecoIssues
     };
   },
   methods: {

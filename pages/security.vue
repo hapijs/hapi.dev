@@ -1,5 +1,5 @@
 <template>
-  <div class="security-wrapper">
+  <div class="page-wrapper">
     <div class="security-upper-wrapper">
       <h2 class="security-heading">Trusted for Simplicity, Security, and Satisfaction</h2>
       <div class="security-content">
@@ -68,12 +68,6 @@ export default {
 <style lang="scss">
 @import "../assets/styles/main.scss";
 @import "../assets/styles/markdown.scss";
-
-.security-wrapper {
-  max-width: 1260px;
-  width: 100%;
-  margin: 0 auto 50px auto;
-}
 
 .security-upper-wrapper {
   text-align: center;

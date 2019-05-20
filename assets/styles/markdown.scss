@@ -116,6 +116,18 @@ li {
   }
 }
 
+.hljs-keyword {
+  color: #d73a49;
+}
+
+.hljs-built_in {
+  color: #009bdc;
+}
+
+.hljs-attr {
+  color: #6f42c1
+}
+
 @media screen and (max-width: 900px) {
 
   h2 a::before, h3 a::before {

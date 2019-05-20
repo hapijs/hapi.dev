@@ -2,6 +2,7 @@
 
    /* Colors */
 $orange: #f6941e;
+$orange-light: lighten($orange, 30%);
 $black: #333;
 $green: #87997D;
 $green-light: #C5E0B6;
@@ -32,6 +33,7 @@ html, body {
    font-size: 16px;
    min-height: calc(100vh - 116px);
    font-family: "Open Sans", sans-serif;
+   color: #333;
 }
 
 .container {
