@@ -9,7 +9,11 @@
         :issues="closedIssues"
         :commits="commits"
       />
-      <Contribute v-if="getCommunity === 'contribute'" :issues="ecoIssues" :hapiIssues="openIssues" />
+      <Contribute
+        v-if="getCommunity === 'contribute'"
+        :issues="ecoIssues"
+        :hapiIssues="openIssues"
+      />
     </div>
   </div>
 </template>
@@ -47,6 +51,9 @@ export default {
       return this.$store.getters.loadCommunity;
     }
   },
+  created(){
+    console.log(this.milestoneList)
+  },
   async asyncData({ $axios, params, store }) {
     const options = {
       headers: {
@@ -56,6 +63,7 @@ export default {
     };
 
     let repo = [];
+    let milestoneList = [];
     let ecoIssues = [];
     let repos = await $axios.$get(
       "https://api.github.com/orgs/hapijs/repos",
@@ -89,6 +97,23 @@ export default {
       options
     );
 
+    let milestones = await $axios.$get(
+      "https://api.github.com/repos/hapijs/hapi/milestones?state=closed&per_page=100&direction=desc",
+      options
+    )
+
+    let sortedMilestones = await milestones.sort((a, b) => {
+      return b.number - a.number
+    })
+    
+    for (let milestone of sortedMilestones.slice(0, 5)) {
+      let m = await $axios.$get(
+        "https://api.github.com/repos/hapijs/hapi/issues?state=closed&milestone=" + milestone.number,
+        options
+      );
+      milestoneList.push(m[0].milestone);
+    }
+
     let openIssues = await $axios.$get(
       "https://api.github.com/repos/hapijs/hapi/issues",
       options
@@ -107,7 +132,10 @@ export default {
     );
 
     return {
+      milestoneList,
+      milestones,
       pullRequests,
+      milestones,
       openIssues,
       closedIssues,
       commits,
