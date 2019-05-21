@@ -57,12 +57,18 @@ html, body {
    max-width: 1260px;
    width: 100%;
    margin: 0 auto 50px auto;
+   padding: 0 20px;
  }
 
  .bold {
    font-weight: 700;
  }
 
+ @media screen and (min-width: 1088px){
+   .container {
+      max-width: 100%;
+   }
+ }
 
 @media screen and (max-width: 900px) {
 

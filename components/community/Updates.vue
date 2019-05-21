@@ -62,16 +62,28 @@
         />
       </div>
     </div>
+    <div class="changelog-wrapper">
+      <h3 class="changelog-header">Changelog</h3>
+      <Changelog
+        v-for="change in milestones"
+        v-bind:key="change[0].id"
+        :version="change[0].milestone.title"
+        :versionUrl="change[0].milestone.html_url"
+        :issues="change"
+      />
+    </div>
   </div>
 </template>
 
 <script>
 import PullRequests from "./PullRequests.vue";
+import Changelog from "./ChangeLog.vue";
 export default {
   components: {
-    PullRequests
+    PullRequests,
+    Changelog
   },
-  props: ["issues", "pullRequests", "commits"]
+  props: ["issues", "pullRequests", "commits", "milestones"]
 };
 </script>
 
@@ -81,7 +93,7 @@ export default {
 
 .update-wrapper {
   width: 100%;
-  padding: 20px 0 10px 100px;
+  padding: 20px 100px 10px 100px;
 }
 
 .update-description {
@@ -132,8 +144,20 @@ export default {
   margin: 0;
 }
 
-@media screen and (max-width: 900px) {
+.changelog-header {
+  margin: 20px 0 10px 0;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
 
+.changelog-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 900px) {
   .update-wrapper {
     padding: 5px 5px 10px 5px;
   }

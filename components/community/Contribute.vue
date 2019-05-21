@@ -70,7 +70,7 @@ export default {
 
 .contribute-wrapper {
   width: 100%;
-  padding: 20px 0 10px 100px;
+  padding: 20px 100px 10px 100px;
 }
 
 .contribute-content {

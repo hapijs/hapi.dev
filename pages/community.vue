@@ -8,8 +8,13 @@
         :pullRequests="pullRequests"
         :issues="closedIssues"
         :commits="commits"
+        :milestones="getMilestones"
       />
-      <Contribute v-if="getCommunity === 'contribute'" :issues="ecoIssues" :hapiIssues="openIssues" />
+      <Contribute
+        v-if="getCommunity === 'contribute'"
+        :issues="ecoIssues"
+        :hapiIssues="openIssues"
+      />
     </div>
   </div>
 </template>
@@ -20,6 +25,7 @@ import Updates from "~/components/community/Updates.vue";
 import Contribute from "~/components/community/Contribute.vue";
 import CommunityNav from "~/components/community/CommunityNav.vue";
 import style from "~/static/lib/style.md";
+let Semver = require('semver')
 let weekAgo = new Date();
 weekAgo.setDate(weekAgo.getDate() - 7);
 weekAgo = weekAgo.toISOString();
@@ -34,7 +40,8 @@ export default {
   data() {
     return {
       page: "updates",
-      display: style.toString()
+      display: style.toString(),
+      milestoneList: []
     };
   },
   head() {
@@ -45,13 +52,39 @@ export default {
   computed: {
     getCommunity() {
       return this.$store.getters.loadCommunity;
+    },
+    getMilestones() {
+      return this.milestoneList;
     }
+  },
+  async created(){
+    const options = {
+      headers: {
+        accept: "application/vnd.github.v3.raw+json",
+        authorization: "token " + process.env.GITHUB_TOKEN
+      }
+    };
+    let milestones = await this.$axios.$get(
+      "https://api.github.com/repos/hapijs/hapi/milestones?state=closed&per_page=100&direction=desc",
+      options
+    )
+
+    let sortedMilestones = await milestones.sort((a, b) => Semver.compare(b.title, a.title))
+    
+    for (let milestone of sortedMilestones.slice(0, 20)) {
+      let m = await this.$axios.$get(
+        "https://api.github.com/repos/hapijs/hapi/issues?state=closed&milestone=" + milestone.number,
+        options
+      );
+      this.milestoneList.push(m);
+    }
+
   },
   async asyncData({ $axios, params, store }) {
     const options = {
       headers: {
         accept: "application/vnd.github.v3.raw+json",
-        authorization: "token " + process.env.gitHub
+        authorization: "token " + process.env.GITHUB_TOKEN
       }
     };
 
