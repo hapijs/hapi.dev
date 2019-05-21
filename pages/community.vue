@@ -8,6 +8,7 @@
         :pullRequests="pullRequests"
         :issues="closedIssues"
         :commits="commits"
+        :milestones="getMilestones"
       />
       <Contribute
         v-if="getCommunity === 'contribute'"
@@ -38,7 +39,8 @@ export default {
   data() {
     return {
       page: "updates",
-      display: style.toString()
+      display: style.toString(),
+      milestoneList: []
     };
   },
   head() {
@@ -49,10 +51,35 @@ export default {
   computed: {
     getCommunity() {
       return this.$store.getters.loadCommunity;
+    },
+    getMilestones() {
+      return this.milestoneList;
     }
   },
-  created(){
-    console.log(this.milestoneList)
+  async created(){
+    const options = {
+      headers: {
+        accept: "application/vnd.github.v3.raw+json",
+        authorization: "token " + process.env.gitHub
+      }
+    };
+    let milestones = await this.$axios.$get(
+      "https://api.github.com/repos/hapijs/hapi/milestones?state=closed&per_page=100&direction=desc",
+      options
+    )
+
+    let sortedMilestones = await milestones.sort((a, b) => {
+      return b.number - a.number
+    })
+    
+    for (let milestone of sortedMilestones.slice(0, 10)) {
+      let m = await this.$axios.$get(
+        "https://api.github.com/repos/hapijs/hapi/issues?state=closed&milestone=" + milestone.number,
+        options
+      );
+      this.milestoneList.push(m[0]);
+    }
+
   },
   async asyncData({ $axios, params, store }) {
     const options = {
@@ -63,7 +90,6 @@ export default {
     };
 
     let repo = [];
-    let milestoneList = [];
     let ecoIssues = [];
     let repos = await $axios.$get(
       "https://api.github.com/orgs/hapijs/repos",
@@ -97,23 +123,6 @@ export default {
       options
     );
 
-    let milestones = await $axios.$get(
-      "https://api.github.com/repos/hapijs/hapi/milestones?state=closed&per_page=100&direction=desc",
-      options
-    )
-
-    let sortedMilestones = await milestones.sort((a, b) => {
-      return b.number - a.number
-    })
-    
-    for (let milestone of sortedMilestones.slice(0, 5)) {
-      let m = await $axios.$get(
-        "https://api.github.com/repos/hapijs/hapi/issues?state=closed&milestone=" + milestone.number,
-        options
-      );
-      milestoneList.push(m[0].milestone);
-    }
-
     let openIssues = await $axios.$get(
       "https://api.github.com/repos/hapijs/hapi/issues",
       options
@@ -132,10 +141,7 @@ export default {
     );
 
     return {
-      milestoneList,
-      milestones,
       pullRequests,
-      milestones,
       openIssues,
       closedIssues,
       commits,
