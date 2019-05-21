@@ -17,7 +17,7 @@
     "cross-env": "^5.2.0",
     "hapi-nuxt": "^1.0.1",
     "nuxt": "^2.4.0",
-    "showdown": "^1.9.0"
+    "semver": "^6.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",

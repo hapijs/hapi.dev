@@ -25,6 +25,7 @@ import Updates from "~/components/community/Updates.vue";
 import Contribute from "~/components/community/Contribute.vue";
 import CommunityNav from "~/components/community/CommunityNav.vue";
 import style from "~/static/lib/style.md";
+let Semver = require('semver')
 let weekAgo = new Date();
 weekAgo.setDate(weekAgo.getDate() - 7);
 weekAgo = weekAgo.toISOString();
@@ -68,16 +69,14 @@ export default {
       options
     )
 
-    let sortedMilestones = await milestones.sort((a, b) => {
-      return b.number - a.number
-    })
+    let sortedMilestones = await milestones.sort((a, b) => Semver.compare(b.title, a.title))
     
-    for (let milestone of sortedMilestones.slice(0, 10)) {
+    for (let milestone of sortedMilestones.slice(0, 20)) {
       let m = await this.$axios.$get(
         "https://api.github.com/repos/hapijs/hapi/issues?state=closed&milestone=" + milestone.number,
         options
       );
-      this.milestoneList.push(m[0]);
+      this.milestoneList.push(m);
     }
 
   },

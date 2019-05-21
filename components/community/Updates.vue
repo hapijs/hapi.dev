@@ -66,12 +66,10 @@
       <h3 class="changelog-header">Changelog</h3>
       <Changelog
         v-for="change in milestones"
-        v-bind:key="change.id"
-        :version="change.milestone.title"
-        :versionUrl="change.milestone.html_url"
-        :issueNumber="change.number"
-        :issueText="change.title"
-        :issueUrl="change.html_url"
+        v-bind:key="change[0].id"
+        :version="change[0].milestone.title"
+        :versionUrl="change[0].milestone.html_url"
+        :issues="change"
       />
     </div>
   </div>

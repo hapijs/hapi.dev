@@ -1,17 +1,27 @@
 <template>
   <div class="log-wrapper">
-    <a :href=versionUrl target="__blank" class="log-title">{{version}}</a>
-    <div class="log-info-wrapper">
-      <a :href=issueUrl target="__blank" class="log-link">#{{issueNumber}}</a>
-      <div class="log-text">{{issueText}}</div>
+    <a :href="versionUrl" target="__blank" class="log-title">{{version}}</a>
+    <div class="changelogtext-wrapper">
+      <ChangelogText
+        v-for="issue in issues"
+        v-bind:key="issue.number"
+        :issueUrl="issue.html_url"
+        :issueNumber="issue.number"
+        :issueText="issue.title"
+      />
     </div>
   </div>
 </template>
 
 <script>
+import ChangelogText from "./ChangelogText.vue";
+
 export default {
-  props: ["version", "versionUrl", "issueNumber", "issueText", "issueUrl"]
-}
+  components: {
+    ChangelogText
+  },
+  props: ["version", "versionUrl", "issues"]
+};
 </script>
 
 <style lang="scss">
@@ -23,20 +33,14 @@ export default {
   justify-content: flex-start;
   align-items: flex-start;
   margin: 10px 0 0 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
 }
 
 .log-title {
   font-size: 1.75rem;
   color: $orange;
   margin: 0;
-}
-
-.log-info-wrapper {
-  display: flex;
-}
-
-.log-link {
-  margin: 0 10px 0 0;
 }
 
 </style>

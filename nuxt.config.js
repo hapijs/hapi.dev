@@ -17,7 +17,7 @@ module.exports = {
   },
 
   env: {
-    gitHub: "920d423c08c08446709ba39029bdf489b3cd9e06"
+    gitHub: "9327873a19490656052d7464b38572991a077403"
   },
 
   /*
