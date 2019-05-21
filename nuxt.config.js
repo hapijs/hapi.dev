@@ -16,10 +16,6 @@ module.exports = {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png?v=1.0" }]
   },
 
-  env: {
-    gitHub: "9327873a19490656052d7464b38572991a077403"
-  },
-
   /*
    ** Customize the progress-bar color
    */
@@ -39,7 +35,7 @@ module.exports = {
    ** Nuxt.js modules
    */
   modules: [
-    '@nuxtjs/markdownit', '@nuxtjs/axios'
+    '@nuxtjs/markdownit', '@nuxtjs/axios', '@nuxtjs/dotenv'
   ],
 
   // [optional] markdownit options
@@ -49,6 +45,10 @@ module.exports = {
     html: true,
     breaks: true,
     injected: true
+  },
+
+  env: {
+    GITHUB_TOKEN: process.env.GITHUB_TOKEN 
   },
 
   /*
