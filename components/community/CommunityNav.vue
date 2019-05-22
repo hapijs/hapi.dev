@@ -7,14 +7,19 @@
           <ul class="side-nav-select-list">
             <li
               class="side-nav-select-link side-nav-active"
+              ref="contribute"
+              v-on:click="onChangePage('contribute')"
+            >Contributing</li>
+            <li
+              class="side-nav-select-link"
               ref="updates"
               v-on:click="onChangePage('updates')"
             >Updates</li>
             <li
               class="side-nav-select-link"
-              ref="contribute"
-              v-on:click="onChangePage('contribute')"
-            >Contributing</li>
+              ref="changelog"
+              v-on:click="onChangePage('changelog')"
+            >Changelog</li>
             <li
               class="side-nav-select-link"
               ref="style"

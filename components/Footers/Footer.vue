@@ -85,7 +85,7 @@ a {
   display: inline-block;
 }
 
-li:nth-child(-n + 7) {
+.footer-links-li:nth-child(-n + 7) {
   padding-right: 10px;
 }
 

@@ -1,46 +1,50 @@
 <template>
-  <div class="log-wrapper">
-    <a :href="versionUrl" target="__blank" class="log-title">{{version}}</a>
-    <div class="changelogtext-wrapper">
-      <ChangelogText
-        v-for="issue in issues"
-        v-bind:key="issue.number"
-        :issueUrl="issue.html_url"
-        :issueNumber="issue.number"
-        :issueText="issue.title"
-      />
-    </div>
+  <div class="changelog-wrapper">
+    <h3 class="changelog-header">Changelog</h3>
+    <ChangelogVersion
+      v-for="change in milestones"
+      v-bind:key="change[0].id"
+      :version="change[0].milestone.title"
+      :versionUrl="change[0].milestone.html_url"
+      :issues="change"
+    />
   </div>
 </template>
 
 <script>
-import ChangelogText from "./ChangelogText.vue";
-
+import ChangelogVersion from "./ChangelogVersion.vue";
 export default {
   components: {
-    ChangelogText
+    ChangelogVersion
   },
-  props: ["version", "versionUrl", "issues"]
+  props: ["milestones"]
 };
 </script>
 
 <style lang="scss">
 @import "../../assets/styles/main.scss";
 
-.log-wrapper {
+.changelog-wrapper {
+  width: 100%;
+  padding: 20px 100px 10px 100px;
+}
+
+.changelog-header {
+  margin: 20px 0 10px 0;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.changelog-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  margin: 10px 0 0 0;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #ddd;
 }
 
-.log-title {
-  font-size: 1.75rem;
-  color: $orange;
-  margin: 0;
+@media screen and (max-width: 900px) {
+  .changelog-wrapper {
+    padding: 0;
+  }
 }
-
 </style>

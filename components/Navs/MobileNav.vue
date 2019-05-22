@@ -79,14 +79,22 @@
         <a class="mobile-link" title="API" href="/api">API</a>
       </li>
       <li class="mobile-links-li">
+        <a class="mobile-link" title="Plugins" href="/plugins">Plugins</a>
+      </li>
+      <li class="mobile-links-li">
         <a class="mobile-link" title="Resources" href="/resources">Resources</a>
       </li>
       <li class="mobile-links-li">
-        <a class="mobile-link" title="Plugins" href="/plugins">Plugins</a>
+        <a class="mobile-link" title="Ecosystem" href="/ecosystem">Ecosystem</a>
       </li>
       <li class="mobile-links-li">
         <a class="mobile-link" title="Contribute" href="/community">Community</a>
         <ul>
+          <li
+            class="mobile-link mobile-tutorial-link"
+            title="Contributing"
+            v-on:click="loadCommunity('contribute')"
+          >Contributing</li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="Updates"
@@ -94,9 +102,9 @@
           >Updates</li>
           <li
             class="mobile-link mobile-tutorial-link"
-            title="Contributing"
-            v-on:click="loadCommunity('contribute')"
-          >Contributing</li>
+            title="Changelog"
+            v-on:click="loadCommunity('changelog')"
+          >Changelog</li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="Contributing"

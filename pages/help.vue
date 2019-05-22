@@ -12,8 +12,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 @import "../assets/styles/main.scss";
+@import "../assets/styles/markdown.scss";
 
 .help-wrapper {
   max-width: 1260px;
