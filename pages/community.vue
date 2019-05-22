@@ -44,7 +44,7 @@ export default {
   },
   data() {
     return {
-      page: "updates",
+      page: "contribute",
       display: style.toString(),
       milestoneList: []
     };

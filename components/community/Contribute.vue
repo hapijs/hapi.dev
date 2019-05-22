@@ -57,9 +57,6 @@ export default {
   props: ["issues", "hapiIssues"],
   components: {
     OpenIssues
-  },
-  created() {
-    console.log(this.issues[0].url);
   }
 };
 </script>
