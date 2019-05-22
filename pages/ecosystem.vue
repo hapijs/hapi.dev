@@ -46,8 +46,10 @@ export default {
         "https://api.github.com/repos/hapijs/" + this.$data.page + "/contents/API.md",
         options
       );
-
-      this.$data.display = await api;
+      let apiString = await api.toString();
+      let finalDisplay = await apiString
+          .replace(/user-content-/g, "")
+      this.$data.display = await finalDisplay;
     }
   },
   created() {

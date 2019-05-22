@@ -15,5 +15,8 @@ export default {
 @import "../assets/styles/main.scss";
 @import "../assets/styles/markdown.scss";
 
+.octicon {
+    display: none;
+}
 
 </style>
