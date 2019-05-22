@@ -78,7 +78,6 @@ export default {
 
 <style lang="scss">
 @import "../../assets/styles/main.scss";
-@import "../../assets/styles/markdown.scss";
 
 .update-wrapper {
   width: 100%;
@@ -87,10 +86,6 @@ export default {
 
 .update-description {
   margin-top: 20px;
-}
-
-.bold {
-  font-weight: 700;
 }
 
 .update-issue-wrapper {

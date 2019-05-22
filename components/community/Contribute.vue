@@ -63,7 +63,6 @@ export default {
 
 <style lang="scss">
 @import "../../assets/styles/main.scss";
-@import "../../assets/styles/markdown.scss";
 
 .contribute-wrapper {
   width: 100%;
@@ -95,7 +94,7 @@ export default {
 }
 
 .contribute-header-wrapper {
-    display: flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 0;

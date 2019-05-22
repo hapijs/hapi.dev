@@ -24,7 +24,7 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: ["bulma", "@assets/styles/main.scss"],
+  css: ["@assets/styles/main.scss", "bulma"],
 
   /*
    ** Plugins to load before mounting the App
