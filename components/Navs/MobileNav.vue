@@ -79,10 +79,13 @@
         <a class="mobile-link" title="API" href="/api">API</a>
       </li>
       <li class="mobile-links-li">
+        <a class="mobile-link" title="Plugins" href="/plugins">Plugins</a>
+      </li>
+      <li class="mobile-links-li">
         <a class="mobile-link" title="Resources" href="/resources">Resources</a>
       </li>
       <li class="mobile-links-li">
-        <a class="mobile-link" title="Plugins" href="/plugins">Plugins</a>
+        <a class="mobile-link" title="Ecosystem" href="/ecosystem">Ecosystem</a>
       </li>
       <li class="mobile-links-li">
         <a class="mobile-link" title="Contribute" href="/community">Community</a>

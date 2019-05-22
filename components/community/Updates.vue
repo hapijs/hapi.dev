@@ -62,26 +62,15 @@
         />
       </div>
     </div>
-    <div class="changelog-wrapper">
-      <h3 class="changelog-header">Changelog</h3>
-      <Changelog
-        v-for="change in milestones"
-        v-bind:key="change[0].id"
-        :version="change[0].milestone.title"
-        :versionUrl="change[0].milestone.html_url"
-        :issues="change"
-      />
-    </div>
   </div>
 </template>
 
 <script>
 import PullRequests from "./PullRequests.vue";
-import Changelog from "./ChangeLog.vue";
+
 export default {
   components: {
-    PullRequests,
-    Changelog
+    PullRequests
   },
   props: ["issues", "pullRequests", "commits", "milestones"]
 };
@@ -142,19 +131,6 @@ export default {
 .update-issue-header-link {
   font-size: 0.8em;
   margin: 0;
-}
-
-.changelog-header {
-  margin: 20px 0 10px 0;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
-}
-
-.changelog-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
 }
 
 @media screen and (max-width: 900px) {

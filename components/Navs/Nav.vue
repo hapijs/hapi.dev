@@ -11,10 +11,13 @@
             <a class="nav-link" title="API" href="/api">API</a>
           </li>
           <li class="nav-links-li">
+            <a class="nav-link" title="Plugins" href="/plugins">Plugins</a>
+          </li>
+          <li class="nav-links-li">
             <a class="nav-link" title="Resources" href="/resources">Resources</a>
           </li>
           <li class="nav-links-li">
-            <a class="nav-link" title="Plugins" href="/plugins">Plugins</a>
+            <a class="nav-link" title="Ecosystem" href="/ecosystem">Ecosystem</a>
           </li>
           <li class="nav-links-li">
             <a class="nav-link" title="Contribute" href="/community">Community</a>

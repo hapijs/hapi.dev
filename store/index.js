@@ -2,7 +2,7 @@ import start from '../static/lib/tutorials/en_US/'
 
 export const state = () => ({
   page: start.gettingStarted.default,
-  community: "updates",
+  community: "contribute",
   version: "18.3.1",
   repos: ["hello"],
   issues: [],
