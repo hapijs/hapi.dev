@@ -171,4 +171,10 @@ export default {
   margin: 0;
   width: 100%;
 }
+
+@media screen and (max-width: 900px) {
+  .community-wrapper {
+    padding: 0 20px;
+  }
+}
 </style>

@@ -92,14 +92,19 @@
         <ul>
           <li
             class="mobile-link mobile-tutorial-link"
+            title="Contributing"
+            v-on:click="loadCommunity('contribute')"
+          >Contributing</li>
+          <li
+            class="mobile-link mobile-tutorial-link"
             title="Updates"
             v-on:click="loadCommunity('updates')"
           >Updates</li>
           <li
             class="mobile-link mobile-tutorial-link"
-            title="Contributing"
-            v-on:click="loadCommunity('contribute')"
-          >Contributing</li>
+            title="Changelog"
+            v-on:click="loadCommunity('changelog')"
+          >Changelog</li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="Contributing"
