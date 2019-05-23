@@ -2,20 +2,17 @@
   <div class="container">
     <ApiNav @change="onChildChange" :menu="menu"/>
     <div class="tutorial-markdown-window">
-      <Markdown :display="display" v-if="version !== '16.7.0'"/>
-      <HTML :display="htmlDisplay" v-if="version === '16.7.0'"/>
+      <HTML :display="htmlDisplay"/>
     </div>
   </div>
 </template>
 
 <script>
-import Markdown from "~/components/Markdown.vue";
-import HTML from "~/components/HTML.vue"
+import HTML from "~/components/HTML.vue";
 import ApiNav from "~/components/api/ApiNav.vue";
 
 export default {
   components: {
-    Markdown,
     HTML,
     ApiNav
   },
@@ -60,24 +57,21 @@ export default {
           .replace(/-\s\[(?:.+[\n\r])+/, "");
         let finalMenu = await rawString.match(/-\s\[(?:.+[\n\r])+/).pop();
         this.$data.menu = await finalMenu;
-        if (this.version === "18.3.1") {
-          const apiHTML = await this.$axios.$post(
-            "https://api.github.com/markdown",
-            {
-              text: finalDisplay,
-              mode: "markdown"
-            },
-            {
-              headers: {
-                authorization: "token " + process.env.GITHUB_TOKEN
-              }
+        const apiHTML = await this.$axios.$post(
+          "https://api.github.com/markdown",
+          {
+            text: finalDisplay,
+            mode: "markdown"
+          },
+          {
+            headers: {
+              authorization: "token " + process.env.GITHUB_TOKEN
             }
-          );
-          let apiString = await apiHTML.toString();
-          let finalHtmlDisplay = await apiString.replace(/user-content-/g, "");
-          this.htmlDisplay = await finalHtmlDisplay
-        }
-        this.$data.display = await finalDisplay;
+          }
+        );
+        let apiString = await apiHTML.toString();
+        let finalHtmlDisplay = await apiString.replace(/user-content-/g, "");
+        this.htmlDisplay = await finalHtmlDisplay;
       } catch (err) {
         console.log(err);
       }
