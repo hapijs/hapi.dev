@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <EcosystemNav @changePage="onChildChange" :page="page"/>
+    <EcosystemNav @changePage="onChildChange" :page="getEcosystem"/>
     <div class="tutorial-markdown-window">
       <HTML :display="display"/>
     </div>
@@ -23,9 +23,13 @@ export default {
   },
   data() {
     return {
-      page: "bell",
       display: ""
     };
+  },
+  computed: {
+    getEcosystem() {
+      return this.$store.getters.loadEcosystem;
+    }
   },
   methods: {
     async onChildChange(value) {
@@ -43,7 +47,7 @@ export default {
       };
 
       let api = await this.$axios.$get(
-        "https://api.github.com/repos/hapijs/" + this.$data.page + "/contents/API.md",
+        "https://api.github.com/repos/hapijs/" + this.getEcosystem + "/contents/API.md",
         options
       );
       let apiString = await api.toString();

@@ -1,6 +1,9 @@
 <template>
   <div ref="nav" class="mobile-nav">
-    <img src="/img/close.png" class="mobile-close" v-on:click="closeNav()">
+    <div class="mobile-nav-header">
+      <img src="/img/hapi.svg" class="mobile-hapi">
+      <img src="/img/close.png" class="mobile-close" v-on:click="closeNav()">
+    </div>
     <ul class="mobile-links">
       <li class="mobile-links-li">
         <a class="mobile-link" title="Home" href="/">Home</a>
@@ -86,6 +89,53 @@
       </li>
       <li class="mobile-links-li">
         <a class="mobile-link" title="Ecosystem" href="/ecosystem">Ecosystem</a>
+        <ul>
+          <li
+            class="mobile-link mobile-tutorial-link"
+            title="bell"
+            v-on:click="loadEcosystem('bell')"
+          >Bell</li>
+          <li
+            class="mobile-link mobile-tutorial-link"
+            title="boom"
+            v-on:click="loadEcosystem('boom')"
+          >Boom</li>
+          <li
+            class="mobile-link mobile-tutorial-link"
+            title="good"
+            v-on:click="loadEcosystem('good')"
+          >Good</li>
+          <li
+            class="mobile-link mobile-tutorial-link"
+            title="hoek"
+            v-on:click="loadEcosystem('hoek')"
+          >Hoek</li>
+          <li
+            class="mobile-link mobile-tutorial-link"
+            title="iron"
+            v-on:click="loadEcosystem('iron')"
+          >Iron</li>
+          <li
+            class="mobile-link mobile-tutorial-link"
+            title="joi"
+            v-on:click="loadEcosystem('joi')"
+          >Joi</li>
+          <li
+            class="mobile-link mobile-tutorial-link"
+            title="shot"
+            v-on:click="loadEcosystem('shot')"
+          >Shot</li>
+          <li
+            class="mobile-link mobile-tutorial-link"
+            title="topo"
+            v-on:click="loadEcosystem('topo')"
+          >Topo</li>
+          <li
+            class="mobile-link mobile-tutorial-link"
+            title="yar"
+            v-on:click="loadEcosystem('yar')"
+          >Yar</li>
+        </ul>
       </li>
       <li class="mobile-links-li">
         <a class="mobile-link" title="Contribute" href="/community">Community</a>
@@ -140,6 +190,12 @@ export default {
       await this.$nuxt.$router.push("tutorials");
       window.scrollTo(0, 0);
       this.closeNav();
+    },
+    async loadEcosystem(ref) {
+      await this.$store.commit("setEcosystem", ref);
+      await this.$nuxt.$router.push("ecosystem");
+      window.scrollTo(0, 0);
+      this.closeNav();
     }
   }
 };
@@ -152,13 +208,29 @@ export default {
   position: relative;
   width: 100%;
   height: auto;
-  padding: 20px 0 5px 0;
+  padding: 5px 0 5px 0;
+}
+
+.mobile-nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 0 10px;
+  width: 100%;
+  height: 65px;
+  border-bottom: 1px solid #ddd;
+}
+
+.mobile-hapi {
+  height: 50px;
+  margin: 0;
 }
 
 .mobile-close {
-  margin: 0 0 20px 20px;
   width: 15px;
+  height: 15px;
   cursor: pointer;
+  margin: 0;
 }
 
 .mobile-links {

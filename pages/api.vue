@@ -60,8 +60,7 @@ export default {
           .replace(/-\s\[(?:.+[\n\r])+/, "");
         let finalMenu = await rawString.match(/-\s\[(?:.+[\n\r])+/).pop();
         this.$data.menu = await finalMenu;
-        if (this.version === "16.7.0") {
-          console.log("here")
+        if (this.version === "18.3.1") {
           const apiHTML = await this.$axios.$post(
             "https://api.github.com/markdown",
             {
