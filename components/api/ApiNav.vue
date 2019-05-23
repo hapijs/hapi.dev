@@ -36,7 +36,7 @@ export default {
     for (let link of links) {
       link.classList.add("api-nav-header");
       link.addEventListener('click', function(event) {
-        if (event.target.classList.contains("api-nav-header")) {
+        if (event.target.classList.contains("api-nav-header") && link.parentElement.children[1]) {
           event.stopPropagation();
           let linkSibling = link.parentElement.children[1];
           linkSibling.classList.toggle('nav-display');
@@ -47,13 +47,6 @@ export default {
     for (let c of code) {
       c.classList.add("api-nav-code");
     }
-    // let lists = document.querySelectorAll(".api-nav-header");
-    // for (let list of lists) {
-    //   list.addEventListener("click", function(event) {
-    //     list.children[1].classList.toggle("nav-display")
-    //   });
-    // }
-    
   }
 };
 </script>
@@ -61,7 +54,14 @@ export default {
 <style lang="scss">
 @import "../../assets/styles/sideNav.scss";
 @import "../../assets/styles/main.scss";
-@import "../../assets/styles/apiMenu.scss";
+
+.api-nav-select-wrapper ul {
+  margin-left: 0;
+}
+
+.api-nav-select-wrapper ul li ul {
+  margin-left: 10px;
+}
 
 .api-nav-select-wrapper {
   margin-top: 20px;
