@@ -32,23 +32,25 @@ export default {
     }
   },
   updated() {
-    let links = document.querySelectorAll(".api-nav-select-wrapper > ul > li");
+    let links = document.querySelectorAll(".api-nav-select-wrapper > ul > li > a");
     for (let link of links) {
       link.classList.add("api-nav-header");
       link.addEventListener('click', function(event) {
-        link.childNodes[2].classList.toggle('nav-display')
+        if (event.target.classList.contains("api-nav-header")) {
+          event.stopPropagation();
+          let linkSibling = link.parentElement.children[1];
+          linkSibling.classList.toggle('nav-display');
+        }
       })
     }
     let code = document.querySelectorAll("code");
     for (let c of code) {
       c.classList.add("api-nav-code");
     }
-    // let lists = document.querySelectorAll(".api-nav-select-wrapper ul li");
+    // let lists = document.querySelectorAll(".api-nav-header");
     // for (let list of lists) {
-    //   list.classList.add("api-nav-list");
     //   list.addEventListener("click", function(event) {
-    //     event.preventDefault();
-    //     console.log(list.childNodes);
+    //     list.children[1].classList.toggle("nav-display")
     //   });
     // }
     
@@ -69,15 +71,29 @@ export default {
   width: 100%;
 }
 
-// .api-nav-header > ul {
-//   display: none;
-// }
+.api-nav-select-wrapper > ul > li > ul{
+  display: none;
+}
+
+.api-nav-header {
+  color: $orange;
+  text-decoration: none;
+}
+
+.api-nav-header:hover {
+  color: $orange;
+}
+
+.api-nav-select-wrapper > ul > li > ul > li a {
+  color: $gray;
+  font-size: .85em;
+}
 
 .api-nav-code {
   background: #f8f8f8;
   color: $gray;
   font-family: "Open Sans", sans-serif;
-  font-size: .75em;
+  font-size: 1em;
 }
 
 .nav-display {
