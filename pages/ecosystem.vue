@@ -1,8 +1,9 @@
 <template>
   <div class="container">
-    <EcosystemNav @changePage="onChildChange" :page="page"/>
+    <EcosystemNav @changePage="onChildChange" :page="getEcosystem"/>
     <div class="tutorial-markdown-window">
-      <HTML :display="display"/>
+      <h1 class="ecosystem-title">{{getEcosystem.charAt(0).toUpperCase() + getEcosystem.slice(1)}}</h1>
+      <HTML :display="getDisplay"/>
     </div>
   </div>
 </template>
@@ -23,13 +24,20 @@ export default {
   },
   data() {
     return {
-      page: "bell",
       display: ""
     };
   },
+  computed: {
+    getEcosystem() {
+      return this.$store.getters.loadEcosystem;
+    },
+    getDisplay() {
+      this.getAPI();
+      return this.$data.display;
+    }
+  },
   methods: {
     async onChildChange(value) {
-      this.$data.page = value;
       this.$store.commit("setEcosystem", value);
       this.getAPI();
       window.scrollTo(0, 0);
@@ -43,7 +51,7 @@ export default {
       };
 
       let api = await this.$axios.$get(
-        "https://api.github.com/repos/hapijs/" + this.$data.page + "/contents/API.md",
+        "https://api.github.com/repos/hapijs/" + this.getEcosystem + "/contents/API.md",
         options
       );
       let apiString = await api.toString();
@@ -60,4 +68,20 @@ export default {
 
 <style lang="scss">
 @import "../assets/styles/main.scss";
+
+.ecosystem-title {
+  margin: 20px 0 -16px 100px;
+  padding-bottom: 16px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ddd;
+  display: inline-block;
+}
+
+@media screen and (max-width: 900px){
+  .ecosystem-title {
+    margin: 20px 0 0 0;
+    padding-bottom: 16px;
+  }
+}
+
 </style>

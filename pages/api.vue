@@ -1,19 +1,19 @@
 <template>
   <div class="container">
-    <ApiNav @change="onChildChange" :menu="menu" />
+    <ApiNav @change="onChildChange" :menu="menu"/>
     <div class="tutorial-markdown-window">
-      <Markdown :display="display"/>
+      <HTML :display="htmlDisplay"/>
     </div>
   </div>
 </template>
 
 <script>
-import Markdown from "~/components/Markdown.vue";
+import HTML from "~/components/HTML.vue";
 import ApiNav from "~/components/api/ApiNav.vue";
 
 export default {
   components: {
-    Markdown,
+    HTML,
     ApiNav
   },
   head() {
@@ -24,6 +24,7 @@ export default {
   data() {
     return {
       display: "",
+      htmlDisplay: "",
       version: "18.3.1",
       menu: ""
     };
@@ -31,14 +32,15 @@ export default {
   methods: {
     async onChildChange(value) {
       this.$data.version = await value;
+      console.log(value);
       await this.getAPI();
-      window.scrollTo(0,0);
+      window.scrollTo(0, 0);
     },
     async getAPI() {
       const options = {
         headers: {
           accept: "application/vnd.github.v3.raw+json",
-          authorization: 'token ' + process.env.GITHUB_TOKEN
+          authorization: "token " + process.env.GITHUB_TOKEN
         }
       };
 
@@ -55,7 +57,21 @@ export default {
           .replace(/-\s\[(?:.+[\n\r])+/, "");
         let finalMenu = await rawString.match(/-\s\[(?:.+[\n\r])+/).pop();
         this.$data.menu = await finalMenu;
-        this.$data.display = await finalDisplay;
+        const apiHTML = await this.$axios.$post(
+          "https://api.github.com/markdown",
+          {
+            text: finalDisplay,
+            mode: "markdown"
+          },
+          {
+            headers: {
+              authorization: "token " + process.env.GITHUB_TOKEN
+            }
+          }
+        );
+        let apiString = await apiHTML.toString();
+        let finalHtmlDisplay = await apiString.replace(/user-content-/g, "");
+        this.htmlDisplay = await finalHtmlDisplay;
       } catch (err) {
         console.log(err);
       }
