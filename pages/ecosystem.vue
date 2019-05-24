@@ -70,7 +70,10 @@ export default {
           "/contents/API.md",
         options
       );
-      moduleAPI[module] = await api
+      let apiString = await api.toString();
+      let finalDisplay = await apiString
+          .replace(/user-content-/g, "")
+      moduleAPI[module] = await finalDisplay
     }
     return { moduleAPI }
   },
