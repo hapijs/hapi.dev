@@ -13,7 +13,9 @@
       <div class="quality-content">
         When quality and performance are in conflict, most frameworks choose wrongly and sacrifice
         quality for performance.
-        <span class="bold">It might save them a millisecond, but it will cost you days</span>. hapi always
+        <span
+          class="bold"
+        >It might save them a millisecond, but it will cost you days</span>. hapi always
         chooses readability. Machines keep getting faster and cheaper. Humans only get slower and more
         expensive.
       </div>
@@ -21,7 +23,9 @@
     <div class="quality-lower-wrapper">
       <div class="quality-content">
         On practically every measurable quality metric,
-        <span class="bold">hapi scores at the very top</span>:
+        <span
+          class="bold"
+        >hapi scores at the very top</span>:
       </div>
       <ul class="quality-list">
         <li class="content-list">

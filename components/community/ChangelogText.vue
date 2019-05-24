@@ -26,5 +26,4 @@ export default {
 .log-text {
   margin: 0;
 }
-
 </style>

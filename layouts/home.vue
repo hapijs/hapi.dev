@@ -1,21 +1,21 @@
 <template>
   <div class="contain">
-    <Nav />
-    <nuxt />
-    <Footer />
+    <Nav/>
+    <nuxt/>
+    <Footer/>
   </div>
 </template>
 
 <script>
-import Nav from "~/components/Navs/Nav.vue"
-import Footer from "~/components/Footers/Footer.vue"
+import Nav from "~/components/Navs/Nav.vue";
+import Footer from "~/components/Footers/Footer.vue";
 
 export default {
   components: {
     Nav,
     Footer
   }
-}
+};
 </script>
 
 <style lang="scss">
@@ -43,5 +43,4 @@ html {
   min-height: 100vh;
   padding-bottom: 100px;
 }
-
 </style>

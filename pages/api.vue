@@ -23,7 +23,6 @@ export default {
   },
   data() {
     return {
-      display: "",
       htmlDisplay: "",
       version: "18.3.1",
       menu: ""
@@ -35,46 +34,6 @@ export default {
       this.$data.htmlDisplay = this.apis[value];
       this.$data.menu = this.menus[value];
       window.scrollTo(0, 0);
-    },
-    async getAPI() {
-      const options = {
-        headers: {
-          accept: "application/vnd.github.v3.raw+json",
-          authorization: "token " + process.env.GITHUB_TOKEN
-        }
-      };
-
-      try {
-        const res = await this.$axios.$get(
-          "https://api.github.com/repos/hapijs/hapi/contents/API.md?ref=v" +
-            this.$data.version,
-          options
-        );
-        let raw = await res;
-        let rawString = await raw.toString();
-        let finalDisplay = await rawString
-          .replace(/\/>/g, "></a>")
-          .replace(/-\s\[(?:.+[\n\r])+/, "");
-        let finalMenu = await rawString.match(/-\s\[(?:.+[\n\r])+/).pop();
-        this.$data.menu = await finalMenu;
-        const apiHTML = await this.$axios.$post(
-          "https://api.github.com/markdown",
-          {
-            text: finalDisplay,
-            mode: "markdown"
-          },
-          {
-            headers: {
-              authorization: "token " + process.env.GITHUB_TOKEN
-            }
-          }
-        );
-        let apiString = await apiHTML.toString();
-        let finalHtmlDisplay = await apiString.replace(/user-content-/g, "");
-        this.htmlDisplay = await finalHtmlDisplay;
-      } catch (err) {
-        console.log(err);
-      }
     }
   },
   async asyncData({ params, $axios }) {

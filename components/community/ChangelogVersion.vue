@@ -42,5 +42,4 @@ export default {
   color: $orange;
   margin: 0;
 }
-
 </style>

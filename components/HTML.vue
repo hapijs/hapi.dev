@@ -1,14 +1,11 @@
 <template>
-  <div class="markdown-wrapper" v-html="display">
-  </div>
+  <div class="markdown-wrapper" v-html="display"></div>
 </template>
 
 <script>
-
 export default {
   props: ["display"]
 };
-
 </script>
 
 <style lang="scss">
@@ -16,7 +13,6 @@ export default {
 @import "../assets/styles/markdown.scss";
 
 .octicon {
-    display: none;
+  display: none;
 }
-
 </style>

@@ -32,7 +32,7 @@ export default {
       return this.$store.getters.loadEcosystem;
     },
     getDisplay() {
-      this.$data.display = this.moduleAPI[this.$store.getters.loadEcosystem]
+      this.$data.display = this.moduleAPI[this.$store.getters.loadEcosystem];
       return this.$data.display;
     }
   },
@@ -65,20 +65,17 @@ export default {
 
     for (let module of modules) {
       let api = await $axios.$get(
-        "https://api.github.com/repos/hapijs/" +
-          module +
-          "/contents/API.md",
+        "https://api.github.com/repos/hapijs/" + module + "/contents/API.md",
         options
       );
       let apiString = await api.toString();
-      let finalDisplay = await apiString
-          .replace(/user-content-/g, "")
-      moduleAPI[module] = await finalDisplay
+      let finalDisplay = await apiString.replace(/user-content-/g, "");
+      moduleAPI[module] = await finalDisplay;
     }
-    return { moduleAPI }
+    return { moduleAPI };
   },
   created() {
-    this.$data.display = this.moduleAPI.bell
+    this.$data.display = this.moduleAPI.bell;
   }
 };
 </script>
