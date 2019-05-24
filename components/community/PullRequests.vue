@@ -1,6 +1,6 @@
 <template>
   <div class="pull-wrapper">
-    <a :href=url target="__blank" class="pull-link">#{{number}}</a>
+    <a :href="url" target="__blank" class="pull-link">#{{number}}</a>
     <div class="pull-description">{{title}}</div>
   </div>
 </template>
@@ -8,7 +8,7 @@
 <script>
 export default {
   props: ["url", "title", "number"]
-}
+};
 </script>
 
 <style lang="scss">
@@ -23,7 +23,7 @@ export default {
 
 .pull-description {
   margin: 0 0 0 10px;
-  font-size: .9em;
+  font-size: 0.9em;
 }
 
 .pull-link {
@@ -31,7 +31,6 @@ export default {
   margin: 0;
   color: $gray;
   background: $green-light;
-  font-size: .9em;
+  font-size: 0.9em;
 }
-
 </style>

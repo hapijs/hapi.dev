@@ -1,6 +1,11 @@
 <template>
   <div class="container">
-    <TutorialNav :tutorial="tutorial" :language="language" @clicked="onClickChild" @changed="onChangeChild"/>
+    <TutorialNav
+      :tutorial="tutorial"
+      :language="language"
+      @clicked="onClickChild"
+      @changed="onChangeChild"
+    />
     <div class="tutorial-markdown-window">
       <Tutorial :display="getPage" :language="language"/>
     </div>
@@ -10,7 +15,7 @@
 <script>
 import Tutorial from "~/components/tutorials/Tutorial.vue";
 import TutorialNav from "~/components/tutorials/TutorialNav.vue";
-const page = require('../static/lib/tutorials/')
+const page = require("../static/lib/tutorials/");
 export default {
   components: {
     Tutorial,
@@ -18,30 +23,34 @@ export default {
   },
   head() {
     return {
-      title: this.tutorial.replace(/([A-Z])/g, ' $1').replace(/^./, function(str){ return str.toUpperCase(); })
-    }
+      title: this.tutorial
+        .replace(/([A-Z])/g, " $1")
+        .replace(/^./, function(str) {
+          return str.toUpperCase();
+        })
+    };
   },
   data() {
     return {
-      tutorial: 'gettingStarted',
-      language: "en_US",
-    }
+      tutorial: "gettingStarted",
+      language: "en_US"
+    };
   },
   computed: {
     getPage() {
-      return this.$store.getters.loadPage
+      return this.$store.getters.loadPage;
     }
   },
   methods: {
-    onClickChild(value){
-      this.$store.commit('setPage', page[this.language][value.ref].default);
+    onClickChild(value) {
+      this.$store.commit("setPage", page[this.language][value.ref].default);
       this.$data.tutorial = value.ref;
-      window.scrollTo(0,0);
+      window.scrollTo(0, 0);
     },
-    onChangeChild(value){
+    onChangeChild(value) {
       this.$data.language = value;
-      this.$store.commit('setPage', page[value][this.tutorial].default);
-      window.scrollTo(0,0);
+      this.$store.commit("setPage", page[value][this.tutorial].default);
+      window.scrollTo(0, 0);
     }
   }
 };
@@ -49,5 +58,4 @@ export default {
 
 <style lang="scss">
 @import "../assets/styles/main.scss";
-
 </style>

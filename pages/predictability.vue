@@ -4,7 +4,9 @@
       <h2 class="predict-heading">Keeps Large Distributed Teams on the Same Page</h2>
       <div class="predict-content">
         hapi was designed from the group-up to
-        <span class="bold">support large, distributed, and remote teams</span> – allowing
+        <span
+          class="bold"
+        >support large, distributed, and remote teams</span> – allowing
         them to effectively work together on common code. No more toe stepping.
       </div>
     </div>
@@ -12,7 +14,9 @@
       <h3 class="predict-heading">Say goodbye to middleware hell.</h3>
       <div class="predict-content">
         hapi was the first node framework (and in some ways, still the only) to provide
-        <span class="bold">strong guarantees</span> .
+        <span
+          class="bold"
+        >strong guarantees</span> .
         The order in which parallel or unrelated components are configured should never produce
         unexpected results.
       </div>

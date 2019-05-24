@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <PluginsNav />
+    <PluginsNav/>
     <div class="tutorial-markdown-window">
-      <Plugins />
+      <Plugins/>
     </div>
   </div>
 </template>
@@ -18,7 +18,7 @@ export default {
   head() {
     return {
       title: "Plugins"
-    }
+    };
   }
 };
 </script>

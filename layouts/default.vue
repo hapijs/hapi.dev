@@ -1,18 +1,18 @@
 <template>
   <div class="contain">
-    <Nav />
-    <nuxt />
+    <Nav/>
+    <nuxt/>
   </div>
 </template>
 
 <script>
-import Nav from "~/components/Navs/Nav.vue"
+import Nav from "~/components/Navs/Nav.vue";
 
 export default {
   components: {
     Nav
   }
-}
+};
 </script>
 
 <style lang="scss">
@@ -48,5 +48,4 @@ html {
   margin: 0 auto;
   border-bottom: 1px solid #ddd;
 }
-
 </style>

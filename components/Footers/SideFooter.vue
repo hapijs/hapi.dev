@@ -8,7 +8,11 @@
         <a class="footer-link" title="Twitter" href="https://twitter.com/hapijs">Twitter</a>
       </li>
       <li class="footer-links-li">
-        <a class="footer-link" title="Slack" href="https://join.slack.com/t/hapihour/shared_invite/enQtNTA5MDUzOTAzOTU4LTUyZmFiYjkyMTBmNDcyMmI2MmRjMzg4Y2YzNTlmNzUzNjViN2U1NmYyY2NjYjhiYWU4MGE2OTFhZDRlYWMyZDY">Slack</a>
+        <a
+          class="footer-link"
+          title="Slack"
+          href="https://join.slack.com/t/hapihour/shared_invite/enQtNTA5MDUzOTAzOTU4LTUyZmFiYjkyMTBmNDcyMmI2MmRjMzg4Y2YzNTlmNzUzNjViN2U1NmYyY2NjYjhiYWU4MGE2OTFhZDRlYWMyZDY"
+        >Slack</a>
       </li>
     </ul>
     <div class="footer-text">
@@ -57,7 +61,7 @@ a {
 .footer-links-li {
   display: inline-block;
   padding: 0 10px;
-  font-size: .8em;
+  font-size: 0.8em;
   margin: 0;
 }
 
@@ -111,10 +115,8 @@ a {
 }
 
 @media screen and (max-width: 900px) {
-
   .side-footer {
     display: none;
   }
-
 }
 </style>

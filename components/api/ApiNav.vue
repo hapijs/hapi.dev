@@ -54,10 +54,10 @@ export default {
     }
   },
   updated() {
-    this.setClasses()
+    this.setClasses();
   },
   mounted() {
-    this.setClasses()
+    this.setClasses();
   }
 };
 </script>
