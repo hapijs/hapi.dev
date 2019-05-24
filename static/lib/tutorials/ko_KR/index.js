@@ -18,6 +18,8 @@ exports.serverMethods = require('./serverMethods.md')
 
 exports.servingFiles = require('./servingFiles.md')
 
+exports.testing = require('./testing.md')
+
 exports.validation = require('./validation.md')
 
 exports.views = require('./views.md')
