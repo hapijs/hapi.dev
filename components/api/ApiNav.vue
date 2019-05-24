@@ -29,24 +29,35 @@ export default {
   methods: {
     onChange(event) {
       this.$emit("change", event.target.value);
+    },
+    setClasses() {
+      let links = document.querySelectorAll(
+        ".api-nav-select-wrapper > ul > li > a"
+      );
+      for (let link of links) {
+        link.classList.add("api-nav-header");
+        link.addEventListener("click", function(event) {
+          if (
+            event.target.classList.contains("api-nav-header") &&
+            link.parentElement.children[1]
+          ) {
+            event.stopPropagation();
+            let linkSibling = link.parentElement.children[1];
+            linkSibling.classList.toggle("nav-display");
+          }
+        });
+      }
+      let code = document.querySelectorAll("code");
+      for (let c of code) {
+        c.classList.add("api-nav-code");
+      }
     }
   },
   updated() {
-    let links = document.querySelectorAll(".api-nav-select-wrapper > ul > li > a");
-    for (let link of links) {
-      link.classList.add("api-nav-header");
-      link.addEventListener('click', function(event) {
-        if (event.target.classList.contains("api-nav-header") && link.parentElement.children[1]) {
-          event.stopPropagation();
-          let linkSibling = link.parentElement.children[1];
-          linkSibling.classList.toggle('nav-display');
-        }
-      })
-    }
-    let code = document.querySelectorAll("code");
-    for (let c of code) {
-      c.classList.add("api-nav-code");
-    }
+    this.setClasses()
+  },
+  mounted() {
+    this.setClasses()
   }
 };
 </script>
@@ -71,7 +82,7 @@ export default {
   width: 100%;
 }
 
-.api-nav-select-wrapper > ul > li > ul{
+.api-nav-select-wrapper > ul > li > ul {
   display: none;
 }
 
@@ -86,7 +97,7 @@ export default {
 
 .api-nav-select-wrapper > ul > li > ul > li a {
   color: $gray;
-  font-size: .85em;
+  font-size: 0.85em;
 }
 
 .api-nav-code {
