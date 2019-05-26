@@ -76,6 +76,7 @@ a {
   align-items: center;
   height: 50px;
   max-width: 735px;
+  background-color: #fff;
 }
 
 .footer-links {
@@ -87,6 +88,7 @@ a {
 
 .footer-links-li {
   display: inline-block;
+  margin: 0;
 }
 
 .footer-links-li:nth-child(-n + 7) {
