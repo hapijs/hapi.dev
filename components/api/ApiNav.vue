@@ -63,10 +63,10 @@ export default {
     let offsets = [];
     for (let i = 0; i < tags.length; i++) {
       if (tags[i].name) {
-        points[tags[i].offsetTop] = {
+        points[tags[i].offsetTop - 20] = {
           name: "#" + tags[i].name,
         };
-        offsets.push(tags[i].offsetTop);
+        offsets.push(tags[i].offsetTop - 20);
       }
     }
     window.onscroll = function() {
