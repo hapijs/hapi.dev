@@ -58,6 +58,36 @@ export default {
   },
   mounted() {
     this.setClasses();
+    let tags = document.querySelectorAll(".markdown-wrapper a");
+    let points = {};
+    let offsets = [];
+    for (let i = 0; i < tags.length; i++) {
+      if (tags[i].name) {
+        points[tags[i].offsetTop] = {
+          name: "#" + tags[i].name,
+        };
+        offsets.push(tags[i].offsetTop);
+      }
+    }
+    window.onscroll = function() {
+      let location = document.documentElement.scrollTop;
+      let actives = document.getElementsByClassName("api-active");
+      let i = 0;
+      for (i in offsets) {
+        if (offsets[i] <= location) {
+          let aClass = points[offsets[i]].name;
+          for (let active of actives) {
+            active.classList.remove("api-active");
+          }
+          document
+            .querySelector(`a[href*='${aClass}']`)
+            .classList.add("api-active");
+          document
+            .querySelector(`a[href*='${aClass}'] code`)
+            .classList.add("api-active");
+        }
+      }
+    };
   }
 };
 </script>
@@ -120,5 +150,10 @@ export default {
 .api-nav-select-wrapper ul li {
   margin: 0;
   list-style-type: none;
+}
+
+.api-active {
+  font-weight: 700;
+  color: $orange;
 }
 </style>
