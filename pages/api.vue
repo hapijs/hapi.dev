@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <ApiNav @change="onChildChange" :menu="menu" :search="search"/>
+    <ApiNav @change="onChildChange" @input="onChildInput" :menu="menu" :search="search"/>
     <div class="tutorial-markdown-window">
       <HTML :display="htmlDisplay"/>
     </div>
@@ -35,6 +35,9 @@ export default {
       this.$data.htmlDisplay = this.apis[value];
       this.$data.menu = this.menus[value];
       window.scrollTo(0, 0);
+    },
+    async onChildInput(value) {
+      this.$data.search = await value;
     }
   },
   async asyncData({ params, $axios }) {
