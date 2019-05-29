@@ -12,7 +12,7 @@
           </select>
         </div>
         <div class="api-search">
-          <input class="api-search-box" name="search" placeholder="Search (not working yet)" />
+          <input class="api-search-box" name="search" :value="search" placeholder="Search (not working yet)" />
           <div class="api-search-img" ></div>
         </div>
         <div class="api-nav-select-wrapper" v-html="$md.render(this.$props.menu)"></div>
@@ -29,7 +29,7 @@ export default {
   components: {
     SideFooter
   },
-  props: ["menu"],
+  props: ["menu", "search"],
   methods: {
     onChange(event) {
       this.$emit("change", event.target.value);

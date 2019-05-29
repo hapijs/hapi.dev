@@ -16,7 +16,7 @@ _This tutorial is compatible with hapi v17_
 
 ## <a name="overview"></a> Overview
 
-Server methods are a useful way of sharing functions by attaching them to your server object rather than requiring a common module everywhere it is needed. Server methods are also used heavily for caching purposes. Since server methods leverage hapi's native caching, they can help reduce your boilerplate to a minimum. See the [caching](https://hapijs.com/tutorials/caching) for more. To register a server method, you call [`server.method()`](https://hapijs.com/api#server.method()). There are two different ways to call this function. You can call it with the signature `server.method(name, method, [options])`, or you can call it with the signature `server.method(method)`, where `method` is an object with `name`, `method`, and `options` parameters (note that you may also pass an array of these objects).
+Server methods are a useful way of sharing functions by attaching them to your server object rather than requiring a common module everywhere it is needed. Server methods are also used heavily for caching purposes. Since server methods leverage hapi's native caching, they can help reduce your boilerplate to a minimum. See the caching tutorial for more. To register a server method, you call [`server.method()`](/api#server.method()). There are two different ways to call this function. You can call it with the signature `server.method(name, method, [options])`, or you can call it with the signature `server.method(method)`, where `method` is an object with `name`, `method`, and `options` parameters (note that you may also pass an array of these objects).
 
 ## <a name="server.method"></a> server.method()
 
@@ -104,7 +104,7 @@ The parameters mean:
 * `segment`: an optional segment name used to isolate cache items.
 * `cache`: an optional string with the name of the cache connection configured on your server to use
 
-More information on the caching options can be found in the [API Reference](/api#servermethodmethod) as well as the documentation for [catbox](https://github.com/hapijs/catbox#policy).
+More information on the caching options can be found in the [API Reference](/api#server.methods) as well as the documentation for [catbox](https://github.com/hapijs/catbox#policy).
 
 You can override the `ttl` (time-to-live) of a server method result per-invocation by setting the `ttl` flag. Let's see how this works with the earlier example:
 

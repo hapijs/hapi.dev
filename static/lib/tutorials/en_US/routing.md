@@ -219,11 +219,11 @@ Alternatively you may pass the same value to `h.response(value)` and return that
 
 The `handler` option must return a value, a promise, or throw an error.
 
-Note: handlers using a fat arrow style function cannot be bound to any `server.bind()` property. Instead, the bound context is available under [`h.context`](https://hapijs.com/api#h.context).
+Note: handlers using a fat arrow style function cannot be bound to any `server.bind()` property. Instead, the bound context is available under [`h.context`](/api#h.context).
 
 ## <a name="options"></a> Options
 
-Aside from these three basic elements, you may also specify an `options` parameter for each route. This is where you configure things like [validation](/tutorials/validation), [authentication](/tutorials/auth), prerequisites, payload processing, and caching options. More details can be found in the linked tutorials, as well as the [API reference](/api#route-options).
+Aside from these three basic elements, you may also specify an `options` parameter for each route. This is where you configure things like validation, authentication, prerequisites, payload processing, and caching options. More details can be found in the linked tutorials, as well as the [API reference](/api#route-options).
 
 Here we will look at some options of validating with Joi.
 
@@ -249,7 +249,7 @@ server.route({
 ```
 The first property under `options` is `auth`. `auth` will set the authentication configuration for the route. Since this route is for a new user signing up, you will disable authentication.  
 
-The second property is `validate`. This allows you to set validation rules for various request components, such as `headers`, `params`, `payload`, and `failAction`. You use the [joi](https://github.com/hapijs/joi) package to validate the `request.payload`. For more info, please check the [validation tutorial](/tutorials/validation).
+The second property is `validate`. This allows you to set validation rules for various request components, such as `headers`, `params`, `payload`, and `failAction`. You use the [joi](https://github.com/hapijs/joi) package to validate the `request.payload`. For more info, please check the validation tutorial.
 
 ## <a name="missing"></a> 404 Handling
 

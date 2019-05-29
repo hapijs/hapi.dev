@@ -23,7 +23,7 @@ hapi has several configurable options when dealing with cookies. The defaults ar
 
 ### <a name="server.state"></a> server.state()
 
-To use a cookie, you first need to configure it by calling [`server.state(name, [options])`](/api#-serverstatename-options) where `name` is the name of the cookie, and `options` is an object used to configure the cookie.
+To use a cookie, you first need to configure it by calling [`server.state(name, [options])`](/api#server.state()) where `name` is the name of the cookie, and `options` is an object used to configure the cookie.
 
 Please note that the default settings for `options` is good for most cases and don't need to be configured. For learning purposes, you will configure them in this tutorial:
 
@@ -75,7 +75,7 @@ Setting a cookie is done via the [response toolkit](/api#response-toolkit) in a 
 
 ### <a name="h.state"></a> h.state()
 
-You set a cookie by calling [`h.state(name, value, [options]`](https://hapijs.com/api#h.state()). In the following example, you set a cookie in a route handler:
+You set a cookie by calling [`h.state(name, value, [options]`](/api#h.state()). In the following example, you set a cookie in a route handler:
 
 ```javascript
 server.route({
