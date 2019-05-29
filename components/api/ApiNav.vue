@@ -31,6 +31,10 @@ export default {
       this.$emit("change", event.target.value);
     },
     setClasses() {
+      let lis = document.getElementsByTagName("li");
+      for (let li of lis) {
+        li.classList.add("api-nav-li");
+      }
       let links = document.querySelectorAll(
         ".api-nav-select-wrapper > ul > li > a"
       );
@@ -63,10 +67,10 @@ export default {
     let offsets = [];
     for (let i = 0; i < tags.length; i++) {
       if (tags[i].name) {
-        points[tags[i].offsetTop - 20] = {
-          name: "#" + tags[i].name,
+        points[tags[i].offsetTop - 70] = {
+          name: "#" + tags[i].name
         };
-        offsets.push(tags[i].offsetTop - 20);
+        offsets.push(tags[i].offsetTop - 70);
       }
     }
     window.onscroll = function() {
@@ -121,13 +125,18 @@ export default {
   text-decoration: none;
 }
 
-.api-nav-header:hover {
-  color: $orange;
+.api-nav-select-wrapper > ul > li > ul > li a {
+  display: inline-block;
+  color: $gray;
+  font-size: 0.78em;
+  width: 100%;
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
 }
 
-.api-nav-select-wrapper > ul > li > ul > li a {
-  color: $gray;
-  font-size: 0.85em;
+.api-nav-li a:hover, .api-nav-li a code:hover {
+  color: $orange;
+  text-decoration: none;
 }
 
 .api-nav-code {
@@ -135,6 +144,7 @@ export default {
   color: $gray;
   font-family: "Open Sans", sans-serif;
   font-size: 1em;
+  padding: 0;
 }
 
 .nav-display {
@@ -153,7 +163,6 @@ export default {
 }
 
 .api-active {
-  font-weight: 700;
   color: $orange;
 }
 </style>
