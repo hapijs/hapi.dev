@@ -30,7 +30,7 @@ You can either write your own authentication `scheme`, or use one of the many ha
 
 The `authenticate` method has a signature of `function (request, h)`, and is the only *required* method in a scheme.
 
-In this context, `request` is the `request` object created by the server. It is the same object that becomes available in a route handler, and is documented in the [API reference](/api#request-object).
+In this context, `request` is the `request` object created by the server. It is the same object that becomes available in a route handler, and is documented in the [API reference](/api#request).
 
 `h` is the standard hapi [response toolkit](https://hapijs.com/api#response-toolkit).
 
@@ -38,7 +38,7 @@ When authentication is successful, you must call and return `h.authenticated({ c
 
 The `credentials` and `artifacts` properties can be accessed later (in a route handler, for example) as part of the `request.auth` object.
 
-If authentication is unsuccessful, you can either throw an error or call and return `h.unauthenticated(error, [data])` where `error` is an authentication error and `data` is an optional object containing `credentials` and `artifacts`. There's no difference between calling `return h.unauthenticated(error)` or throwing an error if no `data` object is provided. The specifics of the error passed will affect the behavior. More information can be found in the API documentation for [`server.auth.scheme(name, scheme)`](https://hapijs.com/api#-serverauthschemename-scheme). It is recommend to use [boom](https://github.com/hapijs/boom) for errors.
+If authentication is unsuccessful, you can either throw an error or call and return `h.unauthenticated(error, [data])` where `error` is an authentication error and `data` is an optional object containing `credentials` and `artifacts`. There's no difference between calling `return h.unauthenticated(error)` or throwing an error if no `data` object is provided. The specifics of the error passed will affect the behavior. More information can be found in the API documentation for [`server.auth.scheme(name, scheme)`](/api#server.auth.scheme()). It is recommend to use [boom](https://github.com/hapijs/boom) for errors.
 
 ### <a name="payload"></a> payload
 
@@ -305,4 +305,4 @@ If the user doesn't not exists, or if the provided password is wrong, you redire
 
 Lastly, if the user does exist, and the passwords match, the user is then redirected to the homepage.  
 
-For more info on additional hapi auth plugins, please see the [plugin section](https://hapijs.com/plugins).
+For more info on additional hapi auth plugins, please see the [plugin section](/plugins).

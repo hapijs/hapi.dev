@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <ApiNav @change="onChildChange" :menu="menu"/>
+    <ApiNav @change="onChildChange" :menu="menu" :search="search"/>
     <div class="tutorial-markdown-window">
       <HTML :display="htmlDisplay"/>
     </div>
@@ -25,7 +25,8 @@ export default {
     return {
       htmlDisplay: "",
       version: "18.3.1",
-      menu: ""
+      menu: "",
+      search: ""
     };
   },
   methods: {

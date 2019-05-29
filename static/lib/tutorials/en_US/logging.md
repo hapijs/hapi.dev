@@ -99,8 +99,8 @@ By default, the only errors debug mode will print to console are uncaught errors
 
 `const server = Hapi.server({ debug: { request: ['error'] } });`
 
-You can find more information on debug mode in the [API documentation](https://hapijs.com/api#-serveroptionsdebug).
+You can find more information on debug mode in the [API documentation](/api#server.options.debug).
 
 ## <a name="plugins"></a>Logging Plugins
 
-The built-in methods provided by hapi for retrieving and printing logs are fairly minimal. For a more feature-rich logging experience, you can look into using a plugin like [good](https://github.com/hapijs/good), or any of the other [hapi logging plugins](https://hapijs.com/plugins#Logging/Metrics).
+The built-in methods provided by hapi for retrieving and printing logs are fairly minimal. For a more feature-rich logging experience, you can look into using a plugin like [good](https://github.com/hapijs/good), or any of the other [hapi logging plugins](/plugins#Logging/Metrics).

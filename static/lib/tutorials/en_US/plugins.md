@@ -182,7 +182,7 @@ const start = async function () {
 
 ### <a name="registration"></a> Registration options
 
-You may also pass a second optional parameter to `server.register()`. Documentation for this object can be found in the [API reference](/api#-await-serverregisterplugins-options).
+You may also pass a second optional parameter to `server.register()`. Documentation for this object can be found in the [API reference](/api#server.register()).
 
 The options object is used by hapi and is *not* passed to the plugin(s) being loaded. It allows you to apply `vhost` or `prefix` modifiers to any routes that your plugins register.
 
@@ -227,4 +227,4 @@ const start = async function () {
 
 Now when the plugin is loaded, because of the `prefix` option the `GET` route will be created at `/plugins/test`.
 
-Similarly the `options.routes.vhost` property will assign a default `vhost` configuration to any routes created by the plugins being loaded. More detail about the `vhost` configuration can be found in the [API reference](/api#-serverrouteroute).
+Similarly the `options.routes.vhost` property will assign a default `vhost` configuration to any routes created by the plugins being loaded. More detail about the `vhost` configuration can be found in the [API reference](/api#server.route()).
