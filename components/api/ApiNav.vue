@@ -11,6 +11,10 @@
             <option value="16.7.0">16.7.0</option>
           </select>
         </div>
+        <div class="api-search">
+          <input class="api-search-box" name="search" placeholder="Search (not working yet)" />
+          <div class="api-search-img" ></div>
+        </div>
         <div class="api-nav-select-wrapper" v-html="$md.render(this.$props.menu)"></div>
       </div>
       <SideFooter/>
@@ -99,6 +103,39 @@ export default {
 <style lang="scss">
 @import "../../assets/styles/sideNav.scss";
 @import "../../assets/styles/main.scss";
+
+.api-search {
+  position: relative;
+  margin: 20px 0 0 0;
+  width: 170px;
+}
+
+.api-search-box {
+  height: 30px;
+  outline: none;
+  padding: 10px;
+  border: 1px solid #ddd;
+  width: 100%;
+  font-size: .85rem;
+}
+
+.api-search-img {
+  position: absolute;
+  background: url("/img/search.png") no-repeat;
+  background-position: center;
+  background-color: #fff;
+  background-size: contain;
+  padding: 10px;
+  right: -30px;
+  top: 0px;
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  height: 30px;
+  width: 30px;
+  z-index: 25;
+  cursor: pointer;
+}
 
 .api-nav-select-wrapper ul {
   margin-left: 0;
