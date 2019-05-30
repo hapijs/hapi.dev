@@ -14,10 +14,9 @@
         <div class="api-search">
           <input
             class="api-search-box"
-            name="search"
             :value="search"
             @input="onInput($event)"
-            placeholder="Search (not working yet)"
+            placeholder="Search API"
           >
           <div class="api-search-img" v-on:click="onSearch"></div>
           <div class="api-search-error hidden">No results found</div>
@@ -42,7 +41,7 @@ export default {
       this.$emit("change", event.target.value);
     },
     onInput(event) {
-      document.querySelector(".api-search-error").classList.add("hidden");
+      document.querySelector(".api-search-error").classList.remove("nav-display");
       this.$emit("input", event.target.value);
     },
     onSearch() {
@@ -68,6 +67,7 @@ export default {
           ) {
             event.stopPropagation();
             let linkSibling = link.parentElement.children[1];
+            console.log(linkSibling)
             linkSibling.classList.toggle("nav-display");
           }
         });
@@ -117,6 +117,9 @@ export default {
       };
     }
   },
+  beforeUpdate() {
+    this.setClasses();
+  },
   updated() {
     this.setClasses();
   },
@@ -165,13 +168,10 @@ export default {
 
 .api-search-error {
   position: absolute;
+  display: none;
   bottom: -20px;
   left: 0;
   font-size: .75em
-}
-
-.hidden {
-  display: none;
 }
 
 .api-nav-select-wrapper ul {

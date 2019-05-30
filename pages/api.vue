@@ -44,36 +44,52 @@ export default {
       this.$data.menu = this.menus[value];
       window.scrollTo(0, 0);
     },
-    async onChildInput(value) {
-      this.$data.search = await value;
+    onChildInput(value) {
+      this.$data.search = value;
     },
     onChildSearch() {
-      this.found = false
+      this.found = false;
+      let headlines = [];
+      let text = [];
       let pages = document
         .querySelector(".markdown-wrapper")
         .querySelectorAll("*");
 
       for (let page of pages) {
-        if (page.innerHTML.indexOf(this.search) !== -1 && this.search !== "") {
-          if (
-            page.nodeName === "H2" ||
-            page.nodeName === "H3" ||
-            page.nodeName === "H4" ||
-            page.nodeName === "H5" ||
-            page.nodeName === "H6"
-          ) {
-            window.scrollTo(0, page.offsetTop);
-            this.found = true
-            break;
-          }
-          window.scrollTo(0, page.offsetTop);
-          this.found = true
-          break
+        if (
+          page.nodeName === "H2" ||
+          page.nodeName === "H3" ||
+          page.nodeName === "H4" ||
+          page.nodeName === "H5" ||
+          page.nodeName === "H6"
+        ) {
+          headlines.push(page);
+        } else {
+          text.push(page);
+        }
+      }
+      for (let headline of headlines) {
+        if (headline.innerHTML.indexOf(this.search) !== -1 && this.search !== "") {
+          window.scrollTo(0, headline.offsetTop);
+          this.found = true;
+          break;
         }
       }
       if (!this.found) {
-        let error = document.querySelector(".api-search-error");
-        error.classList.remove("hidden")
+        for (let t of text) {
+          if (
+            t.innerHTML.indexOf(this.search) !== -1 &&
+            this.search !== ""
+          ) {
+            window.scrollTo(0, t.offsetTop);
+            this.found = true;
+            break;
+          }
+        }
+        if (!this.found) {
+          let error = document.querySelector(".api-search-error");
+          error.classList.add("nav-display");
+        }
       }
     }
   },
