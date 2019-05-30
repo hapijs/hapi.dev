@@ -68,6 +68,7 @@ export default {
           }
           window.scrollTo(0, page.offsetTop);
           this.found = true
+          break
         }
       }
       if (!this.found) {
