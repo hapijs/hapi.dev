@@ -59,7 +59,7 @@ export default {
   layout: "noSide",
   head() {
     return {
-      title: "Security"
+      title: "hapi.js - Security"
     };
   }
 };

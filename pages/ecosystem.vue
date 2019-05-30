@@ -19,7 +19,7 @@ export default {
   },
   head() {
     return {
-      title: "Ecosystem"
+      title: "hapi.js - " + this.$store.getters.loadEcosystem
     };
   },
   data() {

@@ -17,7 +17,7 @@ export default {
   },
   head() {
     return {
-      title: "Resources"
+      title: "hapi.js - Resources"
     };
   }
 };

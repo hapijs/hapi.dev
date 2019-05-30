@@ -17,7 +17,12 @@
 
 <script>
 export default {
-  layout: "noSide"
+  layout: "noSide",
+  head() {
+    return {
+      title: "hapi.js - Help"
+    }
+  }
 };
 </script>
 

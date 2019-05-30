@@ -43,7 +43,7 @@ export default {
   layout: "noSide",
   head() {
     return {
-      title: "Developers First"
+      title: "hapi.js - Developers First"
     };
   }
 };

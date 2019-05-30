@@ -25,7 +25,7 @@ export default {
   },
   head() {
     return {
-      title: "API"
+      title: "hapi.js - " + this.version + " API Reference"
     };
   },
   data() {

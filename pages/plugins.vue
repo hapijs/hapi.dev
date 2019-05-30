@@ -17,7 +17,7 @@ export default {
   },
   head() {
     return {
-      title: "Plugins"
+      title: "hapi.js - Plugins"
     };
   }
 };
