@@ -1,6 +1,13 @@
 <template>
   <div class="container">
-    <ApiNav @change="onChildChange" :menu="menu" :search="search"/>
+    <ApiNav
+      @change="onChildChange"
+      @input="onChildInput"
+      :menu="menu"
+      @search="onChildSearch"
+      :search="search"
+      :version="version"
+    />
     <div class="tutorial-markdown-window">
       <HTML :display="htmlDisplay"/>
     </div>
@@ -26,7 +33,8 @@ export default {
       htmlDisplay: "",
       version: "18.3.1",
       menu: "",
-      search: ""
+      search: "",
+      found: false
     };
   },
   methods: {
@@ -35,6 +43,54 @@ export default {
       this.$data.htmlDisplay = this.apis[value];
       this.$data.menu = this.menus[value];
       window.scrollTo(0, 0);
+    },
+    onChildInput(value) {
+      this.$data.search = value;
+    },
+    onChildSearch() {
+      this.found = false;
+      let headlines = [];
+      let text = [];
+      let pages = document
+        .querySelector(".markdown-wrapper")
+        .querySelectorAll("*");
+
+      for (let page of pages) {
+        if (
+          page.nodeName === "H2" ||
+          page.nodeName === "H3" ||
+          page.nodeName === "H4" ||
+          page.nodeName === "H5" ||
+          page.nodeName === "H6"
+        ) {
+          headlines.push(page);
+        } else {
+          text.push(page);
+        }
+      }
+      for (let headline of headlines) {
+        if (headline.innerHTML.indexOf(this.search) !== -1 && this.search !== "") {
+          window.scrollTo(0, headline.offsetTop);
+          this.found = true;
+          break;
+        }
+      }
+      if (!this.found) {
+        for (let t of text) {
+          if (
+            t.innerHTML.indexOf(this.search) !== -1 &&
+            this.search !== ""
+          ) {
+            window.scrollTo(0, t.offsetTop);
+            this.found = true;
+            break;
+          }
+        }
+        if (!this.found) {
+          let error = document.querySelector(".api-search-error");
+          error.classList.add("nav-display");
+        }
+      }
     }
   },
   async asyncData({ params, $axios }) {
