@@ -20,6 +20,7 @@
             placeholder="Search (not working yet)"
           >
           <div class="api-search-img" v-on:click="onSearch"></div>
+          <div class="api-search-error hidden">No results found</div>
         </div>
         <div class="api-nav-select-wrapper" v-html="$md.render(this.$props.menu)"></div>
       </div>
@@ -41,6 +42,7 @@ export default {
       this.$emit("change", event.target.value);
     },
     onInput(event) {
+      document.querySelector(".api-search-error").classList.add("hidden");
       this.$emit("input", event.target.value);
     },
     onSearch() {
@@ -159,6 +161,17 @@ export default {
   width: 30px;
   z-index: 25;
   cursor: pointer;
+}
+
+.api-search-error {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  font-size: .75em
+}
+
+.hidden {
+  display: none;
 }
 
 .api-nav-select-wrapper ul {

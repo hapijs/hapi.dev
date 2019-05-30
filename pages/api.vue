@@ -33,7 +33,8 @@ export default {
       htmlDisplay: "",
       version: "18.3.1",
       menu: "",
-      search: ""
+      search: "",
+      found: false
     };
   },
   methods: {
@@ -47,6 +48,7 @@ export default {
       this.$data.search = await value;
     },
     onChildSearch() {
+      this.found = false
       let pages = document
         .querySelector(".markdown-wrapper")
         .querySelectorAll("*");
@@ -61,10 +63,16 @@ export default {
             page.nodeName === "H6"
           ) {
             window.scrollTo(0, page.offsetTop);
+            this.found = true
             break;
           }
           window.scrollTo(0, page.offsetTop);
+          this.found = true
         }
+      }
+      if (!this.found) {
+        let error = document.querySelector(".api-search-error");
+        error.classList.remove("hidden")
       }
     }
   },
