@@ -12,8 +12,14 @@
           </select>
         </div>
         <div class="api-search">
-          <input class="api-search-box" name="search" :value="search" @input="onInput($event)" placeholder="Search (not working yet)" />
-          <div class="api-search-img" ></div>
+          <input
+            class="api-search-box"
+            name="search"
+            :value="search"
+            @input="onInput($event)"
+            placeholder="Search (not working yet)"
+          >
+          <div class="api-search-img"></div>
         </div>
         <div class="api-nav-select-wrapper" v-html="$md.render(this.$props.menu)"></div>
       </div>
@@ -29,18 +35,21 @@ export default {
   components: {
     SideFooter
   },
-  props: ["menu", "search"],
+  props: ["menu", "search", "version"],
   methods: {
     onChange(event) {
       this.$emit("change", event.target.value);
     },
     onInput(event) {
-      this.$emit("input", event.target.value)
+      this.$emit("input", event.target.value);
     },
     setClasses() {
       let lis = document.getElementsByTagName("li");
       for (let li of lis) {
         li.classList.add("api-nav-li");
+        if (li.children[1]) {
+          li.children[0].classList.add("api-nav-li-header");
+        }
       }
       let links = document.querySelectorAll(
         ".api-nav-select-wrapper > ul > li > a"
@@ -62,6 +71,46 @@ export default {
       for (let c of code) {
         c.classList.add("api-nav-code");
       }
+      let tags = document.querySelectorAll(".markdown-wrapper a");
+      let points = {};
+      let offsets = [];
+      for (let i = 2; i < tags.length; i++) {
+        if (tags[i].name && this.version !== "16.7.0") {
+          points[tags[i].offsetTop - 70] = {
+            name: "#" + tags[i].name
+          };
+          offsets.push(tags[i].offsetTop - 70);
+        }
+        if (this.version === "16.7.0" && tags[i].id) {
+          points[tags[i].offsetTop - 70] = {
+            name: "#" + tags[i].id
+          };
+          offsets.push(tags[i].offsetTop - 70);
+        }
+      }
+      window.onscroll = function() {
+        console.log(points)
+        let location = document.documentElement.scrollTop;
+        let actives = document.getElementsByClassName("api-active");
+        let i = 0;
+        for (i in offsets) {
+          if (offsets[i] <= location) {
+            let aClass = points[offsets[i]].name;
+            for (let active of actives) {
+              active.classList.remove("api-active");
+            }
+
+            let element = document.querySelector(`a[href*='${aClass}']`);
+            if (element.children.length !== 0) {
+              document
+                .querySelector(`a[href*='${aClass}'] code`)
+                .classList.add("api-active");
+            } else {
+              element.classList.add("api-active");
+            }
+          }
+        }
+      };
     }
   },
   updated() {
@@ -69,36 +118,6 @@ export default {
   },
   mounted() {
     this.setClasses();
-    let tags = document.querySelectorAll(".markdown-wrapper a");
-    let points = {};
-    let offsets = [];
-    for (let i = 0; i < tags.length; i++) {
-      if (tags[i].name) {
-        points[tags[i].offsetTop - 70] = {
-          name: "#" + tags[i].name
-        };
-        offsets.push(tags[i].offsetTop - 70);
-      }
-    }
-    window.onscroll = function() {
-      let location = document.documentElement.scrollTop;
-      let actives = document.getElementsByClassName("api-active");
-      let i = 0;
-      for (i in offsets) {
-        if (offsets[i] <= location) {
-          let aClass = points[offsets[i]].name;
-          for (let active of actives) {
-            active.classList.remove("api-active");
-          }
-          document
-            .querySelector(`a[href*='${aClass}']`)
-            .classList.add("api-active");
-          document
-            .querySelector(`a[href*='${aClass}'] code`)
-            .classList.add("api-active");
-        }
-      }
-    };
   }
 };
 </script>
@@ -119,7 +138,7 @@ export default {
   padding: 10px;
   border: 1px solid #ddd;
   width: 100%;
-  font-size: .85rem;
+  font-size: 0.85rem;
 }
 
 .api-search-img {
@@ -174,7 +193,8 @@ export default {
   border-bottom: 1px solid #ddd;
 }
 
-.api-nav-li a:hover, .api-nav-li a code:hover {
+.api-nav-li a:hover,
+.api-nav-li a code:hover {
   color: $orange;
   text-decoration: none;
 }
@@ -203,6 +223,36 @@ export default {
 }
 
 .api-active {
-  color: $orange;
+  position: relative;
+  color: $orange !important;
+  transition: all 0.2s ease;
+}
+
+.api-active:before {
+  content: "";
+  position: absolute;
+  background: url("/img/arrow.png") no-repeat;
+  background-position: center;
+  background-size: contain;
+  top: 0;
+  bottom: 0;
+  left: -30px;
+  margin: auto;
+  height: 20px;
+  width: 20px;
+  z-index: 100;
+  display: block;
+  animation: arrow 0.4s;
+}
+
+@keyframes arrow {
+  from {
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
 }
 </style>

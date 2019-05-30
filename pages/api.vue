@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <ApiNav @change="onChildChange" @input="onChildInput" :menu="menu" :search="search"/>
+    <ApiNav @change="onChildChange" @input="onChildInput" :menu="menu" :search="search" :version="version"/>
     <div class="tutorial-markdown-window">
       <HTML :display="htmlDisplay"/>
     </div>
