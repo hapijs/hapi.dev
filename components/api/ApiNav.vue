@@ -19,7 +19,7 @@
             @input="onInput($event)"
             placeholder="Search (not working yet)"
           >
-          <div class="api-search-img"></div>
+          <div class="api-search-img" v-on:click="onSearch"></div>
         </div>
         <div class="api-nav-select-wrapper" v-html="$md.render(this.$props.menu)"></div>
       </div>
@@ -42,6 +42,9 @@ export default {
     },
     onInput(event) {
       this.$emit("input", event.target.value);
+    },
+    onSearch() {
+      this.$emit("search");
     },
     setClasses() {
       let lis = document.getElementsByTagName("li");
@@ -89,7 +92,6 @@ export default {
         }
       }
       window.onscroll = function() {
-        console.log(points)
         let location = document.documentElement.scrollTop;
         let actives = document.getElementsByClassName("api-active");
         let i = 0;

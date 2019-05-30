@@ -1,6 +1,13 @@
 <template>
   <div class="container">
-    <ApiNav @change="onChildChange" @input="onChildInput" :menu="menu" :search="search" :version="version"/>
+    <ApiNav
+      @change="onChildChange"
+      @input="onChildInput"
+      :menu="menu"
+      @search="onChildSearch"
+      :search="search"
+      :version="version"
+    />
     <div class="tutorial-markdown-window">
       <HTML :display="htmlDisplay"/>
     </div>
@@ -38,6 +45,27 @@ export default {
     },
     async onChildInput(value) {
       this.$data.search = await value;
+    },
+    onChildSearch() {
+      let pages = document
+        .querySelector(".markdown-wrapper")
+        .querySelectorAll("*");
+
+      for (let page of pages) {
+        if (page.innerHTML.indexOf(this.search) !== -1 && this.search !== "") {
+          if (
+            page.nodeName === "H2" ||
+            page.nodeName === "H3" ||
+            page.nodeName === "H4" ||
+            page.nodeName === "H5" ||
+            page.nodeName === "H6"
+          ) {
+            window.scrollTo(0, page.offsetTop);
+            break;
+          }
+          window.scrollTo(0, page.offsetTop);
+        }
+      }
     }
   },
   async asyncData({ params, $axios }) {
