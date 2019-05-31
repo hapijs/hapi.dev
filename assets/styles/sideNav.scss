@@ -21,6 +21,7 @@
 
 .side-nav-wrapper {
   display: flex;
+  display: -webkit-flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
