@@ -119,6 +119,16 @@ export default {
           };
           offsets.push(tags[i].offsetTop - 70);
         }
+        if (
+          this.version !== this.versions[2] &&
+          tags[i].id &&
+          tags[i].parentElement.children.length === 1
+        ) {
+          points[tags[i].offsetTop - 70] = {
+            name: "#" + tags[i].id
+          };
+          offsets.push(tags[i].offsetTop - 70);
+        }
         if (this.version === this.versions[2] && tags[i].id) {
           points[tags[i].offsetTop - 70] = {
             name: "#" + tags[i].id
