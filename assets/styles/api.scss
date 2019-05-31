@@ -1,3 +1,5 @@
+@import "./assets/styles/main.scss";
+
 h5 {
     font-size: 1.1rem;
   }
@@ -5,14 +7,14 @@ h5 {
 h2, h3, h4 {
     margin-top: 50px;
     padding-top: 10px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid $dark-white;
   }
 
 h3 .api-nav-code, h4 .api-nav-code {
       background: #fff;
       font-family: "Open Sans", sans-serif;
       font-size: 1.55rem;
-      color: #333;
+      color: $black;
       font-weight: 400;
       -webkit-font-smoothing: antialiased;
       padding: 5px 0;

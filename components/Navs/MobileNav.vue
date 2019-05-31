@@ -218,7 +218,7 @@ export default {
   padding: 0 20px 0 10px;
   width: 100%;
   height: 65px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid $dark-white;
 }
 
 .mobile-hapi {
@@ -245,7 +245,7 @@ export default {
   padding: 10px 0;
   padding-right: 0px !important;
   margin: 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid $dark-white;
 }
 
 .mobile-link {

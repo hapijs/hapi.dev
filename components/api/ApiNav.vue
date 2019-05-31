@@ -175,7 +175,7 @@ export default {
   height: 30px;
   outline: none;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid $dark-white;
   width: 100%;
   font-size: 0.85rem;
 }
@@ -189,9 +189,9 @@ export default {
   padding: 10px;
   right: -30px;
   top: 0px;
-  border-top: 1px solid #ddd;
-  border-right: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+  border-top: 1px solid $dark-white;
+  border-right: 1px solid $dark-white;
+  border-bottom: 1px solid $dark-white;
   height: 30px;
   width: 30px;
   z-index: 25;
@@ -227,7 +227,7 @@ export default {
 
 .api-search-button {
   outline: none;
-  border: 1px solid #ddd;
+  border: 1px solid $dark-white;
   background: #fff;
   padding: 2px 10px;
   color: $black;
@@ -246,7 +246,7 @@ export default {
 .api-nav-select-wrapper {
   margin-top: 20px;
   font-size: 1.1em;
-  color: #f6941e;
+  color: $orange;
   line-height: 30px;
   width: 100%;
 }
@@ -266,7 +266,7 @@ export default {
   font-size: 0.78em;
   width: 100%;
   padding: 5px 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid $dark-white;
 }
 
 .api-nav-li a:hover,
@@ -276,7 +276,7 @@ export default {
 }
 
 .api-nav-code {
-  background: #f8f8f8;
+  background: $off-white;
   color: $gray;
   font-family: "Open Sans", sans-serif;
   font-size: 1em;

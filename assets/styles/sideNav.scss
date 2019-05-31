@@ -15,8 +15,8 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  background: #f8f8f8;
-  border-right: 1px solid #ddd;
+  background: $off-white;
+  border-right: 1px solid $dark-white;
 }
 
 .side-nav-wrapper {
@@ -59,7 +59,7 @@
 select {
   width: 100px;
   padding: 0px 5px 0px 5px;
-  border: 1px solid #ddd;
+  border: 1px solid $dark-white;
   height: 30px;
   font-size: 0.9em;
   -webkit-appearance: none;
@@ -106,7 +106,7 @@ select {
     min-height: auto;
     max-height: auto;
     border-right: none;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid $dark-white;
     width: 100%;
   }
 

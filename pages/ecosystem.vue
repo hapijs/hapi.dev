@@ -87,7 +87,7 @@ export default {
   margin: 20px 0 -16px 100px;
   padding-bottom: 16px;
   box-sizing: border-box;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid $dark-white;
   display: inline-block;
 }
 

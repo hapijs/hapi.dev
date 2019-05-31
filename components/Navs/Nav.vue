@@ -174,7 +174,7 @@ export default {
     width: 100%;
     max-width: 100vw;
     padding: 5px 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid $dark-white;
   }
 
   .nav-container {
@@ -199,8 +199,8 @@ export default {
     left: -220px;
     width: 220px;
     height: 100vh;
-    background: #f8f8f8;
-    border-right: 1px solid #ddd;
+    background: $off-white;
+    border-right: 1px solid $dark-white;
     z-index: 10;
     overflow-y: auto;
   }
