@@ -6,9 +6,9 @@
         <div class="lang-wrapper">
           <div class="lang-text">Version:</div>
           <select @change="onChange($event)" class="api-lang-select">
-            <option value="18.3.1">18.3.1</option>
-            <option value="17.9.0">17.9.0</option>
-            <option value="16.7.0">16.7.0</option>
+            <option :value="versions[0]">{{versions[0]}}</option>
+            <option :value="versions[1]">{{versions[1]}}</option>
+            <option :value="versions[2]">{{versions[2]}}</option>
           </select>
         </div>
         <div class="api-search">
@@ -49,7 +49,7 @@ export default {
   components: {
     SideFooter
   },
-  props: ["menu", "search", "version", "results", "indexResults"],
+  props: ["menu", "search", "version", "results", "indexResults", "versions"],
   methods: {
     onChange(event) {
       this.$emit("change", event.target.value);
@@ -74,11 +74,12 @@ export default {
       }
     },
     onNext() {
-      if (this.indexResults !== this.results.length - 1){
-        this.$emit("next", this.indexResults + 1)
+      if (this.indexResults !== this.results.length - 1) {
+        this.$emit("next", this.indexResults + 1);
       }
     },
     setClasses() {
+      //Add classes to API nav
       let lis = document.getElementsByTagName("li");
       for (let li of lis) {
         li.classList.add("api-nav-li");
@@ -106,23 +107,27 @@ export default {
       for (let c of code) {
         c.classList.add("api-nav-code");
       }
+
+      //API nav scroll spy
       let tags = document.querySelectorAll(".markdown-wrapper a");
       let points = {};
       let offsets = [];
       for (let i = 2; i < tags.length; i++) {
-        if (tags[i].name && this.version !== "16.7.0") {
+        if (tags[i].name && this.version !== this.versions[2]) {
           points[tags[i].offsetTop - 70] = {
             name: "#" + tags[i].name
           };
           offsets.push(tags[i].offsetTop - 70);
         }
-        if (this.version === "16.7.0" && tags[i].id) {
+        if (this.version === this.versions[2] && tags[i].id) {
           points[tags[i].offsetTop - 70] = {
             name: "#" + tags[i].id
           };
           offsets.push(tags[i].offsetTop - 70);
         }
       }
+
+      //Add active class to elements on scroll
       window.onscroll = function() {
         let location = document.documentElement.scrollTop;
         let actives = document.getElementsByClassName("api-active");

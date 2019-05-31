@@ -11,6 +11,7 @@
       :results="results"
       :indexResults="indexResults"
       :version="version"
+      :versions="versions"
     />
     <div class="tutorial-markdown-window">
       <HTML :display="htmlDisplay"/>
@@ -21,6 +22,7 @@
 <script>
 import HTML from "~/components/HTML.vue";
 import ApiNav from "~/components/api/ApiNav.vue";
+let Semver = require("semver");
 
 export default {
   components: {
@@ -54,7 +56,7 @@ export default {
     },
     onChildIndex(value) {
       this.$data.indexResults = value;
-      window.scrollTo(0, this.results[this.indexResults].offsetTop)
+      window.scrollTo(0, this.results[this.indexResults].offsetTop);
     },
     onChildSearch() {
       let headlines = [];
@@ -65,6 +67,7 @@ export default {
         .querySelector(".markdown-wrapper")
         .querySelectorAll("*");
 
+      //Check if search item is in a headline
       for (let page of pages) {
         if (
           headers.indexOf(page.nodeName) !== -1 &&
@@ -93,16 +96,38 @@ export default {
     }
   },
   async asyncData({ params, $axios }) {
+    let versions = []
     const options = {
       headers: {
         accept: "application/vnd.github.v3.raw+json",
         authorization: "token " + process.env.GITHUB_TOKEN
       }
     };
-    const versions = ["18.3.1", "17.9.0", "16.7.0"];
+
+    let milestones = await $axios.$get(
+      "https://api.github.com/repos/hapijs/hapi/milestones?state=closed&per_page=100&direction=desc",
+      options
+    );
+
+    let sortedMilestones = await milestones.sort((a, b) =>
+      Semver.compare(b.title, a.title)
+    );
+
+    for (let milestone of sortedMilestones) {
+      if (milestone === sortedMilestones[0]) {
+        versions.push(milestone.title)
+      }
+      if (milestone.title.substring(0, 2) !== versions[versions.length - 1].substring(0, 2)) {
+        versions.push(milestone.title)
+      }
+      if (versions.length === 3) {
+        break
+      }
+    }
     let apis = {};
     let menus = {};
 
+    //Grab and store APIs
     for (let version of versions) {
       try {
         const res = await $axios.$get(
@@ -112,6 +137,8 @@ export default {
         );
         let raw = await res;
         let rawString = await raw.toString();
+
+        //Split API menu from content
         let finalDisplay = await rawString
           .replace(/\/>/g, "></a>")
           .replace(/-\s\[(?:.+[\n\r])+/, "");
@@ -138,7 +165,8 @@ export default {
     }
     return {
       apis,
-      menus
+      menus,
+      versions
     };
   },
   created() {
