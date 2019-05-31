@@ -149,12 +149,13 @@ export default {
               active.classList.remove("api-active");
             }
 
+
             let element = document.querySelector(`a[href*='${aClass}']`);
             if (element.children.length !== 0) {
               document
                 .querySelector(`a[href*='${aClass}'] *`)
                 .classList.add("api-active");
-            } else {
+            } else if (!document.querySelector(`a[href*='${aClass}']`).classList.contains("api-nav-header")){
               document
                 .querySelector(`a[href*='${aClass}']`)
                 .classList.add("api-active");

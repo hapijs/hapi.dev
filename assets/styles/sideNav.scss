@@ -21,12 +21,13 @@
 
 .side-nav-wrapper {
   display: flex;
+  display: -webkit-flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
   width: 100%;
-  height: auto;
-  min-height: calc(100% - 26px);
+  max-height: calc(100vh - 140px);
+  min-height: calc(100vh - 140px);
   box-sizing: border-box;
 }
 
