@@ -63,6 +63,7 @@ export default {
     ];
     let moduleAPI = {};
 
+    //Grab module APIs
     for (let module of modules) {
       let api = await $axios.$get(
         "https://api.github.com/repos/hapijs/" + module + "/contents/API.md",

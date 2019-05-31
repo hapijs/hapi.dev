@@ -82,6 +82,7 @@ export default {
       Semver.compare(b.title, a.title)
     );
 
+    //Get milestone issues
     for (let milestone of sortedMilestones.slice(0, 10)) {
       let m = await this.$axios.$get(
         "https://api.github.com/repos/hapijs/hapi/issues?state=closed&milestone=" +
