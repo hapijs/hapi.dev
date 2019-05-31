@@ -6,20 +6,34 @@
         <div class="lang-wrapper">
           <div class="lang-text">Version:</div>
           <select @change="onChange($event)" class="api-lang-select">
-            <option value="18.3.1">18.3.1</option>
-            <option value="17.9.0">17.9.0</option>
-            <option value="16.7.0">16.7.0</option>
+            <option :value="versions[0]">{{versions[0]}}</option>
+            <option :value="versions[1]">{{versions[1]}}</option>
+            <option :value="versions[2]">{{versions[2]}}</option>
           </select>
         </div>
         <div class="api-search">
           <input
             class="api-search-box"
             :value="search"
+            v-on:keyup.enter="onSearch"
             @input="onInput($event)"
             placeholder="Search API"
           >
           <div class="api-search-img" v-on:click="onSearch"></div>
-          <div class="api-search-error hidden">No results found</div>
+          <div class="api-search-info">
+            <div class="api-search-results">
+              <div class="api-search-results-wrapper">
+                <div
+                  class="api-search-results-text"
+                >Showing result {{indexResults + 1}} of {{results.length}}</div>
+                <div class="api-search-buttons">
+                  <button class="api-search-button" v-on:click="onPrevious">Previous</button>
+                  <button class="api-search-button" v-on:click="onNext">Next</button>
+                </div>
+              </div>
+            </div>
+            <div class="api-search-error">No results found</div>
+          </div>
         </div>
         <div class="api-nav-select-wrapper" v-html="$md.render(this.$props.menu)"></div>
       </div>
@@ -35,19 +49,37 @@ export default {
   components: {
     SideFooter
   },
-  props: ["menu", "search", "version"],
+  props: ["menu", "search", "version", "results", "indexResults", "versions"],
   methods: {
     onChange(event) {
       this.$emit("change", event.target.value);
     },
     onInput(event) {
-      document.querySelector(".api-search-error").classList.remove("nav-display");
+      document
+        .querySelector(".api-search-error")
+        .classList.remove("nav-display");
+      document
+        .querySelector(".api-search-results")
+        .classList.remove("nav-display");
       this.$emit("input", event.target.value);
     },
     onSearch() {
-      this.$emit("search");
+      if (this.search !== "") {
+        this.$emit("search");
+      }
+    },
+    onPrevious() {
+      if (this.indexResults !== 0) {
+        this.$emit("previous", this.indexResults - 1);
+      }
+    },
+    onNext() {
+      if (this.indexResults !== this.results.length - 1) {
+        this.$emit("next", this.indexResults + 1);
+      }
     },
     setClasses() {
+      //Add classes to API nav
       let lis = document.getElementsByTagName("li");
       for (let li of lis) {
         li.classList.add("api-nav-li");
@@ -67,7 +99,6 @@ export default {
           ) {
             event.stopPropagation();
             let linkSibling = link.parentElement.children[1];
-            console.log(linkSibling)
             linkSibling.classList.toggle("nav-display");
           }
         });
@@ -76,23 +107,37 @@ export default {
       for (let c of code) {
         c.classList.add("api-nav-code");
       }
+
+      //API nav scroll spy
       let tags = document.querySelectorAll(".markdown-wrapper a");
       let points = {};
       let offsets = [];
       for (let i = 2; i < tags.length; i++) {
-        if (tags[i].name && this.version !== "16.7.0") {
+        if (tags[i].name && this.version !== this.versions[2]) {
           points[tags[i].offsetTop - 70] = {
             name: "#" + tags[i].name
           };
           offsets.push(tags[i].offsetTop - 70);
         }
-        if (this.version === "16.7.0" && tags[i].id) {
+        if (
+          this.version !== this.versions[2] &&
+          tags[i].id &&
+          tags[i].parentElement.children.length === 1
+        ) {
+          points[tags[i].offsetTop - 70] = {
+            name: "#" + tags[i].id
+          };
+          offsets.push(tags[i].offsetTop - 70);
+        }
+        if (this.version === this.versions[2] && tags[i].id) {
           points[tags[i].offsetTop - 70] = {
             name: "#" + tags[i].id
           };
           offsets.push(tags[i].offsetTop - 70);
         }
       }
+
+      //Add active class to elements on scroll
       window.onscroll = function() {
         let location = document.documentElement.scrollTop;
         let actives = document.getElementsByClassName("api-active");
@@ -107,10 +152,12 @@ export default {
             let element = document.querySelector(`a[href*='${aClass}']`);
             if (element.children.length !== 0) {
               document
-                .querySelector(`a[href*='${aClass}'] code`)
+                .querySelector(`a[href*='${aClass}'] *`)
                 .classList.add("api-active");
             } else {
-              element.classList.add("api-active");
+              document
+                .querySelector(`a[href*='${aClass}']`)
+                .classList.add("api-active");
             }
           }
         }
@@ -143,7 +190,7 @@ export default {
   height: 30px;
   outline: none;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid $dark-white;
   width: 100%;
   font-size: 0.85rem;
 }
@@ -157,21 +204,50 @@ export default {
   padding: 10px;
   right: -30px;
   top: 0px;
-  border-top: 1px solid #ddd;
-  border-right: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+  border-top: 1px solid $dark-white;
+  border-right: 1px solid $dark-white;
+  border-bottom: 1px solid $dark-white;
   height: 30px;
   width: 30px;
   z-index: 25;
   cursor: pointer;
 }
 
-.api-search-error {
-  position: absolute;
+.api-search-info {
+  margin-top: 5px;
+  width: 100%;
+}
+
+.api-search-error,
+.api-search-results {
   display: none;
-  bottom: -20px;
-  left: 0;
-  font-size: .75em
+  width: 100%;
+  font-size: 0.85em;
+}
+
+.api-search-results-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.api-search-results-text {
+  margin: 0;
+}
+
+.api-search-buttons {
+  margin: 5px 0 0 0;
+}
+
+.api-search-button {
+  outline: none;
+  border: 1px solid $dark-white;
+  background: #fff;
+  padding: 2px 10px;
+  color: $black;
+  cursor: pointer;
+  margin-right: 10px;
 }
 
 .api-nav-select-wrapper ul {
@@ -185,7 +261,7 @@ export default {
 .api-nav-select-wrapper {
   margin-top: 20px;
   font-size: 1.1em;
-  color: #f6941e;
+  color: $orange;
   line-height: 30px;
   width: 100%;
 }
@@ -205,7 +281,7 @@ export default {
   font-size: 0.78em;
   width: 100%;
   padding: 5px 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid $dark-white;
 }
 
 .api-nav-li a:hover,
@@ -215,7 +291,7 @@ export default {
 }
 
 .api-nav-code {
-  background: #f8f8f8;
+  background: $off-white;
   color: $gray;
   font-family: "Open Sans", sans-serif;
   font-size: 1em;

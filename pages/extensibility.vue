@@ -64,7 +64,7 @@ export default {
   layout: "noSide",
   head() {
     return {
-      title: "Extensibility"
+      title: "hapi.js - Extensibility"
     };
   }
 };

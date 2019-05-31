@@ -34,7 +34,7 @@ export default {
   align-items: flex-start;
   margin: 10px 0 0 0;
   padding-bottom: 10px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid $dark-white;
 }
 
 .log-title {

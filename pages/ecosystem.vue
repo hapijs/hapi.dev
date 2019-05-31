@@ -19,7 +19,7 @@ export default {
   },
   head() {
     return {
-      title: "Ecosystem"
+      title: "hapi.js - " + this.$store.getters.loadEcosystem
     };
   },
   data() {
@@ -63,6 +63,7 @@ export default {
     ];
     let moduleAPI = {};
 
+    //Grab module APIs
     for (let module of modules) {
       let api = await $axios.$get(
         "https://api.github.com/repos/hapijs/" + module + "/contents/API.md",
@@ -87,7 +88,7 @@ export default {
   margin: 20px 0 -16px 100px;
   padding-bottom: 16px;
   box-sizing: border-box;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid $dark-white;
   display: inline-block;
 }
 

@@ -23,7 +23,7 @@ export default {
   },
   head() {
     return {
-      title: this.tutorial
+      title: "hapi.js - " + this.tutorial
         .replace(/([A-Z])/g, " $1")
         .replace(/^./, function(str) {
           return str.toUpperCase();

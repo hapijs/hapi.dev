@@ -6,6 +6,7 @@
         83% of developers* are concerned with the security of open-source code.
         You’re probably among that 83%.
       </div>
+      <div class="security-percent">* npm Inc. 2019 Trends in JavaScript report</div>
     </div>
     <div class="security-middle-wrapper">
       <h3 class="security-heading">You’ve got nothing to worry about with hapi.</h3>
@@ -59,7 +60,7 @@ export default {
   layout: "noSide",
   head() {
     return {
-      title: "Security"
+      title: "hapi.js - Security"
     };
   }
 };
@@ -70,7 +71,15 @@ export default {
 @import "../assets/styles/markdown.scss";
 
 .security-upper-wrapper {
+  position: relative;
   text-align: center;
+}
+
+.security-percent {
+  position: absolute;
+  bottom: -25px;
+  right: 0;
+  font-size: .75em;
 }
 
 .security-middle-wrapper {

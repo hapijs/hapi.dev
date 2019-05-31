@@ -51,7 +51,11 @@ export default {
   },
   head() {
     return {
-      title: "Community"
+      title: "hapi.js - " + this.page
+        .replace(/([A-Z])/g, " $1")
+        .replace(/^./, function(str) {
+          return str.toUpperCase();
+        })
     };
   },
   computed: {
@@ -78,6 +82,7 @@ export default {
       Semver.compare(b.title, a.title)
     );
 
+    //Get milestone issues
     for (let milestone of sortedMilestones.slice(0, 10)) {
       let m = await this.$axios.$get(
         "https://api.github.com/repos/hapijs/hapi/issues?state=closed&milestone=" +

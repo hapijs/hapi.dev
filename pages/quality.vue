@@ -51,7 +51,7 @@ export default {
   layout: "noSide",
   head() {
     return {
-      title: "Quality"
+      title: "hapi.js - Quality"
     };
   }
 };

@@ -49,7 +49,7 @@ export default {
   layout: "noSide",
   head() {
     return {
-      title: "Predictability"
+      title: "hapi.js - Predictability"
     };
   }
 };

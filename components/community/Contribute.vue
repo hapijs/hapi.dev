@@ -101,7 +101,7 @@ export default {
   font-size: 1.3rem;
   box-sizing: border-box;
   width: 100%;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid $dark-white;
 }
 
 .contribute-issue-header-text {

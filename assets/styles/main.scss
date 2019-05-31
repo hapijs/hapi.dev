@@ -4,6 +4,8 @@
 $orange: #f6941e;
 $orange-light: lighten($orange, 30%);
 $black: #333;
+$off-white: #f8f8f8;
+$dark-white: #ddd;
 $green: #87997D;
 $green-light: #C5E0B6;
 $green-lighter: lighten($green, 90%);
@@ -33,7 +35,7 @@ html, body {
    font-size: 16px;
    min-height: calc(100vh - 116px);
    font-family: "Open Sans", sans-serif;
-   color: #333;
+   color: $black;
 }
 
 .container {
