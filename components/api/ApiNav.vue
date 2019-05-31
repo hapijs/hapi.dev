@@ -15,11 +15,25 @@
           <input
             class="api-search-box"
             :value="search"
+            v-on:keyup.enter="onSearch"
             @input="onInput($event)"
             placeholder="Search API"
           >
           <div class="api-search-img" v-on:click="onSearch"></div>
-          <div class="api-search-error hidden">No results found</div>
+          <div class="api-search-info">
+            <div class="api-search-results">
+              <div class="api-search-results-wrapper">
+                <div
+                  class="api-search-results-text"
+                >Showing result {{indexResults + 1}} of {{results.length}}</div>
+                <div class="api-search-buttons">
+                  <button class="api-search-button" v-on:click="onPrevious">Previous</button>
+                  <button class="api-search-button" v-on:click="onNext">Next</button>
+                </div>
+              </div>
+            </div>
+            <div class="api-search-error">No results found</div>
+          </div>
         </div>
         <div class="api-nav-select-wrapper" v-html="$md.render(this.$props.menu)"></div>
       </div>
@@ -35,17 +49,34 @@ export default {
   components: {
     SideFooter
   },
-  props: ["menu", "search", "version"],
+  props: ["menu", "search", "version", "results", "indexResults"],
   methods: {
     onChange(event) {
       this.$emit("change", event.target.value);
     },
     onInput(event) {
-      document.querySelector(".api-search-error").classList.remove("nav-display");
+      document
+        .querySelector(".api-search-error")
+        .classList.remove("nav-display");
+      document
+        .querySelector(".api-search-results")
+        .classList.remove("nav-display");
       this.$emit("input", event.target.value);
     },
     onSearch() {
-      this.$emit("search");
+      if (this.search !== "") {
+        this.$emit("search");
+      }
+    },
+    onPrevious() {
+      if (this.indexResults !== 0) {
+        this.$emit("previous", this.indexResults - 1);
+      }
+    },
+    onNext() {
+      if (this.indexResults !== this.results.length - 1){
+        this.$emit("next", this.indexResults + 1)
+      }
     },
     setClasses() {
       let lis = document.getElementsByTagName("li");
@@ -67,7 +98,6 @@ export default {
           ) {
             event.stopPropagation();
             let linkSibling = link.parentElement.children[1];
-            console.log(linkSibling)
             linkSibling.classList.toggle("nav-display");
           }
         });
@@ -107,10 +137,12 @@ export default {
             let element = document.querySelector(`a[href*='${aClass}']`);
             if (element.children.length !== 0) {
               document
-                .querySelector(`a[href*='${aClass}'] code`)
+                .querySelector(`a[href*='${aClass}'] *`)
                 .classList.add("api-active");
             } else {
-              element.classList.add("api-active");
+              document
+                .querySelector(`a[href*='${aClass}']`)
+                .classList.add("api-active");
             }
           }
         }
@@ -166,12 +198,41 @@ export default {
   cursor: pointer;
 }
 
-.api-search-error {
-  position: absolute;
+.api-search-info {
+  margin-top: 5px;
+  width: 100%;
+}
+
+.api-search-error,
+.api-search-results {
   display: none;
-  bottom: -20px;
-  left: 0;
-  font-size: .75em
+  width: 100%;
+  font-size: 0.85em;
+}
+
+.api-search-results-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.api-search-results-text {
+  margin: 0;
+}
+
+.api-search-buttons {
+  margin: 5px 0 0 0;
+}
+
+.api-search-button {
+  outline: none;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 2px 10px;
+  color: $black;
+  cursor: pointer;
+  margin-right: 10px;
 }
 
 .api-nav-select-wrapper ul {
