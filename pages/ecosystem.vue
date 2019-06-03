@@ -1,10 +1,6 @@
 <template>
   <div class="container">
-    <EcosystemNav
-      :page="getEcosystem"
-      :moduleAPI="moduleAPI"
-      :modules="modules"
-    />
+    <EcosystemNav :page="getEcosystem" :moduleAPI="moduleAPI" :modules="modules"/>
     <div class="tutorial-markdown-window">
       <HTML :display="getDisplay"/>
     </div>
@@ -29,6 +25,55 @@ export default {
     return {
       display: ""
     };
+  },
+  methods: {
+    onScroll() {
+      let links = [];
+      links = document.querySelectorAll(
+        "#" + this.$store.getters.loadEcosystem + " a"
+      );
+      let points = {};
+      let offsets = [];
+      for (let i = 0; i < links.length; i++) {
+        let point = document.querySelector(
+          `.markdown-wrapper a[href*='${links[i].href.replace(/^[^_]*#/, "")}']`
+        );
+        if (point && point.id) {
+          points[point.offsetTop - 70] = {
+            name: "#" + point.id
+          };
+          offsets.push(point.offsetTop - 70);
+        }
+      }
+      offsets = [...new Set(offsets)]
+
+      //Add active class to elements on scroll
+      window.onscroll = function() {
+        let location = document.documentElement.scrollTop;
+        let actives = document.getElementsByClassName("ecosystem-active");
+        let i = 0;
+        for (i in offsets) {
+          if (offsets[i] <= location) {
+            let aClass = points[offsets[i]].name;
+            console.log(aClass)
+            for (let active of actives) {
+              active.classList.remove("ecosystem-active");
+            }
+
+            let element = document.querySelector(`a[href*='${aClass}']`);
+            if (element.children.length !== 0) {
+              document
+                .querySelector(`a[href*='${aClass}'] *`)
+                .classList.add("ecosystem-active");
+            } else if (element.children.length === 0) {
+              document
+                .querySelector(`a[href*='${aClass}']`)
+                .classList.add("ecosystem-active");
+            }
+          }
+        }
+      };
+    }
   },
   computed: {
     getEcosystem() {
@@ -101,6 +146,12 @@ export default {
   },
   created() {
     this.$data.display = this.moduleAPI.bell;
+  },
+  mounted() {
+    this.onScroll();
+  },
+  updated() {
+    this.onScroll();
   }
 };
 </script>
