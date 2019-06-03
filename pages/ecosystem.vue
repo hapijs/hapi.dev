@@ -107,6 +107,7 @@ export default {
 
 <style lang="scss">
 @import "../assets/styles/main.scss";
+@import "../assets/styles/api.scss";
 
 .ecosystem-title {
   margin: 20px 0 -16px 100px;

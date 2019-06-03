@@ -29,7 +29,12 @@ export default {
     SideFooter,
     EcosystemNavItem
   },
-  props: ["page", "moduleAPI", "modules"]
+  props: ["page", "moduleAPI", "modules"],
+  methods: {
+    setClasses() {
+      return true
+    }
+  }
 };
 </script>
 

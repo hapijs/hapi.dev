@@ -1,7 +1,11 @@
 <template>
-  <li class="side-nav-select-link ecosystem-side-nav-item" :ref="name" v-on:click="onChangePage(name)">
+  <li
+    class="side-nav-select-link ecosystem-side-nav-item"
+    :ref="name"
+    v-on:click="onChangePage(name)"
+  >
     {{name.charAt(0).toUpperCase(0) + name.slice(1)}}
-    <div class="ecosystem-nav-select-wrapper" :id="name" v-html="$md.render(this.$props.menu)"></div>
+    <div :class="getPage === name ? 'ecosystem-nav-select-wrapper ecosystem-display' : 'ecosystem-nav-select-wrapper'" v-html="$md.render(this.$props.menu)"></div>
   </li>
 </template>
 
@@ -24,6 +28,10 @@ export default {
 
 <style lang="scss">
 @import "../../assets/styles/sideNav.scss";
+
+.ecosystem-side-nav-item {
+  margin: 0 !important;
+}
 
 .ecosystem-side-nav-item:hover {
   text-decoration: none !important;
@@ -79,4 +87,9 @@ export default {
   padding: 0;
 }
 
+.ecosystem-display {
+  display: block !important;
+  height: auto;
+  transition: all 0.3 ease;
+}
 </style>
