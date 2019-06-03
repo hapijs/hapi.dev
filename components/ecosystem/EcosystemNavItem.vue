@@ -2,10 +2,14 @@
   <li
     class="side-nav-select-link ecosystem-side-nav-item"
     :ref="name"
-    v-on:click="onChangePage(name)"
+    v-on:click.self="onChangePage(name)"
   >
     {{name.charAt(0).toUpperCase(0) + name.slice(1)}}
-    <div :class="getPage === name ? 'ecosystem-nav-select-wrapper ecosystem-display' : 'ecosystem-nav-select-wrapper'" v-html="$md.render(this.$props.menu)"></div>
+    <div
+      :class="getPage === name ? 'ecosystem-nav-select-wrapper ecosystem-display' : 'ecosystem-nav-select-wrapper'"
+      :id="name"
+      v-html="$md.render(this.$props.menu)"
+    ></div>
   </li>
 </template>
 
@@ -19,8 +23,11 @@ export default {
   },
   methods: {
     onChangePage(ref) {
-      this.$store.commit("setEcosystem", ref);
-      window.scrollTo(0, 0);
+      if (this.$refs[ref].classList.contains("ecosystem-side-nav-item")) {
+        this.$store.commit("setEcosystem", ref);
+        document.querySelector(".side-nav-window").scrollTo(0, 0);
+        window.scrollTo(0, 0);
+      }
     }
   }
 };
@@ -91,5 +98,39 @@ export default {
   display: block !important;
   height: auto;
   transition: all 0.3 ease;
+}
+
+.ecosystem-active {
+  position: relative;
+  color: $orange !important;
+  transition: all 0.2s ease;
+}
+
+.ecosystem-active:before {
+  content: "";
+  position: absolute;
+  background: url("/img/arrow.png") no-repeat;
+  background-position: center;
+  background-size: contain;
+  top: 0;
+  bottom: 0;
+  left: -30px;
+  margin: auto;
+  height: 20px;
+  width: 20px;
+  z-index: 100;
+  display: block;
+  animation: arrow 0.4s;
+}
+
+@keyframes arrow {
+  from {
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
 }
 </style>
