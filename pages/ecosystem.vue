@@ -1,8 +1,11 @@
 <template>
   <div class="container">
-    <EcosystemNav @changePage="onChildChange" :page="getEcosystem"/>
+    <EcosystemNav
+      :page="getEcosystem"
+      :moduleAPI="moduleAPI"
+      :modules="modules"
+    />
     <div class="tutorial-markdown-window">
-      <h1 class="ecosystem-title">{{getEcosystem.charAt(0).toUpperCase() + getEcosystem.slice(1)}}</h1>
       <HTML :display="getDisplay"/>
     </div>
   </div>
@@ -32,21 +35,16 @@ export default {
       return this.$store.getters.loadEcosystem;
     },
     getDisplay() {
-      this.$data.display = this.moduleAPI[this.$store.getters.loadEcosystem];
+      this.$data.display = this.moduleAPI[
+        this.$store.getters.loadEcosystem
+      ].display;
       return this.$data.display;
-    }
-  },
-  methods: {
-    async onChildChange(value) {
-      this.$store.commit("setEcosystem", value);
-      this.$data.display = this.moduleAPI[value];
-      window.scrollTo(0, 0);
     }
   },
   async asyncData({ params, $axios }) {
     const options = {
       headers: {
-        accept: "application/vnd.github.v3.html+json",
+        accept: "application/vnd.github.v3.raw+json",
         authorization: "token " + process.env.GITHUB_TOKEN
       }
     };
@@ -63,17 +61,43 @@ export default {
     ];
     let moduleAPI = {};
 
-    //Grab module APIs
     for (let module of modules) {
-      let api = await $axios.$get(
-        "https://api.github.com/repos/hapijs/" + module + "/contents/API.md",
-        options
-      );
-      let apiString = await api.toString();
-      let finalDisplay = await apiString.replace(/user-content-/g, "");
-      moduleAPI[module] = await finalDisplay;
+      try {
+        const res = await $axios.$get(
+          "https://api.github.com/repos/hapijs/" + module + "/contents/API.md",
+          options
+        );
+        let raw = await res;
+        let rawString = await raw.toString();
+
+        //Split API menu from content
+        let finalDisplay = await rawString
+          .replace(/\/>/g, "></a>")
+          .replace(/.\s\[(?:.+[\n\r])+/, "");
+        let finalMenu = await rawString.match(/.\s\[(?:.+[\n\r])+/).pop();
+        const apiHTML = await $axios.$post(
+          "https://api.github.com/markdown",
+          {
+            text: finalDisplay,
+            mode: "markdown"
+          },
+          {
+            headers: {
+              authorization: "token " + process.env.GITHUB_TOKEN
+            }
+          }
+        );
+        let apiString = await apiHTML.toString();
+        let finalHtmlDisplay = await apiString.replace(/user-content-/g, "");
+        moduleAPI[module] = {
+          display: await finalHtmlDisplay,
+          menu: await finalMenu
+        };
+      } catch (err) {
+        console.log(err);
+      }
     }
-    return { moduleAPI };
+    return { moduleAPI, modules };
   },
   created() {
     this.$data.display = this.moduleAPI.bell;
