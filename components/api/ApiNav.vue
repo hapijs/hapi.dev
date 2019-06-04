@@ -97,9 +97,13 @@ export default {
             event.target.classList.contains("api-nav-header") &&
             link.parentElement.children[1]
           ) {
-            event.stopPropagation();
+            let active = document.querySelector(".nav-display");
+            if (active){
+              active.classList.remove("nav-display")
+            }
             let linkSibling = link.parentElement.children[1];
-            linkSibling.classList.toggle("nav-display");
+            linkSibling.classList.add("nav-display");
+            document.querySelector(".side-nav-window").scrollTo(0, 0);
           }
         });
       }

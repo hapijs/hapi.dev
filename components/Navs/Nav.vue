@@ -50,7 +50,6 @@ export default {
   },
   computed: {
     getDisplay() {
-      console.log(this.$store.getters.loadDisplay)
       return this.$store.getters.loadDisplay;
     }
   },
