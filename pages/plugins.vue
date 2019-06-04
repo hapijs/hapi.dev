@@ -19,6 +19,9 @@ export default {
     return {
       title: "hapi.js - Plugins"
     };
+  },
+  created() {
+    this.$store.commit("setDisplay", "plugins");
   }
 };
 </script>

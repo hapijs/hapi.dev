@@ -146,6 +146,7 @@ export default {
   },
   created() {
     this.$data.display = this.moduleAPI.bell;
+    this.$store.commit('setDisplay', 'ecosystem')
   },
   mounted() {
     this.onScroll();

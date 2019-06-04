@@ -23,9 +23,9 @@ export default {
   },
   head() {
     return {
-      title: "hapi.js - " + this.tutorial
-        .replace(/([A-Z])/g, " $1")
-        .replace(/^./, function(str) {
+      title:
+        "hapi.js - " +
+        this.tutorial.replace(/([A-Z])/g, " $1").replace(/^./, function(str) {
           return str.toUpperCase();
         })
     };
@@ -52,6 +52,9 @@ export default {
       this.$store.commit("setPage", page[value][this.tutorial].default);
       window.scrollTo(0, 0);
     }
+  },
+  created() {
+    this.$store.commit("setDisplay", "tutorials");
   }
 };
 </script>

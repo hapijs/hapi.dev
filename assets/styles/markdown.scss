@@ -96,15 +96,19 @@ ul {
   padding: 0;
 }
 
-.hljs-keyword {
+.hljs-keyword, .pl-k {
   color: #d73a49;
 }
 
-.hljs-built_in {
+.hljs-built_in, .pl-c1 {
   color: #009bdc;
 }
 
-.hljs-attr {
+.pl-c {
+  color: #aaa
+}
+
+.hljs-attr, .pl-en {
   color: #6f42c1
 }
 
