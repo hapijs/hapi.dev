@@ -1,42 +1,44 @@
 <template>
-  <nav role="navigation" class="navbar">
-    <div class="nav-container">
-      <a class="logo" href="/" title="Back to home"/>
-      <div class="nav-collapse">
-        <ul class="nav-links">
-          <li class="nav-links-li">
-            <a class="nav-link" title="Tutorials" href="/tutorials">Tutorials</a>
-          </li>
-          <li class="nav-links-li">
-            <a class="nav-link" title="API" href="/api">API</a>
-          </li>
-          <li class="nav-links-li">
-            <a class="nav-link" title="Plugins" href="/plugins">Plugins</a>
-          </li>
-          <li class="nav-links-li">
-            <a class="nav-link" title="Resources" href="/resources">Resources</a>
-          </li>
-          <li class="nav-links-li">
-            <a class="nav-link" title="Ecosystem" href="/ecosystem">Ecosystem</a>
-          </li>
-          <li class="nav-links-li">
-            <a class="nav-link" title="Contribute" href="/community">Community</a>
-          </li>
-          <li class="nav-links-li">
-            <a class="nav-link" title="Help" href="/help">Help</a>
-          </li>
-        </ul>
+  <header>
+    <nav role="navigation" class="navbar">
+      <div class="nav-container">
+        <a class="logo" href="/" title="Back to home" aria-label="hapi-logo"/>
+        <div class="nav-collapse">
+          <ul class="nav-links">
+            <li class="nav-links-li">
+              <a class="nav-link" title="Tutorials" href="/tutorials">Tutorials</a>
+            </li>
+            <li class="nav-links-li">
+              <a class="nav-link" title="API" href="/api">API</a>
+            </li>
+            <li class="nav-links-li">
+              <a class="nav-link" title="Plugins" href="/plugins">Plugins</a>
+            </li>
+            <li class="nav-links-li">
+              <a class="nav-link" title="Resources" href="/resources">Resources</a>
+            </li>
+            <li class="nav-links-li">
+              <a class="nav-link" title="Ecosystem" href="/ecosystem">Ecosystem</a>
+            </li>
+            <li class="nav-links-li">
+              <a class="nav-link" title="Contribute" href="/community">Community</a>
+            </li>
+            <li class="nav-links-li">
+              <a class="nav-link" title="Help" href="/help">Help</a>
+            </li>
+          </ul>
+        </div>
+        <a href="javascript:void(0);" class="hamburger" aria-label="hamburger" v-on:click="showNav()">
+          <span class="hamburger-line hamburger-line-upper"/>
+          <span class="hamburger-line hamburger-line-middle"/>
+          <span class="hamburger-line hamburger-line-lower"/>
+        </a>
       </div>
-      <a href="javascript:void(0);" class="hamburger" v-on:click="showNav()">
-        <span class="hamburger-line hamburger-line-upper"/>
-        <span class="hamburger-line hamburger-line-middle"/>
-        <span class="hamburger-line hamburger-line-lower"/>
-      </a>
-    </div>
-    <div ref="mobileNav" class="mobile-nav-wrapper">
-      <MobileNav/>
-    </div>
-  </nav>
+      <div ref="mobileNav" class="mobile-nav-wrapper">
+        <MobileNav/>
+      </div>
+    </nav>
+  </header>
 </template>
 
 <script>

@@ -1,39 +1,45 @@
 <template>
-  <section class="home-container">
-    <div class="index-header">
-      <div class="index-header1">The Simple, Secure Framework</div>
-      <div class="index-header2">Developers Trust</div>
-    </div>
-    <div class="index-description">
-      Build
-      <span class="bold">powerful</span>,
-      <span class="bold">scalable applications</span>, with
-      <span class="bold">minimal overhead</span> and full
-      <span class="bold">out-of-the-box</span> functionality -
-      <span class="bold">your code, your way</span>
-    </div>
-    <a class="index-button" href="/tutorials">Get started with hapi</a>
-    <div>
-      Originally developed to handle Walmart’s
-      <span class="bold">Black Friday scale</span>, hapi continues to be the
-      <span class="bold">proven</span> choice for
-      <span class="bold">enterprise-grade</span> backend needs.
-    </div>
-    <div class="index-about-header">Continue to learn more about:</div>
-    <div class="index-about">
-      <a href="/security" class="index-about-link">Security</a>
-      <span class="index-divider">|</span>
-      <a href="/quality" class="index-about-link">Quality</a>
-      <span class="index-divider">|</span>
-      <a href="/developersfirst" class="index-about-link">Developers First</a>
-      <span class="index-divider">|</span>
-      <a href="/predictability" class="index-about-link">Predictability</a>
-      <span class="index-divider">|</span>
-      <a href="/extensibility" class="index-about-link">Extensibility</a>
-      <span class="index-divider">|</span>
-      <a href="/help" class="index-about-link">Support</a>
-    </div>
-  </section>
+  <main>
+    <section class="home-container">
+      <div class="index-header">
+        <div class="index-header1">The Simple, Secure Framework</div>
+        <div class="index-header2">Developers Trust</div>
+      </div>
+      <div class="index-description">
+        Build
+        <span class="bold">powerful</span>,
+        <span class="bold">scalable applications</span>, with
+        <span class="bold">minimal overhead</span> and full
+        <span class="bold">out-of-the-box</span> functionality -
+        <span class="bold">your code, your way</span>
+      </div>
+      <a
+        class="index-button"
+        href="/tutorials"
+        aria-label="get-started-button"
+      >Get started with hapi</a>
+      <div>
+        Originally developed to handle Walmart’s
+        <span class="bold">Black Friday scale</span>, hapi continues to be the
+        <span class="bold">proven</span> choice for
+        <span class="bold">enterprise-grade</span> backend needs.
+      </div>
+      <div class="index-about-header">Continue to learn more about:</div>
+      <div class="index-about">
+        <a href="/security" class="index-about-link">Security</a>
+        <span class="index-divider">|</span>
+        <a href="/quality" class="index-about-link">Quality</a>
+        <span class="index-divider">|</span>
+        <a href="/developersfirst" class="index-about-link">Developers First</a>
+        <span class="index-divider">|</span>
+        <a href="/predictability" class="index-about-link">Predictability</a>
+        <span class="index-divider">|</span>
+        <a href="/extensibility" class="index-about-link">Extensibility</a>
+        <span class="index-divider">|</span>
+        <a href="/help" class="index-about-link">Support</a>
+      </div>
+    </section>
+  </main>
 </template>
 
 <script>
