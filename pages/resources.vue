@@ -19,6 +19,9 @@ export default {
     return {
       title: "hapi.js - Resources"
     };
+  },
+  created() {
+    this.$store.commit("setDisplay", "resources");
   }
 };
 </script>

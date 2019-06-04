@@ -6,25 +6,25 @@
         <div class="nav-collapse">
           <ul class="nav-links">
             <li class="nav-links-li">
-              <a class="nav-link" title="Tutorials" href="/tutorials">Tutorials</a>
+              <a :class="getDisplay === 'tutorials' ? 'nav-link nav-link-active' : 'nav-link'" ref="tutorials" title="Tutorials" href="/tutorials" v-on:click="addActive('tutorials')">Tutorials</a>
             </li>
             <li class="nav-links-li">
-              <a class="nav-link" title="API" href="/api">API</a>
+              <a :class="getDisplay === 'api' ? 'nav-link nav-link-active' : 'nav-link'" ref="api" title="API" href="/api" v-on:click="addActive('api')">API</a>
             </li>
             <li class="nav-links-li">
-              <a class="nav-link" title="Plugins" href="/plugins">Plugins</a>
+              <a :class="getDisplay === 'plugins' ? 'nav-link nav-link-active' : 'nav-link'" ref="plugins" title="Plugins" href="/plugins"  v-on:click="addActive('plugins')">Plugins</a>
             </li>
             <li class="nav-links-li">
-              <a class="nav-link" title="Resources" href="/resources">Resources</a>
+              <a :class="getDisplay === 'resources' ? 'nav-link nav-link-active' : 'nav-link'" ref="resources" title="Resources" href="/resources"vv-on:click="addActive('resources')">Resources</a>
             </li>
             <li class="nav-links-li">
-              <a class="nav-link" title="Ecosystem" href="/ecosystem">Ecosystem</a>
+              <a :class="getDisplay === 'ecosystem' ? 'nav-link nav-link-active' : 'nav-link'" ref="ecosystem" title="Ecosystem" href="/ecosystem" v-on:click="addActive('ecosystem')">Ecosystem</a>
             </li>
             <li class="nav-links-li">
-              <a class="nav-link" title="Contribute" href="/community">Community</a>
+              <a :class="getDisplay === 'community' ? 'nav-link nav-link-active' : 'nav-link'" ref="contribute" title="Contribute" href="/community" v-on:click="addActive('community')">Community</a>
             </li>
             <li class="nav-links-li">
-              <a class="nav-link" title="Help" href="/help">Help</a>
+              <a :class="getDisplay === 'help' ? 'nav-link nav-link-active' : 'nav-link'" ref="help" title="Help" href="/help" v-on:click="addActive('help')">Help</a>
             </li>
           </ul>
         </div>
@@ -48,9 +48,18 @@ export default {
   components: {
     MobileNav
   },
+  computed: {
+    getDisplay() {
+      console.log(this.$store.getters.loadDisplay)
+      return this.$store.getters.loadDisplay;
+    }
+  },
   methods: {
     showNav() {
       this.$refs.mobileNav.classList.add("show-nav");
+    },
+    addActive(ref) {
+      this.$store.commit('setDisplay', ref)
     }
   }
 };
@@ -123,7 +132,7 @@ export default {
   text-decoration: none;
 }
 
-.nav-link:before {
+.nav-link:before, .nav-link-active:before {
   width: 0;
   position: absolute;
   content: "";
@@ -136,7 +145,7 @@ export default {
   transition: 0.15s linear;
 }
 
-.nav-link:after {
+.nav-link:after, .nav-link-active:after {
   width: 0;
   position: absolute;
   content: "";
@@ -150,7 +159,9 @@ export default {
 }
 
 .nav-link:hover:after,
-.nav-link:hover:before {
+.nav-link:hover:before,
+.nav-link-active:before,
+.nav-link-active:after {
   width: 100%;
 }
 

@@ -14,10 +14,7 @@
         :issues="ecoIssues"
         :hapiIssues="openIssues"
       />
-      <Changelog
-        v-if="getCommunity === 'changelog'"
-        :milestones="getMilestones"
-      />
+      <Changelog v-if="getCommunity === 'changelog'" :milestones="getMilestones"/>
     </div>
   </div>
 </template>
@@ -26,7 +23,7 @@
 import Markdown from "~/components/Markdown.vue";
 import Updates from "~/components/community/Updates.vue";
 import Contribute from "~/components/community/Contribute.vue";
-import Changelog from "~/components/community/Changelog.vue"
+import Changelog from "~/components/community/Changelog.vue";
 import CommunityNav from "~/components/community/CommunityNav.vue";
 import style from "~/static/lib/style.md";
 let Semver = require("semver");
@@ -51,9 +48,9 @@ export default {
   },
   head() {
     return {
-      title: "hapi.js - " + this.page
-        .replace(/([A-Z])/g, " $1")
-        .replace(/^./, function(str) {
+      title:
+        "hapi.js - " +
+        this.page.replace(/([A-Z])/g, " $1").replace(/^./, function(str) {
           return str.toUpperCase();
         })
     };
@@ -165,6 +162,9 @@ export default {
       this.$store.commit("setCommunity", value);
       window.scrollTo(0, 0);
     }
+  },
+  created() {
+    this.$store.commit("setDisplay", "community");
   }
 };
 </script>

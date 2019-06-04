@@ -3,7 +3,10 @@
     <div class="help-top">There are a few ways in which you can receive help using hapi:</div>
     <div class="help-middle">
       - For any issue or question (no matter how basic), open an issue on
-      <a class="help-link" href="https://github.com/hapijs/hapi">github</a>.
+      <a
+        class="help-link"
+        href="https://github.com/hapijs/hapi"
+      >github</a>.
     </div>
     <div class="help-bottom">
       - For discussions, join the
@@ -21,7 +24,10 @@ export default {
   head() {
     return {
       title: "hapi.js - Help"
-    }
+    };
+  },
+  created() {
+    this.$store.commit("setDisplay", "help");
   }
 };
 </script>

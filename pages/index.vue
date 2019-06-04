@@ -45,7 +45,10 @@
 <script>
 export default {
   layout: "home",
-  components: {}
+  components: {},
+  created() {
+    this.$store.commit("setDisplay", "home");
+  }
 };
 </script>
 

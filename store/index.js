@@ -4,6 +4,7 @@ export const state = () => ({
   page: start.gettingStarted.default,
   community: "contribute",
   ecosystem: "bell",
+  display: "home"
 })
 
 export const mutations = {
@@ -15,6 +16,9 @@ export const mutations = {
   },
   setEcosystem (state, ecosystem) {
     state.ecosystem = ecosystem
+  },
+  setDisplay (state, display) {
+    state.display = display
   }
 }
 
@@ -27,5 +31,8 @@ export const getters = {
   },
   loadEcosystem (state) {
     return state.ecosystem
+  },
+  loadDisplay (state) {
+    return state.display
   }
 }
