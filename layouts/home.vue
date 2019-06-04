@@ -43,4 +43,10 @@ html {
   min-height: 100vh;
   padding-bottom: 100px;
 }
+
+@media screen and (max-width: 900px) {
+  .contain {
+    min-height: calc(100vh - 80px)
+  }
+}
 </style>

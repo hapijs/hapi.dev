@@ -64,6 +64,7 @@ export default {
     }
   },
   async created() {
+    await this.$store.commit("setDisplay", "community");
     const options = {
       headers: {
         accept: "application/vnd.github.v3.raw+json",
@@ -162,9 +163,6 @@ export default {
       this.$store.commit("setCommunity", value);
       window.scrollTo(0, 0);
     }
-  },
-  created() {
-    this.$store.commit("setDisplay", "community");
   }
 };
 </script>

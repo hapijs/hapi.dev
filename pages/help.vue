@@ -53,4 +53,10 @@ export default {
 .help-bottom {
   margin-left: 25px;
 }
+
+@media screen and (max-width: 900px) {
+  .help-wrapper {
+    padding: 10px;
+  }
+}
 </style>

@@ -54,4 +54,11 @@ body {
   min-height: calc(100vh - 110px);
   padding-bottom: 100px;
 }
+
+@media screen and (max-width: 900px) {
+  .contain {
+    margin: 60px auto 0 auto;
+    min-height: calc(100vh - 80px);
+  }
+}
 </style>

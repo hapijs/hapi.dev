@@ -139,5 +139,9 @@ export default {
     margin-top: 70px;
     padding: 0 10px;
   }
+
+  .index-about {
+    margin-bottom: 10px;
+  }
 }
 </style>
