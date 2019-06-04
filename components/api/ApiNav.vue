@@ -103,7 +103,7 @@ export default {
           }
         });
       }
-      let code = document.querySelectorAll("code");
+      let code = document.querySelectorAll(".api-nav-select-wrapper code");
       for (let c of code) {
         c.classList.add("api-nav-code");
       }
