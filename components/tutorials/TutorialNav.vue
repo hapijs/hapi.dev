@@ -87,6 +87,12 @@
               v-on:click="showDiv('views')"
               class="side-nav-select-link"
             >Views</li>
+            <li
+              id="expressToHapi"
+              ref="expressToHapi"
+              v-on:click="showDiv('expressToHapi')"
+              class="side-nav-select-link"
+            >Express to hapi Guide</li>
           </ul>
         </div>
       </div>
