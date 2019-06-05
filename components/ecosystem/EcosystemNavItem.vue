@@ -1,6 +1,6 @@
 <template>
   <li
-    class="side-nav-select-link ecosystem-side-nav-item"
+    :class="getPage === name ? 'side-nav-select-link ecosystem-side-nav-item side-nav-active' : 'side-nav-select-link ecosystem-side-nav-item'"
     :ref="name"
     v-on:click.self="onChangePage(name)"
   >
