@@ -172,6 +172,7 @@ export default {
   created() {
     this.$data.htmlDisplay = this.apis["18.3.1"];
     this.$data.menu = this.menus["18.3.1"];
+    this.$store.commit('setDisplay', 'api');
   }
 };
 </script>
