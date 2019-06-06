@@ -38,6 +38,7 @@ export default {
   },
   computed: {
     getPage() {
+      // /<ul>([^;]*)<\/ul>/
       return this.$store.getters.loadPage;
     }
   },
@@ -63,3 +64,4 @@ export default {
 @import "../assets/styles/main.scss";
 @import "../assets/styles/api.scss";
 </style>
+
