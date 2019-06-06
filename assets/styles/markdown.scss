@@ -52,7 +52,7 @@ code {
   font-family: "inconsolata", menlo, consolas, monospace;
   padding: 0.2rem 0.33rem;
   color: #6f6f6f;
-  background-color: #f3f3f3;
+  background-color: #f8f8f8;
 }
 
 .tutorial-markdown-window section {
@@ -77,23 +77,30 @@ p {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   color: $black;
+  line-height: 1.7rem;
 }
 
-p code {
+  p code, li code {
   font-family: "inconsolata", menlo, consolas, monospace;
   padding: 0.2rem 0.33rem;
   color: #6f6f6f;
   background-color: #f3f3f3;
+  border: 1px solid $dark-white;
 }
 
 li {
   margin-bottom: 20px;
+  line-height: 1.7rem;
   list-style-type: disc;
 }
 
 ul {
   margin: 15px 0 15px 20px;
   padding: 0;
+}
+
+pre {
+  border: 1px solid $dark-white;
 }
 
 .hljs-keyword, .pl-k {

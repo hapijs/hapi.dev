@@ -92,6 +92,7 @@ export default {
   font-family: "Open Sans", sans-serif;
   font-size: 1em;
   padding: 0;
+  border: none;
 }
 
 .ecosystem-display {
