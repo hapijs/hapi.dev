@@ -4,7 +4,8 @@ export const state = () => ({
   page: start.gettingStarted.default,
   community: "contribute",
   ecosystem: "bell",
-  display: "home"
+  display: "home",
+  language: "en_US"
 })
 
 export const mutations = {
@@ -19,6 +20,9 @@ export const mutations = {
   },
   setDisplay (state, display) {
     state.display = display
+  },
+  setLanguage (state, language) {
+    state.language = language
   }
 }
 
@@ -34,5 +38,8 @@ export const getters = {
   },
   loadDisplay (state) {
     return state.display
+  },
+  loadLanguage (state) {
+    return state.language
   }
 }

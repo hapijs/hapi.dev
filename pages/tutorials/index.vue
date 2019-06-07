@@ -3,7 +3,6 @@
     <TutorialNav
       :tutorial="tutorial"
       :language="language"
-      @clicked="onClickChild"
       @changed="onChangeChild"
     />
     <div class="tutorial-markdown-window">
@@ -33,33 +32,30 @@ export default {
   data() {
     return {
       tutorial: "gettingStarted",
-      language: "en_US"
+      language: this.getLanguage
     };
   },
   computed: {
     getPage() {
       // /<ul>([^;]*)<\/ul>/
       return this.$store.getters.loadPage;
+    },
+    getLanguage() {
+      return this.$store.getters.loadLanguage
     }
   },
   methods: {
-    onClickChild(value) {
-      this.$data.tutorial = value.ref;
-      window.scrollTo(0, 0);
-    },
     onChangeChild(value) {
-      this.$data.language = value;
+      this.$store.commit("setLanguage", value)
       this.$store.commit("setPage", page[value][this.tutorial].default);
       window.scrollTo(0, 0);
     }
   },
   created() {
     this.$store.commit("setDisplay", "tutorials");
-
-      this.$store.commit(
-        "setPage",
-        page.en_US.gettingStarted.default)
-
+    this.$store.commit("setLanguage", this.$route.query.lang)
+    this.$store.commit("setPage", page.en_US.gettingStarted.default);
+    
   }
 };
 </script>

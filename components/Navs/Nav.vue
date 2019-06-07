@@ -6,7 +6,7 @@
         <div class="nav-collapse">
           <ul class="nav-links">
             <li class="nav-links-li">
-              <a :class="getDisplay === 'tutorials' ? 'nav-link nav-link-active' : 'nav-link'" ref="tutorials" title="Tutorials" href="/tutorials" v-on:click="addActive('tutorials')">Tutorials</a>
+              <a :class="getDisplay === 'tutorials' ? 'nav-link nav-link-active' : 'nav-link'" ref="tutorials" title="Tutorials" href="/tutorials/?lang=en_US" v-on:click="addActive('tutorials')">Tutorials</a>
             </li>
             <li class="nav-links-li">
               <a :class="getDisplay === 'api' ? 'nav-link nav-link-active' : 'nav-link'" ref="api" title="API" href="/api" v-on:click="addActive('api')">API</a>
