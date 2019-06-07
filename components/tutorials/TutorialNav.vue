@@ -16,7 +16,7 @@
         <div class="side-nav-select-wrapper">
           <ul class="side-nav-select-list">
             <li
-              :class="$route.params.tutorial === 'gettingStarted' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+              :class="$route.params.tutorial === 'gettingStarted' || !$route.params.tutorial ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
             >
               <a
                 ref="gettingStarted"

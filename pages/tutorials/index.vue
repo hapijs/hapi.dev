@@ -55,14 +55,11 @@ export default {
   },
   created() {
     this.$store.commit("setDisplay", "tutorials");
-    if (!page[this.language][this.$route.params.tutorial].default) {
-      error({ statusCode: 404, message: "That tutorial does not exist!" });
-    } else {
+
       this.$store.commit(
         "setPage",
-        page[this.language][this.$route.params.tutorial].default
-      );
-    }
+        page.en_US.gettingStarted.default)
+
   }
 };
 </script>
