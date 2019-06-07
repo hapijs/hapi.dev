@@ -15,7 +15,7 @@
       </div>
       <a
         class="index-button"
-        href="/tutorials"
+        href="/tutorials/?lang=en_US"
         aria-label="get-started-button"
       >Get started with hapi</a>
       <div>

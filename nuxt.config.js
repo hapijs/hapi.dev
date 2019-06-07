@@ -3,6 +3,24 @@ const pkg = require("./package")
 module.exports = {
   mode: "universal",
 
+  generate: {
+    routes: [
+      '/tutorials/gettingStarted',
+      '/tutorials/auth',
+      '/tutorials/caching',
+      '/tutorials/cookies',
+      '/tutorials/logging',
+      '/tutorials/plugins',
+      '/tutorials/routing',
+      '/tutorials/serverMethods',
+      '/tutorials/servingFiles',
+      '/tutorials/testing',
+      '/tutorials/validation',
+      '/tutorials/views',
+      '/tutorials/expressToHapi'
+    ]
+  },
+
   /*
    ** Headers of the page
    */
