@@ -13,9 +13,9 @@
 </template>
 
 <script>
-import Tutorial from "~/components/tutorials/Tutorial.vue";
-import TutorialNav from "~/components/tutorials/TutorialNav.vue";
-const page = require("../static/lib/tutorials/");
+import Tutorial from "../../components/tutorials/Tutorial.vue";
+import TutorialNav from "../../components/tutorials/TutorialNav.vue";
+const page = require("../../static/lib/tutorials/");
 export default {
   components: {
     Tutorial,
@@ -44,7 +44,6 @@ export default {
   },
   methods: {
     onClickChild(value) {
-      this.$store.commit("setPage", page[this.language][value.ref].default);
       this.$data.tutorial = value.ref;
       window.scrollTo(0, 0);
     },
@@ -56,12 +55,19 @@ export default {
   },
   created() {
     this.$store.commit("setDisplay", "tutorials");
+    if (!page[this.language][this.$route.params.tutorial].default) {
+      error({ statusCode: 404, message: "That tutorial does not exist!" });
+    } else {
+      this.$store.commit(
+        "setPage",
+        page[this.language][this.$route.params.tutorial].default
+      );
+    }
   }
 };
 </script>
 
 <style lang="scss">
-@import "../assets/styles/main.scss";
-@import "../assets/styles/api.scss";
+@import "../../assets/styles/main.scss";
+@import "../../assets/styles/api.scss";
 </style>
-
