@@ -42,8 +42,7 @@ export default {
   data() {
     return {
       page: "contribute",
-      display: style.toString(),
-      milestoneList: []
+      display: style.toString()
     };
   },
   head() {
@@ -65,30 +64,6 @@ export default {
   },
   async created() {
     await this.$store.commit("setDisplay", "community");
-    const options = {
-      headers: {
-        accept: "application/vnd.github.v3.raw+json",
-        authorization: "token " + process.env.GITHUB_TOKEN
-      }
-    };
-    let milestones = await this.$axios.$get(
-      "https://api.github.com/repos/hapijs/hapi/milestones?state=closed&per_page=100&direction=desc",
-      options
-    );
-
-    let sortedMilestones = await milestones.sort((a, b) =>
-      Semver.compare(b.title, a.title)
-    );
-
-    //Get milestone issues
-    for (let milestone of sortedMilestones.slice(0, 10)) {
-      let m = await this.$axios.$get(
-        "https://api.github.com/repos/hapijs/hapi/issues?state=closed&milestone=" +
-          milestone.number,
-        options
-      );
-      this.milestoneList.push(m);
-    }
   },
   async asyncData({ $axios, params, store }) {
     const options = {
@@ -100,6 +75,7 @@ export default {
 
     let repo = [];
     let ecoIssues = [];
+    let milestoneList = [];
     let repos = await $axios.$get(
       "https://api.github.com/orgs/hapijs/repos",
       options
@@ -149,12 +125,38 @@ export default {
       options
     );
 
+    const mileOptions = {
+      headers: {
+        accept: "application/vnd.github.v3.raw+json",
+        authorization: "token " + process.env.GITHUB_TOKEN
+      }
+    };
+    let milestones = await $axios.$get(
+      "https://api.github.com/repos/hapijs/hapi/milestones?state=closed&per_page=100&direction=desc",
+      mileOptions
+    );
+
+    let sortedMilestones = await milestones.sort((a, b) =>
+      Semver.compare(b.title, a.title)
+    );
+
+    //Get milestone issues
+    for (let milestone of sortedMilestones.slice(0, 10)) {
+      let m = await $axios.$get(
+        "https://api.github.com/repos/hapijs/hapi/issues?state=closed&milestone=" +
+          milestone.number,
+        mileOptions
+      );
+      milestoneList.push(m);
+    }
+
     return {
       pullRequests,
       openIssues,
       closedIssues,
       commits,
-      ecoIssues
+      ecoIssues,
+      milestoneList
     };
   },
   methods: {

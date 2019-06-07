@@ -55,7 +55,6 @@ export default {
         for (i in offsets) {
           if (offsets[i] <= location) {
             let aClass = points[offsets[i]].name;
-            console.log(aClass)
             for (let active of actives) {
               active.classList.remove("ecosystem-active");
             }
