@@ -44,15 +44,12 @@ This Express to hapi guide will show you how to take what you know how to do in 
 ### <a name="installation" ></a> Installation
 
 Express:
+`npm install express`
 
-```js
-npm install express
-```
 
 hapi:
-```js
-npm install @hapi/hapi
-```
+`npm install @hapi/hapi`
+
 
 ### <a name="server" ></a> Creating a Server
 

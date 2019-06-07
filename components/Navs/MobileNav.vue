@@ -9,73 +9,44 @@
         <a class="mobile-link" title="Home" href="/">Home</a>
       </li>
       <li class="mobile-links-li">
-        <a
-          class="mobile-link"
-          title="Tutorials"
-          v-on:click="loadTutorial('gettingStarted')"
-        >Tutorials</a>
+        <a class="mobile-link" title="Tutorials" href="/tutorials/">Tutorials</a>
         <ul>
-          <li
-            class="mobile-link mobile-tutorial-link"
-            title="Getting Started"
-            v-on:click="loadTutorial('gettingStarted')"
-          >Getting Started</li>
-          <li
-            class="mobile-link mobile-tutorial-link"
-            title="Getting Started"
-            v-on:click="loadTutorial('auth')"
-          >Authentication</li>
-          <li
-            class="mobile-link mobile-tutorial-link"
-            title="Getting Started"
-            v-on:click="loadTutorial('caching')"
-          >Caching</li>
-          <li
-            class="mobile-link mobile-tutorial-link"
-            title="Getting Started"
-            v-on:click="loadTutorial('cookies')"
-          >Cookies</li>
-          <li
-            class="mobile-link mobile-tutorial-link"
-            title="Getting Started"
-            v-on:click="loadTutorial('logging')"
-          >Logging</li>
-          <li
-            class="mobile-link mobile-tutorial-link"
-            title="Getting Started"
-            v-on:click="loadTutorial('plugins')"
-          >Plugins</li>
-          <li
-            class="mobile-link mobile-tutorial-link"
-            title="Getting Started"
-            v-on:click="loadTutorial('routing')"
-          >Routing</li>
-          <li
-            class="mobile-link mobile-tutorial-link"
-            title="Getting Started"
-            v-on:click="loadTutorial('serverMethods')"
-          >Server Methods</li>
-          <li
-            class="mobile-link mobile-tutorial-link"
-            title="Serving Files"
-            append
-            v-on:click="loadTutorial('servingFiles')"
-          >Serving Static Files</li>
-          <li
-            class="mobile-link mobile-tutorial-link"
-            title="Getting Started"
-            v-on:click="loadTutorial('testing')"
-          >Testing</li>
-          <li
-            class="mobile-link mobile-tutorial-link"
-            title="Getting Started"
-            v-on:click="loadTutorial('validation')"
-          >Validation</li>
-          <li
-            class="mobile-link mobile-tutorial-link"
-            title="Getting Started"
-            v-on:click="loadTutorial('views')"
-          >Views</li>
+          <li class="mobile-link mobile-tutorial-link">
+            <a title="Tutorials" href="/tutorials/gettingStarted/">Getting Started</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link">
+            <a title="Tutorials" href="/tutorials/auth/">Authentication</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link">
+            <a title="Tutorials" href="/tutorials/caching/">Caching</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link">
+            <a title="Tutorials" href="/tutorials/cookies/">Cookies</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link">
+            <a title="Tutorials" href="/tutorials/logging/">Logging</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link">
+            <a title="Tutorials" href="/tutorials/plugins/">Plugins</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link">
+            <a title="Tutorials" href="/tutorials/routing/">Routing</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link">
+            <a title="Tutorials" href="/tutorials/serverMethods/">Server Methods</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link">
+            <a title="Tutorials" href="/tutorials/servingFiles/">Serving Static Files</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link">
+            <a title="Tutorials" href="/tutorials/testing/">Testing</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link">
+            <a title="Tutorials" href="/tutorials/validation/">Validation</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link">
+            <a title="Tutorials" href="/tutorials/views/">Views</a>
+          </li>
         </ul>
       </li>
       <li class="mobile-links-li">
@@ -182,12 +153,6 @@ export default {
     async loadCommunity(ref) {
       await this.$store.commit("setCommunity", ref);
       await this.$nuxt.$router.push("community");
-      window.scrollTo(0, 0);
-      this.closeNav();
-    },
-    async loadTutorial(ref) {
-      await this.$store.commit("setPage", tutorial.en_US[ref].default);
-      await this.$nuxt.$router.push("tutorials");
       window.scrollTo(0, 0);
       this.closeNav();
     },

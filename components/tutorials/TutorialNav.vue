@@ -16,83 +16,78 @@
         <div class="side-nav-select-wrapper">
           <ul class="side-nav-select-list">
             <li
-              id="gettingStarted"
-              ref="gettingStarted"
-              v-on:click="showDiv('gettingStarted')"
-              class="side-nav-select-link side-nav-active"
-            >Getting Started</li>
+              :class="$route.params.tutorial === 'gettingStarted' || !$route.params.tutorial ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+            >
+              <a
+                ref="gettingStarted"
+                v-on:click="showDiv()"
+                href="/tutorials/gettingStarted/"
+              >Getting Started</a>
+            </li>
             <li
-              id="auth"
-              ref="auth"
-              v-on:click="showDiv('auth')"
-              class="side-nav-select-link"
-            >Authentication</li>
+              :class="$route.params.tutorial === 'auth' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+            >
+              <a ref="auth" v-on:click="showDiv()" href="/tutorials/auth/">Authentication</a>
+            </li>
             <li
-              id="caching"
-              ref="caching"
-              v-on:click="showDiv('caching')"
-              class="side-nav-select-link"
-            >Caching</li>
+              :class="$route.params.tutorial === 'caching' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+            >
+              <a ref="caching" v-on:click="showDiv()" href="/tutorials/caching/">Caching</a>
+            </li>
             <li
-              id="cookies"
-              ref="cookies"
-              v-on:click="showDiv('cookies')"
-              class="side-nav-select-link"
-            >Cookies</li>
+              :class="$route.params.tutorial === 'cookies' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+            >
+              <a ref="cookies" v-on:click="showDiv()" href="/tutorials/cookies/">Cookies</a>
+            </li>
             <li
-              id="logging"
-              ref="logging"
-              v-on:click="showDiv('logging')"
-              class="side-nav-select-link"
-            >Logging</li>
+              :class="$route.params.tutorial === 'logging' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+            >
+              <a ref="logging" v-on:click="showDiv()" href="/tutorials/logging/">Logging</a>
+            </li>
             <li
-              id="plugins"
-              ref="plugins"
-              v-on:click="showDiv('plugins')"
-              class="side-nav-select-link"
-            >Plugins</li>
+              :class="$route.params.tutorial === 'plugins' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+            >
+              <a ref="plugins" v-on:click="showDiv()" href="/tutorials/plugins/">Plugins</a>
+            </li>
             <li
-              id="routing"
-              ref="routing"
-              v-on:click="showDiv('routing')"
-              class="side-nav-select-link"
-            >Routing</li>
+              :class="$route.params.tutorial === 'routing' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+            >
+              <a ref="routing" v-on:click="showDiv()" href="/tutorials/routing/">Routing</a>
+            </li>
             <li
-              id="serverMethods"
-              ref="serverMethods"
-              v-on:click="showDiv('serverMethods')"
-              class="side-nav-select-link"
-            >Server Methods</li>
-            <li
-              id="servingFiles"
-              ref="servingFiles"
-              v-on:click="showDiv('servingFiles')"
-              class="side-nav-select-link"
-            >Serving Static Content</li>
-            <li
-              id="testing"
-              ref="testing"
-              v-on:click="showDiv('testing')"
-              class="side-nav-select-link"
-            >Testing</li>
-            <li
-              id="validation"
-              ref="validation"
-              v-on:click="showDiv('validation')"
-              class="side-nav-select-link"
-            >Validation</li>
-            <li
-              id="views"
-              ref="views"
-              v-on:click="showDiv('views')"
-              class="side-nav-select-link"
-            >Views</li>
-            <li
-              id="expressToHapi"
-              ref="expressToHapi"
-              v-on:click="showDiv('expressToHapi')"
-              class="side-nav-select-link"
-            >Express to hapi Guide</li>
+              :class="$route.params.tutorial === 'serverMethods' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+            >
+              <a
+                ref="serverMethods"
+                v-on:click="showDiv()"
+                href="/tutorials/serverMethods/"
+              >Server Methods</a>
+            </li>
+                        <li
+              :class="$route.params.tutorial === 'servingFiles' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+            >
+              <a ref="servingFiles" v-on:click="showDiv()" href="/tutorials/servingFiles/">Serving Static Files</a>
+            </li>
+                        <li
+              :class="$route.params.tutorial === 'testing' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+            >
+              <a ref="testing" v-on:click="showDiv()" href="/tutorials/testing/">Testing</a>
+            </li>
+                        <li
+              :class="$route.params.tutorial === 'validation' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+            >
+              <a ref="validation" v-on:click="showDiv()" href="/tutorials/validation/">Validation</a>
+            </li>
+                        <li
+              :class="$route.params.tutorial === 'views' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+            >
+              <a ref="views" v-on:click="showDiv()" href="/tutorials/views/">Views</a>
+            </li>
+                        <li
+              :class="$route.params.tutorial === 'expressToHapi' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+            >
+              <a ref="expressToHapi" v-on:click="showDiv()" href="/tutorials/expressToHapi/">Express to hapi Guide</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -111,10 +106,8 @@ export default {
     onChange(event) {
       this.$emit("changed", event.target.value);
     },
-    showDiv(ref) {
-      this.$refs[this.tutorial].classList.remove("side-nav-active");
-      this.$refs[ref].classList.add("side-nav-active");
-      this.$emit("clicked", { ref: ref });
+    showDiv() {
+      window.scrollTo(0, 0);
     }
   },
   components: {

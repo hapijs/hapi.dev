@@ -15,7 +15,7 @@
               <a :class="getDisplay === 'plugins' ? 'nav-link nav-link-active' : 'nav-link'" ref="plugins" title="Plugins" href="/plugins"  v-on:click="addActive('plugins')">Plugins</a>
             </li>
             <li class="nav-links-li">
-              <a :class="getDisplay === 'resources' ? 'nav-link nav-link-active' : 'nav-link'" ref="resources" title="Resources" href="/resources"vv-on:click="addActive('resources')">Resources</a>
+              <a :class="getDisplay === 'resources' ? 'nav-link nav-link-active' : 'nav-link'" ref="resources" title="Resources" href="/resources" v-on:click="addActive('resources')">Resources</a>
             </li>
             <li class="nav-links-li">
               <a :class="getDisplay === 'ecosystem' ? 'nav-link nav-link-active' : 'nav-link'" ref="ecosystem" title="Ecosystem" href="/ecosystem" v-on:click="addActive('ecosystem')">Ecosystem</a>

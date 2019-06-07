@@ -15,7 +15,7 @@ Hapi is designed for creating robust, testable applications. To this end, Hapi i
 
 This tutorial goes into a basic setup for testing routes, and outlines one possible setup for a testable application using [lab](https://github.com/hapijs/lab) and [code](https://github.com/hapijs/code).
 
-## <a name="lab" /> lab
+## <a name="lab"></a> lab
 
 `lab` is a simple test utility for Node.js. Unlike other test utilities, lab uses only async/await features and includes everything you should expect from a modern Node.js test utility. `lab` works with any assertion library that throws an error when a condition isn't met. For this tutorial, you will be using the `code` assertion library.
 
