@@ -77,6 +77,7 @@ a {
   height: 50px;
   max-width: 735px;
   background-color: #fff;
+  padding: 0 20px;
 }
 
 .footer-links {

@@ -9,43 +9,46 @@
         <a class="mobile-link" title="Home" href="/">Home</a>
       </li>
       <li class="mobile-links-li">
-        <a class="mobile-link" title="Tutorials" href="/tutorials/">Tutorials</a>
+        <a class="mobile-link" title="Tutorials" href="/tutorials/?lang=en_US">Tutorials</a>
         <ul>
           <li class="mobile-link mobile-tutorial-link">
-            <a title="Tutorials" href="/tutorials/gettingStarted/">Getting Started</a>
+            <a title="Tutorials" href="/tutorials/gettingStarted/?lang=en_US">Getting Started</a>
           </li>
           <li class="mobile-link mobile-tutorial-link">
-            <a title="Tutorials" href="/tutorials/auth/">Authentication</a>
+            <a title="Tutorials" href="/tutorials/auth/?lang=en_US">Authentication</a>
           </li>
           <li class="mobile-link mobile-tutorial-link">
-            <a title="Tutorials" href="/tutorials/caching/">Caching</a>
+            <a title="Tutorials" href="/tutorials/caching/?lang=en_US">Caching</a>
           </li>
           <li class="mobile-link mobile-tutorial-link">
-            <a title="Tutorials" href="/tutorials/cookies/">Cookies</a>
+            <a title="Tutorials" href="/tutorials/cookies/?lang=en_US">Cookies</a>
           </li>
           <li class="mobile-link mobile-tutorial-link">
-            <a title="Tutorials" href="/tutorials/logging/">Logging</a>
+            <a title="Tutorials" href="/tutorials/logging/?lang=en_US">Logging</a>
           </li>
           <li class="mobile-link mobile-tutorial-link">
-            <a title="Tutorials" href="/tutorials/plugins/">Plugins</a>
+            <a title="Tutorials" href="/tutorials/plugins/?lang=en_US">Plugins</a>
           </li>
           <li class="mobile-link mobile-tutorial-link">
-            <a title="Tutorials" href="/tutorials/routing/">Routing</a>
+            <a title="Tutorials" href="/tutorials/routing/?lang=en_US">Routing</a>
           </li>
           <li class="mobile-link mobile-tutorial-link">
-            <a title="Tutorials" href="/tutorials/serverMethods/">Server Methods</a>
+            <a title="Tutorials" href="/tutorials/serverMethods/?lang=en_US">Server Methods</a>
           </li>
           <li class="mobile-link mobile-tutorial-link">
-            <a title="Tutorials" href="/tutorials/servingFiles/">Serving Static Files</a>
+            <a title="Tutorials" href="/tutorials/servingFiles/?lang=en_US">Serving Static Files</a>
           </li>
           <li class="mobile-link mobile-tutorial-link">
-            <a title="Tutorials" href="/tutorials/testing/">Testing</a>
+            <a title="Tutorials" href="/tutorials/testing/?lang=en_US">Testing</a>
           </li>
           <li class="mobile-link mobile-tutorial-link">
-            <a title="Tutorials" href="/tutorials/validation/">Validation</a>
+            <a title="Tutorials" href="/tutorials/validation/?lang=en_US">Validation</a>
           </li>
           <li class="mobile-link mobile-tutorial-link">
-            <a title="Tutorials" href="/tutorials/views/">Views</a>
+            <a title="Tutorials" href="/tutorials/views/?lang=en_US">Views</a>
+          </li>
+                    <li class="mobile-link mobile-tutorial-link">
+            <a title="ExpressToHapi" href="/tutorials/expressToHapi/?lang=en_US">Express to hapi</a>
           </li>
         </ul>
       </li>
@@ -174,7 +177,6 @@ export default {
   width: 100%;
   height: auto;
   padding: 5px 0 5px 0;
-  border-right: 1px solid $dark-white;
 }
 
 .mobile-nav-header {

@@ -137,7 +137,8 @@ export default {
 @media screen and (max-width: 900px) {
   .home-container {
     margin-top: 70px;
-    padding: 0 10px;
+    padding: 0 20px;
+    font-size: 1.1em;
   }
 
   .index-about {
