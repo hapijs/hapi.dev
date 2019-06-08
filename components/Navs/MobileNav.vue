@@ -177,7 +177,6 @@ export default {
   width: 100%;
   height: auto;
   padding: 5px 0 5px 0;
-  border-right: 1px solid $dark-white;
 }
 
 .mobile-nav-header {
