@@ -56,7 +56,7 @@ export default {
 
 @media screen and (max-width: 900px) {
   .help-wrapper {
-    padding: 10px;
+    padding: 10px 20px;
   }
 }
 </style>
