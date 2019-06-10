@@ -9,7 +9,7 @@
               v-for="name in modules"
               v-bind:key="name"
               :name="name"
-              :menu="moduleAPI[name].menu"
+              :active="moduleAPI"
               :page="page"
             />
           </ul>

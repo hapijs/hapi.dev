@@ -21,7 +21,16 @@ module.exports = {
       '/community/contributing',
       '/community/updates',
       '/community/changelog',
-      'community/styleguide'
+      'community/styleguide',
+      'ecosystem/bell',
+      'ecosystem/boom',
+      'ecosystem/good',
+      'ecosystem/hoek',
+      'ecosystem/iron',
+      'ecosystem/joi',
+      'ecosystem/shot',
+      'ecosystem/topo',
+      'ecosystem/yar'
     ]
   },
 

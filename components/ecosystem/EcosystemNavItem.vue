@@ -1,35 +1,21 @@
 <template>
   <li
-    :class="getPage === name ? 'side-nav-select-link ecosystem-side-nav-item side-nav-active' : 'side-nav-select-link ecosystem-side-nav-item'"
+    :class="this.$route.params.ecosystem === name || (!this.$route.params.ecosystem && name === 'bell') ? 'side-nav-select-link ecosystem-side-nav-item side-nav-active' : 'side-nav-select-link ecosystem-side-nav-item'"
     :ref="name"
-    v-on:click.self="onChangePage(name)"
   >
-    {{name.charAt(0).toUpperCase(0) + name.slice(1)}}
+    <a :href="'/ecosystem/' + name">{{name.charAt(0).toUpperCase(0) + name.slice(1)}}</a>
     <div
-      :class="getPage === name ? 'ecosystem-nav-select-wrapper ecosystem-display' : 'ecosystem-nav-select-wrapper'"
+      v-if="this.$props.active[name]"
+      class="ecosystem-nav-select-wrapper ecosystem-display"
       :id="name"
-      v-html="$md.render(this.$props.menu)"
+      v-html="$md.render(this.$props.active[name].menu)"
     ></div>
   </li>
 </template>
 
 <script>
 export default {
-  props: ["menu", "name", "page"],
-  computed: {
-    getPage() {
-      return this.$store.getters.loadEcosystem;
-    }
-  },
-  methods: {
-    onChangePage(ref) {
-      if (this.$refs[ref].classList.contains("ecosystem-side-nav-item")) {
-        this.$store.commit("setEcosystem", ref);
-        document.querySelector(".side-nav-window").scrollTo(0, 0);
-        window.scrollTo(0, 0);
-      }
-    }
-  }
+  props: ["active", "name", "page"],
 };
 </script>
 
