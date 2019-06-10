@@ -4,6 +4,7 @@ module.exports = {
   mode: "universal",
 
   generate: {
+    fallback: true,
     routes: [
       '/tutorials/gettingStarted',
       '/tutorials/auth',

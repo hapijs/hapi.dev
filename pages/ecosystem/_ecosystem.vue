@@ -133,12 +133,11 @@ export default {
         menu: await finalMenu
       };
     } catch (err) {
-      console.log(err);
+      console.log(err.message)
     }
     return { moduleAPI, modules };
   },
   created() {
-    this.$data.display = this.moduleAPI.bell;
     this.$store.commit("setDisplay", "ecosystem");
   },
   mounted() {
