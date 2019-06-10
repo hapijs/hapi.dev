@@ -17,7 +17,11 @@ module.exports = {
       '/tutorials/testing',
       '/tutorials/validation',
       '/tutorials/views',
-      '/tutorials/expressToHapi'
+      '/tutorials/expressToHapi',
+      '/community/contributing',
+      '/community/updates',
+      '/community/changelog',
+      'community/styleguide'
     ]
   },
 

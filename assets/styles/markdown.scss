@@ -88,6 +88,10 @@ p {
   border: 1px solid $dark-white;
 }
 
+pre p code {
+  border: none;
+}
+
 li {
   margin-bottom: 20px;
   line-height: 1.7rem;

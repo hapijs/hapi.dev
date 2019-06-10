@@ -6,25 +6,17 @@
         <div class="side-nav-select-wrapper">
           <ul class="side-nav-select-list">
             <li
-              class="side-nav-select-link side-nav-active"
-              ref="contribute"
-              v-on:click="onChangePage('contribute')"
-            >Contributing</li>
+              :class="page === 'contribute' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+            ><a href="/community/contributing">Contributing</a></li>
             <li
-              class="side-nav-select-link"
-              ref="updates"
-              v-on:click="onChangePage('updates')"
-            >Updates</li>
+              :class="page === 'updates' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+            ><a href="/community/updates">Updates</a></li>
             <li
-              class="side-nav-select-link"
-              ref="changelog"
-              v-on:click="onChangePage('changelog')"
-            >Changelog</li>
+              :class="page === 'changelog' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+            ><a href="/community/changelog">Changelog</a></li>
             <li
-              class="side-nav-select-link"
-              ref="style"
-              v-on:click="onChangePage('style')"
-            >Style Guide</li>
+              :class="page === 'styleGuide' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+            ><a href="/community/styleguide">Style Guide</a></li>
           </ul>
         </div>
       </div>

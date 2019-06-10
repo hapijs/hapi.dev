@@ -47,7 +47,7 @@
           <li class="mobile-link mobile-tutorial-link">
             <a title="Tutorials" href="/tutorials/views/?lang=en_US">Views</a>
           </li>
-                    <li class="mobile-link mobile-tutorial-link">
+          <li class="mobile-link mobile-tutorial-link">
             <a title="ExpressToHapi" href="/tutorials/expressToHapi/?lang=en_US">Express to hapi</a>
           </li>
         </ul>
@@ -114,26 +114,18 @@
       <li class="mobile-links-li">
         <a class="mobile-link" title="Contribute" href="/community">Community</a>
         <ul>
-          <li
-            class="mobile-link mobile-tutorial-link"
-            title="Contributing"
-            v-on:click="loadCommunity('contribute')"
-          >Contributing</li>
-          <li
-            class="mobile-link mobile-tutorial-link"
-            title="Updates"
-            v-on:click="loadCommunity('updates')"
-          >Updates</li>
-          <li
-            class="mobile-link mobile-tutorial-link"
-            title="Changelog"
-            v-on:click="loadCommunity('changelog')"
-          >Changelog</li>
-          <li
-            class="mobile-link mobile-tutorial-link"
-            title="Contributing"
-            v-on:click="loadCommunity('style')"
-          >Style Guide</li>
+          <li class="mobile-link mobile-tutorial-link" title="Contributing">
+            <a href="/community/contributing">Contributing</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link" title="Updates">
+            <a href="/community/updates">Updates</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link" title="Changelog">
+            <a href="/community/changelog">Changelog</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link" title="Contributing">
+            <a href="/community/styleguide">Style Guide</a>
+          </li>
         </ul>
       </li>
       <li class="mobile-links-li">
