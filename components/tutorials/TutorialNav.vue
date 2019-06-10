@@ -20,46 +20,44 @@
             >
               <a
                 ref="gettingStarted"
-                v-on:click="showDiv()"
                 :href="'/tutorials/gettingStarted/?lang=' + getLanguage"
               >Getting Started</a>
             </li>
             <li
               :class="$route.params.tutorial === 'auth' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
             >
-              <a ref="auth" v-on:click="showDiv()" :href="'/tutorials/auth/?lang=' + getLanguage">Authentication</a>
+              <a ref="auth" :href="'/tutorials/auth/?lang=' + getLanguage">Authentication</a>
             </li>
             <li
               :class="$route.params.tutorial === 'caching' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
             >
-              <a ref="caching" v-on:click="showDiv()" :href="'/tutorials/caching/?lang=' + getLanguage">Caching</a>
+              <a ref="caching" :href="'/tutorials/caching/?lang=' + getLanguage">Caching</a>
             </li>
             <li
               :class="$route.params.tutorial === 'cookies' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
             >
-              <a ref="cookies" v-on:click="showDiv()" :href="'/tutorials/cookies/?lang=' + getLanguage">Cookies</a>
+              <a ref="cookies" :href="'/tutorials/cookies/?lang=' + getLanguage">Cookies</a>
             </li>
             <li
               :class="$route.params.tutorial === 'logging' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
             >
-              <a ref="logging" v-on:click="showDiv()" :href="'/tutorials/logging/?lang=' + getLanguage">Logging</a>
+              <a ref="logging" :href="'/tutorials/logging/?lang=' + getLanguage">Logging</a>
             </li>
             <li
               :class="$route.params.tutorial === 'plugins' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
             >
-              <a ref="plugins" v-on:click="showDiv()" :href="'/tutorials/plugins/?lang=' + getLanguage">Plugins</a>
+              <a ref="plugins" :href="'/tutorials/plugins/?lang=' + getLanguage">Plugins</a>
             </li>
             <li
               :class="$route.params.tutorial === 'routing' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
             >
-              <a ref="routing" v-on:click="showDiv()" :href="'/tutorials/routing/?lang=' + getLanguage">Routing</a>
+              <a ref="routing" :href="'/tutorials/routing/?lang=' + getLanguage">Routing</a>
             </li>
             <li
               :class="$route.params.tutorial === 'serverMethods' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
             >
               <a
                 ref="serverMethods"
-                v-on:click="showDiv()"
                 :href="'/tutorials/serverMethods/?lang=' + getLanguage"
               >Server Methods</a>
             </li>
@@ -68,31 +66,29 @@
             >
               <a
                 ref="servingFiles"
-                v-on:click="showDiv()"
                 :href="'/tutorials/servingFiles/?lang=' + getLanguage"
               >Serving Static Files</a>
             </li>
             <li
               :class="$route.params.tutorial === 'testing' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
             >
-              <a ref="testing" v-on:click="showDiv()" :href="'/tutorials/testing/?lang=' + getLanguage">Testing</a>
+              <a ref="testing" :href="'/tutorials/testing/?lang=' + getLanguage">Testing</a>
             </li>
             <li
               :class="$route.params.tutorial === 'validation' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
             >
-              <a ref="validation" v-on:click="showDiv()" :href="'/tutorials/validation/?lang=' + getLanguage">Validation</a>
+              <a ref="validation" :href="'/tutorials/validation/?lang=' + getLanguage">Validation</a>
             </li>
             <li
               :class="$route.params.tutorial === 'views' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
             >
-              <a ref="views" v-on:click="showDiv()" :href="'/tutorials/views/?lang=' + getLanguage">Views</a>
+              <a ref="views" :href="'/tutorials/views/?lang=' + getLanguage">Views</a>
             </li>
             <li
               :class="$route.params.tutorial === 'expressToHapi' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
             >
               <a
                 ref="expressToHapi"
-                v-on:click="showDiv()"
                 :href="'/tutorials/expressToHapi/?lang=' + getLanguage"
               >Express to hapi Guide</a>
             </li>
@@ -112,15 +108,12 @@ export default {
   props: ["tutorial", "language"],
   computed: {
     getLanguage() {
-      return this.$store.getters.loadLanguage
+      return this.$store.getters.loadLanguage;
     }
   },
   methods: {
     onChange(event) {
       this.$emit("changed", event.target.value);
-    },
-    showDiv() {
-      window.scrollTo(0, 0);
     }
   },
   components: {

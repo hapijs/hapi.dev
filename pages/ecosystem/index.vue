@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <EcosystemNav :page="getEcosystem" :moduleAPI="moduleAPI" :modules="modules"/>
+    <EcosystemNav :moduleAPI="moduleAPI" :modules="modules"/>
     <div class="tutorial-markdown-window">
       <HTML :display="getDisplay"/>
     </div>
@@ -18,7 +18,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.js - " + this.$store.getters.loadEcosystem
+      title: "hapi.js - bell"
     };
   },
   data() {
@@ -30,7 +30,7 @@ export default {
     onScroll() {
       let links = [];
       links = document.querySelectorAll(
-        "#" + this.$store.getters.loadEcosystem + " a"
+        "#bell a"
       );
       let points = {};
       let offsets = [];
@@ -75,17 +75,11 @@ export default {
     }
   },
   computed: {
-    getEcosystem() {
-      return this.$store.getters.loadEcosystem;
-    },
     getDisplay() {
-      this.$data.display = this.moduleAPI[
-        this.$store.getters.loadEcosystem
-      ].display;
-      return this.$data.display;
+      return this.moduleAPI.bell.display;
     }
   },
-  async asyncData({ params, $axios }) {
+  async asyncData({ params, $axios, query }) {
     const options = {
       headers: {
         accept: "application/vnd.github.v3.raw+json",
@@ -105,10 +99,9 @@ export default {
     ];
     let moduleAPI = {};
 
-    for (let module of modules) {
       try {
         const res = await $axios.$get(
-          "https://api.github.com/repos/hapijs/" + module + "/contents/API.md",
+          "https://api.github.com/repos/hapijs/bell/contents/API.md",
           options
         );
         let raw = await res;
@@ -133,14 +126,13 @@ export default {
         );
         let apiString = await apiHTML.toString();
         let finalHtmlDisplay = await apiString.replace(/user-content-/g, "");
-        moduleAPI[module] = {
+        moduleAPI.bell = {
           display: await finalHtmlDisplay,
           menu: await finalMenu
         };
       } catch (err) {
         console.log(err);
       }
-    }
     return { moduleAPI, modules };
   },
   created() {
@@ -157,8 +149,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../assets/styles/main.scss";
-@import "../assets/styles/api.scss";
+@import "../../assets/styles/main.scss";
+@import "../../assets/styles/api.scss";
 
 .ecosystem-title {
   margin: 20px 0 -16px 100px;

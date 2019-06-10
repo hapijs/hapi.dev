@@ -47,7 +47,7 @@
           <li class="mobile-link mobile-tutorial-link">
             <a title="Tutorials" href="/tutorials/views/?lang=en_US">Views</a>
           </li>
-                    <li class="mobile-link mobile-tutorial-link">
+          <li class="mobile-link mobile-tutorial-link">
             <a title="ExpressToHapi" href="/tutorials/expressToHapi/?lang=en_US">Express to hapi</a>
           </li>
         </ul>
@@ -67,73 +67,56 @@
           <li
             class="mobile-link mobile-tutorial-link"
             title="bell"
-            v-on:click="loadEcosystem('bell')"
-          >Bell</li>
+          ><a href="/ecosystem/bell">Bell</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="boom"
-            v-on:click="loadEcosystem('boom')"
-          >Boom</li>
+          ><a href="/ecosystem/boom">Boom</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="good"
-            v-on:click="loadEcosystem('good')"
-          >Good</li>
+          ><a href="/ecosystem/good">Good</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="hoek"
-            v-on:click="loadEcosystem('hoek')"
-          >Hoek</li>
+          ><a href="/ecosystem/hoek">Hoek</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="iron"
-            v-on:click="loadEcosystem('iron')"
-          >Iron</li>
+          ><a href="/ecosystem/iron">Iron</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="joi"
-            v-on:click="loadEcosystem('joi')"
-          >Joi</li>
+          ><a href="/ecosystem/joi">Joi</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="shot"
-            v-on:click="loadEcosystem('shot')"
-          >Shot</li>
+          ><a href="/ecosystem/shot">Shot</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="topo"
-            v-on:click="loadEcosystem('topo')"
-          >Topo</li>
+          ><a href="/ecosystem/topo">Topo</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="yar"
-            v-on:click="loadEcosystem('yar')"
-          >Yar</li>
+          ><a href="/ecosystem/yar">Yar</a></li>
         </ul>
       </li>
       <li class="mobile-links-li">
         <a class="mobile-link" title="Contribute" href="/community">Community</a>
         <ul>
-          <li
-            class="mobile-link mobile-tutorial-link"
-            title="Contributing"
-            v-on:click="loadCommunity('contribute')"
-          >Contributing</li>
-          <li
-            class="mobile-link mobile-tutorial-link"
-            title="Updates"
-            v-on:click="loadCommunity('updates')"
-          >Updates</li>
-          <li
-            class="mobile-link mobile-tutorial-link"
-            title="Changelog"
-            v-on:click="loadCommunity('changelog')"
-          >Changelog</li>
-          <li
-            class="mobile-link mobile-tutorial-link"
-            title="Contributing"
-            v-on:click="loadCommunity('style')"
-          >Style Guide</li>
+          <li class="mobile-link mobile-tutorial-link" title="Contributing">
+            <a href="/community/contributing">Contributing</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link" title="Updates">
+            <a href="/community/updates">Updates</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link" title="Changelog">
+            <a href="/community/changelog">Changelog</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link" title="Contributing">
+            <a href="/community/styleguide">Style Guide</a>
+          </li>
         </ul>
       </li>
       <li class="mobile-links-li">
@@ -152,18 +135,6 @@ export default {
   methods: {
     closeNav() {
       this.$refs.nav.parentNode.classList.remove("show-nav");
-    },
-    async loadCommunity(ref) {
-      await this.$store.commit("setCommunity", ref);
-      await this.$nuxt.$router.push("community");
-      window.scrollTo(0, 0);
-      this.closeNav();
-    },
-    async loadEcosystem(ref) {
-      await this.$store.commit("setEcosystem", ref);
-      await this.$nuxt.$router.push("ecosystem");
-      window.scrollTo(0, 0);
-      this.closeNav();
     }
   }
 };

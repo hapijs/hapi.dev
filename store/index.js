@@ -3,7 +3,6 @@ import start from '../static/lib/tutorials/en_US/'
 export const state = () => ({
   page: start.gettingStarted.default,
   community: "contribute",
-  ecosystem: "bell",
   display: "home",
   language: "en_US"
 })
@@ -14,9 +13,6 @@ export const mutations = {
   },
   setCommunity (state, community) {
     state.community = community
-  },
-  setEcosystem (state, ecosystem) {
-    state.ecosystem = ecosystem
   },
   setDisplay (state, display) {
     state.display = display
@@ -32,9 +28,6 @@ export const getters = {
   },
   loadCommunity (state) {
     return state.community
-  },
-  loadEcosystem (state) {
-    return state.ecosystem
   },
   loadDisplay (state) {
     return state.display

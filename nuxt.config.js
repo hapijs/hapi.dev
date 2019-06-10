@@ -4,6 +4,7 @@ module.exports = {
   mode: "universal",
 
   generate: {
+    fallback: true,
     routes: [
       '/tutorials/gettingStarted',
       '/tutorials/auth',
@@ -17,7 +18,20 @@ module.exports = {
       '/tutorials/testing',
       '/tutorials/validation',
       '/tutorials/views',
-      '/tutorials/expressToHapi'
+      '/tutorials/expressToHapi',
+      '/community/contributing',
+      '/community/updates',
+      '/community/changelog',
+      'community/styleguide',
+      'ecosystem/bell',
+      'ecosystem/boom',
+      'ecosystem/good',
+      'ecosystem/hoek',
+      'ecosystem/iron',
+      'ecosystem/joi',
+      'ecosystem/shot',
+      'ecosystem/topo',
+      'ecosystem/yar'
     ]
   },
 
