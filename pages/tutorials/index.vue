@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <TutorialNav
-      :tutorial="tutorial"
       :language="language"
       @changed="onChangeChild"
     />
@@ -23,15 +22,11 @@ export default {
   head() {
     return {
       title:
-        "hapi.js - " +
-        this.tutorial.replace(/([A-Z])/g, " $1").replace(/^./, function(str) {
-          return str.toUpperCase();
-        })
+        "hapi.js - Getting Started"
     };
   },
   data() {
     return {
-      tutorial: "gettingStarted",
       language: this.getLanguage
     };
   },
@@ -47,7 +42,7 @@ export default {
   methods: {
     onChangeChild(value) {
       this.$store.commit("setLanguage", value)
-      this.$store.commit("setPage", page[value][this.tutorial].default);
+      this.$store.commit("setPage", page[value].gettingStarted.default);
       window.scrollTo(0, 0);
     }
   },
