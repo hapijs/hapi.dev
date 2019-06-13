@@ -23,3 +23,5 @@ exports.testing = require('./testing.md')
 exports.validation = require('./validation.md')
 
 exports.views = require('./views.md')
+
+exports.expressToHapi = require('./expresstohapi.md')
