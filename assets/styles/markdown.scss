@@ -42,6 +42,10 @@ h2 a::before, h3 a::before , h4 a::before, h5 a::before{
   pointer-events: none;
 }
 
+a:focus {
+  outline: none;
+}
+
 h2 a,
 h3 a {
   color: $black;
