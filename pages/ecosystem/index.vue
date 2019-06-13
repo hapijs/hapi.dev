@@ -50,10 +50,11 @@ export default {
       //Add active class to elements on scroll
       window.onscroll = function() {
         let location = document.documentElement.scrollTop;
+        let locationBody = document.body.scrollTop;
         let actives = document.getElementsByClassName("ecosystem-active");
         let i = 0;
         for (i in offsets) {
-          if (offsets[i] <= location) {
+          if (offsets[i] <= location || offsets[i] <= locationBody) {
             let aClass = points[offsets[i]].name;
             for (let active of actives) {
               active.classList.remove("ecosystem-active");
