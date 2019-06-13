@@ -2,15 +2,16 @@
   <footer class="side-footer">
     <ul class="footer-links">
       <li class="footer-links-li">
-        <a class="footer-link" title="Github" href="https://github.com/hapijs/hapi">Github</a>
+        <a class="footer-link" title="Github" target="__blank" href="https://github.com/hapijs/hapi">Github</a>
       </li>
       <li class="footer-links-li">
-        <a class="footer-link" title="Twitter" href="https://twitter.com/hapijs">Twitter</a>
+        <a class="footer-link" title="Twitter" target="_blank" href="https://twitter.com/hapijs">Twitter</a>
       </li>
       <li class="footer-links-li">
         <a
           class="footer-link"
           title="Slack"
+          target="__blank"
           href="https://join.slack.com/t/hapihour/shared_invite/enQtNTA5MDUzOTAzOTU4LTUyZmFiYjkyMTBmNDcyMmI2MmRjMzg4Y2YzNTlmNzUzNjViN2U1NmYyY2NjYjhiYWU4MGE2OTFhZDRlYWMyZDY"
         >Slack</a>
       </li>
