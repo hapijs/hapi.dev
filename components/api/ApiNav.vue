@@ -306,8 +306,6 @@ export default {
 
 .nav-display {
   display: block !important;
-  height: auto;
-  transition: all 0.3 ease;
 }
 
 .api-nav-select-wrapper ul {
