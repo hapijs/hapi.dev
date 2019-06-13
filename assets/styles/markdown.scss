@@ -138,6 +138,19 @@ pre {
     margin-top: -50px; 
     height: 50px; 
   }
+
+  p, li {
+    line-height: 2rem;
+    font-size: 1.15rem;
+  }
+
+  pre {
+    font-size: 1.05 rem;
+  }
+
+  a {
+    font-size: 1.15rem;
+  }
   
   .markdown-wrapper {
     padding: 5px;
