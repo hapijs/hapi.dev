@@ -105,7 +105,7 @@ import SideFooter from "~/components/Footers/SideFooter.vue";
 const page = require("../../static/lib/tutorials/");
 
 export default {
-  props: ["tutorial", "language"],
+  props: ["language"],
   computed: {
     getLanguage() {
       return this.$store.getters.loadLanguage;
