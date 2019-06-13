@@ -144,10 +144,11 @@ export default {
       //Add active class to elements on scroll
       window.onscroll = function() {
         let location = document.documentElement.scrollTop;
+        let locationBody = document.body.scrollTop;
         let actives = document.getElementsByClassName("api-active");
         let i = 0;
         for (i in offsets) {
-          if (offsets[i] <= location) {
+          if (offsets[i] <= location || offsets[i] <= locationBody) {
             let aClass = points[offsets[i]].name;
             for (let active of actives) {
               active.classList.remove("api-active");
@@ -306,8 +307,6 @@ export default {
 
 .nav-display {
   display: block !important;
-  height: auto;
-  transition: all 0.3 ease;
 }
 
 .api-nav-select-wrapper ul {
