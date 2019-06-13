@@ -2,34 +2,28 @@
   <div class="container">
     <CommunityNav :page="page" @changePage="changePage"/>
     <div class="community-wrapper">
-      <Markdown :display="display"/>
+      <HTML :display="styleGuide"/>
     </div>
   </div>
 </template>
 
 <script>
-import Markdown from "~/components/Markdown.vue";
+import HTML from "~/components/HTML.vue";
 import CommunityNav from "~/components/community/CommunityNav.vue";
-import style from "~/static/lib/style.md";
 
 export default {
   components: {
-    Markdown,
+    HTML,
     CommunityNav
   },
   data() {
     return {
       page: "styleGuide",
-      display: style.toString()
     };
   },
   head() {
     return {
-      title:
-        "hapi.js - " +
-        this.page.replace(/([A-Z])/g, " $1").replace(/^./, function(str) {
-          return str.toUpperCase();
-        })
+      title: "hapi.js - Style Guide"
     };
   },
   async created() {
@@ -41,6 +35,32 @@ export default {
       this.$store.commit("setCommunity", value);
       window.scrollTo(0, 0);
     }
+  },
+  async asyncData({ params, $axios }) {
+    const options = {
+      headers: {
+        accept: "application/vnd.github.v3.raw+json",
+        authorization: "token " + process.env.GITHUB_TOKEN
+      }
+    };
+    let style = await $axios.$get(
+      "https://api.github.com/repos/hapijs/assets/contents/STYLE.md",
+      options
+    );
+
+    const styleGuide = await $axios.$post(
+      "https://api.github.com/markdown",
+      {
+        text: style.toString(),
+        mode: "markdown"
+      },
+      {
+        headers: {
+          authorization: "token " + process.env.GITHUB_TOKEN
+        }
+      }
+    );
+    return { styleGuide }
   }
 };
 </script>
@@ -48,7 +68,6 @@ export default {
 <style lang="scss">
 @import "../../assets/styles/main.scss";
 @import "../../assets/styles/markdown.scss";
-
 
 .community-wrapper {
   margin: 0;
