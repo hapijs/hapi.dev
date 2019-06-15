@@ -102,12 +102,13 @@ a {
   align-items: center;
   height: 50px;
   max-width: 100%;
-  margin: 10px;
+  margin: 20px 10px 10px 10px;
 }
 
 .footer-text {
   font-size: 0.7em;
   text-align: center;
+  padding-bottom: 10px;
 }
 
 .footer-text-links:hover {

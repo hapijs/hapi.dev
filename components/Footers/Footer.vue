@@ -8,7 +8,7 @@
         <a class="footer-link" title="API" href="/api">API</a>
       </li>
       <li class="footer-links-li">
-        <a class="footer-link" title="Resources" href="/resources">Resources</a>
+        <a class="footer-link" title="Ecosystem" href="/ecosystem">Ecosystem</a>
       </li>
       <li class="footer-links-li">
         <a class="footer-link" title="Plugins" href="/plugins">Plugins</a>
@@ -105,6 +105,7 @@ a {
 .footer-text {
   font-size: 0.8em;
   text-align: center;
+  padding-bottom: 15px;
 }
 
 .footer-text-links:hover {
