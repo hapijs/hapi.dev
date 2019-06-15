@@ -281,7 +281,7 @@ You can also specify a different layout per view:
 return h.view('myview', null, { layout: 'another_layout' });
 ```
 
-## <a name="render" /> Rendering a view
+## <a name="render"></a> Rendering a view
 
 There are two options for rendering a view, you can use either the [`h.view()`](https://github.com/hapijs/vision/blob/master/API.md#hviewtemplate-context-options) method, where `h` is the [response toolkit](/api#response-toolkit) or the view handler.
 

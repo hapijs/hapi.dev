@@ -544,6 +544,10 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     A multi-purpose plugin that allows you to autoload methods, handlers, routes and decorators using a simple signature convention.
 
+*   [hapi-oracledb](https://github.com/midnightcodr/hapi-oracledb)
+
+    Oracledb plugin for hapijs.
+
 *   [hapi-paginate](https://github.com/developmentseed/hapi-paginate)
 
     A simple pagination for HapiJS responses

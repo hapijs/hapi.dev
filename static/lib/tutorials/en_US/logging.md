@@ -18,7 +18,7 @@ _This tutorial is compatible with hapi v17_
 
 As with any server software, logging is very important. hapi has some built in logging methods, as well as some basic capabilities for displaying these logs.
 
-## <a name="methods" /> Built-in Methods
+## <a name="methods"></a> Built-in Methods
 
 There are two nearly identical logging methods, `server.log(tags, [data, [timestamp]])`, and `request.log(tags, [data])`, which are to be called whenever you want to log an event in your application. 
 
