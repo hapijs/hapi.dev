@@ -54,7 +54,7 @@ a {
 
 .footer-links {
   list-style-type: none;
-  margin: 0 auto 5px auto;
+  margin: 0 auto;
   width: 100%;
   text-align: center;
 }
