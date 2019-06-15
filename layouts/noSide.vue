@@ -50,9 +50,9 @@ body {
 
 .contain {
   position: relative;
-  margin: 110px auto 0 auto;
-  min-height: calc(100vh - 110px);
-  padding-bottom: 100px;
+  margin: 96px auto 0 auto;
+  min-height: calc(100vh - 136px);
+  padding: 10px 0 100px 0;
 }
 
 @media screen and (max-width: 900px) {
