@@ -132,9 +132,8 @@ pre {
 
 @media screen and (max-width: 900px) {
 
-  h2 a::before, h3 a::before {
-    margin-top: -50px; 
-    height: 50px; 
+  h2 a, h3 a, h4 a, h5 a { 
+    top: -60px;
   }
 
   p, li {
