@@ -33,13 +33,11 @@ h1, h2, h3, h4 {
   margin: 1rem 0;
 }
 
-h2 a::before, h3 a::before , h4 a::before, h5 a::before{
-  display: block; 
-  content: ""; 
-  margin-top: -116px; 
-  height: 116px; 
-  visibility: hidden; 
-  pointer-events: none;
+h2 a, h3 a, h4 a, h5 a {
+  display: block;
+  position: relative;
+  top: -116px;
+  visibility: hidden;
 }
 
 a:focus {
