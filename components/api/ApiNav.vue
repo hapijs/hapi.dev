@@ -80,30 +80,48 @@ export default {
     },
     setClasses() {
       //Add classes to API nav
-      let lis = document.getElementsByTagName("li");
+      let lis = document.querySelectorAll(".api-nav-select-wrapper li");
       for (let li of lis) {
         li.classList.add("api-nav-li");
         if (li.children[1]) {
-          li.children[0].classList.add("api-nav-li-header");
+          li.children[0].classList.add("api-nav-plus");
         }
       }
+      let uls = document.querySelectorAll(".api-nav-li ul");
+      for (let ul of uls) {
+        ul.classList.add("api-nav-ul");
+      }
+      let topLinks = document.querySelectorAll(".api-nav-select-wrapper > ul > li > a")
+      for (let top of topLinks) {
+        top.classList.add("api-header");
+      }
       let links = document.querySelectorAll(
-        ".api-nav-select-wrapper > ul > li > a"
+        ".api-nav-select-wrapper > ul > li  a"
       );
       for (let link of links) {
         link.classList.add("api-nav-header");
+        if (
+          link.parentElement.children[1] &&
+          link.parentElement.children[1].classList.contains("api-nav-ul")
+        ) {
+          link.classList.add("api-nav-plus");
+        }
         link.addEventListener("click", function(event) {
           if (
-            event.target.classList.contains("api-nav-header") &&
-            link.parentElement.children[1]
+            link.parentElement.children[1] &&
+            link.parentElement.children[1].classList.contains("nav-display")
           ) {
-            let active = document.querySelector(".nav-display");
-            if (active){
-              active.classList.remove("nav-display")
-            }
+            link.parentElement.children[1].classList.remove("nav-display");
+            link.classList.remove("api-nav-minus");
+            link.classList.add("api-nav-plus");
+          } else if (
+            link.parentElement.children[1] &&
+            !link.parentElement.children[1].classList.contains("nav-display")
+          ) {
             let linkSibling = link.parentElement.children[1];
             linkSibling.classList.add("nav-display");
-            document.querySelector(".side-nav-window").scrollTo(0, 0);
+            link.classList.remove("api-nav-plus");
+            link.classList.add("api-nav-minus");
           }
         });
       }
@@ -154,13 +172,16 @@ export default {
               active.classList.remove("api-active");
             }
 
-
             let element = document.querySelector(`a[href*='${aClass}']`);
             if (element.children.length !== 0) {
               document
                 .querySelector(`a[href*='${aClass}'] *`)
                 .classList.add("api-active");
-            } else if (!document.querySelector(`a[href*='${aClass}']`).classList.contains("api-nav-header")){
+            } else if (
+              !document
+                .querySelector(`a[href*='${aClass}']`)
+                .classList.contains("api-header")
+            ) {
               document
                 .querySelector(`a[href*='${aClass}']`)
                 .classList.add("api-active");
@@ -272,7 +293,7 @@ export default {
   width: 100%;
 }
 
-.api-nav-select-wrapper > ul > li > ul {
+.api-nav-ul {
   display: none;
 }
 
@@ -294,6 +315,30 @@ export default {
 .api-nav-li a code:hover {
   color: $orange;
   text-decoration: none;
+}
+
+.api-nav-plus:after {
+  content: "\002B";
+  font-size: 20px;
+  position: relative;
+  top: 2px;
+  left: 5px;
+  height: 15px;
+  width: 15px;
+  z-index: 100;
+  display: inline-block;
+}
+
+.api-nav-minus:after {
+  content: "\2212";
+  font-size: 20px;
+  position: relative;
+  top: 2px;
+  left: 5px;
+  height: 15px;
+  width: 15px;
+  z-index: 100;
+  display: inline-block;
 }
 
 .api-nav-code {
