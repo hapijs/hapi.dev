@@ -95,11 +95,24 @@ export default {
         link.addEventListener("click", function(event) {
           if (
             event.target.classList.contains("api-nav-header") &&
-            link.parentElement.children[1]
+            link.parentElement.children[1] &&
+            link.parentElement.children[1].classList.contains("nav-display")
+          ) {
+            console.log("REMOVE DISPLAY")
+            let active = document.querySelector(".nav-display");
+            if (active) {
+              active.classList.remove("nav-display");
+            }
+            document.querySelector(".side-nav-window").scrollTo(0, 0);
+          }
+          else if (
+            event.target.classList.contains("api-nav-header") &&
+            link.parentElement.children[1] &&
+            !link.parentElement.children[1].classList.contains("nav-display")
           ) {
             let active = document.querySelector(".nav-display");
-            if (active){
-              active.classList.remove("nav-display")
+            if (active) {
+              active.classList.remove("nav-display");
             }
             let linkSibling = link.parentElement.children[1];
             linkSibling.classList.add("nav-display");
@@ -154,13 +167,16 @@ export default {
               active.classList.remove("api-active");
             }
 
-
             let element = document.querySelector(`a[href*='${aClass}']`);
             if (element.children.length !== 0) {
               document
                 .querySelector(`a[href*='${aClass}'] *`)
                 .classList.add("api-active");
-            } else if (!document.querySelector(`a[href*='${aClass}']`).classList.contains("api-nav-header")){
+            } else if (
+              !document
+                .querySelector(`a[href*='${aClass}']`)
+                .classList.contains("api-nav-header")
+            ) {
               document
                 .querySelector(`a[href*='${aClass}']`)
                 .classList.add("api-active");
