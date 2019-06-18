@@ -87,36 +87,28 @@ export default {
           li.children[0].classList.add("api-nav-li-header");
         }
       }
+      let uls = document.querySelectorAll(".api-nav-li ul")
+      for (let ul of uls) {
+        ul.classList.add("api-nav-ul");
+      }
       let links = document.querySelectorAll(
-        ".api-nav-select-wrapper > ul > li > a"
+        ".api-nav-select-wrapper > ul > li  a"
       );
       for (let link of links) {
         link.classList.add("api-nav-header");
         link.addEventListener("click", function(event) {
           if (
-            event.target.classList.contains("api-nav-header") &&
             link.parentElement.children[1] &&
             link.parentElement.children[1].classList.contains("nav-display")
           ) {
-            console.log("REMOVE DISPLAY")
-            let active = document.querySelector(".nav-display");
-            if (active) {
-              active.classList.remove("nav-display");
-            }
-            document.querySelector(".side-nav-window").scrollTo(0, 0);
+            link.parentElement.children[1].classList.remove("nav-display")
           }
           else if (
-            event.target.classList.contains("api-nav-header") &&
             link.parentElement.children[1] &&
             !link.parentElement.children[1].classList.contains("nav-display")
           ) {
-            let active = document.querySelector(".nav-display");
-            if (active) {
-              active.classList.remove("nav-display");
-            }
             let linkSibling = link.parentElement.children[1];
             linkSibling.classList.add("nav-display");
-            document.querySelector(".side-nav-window").scrollTo(0, 0);
           }
         });
       }
@@ -288,7 +280,7 @@ export default {
   width: 100%;
 }
 
-.api-nav-select-wrapper > ul > li > ul {
+.api-nav-ul {
   display: none;
 }
 
