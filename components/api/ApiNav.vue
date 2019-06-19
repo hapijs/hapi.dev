@@ -91,7 +91,9 @@ export default {
       for (let ul of uls) {
         ul.classList.add("api-nav-ul");
       }
-      let topLinks = document.querySelectorAll(".api-nav-select-wrapper > ul > li > a")
+      let topLinks = document.querySelectorAll(
+        ".api-nav-select-wrapper > ul > li > a"
+      );
       for (let top of topLinks) {
         top.classList.add("api-header");
       }
@@ -111,6 +113,17 @@ export default {
             link.parentElement.children[1] &&
             link.parentElement.children[1].classList.contains("nav-display")
           ) {
+            if (link.classList.contains("api-header")) {
+              let headers = document.querySelectorAll(".nav-display");
+              for (let head of headers) {
+                head.classList.remove("nav-display");
+              }
+              let minus = document.querySelectorAll(".api-nav-minus");
+              for (let m of minus) {
+                m.classList.remove("api-nav-minus");
+                m.classList.add("api-nav-plus");
+              }
+            }
             link.parentElement.children[1].classList.remove("nav-display");
             link.classList.remove("api-nav-minus");
             link.classList.add("api-nav-plus");
@@ -118,6 +131,17 @@ export default {
             link.parentElement.children[1] &&
             !link.parentElement.children[1].classList.contains("nav-display")
           ) {
+            if (link.classList.contains("api-header")) {
+              let headers = document.querySelectorAll(".nav-display");
+              for (let head of headers) {
+                head.classList.remove("nav-display");
+              }
+              let minus = document.querySelectorAll(".api-nav-minus");
+              for (let m of minus) {
+                m.classList.remove("api-nav-minus");
+                m.classList.add("api-nav-plus");
+              }
+            }
             let linkSibling = link.parentElement.children[1];
             linkSibling.classList.add("nav-display");
             link.classList.remove("api-nav-plus");
