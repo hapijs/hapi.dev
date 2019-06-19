@@ -1,4 +1,4 @@
-## <a name="books"></a> Books
+## <a id="books"></a> Books
 
 *   [Developing a hapi Edge](http://www.amazon.com/Developing-hapi-Edge-Framework-Services-ebook/dp/B013CWI3MY)
 
@@ -20,7 +20,7 @@
 
     This handbook is a collection of tutorials for Hapi.js framework. You can find tutorials about validation, working with 3rd plugins, sending/getting data, template engines, integrations with DB and etc.
 
-## <a name="gists"></a> Gists and code samples
+## <a id="gists"></a> Gists and code samples
 
 *   [Code style tips](https://gist.github.com/hueniverse/a06f6315ea736ed1b46d)
 
@@ -34,7 +34,7 @@
 
     An insight into how hapi.js is used at Walmart
 
-## <a name="boilerplates"></a> Boilerplates
+## <a id="boilerplates"></a> Boilerplates
 
 *   [appy](https://github.com/JKHeadley/appy)
 
@@ -136,7 +136,7 @@
 
     A Typescript based boilerplate for HAPIJS with TypeORM & Dynamic Linting
 
-## <a name="projects"></a> Projects built with hapi.js
+## <a id="projects"></a> Projects built with hapi.js
 
 *   [Colonizers](https://github.com/colonizers/colonizers)
 
@@ -154,7 +154,7 @@
 
     Postmile is a collaborative list making tool built using hapi.js, Node.js, and MongoDB.
 
-## <a name="tutorials"></a> Tutorials
+## <a id="tutorials"></a> Tutorials
 
 *   [Authentication and Authorization with hapi](https://medium.com/@poeticninja/authentication-and-authorization-with-hapi-5529b5ecc8ec)
 
@@ -204,7 +204,7 @@
 
     Tutorial on how to integrate Socket.io with hapi.js
 
-## <a name="videos"></a> Videos
+## <a id="videos"></a> Videos
 
 *   [Hapi Days Conf 2014 Videos](https://www.youtube.com/playlist?list=PLzc1AUDlJ7WvcMnv3NaEwgh0i2nJKl0GX)
 

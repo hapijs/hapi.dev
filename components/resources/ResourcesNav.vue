@@ -6,22 +6,25 @@
         <div class="side-nav-select-wrapper">
           <ul class="side-nav-select-list">
             <li class="side-nav-select-link">
-              <a href="#books">Books</a>
+              <a href="/resources#books">Books</a>
             </li>
             <li class="side-nav-select-link">
-              <a href="#gists">Gists and code samples</a>
+              <a href="/resources#gists">Gists and code samples</a>
             </li>
             <li class="side-nav-select-link">
-              <a href="#boilerplates">Boilerplates</a>
+              <a href="/resources#boilerplates">Boilerplates</a>
             </li>
             <li class="side-nav-select-link">
-              <a href="#projects">Projects built with hapi</a>
+              <a href="/resources#projects">Projects built with hapi</a>
             </li>
             <li class="side-nav-select-link">
-              <a href="#tutorials">Tutorials</a>
+              <a href="/resources#tutorials">Tutorials</a>
             </li>
             <li class="side-nav-select-link">
-              <a href="#videos">Videos</a>
+              <a href="/resources#videos">Videos</a>
+            </li>
+            <li class="side-nav-select-link">
+              <a href="/resources/changelog">Changelog</a>
             </li>
           </ul>
         </div>

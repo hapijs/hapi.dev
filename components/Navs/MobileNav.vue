@@ -60,6 +60,14 @@
       </li>
       <li class="mobile-links-li">
         <a class="mobile-link" title="Resources" href="/resources">Resources</a>
+        <ul>
+          <li class="mobile-link mobile-tutorial-link">
+            <a title="List" href="/resources">List</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link">
+            <a title="Changelog" href="/resources/changelog">Changelog</a>
+          </li>
+        </ul>
       </li>
       <li class="mobile-links-li">
         <a class="mobile-link" title="Ecosystem" href="/ecosystem">Ecosystem</a>
@@ -110,9 +118,6 @@
           </li>
           <li class="mobile-link mobile-tutorial-link" title="Updates">
             <a href="/community/updates">Updates</a>
-          </li>
-          <li class="mobile-link mobile-tutorial-link" title="Changelog">
-            <a href="/community/changelog">Changelog</a>
           </li>
           <li class="mobile-link mobile-tutorial-link" title="Contributing">
             <a href="/community/styleguide">Style Guide</a>
