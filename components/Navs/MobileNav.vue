@@ -135,6 +135,11 @@ export default {
   methods: {
     closeNav() {
       this.$refs.nav.parentNode.classList.remove("show-nav");
+      // this.$refs.overlay.classList.remove("show-nav");
+      let overlay = document.querySelector(".mobile-overlay");
+      overlay.classList.remove("show-nav");
+      let body = document.body;
+      body.classList.remove("no-scroll");
     }
   }
 };
@@ -142,11 +147,15 @@ export default {
 
 <style lang="scss">
 @import "../../assets/styles/main.scss";
+@import "../../assets/styles/markdown.scss";
 
 .mobile-nav {
   position: relative;
   width: 100%;
   height: auto;
+  z-index: 20;
+  background: $off-white;
+  border-right: 1px solid $dark-white;
   padding: 5px 0 5px 0;
 }
 

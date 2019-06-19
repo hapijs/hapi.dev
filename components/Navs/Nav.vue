@@ -35,6 +35,7 @@
         </a>
       </div>
       <div ref="mobileNav" class="mobile-nav-wrapper">
+        <div ref="overlay" class="mobile-overlay" v-on:click="hideNav()"></div>
         <MobileNav/>
       </div>
     </nav>
@@ -56,6 +57,15 @@ export default {
   methods: {
     showNav() {
       this.$refs.mobileNav.classList.add("show-nav");
+      this.$refs.overlay.classList.add("show-nav");
+      let body = document.body
+      body.classList.add("no-scroll");
+    },
+    hideNav() {
+      this.$refs.mobileNav.classList.remove("show-nav");
+      this.$refs.overlay.classList.remove("show-nav");
+      let body = document.body
+      body.classList.remove("no-scroll");
     },
     addActive(ref) {
       this.$store.commit('setDisplay', ref)
@@ -88,6 +98,15 @@ export default {
 .mobile-nav-wrapper {
   display: none;
   transition: all 0.5s ease-in-out;
+}
+
+.mobile-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: -100%;
+  z-index: 10;
+  overflow: hidden;
 }
 
 .logo {
@@ -219,7 +238,10 @@ export default {
 
   .show-nav {
     left: 0;
-    position: fixed;
+  }
+
+  .no-scroll {
+    overflow: hidden;
   }
 
   .hamburger {
