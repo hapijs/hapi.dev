@@ -319,8 +319,8 @@ export default {
 
 .api-nav-plus:after {
   content: "\002B";
-  font-size: 20px;
   position: relative;
+  font-size: 20px;
   top: 2px;
   left: 5px;
   height: 15px;
@@ -331,8 +331,8 @@ export default {
 
 .api-nav-minus:after {
   content: "\2212";
-  font-size: 20px;
   position: relative;
+  font-size: 20px;
   top: 2px;
   left: 5px;
   height: 15px;

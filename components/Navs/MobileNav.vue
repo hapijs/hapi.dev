@@ -204,12 +204,11 @@ export default {
 .mobile-tutorial-link {
   font-size: 14px;
   list-style-type: none;
-  margin-left: 20px;
 }
 
 .mobile-helmet {
   display: block;
   width: 25px;
-  margin: 30px auto 0 auto;
+  margin: 10px auto 5px auto;
 }
 </style>

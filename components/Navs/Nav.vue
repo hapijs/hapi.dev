@@ -219,6 +219,7 @@ export default {
 
   .show-nav {
     left: 0;
+    position: fixed;
   }
 
   .hamburger {
