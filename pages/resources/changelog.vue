@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <CommunityNav :page="page" @changePage="changePage"/>
+    <ResourcesNav :page="page" @changePage="changePage"/>
     <div class="community-wrapper">
       <Changelog :milestones="getMilestones"/>
     </div>
@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import Changelog from "~/components/community/Changelog.vue";
-import CommunityNav from "~/components/community/CommunityNav.vue";
+import Changelog from "../../components/community/Changelog.vue";
+import ResourcesNav from "../../components/resources/ResourcesNav.vue";
 let Semver = require("semver");
 let weekAgo = new Date();
 weekAgo.setDate(weekAgo.getDate() - 7);
@@ -18,7 +18,7 @@ weekAgo = weekAgo.toISOString();
 export default {
   components: {
     Changelog,
-    CommunityNav
+    ResourcesNav
   },
   data() {
     return {

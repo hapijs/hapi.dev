@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import Resources from "~/components/resources/Resources.vue";
-import ResourcesNav from "~/components/resources/ResourcesNav.vue";
+import Resources from "../../components/resources/Resources.vue";
+import ResourcesNav from "../../components/resources/ResourcesNav.vue";
 export default {
   components: {
     Resources,
@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../assets/styles/main.scss";
+@import "../../assets/styles/main.scss";
 
 .markdown-window {
   position: relative;

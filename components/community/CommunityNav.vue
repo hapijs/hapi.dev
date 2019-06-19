@@ -12,9 +12,6 @@
               :class="page === 'updates' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
             ><a href="/community/updates">Updates</a></li>
             <li
-              :class="page === 'changelog' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
-            ><a href="/community/changelog">Changelog</a></li>
-            <li
               :class="page === 'styleGuide' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
             ><a href="/community/styleguide">Style Guide</a></li>
           </ul>

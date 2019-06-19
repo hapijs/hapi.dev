@@ -60,6 +60,14 @@
       </li>
       <li class="mobile-links-li">
         <a class="mobile-link" title="Resources" href="/resources">Resources</a>
+        <ul>
+          <li class="mobile-link mobile-tutorial-link">
+            <a title="List" href="/resources">List</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link">
+            <a title="Changelog" href="/resources/changelog">Changelog</a>
+          </li>
+        </ul>
       </li>
       <li class="mobile-links-li">
         <a class="mobile-link" title="Ecosystem" href="/ecosystem">Ecosystem</a>
@@ -111,9 +119,6 @@
           <li class="mobile-link mobile-tutorial-link" title="Updates">
             <a href="/community/updates">Updates</a>
           </li>
-          <li class="mobile-link mobile-tutorial-link" title="Changelog">
-            <a href="/community/changelog">Changelog</a>
-          </li>
           <li class="mobile-link mobile-tutorial-link" title="Contributing">
             <a href="/community/styleguide">Style Guide</a>
           </li>
@@ -135,6 +140,11 @@ export default {
   methods: {
     closeNav() {
       this.$refs.nav.parentNode.classList.remove("show-nav");
+      // this.$refs.overlay.classList.remove("show-nav");
+      let overlay = document.querySelector(".mobile-overlay");
+      overlay.classList.remove("show-nav");
+      let body = document.body;
+      body.classList.remove("no-scroll");
     }
   }
 };
@@ -142,11 +152,15 @@ export default {
 
 <style lang="scss">
 @import "../../assets/styles/main.scss";
+@import "../../assets/styles/markdown.scss";
 
 .mobile-nav {
   position: relative;
   width: 100%;
   height: auto;
+  z-index: 20;
+  background: $off-white;
+  border-right: 1px solid $dark-white;
   padding: 5px 0 5px 0;
 }
 
@@ -204,12 +218,11 @@ export default {
 .mobile-tutorial-link {
   font-size: 14px;
   list-style-type: none;
-  margin-left: 20px;
 }
 
 .mobile-helmet {
   display: block;
   width: 25px;
-  margin: 30px auto 0 auto;
+  margin: 10px auto 5px auto;
 }
 </style>
