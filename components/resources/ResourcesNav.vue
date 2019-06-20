@@ -9,22 +9,22 @@
               <a :class="$props.list ? 'side-nav-select-link resources-minus resources-selected' : 'side-nav-select-link resources-plus'" href="/resources">List</a>
               <ul :class="$props.list ? 'resources-ul' : 'resources-ul hide-ul'">
                 <li class="resources-link">
-                  <a href="/resources#books">Books</a>
+                  <a href="#books">Books</a>
                 </li>
                 <li class="resources-link">
-                  <a href="/resources#gists">Gists and code samples</a>
+                  <a href="#gists">Gists and code samples</a>
                 </li>
                 <li class="resources-link">
-                  <a href="/resources#boilerplates">Boilerplates</a>
+                  <a href="#boilerplates">Boilerplates</a>
                 </li>
                 <li class="resources-link">
-                  <a href="/resources#projects">Projects built with hapi</a>
+                  <a href="#projects">Projects built with hapi</a>
                 </li>
                 <li class="resources-link">
-                  <a href="/resources#tutorials">Tutorials</a>
+                  <a href="#tutorials">Tutorials</a>
                 </li>
                 <li class="resources-link">
-                  <a href="/resources#videos">Videos</a>
+                  <a href="#videos">Videos</a>
                 </li>
               </ul>
             </li>
