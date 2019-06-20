@@ -86,6 +86,10 @@ p {
   border: 1px solid $dark-white;
 }
 
+pre {
+  font-family: "inconsolata", menlo, consolas, monospace;
+}
+
 pre p code, pre pre {
   border: none;
 }
