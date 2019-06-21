@@ -222,7 +222,7 @@ export default {
 
 .mobile-helmet {
   display: block;
-  width: 25px;
-  margin: 10px auto 5px auto;
+  width: 35px;
+  margin: 17.5px auto 17.5px auto;
 }
 </style>
