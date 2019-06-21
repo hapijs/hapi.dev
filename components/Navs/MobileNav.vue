@@ -1,8 +1,8 @@
 <template>
   <div ref="nav" class="mobile-nav">
     <div class="mobile-nav-header">
-      <img src="/img/hapi.svg" class="mobile-hapi">
-      <img src="/img/close.png" class="mobile-close" v-on:click="closeNav()">
+      <img src="/img/hapi.svg" class="mobile-hapi" alt="hapi-logo">
+      <img src="/img/close.png" class="mobile-close" alt="close" v-on:click="closeNav()">
     </div>
     <ul class="mobile-links">
       <li class="mobile-links-li">
@@ -128,7 +128,7 @@
         <a class="mobile-link" title="Help" href="/help">Help</a>
       </li>
     </ul>
-    <img class="mobile-helmet" src="../../static/img/helmet.png">
+    <img class="mobile-helmet" src="../../static/img/helmet.png" alt="hapi-helmet">
   </div>
 </template>
 
@@ -222,7 +222,7 @@ export default {
 
 .mobile-helmet {
   display: block;
-  width: 25px;
-  margin: 10px auto 5px auto;
+  width: 35px;
+  margin: 17.5px auto 17.5px auto;
 }
 </style>

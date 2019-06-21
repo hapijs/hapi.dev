@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <ResourcesNav :page="page" @changePage="changePage"/>
+    <ResourcesNav :list=false />
     <div class="community-wrapper">
       <Changelog :milestones="getMilestones"/>
     </div>

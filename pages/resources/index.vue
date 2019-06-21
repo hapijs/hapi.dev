@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <ResourcesNav/>
+    <ResourcesNav :list=true />
     <div class="markdown-window">
       <Resources/>
     </div>

@@ -341,6 +341,10 @@ export default {
   text-decoration: none;
 }
 
+.api-nav-plus, .api-nav-minus, .api-nav-plus code, .api-nav-minus code {
+  color: $orange !important;
+}
+
 .api-nav-plus:after {
   content: "\002B";
   position: relative;

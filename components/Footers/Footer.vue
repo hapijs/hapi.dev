@@ -91,10 +91,15 @@ a {
 .footer-links-li {
   display: inline-block;
   margin: 0;
+  line-height: 1rem;
 }
 
 .footer-links-li:nth-child(-n + 7) {
   padding-right: 10px;
+}
+
+.footer-link {
+  font-size: 1rem;
 }
 
 .footer-link:hover {

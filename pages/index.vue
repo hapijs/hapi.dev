@@ -98,6 +98,7 @@ export default {
   border: 4px solid $orange;
   background: #fff;
   color: $orange;
+  text-decoration: none;
   transition: all 0.3s ease 0s;
 }
 
