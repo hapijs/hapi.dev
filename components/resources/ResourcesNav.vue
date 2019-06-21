@@ -8,28 +8,28 @@
             <li class="resources-header-link">
               <a :class="$props.list ? 'side-nav-select-link resources-minus resources-selected' : 'side-nav-select-link resources-plus'" href="/resources">List</a>
               <ul :class="$props.list ? 'resources-ul' : 'resources-ul hide-ul'">
-                <li class="resources-link">
+                <li class="side-nav-select-link">
                   <a href="#books">Books</a>
                 </li>
-                <li class="resources-link">
+                <li class="side-nav-select-link">
                   <a href="#gists">Gists and code samples</a>
                 </li>
-                <li class="resources-link">
+                <li class="side-nav-select-link">
                   <a href="#boilerplates">Boilerplates</a>
                 </li>
-                <li class="resources-link">
+                <li class="side-nav-select-link">
                   <a href="#projects">Projects built with hapi</a>
                 </li>
-                <li class="resources-link">
+                <li class="side-nav-select-link">
                   <a href="#tutorials">Tutorials</a>
                 </li>
-                <li class="resources-link">
+                <li class="side-nav-select-link">
                   <a href="#videos">Videos</a>
                 </li>
               </ul>
             </li>
-            <li :class="!$props.list ? 'side-nav-select-link resources-selected' : 'side-nav-select-link'">
-              <a href="/resources/changelog">Changelog</a>
+            <li class="resources-header-link">
+              <a :class="!$props.list ? 'side-nav-select-link resources-selected' : 'side-nav-select-link'" href="/resources/changelog">Changelog</a>
             </li>
           </ul>
         </div>
@@ -119,28 +119,25 @@ export default {
   display: none;
 }
 
-.resources-link {
+.side-nav-select-link a {
   display: inline-block;
-  font-size: 0.9em;
+  font-size: .78em;
   width: 100%;
   padding: 5px 0;
+  color: $gray;
   margin: 0;
   border-bottom: 1px solid $dark-white;
   cursor: pointer;
 }
 
-.resources-link a {
-  color: $gray;
-}
-
-.resources-link a:hover {
+.side-nav-select-link a:hover {
   text-decoration: none;
 }
 
 .resources-plus:after {
   content: "\002B";
   position: relative;
-  font-size: 20px;
+  font-size: 1.2rem;
   top: 2px;
   left: 5px;
   height: 15px;
@@ -152,7 +149,7 @@ export default {
 .resources-minus:after {
   content: "\2212";
   position: relative;
-  font-size: 20px;
+  font-size: 1.2rem;
   top: 2px;
   left: 5px;
   height: 15px;
