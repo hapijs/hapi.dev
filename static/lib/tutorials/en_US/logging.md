@@ -3,13 +3,13 @@
 
 _This tutorial is compatible with hapi v17_
 
-- [Overview](#overview)
-- [Built-in Methods](#methods)
-    - [request.log()](#request.log)
-    - [server.log()](#server.log)
-- [Retrieving and Displaying Logs](#display)
-- [Debug Mode](#debug)
-- [Logging Plugins](#plugins)
+1. [Overview](#overview)
+1. [Built-in Methods](#methods)
+    1. [request.log()](#request.log)
+    1. [server.log()](#server.log)
+1. [Retrieving and Displaying Logs](#display)
+1. [Debug Mode](#debug)
+1. [Logging Plugins](#plugins)
 
 
 

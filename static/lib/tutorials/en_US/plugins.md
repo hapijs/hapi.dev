@@ -2,11 +2,11 @@
 
 _This tutorial is compatible with hapi v17_
 
-- [Overview](#overview)
-- [Creating a plugin](#create)
-    - [Register Method](#register)
-- [Loading a Plugin](#loading)
-    - [Registration Options](#registration)
+1. [Overview](#overview)
+1. [Creating a plugin](#create)
+    1. [Register Method](#register)
+1. [Loading a Plugin](#loading)
+    1. [Registration Options](#registration)
 
 
 ## <a name="overview"></a> Overview

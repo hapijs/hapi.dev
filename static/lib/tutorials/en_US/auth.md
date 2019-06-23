@@ -2,16 +2,16 @@
 
 _This tutorial is compatible with hapi v17_
 
-- [Overview](#overview)
-- [Schemes](#schemes)
-    - [authenticate](#authenticate)
-    - [payload](#payload)
-    - [response](#response)
-- [Strategies](#strategies)
-- [Default Strategy](#default)
-- [Route Configuration](#route)
-- [@hapi/basic](#basic)
-- [@hapi/cookie](#cookie)
+1. [Overview](#overview)
+1. [Schemes](#schemes)
+    1. [authenticate](#authenticate)
+    1. [payload](#payload)
+    1. [response](#response)
+1. [Strategies](#strategies)
+1. [Default Strategy](#default)
+1. [Route Configuration](#route)
+1. [@hapi/basic](#basic)
+1. [@hapi/cookie](#cookie)
 
 
 ## <a name="overview"></a> Overview

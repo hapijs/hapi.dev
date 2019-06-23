@@ -2,11 +2,11 @@
 
 _This tutorial is compatible with hapi v17_
 
-- [Overview](#overview)
-- [lab](#lab)
-- [code](#code)
-- [Server Setup](#server)
-- [Writing a Route Test](#writingTest)
+1. [Overview](#overview)
+1. [lab](#lab)
+1. [code](#code)
+1. [Server Setup](#server)
+1. [Writing a Route Test](#writingTest)
 
 
 

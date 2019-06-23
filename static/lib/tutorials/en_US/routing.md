@@ -3,16 +3,16 @@
 _This tutorial is compatible with hapi v17_
 
 
-- [Overview](#overview)
-- [Methods](#methods)
-- [Path](#path)
-- [Optional Parameters](#optionalParameters)
-- [Multi-Segment Parameters](#multiParameters)
-- [Query Parameters](#query)
-- [Request Payload](#requestpayload)
-- [Handler](#handler)
-- [Options](#options)
-- [404 Handling](#missing)
+1. [Overview](#overview)
+1. [Methods](#methods)
+1. [Path](#path)
+1. [Optional Parameters](#optionalParameters)
+1. [Multi-Segment Parameters](#multiParameters)
+1. [Query Parameters](#query)
+1. [Request Payload](#requestpayload)
+1. [Handler](#handler)
+1. [Options](#options)
+1. [404 Handling](#missing)
         
 
 ## <a name="overview"></a> Overview

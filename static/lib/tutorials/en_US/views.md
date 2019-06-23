@@ -2,18 +2,18 @@
 
 _This tutorial is compatible with hapi v17_
 
-- [Overview](#overview)
-- [Vision](#vision)
-- [Configuring the Server](#server)
-- [server.views() Options](#options)
-    - [Engines](#engines)
-    - [Paths](#paths)
-    - [Global Context](#global)
-    - [View helpers](#helpers)
-    - [Layouts](#layouts)
-- [Rendering a View](#render)
-    - [h.view()](#hview)
-    - [View handler](#viewhandler)
+1. [Overview](#overview)
+1. [Vision](#vision)
+1. [Configuring the Server](#server)
+1. [server.views() Options](#options)
+    1. [Engines](#engines)
+    1. [Paths](#paths)
+    1. [Global Context](#global)
+    1. [View helpers](#helpers)
+    1. [Layouts](#layouts)
+1. [Rendering a View](#render)
+    1. [h.view()](#hview)
+    1. [View handler](#viewhandler)
 
 
 ## <a name="overview"></a> Overview
