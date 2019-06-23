@@ -2,15 +2,15 @@
 
 _This tutorial is compatible with hapi v17_
 
-- [Overview](#overview)
-- [Configuring the Server](#server)
-    - [server.state()](#server.state)
-    - [route.options.state()](#options.state)
-- [Setting a Cookie](#setting)
-    - [h.state()](#h.state)
-- [Overriding Options](#override)
-- [Getting a Cookie Value](#value)
-- [Clearing a Cookie](#clearing)
+1. [Overview](#overview)
+1. [Configuring the Server](#server)
+    1. [server.state()](#server.state)
+    1. [route.options.state()](#options.state)
+1. [Setting a Cookie](#setting)
+    1. [h.state()](#h.state)
+1. [Overriding Options](#override)
+1. [Getting a Cookie Value](#value)
+1. [Clearing a Cookie](#clearing)
 
 
 ## <a name="overview"></a> Overview

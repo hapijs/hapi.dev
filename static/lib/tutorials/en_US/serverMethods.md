@@ -2,15 +2,15 @@
 
 _This tutorial is compatible with hapi v17_
 
-- [Overview](#overview)
-- [server.method()](#server.method)
-    - [Name](#name)
-    - [Method](#method)
-- [Options](#options)
-    - [Cache](#cache)
-    - [Generate a Custom Key](#key)
-    - [Bind](#key)
-- [server.methods](#server.methods)
+1. [Overview](#overview)
+1. [server.method()](#server.method)
+    1. [Name](#name)
+    1. [Method](#method)
+1. [Options](#options)
+    1. [Cache](#cache)
+    1. [Generate a Custom Key](#key)
+    1. [Bind](#key)
+1. [server.methods](#server.methods)
 
 
 

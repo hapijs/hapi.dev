@@ -3,11 +3,11 @@
 _This tutorial is compatible with hapi v17_
 
 
-- [Overview](#overview)
-- [Installing hapi](#installing)
-- [Creating a server](#server)
-- [Adding Routes](#routes)
-- [Everything Else](#everything)
+1. [Overview](#overview)
+1. [Installing hapi](#installing)
+1. [Creating a server](#server)
+1. [Adding Routes](#routes)
+1. [Everything Else](#everything)
 
         
         
