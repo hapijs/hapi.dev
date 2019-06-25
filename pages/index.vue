@@ -73,7 +73,7 @@ export default {
 }
 
 .index-header {
-  font-size: 1.6em;
+  font-size: 1.5em;
   font-weight: 700;
 }
 
