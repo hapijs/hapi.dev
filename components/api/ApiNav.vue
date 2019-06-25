@@ -204,7 +204,10 @@ export default {
             } else if (
               !document
                 .querySelector(`a[href*='${aClass}']`)
-                .classList.contains("api-header")
+                .classList.contains("api-nav-plus") &&
+              !document
+                .querySelector(`a[href*='${aClass}']`)
+                .classList.contains("api-nav-minus")
             ) {
               document
                 .querySelector(`a[href*='${aClass}']`)
@@ -345,7 +348,10 @@ export default {
   text-decoration: none;
 }
 
-.api-nav-plus, .api-nav-minus, .api-nav-plus code, .api-nav-minus code {
+.api-nav-plus,
+.api-nav-minus,
+.api-nav-plus code,
+.api-nav-minus code {
   color: $orange !important;
 }
 
