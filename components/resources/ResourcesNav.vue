@@ -6,30 +6,28 @@
         <div class="side-nav-select-wrapper">
           <ul class="side-nav-select-list">
             <li class="resources-header-link">
-              <a :class="$props.list ? 'side-nav-select-link resources-minus resources-selected' : 'side-nav-select-link resources-plus'" href="/resources">List</a>
-              <ul :class="$props.list ? 'resources-ul' : 'resources-ul hide-ul'">
-                <li class="side-nav-select-link">
-                  <a href="#books">Books</a>
-                </li>
-                <li class="side-nav-select-link">
-                  <a href="#gists">Gists and code samples</a>
-                </li>
-                <li class="side-nav-select-link">
-                  <a href="#boilerplates">Boilerplates</a>
-                </li>
-                <li class="side-nav-select-link">
-                  <a href="#projects">Projects built with hapi</a>
-                </li>
-                <li class="side-nav-select-link">
-                  <a href="#tutorials">Tutorials</a>
-                </li>
-                <li class="side-nav-select-link">
-                  <a href="#videos">Videos</a>
-                </li>
-              </ul>
+              <a :class="!$props.list ? 'side-nav-select-link resources-selected' : 'side-nav-select-link'" href="/resources/changelog">Changelog</a>
             </li>
             <li class="resources-header-link">
-              <a :class="!$props.list ? 'side-nav-select-link resources-selected' : 'side-nav-select-link'" href="/resources/changelog">Changelog</a>
+              <a :class="!$props.list ? 'side-nav-select-link resources-selected' : 'side-nav-select-link'" href="/resources/styleguide">Style Guide</a>
+            </li>
+            <li class="resources-header-link">
+              <a href="#books">Books</a>
+            </li>
+            <li class="resources-header-link">
+              <a href="#gists">Gists and code samples</a>
+            </li>
+            <li class="resources-header-link">
+              <a href="#boilerplates">Boilerplates</a>
+            </li>
+            <li class="resources-header-link">
+              <a href="#projects">Projects built with hapi</a>
+            </li>
+            <li class="resources-header-link">
+              <a href="#tutorials">Tutorials</a>
+            </li>
+            <li class="resources-header-link">
+              <a href="#videos">Videos</a>
             </li>
           </ul>
         </div>

@@ -6,19 +6,19 @@
         <div class="nav-collapse">
           <ul class="nav-links">
             <li class="nav-links-li">
-              <a :class="getDisplay === 'tutorials' ? 'nav-link nav-link-active' : 'nav-link'" ref="tutorials" title="Tutorials" href="/tutorials/?lang=en_US" v-on:click="addActive('tutorials')">Tutorials</a>
-            </li>
-            <li class="nav-links-li">
               <a :class="getDisplay === 'api' ? 'nav-link nav-link-active' : 'nav-link'" ref="api" title="API" href="/api" v-on:click="addActive('api')">API</a>
             </li>
             <li class="nav-links-li">
-              <a :class="getDisplay === 'plugins' ? 'nav-link nav-link-active' : 'nav-link'" ref="plugins" title="Plugins" href="/plugins"  v-on:click="addActive('plugins')">Plugins</a>
+              <a :class="getDisplay === 'tutorials' ? 'nav-link nav-link-active' : 'nav-link'" ref="tutorials" title="Tutorials" href="/tutorials/?lang=en_US" v-on:click="addActive('tutorials')">Tutorials</a>
             </li>
             <li class="nav-links-li">
               <a :class="getDisplay === 'resources' ? 'nav-link nav-link-active' : 'nav-link'" ref="resources" title="Resources" href="/resources" v-on:click="addActive('resources')">Resources</a>
             </li>
             <li class="nav-links-li">
               <a :class="getDisplay === 'family' ? 'nav-link nav-link-active' : 'nav-link'" ref="family" title="Family" href="/family" v-on:click="addActive('family')">Family</a>
+            </li>
+            <li class="nav-links-li">
+              <a :class="getDisplay === 'plugins' ? 'nav-link nav-link-active' : 'nav-link'" ref="plugins" title="Plugins" href="/plugins"  v-on:click="addActive('plugins')">Plugins</a>
             </li>
             <li class="nav-links-li">
               <a :class="getDisplay === 'community' ? 'nav-link nav-link-active' : 'nav-link'" ref="contribute" title="Contribute" href="/community" v-on:click="addActive('community')">Community</a>
@@ -58,17 +58,17 @@ export default {
     showNav() {
       this.$refs.mobileNav.classList.add("show-nav");
       this.$refs.overlay.classList.add("show-nav");
-      let body = document.body
+      let body = document.body;
       body.classList.add("no-scroll");
     },
     hideNav() {
       this.$refs.mobileNav.classList.remove("show-nav");
       this.$refs.overlay.classList.remove("show-nav");
-      let body = document.body
+      let body = document.body;
       body.classList.remove("no-scroll");
     },
     addActive(ref) {
-      this.$store.commit('setDisplay', ref)
+      this.$store.commit("setDisplay", ref);
     }
   }
 };
@@ -142,7 +142,8 @@ export default {
   text-decoration: none;
 }
 
-.nav-link:before, .nav-link-active:before {
+.nav-link:before,
+.nav-link-active:before {
   width: 0;
   position: absolute;
   content: "";
@@ -155,7 +156,8 @@ export default {
   transition: 0.15s linear;
 }
 
-.nav-link:after, .nav-link-active:after {
+.nav-link:after,
+.nav-link-active:after {
   width: 0;
   position: absolute;
   content: "";

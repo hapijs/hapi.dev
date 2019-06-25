@@ -43,7 +43,7 @@ export default {
     }
   },
   async created() {
-    await this.$store.commit("setDisplay", "community");
+    await this.$store.commit("setDisplay", "resources");
   },
   async asyncData({ $axios, params, store }) {
 
