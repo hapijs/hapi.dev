@@ -203,12 +203,6 @@ export default {
     justify-content: center;
   }
 
-  .logo {
-    height: 50px;
-    width: calc(100px * (2 / 3));
-    margin: 0 auto;
-  }
-
   .nav-collapse {
     display: none;
   }

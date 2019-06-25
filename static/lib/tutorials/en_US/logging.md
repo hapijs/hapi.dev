@@ -1,7 +1,7 @@
 
 # Logging
 
-_This tutorial is compatible with hapi v17_
+_This tutorial is compatible with hapi v17 and newer_
 
 1. [Overview](#overview)
 1. [Built-in Methods](#methods)

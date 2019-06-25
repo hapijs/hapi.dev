@@ -18,6 +18,9 @@
             <a title="Tutorials" href="/tutorials/gettingStarted/?lang=en_US">Getting Started</a>
           </li>
           <li class="mobile-link mobile-tutorial-link">
+            <a title="ExpressToHapi" href="/tutorials/expressToHapi/?lang=en_US">Express Migration</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link">
             <a title="Tutorials" href="/tutorials/auth/?lang=en_US">Authentication</a>
           </li>
           <li class="mobile-link mobile-tutorial-link">
@@ -49,9 +52,6 @@
           </li>
           <li class="mobile-link mobile-tutorial-link">
             <a title="Tutorials" href="/tutorials/views/?lang=en_US">Views</a>
-          </li>
-          <li class="mobile-link mobile-tutorial-link">
-            <a title="ExpressToHapi" href="/tutorials/expressToHapi/?lang=en_US">Express to hapi</a>
           </li>
         </ul>
       </li>
