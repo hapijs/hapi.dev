@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Changelog from "../../components/community/Changelog.vue";
+import Changelog from "../../components/resources/Changelog.vue";
 import ResourcesNav from "../../components/resources/ResourcesNav.vue";
 let Semver = require("semver");
 let weekAgo = new Date();
