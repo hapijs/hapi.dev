@@ -109,14 +109,6 @@ export default {
   overflow: hidden;
 }
 
-.logo {
-  background: url("/img/hapi.svg") no-repeat 0 0;
-  background-size: contain;
-  height: 75px;
-  width: 100px;
-  margin: 0;
-}
-
 .nav-collapse {
   margin: 0;
 }
