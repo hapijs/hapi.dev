@@ -21,9 +21,6 @@
               <a :class="getDisplay === 'plugins' ? 'nav-link nav-link-active' : 'nav-link'" ref="plugins" title="Plugins" href="/plugins"  v-on:click="addActive('plugins')">Plugins</a>
             </li>
             <li class="nav-links-li">
-              <a :class="getDisplay === 'community' ? 'nav-link nav-link-active' : 'nav-link'" ref="contribute" title="Contribute" href="/community" v-on:click="addActive('community')">Community</a>
-            </li>
-            <li class="nav-links-li">
               <a :class="getDisplay === 'support' ? 'nav-link nav-link-active' : 'nav-link'" ref="support" title="Support" href="/support" v-on:click="addActive('support')">Support</a>
             </li>
           </ul>

@@ -56,4 +56,12 @@ html {
   width: 100px;
   margin: 0;
 }
+
+@media screen and (max-width: 900px) {
+  .logo {
+    height: 50px;
+    width: calc(100px * (2 / 3));
+    margin: 0 auto;
+  }
+}
 </style>

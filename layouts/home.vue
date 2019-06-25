@@ -57,5 +57,11 @@ html {
     min-height: calc(100vh - 80px);
     padding-bottom: 100px;
   }
+
+  .logo {
+    height: 50px;
+    width: calc(100px * (2 / 3));
+    margin: 0 auto;
+  }
 }
 </style>

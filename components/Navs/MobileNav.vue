@@ -9,6 +9,9 @@
         <a class="mobile-link" title="Home" href="/">Home</a>
       </li>
       <li class="mobile-links-li">
+        <a class="mobile-link" title="API" href="/api">API</a>
+      </li>
+      <li class="mobile-links-li">
         <a class="mobile-link" title="Tutorials" href="/tutorials/?lang=en_US">Tutorials</a>
         <ul>
           <li class="mobile-link mobile-tutorial-link">
@@ -53,19 +56,16 @@
         </ul>
       </li>
       <li class="mobile-links-li">
-        <a class="mobile-link" title="API" href="/api">API</a>
-      </li>
-      <li class="mobile-links-li">
-        <a class="mobile-link" title="Plugins" href="/plugins">Plugins</a>
-      </li>
-      <li class="mobile-links-li">
         <a class="mobile-link" title="Resources" href="/resources">Resources</a>
         <ul>
           <li class="mobile-link mobile-tutorial-link">
-            <a title="List" href="/resources">List</a>
+            <a title="Changelog" href="/resources/changelog">Changelog</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link" title="Contributing">
+            <a href="/resources/styleguide">Style Guide</a>
           </li>
           <li class="mobile-link mobile-tutorial-link">
-            <a title="Changelog" href="/resources/changelog">Changelog</a>
+            <a title="List" href="/resources">List</a>
           </li>
         </ul>
       </li>
@@ -111,18 +111,7 @@
         </ul>
       </li>
       <li class="mobile-links-li">
-        <a class="mobile-link" title="Contribute" href="/community">Community</a>
-        <ul>
-          <li class="mobile-link mobile-tutorial-link" title="Contributing">
-            <a href="/community/contributing">Contributing</a>
-          </li>
-          <li class="mobile-link mobile-tutorial-link" title="Updates">
-            <a href="/community/updates">Updates</a>
-          </li>
-          <li class="mobile-link mobile-tutorial-link" title="Contributing">
-            <a href="/community/styleguide">Style Guide</a>
-          </li>
-        </ul>
+        <a class="mobile-link" title="Plugins" href="/plugins">Plugins</a>
       </li>
       <li class="mobile-links-li">
         <a class="mobile-link" title="Support" href="/support">Support</a>
