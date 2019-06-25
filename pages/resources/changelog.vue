@@ -56,7 +56,7 @@ export default {
       }
     };
     let milestones = await $axios.$get(
-      "https://api.github.com/repos/hapijs/hapi/milestones?state=closed&per_page=100&direction=desc",
+      "https://api.github.com/repos/hapijs/hapi/milestones?state=closed&per_page=200&direction=desc",
       mileOptions
     );
 
@@ -65,7 +65,7 @@ export default {
     );
 
     //Get milestone issues
-    for (let milestone of sortedMilestones.slice(0, 10)) {
+    for (let milestone of sortedMilestones) {
       let m = await $axios.$get(
         "https://api.github.com/repos/hapijs/hapi/issues?state=closed&milestone=" +
           milestone.number,

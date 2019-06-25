@@ -18,13 +18,13 @@
               <a :class="getDisplay === 'resources' ? 'nav-link nav-link-active' : 'nav-link'" ref="resources" title="Resources" href="/resources" v-on:click="addActive('resources')">Resources</a>
             </li>
             <li class="nav-links-li">
-              <a :class="getDisplay === 'ecosystem' ? 'nav-link nav-link-active' : 'nav-link'" ref="ecosystem" title="Ecosystem" href="/ecosystem" v-on:click="addActive('ecosystem')">Ecosystem</a>
+              <a :class="getDisplay === 'family' ? 'nav-link nav-link-active' : 'nav-link'" ref="family" title="Family" href="/family" v-on:click="addActive('family')">Family</a>
             </li>
             <li class="nav-links-li">
               <a :class="getDisplay === 'community' ? 'nav-link nav-link-active' : 'nav-link'" ref="contribute" title="Contribute" href="/community" v-on:click="addActive('community')">Community</a>
             </li>
             <li class="nav-links-li">
-              <a :class="getDisplay === 'help' ? 'nav-link nav-link-active' : 'nav-link'" ref="help" title="Help" href="/help" v-on:click="addActive('help')">Help</a>
+              <a :class="getDisplay === 'support' ? 'nav-link nav-link-active' : 'nav-link'" ref="support" title="Support" href="/support" v-on:click="addActive('support')">Support</a>
             </li>
           </ul>
         </div>

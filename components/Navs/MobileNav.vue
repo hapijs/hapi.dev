@@ -70,44 +70,44 @@
         </ul>
       </li>
       <li class="mobile-links-li">
-        <a class="mobile-link" title="Ecosystem" href="/ecosystem">Ecosystem</a>
+        <a class="mobile-link" title="Family" href="/family">Family</a>
         <ul>
           <li
             class="mobile-link mobile-tutorial-link"
             title="bell"
-          ><a href="/ecosystem/bell">Bell</a></li>
+          ><a href="/family/bell">Bell</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="boom"
-          ><a href="/ecosystem/boom">Boom</a></li>
+          ><a href="/family/boom">Boom</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="good"
-          ><a href="/ecosystem/good">Good</a></li>
+          ><a href="/family/good">Good</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="hoek"
-          ><a href="/ecosystem/hoek">Hoek</a></li>
+          ><a href="/family/hoek">Hoek</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="iron"
-          ><a href="/ecosystem/iron">Iron</a></li>
+          ><a href="/family/iron">Iron</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="joi"
-          ><a href="/ecosystem/joi">Joi</a></li>
+          ><a href="/family/joi">Joi</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="shot"
-          ><a href="/ecosystem/shot">Shot</a></li>
+          ><a href="/family/shot">Shot</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="topo"
-          ><a href="/ecosystem/topo">Topo</a></li>
+          ><a href="/family/topo">Topo</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="yar"
-          ><a href="/ecosystem/yar">Yar</a></li>
+          ><a href="/family/yar">Yar</a></li>
         </ul>
       </li>
       <li class="mobile-links-li">
@@ -125,7 +125,7 @@
         </ul>
       </li>
       <li class="mobile-links-li">
-        <a class="mobile-link" title="Help" href="/help">Help</a>
+        <a class="mobile-link" title="Support" href="/support">Support</a>
       </li>
     </ul>
     <img class="mobile-helmet" src="../../static/img/helmet.png" alt="hapi-helmet">
