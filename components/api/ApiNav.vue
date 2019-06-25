@@ -204,7 +204,10 @@ export default {
             } else if (
               !document
                 .querySelector(`a[href*='${aClass}']`)
-                .classList.contains("api-header")
+                .classList.contains("api-nav-plus") &&
+              !document
+                .querySelector(`a[href*='${aClass}']`)
+                .classList.contains("api-nav-minus")
             ) {
               document
                 .querySelector(`a[href*='${aClass}']`)
@@ -326,6 +329,10 @@ export default {
   text-decoration: none;
 }
 
+.api-nav-li {
+  position: relative;
+}
+
 .api-nav-select-wrapper > ul > li > ul > li a {
   display: inline-block;
   color: $gray;
@@ -341,32 +348,46 @@ export default {
   text-decoration: none;
 }
 
-.api-nav-plus, .api-nav-minus, .api-nav-plus code, .api-nav-minus code {
+.api-nav-plus,
+.api-nav-minus,
+.api-nav-plus code,
+.api-nav-minus code {
   color: $orange !important;
 }
 
 .api-nav-plus:after {
   content: "\002B";
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
   font-size: 20px;
-  top: 2px;
-  left: 5px;
-  height: 15px;
+  top: 0;
+  bottom: 0;
+  left: -17px;
+  height: 37px;
   width: 15px;
   z-index: 100;
-  display: inline-block;
+}
+
+.api-nav-select-wrapper > ul > .api-nav-li > .api-nav-plus:after,
+.api-nav-select-wrapper > ul > .api-nav-li > .api-nav-minus:after {
+  height: 27px;
 }
 
 .api-nav-minus:after {
   content: "\2212";
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
   font-size: 20px;
-  top: 2px;
-  left: 5px;
-  height: 15px;
+  top: 0;
+  bottom: 0;
+  left: -17px;
+  height: 37px;
   width: 15px;
   z-index: 100;
-  display: inline-block;
 }
 
 .api-nav-code {
