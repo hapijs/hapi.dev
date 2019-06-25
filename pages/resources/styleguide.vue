@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <CommunityNav :page="page" @changePage="changePage"/>
+    <ResourcesNav />
     <div class="community-wrapper">
       <HTML :display="styleGuide"/>
     </div>
@@ -9,12 +9,12 @@
 
 <script>
 import HTML from "~/components/HTML.vue";
-import CommunityNav from "~/components/community/CommunityNav.vue";
+import ResourcesNav from "~/components/resources/ResourcesNav.vue";
 
 export default {
   components: {
     HTML,
-    CommunityNav
+    ResourcesNav
   },
   data() {
     return {
@@ -27,7 +27,7 @@ export default {
     };
   },
   async created() {
-    await this.$store.commit("setDisplay", "community");
+    await this.$store.commit("setDisplay", "resources");
   },
   methods: {
     changePage(value) {

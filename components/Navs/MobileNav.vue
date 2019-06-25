@@ -9,10 +9,16 @@
         <a class="mobile-link" title="Home" href="/">Home</a>
       </li>
       <li class="mobile-links-li">
+        <a class="mobile-link" title="API" href="/api">API</a>
+      </li>
+      <li class="mobile-links-li">
         <a class="mobile-link" title="Tutorials" href="/tutorials/?lang=en_US">Tutorials</a>
         <ul>
           <li class="mobile-link mobile-tutorial-link">
             <a title="Tutorials" href="/tutorials/gettingStarted/?lang=en_US">Getting Started</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link">
+            <a title="ExpressToHapi" href="/tutorials/expressToHapi/?lang=en_US">Express Migration</a>
           </li>
           <li class="mobile-link mobile-tutorial-link">
             <a title="Tutorials" href="/tutorials/auth/?lang=en_US">Authentication</a>
@@ -47,85 +53,68 @@
           <li class="mobile-link mobile-tutorial-link">
             <a title="Tutorials" href="/tutorials/views/?lang=en_US">Views</a>
           </li>
-          <li class="mobile-link mobile-tutorial-link">
-            <a title="ExpressToHapi" href="/tutorials/expressToHapi/?lang=en_US">Express to hapi</a>
-          </li>
         </ul>
-      </li>
-      <li class="mobile-links-li">
-        <a class="mobile-link" title="API" href="/api">API</a>
-      </li>
-      <li class="mobile-links-li">
-        <a class="mobile-link" title="Plugins" href="/plugins">Plugins</a>
       </li>
       <li class="mobile-links-li">
         <a class="mobile-link" title="Resources" href="/resources">Resources</a>
         <ul>
           <li class="mobile-link mobile-tutorial-link">
-            <a title="List" href="/resources">List</a>
+            <a title="Changelog" href="/resources/changelog">Changelog</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link" title="Contributing">
+            <a href="/resources/styleguide">Style Guide</a>
           </li>
           <li class="mobile-link mobile-tutorial-link">
-            <a title="Changelog" href="/resources/changelog">Changelog</a>
+            <a title="List" href="/resources">List</a>
           </li>
         </ul>
       </li>
       <li class="mobile-links-li">
-        <a class="mobile-link" title="Ecosystem" href="/ecosystem">Ecosystem</a>
+        <a class="mobile-link" title="Family" href="/family">Family</a>
         <ul>
           <li
             class="mobile-link mobile-tutorial-link"
             title="bell"
-          ><a href="/ecosystem/bell">Bell</a></li>
+          ><a href="/family/bell">Bell</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="boom"
-          ><a href="/ecosystem/boom">Boom</a></li>
+          ><a href="/family/boom">Boom</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="good"
-          ><a href="/ecosystem/good">Good</a></li>
+          ><a href="/family/good">Good</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="hoek"
-          ><a href="/ecosystem/hoek">Hoek</a></li>
+          ><a href="/family/hoek">Hoek</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="iron"
-          ><a href="/ecosystem/iron">Iron</a></li>
+          ><a href="/family/iron">Iron</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="joi"
-          ><a href="/ecosystem/joi">Joi</a></li>
+          ><a href="/family/joi">Joi</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="shot"
-          ><a href="/ecosystem/shot">Shot</a></li>
+          ><a href="/family/shot">Shot</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="topo"
-          ><a href="/ecosystem/topo">Topo</a></li>
+          ><a href="/family/topo">Topo</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="yar"
-          ><a href="/ecosystem/yar">Yar</a></li>
+          ><a href="/family/yar">Yar</a></li>
         </ul>
       </li>
       <li class="mobile-links-li">
-        <a class="mobile-link" title="Contribute" href="/community">Community</a>
-        <ul>
-          <li class="mobile-link mobile-tutorial-link" title="Contributing">
-            <a href="/community/contributing">Contributing</a>
-          </li>
-          <li class="mobile-link mobile-tutorial-link" title="Updates">
-            <a href="/community/updates">Updates</a>
-          </li>
-          <li class="mobile-link mobile-tutorial-link" title="Contributing">
-            <a href="/community/styleguide">Style Guide</a>
-          </li>
-        </ul>
+        <a class="mobile-link" title="Plugins" href="/plugins">Plugins</a>
       </li>
       <li class="mobile-links-li">
-        <a class="mobile-link" title="Help" href="/help">Help</a>
+        <a class="mobile-link" title="Support" href="/support">Support</a>
       </li>
     </ul>
     <img class="mobile-helmet" src="../../static/img/helmet.png" alt="hapi-helmet">

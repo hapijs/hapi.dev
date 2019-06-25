@@ -44,10 +44,24 @@ html {
   padding-bottom: 50px;
 }
 
+.logo {
+  background: url("/img/hapi.svg") no-repeat 0 0;
+  background-size: contain;
+  height: 112.5px;
+  width: 150px;
+  margin: 0;
+}
+
 @media screen and (max-width: 900px) {
   .contain {
     min-height: calc(100vh - 80px);
     padding-bottom: 100px;
+  }
+
+  .logo {
+    height: 50px;
+    width: calc(100px * (2 / 3));
+    margin: 0 auto;
   }
 }
 </style>

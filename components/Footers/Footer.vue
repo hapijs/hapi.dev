@@ -2,21 +2,6 @@
   <footer class="footer">
     <ul class="footer-links">
       <li class="footer-links-li">
-        <a class="footer-link" title="Tutorials" href="/tutorials">Tutorials</a>
-      </li>
-      <li class="footer-links-li">
-        <a class="footer-link" title="API" href="/api">API</a>
-      </li>
-      <li class="footer-links-li">
-        <a class="footer-link" title="Ecosystem" href="/ecosystem">Ecosystem</a>
-      </li>
-      <li class="footer-links-li">
-        <a class="footer-link" title="Plugins" href="/plugins">Plugins</a>
-      </li>
-      <li class="footer-links-li">
-        <a class="footer-link" title="Help" href="/help">Help</a>
-      </li>
-      <li class="footer-links-li">
         <a class="footer-link" title="Github" target="__blank" href="https://github.com/hapijs/hapi">Github</a>
       </li>
       <li class="footer-links-li">
@@ -32,25 +17,7 @@
       </li>
     </ul>
     <div class="footer-text">
-      hapi is maintained by the
-      <a
-        class="footer-text-links"
-        target="__blank"
-        href="https://github.com/orgs/hapijs/people"
-      >core team</a>
-      with help from
-      <a
-        class="footer-text-links"
-        target="__blank"
-        href="https://github.com/hapijs/hapi/graphs/contributors"
-      >our contributors</a>
-      and a very big thanks to
-      <a
-        class="footer-text-links"
-        target="__blank"
-        href="https://packet.net"
-      >packet.net</a>
-      for our hosting.
+      &copy; 2012 - 2019 Sideway Inc.
     </div>
   </footer>
 </template>
@@ -83,7 +50,7 @@ a {
 
 .footer-links {
   list-style-type: none;
-  margin: 0 auto 10px auto;
+  margin: 0 auto 3px auto;
   width: 100%;
   text-align: center;
 }
@@ -94,7 +61,7 @@ a {
   line-height: 1rem;
 }
 
-.footer-links-li:nth-child(-n + 7) {
+.footer-links-li:nth-child(-n + 2) {
   padding-right: 10px;
 }
 

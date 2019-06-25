@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Changelog from "../../components/community/Changelog.vue";
+import Changelog from "../../components/resources/Changelog.vue";
 import ResourcesNav from "../../components/resources/ResourcesNav.vue";
 let Semver = require("semver");
 let weekAgo = new Date();
@@ -43,7 +43,7 @@ export default {
     }
   },
   async created() {
-    await this.$store.commit("setDisplay", "community");
+    await this.$store.commit("setDisplay", "resources");
   },
   async asyncData({ $axios, params, store }) {
 
@@ -56,7 +56,7 @@ export default {
       }
     };
     let milestones = await $axios.$get(
-      "https://api.github.com/repos/hapijs/hapi/milestones?state=closed&per_page=100&direction=desc",
+      "https://api.github.com/repos/hapijs/hapi/milestones?state=closed&per_page=200&direction=desc",
       mileOptions
     );
 
@@ -65,7 +65,7 @@ export default {
     );
 
     //Get milestone issues
-    for (let milestone of sortedMilestones.slice(0, 10)) {
+    for (let milestone of sortedMilestones) {
       let m = await $axios.$get(
         "https://api.github.com/repos/hapijs/hapi/issues?state=closed&milestone=" +
           milestone.number,

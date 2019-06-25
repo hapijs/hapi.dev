@@ -1,6 +1,6 @@
 # Express to hapi Guide
 
-_This guide is compatible with hapi v17_
+_This guide is compatible with hapi v17 and newer_
 
 1. [Overview](#overview)
 1. [Setup](#setup)

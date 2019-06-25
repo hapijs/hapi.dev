@@ -17,25 +17,7 @@
       </li>
     </ul>
     <div class="footer-text">
-      hapi is maintained by the
-      <a
-        class="footer-text-links"
-        target="__blank"
-        href="https://github.com/orgs/hapijs/people"
-      >core team</a>
-      with help from
-      <a
-        class="footer-text-links"
-        target="__blank"
-        href="https://github.com/hapijs/hapi/graphs/contributors"
-      >our contributors</a>
-      and a very big thanks to
-      <a
-        class="footer-text-links"
-        target="__blank"
-        href="https://packet.net"
-      >packet.net</a>
-      for our hosting.
+      &copy; 2012 - 2019 Sideway Inc.
     </div>
   </footer>
 </template>
@@ -102,13 +84,12 @@ a {
   align-items: center;
   height: 50px;
   max-width: 100%;
-  margin: 20px 10px 10px 10px;
+  margin: 20px 10px 5px 10px;
 }
 
 .footer-text {
   font-size: 0.7em;
   text-align: center;
-  padding-bottom: 10px;
 }
 
 .footer-text-links:hover {

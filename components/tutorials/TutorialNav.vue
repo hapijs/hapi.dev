@@ -6,11 +6,11 @@
         <div class="lang-wrapper">
           <div class="lang-text">Languages:</div>
           <select @change="onChange($event)" :value="getLanguage" class="tutorial-lang-select">
-            <option value="en_US">en_US</option>
-            <option value="pt_BR">pt_BR</option>
-            <option value="ko_KR">ko_KR</option>
-            <option value="tr_TR">tr_TR</option>
-            <option value="zh_CN">zh_CN</option>
+            <option value="en_US">en-US</option>
+            <option value="pt_BR">pt-BR</option>
+            <option value="ko_KR">ko-KR</option>
+            <option value="tr_TR">tr-TR</option>
+            <option value="zh_CN">zh-CN</option>
           </select>
         </div>
         <div class="side-nav-select-wrapper">
@@ -22,6 +22,14 @@
                 ref="gettingStarted"
                 :href="'/tutorials/gettingStarted/?lang=' + getLanguage"
               >Getting Started</a>
+            </li>
+            <li
+              :class="$route.params.tutorial === 'expressToHapi' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+            >
+              <a
+                ref="expressToHapi"
+                :href="'/tutorials/expressToHapi/?lang=' + getLanguage"
+              >Express Migration</a>
             </li>
             <li
               :class="$route.params.tutorial === 'auth' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
@@ -83,14 +91,6 @@
               :class="$route.params.tutorial === 'views' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
             >
               <a ref="views" :href="'/tutorials/views/?lang=' + getLanguage">Views</a>
-            </li>
-            <li
-              :class="$route.params.tutorial === 'expressToHapi' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
-            >
-              <a
-                ref="expressToHapi"
-                :href="'/tutorials/expressToHapi/?lang=' + getLanguage"
-              >Express to hapi Guide</a>
             </li>
           </ul>
         </div>
