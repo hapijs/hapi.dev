@@ -2,10 +2,10 @@
   <div class="side-nav-window">
     <div class="side-nav-wrapper">
       <div class="side-nav-inner-wrapper">
-        <div class="side-nav-title">Ecosystem</div>
+        <div class="side-nav-title">Family</div>
         <div class="side-nav-select-wrapper">
           <ul class="side-nav-select-list">
-            <EcosystemNavItem
+            <FamilyNavItem
               v-for="name in modules"
               v-bind:key="name"
               :name="name"
@@ -22,12 +22,12 @@
 
 <script>
 import SideFooter from "~/components/Footers/SideFooter.vue";
-import EcosystemNavItem from "./EcosystemNavItem.vue";
+import FamilyNavItem from "./FamilyNavItem.vue";
 
 export default {
   components: {
     SideFooter,
-    EcosystemNavItem
+    FamilyNavItem
   },
   props: ["page", "moduleAPI", "modules"]
 };

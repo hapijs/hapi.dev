@@ -19,15 +19,15 @@ module.exports = {
       '/tutorials/validation',
       '/tutorials/views',
       '/tutorials/expressToHapi',
-      'ecosystem/bell',
-      'ecosystem/boom',
-      'ecosystem/good',
-      'ecosystem/hoek',
-      'ecosystem/iron',
-      'ecosystem/joi',
-      'ecosystem/shot',
-      'ecosystem/topo',
-      'ecosystem/yar'
+      '/family/bell',
+      '/family/boom',
+      '/family/good',
+      '/family/hoek',
+      '/family/iron',
+      '/family/joi',
+      '/family/shot',
+      '/family/topo',
+      '/family/yar'
     ]
   },
 

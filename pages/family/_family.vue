@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <EcosystemNav :moduleAPI="moduleAPI" :modules="modules"/>
+    <FamilyNav :moduleAPI="moduleAPI" :modules="modules"/>
     <div class="tutorial-markdown-window">
       <HTML :display="getDisplay"/>
     </div>
@@ -9,16 +9,16 @@
 
 <script>
 import HTML from "~/components/HTML.vue";
-import EcosystemNav from "~/components/ecosystem/EcosystemNav.vue";
+import FamilyNav from "~/components/family/FamilyNav.vue";
 
 export default {
   components: {
     HTML,
-    EcosystemNav
+    FamilyNav
   },
   head() {
     return {
-      title: "hapi.js - " + this.$route.params.ecosystem
+      title: "hapi.js - " + this.$route.params.family
     };
   },
   data() {
@@ -30,7 +30,7 @@ export default {
     onScroll() {
       let links = [];
       links = document.querySelectorAll(
-        "#" + this.$route.params.ecosystem + " a"
+        "#" + this.$route.params.family + " a"
       );
       let points = {};
       let offsets = [];
@@ -77,7 +77,7 @@ export default {
   },
   computed: {
     getDisplay() {
-      return this.moduleAPI[this.$route.params.ecosystem].display;
+      return this.moduleAPI[this.$route.params.family].display;
     }
   },
   async asyncData({ params, $axios, route }) {
@@ -103,7 +103,7 @@ export default {
     try {
       const res = await $axios.$get(
         "https://api.github.com/repos/hapijs/" +
-          params.ecosystem +
+          params.family +
           "/contents/API.md",
         options
       );
@@ -129,7 +129,7 @@ export default {
       );
       let apiString = await apiHTML.toString();
       let finalHtmlDisplay = await apiString.replace(/user-content-/g, "");
-      moduleAPI[params.ecosystem] = {
+      moduleAPI[params.family] = {
         display: await finalHtmlDisplay,
         menu: await finalMenu
       };
@@ -139,7 +139,7 @@ export default {
     return { moduleAPI, modules };
   },
   created() {
-    this.$store.commit("setDisplay", "ecosystem");
+    this.$store.commit("setDisplay", "family");
   },
   mounted() {
     this.onScroll();
