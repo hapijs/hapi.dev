@@ -1,15 +1,16 @@
 <template>
-  <div class="side-nav-window">
-    <div class="side-nav-wrapper">
-      <div class="side-nav-inner-wrapper">
-        <div class="side-nav-title">API</div>
-        <div class="lang-wrapper">
-          <div class="lang-text">Version:</div>
-          <select @change="onChange($event)" class="api-lang-select">
-            <option :value="versions[0]">{{versions[0]}}</option>
-            <option :value="versions[1]">{{versions[1]}}</option>
-            <option :value="versions[2]">{{versions[2]}}</option>
-          </select>
+  <div class="api-nav-window">
+    <div class="api-nav-wrapper">
+      <div class="api-nav-inner-wrapper">
+        <div class="api-nav-title-wrapper">
+          <div class="api-nav-title">API</div>
+          <div class="api-lang-wrapper">
+            <select @change="onChange($event)" class="api-lang-select">
+              <option :value="versions[0]">{{versions[0]}}</option>
+              <option :value="versions[1]">{{versions[1]}}</option>
+              <option :value="versions[2]">{{versions[2]}}</option>
+            </select>
+          </div>
         </div>
         <div class="api-search">
           <input
@@ -234,10 +235,81 @@ export default {
 @import "../../assets/styles/sideNav.scss";
 @import "../../assets/styles/main.scss";
 
+.api-nav-window {
+  position: sticky;
+  top: 96px;
+  bottom: 0;
+  width: 370px;
+  min-width: 370px;
+  max-height: calc(100vh - 96px);
+  min-height: calc(100vh - 96px);
+  overflow-y: auto;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: $off-white;
+  border-right: 1px solid $dark-white;
+}
+
+.api-nav-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: calc(100vh - 96px);
+}
+
+.api-nav-inner-wrapper {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+}
+
+.api-nav-title-wrapper {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.api-nav-title {
+  font-size: 1.5rem;
+  color: $black;
+  margin: 0;
+}
+
+.api-lang-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin: 0 0 0 10px;
+}
+
+.api-lang-select {
+  width: 70px;
+  padding: 0px 5px 0px 5px;
+  border: none;
+  height: 30px;
+  font-size: 1em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(/img/down.png) 96% / 15% no-repeat $off-white;
+  cursor: pointer;
+}
+
 .api-search {
   position: relative;
-  margin: 20px 0 0 0;
-  width: 170px;
+  padding: 0 20px;
+  width: 100%;
 }
 
 .api-search-box {
@@ -256,7 +328,7 @@ export default {
   background-color: #fff;
   background-size: contain;
   padding: 10px;
-  right: -30px;
+  right: 20px;
   top: 0px;
   border-top: 1px solid $dark-white;
   border-right: 1px solid $dark-white;
@@ -298,7 +370,7 @@ export default {
   outline: none;
   border: 1px solid $dark-white;
   background: #fff;
-  padding: 2px 10px;
+  padding: 4px 10px;
   color: $black;
   cursor: pointer;
   margin-right: 10px;
