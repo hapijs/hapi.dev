@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <EcosystemNav :moduleAPI="moduleAPI" :modules="modules"/>
+    <FamilyNav :moduleAPI="moduleAPI" :modules="modules"/>
     <div class="tutorial-markdown-window">
       <HTML :display="getDisplay"/>
     </div>
@@ -9,12 +9,12 @@
 
 <script>
 import HTML from "~/components/HTML.vue";
-import EcosystemNav from "~/components/ecosystem/EcosystemNav.vue";
+import FamilyNav from "~/components/family/FamilyNav.vue";
 
 export default {
   components: {
     HTML,
-    EcosystemNav
+    FamilyNav
   },
   head() {
     return {
@@ -138,7 +138,7 @@ export default {
   },
   created() {
     this.$data.display = this.moduleAPI.bell;
-    this.$store.commit('setDisplay', 'ecosystem')
+    this.$store.commit('setDisplay', 'family')
   },
   mounted() {
     this.onScroll();

@@ -73,7 +73,7 @@ export default {
 }
 
 .index-header {
-  font-size: 1.6em;
+  font-size: 1.5em;
   font-weight: 700;
 }
 
@@ -85,7 +85,7 @@ export default {
   border-radius: 10px;
   border: none;
   background: $orange;
-  padding: 15px;
+  padding: 5px 15px;
   font-size: 0.9em;
   font-weight: 700;
   margin: 40px 0;

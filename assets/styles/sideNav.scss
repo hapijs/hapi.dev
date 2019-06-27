@@ -69,6 +69,10 @@ select {
   cursor: pointer;
 }
 
+select:focus {
+  outline: none;
+}
+
 .side-nav-select-wrapper {
   margin-top: 20px;
   font-size: 1.1em;

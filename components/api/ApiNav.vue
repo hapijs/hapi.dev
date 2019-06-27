@@ -1,15 +1,16 @@
 <template>
-  <div class="side-nav-window">
-    <div class="side-nav-wrapper">
-      <div class="side-nav-inner-wrapper">
-        <div class="side-nav-title">API</div>
-        <div class="lang-wrapper">
-          <div class="lang-text">Version:</div>
-          <select @change="onChange($event)" class="api-lang-select">
-            <option :value="versions[0]">{{versions[0]}}</option>
-            <option :value="versions[1]">{{versions[1]}}</option>
-            <option :value="versions[2]">{{versions[2]}}</option>
-          </select>
+  <div class="api-nav-window">
+    <div class="api-nav-wrapper">
+      <div class="api-nav-inner-wrapper">
+        <div class="api-nav-title-wrapper">
+          <div class="api-nav-title">API</div>
+          <div class="api-lang-wrapper">
+            <select @change="onChange($event)" class="api-lang-select">
+              <option :value="versions[0]">{{versions[0]}}</option>
+              <option :value="versions[1]">{{versions[1]}}</option>
+              <option :value="versions[2]">{{versions[2]}}</option>
+            </select>
+          </div>
         </div>
         <div class="api-search">
           <input
@@ -160,26 +161,26 @@ export default {
       let offsets = [];
       for (let i = 2; i < tags.length; i++) {
         if (tags[i].name && this.version !== this.versions[2]) {
-          points[tags[i].offsetTop - 70] = {
+          points[tags[i].offsetTop - 40] = {
             name: "#" + tags[i].name
           };
-          offsets.push(tags[i].offsetTop - 70);
+          offsets.push(tags[i].offsetTop - 40);
         }
         if (
           this.version !== this.versions[2] &&
           tags[i].id &&
           tags[i].parentElement.children.length === 1
         ) {
-          points[tags[i].offsetTop - 70] = {
+          points[tags[i].offsetTop - 40] = {
             name: "#" + tags[i].id
           };
-          offsets.push(tags[i].offsetTop - 70);
+          offsets.push(tags[i].offsetTop - 40);
         }
         if (this.version === this.versions[2] && tags[i].id) {
-          points[tags[i].offsetTop - 70] = {
+          points[tags[i].offsetTop - 40] = {
             name: "#" + tags[i].id
           };
-          offsets.push(tags[i].offsetTop - 70);
+          offsets.push(tags[i].offsetTop - 40);
         }
       }
 
@@ -197,21 +198,15 @@ export default {
             }
 
             let element = document.querySelector(`a[href*='${aClass}']`);
-            if (element.children.length !== 0) {
-              document
-                .querySelector(`a[href*='${aClass}'] *`)
-                .classList.add("api-active");
-            } else if (
-              !document
+            if (element.children.length !== 0 && !document
                 .querySelector(`a[href*='${aClass}']`)
                 .classList.contains("api-nav-plus") &&
               !document
                 .querySelector(`a[href*='${aClass}']`)
-                .classList.contains("api-nav-minus")
-            ) {
+                .classList.contains("api-nav-minus")) {
               document
-                .querySelector(`a[href*='${aClass}']`)
-                .classList.add("api-active");
+                .querySelector(`a[href*='${aClass}'] *`)
+                .parentElement.classList.add("api-active");
             }
           }
         }
@@ -234,10 +229,81 @@ export default {
 @import "../../assets/styles/sideNav.scss";
 @import "../../assets/styles/main.scss";
 
+.api-nav-window {
+  position: sticky;
+  top: 96px;
+  bottom: 0;
+  width: 370px;
+  min-width: 370px;
+  max-height: calc(100vh - 96px);
+  min-height: calc(100vh - 96px);
+  overflow-y: auto;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: $off-white;
+  border-right: 1px solid $dark-white;
+}
+
+.api-nav-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: calc(100vh - 96px);
+}
+
+.api-nav-inner-wrapper {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+}
+
+.api-nav-title-wrapper {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.api-nav-title {
+  font-size: 1.5rem;
+  color: $black;
+  margin: 0;
+}
+
+.api-lang-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin: 0 0 0 10px;
+}
+
+.api-lang-select {
+  width: 70px;
+  padding: 0px 5px 0px 5px;
+  border: none;
+  height: 30px;
+  font-size: 1em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(/img/down.png) 96% / 15% no-repeat $off-white;
+  cursor: pointer;
+}
+
 .api-search {
   position: relative;
-  margin: 20px 0 0 0;
-  width: 170px;
+  padding: 0 20px;
+  width: 100%;
 }
 
 .api-search-box {
@@ -256,7 +322,7 @@ export default {
   background-color: #fff;
   background-size: contain;
   padding: 10px;
-  right: -30px;
+  right: 20px;
   top: 0px;
   border-top: 1px solid $dark-white;
   border-right: 1px solid $dark-white;
@@ -298,7 +364,7 @@ export default {
   outline: none;
   border: 1px solid $dark-white;
   background: #fff;
-  padding: 2px 10px;
+  padding: 4px 10px;
   color: $black;
   cursor: pointer;
   margin-right: 10px;
@@ -306,10 +372,6 @@ export default {
 
 .api-nav-select-wrapper ul {
   margin-left: 0;
-}
-
-.api-nav-select-wrapper ul li ul {
-  margin-left: 10px;
 }
 
 .api-nav-select-wrapper {
@@ -324,28 +386,30 @@ export default {
   display: none;
 }
 
-.api-nav-header {
+.api-nav-select-wrapper ul li ul {
+  margin-left: 10px;
+}
+
+.api-nav-header * {
   color: $orange;
   text-decoration: none;
 }
 
 .api-nav-li {
   position: relative;
+  color: $gray;
 }
 
 .api-nav-select-wrapper > ul > li > ul > li a {
-  display: inline-block;
   color: $gray;
   font-size: 0.78em;
   width: 100%;
-  padding: 5px 0;
-  border-bottom: 1px solid $dark-white;
+  padding: 2px 0;
 }
 
 .api-nav-li a:hover,
 .api-nav-li a code:hover {
-  color: $orange;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .api-nav-plus,
@@ -365,7 +429,7 @@ export default {
   top: 0;
   bottom: 0;
   left: -17px;
-  height: 37px;
+  height: 31px;
   width: 15px;
   z-index: 100;
 }
@@ -385,16 +449,21 @@ export default {
   top: 0;
   bottom: 0;
   left: -17px;
-  height: 37px;
+  height: 31px;
   width: 15px;
   z-index: 100;
 }
 
+.api-nav-header {
+  display: flex;
+}
+
 .api-nav-code {
   background: $off-white;
+  font-family: "Lato", sans-serif;
   color: $gray;
-  font-family: "Open Sans", sans-serif;
   font-size: 1em;
+  margin: 0 5px 0 0;
   padding: 0;
   border: none;
 }
@@ -404,7 +473,7 @@ export default {
 }
 
 .api-nav-select-wrapper ul {
-  margin: 0;
+  margin: 0 0 0 30px;
 }
 
 .api-nav-select-wrapper ul li {
@@ -412,27 +481,17 @@ export default {
   list-style-type: none;
 }
 
-.api-active {
+.api-active, .api-active * {
   position: relative;
-  color: $orange !important;
-  transition: all 0.2s ease;
+  color: #fff !important;
+  background: $gray;
 }
 
-.api-active:before {
-  content: "";
-  position: absolute;
-  background: url("/img/arrow.png") no-repeat;
-  background-position: center;
-  background-size: contain;
-  top: 0;
-  bottom: 0;
-  left: -30px;
-  margin: auto;
-  height: 20px;
-  width: 20px;
-  z-index: 100;
-  display: block;
-  animation: arrow 0.4s;
+.api-active {
+  left: -50px;
+  padding: 5px 0 5px 50px !important;
+  width: 370px !important;
+  transition: padding-bottom .2s ease-out;
 }
 
 @keyframes arrow {
@@ -445,4 +504,21 @@ export default {
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .api-nav-window {
+    flex-direction: row;
+    position: relative;
+    top: 0;
+    min-height: auto;
+    max-height: auto;
+    border-right: none;
+    border-bottom: 1px solid $dark-white;
+    width: 100%;
+  }
+  .api-nav-wrapper {
+    min-height: auto;
+  }
+}
+
 </style>

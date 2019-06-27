@@ -1,9 +1,9 @@
 <template>
   <li
-    :class="this.$route.params.ecosystem === name || (!this.$route.params.ecosystem && name === 'bell') ? 'side-nav-select-link ecosystem-side-nav-item side-nav-active' : 'side-nav-select-link ecosystem-side-nav-item'"
+    :class="this.$route.params.family === name || (!this.$route.params.family && name === 'bell') ? 'side-nav-select-link ecosystem-side-nav-item side-nav-active' : 'side-nav-select-link ecosystem-side-nav-item'"
     :ref="name"
   >
-    <a :href="'/ecosystem/' + name">{{name.charAt(0).toUpperCase(0) + name.slice(1)}}</a>
+    <a :href="'/family/' + name">{{name.charAt(0).toUpperCase(0) + name.slice(1)}}</a>
     <div
       v-if="this.$props.active[name]"
       class="ecosystem-nav-select-wrapper ecosystem-display"
