@@ -98,11 +98,16 @@ export default {
       for (let top of topLinks) {
         top.classList.add("api-header");
       }
+      let aLinks = document.querySelectorAll(
+        ".api-nav-select-wrapper > ul > li > ul > li a"
+      );
+      for (let a of aLinks) {
+        a.classList.add("api-nav-header")
+      }
       let links = document.querySelectorAll(
-        ".api-nav-select-wrapper > ul > li  a"
+        ".api-nav-select-wrapper > ul > li a"
       );
       for (let link of links) {
-        link.classList.add("api-nav-header");
         if (
           link.parentElement.children[1] &&
           link.parentElement.children[1].classList.contains("api-nav-ul")
@@ -189,6 +194,7 @@ export default {
         let location = document.documentElement.scrollTop;
         let locationBody = document.body.scrollTop;
         let actives = document.getElementsByClassName("api-active");
+        let apiWindow = document.querySelector(".api-nav-window");
         let i = 0;
         for (i in offsets) {
           if (offsets[i] <= location || offsets[i] <= locationBody) {
@@ -196,24 +202,21 @@ export default {
             for (let active of actives) {
               active.classList.remove("api-active");
             }
-
             let element = document.querySelector(`a[href*='${aClass}']`);
-            if (
-              element.children.length !== 0 &&
-              !element.classList.contains("api-nav-plus") &&
-              !element.classList.contains("api-nav-minus")
-            ) {
-              element.parentElement.classList.add("api-active");
+            if (element.children.length !== 0) {
+              element.classList.add("api-active");
             }
             if (
-              element.classList.contains("api-nav-plus")
+              element.classList.contains("api-nav-plus") ||
+              element.classList.contains("api-nav-minus")
             ) {
               let linkSibling = element.parentElement.children[1];
               linkSibling.classList.add("nav-display");
               element.classList.remove("api-nav-plus");
               element.classList.add("api-nav-minus");
+              element.classList.add("api-active");
             }
-          } 
+          }
         }
       };
     }
@@ -395,21 +398,33 @@ export default {
   margin-left: 10px;
 }
 
-.api-nav-header * {
-  color: $orange;
-  text-decoration: none;
-}
-
 .api-nav-li {
   position: relative;
   color: $gray;
 }
 
-.api-nav-select-wrapper > ul > li > ul > li a {
+.api-nav-header {
   color: $gray;
-  font-size: 0.78em;
+  font-size: 0.85em;
   width: 100%;
   padding: 2px 0;
+}
+
+.api-nav-header:hover {
+  color: $gray;
+}
+
+.api-active:hover {
+  color: #fff;
+}
+
+.api-nav-plus:hover, .api-nav-minus:hover {
+  color: $orange;
+}
+
+.api-nav-header * {
+  color: $orange;
+  text-decoration: none;
 }
 
 .api-nav-li a:hover,
@@ -421,7 +436,7 @@ export default {
 .api-nav-minus,
 .api-nav-plus code,
 .api-nav-minus code {
-  color: $orange !important;
+  color: $orange;
 }
 
 .api-nav-plus:after {
@@ -446,6 +461,7 @@ export default {
 
 .api-nav-minus:after {
   content: "\2212";
+  color: inherit;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -493,11 +509,16 @@ export default {
   background: $gray;
 }
 
+.api-active:after {
+  position: absolute;
+  left: 43px;
+  height: 27px;
+}
+
 .api-active {
-  left: -50px;
-  padding: 5px 0 5px 50px !important;
+  left: -60px;
+  padding: 0 0 0 60px !important;
   width: 370px !important;
-  transition: padding-bottom 0.2s ease-out;
 }
 
 @keyframes arrow {
