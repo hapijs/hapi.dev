@@ -98,11 +98,16 @@ export default {
       for (let top of topLinks) {
         top.classList.add("api-header");
       }
+      let aLinks = document.querySelectorAll(
+        ".api-nav-select-wrapper > ul > li > ul > li a"
+      );
+      for (let a of aLinks) {
+        a.classList.add("api-nav-header");
+      }
       let links = document.querySelectorAll(
-        ".api-nav-select-wrapper > ul > li  a"
+        ".api-nav-select-wrapper > ul > li a"
       );
       for (let link of links) {
-        link.classList.add("api-nav-header");
         if (
           link.parentElement.children[1] &&
           link.parentElement.children[1].classList.contains("api-nav-ul")
@@ -189,25 +194,32 @@ export default {
         let location = document.documentElement.scrollTop;
         let locationBody = document.body.scrollTop;
         let actives = document.getElementsByClassName("api-active");
+        let extend = document.querySelectorAll(".api-ul-extend");
         let i = 0;
         for (i in offsets) {
+          let aClass = points[offsets[i]].name;
+          let element = document.querySelector(`a[href*='${aClass}']`);
           if (offsets[i] <= location || offsets[i] <= locationBody) {
-            let aClass = points[offsets[i]].name;
             for (let active of actives) {
               active.classList.remove("api-active");
             }
-
-            let element = document.querySelector(`a[href*='${aClass}']`);
-            if (element.children.length !== 0 && !document
-                .querySelector(`a[href*='${aClass}']`)
-                .classList.contains("api-nav-plus") &&
-              !document
-                .querySelector(`a[href*='${aClass}']`)
-                .classList.contains("api-nav-minus")) {
-              document
-                .querySelector(`a[href*='${aClass}'] *`)
-                .parentElement.classList.add("api-active");
-            }
+            // for (let e of extend) {
+            //   e.parentElement.children[0].classList.remove("api-nav-minus");
+            //   e.parentElement.children[0].classList.add("api-nav-plus");
+            //   e.classList.remove("nav-display")
+            // }
+            element.classList.add("api-active");
+            // if (
+            //   element.classList.contains("api-nav-plus") ||
+            //   element.classList.contains("api-nav-minus")
+            // ) {
+            //   let linkSibling = element.parentElement.children[1];
+            //   linkSibling.classList.add("nav-display");
+            //   element.classList.remove("api-nav-plus");
+            //   element.classList.add("api-nav-minus");
+            //   element.classList.add("api-active");
+            //   linkSibling.classList.add("api-ul-extend")
+            // }
           }
         }
       };
@@ -390,21 +402,34 @@ export default {
   margin-left: 10px;
 }
 
-.api-nav-header * {
-  color: $orange;
-  text-decoration: none;
-}
-
 .api-nav-li {
   position: relative;
   color: $gray;
 }
 
-.api-nav-select-wrapper > ul > li > ul > li a {
+.api-nav-header {
   color: $gray;
-  font-size: 0.78em;
+  font-size: 0.85em;
   width: 100%;
   padding: 2px 0;
+}
+
+.api-nav-header:hover {
+  color: $gray;
+}
+
+.api-active:hover {
+  color: #fff;
+}
+
+.api-nav-plus:hover,
+.api-nav-minus:hover {
+  color: $orange;
+}
+
+.api-nav-header * {
+  color: $orange;
+  text-decoration: none;
 }
 
 .api-nav-li a:hover,
@@ -416,7 +441,7 @@ export default {
 .api-nav-minus,
 .api-nav-plus code,
 .api-nav-minus code {
-  color: $orange !important;
+  color: $orange;
 }
 
 .api-nav-plus:after {
@@ -441,6 +466,7 @@ export default {
 
 .api-nav-minus:after {
   content: "\2212";
+  color: inherit;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -481,17 +507,23 @@ export default {
   list-style-type: none;
 }
 
-.api-active, .api-active * {
+.api-active,
+.api-active * {
   position: relative;
   color: #fff !important;
   background: $gray;
 }
 
+.api-active:after {
+  position: absolute;
+  left: 43px;
+  height: 27px;
+}
+
 .api-active {
-  left: -50px;
-  padding: 5px 0 5px 50px !important;
+  left: -60px;
+  padding: 0 0 0 60px !important;
   width: 370px !important;
-  transition: padding-bottom .2s ease-out;
 }
 
 @keyframes arrow {
@@ -520,5 +552,4 @@ export default {
     min-height: auto;
   }
 }
-
 </style>
