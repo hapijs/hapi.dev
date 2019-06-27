@@ -198,17 +198,22 @@ export default {
             }
 
             let element = document.querySelector(`a[href*='${aClass}']`);
-            if (element.children.length !== 0 && !document
-                .querySelector(`a[href*='${aClass}']`)
-                .classList.contains("api-nav-plus") &&
-              !document
-                .querySelector(`a[href*='${aClass}']`)
-                .classList.contains("api-nav-minus")) {
-              document
-                .querySelector(`a[href*='${aClass}'] *`)
-                .parentElement.classList.add("api-active");
+            if (
+              element.children.length !== 0 &&
+              !element.classList.contains("api-nav-plus") &&
+              !element.classList.contains("api-nav-minus")
+            ) {
+              element.parentElement.classList.add("api-active");
             }
-          }
+            if (
+              element.classList.contains("api-nav-plus")
+            ) {
+              let linkSibling = element.parentElement.children[1];
+              linkSibling.classList.add("nav-display");
+              element.classList.remove("api-nav-plus");
+              element.classList.add("api-nav-minus");
+            }
+          } 
         }
       };
     }
@@ -481,7 +486,8 @@ export default {
   list-style-type: none;
 }
 
-.api-active, .api-active * {
+.api-active,
+.api-active * {
   position: relative;
   color: #fff !important;
   background: $gray;
@@ -491,7 +497,7 @@ export default {
   left: -50px;
   padding: 5px 0 5px 50px !important;
   width: 370px !important;
-  transition: padding-bottom .2s ease-out;
+  transition: padding-bottom 0.2s ease-out;
 }
 
 @keyframes arrow {
@@ -520,5 +526,4 @@ export default {
     min-height: auto;
   }
 }
-
 </style>
