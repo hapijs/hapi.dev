@@ -102,7 +102,7 @@ export default {
         ".api-nav-select-wrapper > ul > li > ul > li a"
       );
       for (let a of aLinks) {
-        a.classList.add("api-nav-header")
+        a.classList.add("api-nav-header");
       }
       let links = document.querySelectorAll(
         ".api-nav-select-wrapper > ul > li a"
@@ -194,28 +194,32 @@ export default {
         let location = document.documentElement.scrollTop;
         let locationBody = document.body.scrollTop;
         let actives = document.getElementsByClassName("api-active");
-        let apiWindow = document.querySelector(".api-nav-window");
+        let extend = document.querySelectorAll(".api-ul-extend");
         let i = 0;
         for (i in offsets) {
+          let aClass = points[offsets[i]].name;
+          let element = document.querySelector(`a[href*='${aClass}']`);
           if (offsets[i] <= location || offsets[i] <= locationBody) {
-            let aClass = points[offsets[i]].name;
             for (let active of actives) {
               active.classList.remove("api-active");
             }
-            let element = document.querySelector(`a[href*='${aClass}']`);
-            if (element.children.length !== 0) {
-              element.classList.add("api-active");
-            }
-            if (
-              element.classList.contains("api-nav-plus") ||
-              element.classList.contains("api-nav-minus")
-            ) {
-              let linkSibling = element.parentElement.children[1];
-              linkSibling.classList.add("nav-display");
-              element.classList.remove("api-nav-plus");
-              element.classList.add("api-nav-minus");
-              element.classList.add("api-active");
-            }
+            // for (let e of extend) {
+            //   e.parentElement.children[0].classList.remove("api-nav-minus");
+            //   e.parentElement.children[0].classList.add("api-nav-plus");
+            //   e.classList.remove("nav-display")
+            // }
+            element.classList.add("api-active");
+            // if (
+            //   element.classList.contains("api-nav-plus") ||
+            //   element.classList.contains("api-nav-minus")
+            // ) {
+            //   let linkSibling = element.parentElement.children[1];
+            //   linkSibling.classList.add("nav-display");
+            //   element.classList.remove("api-nav-plus");
+            //   element.classList.add("api-nav-minus");
+            //   element.classList.add("api-active");
+            //   linkSibling.classList.add("api-ul-extend")
+            // }
           }
         }
       };
@@ -418,7 +422,8 @@ export default {
   color: #fff;
 }
 
-.api-nav-plus:hover, .api-nav-minus:hover {
+.api-nav-plus:hover,
+.api-nav-minus:hover {
   color: $orange;
 }
 
