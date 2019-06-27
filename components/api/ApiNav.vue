@@ -161,26 +161,26 @@ export default {
       let offsets = [];
       for (let i = 2; i < tags.length; i++) {
         if (tags[i].name && this.version !== this.versions[2]) {
-          points[tags[i].offsetTop - 70] = {
+          points[tags[i].offsetTop - 40] = {
             name: "#" + tags[i].name
           };
-          offsets.push(tags[i].offsetTop - 70);
+          offsets.push(tags[i].offsetTop - 40);
         }
         if (
           this.version !== this.versions[2] &&
           tags[i].id &&
           tags[i].parentElement.children.length === 1
         ) {
-          points[tags[i].offsetTop - 70] = {
+          points[tags[i].offsetTop - 40] = {
             name: "#" + tags[i].id
           };
-          offsets.push(tags[i].offsetTop - 70);
+          offsets.push(tags[i].offsetTop - 40);
         }
         if (this.version === this.versions[2] && tags[i].id) {
-          points[tags[i].offsetTop - 70] = {
+          points[tags[i].offsetTop - 40] = {
             name: "#" + tags[i].id
           };
-          offsets.push(tags[i].offsetTop - 70);
+          offsets.push(tags[i].offsetTop - 40);
         }
       }
 
@@ -198,21 +198,15 @@ export default {
             }
 
             let element = document.querySelector(`a[href*='${aClass}']`);
-            if (element.children.length !== 0) {
-              document
-                .querySelector(`a[href*='${aClass}'] *`)
-                .classList.add("api-active");
-            } else if (
-              !document
+            if (element.children.length !== 0 && !document
                 .querySelector(`a[href*='${aClass}']`)
                 .classList.contains("api-nav-plus") &&
               !document
                 .querySelector(`a[href*='${aClass}']`)
-                .classList.contains("api-nav-minus")
-            ) {
+                .classList.contains("api-nav-minus")) {
               document
-                .querySelector(`a[href*='${aClass}']`)
-                .classList.add("api-active");
+                .querySelector(`a[href*='${aClass}'] *`)
+                .parentElement.classList.add("api-active");
             }
           }
         }
@@ -380,10 +374,6 @@ export default {
   margin-left: 0;
 }
 
-.api-nav-select-wrapper ul li ul {
-  margin-left: 10px;
-}
-
 .api-nav-select-wrapper {
   margin-top: 20px;
   font-size: 1.1em;
@@ -396,28 +386,30 @@ export default {
   display: none;
 }
 
-.api-nav-header {
+.api-nav-select-wrapper ul li ul {
+  margin-left: 10px;
+}
+
+.api-nav-header * {
   color: $orange;
   text-decoration: none;
 }
 
 .api-nav-li {
   position: relative;
+  color: $gray;
 }
 
 .api-nav-select-wrapper > ul > li > ul > li a {
-  display: inline-block;
   color: $gray;
   font-size: 0.78em;
   width: 100%;
-  padding: 5px 0;
-  border-bottom: 1px solid $dark-white;
+  padding: 2px 0;
 }
 
 .api-nav-li a:hover,
 .api-nav-li a code:hover {
-  color: $orange;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .api-nav-plus,
@@ -437,7 +429,7 @@ export default {
   top: 0;
   bottom: 0;
   left: -17px;
-  height: 37px;
+  height: 31px;
   width: 15px;
   z-index: 100;
 }
@@ -457,16 +449,21 @@ export default {
   top: 0;
   bottom: 0;
   left: -17px;
-  height: 37px;
+  height: 31px;
   width: 15px;
   z-index: 100;
 }
 
+.api-nav-header {
+  display: flex;
+}
+
 .api-nav-code {
   background: $off-white;
+  font-family: "Lato", sans-serif;
   color: $gray;
-  font-family: "Open Sans", sans-serif;
   font-size: 1em;
+  margin: 0 5px 0 0;
   padding: 0;
   border: none;
 }
@@ -476,7 +473,7 @@ export default {
 }
 
 .api-nav-select-wrapper ul {
-  margin: 0;
+  margin: 0 0 0 30px;
 }
 
 .api-nav-select-wrapper ul li {
@@ -484,27 +481,17 @@ export default {
   list-style-type: none;
 }
 
-.api-active {
+.api-active, .api-active * {
   position: relative;
-  color: $orange !important;
-  transition: all 0.2s ease;
+  color: #fff !important;
+  background: $gray;
 }
 
-.api-active:before {
-  content: "";
-  position: absolute;
-  background: url("/img/arrow.png") no-repeat;
-  background-position: center;
-  background-size: contain;
-  top: 0;
-  bottom: 0;
-  left: -30px;
-  margin: auto;
-  height: 20px;
-  width: 20px;
-  z-index: 100;
-  display: block;
-  animation: arrow 0.4s;
+.api-active {
+  left: -50px;
+  padding: 5px 0 5px 50px !important;
+  width: 370px !important;
+  transition: padding-bottom .2s ease-out;
 }
 
 @keyframes arrow {
@@ -517,4 +504,21 @@ export default {
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .api-nav-window {
+    flex-direction: row;
+    position: relative;
+    top: 0;
+    min-height: auto;
+    max-height: auto;
+    border-right: none;
+    border-bottom: 1px solid $dark-white;
+    width: 100%;
+  }
+  .api-nav-wrapper {
+    min-height: auto;
+  }
+}
+
 </style>
