@@ -42,6 +42,7 @@
       <Quality />
       <DevelopersFirst />
       <Predictability />
+      <Extensibility />
     </section>
   </main>
 </template>
@@ -51,6 +52,7 @@ import Security from "~/components/Security.vue";
 import Quality from "~/components/Quality.vue";
 import DevelopersFirst from "~/components/DevelopersFirst.vue";
 import Predictability from "~/components/Predictability.vue";
+import Extensibility from "~/components/Extensibility.vue";
 
 export default {
   layout: "home",
@@ -58,7 +60,8 @@ export default {
     Security,
     Quality,
     DevelopersFirst,
-    Predictability
+    Predictability,
+    Extensibility
   },
   created() {
     this.$store.commit("setDisplay", "home");
@@ -163,6 +166,7 @@ export default {
 .page-container {
   border-top: 2px solid $dark-white;
   padding-bottom: 20px;
+  text-align: left;
 }
 
 .quote-wrapper {
