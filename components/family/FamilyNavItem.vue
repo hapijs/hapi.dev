@@ -53,23 +53,27 @@ export default {
 }
 
 .ecosystem-nav-select-wrapper ul li {
+  color: $gray !important;
   margin: 0;
   list-style-type: none;
 }
 
 .ecosystem-nav-select-wrapper a:hover,
 .ecosystem-nav-select-wrapper a code:hover {
-  color: $orange;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .ecosystem-nav-select-wrapper a {
   display: inline-block;
   color: $gray;
-  font-size: 0.78em;
+  font-size: 0.85em;
+  height: 100%;
   width: 100%;
-  padding: 5px 0;
-  border-bottom: 1px solid $dark-white;
+  padding: 2px 0;
+}
+
+.ecosystem-nav-select-wrapper a:hover {
+  color: $gray;
 }
 
 .ecosystem-nav-select-wrapper a code {
@@ -87,37 +91,17 @@ export default {
   transition: all 0.3 ease;
 }
 
-.ecosystem-active {
+.ecosystem-active, .ecosystem-active * {
   position: relative;
-  color: $orange !important;
-  transition: all 0.2s ease;
+  color: #fff !important;
+  background: $gray !important;
+  height: 31px;
 }
 
-.ecosystem-active:before {
-  content: "";
-  position: absolute;
-  background: url("/img/arrow.png") no-repeat;
-  background-position: center;
-  background-size: contain;
-  top: 0;
-  bottom: 0;
-  left: -30px;
-  margin: auto;
-  height: 20px;
-  width: 20px;
-  z-index: 100;
-  display: block;
-  animation: arrow 0.4s;
+.ecosystem-active {
+  left: -60px;
+  padding: 0 0 0 60px !important;
+  width: 370px !important;
 }
 
-@keyframes arrow {
-  from {
-    transform: rotate(-90deg);
-    opacity: 0;
-  }
-  to {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-}
 </style>
