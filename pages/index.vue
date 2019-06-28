@@ -30,7 +30,7 @@
         <span class="index-divider">|</span>
         <a href="#quality" class="index-about-link">Quality</a>
         <span class="index-divider">|</span>
-        <a href="/developersfirst" class="index-about-link">Developers First</a>
+        <a href="#developersfirst" class="index-about-link">Developers First</a>
         <span class="index-divider">|</span>
         <a href="/predictability" class="index-about-link">Predictability</a>
         <span class="index-divider">|</span>
@@ -40,6 +40,7 @@
       </div>
       <Security />
       <Quality />
+      <DevelopersFirst />
     </section>
   </main>
 </template>
@@ -47,12 +48,14 @@
 <script>
 import Security from "~/components/Security.vue";
 import Quality from "~/components/Quality.vue";
+import DevelopersFirst from "~/components/DevelopersFirst.vue";
 
 export default {
   layout: "home",
   components: {
     Security,
-    Quality
+    Quality,
+    DevelopersFirst
   },
   created() {
     this.$store.commit("setDisplay", "home");
