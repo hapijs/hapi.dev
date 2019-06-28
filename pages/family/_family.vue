@@ -63,7 +63,7 @@ export default {
             let element = document.querySelector(`a[href*='${aClass}']`);
             if (element.children.length !== 0) {
               document
-                .querySelector(`a[href*='${aClass}'] *`)
+                .querySelector(`a[href*='${aClass}']`)
                 .classList.add("ecosystem-active");
             } else if (element.children.length === 0) {
               document

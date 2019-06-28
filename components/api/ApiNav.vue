@@ -526,17 +526,6 @@ export default {
   width: 370px !important;
 }
 
-@keyframes arrow {
-  from {
-    transform: rotate(-90deg);
-    opacity: 0;
-  }
-  to {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-}
-
 @media screen and (max-width: 900px) {
   .api-nav-window {
     flex-direction: row;
