@@ -11,7 +11,7 @@
         <span class="bold">scalable applications</span>, with
         <span class="bold">minimal overhead</span> and full
         <span class="bold">out-of-the-box</span> functionality -
-        <span class="bold">your code, your way</span>
+        <span class="underline">your code, your way</span>
       </div>
       <a
         class="index-button"
@@ -20,7 +20,7 @@
       >Get started with hapi</a>
       <div>
         Originally developed to handle Walmart’s
-        <span class="bold">Black Friday scale</span>, hapi continues to be the
+        <span class="bold">Black Friday scale</span>, <br>hapi continues to be the
         <span class="bold">proven</span> choice for
         <span class="bold">enterprise-grade</span> backend needs.
       </div>
@@ -59,7 +59,7 @@ export default {
   margin: 50px auto 0 auto;
   height: 100%;
   width: 100%;
-  max-width: 800px;
+  max-width: 730px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -73,11 +73,12 @@ export default {
 }
 
 .index-header {
-  font-size: 1.5em;
-  font-weight: 700;
+  font-size: 1.45em;
+  font-weight: 900;
 }
 
 .index-description {
+  font-size: 1.15em;
   margin-top: 50px;
 }
 
@@ -131,8 +132,8 @@ export default {
   padding: 0 5px;
 }
 
-.bold {
-  font-weight: 700;
+.underline {
+  border-bottom: 2px solid $black;
 }
 
 @media screen and (max-width: 900px) {
