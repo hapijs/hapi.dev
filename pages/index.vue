@@ -28,7 +28,7 @@
       <div class="index-about">
         <a href="#security" class="index-about-link">Security</a>
         <span class="index-divider">|</span>
-        <a href="/quality" class="index-about-link">Quality</a>
+        <a href="#quality" class="index-about-link">Quality</a>
         <span class="index-divider">|</span>
         <a href="/developersfirst" class="index-about-link">Developers First</a>
         <span class="index-divider">|</span>
@@ -39,16 +39,20 @@
         <a href="/help" class="index-about-link">Support</a>
       </div>
       <Security />
+      <Quality />
     </section>
   </main>
 </template>
 
 <script>
 import Security from "~/components/Security.vue";
+import Quality from "~/components/Quality.vue";
+
 export default {
   layout: "home",
   components: {
-    Security
+    Security,
+    Quality
   },
   created() {
     this.$store.commit("setDisplay", "home");
@@ -152,6 +156,7 @@ export default {
 
 .page-container {
   border-top: 2px solid $dark-white;
+  padding-bottom: 20px;
 }
 
 .quote-wrapper {

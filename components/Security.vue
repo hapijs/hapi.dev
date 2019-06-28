@@ -66,12 +66,6 @@
 
 <script>
 export default {
-  layout: "noSide",
-  head() {
-    return {
-      title: "hapi.js - Security"
-    };
-  }
 };
 </script>
 
