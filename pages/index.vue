@@ -32,15 +32,16 @@
         <span class="index-divider">|</span>
         <a href="#developersfirst" class="index-about-link">Developers First</a>
         <span class="index-divider">|</span>
-        <a href="/predictability" class="index-about-link">Predictability</a>
+        <a href="#predictability" class="index-about-link">Predictability</a>
         <span class="index-divider">|</span>
-        <a href="/extensibility" class="index-about-link">Extensibility</a>
+        <a href="#extensibility" class="index-about-link">Extensibility</a>
         <span class="index-divider">|</span>
-        <a href="/help" class="index-about-link">Support</a>
+        <a href="/support" class="index-about-link">Support</a>
       </div>
       <Security />
       <Quality />
       <DevelopersFirst />
+      <Predictability />
     </section>
   </main>
 </template>
@@ -49,13 +50,15 @@
 import Security from "~/components/Security.vue";
 import Quality from "~/components/Quality.vue";
 import DevelopersFirst from "~/components/DevelopersFirst.vue";
+import Predictability from "~/components/Predictability.vue";
 
 export default {
   layout: "home",
   components: {
     Security,
     Quality,
-    DevelopersFirst
+    DevelopersFirst,
+    Predictability
   },
   created() {
     this.$store.commit("setDisplay", "home");
