@@ -1,22 +1,22 @@
 ## <a name="books"></a> Books
 
-*   [Developing a hapi Edge](http://www.amazon.com/Developing-hapi-Edge-Framework-Services-ebook/dp/B013CWI3MY)
+*   [Developing a hapi Edge <img src="/img/hapi-edge.jpg" class="resources-book" />](http://www.amazon.com/Developing-hapi-Edge-Framework-Services-ebook/dp/B013CWI3MY)
 
     This book shows you how to build enterprise-quality web applications using the hapi service and application framework. By walking through the creation of a real web application, hapi-plugins.com, you will learn how to configure and start hapi, build out APIs, perform authentication, validation, caching, and so much more. You will also discover tips and tricks used in production hapi deployments regarding plugins, testing, debugging, and security. hapi was developed and is used within Walmart and has been battle tested during the most critical days of the year for e-commerce websites, Black Friday. It has proven itself to not only handle extremely high production loads at a breeze but is also a pleasure to work with. The aim of the framework was to address pitfalls in the other established out there, and it has done so without fail.
 
-*   [Getting Started with hapi.js](https://www.packtpub.com/web-development/getting-started-hapijs)
+*   [Getting Started with hapi.js <img src="/img/gettingStarted.jpg" class="resources-book" />](https://www.packtpub.com/web-development/getting-started-hapijs)
 
     This book introduces hapi.js and walks through the creation of your first working application using the out-of-the-box features hapi.js provides. Packed with real-world problems and examples, this book covers some of the basic concepts of hapi.js and Node.js and takes you through the typical journey you'll face when developing an application. Starting with easier concepts such as routing requests, building APIs serving JSON, using templates to build websites and applications, and connecting databases, we then move on to more complex problems such as authentication, model validation, caching, and techniques for structuring your codebase to scale gracefully. You will also develop skills to ensure your application's reliability through testing, code coverage, and logging. By the end of this book, you'll be equipped with all the skills you need to build your first fully featured application. This book will be invaluable if you are investigating Node.js frameworks or planning on using hapi.js in your next project.
 
-*   [hapi.js in Action](http://manning.com/harrison)
+*   [hapi.js in Action <img src="/img/inAction.png" class="resources-book" />](http://manning.com/harrison)
 
     Packed with examples, this book takes you from your first simple server through the skills you'll need to build a complete application. In it, you'll learn how to build websites and APIs, implement caching, authentication, validation, error handling, and a lot more. You'll also explore vital techniques for production applications, such as testing, monitoring, deployment, and documentation.
 
-*   [hapi with Typescript](http://hapibook.jjude.com)
+*   [hapi with Typescript <img src="/img/hapiTypescript.png" class="resources-book" />](http://hapibook.jjude.com)
 
     This book introduces Typescript into developing web applications with hapi. Typescript, a language developed by Microsoft, brings the benefits of strong types and object-oriented programming to Javascript. With ample code samples, this book teaches all aspects of developing a web application in hapi with Typescript. It also introduces, hapidock, a docker container with all required components for developing in hapi. With hapidock, you can develop and test hapi applications in a production-like environment. Through this book, you will learn to build stable enterprise-level server applications. The book is free to read at http://hapibook.jjude.com. E-books (pdf, mobi, and epub) and fully executable code samples are available after purchase.
 
-*   [Hapi.js Handbook](https://leanpub.com/hapi-handbook)
+*   [Hapi.js Handbook <img src="/img/hapiHandbook.png" class="resources-book" />](https://leanpub.com/hapi-handbook)
 
     This handbook is a collection of tutorials for Hapi.js framework. You can find tutorials about validation, working with 3rd plugins, sending/getting data, template engines, integrations with DB and etc.
 

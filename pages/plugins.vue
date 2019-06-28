@@ -39,7 +39,6 @@ export default {
 
 .markdown-wrapper a {
   position: relative;
-  overflow-x: auto;
 }
 
 .plugins-logo {
