@@ -20,13 +20,13 @@
       >Get started with hapi</a>
       <div>
         Originally developed to handle Walmart’s
-        <span class="bold">Black Friday scale</span>, <br>hapi continues to be the
+        <span class="bold">Black Friday scale</span>, <br class="break">hapi continues to be the
         <span class="bold">proven</span> choice for
         <span class="bold">enterprise-grade</span> backend needs.
       </div>
       <div class="index-about-header">Continue to learn more about:</div>
       <div class="index-about">
-        <a href="/security" class="index-about-link">Security</a>
+        <a href="#security" class="index-about-link">Security</a>
         <span class="index-divider">|</span>
         <a href="/quality" class="index-about-link">Quality</a>
         <span class="index-divider">|</span>
@@ -38,14 +38,18 @@
         <span class="index-divider">|</span>
         <a href="/help" class="index-about-link">Support</a>
       </div>
+      <Security />
     </section>
   </main>
 </template>
 
 <script>
+import Security from "~/components/Security.vue";
 export default {
   layout: "home",
-  components: {},
+  components: {
+    Security
+  },
   created() {
     this.$store.commit("setDisplay", "home");
   }
@@ -136,6 +140,45 @@ export default {
   border-bottom: 2px solid $black;
 }
 
+.code {
+  font-family: "inconsolata", menlo, consolas, monospace;
+  padding: 0.2rem 0.33rem;
+  color: #6f6f6f;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: #f3f3f3;
+  border: 1px solid $dark-white;
+}
+
+.page-container {
+  border-top: 2px solid $dark-white;
+}
+
+.quote-wrapper {
+  position: relative;
+  border-bottom: 2px solid $dark-white;
+  padding: 20px 0;
+  text-align: left;
+}
+
+.quote-img {
+  position: absolute;
+  top: 40px;
+  left: -170px;
+  width: 150px;
+}
+
+.quote {
+  padding: 20px 0;
+  font-style: italic;
+}
+
+.quote-author {
+  padding-bottom: 20px;
+  font-weight: 700;
+}
+
+
 @media screen and (max-width: 900px) {
   .home-container {
     margin-top: 70px;
@@ -145,6 +188,14 @@ export default {
 
   .index-about {
     margin-bottom: 10px;
+  }
+
+  .index-button {
+    margin: 20px 0;
+  }
+
+  .break {
+    display: none;
   }
 }
 </style>
