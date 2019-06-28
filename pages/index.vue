@@ -11,7 +11,7 @@
         <span class="bold">scalable applications</span>, with
         <span class="bold">minimal overhead</span> and full
         <span class="bold">out-of-the-box</span> functionality -
-        <span class="bold">your code, your way</span>
+        <span class="underline">your code, your way</span>
       </div>
       <a
         class="index-button"
@@ -20,32 +20,49 @@
       >Get started with hapi</a>
       <div>
         Originally developed to handle Walmart’s
-        <span class="bold">Black Friday scale</span>, hapi continues to be the
+        <span class="bold">Black Friday scale</span>, <br class="break">hapi continues to be the
         <span class="bold">proven</span> choice for
         <span class="bold">enterprise-grade</span> backend needs.
       </div>
       <div class="index-about-header">Continue to learn more about:</div>
       <div class="index-about">
-        <a href="/security" class="index-about-link">Security</a>
+        <a href="#security" class="index-about-link">Security</a>
         <span class="index-divider">|</span>
-        <a href="/quality" class="index-about-link">Quality</a>
+        <a href="#quality" class="index-about-link">Quality</a>
         <span class="index-divider">|</span>
-        <a href="/developersfirst" class="index-about-link">Developers First</a>
+        <a href="#developersfirst" class="index-about-link">Developers First</a>
         <span class="index-divider">|</span>
-        <a href="/predictability" class="index-about-link">Predictability</a>
+        <a href="#predictability" class="index-about-link">Predictability</a>
         <span class="index-divider">|</span>
-        <a href="/extensibility" class="index-about-link">Extensibility</a>
+        <a href="#extensibility" class="index-about-link">Extensibility</a>
         <span class="index-divider">|</span>
-        <a href="/help" class="index-about-link">Support</a>
+        <a href="/support" class="index-about-link">Support</a>
       </div>
+      <Security />
+      <Quality />
+      <DevelopersFirst />
+      <Predictability />
+      <Extensibility />
     </section>
   </main>
 </template>
 
 <script>
+import Security from "~/components/Security.vue";
+import Quality from "~/components/Quality.vue";
+import DevelopersFirst from "~/components/DevelopersFirst.vue";
+import Predictability from "~/components/Predictability.vue";
+import Extensibility from "~/components/Extensibility.vue";
+
 export default {
   layout: "home",
-  components: {},
+  components: {
+    Security,
+    Quality,
+    DevelopersFirst,
+    Predictability,
+    Extensibility
+  },
   created() {
     this.$store.commit("setDisplay", "home");
   }
@@ -59,7 +76,7 @@ export default {
   margin: 50px auto 0 auto;
   height: 100%;
   width: 100%;
-  max-width: 800px;
+  max-width: 730px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -73,11 +90,12 @@ export default {
 }
 
 .index-header {
-  font-size: 1.5em;
-  font-weight: 700;
+  font-size: 1.45em;
+  font-weight: 900;
 }
 
 .index-description {
+  font-size: 1.15em;
   margin-top: 50px;
 }
 
@@ -131,9 +149,50 @@ export default {
   padding: 0 5px;
 }
 
-.bold {
+.underline {
+  border-bottom: 2px solid $black;
+}
+
+.code {
+  font-family: "inconsolata", menlo, consolas, monospace;
+  padding: 0.2rem 0.33rem;
+  color: #6f6f6f;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: #f3f3f3;
+  border: 1px solid $dark-white;
+}
+
+.page-container {
+  border-top: 2px solid $dark-white;
+  padding-bottom: 20px;
+  text-align: left;
+}
+
+.quote-wrapper {
+  position: relative;
+  border-bottom: 2px solid $dark-white;
+  padding: 20px 0;
+  text-align: left;
+}
+
+.quote-img {
+  position: absolute;
+  top: 40px;
+  left: -170px;
+  width: 150px;
+}
+
+.quote {
+  padding: 20px 0;
+  font-style: italic;
+}
+
+.quote-author {
+  padding-bottom: 20px;
   font-weight: 700;
 }
+
 
 @media screen and (max-width: 900px) {
   .home-container {
@@ -144,6 +203,14 @@ export default {
 
   .index-about {
     margin-bottom: 10px;
+  }
+
+  .index-button {
+    margin: 20px 0;
+  }
+
+  .break {
+    display: none;
   }
 }
 </style>
