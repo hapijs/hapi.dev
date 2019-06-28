@@ -36,4 +36,26 @@ export default {
   box-sizing: border-box;
   margin: 0;
 }
+
+.markdown-wrapper a {
+  position: relative;
+  overflow-x: auto;
+}
+
+.plugins-logo {
+  position: absolute;
+  top: -8px;
+  right: -40px;
+  width: 35px;
+  height: 35px;
+  max-width: none;
+}
+
+.plugins-logo-top {
+  position: relative;
+  top: 10px;
+  width: 35px;
+  height: 35px;
+  max-width: none;
+}
 </style>
