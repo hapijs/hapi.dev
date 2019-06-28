@@ -36,4 +36,17 @@ export default {
   box-sizing: border-box;
   margin: 0;
 }
+
+.markdown-wrapper a {
+  position: relative;
+}
+
+.resources-book {
+  position: absolute;
+  top: -12px;
+  right: -50px;
+  height: 50px;
+  max-width: none;
+  border: 1px solid $dark-white;
+}
 </style>
