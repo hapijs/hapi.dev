@@ -5,7 +5,7 @@
       v-for="change in milestones"
       v-bind:key="change[0].id"
       :version="change[0].milestone.title"
-      :versionUrl="change[0].milestone.html_url"
+      :versionUR="change[0].milestone.html_url"
       :issues="change"
     />
   </div>
@@ -17,7 +17,7 @@ export default {
   components: {
     ChangelogVersion
   },
-  props: ["milestones"]
+  props: ["milestones"],
 };
 </script>
 
