@@ -169,6 +169,10 @@ export default {
   text-align: left;
 }
 
+.bottom-page-container {
+  padding-bottom: 80px;
+}
+
 .quote-wrapper {
   position: relative;
   border-bottom: 2px solid $dark-white;
@@ -219,5 +223,10 @@ export default {
     left: 0;
     width: 100px
   }
+
+  .bottom-page-container {
+  padding-bottom: 20px;
+  }
+
 }
 </style>
