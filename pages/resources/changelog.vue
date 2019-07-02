@@ -48,6 +48,8 @@ export default {
   async asyncData({ $axios, params, store }) {
 
     let milestoneList = [];
+    let m = [];
+    let milestones = []
 
     const mileOptions = {
       headers: {
@@ -55,12 +57,17 @@ export default {
         authorization: "token " + process.env.GITHUB_TOKEN
       }
     };
-    let milestones = await $axios.$get(
-      "https://api.github.com/repos/hapijs/hapi/milestones?state=closed&per_page=200&direction=desc",
-      mileOptions
-    );
+    for(let p = 1; p <= 2; p++) {
+      milestones = await $axios.$get(
+        "https://api.github.com/repos/hapijs/hapi/milestones?state=closed&per_page=100&page=" + p,
+        mileOptions
+      );
+      await m.push(milestones)
+    }
 
-    let sortedMilestones = await milestones.sort((a, b) =>
+    let flatM = await [].concat(...m);
+
+    let sortedMilestones = await flatM.sort((a, b) =>
       Semver.compare(b.title, a.title)
     );
 
@@ -71,8 +78,11 @@ export default {
           milestone.number,
         mileOptions
       );
-      milestoneList.push(m);
+      if (m.length > 0) {
+        milestoneList.push(m);
+      }
     }
+
 
     return {
       milestoneList
