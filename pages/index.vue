@@ -212,5 +212,12 @@ export default {
   .break {
     display: none;
   }
+
+  .quote-img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100px
+  }
 }
 </style>
