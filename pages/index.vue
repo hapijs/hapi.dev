@@ -154,12 +154,6 @@ export default {
 }
 
 .code {
-  font-family: "inconsolata", menlo, consolas, monospace;
-  padding: 0.2rem 0.33rem;
-  color: #6f6f6f;
-  font-size: 1rem;
-  font-weight: 700;
-  background-color: #f3f3f3;
   border: 1px solid $dark-white;
 }
 

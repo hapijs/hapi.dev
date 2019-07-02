@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <FamilyNav :moduleAPI="moduleAPI" :modules="modules"/>
+    <FamilyNav :moduleAPI="moduleAPI" :modules="modules" :version="version"/>
     <div class="tutorial-markdown-window">
       <HTML :display="getDisplay"/>
     </div>
@@ -99,6 +99,7 @@ export default {
       "yar"
     ];
     let moduleAPI = {};
+    let version = "";
 
       try {
         const res = await $axios.$get(
@@ -134,7 +135,16 @@ export default {
       } catch (err) {
         console.log(err);
       }
-    return { moduleAPI, modules };
+      try {
+        const r = await $axios.$get(
+          "https://api.github.com/repos/hapijs/bell/contents/package.json",
+          options
+        );
+        version = await r.version;
+      } catch (err) {
+        console.log(err);
+      }
+    return { moduleAPI, modules, version };
   },
   created() {
     this.$data.display = this.moduleAPI.bell;

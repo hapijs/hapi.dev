@@ -21,7 +21,7 @@
     <h3 class="security-heading">You’ve got nothing to worry about with hapi.</h3>
     <div class="security-content">
         When you
-        <code>npm install @hapi/hapi</code>, every single line of code you get has been verified. You
+        <span class="code">npm install @hapi/hapi</span>, every single line of code you get has been verified. You
         never have to worry about some deep dependency being poorly maintained (or handed over to
         someone sketchy). hapi is the only leading node framework without any external code dependencies.
         None.
