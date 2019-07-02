@@ -11,6 +11,7 @@
               :name="name"
               :active="moduleAPI"
               :page="page"
+              :version="version"
             />
           </ul>
         </div>
@@ -29,7 +30,7 @@ export default {
     SideFooter,
     FamilyNavItem
   },
-  props: ["page", "moduleAPI", "modules"]
+  props: ["page", "moduleAPI", "modules", "version"],
 };
 </script>
 

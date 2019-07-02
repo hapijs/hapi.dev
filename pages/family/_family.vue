@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <FamilyNav :moduleAPI="moduleAPI" :modules="modules"/>
+    <FamilyNav :moduleAPI="moduleAPI" :modules="modules" :version="version"/>
     <div class="tutorial-markdown-window">
       <HTML :display="getDisplay"/>
     </div>
@@ -29,9 +29,7 @@ export default {
   methods: {
     onScroll() {
       let links = [];
-      links = document.querySelectorAll(
-        "#" + this.$route.params.family + " a"
-      );
+      links = document.querySelectorAll("#" + this.$route.params.family + " a");
       let points = {};
       let offsets = [];
       for (let i = 0; i < links.length; i++) {
@@ -99,6 +97,7 @@ export default {
       "yar"
     ];
     let moduleAPI = {};
+    let version = "";
 
     try {
       const res = await $axios.$get(
@@ -134,9 +133,18 @@ export default {
         menu: await finalMenu
       };
     } catch (err) {
-      console.log(err.message)
+      console.log(err.message);
     }
-    return { moduleAPI, modules };
+    try {
+      const r = await $axios.$get(
+        "https://api.github.com/repos/hapijs/" + params.family +"/contents/package.json",
+        options
+      );
+      version = await r.version;
+    } catch (err) {
+      console.log(err);
+    }
+    return { moduleAPI, modules, version };
   },
   created() {
     this.$store.commit("setDisplay", "family");

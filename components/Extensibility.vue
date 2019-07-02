@@ -1,5 +1,5 @@
 <template>
-  <div class="page-container">
+  <div class="page-container bottom-page-container">
     <div class="extensibility-upper-wrapper" id="extensibility">
         <div class="quote-wrapper">
             <img class="quote-img" src="/img/conde-nast-logo.png" alt="conde-nast-logo">

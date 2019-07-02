@@ -154,12 +154,6 @@ export default {
 }
 
 .code {
-  font-family: "inconsolata", menlo, consolas, monospace;
-  padding: 0.2rem 0.33rem;
-  color: #6f6f6f;
-  font-size: 1rem;
-  font-weight: 700;
-  background-color: #f3f3f3;
   border: 1px solid $dark-white;
 }
 
@@ -167,6 +161,10 @@ export default {
   border-top: 2px solid $dark-white;
   padding-bottom: 20px;
   text-align: left;
+}
+
+.bottom-page-container {
+  padding-bottom: 80px;
 }
 
 .quote-wrapper {
@@ -212,5 +210,17 @@ export default {
   .break {
     display: none;
   }
+
+  .quote-img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100px
+  }
+
+  .bottom-page-container {
+  padding-bottom: 20px;
+  }
+
 }
 </style>

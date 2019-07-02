@@ -46,12 +46,13 @@ h3 a {
   cursor: auto;
 }
 
-code {
+code, .code{
   font-family: "inconsolata", menlo, consolas, monospace;
   padding: 0.2rem 0.33rem;
   font-size: 1rem;
   color: $gray;
   background-color: #f8f8f8;
+  // border: 1px solid $dark-white;
 }
 
 .tutorial-markdown-window section {

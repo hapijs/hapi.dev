@@ -4,6 +4,7 @@
     :ref="name"
   >
     <a :href="'/family/' + name">{{name.charAt(0).toUpperCase(0) + name.slice(1)}}</a>
+    <span v-if="this.$route.params.family === name || (!this.$route.params.family && name === 'bell')" class="family-span">v{{version}}</span>
     <div
       v-if="this.$props.active[name]"
       class="ecosystem-nav-select-wrapper ecosystem-display"
@@ -15,7 +16,7 @@
 
 <script>
 export default {
-  props: ["active", "name", "page"],
+  props: ["active", "name", "page", "version"],
 };
 </script>
 
@@ -101,7 +102,13 @@ export default {
 .ecosystem-active {
   left: -60px;
   padding: 0 0 0 60px !important;
-  width: 370px !important;
+  width: 400px !important;
+}
+
+.family-span {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 400;
 }
 
 </style>
