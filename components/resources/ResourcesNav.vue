@@ -6,28 +6,28 @@
         <div class="side-nav-select-wrapper">
           <ul class="side-nav-select-list">
             <li class="resources-header-link">
-              <a :class="!$props.list ? 'side-nav-select-link resources-selected' : 'side-nav-select-link'" href="/resources/changelog">Changelog</a>
+              <nuxt-link :class="!$props.list ? 'side-nav-select-link resources-selected' : 'side-nav-select-link'" to="/resources/changelog">Changelog</nuxt-link>
             </li>
             <li class="resources-header-link">
-              <a :class="!$props.list ? 'side-nav-select-link resources-selected' : 'side-nav-select-link'" href="/resources/styleguide">Style Guide</a>
+              <nuxt-link :class="!$props.list ? 'side-nav-select-link resources-selected' : 'side-nav-select-link'" to="/resources/styleguide">Style Guide</nuxt-link>
             </li>
             <li class="resources-header-link">
-              <a href="#books">Books</a>
+              <a href="/resources/list#books">Books</a>
             </li>
             <li class="resources-header-link">
-              <a href="#gists">Gists and code samples</a>
+              <a href="/resources/list#gists">Gists and code samples</a>
             </li>
             <li class="resources-header-link">
-              <a href="#boilerplates">Boilerplates</a>
+              <a href="/resources/list#boilerplates">Boilerplates</a>
             </li>
             <li class="resources-header-link">
-              <a href="#projects">Projects built with hapi</a>
+              <a href="/resources/list#projects">Projects built with hapi</a>
             </li>
             <li class="resources-header-link">
-              <a href="#tutorials">Tutorials</a>
+              <a href="/resources/list#tutorials">Tutorials</a>
             </li>
             <li class="resources-header-link">
-              <a href="#videos">Videos</a>
+              <a href="/resources/list#videos">Videos</a>
             </li>
           </ul>
         </div>
