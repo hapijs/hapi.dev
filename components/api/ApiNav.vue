@@ -198,29 +198,28 @@ export default {
         for (i in offsets) {
           let aClass = points[offsets[i]].name;
           let element = document.querySelector(`a[href*='${aClass}']`);
-          if ((offsets[i] <= location || offsets[i] <= locationBody) && (!element.classList.contains("api-header"))) {
+          if (
+            (offsets[i] <= location || offsets[i] <= locationBody) &&
+            !element.classList.contains("api-header")
+          ) {
             for (let active of actives) {
               active.classList.remove("api-active");
             }
             element.classList.add("api-active");
-            // if (
-            //   offsets[i] <= location <= offsets[i] + 90 ||
-            //   offsets[i] <= locationBody <= offsets[i] + 90
-            // ) {
-            //   console.log("location", location);
-            //   console.log("offset", offsets[i]);
-            //   if (
-            //     element.classList.contains("api-nav-plus") ||
-            //     element.classList.contains("api-nav-minus")
-            //   ) {
-            //     let linkSibling = element.parentElement.children[1];
-            //     linkSibling.classList.add("nav-display");
-            //     element.classList.remove("api-nav-plus");
-            //     element.classList.add("api-nav-minus");
-            //     element.classList.add("api-active");
-            //     linkSibling.classList.add("api-ul-extend");
-            //   }
-            // }
+          }
+          if (
+            (offsets[i] <= location && location <= offsets[i] + 90) || ((offsets[i] <= locationBody && locationBody <= offsets[i] + 90))
+          ) {
+            if (
+              element.classList.contains("api-nav-plus") ||
+              element.classList.contains("api-nav-minus")
+            ) {
+              let linkSibling = element.parentElement.children[1];
+              linkSibling.classList.add("nav-display");
+              element.classList.remove("api-nav-plus");
+              element.classList.add("api-nav-minus");
+              linkSibling.classList.add("api-ul-extend");
+            }
           }
         }
       };
