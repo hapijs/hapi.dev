@@ -19,7 +19,7 @@
             v-on:keyup.enter="onSearch"
             @input="onInput($event)"
             placeholder="Search API"
-          >
+          />
           <div class="api-search-img" v-on:click="onSearch"></div>
           <div class="api-search-info">
             <div class="api-search-results">
@@ -38,7 +38,7 @@
         </div>
         <div class="api-nav-select-wrapper" v-html="$md.render(this.$props.menu)"></div>
       </div>
-      <SideFooter/>
+      <SideFooter />
     </div>
   </div>
 </template>
@@ -194,32 +194,32 @@ export default {
         let location = document.documentElement.scrollTop;
         let locationBody = document.body.scrollTop;
         let actives = document.getElementsByClassName("api-active");
-        let extend = document.querySelectorAll(".api-ul-extend");
         let i = 0;
         for (i in offsets) {
           let aClass = points[offsets[i]].name;
           let element = document.querySelector(`a[href*='${aClass}']`);
-          if (offsets[i] <= location || offsets[i] <= locationBody) {
+          if (
+            (offsets[i] <= location || offsets[i] <= locationBody) &&
+            !element.classList.contains("api-header")
+          ) {
             for (let active of actives) {
               active.classList.remove("api-active");
             }
-            // for (let e of extend) {
-            //   e.parentElement.children[0].classList.remove("api-nav-minus");
-            //   e.parentElement.children[0].classList.add("api-nav-plus");
-            //   e.classList.remove("nav-display")
-            // }
             element.classList.add("api-active");
-            // if (
-            //   element.classList.contains("api-nav-plus") ||
-            //   element.classList.contains("api-nav-minus")
-            // ) {
-            //   let linkSibling = element.parentElement.children[1];
-            //   linkSibling.classList.add("nav-display");
-            //   element.classList.remove("api-nav-plus");
-            //   element.classList.add("api-nav-minus");
-            //   element.classList.add("api-active");
-            //   linkSibling.classList.add("api-ul-extend")
-            // }
+          }
+          if (
+            (offsets[i] <= location && location <= offsets[i] + 90) || ((offsets[i] <= locationBody && locationBody <= offsets[i] + 90))
+          ) {
+            if (
+              element.classList.contains("api-nav-plus") ||
+              element.classList.contains("api-nav-minus")
+            ) {
+              let linkSibling = element.parentElement.children[1];
+              linkSibling.classList.add("nav-display");
+              element.classList.remove("api-nav-plus");
+              element.classList.add("api-nav-minus");
+              linkSibling.classList.add("api-ul-extend");
+            }
           }
         }
       };
@@ -523,7 +523,7 @@ export default {
 .api-active {
   left: -60px;
   padding: 0 0 0 60px !important;
-  width: 370px !important;
+  width: 400px !important;
 }
 
 @media screen and (max-width: 900px) {
