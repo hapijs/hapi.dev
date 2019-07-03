@@ -5,7 +5,7 @@
       v-for="change in milestones"
       v-bind:key="change[0].id"
       :version="change[0].milestone.title"
-      :versionUR="change[0].milestone.html_url"
+      :versionUrl="change[0].milestone.html_url"
       :issues="change"
     />
   </div>
