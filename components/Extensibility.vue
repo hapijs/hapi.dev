@@ -82,6 +82,6 @@ export default {
 .extensibility-heading {
   text-align: center;
   font-weight: 900;
-  margin: 20px 0;
+  margin: 40px 0;
 }
 </style>
