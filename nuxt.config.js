@@ -36,7 +36,7 @@ module.exports = {
       if (savedPosition) {
         return savedPosition;
       } else {
-        let position = {};
+        let position = {}
         if (to.matched.length < 2) {
           position = { x: 0, y: 0 }
         } else if (to.matched.some(r => r.components.default.options.scrollToTop)) {
