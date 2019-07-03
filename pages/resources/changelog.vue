@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <ResourcesNav :list=false />
+    <ResourcesNav page="changelog" />
     <div class="community-wrapper">
       <Changelog :milestones="getMilestones"/>
     </div>
@@ -70,6 +70,8 @@ export default {
     let sortedMilestones = await flatM.sort((a, b) =>
       Semver.compare(b.title, a.title)
     );
+
+    sortedMilestones = sortedMilestones.slice(0, 5);
 
     //Get milestone issues
     for (let milestone of sortedMilestones) {

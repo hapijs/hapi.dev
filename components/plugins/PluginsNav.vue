@@ -121,7 +121,7 @@ export default {
 .plugins-active {
   position: relative;
   color: $orange !important;
-  font-weight: 700;
+  font-weight: 900;
   transition: all 0.2s ease;
 }
 

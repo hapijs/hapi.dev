@@ -6,33 +6,41 @@
         <div class="side-nav-select-wrapper">
           <ul class="side-nav-select-list">
             <li class="resources-header-link">
-              <a :class="!$props.list ? 'side-nav-select-link resources-selected' : 'side-nav-select-link'" href="/resources/changelog">Changelog</a>
+              <nuxt-link
+                :class="$props.page === 'changelog' ? 'side-nav-select-link resources-active' : 'side-nav-select-link'"
+                to="/resources/changelog"
+              >Changelog</nuxt-link>
             </li>
             <li class="resources-header-link">
-              <a :class="!$props.list ? 'side-nav-select-link resources-selected' : 'side-nav-select-link'" href="/resources/styleguide">Style Guide</a>
+              <nuxt-link
+                :class="$props.page === 'styleguide' ? 'side-nav-select-link resources-active' : 'side-nav-select-link'"
+                to="/resources/styleguide"
+              >Style Guide</nuxt-link>
             </li>
-            <li class="resources-header-link">
-              <a href="#books">Books</a>
-            </li>
-            <li class="resources-header-link">
-              <a href="#gists">Gists and code samples</a>
-            </li>
-            <li class="resources-header-link">
-              <a href="#boilerplates">Boilerplates</a>
-            </li>
-            <li class="resources-header-link">
-              <a href="#projects">Projects built with hapi</a>
-            </li>
-            <li class="resources-header-link">
-              <a href="#tutorials">Tutorials</a>
-            </li>
-            <li class="resources-header-link">
-              <a href="#videos">Videos</a>
-            </li>
+            <ul class="resources-ul">
+              <li class="resources-header-link">
+                <a href="/resources/list#books">Books</a>
+              </li>
+              <li class="resources-header-link">
+                <a href="/resources/list#gists">Gists and code samples</a>
+              </li>
+              <li class="resources-header-link">
+                <a href="/resources/list#boilerplates">Boilerplates</a>
+              </li>
+              <li class="resources-header-link">
+                <a href="/resources/list#projects">Projects built with hapi</a>
+              </li>
+              <li class="resources-header-link">
+                <a href="/resources/list#tutorials">Tutorials</a>
+              </li>
+              <li class="resources-header-link">
+                <a href="/resources/list#videos">Videos</a>
+              </li>
+            </ul>
           </ul>
         </div>
       </div>
-      <SideFooter/>
+      <SideFooter />
     </div>
   </div>
 </template>
@@ -44,59 +52,7 @@ export default {
   components: {
     SideFooter
   },
-  props: ["list"],
-  methods: {
-    onScroll() {
-      let links = [];
-      links = document.querySelectorAll(".resources-ul a");
-      let points = {};
-      let offsets = [];
-      for (let i = 0; i < links.length; i++) {
-        let point = document.querySelector(
-          `.markdown-wrapper a[name*='${links[i].href.replace(/^[^_]*#/, "")}']`
-        );
-        if (point && point.name) {
-          points[point.offsetTop - 20] = {
-            name: "#" + point.name
-          };
-          offsets.push(point.offsetTop - 20);
-        }
-      }
-      offsets = [...new Set(offsets)];
-
-      //Add active class to elements on scroll
-      window.onscroll = function() {
-        let location = document.documentElement.scrollTop;
-        let locationBody = document.body.scrollTop;
-        let actives = document.getElementsByClassName("resources-active");
-        let i = 0;
-        for (i in offsets) {
-          if (offsets[i] <= location || offsets[i] <= locationBody) {
-            let aClass = points[offsets[i]].name;
-            for (let active of actives) {
-              active.classList.remove("resources-active");
-            }
-
-            let element = document.querySelector(`a[href*='${aClass}']`);
-            if (element.children.length !== 0) {
-              document
-                .querySelector(`a[href*='${aClass}'] *`)
-                .classList.add("resources-active");
-            } else if (element.children.length === 0) {
-              document
-                .querySelector(`a[href*='${aClass}']`)
-                .classList.add("resources-active");
-            }
-          }
-        }
-      };
-    },
-  },
-  mounted() {
-    if(this.$props.list){
-      this.onScroll();
-    }
-  }
+  props: ["page"],
 };
 </script>
 
@@ -110,16 +66,12 @@ export default {
 }
 
 .resources-ul {
-  margin: 5px 0px 5px 10px;
-}
-
-.hide-ul {
-  display: none;
+  margin: 0;
 }
 
 .side-nav-select-link a {
   display: inline-block;
-  font-size: .78em;
+  font-size: 0.78em;
   width: 100%;
   padding: 5px 0;
   color: $gray;
@@ -132,37 +84,10 @@ export default {
   text-decoration: none;
 }
 
-.resources-plus:after {
-  content: "\002B";
-  position: relative;
-  font-size: 1.2rem;
-  top: 2px;
-  left: 5px;
-  height: 15px;
-  width: 15px;
-  z-index: 100;
-  display: inline-block;
-}
-
-.resources-minus:after {
-  content: "\2212";
-  position: relative;
-  font-size: 1.2rem;
-  top: 2px;
-  left: 5px;
-  height: 15px;
-  width: 15px;
-  z-index: 100;
-  display: inline-block;
-}
-
-.resources-selected {
-  font-weight: 700;
-}
-
 .resources-active {
   position: relative;
   color: $orange !important;
+  font-weight: 900;
   transition: all 0.2s ease;
 }
 

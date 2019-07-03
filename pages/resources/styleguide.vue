@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <ResourcesNav />
+    <ResourcesNav page="styleguide" />
     <div class="community-wrapper">
       <HTML :display="styleGuide"/>
     </div>

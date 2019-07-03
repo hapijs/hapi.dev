@@ -5,7 +5,7 @@
       v-for="change in milestones"
       v-bind:key="change[0].id"
       :version="change[0].milestone.title"
-      :versionUR="change[0].milestone.html_url"
+      :versionUrl="change[0].milestone.html_url"
       :issues="change"
     />
   </div>
@@ -32,6 +32,7 @@ export default {
 .changelog-header {
   margin: 20px 0 10px 0;
   border-bottom: 1px solid $dark-white;
+  border-top: none;
   padding-bottom: 10px;
 }
 
