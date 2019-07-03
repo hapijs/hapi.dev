@@ -71,8 +71,6 @@ export default {
       Semver.compare(b.title, a.title)
     );
 
-    sortedMilestones = sortedMilestones.slice(0, 5);
-
     //Get milestone issues
     for (let milestone of sortedMilestones) {
       let m = await $axios.$get(
