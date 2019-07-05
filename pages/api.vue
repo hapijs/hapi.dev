@@ -71,12 +71,12 @@ export default {
       for (let page of pages) {
         if (
           headers.indexOf(page.nodeName) !== -1 &&
-          page.innerHTML.indexOf(this.search) !== -1
+          page.innerHTML.indexOf(this.search.toLowerCase()) !== -1
         ) {
           headlines.push(page);
         } else if (
           headers.indexOf(page.nodeName) === -1 &&
-          page.innerHTML.indexOf(this.search) !== -1
+          page.innerHTML.indexOf(this.search.toLowerCase()) !== -1
         ) {
           text.push(page);
         }
