@@ -65,7 +65,7 @@
             <a href="/resources/styleguide">Style Guide</a>
           </li>
           <li class="mobile-link mobile-tutorial-link">
-            <a title="List" href="/resources">List</a>
+            <a title="List" href="/resources/list">List</a>
           </li>
         </ul>
       </li>
