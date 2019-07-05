@@ -4,7 +4,7 @@ export const state = () => ({
   page: start.gettingStarted.default,
   community: "contribute",
   display: "home",
-  language: "en_US"
+  language: "en_US",
 })
 
 export const mutations = {

@@ -124,31 +124,4 @@ export default {
   font-weight: 900;
   transition: all 0.2s ease;
 }
-
-.plugins-active:before {
-  content: "";
-  position: absolute;
-  background: url("/img/arrow.png") no-repeat;
-  background-position: center;
-  background-size: contain;
-  top: 0;
-  bottom: 0;
-  left: -30px;
-  margin: auto;
-  height: 20px;
-  width: 20px;
-  z-index: 100;
-  display: block;
-  animation: arrow 0.4s;
-}
-@keyframes arrow {
-  from {
-    transform: rotate(-90deg);
-    opacity: 0;
-  }
-  to {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-}
 </style>
