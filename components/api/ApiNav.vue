@@ -521,9 +521,11 @@ export default {
 }
 
 .api-active {
+  display: inline-block;
   left: -60px;
-  padding: 0 0 0 60px !important;
-  width: 400px !important;
+  padding: 0 30px 0 60px !important;
+  width: 375px !important;
+  overflow-wrap: break-word;
 }
 
 @media screen and (max-width: 900px) {
