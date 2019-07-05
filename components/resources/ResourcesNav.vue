@@ -19,22 +19,22 @@
             </li>
             <ul class="resources-ul">
               <li class="resources-header-link">
-                <a href="/resources/list#books">Books</a>
+                <a ref="books" v-on:click="onClick('books')" href="/resources/list#books">Books</a>
               </li>
               <li class="resources-header-link">
-                <a href="/resources/list#gists">Gists and code samples</a>
+                <a ref="gists" v-on:click="onClick('gists')" href="/resources/list#gists">Gists and code samples</a>
               </li>
               <li class="resources-header-link">
-                <a href="/resources/list#boilerplates">Boilerplates</a>
+                <a ref="boilerplates" v-on:click="onClick('boilerplates')" href="/resources/list#boilerplates">Boilerplates</a>
               </li>
               <li class="resources-header-link">
-                <a href="/resources/list#projects">Projects built with hapi</a>
+                <a ref="projects" v-on:click="onClick('projects')" href="/resources/list#projects">Projects built with hapi</a>
               </li>
               <li class="resources-header-link">
-                <a href="/resources/list#tutorials">Tutorials</a>
+                <a ref="tutorials" v-on:click="onClick('tutorials')" href="/resources/list#tutorials">Tutorials</a>
               </li>
               <li class="resources-header-link">
-                <a href="/resources/list#videos">Videos</a>
+                <a ref="videos" v-on:click="onClick('videos')" href="/resources/list#videos">Videos</a>
               </li>
             </ul>
           </ul>
@@ -53,6 +53,15 @@ export default {
     SideFooter
   },
   props: ["page"],
+  methods: {
+    onClick(ref) {
+      let actives = document.querySelectorAll(".resources-active");
+      for (let active of actives) {
+        active.classList.remove("resources-active");
+      }
+      this.$refs[ref].classList.add("resources-active");
+    }
+  }
 };
 </script>
 
@@ -89,32 +98,5 @@ export default {
   color: $orange !important;
   font-weight: 900;
   transition: all 0.2s ease;
-}
-
-.resources-active:before {
-  content: "";
-  position: absolute;
-  background: url("/img/arrow.png") no-repeat;
-  background-position: center;
-  background-size: contain;
-  top: 0;
-  bottom: 0;
-  left: -30px;
-  margin: auto;
-  height: 20px;
-  width: 20px;
-  z-index: 100;
-  display: block;
-  animation: arrow 0.4s;
-}
-@keyframes arrow {
-  from {
-    transform: rotate(-90deg);
-    opacity: 0;
-  }
-  to {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
 }
 </style>
