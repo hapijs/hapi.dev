@@ -164,34 +164,43 @@ export default {
       let tags = document.querySelectorAll(".markdown-wrapper a");
       let points = {};
       let offsets = [];
-      for (let i = 2; i < tags.length; i++) {
-        if (tags[i].name && this.version !== this.versions[2]) {
+      for (let i = 1; i < tags.length; i++) {
+        if (i === 1) {
+          points[tags[1].offsetTop + 116] = {
+            name: "#" + tags[i].id
+          }
+          offsets.push(tags[i].offsetTop + 116);
+        }
+        else if (tags[i].name && this.version !== this.versions[2]) {
           points[tags[i].offsetTop - 40] = {
             name: "#" + tags[i].name
           };
           offsets.push(tags[i].offsetTop - 40);
         }
-        if (
+        else if (
           this.version !== this.versions[2] &&
-          tags[i].id &&
-          tags[i].parentElement.children.length === 1
+          tags[i].id
         ) {
           points[tags[i].offsetTop - 40] = {
             name: "#" + tags[i].id
           };
           offsets.push(tags[i].offsetTop - 40);
         }
-        if (this.version === this.versions[2] && tags[i].id) {
+        else if (this.version === this.versions[2] && tags[i].id) {
           points[tags[i].offsetTop - 40] = {
             name: "#" + tags[i].id
           };
           offsets.push(tags[i].offsetTop - 40);
         }
       }
+      
+      console.log(points)
+      console.log(offsets)
 
       //Add active class to elements on scroll
       window.onscroll = function() {
         let location = document.documentElement.scrollTop;
+        console.log(location);
         let locationBody = document.body.scrollTop;
         let actives = document.getElementsByClassName("api-active");
         let i = 0;
@@ -208,7 +217,7 @@ export default {
             element.classList.add("api-active");
           }
           if (
-            (offsets[i] <= location && location <= offsets[i] + 90) || ((offsets[i] <= locationBody && locationBody <= offsets[i] + 90))
+            (offsets[i] <= location && location <= offsets[i] + 200) || ((offsets[i] <= locationBody && locationBody <= offsets[i] + 200))
           ) {
             if (
               element.classList.contains("api-nav-plus") ||

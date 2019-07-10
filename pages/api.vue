@@ -143,6 +143,7 @@ export default {
           .replace(/\/>/g, "></a>")
           .replace(/-\s\[(?:.+[\n\r])+/, "");
         let finalMenu = await rawString.match(/-\s\[(?:.+[\n\r])+/).pop();
+        finalMenu = await finalMenu.replace(/\(([^#/(/)]+)\)/g, "()");
         menus[version] = await finalMenu;
         const apiHTML = await $axios.$post(
           "https://api.github.com/markdown",
