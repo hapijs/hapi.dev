@@ -164,7 +164,7 @@ export default {
       let tags = document.querySelectorAll(".markdown-wrapper a");
       let points = {};
       let offsets = [];
-      for (let i = 2; i < tags.length; i++) {
+      for (let i = 1; i < tags.length; i++) {
         if (tags[i].name && this.version !== this.versions[2]) {
           points[tags[i].offsetTop - 40] = {
             name: "#" + tags[i].name
@@ -173,8 +173,7 @@ export default {
         }
         if (
           this.version !== this.versions[2] &&
-          tags[i].id &&
-          tags[i].parentElement.children.length === 1
+          tags[i].id
         ) {
           points[tags[i].offsetTop - 40] = {
             name: "#" + tags[i].id
@@ -188,6 +187,8 @@ export default {
           offsets.push(tags[i].offsetTop - 40);
         }
       }
+
+      console.log(points)
 
       //Add active class to elements on scroll
       window.onscroll = function() {
