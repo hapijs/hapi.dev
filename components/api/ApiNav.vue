@@ -208,7 +208,7 @@ export default {
             element.classList.add("api-active");
           }
           if (
-            (offsets[i] <= location && location <= offsets[i] + 90) || ((offsets[i] <= locationBody && locationBody <= offsets[i] + 90))
+            (offsets[i] <= location && location <= offsets[i] + 200) || ((offsets[i] <= locationBody && locationBody <= offsets[i] + 200))
           ) {
             if (
               element.classList.contains("api-nav-plus") ||
