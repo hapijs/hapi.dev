@@ -158,7 +158,9 @@ export default {
       let code = document.querySelectorAll(".api-nav-select-wrapper code");
       for (let c of code) {
         c.classList.add("api-nav-code");
+        c.innerHTML = c.innerHTML.replace(/.*(?=\.)./g, "");
       }
+
 
       //API nav scroll spy
       let tags = document.querySelectorAll(".markdown-wrapper a");
@@ -193,9 +195,7 @@ export default {
           offsets.push(tags[i].offsetTop - 40);
         }
       }
-      
-      console.log(points)
-      console.log(offsets)
+    
 
       //Add active class to elements on scroll
       window.onscroll = function() {
@@ -420,7 +420,7 @@ export default {
 
 .api-nav-header {
   color: $gray;
-  font-size: 0.85em;
+  font-size: 1rem;
   width: 100%;
   padding: 2px 0;
 }
@@ -499,7 +499,7 @@ export default {
   background: $off-white;
   font-family: "Lato", sans-serif;
   color: $gray;
-  font-size: 1em;
+  font-size: 1rem;
   margin: 0 5px 0 0;
   padding: 0;
   border: none;
