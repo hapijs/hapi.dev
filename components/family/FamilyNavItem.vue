@@ -80,7 +80,7 @@ export default {
 .ecosystem-nav-select-wrapper a code {
   background: $off-white;
   color: $gray;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 1em;
   padding: 0;
   border: none;

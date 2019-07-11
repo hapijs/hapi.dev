@@ -259,6 +259,8 @@ export default {
   max-height: calc(100vh - 96px);
   min-height: calc(100vh - 96px);
   overflow-y: auto;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
   padding: 0;
   margin: 0;
   display: flex;
@@ -534,7 +536,6 @@ export default {
   left: -60px;
   padding: 0 30px 0 60px !important;
   width: 375px !important;
-  overflow-wrap: break-word;
 }
 
 @media screen and (max-width: 900px) {
