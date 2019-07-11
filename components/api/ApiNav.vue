@@ -158,7 +158,10 @@ export default {
       let code = document.querySelectorAll(".api-nav-select-wrapper code");
       for (let c of code) {
         c.classList.add("api-nav-code");
-        c.innerHTML = c.innerHTML.replace(/.*(?=\.)./g, "");
+        if (!c.parentElement.classList.contains("api-nav-plus") && !c.parentElement.classList.contains("api-nav-minus")){
+          c.innerHTML = c.innerHTML.replace(/.*(?=\.)./g, "");
+        }
+        
       }
 
 
