@@ -59,7 +59,7 @@ body {
 .contain {
   position: relative;
   margin: 96px auto 0 auto;
-  min-height: calc(100vh - 136px);
+  min-height: calc(100vh - 111px);
   padding: 10px 0 100px 0;
 }
 

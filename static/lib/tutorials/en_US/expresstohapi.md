@@ -1,4 +1,4 @@
-# Express to hapi Guide
+# Express Migration
 
 _This guide is compatible with hapi v17 and newer_
 

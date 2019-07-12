@@ -546,7 +546,7 @@ export default {
 .api-active {
   display: inline-block;
   left: -60px;
-  padding: 0 30px 0 60px !important;
+  padding: 2px 30px 2px 60px !important;
   width: 375px !important;
 }
 
