@@ -158,9 +158,11 @@ export default {
       let code = document.querySelectorAll(".api-nav-select-wrapper code");
       for (let c of code) {
         c.classList.add("api-nav-code");
-        if (!c.parentElement.classList.contains("api-nav-plus") && !c.parentElement.classList.contains("api-nav-minus")){
-          c.innerHTML = c.innerHTML.replace(/.*(?=\.)./g, "");
-        }
+        let bold = c.innerHTML.match(/.\S*(?=\()/g);
+        c.innerHTML = c.innerHTML.replace(/.\S*(?=\()/g, "<span class='api-bold'>" + bold + "</span>");
+        // if (!c.parentElement.classList.contains("api-nav-plus") && !c.parentElement.classList.contains("api-nav-minus")){
+        //   c.innerHTML = c.innerHTML.replace(/.*(?=\.)./g, "");
+        // }
         
       }
 
@@ -442,7 +444,6 @@ export default {
 }
 
 .api-nav-header * {
-  color: $orange;
   text-decoration: none;
 }
 
@@ -526,6 +527,10 @@ export default {
   position: relative;
   color: #fff !important;
   background: $gray;
+}
+
+.api-bold {
+  font-weight: 900;
 }
 
 .api-active:after {
