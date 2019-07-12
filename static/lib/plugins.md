@@ -22,25 +22,21 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
 ## <a name="authentication"></a> Authentication
 
+*   [basic <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/basic)
+
+    An HTTP Basic authentication scheme
+
 *   [bell <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/bell)
 
     Third-party login plugin for hapi with built in Facebook, GitHub, Google, Instagram, LinkedIn, Twitter, Yahoo, Foursquare, VK, ArcGIS Online and Windows Live support
 
-*   [hapi-auth-basic <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/hapi-auth-basic)
+*   [cookie <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/cookie)
 
-    An HTTP Basic authentication scheme
+    A cookie-based session authentication scheme
 
 *   [hapi-auth-bearer-token](https://github.com/johnbrett/hapi-auth-bearer-token)
 
     A bearer token based authentication scheme
-
-*   [hapi-auth-cookie <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/hapi-auth-cookie)
-
-    A cookie-based session authentication scheme
-
-*   [hapi-auth-hawk <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/hapi-auth-hawk)
-
-    Hawk authentication plugin
 
 *   [hapi-auth-jwt2](https://www.npmjs.com/package/hapi-auth-jwt2)
 
@@ -65,6 +61,10 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 *   [hapi-passport-saml](https://github.com/molekilla/hapi-passport-saml)
 
     A Hapi plugin that wraps passport-saml for SAML SSO
+
+*   [hawk <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/hawk)
+
+    Hawk authentication plugin
 
 ## <a name="documentation"></a> Documentation
 
@@ -217,10 +217,6 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 *   [akaya](https://github.com/felixheck/akaya)
 
     Generate URIs fast based on named hapi routes their parameters
-
-*   [bassmaster <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/bassmaster)
-
-    The batch endpoint makes it easy to combine multiple requests into a single one
 
 *   [bissle](https://github.com/felixheck/bissle)
 
@@ -402,10 +398,6 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     A limitd plugin for hapi, useful for rate-limiting/throttling
 
-*   [poop <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/poop)
-
-    Plugin for taking a process dump and cleaning up after an uncaught exception
-
 *   [rate-limiter-flexible](https://github.com/animir/node-rate-limiter-flexible)
 
     Mature and flexible rate limiter, DDoS and bruteforce protection at any scale in process Memory, Cluster or PM2, Redis, Memcached, MongoDb, etc. Block key for some duration, enable Leaky Bucket analogy, manage failover with insurance options, configure smart key blocking in memory and many others.
@@ -413,10 +405,6 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 *   [recourier](https://github.com/ruiquelhas/recourier)
 
     Request lifecycle property sealing
-
-*   [reptile <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/reptile)
-
-    A plugin for creating a REPL
 
 *   [rest-hapi](https://github.com/JKHeadley/rest-hapi)
 
@@ -514,13 +502,9 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     HTTP-friendly error objects
 
-*   [confidence <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/confidence)
+*   [confidence](https://github.com/hapipal/confidence)
 
     A configuration document format, an API, and a foundation for A/B testing
-
-*   [faketoe <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/faketoe)
-
-    An XML to JSON converter
 
 *   [glue <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/glue)
 
@@ -554,17 +538,9 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     Object schema description language and validator for JavaScript objects
 
-*   [kilt <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/kilt)
-
-    Combine multiple event emitters into a single emitter
-
 *   [lab <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/lab)
 
     A simple testing utility with code coverage analysis
-
-*   [makemehapi <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/makemehapi)
-
-    Self guided workshops to teach you about hapi
 
 *   [nes <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/nes)
 
@@ -581,10 +557,6 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 *   [qs <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/qs)
 
     A querystring parser with support for arrays and objects
-
-*   [rejoice <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/rejoice)
-
-    hapi.js cli
 
 *   [shot <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/shot)
 
