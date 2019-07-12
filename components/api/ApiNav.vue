@@ -158,8 +158,12 @@ export default {
       let code = document.querySelectorAll(".api-nav-select-wrapper code");
       for (let c of code) {
         c.classList.add("api-nav-code");
-        let bold = c.innerHTML.match(/.\S*(?=\()/g);
-        c.innerHTML = c.innerHTML.replace(/.\S*(?=\()/g, "<span class='api-bold'>" + bold + "</span>");
+
+        //Bold methods
+        // let bold = c.innerHTML.match(/.\S*(?=\()/g);
+        // c.innerHTML = c.innerHTML.replace(/.\S*(?=\()/g, "<span class='api-bold'>" + bold + "</span>");
+
+        //Remove methods
         // if (!c.parentElement.classList.contains("api-nav-plus") && !c.parentElement.classList.contains("api-nav-minus")){
         //   c.innerHTML = c.innerHTML.replace(/.*(?=\.)./g, "");
         // }
