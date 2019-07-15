@@ -32,7 +32,7 @@ module.exports = {
   },
 
   router: {
-    scrollBehavior: function(to, from, savedPosition) {
+    scrollBehavior: function (to, from, savedPosition) {
       if (savedPosition) {
         return savedPosition;
       } else {
@@ -62,7 +62,8 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png?v=1.0' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png?v=1.0' },
+           { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Inconsolata:400|Lato:400,900&display=swap' }]
   },
 
   /*
