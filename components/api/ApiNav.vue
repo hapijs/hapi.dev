@@ -149,8 +149,6 @@ export default {
               }
             }
             let linkSibling = link.parentElement.children[1];
-            console.log(link);
-            console.log(linkSibling)
             linkSibling.classList.add("nav-display");
             link.classList.remove("api-nav-plus");
             link.classList.add("api-nav-minus");
