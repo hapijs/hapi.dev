@@ -56,7 +56,7 @@ export default {
     },
     onChildIndex(value) {
       this.$data.indexResults = value;
-      window.scrollTo({top: this.results[this.indexResults].offsetTop, behavior: 'smooth'});
+      window.scrollTo(0, this.results[this.indexResults].offsetTop);
     },
     onChildSearch() {
       let headlines = [];
@@ -87,7 +87,7 @@ export default {
         document
           .querySelector(".api-search-results")
           .classList.add("nav-display");
-        window.scrollTo({top: this.results[this.indexResults].offsetTop, behavior: 'smooth'});
+        window.scrollTo(0, this.results[this.indexResults].offsetTop);
       } else if (this.results.length === 0) {
         document
           .querySelector(".api-search-error")
