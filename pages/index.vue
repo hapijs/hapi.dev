@@ -48,16 +48,11 @@
 </template>
 
 <script>
-const Security = () => import('~/components/Security.vue');
-const Quality = () => import('~/components/Quality.vue');
-const DevelopersFirst = () => import('~/components/DevelopersFirst.vue');
-const Predictability = () => import('~/components/Predictability.vue');
-const Extensibility = () => import('~/components/Extensibility.vue');
-// import Security from "~/components/Security.vue";
-// import Quality from "~/components/Quality.vue";
-// import DevelopersFirst from "~/components/DevelopersFirst.vue";
-// import Predictability from "~/components/Predictability.vue";
-// import Extensibility from "~/components/Extensibility.vue";
+import Security from "~/components/Security.vue";
+import Quality from "~/components/Quality.vue";
+import DevelopersFirst from "~/components/DevelopersFirst.vue";
+import Predictability from "~/components/Predictability.vue";
+import Extensibility from "~/components/Extensibility.vue";
 
 export default {
   layout: "home",
