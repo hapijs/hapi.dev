@@ -209,7 +209,6 @@ export default {
       //Add active class to elements on scroll
       window.onscroll = function() {
         let location = document.documentElement.scrollTop;
-        console.log(location);
         let locationBody = document.body.scrollTop;
         let actives = document.getElementsByClassName("api-active");
         let i = 0;
@@ -226,7 +225,7 @@ export default {
             element.classList.add("api-active");
           }
           if (
-            (offsets[i] <= location && location <= offsets[i] + 200) || ((offsets[i] <= locationBody && locationBody <= offsets[i] + 200))
+            (offsets[i] <= location && location <= offsets[i] + 100) || ((offsets[i] <= locationBody && locationBody <= offsets[i] + 100))
           ) {
             if (
               element.classList.contains("api-nav-plus") ||
