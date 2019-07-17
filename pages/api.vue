@@ -57,15 +57,21 @@ export default {
     onChildIndex(value, headers, uls, links) {
       this.$data.indexResults = value;
       window.scrollTo(0, this.results[this.indexResults].offsetTop);
-      this.findActives(this.results[this.indexResults].offsetTop);
+      this.findActives(this.results[this.indexResults].offsetTop, headers, uls, links);
     },
-    findActives(position) {
+    findActives(position, headers, uls, links) {
       const checkIfScrollToIsFinished = setInterval(() => {
         if (document.documentElement.scrollTop === position) {
           let active = document.querySelector(
             ".api-nav-select-wrapper .api-active"
           );
-          console.log(active);
+          const activePosition = links[active.hash];
+          for (let key in headers) {
+            if (activePosition < key) {
+              headers[key].parentElement.children[1].classList.add("nav-display");
+              break;
+            }
+          }
           clearInterval(checkIfScrollToIsFinished);
         }
       }, 25);
@@ -100,7 +106,7 @@ export default {
           .querySelector(".api-search-results")
           .classList.add("nav-display");
         window.scrollTo(0, this.results[this.indexResults].offsetTop);
-        this.findActives(this.results[this.indexResults].offsetTop);
+        this.findActives(this.results[this.indexResults].offsetTop, heads, uls, links);
       } else if (this.results.length === 0) {
         document
           .querySelector(".api-search-error")
