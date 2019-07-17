@@ -54,7 +54,8 @@ export default {
   data: function() {
     return {
       headers: {},
-      uls: {}
+      uls: {},
+      links: {}
     }
   },
   methods: {
@@ -72,17 +73,17 @@ export default {
     },
     onSearch() {
       if (this.search !== "") {
-        this.$emit("search");
+        this.$emit("search", this.headers, this.uls, this.links);
       }
     },
     onPrevious() {
       if (this.indexResults !== 0) {
-        this.$emit("previous", this.indexResults - 1);
+        this.$emit("previous", this.indexResults - 1, this.headers, this.uls, this.links);
       }
     },
     onNext() {
       if (this.indexResults !== this.results.length - 1) {
-        this.$emit("next", this.indexResults + 1);
+        this.$emit("next", this.indexResults + 1, this.headers, this.uls, this.links);
       }
     },
     setClasses() {
@@ -112,16 +113,15 @@ export default {
           this.headers[topPosition] = top
         }
       }
-      console.log(this.headers);
-      console.log(this.uls);
-      for (let ul of uls) {
-        ul.classList.add("api-nav-ul");
-      }
       let aLinks = document.querySelectorAll(
         ".api-nav-select-wrapper > ul > li > ul > li a"
       );
       for (let a of aLinks) {
         a.classList.add("api-nav-header");
+        this.links[a.hash] = a.getBoundingClientRect().top;
+      }
+      for (let ul of uls) {
+        ul.classList.add("api-nav-ul");
       }
       let links = document.querySelectorAll(
         ".api-nav-select-wrapper > ul > li a"
@@ -261,12 +261,12 @@ export default {
       };
     }
   },
-  beforeUpdate() {
-    this.setClasses();
-  },
-  updated() {
-    this.setClasses();
-  },
+  // beforeUpdate() {
+  //   this.setClasses();
+  // },
+  // updated() {
+  //   this.setClasses();
+  // },
   mounted() {
     this.setClasses();
   }

@@ -54,11 +54,23 @@ export default {
     onChildInput(value) {
       this.$data.search = value;
     },
-    onChildIndex(value) {
+    onChildIndex(value, headers, uls, links) {
       this.$data.indexResults = value;
       window.scrollTo(0, this.results[this.indexResults].offsetTop);
+      this.findActives(this.results[this.indexResults].offsetTop);
     },
-    onChildSearch() {
+    findActives(position) {
+      const checkIfScrollToIsFinished = setInterval(() => {
+        if (document.documentElement.scrollTop === position) {
+          let active = document.querySelector(
+            ".api-nav-select-wrapper .api-active"
+          );
+          console.log(active);
+          clearInterval(checkIfScrollToIsFinished);
+        }
+      }, 25);
+    },
+    onChildSearch(heads, uls, links) {
       let headlines = [];
       let text = [];
       this.indexResults = 0;
@@ -88,6 +100,7 @@ export default {
           .querySelector(".api-search-results")
           .classList.add("nav-display");
         window.scrollTo(0, this.results[this.indexResults].offsetTop);
+        this.findActives(this.results[this.indexResults].offsetTop);
       } else if (this.results.length === 0) {
         document
           .querySelector(".api-search-error")
@@ -96,7 +109,7 @@ export default {
     }
   },
   async asyncData({ params, $axios }) {
-    let versions = []
+    let versions = [];
     const options = {
       headers: {
         accept: "application/vnd.github.v3.raw+json",
@@ -115,13 +128,16 @@ export default {
 
     for (let milestone of sortedMilestones) {
       if (milestone === sortedMilestones[0]) {
-        versions.push(milestone.title)
+        versions.push(milestone.title);
       }
-      if (milestone.title.substring(0, 2) !== versions[versions.length - 1].substring(0, 2)) {
-        versions.push(milestone.title)
+      if (
+        milestone.title.substring(0, 2) !==
+        versions[versions.length - 1].substring(0, 2)
+      ) {
+        versions.push(milestone.title);
       }
       if (versions.length === 3) {
-        break
+        break;
       }
     }
     let apis = {};
@@ -173,7 +189,7 @@ export default {
   created() {
     this.$data.htmlDisplay = this.apis["18.3.1"];
     this.$data.menu = this.menus["18.3.1"];
-    this.$store.commit('setDisplay', 'api');
+    this.$store.commit("setDisplay", "api");
   }
 };
 </script>
