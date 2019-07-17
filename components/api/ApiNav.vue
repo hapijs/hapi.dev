@@ -51,6 +51,12 @@ export default {
     SideFooter
   },
   props: ["menu", "search", "version", "results", "indexResults", "versions"],
+  data: function() {
+    return {
+      headers: {},
+      uls: {}
+    }
+  },
   methods: {
     onChange(event) {
       this.$emit("change", event.target.value);
@@ -82,6 +88,7 @@ export default {
     setClasses() {
       //Add classes to API nav
       let lis = document.querySelectorAll(".api-nav-select-wrapper li");
+      const height = document.querySelector(".api-nav-select-wrapper").getBoundingClientRect().bottom;
       for (let li of lis) {
         li.classList.add("api-nav-li");
         if (li.children[1]) {
@@ -90,13 +97,25 @@ export default {
       }
       let uls = document.querySelectorAll(".api-nav-li ul");
       for (let ul of uls) {
-        ul.classList.add("api-nav-ul");
+        this.uls[ul.getBoundingClientRect().top] = ul
       }
       let topLinks = document.querySelectorAll(
         ".api-nav-select-wrapper > ul > li > a"
       );
       for (let top of topLinks) {
         top.classList.add("api-header");
+        if (top.parentElement.children[1]) {
+          let topPosition = top.parentElement.children[1].getBoundingClientRect().bottom;
+          this.headers[topPosition] = top
+        } else {
+          let topPosition = top.getBoundingClientRect().bottom;
+          this.headers[topPosition] = top
+        }
+      }
+      console.log(this.headers);
+      console.log(this.uls);
+      for (let ul of uls) {
+        ul.classList.add("api-nav-ul");
       }
       let aLinks = document.querySelectorAll(
         ".api-nav-select-wrapper > ul > li > ul > li a"
