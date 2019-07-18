@@ -261,12 +261,6 @@ export default {
       };
     }
   },
-  // beforeUpdate() {
-  //   this.setClasses();
-  // },
-  // updated() {
-  //   this.setClasses();
-  // },
   mounted() {
     this.setClasses();
   }

@@ -37,7 +37,7 @@ export default {
   data() {
     return {
       htmlDisplay: "",
-      version: "18.3.1",
+      version: "",
       menu: "",
       search: "",
       indexResults: 0,
@@ -47,9 +47,16 @@ export default {
   methods: {
     async onChildChange(value) {
       this.$data.version = await value;
-      this.$data.htmlDisplay = this.apis[value];
-      this.$data.menu = this.menus[value];
+      this.$data.htmlDisplay = await this.apis[value];
+      this.$data.menu = await this.menus[value];
       window.scrollTo(0, 0);
+      const checkIfPageLoaded = setInterval(() => {
+        if (this.$data.version = value) {
+          this.$children[0].setClasses();
+          clearInterval(checkIfPageLoaded);
+        }
+      }, 25);
+      
     },
     onChildInput(value) {
       this.$data.search = value;
@@ -66,9 +73,12 @@ export default {
             ".api-nav-select-wrapper .api-active"
           );
           const activePosition = links[active.hash];
+          console.log(uls);
           for (let key in headers) {
             if (activePosition < key) {
               headers[key].parentElement.children[1].classList.add("nav-display");
+              headers[key].classList.remove("api-nav-plus");
+              headers[key].classList.add("api-nav-minus");
               break;
             }
           }
@@ -193,8 +203,9 @@ export default {
     };
   },
   created() {
-    this.$data.htmlDisplay = this.apis["18.3.1"];
-    this.$data.menu = this.menus["18.3.1"];
+    this.$data.version = this.versions[0];
+    this.$data.htmlDisplay = this.apis[this.versions[0]];
+    this.$data.menu = this.menus[this.versions[0]];
     this.$store.commit("setDisplay", "api");
   }
 };
