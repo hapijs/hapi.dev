@@ -49,6 +49,13 @@ export default {
       this.$data.version = await value;
       this.$data.htmlDisplay = await this.apis[value];
       this.$data.menu = await this.menus[value];
+      this.$data.search = "";
+      document
+          .querySelector(".api-search-results")
+          .classList.remove("nav-display");
+      document
+          .querySelector(".api-search-error")
+          .classList.remove("nav-display");
       window.scrollTo(0, 0);
       const checkIfPageLoaded = setInterval(() => {
         if (this.$data.version = value) {
