@@ -61,32 +61,31 @@ export default {
     onChildInput(value) {
       this.$data.search = value;
     },
-    onChildIndex(value, headers, uls, links) {
+    onChildIndex(value, uls, links) {
       this.$data.indexResults = value;
       window.scrollTo(0, this.results[this.indexResults].offsetTop);
-      this.findActives(this.results[this.indexResults].offsetTop, headers, uls, links);
+      this.findActives(this.results[this.indexResults].offsetTop, uls, links);
     },
-    findActives(position, headers, uls, links) {
+    findActives(position, uls, links) {
       const checkIfScrollToIsFinished = setInterval(() => {
         if (document.documentElement.scrollTop === position) {
           let active = document.querySelector(
             ".api-nav-select-wrapper .api-active"
           );
           const activePosition = links[active.hash];
-          console.log(uls);
-          for (let key in headers) {
-            if (activePosition < key) {
-              headers[key].parentElement.children[1].classList.add("nav-display");
-              headers[key].classList.remove("api-nav-plus");
-              headers[key].classList.add("api-nav-minus");
-              break;
+          for (let key in uls) {
+            if (activePosition > uls[key].top && activePosition < uls[key].bottom) {
+              console.log(uls[key].name)
+              uls[key].name.classList.add("nav-display");
+              uls[key].name.parentElement.children[0].classList.remove("api-nav-plus");
+              uls[key].name.parentElement.children[0].classList.add("api-nav-minus");
             }
           }
           clearInterval(checkIfScrollToIsFinished);
         }
       }, 25);
     },
-    onChildSearch(heads, uls, links) {
+    onChildSearch(uls, links) {
       let headlines = [];
       let text = [];
       this.indexResults = 0;
@@ -116,7 +115,7 @@ export default {
           .querySelector(".api-search-results")
           .classList.add("nav-display");
         window.scrollTo(0, this.results[this.indexResults].offsetTop);
-        this.findActives(this.results[this.indexResults].offsetTop, heads, uls, links);
+        this.findActives(this.results[this.indexResults].offsetTop, uls, links);
       } else if (this.results.length === 0) {
         document
           .querySelector(".api-search-error")

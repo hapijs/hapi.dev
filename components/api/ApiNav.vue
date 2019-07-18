@@ -53,7 +53,6 @@ export default {
   props: ["menu", "search", "version", "results", "indexResults", "versions"],
   data: function() {
     return {
-      headers: {},
       uls: {},
       links: {}
     }
@@ -73,17 +72,17 @@ export default {
     },
     onSearch() {
       if (this.search !== "") {
-        this.$emit("search", this.headers, this.uls, this.links);
+        this.$emit("search", this.uls, this.links);
       }
     },
     onPrevious() {
       if (this.indexResults !== 0) {
-        this.$emit("previous", this.indexResults - 1, this.headers, this.uls, this.links);
+        this.$emit("previous", this.indexResults - 1, this.uls, this.links);
       }
     },
     onNext() {
       if (this.indexResults !== this.results.length - 1) {
-        this.$emit("next", this.indexResults + 1, this.headers, this.uls, this.links);
+        this.$emit("next", this.indexResults + 1, this.uls, this.links);
       }
     },
     setClasses() {
@@ -96,22 +95,11 @@ export default {
           li.children[0].classList.add("api-nav-plus");
         }
       }
-      let uls = document.querySelectorAll(".api-nav-li ul");
-      for (let ul of uls) {
-        this.uls[ul.getBoundingClientRect().top] = ul
-      }
       let topLinks = document.querySelectorAll(
         ".api-nav-select-wrapper > ul > li > a"
       );
       for (let top of topLinks) {
         top.classList.add("api-header");
-        if (top.parentElement.children[1]) {
-          let topPosition = top.parentElement.children[1].getBoundingClientRect().bottom;
-          this.headers[topPosition] = top
-        } else {
-          let topPosition = top.getBoundingClientRect().bottom;
-          this.headers[topPosition] = top
-        }
       }
       let aLinks = document.querySelectorAll(
         ".api-nav-select-wrapper > ul > li > ul > li a"
@@ -119,6 +107,14 @@ export default {
       for (let a of aLinks) {
         a.classList.add("api-nav-header");
         this.links[a.hash] = a.getBoundingClientRect().top;
+      }
+      let uls = document.querySelectorAll(".api-nav-li ul");
+      for (let ul of uls) {
+        this.uls[ul.getBoundingClientRect().top] = {
+          name: ul,
+          top: ul.getBoundingClientRect().top,
+          bottom: ul.getBoundingClientRect().bottom
+        }
       }
       for (let ul of uls) {
         ul.classList.add("api-nav-ul");
@@ -428,6 +424,10 @@ export default {
 
 .api-nav-ul {
   display: none;
+}
+
+.ul-block {
+  display: block;
 }
 
 .api-nav-select-wrapper ul li ul {
