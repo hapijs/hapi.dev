@@ -37,7 +37,7 @@ export default {
   data() {
     return {
       htmlDisplay: "",
-      version: "18.3.1",
+      version: "",
       menu: "",
       search: "",
       indexResults: 0,
@@ -47,18 +47,52 @@ export default {
   methods: {
     async onChildChange(value) {
       this.$data.version = await value;
-      this.$data.htmlDisplay = this.apis[value];
-      this.$data.menu = this.menus[value];
+      this.$data.htmlDisplay = await this.apis[value];
+      this.$data.menu = await this.menus[value];
+      this.$data.search = "";
+      document
+          .querySelector(".api-search-results")
+          .classList.remove("nav-display");
+      document
+          .querySelector(".api-search-error")
+          .classList.remove("nav-display");
       window.scrollTo(0, 0);
+      const checkIfPageLoaded = setInterval(() => {
+        if (this.$data.version = value) {
+          this.$children[0].setClasses();
+          clearInterval(checkIfPageLoaded);
+        }
+      }, 25);
+      
     },
     onChildInput(value) {
       this.$data.search = value;
     },
-    onChildIndex(value) {
+    onChildIndex(value, uls, links) {
       this.$data.indexResults = value;
-      window.scrollTo({top: this.results[this.indexResults].offsetTop, behavior: 'smooth'});
+      window.scrollTo(0, this.results[this.indexResults].offsetTop);
+      this.findActives(this.results[this.indexResults].offsetTop, uls, links);
     },
-    onChildSearch() {
+    findActives(position, uls, links) {
+      const checkIfScrollToIsFinished = setInterval(() => {
+        if (document.documentElement.scrollTop === position) {
+          let active = document.querySelector(
+            ".api-nav-select-wrapper .api-active"
+          );
+          const activePosition = links[active.hash];
+          for (let key in uls) {
+            if (activePosition > uls[key].top && activePosition < uls[key].bottom) {
+              console.log(uls[key].name)
+              uls[key].name.classList.add("nav-display");
+              uls[key].name.parentElement.children[0].classList.remove("api-nav-plus");
+              uls[key].name.parentElement.children[0].classList.add("api-nav-minus");
+            }
+          }
+          clearInterval(checkIfScrollToIsFinished);
+        }
+      }, 25);
+    },
+    onChildSearch(uls, links) {
       let headlines = [];
       let text = [];
       this.indexResults = 0;
@@ -87,7 +121,8 @@ export default {
         document
           .querySelector(".api-search-results")
           .classList.add("nav-display");
-        window.scrollTo({top: this.results[this.indexResults].offsetTop, behavior: 'smooth'});
+        window.scrollTo(0, this.results[this.indexResults].offsetTop);
+        this.findActives(this.results[this.indexResults].offsetTop, uls, links);
       } else if (this.results.length === 0) {
         document
           .querySelector(".api-search-error")
@@ -96,7 +131,7 @@ export default {
     }
   },
   async asyncData({ params, $axios }) {
-    let versions = []
+    let versions = [];
     const options = {
       headers: {
         accept: "application/vnd.github.v3.raw+json",
@@ -115,13 +150,16 @@ export default {
 
     for (let milestone of sortedMilestones) {
       if (milestone === sortedMilestones[0]) {
-        versions.push(milestone.title)
+        versions.push(milestone.title);
       }
-      if (milestone.title.substring(0, 2) !== versions[versions.length - 1].substring(0, 2)) {
-        versions.push(milestone.title)
+      if (
+        milestone.title.substring(0, 2) !==
+        versions[versions.length - 1].substring(0, 2)
+      ) {
+        versions.push(milestone.title);
       }
       if (versions.length === 3) {
-        break
+        break;
       }
     }
     let apis = {};
@@ -171,9 +209,10 @@ export default {
     };
   },
   created() {
-    this.$data.htmlDisplay = this.apis["18.3.1"];
-    this.$data.menu = this.menus["18.3.1"];
-    this.$store.commit('setDisplay', 'api');
+    this.$data.version = this.versions[0];
+    this.$data.htmlDisplay = this.apis[this.versions[0]];
+    this.$data.menu = this.menus[this.versions[0]];
+    this.$store.commit("setDisplay", "api");
   }
 };
 </script>

@@ -51,6 +51,12 @@ export default {
     SideFooter
   },
   props: ["menu", "search", "version", "results", "indexResults", "versions"],
+  data: function() {
+    return {
+      uls: {},
+      links: {}
+    };
+  },
   methods: {
     onChange(event) {
       this.$emit("change", event.target.value);
@@ -66,31 +72,30 @@ export default {
     },
     onSearch() {
       if (this.search !== "") {
-        this.$emit("search");
+        this.$emit("search", this.uls, this.links);
       }
     },
     onPrevious() {
       if (this.indexResults !== 0) {
-        this.$emit("previous", this.indexResults - 1);
+        this.$emit("previous", this.indexResults - 1, this.uls, this.links);
       }
     },
     onNext() {
       if (this.indexResults !== this.results.length - 1) {
-        this.$emit("next", this.indexResults + 1);
+        this.$emit("next", this.indexResults + 1, this.uls, this.links);
       }
     },
     setClasses() {
       //Add classes to API nav
       let lis = document.querySelectorAll(".api-nav-select-wrapper li");
+      const height = document
+        .querySelector(".api-nav-select-wrapper")
+        .getBoundingClientRect().bottom;
       for (let li of lis) {
         li.classList.add("api-nav-li");
         if (li.children[1]) {
           li.children[0].classList.add("api-nav-plus");
         }
-      }
-      let uls = document.querySelectorAll(".api-nav-li ul");
-      for (let ul of uls) {
-        ul.classList.add("api-nav-ul");
       }
       let topLinks = document.querySelectorAll(
         ".api-nav-select-wrapper > ul > li > a"
@@ -103,6 +108,18 @@ export default {
       );
       for (let a of aLinks) {
         a.classList.add("api-nav-header");
+        this.links[a.hash] = a.getBoundingClientRect().top;
+      }
+      let uls = document.querySelectorAll(".api-nav-li ul");
+      for (let ul of uls) {
+        this.uls[ul.getBoundingClientRect().top] = {
+          name: ul,
+          top: ul.getBoundingClientRect().top,
+          bottom: ul.getBoundingClientRect().bottom
+        };
+      }
+      for (let ul of uls) {
+        ul.classList.add("api-nav-ul");
       }
       let links = document.querySelectorAll(
         ".api-nav-select-wrapper > ul > li a"
@@ -167,9 +184,7 @@ export default {
         // if (!c.parentElement.classList.contains("api-nav-plus") && !c.parentElement.classList.contains("api-nav-minus")){
         //   c.innerHTML = c.innerHTML.replace(/.*(?=\.)./g, "");
         // }
-        
       }
-
 
       //API nav scroll spy
       let tags = document.querySelectorAll(".markdown-wrapper a");
@@ -179,32 +194,25 @@ export default {
         if (i === 1) {
           points[tags[1].offsetTop + 116] = {
             name: "#" + tags[i].id
-          }
+          };
           offsets.push(tags[i].offsetTop + 116);
-        }
-        else if (tags[i].name && this.version !== this.versions[2]) {
+        } else if (tags[i].name && this.version !== this.versions[2]) {
           points[tags[i].offsetTop - 40] = {
             name: "#" + tags[i].name
           };
           offsets.push(tags[i].offsetTop - 40);
-        }
-        else if (
-          this.version !== this.versions[2] &&
-          tags[i].id
-        ) {
+        } else if (this.version !== this.versions[2] && tags[i].id) {
           points[tags[i].offsetTop - 40] = {
             name: "#" + tags[i].id
           };
           offsets.push(tags[i].offsetTop - 40);
-        }
-        else if (this.version === this.versions[2] && tags[i].id) {
+        } else if (this.version === this.versions[2] && tags[i].id) {
           points[tags[i].offsetTop - 40] = {
             name: "#" + tags[i].id
           };
           offsets.push(tags[i].offsetTop - 40);
         }
       }
-    
 
       //Add active class to elements on scroll
       window.onscroll = function() {
@@ -225,7 +233,8 @@ export default {
             element.classList.add("api-active");
           }
           if (
-            (offsets[i] <= location && location <= offsets[i] + 100) || ((offsets[i] <= locationBody && locationBody <= offsets[i] + 100))
+            (offsets[i] <= location && location <= offsets[i] + 100) ||
+            (offsets[i] <= locationBody && locationBody <= offsets[i] + 100)
           ) {
             if (
               element.classList.contains("api-nav-plus") ||
@@ -241,12 +250,6 @@ export default {
         }
       };
     }
-  },
-  beforeUpdate() {
-    this.setClasses();
-  },
-  updated() {
-    this.setClasses();
   },
   mounted() {
     this.setClasses();
@@ -415,6 +418,10 @@ export default {
 
 .api-nav-ul {
   display: none;
+}
+
+.ul-block {
+  display: block;
 }
 
 .api-nav-select-wrapper ul li ul {
