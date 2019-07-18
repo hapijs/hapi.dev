@@ -55,7 +55,7 @@ export default {
     return {
       uls: {},
       links: {}
-    }
+    };
   },
   methods: {
     onChange(event) {
@@ -88,7 +88,9 @@ export default {
     setClasses() {
       //Add classes to API nav
       let lis = document.querySelectorAll(".api-nav-select-wrapper li");
-      const height = document.querySelector(".api-nav-select-wrapper").getBoundingClientRect().bottom;
+      const height = document
+        .querySelector(".api-nav-select-wrapper")
+        .getBoundingClientRect().bottom;
       for (let li of lis) {
         li.classList.add("api-nav-li");
         if (li.children[1]) {
@@ -114,7 +116,7 @@ export default {
           name: ul,
           top: ul.getBoundingClientRect().top,
           bottom: ul.getBoundingClientRect().bottom
-        }
+        };
       }
       for (let ul of uls) {
         ul.classList.add("api-nav-ul");
@@ -182,9 +184,7 @@ export default {
         // if (!c.parentElement.classList.contains("api-nav-plus") && !c.parentElement.classList.contains("api-nav-minus")){
         //   c.innerHTML = c.innerHTML.replace(/.*(?=\.)./g, "");
         // }
-        
       }
-
 
       //API nav scroll spy
       let tags = document.querySelectorAll(".markdown-wrapper a");
@@ -194,32 +194,25 @@ export default {
         if (i === 1) {
           points[tags[1].offsetTop + 116] = {
             name: "#" + tags[i].id
-          }
+          };
           offsets.push(tags[i].offsetTop + 116);
-        }
-        else if (tags[i].name && this.version !== this.versions[2]) {
+        } else if (tags[i].name && this.version !== this.versions[2]) {
           points[tags[i].offsetTop - 40] = {
             name: "#" + tags[i].name
           };
           offsets.push(tags[i].offsetTop - 40);
-        }
-        else if (
-          this.version !== this.versions[2] &&
-          tags[i].id
-        ) {
+        } else if (this.version !== this.versions[2] && tags[i].id) {
           points[tags[i].offsetTop - 40] = {
             name: "#" + tags[i].id
           };
           offsets.push(tags[i].offsetTop - 40);
-        }
-        else if (this.version === this.versions[2] && tags[i].id) {
+        } else if (this.version === this.versions[2] && tags[i].id) {
           points[tags[i].offsetTop - 40] = {
             name: "#" + tags[i].id
           };
           offsets.push(tags[i].offsetTop - 40);
         }
       }
-    
 
       //Add active class to elements on scroll
       window.onscroll = function() {
@@ -240,7 +233,8 @@ export default {
             element.classList.add("api-active");
           }
           if (
-            (offsets[i] <= location && location <= offsets[i] + 100) || ((offsets[i] <= locationBody && locationBody <= offsets[i] + 100))
+            (offsets[i] <= location && location <= offsets[i] + 100) ||
+            (offsets[i] <= locationBody && locationBody <= offsets[i] + 100)
           ) {
             if (
               element.classList.contains("api-nav-plus") ||
