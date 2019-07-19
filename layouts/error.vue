@@ -5,7 +5,11 @@
       <div class="error-heading">4<span><img class="error-helmet" src="../static/img/helmet.png" alt="hapi-helmet"></span>4</div>
       <div class="error-description-heading">Oh No!</div>
       <div class="error-description">It seems as though that page is not filled with joi today.</div>
-      <nuxt-link class="error-button" to="/">Back to the hapi place</nuxt-link>
+      <a
+        class="error-button"
+        href="/"
+        aria-label="home-button"
+      >Back to the hapi place</a>
     </div>
     <Footer/>
   </div>
@@ -106,6 +110,10 @@ export default {
   max-width: 735px;
   background-color: #fff !important;
   padding: 0 20px !important;
+}
+
+.footer-link {
+  color: $orange;
 }
 
 .logo {
