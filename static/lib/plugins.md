@@ -1,4 +1,4 @@
-There are dozens of plugins for hapi, ranging from documentation to authentication, and much more. If you wrote or use a plugin that you don't see on this list, please send us a [pull request](https://github.com/hapijs/hapijs.com/blob/master/lib/plugins.js).
+There are dozens of plugins for hapi, ranging from documentation to authentication, and much more. If you wrote or use a plugin that you don't see on this list, please send us a [pull request](https://github.com/hapijs/hapi.dev/blob/master/static/lib/plugins.md).
 
 <img src="/img/family.svg" class="plugins-logo-top" /> -   Designates an offical hapi family plugin
 
