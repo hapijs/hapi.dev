@@ -37,8 +37,8 @@ body {
 .logo {
   background: url("/img/hapi.svg") no-repeat 0 0;
   background-size: contain;
-  height: 75px;
-  width: 100px;
+  height: 75px !important;
+  width: 100px !important;
   margin: 0;
 }
 
