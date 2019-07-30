@@ -173,8 +173,25 @@ export default {
           }
         });
       }
+      let plus = document.querySelectorAll(".api-nav-plus");
+      let methods = [];
+      for (let p of plus){
+        if(p.children[0]){
+          methods.push(p.children[0])
+        } else {
+          methods.push(p)
+        }
+      }
       for (let i = 0; i < code.length; i++) {
+        let heading = ""
         code[i].classList.add("api-nav-code");
+        // for (let m of methods){
+        //   if(m.contains(code[i])){
+        //     heading +=  m.innerHTML.toLowerCase().split(" ").join(".") + ".";
+        //   }
+        // }
+        // console.log(heading);
+        // code[i].innerHTML = code[i].innerHTML.replace(/^([^.]+)./g, "");
         code[i].innerHTML = code[i].innerHTML.replace(/.*(?=\.)./g, "");
         if (code[i - 1]) {
           let a = code[i].innerHTML.replace(/\(([^#/(/)]+)\)/g, "()");

@@ -11,13 +11,13 @@
               <div class="quote-company">Principal Engineer, Condé Nast</div>
             </div>
             <div class="quote-img-container">
-              <img class="quote-img" src="/img/conde-nast-logo.png" alt="conde-nast-logo">
+              <img class="quote-img conde-img" src="/img/conde-nast-logo.png" alt="conde-nast-logo">
             </div>
           </div>
         </div>
       <h2
         class="extensibility-heading"
-      >Provides True Extensibility and Customization, Safely and Predictably</h2>
+      >Provides True Extensibility and Customization,<br class="break"> Safely and Predictably</h2>
       <div class="extensibility-content">
         hapi comes pretty loaded out-of-the-box, but it also has the most
         <span
@@ -89,5 +89,16 @@ export default {};
   text-align: center;
   font-weight: 900;
   margin: 40px 0;
+}
+
+.conde-img {
+  width: 250px !important;
+}
+
+@media screen and (max-width: 900px) {
+  .conde-img {
+    width: 150px !important; 
+  }
+  
 }
 </style>
