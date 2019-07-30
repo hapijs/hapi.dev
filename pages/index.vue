@@ -193,7 +193,7 @@ export default {
 .quote-wrapper {
   position: relative;
   background: #f3f3f3;
-  padding-bottom: 20px;
+  padding: 20px 0 40px 0;
   text-align: left;
   margin: 30px 0 80px 0;
 }

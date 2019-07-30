@@ -290,6 +290,10 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     HapiJS / LevelDB integration
 
+*   [hapi-maxmind-web](https://github.com/midnightcodr/hapi-maxmind-web)
+    
+    Hapi.js plugin for MaxMind GeoIP2 Web Service
+
 *   [hapi-mongo-models](https://github.com/jedireza/hapi-mongo-models)
 
     MongoDB object models for hapi applications
