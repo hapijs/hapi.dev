@@ -90,6 +90,7 @@ export default {
   text-align: center;
   color: $black;
   font-size: 1.3em;
+  overflow-x: hidden;
 }
 
 .navbar {

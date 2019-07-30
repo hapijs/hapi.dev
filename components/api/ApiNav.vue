@@ -183,15 +183,14 @@ export default {
         }
       }
       for (let i = 0; i < code.length; i++) {
-        let heading = ""
         code[i].classList.add("api-nav-code");
         // for (let m of methods){
         //   if(m.contains(code[i])){
-        //     heading +=  m.innerHTML.toLowerCase().split(" ").join(".") + ".";
+        //     console.log(m.innerHTML, code[i].innerHTML)
+        //     code[i].innerHTML = code[i].innerHTML.replace(m.innerHTML.toLowerCase().split(" ").join(".") + ".", "");
         //   }
         // }
-        // console.log(heading);
-        // code[i].innerHTML = code[i].innerHTML.replace(/^([^.]+)./g, "");
+        // // code[i].innerHTML = code[i].innerHTML.replace(/^([^.]+)./g, "");
         code[i].innerHTML = code[i].innerHTML.replace(/.*(?=\.)./g, "");
         if (code[i - 1]) {
           let a = code[i].innerHTML.replace(/\(([^#/(/)]+)\)/g, "()");
