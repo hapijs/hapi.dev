@@ -269,7 +269,9 @@ export default {
   }
 
   .quote-container {
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   .quote-img-container {
@@ -279,6 +281,7 @@ export default {
     height: auto;
     justify-content: flex-start;
     align-items: flex-start;
+    padding-top: 5px;
   }
 
   .quote-img {
