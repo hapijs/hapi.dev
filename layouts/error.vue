@@ -119,8 +119,8 @@ export default {
 .logo {
   background: url("/img/hapi.svg") no-repeat 0 0;
   background-size: contain;
-  height: 112.5px !important;
-  width: 150px !important;
+  height: 112.5px;
+  width: 150px;
   margin: 0;
 }
 
