@@ -9,10 +9,12 @@
                 yet extendable code base with great test coverage 
                 to build off of.”</div>
           <div class="quote-container">
-            <div class="quote-author">- Johnny Megahan</div>
-            <div class="quote-company">Beats Music</div>
             <div class="quote-img-container">
               <img class="quote-img beats-logo" src="/img/beats-logo.svg" alt="beats-logo">
+            </div>
+            <div class="quote-text">
+              <div class="quote-author">- Johnny Megahan</div>
+              <div class="quote-company">Beats Music</div>
             </div>
           </div>
         </div>
@@ -73,15 +75,13 @@ export default {
 }
 
 .beats-logo {
-  width: 80px !important;
+  width: 62px !important;
+  margin: 0;
 }
 
 @media screen and (max-width: 900px) {
   .beats-logo {
-    position: relative;
-    top: 0;
-    left: 0 !important;
-    width: 50px !important; 
+    width: 46px !important; 
   }
   
 }

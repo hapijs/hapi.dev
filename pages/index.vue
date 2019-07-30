@@ -209,20 +209,22 @@ export default {
 }
 
 .quote-img-container {
-  position: absolute;
+  position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  top: 0px;
-  left: -170px;
-  width: 150px;
   height: 62px;
+  margin: 0 20px 0 0;
 }
 
 .quote-img {
-  position: absolute;
+  position: relative;
   right: 0;
-  width: 150px;;
+  width: 150px;
+}
+
+.quote-text {
+  margin: 0;
 }
 
 .quote {
@@ -231,6 +233,9 @@ export default {
 
 .quote-container {
   position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .quote-author {
@@ -258,6 +263,10 @@ export default {
     display: none;
   }
 
+  .quote-container {
+    align-items: center;
+  }
+
   .quote-img-container {
     position: relative;
     left: 0;
@@ -265,7 +274,6 @@ export default {
     height: auto;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-top: 10px;
   }
 
   .quote-img {
