@@ -17,7 +17,7 @@ _This tutorial is compatible with hapi v17 and newer_
 
 ## <a name="overview"></a> Overview
 
-Inevitably while building any web application, the need arises to server a simple file from disk. There is a hapi plugin called [inert](https://github.com/hapijs/inert) that adds this functionality to hapi through the use of additional handlers. 
+Inevitably while building any web application, the need arises to serve a simple file from disk. There is a hapi plugin called [inert](https://github.com/hapijs/inert) that adds this functionality to hapi through the use of additional handlers. 
 
 First you need to install and add `inert` as a dependency to your project:
 
