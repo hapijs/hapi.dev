@@ -125,7 +125,7 @@ export default {
   position: relative;
   margin: 10px;
   color: $orange;
-  font-size: 1.05em;
+  font-size: 1.10em;
   font-weight: 900;
   box-sizing: border-box;
   border-radius: 6px;

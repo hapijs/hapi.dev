@@ -148,7 +148,7 @@ export default {
   display: flex;
   flex-direction: column;
   font-weight: 700;
-  font-size: 1.1em;
+  font-size: 1em;
   flex-wrap: wrap;
   margin: 50px 0;
   line-height: 30px;
@@ -192,14 +192,14 @@ export default {
 
 .quote-wrapper {
   position: relative;
-  background: $dark-white;
-  padding: 20px 0;
+  background: #f3f3f3;
+  padding-bottom: 20px;
   text-align: left;
 }
 
 .quote-wrapper:before {
     content:"";
-    background-color:$dark-white;
+    background-color: #f3f3f3;
     position: absolute;
     height: 100%;
     top: 0;
