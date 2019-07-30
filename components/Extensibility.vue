@@ -6,7 +6,9 @@
                  extend, and compose brand-specific features on top of its rock-solid architecture.
                   It has become our secret weapon for powerful API services."</div>
           <div class="quote-container">
-            <img class="quote-img" src="/img/conde-nast-logo.png" alt="conde-nast-logo">
+            <div class="quote-img-container">
+              <img class="quote-img" src="/img/conde-nast-logo.png" alt="conde-nast-logo">
+            </div>
             <div class="quote-author">- Paul Fryzel</div>
             <div class="quote-company">Principal Engineer, Condé Nast</div>
           </div>

@@ -208,16 +208,25 @@ export default {
     z-index: -1;
 }
 
-.quote-img {
+.quote-img-container {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 0px;
   left: -170px;
   width: 150px;
+  height: 62px;
+}
+
+.quote-img {
+  position: absolute;
+  right: 0;
+  width: 150px;;
 }
 
 .quote {
   padding: 20px 0;
-  font-style: italic;
 }
 
 .quote-container {

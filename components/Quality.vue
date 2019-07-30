@@ -8,7 +8,9 @@
                 at a fast pace. The hapi ecosystem provides a consistent and secure building 
                 block to develop HTTP services at scale."</div>
           <div class="quote-container">
-            <img class="quote-img" src="/img/auth0-logo.svg" alt="auth0-logo">
+            <div class="quote-img-container">
+              <img class="quote-img" src="/img/auth0-logo.svg" alt="auth0-logo">
+            </div>
             <div class="quote-author">- Damian Schenkelman</div>
             <div class="quote-company">Director of Engineering, Auth0</div>
           </div>
