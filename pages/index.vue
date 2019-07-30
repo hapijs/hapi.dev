@@ -93,7 +93,7 @@ export default {
 }
 
 .navbar {
-  max-width: 1260px;
+  max-width: 1100px;
 }
 
 .index-header {
