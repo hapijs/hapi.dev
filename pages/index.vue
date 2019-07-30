@@ -195,6 +195,7 @@ export default {
   background: #f3f3f3;
   padding-bottom: 20px;
   text-align: left;
+  margin: 30px 0 80px 0;
 }
 
 .quote-wrapper:before {
@@ -234,7 +235,7 @@ export default {
 .quote-container {
   position: relative;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
 }
 
@@ -263,8 +264,14 @@ export default {
     display: none;
   }
 
+  .quote-wrapper {
+    margin: 0;
+  }
+
   .quote-container {
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   .quote-img-container {
@@ -274,6 +281,7 @@ export default {
     height: auto;
     justify-content: flex-start;
     align-items: flex-start;
+    padding-top: 5px;
   }
 
   .quote-img {
