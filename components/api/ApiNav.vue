@@ -176,18 +176,24 @@ export default {
       for (let i = 0; i < code.length; i++) {
         code[i].classList.add("api-nav-code");
         code[i].innerHTML = code[i].innerHTML.replace(/.*(?=\.)./g, "");
-        if(code[i - 1]){
+        if (code[i - 1]) {
           let a = code[i].innerHTML.replace(/\(([^#/(/)]+)\)/g, "()");
-          let b = code[i - 1].innerHTML.replace(/\(([^#/(/)]+)\)/g, "()")
-          if (a === b){
+          let b = code[i - 1].innerHTML.replace(/\(([^#/(/)]+)\)/g, "()");
+
+          if (a === b) {
             continue;
           }
         }
-        if(code[i + 1]){
+        if (code[i + 1]) {
           let a = code[i].innerHTML.replace(/\(([^#/(/)]+)\)/g, "()");
-          let b = code[i + 1].innerHTML.replace(/\(([^#/(/)]+)\)/g, "()").replace(/.*(?=\.)./g, "");
-          if(a !== b){
-            code[i].innerHTML = code[i].innerHTML.replace(/\(([^#/(/)]+)\)/g, "()");
+          let b = code[i + 1].innerHTML
+            .replace(/\(([^#/(/)]+)\)/g, "()")
+            .replace(/.*(?=\.)./g, "");
+          if (a !== b) {
+            code[i].innerHTML = code[i].innerHTML.replace(
+              /\(([^#/(/)]+)\)/g,
+              "()"
+            );
           }
         }
       }
