@@ -8,11 +8,11 @@
             extensible plugins to support the requirements of a modern service 
             - session management, security, connectivity, and testing."</div>
         <div class="quote-container">
+          <div class="quote-author">- Brendan Eich</div>
+          <div class="quote-company">Creator of JavaScript & CEO, Brave</div>
           <div class="quote-img-container">
             <img class="quote-img" src="/img/brave-logo.svg" alt="brave-logo">
           </div>
-          <div class="quote-author">- Brendan Eich</div>
-          <div class="quote-company">Creator of JavaScript & CEO, Brave</div>
         </div>
     </div>
     <h2 class="security-heading">Trusted for Simplicity, Security, and Satisfaction</h2>

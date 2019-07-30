@@ -148,7 +148,7 @@ export default {
   display: flex;
   flex-direction: column;
   font-weight: 700;
-  font-size: 1.05em;
+  font-size: 1.1em;
   flex-wrap: wrap;
   margin: 50px 0;
   line-height: 30px;
@@ -169,7 +169,7 @@ export default {
 }
 
 .index-divider {
-  padding: 0 15px;
+  padding: 0 20px;
 }
 
 .underline {
@@ -246,7 +246,8 @@ export default {
   }
 
   .index-about {
-    margin-bottom: 10px;
+    width: 100%;
+    font-size: .90rem;
   }
 
   .index-button {
@@ -257,15 +258,30 @@ export default {
     display: none;
   }
 
+  .quote-img-container {
+    position: relative;
+    left: 0;
+    width: auto;
+    height: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 10px;
+  }
+
   .quote-img {
     position: relative;
     top: 0;
     left: 0;
+    margin: 0;
     width: 100px
   }
 
   .bottom-page-container {
   padding-bottom: 20px;
+  }
+
+  .bottom-button {
+    margin: 10px 0;
   }
 
 }

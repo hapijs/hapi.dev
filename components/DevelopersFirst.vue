@@ -9,11 +9,11 @@
                 yet extendable code base with great test coverage 
                 to build off of.”</div>
           <div class="quote-container">
+            <div class="quote-author">- Johnny Megahan</div>
+            <div class="quote-company">Beats Music</div>
             <div class="quote-img-container">
               <img class="quote-img beats-logo" src="/img/beats-logo.svg" alt="beats-logo">
             </div>
-            <div class="quote-author">- Johnny Megahan</div>
-            <div class="quote-company">Beats Music</div>
           </div>
         </div>
       <h2 class="develop-heading">Relied on for Friction-Free Development and Intuitive Internals</h2>
