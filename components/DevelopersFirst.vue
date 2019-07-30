@@ -81,10 +81,7 @@ export default {
 
 @media screen and (max-width: 900px) {
   .beats-logo {
-    position: relative;
-    top: 0;
-    left: 0 !important;
-    width: 50px !important; 
+    width: 46px !important; 
   }
   
 }
