@@ -47,8 +47,8 @@ html {
 .logo {
   background: url("/img/hapi.svg") no-repeat 0 0;
   background-size: contain;
-  height: 150px;
-  width: 200px;
+  height: 150px !important;
+  width: 200px !important;
   margin: 0;
 }
 

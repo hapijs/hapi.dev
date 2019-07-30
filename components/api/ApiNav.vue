@@ -88,6 +88,7 @@ export default {
     setClasses() {
       //Add classes to API nav
       let lis = document.querySelectorAll(".api-nav-select-wrapper li");
+      let code = document.querySelectorAll(".api-nav-select-wrapper code");
       const height = document
         .querySelector(".api-nav-select-wrapper")
         .getBoundingClientRect().bottom;
@@ -172,11 +173,23 @@ export default {
           }
         });
       }
-      let code = document.querySelectorAll(".api-nav-select-wrapper code");
-      for (let c of code) {
-        c.classList.add("api-nav-code");
-        c.innerHTML = c.innerHTML.replace(/.*(?=\.)./g, "");
-
+      for (let i = 0; i < code.length; i++) {
+        code[i].classList.add("api-nav-code");
+        code[i].innerHTML = code[i].innerHTML.replace(/.*(?=\.)./g, "");
+        if(code[i - 1]){
+          let a = code[i].innerHTML.replace(/\(([^#/(/)]+)\)/g, "()");
+          let b = code[i - 1].innerHTML.replace(/\(([^#/(/)]+)\)/g, "()")
+          if (a === b){
+            continue;
+          }
+        }
+        if(code[i + 1]){
+          let a = code[i].innerHTML.replace(/\(([^#/(/)]+)\)/g, "()");
+          let b = code[i + 1].innerHTML.replace(/\(([^#/(/)]+)\)/g, "()").replace(/.*(?=\.)./g, "");
+          if(a !== b){
+            code[i].innerHTML = code[i].innerHTML.replace(/\(([^#/(/)]+)\)/g, "()");
+          }
+        }
       }
 
       //API nav scroll spy
