@@ -47,8 +47,8 @@ html {
 .logo {
   background: url("/img/hapi.svg") no-repeat 0 0;
   background-size: contain;
-  height: 112.5px;
-  width: 150px;
+  height: 150px !important;
+  width: 200px !important;
   margin: 0;
 }
 
@@ -59,8 +59,8 @@ html {
   }
 
   .logo {
-    height: 50px;
-    width: calc(100px * (2 / 3));
+    height: 50px !important;
+    width: calc(100px * (2 / 3)) !important;
     margin: 0 auto;
   }
 }

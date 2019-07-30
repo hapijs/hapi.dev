@@ -2,13 +2,18 @@
   <div class="page-container">
     <div class="security-upper-wrapper" id="security">
     <div class="quote-wrapper">
-        <img class="quote-img" src="/img/brave-logo.svg" alt="brave-logo">
         <div class="quote">"At Brave, developing web services with hapi allows
            us to focus on the many problems to be solved, not on the details of
             the tool being used. hapi provides the right set of core APIs and 
             extensible plugins to support the requirements of a modern service 
             - session management, security, connectivity, and testing."</div>
-        <div class="quote-author">- Brendan Eich, CEO, Brave & Creator of JavaScript</div>
+        <div class="quote-container">
+          <div class="quote-author">- Brendan Eich</div>
+          <div class="quote-company">Creator of JavaScript & CEO, Brave</div>
+          <div class="quote-img-container">
+            <img class="quote-img" src="/img/brave-logo.svg" alt="brave-logo">
+          </div>
+        </div>
     </div>
     <h2 class="security-heading">Trusted for Simplicity, Security, and Satisfaction</h2>
     <div class="security-content">

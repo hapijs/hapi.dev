@@ -2,14 +2,19 @@
   <div class="page-container">
     <div class="develop-upper-wrapper" id="developersfirst">
         <div class="quote-wrapper">
-            <img class="quote-img beats-logo" src="/img/beats-logo.svg" alt="beats-logo">
-            <div class="quote">“With a well-planned interface
-                 and selection of patterns, hapi has allowed 
-                 us to get started on business logic on day one 
-                 of each new project, knowing that we have a solid,
-                  yet extendable code base with great test coverage 
-                  to build off of.”</div>
-            <div class="quote-author">- Johnny Megahan, Beats Music</div>
+          <div class="quote">“With a well-planned interface
+                and selection of patterns, hapi has allowed 
+                us to get started on business logic on day one 
+                of each new project, knowing that we have a solid,
+                yet extendable code base with great test coverage 
+                to build off of.”</div>
+          <div class="quote-container">
+            <div class="quote-author">- Johnny Megahan</div>
+            <div class="quote-company">Beats Music</div>
+            <div class="quote-img-container">
+              <img class="quote-img beats-logo" src="/img/beats-logo.svg" alt="beats-logo">
+            </div>
+          </div>
         </div>
       <h2 class="develop-heading">Relied on for Friction-Free Development and Intuitive Internals</h2>
       <div class="develop-content">
@@ -69,7 +74,6 @@ export default {
 
 .beats-logo {
   width: 80px !important;
-  left: -100px !important;
 }
 
 @media screen and (max-width: 900px) {

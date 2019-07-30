@@ -24,25 +24,32 @@
         <span class="bold">proven</span> choice for
         <span class="bold">enterprise-grade</span> backend needs.
       </div>
-      <div class="index-about-header">Continue to learn more about:</div>
       <div class="index-about">
-        <a href="#security" class="index-about-link">Security</a>
-        <span class="index-divider">|</span>
-        <a href="#quality" class="index-about-link">Quality</a>
-        <span class="index-divider">|</span>
-        <a href="#developersfirst" class="index-about-link">Developers First</a>
-        <span class="index-divider">|</span>
-        <a href="#predictability" class="index-about-link">Predictability</a>
-        <span class="index-divider">|</span>
-        <a href="#extensibility" class="index-about-link">Extensibility</a>
-        <span class="index-divider">|</span>
-        <a href="/support" class="index-about-link">Support</a>
+        <div class="index-about-top">
+          <a href="#security" class="index-about-link">Security</a>
+          <span class="index-divider">|</span>
+          <a href="#quality" class="index-about-link">Quality</a>
+          <span class="index-divider">|</span>
+          <a href="#developersfirst" class="index-about-link">Developers First</a>
+        </div>
+        <div class="index-about-bottom">
+          <a href="#predictability" class="index-about-link">Predictability</a>
+          <span class="index-divider">|</span>
+          <a href="#extensibility" class="index-about-link">Extensibility</a>
+          <span class="index-divider">|</span>
+          <a href="/support" class="index-about-link">Support</a>
+        </div>
       </div>
       <Security />
       <Quality />
       <DevelopersFirst />
       <Predictability />
       <Extensibility />
+      <a
+        class="bottom-button"
+        href="/tutorials/?lang=en_US"
+        aria-label="get-started-button"
+      >Get started with hapi</a>
     </section>
   </main>
 </template>
@@ -86,7 +93,7 @@ export default {
 }
 
 .navbar {
-  max-width: 1260px;
+  max-width: 1100px;
 }
 
 .index-header {
@@ -112,7 +119,7 @@ export default {
   border: 4px solid rgba(0, 0, 0, 0);
 }
 
-.index-button:hover {
+.index-button:hover, .bottom-button:hover {
   border: 4px solid $orange;
   background: #fff;
   color: $orange;
@@ -120,16 +127,36 @@ export default {
   transition: all 0.3s ease 0s;
 }
 
+.bottom-button {
+  border-radius: 10px;
+  border: none;
+  background: $orange;
+  padding: 5px 15px;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  border: 4px solid rgba(0, 0, 0, 0);
+  margin: -30px 0 50px 0;
+}
+
 .index-about-header {
   margin: 40px 0 20px 0;
 }
 
 .index-about {
+  display: flex;
+  flex-direction: column;
   font-weight: 700;
-  font-size: 0.85em;
+  font-size: 1em;
   flex-wrap: wrap;
-  margin-bottom: 50px;
+  margin: 50px 0;
   line-height: 30px;
+  width: 80%;
+}
+
+.index-about-top, .index-about-bottom {
+  display: flex;
 }
 
 .index-about-link:hover {
@@ -137,16 +164,12 @@ export default {
   text-decoration: underline;
 }
 
-.index-about:nth-child(-n + 5) {
-  padding-right: 10px;
-}
-
 .index-about-link {
   cursor: pointer;
 }
 
 .index-divider {
-  padding: 0 5px;
+  padding: 0 20px;
 }
 
 .underline {
@@ -158,7 +181,7 @@ export default {
 }
 
 .page-container {
-  border-top: 2px solid $dark-white;
+  position: relative;
   padding-bottom: 20px;
   text-align: left;
 }
@@ -169,25 +192,48 @@ export default {
 
 .quote-wrapper {
   position: relative;
-  border-bottom: 2px solid $dark-white;
-  padding: 20px 0;
+  background: #f3f3f3;
+  padding-bottom: 20px;
   text-align: left;
+}
+
+.quote-wrapper:before {
+    content:"";
+    background-color: #f3f3f3;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 5000px;
+    left: -2500px;
+    z-index: -1;
+}
+
+.quote-img-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0px;
+  left: -170px;
+  width: 150px;
+  height: 62px;
 }
 
 .quote-img {
   position: absolute;
-  top: 40px;
-  left: -170px;
-  width: 150px;
+  right: 0;
+  width: 150px;;
 }
 
 .quote {
   padding: 20px 0;
-  font-style: italic;
+}
+
+.quote-container {
+  position: relative;
 }
 
 .quote-author {
-  padding-bottom: 20px;
   font-weight: 700;
 }
 
@@ -200,7 +246,8 @@ export default {
   }
 
   .index-about {
-    margin-bottom: 10px;
+    width: 100%;
+    font-size: .90rem;
   }
 
   .index-button {
@@ -211,15 +258,30 @@ export default {
     display: none;
   }
 
+  .quote-img-container {
+    position: relative;
+    left: 0;
+    width: auto;
+    height: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 10px;
+  }
+
   .quote-img {
     position: relative;
     top: 0;
     left: 0;
+    margin: 0;
     width: 100px
   }
 
   .bottom-page-container {
   padding-bottom: 20px;
+  }
+
+  .bottom-button {
+    margin: 10px 0;
   }
 
 }
