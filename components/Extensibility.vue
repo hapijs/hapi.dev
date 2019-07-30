@@ -46,7 +46,7 @@
     <ul class="extensibility-list">
       <li class="content-list">
         <span class="bold">Framework plugins</span> — a
-        <span class="bold">truly composable</span> way of breaking your application into logic components
+        <span class="bold">truly composable</span> way of breaking your application into logical components
         with a
         <span
           class="bold"
