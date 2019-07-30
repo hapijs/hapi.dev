@@ -2,12 +2,15 @@
   <div class="page-container">
     <div class="predict-upper-wrapper" id="predictability">
         <div class="quote-wrapper">
+          <div class="quote">"hapi allows us to develop loosely coupled capabilities
+                in a distributed development environment. It is easy to test and has 
+                excellent documentation. hapi is the enterprise grade foundation that 
+                drives our next generation web applications."</div>
+          <div class="quote-container">
             <img class="quote-img" src="/img/vrbo-logo.png" alt="vrbo-logo">
-            <div class="quote">"hapi allows us to develop loosely coupled capabilities
-                 in a distributed development environment. It is easy to test and has 
-                 excellent documentation. hapi is the enterprise grade foundation that 
-                 drives our next generation web applications."</div>
-            <div class="quote-author">- Patrick Ritchie, Director of Engineering, Vrbo</div>
+            <div class="quote-author">- Patrick Ritchie</div>
+            <div class="quote-company">Director of Engineering, Vrbo</div>
+          </div>
         </div>
       <h2 class="predict-heading">Keeps Large Distributed Teams on the Same Page</h2>
       <div class="predict-content">

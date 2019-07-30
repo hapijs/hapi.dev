@@ -2,11 +2,14 @@
   <div class="page-container bottom-page-container">
     <div class="extensibility-upper-wrapper" id="extensibility">
         <div class="quote-wrapper">
-            <img class="quote-img" src="/img/conde-nast-logo.png" alt="conde-nast-logo">
             <div class="quote">"hapi's extensive plugin system allows us to quickly build,
                  extend, and compose brand-specific features on top of its rock-solid architecture.
                   It has become our secret weapon for powerful API services."</div>
-            <div class="quote-author">- Paul Fryzel, Principal Engineer, Condé Nast</div>
+          <div class="quote-container">
+            <img class="quote-img" src="/img/conde-nast-logo.png" alt="conde-nast-logo">
+            <div class="quote-author">- Paul Fryzel</div>
+            <div class="quote-company">Principal Engineer, Condé Nast</div>
+          </div>
         </div>
       <h2
         class="extensibility-heading"
@@ -21,6 +24,15 @@
         <span class="bold">authorization</span>, and
         <span class="bold">validation</span>.
       </div>
+    </div>
+    <h3 class="extensibility-heading">Middleware is just another name for bad design.</h3>
+    <div class="extensibility-content">
+      hapi doesn’t use middleware, because it’s a bad pattern. Instead of a generic, one-size-fits-all
+      approach taken by almost every other framework, hapi provides a rich, laser-focused extensibility
+      model that puts
+      <span
+        class="bold"
+      >security and predictability first</span>.
     </div>
     <h3 class="extensibility-heading">Make it Yours.</h3>
     <div class="extensibility-content">
@@ -54,21 +66,11 @@
       two extensions or plugins. Everything is validated in load-time so you can easily identify conflicts
       during development.
     </div>
-    <h3 class="extensibility-heading">Middleware is just another name for bad design.</h3>
-    <div class="extensibility-content">
-      hapi doesn’t use middleware, because it’s a bad pattern. Instead of a generic, one-size-fits-all
-      approach taken by almost every other framework, hapi provides a rich, laser-focused extensibility
-      model that puts
-      <span
-        class="bold"
-      >security and predictability first</span>.
-    </div>
   </div>
 </template>
 
 <script>
-export default {
-};
+export default {};
 </script>
 
 <style lang="scss">

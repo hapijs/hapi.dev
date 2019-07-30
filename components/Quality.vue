@@ -2,13 +2,16 @@
   <div class="page-container">
     <div class="quality-upper-wrapper" id="quality">
         <div class="quote-wrapper">
+          <div class="quote">"We love hapi’s clear structure. In particular, its plugin 
+              system and request lifecycle - they makes it easy for us to separate cross-cutting
+                concerns from our API business logic. It allows us to add features and fix bugs 
+                at a fast pace. The hapi ecosystem provides a consistent and secure building 
+                block to develop HTTP services at scale."</div>
+          <div class="quote-container">
             <img class="quote-img" src="/img/auth0-logo.svg" alt="auth0-logo">
-            <div class="quote">"We love hapi’s clear structure. In particular, its plugin 
-                system and request lifecycle - they makes it easy for us to separate cross-cutting
-                 concerns from our API business logic. It allows us to add features and fix bugs 
-                 at a fast pace. The hapi ecosystem provides a consistent and secure building 
-                 block to develop HTTP services at scale."</div>
-            <div class="quote-author">- Damian Schenkelman, Director of Engineering, Auth0</div>
+            <div class="quote-author">- Damian Schenkelman</div>
+            <div class="quote-company">Director of Engineering, Auth0</div>
+          </div>
         </div>
       <h2 class="quality-heading">Recognized for Industry Leading Quality Standards</h2>
       <div class="quality-content">
