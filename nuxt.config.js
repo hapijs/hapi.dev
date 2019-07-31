@@ -84,7 +84,7 @@ module.exports = {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/markdownit', '@nuxtjs/axios', '@nuxtjs/dotenv'],
+  modules: ['@nuxtjs/markdownit', '@nuxtjs/axios', '@nuxtjs/dotenv', '@nuxtjs/google-analytics'],
 
   // [optional] markdownit options
   // See https://github.com/markdown-it/markdown-it
@@ -93,6 +93,10 @@ module.exports = {
     html: true,
     breaks: true,
     injected: true
+  },
+
+  googleAnalytics: {
+    id: 'UA-144917045-1'
   },
 
   env: {
