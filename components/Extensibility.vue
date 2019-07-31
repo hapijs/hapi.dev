@@ -41,7 +41,7 @@
     <h3 class="extensibility-heading">Make it Yours.</h3>
     <div class="extensibility-content">
       hapi has always led the way with tools to make the server yours. It was the first to introduce these
-      (often imitated but poorly execute) features:
+      (often imitated but poorly executed) features:
     </div>
     <ul class="extensibility-list">
       <li class="content-list">
