@@ -37,7 +37,6 @@ html, body {
    min-height: calc(100vh - 116px);
    font-family: 'Lato', sans-serif;
    color: $black;
-   overflow-x: hidden;
 }
 
 .container {
@@ -78,6 +77,7 @@ html, body {
 
    html, body {
       font-size: 14px;
+      overflow-x: hidden;
    }
 
    .container {
