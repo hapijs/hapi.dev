@@ -270,7 +270,7 @@ app.use(getDate);
 hapi:
 ```js
 server.register({
-    plugin: 'getDate'
+    plugin: getDate
 })
 ```
 You can all addition options for you plugin by setting the `options` property on `server.register()`.
@@ -293,7 +293,7 @@ module.exports = function (options) {
 hapi:
 ```js
 server.register({
-    plugin: 'getDate',
+    plugin: getDate,
     options: {
         name: 'Tom'
     }
