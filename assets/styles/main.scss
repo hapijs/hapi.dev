@@ -78,6 +78,7 @@ html, body {
    html, body {
       font-size: 14px;
       overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
    }
 
    .container {
