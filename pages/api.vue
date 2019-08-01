@@ -79,6 +79,7 @@ export default {
           let active = document.querySelector(
             ".api-nav-select-wrapper .api-active"
           );
+          console.log(active);
           const activePosition = links[active.hash];
           for (let key in uls) {
             if (activePosition > uls[key].top && activePosition < uls[key].bottom) {
