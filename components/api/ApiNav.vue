@@ -175,11 +175,11 @@ export default {
       }
       let plus = document.querySelectorAll(".api-nav-plus");
       let methods = [];
-      for (let p of plus){
-        if(p.children[0]){
-          methods.push(p.children[0])
+      for (let p of plus) {
+        if (p.children[0]) {
+          methods.push(p.children[0]);
         } else {
-          methods.push(p)
+          methods.push(p);
         }
       }
       for (let i = 0; i < code.length; i++) {
@@ -279,8 +279,25 @@ export default {
       };
     }
   },
-  mounted() {
-    this.setClasses();
+  async mounted() {
+    await this.setClasses();
+    if (this.$route.hash) {
+      let aClass = this.$route.hash;
+      let active = document.querySelector(`a[href*='${aClass}']`);
+      active.classList.add("api-active");
+      const activePosition = this.links[active.hash];
+      for (let key in this.uls) {
+        if (activePosition > this.uls[key].top && activePosition < this.uls[key].bottom) {
+          this.uls[key].name.classList.add("nav-display");
+          this.uls[key].name.parentElement.children[0].classList.remove(
+            "api-nav-plus"
+          );
+          this.uls[key].name.parentElement.children[0].classList.add(
+            "api-nav-minus"
+          );
+        }
+      }
+    }
   }
 };
 </script>
