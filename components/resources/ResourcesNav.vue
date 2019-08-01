@@ -6,16 +6,16 @@
         <div class="side-nav-select-wrapper">
           <ul class="side-nav-select-list">
             <li class="resources-header-link">
-              <nuxt-link
+              <a
                 :class="$props.page === 'changelog' ? 'side-nav-select-link resources-active' : 'side-nav-select-link'"
-                to="/resources/changelog"
-              >Changelog</nuxt-link>
+                href="/resources/changelog"
+              >Changelog</a>
             </li>
             <li class="resources-header-link">
-              <nuxt-link
+              <a
                 :class="$props.page === 'styleguide' ? 'side-nav-select-link resources-active' : 'side-nav-select-link'"
-                to="/resources/styleguide"
-              >Style Guide</nuxt-link>
+                href="/resources/styleguide"
+              >Style Guide</a>
             </li>
             <ul class="resources-ul">
               <li class="resources-header-link">
