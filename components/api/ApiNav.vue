@@ -176,11 +176,6 @@ export default {
       let plus = document.querySelectorAll(".api-nav-plus");
       let methods = [];
       for (let p of plus) {
-        // if (p.children[0]) {
-        //   methods.push(p.children[0]);
-        // } else {
-        //   methods.push(p);
-        // }
         methods.push(p);
       }
       for (let i = code.length - 1; i >= 0; i--) {
@@ -205,32 +200,39 @@ export default {
             if (code[i].innerHTML.replace(match, "").length > matchHeader) {
               matchHeader = code[i].innerHTML
                 .replace(match, "")
-                .replace("await", "");
+                .replace("await ", "");
             }
           }
         }
         if (matchHeader) {
           code[i].innerHTML = matchHeader;
         }
-        if (code[i - 1]) {
-          let a = code[i].innerHTML.replace(/\(([^#/(/)]+)\)/g, "()");
-          let b = code[i - 1].innerHTML.replace(/\(([^#/(/)]+)\)/g, "()");
+        if (code[i + 1]) {
+          let a = code[i].innerHTML.replace(/\(([^#/(/)]+)\)/g, "()").replace("await ", "");
+          let b = code[i + 1].innerHTML.replace(/\(([^#/(/)]+)\)/g, "()").replace("await ", "");
 
           if (a === b) {
             continue;
           }
         }
-        if (code[i + 1]) {
+        if (code[i - 1]) {
           let a = code[i].innerHTML.replace(/\(([^#/(/)]+)\)/g, "()");
-          let b = code[i + 1].innerHTML
+          let b = code[i - 1].innerHTML
             .replace(/\(([^#/(/)]+)\)/g, "()")
-            .replace(/.*(?=\.)./g, "");
+            .replace(match, "");
           if (a !== b) {
+            console.log(a, b);
             code[i].innerHTML = code[i].innerHTML.replace(
               /\(([^#/(/)]+)\)/g,
               "()"
             );
           }
+        }
+        if (!code[i - 1]) {
+          code[i].innerHTML = code[i].innerHTML.replace(
+            /\(([^#/(/)]+)\)/g,
+            "()"
+          );
         }
       }
 
