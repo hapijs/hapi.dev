@@ -186,7 +186,7 @@ export default {
       for (let i = code.length - 1; i >= 0; i--) {
         code[i].classList.add("api-nav-code");
         let matchHeader = "";
-        let match = ""
+        let match = "";
         for (let m = methods.length - 1; m >= 0; m--) {
           if (methods[m].innerHTML.includes("Response")) {
             match = "response.";
@@ -203,17 +203,15 @@ export default {
             code[i].innerHTML.includes(match)
           ) {
             if (code[i].innerHTML.replace(match, "").length > matchHeader) {
-              matchHeader = code[i].innerHTML.replace(match, "").replace("await", "");
+              matchHeader = code[i].innerHTML
+                .replace(match, "")
+                .replace("await", "");
             }
           }
         }
         if (matchHeader) {
           code[i].innerHTML = matchHeader;
         }
-        // if (code[i].innerHTML.includes(".")) {
-        //   code[i].innerHTML = code[i].innerHTML.replace(/^([^.]+)./g, "");
-        // }
-        // code[i].innerHTML = code[i].innerHTML.replace(/.*(?=\.)./g, "");
         if (code[i - 1]) {
           let a = code[i].innerHTML.replace(/\(([^#/(/)]+)\)/g, "()");
           let b = code[i - 1].innerHTML.replace(/\(([^#/(/)]+)\)/g, "()");
