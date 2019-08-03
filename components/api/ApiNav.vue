@@ -176,41 +176,63 @@ export default {
       let plus = document.querySelectorAll(".api-nav-plus");
       let methods = [];
       for (let p of plus) {
-        if (p.children[0]) {
-          methods.push(p.children[0]);
-        } else {
-          methods.push(p);
-        }
+        methods.push(p);
       }
-      for (let i = 0; i < code.length; i++) {
+      for (let i = code.length - 1; i >= 0; i--) {
         code[i].classList.add("api-nav-code");
-        // for (let m of methods){
-        //   if(m.contains(code[i])){
-        //     console.log(m.innerHTML, code[i].innerHTML)
-        //     code[i].innerHTML = code[i].innerHTML.replace(m.innerHTML.toLowerCase().split(" ").join(".") + ".", "");
-        //   }
-        // }
-        // // code[i].innerHTML = code[i].innerHTML.replace(/^([^.]+)./g, "");
-        code[i].innerHTML = code[i].innerHTML.replace(/.*(?=\.)./g, "");
-        if (code[i - 1]) {
-          let a = code[i].innerHTML.replace(/\(([^#/(/)]+)\)/g, "()");
-          let b = code[i - 1].innerHTML.replace(/\(([^#/(/)]+)\)/g, "()");
+        let matchHeader = "";
+        let match = "";
+        for (let m = methods.length - 1; m >= 0; m--) {
+          if (methods[m].innerHTML.includes("Response")) {
+            match = "response.";
+          } else {
+            match =
+              methods[m].innerHTML
+                .replace(/<[^>]*>/g, "")
+                .toLowerCase()
+                .split(" ")
+                .join(".") + ".";
+          }
+          if (
+            methods[m].parentElement.children[1].contains(code[i]) &&
+            code[i].innerHTML.includes(match)
+          ) {
+            if (code[i].innerHTML.replace(match, "").length > matchHeader) {
+              matchHeader = code[i].innerHTML
+                .replace(match, "")
+                .replace("await ", "");
+            }
+          }
+        }
+        if (matchHeader) {
+          code[i].innerHTML = matchHeader;
+        }
+        if (code[i + 1]) {
+          let a = code[i].innerHTML.replace(/\(([^#/(/)]+)\)/g, "()").replace("await ", "");
+          let b = code[i + 1].innerHTML.replace(/\(([^#/(/)]+)\)/g, "()").replace("await ", "");
 
           if (a === b) {
             continue;
           }
         }
-        if (code[i + 1]) {
+        if (code[i - 1]) {
           let a = code[i].innerHTML.replace(/\(([^#/(/)]+)\)/g, "()");
-          let b = code[i + 1].innerHTML
+          let b = code[i - 1].innerHTML
             .replace(/\(([^#/(/)]+)\)/g, "()")
-            .replace(/.*(?=\.)./g, "");
+            .replace(match, "");
           if (a !== b) {
+            console.log(a, b);
             code[i].innerHTML = code[i].innerHTML.replace(
               /\(([^#/(/)]+)\)/g,
               "()"
             );
           }
+        }
+        if (!code[i - 1]) {
+          code[i].innerHTML = code[i].innerHTML.replace(
+            /\(([^#/(/)]+)\)/g,
+            "()"
+          );
         }
       }
 
@@ -287,7 +309,10 @@ export default {
       active.classList.add("api-active");
       const activePosition = this.links[active.hash];
       for (let key in this.uls) {
-        if (activePosition > this.uls[key].top && activePosition < this.uls[key].bottom) {
+        if (
+          activePosition > this.uls[key].top &&
+          activePosition < this.uls[key].bottom
+        ) {
           this.uls[key].name.classList.add("nav-display");
           this.uls[key].name.parentElement.children[0].classList.remove(
             "api-nav-plus"
