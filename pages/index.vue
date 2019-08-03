@@ -253,7 +253,7 @@ export default {
 
   .index-about {
     width: 100%;
-    font-size: .90rem;
+    font-size: 1rem;
   }
 
   .index-button {
@@ -300,5 +300,12 @@ export default {
     margin: 10px 0;
   }
 
+}
+
+@media screen and (max-width: 330px) {
+  .index-about {
+    width: 100%;
+    font-size: .9rem;
+  }
 }
 </style>
