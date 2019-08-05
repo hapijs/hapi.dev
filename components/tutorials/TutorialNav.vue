@@ -16,19 +16,19 @@
         <div class="side-nav-select-wrapper">
           <ul class="side-nav-select-list">
             <li
-              :class="$route.params.tutorial === 'gettingStarted' || !$route.params.tutorial ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+              :class="$route.params.tutorial === 'gettingstarted' || !$route.params.tutorial ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
             >
               <a
                 ref="gettingStarted"
-                :href="'/tutorials/gettingStarted/?lang=' + getLanguage"
+                :href="'/tutorials/gettingstarted/?lang=' + getLanguage"
               >Getting Started</a>
             </li>
             <li
-              :class="$route.params.tutorial === 'expressToHapi' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+              :class="$route.params.tutorial === 'expresstohapi' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
             >
               <a
-                ref="expressToHapi"
-                :href="'/tutorials/expressToHapi/?lang=' + getLanguage"
+                ref="expresstohapi"
+                :href="'/tutorials/expresstohapi/?lang=' + getLanguage"
               >Express Migration</a>
             </li>
             <li
@@ -62,19 +62,19 @@
               <a ref="routing" :href="'/tutorials/routing/?lang=' + getLanguage">Routing</a>
             </li>
             <li
-              :class="$route.params.tutorial === 'serverMethods' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+              :class="$route.params.tutorial === 'servermethods' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
             >
               <a
-                ref="serverMethods"
-                :href="'/tutorials/serverMethods/?lang=' + getLanguage"
+                ref="servermethods"
+                :href="'/tutorials/servermethods/?lang=' + getLanguage"
               >Server Methods</a>
             </li>
             <li
-              :class="$route.params.tutorial === 'servingFiles' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+              :class="$route.params.tutorial === 'servingfiles' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
             >
               <a
-                ref="servingFiles"
-                :href="'/tutorials/servingFiles/?lang=' + getLanguage"
+                ref="servingfiles"
+                :href="'/tutorials/servingfiles/?lang=' + getLanguage"
               >Serving Static Files</a>
             </li>
             <li
