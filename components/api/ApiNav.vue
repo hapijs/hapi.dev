@@ -359,7 +359,7 @@ export default {
   position: relative;
   width: 100%;
   height: auto;
-  min-height: calc(100vh - 96px);
+  min-height: calc(100vh - 93px);
 }
 
 .api-nav-inner-wrapper {
@@ -368,6 +368,7 @@ export default {
   flex-direction: column;
   align-items: flex-start;
   margin: 0;
+  overflow-x: hidden;
 }
 
 .api-nav-title-wrapper {

@@ -137,7 +137,7 @@ export default {
   color: #fff;
   cursor: pointer;
   border: 4px solid rgba(0, 0, 0, 0);
-  margin: -30px 0 50px 0;
+  margin: 0 0 50px 0;
 }
 
 .index-about-header {
@@ -187,7 +187,7 @@ export default {
 }
 
 .bottom-page-container {
-  padding-bottom: 80px;
+  padding-bottom: 50px;
 }
 
 .quote-wrapper {
