@@ -58,7 +58,6 @@
       </li>
       <li class="content-list">
         <span class="bold">Server methods</span> — reusable, cacheable functions accessible throughout the application.
-        every single dependency.
       </li>
       <li class="content-list">
         <span class="bold">API Decorations</span> — user-defined API that lives, safely, side-by-side the official API.

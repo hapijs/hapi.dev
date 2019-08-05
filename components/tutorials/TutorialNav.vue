@@ -19,7 +19,7 @@
               :class="$route.params.tutorial === 'gettingstarted' || !$route.params.tutorial ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
             >
               <a
-                ref="gettingStarted"
+                ref="gettingstarted"
                 :href="'/tutorials/gettingstarted/?lang=' + getLanguage"
               >Getting Started</a>
             </li>
