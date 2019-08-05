@@ -103,7 +103,7 @@ export default {
   display: inline-block;
   left: -60px;
   padding: 2px 30px 2px 60px !important;
-  width: 375px !important;
+  width: 392px !important;
   overflow-wrap: break-word;
 }
 
