@@ -79,11 +79,9 @@ export default {
           let active = document.querySelector(
             ".api-nav-select-wrapper .api-active"
           );
-          console.log(active);
           const activePosition = links[active.hash];
           for (let key in uls) {
             if (activePosition > uls[key].top && activePosition < uls[key].bottom) {
-              console.log(uls[key].name)
               uls[key].name.classList.add("nav-display");
               uls[key].name.parentElement.children[0].classList.remove("api-nav-plus");
               uls[key].name.parentElement.children[0].classList.add("api-nav-minus");
