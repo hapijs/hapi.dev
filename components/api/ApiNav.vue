@@ -221,7 +221,6 @@ export default {
             .replace(/\(([^#/(/)]+)\)/g, "()")
             .replace(match, "");
           if (a !== b) {
-            console.log(a, b);
             code[i].innerHTML = code[i].innerHTML.replace(
               /\(([^#/(/)]+)\)/g,
               "()"
@@ -304,6 +303,8 @@ export default {
   async mounted() {
     await this.setClasses();
     if (this.$route.hash) {
+      document.querySelector(".api-nav-select-wrapper").getBoundingClientRect()
+      let wrapperHeight = document.querySelector(".api-nav-wrapper").getBoundingClientRect().height
       let aClass = this.$route.hash;
       let active = document.querySelector(`a[href*='${aClass}']`);
       active.classList.add("api-active");
@@ -322,6 +323,7 @@ export default {
           );
         }
       }
+      active.scrollIntoView(false);
     }
   }
 };
