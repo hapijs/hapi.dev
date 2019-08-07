@@ -20,7 +20,8 @@
       >Get started with hapi</a>
       <div>
         Originally developed to handle Walmart’s
-        <span class="bold">Black Friday scale</span>, <br class="break">hapi continues to be the
+        <span class="bold">Black Friday scale</span>,
+        <br class="break" />hapi continues to be the
         <span class="bold">proven</span> choice for
         <span class="bold">enterprise-grade</span> backend needs.
       </div>
@@ -119,7 +120,8 @@ export default {
   border: 4px solid rgba(0, 0, 0, 0);
 }
 
-.index-button:hover, .bottom-button:hover {
+.index-button:hover,
+.bottom-button:hover {
   border: 4px solid $orange;
   background: #fff;
   color: $orange;
@@ -155,8 +157,13 @@ export default {
   width: 80%;
 }
 
-.index-about-top, .index-about-bottom {
+.index-about-top,
+.index-about-bottom {
   display: flex;
+}
+
+.index-about-top {
+  margin-bottom: 10px;
 }
 
 .index-about-link:hover {
@@ -199,14 +206,14 @@ export default {
 }
 
 .quote-wrapper:before {
-    content:"";
-    background-color: #f3f3f3;
-    position: absolute;
-    height: 100%;
-    top: 0;
-    width: 5000px;
-    left: -2500px;
-    z-index: -1;
+  content: "";
+  background-color: #f3f3f3;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  width: 5000px;
+  left: -2500px;
+  z-index: -1;
 }
 
 .quote-img-container {
@@ -243,7 +250,6 @@ export default {
   font-weight: 700;
 }
 
-
 @media screen and (max-width: 900px) {
   .home-container {
     margin-top: 70px;
@@ -254,6 +260,10 @@ export default {
   .index-about {
     width: 100%;
     font-size: 1rem;
+  }
+
+  .index-about-top {
+    margin-bottom: 5px;
   }
 
   .index-button {
@@ -289,23 +299,22 @@ export default {
     top: 0;
     left: 0;
     margin: 0;
-    width: 100px
+    width: 100px;
   }
 
   .bottom-page-container {
-  padding-bottom: 20px;
+    padding-bottom: 20px;
   }
 
   .bottom-button {
     margin: 10px 0;
   }
-
 }
 
 @media screen and (max-width: 330px) {
   .index-about {
     width: 100%;
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 }
 </style>
