@@ -84,7 +84,7 @@ module.exports = {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/markdownit', '@nuxtjs/axios', '@nuxtjs/dotenv', '@nuxtjs/google-analytics'],
+  modules: ['@nuxtjs/markdownit', '@nuxtjs/axios', '@nuxtjs/dotenv', '@nuxtjs/google-analytics', '@nuxtjs/pwa'],
 
   // [optional] markdownit options
   // See https://github.com/markdown-it/markdown-it
@@ -101,6 +101,13 @@ module.exports = {
 
   env: {
     GITHUB_TOKEN: process.env.GITHUB_TOKEN
+  },
+
+  manifest: {
+    name: 'hapi.dev',
+    short_name: 'hapi',
+    background_color: '#ffffff',
+    theme_color: '#ed7d31'
   },
 
   /*
