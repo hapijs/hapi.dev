@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <FamilyNav :moduleAPI="moduleAPI" :modules="modules" :version="version"/>
+    <FamilyNav :moduleAPI="moduleAPI" :modules="modules" :version="version" />
     <div class="tutorial-markdown-window">
-      <HTML :display="getDisplay"/>
+      <HTML :display="getDisplay" />
     </div>
   </div>
 </template>
@@ -23,7 +23,8 @@ export default {
   },
   data() {
     return {
-      display: ""
+      display: "",
+      modules: this.modules
     };
   },
   methods: {
@@ -44,6 +45,19 @@ export default {
         }
       }
       offsets = [...new Set(offsets)];
+
+      let currentElement = document.querySelector(".markdown-wrapper");
+      const modules = [
+        "bell",
+        "boom",
+        "good",
+        "hoek",
+        "iron",
+        "joi",
+        "shot",
+        "topo",
+        "yar"
+      ];
 
       //Add active class to elements on scroll
       window.onscroll = function() {
@@ -70,6 +84,15 @@ export default {
             }
           }
         }
+        // if (
+        //   currentElement.offsetHeight ===
+        //   location + window.innerHeight - 96
+        // ) {
+        //   let index = modules.indexOf(this.$nuxt.$route.params.family);
+        //   this.$nuxt.$router.push({
+        //     path: "/family/" + modules[index + 1]
+        //   });
+        // }
       };
     }
   },
@@ -98,14 +121,22 @@ export default {
     ];
     let moduleAPI = {};
     let version = "";
+    let res;
 
     try {
-      const res = await $axios.$get(
-        "https://api.github.com/repos/hapijs/" +
-          params.family +
-          "/contents/API.md",
-        options
-      );
+      if (params.family !== "joi") {
+        res = await $axios.$get(
+          "https://api.github.com/repos/hapijs/" +
+            params.family +
+            "/contents/API.md",
+          options
+        );
+      } else {
+        res = await $axios.$get(
+          "https://api.github.com/repos/hapijs/joi/contents/API.md?ref=v15",
+          options
+        );
+      }
       let raw = await res;
       let rawString = await raw.toString();
 
@@ -115,7 +146,7 @@ export default {
         .replace(/.\s\[(?:.+[\n\r])+/, "");
       let finalMenu = await rawString.match(/.\s\[(?:.+[\n\r])+/).pop();
       finalMenu = await finalMenu.replace(/Boom\./g, "");
-      finalMenu = await finalMenu.replace(/\(([^#\*]+)\)/g, "()")
+      finalMenu = await finalMenu.replace(/\(([^#\*]+)\)/g, "()");
       const apiHTML = await $axios.$post(
         "https://api.github.com/markdown",
         {
@@ -138,11 +169,17 @@ export default {
       console.log(err.message);
     }
     try {
-      const r = await $axios.$get(
-        "https://api.github.com/repos/hapijs/" + params.family +"/contents/package.json",
-        options
-      );
-      version = await r.version;
+      if (params.family !== "joi") {
+        const r = await $axios.$get(
+          "https://api.github.com/repos/hapijs/" +
+            params.family +
+            "/contents/package.json",
+          options
+        );
+        version = await r.version;
+      } else {
+        version = "15.1.0";
+      }
     } catch (err) {
       console.log(err);
     }
