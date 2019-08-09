@@ -14,7 +14,7 @@
       :versions="versions"
     />
     <div class="tutorial-markdown-window">
-      <HTML :display="htmlDisplay"/>
+      <HTML :display="htmlDisplay" />
     </div>
   </div>
 </template>
@@ -47,23 +47,23 @@ export default {
   methods: {
     async onChildChange(value) {
       this.$data.version = await value;
+      await this.$router.push({ path: this.$route.path, query: { v: value } });
       this.$data.htmlDisplay = await this.apis[value];
       this.$data.menu = await this.menus[value];
       this.$data.search = "";
       document
-          .querySelector(".api-search-results")
-          .classList.remove("nav-display");
+        .querySelector(".api-search-results")
+        .classList.remove("nav-display");
       document
-          .querySelector(".api-search-error")
-          .classList.remove("nav-display");
+        .querySelector(".api-search-error")
+        .classList.remove("nav-display");
       window.scrollTo(0, 0);
       const checkIfPageLoaded = setInterval(() => {
-        if (this.$data.version = value) {
+        if ((this.$data.version = value)) {
           this.$children[0].setClasses();
           clearInterval(checkIfPageLoaded);
         }
       }, 25);
-      
     },
     onChildInput(value) {
       this.$data.search = value;
@@ -81,15 +81,35 @@ export default {
           );
           const activePosition = links[active.hash];
           for (let key in uls) {
-            if (activePosition > uls[key].top && activePosition < uls[key].bottom) {
+            if (
+              activePosition > uls[key].top &&
+              activePosition < uls[key].bottom
+            ) {
               uls[key].name.classList.add("nav-display");
-              uls[key].name.parentElement.children[0].classList.remove("api-nav-plus");
-              uls[key].name.parentElement.children[0].classList.add("api-nav-minus");
+              uls[key].name.parentElement.children[0].classList.remove(
+                "api-nav-plus"
+              );
+              uls[key].name.parentElement.children[0].classList.add(
+                "api-nav-minus"
+              );
             }
           }
           clearInterval(checkIfScrollToIsFinished);
         }
       }, 25);
+    },
+    goToAnchor() {
+      let hash = document.location.hash;
+      if (hash != "") {
+        setTimeout(function() {
+          if (location.hash) {
+            window.scrollTo(0, 0);
+            window.location.href = hash;
+          }
+        }, 1);
+      } else {
+        return false;
+      }
     },
     onChildSearch(uls, links) {
       let headlines = [];
@@ -207,10 +227,21 @@ export default {
     };
   },
   created() {
-    this.$data.version = this.versions[0];
-    this.$data.htmlDisplay = this.apis[this.versions[0]];
-    this.$data.menu = this.menus[this.versions[0]];
+    this.$data.version = this.versions.includes(this.$route.query.v)
+      ? this.$route.query.v
+      : this.versions[0];
+    (!this.$route.query.v ||
+      !this.versions.includes(this.$route.query.v)) &&
+        this.$router.push({
+          path: this.$route.path,
+          query: { v: this.versions[0] }
+        });
+    this.$data.htmlDisplay = this.apis[this.$data.version];
+    this.$data.menu = this.menus[this.$data.version];
     this.$store.commit("setDisplay", "api");
+  },
+  mounted() {
+    this.goToAnchor();
   }
 };
 </script>
