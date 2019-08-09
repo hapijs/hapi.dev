@@ -4,7 +4,7 @@
       :moduleAPI="moduleAPI"
       :modules="modules"
       :menu="getMenu"
-      :version="getVersions"
+      :version="getVersion"
       :versions="versionsArray"
     />
     <div class="tutorial-markdown-window">
