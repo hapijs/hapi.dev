@@ -170,9 +170,9 @@ export default {
             options
           );
           if (v.version === sortedMilestones[0].title) {
-            moduleAPI[params.family].versions[sortedMilestones[0].title] = "v" + v.version
+            moduleAPI[params.family].versions[sortedMilestones[0].title] = branch.name
           } else if (!versionsArray.includes(v.version)) {
-            moduleAPI[params.family].versions[v.version] = "v" + v.version
+            moduleAPI[params.family].versions[v.version] = branch.name
             await versionsArray.push(v.version)
           }
         }
