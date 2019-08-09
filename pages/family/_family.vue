@@ -3,7 +3,8 @@
     <FamilyNav
       :moduleAPI="moduleAPI"
       :modules="modules"
-      :version="version"
+      :menu="getMenu"
+      :version="getVersions"
       :versions="versionsArray"
     />
     <div class="tutorial-markdown-window">
@@ -30,7 +31,9 @@ export default {
   data() {
     return {
       display: "",
-      modules: this.modules
+      modules: this.modules,
+      version: "",
+      menu: ""
     };
   },
   methods: {
@@ -104,7 +107,13 @@ export default {
   },
   computed: {
     getDisplay() {
-      return this.moduleAPI[this.$route.params.family].display;
+      return this.moduleAPI[this.$route.params.family].displays[this.getVersion];
+    },
+    getVersion() {
+      return this.$store.getters.loadVersion;
+    },
+    getMenu() {
+      return this.moduleAPI[this.$route.params.family].menus[this.getVersion]
     }
   },
   async asyncData({ params, $axios, route }) {
@@ -126,6 +135,7 @@ export default {
       "yar"
     ];
     let moduleAPI = {};
+    moduleAPI[params.family] = {menus: {}, displays: {}}
     let version = "";
     let versionsArray = [];
 
@@ -162,41 +172,41 @@ export default {
           }
         }
       }
-      const res = await $axios.$get(
-        "https://api.github.com/repos/hapijs/" +
-          params.family +
-          "/contents/API.md",
-        options
-      );
+      for (let v of versionsArray) {
+        const res = await $axios.$get(
+          "https://api.github.com/repos/hapijs/" +
+            params.family +
+            "/contents/API.md?ref=v" + v,
+          options
+        );
 
-      let raw = await res;
-      let rawString = await raw.toString();
+        let raw = await res;
+        let rawString = await raw.toString();
 
-      //Split API menu from content
-      let finalDisplay = await rawString
-        .replace(/\/>/g, "></a>")
-        .replace(/.\s\[(?:.+[\n\r])+/, "");
-      let finalMenu = await rawString.match(/.\s\[(?:.+[\n\r])+/).pop();
-      finalMenu = await finalMenu.replace(/Boom\./g, "");
-      finalMenu = await finalMenu.replace(/\(([^#\*]+)\)/g, "()");
-      const apiHTML = await $axios.$post(
-        "https://api.github.com/markdown",
-        {
-          text: finalDisplay,
-          mode: "markdown"
-        },
-        {
-          headers: {
-            authorization: "token " + process.env.GITHUB_TOKEN
+        //Split API menu from content
+        let finalDisplay = await rawString
+          .replace(/\/>/g, "></a>")
+          .replace(/.\s\[(?:.+[\n\r])+/, "");
+        let finalMenu = await rawString.match(/.\s\[(?:.+[\n\r])+/).pop();
+        finalMenu = await finalMenu.replace(/Boom\./g, "");
+        finalMenu = await finalMenu.replace(/\(([^#\*]+)\)/g, "()");
+        const apiHTML = await $axios.$post(
+          "https://api.github.com/markdown",
+          {
+            text: finalDisplay,
+            mode: "markdown"
+          },
+          {
+            headers: {
+              authorization: "token " + process.env.GITHUB_TOKEN
+            }
           }
-        }
-      );
-      let apiString = await apiHTML.toString();
-      let finalHtmlDisplay = await apiString.replace(/user-content-/g, "");
-      moduleAPI[params.family] = {
-        display: await finalHtmlDisplay,
-        menu: await finalMenu
-      };
+        );
+        let apiString = await apiHTML.toString();
+        let finalHtmlDisplay = await apiString.replace(/user-content-/g, "");
+        moduleAPI[params.family].menus[v] = await finalMenu;
+        moduleAPI[params.family].displays[v] = await finalHtmlDisplay;
+      }
     } catch (err) {
       console.log(err.message);
     }
@@ -216,6 +226,8 @@ export default {
   },
   created() {
     this.$store.commit("setDisplay", "family");
+    this.$store.commit("setVersion", this.versionsArray[0]);
+    this.$data.menu = this.moduleAPI[this.$route.params.family].menus[this.versionsArray[0]];
   },
   mounted() {
     this.onScroll();

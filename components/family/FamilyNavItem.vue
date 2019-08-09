@@ -16,14 +16,19 @@
       v-if="this.$props.active[name]"
       class="ecosystem-nav-select-wrapper ecosystem-display"
       :id="name"
-      v-html="$md.render(this.$props.active[name].menu)"
+      v-html="$md.render(this.$props.menu)"
     ></div>
   </li>
 </template>
 
 <script>
 export default {
-  props: ["active", "name", "page", "version", "versions"]
+  props: ["active", "name", "page", "version", "versions", "menu"],
+  methods: {
+    onChange(event) {
+      this.$store.commit("setVersion", event.target.value);
+    },
+  }
 };
 </script>
 

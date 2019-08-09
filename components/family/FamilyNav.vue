@@ -9,6 +9,7 @@
               v-for="name in modules"
               v-bind:key="name"
               :name="name"
+              :menu="menu"
               :active="moduleAPI"
               :page="page"
               :version="version"
@@ -31,7 +32,7 @@ export default {
     SideFooter,
     FamilyNavItem
   },
-  props: ["page", "moduleAPI", "modules", "version", "versions"],
+  props: ["page", "moduleAPI", "modules", "version", "versions", "menu"],
 };
 </script>
 

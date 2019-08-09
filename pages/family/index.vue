@@ -1,6 +1,12 @@
 <template>
   <div class="container">
-    <FamilyNav :moduleAPI="moduleAPI" :modules="modules" :version="version" :versions="versionsArray" />
+    <FamilyNav
+      :moduleAPI="moduleAPI"
+      :modules="modules"
+      :menu="menu"
+      :version="getVersion"
+      :versions="versionsArray"
+    />
     <div class="tutorial-markdown-window">
       <HTML :display="getDisplay" />
     </div>
@@ -24,7 +30,9 @@ export default {
   },
   data() {
     return {
-      display: ""
+      display: "",
+      version: "",
+      menu:""
     };
   },
   methods: {
@@ -76,7 +84,10 @@ export default {
   },
   computed: {
     getDisplay() {
-      return this.moduleAPI.bell.display;
+      return this.moduleAPI.bell.displays[this.getVersion];
+    },
+    getVersion() {
+      return this.$store.getters.loadVersion;
     }
   },
   async asyncData({ params, $axios, query }) {
@@ -97,7 +108,7 @@ export default {
       "topo",
       "yar"
     ];
-    let moduleAPI = {};
+    let moduleAPI = {bell: {menus: {}, displays: {}}};
     let version = "";
     let versionsArray = [];
 
@@ -121,43 +132,44 @@ export default {
       for (let branch of branches) {
         if (branch.name.match(/^v+[0-9]+/g)) {
           const v = await $axios.$get(
-            "https://api.github.com/repos/hapijs/bell/contents/package.json?ref=" + branch.name,
+            "https://api.github.com/repos/hapijs/bell/contents/package.json?ref=" +
+              branch.name,
             options
           );
-          await versionsArray.push(v.version)
+          await versionsArray.push(v.version);
         }
       }
+      for (let v of versionsArray) {
+        const res = await $axios.$get(
+          "https://api.github.com/repos/hapijs/bell/contents/API.md?ref=v" +
+            v,
+          options
+        );
+        let raw = await res;
+        let rawString = await raw.toString();
 
-      const res = await $axios.$get(
-        "https://api.github.com/repos/hapijs/bell/contents/API.md",
-        options
-      );
-      let raw = await res;
-      let rawString = await raw.toString();
-
-      //Split API menu from content
-      let finalDisplay = await rawString
-        .replace(/\/>/g, "></a>")
-        .replace(/.\s\[(?:.+[\n\r])+/, "");
-      let finalMenu = await rawString.match(/.\s\[(?:.+[\n\r])+/).pop();
-      const apiHTML = await $axios.$post(
-        "https://api.github.com/markdown",
-        {
-          text: finalDisplay,
-          mode: "markdown"
-        },
-        {
-          headers: {
-            authorization: "token " + process.env.GITHUB_TOKEN
+        //Split API menu from content
+        let finalDisplay = await rawString
+          .replace(/\/>/g, "></a>")
+          .replace(/.\s\[(?:.+[\n\r])+/, "");
+        let finalMenu = await rawString.match(/.\s\[(?:.+[\n\r])+/).pop();
+        const apiHTML = await $axios.$post(
+          "https://api.github.com/markdown",
+          {
+            text: finalDisplay,
+            mode: "markdown"
+          },
+          {
+            headers: {
+              authorization: "token " + process.env.GITHUB_TOKEN
+            }
           }
-        }
-      );
-      let apiString = await apiHTML.toString();
-      let finalHtmlDisplay = await apiString.replace(/user-content-/g, "");
-      moduleAPI.bell = {
-        display: await finalHtmlDisplay,
-        menu: await finalMenu
-      };
+        );
+        let apiString = await apiHTML.toString();
+        let finalHtmlDisplay = await apiString.replace(/user-content-/g, "");
+        moduleAPI.bell.menus[v] = await finalMenu;
+        moduleAPI.bell.displays[v] = await finalHtmlDisplay;
+      }
     } catch (err) {
       console.log(err);
     }
@@ -173,8 +185,9 @@ export default {
     return { moduleAPI, modules, version, versionsArray };
   },
   created() {
-    this.$data.display = this.moduleAPI.bell;
     this.$store.commit("setDisplay", "family");
+    this.$store.commit("setVersion", this.versionsArray[0]);
+    this.$data.menu = this.moduleAPI.bell.menus[this.versionsArray[0]];
   },
   mounted() {
     this.onScroll();
