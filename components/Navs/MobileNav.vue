@@ -15,10 +15,10 @@
         <a class="mobile-link" title="Tutorials" href="/tutorials/?lang=en_US">Tutorials</a>
         <ul>
           <li class="mobile-link mobile-tutorial-link">
-            <a title="Tutorials" href="/tutorials/gettingStarted/?lang=en_US">Getting Started</a>
+            <a title="Tutorials" href="/tutorials/gettingstarted/?lang=en_US">Getting Started</a>
           </li>
           <li class="mobile-link mobile-tutorial-link">
-            <a title="ExpressToHapi" href="/tutorials/expressToHapi/?lang=en_US">Express Migration</a>
+            <a title="ExpressToHapi" href="/tutorials/expresstohapi/?lang=en_US">Express Migration</a>
           </li>
           <li class="mobile-link mobile-tutorial-link">
             <a title="Tutorials" href="/tutorials/auth/?lang=en_US">Authentication</a>
@@ -39,10 +39,10 @@
             <a title="Tutorials" href="/tutorials/routing/?lang=en_US">Routing</a>
           </li>
           <li class="mobile-link mobile-tutorial-link">
-            <a title="Tutorials" href="/tutorials/serverMethods/?lang=en_US">Server Methods</a>
+            <a title="Tutorials" href="/tutorials/servermethods/?lang=en_US">Server Methods</a>
           </li>
           <li class="mobile-link mobile-tutorial-link">
-            <a title="Tutorials" href="/tutorials/servingFiles/?lang=en_US">Serving Static Files</a>
+            <a title="Tutorials" href="/tutorials/servingfiles/?lang=en_US">Serving Static Files</a>
           </li>
           <li class="mobile-link mobile-tutorial-link">
             <a title="Tutorials" href="/tutorials/testing/?lang=en_US">Testing</a>
