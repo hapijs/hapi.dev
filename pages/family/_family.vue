@@ -1,6 +1,11 @@
 <template>
   <div class="container">
-    <FamilyNav :moduleAPI="moduleAPI" :modules="modules" :version="version" />
+    <FamilyNav
+      :moduleAPI="moduleAPI"
+      :modules="modules"
+      :version="version"
+      :versions="versionsArray"
+    />
     <div class="tutorial-markdown-window">
       <HTML :display="getDisplay" />
     </div>
@@ -10,6 +15,7 @@
 <script>
 import HTML from "~/components/HTML.vue";
 import FamilyNav from "~/components/family/FamilyNav.vue";
+let Semver = require("semver");
 
 export default {
   components: {
@@ -121,22 +127,48 @@ export default {
     ];
     let moduleAPI = {};
     let version = "";
-    let res;
+    let versionsArray = [];
 
     try {
-      if (params.family !== "joi") {
-        res = await $axios.$get(
-          "https://api.github.com/repos/hapijs/" +
-            params.family +
-            "/contents/API.md",
-          options
-        );
-      } else {
-        res = await $axios.$get(
-          "https://api.github.com/repos/hapijs/joi/contents/API.md?ref=v15",
-          options
-        );
+      let milestones = await $axios.$get(
+        "https://api.github.com/repos/hapijs/" +
+          params.family +
+          "/milestones?state=closed&per_page=100&direction=desc",
+        options
+      );
+
+      let sortedMilestones = await milestones.sort((a, b) =>
+        Semver.compare(b.title, a.title)
+      );
+
+      await versionsArray.push(sortedMilestones[0].title);
+
+      let branches = await $axios.$get(
+        "https://api.github.com/repos/hapijs/" + params.family + "/branches",
+        options
+      );
+
+      for (let branch of branches) {
+        if (branch.name.match(/^v+[0-9]+/g)) {
+          const v = await $axios.$get(
+            "https://api.github.com/repos/hapijs/" +
+              params.family +
+              "/contents/package.json?ref=" +
+              branch.name,
+            options
+          );
+          if (versionsArray.indexOf(v.version)) {
+            await versionsArray.push(v.version);
+          }
+        }
       }
+      const res = await $axios.$get(
+        "https://api.github.com/repos/hapijs/" +
+          params.family +
+          "/contents/API.md",
+        options
+      );
+
       let raw = await res;
       let rawString = await raw.toString();
 
@@ -169,22 +201,18 @@ export default {
       console.log(err.message);
     }
     try {
-      if (params.family !== "joi") {
-        const r = await $axios.$get(
-          "https://api.github.com/repos/hapijs/" +
-            params.family +
-            "/contents/package.json",
-          options
-        );
-        version = await r.version;
-      } else {
-        version = "15.1.0";
-      }
+      const r = await $axios.$get(
+        "https://api.github.com/repos/hapijs/" +
+          params.family +
+          "/contents/package.json",
+        options
+      );
+      version = await r.version;
     } catch (err) {
       console.log(err);
     }
 
-    return { moduleAPI, modules, version };
+    return { moduleAPI, modules, version, versionsArray };
   },
   created() {
     this.$store.commit("setDisplay", "family");

@@ -4,7 +4,14 @@
     :ref="name"
   >
     <a :href="'/family/' + name">{{name.charAt(0).toUpperCase(0) + name.slice(1)}}</a>
-    <span v-if="this.$route.params.family === name || (!this.$route.params.family && name === 'bell')" class="family-span">v{{version}}</span>
+    <span
+      v-if="this.$route.params.family === name || (!this.$route.params.family && name === 'bell')"
+      class="family-span"
+    >
+      <select @change="onChange($event)" class="family-version-select">
+        <option v-for="version in versions" v-bind:key="version" :value="version">{{version}}</option>
+      </select>
+    </span>
     <div
       v-if="this.$props.active[name]"
       class="ecosystem-nav-select-wrapper ecosystem-display"
@@ -16,7 +23,7 @@
 
 <script>
 export default {
-  props: ["active", "name", "page", "version"],
+  props: ["active", "name", "page", "version", "versions"]
 };
 </script>
 
@@ -92,7 +99,8 @@ export default {
   transition: all 0.3 ease;
 }
 
-.ecosystem-active, .ecosystem-active * {
+.ecosystem-active,
+.ecosystem-active * {
   position: relative;
   color: #fff !important;
   background: $gray !important;
@@ -113,4 +121,16 @@ export default {
   font-weight: 400;
 }
 
+.family-version-select {
+  width: 70px;
+  padding: 0px 5px 0px 5px;
+  border: none;
+  height: 30px;
+  font-size: 1em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(/img/down.png) 96% / 15% no-repeat $off-white;
+  cursor: pointer;
+}
 </style>

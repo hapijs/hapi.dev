@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <FamilyNav :moduleAPI="moduleAPI" :modules="modules" :version="version"/>
+    <FamilyNav :moduleAPI="moduleAPI" :modules="modules" :version="version" :versions="versionsArray" />
     <div class="tutorial-markdown-window">
-      <HTML :display="getDisplay"/>
+      <HTML :display="getDisplay" />
     </div>
   </div>
 </template>
@@ -10,6 +10,7 @@
 <script>
 import HTML from "~/components/HTML.vue";
 import FamilyNav from "~/components/family/FamilyNav.vue";
+let Semver = require("semver");
 
 export default {
   components: {
@@ -29,9 +30,7 @@ export default {
   methods: {
     onScroll() {
       let links = [];
-      links = document.querySelectorAll(
-        "#bell a"
-      );
+      links = document.querySelectorAll("#bell a");
       let points = {};
       let offsets = [];
       for (let i = 0; i < links.length; i++) {
@@ -45,7 +44,7 @@ export default {
           offsets.push(point.offsetTop - 70);
         }
       }
-      offsets = [...new Set(offsets)]
+      offsets = [...new Set(offsets)];
 
       //Add active class to elements on scroll
       window.onscroll = function() {
@@ -100,55 +99,82 @@ export default {
     ];
     let moduleAPI = {};
     let version = "";
+    let versionsArray = [];
 
-      try {
-        const res = await $axios.$get(
-          "https://api.github.com/repos/hapijs/bell/contents/API.md",
-          options
-        );
-        let raw = await res;
-        let rawString = await raw.toString();
+    try {
+      let milestones = await $axios.$get(
+        "https://api.github.com/repos/hapijs/bell/milestones?state=closed&per_page=100&direction=desc",
+        options
+      );
 
-        //Split API menu from content
-        let finalDisplay = await rawString
-          .replace(/\/>/g, "></a>")
-          .replace(/.\s\[(?:.+[\n\r])+/, "");
-        let finalMenu = await rawString.match(/.\s\[(?:.+[\n\r])+/).pop();
-        const apiHTML = await $axios.$post(
-          "https://api.github.com/markdown",
-          {
-            text: finalDisplay,
-            mode: "markdown"
-          },
-          {
-            headers: {
-              authorization: "token " + process.env.GITHUB_TOKEN
-            }
+      let sortedMilestones = await milestones.sort((a, b) =>
+        Semver.compare(b.title, a.title)
+      );
+
+      await versionsArray.push(sortedMilestones[0].title);
+
+      let branches = await $axios.$get(
+        "https://api.github.com/repos/hapijs/bell/branches",
+        options
+      );
+
+      for (let branch of branches) {
+        if (branch.name.match(/^v+[0-9]+/g)) {
+          const v = await $axios.$get(
+            "https://api.github.com/repos/hapijs/bell/contents/package.json?ref=" + branch.name,
+            options
+          );
+          await versionsArray.push(v.version)
+        }
+      }
+
+      const res = await $axios.$get(
+        "https://api.github.com/repos/hapijs/bell/contents/API.md",
+        options
+      );
+      let raw = await res;
+      let rawString = await raw.toString();
+
+      //Split API menu from content
+      let finalDisplay = await rawString
+        .replace(/\/>/g, "></a>")
+        .replace(/.\s\[(?:.+[\n\r])+/, "");
+      let finalMenu = await rawString.match(/.\s\[(?:.+[\n\r])+/).pop();
+      const apiHTML = await $axios.$post(
+        "https://api.github.com/markdown",
+        {
+          text: finalDisplay,
+          mode: "markdown"
+        },
+        {
+          headers: {
+            authorization: "token " + process.env.GITHUB_TOKEN
           }
-        );
-        let apiString = await apiHTML.toString();
-        let finalHtmlDisplay = await apiString.replace(/user-content-/g, "");
-        moduleAPI.bell = {
-          display: await finalHtmlDisplay,
-          menu: await finalMenu
-        };
-      } catch (err) {
-        console.log(err);
-      }
-      try {
-        const r = await $axios.$get(
-          "https://api.github.com/repos/hapijs/bell/contents/package.json",
-          options
-        );
-        version = await r.version;
-      } catch (err) {
-        console.log(err);
-      }
-    return { moduleAPI, modules, version };
+        }
+      );
+      let apiString = await apiHTML.toString();
+      let finalHtmlDisplay = await apiString.replace(/user-content-/g, "");
+      moduleAPI.bell = {
+        display: await finalHtmlDisplay,
+        menu: await finalMenu
+      };
+    } catch (err) {
+      console.log(err);
+    }
+    try {
+      const r = await $axios.$get(
+        "https://api.github.com/repos/hapijs/bell/contents/package.json",
+        options
+      );
+      version = await r.version;
+    } catch (err) {
+      console.log(err);
+    }
+    return { moduleAPI, modules, version, versionsArray };
   },
   created() {
     this.$data.display = this.moduleAPI.bell;
-    this.$store.commit('setDisplay', 'family')
+    this.$store.commit("setDisplay", "family");
   },
   mounted() {
     this.onScroll();
