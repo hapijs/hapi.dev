@@ -135,9 +135,10 @@ export default {
       "yar"
     ];
     let moduleAPI = {};
-    moduleAPI[params.family] = {menus: {}, displays: {}}
+    moduleAPI[params.family] = {menus: {}, displays: {}, versions: {}}
     let version = "";
     let versionsArray = [];
+    let lastestVersion = "";
 
     try {
       let milestones = await $axios.$get(
@@ -151,7 +152,8 @@ export default {
         Semver.compare(b.title, a.title)
       );
 
-      await versionsArray.push(sortedMilestones[0].title);
+      moduleAPI[params.family].versions[sortedMilestones[0].title] = "master"
+      versionsArray.push(sortedMilestones[0].title)
 
       let branches = await $axios.$get(
         "https://api.github.com/repos/hapijs/" + params.family + "/branches",
@@ -167,8 +169,11 @@ export default {
               branch.name,
             options
           );
-          if (versionsArray.indexOf(v.version)) {
-            await versionsArray.push(v.version);
+          if (v.version === sortedMilestones[0].title) {
+            moduleAPI[params.family].versions[sortedMilestones[0].title] = "v" + v.version
+          } else if (!versionsArray.includes(v.version)) {
+            moduleAPI[params.family].versions[v.version] = "v" + v.version
+            await versionsArray.push(v.version)
           }
         }
       }
@@ -176,7 +181,7 @@ export default {
         const res = await $axios.$get(
           "https://api.github.com/repos/hapijs/" +
             params.family +
-            "/contents/API.md?ref=v" + v,
+            "/contents/API.md?ref=" + moduleAPI[params.family].versions[v],
           options
         );
 
