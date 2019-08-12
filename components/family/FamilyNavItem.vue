@@ -8,7 +8,7 @@
       v-if="this.$route.params.family === name || (!this.$route.params.family && name === 'bell')"
       class="family-span"
     >
-      <select @change="onChange($event)" class="family-version-select">
+      <select @change="onChange($event)" class="family-version-select" :value="version">
         <option v-for="version in versions" v-bind:key="version" :value="version">{{version}}</option>
       </select>
     </span>
@@ -25,8 +25,9 @@
 export default {
   props: ["active", "name", "page", "version", "versions", "menu"],
   methods: {
-    onChange(event) {
+    async onChange(event) {
       this.$store.commit("setVersion", event.target.value);
+      await this.$router.push({ path: this.$route.path, query: { v: event.target.value } });
       window.scrollTo(0, 0);
     },
   }

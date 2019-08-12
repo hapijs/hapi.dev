@@ -6,9 +6,7 @@
         <div class="mobile-family-info">
           <div class="mobile-family-title">
             {{title}}
-            <span
-              class="family-span"
-            >
+            <span class="family-span">
               <select @change="onChange($event)" class="family-version-select">
                 <option
                   v-for="version in versions"
@@ -56,7 +54,17 @@ export default {
           this.$route.params.family.slice(1)
     };
   },
-  props: ["page", "moduleAPI", "modules", "version", "versions", "menu"]
+  props: ["page", "moduleAPI", "modules", "version", "versions", "menu"],
+  mounted() {
+    let aClass = this.$route.hash;
+    if (this.$route.hash) {
+      let aClass = this.$route.hash;
+      let active = document.querySelector(
+        `.side-nav-wrapper a[href*='${aClass}']`
+      );
+      active.scrollIntoView(false);
+    }
+  }
 };
 </script>
 
@@ -64,15 +72,14 @@ export default {
 @import "../../assets/styles/sideNav.scss";
 
 .mobile-family-info {
-  display: none
+  display: none;
 }
 
 @media screen and (max-width: 900px) {
-
-.mobile-family-info {
-  display: block;
-  margin: 0;
-  font-size: 1.2rem;
-}
+  .mobile-family-info {
+    display: block;
+    margin: 0;
+    font-size: 1.2rem;
+  }
 }
 </style>

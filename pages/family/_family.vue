@@ -37,6 +37,19 @@ export default {
     };
   },
   methods: {
+    goToAnchor() {
+      let hash = document.location.hash;
+      if (hash != "") {
+        setTimeout(function() {
+          if (location.hash) {
+            window.scrollTo(0, 0);
+            window.location.href = hash;
+          }
+        }, 1);
+      } else {
+        return false;
+      }
+    },
     onScroll() {
       let links = [];
       links = document.querySelectorAll("#" + this.$route.params.family + " a");
@@ -107,13 +120,15 @@ export default {
   },
   computed: {
     getDisplay() {
-      return this.moduleAPI[this.$route.params.family].displays[this.getVersion];
+      return this.moduleAPI[this.$route.params.family].displays[
+        this.getVersion
+      ];
     },
     getVersion() {
       return this.$store.getters.loadVersion;
     },
     getMenu() {
-      return this.moduleAPI[this.$route.params.family].menus[this.getVersion]
+      return this.moduleAPI[this.$route.params.family].menus[this.getVersion];
     }
   },
   async asyncData({ params, $axios, route }) {
@@ -135,7 +150,7 @@ export default {
       "yar"
     ];
     let moduleAPI = {};
-    moduleAPI[params.family] = {menus: {}, displays: {}, versions: {}}
+    moduleAPI[params.family] = { menus: {}, displays: {}, versions: {} };
     let version = "";
     let versionsArray = [];
 
@@ -151,8 +166,8 @@ export default {
         Semver.compare(b.title, a.title)
       );
 
-      moduleAPI[params.family].versions[sortedMilestones[0].title] = "master"
-      versionsArray.push(sortedMilestones[0].title)
+      moduleAPI[params.family].versions[sortedMilestones[0].title] = "master";
+      versionsArray.push(sortedMilestones[0].title);
 
       let branches = await $axios.$get(
         "https://api.github.com/repos/hapijs/" + params.family + "/branches",
@@ -169,10 +184,11 @@ export default {
             options
           );
           if (v.version === sortedMilestones[0].title) {
-            moduleAPI[params.family].versions[sortedMilestones[0].title] = branch.name
+            moduleAPI[params.family].versions[sortedMilestones[0].title] =
+              branch.name;
           } else if (!versionsArray.includes(v.version)) {
-            moduleAPI[params.family].versions[v.version] = branch.name
-            await versionsArray.push(v.version)
+            moduleAPI[params.family].versions[v.version] = branch.name;
+            await versionsArray.push(v.version);
           }
         }
       }
@@ -180,7 +196,8 @@ export default {
         const res = await $axios.$get(
           "https://api.github.com/repos/hapijs/" +
             params.family +
-            "/contents/API.md?ref=" + moduleAPI[params.family].versions[v],
+            "/contents/API.md?ref=" +
+            moduleAPI[params.family].versions[v],
           options
         );
 
@@ -229,12 +246,24 @@ export default {
     return { moduleAPI, modules, version, versionsArray };
   },
   created() {
+    let version = this.versionsArray.includes(this.$route.query.v)
+      ? this.$route.query.v
+      : this.versionsArray[0];
     this.$store.commit("setDisplay", "family");
-    this.$store.commit("setVersion", this.versionsArray[0]);
-    this.$data.menu = this.moduleAPI[this.$route.params.family].menus[this.versionsArray[0]];
+    this.$store.commit("setVersion", version);
+    (!this.$route.query.v ||
+      !this.versionsArray.includes(this.$route.query.v)) &&
+      this.$router.push({
+        path: this.$route.path,
+        query: { v: this.versionsArray[0] }
+      });
+    this.$data.menu = this.moduleAPI[this.$route.params.family].menus[
+      this.getVersion
+    ];
   },
   mounted() {
     this.onScroll();
+    this.goToAnchor();
   },
   updated() {
     this.onScroll();
