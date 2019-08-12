@@ -1,6 +1,12 @@
 <template>
   <div class="container">
-    <FamilyNav :moduleAPI="moduleAPI" :modules="modules" :version="version" />
+    <FamilyNav
+      :moduleAPI="moduleAPI"
+      :modules="modules"
+      :menu="getMenu"
+      :version="getVersion"
+      :versions="versionsArray"
+    />
     <div class="tutorial-markdown-window">
       <HTML :display="getDisplay" />
     </div>
@@ -10,6 +16,7 @@
 <script>
 import HTML from "~/components/HTML.vue";
 import FamilyNav from "~/components/family/FamilyNav.vue";
+let Semver = require("semver");
 
 export default {
   components: {
@@ -24,10 +31,25 @@ export default {
   data() {
     return {
       display: "",
-      modules: this.modules
+      modules: this.modules,
+      version: "",
+      menu: ""
     };
   },
   methods: {
+    goToAnchor() {
+      let hash = document.location.hash;
+      if (hash != "") {
+        setTimeout(function() {
+          if (location.hash) {
+            window.scrollTo(0, 0);
+            window.location.href = hash;
+          }
+        }, 1);
+      } else {
+        return false;
+      }
+    },
     onScroll() {
       let links = [];
       links = document.querySelectorAll("#" + this.$route.params.family + " a");
@@ -98,7 +120,15 @@ export default {
   },
   computed: {
     getDisplay() {
-      return this.moduleAPI[this.$route.params.family].display;
+      return this.moduleAPI[this.$route.params.family].displays[
+        this.getVersion
+      ];
+    },
+    getVersion() {
+      return this.$store.getters.loadVersion;
+    },
+    getMenu() {
+      return this.moduleAPI[this.$route.params.family].menus[this.getVersion];
     }
   },
   async asyncData({ params, $axios, route }) {
@@ -120,77 +150,120 @@ export default {
       "yar"
     ];
     let moduleAPI = {};
+    moduleAPI[params.family] = { menus: {}, displays: {}, versions: {} };
     let version = "";
-    let res;
+    let versionsArray = [];
 
     try {
-      if (params.family !== "joi") {
-        res = await $axios.$get(
-          "https://api.github.com/repos/hapijs/" +
-            params.family +
-            "/contents/API.md",
-          options
-        );
-      } else {
-        res = await $axios.$get(
-          "https://api.github.com/repos/hapijs/joi/contents/API.md?ref=v15",
-          options
-        );
-      }
-      let raw = await res;
-      let rawString = await raw.toString();
+      let milestones = await $axios.$get(
+        "https://api.github.com/repos/hapijs/" +
+          params.family +
+          "/milestones?state=closed&per_page=100&direction=desc",
+        options
+      );
 
-      //Split API menu from content
-      let finalDisplay = await rawString
-        .replace(/\/>/g, "></a>")
-        .replace(/.\s\[(?:.+[\n\r])+/, "");
-      let finalMenu = await rawString.match(/.\s\[(?:.+[\n\r])+/).pop();
-      finalMenu = await finalMenu.replace(/Boom\./g, "");
-      finalMenu = await finalMenu.replace(/\(([^#\*]+)\)/g, "()");
-      const apiHTML = await $axios.$post(
-        "https://api.github.com/markdown",
-        {
-          text: finalDisplay,
-          mode: "markdown"
-        },
-        {
-          headers: {
-            authorization: "token " + process.env.GITHUB_TOKEN
+      let sortedMilestones = await milestones.sort((a, b) =>
+        Semver.compare(b.title, a.title)
+      );
+
+      moduleAPI[params.family].versions[sortedMilestones[0].title] = "master";
+      versionsArray.push(sortedMilestones[0].title);
+
+      let branches = await $axios.$get(
+        "https://api.github.com/repos/hapijs/" + params.family + "/branches",
+        options
+      );
+
+      for (let branch of branches) {
+        if (branch.name.match(/^v+[0-9]+/g)) {
+          const v = await $axios.$get(
+            "https://api.github.com/repos/hapijs/" +
+              params.family +
+              "/contents/package.json?ref=" +
+              branch.name,
+            options
+          );
+          if (v.version === sortedMilestones[0].title) {
+            moduleAPI[params.family].versions[sortedMilestones[0].title] =
+              branch.name;
+          } else if (!versionsArray.includes(v.version)) {
+            moduleAPI[params.family].versions[v.version] = branch.name;
+            await versionsArray.push(v.version);
           }
         }
-      );
-      let apiString = await apiHTML.toString();
-      let finalHtmlDisplay = await apiString.replace(/user-content-/g, "");
-      moduleAPI[params.family] = {
-        display: await finalHtmlDisplay,
-        menu: await finalMenu
-      };
+      }
+      for (let v of versionsArray) {
+        const res = await $axios.$get(
+          "https://api.github.com/repos/hapijs/" +
+            params.family +
+            "/contents/API.md?ref=" +
+            moduleAPI[params.family].versions[v],
+          options
+        );
+
+        let raw = await res;
+        let rawString = await raw.toString();
+
+        //Split API menu from content
+        let finalDisplay = await rawString
+          .replace(/\/>/g, "></a>")
+          .replace(/.\s\[(?:.+[\n\r])+/, "");
+        let finalMenu = await rawString.match(/.\s\[(?:.+[\n\r])+/).pop();
+        finalMenu = await finalMenu.replace(/Boom\./g, "");
+        finalMenu = await finalMenu.replace(/\(([^#\*]+)\)/g, "()");
+        const apiHTML = await $axios.$post(
+          "https://api.github.com/markdown",
+          {
+            text: finalDisplay,
+            mode: "markdown"
+          },
+          {
+            headers: {
+              authorization: "token " + process.env.GITHUB_TOKEN
+            }
+          }
+        );
+        let apiString = await apiHTML.toString();
+        let finalHtmlDisplay = await apiString.replace(/user-content-/g, "");
+        moduleAPI[params.family].menus[v] = await finalMenu;
+        moduleAPI[params.family].displays[v] = await finalHtmlDisplay;
+      }
     } catch (err) {
       console.log(err.message);
     }
     try {
-      if (params.family !== "joi") {
-        const r = await $axios.$get(
-          "https://api.github.com/repos/hapijs/" +
-            params.family +
-            "/contents/package.json",
-          options
-        );
-        version = await r.version;
-      } else {
-        version = "15.1.0";
-      }
+      const r = await $axios.$get(
+        "https://api.github.com/repos/hapijs/" +
+          params.family +
+          "/contents/package.json",
+        options
+      );
+      version = await r.version;
     } catch (err) {
       console.log(err);
     }
 
-    return { moduleAPI, modules, version };
+    return { moduleAPI, modules, version, versionsArray };
   },
   created() {
+    let version = this.versionsArray.includes(this.$route.query.v)
+      ? this.$route.query.v
+      : this.versionsArray[0];
     this.$store.commit("setDisplay", "family");
+    this.$store.commit("setVersion", version);
+    (!this.$route.query.v ||
+      !this.versionsArray.includes(this.$route.query.v)) &&
+      this.$router.push({
+        path: this.$route.path,
+        query: { v: this.versionsArray[0] }
+      });
+    this.$data.menu = this.moduleAPI[this.$route.params.family].menus[
+      this.getVersion
+    ];
   },
   mounted() {
     this.onScroll();
+    this.goToAnchor();
   },
   updated() {
     this.onScroll();
