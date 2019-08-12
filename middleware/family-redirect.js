@@ -1,4 +1,4 @@
-export default function ({ store, redirect }) {
+export default function ({ redirect }) {
   // automatic redirect
   return redirect('/family/bell')
 }

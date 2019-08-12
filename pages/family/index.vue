@@ -7,7 +7,7 @@
 <script>
 
 export default {
-  middleware: 'redirect'
+  middleware: 'family-redirect'
 }
 </script>
 
