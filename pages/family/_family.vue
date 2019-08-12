@@ -138,7 +138,6 @@ export default {
     moduleAPI[params.family] = {menus: {}, displays: {}, versions: {}}
     let version = "";
     let versionsArray = [];
-    let lastestVersion = "";
 
     try {
       let milestones = await $axios.$get(

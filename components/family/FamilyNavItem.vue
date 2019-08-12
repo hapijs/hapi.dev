@@ -27,6 +27,7 @@ export default {
   methods: {
     onChange(event) {
       this.$store.commit("setVersion", event.target.value);
+      window.scrollTo(0, 0);
     },
   }
 };

@@ -32,7 +32,7 @@ export default {
     return {
       display: "",
       version: "",
-      menu:""
+      menu: ""
     };
   },
   methods: {
@@ -108,7 +108,7 @@ export default {
       "topo",
       "yar"
     ];
-    let moduleAPI = {bell: {menus: {}, displays: {}}};
+    let moduleAPI = { bell: { menus: {}, displays: {}, versions: {} } };
     let version = "";
     let versionsArray = [];
 
@@ -122,6 +122,7 @@ export default {
         Semver.compare(b.title, a.title)
       );
 
+      moduleAPI.bell.versions[sortedMilestones[0].title] = "master";
       await versionsArray.push(sortedMilestones[0].title);
 
       let branches = await $axios.$get(
@@ -136,13 +137,18 @@ export default {
               branch.name,
             options
           );
-          await versionsArray.push(v.version);
+          if (v.version === sortedMilestones[0].title) {
+            moduleAPI.bell.versions[sortedMilestones[0].title] = branch.name;
+          } else if (!versionsArray.includes(v.version)) {
+            moduleAPI.bell.versions[v.version] = branch.name;
+            await versionsArray.push(v.version);
+          }
         }
       }
       for (let v of versionsArray) {
         const res = await $axios.$get(
-          "https://api.github.com/repos/hapijs/bell/contents/API.md?ref=v" +
-            v,
+          "https://api.github.com/repos/hapijs/bell/contents/API.md?ref=" +
+            moduleAPI.bell.versions[v],
           options
         );
         let raw = await res;
