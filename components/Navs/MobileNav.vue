@@ -56,7 +56,7 @@
         </ul>
       </li>
       <li class="mobile-links-li">
-        <a class="mobile-link" title="Resources" href="/resources">Resources</a>
+        <a class="mobile-link" title="Resources" href="/resources/changelog">Resources</a>
         <ul>
           <li class="mobile-link mobile-tutorial-link">
             <a title="Changelog" href="/resources/changelog">Changelog</a>
