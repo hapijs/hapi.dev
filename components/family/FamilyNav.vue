@@ -2,19 +2,21 @@
   <div class="side-nav-window">
     <div class="side-nav-wrapper">
       <div class="side-nav-inner-wrapper">
-        <div class="side-nav-title">Family</div>
-        <div class="mobile-family-info">
-          <div class="mobile-family-title">
-            {{title}}
-            <span class="family-span">
-              <select @change="onChange($event)" class="family-version-select">
-                <option
-                  v-for="version in versions"
-                  v-bind:key="version"
-                  :value="version"
-                >{{version}}</option>
-              </select>
-            </span>
+        <div class="mobile-top-wrapper">
+          <div class="side-nav-title">Family</div>
+          <div class="mobile-family-info">
+            <div class="mobile-family-title">
+              {{title}}
+              <span class="mobile-family-span">
+                <select @change="onChange($event)" class="family-version-select" :value="version">
+                  <option
+                    v-for="version in versions"
+                    v-bind:key="version"
+                    :value="version"
+                  >{{version}}</option>
+                </select>
+              </span>
+            </div>
           </div>
         </div>
         <div class="side-nav-select-wrapper">
@@ -45,6 +47,16 @@ export default {
   components: {
     SideFooter,
     FamilyNavItem
+  },
+  methods: {
+    async onChange(event) {
+      this.$store.commit("setVersion", event.target.value);
+      await this.$router.push({
+        path: this.$route.path,
+        query: { v: event.target.value }
+      });
+      window.scrollTo(0, 0);
+    }
   },
   data() {
     return {
@@ -80,6 +92,22 @@ export default {
     display: block;
     margin: 0;
     font-size: 1.2rem;
+  }
+
+  .mobile-top-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+  }
+
+  .family-span {
+    font-size: 1.5rem;
+  }
+
+  .family-version-select {
+    width: 80px;
   }
 }
 </style>
