@@ -70,7 +70,7 @@
         </ul>
       </li>
       <li class="mobile-links-li">
-        <a class="mobile-link" title="Family" href="/family">Family</a>
+        <a class="mobile-link" title="Family" href="/family/bell">Family</a>
         <ul>
           <li
             class="mobile-link mobile-tutorial-link"

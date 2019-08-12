@@ -4,6 +4,7 @@ export const state = () => ({
   page: start.gettingstarted.default,
   display: "home",
   language: "en_US",
+  version: ""
 })
 
 export const mutations = {
@@ -15,6 +16,9 @@ export const mutations = {
   },
   setLanguage (state, language) {
     state.language = language
+  },
+  setVersion (state, version) {
+    state.version = version
   }
 }
 
@@ -27,5 +31,8 @@ export const getters = {
   },
   loadLanguage (state) {
     return state.language
+  },
+  loadVersion (state) {
+    return state.version
   }
 }
