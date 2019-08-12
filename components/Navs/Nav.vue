@@ -12,7 +12,7 @@
               <a :class="getDisplay === 'tutorials' ? 'nav-link nav-link-active' : 'nav-link'" ref="tutorials" title="Tutorials" href="/tutorials/?lang=en_US" v-on:click="addActive('tutorials')">Tutorials</a>
             </li>
             <li class="nav-links-li">
-              <a :class="getDisplay === 'resources' ? 'nav-link nav-link-active' : 'nav-link'" ref="resources" title="Resources" href="/resources" v-on:click="addActive('resources')">Resources</a>
+              <a :class="getDisplay === 'resources' ? 'nav-link nav-link-active' : 'nav-link'" ref="resources" title="Resources" href="/resources/changelog" v-on:click="addActive('resources')">Resources</a>
             </li>
             <li class="nav-links-li">
               <a :class="getDisplay === 'family' ? 'nav-link nav-link-active' : 'nav-link'" ref="family" title="Family" href="/family/bell" v-on:click="addActive('family')">Family</a>
