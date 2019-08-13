@@ -7,7 +7,9 @@
 <script>
 
 export default {
-  middleware: 'family-redirect'
+  beforeMount() {
+    window.location.href = '/resources/changelog'
+  }
 }
 </script>
 
