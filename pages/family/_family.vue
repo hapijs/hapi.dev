@@ -107,8 +107,6 @@ export default {
             }
           }
         }
-        
-        let active = document.querySelector(".ecosystem-active")
         let bottom = element.getBoundingClientRect().bottom
         if (bottom > window.innerHeight) {
           element.scrollIntoView(false);

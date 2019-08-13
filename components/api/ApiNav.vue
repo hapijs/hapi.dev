@@ -208,8 +208,12 @@ export default {
           code[i].innerHTML = matchHeader;
         }
         if (code[i + 1]) {
-          let a = code[i].innerHTML.replace(/\(([^#/(/)]+)\)/g, "()").replace("await ", "");
-          let b = code[i + 1].innerHTML.replace(/\(([^#/(/)]+)\)/g, "()").replace("await ", "");
+          let a = code[i].innerHTML
+            .replace(/\(([^#/(/)]+)\)/g, "()")
+            .replace("await ", "");
+          let b = code[i + 1].innerHTML
+            .replace(/\(([^#/(/)]+)\)/g, "()")
+            .replace("await ", "");
 
           if (a === b) {
             continue;
@@ -269,6 +273,7 @@ export default {
         let locationBody = document.body.scrollTop;
         let actives = document.getElementsByClassName("api-active");
         let i = 0;
+        let active;
         for (i in offsets) {
           let aClass = points[offsets[i]].name;
           let element = document.querySelector(`a[href*='${aClass}']`);
@@ -280,6 +285,7 @@ export default {
               active.classList.remove("api-active");
             }
             element.classList.add("api-active");
+            active = document.querySelector(".api-active");
           }
           if (
             (offsets[i] <= location && location <= offsets[i] + 100) ||
@@ -297,14 +303,22 @@ export default {
             }
           }
         }
+        if (active) {
+          let bottom = active.getBoundingClientRect().bottom;
+          if (bottom > window.innerHeight) {
+            active.scrollIntoView(false);
+          }
+        }
       };
     }
   },
   async mounted() {
     await this.setClasses();
     if (this.$route.hash) {
-      document.querySelector(".api-nav-select-wrapper").getBoundingClientRect()
-      let wrapperHeight = document.querySelector(".api-nav-wrapper").getBoundingClientRect().height
+      document.querySelector(".api-nav-select-wrapper").getBoundingClientRect();
+      let wrapperHeight = document
+        .querySelector(".api-nav-wrapper")
+        .getBoundingClientRect().height;
       let aClass = this.$route.hash;
       let active = document.querySelector(`a[href*='${aClass}']`);
       active.classList.add("api-active");
