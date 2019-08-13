@@ -8,7 +8,7 @@
 
 export default {
   beforeMount() {
-    window.location.href = '/resources/changelog'
+    window.location.href = '/family/bell'
   }
 }
 </script>
