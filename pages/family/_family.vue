@@ -86,6 +86,7 @@ export default {
         let location = document.documentElement.scrollTop;
         let locationBody = document.body.scrollTop;
         let actives = document.getElementsByClassName("ecosystem-active");
+        let element;
         let i = 0;
         for (i in offsets) {
           if (offsets[i] <= location || offsets[i] <= locationBody) {
@@ -94,7 +95,7 @@ export default {
               active.classList.remove("ecosystem-active");
             }
 
-            let element = document.querySelector(`a[href*='${aClass}']`);
+            element = document.querySelector(`.side-nav-wrapper a[href*='${aClass}']`);
             if (element.children.length !== 0) {
               document
                 .querySelector(`a[href*='${aClass}']`)
@@ -106,15 +107,12 @@ export default {
             }
           }
         }
-        // if (
-        //   currentElement.offsetHeight ===
-        //   location + window.innerHeight - 96
-        // ) {
-        //   let index = modules.indexOf(this.$nuxt.$route.params.family);
-        //   this.$nuxt.$router.push({
-        //     path: "/family/" + modules[index + 1]
-        //   });
-        // }
+        
+        let active = document.querySelector(".ecosystem-active")
+        let bottom = element.getBoundingClientRect().bottom
+        if (bottom > window.innerHeight) {
+          element.scrollIntoView(false);
+        }
       };
     }
   },
