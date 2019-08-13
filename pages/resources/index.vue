@@ -6,7 +6,9 @@
 
 <script>
 export default {
-  middleware: 'resource-redirect'
+  beforeMount() {
+    window.location.href = '/resources/changelog'
+  }
 }
 </script>
 
