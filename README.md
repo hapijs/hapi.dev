@@ -2,6 +2,8 @@
 
 # hapi.dev
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/hapijs/hapi.dev.svg)](https://greenkeeper.io/)
+
 The home of the [hapi.dev](http://hapi.dev) developer portal.
 
 ## Running/developing
