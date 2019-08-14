@@ -259,7 +259,7 @@ export default {
 
   .index-about {
     width: 100%;
-    font-size: 1rem;
+    font-size: 1.15rem;
   }
 
   .index-about-top {
@@ -268,6 +268,15 @@ export default {
 
   .index-button {
     margin: 20px 0;
+    font-size: 1.1rem;
+  }
+
+  .underline {
+    border-bottom: 1px solid $black;
+  }
+
+  .index-divider {
+    padding: 0 10px;
   }
 
   .break {
