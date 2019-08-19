@@ -136,6 +136,10 @@ table {
   overflow-x: auto;
 }
 
+th {
+  font-size: 1.4rem;
+}
+
 td {
   padding: 10px 5px;
   height: 76px;
