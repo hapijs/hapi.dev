@@ -3,6 +3,7 @@
     <howToHelp />
     <commercialSupport />
     <commercialLicense />
+    <Table />
   </div>
 </template>
 
@@ -10,13 +11,15 @@
 import howToHelp from "~/components/support/howToHelp.vue";
 import commercialSupport from "~/components/support/commercialSupport.vue";
 import commercialLicense from "~/components/support/commercialLicense.vue";
+import Table from "~/components/support/Table.vue";
 
 export default {
   layout: "noSide",
   components: {
     howToHelp,
     commercialSupport,
-    commercialLicense
+    commercialLicense,
+    Table
   },
   head() {
     return {
@@ -85,8 +88,9 @@ export default {
 }
 
 @media screen and (max-width: 900px) {
-  .help-wrapper {
-    padding: 10px 20px;
+  .support-wrapper {
+    padding: 0 20px;
+    font-size: 1.1em;
   }
 }
 </style>
