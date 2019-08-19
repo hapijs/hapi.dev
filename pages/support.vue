@@ -16,7 +16,7 @@
         </div>
         <div class="modal-description">Commercial support plan contact form</div>
         <div class="modal-middle">
-          <form action="https://formspree.io/jarrod524@gmail.tld" method="POST">
+          <form action="" method="POST">
             <label for="name" class="modal-label">Name</label>
             <input type="text" name="name" id="name" class="modal-input" required/>
             <label for="company" class="modal-label">Company</label>
@@ -29,7 +29,7 @@
           </form>
         </div>
         <div class="modal-bottom">
-          <img src="img/helmet.png" alt="helmet" class="modal-helmet" />
+          <img src="/img/helmet.png" alt="helmet" class="modal-helmet" />
         </div>
       </div>
     </modal>
