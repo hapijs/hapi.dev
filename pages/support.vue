@@ -1,16 +1,22 @@
 <template>
   <div class="support-wrapper">
     <howToHelp />
+    <commercialSupport />
+    <commercialLicense />
   </div>
 </template>
 
 <script>
 import howToHelp from "~/components/support/howToHelp.vue";
+import commercialSupport from "~/components/support/commercialSupport.vue";
+import commercialLicense from "~/components/support/commercialLicense.vue";
 
 export default {
   layout: "noSide",
   components: {
-    howToHelp
+    howToHelp,
+    commercialSupport,
+    commercialLicense
   },
   head() {
     return {
@@ -52,7 +58,7 @@ export default {
 }
 
 .support-button-wrapper {
-  margin: 30px auto 50px auto;
+  margin: 30px auto 80px auto;
   display: flex;
   justify-content: center;
   align-items: center;
