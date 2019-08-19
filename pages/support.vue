@@ -68,7 +68,7 @@ export default {
     }
   },
   created() {
-    this.$store.commit("setDisplay", "help");
+    this.$store.commit("setDisplay", "support");
   }
 };
 </script>
@@ -162,6 +162,7 @@ export default {
   width: 100%;
   height: 30px;
   padding: 5px;
+  margin-bottom: 10px;
 }
 
 .modal-text {
