@@ -67,6 +67,10 @@ html, body {
    font-weight: 900;
  }
 
+ .underline {
+   border-bottom: 2px solid $black;
+ }
+
  @media screen and (min-width: 1088px){
    .container {
       max-width: 100%;
