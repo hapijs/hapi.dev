@@ -98,7 +98,7 @@
         class="support-button"
         aria-label="license-button"
         v-on:click="openModal"
-      >Sign up for a commercial lincense plan</button>
+      >Sign up for a commercial license plan</button>
     </div>
   </div>
 </template>
@@ -132,12 +132,12 @@ export default {
 
 table {
   width: 100%;
-  margin-bottom: 70px;
   overflow-x: auto;
 }
 
 td {
   padding: 10px 5px;
+  height: 76px;
 }
 
 tr:nth-child(even) {
