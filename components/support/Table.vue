@@ -1,8 +1,9 @@
 <template>
   <div class="support-table-wrapper">
+    <div id="plans"></div>
     <h2 class="support-main-heading">Find the plan that's right for you!</h2>
     <div class="table-wrapper">
-      <table id="plans">
+      <table>
         <tr>
           <th></th>
           <th class="bold">Core</th>
@@ -93,17 +94,23 @@
       </table>
     </div>
     <div class="support-button-wrapper">
-      <a
+      <button
         class="support-button"
-        href="#plans"
         aria-label="license-button"
-      >Sign up for a commercial lincense plan</a>
+        v-on:click="openModal"
+      >Sign up for a commercial lincense plan</button>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    openModal() {
+      this.$modal.show("form");
+    }
+  }
+};
 </script>
 
 <style lang="scss">
@@ -116,6 +123,11 @@ export default {};
 
 .table-wrapper {
   overflow-x: auto;
+}
+
+#plans {
+  position: relative;
+  top: -116px;
 }
 
 table {
@@ -134,8 +146,12 @@ tr:nth-child(even) {
 
 @media screen and (max-width: 900px) {
   table {
-    font-size: .8rem;
+    font-size: 0.8rem;
     margin-bottom: 0;
+  }
+
+  #plans {
+    top: -55px;
   }
 }
 </style>

@@ -37,7 +37,7 @@
       of volunteer resources. When free support is not enough, commercial licensing and support plans are available.
     </div>
     <div class="support-button-wrapper">
-      <a class="support-button" href="#plans" aria-label="github-button">Open an issue on GitHub</a>
+      <a class="support-button" href="https://github.com/hapijs/hapi/issues" target="__blank" aria-label="github-button">Open an issue on GitHub</a>
     </div>
   </div>
 </template>
