@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="license-wrapper">
     <h2 class="support-main-heading">When does a commercial license make sense?</h2>
     <div class="support-content">
       If paying for open-source software seems strange to
@@ -38,7 +38,7 @@
       <span class="bold">A hapi commercial license allows you to upgrade on your own schedule</span>,
       while still running a supported, well-maintained, and secure code.
     </div>
-    <h2 class="support-main-heading">What happens if I don't pay for a commercial license?</h2>
+    <h2 class="support-main-heading commercial-heading">What happens if I don't pay for a commercial license?</h2>
     <div class="support-content">
       In a word:
       <span class="bold">nothing</span>.
@@ -96,4 +96,12 @@ export default {};
 <style lang="scss">
 @import "../../assets/styles/main.scss";
 @import "../../assets/styles/markdown.scss";
+
+.license-wrapper {
+  margin-bottom: 100px;
+}
+
+.commercial-heading {
+  margin-top: 100px !important;
+}
 </style>

@@ -4,93 +4,129 @@
     <h2 class="support-main-heading">Find the plan that's right for you!</h2>
     <div class="table-wrapper">
       <table>
-        <tr>
-          <th></th>
-          <th class="bold">Core</th>
-          <th class="bold">Plus</th>
-          <th class="bold">Enterprise</th>
-        </tr>
-        <tr>
-          <td>
-            Cost
-            <span class="table-span">(paid annually)</span>
-          </td>
-          <td>$95/month</td>
-          <td>$749/month</td>
-          <td>$1,995/month</td>
-        </tr>
-        <tr>
-          <td>Number of developers</td>
-          <td>Unlimited</td>
-          <td>Unlimited</td>
-          <td>Unlimited</td>
-        </tr>
-        <tr>
-          <td>hapi versions</td>
-          <td>v18</td>
-          <td>v18, v17</td>
-          <td>v18, v17, v16</td>
-        </tr>
-        <tr>
-          <td>Version lock-in</td>
-          <td>-</td>
-          <td>2 years</td>
-          <td>5 years</td>
-        </tr>
-        <tr>
-          <td>Additional lock-in years</td>
-          <td>-</td>
-          <td>-</td>
-          <td>Price upon request</td>
-        </tr>
-        <tr>
-          <td>Enterprise plugs</td>
-          <td>Included</td>
-          <td>Included</td>
-          <td>Included</td>
-        </tr>
-        <tr>
-          <td>Max-response time for GitHub issues</td>
-          <td>3 business days</td>
-          <td>3 business days</td>
-          <td>2 business days</td>
-        </tr>
-        <tr>
-          <td>
-            Private priority issues
-            <span class="table-span">(Up to 2 business days response time)</span>
-          </td>
-          <td>-</td>
-          <td>5 issues/month</td>
-          <td>10 issues/month</td>
-        </tr>
-        <tr>
-          <td>
-            Private critical issues
-            <span class="table-span">(Up to 24 hours response time)</span>
-          </td>
-          <td>-</td>
-          <td>-</td>
-          <td>3 issues/month</td>
-        </tr>
-        <tr>
-          <td>Advance security notifactions</td>
-          <td>24 hours</td>
-          <td>48 hours</td>
-          <td>72 hours</td>
-        </tr>
-        <tr>
-          <td>Security patch preview</td>
-          <td>-</td>
-          <td>Included</td>
-          <td>Included</td>
-        </tr>
-        <tr>
-          <td>Private Slack channel</td>
-          <td>-</td>
-          <td>-</td>
-          <td>Included</td>
-        </tr>
+        <thead>
+          <tr>
+            <th></th>
+            <th class="bold">Community</th>
+            <th class="bold">Core</th>
+            <th class="bold">Plus</th>
+            <th class="bold">Enterprise</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="table-feature">
+              Cost
+              <span class="table-span">(paid annually)</span>
+            </td>
+            <td>$0</td>
+            <td>$95/month</td>
+            <td>$749/month</td>
+            <td>$1,995/month</td>
+          </tr>
+          <tr>
+            <td class="table-feature">Number of developers</td>
+            <td>Unlimited</td>
+            <td>Unlimited</td>
+            <td>Unlimited</td>
+            <td>Unlimited</td>
+          </tr>
+          <tr>
+            <td class="table-feature">Public Slack channel</td>
+            <td>&#10004;</td>
+            <td>&#10004;</td>
+            <td>&#10004;</td>
+            <td>&#10004;</td>
+          </tr>
+          <tr>
+            <td class="table-feature">GitHub issues support</td>
+            <td>Community</td>
+            <td>&#10004;</td>
+            <td>&#10004;</td>
+            <td>&#10004;</td>
+          </tr>
+          <tr>
+            <td class="table-feature">
+              Max response time for GitHub issues
+              <span class="table-span">(business days)</span>
+            </td>
+            <td>-</td>
+            <td><span class="bold">3 days</span></td>
+            <td><span class="bold">3 days</span></td>
+            <td><span class="bold">2 days</span></td>
+          </tr>
+          <tr>
+            <td class="table-feature">hapi versions</td>
+            <td>v18</td>
+            <td>v18</td>
+            <td>v18, <span class="bold">v17</span></td>
+            <td>v18, <span class="bold">v17</span>, <span class="bold">v16</span></td>
+          </tr>
+          <tr>
+            <td class="table-feature">Version lock-in</td>
+            <td>-</td>
+            <td>-</td>
+            <td><span class="bold">2 years</span></td>
+            <td><span class="bold">5 years</span></td>
+          </tr>
+          <tr>
+            <td class="table-feature">Additional lock-in years</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>Price upon request</td>
+          </tr>
+          <tr>
+            <td class="table-feature">Enterprise plugs</td>
+            <td>-</td>
+            <td>&#10004;</td>
+            <td>&#10004;</td>
+            <td>&#10004;</td>
+          </tr>
+          <tr>
+            <td class="table-feature">
+              Private priority issues/month
+              <span
+                class="table-span"
+              >(Up to 2 business days response time)</span>
+            </td>
+            <td>-</td>
+            <td><span class="bold">1</span></td>
+            <td><span class="bold">5</span></td>
+            <td><span class="bold">10</span></td>
+          </tr>
+          <tr>
+            <td class="table-feature">
+              Private critical issues/month
+              <span class="table-span">(Up to 24 hours response time)</span>
+            </td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td><span class="bold">3</span></td>
+          </tr>
+          <tr>
+            <td class="table-feature">Advance security notifactions</td>
+            <td>-</td>
+            <td><span class="bold">24 hours</span></td>
+            <td><span class="bold">48 hours</span></td>
+            <td><span class="bold">72 hours</span></td>
+          </tr>
+          <tr>
+            <td class="table-feature">Security patch preview</td>
+            <td>-</td>
+            <td>-</td>
+            <td>&#10004;</td>
+            <td>&#10004;</td>
+          </tr>
+          <tr>
+            <td class="table-feature">Private Slack channel</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>&#10004;</td>
+          </tr>
+        </tbody>
       </table>
     </div>
     <div class="support-button-wrapper">
@@ -136,16 +172,23 @@ table {
   overflow-x: auto;
 }
 
-th {
-  font-size: 1.4rem;
+table th {
+  font-size: 1.3rem;
+  text-align: center;
 }
 
-td {
+table td {
   padding: 10px 5px;
   height: 76px;
+  text-align: center;
+  vertical-align: middle;
 }
 
-tr:nth-child(even) {
+.table-feature {
+  text-align: left;
+}
+
+tbody tr:nth-child(odd) {
   background-color: #fbe4d5;
 }
 

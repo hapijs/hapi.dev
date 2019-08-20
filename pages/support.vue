@@ -16,7 +16,9 @@
         </div>
         <div class="modal-description">Commercial support plan contact form</div>
         <div class="modal-middle">
-          <form action="" method="POST">
+          <form action="https://jumprock.co/mail/tester" method="POST">
+            <input type="hidden" name="after" value="https://hapi-support.netlify.com/support" />
+            <input type="hidden" name="subject" value="hapi.dev license request" />
             <label for="name" class="modal-label">Name</label>
             <input type="text" name="name" id="name" class="modal-input" required/>
             <label for="company" class="modal-label">Company</label>
@@ -80,7 +82,7 @@ export default {
 @import "../assets/styles/markdown.scss";
 
 .support-wrapper {
-  max-width: 1000px;
+  max-width: 1050px;
   width: 100%;
   margin: 0 auto;
   padding: 0 60px;
