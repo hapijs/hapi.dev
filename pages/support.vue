@@ -51,11 +51,11 @@
           <img src="/img/hapi.svg" alt="hapi-logo" class="modal-logo" />
           <img src="/img/close.png" v-on:click="closeConfirmation" alt="close" class="modal-close" />
         </div>
-        <div class="modal-description">Confirmation</div>
+        <div class="modal-description">Thank You!</div>
         <div class="modal-middle">
           <div
             class="confirmation-text"
-          >Thank you for submitting your info. We will contact you shortly.</div>
+          >Your submission has been received. We will contact you shortly.</div>
         </div>
         <div class="modal-bottom">
           <img src="/img/helmet.png" alt="helmet" class="modal-helmet" />
@@ -117,10 +117,9 @@ export default {
 @import "../assets/styles/markdown.scss";
 
 .support-wrapper {
-  max-width: 1050px;
+  max-width: 1070px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 60px;
   font-size: 1.2rem;
 }
 
@@ -191,6 +190,10 @@ export default {
   text-align: center;
   padding: 10px 0;
   border-bottom: 1px solid $dark-white;
+}
+
+.confirmation-text {
+  text-align: center;
 }
 
 .modal-label {

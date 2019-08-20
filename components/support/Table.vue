@@ -155,6 +155,7 @@ export default {
 
 .table-span {
   display: block;
+  font-size: .95rem;
 }
 
 .table-wrapper {
@@ -170,6 +171,7 @@ table {
   width: 100%;
   margin-bottom: 20px;
   overflow-x: auto;
+  font-size: 1.1rem;
 }
 
 table th {
@@ -182,10 +184,12 @@ table td {
   height: 76px;
   text-align: center;
   vertical-align: middle;
+  width: 192px;
 }
 
 .table-feature {
   text-align: left;
+  width: auto !important;
 }
 
 tbody tr:nth-child(odd) {
