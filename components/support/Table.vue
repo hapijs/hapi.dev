@@ -106,7 +106,7 @@
             <td><span class="bold">3</span></td>
           </tr>
           <tr>
-            <td class="table-feature">Advance security notifactions</td>
+            <td class="table-feature">Advance security notifications</td>
             <td>-</td>
             <td><span class="bold">24 hours</span></td>
             <td><span class="bold">48 hours</span></td>
