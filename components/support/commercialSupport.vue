@@ -4,7 +4,7 @@
     <h4 class="support-minor-heading">1. Keep your focus on what you're building</h4>
     <div class="support-content">
       <span class="bold">Open source software never stops evolving</span>, and your team
-      will always spend some time keeping up. Major releases mean new feature and improved
+      will always spend some time keeping up. Major releases mean new features and improved
       functionality, but they also mean
       <span
         class="bold"
