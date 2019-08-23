@@ -42,7 +42,7 @@ export default {
   methods: {
     onChangeChild(value) {
       this.$store.commit("setLanguage", value)
-      this.$store.commit("setPage", page[value].gettingStarted.default);
+      this.$store.commit("setPage", page[value].gettingstarted.default);
       window.scrollTo(0, 0);
     }
   },

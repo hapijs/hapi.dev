@@ -239,6 +239,10 @@ export default {
       console.log(err);
     }
 
+    versionsArray = await versionsArray.sort((a, b) =>
+        Semver.compare(b, a)
+      );
+
     return { moduleAPI, modules, version, versionsArray };
   },
   created() {
