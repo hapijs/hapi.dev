@@ -1,113 +1,33 @@
 <template>
-  <div class="support-wrapper">
-    <modal
-      name="form"
-      :clickToClose="false"
-      :adaptive=true
-      :width="500"
-      :height="700"
-      :pivotX="0"
-      :pivotY="0.28"
-      :reset="true"
-    >
-      <div class="modal-wrapper">
-        <div class="modal-top">
-          <img src="/img/hapi.svg" alt="hapi-logo" class="modal-logo" />
-          <img src="/img/close.png" v-on:click="closeModal" alt="close" class="modal-close" />
-        </div>
-        <div class="modal-description">Commercial support plan contact form</div>
-        <div class="modal-middle">
-          <form action="https://jumprock.co/mail/hapi" method="POST">
-            <input type="hidden" name="after" value="https://hapi-support.netlify.com/support" />
-            <input type="hidden" name="subject" value="hapi.dev license request" />
-            <label for="name" class="modal-label">Name</label>
-            <input type="text" name="name" id="name" class="modal-input" required />
-            <label for="company" class="modal-label">Company</label>
-            <input type="text" name="company" id="company" class="modal-input" required />
-            <label for="email" class="modal-label">Email</label>
-            <input type="text" name="email" id="email" class="modal-input" required />
-            <label for="message" class="modal-label">Message</label>
-            <textarea name="message" id="message" class="modal-text"></textarea>
-            <button class="modal-button" type="submit" v-on:click="openConfirmation">Submit</button>
-          </form>
-        </div>
-        <div class="modal-bottom">
-          <img src="/img/helmet.png" alt="helmet" class="modal-helmet" />
-        </div>
-      </div>
-    </modal>
-    <modal
-      name="confirmation"
-      :clickToClose="false"
-      :adaptive=true
-      :width="500"
-      :height="700"
-      :pivotX="0"
-      :pivotY="0.28"
-      :reset="true"
-    >
-      <div class="modal-wrapper">
-        <div class="modal-top">
-          <img src="/img/hapi.svg" alt="hapi-logo" class="modal-logo" />
-          <img src="/img/close.png" v-on:click="closeConfirmation" alt="close" class="modal-close" />
-        </div>
-        <div class="modal-description">Thank You!</div>
-        <div class="modal-middle">
-          <div
-            class="confirmation-text"
-          >Your submission has been received. We will contact you shortly.</div>
-        </div>
-        <div class="modal-bottom">
-          <img src="/img/helmet.png" alt="helmet" class="modal-helmet" />
-        </div>
-      </div>
-    </modal>
-    <howToHelp />
-    <commercialSupport />
-    <commercialLicense />
-    <Table />
+  <div class="help-wrapper">
+    <div class="help-top">There are a few ways in which you can receive help using hapi:</div>
+    <div class="help-middle">
+      - For any issue or question (no matter how basic), open an issue on
+      <a
+        class="help-link"
+        href="https://github.com/hapijs/hapi"
+      >github</a>.
+    </div>
+    <div class="help-bottom">
+      - For discussions, join the
+      <a
+        class="help-link"
+        href="https://join.slack.com/t/hapihour/shared_invite/enQtNTA5MDUzOTAzOTU4LTUyZmFiYjkyMTBmNDcyMmI2MmRjMzg4Y2YzNTlmNzUzNjViN2U1NmYyY2NjYjhiYWU4MGE2OTFhZDRlYWMyZDY"
+      >Slack channel</a>.
+    </div>
   </div>
 </template>
 
 <script>
-import howToHelp from "~/components/support/howToHelp.vue";
-import commercialSupport from "~/components/support/commercialSupport.vue";
-import commercialLicense from "~/components/support/commercialLicense.vue";
-import Table from "~/components/support/Table.vue";
-
 export default {
   layout: "noSide",
-  components: {
-    howToHelp,
-    commercialSupport,
-    commercialLicense,
-    Table
-  },
   head() {
     return {
-      title: "hapi.js - Support"
+      title: "hapi.js - Help"
     };
   },
-  methods: {
-    closeModal() {
-      this.$modal.hide("form");
-    },
-    closeConfirmation() {
-      this.$modal.hide("confirmation");
-      this.$cookies.set("confirmation", false);
-    },
-    openConfirmation() {
-      this.$modal.hide("form");
-      this.$cookies.set("confirmation", true);
-    }
-  },
   created() {
-    this.$store.commit("setDisplay", "support");
-  },
-  mounted() {
-    if (this.$cookies.get("confirmation")) {
-      this.$modal.show("confirmation");
-    }
+    this.$store.commit("setDisplay", "help");
   }
 };
 </script>
@@ -116,169 +36,27 @@ export default {
 @import "../assets/styles/main.scss";
 @import "../assets/styles/markdown.scss";
 
-.support-wrapper {
-  max-width: 1070px;
+.help-wrapper {
+  max-width: 1260px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 60px;
   font-size: 1.2rem;
 }
 
-.support-main-heading {
-  text-align: center;
-  font-weight: 900;
-  margin: 40px 0;
+.help-top,
+.help-middle {
+  margin-bottom: 25px;
 }
 
-.support-minor-heading {
-  text-align: center;
-  font-weight: 900;
-  margin: 40px 0 0 0;
-}
-
-.support-content {
-  margin: 10px 0;
-}
-
-.support-button-wrapper {
-  margin: 30px auto 80px auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.support-button {
-  border-radius: 10px;
-  border: none;
-  background: $orange;
-  padding: 7px 15px;
-  font-size: 0.9em;
-  font-weight: 700;
-  color: #fff;
-  cursor: pointer;
-  border: 4px solid rgba(0, 0, 0, 0);
-}
-
-.support-button:hover {
-  border: 4px solid $orange;
-  background: #fff;
-  color: $orange;
-  text-decoration: none;
-  transition: all 0.3s ease 0s;
-}
-
-.modal-top {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-logo {
-  width: 150px;
-}
-
-.modal-close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 25px;
-}
-
-.modal-description {
-  margin: 0 auto;
-  width: 100%;
-  text-align: center;
-  padding: 10px 0;
-  border-bottom: 1px solid $dark-white;
-}
-
-.confirmation-text {
-  text-align: center;
-}
-
-.modal-label {
-  margin: 0;
-}
-
-.modal-input {
-  width: 100%;
-  height: 30px;
-  padding: 5px;
-  margin-bottom: 10px;
-}
-
-.modal-text {
-  width: 100%;
-  height: 125px;
-  margin-bottom: 20px;
-  resize: none;
-  padding: 5px;
-}
-
-.modal-middle {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 20px;
-}
-
-.modal-button {
-  border-radius: 10px;
-  border: none;
-  background: $orange;
-  padding: 5px 15px;
-  font-size: 0.9em;
-  font-weight: 700;
-  color: #fff;
-  cursor: pointer;
-  border: 4px solid rgba(0, 0, 0, 0);
-}
-
-.modal-button:hover {
-  border: 4px solid $orange;
-  background: #fff;
-  color: $orange;
-  text-decoration: none;
-  transition: all 0.3s ease 0s;
-}
-
-.modal-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-top: 1px solid $dark-white;
-}
-
-.modal-helmet {
-  width: 40px;
+.help-middle,
+.help-bottom {
+  margin-left: 25px;
 }
 
 @media screen and (max-width: 900px) {
-  .support-wrapper {
-    padding: 0 20px;
-    font-size: 1.1em;
-  }
-
-  .modal-input {
-    height: 30px;
-  }
-
-  .modal-text {
-    height: 75px;
-  }
-
-  .modal-logo {
-    width: 100px;
-  }
-
-  .modal-bottom {
-    display: none;
+  .help-wrapper {
+    padding: 10px 20px;
   }
 }
 </style>

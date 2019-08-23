@@ -56,11 +56,11 @@
 </template>
 
 <script>
-import Security from "~/components/index/Security.vue";
-import Quality from "~/components/index/Quality.vue";
-import DevelopersFirst from "~/components/index/DevelopersFirst.vue";
-import Predictability from "~/components/index/Predictability.vue";
-import Extensibility from "~/components/index/Extensibility.vue";
+import Security from "~/components/Security.vue";
+import Quality from "~/components/Quality.vue";
+import DevelopersFirst from "~/components/DevelopersFirst.vue";
+import Predictability from "~/components/Predictability.vue";
+import Extensibility from "~/components/Extensibility.vue";
 
 export default {
   layout: "home",
@@ -177,6 +177,10 @@ export default {
 
 .index-divider {
   padding: 0 20px;
+}
+
+.underline {
+  border-bottom: 2px solid $black;
 }
 
 .code {

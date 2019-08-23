@@ -79,12 +79,12 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/vue-js-modal'],
+  plugins: [],
 
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/markdownit', '@nuxtjs/axios', '@nuxtjs/dotenv', '@nuxtjs/google-analytics', '@nuxtjs/pwa', 'cookie-universal-nuxt'],
+  modules: ['@nuxtjs/markdownit', '@nuxtjs/axios', '@nuxtjs/dotenv', '@nuxtjs/google-analytics', '@nuxtjs/pwa'],
 
   // [optional] markdownit options
   // See https://github.com/markdown-it/markdown-it
