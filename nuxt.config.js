@@ -60,7 +60,7 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { hid: 'description', name: 'description', content: 'The official home of the hapi.js node framework' }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png?v=1.0' },
            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Inconsolata:400|Lato:400,900&display=swap' }]
