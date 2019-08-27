@@ -284,8 +284,10 @@ export default {
             for (let active of actives) {
               active.classList.remove("api-active");
             }
-            element.classList.add("api-active");
-            active = document.querySelector(".api-active");
+            if (aClass !== "#route.options.validate.state") {
+              element.classList.add("api-active");
+              active = document.querySelector(".api-active");
+            }
           }
           if (
             (offsets[i] <= location && location <= offsets[i] + 100) ||
