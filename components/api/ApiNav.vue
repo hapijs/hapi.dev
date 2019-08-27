@@ -267,7 +267,6 @@ export default {
         }
       }
 
-      let that = this;
       //Add active class to elements on scroll
       window.onscroll = function() {
         let location = document.documentElement.scrollTop;
@@ -309,32 +308,6 @@ export default {
           if (bottom > window.innerHeight) {
             active.scrollIntoView(false);
           }
-          if (that.$route.hash && bottom === 0) {
-            let wrapperHeight = document
-              .querySelector(".api-nav-wrapper")
-              .getBoundingClientRect().height;
-            let activeClass = that.$route.hash;
-            let activeLink = document.querySelector(
-              `a[href*='${activeClass}']`
-            );
-            activeLink.classList.add("api-active");
-            const activePosition = that.links[activeLink.hash];
-            for (let key in that.uls) {
-              if (
-                activePosition > that.uls[key].top &&
-                activePosition < that.uls[key].bottom
-              ) {
-                that.uls[key].name.classList.add("nav-display");
-                that.uls[key].name.parentElement.children[0].classList.remove(
-                  "api-nav-plus"
-                );
-                that.uls[key].name.parentElement.children[0].classList.add(
-                  "api-nav-minus"
-                );
-              }
-            }
-            active.scrollIntoView(false);
-          }
         }
       };
     }
@@ -342,6 +315,7 @@ export default {
   async mounted() {
     await this.setClasses();
     if (this.$route.hash) {
+      document.querySelector(".api-nav-select-wrapper").getBoundingClientRect();
       let wrapperHeight = document
         .querySelector(".api-nav-wrapper")
         .getBoundingClientRect().height;
