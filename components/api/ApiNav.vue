@@ -267,6 +267,8 @@ export default {
         }
       }
 
+      let that = this;
+
       //Add active class to elements on scroll
       window.onscroll = function() {
         let location = document.documentElement.scrollTop;
@@ -281,8 +283,8 @@ export default {
             (offsets[i] <= location || offsets[i] <= locationBody) &&
             !element.classList.contains("api-header")
           ) {
-            for (let active of actives) {
-              active.classList.remove("api-active");
+            for (let a of actives) {
+              a.classList.remove("api-active");
             }
             if (aClass !== "#route.options.validate.state") {
               element.classList.add("api-active");
@@ -293,10 +295,7 @@ export default {
             (offsets[i] <= location && location <= offsets[i] + 100) ||
             (offsets[i] <= locationBody && locationBody <= offsets[i] + 100)
           ) {
-            if (
-              element.classList.contains("api-nav-plus") ||
-              element.classList.contains("api-nav-minus")
-            ) {
+            if (element.classList.contains("api-nav-plus")) {
               let linkSibling = element.parentElement.children[1];
               linkSibling.classList.add("nav-display");
               element.classList.remove("api-nav-plus");
@@ -308,6 +307,32 @@ export default {
         if (active) {
           let bottom = active.getBoundingClientRect().bottom;
           if (bottom > window.innerHeight) {
+            active.scrollIntoView(false);
+          }
+          if (that.$route.hash && bottom === 0) {
+            let wrapperHeight = document
+              .querySelector(".api-nav-wrapper")
+              .getBoundingClientRect().height;
+            let activeClass = that.$route.hash;
+            let activeLink = document.querySelector(
+              `a[href*='${activeClass}']`
+            );
+            // activeLink.classList.add("api-active");
+            const activePosition = that.links[activeLink.hash];
+            for (let key in that.uls) {
+              if (
+                activePosition > that.uls[key].top &&
+                activePosition < that.uls[key].bottom
+              ) {
+                that.uls[key].name.classList.add("nav-display");
+                that.uls[key].name.parentElement.children[0].classList.remove(
+                  "api-nav-plus"
+                );
+                that.uls[key].name.parentElement.children[0].classList.add(
+                  "api-nav-minus"
+                );
+              }
+            }
             active.scrollIntoView(false);
           }
         }
