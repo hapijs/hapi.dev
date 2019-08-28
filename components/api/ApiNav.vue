@@ -276,8 +276,9 @@ export default {
         let actives = document.getElementsByClassName("api-active");
         let i = 0;
         let active;
+        let aClass;
         for (i in offsets) {
-          let aClass = points[offsets[i]].name;
+          aClass = points[offsets[i]].name;
           let element = document.querySelector(`a[href*='${aClass}']`);
           if (
             (offsets[i] <= location || offsets[i] <= locationBody) &&
@@ -291,48 +292,38 @@ export default {
               active = document.querySelector(".api-active");
             }
           }
-          if (
-            (offsets[i] <= location && location <= offsets[i] + 100) ||
-            (offsets[i] <= locationBody && locationBody <= offsets[i] + 100)
-          ) {
-            if (element.classList.contains("api-nav-plus")) {
-              let linkSibling = element.parentElement.children[1];
-              linkSibling.classList.add("nav-display");
-              element.classList.remove("api-nav-plus");
-              element.classList.add("api-nav-minus");
-              linkSibling.classList.add("api-ul-extend");
-            }
-          }
         }
         if (active) {
+          let activeClass;
           let bottom = active.getBoundingClientRect().bottom;
           if (bottom > window.innerHeight) {
             active.scrollIntoView(false);
           }
-          if (that.$route.hash && bottom === 0) {
+          if (that.$route.hash === active.hash && bottom === 0) {
             let wrapperHeight = document
               .querySelector(".api-nav-wrapper")
               .getBoundingClientRect().height;
-            let activeClass = that.$route.hash;
-            let activeLink = document.querySelector(
-              `a[href*='${activeClass}']`
-            );
-            // activeLink.classList.add("api-active");
-            const activePosition = that.links[activeLink.hash];
-            for (let key in that.uls) {
-              if (
-                activePosition > that.uls[key].top &&
-                activePosition < that.uls[key].bottom
-              ) {
-                that.uls[key].name.classList.add("nav-display");
-                that.uls[key].name.parentElement.children[0].classList.remove(
-                  "api-nav-plus"
-                );
-                that.uls[key].name.parentElement.children[0].classList.add(
-                  "api-nav-minus"
-                );
-              }
+            activeClass = that.$route.hash;
+          } else {
+            activeClass = active.hash;
+          }
+          let activeLink = document.querySelector(`a[href*='${activeClass}']`);
+          let activePosition = that.links[activeLink.hash];
+          for (let key in that.uls) {
+            if (
+              activePosition >= that.uls[key].top &&
+              activePosition < that.uls[key].bottom
+            ) {
+              that.uls[key].name.classList.add("nav-display");
+              that.uls[key].name.parentElement.children[0].classList.remove(
+                "api-nav-plus"
+              );
+              that.uls[key].name.parentElement.children[0].classList.add(
+                "api-nav-minus"
+              );
             }
+          }
+          if (that.$route.hash === active.hash && bottom === 0) {
             active.scrollIntoView(false);
           }
         }
