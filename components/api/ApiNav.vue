@@ -295,10 +295,7 @@ export default {
             (offsets[i] <= location && location <= offsets[i] + 100) ||
             (offsets[i] <= locationBody && locationBody <= offsets[i] + 100)
           ) {
-            if (
-              element.classList.contains("api-nav-plus") ||
-              element.classList.contains("api-nav-minus")
-            ) {
+            if (element.classList.contains("api-nav-plus")) {
               let linkSibling = element.parentElement.children[1];
               linkSibling.classList.add("nav-display");
               element.classList.remove("api-nav-plus");
@@ -320,7 +317,7 @@ export default {
             let activeLink = document.querySelector(
               `a[href*='${activeClass}']`
             );
-            activeLink.classList.add("api-active");
+            // activeLink.classList.add("api-active");
             const activePosition = that.links[activeLink.hash];
             for (let key in that.uls) {
               if (
