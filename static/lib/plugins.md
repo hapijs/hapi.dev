@@ -4,6 +4,11 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
 ## <a name="authorization"></a> Authorization
 
+
+*   [hacli](https://github.com/antoniogiordano/hacli)
+
+    ACL support based on permissions hierarchy
+    
 *   [hapi-acl-auth](https://github.com/charlesread/hapi-acl-auth)
 
     Authentication provider agnostic authorization plugin for hapi apps
