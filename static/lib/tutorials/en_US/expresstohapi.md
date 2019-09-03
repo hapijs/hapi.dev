@@ -471,6 +471,7 @@ Express:
 ```js
 npm install passport passport-twitter
 ```
+<br />
 
 ```js
 var passport = require('passport');
@@ -508,6 +509,7 @@ hapi:
 ```js
 npm install '@hapi/bell'
 ```
+<br />
 
 ```js
 const Hapi = require('@hapi/hapi');
@@ -571,6 +573,7 @@ Express:
 ```js
 npm install express-validator
 ```
+<br />
 
 ```js
 const bodyParser = require('body-parser');
@@ -597,6 +600,7 @@ hapi:
 ```js
 npm install @hapi/joi
 ```
+<br />
 
 ```js
 const Joi = require('joi')
@@ -827,7 +831,9 @@ hapi uses the [boom](https://github.com/hapijs/boom) module to handle errors. By
 
 Express: 
 
-```Cannot GET /hello```
+```js
+Cannot GET /hello
+```
 
 hapi:
 ```json
