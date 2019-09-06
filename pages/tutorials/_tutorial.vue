@@ -1,11 +1,8 @@
 <template>
   <div class="container">
-    <TutorialNav
-      :language="language"
-      @changed="onChangeChild"
-    />
+    <TutorialNav :language="language" @changed="onChangeChild" />
     <div class="tutorial-markdown-window">
-      <Tutorial :display="getPage" :language="language"/>
+      <Tutorial :display="getPage" :language="language" />
     </div>
   </div>
 </template>
@@ -23,9 +20,14 @@ export default {
     return {
       title:
         "hapi.js - " +
-        this.$route.params.tutorial.replace(/([A-Z])/g, " $1").replace(/^./, function(str) {
-          return str.toUpperCase();
-        })
+        this.$route.params.tutorial
+          .replace(/([A-Z])/g, " $1")
+          .replace(/^./, function(str) {
+            return str.toUpperCase();
+          }),
+      meta: [
+        { hid: "description", name: "description", content: "Learn how to use hapi" }
+      ]
     };
   },
   data() {
@@ -39,21 +41,31 @@ export default {
       return this.$store.getters.loadPage;
     },
     getLanguage() {
-      return this.$store.getters.loadLanguage
+      return this.$store.getters.loadLanguage;
     }
   },
   methods: {
     onChangeChild(value) {
-      this.$store.commit("setLanguage", value)
-      this.$store.commit("setPage", page[value][this.$route.params.tutorial].default);
+      this.$store.commit("setLanguage", value);
+      this.$store.commit(
+        "setPage",
+        page[value][this.$route.params.tutorial].default
+      );
       window.scrollTo(0, 0);
     }
   },
   created() {
     this.$store.commit("setDisplay", "tutorials");
-    this.$store.commit("setLanguage", this.$route.query.lang ? this.$route.query.lang : "en_US")
-    this.$store.commit("setPage", page[this.$store.getters.loadLanguage][this.$route.params.tutorial].default);
-  },
+    this.$store.commit(
+      "setLanguage",
+      this.$route.query.lang ? this.$route.query.lang : "en_US"
+    );
+    this.$store.commit(
+      "setPage",
+      page[this.$store.getters.loadLanguage][this.$route.params.tutorial]
+        .default
+    );
+  }
 };
 </script>
 
@@ -84,9 +96,8 @@ ol {
 }
 
 .markdown-wrapper ol li:before {
-  content: counters(item, ".") ". "; 
+  content: counters(item, ".") ". ";
   counter-increment: item;
 }
-
 </style>
 
