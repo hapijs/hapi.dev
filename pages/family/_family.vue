@@ -25,7 +25,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.js - " + this.$route.params.family,
+      title: "hapi.js - " + this.$route.params.family + " v" + this.getVersion,
       meta: [
         { hid: "description", name: "description", content: "View the APIs for the hapi modules" }
       ]
