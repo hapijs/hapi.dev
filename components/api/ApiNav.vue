@@ -378,7 +378,7 @@ export default {
   overflow-y: auto;
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
-  padding: 20px 20px 5px 0;
+  padding: 20px 0 5px 0;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -665,7 +665,7 @@ export default {
 
 .api-side-footer-wrapper {
   width: 100%;
-  padding-left: 20px;
+  padding: 0 20px;
 }
 
 @media screen and (max-width: 900px) {
