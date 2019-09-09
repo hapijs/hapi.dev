@@ -38,7 +38,9 @@
         </div>
         <div class="api-nav-select-wrapper" v-html="$md.render(this.$props.menu)"></div>
       </div>
-      <SideFooter />
+      <div class="api-side-footer-wrapper">
+        <SideFooter />
+      </div>
     </div>
   </div>
 </template>
@@ -376,7 +378,7 @@ export default {
   overflow-y: auto;
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
-  padding: 0;
+  padding: 20px 20px 5px 0;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -393,7 +395,7 @@ export default {
   position: relative;
   width: 100%;
   height: auto;
-  min-height: calc(100vh - 93px);
+  min-height: calc(100vh - 122px);
 }
 
 .api-nav-inner-wrapper {
@@ -406,7 +408,7 @@ export default {
 }
 
 .api-nav-title-wrapper {
-  padding: 20px;
+  padding: 0 20px 20px 20px;
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -659,6 +661,11 @@ export default {
   left: -60px;
   padding: 2px 30px 2px 60px !important;
   width: 375px !important;
+}
+
+.api-side-footer-wrapper {
+  width: 100%;
+  padding-left: 20px;
 }
 
 @media screen and (max-width: 900px) {
