@@ -36,7 +36,7 @@ a {
 
 .footer-links {
   list-style-type: none;
-  margin: 0 auto;
+  margin: 0 auto 3px auto;
   width: 100%;
   text-align: center;
 }
@@ -88,7 +88,6 @@ a {
 }
 
 .footer-text {
-  font-size: 0.7em;
   text-align: center;
 }
 

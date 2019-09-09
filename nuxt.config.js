@@ -1,5 +1,3 @@
-const pkg = require('./package');
-
 module.exports = {
   mode: 'universal',
 
@@ -34,7 +32,7 @@ module.exports = {
   router: {
     scrollBehavior: function (to, from, savedPosition) {
       if (savedPosition) {
-        return savedPosition;
+        return savedPosition
       } else {
         let position = {}
         if (to.matched.length < 2) {
@@ -45,7 +43,7 @@ module.exports = {
         if (to.hash) {
           position = { selector: to.hash }
         }
-        return position;
+        return position
       }
     }
   },
@@ -123,4 +121,4 @@ module.exports = {
      */
     // extend(config, ctx) {}
   }
-};
+}

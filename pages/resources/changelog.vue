@@ -2,7 +2,7 @@
   <div class="container">
     <ResourcesNav page="changelog" />
     <div class="community-wrapper">
-      <Changelog :milestones="getMilestones"/>
+      <Changelog :milestones="getMilestones" />
     </div>
   </div>
 </template>
@@ -22,7 +22,7 @@ export default {
   },
   data() {
     return {
-      page: "changelog",
+      page: "changelog"
     };
   },
   head() {
@@ -31,7 +31,10 @@ export default {
         "hapi.js - " +
         this.page.replace(/([A-Z])/g, " $1").replace(/^./, function(str) {
           return str.toUpperCase();
-        })
+        }),
+      meta: [
+        { hid: "description", name: "description", content: "View hapi's version history" }
+      ]
     };
   },
   computed: {
@@ -46,10 +49,9 @@ export default {
     await this.$store.commit("setDisplay", "resources");
   },
   async asyncData({ $axios, params, store }) {
-
     let milestoneList = [];
     let m = [];
-    let milestones = []
+    let milestones = [];
 
     const mileOptions = {
       headers: {
@@ -57,12 +59,13 @@ export default {
         authorization: "token " + process.env.GITHUB_TOKEN
       }
     };
-    for(let p = 1; p <= 2; p++) {
+    for (let p = 1; p <= 2; p++) {
       milestones = await $axios.$get(
-        "https://api.github.com/repos/hapijs/hapi/milestones?state=closed&per_page=100&page=" + p,
+        "https://api.github.com/repos/hapijs/hapi/milestones?state=closed&per_page=100&page=" +
+          p,
         mileOptions
       );
-      await m.push(milestones)
+      await m.push(milestones);
     }
 
     let flatM = await [].concat(...m);
@@ -83,7 +86,6 @@ export default {
       }
     }
 
-
     return {
       milestoneList
     };
@@ -101,7 +103,6 @@ export default {
 <style lang="scss">
 @import "../../assets/styles/main.scss";
 @import "../../assets/styles/markdown.scss";
-
 
 .community-wrapper {
   margin: 0;
