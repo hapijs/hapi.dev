@@ -87,6 +87,14 @@ export default {
   display: none;
 }
 
+.mobile-top-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin: 0;
+}
+
 @media screen and (max-width: 900px) {
   .mobile-family-info {
     display: block;
@@ -95,11 +103,7 @@ export default {
   }
 
   .mobile-top-wrapper {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    margin: 0;
   }
 
   .family-span {
