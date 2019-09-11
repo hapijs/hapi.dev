@@ -273,6 +273,11 @@ const start = async () => {
                 request.cookieAuth.set({ id: account.id });
 
                 return h.redirect('/');
+             },
+             options: {
+                 auth: {
+                     mode: 'try'
+                 }
              }
         }
     ]);
