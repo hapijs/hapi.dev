@@ -68,7 +68,6 @@ html {
 @media print {
   .navbar {
     position: relative !important;
-    margin-bottom: -96px;
   }
 }
 </style>
