@@ -1,5 +1,3 @@
-const pkg = require('./package');
-
 module.exports = {
   mode: 'universal',
 
@@ -34,7 +32,7 @@ module.exports = {
   router: {
     scrollBehavior: function (to, from, savedPosition) {
       if (savedPosition) {
-        return savedPosition;
+        return savedPosition
       } else {
         let position = {}
         if (to.matched.length < 2) {
@@ -45,7 +43,7 @@ module.exports = {
         if (to.hash) {
           position = { selector: to.hash }
         }
-        return position;
+        return position
       }
     }
   },
@@ -53,14 +51,15 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: 'hapi.js',
+    title: 'hapi.js - The simple, secure framework developers trust',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { hid: 'description', name: 'description', content: 'Build powerful, scalable applications, with minimal overhead and full out-of-the-box functionality - your code, your way. Originally developed to handle Walmart’s Black Friday scale, hapi continues to be the proven choice for enterprise-grade backend needs.' },
+      { hid: 'keywords', name:'keywords', content: 'hapi, hapi.js, node, node.js, javascript, framework'}
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png?v=1.0' },
            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Inconsolata:400|Lato:400,900&display=swap' }]
@@ -79,12 +78,12 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/vue-js-modal'],
+  plugins: [],
 
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/markdownit', '@nuxtjs/axios', '@nuxtjs/dotenv', '@nuxtjs/google-analytics', '@nuxtjs/pwa', 'cookie-universal-nuxt'],
+  modules: ['@nuxtjs/markdownit', '@nuxtjs/axios', '@nuxtjs/dotenv', '@nuxtjs/google-analytics', '@nuxtjs/pwa'],
 
   // [optional] markdownit options
   // See https://github.com/markdown-it/markdown-it
@@ -122,4 +121,4 @@ module.exports = {
      */
     // extend(config, ctx) {}
   }
-};
+}

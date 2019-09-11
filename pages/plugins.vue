@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <PluginsNav/>
+    <PluginsNav />
     <div class="tutorial-markdown-window">
-      <Plugins/>
+      <Plugins />
     </div>
   </div>
 </template>
@@ -17,7 +17,19 @@ export default {
   },
   head() {
     return {
-      title: "hapi.js - Plugins"
+      title: "hapi.js - Plugins",
+      head() {
+        return {
+          title: "hapi.js - " + this.$route.params.family,
+          meta: [
+            {
+              hid: "description",
+              name: "description",
+              content: "View the hapi plugins"
+            }
+          ]
+        };
+      }
     };
   },
   created() {

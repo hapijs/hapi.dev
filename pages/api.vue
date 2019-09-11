@@ -31,7 +31,10 @@ export default {
   },
   head() {
     return {
-      title: "hapi.js - " + this.version + " API Reference"
+      title: "hapi.js - " + this.version + " API Reference",
+      meta: [
+        { hid: 'description', name: 'description', content: 'The hapi API' }
+      ]
     };
   },
   data() {
@@ -233,8 +236,8 @@ export default {
     (!this.$route.query.v ||
       !this.versions.includes(this.$route.query.v)) &&
         this.$router.push({
-          path: this.$route.path,
-          query: { v: this.versions[0] }
+          query: { v: this.versions[0] },
+          hash: this.$route.hash
         });
     this.$data.htmlDisplay = this.apis[this.$data.version];
     this.$data.menu = this.menus[this.$data.version];

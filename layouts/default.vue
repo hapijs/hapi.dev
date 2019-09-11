@@ -64,4 +64,10 @@ html {
     margin: 0 auto;
   }
 }
+
+@media print {
+  .navbar {
+    position: relative !important;
+  }
+}
 </style>

@@ -2,38 +2,79 @@
   <header>
     <nav role="navigation" class="navbar">
       <div class="nav-container">
-        <a class="logo" href="/" title="Back to home" aria-label="hapi-logo"/>
+        <a class="logo" href="/" title="Back to home" aria-label="hapi-logo" />
         <div class="nav-collapse">
           <ul class="nav-links">
             <li class="nav-links-li">
-              <a :class="getDisplay === 'api' ? 'nav-link nav-link-active' : 'nav-link'" ref="api" title="API" href="/api" v-on:click="addActive('api')">API</a>
+              <a
+                :class="getDisplay === 'api' ? 'nav-link nav-link-active' : 'nav-link'"
+                ref="api"
+                title="API"
+                href="/api"
+                v-on:click="addActive('api')"
+              >API</a>
             </li>
             <li class="nav-links-li">
-              <a :class="getDisplay === 'tutorials' ? 'nav-link nav-link-active' : 'nav-link'" ref="tutorials" title="Tutorials" href="/tutorials/?lang=en_US" v-on:click="addActive('tutorials')">Tutorials</a>
+              <a
+                :class="getDisplay === 'tutorials' ? 'nav-link nav-link-active' : 'nav-link'"
+                ref="tutorials"
+                title="Tutorials"
+                href="/tutorials/?lang=en_US"
+                v-on:click="addActive('tutorials')"
+              >Tutorials</a>
             </li>
             <li class="nav-links-li">
-              <a :class="getDisplay === 'resources' ? 'nav-link nav-link-active' : 'nav-link'" ref="resources" title="Resources" href="/resources/changelog" v-on:click="addActive('resources')">Resources</a>
+              <a
+                :class="getDisplay === 'resources' ? 'nav-link nav-link-active' : 'nav-link'"
+                ref="resources"
+                title="Resources"
+                href="/resources/changelog"
+                v-on:click="addActive('resources')"
+              >Resources</a>
             </li>
             <li class="nav-links-li">
-              <a :class="getDisplay === 'family' ? 'nav-link nav-link-active' : 'nav-link'" ref="family" title="Family" href="/family/bell" v-on:click="addActive('family')">Family</a>
+              <a
+                :class="getDisplay === 'family' ? 'nav-link nav-link-active' : 'nav-link'"
+                ref="family"
+                title="Family"
+                href="/family/bell"
+                v-on:click="addActive('family')"
+              >Family</a>
             </li>
             <li class="nav-links-li">
-              <a :class="getDisplay === 'plugins' ? 'nav-link nav-link-active' : 'nav-link'" ref="plugins" title="Plugins" href="/plugins"  v-on:click="addActive('plugins')">Plugins</a>
+              <a
+                :class="getDisplay === 'plugins' ? 'nav-link nav-link-active' : 'nav-link'"
+                ref="plugins"
+                title="Plugins"
+                href="/plugins"
+                v-on:click="addActive('plugins')"
+              >Plugins</a>
             </li>
             <li class="nav-links-li">
-              <a :class="getDisplay === 'support' ? 'nav-link nav-link-active' : 'nav-link'" ref="support" title="Support" href="/support" v-on:click="addActive('support')">Support</a>
+              <a
+                :class="getDisplay === 'support' ? 'nav-link nav-link-active' : 'nav-link'"
+                ref="support"
+                title="Support"
+                href="/support"
+                v-on:click="addActive('support')"
+              >Support</a>
             </li>
           </ul>
         </div>
-        <a href="javascript:void(0);" class="hamburger" aria-label="hamburger" v-on:click="showNav()">
-          <span class="hamburger-line hamburger-line-upper"/>
-          <span class="hamburger-line hamburger-line-middle"/>
-          <span class="hamburger-line hamburger-line-lower"/>
+        <a
+          href="javascript:void(0);"
+          class="hamburger"
+          aria-label="hamburger"
+          v-on:click="showNav()"
+        >
+          <span class="hamburger-line hamburger-line-upper" />
+          <span class="hamburger-line hamburger-line-middle" />
+          <span class="hamburger-line hamburger-line-lower" />
         </a>
       </div>
       <div ref="mobileNav" class="mobile-nav-wrapper">
         <div ref="overlay" class="mobile-overlay" v-on:click="hideNav()"></div>
-        <MobileNav/>
+        <MobileNav />
       </div>
     </nav>
   </header>
@@ -125,7 +166,7 @@ export default {
   position: relative;
   margin: 10px;
   color: $orange;
-  font-size: 1.10em;
+  font-size: 1.1em;
   font-weight: 900;
   box-sizing: border-box;
   border-radius: 6px;
@@ -234,6 +275,19 @@ export default {
     display: inline-block;
     left: 20px;
     top: 8px;
+  }
+}
+
+@media print {
+  .navbar {
+    padding: 10px 0;
+  }
+  .nav-container {
+    justify-content: flex-start;
+  }
+
+  .nav-collapse {
+    display: none;
   }
 }
 </style>

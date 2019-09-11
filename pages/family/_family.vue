@@ -25,7 +25,10 @@ export default {
   },
   head() {
     return {
-      title: "hapi.js - " + this.$route.params.family
+      title: "hapi.js - " + this.$route.params.family + " v" + this.getVersion,
+      meta: [
+        { hid: "description", name: "description", content: "View the APIs for the hapi modules" }
+      ]
     };
   },
   data() {
@@ -95,7 +98,9 @@ export default {
               active.classList.remove("ecosystem-active");
             }
 
-            element = document.querySelector(`.side-nav-wrapper a[href*='${aClass}']`);
+            element = document.querySelector(
+              `.side-nav-wrapper a[href*='${aClass}']`
+            );
             if (element.children.length !== 0) {
               document
                 .querySelector(`a[href*='${aClass}']`)
@@ -107,7 +112,7 @@ export default {
             }
           }
         }
-        let bottom = element.getBoundingClientRect().bottom
+        let bottom = element.getBoundingClientRect().bottom;
         if (bottom > window.innerHeight) {
           element.scrollIntoView(false);
         }
@@ -238,6 +243,8 @@ export default {
     } catch (err) {
       console.log(err);
     }
+
+    versionsArray = await versionsArray.sort((a, b) => Semver.compare(b, a));
 
     return { moduleAPI, modules, version, versionsArray };
   },

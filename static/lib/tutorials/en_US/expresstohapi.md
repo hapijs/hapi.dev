@@ -208,9 +208,9 @@ hapi has the functionality to respond with JSON data by default. They only thing
 
 To extend its functionality, Express uses middleware. Middleware essentially is a sequence of functions using callbacks to execute the next function. The issue with this is as your application grows in size and complexity, the order at which middleware executes becomes more crucial and more difficult to maintain. Having a middleware execute before one it's dependant on will cause you application to fail. hapi fixes this issue with its robust plugin and extension system. 
 
-Plugins allow you to break your application logic into isolated pieces of business logic, and reusable utilities. Each plugin comes with its own dependencies which are explicitly specified in the plugins themselves. This means you don't have to install dependencies yourself to make your plugins work. You can either add an existing hapi plugin, or write your own. For a more extensive tutorial on plugins, please see the [plugins](/tutorials/plugins) tutorial.  
+Plugins allow you to break your application logic into isolated pieces of business logic, and reusable utilities. Each plugin comes with its own dependencies which are explicitly specified in the plugins themselves. This means you don't have to install dependencies yourself to make your plugins work. You can either add an existing hapi plugin, or write your own. For a more extensive tutorial on plugins, please see the [plugins](/tutorials/plugins/?lang=en_US) tutorial.  
 
-Each request in hapi follows a predefined path, the request lifecycle. hapi has extension points that let you create custom functionlity along the lifecycle. Extension points in hapi let you know the precise order at which you application will run. For more info, please see the hapi [request lifecycle](/api#request-lifecycle).
+Each request in hapi follows a predefined path, the request lifecycle. hapi has extension points that let you create custom functionlity along the lifecycle. Extension points in hapi let you know the precise order at which you application will run. For more info, please see the hapi [request lifecycle](/api/#request-lifecycle).
 
 ### <a name="extension" ></a> Extension Points
 
@@ -471,6 +471,7 @@ Express:
 ```js
 npm install passport passport-twitter
 ```
+<br />
 
 ```js
 var passport = require('passport');
@@ -508,6 +509,7 @@ hapi:
 ```js
 npm install '@hapi/bell'
 ```
+<br />
 
 ```js
 const Hapi = require('@hapi/hapi');
@@ -561,7 +563,7 @@ To use bell, simply register the plugin and configure the strategy with `server.
 
 ## <a name="joi" ></a> express-validator -> joi
 
-To validate data in Express, you make use of the `express-validator` plugin. One of the biggest drawbacks to `express-validator` is that while you can validate a request, there is no clear way of validating a response. In hapi, you use the [joi](https://github.com/hapijs/joi) module, which can validate requests and responses with ease. Joi allows you to create your own validations with a simple and clean object syntax. For a more in-depth look at validation in hapi, please see the [validation](/tutorials/validation) tutorial.
+To validate data in Express, you make use of the `express-validator` plugin. One of the biggest drawbacks to `express-validator` is that while you can validate a request, there is no clear way of validating a response. In hapi, you use the [joi](https://github.com/hapijs/joi) module, which can validate requests and responses with ease. Joi allows you to create your own validations with a simple and clean object syntax. For a more in-depth look at validation in hapi, please see the [validation](/tutorials/validation/?lang=en_US) tutorial.
 
 ### <a name="input" ></a> Input Validation
 
@@ -571,6 +573,7 @@ Express:
 ```js
 npm install express-validator
 ```
+<br />
 
 ```js
 const bodyParser = require('body-parser');
@@ -597,6 +600,7 @@ hapi:
 ```js
 npm install @hapi/joi
 ```
+<br />
 
 ```js
 const Joi = require('joi')
@@ -657,7 +661,7 @@ This route will return a list of books. In the `options` route property, we can 
 
 ## <a name="vision" ></a> app.set('view engine') -> vision
 
-hapi has extensive support for template rendering, including the ability to load and leverage multiple templating engines, partials, helpers (functions used in templates to manipulate data), and layouts. Express enables views capabilities by using `app.set('view engine)`, where hapi's capabilities are provided by the [vision](https://github.com/hapijs/vision) plugin. For a more extensive tutorial on views in hapi, please see the [views](/tutorials/views) tutorial.
+hapi has extensive support for template rendering, including the ability to load and leverage multiple templating engines, partials, helpers (functions used in templates to manipulate data), and layouts. Express enables views capabilities by using `app.set('view engine)`, where hapi's capabilities are provided by the [vision](https://github.com/hapijs/vision) plugin. For a more extensive tutorial on views in hapi, please see the [views](/tutorials/views/?lang=en_US) tutorial.
 
 ### <a name="viewengine" ></a> Setting the View Engine
 
@@ -681,7 +685,7 @@ server.views({
 ```
 By default, Express will look for views or templates in the `views` folder. In hapi, you specify where the views are located using the `relativeTo` and `path` properties. Like Express, hapi supports a wide variety of templating engines, such as pug, ejs, handlebars, etc.
 
-hapi has many more configurable options in `server.views`. To see the full list of capabilities, please go to the [views](/tutorials/views) tutorial.
+hapi has many more configurable options in `server.views`. To see the full list of capabilities, please go to the [views](/tutorials/views/?lang=en_US) tutorial.
 
 ### <a name="view" ></a> Rendering a View
 
@@ -727,7 +731,7 @@ To pass context in `h.view`, you pass an object as the second parameter. To pass
 
 ## <a name="inert" ></a> express.static() -> inert
 
-hapi gets its ability to serve static content from a plugin called [inert](https://github.com/hapijs/inert). inert provides new handler methods for serving static files and directories, as well as adding a `h.file()` method to the response toolkit. For a more in-depth tutorial of server static files in hapi, please see the [serving static files](/tutorials/serving-files) tutorial.
+hapi gets its ability to serve static content from a plugin called [inert](https://github.com/hapijs/inert). inert provides new handler methods for serving static files and directories, as well as adding a `h.file()` method to the response toolkit. For a more in-depth tutorial of server static files in hapi, please see the [serving static files](/tutorials/serving-files/?lang=en_US) tutorial.
 
 ### <a name="single" ></a> Serving Single Files
 
@@ -819,7 +823,7 @@ server.route({
     }
 });
 ```
-Now, you can access any static files by going to `localhost:3000/filename`. [inert](https://github.com/hapijs/inert) has many other options and capabilities. To see what all it can do, please see the [serving static files](/tutorials/serving-files) tutorial.
+Now, you can access any static files by going to `localhost:3000/filename`. [inert](https://github.com/hapijs/inert) has many other options and capabilities. To see what all it can do, please see the [serving static files](/tutorials/serving-files/?lang=en_US) tutorial.
 
 ## <a name="boom" ></a> Error Handling -> boom
 
@@ -827,7 +831,9 @@ hapi uses the [boom](https://github.com/hapijs/boom) module to handle errors. By
 
 Express: 
 
-```Cannot GET /hello```
+```js
+Cannot GET /hello
+```
 
 hapi:
 ```json

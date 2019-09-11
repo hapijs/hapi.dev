@@ -38,7 +38,9 @@
         </div>
         <div class="api-nav-select-wrapper" v-html="$md.render(this.$props.menu)"></div>
       </div>
-      <SideFooter />
+      <div class="api-side-footer-wrapper">
+        <SideFooter />
+      </div>
     </div>
   </div>
 </template>
@@ -267,6 +269,8 @@ export default {
         }
       }
 
+      let that = this;
+
       //Add active class to elements on scroll
       window.onscroll = function() {
         let location = document.documentElement.scrollTop;
@@ -274,38 +278,54 @@ export default {
         let actives = document.getElementsByClassName("api-active");
         let i = 0;
         let active;
+        let aClass;
         for (i in offsets) {
-          let aClass = points[offsets[i]].name;
+          aClass = points[offsets[i]].name;
           let element = document.querySelector(`a[href*='${aClass}']`);
           if (
             (offsets[i] <= location || offsets[i] <= locationBody) &&
             !element.classList.contains("api-header")
           ) {
-            for (let active of actives) {
-              active.classList.remove("api-active");
+            for (let a of actives) {
+              a.classList.remove("api-active");
             }
-            element.classList.add("api-active");
-            active = document.querySelector(".api-active");
-          }
-          if (
-            (offsets[i] <= location && location <= offsets[i] + 100) ||
-            (offsets[i] <= locationBody && locationBody <= offsets[i] + 100)
-          ) {
-            if (
-              element.classList.contains("api-nav-plus") ||
-              element.classList.contains("api-nav-minus")
-            ) {
-              let linkSibling = element.parentElement.children[1];
-              linkSibling.classList.add("nav-display");
-              element.classList.remove("api-nav-plus");
-              element.classList.add("api-nav-minus");
-              linkSibling.classList.add("api-ul-extend");
+            if (aClass !== "#route.options.validate.state") {
+              element.classList.add("api-active");
+              active = document.querySelector(".api-active");
             }
           }
         }
         if (active) {
+          let activeClass;
           let bottom = active.getBoundingClientRect().bottom;
           if (bottom > window.innerHeight) {
+            active.scrollIntoView(false);
+          }
+          if (that.$route.hash === active.hash && bottom === 0) {
+            let wrapperHeight = document
+              .querySelector(".api-nav-wrapper")
+              .getBoundingClientRect().height;
+            activeClass = that.$route.hash;
+          } else {
+            activeClass = active.hash;
+          }
+          let activeLink = document.querySelector(`a[href*='${activeClass}']`);
+          let activePosition = that.links[activeLink.hash];
+          for (let key in that.uls) {
+            if (
+              activePosition >= that.uls[key].top &&
+              activePosition < that.uls[key].bottom
+            ) {
+              that.uls[key].name.classList.add("nav-display");
+              that.uls[key].name.parentElement.children[0].classList.remove(
+                "api-nav-plus"
+              );
+              that.uls[key].name.parentElement.children[0].classList.add(
+                "api-nav-minus"
+              );
+            }
+          }
+          if (that.$route.hash === active.hash && bottom === 0) {
             active.scrollIntoView(false);
           }
         }
@@ -358,7 +378,7 @@ export default {
   overflow-y: auto;
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
-  padding: 0;
+  padding: 20px 0 5px 0;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -375,7 +395,7 @@ export default {
   position: relative;
   width: 100%;
   height: auto;
-  min-height: calc(100vh - 93px);
+  min-height: calc(100vh - 122px);
 }
 
 .api-nav-inner-wrapper {
@@ -388,7 +408,7 @@ export default {
 }
 
 .api-nav-title-wrapper {
-  padding: 20px;
+  padding: 0 20px 20px 20px;
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -643,6 +663,11 @@ export default {
   width: 375px !important;
 }
 
+.api-side-footer-wrapper {
+  width: 100%;
+  padding: 0 20px;
+}
+
 @media screen and (max-width: 900px) {
   .api-nav-window {
     flex-direction: row;
@@ -656,6 +681,12 @@ export default {
   }
   .api-nav-wrapper {
     min-height: auto;
+  }
+}
+
+@media print {
+  .api-nav-window {
+    display: none;
   }
 }
 </style>

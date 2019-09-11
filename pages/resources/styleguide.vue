@@ -2,7 +2,7 @@
   <div class="container">
     <ResourcesNav page="styleguide" />
     <div class="community-wrapper">
-      <HTML :display="styleGuide"/>
+      <HTML :display="styleGuide" />
     </div>
   </div>
 </template>
@@ -18,12 +18,15 @@ export default {
   },
   data() {
     return {
-      page: "styleGuide",
+      page: "styleGuide"
     };
   },
   head() {
     return {
-      title: "hapi.js - Style Guide"
+      title: "hapi.js - Style Guide",
+      meta: [
+        { hid: "description", name: "description", content: "The official hapi style guide" }
+      ]
     };
   },
   async created() {
@@ -60,7 +63,7 @@ export default {
         }
       }
     );
-    return { styleGuide }
+    return { styleGuide };
   }
 };
 </script>

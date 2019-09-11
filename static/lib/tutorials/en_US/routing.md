@@ -55,10 +55,17 @@ server.route({
     path: '/hello/{user}',
     handler: function (request, h) {
 
-        return `Hello ${encodeURIComponent(request.params.user)}!`;
+        return `Hello ${request.params.user}!`;
     }
 });
 ```
+
+Note: It is best practice to always to return escaped and validated user inputs such as query/path parameters. This is done to prevent echo or XSS attacks. One way to do this is to use [Hoek](/family/hoek) `escapeHtml()` method. With escaping in place, the above example would look like the following:
+
+```js
+return `Hello ${Hoek.escapeHtml(request.params.user)}!`
+```
+
 As you can see above, you have the string `{user}` in your path, which means you're asking for that segment of the path to be assigned to a named parameter. These parameters are stored in the object `request.params` within the handler. Since you named your parameter user, you are able to access the value with the property `request.params.user`, after URI encoding it so as to prevent content injection attacks. For example, going to `/hello/ferris` in your browser, you will see `Hello ferris!`.
 
 ## <a name="optionalParameters"></a> Optional Parameters
@@ -71,9 +78,7 @@ server.route({
     path: '/hello/{user?}',
     handler: function (request, h) {
 
-        const user = request.params.user ?
-            encodeURIComponent(request.params.user) :
-            'stranger';
+        const user = request.params.user ? request.params.user : 'stranger';
 
         return `Hello ${user}!`;
     }
@@ -92,7 +97,8 @@ server.route({
     handler: function (request, h) {
 
         const userParts = request.params.user.split('/');
-        return `Hello ${encodeURLComponent(userParts[0])} ${encodeURLComponent(userParts[1])}!`;
+
+        return `Hello ${userParts[0]} ${userParts[1]}!`;
     }
 });
 ```
@@ -160,7 +166,7 @@ server.route({
 const init = async () => {
 
     await server.start();
-    console.log('Server running on %ss', server.info.uri);
+    console.log('Server running on %s', server.info.uri);
 };
 
 process.on('unhandledRejection', (err) => {
@@ -197,7 +203,8 @@ server.route({
     handler: function (request, h) {
 
         const payload = request.payload;
-        return `Welcome ${encodeURIComponent(payload.username)}!`;
+
+        return `Welcome ${payload.username}!`;
     }
 });
 ```
@@ -234,7 +241,8 @@ server.route({
     handler: function (request, h) {
 
         const payload = request.payload;
-        return `Welcome ${encodeURIComponent(payload.username)}!`;
+
+        return `Welcome ${payload.username}!`;
     },
     options: {
         auth: false,
@@ -279,7 +287,7 @@ const init = async () => {
     });
 
     await server.start();
-    console.log('Server running on %ss', server.info.uri);
+    console.log('Server running on %s', server.info.uri);
 };
 
 init();
