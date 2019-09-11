@@ -18,7 +18,7 @@ import Form from "~/components/support/Form.vue";
 import Confirmation from "~/components/support/Confirmation.vue";
 
 export default {
-  layout: "noSide", 
+  layout: "noSide",
   components: {
     howToHelp,
     commercialSupport,
@@ -34,6 +34,11 @@ export default {
   },
   created() {
     this.$store.commit("setDisplay", "help");
+  },
+  mounted() {
+    if (this.$cookies.get("confirmation")) {
+      this.$modal.show("confirmation");
+    }
   }
 };
 </script>
