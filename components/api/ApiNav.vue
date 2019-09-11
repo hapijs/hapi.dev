@@ -683,4 +683,10 @@ export default {
     min-height: auto;
   }
 }
+
+@media print {
+  .api-nav-window {
+    display: none;
+  }
+}
 </style>

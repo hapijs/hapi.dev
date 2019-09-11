@@ -1,4 +1,4 @@
-@import "../../assets/styles/main.scss";
+@import '../../assets/styles/main.scss';
 
 .side-nav-window {
   position: sticky;
@@ -150,8 +150,14 @@ select:focus {
     display: inline-block;
   }
 
-  .side-nav-select-wrapper, .api-nav-select-wrapper {
+  .side-nav-select-wrapper,
+  .api-nav-select-wrapper {
     display: none;
   }
+}
 
+@media print {
+  .side-nav-window {
+    display: none;
+  }
 }

@@ -1,4 +1,4 @@
-@import "./assets/styles/main.scss";
+@import './assets/styles/main.scss';
 
 .markdown-wrapper {
   position: relative;
@@ -29,7 +29,10 @@ h5 {
   font-size: 1.25rem;
 }
 
-h2 a, h3 a, h4 a, h5 a {
+h2 a,
+h3 a,
+h4 a,
+h5 a {
   display: block;
   position: relative;
   top: -116px;
@@ -46,8 +49,9 @@ h3 a {
   cursor: auto;
 }
 
-code, .code{
-  font-family: "inconsolata", menlo, consolas, monospace;
+code,
+.code {
+  font-family: 'inconsolata', menlo, consolas, monospace;
   padding: 0.2rem 0.33rem;
   font-size: 1rem;
   color: $gray;
@@ -80,8 +84,9 @@ p {
   line-height: 1.7rem;
 }
 
-  p code, li code {
-  font-family: "inconsolata", menlo, consolas, monospace;
+p code,
+li code {
+  font-family: 'inconsolata', menlo, consolas, monospace;
   padding: 0.2rem 0.33rem;
   color: #6f6f6f;
   background-color: #f3f3f3;
@@ -89,11 +94,12 @@ p {
 }
 
 pre {
-  font-family: "inconsolata", menlo, consolas, monospace;
+  font-family: 'inconsolata', menlo, consolas, monospace;
   font-size: 1rem;
 }
 
-pre p code, pre pre {
+pre p code,
+pre pre {
   border: none;
 }
 
@@ -110,36 +116,42 @@ ul {
 
 pre {
   border: 1px solid $dark-white;
-  white-space: pre-wrap;       /* Since CSS 2.1 */
-  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;      /* Opera 4-6 */
-  white-space: -o-pre-wrap;    /* Opera 7 */
-  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  white-space: pre-wrap; /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
 
-.hljs-keyword, .pl-k {
+.hljs-keyword,
+.pl-k {
   color: #d73a49;
 }
 
-.hljs-built_in, .pl-c1 {
+.hljs-built_in,
+.pl-c1 {
   color: #009bdc;
 }
 
 .pl-c {
-  color: #aaa
+  color: #aaa;
 }
 
-.hljs-attr, .pl-en {
-  color: #6f42c1
+.hljs-attr,
+.pl-en {
+  color: #6f42c1;
 }
 
 @media screen and (max-width: 900px) {
-
-  h2 a, h3 a, h4 a, h5 a { 
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a {
     top: -60px;
   }
 
-  p, li {
+  p,
+  li {
     line-height: 2rem;
     font-size: 16px;
   }
@@ -147,8 +159,14 @@ pre {
   pre {
     font-size: 15.25px;
   }
-  
+
   .markdown-wrapper {
     padding: 5px;
+  }
+}
+
+@media print {
+  .markdown-wrapper {
+    padding: 0;
   }
 }
