@@ -78,7 +78,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['~/plugins/vue-js-modal'],
 
   /*
    ** Nuxt.js modules
