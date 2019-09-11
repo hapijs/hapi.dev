@@ -14,7 +14,7 @@
         <img src="/img/hapi.svg" alt="hapi-logo" class="modal-logo" />
         <img src="/img/close.png" v-on:click="closeConfirmation" alt="close" class="modal-close" />
       </div>
-      <div class="modal-description">Thank You!</div>
+      <div class="modal-description">Thank You!</div> 
       <div class="modal-middle"> 
         <div
           class="confirmation-text"

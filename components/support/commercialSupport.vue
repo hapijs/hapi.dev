@@ -11,7 +11,7 @@
       >time away from building your product</span>. If you don’t upgrade,
       you get left behind with technical debt.
     </div>
-    <div class="support-content">
+    <div class="support-content"> 
       Licensing hapi gives you the ability to kick upgrade decisions down the road until
       <span
         class="bold" 

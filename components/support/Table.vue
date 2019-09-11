@@ -117,7 +117,7 @@
             <td>-</td>
             <td>-</td>
             <td>&#10004;</td>
-            <td>&#10004;</td>
+            <td>&#10004;</td> 
           </tr>
           <tr>
             <td class="table-feature">Private Slack channel</td>

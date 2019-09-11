@@ -29,7 +29,7 @@
       <a
         class="support-button"
         href="#plans"
-        aria-label="plans-button"
+        aria-label="plans-button" 
       >Choose the plan that fits your team</a>
     </div>
     <h4 class="support-minor-heading">No worries, we're here to help!</h4>

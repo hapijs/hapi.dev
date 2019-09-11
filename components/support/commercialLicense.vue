@@ -27,7 +27,7 @@
     <div class="support-content">
       However,
       <span class="bold">
-        very few companies can afford to migrate efficiently with every
+        very few companies can afford to migrate efficiently with every 
         new major release
       </span> of a core component. Your engineering
       <span class="bold">resources are finite</span>, and you’d rather spend

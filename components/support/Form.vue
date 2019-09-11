@@ -31,7 +31,7 @@
         </form>
       </div>
       <div class="modal-bottom">
-        <img src="/img/helmet.png" alt="helmet" class="modal-helmet" />
+        <img src="/img/helmet.png" alt="helmet" class="modal-helmet" /> 
       </div>
     </div>
   </modal>
