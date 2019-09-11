@@ -14,7 +14,7 @@
           target="__blank"
         >hapi Developer Portal</a>
       </span> contains plenty of resources to help you get
-      started and use hapi. But when that’s not enough…
+      started and use hapi. But when that’s not enough… 
     </div>
     <h4 class="support-minor-heading">Curious about commercial support plans?</h4>
     <div class="support-content">

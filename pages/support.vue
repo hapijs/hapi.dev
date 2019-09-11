@@ -18,7 +18,7 @@ import Form from "~/components/support/Form.vue";
 import Confirmation from "~/components/support/Confirmation.vue";
 
 export default {
-  layout: "noSide",
+  layout: "noSide", 
   components: {
     howToHelp,
     commercialSupport,

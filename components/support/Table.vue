@@ -103,7 +103,7 @@
             <td>-</td>
             <td>-</td>
             <td>-</td>
-            <td><span class="bold">3</span></td>
+            <td><span class="bold">3</span></td> 
           </tr>
           <tr>
             <td class="table-feature">Advance security notifications</td>

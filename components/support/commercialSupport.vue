@@ -14,7 +14,7 @@
     <div class="support-content">
       Licensing hapi gives you the ability to kick upgrade decisions down the road until
       <span
-        class="bold"
+        class="bold" 
       >you</span> want
       to upgrade. That means your team can
       <span

@@ -15,7 +15,7 @@
         <img src="/img/close.png" v-on:click="closeModal" alt="close" class="modal-close" />
       </div>
       <div class="modal-description">Commercial support plan contact form</div>
-      <div class="modal-middle">
+      <div class="modal-middle"> 
         <form action="https://jumprock.co/mail/hapi" method="POST">
           <input type="hidden" name="after" value="https://hapi-support.netlify/support" />
           <input type="hidden" name="subject" value="hapi.dev license request" />
