@@ -17,7 +17,7 @@
       <div class="modal-description">Commercial support plan contact form</div>
       <div class="modal-middle"> 
         <form action="https://jumprock.co/mail/hapi" method="POST">
-          <input type="hidden" name="after" value="https://hapi-support.netlify/support" />
+          <input type="hidden" name="after" value="https://hapi.dev/support" />
           <input type="hidden" name="subject" value="hapi.dev license request" />
           <label for="name" class="modal-label">Name</label>
           <input type="text" name="name" id="name" class="modal-input" required />
