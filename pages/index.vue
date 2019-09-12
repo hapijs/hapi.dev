@@ -56,11 +56,11 @@
 </template>
 
 <script>
-import Security from "~/components/Security.vue";
-import Quality from "~/components/Quality.vue";
-import DevelopersFirst from "~/components/DevelopersFirst.vue";
-import Predictability from "~/components/Predictability.vue";
-import Extensibility from "~/components/Extensibility.vue";
+import Security from "~/components/home/Security.vue";
+import Quality from "~/components/home/Quality.vue";
+import DevelopersFirst from "~/components/home/DevelopersFirst.vue";
+import Predictability from "~/components/home/Predictability.vue";
+import Extensibility from "~/components/home/Extensibility.vue";
 
 export default {
   layout: "home",
