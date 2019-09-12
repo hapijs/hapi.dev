@@ -27,7 +27,11 @@ export default {
     return {
       title: "hapi.js - " + this.$route.params.family + " v" + this.getVersion,
       meta: [
-        { hid: "description", name: "description", content: "View the APIs for the hapi modules" }
+        {
+          hid: "description",
+          name: "description",
+          content: "View the APIs for the hapi modules"
+        }
       ]
     };
   },
@@ -60,12 +64,31 @@ export default {
       let offsets = [];
       for (let i = 0; i < links.length; i++) {
         let point = document.querySelector(
-          `.markdown-wrapper a[href*='${links[i].href.replace(/^[^_]*#/, "")}']`
+          `.markdown-wrapper h2 a[href*='${links[i].href.replace(
+            /^[^_]*#/,
+            ""
+          )}'], .markdown-wrapper h3 a[href*='${links[i].href.replace(
+            /^[^_]*#/,
+            ""
+          )}'], .markdown-wrapper h4 a[href*='${links[i].href.replace(
+            /^[^_]*#/,
+            ""
+          )}'], .markdown-wrapper h5 a[href*='${links[i].href.replace(
+            /^[^_]*#/,
+            ""
+          )}']`
         );
-        if (point && point.id) {
-          points[point.offsetTop - 70] = {
-            name: "#" + point.id
-          };
+        if (point) {
+          if (point.id) {
+            points[point.offsetTop - 70] = {
+              name: "#" + point.id
+            };
+          } else {
+            points[point.offsetTop - 70] = {
+              name: point.hash
+            };
+          }
+
           offsets.push(point.offsetTop - 70);
         }
       }
@@ -84,6 +107,7 @@ export default {
         "yar"
       ];
 
+
       //Add active class to elements on scroll
       window.onscroll = function() {
         let location = document.documentElement.scrollTop;
@@ -97,15 +121,14 @@ export default {
             for (let active of actives) {
               active.classList.remove("ecosystem-active");
             }
-
             element = document.querySelector(
               `.side-nav-wrapper a[href*='${aClass}']`
             );
-            if (element.children.length !== 0) {
+            if (element && element.children.length !== 0) {
               document
                 .querySelector(`a[href*='${aClass}']`)
                 .classList.add("ecosystem-active");
-            } else if (element.children.length === 0) {
+            } else if (element && element.children.length === 0) {
               document
                 .querySelector(`a[href*='${aClass}']`)
                 .classList.add("ecosystem-active");
@@ -193,6 +216,7 @@ export default {
           }
         }
       }
+
       for (let v of versionsArray) {
         const res = await $axios.$get(
           "https://api.github.com/repos/hapijs/" +
