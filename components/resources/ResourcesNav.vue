@@ -13,6 +13,12 @@
             </li>
             <li class="resources-header-link">
               <a
+                :class="$props.page === 'security' ? 'side-nav-select-link resources-active' : 'side-nav-select-link'"
+                href="/resources/security"
+              >Security</a>
+            </li>
+            <li class="resources-header-link">
+              <a
                 :class="$props.page === 'styleguide' ? 'side-nav-select-link resources-active' : 'side-nav-select-link'"
                 href="/resources/styleguide"
               >Style Guide</a>

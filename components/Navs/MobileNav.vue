@@ -61,8 +61,11 @@
           <li class="mobile-link mobile-tutorial-link">
             <a title="Changelog" href="/resources/changelog">Changelog</a>
           </li>
-          <li class="mobile-link mobile-tutorial-link" title="Contributing">
-            <a href="/resources/styleguide">Style Guide</a>
+          <li class="mobile-link mobile-tutorial-link">
+            <a title="Security" href="/resources/security">Security</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link">
+            <a title="Contributing" href="/resources/styleguide">Style Guide</a>
           </li>
           <li class="mobile-link mobile-tutorial-link">
             <a title="List" href="/resources/list">List</a>
