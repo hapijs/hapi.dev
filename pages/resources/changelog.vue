@@ -28,7 +28,7 @@ export default {
   head() {
     return {
       title:
-        "hapi.js - " +
+        "hapi.dev - " +
         this.page.replace(/([A-Z])/g, " $1").replace(/^./, function(str) {
           return str.toUpperCase();
         }),

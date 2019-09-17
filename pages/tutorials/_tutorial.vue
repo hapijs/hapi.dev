@@ -19,7 +19,7 @@ export default {
   head() {
     return {
       title:
-        "hapi.js - " +
+        "hapi.dev - " +
         this.$route.params.tutorial
           .replace(/([A-Z])/g, " $1")
           .replace(/^./, function(str) {

@@ -17,7 +17,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.js - Plugins",
+      title: "hapi.dev - Plugins",
       head() {
         return {
           title: "hapi.js - " + this.$route.params.family,

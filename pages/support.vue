@@ -29,7 +29,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.js - Help"
+      title: "hapi.dev - Help"
     };
   },
   created() {
