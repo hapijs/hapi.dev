@@ -34,6 +34,15 @@
             </li>
             <li class="nav-links-li">
               <a
+                :class="getDisplay === 'policies' ? 'nav-link nav-link-active' : 'nav-link'"
+                ref="policies"
+                title="Policies"
+                href="/policies/security"
+                v-on:click="addActive('policies')"
+              >Policies</a>
+            </li>
+            <li class="nav-links-li">
+              <a
                 :class="getDisplay === 'family' ? 'nav-link nav-link-active' : 'nav-link'"
                 ref="family"
                 title="Family"

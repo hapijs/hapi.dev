@@ -1,36 +1,36 @@
 <template>
   <div class="container">
-    <ResourcesNav page="styleguide" />
+    <PoliciesNav page="security" />
     <div class="community-wrapper">
-      <HTML :display="styleGuide" />
+      <HTML :display="security" />
     </div>
   </div>
 </template>
 
 <script>
 import HTML from "~/components/HTML.vue";
-import ResourcesNav from "~/components/resources/ResourcesNav.vue";
+import PoliciesNav from "~/components/policies/PoliciesNav.vue";
 
 export default {
   components: {
     HTML,
-    ResourcesNav
+    PoliciesNav
   },
   data() {
     return {
-      page: "styleGuide"
+      page: "security"
     };
   },
   head() {
     return {
-      title: "hapi.dev - Style Guide",
+      title: "hapi.dev - Security Policy",
       meta: [
         { hid: "description", name: "description", content: "The official hapi style guide" }
       ]
     };
   },
   async created() {
-    await this.$store.commit("setDisplay", "resources");
+    await this.$store.commit("setDisplay", "policies");
   },
   methods: {
     changePage(value) {
@@ -46,15 +46,15 @@ export default {
         authorization: "token " + process.env.GITHUB_TOKEN
       }
     };
-    let style = await $axios.$get(
-      "https://api.github.com/repos/hapijs/assets/contents/STYLE.md",
+    let s = await $axios.$get(
+      "https://api.github.com/repos/hapijs/.github/contents/SECURITY.md",
       options
     );
 
-    const styleGuide = await $axios.$post(
+    const security = await $axios.$post(
       "https://api.github.com/markdown",
       {
-        text: style.toString(),
+        text: s.toString(),
         mode: "markdown"
       },
       {
@@ -63,7 +63,7 @@ export default {
         }
       }
     );
-    return { styleGuide };
+    return { security };
   }
 };
 </script>
