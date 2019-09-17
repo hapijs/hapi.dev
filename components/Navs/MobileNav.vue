@@ -78,39 +78,39 @@
           <li
             class="mobile-link mobile-tutorial-link"
             title="bell"
-          ><a href="/family/bell">Bell</a></li>
+          ><a href="/family/bell">bell</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="boom"
-          ><a href="/family/boom">Boom</a></li>
+          ><a href="/family/boom">boom</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="good"
-          ><a href="/family/good">Good</a></li>
+          ><a href="/family/good">good</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="hoek"
-          ><a href="/family/hoek">Hoek</a></li>
+          ><a href="/family/hoek">hoek</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="iron"
-          ><a href="/family/iron">Iron</a></li>
+          ><a href="/family/iron">iron</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="joi"
-          ><a href="/family/joi">Joi</a></li>
+          ><a href="/family/joi">joi</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="shot"
-          ><a href="/family/shot">Shot</a></li>
+          ><a href="/family/shot">shot</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="topo"
-          ><a href="/family/topo">Topo</a></li>
+          ><a href="/family/topo">topo</a></li>
           <li
             class="mobile-link mobile-tutorial-link"
             title="yar"
-          ><a href="/family/yar">Yar</a></li>
+          ><a href="/family/yar">yar</a></li>
         </ul>
       </li>
       <li class="mobile-links-li">

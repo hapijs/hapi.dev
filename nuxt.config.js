@@ -51,7 +51,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: 'hapi.js - The simple, secure framework developers trust',
+    title: 'hapi.dev - The simple, secure framework developers trust',
     htmlAttrs: {
       lang: 'en'
     },

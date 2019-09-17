@@ -31,7 +31,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.js - " + this.version + " API Reference",
+      title: "hapi.dev - " + this.version + " API Reference",
       meta: [
         { hid: 'description', name: 'description', content: 'The hapi API' }
       ]
