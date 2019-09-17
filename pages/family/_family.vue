@@ -43,7 +43,7 @@ export default {
       display: "",
       modules: this.modules,
       version: "",
-      menu: "", 
+      menu: "",
       name: this.$route.params.family
     };
   },
@@ -111,7 +111,6 @@ export default {
         "yar"
       ];
 
-
       //Add active class to elements on scroll
       window.onscroll = function() {
         let location = document.documentElement.scrollTop;
@@ -139,9 +138,11 @@ export default {
             }
           }
         }
-        let bottom = element.getBoundingClientRect().bottom;
-        if (bottom > window.innerHeight) {
-          element.scrollIntoView(false);
+        if (element) {
+          let bottom = element.getBoundingClientRect().bottom;
+          if (bottom > window.innerHeight) {
+            element.scrollIntoView(false);
+          }
         }
       };
     }
