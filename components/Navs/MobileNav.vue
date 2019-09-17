@@ -62,13 +62,18 @@
             <a title="Changelog" href="/resources/changelog">Changelog</a>
           </li>
           <li class="mobile-link mobile-tutorial-link">
-            <a title="Security" href="/resources/security">Security</a>
-          </li>
-          <li class="mobile-link mobile-tutorial-link">
-            <a title="Contributing" href="/resources/styleguide">Style Guide</a>
-          </li>
-          <li class="mobile-link mobile-tutorial-link">
             <a title="List" href="/resources/list">List</a>
+          </li>
+        </ul>
+      </li>
+      <li class="mobile-links-li">
+        <a class="mobile-link" title="Policies" href="/policies/security">Policies</a>
+        <ul>
+          <li class="mobile-link mobile-tutorial-link">
+            <a title="Security" href="/policies/security">Security</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link">
+            <a title="Style Guide" href="/policies/styleguide">Style Guide</a>
           </li>
         </ul>
       </li>
