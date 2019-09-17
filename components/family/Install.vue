@@ -1,6 +1,6 @@
 <template>
   <div class="install-wrapper">
-    <div class="install-header">Install Instructions</div>
+    <div class="install-header">Installation:</div>
     <p class="install-how"><a class="install-link" target="__blank" :href='"https://www.npmjs.com/package/@hapi/" + name'>npm</a>: <span><code>npm install @hapi/{{name}}</code></span></p>
     <p class="install-how"><a class="install-link" target="__blank" :href='"https://yarnpkg.com/en/package/@hapi/" + name'>yarn</a>: <span><code>yarn add @hapi/{{name}}</code></span></p>
   </div>
@@ -34,6 +34,10 @@ export default {
 @media screen and (max-width: 900px) {
   .install-wrapper {
     margin: 20px 10px 0 10px;
+  }
+
+  .install-header {
+    font-size: 24px;
   }
 }
 
