@@ -3,7 +3,7 @@
     :class="this.$route.params.family === name || (!this.$route.params.family && name === 'bell') ? 'side-nav-select-link ecosystem-side-nav-item side-nav-active' : 'side-nav-select-link ecosystem-side-nav-item'"
     :ref="name"
   >
-    <a :href="'/family/' + name">{{name.charAt(0).toUpperCase(0) + name.slice(1)}}</a>
+    <a :href="'/family/' + name">{{name}}</a>
     <span
       v-if="this.$route.params.family === name || (!this.$route.params.family && name === 'bell')"
       class="family-span"
