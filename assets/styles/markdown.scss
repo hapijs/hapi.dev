@@ -9,6 +9,15 @@
   word-wrap: break-all;
 }
 
+.family-markdown-wrapper {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 100px 20px 100px;
+  word-wrap: break-all;
+}
+
 h1 {
   font-size: 2rem;
 }

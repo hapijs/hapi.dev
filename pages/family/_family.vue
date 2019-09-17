@@ -8,20 +8,23 @@
       :versions="versionsArray"
     />
     <div class="tutorial-markdown-window">
-      <HTML :display="getDisplay" />
+      <Install :name="name" />
+      <FamilyDisplay :display="getDisplay" />
     </div>
   </div>
 </template>
 
 <script>
-import HTML from "~/components/HTML.vue";
+import FamilyDisplay from "~/components/family/FamilyDisplay.vue";
 import FamilyNav from "~/components/family/FamilyNav.vue";
+import Install from "~/components/family/Install.vue";
 let Semver = require("semver");
 
 export default {
   components: {
-    HTML,
-    FamilyNav
+    FamilyDisplay,
+    FamilyNav,
+    Install
   },
   head() {
     return {
@@ -40,7 +43,8 @@ export default {
       display: "",
       modules: this.modules,
       version: "",
-      menu: ""
+      menu: "", 
+      name: this.$route.params.family
     };
   },
   methods: {
@@ -64,32 +68,32 @@ export default {
       let offsets = [];
       for (let i = 0; i < links.length; i++) {
         let point = document.querySelector(
-          `.markdown-wrapper h2 a[href*='${links[i].href.replace(
+          `.tutorial-markdown-window h2 a[href*='${links[i].href.replace(
             /^[^_]*#/,
             ""
-          )}'], .markdown-wrapper h3 a[href*='${links[i].href.replace(
+          )}'], .tutorial-markdown-window h3 a[href*='${links[i].href.replace(
             /^[^_]*#/,
             ""
-          )}'], .markdown-wrapper h4 a[href*='${links[i].href.replace(
+          )}'], .tutorial-markdown-window h4 a[href*='${links[i].href.replace(
             /^[^_]*#/,
             ""
-          )}'], .markdown-wrapper h5 a[href*='${links[i].href.replace(
+          )}'], .tutorial-markdown-window h5 a[href*='${links[i].href.replace(
             /^[^_]*#/,
             ""
           )}']`
         );
         if (point) {
           if (point.id) {
-            points[point.offsetTop - 70] = {
+            points[point.offsetTop + 80] = {
               name: "#" + point.id
             };
           } else {
-            points[point.offsetTop - 70] = {
+            points[point.offsetTop + 80] = {
               name: point.hash
             };
           }
 
-          offsets.push(point.offsetTop - 70);
+          offsets.push(point.offsetTop + 80);
         }
       }
       offsets = [...new Set(offsets)];
