@@ -116,9 +116,9 @@ export default {
 
 .ecosystem-active {
   display: inline-block;
-  left: -60px;
-  padding: 2px 30px 2px 60px !important;
-  width: 392px !important;
+  left: -70px;
+  padding: 2px 30px 2px 70px !important;
+  width: 402px !important;
   overflow-wrap: break-word;
 }
 
