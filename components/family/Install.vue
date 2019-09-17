@@ -31,4 +31,10 @@ export default {
   font-weight: 700;
 }
 
+@media screen and (max-width: 900px) {
+  .install-wrapper {
+    margin: 20px 10px 0 10px;
+  }
+}
+
 </style>

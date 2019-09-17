@@ -169,13 +169,13 @@ pre {
     font-size: 15.25px;
   }
 
-  .markdown-wrapper {
+  .markdown-wrapper, .family-markdown-wrapper {
     padding: 5px;
   }
 }
 
 @media print {
-  .markdown-wrapper {
+  .markdown-wrapper, .family-markdown-wrapper {
     padding: 0;
   }
 }
