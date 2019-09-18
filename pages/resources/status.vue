@@ -35,11 +35,11 @@ export default {
             return Semver.compare(b.title, a.title);
           });
           repos[repositories[r].name] = {
-            name: repositories[r].name,
-            versions: {
-              'master': sortedMilestones[0].title
-            },
-            license: []
+            versions: [{
+                name: sortedMilestones[0].title,
+                branch: 'master',
+                license: 'BSD' 
+            }],
           };
           let branches = await $axios.$get(
             "https://api.github.com/repos/hapijs/" +
@@ -56,31 +56,13 @@ export default {
                   branch.name,
                 options
               );
-              repos[repositories[r].name].versions[branch.name] = v.version
+              repos[repositories[r].name].versions.push({name: v.name, branch: branch.name, lincense: branch.name.includes("commercial") ? "Commercial" : "BSD"})
               if (v.version === sortedMilestones[0].title) {
-                delete repos[repositories[r].name].versions.master
+                repos[repositories[r].name].versions.unshift()
               }
             }
           }
         }
-        // } else if (
-        //   repositories[r].name !== "assets" &&
-        //   repositories[r].name !== ".github"
-        // ) {
-        //   let a = await $axios.$get(
-        //     "https://api.github.com/repos/hapijs/" +
-        //       repositories[r].name +
-        //       "/contents/package.json",
-        //     options
-        //   );
-        //   let version = await a.version;
-        //   repos[repositories[r].name] = {
-        //     name: repositories[r].name,
-        //     versions: [version],
-        //     branches: ["master"],
-        //     license: []
-        //   };
-        // }
       }
     } catch (err) {
       console.log(err);
