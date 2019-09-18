@@ -29,17 +29,13 @@ export default {
 
         if (milestones.length > 0) {
           let sortedMilestones = await milestones.sort(function(a, b) {
-            if(!Semver.valid(a.title)){
-              a.title = Semver.clean(a.title + ".0", {loose: true})
+            if (!Semver.valid(a.title)) {
+              a.title = Semver.clean(a.title + ".0", { loose: true });
             }
             return Semver.compare(b.title, a.title);
           });
           repos[repositories[r].name] = {
-            versions: [{
-                name: sortedMilestones[0].title,
-                branch: 'master',
-                license: 'BSD' 
-            }],
+            versions: []
           };
           let branches = await $axios.$get(
             "https://api.github.com/repos/hapijs/" +
@@ -48,7 +44,7 @@ export default {
             options
           );
           for (let branch of branches) {
-            if (branch.name.match(/^v+[0-9]+/g)) {
+            if (branch.name.match(/^v+[0-9]+|\bmaster\b/g)) {
               const v = await $axios.$get(
                 "https://api.github.com/repos/hapijs/" +
                   repositories[r].name +
@@ -56,12 +52,38 @@ export default {
                   branch.name,
                 options
               );
-              repos[repositories[r].name].versions.push({name: v.name, branch: branch.name, lincense: branch.name.includes("commercial") ? "Commercial" : "BSD"})
-              if (v.version === sortedMilestones[0].title) {
-                repos[repositories[r].name].versions.unshift()
+              repos[repositories[r].name].versions.push({
+                name: v.version,
+                branch: branch.name,
+                lincense: v.name.includes("commercial") ? "Commercial" : "BSD"
+              });
+              if (
+                v.version === repos[repositories[r].name].versions[0].name &&
+                branch.name !== "master"
+              ) {
+                repos[repositories[r].name].versions.shift();
               }
             }
           }
+        } else if (
+          repositories[r].name !== "assets" &&
+          repositories[r].name !== ".github"
+        ) {
+          let a = await $axios.$get(
+            "https://api.github.com/repos/hapijs/" +
+              repositories[r].name +
+              "/contents/package.json",
+            options
+          );
+          repos[repositories[r].name] = {
+            versions: []
+          };
+          let version = await a.version;
+          repos[repositories[r].name].versions.push({
+            name: version,
+            branch: "master",
+            lincense: a.name.includes("commercial") ? "Commercial" : "BSD"
+          });
         }
       }
     } catch (err) {
