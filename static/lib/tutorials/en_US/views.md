@@ -52,6 +52,8 @@ const start = async () => {
         relativeTo: __dirname,
         path: 'templates'
     });
+
+    await server.start();
 };
 
 start();
@@ -227,6 +229,8 @@ const start = async () => {
             return h.view('index');
         }
     });
+
+    await server.start();
 };
 
 start();
