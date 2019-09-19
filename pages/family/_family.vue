@@ -278,6 +278,9 @@ export default {
     return { moduleAPI, modules, version, versionsArray };
   },
   created() {
+    if (!this.modules.includes(this.$route.params.family)) {
+      return this.$nuxt.error({ statusCode: 404 })
+    }
     let version = this.versionsArray.includes(this.$route.query.v)
       ? this.$route.query.v
       : this.versionsArray[0];
