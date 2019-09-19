@@ -1,8 +1,8 @@
 <template>
   <div ref="nav" class="mobile-nav">
     <div class="mobile-nav-header">
-      <img src="/img/hapi.svg" class="mobile-hapi" alt="hapi-logo">
-      <img src="/img/close.png" class="mobile-close" alt="close" v-on:click="closeNav()">
+      <img src="/img/hapi.svg" class="mobile-hapi" alt="hapi-logo" />
+      <img src="/img/close.png" class="mobile-close" alt="close" v-on:click="closeNav()" />
     </div>
     <ul class="mobile-links">
       <li class="mobile-links-li">
@@ -67,8 +67,17 @@
         </ul>
       </li>
       <li class="mobile-links-li">
-        <a class="mobile-link" title="Policies" href="/policies/security">Policies</a>
+        <a class="mobile-link" title="Policies" href="/policies/coc">Policies</a>
         <ul>
+          <li class="mobile-link mobile-tutorial-link">
+            <a title="COC" href="/policies/coc">Code of Conduct</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link">
+            <a title="COC" href="/policies/contributing">Contributing</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link">
+            <a title="COC" href="/policies/license">License</a>
+          </li>
           <li class="mobile-link mobile-tutorial-link">
             <a title="Security" href="/policies/security">Security</a>
           </li>
@@ -80,42 +89,33 @@
       <li class="mobile-links-li">
         <a class="mobile-link" title="Family" href="/family/bell">Family</a>
         <ul>
-          <li
-            class="mobile-link mobile-tutorial-link"
-            title="bell"
-          ><a href="/family/bell">bell</a></li>
-          <li
-            class="mobile-link mobile-tutorial-link"
-            title="boom"
-          ><a href="/family/boom">boom</a></li>
-          <li
-            class="mobile-link mobile-tutorial-link"
-            title="good"
-          ><a href="/family/good">good</a></li>
-          <li
-            class="mobile-link mobile-tutorial-link"
-            title="hoek"
-          ><a href="/family/hoek">hoek</a></li>
-          <li
-            class="mobile-link mobile-tutorial-link"
-            title="iron"
-          ><a href="/family/iron">iron</a></li>
-          <li
-            class="mobile-link mobile-tutorial-link"
-            title="joi"
-          ><a href="/family/joi">joi</a></li>
-          <li
-            class="mobile-link mobile-tutorial-link"
-            title="shot"
-          ><a href="/family/shot">shot</a></li>
-          <li
-            class="mobile-link mobile-tutorial-link"
-            title="topo"
-          ><a href="/family/topo">topo</a></li>
-          <li
-            class="mobile-link mobile-tutorial-link"
-            title="yar"
-          ><a href="/family/yar">yar</a></li>
+          <li class="mobile-link mobile-tutorial-link" title="bell">
+            <a href="/family/bell">bell</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link" title="boom">
+            <a href="/family/boom">boom</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link" title="good">
+            <a href="/family/good">good</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link" title="hoek">
+            <a href="/family/hoek">hoek</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link" title="iron">
+            <a href="/family/iron">iron</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link" title="joi">
+            <a href="/family/joi">joi</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link" title="shot">
+            <a href="/family/shot">shot</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link" title="topo">
+            <a href="/family/topo">topo</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link" title="yar">
+            <a href="/family/yar">yar</a>
+          </li>
         </ul>
       </li>
       <li class="mobile-links-li">
@@ -125,7 +125,7 @@
         <a class="mobile-link" title="Support" href="/support">Support</a>
       </li>
     </ul>
-    <img class="mobile-helmet" src="../../static/img/helmet.png" alt="hapi-helmet">
+    <img class="mobile-helmet" src="../../static/img/helmet.png" alt="hapi-helmet" />
   </div>
 </template>
 

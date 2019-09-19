@@ -37,7 +37,7 @@
                 :class="getDisplay === 'policies' ? 'nav-link nav-link-active' : 'nav-link'"
                 ref="policies"
                 title="Policies"
-                href="/policies/security"
+                href="/policies/coc"
                 v-on:click="addActive('policies')"
               >Policies</a>
             </li>
