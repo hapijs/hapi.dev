@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <PoliciesNav page="conduct" />
+    <PoliciesNav page="contributing" />
     <div class="community-wrapper">
-      <HTML :display="conduct" />
+      <HTML :display="contributing" />
     </div>
   </div>
 </template>
@@ -18,14 +18,14 @@ export default {
   },
   data() {
     return {
-      page: "conduct"
+      page: "contributing"
     };
   },
   head() {
     return {
-      title: "hapi.dev - Code of Conduct",
+      title: "hapi.dev - Contributing",
       meta: [
-        { hid: "description", name: "description", content: "The hapi code of conduct" }
+        { hid: "description", name: "description", content: "Contributing to hapi" }
       ]
     };
   },
@@ -46,15 +46,15 @@ export default {
         authorization: "token " + process.env.GITHUB_TOKEN
       }
     };
-    let coc = await $axios.$get(
-      "https://api.github.com/repos/hapijs/.github/contents/CODE_OF_CONDUCT.md",
+    let contribute = await $axios.$get(
+      "https://api.github.com/repos/hapijs/.github/contents/CONTRIBUTING.md",
       options
     );
 
-    const conduct = await $axios.$post(
+    const contributing = await $axios.$post(
       "https://api.github.com/markdown",
       {
-        text: coc.toString(),
+        text: contribute.toString(),
         mode: "markdown"
       },
       {
@@ -63,7 +63,7 @@ export default {
         }
       }
     );
-    return { conduct };
+    return { contributing };
   }
 };
 </script>
