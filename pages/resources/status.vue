@@ -1,9 +1,45 @@
-<template></template>
+<template>
+  <div class="container">
+    <ResourcesNav page="status" />
+    <div class="module-status-wrapper">
+      <h1 class="module-status-header">Module Status</h1>
+      <ModuleStatus
+        v-for="repo in orderedRepos"
+        v-bind:key="repo.name"
+        :name="repo.name"
+        :versions="repo.versions"
+      />
+    </div>
+  </div>
+</template>
 
 <script>
+import ResourcesNav from "../../components/resources/ResourcesNav.vue";
+import ModuleStatus from "../../components/resources/ModuleStatus.vue";
 let Semver = require("semver");
 
 export default {
+  components: {
+    ResourcesNav,
+    ModuleStatus
+  },
+  head() {
+    return {
+      title: "hapi.dev - Module Status",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "View hapi's module status"
+        }
+      ]
+    };
+  },
+  data() {
+    return {
+      page: "status"
+    };
+  },
   async asyncData({ params, $axios }) {
     let repos = {};
 
@@ -35,6 +71,7 @@ export default {
             return Semver.compare(b.title, a.title);
           });
           repos[repositories[r].name] = {
+            name: repositories[r].name,
             versions: []
           };
           let branches = await $axios.$get(
@@ -55,7 +92,7 @@ export default {
               repos[repositories[r].name].versions.push({
                 name: v.version,
                 branch: branch.name,
-                lincense: v.name.includes("commercial") ? "Commercial" : "BSD"
+                license: v.name.includes("commercial") ? "Commercial" : "BSD"
               });
               if (
                 v.version === repos[repositories[r].name].versions[0].name &&
@@ -64,6 +101,9 @@ export default {
                 repos[repositories[r].name].versions.shift();
               }
             }
+            await repos[repositories[r].name].versions.sort(function(a, b) {
+              return Semver.compare(b.name, a.name);
+            });
           }
         } else if (
           repositories[r].name !== "assets" &&
@@ -76,13 +116,14 @@ export default {
             options
           );
           repos[repositories[r].name] = {
+            name: repositories[r].name,
             versions: []
           };
           let version = await a.version;
           repos[repositories[r].name].versions.push({
             name: version,
             branch: "master",
-            lincense: a.name.includes("commercial") ? "Commercial" : "BSD"
+            license: a.name.includes("commercial") ? "Commercial" : "BSD"
           });
         }
       }
@@ -90,13 +131,40 @@ export default {
       console.log(err);
     }
 
-    return { repos };
+    const orderedRepos = {};
+
+    Object.keys(repos)
+      .sort()
+      .forEach(function(key) {
+        orderedRepos[key] = repos[key];
+      });
+
+    return { orderedRepos };
   },
-  created() {
-    console.log(this.repos);
+  async created() {
+    await this.$store.commit("setDisplay", "resources");
   }
 };
 </script>
 
-<style>
+<style lang="scss">
+@import "../../assets/styles/main.scss";
+@import "../../assets/styles/markdown.scss";
+
+.module-status-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px 100px;
+  margin: 0;
+  width: 100%;
+}
+
+.module-status-header {
+  margin: 20px 0 10px;
+  border-bottom: 1px solid #ddd;
+  border-top: none;
+  padding-bottom: 10px;
+}
 </style>
