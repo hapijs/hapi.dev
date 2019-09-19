@@ -7,6 +7,12 @@
           <ul class="side-nav-select-list">
             <li class="policies-header-link">
               <a
+                :class="$props.page === 'conduct' ? 'side-nav-select-link policies-active' : 'side-nav-select-link'"
+                href="/policies/coc"
+              >Code of Conduct</a>
+            </li>
+            <li class="policies-header-link">
+              <a
                 :class="$props.page === 'security' ? 'side-nav-select-link policies-active' : 'side-nav-select-link'"
                 href="/policies/security"
               >Security</a>
