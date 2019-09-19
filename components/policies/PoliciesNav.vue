@@ -19,6 +19,12 @@
             </li>
             <li class="policies-header-link">
               <a
+                :class="$props.page === 'license' ? 'side-nav-select-link policies-active' : 'side-nav-select-link'"
+                href="/policies/license"
+              >License</a>
+            </li>
+            <li class="policies-header-link">
+              <a
                 :class="$props.page === 'security' ? 'side-nav-select-link policies-active' : 'side-nav-select-link'"
                 href="/policies/security"
               >Security</a>

@@ -76,6 +76,9 @@
             <a title="COC" href="/policies/contributing">Contributing</a>
           </li>
           <li class="mobile-link mobile-tutorial-link">
+            <a title="COC" href="/policies/license">License</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link">
             <a title="Security" href="/policies/security">Security</a>
           </li>
           <li class="mobile-link mobile-tutorial-link">
