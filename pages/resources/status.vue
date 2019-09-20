@@ -30,12 +30,11 @@
                         >{{version.name}}</a>
                       </td>
                       <td class="status-badge">
-                        <!-- <svg viewBox="0 0 100 100"><use :xlink:href='"https://david-dm.org/hapijs/" + repo.name + ".svg?branch=" + version.branch'></use></svg> -->
-                        <object :data='"https://david-dm.org/hapijs/" + repo.name + ".svg?branch=" + version.branch' :id='"dependSVG-" + repo.name'></object>
-                        <!-- <img
+                        <!-- <object :data='"https://david-dm.org/hapijs/" + repo.name + ".svg?branch=" + version.branch' :id='"dependSVG-" + repo.name'></object> -->
+                        <img
                           :src='"https://david-dm.org/hapijs/" + repo.name + ".svg?branch=" + version.branch'
                           alt="Dependency Status"
-                        /> -->
+                        />
                       </td>
                       <td class="status-badge">
                         <img
@@ -83,6 +82,14 @@ export default {
   data() {
     return {
       page: "status",
+      img: {
+        0: '<div class="status-code staus-unknown">Pending</div>',
+        81: '<div><code class="status-code status-failing">Failing</code></div>',
+        90: '<div><code class="status-code status-passing">Passing</code></div>',
+        98: '<div><code class="status-code status-unknown">Unknown</code></div>',
+        126: '<div><code class="status-code status-passing">No Dependencies</code></div>',
+        156: '<div><code class="status-code status-passing">Up to Date</code></div>'
+      },
       apiModules: [
         "bell",
         "boom",
@@ -203,11 +210,20 @@ export default {
     await this.$store.commit("setDisplay", "resources");
   },
   mounted() {
-    this.$nextTick(function () {
-      let textSVG = document.querySelectorAll("object")
-      console.log(textSVG)
-    })
-  
+    let tagsInterval = setInterval(() => {
+      let exit = true;
+      let tags = document.querySelectorAll(".status-table img");
+      for (let tag of tags){
+        tag.parentNode.innerHTML = this.img[tag.naturalWidth]
+        if (tag.naturalWidth === 0) {
+          exit = false
+        }
+    }
+      if(exit) {
+        clearInterval(tagsInterval)
+      }
+    }, 2000)
+
   }
 };
 </script>
@@ -215,6 +231,14 @@ export default {
 <style lang="scss">
 @import "../../assets/styles/main.scss";
 @import "../../assets/styles/markdown.scss";
+
+svg {
+  display: none !important;
+}
+
+g text:nth-child(-n + 2) {
+  display: none !important;
+}
 
 .module-status-wrapper {
   display: flex;
@@ -232,7 +256,7 @@ export default {
 }
 
 .module-status-header {
-  margin: 20px 0 10px;
+  margin: 20px 0 30px;
   border-bottom: 1px solid #ddd;
   border-top: none;
   padding-bottom: 10px;
@@ -254,17 +278,21 @@ export default {
   width: 16%;
 }
 
+.header-module {
+  text-align: center;
+}
+
 .module-name {
   width: 20%;
   border-right: 1px solid $dark-white;
   text-align: center;
   vertical-align: middle;
-  font-size: 1.2em;
+  font-size: 1.15em;
   font-weight: 700;
 }
 
 .module-row {
-  border-bottom: 1px solid $dark-white;
+  border-bottom: 3px solid $dark-white;
   background-color: #fff;
 }
 
@@ -289,7 +317,7 @@ export default {
 }
 
 .status-table tbody {
-  border: 1px solid $dark-white;
+  border: 3px solid $dark-white;
 }
 
 .nested-tbody {
@@ -307,5 +335,24 @@ export default {
 
 .status-link {
   font-weight: 700;
+}
+
+.status-code {
+  font-family: 'inconsolata', menlo, consolas, monospace;
+  padding: 0.2rem 0.33rem;
+  color: $black;
+  background-color: #f3f3f3;
+}
+
+.status-passing {
+  border: 2px solid #4bc51d;
+}
+
+.status-failing {
+  border: 2px solid #d50112;
+}
+
+.status-unknown {
+  border: 2px solid $gray;
 }
 </style>
