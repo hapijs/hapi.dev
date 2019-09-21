@@ -9,46 +9,51 @@
             <tr class="header-row">
               <th class="header-module">Module</th>
               <th class="version-header">Version</th>
+              <th class="license-header">License</th>
               <th class="dependencies-header">Dependencies</th>
               <th class="travis-header">Travis Build</th>
-              <th class="license-header">License</th>
               <th class="life-header">End of Life</th>
             </tr>
           </thead>
           <tbody>
-            <tr v-for="repo in orderedRepos" v-bind:key="repo.name" class="module-row">
+            <tr v-for="repo in newRepos" v-bind:key="repo.name" class="module-row">
               <td class="module-name">{{repo.name}}</td>
               <td colspan="5" class="nested-td">
                 <table class="nested-table">
                   <tbody class="nested-tbody">
                     <tr v-for="version in repo.versions" v-bind:key="version.name">
-                      <td>
-                        <a
-                          target="__blank"
-                          class="status-link"
-                          :href='apiModules.includes(repo.name) ? "/family/" + repo.name + "/?v=" + version.name : "https://github.com/hapijs/" + repo.name + "/tree/" + version.branch'
-                        >{{version.name}}</a>
-                      </td>
-                      <td class="status-badge">
-                        <!-- <object :data='"https://david-dm.org/hapijs/" + repo.name + ".svg?branch=" + version.branch' :id='"dependSVG-" + repo.name'></object> -->
-                        <img
-                          :src='"https://david-dm.org/hapijs/" + repo.name + ".svg?branch=" + version.branch'
-                          alt="Dependency Status"
-                        />
-                      </td>
-                      <td class="status-badge">
-                        <img
-                          :src='"https://travis-ci.org/hapijs/" + repo.name + ".svg?branch=" + version.branch'
-                          alt="Build Status"
-                        />
+                      <td class="module-version">
+                        <div class="module-version-wrapper">
+                          <div>{{version.name}}</div>
+                          <a
+                            target="__blank"
+                            class="status-link"
+                            :href='apiModules.includes(repo.name) ? "/family/" + repo.name + "/?v=" + version.name : "https://github.com/hapijs/" + repo.name + "/tree/" + version.branch'
+                          ><img src="/img/helmet.png" alt="hapi helmet" class="version-img"></a>
+                          <a :href='"https://github.com/hapijs" + repo.name + "/tree/" + version.branch' target="__blank"><img src="/img/githubLogo.png" alt="github logo" class="version-img"></a>
+                        </div>
+
                       </td>
                       <td>{{version.license}}</td>
-                      <td></td>
+                      <td class="status-badge">
+                        <img
+                          :src='"https://david-dm.org/hapijs/" + repo.name + ".svg?branch=" + version.branch'
+                          alt="Dependency Status" class="hide" @load="swapImg('depend' + repo.name + version.name)" :id='"depend" + repo.name + version.name'
+                        />
+                      </td>
+                      <td class="status-badge" >
+                        <a :href='"https://travis-ci.org/hapijs/" + repo.name' target="__blank">
+                          <img
+                            :src='"https://travis-ci.org/hapijs/" + repo.name + ".svg?branch=" + version.branch'
+                            alt="Build Status" class="hide" @load="swapImg('travis' + repo.name + version.name)" :id='"travis" + repo.name + version.name'
+                          />
+                        </a>
+                      </td>
+                      <td class="module-life">{{life.endOfLife[camelName(repo.name)][version.name] && life.endOfLife[camelName(repo.name)][version.name]}}</td>
                     </tr>
                   </tbody>
                 </table>
               </td>
-              <!-- <td>{{life.endOfLife[camelName][version.name] && life.endOfLife[camelName][version.name]}}</td> -->
             </tr>
           </tbody>
         </table>
@@ -83,12 +88,12 @@ export default {
     return {
       page: "status",
       img: {
-        0: '<div class="status-code staus-unknown">Pending</div>',
-        81: '<div><code class="status-code status-failing">Failing</code></div>',
-        90: '<div><code class="status-code status-passing">Passing</code></div>',
-        98: '<div><code class="status-code status-unknown">Unknown</code></div>',
-        126: '<div><code class="status-code status-passing">No Dependencies</code></div>',
-        156: '<div><code class="status-code status-passing">Up to Date</code></div>'
+        0: '<div class="status-code status-unknown"></div>',
+        81: '<div class="status-code status-failing"></div>',
+        90: '<div class="status-code status-passing"></div>',
+        98: '<div class="status-code status-unknown"></div>',
+        126: '<div class="status-code status-passing"></div>',
+        156: '<div class="status-code status-passing"></div>'
       },
       apiModules: [
         "bell",
@@ -101,20 +106,26 @@ export default {
         "topo",
         "yar"
       ],
-      life: life,
-      camelName: _.camelCase(this.name)
+      life: life
     };
+  },
+  methods: {
+    camelName(name) {
+      return _.camelCase(name)
+    },
+    async swapImg(id) {
+      let badge = await document.getElementById(id)
+      badge.parentNode.innerHTML = await this.img[badge.naturalWidth]
+    }
   },
   async asyncData({ params, $axios }) {
     let repos = {};
-
     const options = {
       headers: {
         accept: "application/vnd.github.v3.raw+json",
         authorization: "token " + process.env.GITHUB_TOKEN
       }
     };
-
     try {
       let repositories = await $axios.$get(
         "https://api.github.com/orgs/hapijs/repos?per_page=100",
@@ -127,7 +138,6 @@ export default {
             "/milestones?state=closed&per_page=100&direction=desc",
           options
         );
-
         if (milestones.length > 0) {
           let sortedMilestones = await milestones.sort(function(a, b) {
             if (!Semver.valid(a.title)) {
@@ -195,35 +205,23 @@ export default {
     } catch (err) {
       console.log(err);
     }
-
     const orderedRepos = {};
-
     Object.keys(repos)
       .sort()
       .forEach(function(key) {
         orderedRepos[key] = repos[key];
       });
 
-    return { orderedRepos };
+    let hapi = orderedRepos.hapi;
+
+    delete orderedRepos.hapi;
+
+    let newRepos = Object.assign({hapi}, orderedRepos);
+
+    return { newRepos };
   },
   async created() {
     await this.$store.commit("setDisplay", "resources");
-  },
-  mounted() {
-    let tagsInterval = setInterval(() => {
-      let exit = true;
-      let tags = document.querySelectorAll(".status-table img");
-      for (let tag of tags){
-        tag.parentNode.innerHTML = this.img[tag.naturalWidth]
-        if (tag.naturalWidth === 0) {
-          exit = false
-        }
-    }
-      if(exit) {
-        clearInterval(tagsInterval)
-      }
-    }, 2000)
-
   }
 };
 </script>
@@ -266,16 +264,9 @@ g text:nth-child(-n + 2) {
   width: 100%;
 }
 
-.header-row {
-  width: 100%
-}
-
-.module-header {
-  width: 20%;
-}
-
-.version-header, .dependencis-header, .travis-header, .license-header, .life-header {
-  width: 16%;
+.dependencies-header, .travis-header, .license-header, .version-header, .life-header {
+  width: 14%;
+  text-align: center;
 }
 
 .header-module {
@@ -283,7 +274,7 @@ g text:nth-child(-n + 2) {
 }
 
 .module-name {
-  width: 20%;
+  width: 30%;
   border-right: 1px solid $dark-white;
   text-align: center;
   vertical-align: middle;
@@ -306,10 +297,16 @@ g text:nth-child(-n + 2) {
 
 .nested-table td {
   width: 20%;
+  text-align: center;
 }
 
+// .module-version, .module-life {
+//   width: 15% !important;
+// }
+
 .status-table th {
-  padding: 0 10px;
+  padding: 10px;
+  font-size: 1.15em;
 }
 
 .status-table td {
@@ -324,6 +321,10 @@ g text:nth-child(-n + 2) {
   border: none !important;
 }
 
+.nested-tbody td {
+  vertical-align: middle;
+}
+
 .nested-td {
   box-sizing: border-box;
   padding: 0 !important;
@@ -333,26 +334,49 @@ g text:nth-child(-n + 2) {
   border-bottom: 1px solid $dark-white;
 }
 
+.module-version-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.version-img {
+  width: 30px;
+}
+
 .status-link {
   font-weight: 700;
 }
 
-.status-code {
-  font-family: 'inconsolata', menlo, consolas, monospace;
-  padding: 0.2rem 0.33rem;
-  color: $black;
-  background-color: #f3f3f3;
-}
-
 .status-passing {
-  border: 2px solid #4bc51d;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #1dd022;
 }
 
 .status-failing {
-  border: 2px solid #d50112;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e80013;
 }
 
 .status-unknown {
-  border: 2px solid $gray;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #797979;
+}
+
+.hide {
+  display: hidden;
+}
+
+@media screen and (max-width: 900px) {
+  .module-status-wrapper {
+    padding: 10px;
+    overflow-x: auto;
+  }
 }
 </style>
