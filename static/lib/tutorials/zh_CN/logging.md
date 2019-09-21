@@ -70,4 +70,4 @@ const server = Hapi.server({ debug: { request: ['error'] } });
 
 ## 日志插件
 
-hapi 内建的日志方法已经基本满足了开发的需求。如果需要更多的日志功能，可以使用如[good](https://github.com/hapijs/good)之类的日志插件。
+hapi 内建的日志方法已经基本满足了开发的需求。如果需要更多的日志功能，可以使用如[hapi-pino](https://www.npmjs.com/package/hapi-pino)之类的日志插件。
