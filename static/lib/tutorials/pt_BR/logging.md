@@ -31,4 +31,4 @@ const server = new Hapi.Server({ debug: { request: ['error'] } });
 
 ## Plugins de log
 
-Os métodos nativos são mínimos, no entando, para um log mais completo você realmente deveria pensar em usar um plugin como [good](https://github.com/hapijs/good).
+Os métodos nativos são mínimos, no entando, para um log mais completo você realmente deveria pensar em usar um plugin como [hapi-pino](https://www.npmjs.com/package/hapi-pino).
