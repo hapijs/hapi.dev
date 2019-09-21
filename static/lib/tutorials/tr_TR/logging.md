@@ -71,4 +71,4 @@ Hata ayıklama modu hakkında daha fazla bilgili [API dokümantasyonu](https://h
 
 ## Gunlukleme eklentileri
 
-hapi tarafından hataları okumak ve yazdırmak için sunulan yöntemler gerçekten minimalisttir. Daha çok özellik bulunduran bir günlükleme deneyimi için [good](https://github.com/hapijs/good) ya da [bucker](https://github.com/nlf/bucker) gibi bir paket bakabilirsin.
+hapi tarafından hataları okumak ve yazdırmak için sunulan yöntemler gerçekten minimalisttir. Daha çok özellik bulunduran bir günlükleme deneyimi için [hapi-pino](https://www.npmjs.com/package/hapi-pino).
