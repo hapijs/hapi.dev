@@ -1,7 +1,7 @@
 export const endOfLife = {
   accept: {
     '3.2.3': '',
-    '2.2.2': 'Sept 2020'
+    '2.2.2': 'Sept 1, 2020'
   },
   address: {
     '2.1.1': '',
@@ -35,7 +35,7 @@ export const endOfLife = {
   },
   call: {
     '5.1.1': '',
-    '4.1.0': 'Dec 2019'
+    '4.1.0': 'Dec 1, 2019'
   },
   catbox: {
     '10.2.3': '',

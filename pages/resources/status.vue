@@ -2,7 +2,7 @@
   <div class="container">
     <ResourcesNav page="status" />
     <div class="module-status-wrapper">
-      <h1 class="module-status-header">Module Status</h1>
+      <h2 class="resources-header">Module Status</h2>
       <div class="module-status-table-wrapper">
         <table class="status-table">
           <thead>
@@ -24,13 +24,13 @@
                     <tr v-for="version in repo.versions" v-bind:key="version.name">
                       <td class="module-version">
                         <div class="module-version-wrapper">
-                          <div>{{version.name}}</div>
+                          <div class="version-name">{{version.name}}</div>
                           <a
                             target="__blank"
-                            class="status-link"
-                            :href='apiModules.includes(repo.name) ? "/family/" + repo.name + "/?v=" + version.name : "https://github.com/hapijs/" + repo.name + "/tree/" + version.branch'
+                            class="version-helmet"
+                            :href='apiModules.includes(repo.name) ? "/family/" + repo.name + "/?v=" + version.name : (repo.name === "hapi" ? "/api/?v=" + version.name : ("https://github.com/hapijs/" + repo.name + "/tree/" + version.branch))'
                           ><img src="/img/helmet.png" alt="hapi helmet" class="version-img"></a>
-                          <a :href='"https://github.com/hapijs" + repo.name + "/tree/" + version.branch' target="__blank"><img src="/img/githubLogo.png" alt="github logo" class="version-img"></a>
+                          <a :href='"https://github.com/hapijs/" + repo.name + "/tree/" + version.branch' target="__blank"><img src="/img/githubLogo.png" alt="github logo" class="version-img"></a>
                         </div>
 
                       </td>
@@ -230,14 +230,6 @@ export default {
 @import "../../assets/styles/main.scss";
 @import "../../assets/styles/markdown.scss";
 
-svg {
-  display: none !important;
-}
-
-g text:nth-child(-n + 2) {
-  display: none !important;
-}
-
 .module-status-wrapper {
   display: flex;
   flex-direction: column;
@@ -253,20 +245,22 @@ g text:nth-child(-n + 2) {
   width: 100%;
 }
 
-.module-status-header {
-  margin: 20px 0 30px;
-  border-bottom: 1px solid #ddd;
-  border-top: none;
-  padding-bottom: 10px;
-}
-
 .status-table {
   width: 100%;
+  margin-top: 16px;
+  min-width: 800px;
 }
 
-.dependencies-header, .travis-header, .license-header, .version-header, .life-header {
-  width: 14%;
+.dependencies-header, .travis-header, .license-header, .life-header {
+  width: 13.125%;
   text-align: center;
+  font-weight: 900;
+}
+
+.version-header {
+  width: 17.5%;
+  text-align: center;
+  font-weight: 900;
 }
 
 .header-module {
@@ -296,13 +290,13 @@ g text:nth-child(-n + 2) {
 }
 
 .nested-table td {
-  width: 20%;
+  width: 18.75%;
   text-align: center;
 }
 
-// .module-version, .module-life {
-//   width: 15% !important;
-// }
+.module-version {
+  width: 25% !important;
+}
 
 .status-table th {
   padding: 10px;
@@ -336,12 +330,21 @@ g text:nth-child(-n + 2) {
 
 .module-version-wrapper {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+}
+
+.module-version-wrapper * {
+  margin: 0;
+}
+
+.version-helmet {
+  padding: 0 20px;
 }
 
 .version-img {
   width: 30px;
+  min-width: 20px;
 }
 
 .status-link {
@@ -373,10 +376,29 @@ g text:nth-child(-n + 2) {
   display: hidden;
 }
 
+@media screen and (max-width: 1500px) {
+  .module-status-wrapper {
+    padding: 20px 40px;
+  }
+
+  .status-table th {
+    font-size: 16px;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .module-status-wrapper {
     padding: 10px;
     overflow-x: auto;
+  }
+
+  .status-table {
+    margin-right: 10px;
+  }
+
+  .status-table th {
+    padding: 0;
+    font-size: 12px;
   }
 }
 </style>
