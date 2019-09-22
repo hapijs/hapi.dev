@@ -49,7 +49,7 @@
                           />
                         </a>
                       </td>
-                      <td class="module-life">{{life.endOfLife[camelName(repo.name)][version.name] && life.endOfLife[camelName(repo.name)][version.name]}}</td>
+                      <td class="module-life">{{ life.endOfLife[camelName(repo.name)] && life.endOfLife[camelName(repo.name)][version.name] ? life.endOfLife[camelName(repo.name)][version.name] : null }}</td>
                     </tr>
                   </tbody>
                 </table>
@@ -93,7 +93,9 @@ export default {
         90: '<div class="status-code status-passing"></div>',
         98: '<div class="status-code status-unknown"></div>',
         126: '<div class="status-code status-passing"></div>',
-        156: '<div class="status-code status-passing"></div>'
+        149: '<div class="status-code status-unknown"></div>',
+        156: '<div class="status-code status-passing"></div>',
+        160: '<div class="status-code status-failing"></div>'
       },
       apiModules: [
         "bell",
@@ -252,13 +254,13 @@ export default {
 }
 
 .dependencies-header, .travis-header, .license-header, .life-header {
-  width: 13.125%;
+  width: 14.125%;
   text-align: center;
   font-weight: 900;
 }
 
 .version-header {
-  width: 17.5%;
+  width: 18.5%;
   text-align: center;
   font-weight: 900;
 }
@@ -268,7 +270,7 @@ export default {
 }
 
 .module-name {
-  width: 30%;
+  width: 25%;
   border-right: 1px solid $dark-white;
   text-align: center;
   vertical-align: middle;
@@ -384,11 +386,19 @@ export default {
   .status-table th {
     font-size: 16px;
   }
+
+  .module-name {
+    font-size: 16px;
+  }
+
+  .status-table td {
+    padding: 10px 5px;
+}
 }
 
 @media screen and (max-width: 900px) {
   .module-status-wrapper {
-    padding: 10px;
+    padding: 10px 10px 0 10px;
     overflow-x: auto;
   }
 
