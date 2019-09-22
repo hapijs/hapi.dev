@@ -36,6 +36,12 @@ export default {
   align-items: flex-start;
 }
 
+@media screen and (max-width: 1500px) {
+  .changelog-wrapper {
+    padding: 20px 40px;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .changelog-wrapper {
     padding: 0;
