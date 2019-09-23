@@ -229,11 +229,14 @@ export default {
     this.$data.version = this.versions.includes(this.$route.query.v)
       ? this.$route.query.v
       : this.versions[0];
-    (!this.$route.query.v || !this.versions.includes(this.$route.query.v)) &&
+    !this.$route.query.v &&
       this.$router.push({
         query: { v: this.versions[0] },
         hash: this.$route.hash
       });
+    if (!this.versions.includes(this.$route.query.v) && typeof this.$route.query.v === "string"){
+      return this.$nuxt.error({ statusCode: 404 })
+    }
     this.$data.htmlDisplay = this.apis[this.$data.version];
     this.$data.menu = this.menus[this.$data.version];
     this.$store.commit("setDisplay", "api");
