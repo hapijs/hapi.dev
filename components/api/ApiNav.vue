@@ -253,17 +253,17 @@ export default {
             name: "#" + tags[i].id
           };
           offsets.push(tags[i].offsetTop + 116);
-        } else if (tags[i].name && this.version !== this.versions[2]) {
+        } else if (tags[i].name && this.version !== this.versions[3]) {
           points[tags[i].offsetTop - 40] = {
             name: "#" + tags[i].name
           };
           offsets.push(tags[i].offsetTop - 40);
-        } else if (this.version !== this.versions[2] && tags[i].id) {
+        } else if (this.version !== this.versions[3] && tags[i].id) {
           points[tags[i].offsetTop - 40] = {
             name: "#" + tags[i].id
           };
           offsets.push(tags[i].offsetTop - 40);
-        } else if (this.version === this.versions[2] && tags[i].id) {
+        } else if (this.version === this.versions[3] && tags[i].id) {
           points[tags[i].offsetTop - 40] = {
             name: "#" + tags[i].id
           };
