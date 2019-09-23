@@ -346,7 +346,7 @@ export default {
 
 .version-img {
   width: 30px;
-  min-width: 20px;
+  min-width: 30px;
 }
 
 .status-link {
