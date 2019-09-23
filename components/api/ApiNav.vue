@@ -6,9 +6,11 @@
           <div class="api-nav-title">API</div>
           <div class="api-lang-wrapper">
             <select @change="onChange($event)" class="api-lang-select" :value="version">
-              <option :value="versions[0]">{{versions[0]}}</option>
-              <option :value="versions[1]">{{versions[1]}}</option>
-              <option :value="versions[2]">{{versions[2]}}</option>
+              <option
+                    v-for="version in versions"
+                    v-bind:key="version"
+                    :value="version"
+                  >{{version}}</option>
             </select>
           </div>
         </div>

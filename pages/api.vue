@@ -33,7 +33,7 @@ export default {
     return {
       title: "hapi.dev - " + this.version + " API Reference",
       meta: [
-        { hid: 'description', name: 'description', content: 'The hapi API' }
+        { hid: "description", name: "description", content: "The hapi API" }
       ]
     };
   },
@@ -161,29 +161,25 @@ export default {
       }
     };
 
-    let milestones = await $axios.$get(
-      "https://api.github.com/repos/hapijs/hapi/milestones?state=closed&per_page=100&direction=desc",
+    let branches = await $axios.$get(
+      "https://api.github.com/repos/hapijs/hapi/branches",
       options
     );
 
-    let sortedMilestones = await milestones.sort((a, b) =>
-      Semver.compare(b.title, a.title)
-    );
-
-    for (let milestone of sortedMilestones) {
-      if (milestone === sortedMilestones[0]) {
-        versions.push(milestone.title);
+    for (let branch of branches) {
+      if (branch.name.match(/^v+[0-9]+|\bmaster\b/g)) {
+        const v = await $axios.$get(
+          "https://api.github.com/repos/hapijs/hapi/contents/package.json?ref=" +
+            branch.name,
+          options
+        );
+        versions.push(v.version);
       }
-      if (
-        milestone.title.substring(0, 2) !==
-        versions[versions.length - 1].substring(0, 2)
-      ) {
-        versions.push(milestone.title);
-      }
-      if (versions.length === 3) {
-        break;
-      }
+      versions = await versions.sort((a, b) => 
+        Semver.compare(b, a)
+      )
     }
+
     let apis = {};
     let menus = {};
 
@@ -233,12 +229,11 @@ export default {
     this.$data.version = this.versions.includes(this.$route.query.v)
       ? this.$route.query.v
       : this.versions[0];
-    (!this.$route.query.v ||
-      !this.versions.includes(this.$route.query.v)) &&
-        this.$router.push({
-          query: { v: this.versions[0] },
-          hash: this.$route.hash
-        });
+    (!this.$route.query.v || !this.versions.includes(this.$route.query.v)) &&
+      this.$router.push({
+        query: { v: this.versions[0] },
+        hash: this.$route.hash
+      });
     this.$data.htmlDisplay = this.apis[this.$data.version];
     this.$data.menu = this.menus[this.$data.version];
     this.$store.commit("setDisplay", "api");
