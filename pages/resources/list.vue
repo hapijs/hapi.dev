@@ -28,6 +28,17 @@ export default {
       return this.$route.hash;
     }
   },
+  methods: {
+    setClasses() {
+      let headings = document.querySelectorAll("h2")
+      for (let head of headings) {
+        head.classList.add("resources-header")
+      }
+    }
+  },
+  mounted() {
+    this.setClasses();
+  },
   created() {
     this.$store.commit("setDisplay", "resources");
   }

@@ -1,6 +1,6 @@
 <template>
   <div class="changelog-wrapper">
-    <h3 class="changelog-header">Changelog</h3>
+    <h2 class="resources-header">Changelog</h2>
     <ChangelogVersion
       v-for="change in milestones"
       v-bind:key="change[0].id"
@@ -29,18 +29,17 @@ export default {
   padding: 20px 100px 10px 100px;
 }
 
-.changelog-header {
-  margin: 20px 0 10px 0;
-  border-bottom: 1px solid $dark-white;
-  border-top: none;
-  padding-bottom: 10px;
-}
-
 .changelog-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+}
+
+@media screen and (max-width: 1500px) {
+  .changelog-wrapper {
+    padding: 20px 40px;
+  }
 }
 
 @media screen and (max-width: 900px) {

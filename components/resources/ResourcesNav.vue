@@ -11,6 +11,12 @@
                 href="/resources/changelog"
               >Changelog</a>
             </li>
+            <li class="resources-header-link">
+              <a
+                :class="$props.page === 'status' ? 'side-nav-select-link resources-active' : 'side-nav-select-link'"
+                href="/resources/status"
+              >Module Status</a>
+            </li>
             <ul class="resources-ul">
               <li class="resources-header-link">
                 <a

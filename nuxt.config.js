@@ -83,7 +83,7 @@ module.exports = {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/markdownit', '@nuxtjs/axios', '@nuxtjs/dotenv', '@nuxtjs/google-analytics', '@nuxtjs/pwa', 'cookie-universal-nuxt'],
+  modules: ['@nuxtjs/markdownit', '@nuxtjs/axios', '@nuxtjs/dotenv', '@nuxtjs/google-analytics', '@nuxtjs/pwa', 'cookie-universal-nuxt', '@nuxtjs/svg'],
 
   // [optional] markdownit options
   // See https://github.com/markdown-it/markdown-it
