@@ -3,9 +3,9 @@
 
 export const endOfLife = {
   accept: {
-    '2.2.2': 'Sept 1, 2020'
+    // '2.2.2': 'Sept 1, 2020'
   },
   call: {
-    '4.1.0': 'Dec 1, 2019'
+    // '4.1.0': 'Dec 1, 2019'
   }
 }

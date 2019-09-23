@@ -42,7 +42,7 @@
                         />
                       </td>
                       <td class="status-badge" >
-                        <a :href='"https://travis-ci.org/hapijs/" + repo.name' target="__blank">
+                        <a :href='"https://travis-ci.org/hapijs/" + repo.name + "/builds"' target="__blank">
                           <img
                             :src='"https://travis-ci.org/hapijs/" + repo.name + ".svg?branch=" + version.branch'
                             alt="Build Status" class="hide" @load="swapImg('travis' + repo.name + version.name)" :id='"travis" + repo.name + version.name'
@@ -336,6 +336,11 @@ export default {
   align-items: center;
 }
 
+.version-name {
+  color: $orange;
+  font-weight: 700;
+}
+
 .module-version-wrapper * {
   margin: 0;
 }
@@ -345,8 +350,8 @@ export default {
 }
 
 .version-img {
-  width: 30px;
-  min-width: 30px;
+  width: 20px;
+  min-width: 20px;
 }
 
 .status-link {
@@ -354,22 +359,22 @@ export default {
 }
 
 .status-passing {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background: #1dd022;
 }
 
 .status-failing {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background: #e80013;
 }
 
 .status-unknown {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background: #797979;
 }
