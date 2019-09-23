@@ -42,7 +42,7 @@
                         />
                       </td>
                       <td class="status-badge" >
-                        <a :href='"https://travis-ci.org/hapijs/" + repo.name + "/builds"' target="__blank">
+                        <a :href='repo.versions.length > 1 ? "https://travis-ci.org/hapijs/" + repo.name + "/branches" : "https://travis-ci.org/hapijs/" + repo.name' target="__blank">
                           <img
                             :src='"https://travis-ci.org/hapijs/" + repo.name + ".svg?branch=" + version.branch'
                             alt="Build Status" class="hide" @load="swapImg('travis' + repo.name + version.name)" :id='"travis" + repo.name + version.name'
@@ -251,6 +251,7 @@ export default {
   width: 100%;
   margin-top: 16px;
   min-width: 800px;
+  position: relative;
 }
 
 .dependencies-header, .travis-header, .license-header, .life-header {
@@ -303,6 +304,18 @@ export default {
 .status-table th {
   padding: 10px;
   font-size: 1.15em;
+  position: sticky;
+  top: 90px;
+  background-color: #fff;
+}
+
+.status-table th:after {
+    content:'';
+    position:absolute;
+    left: 0;
+    bottom: -1px;
+    width:100%;
+    border-bottom: 1px solid $dark-white;
 }
 
 .status-table td {
