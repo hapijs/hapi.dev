@@ -66,6 +66,15 @@ body {
   font-weight: 900;
 }
 
+.resources-header {
+  margin: 20px 0 10px 0;
+  border-bottom: 1px solid #ddd;
+  border-top: none;
+  padding-bottom: 10px;
+  width: auto;
+  display: inline-block;
+}
+
 @media screen and (min-width: 1088px) {
   .container {
     max-width: 100%;
@@ -100,7 +109,7 @@ body {
     margin: 0;
     display: block;
   }
-   .tutorial-markdown-window {
-      max-width: 100%;
-   }
+  .tutorial-markdown-window {
+    max-width: 100%;
+  }
 }

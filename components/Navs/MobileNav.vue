@@ -62,6 +62,9 @@
             <a title="Changelog" href="/resources/changelog">Changelog</a>
           </li>
           <li class="mobile-link mobile-tutorial-link">
+            <a title="Changelog" href="/resources/status">Module Status</a>
+          </li>
+          <li class="mobile-link mobile-tutorial-link">
             <a title="List" href="/resources/list">List</a>
           </li>
         </ul>

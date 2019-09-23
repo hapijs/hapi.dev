@@ -151,6 +151,16 @@ pre {
   color: #6f42c1;
 }
 
+@media screen and (max-width: 1500px) {
+  .markdown-wrapper {
+    padding: 20px 40px;
+  }
+
+  .family-markdown-wrapper {
+    padding: 0 40px 20px 40px;
+  }
+}
+
 @media screen and (max-width: 900px) {
   h2 a,
   h3 a,
