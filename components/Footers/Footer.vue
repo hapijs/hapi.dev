@@ -16,8 +16,11 @@
         >Slack</a>
       </li>
     </ul>
-    <div class="footer-text">
-      &copy; 2012 - 2019 Sideway Inc.
+    <div class="footer-text-wrapper">
+      <a class="netlify-link" href="https://www.netlify.com">
+        <img class="netlify" src="https://www.netlify.com/img/global/badges/netlify-dark.svg" />
+      </a>
+      <div class="footer-text">&copy; 2012 - 2019 Sideway Inc.</div>
     </div>
   </footer>
 </template>
@@ -76,13 +79,29 @@ a {
 
 .footer-text {
   font-size: 0.8em;
-  text-align: center;
-  padding-bottom: 15px;
+  margin: 0;
+  padding-bottom: 5px;
 }
 
 .footer-text-links:hover {
   color: $orange;
   text-decoration: underline;
+}
+
+.footer-text-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0 15px 0;
+}
+
+.netlify-link {
+  padding-right: 10px;
+  margin: 0;
+}
+
+.netlify {
+  max-width: 50px;
 }
 
 </style>
