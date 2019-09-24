@@ -236,19 +236,18 @@ export default {
         let rawString = await raw.toString();
 
         let testMenu = "";
-        let testToc = await rawString.match(/\n#.+/g)
-        for (let t of testToc) {
-          testMenu = testMenu + t;
+        let testToc = await rawString.match(/\n#.+/g);
+        for (let t = 1; t < testToc.length; ++t) {
+          testMenu = testMenu + testToc[t];
         }
-        await console.log(Toc(testMenu, {bullets: '-'}).content)
+        let finalMenu = Toc(testMenu, {bullets: '-'}).content
 
-        // console.log(Toc("## Hello\n### Hello Again\n## Goodbye\n## Word", {bullets: '-'}).content)
 
         //Split API menu from content
         let finalDisplay = await rawString
           .replace(/\/>/g, "></a>")
           .replace(/.\s\[(?:.+[\n\r])+/, "");
-        let finalMenu = await rawString.match(/.\s\[(?:.+[\n\r])+/).pop();
+        // let finalMenu = await rawString.match(/.\s\[(?:.+[\n\r])+/).pop();
         finalMenu = await finalMenu.replace(/Boom\./g, "");
         finalMenu = await finalMenu.replace(/\(([^#\*]+)\)/g, "()");
         const apiHTML = await $axios.$post(

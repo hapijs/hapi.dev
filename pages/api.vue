@@ -22,6 +22,7 @@
 <script>
 import HTML from "~/components/HTML.vue";
 import ApiNav from "~/components/api/ApiNav.vue";
+let Toc = require('markdown-toc');
 let Semver = require("semver");
 
 export default {
@@ -182,6 +183,12 @@ export default {
 
     let apis = {};
     let menus = {};
+    const test = await $axios.$get(
+          "https://api.github.com/repos/hapijs/hapi/contents/API.md?ref=v16-commercial",
+          options
+        );
+
+    await console.log(test);
 
     //Grab and store APIs
     for (let version of versions) {
@@ -194,11 +201,18 @@ export default {
         let raw = await res;
         let rawString = await raw.toString();
 
+        let testMenu = "";
+        let testToc = await rawString.match(/\n#.+/g);
+        for (let t = 0; t < testToc.length; ++t) {
+          testMenu = testMenu + testToc[t];
+        }
+        let finalMenu = Toc(testMenu, {bullets: '-'}).content
+
         //Split API menu from content
         let finalDisplay = await rawString
           .replace(/\/>/g, "></a>")
           .replace(/-\s\[(?:.+[\n\r])+/, "");
-        let finalMenu = await rawString.match(/-\s\[(?:.+[\n\r])+/).pop();
+        // let finalMenu = await rawString.match(/-\s\[(?:.+[\n\r])+/).pop();
         menus[version] = await finalMenu;
         const apiHTML = await $axios.$post(
           "https://api.github.com/markdown",
