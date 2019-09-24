@@ -18,6 +18,7 @@
 import FamilyDisplay from "~/components/family/FamilyDisplay.vue";
 import FamilyNav from "~/components/family/FamilyNav.vue";
 import Install from "~/components/family/Install.vue";
+let Toc = require('markdown-toc');
 let Semver = require("semver");
 
 export default {
@@ -233,6 +234,15 @@ export default {
 
         let raw = await res;
         let rawString = await raw.toString();
+
+        let testMenu = "";
+        let testToc = await rawString.match(/\n#.+/g)
+        for (let t of testToc) {
+          testMenu = testMenu + t;
+        }
+        await console.log(Toc(testMenu, {bullets: '-'}).content)
+
+        // console.log(Toc("## Hello\n### Hello Again\n## Goodbye\n## Word", {bullets: '-'}).content)
 
         //Split API menu from content
         let finalDisplay = await rawString
