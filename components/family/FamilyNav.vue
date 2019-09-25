@@ -22,7 +22,7 @@
         <div class="side-nav-select-wrapper">
           <ul class="side-nav-select-list">
             <FamilyNavItem
-              v-for="name in modules"
+              v-for="name in getModules"
               v-bind:key="name"
               :name="name"
               :menu="menu"
@@ -63,10 +63,15 @@ export default {
       title: !this.$route.params.family
         ? "Bell"
         : this.$route.params.family.charAt(0).toUpperCase(0) +
-          this.$route.params.family.slice(1)
+          this.$route.params.family.slice(1),
     };
   },
-  props: ["page", "moduleAPI", "modules", "version", "versions", "menu"],
+  computed: {
+    getModules() {
+      return this.$store.getters.loadModules;
+    }
+  },
+  props: ["page", "moduleAPI", "version", "versions", "menu"],
   mounted() {
     let aClass = this.$route.hash;
     if (this.$route.hash) {

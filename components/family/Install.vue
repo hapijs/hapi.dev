@@ -17,7 +17,7 @@ export default {
 @import "../../assets/styles/api.scss";
 
 .install-wrapper {
-  margin: 20px 100px 0 100px;
+  margin: 20px 100px 10px 100px;
   border: 1px solid #ddd;
   padding: 10px;
   background: #f8f8f8;
@@ -33,7 +33,7 @@ export default {
 
 @media screen and (max-width: 1500px) {
   .install-wrapper {
-    margin: 20px 40px 0 40px;
+    margin: 20px 40px 10px 40px;
   }
 }
 
