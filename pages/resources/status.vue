@@ -104,6 +104,7 @@ export default {
         "hoek",
         "iron",
         "joi",
+        "podium",
         "shot",
         "topo",
         "yar"

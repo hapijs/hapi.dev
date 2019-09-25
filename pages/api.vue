@@ -22,7 +22,7 @@
 <script>
 import HTML from "~/components/HTML.vue";
 import ApiNav from "~/components/api/ApiNav.vue";
-let Toc = require('markdown-toc');
+let Toc = require("markdown-toc");
 let Semver = require("semver");
 
 export default {
@@ -167,35 +167,25 @@ export default {
       options
     );
 
-    for (let branch of branches) {
-      if (branch.name.match(/^v+[0-9]+|\bmaster\b/g)) {
-        const v = await $axios.$get(
-          "https://api.github.com/repos/hapijs/hapi/contents/package.json?ref=" +
-            branch.name,
-          options
-        );
-        versions.push(v.version);
-      }
-      versions = await versions.sort((a, b) => 
-        Semver.compare(b, a)
-      )
-    }
-
     let apis = {};
     let menus = {};
-    const test = await $axios.$get(
-          "https://api.github.com/repos/hapijs/hapi/contents/API.md?ref=v16-commercial",
-          options
-        );
-
-    await console.log(test);
 
     //Grab and store APIs
-    for (let version of versions) {
+    for (let branch of branches) {
+      let v = "";
       try {
+        if (branch.name.match(/^v+[0-9]+|\bmaster\b/g)) {
+          v = await $axios.$get(
+            "https://api.github.com/repos/hapijs/hapi/contents/package.json?ref=" +
+              branch.name,
+            options
+          );
+          versions.push(v.version);
+        }
+        versions = await versions.sort((a, b) => Semver.compare(b, a));
         const res = await $axios.$get(
-          "https://api.github.com/repos/hapijs/hapi/contents/API.md?ref=v" +
-            version,
+          "https://api.github.com/repos/hapijs/hapi/contents/API.md?ref=" +
+            branch.name,
           options
         );
         let raw = await res;
@@ -206,14 +196,13 @@ export default {
         for (let t = 0; t < testToc.length; ++t) {
           testMenu = testMenu + testToc[t];
         }
-        let finalMenu = Toc(testMenu, {bullets: '-'}).content
+        let finalMenu = Toc(testMenu, { bullets: "-" }).content;
 
         //Split API menu from content
         let finalDisplay = await rawString
           .replace(/\/>/g, "></a>")
           .replace(/-\s\[(?:.+[\n\r])+/, "");
-        // let finalMenu = await rawString.match(/-\s\[(?:.+[\n\r])+/).pop();
-        menus[version] = await finalMenu;
+        menus[v.version] = await finalMenu;
         const apiHTML = await $axios.$post(
           "https://api.github.com/markdown",
           {
@@ -228,7 +217,7 @@ export default {
         );
         let apiString = await apiHTML.toString();
         let finalHtmlDisplay = await apiString.replace(/user-content-/g, "");
-        apis[version] = await finalHtmlDisplay;
+        apis[v.version] = await finalHtmlDisplay;
       } catch (err) {
         console.log(err);
       }
@@ -248,8 +237,11 @@ export default {
         query: { v: this.versions[0] },
         hash: this.$route.hash
       });
-    if (!this.versions.includes(this.$route.query.v) && typeof this.$route.query.v === "string"){
-      return this.$nuxt.error({ statusCode: 404 })
+    if (
+      !this.versions.includes(this.$route.query.v) &&
+      typeof this.$route.query.v === "string"
+    ) {
+      return this.$nuxt.error({ statusCode: 404 });
     }
     this.$data.htmlDisplay = this.apis[this.$data.version];
     this.$data.menu = this.menus[this.$data.version];

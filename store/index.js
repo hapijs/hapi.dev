@@ -4,7 +4,18 @@ export const state = () => ({
   page: start.gettingstarted.default,
   display: "home",
   language: "en_US",
-  version: ""
+  version: "",
+  modules: [
+    "bell",
+    "boom",
+    "good",
+    "hoek",
+    "iron",
+    "joi",
+    "shot",
+    "topo",
+    "yar"
+  ]
 })
 
 export const mutations = {
@@ -34,5 +45,8 @@ export const getters = {
   },
   loadVersion (state) {
     return state.version
+  },
+  loadModules (state) {
+    return state.modules
   }
 }
