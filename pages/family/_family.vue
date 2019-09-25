@@ -2,7 +2,6 @@
   <div class="container">
     <FamilyNav
       :moduleAPI="moduleAPI"
-      :modules="modules"
       :menu="getMenu"
       :version="getVersion"
       :versions="versionsArray"
@@ -18,6 +17,7 @@
 import FamilyDisplay from "~/components/family/FamilyDisplay.vue";
 import FamilyNav from "~/components/family/FamilyNav.vue";
 import Install from "~/components/family/Install.vue";
+let Toc = require("markdown-toc");
 let Semver = require("semver");
 
 export default {
@@ -99,17 +99,6 @@ export default {
       offsets = [...new Set(offsets)];
 
       let currentElement = document.querySelector(".markdown-wrapper");
-      const modules = [
-        "bell",
-        "boom",
-        "good",
-        "hoek",
-        "iron",
-        "joi",
-        "shot",
-        "topo",
-        "yar"
-      ];
 
       //Add active class to elements on scroll
       window.onscroll = function() {
@@ -160,126 +149,123 @@ export default {
       return this.moduleAPI[this.$route.params.family].menus[this.getVersion];
     }
   },
-  async asyncData({ params, $axios, route }) {
+  async asyncData({ params, $axios, route, store }) {
     const options = {
       headers: {
         accept: "application/vnd.github.v3.raw+json",
         authorization: "token " + process.env.GITHUB_TOKEN
       }
     };
-    const modules = [
-      "bell",
-      "boom",
-      "good",
-      "hoek",
-      "iron",
-      "joi",
-      "shot",
-      "topo",
-      "yar"
-    ];
     let moduleAPI = {};
     moduleAPI[params.family] = { menus: {}, displays: {}, versions: {} };
     let version = "";
     let versionsArray = [];
-
-    try {
-      let milestones = await $axios.$get(
-        "https://api.github.com/repos/hapijs/" +
-          params.family +
-          "/milestones?state=closed&per_page=100&direction=desc",
-        options
-      );
-
-      let sortedMilestones = await milestones.sort((a, b) =>
-        Semver.compare(b.title, a.title)
-      );
-
-      moduleAPI[params.family].versions[sortedMilestones[0].title] = "master";
-      versionsArray.push(sortedMilestones[0].title);
-
-      let branches = await $axios.$get(
-        "https://api.github.com/repos/hapijs/" + params.family + "/branches",
-        options
-      );
-
-      for (let branch of branches) {
-        if (branch.name.match(/^v+[0-9]+/g)) {
-          const v = await $axios.$get(
-            "https://api.github.com/repos/hapijs/" +
-              params.family +
-              "/contents/package.json?ref=" +
-              branch.name,
-            options
-          );
-          if (v.version === sortedMilestones[0].title) {
-            moduleAPI[params.family].versions[sortedMilestones[0].title] =
-              branch.name;
-          } else if (!versionsArray.includes(v.version)) {
-            moduleAPI[params.family].versions[v.version] = branch.name;
-            await versionsArray.push(v.version);
-          }
-        }
-      }
-
-      for (let v of versionsArray) {
-        const res = await $axios.$get(
+    
+    if (store.getters.loadModules.includes(params.family)) {
+      try {
+        let milestones = await $axios.$get(
           "https://api.github.com/repos/hapijs/" +
             params.family +
-            "/contents/API.md?ref=" +
-            moduleAPI[params.family].versions[v],
+            "/milestones?state=closed&per_page=100&direction=desc",
           options
         );
 
-        let raw = await res;
-        let rawString = await raw.toString();
+        let sortedMilestones = await milestones.sort((a, b) =>
+          Semver.compare(b.title, a.title)
+        );
 
-        //Split API menu from content
-        let finalDisplay = await rawString
-          .replace(/\/>/g, "></a>")
-          .replace(/.\s\[(?:.+[\n\r])+/, "");
-        let finalMenu = await rawString.match(/.\s\[(?:.+[\n\r])+/).pop();
-        finalMenu = await finalMenu.replace(/Boom\./g, "");
-        finalMenu = await finalMenu.replace(/\(([^#\*]+)\)/g, "()");
-        const apiHTML = await $axios.$post(
-          "https://api.github.com/markdown",
-          {
-            text: finalDisplay,
-            mode: "markdown"
-          },
-          {
-            headers: {
-              authorization: "token " + process.env.GITHUB_TOKEN
+        moduleAPI[params.family].versions[sortedMilestones[0].title] = "master";
+        versionsArray.push(sortedMilestones[0].title);
+
+        let branches = await $axios.$get(
+          "https://api.github.com/repos/hapijs/" + params.family + "/branches",
+          options
+        );
+
+        for (let branch of branches) {
+          if (branch.name.match(/^v+[0-9]+/g)) {
+            const v = await $axios.$get(
+              "https://api.github.com/repos/hapijs/" +
+                params.family +
+                "/contents/package.json?ref=" +
+                branch.name,
+              options
+            );
+            if (v.version === sortedMilestones[0].title) {
+              moduleAPI[params.family].versions[sortedMilestones[0].title] =
+                branch.name;
+            } else if (!versionsArray.includes(v.version)) {
+              moduleAPI[params.family].versions[v.version] = branch.name;
+              await versionsArray.push(v.version);
             }
           }
-        );
-        let apiString = await apiHTML.toString();
-        let finalHtmlDisplay = await apiString.replace(/user-content-/g, "");
-        moduleAPI[params.family].menus[v] = await finalMenu;
-        moduleAPI[params.family].displays[v] = await finalHtmlDisplay;
+        }
+
+        for (let v of versionsArray) {
+          const res = await $axios.$get(
+            "https://api.github.com/repos/hapijs/" +
+              params.family +
+              "/contents/API.md?ref=" +
+              moduleAPI[params.family].versions[v],
+            options
+          );
+
+          let raw = await res;
+          let rawString = await raw.toString();
+
+          let testMenu = "";
+          let testToc = await rawString.match(/\n#.+/g);
+          for (let t = 1; t < testToc.length; ++t) {
+            testMenu = testMenu + testToc[t];
+          }
+          let finalMenu = Toc(testMenu, { bullets: "-" }).content;
+
+          //Split API menu from content
+          let finalDisplay = await rawString
+            .replace(/\/>/g, "></a>")
+            .replace(/.\s\[(?:.+[\n\r])+/, "");
+          finalMenu = await finalMenu.replace(/Boom\./g, "");
+          finalMenu = await finalMenu.replace(/\(([^#\*]+)\)/g, "()");
+          const apiHTML = await $axios.$post(
+            "https://api.github.com/markdown",
+            {
+              text: finalDisplay,
+              mode: "markdown"
+            },
+            {
+              headers: {
+                authorization: "token " + process.env.GITHUB_TOKEN
+              }
+            }
+          );
+          let apiString = await apiHTML.toString();
+          let finalHtmlDisplay = await apiString.replace(/user-content-/g, "");
+          moduleAPI[params.family].menus[v] = await finalMenu;
+          moduleAPI[params.family].displays[v] = await finalHtmlDisplay;
+        }
+      } catch (err) {
+        console.log(err.message);
       }
-    } catch (err) {
-      console.log(err.message);
-    }
-    try {
-      const r = await $axios.$get(
-        "https://api.github.com/repos/hapijs/" +
-          params.family +
-          "/contents/package.json",
-        options
-      );
-      version = await r.version;
-    } catch (err) {
-      console.log(err);
+      try {
+        const r = await $axios.$get(
+          "https://api.github.com/repos/hapijs/" +
+            params.family +
+            "/contents/package.json",
+          options
+        );
+        version = await r.version;
+      } catch (err) {
+        console.log(err);
+      }
     }
 
     versionsArray = await versionsArray.sort((a, b) => Semver.compare(b, a));
 
-    return { moduleAPI, modules, version, versionsArray };
+    return { moduleAPI, version, versionsArray };
   },
   created() {
-    if (!this.modules.includes(this.$route.params.family)) {
-      return this.$nuxt.error({ statusCode: 404 })
+    if (!this.$store.getters.loadModules.includes(this.$route.params.family)) {
+      return this.$nuxt.error({ statusCode: 404 });
     }
     let version = this.versionsArray.includes(this.$route.query.v)
       ? this.$route.query.v
