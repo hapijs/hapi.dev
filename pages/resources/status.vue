@@ -28,7 +28,7 @@
                           <a
                             target="__blank"
                             class="version-helmet"
-                            :href='apiModules.includes(repo.name) ? "/family/" + repo.name + "/?v=" + version.name : (repo.name === "hapi" ? "/api/?v=" + version.name : ("https://github.com/hapijs/" + repo.name + "/tree/" + version.branch))'
+                            :href='getModules.includes(repo.name) ? "/family/" + repo.name + "/?v=" + version.name : (repo.name === "hapi" ? "/api/?v=" + version.name : ("https://github.com/hapijs/" + repo.name + "/tree/" + version.branch))'
                           ><img src="/img/helmet.png" alt="hapi helmet" class="version-img"></a>
                           <a :href='"https://github.com/hapijs/" + repo.name + "/tree/" + version.branch' target="__blank"><img src="/img/githubLogo.png" alt="github logo" class="version-img"></a>
                         </div>
@@ -97,20 +97,13 @@ export default {
         156: '<div class="status-code status-passing"></div>',
         160: '<div class="status-code status-failing"></div>'
       },
-      apiModules: [
-        "bell",
-        "boom",
-        "good",
-        "hoek",
-        "iron",
-        "joi",
-        "podium",
-        "shot",
-        "topo",
-        "yar"
-      ],
       life: life
     };
+  },
+  computed: {
+    getModules() {
+      return this.$store.getters.loadModules
+    }
   },
   methods: {
     camelName(name) {
