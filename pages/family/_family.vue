@@ -160,7 +160,7 @@ export default {
     moduleAPI[params.family] = { menus: {}, displays: {}, versions: {} };
     let version = "";
     let versionsArray = [];
-    
+
     if (store.getters.loadModules.includes(params.family)) {
       try {
         let milestones = await $axios.$get(
@@ -215,7 +215,8 @@ export default {
 
           let testMenu = "";
           let testToc = await rawString.match(/\n#.+/g);
-          for (let t = 1; t < testToc.length; ++t) {
+          
+          for (let t = 0; t < testToc.length; ++t) {
             testMenu = testMenu + testToc[t];
           }
           let finalMenu = Toc(testMenu, { bullets: "-" }).content;
