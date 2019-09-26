@@ -30,6 +30,10 @@ export default {
       await this.$router.push({ path: this.$route.path, query: { v: event.target.value } });
       window.scrollTo(0, 0);
     },
+  },
+  mounted() {
+    let active = document.querySelector(".side-nav-active");
+    active.scrollIntoView(true);
   }
 };
 </script>

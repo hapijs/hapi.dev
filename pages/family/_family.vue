@@ -7,7 +7,7 @@
       :versions="versionsArray"
     />
     <div class="tutorial-markdown-window">
-      <Install :name="name" />
+      <Install :name="name" :moduleAPI="moduleAPI" :version="version"/>
       <FamilyDisplay :display="getDisplay" />
     </div>
   </div>
@@ -157,8 +157,9 @@ export default {
       }
     };
     let moduleAPI = {};
-    moduleAPI[params.family] = { menus: {}, displays: {}, versions: {} };
+    moduleAPI[params.family] = { menus: {}, displays: {}, versions: {}, license: {} };
     let version = "";
+    let license = ""
     let versionsArray = [];
 
     if (store.getters.loadModules.includes(params.family)) {
@@ -170,9 +171,12 @@ export default {
           options
         );
 
-        let sortedMilestones = await milestones.sort((a, b) =>
-          Semver.compare(b.title, a.title)
-        );
+        let sortedMilestones = await milestones.sort(function(a, b) {
+          if (!Semver.valid(a.title)) {
+            a.title = Semver.clean(a.title + ".0", { loose: true });
+          }
+          return Semver.compare(b.title, a.title);
+        });
 
         moduleAPI[params.family].versions[sortedMilestones[0].title] = "master";
         versionsArray.push(sortedMilestones[0].title);
@@ -215,15 +219,14 @@ export default {
 
           let testMenu = "";
           let testToc = await rawString.match(/\n#.+/g);
-          
+
           for (let t = 0; t < testToc.length; ++t) {
             testMenu = testMenu + testToc[t];
           }
           let finalMenu = Toc(testMenu, { bullets: "-" }).content;
 
           //Split API menu from content
-          let finalDisplay = await rawString
-            .replace(/\/>/g, "></a>");
+          let finalDisplay = await rawString.replace(/\/>/g, "></a>");
           finalMenu = await finalMenu.replace(/Boom\./g, "");
           finalMenu = await finalMenu.replace(/\(([^#\*]+)\)/g, "()");
           const apiHTML = await $axios.$post(
@@ -254,6 +257,8 @@ export default {
           options
         );
         version = await r.version;
+        
+
       } catch (err) {
         console.log(err);
       }
@@ -261,7 +266,7 @@ export default {
 
     versionsArray = await versionsArray.sort((a, b) => Semver.compare(b, a));
 
-    return { moduleAPI, version, versionsArray };
+    return { moduleAPI, version, versionsArray, license };
   },
   created() {
     if (!this.$store.getters.loadModules.includes(this.$route.params.family)) {
