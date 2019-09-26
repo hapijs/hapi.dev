@@ -92,32 +92,8 @@
       <li class="mobile-links-li">
         <a class="mobile-link" title="Family" href="/family/bell">Family</a>
         <ul>
-          <li class="mobile-link mobile-tutorial-link" title="bell">
-            <a href="/family/bell">bell</a>
-          </li>
-          <li class="mobile-link mobile-tutorial-link" title="boom">
-            <a href="/family/boom">boom</a>
-          </li>
-          <li class="mobile-link mobile-tutorial-link" title="good">
-            <a href="/family/good">good</a>
-          </li>
-          <li class="mobile-link mobile-tutorial-link" title="hoek">
-            <a href="/family/hoek">hoek</a>
-          </li>
-          <li class="mobile-link mobile-tutorial-link" title="iron">
-            <a href="/family/iron">iron</a>
-          </li>
-          <li class="mobile-link mobile-tutorial-link" title="joi">
-            <a href="/family/joi">joi</a>
-          </li>
-          <li class="mobile-link mobile-tutorial-link" title="shot">
-            <a href="/family/shot">shot</a>
-          </li>
-          <li class="mobile-link mobile-tutorial-link" title="topo">
-            <a href="/family/topo">topo</a>
-          </li>
-          <li class="mobile-link mobile-tutorial-link" title="yar">
-            <a href="/family/yar">yar</a>
+          <li v-for="name in getModules" v-bind:key="name" :name="name" class="mobile-link mobile-tutorial-link" :title='name'>
+            <a :href='"/family/" + name'>{{name}}</a>
           </li>
         </ul>
       </li>
@@ -145,6 +121,11 @@ export default {
       overlay.classList.remove("show-nav");
       let body = document.body;
       body.classList.remove("no-scroll");
+    }
+  },
+  computed: {
+    getModules() {
+      return this.$store.getters.loadModules;
     }
   }
 };
