@@ -90,7 +90,7 @@
         </ul>
       </li>
       <li class="mobile-links-li">
-        <a class="mobile-link" title="Family" href="/family/bell">Family</a>
+        <a class="mobile-link" title="Family" href="/family/accept">Family</a>
         <ul>
           <li v-for="name in getModules" v-bind:key="name" :name="name" class="mobile-link mobile-tutorial-link" :title='name'>
             <a :href='"/family/" + name'>{{name}}</a>

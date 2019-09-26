@@ -46,7 +46,7 @@
                 :class="getDisplay === 'family' ? 'nav-link nav-link-active' : 'nav-link'"
                 ref="family"
                 title="Family"
-                href="/family/bell"
+                href="/family/accept"
                 v-on:click="addActive('family')"
               >Family</a>
             </li>
