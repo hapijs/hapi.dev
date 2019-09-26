@@ -1,6 +1,6 @@
 <a href="http://hapi.dev"><img src="https://raw.githubusercontent.com/hapijs/assets/master/images/family.png" width="180px" align="right" /></a>
 
-# hapi.dev
+# @hapi/hapi.dev
 
 The home of the [hapi.dev](http://hapi.dev) developer portal.
 

@@ -121,26 +121,6 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     Displays the routes table at startup
 
-*   [good <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/good)
-
-    A logging plugin that supports output to console, file and udp/http endpoints
-
-*   [good-influx](https://github.com/fhemberger/good-influx)
-
-    InfluxDB broadcasting for Good process monitor
-
-*   [good-logstash](https://github.com/fhemberger/good-logstash)
-
-    Logstash TCP/UDP broadcasting for Good process monitor
-
-*   [good-kinesis-reporter](https://github.com/vvondra/good-kinesis-reporter)
-
-    AWS Kinesis and AWS Kinesis Firehose reporter for Good
-
-*   [hapi-good-winston](https://github.com/alexandrebodin/hapi-good-winston)
-
-    Winston logging for Good process monitor
-
 *   [hapi-statsd](https://github.com/mac-/hapi-statsd)
 
     Sends request round trip metrics to statsd

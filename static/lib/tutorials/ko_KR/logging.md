@@ -70,4 +70,4 @@ const server = Hapi.server({ debug: { request: ['error'] } });
 
 ## 로깅 플러그인
 
-hapi에서 로그 검색 및 출력을 위햇 제공하는 내장 메소드는 매우 적습니다. 보다 풍부한 로깅 경험을 위해서 [good](https://github.com/hapijs/good) 같은 플러그인 사용법을 실제로 봐야 합니다.
+hapi에서 로그 검색 및 출력을 위햇 제공하는 내장 메소드는 매우 적습니다. 보다 풍부한 로깅 경험을 위해서 [hapi-pino](https://www.npmjs.com/package/hapi-pino) 같은 플러그인 사용법을 실제로 봐야 합니다.
