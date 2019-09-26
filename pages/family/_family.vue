@@ -223,8 +223,7 @@ export default {
 
           //Split API menu from content
           let finalDisplay = await rawString
-            .replace(/\/>/g, "></a>")
-            .replace(/.\s\[(?:.+[\n\r])+/, "");
+            .replace(/\/>/g, "></a>");
           finalMenu = await finalMenu.replace(/Boom\./g, "");
           finalMenu = await finalMenu.replace(/\(([^#\*]+)\)/g, "()");
           const apiHTML = await $axios.$post(
