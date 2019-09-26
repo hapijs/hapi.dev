@@ -7,7 +7,7 @@
       :versions="versionsArray"
     />
     <div class="tutorial-markdown-window">
-      <Install :name="name" />
+      <Install :name="name" :moduleAPI="moduleAPI" :version="version"/>
       <FamilyDisplay :display="getDisplay" />
     </div>
   </div>
@@ -157,8 +157,9 @@ export default {
       }
     };
     let moduleAPI = {};
-    moduleAPI[params.family] = { menus: {}, displays: {}, versions: {} };
+    moduleAPI[params.family] = { menus: {}, displays: {}, versions: {}, license: {} };
     let version = "";
+    let license = ""
     let versionsArray = [];
 
     if (store.getters.loadModules.includes(params.family)) {
@@ -256,6 +257,8 @@ export default {
           options
         );
         version = await r.version;
+        license = r.name.includes("commercial") ? "Commercial" : "BSD"
+
       } catch (err) {
         console.log(err);
       }
@@ -263,7 +266,7 @@ export default {
 
     versionsArray = await versionsArray.sort((a, b) => Semver.compare(b, a));
 
-    return { moduleAPI, version, versionsArray };
+    return { moduleAPI, version, versionsArray, license };
   },
   created() {
     if (!this.$store.getters.loadModules.includes(this.$route.params.family)) {
