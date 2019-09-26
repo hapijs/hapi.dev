@@ -14,8 +14,6 @@ export const state = () => ({
     "boom",
     "bossy",
     "bounce",
-    "bourne",
-    "call",
     "catbox",
     "catbox-memcached",
     "catbox-memory",

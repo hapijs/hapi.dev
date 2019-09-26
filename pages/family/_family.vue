@@ -257,7 +257,7 @@ export default {
           options
         );
         version = await r.version;
-        license = r.name.includes("commercial") ? "Commercial" : "BSD"
+        
 
       } catch (err) {
         console.log(err);
