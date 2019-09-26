@@ -170,9 +170,12 @@ export default {
           options
         );
 
-        let sortedMilestones = await milestones.sort((a, b) =>
-          Semver.compare(b.title, a.title)
-        );
+        let sortedMilestones = await milestones.sort(function(a, b) {
+          if (!Semver.valid(a.title)) {
+            a.title = Semver.clean(a.title + ".0", { loose: true });
+          }
+          return Semver.compare(b.title, a.title);
+        });
 
         moduleAPI[params.family].versions[sortedMilestones[0].title] = "master";
         versionsArray.push(sortedMilestones[0].title);
@@ -215,15 +218,14 @@ export default {
 
           let testMenu = "";
           let testToc = await rawString.match(/\n#.+/g);
-          
+
           for (let t = 0; t < testToc.length; ++t) {
             testMenu = testMenu + testToc[t];
           }
           let finalMenu = Toc(testMenu, { bullets: "-" }).content;
 
           //Split API menu from content
-          let finalDisplay = await rawString
-            .replace(/\/>/g, "></a>");
+          let finalDisplay = await rawString.replace(/\/>/g, "></a>");
           finalMenu = await finalMenu.replace(/Boom\./g, "");
           finalMenu = await finalMenu.replace(/\(([^#\*]+)\)/g, "()");
           const apiHTML = await $axios.$post(
