@@ -89,6 +89,7 @@ export default {
       page: "status",
       img: {
         0: '<div class="status-code status-unknown"></div>',
+        76: '<div class="status-code status-unknown"></div>',
         81: '<div class="status-code status-failing"></div>',
         90: '<div class="status-code status-passing"></div>',
         98: '<div class="status-code status-unknown"></div>',
