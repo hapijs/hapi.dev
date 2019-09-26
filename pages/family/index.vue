@@ -17,7 +17,7 @@ export default {
     };
   },
   beforeMount() {
-    window.location.href = "/family/bell";
+    window.location.href = "/family/accept";
   }
 };
 </script>
