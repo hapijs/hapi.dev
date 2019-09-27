@@ -17,7 +17,7 @@
           </thead>
           <tbody>
             <tr v-for="repo in newRepos" v-bind:key="repo.name" class="module-row">
-              <td class="module-name">{{repo.name}}</td>
+              <td class="module-name">{{repo.name}}<a class="module-name-link" :id='repo.name' :href='"#" + repo.name'></a></td>
               <td colspan="5" class="nested-td">
                 <table class="nested-table">
                   <tbody class="nested-tbody">
@@ -265,6 +265,11 @@ export default {
   text-align: center;
 }
 
+.header-row {
+  position: relative;
+  z-index: 1;
+}
+
 .module-name {
   width: 25%;
   border-right: 1px solid $dark-white;
@@ -278,6 +283,20 @@ export default {
   border-bottom: 3px solid $dark-white;
   background-color: #fff;
 }
+
+.module-name {
+  position: relative;
+}
+
+.module-name-link {
+  display: block;
+  position: absolute;
+  content: "";
+  visibility: hidden;
+  top: -150px;
+  z-index: -5;
+}
+
 
 .module-row:nth-child(odd) {
   background-color: $off-white;
@@ -302,6 +321,7 @@ export default {
   position: sticky;
   top: 90px;
   background-color: #fff;
+  z-index: 1;
 }
 
 .status-table th:after {
@@ -311,6 +331,7 @@ export default {
     bottom: -1px;
     width:100%;
     border-bottom: 1px solid $dark-white;
+    z-index: 1;
 }
 
 .status-table td {
