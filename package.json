@@ -21,6 +21,7 @@
     "cookie-universal-nuxt": "^2.0.17",
     "cross-env": "^5.2.0",
     "hapi-nuxt": "^1.0.1",
+    "js-yaml": "^3.13.1",
     "lodash": "^4.17.15",
     "markdown-toc": "^1.2.0",
     "nuxt": "^2.4.0",
