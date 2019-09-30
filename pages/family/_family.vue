@@ -7,7 +7,7 @@
       :versions="versionsArray"
     />
     <div class="tutorial-markdown-window">
-      <Install :name="name" :moduleAPI="moduleAPI" :version="version"/>
+      <Install :name="name" :moduleAPI="moduleAPI" :version="version" />
       <FamilyDisplay :display="getDisplay" />
     </div>
   </div>
@@ -62,6 +62,25 @@ export default {
       }
     },
     onScroll() {
+      let anchors = document.querySelectorAll(".ecosystem-nav-select-wrapper a")
+      let code = document.querySelectorAll(".ecosystem-nav-select-wrapper a code")
+      let familyUls = document.querySelectorAll(
+        ".ecosystem-nav-select-wrapper > ul ul"
+      );
+
+      for (let a of anchors) {
+        a.classList.add("family-anchor")
+      }
+
+      for (let c of code) {
+        c.classList.add("family-code")
+      }
+
+      for (let ul of familyUls) {
+        ul.parentNode.children[0].classList.add("family-plus")
+        ul.classList.add("family-hide")
+      }
+
       let links = [];
       links = document.querySelectorAll("#" + this.$route.params.family + " a");
       let points = {};
@@ -157,9 +176,14 @@ export default {
       }
     };
     let moduleAPI = {};
-    moduleAPI[params.family] = { menus: {}, displays: {}, versions: {}, license: {} };
+    moduleAPI[params.family] = {
+      menus: {},
+      displays: {},
+      versions: {},
+      license: {}
+    };
     let version = "";
-    let license = ""
+    let license = "";
     let versionsArray = [];
 
     if (store.getters.loadModules.includes(params.family)) {
@@ -257,8 +281,6 @@ export default {
           options
         );
         version = await r.version;
-        
-
       } catch (err) {
         console.log(err);
       }
@@ -307,6 +329,64 @@ export default {
   box-sizing: border-box;
   border-bottom: 1px solid $dark-white;
   display: inline-block;
+}
+
+.family-anchor {
+  display: inline-block;
+  color: $gray;
+  font-size: 0.85em;
+  height: 100%;
+  width: 100%;
+  padding: 2px 0;
+}
+
+.family-anchor:hover {
+  color: $gray;
+}
+
+.family-code {
+  background: $off-white;
+  color: $gray;
+  font-family: "Lato", sans-serif;
+  font-size: 1em;
+  padding: 0;
+  border: none;
+}
+
+.family-plus,
+.family-minus, .family-plus code, .family-minus code {
+  position: relative;
+  color: $orange;
+  text-decoration: none;
+}
+
+.family-plus:hover, .family-minus:hover {
+  color: $orange;
+}
+
+.ecosystem-active:after {
+  position: absolute;
+  left: 53px !important;
+  height: 31px !important;
+}
+
+.family-plus:after {
+  content: "\002B";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 20px;
+  top: 0;
+  bottom: 0;
+  left: -17px;
+  height: 31px;
+  width: 15px;
+  z-index: 100;
+}
+
+.family-hide {
+  display: none;
 }
 
 @media screen and (max-width: 900px) {

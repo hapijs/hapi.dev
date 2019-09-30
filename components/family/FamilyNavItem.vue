@@ -77,33 +77,6 @@ export default {
   list-style-type: none;
 }
 
-.ecosystem-nav-select-wrapper a:hover,
-.ecosystem-nav-select-wrapper a code:hover {
-  text-decoration: underline;
-}
-
-.ecosystem-nav-select-wrapper a {
-  display: inline-block;
-  color: $gray;
-  font-size: 0.85em;
-  height: 100%;
-  width: 100%;
-  padding: 2px 0;
-}
-
-.ecosystem-nav-select-wrapper a:hover {
-  color: $gray;
-}
-
-.ecosystem-nav-select-wrapper a code {
-  background: $off-white;
-  color: $gray;
-  font-family: "Lato", sans-serif;
-  font-size: 1em;
-  padding: 0;
-  border: none;
-}
-
 .ecosystem-display {
   display: block !important;
   height: auto;
