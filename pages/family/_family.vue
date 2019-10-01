@@ -71,9 +71,26 @@ export default {
         ".ecosystem-nav-select-wrapper a code"
       );
 
-      for (let a of anchors) {
-        a.classList.add("family-anchor");
-        this.links[a.hash] = a.getBoundingClientRect().top;
+      for (let link of anchors) {
+        link.classList.add("family-anchor");
+        this.links[link.hash] = link.getBoundingClientRect().top;
+        link.addEventListener("click", function(event) {
+          if (
+            link.parentElement.children[1] &&
+            link.parentElement.children[1].classList.contains("family-display")
+          ) {
+            link.parentElement.children[1].classList.remove("family-display");
+            link.classList.remove("family-minus");
+            link.classList.add("family-plus")
+          } else if (
+            link.parentElement.children[1] &&
+            !link.parentElement.children[1].classList.contains("family-display")
+          ) {
+            link.parentElement.children[1].classList.add("family-display");
+            link.classList.remove("family-plus");
+            link.classList.add("family-minus");
+          }
+        });
       }
 
       for (let c of code) {
