@@ -96,7 +96,7 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Build powerful, scalable applications, with minimal overhead and full out-of-the-box functionality - your code, your way. Originally developed to handle Walmart’s Black Friday scale, hapi continues to be the proven choice for enterprise-grade backend needs.' },
-      { hid: 'keywords', name:'keywords', content: 'hapi, hapi.js, node, node.js, javascript, framework'}
+      { hid: 'keywords', name:'keywords', content: 'hapi, hapijs, hapi.js, node, node.js, javascript, framework'}
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png?v=1.0' },
            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Inconsolata:400|Lato:400,900&display=swap' }]
