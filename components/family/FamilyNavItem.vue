@@ -25,10 +25,8 @@
 export default {
   props: ["active", "name", "page", "version", "versions", "menu"],
   methods: {
-    async onChange(event) {
-      this.$store.commit("setVersion", event.target.value);
-      await this.$router.push({ path: this.$route.path, query: { v: event.target.value } });
-      window.scrollTo(0, 0);
+    onChange(event) {
+      this.$emit("change", event.target.value);
     },
   },
   mounted() {

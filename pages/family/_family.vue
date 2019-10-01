@@ -44,7 +44,9 @@ export default {
       modules: this.modules,
       version: "",
       menu: "",
-      name: this.$route.params.family
+      name: this.$route.params.family,
+      uls: {},
+      links: {}
     };
   },
   methods: {
@@ -62,23 +64,32 @@ export default {
       }
     },
     onScroll() {
-      let anchors = document.querySelectorAll(".ecosystem-nav-select-wrapper a")
-      let code = document.querySelectorAll(".ecosystem-nav-select-wrapper a code")
+      let anchors = document.querySelectorAll(
+        ".ecosystem-nav-select-wrapper a"
+      );
+      let code = document.querySelectorAll(
+        ".ecosystem-nav-select-wrapper a code"
+      );
+
+      for (let a of anchors) {
+        a.classList.add("family-anchor");
+        this.links[a.hash] = a.getBoundingClientRect().top;
+      }
+
+      for (let c of code) {
+        c.classList.add("family-code");
+      }
+
       let familyUls = document.querySelectorAll(
         ".ecosystem-nav-select-wrapper > ul ul"
       );
 
-      for (let a of anchors) {
-        a.classList.add("family-anchor")
-      }
-
-      for (let c of code) {
-        c.classList.add("family-code")
-      }
-
       for (let ul of familyUls) {
-        ul.parentNode.children[0].classList.add("family-plus")
-        ul.classList.add("family-hide")
+        this.uls[ul.getBoundingClientRect().top] = {
+          name: ul,
+          top: ul.getBoundingClientRect().top,
+          bottom: ul.getBoundingClientRect().bottom
+        };
       }
 
       let links = [];
@@ -119,11 +130,19 @@ export default {
 
       let currentElement = document.querySelector(".markdown-wrapper");
 
+      for (let ul of familyUls) {
+        ul.parentNode.children[0].classList.add("family-plus");
+        ul.classList.add("family-hide");
+      }
+
+      let that = this;
+
       //Add active class to elements on scroll
       window.onscroll = function() {
         let location = document.documentElement.scrollTop;
         let locationBody = document.body.scrollTop;
         let actives = document.getElementsByClassName("ecosystem-active");
+        let active;
         let element;
         let i = 0;
         for (i in offsets) {
@@ -139,17 +158,48 @@ export default {
               document
                 .querySelector(`a[href*='${aClass}']`)
                 .classList.add("ecosystem-active");
+              active = document.querySelector(".ecosystem-active");
             } else if (element && element.children.length === 0) {
               document
                 .querySelector(`a[href*='${aClass}']`)
                 .classList.add("ecosystem-active");
+              active = document.querySelector(".ecosystem-active");
             }
           }
         }
-        if (element) {
-          let bottom = element.getBoundingClientRect().bottom;
+
+        if (active) {
+          let activeClass;
+          let bottom = active.getBoundingClientRect().bottom;
           if (bottom > window.innerHeight) {
             element.scrollIntoView(false);
+          }
+          if (that.$route.hash === active.hash && bottom === 0) {
+            let wrapperHeight = document
+              .querySelector(".api-nav-wrapper")
+              .getBoundingClientRect().height;
+            activeClass = that.$route.hash;
+          } else {
+            activeClass = active.hash;
+          }
+          let activeLink = document.querySelector(`a[href*='${activeClass}']`);
+          let activePosition = that.links[activeLink.hash];
+          for (let key in that.uls) {
+            if (
+              activePosition >= that.uls[key].top &&
+              activePosition < that.uls[key].bottom
+            ) {
+              that.uls[key].name.classList.add("family-display");
+              that.uls[key].name.parentElement.children[0].classList.remove(
+                "family-plus"
+              );
+              that.uls[key].name.parentElement.children[0].classList.add(
+                "family-minus"
+              );
+            }
+          }
+          if (that.$route.hash === active.hash && bottom === 0) {
+            active.scrollIntoView(false);
           }
         }
       };
@@ -312,9 +362,6 @@ export default {
   mounted() {
     this.onScroll();
     this.goToAnchor();
-  },
-  updated() {
-    this.onScroll();
   }
 };
 </script>
@@ -354,20 +401,17 @@ export default {
 }
 
 .family-plus,
-.family-minus, .family-plus code, .family-minus code {
+.family-minus,
+.family-plus code,
+.family-minus code {
   position: relative;
   color: $orange;
   text-decoration: none;
 }
 
-.family-plus:hover, .family-minus:hover {
+.family-plus:hover,
+.family-minus:hover {
   color: $orange;
-}
-
-.ecosystem-active:after {
-  position: absolute;
-  left: 53px !important;
-  height: 31px !important;
 }
 
 .family-plus:after {
@@ -385,8 +429,34 @@ export default {
   z-index: 100;
 }
 
+.family-minus:after {
+  content: "\2212";
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 20px;
+  top: 0;
+  bottom: 0;
+  left: -17px;
+  height: 31px;
+  width: 15px;
+  z-index: 100;
+}
+
+.ecosystem-active:after {
+  position: absolute;
+  left: 53px;
+  height: 31px;
+}
+
 .family-hide {
   display: none;
+}
+
+.family-display {
+  display: block;
 }
 
 @media screen and (max-width: 900px) {
