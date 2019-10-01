@@ -25,10 +25,8 @@
 export default {
   props: ["active", "name", "page", "version", "versions", "menu"],
   methods: {
-    async onChange(event) {
-      this.$store.commit("setVersion", event.target.value);
-      await this.$router.push({ path: this.$route.path, query: { v: event.target.value } });
-      window.scrollTo(0, 0);
+    onChange(event) {
+      this.$emit("change", event.target.value);
     },
   },
   mounted() {
@@ -75,33 +73,6 @@ export default {
   color: $gray !important;
   margin: 0;
   list-style-type: none;
-}
-
-.ecosystem-nav-select-wrapper a:hover,
-.ecosystem-nav-select-wrapper a code:hover {
-  text-decoration: underline;
-}
-
-.ecosystem-nav-select-wrapper a {
-  display: inline-block;
-  color: $gray;
-  font-size: 0.85em;
-  height: 100%;
-  width: 100%;
-  padding: 2px 0;
-}
-
-.ecosystem-nav-select-wrapper a:hover {
-  color: $gray;
-}
-
-.ecosystem-nav-select-wrapper a code {
-  background: $off-white;
-  color: $gray;
-  font-family: "Lato", sans-serif;
-  font-size: 1em;
-  padding: 0;
-  border: none;
 }
 
 .ecosystem-display {

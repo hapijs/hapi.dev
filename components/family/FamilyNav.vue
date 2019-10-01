@@ -30,6 +30,7 @@
               :page="page"
               :version="version"
               :versions="versions"
+              @change="onVersionChange"
             />
           </ul>
         </div>
@@ -56,6 +57,15 @@ export default {
         query: { v: event.target.value }
       });
       window.scrollTo(0, 0);
+    },
+    async onVersionChange(value) {
+      this.$store.commit("setVersion", value);
+      await this.$router.push({
+        path: this.$route.path,
+        query: { v: value }
+      });
+      window.scrollTo(0, 0);
+      await this.$parent.onScroll();
     }
   },
   data() {
@@ -63,7 +73,7 @@ export default {
       title: !this.$route.params.family
         ? "Bell"
         : this.$route.params.family.charAt(0).toUpperCase(0) +
-          this.$route.params.family.slice(1),
+          this.$route.params.family.slice(1)
     };
   },
   computed: {

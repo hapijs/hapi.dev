@@ -10,15 +10,19 @@
               <th class="header-module">Module</th>
               <th class="version-header">Version</th>
               <th class="license-header">License</th>
+              <th class="node-header">Node</th>
               <th class="dependencies-header">Dependencies</th>
-              <th class="travis-header">Travis Build</th>
+              <th class="travis-header">Travis</th>
               <th class="life-header">End of Life</th>
             </tr>
           </thead>
           <tbody>
             <tr v-for="repo in newRepos" v-bind:key="repo.name" class="module-row">
-              <td class="module-name">{{repo.name}}<a class="module-name-link" :id='repo.name' :href='"#" + repo.name'></a></td>
-              <td colspan="5" class="nested-td">
+              <td class="module-name">
+                {{repo.name}}
+                <a class="module-name-link" :id='repo.name' :href='"#" + repo.name'></a>
+              </td>
+              <td colspan="6" class="nested-td">
                 <table class="nested-table">
                   <tbody class="nested-tbody">
                     <tr v-for="version in repo.versions" v-bind:key="version.name">
@@ -29,27 +33,45 @@
                             target="__blank"
                             class="version-helmet"
                             :href='getModules.includes(repo.name) ? "/family/" + repo.name + "/?v=" + version.name : (repo.name === "hapi" ? "/api/?v=" + version.name : ("https://github.com/hapijs/" + repo.name + "/tree/" + version.branch))'
-                          ><img src="/img/helmet.png" alt="hapi helmet" class="version-img"></a>
-                          <a :href='"https://github.com/hapijs/" + repo.name + "/tree/" + version.branch' target="__blank"><img src="/img/githubLogo.png" alt="github logo" class="version-img"></a>
+                          >
+                            <img src="/img/helmet.png" alt="hapi helmet" class="version-img" />
+                          </a>
+                          <a
+                            :href='"https://github.com/hapijs/" + repo.name + "/tree/" + version.branch'
+                            target="__blank"
+                          >
+                            <img src="/img/githubLogo.png" alt="github logo" class="version-img" />
+                          </a>
                         </div>
-
                       </td>
-                      <td>{{version.license}}</td>
+                      <td class="module-license">{{version.license}}</td>
+                      <td>{{version.node}}</td>
                       <td class="status-badge">
                         <img
                           :src='"https://david-dm.org/hapijs/" + repo.name + ".svg?branch=" + version.branch'
-                          alt="Dependency Status" class="hide" @load="swapImg('depend' + repo.name + version.name)" :id='"depend" + repo.name + version.name'
+                          alt="Dependency Status"
+                          class="hide"
+                          @load="swapImg('depend' + repo.name + version.name)"
+                          :id='"depend" + repo.name + version.name'
                         />
                       </td>
-                      <td class="status-badge" >
-                        <a :href='repo.versions.length > 1 ? "https://travis-ci.org/hapijs/" + repo.name + "/branches" : "https://travis-ci.org/hapijs/" + repo.name' target="__blank">
+                      <td class="status-badge">
+                        <a
+                          :href='repo.versions.length > 1 ? "https://travis-ci.org/hapijs/" + repo.name + "/branches" : "https://travis-ci.org/hapijs/" + repo.name'
+                          target="__blank"
+                        >
                           <img
                             :src='"https://travis-ci.org/hapijs/" + repo.name + ".svg?branch=" + version.branch'
-                            alt="Build Status" class="hide" @load="swapImg('travis' + repo.name + version.name)" :id='"travis" + repo.name + version.name'
+                            alt="Build Status"
+                            class="hide"
+                            @load="swapImg('travis' + repo.name + version.name)"
+                            :id='"travis" + repo.name + version.name'
                           />
                         </a>
                       </td>
-                      <td class="module-life">{{ life.endOfLife[camelName(repo.name)] && life.endOfLife[camelName(repo.name)][version.name] ? life.endOfLife[camelName(repo.name)][version.name] : null }}</td>
+                      <td
+                        class="module-life"
+                      >{{ life.endOfLife[camelName(repo.name)] && life.endOfLife[camelName(repo.name)][version.name] ? life.endOfLife[camelName(repo.name)][version.name] : null }}</td>
                     </tr>
                   </tbody>
                 </table>
@@ -66,7 +88,8 @@
 import ResourcesNav from "../../components/resources/ResourcesNav.vue";
 const life = require("../../static/lib/endOfLife.js");
 let Semver = require("semver");
-import _ from 'lodash';
+let Yaml = require("js-yaml");
+import _ from "lodash";
 
 export default {
   components: {
@@ -103,16 +126,16 @@ export default {
   },
   computed: {
     getModules() {
-      return this.$store.getters.loadModules
+      return this.$store.getters.loadModules;
     }
   },
   methods: {
     camelName(name) {
-      return _.camelCase(name)
+      return _.camelCase(name);
     },
     async swapImg(id) {
-      let badge = await document.getElementById(id)
-      badge.parentNode.innerHTML = await this.img[badge.naturalWidth]
+      let badge = await document.getElementById(id);
+      badge.parentNode.innerHTML = await this.img[badge.naturalWidth];
     }
   },
   async asyncData({ params, $axios }) {
@@ -154,20 +177,33 @@ export default {
           );
           for (let branch of branches) {
             if (branch.name.match(/^v+[0-9]+|\bmaster\b/g)) {
-              const v = await $axios.$get(
+              const gitHubVersion = await $axios.$get(
                 "https://api.github.com/repos/hapijs/" +
                   repositories[r].name +
                   "/contents/package.json?ref=" +
                   branch.name,
                 options
               );
+              const nodeYaml = await $axios.$get(
+                "https://api.github.com/repos/hapijs/" +
+                  repositories[r].name +
+                  "/contents/.travis.yml?ref=" +
+                  branch.name,
+                options
+              );
+              let nodeVersions = Yaml.safeLoad(nodeYaml).node_js.reverse();
+
               repos[repositories[r].name].versions.push({
-                name: v.version,
+                name: gitHubVersion.version,
                 branch: branch.name,
-                license: v.name.includes("commercial") ? "Commercial" : "BSD"
+                license: gitHubVersion.name.includes("commercial")
+                  ? "Commercial"
+                  : "BSD",
+                node: nodeVersions.join(", ").replace("node,", "")
               });
               if (
-                v.version === repos[repositories[r].name].versions[0].name &&
+                gitHubVersion.version ===
+                  repos[repositories[r].name].versions[0].name &&
                 branch.name !== "master"
               ) {
                 repos[repositories[r].name].versions.shift();
@@ -179,23 +215,35 @@ export default {
           }
         } else if (
           repositories[r].name !== "assets" &&
-          repositories[r].name !== ".github"
+          repositories[r].name !== ".github" &&
+          repositories[r].name !== "hapi.dev"
         ) {
-          let a = await $axios.$get(
+          let gitHubVersion = await $axios.$get(
             "https://api.github.com/repos/hapijs/" +
               repositories[r].name +
               "/contents/package.json",
             options
           );
+          const nodeYaml = await $axios.$get(
+            "https://api.github.com/repos/hapijs/" +
+              repositories[r].name +
+              "/contents/.travis.yml",
+            options
+          );
+          let nodeVersions = Yaml.safeLoad(nodeYaml).node_js.reverse();
+
           repos[repositories[r].name] = {
             name: repositories[r].name,
             versions: []
           };
-          let version = await a.version;
+          let version = await gitHubVersion.version;
           repos[repositories[r].name].versions.push({
             name: version,
             branch: "master",
-            license: a.name.includes("commercial") ? "Commercial" : "BSD"
+            license: gitHubVersion.name.includes("commercial")
+              ? "Commercial"
+              : "BSD",
+            node: nodeVersions.join(", ").replace("node,", "")
           });
         }
       }
@@ -213,7 +261,7 @@ export default {
 
     delete orderedRepos.hapi;
 
-    let newRepos = Object.assign({hapi}, orderedRepos);
+    let newRepos = Object.assign({ hapi }, orderedRepos);
 
     return { newRepos };
   },
@@ -249,14 +297,18 @@ export default {
   position: relative;
 }
 
-.dependencies-header, .travis-header, .license-header, .life-header {
-  width: 14.125%;
+.dependencies-header,
+.travis-header,
+.license-header,
+.node-header,
+.life-header {
+  width: 10.546875%;
   text-align: center;
   font-weight: 900;
 }
 
 .version-header {
-  width: 18.5%;
+  width: 18.75%;
   text-align: center;
   font-weight: 900;
 }
@@ -297,7 +349,6 @@ export default {
   z-index: -5;
 }
 
-
 .module-row:nth-child(odd) {
   background-color: $off-white;
 }
@@ -307,8 +358,12 @@ export default {
 }
 
 .nested-table td {
-  width: 18.75%;
+  width: 14.0625%;
   text-align: center;
+}
+
+.module-license {
+  width: 18.75%;
 }
 
 .module-version {
@@ -325,13 +380,13 @@ export default {
 }
 
 .status-table th:after {
-    content:'';
-    position:absolute;
-    left: 0;
-    bottom: -1px;
-    width:100%;
-    border-bottom: 1px solid $dark-white;
-    z-index: 1;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  border-bottom: 1px solid $dark-white;
+  z-index: 1;
 }
 
 .status-table td {
@@ -418,7 +473,8 @@ export default {
   }
 
   .status-table th {
-    font-size: 16px;
+    font-size: 14px;
+    padding: 10px 0px;
   }
 
   .module-name {
@@ -427,7 +483,7 @@ export default {
 
   .status-table td {
     padding: 10px 5px;
-}
+  }
 }
 
 @media screen and (max-width: 900px) {
