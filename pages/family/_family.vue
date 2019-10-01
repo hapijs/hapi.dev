@@ -158,13 +158,10 @@ export default {
 
       let that = this;
 
-      console.log(offsets);
-
       //Add active class to elements on scroll
       window.onscroll = function() {
         let location = document.documentElement.scrollTop;
         let locationBody = document.body.scrollTop;
-        console.log(location);
         let actives = document.getElementsByClassName("ecosystem-active");
         let active;
         let element;
