@@ -81,7 +81,7 @@ export default {
           ) {
             link.parentElement.children[1].classList.remove("family-display");
             link.classList.remove("family-minus");
-            link.classList.add("family-plus")
+            link.classList.add("family-plus");
           } else if (
             link.parentElement.children[1] &&
             !link.parentElement.children[1].classList.contains("family-display")
@@ -115,7 +115,11 @@ export default {
       let offsets = [];
       for (let i = 0; i < links.length; i++) {
         let point = document.querySelector(
-          `.tutorial-markdown-window h2 a[href*='${links[i].href.replace(
+          `.tutorial-markdown-window h1 a[href*='${links[i].href.replace(
+            /^[^_]*#/,
+            ""
+          )}'],
+          .tutorial-markdown-window h2 a[href*='${links[i].href.replace(
             /^[^_]*#/,
             ""
           )}'], .tutorial-markdown-window h3 a[href*='${links[i].href.replace(
@@ -131,16 +135,16 @@ export default {
         );
         if (point) {
           if (point.id) {
-            points[point.offsetTop + 80] = {
+            points[point.offsetTop + 220] = {
               name: "#" + point.id
             };
           } else {
-            points[point.offsetTop + 80] = {
+            points[point.offsetTop + 220] = {
               name: point.hash
             };
           }
 
-          offsets.push(point.offsetTop + 80);
+          offsets.push(point.offsetTop + 220);
         }
       }
       offsets = [...new Set(offsets)];
@@ -154,10 +158,13 @@ export default {
 
       let that = this;
 
+      console.log(offsets);
+
       //Add active class to elements on scroll
       window.onscroll = function() {
         let location = document.documentElement.scrollTop;
         let locationBody = document.body.scrollTop;
+        console.log(location);
         let actives = document.getElementsByClassName("ecosystem-active");
         let active;
         let element;
@@ -386,6 +393,7 @@ export default {
 <style lang="scss">
 @import "../../assets/styles/main.scss";
 @import "../../assets/styles/api.scss";
+@import "../../assets/styles/markdown.scss";
 
 .ecosystem-title {
   margin: 20px 0 -16px 100px;
@@ -474,6 +482,13 @@ export default {
 
 .family-display {
   display: block;
+}
+
+h1 a {
+  display: block;
+  position: relative;
+  top: -116px;
+  visibility: hidden;
 }
 
 @media screen and (max-width: 900px) {
