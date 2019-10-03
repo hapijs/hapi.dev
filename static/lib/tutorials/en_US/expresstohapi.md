@@ -465,7 +465,7 @@ server.route({
 
 ## <a name="bell" ></a> Passport -> bell
 
-In Express, third party authentication is handled with Passport. In hapi, you use the [bell](https://github.com/hapijs/bell) module for third party authentication. `bell` has over 30 predefined configurations for OAuth providers including Twitter, Facebook, Google, Github, and more. It will also allow you to set up your own custom provider. For a complete list, please see the [bell providers documentation](https://github.com/hapijs/bell/blob/master/Providers.md). `bell` was developed and is maintained by the core hapi team, so you know stability and reliability won't be an issue. Lets look how to authenticate using your Twitter credentials:
+In Express, third party authentication is handled with Passport. In hapi, you use the [bell](/family/bell) module for third party authentication. `bell` has over 30 predefined configurations for OAuth providers including Twitter, Facebook, Google, Github, and more. It will also allow you to set up your own custom provider. For a complete list, please see the [bell providers documentation](https://github.com/hapijs/bell/blob/master/Providers.md). `bell` was developed and is maintained by the core hapi team, so you know stability and reliability won't be an issue. Lets look how to authenticate using your Twitter credentials:
 
 Express:
 ```js
@@ -563,7 +563,7 @@ To use bell, simply register the plugin and configure the strategy with `server.
 
 ## <a name="joi" ></a> express-validator -> joi
 
-To validate data in Express, you make use of the `express-validator` plugin. One of the biggest drawbacks to `express-validator` is that while you can validate a request, there is no clear way of validating a response. In hapi, you use the [joi](https://github.com/hapijs/joi) module, which can validate requests and responses with ease. Joi allows you to create your own validations with a simple and clean object syntax. For a more in-depth look at validation in hapi, please see the [validation](/tutorials/validation/?lang=en_US) tutorial.
+To validate data in Express, you make use of the `express-validator` plugin. One of the biggest drawbacks to `express-validator` is that while you can validate a request, there is no clear way of validating a response. In hapi, you use the [joi](/family/joi) module, which can validate requests and responses with ease. Joi allows you to create your own validations with a simple and clean object syntax. For a more in-depth look at validation in hapi, please see the [validation](/tutorials/validation/?lang=en_US) tutorial.
 
 ### <a name="input" ></a> Input Validation
 
@@ -661,7 +661,7 @@ This route will return a list of books. In the `options` route property, we can 
 
 ## <a name="vision" ></a> app.set('view engine') -> vision
 
-hapi has extensive support for template rendering, including the ability to load and leverage multiple templating engines, partials, helpers (functions used in templates to manipulate data), and layouts. Express enables views capabilities by using `app.set('view engine)`, where hapi's capabilities are provided by the [vision](https://github.com/hapijs/vision) plugin. For a more extensive tutorial on views in hapi, please see the [views](/tutorials/views/?lang=en_US) tutorial.
+hapi has extensive support for template rendering, including the ability to load and leverage multiple templating engines, partials, helpers (functions used in templates to manipulate data), and layouts. Express enables views capabilities by using `app.set('view engine)`, where hapi's capabilities are provided by the [vision](/family/vision) plugin. For a more extensive tutorial on views in hapi, please see the [views](/tutorials/views/?lang=en_US) tutorial.
 
 ### <a name="viewengine" ></a> Setting the View Engine
 
@@ -731,11 +731,11 @@ To pass context in `h.view`, you pass an object as the second parameter. To pass
 
 ## <a name="inert" ></a> express.static() -> inert
 
-hapi gets its ability to serve static content from a plugin called [inert](https://github.com/hapijs/inert). inert provides new handler methods for serving static files and directories, as well as adding a `h.file()` method to the response toolkit. For a more in-depth tutorial of server static files in hapi, please see the [serving static files](/tutorials/serving-files/?lang=en_US) tutorial.
+hapi gets its ability to serve static content from a plugin called [inert](/family/inert). inert provides new handler methods for serving static files and directories, as well as adding a `h.file()` method to the response toolkit. For a more in-depth tutorial of server static files in hapi, please see the [serving static files](/tutorials/serving-files/?lang=en_US) tutorial.
 
 ### <a name="single" ></a> Serving Single Files
 
-In Express, you would use the `res.sendFile` method to return a single file. In hapi, you can either use the `h.file()` method or the file handler, which is available via [inert](https://github.com/hapijs/inert). Once you register the inert plugin, you will be able to serve your static files:
+In Express, you would use the `res.sendFile` method to return a single file. In hapi, you can either use the `h.file()` method or the file handler, which is available via [inert](/family/inert). Once you register the inert plugin, you will be able to serve your static files:
 
 Express:
 ```js
@@ -793,7 +793,7 @@ To serve static files in hapi, you first must tell hapi where the static files a
 
 ### <a name="static" ></a> Static File Server
 
-To set up a static file server in Express, you would use the `express.static()` middleware. In hapi, you use the file handler made available by the [inert](https://github.com/hapijs/inert) plugin. You would setup the server in the same what as you did to server a single static file, by telling where the files are located. You then would setup a route to catch all of the requests and return the correct files. Lets have a look:
+To set up a static file server in Express, you would use the `express.static()` middleware. In hapi, you use the file handler made available by the [inert](/family/inert) plugin. You would setup the server in the same what as you did to server a single static file, by telling where the files are located. You then would setup a route to catch all of the requests and return the correct files. Lets have a look:
 
 Express:
 ```js
@@ -823,11 +823,11 @@ server.route({
     }
 });
 ```
-Now, you can access any static files by going to `localhost:3000/filename`. [inert](https://github.com/hapijs/inert) has many other options and capabilities. To see what all it can do, please see the [serving static files](/tutorials/serving-files/?lang=en_US) tutorial.
+Now, you can access any static files by going to `localhost:3000/filename`. [inert](/family/inert) has many other options and capabilities. To see what all it can do, please see the [serving static files](/tutorials/serving-files/?lang=en_US) tutorial.
 
 ## <a name="boom" ></a> Error Handling -> boom
 
-hapi uses the [boom](https://github.com/hapijs/boom) module to handle errors. By default, boom will return the errors in JSON format. Express on the other hand will return a text response by default, which is suboptimal with a JSON API. Lets look a 404 error response with the default settings by submitting a `GET` request to `'/hello'`, which does not exists:
+hapi uses the [boom](/family/boom) module to handle errors. By default, boom will return the errors in JSON format. Express on the other hand will return a text response by default, which is suboptimal with a JSON API. Lets look a 404 error response with the default settings by submitting a `GET` request to `'/hello'`, which does not exists:
 
 Express: 
 
@@ -858,4 +858,4 @@ hapi:
 Boom.notFound('Page not found');
 ```
 
-In Express, you set the status code, then send the error message body. In this case we return a JSON object with the status code and the error message. In `boom`, there is no need to return a JSON object with the status code, it does this by default. In the example above, you call `Boom.notFound()` to set the error message. `boom` has a long list of 4xx and 5xx errors, such as `Boom.unauthorized()`, `Boom.badRequest()`, `Boom.badImplementation()`, etc. For a complete list, please see the [boom](https://github.com/hapijs/boom) documentation.
+In Express, you set the status code, then send the error message body. In this case we return a JSON object with the status code and the error message. In `boom`, there is no need to return a JSON object with the status code, it does this by default. In the example above, you call `Boom.notFound()` to set the error message. `boom` has a long list of 4xx and 5xx errors, such as `Boom.unauthorized()`, `Boom.badRequest()`, `Boom.badImplementation()`, etc. For a complete list, please see the [boom](/family/boom) documentation.

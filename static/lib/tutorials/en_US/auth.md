@@ -32,19 +32,19 @@ The `authenticate` method has a signature of `function (request, h)`, and is the
 
 In this context, `request` is the `request` object created by the server. It is the same object that becomes available in a route handler, and is documented in the [API reference](/api#request).
 
-`h` is the standard hapi [response toolkit](https://hapijs.com/api#response-toolkit).
+`h` is the standard hapi [response toolkit](/api#response-toolkit).
 
 When authentication is successful, you must call and return `h.authenticated({ credentials, artifacts })`. `credentials` property is an object representing the authenticated user (or the credentials the user attempted to authenticate with). Additionally, you may also have an `artifacts` key, which can contain any authentication related data that is not part of the user's credentials.
 
 The `credentials` and `artifacts` properties can be accessed later (in a route handler, for example) as part of the `request.auth` object.
 
-If authentication is unsuccessful, you can either throw an error or call and return `h.unauthenticated(error, [data])` where `error` is an authentication error and `data` is an optional object containing `credentials` and `artifacts`. There's no difference between calling `return h.unauthenticated(error)` or throwing an error if no `data` object is provided. The specifics of the error passed will affect the behavior. More information can be found in the API documentation for [`server.auth.scheme(name, scheme)`](/api#server.auth.scheme()). It is recommend to use [boom](https://github.com/hapijs/boom) for errors.
+If authentication is unsuccessful, you can either throw an error or call and return `h.unauthenticated(error, [data])` where `error` is an authentication error and `data` is an optional object containing `credentials` and `artifacts`. There's no difference between calling `return h.unauthenticated(error)` or throwing an error if no `data` object is provided. The specifics of the error passed will affect the behavior. More information can be found in the API documentation for [`server.auth.scheme(name, scheme)`](/api#server.auth.scheme()). It is recommend to use [boom](/family/boom) for errors.
 
 ### <a name="payload"></a> payload
 
 The `payload` method has the signature `function (request, h)`.
 
-Again, the standard hapi response toolkit is available here. To signal a failure throw an error, again it's recommended to use [boom](https://github.com/hapijs/boom) for errors.
+Again, the standard hapi response toolkit is available here. To signal a failure throw an error, again it's recommended to use [boom](/family/boom) for errors.
 
 To signal a successful authentication, return `h.continue`.
 
@@ -56,7 +56,7 @@ This method is intended to decorate the response object (`request.response`) wit
 
 Once any decoration is complete, you must return `h.continue`, and the response will be sent.
 
-If an error occurs, you should instead throw an error where the error is recommended to be a [boom](https://github.com/hapijs/boom).
+If an error occurs, you should instead throw an error where the error is recommended to be a [boom](/family/boom).
 
 ## <a name="strategies"></a> Strategies
 
@@ -107,7 +107,7 @@ The `payload` parameter is only possible to use with a strategy that supports th
 
 ## <a name="basic"></a> basic
 
-The first `scheme` we will look at is the [@hapi/basic](https://github.com/hapijs/basic) plugin. Just like the name says, the `@hapi/basic` plugin uses basic authentication to validate users. Here is an example of setting up `@hapi/basic`:
+The first `scheme` we will look at is the [@hapi/basic](/family/basic) plugin. Just like the name says, the `@hapi/basic` plugin uses basic authentication to validate users. Here is an example of setting up `@hapi/basic`:
 
 ```js
 'use strict';
@@ -165,7 +165,7 @@ const start = async () => {
 start();
 ```
 
-First, you define your `users` database, which is a simple object in this example. Then you define a validation function, which is a feature specific to [@hapi/basic](https://github.com/hapijs/basic) and allows you to verify that the user has provided valid credentials. For this validation function, you use `Bcrypt` to compare the user provided password with the hashed password in your database.  
+First, you define your `users` database, which is a simple object in this example. Then you define a validation function, which is a feature specific to [@hapi/basic](/family/basic) and allows you to verify that the user has provided valid credentials. For this validation function, you use `Bcrypt` to compare the user provided password with the hashed password in your database.  
 
 Next, you register the plugin, which creates a scheme with the name of `basic`. This is done within the plugin via [server.auth.scheme()](/api#-serverauthschemename-scheme).
 
@@ -175,7 +175,7 @@ The last thing you do is tell a route to use the strategy named `simple` for aut
 
 ## <a name="cookie"></a> cookie
 
-[@hapi/cookie](https://github.com/hapijs/cookie) is a plugin that will store a cookie in the users browser once they are authenticated. This has the option of keeping the user logged in, even after they leave the site. Here is an example of setting up `@hapi/cookie`:
+[@hapi/cookie](/family/cookie) is a plugin that will store a cookie in the users browser once they are authenticated. This has the option of keeping the user logged in, even after they leave the site. Here is an example of setting up `@hapi/cookie`:
 
 In this example, the home route, "/", is restricted and can only be accessed once a user has authenticated themselves:  
 
