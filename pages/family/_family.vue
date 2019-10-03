@@ -374,7 +374,8 @@ export default {
       !this.versionsArray.includes(this.$route.query.v)) &&
       this.$router.push({
         path: this.$route.path,
-        query: { v: this.versionsArray[0] }
+        query: { v: this.versionsArray[0] },
+        hash: this.$route.hash
       });
     this.$data.menu = this.moduleAPI[this.$route.params.family].menus[
       this.getVersion

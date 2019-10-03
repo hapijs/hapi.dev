@@ -257,7 +257,7 @@ server.route({
 ```
 The first property under `options` is `auth`. `auth` will set the authentication configuration for the route. Since this route is for a new user signing up, you will disable authentication.  
 
-The second property is `validate`. This allows you to set validation rules for various request components, such as `headers`, `params`, `payload`, and `failAction`. You use the [joi](https://github.com/hapijs/joi) package to validate the `request.payload`. For more info, please check the validation tutorial.
+The second property is `validate`. This allows you to set validation rules for various request components, such as `headers`, `params`, `payload`, and `failAction`. You use the [joi](/family/joi) package to validate the `request.payload`. For more info, please check the validation tutorial.
 
 ## <a name="missing"></a> 404 Handling
 

@@ -21,11 +21,11 @@ _This tutorial is compatible with hapi v17 and newer_
 
 ## <a name="overview"></a> Overview
 
-Validating data can be very helpful in making sure that your application is stable and secure. hapi allows this functionality by using the module [Joi](https://github.com/hapijs/joi), which allows you to create your validations with a simple and clear object syntax.
+Validating data can be very helpful in making sure that your application is stable and secure. hapi allows this functionality by using the module [Joi](/family/joi), which allows you to create your validations with a simple and clear object syntax.
 
 ## <a name="joi"></a> Joi
 
-[Joi](https://github.com/hapijs/joi) is an object schema description language and validator for JavaScript objects. Joi allows you to create blueprints or schemas for JavaScript objects to ensure validation of key information. To get started with joi, you must first install and add it as a dependency to your project:
+[Joi](/family/joi) is an object schema description language and validator for JavaScript objects. Joi allows you to create blueprints or schemas for JavaScript objects to ensure validation of key information. To get started with joi, you must first install and add it as a dependency to your project:
 
 `npm install @hapi/joi`
 
@@ -46,7 +46,7 @@ options: {
     }
 }
 ```
-Look [here](https://github.com/hapijs/joi/blob/v14.3.1/API.md#anyoptionsoptions) for details about such options.
+Look [here](/family/joi#any) for details about such options.
 
 ### <a name="pathparams"></a> Path parameters
 
@@ -269,7 +269,7 @@ hapi supports this by allowing you to specify a different validation schema for 
 
 ### <a name="options"></a> response.options
 
-Options to pass to joi during validation. Useful to set global options such as `stripUnknown` or `abortEarly` (the complete list is available [here](https://github.com/hapijs/joi/blob/master/API.md#validatevalue-schema-options-callback)). If a custom validation function is defined via `schema` or `status` then `options` can an arbitrary object that will be passed to this function as the second argument.
+Options to pass to joi during validation. Useful to set global options such as `stripUnknown` or `abortEarly`. If a custom validation function is defined via `schema` or `status` then `options` can an arbitrary object that will be passed to this function as the second argument.
 
 ## <a name="alternatives"></a> Alternatives to Joi
 
