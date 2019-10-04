@@ -75,6 +75,32 @@ export default {
     onChildIndex(value, uls, links) {
       this.$data.indexResults = value;
       window.scrollTo(0, this.results[this.indexResults].offsetTop);
+      this.findActives(this.results[this.indexResults].offsetTop, uls, links);
+    },
+    findActives(position, uls, links) {
+      const checkIfScrollToIsFinished = setInterval(() => {
+        if (document.documentElement.scrollTop === position) {
+          let active = document.querySelector(
+            ".api-nav-select-wrapper .api-active"
+          );
+          const activePosition = links[active.hash];
+          for (let key in uls) {
+            if (
+              activePosition > uls[key].top &&
+              activePosition < uls[key].bottom
+            ) {
+              uls[key].name.classList.add("nav-display");
+              uls[key].name.parentElement.children[0].classList.remove(
+                "api-nav-plus"
+              );
+              uls[key].name.parentElement.children[0].classList.add(
+                "api-nav-minus"
+              );
+            }
+          }
+          clearInterval(checkIfScrollToIsFinished);
+        }
+      }, 25);
     },
     goToAnchor() {
       let hash = document.location.hash;
@@ -119,6 +145,7 @@ export default {
           .querySelector(".api-search-results")
           .classList.add("nav-display");
         window.scrollTo(0, this.results[this.indexResults].offsetTop);
+        this.findActives(this.results[this.indexResults].offsetTop, uls, links);
       } else if (this.results.length === 0) {
         document
           .querySelector(".api-search-error")
@@ -164,15 +191,12 @@ export default {
         let raw = await res;
         let rawString = await raw.toString();
 
-
-        //Auto generate TOC
-        let apiTocString = "";
-        let apiTocArray = await rawString.match(/\n#.+/g);
-
-        for (let i = 0; i < apiTocArray.length; ++i) {
-          apiTocString = apiTocString + apiTocArray[i];
+        let testMenu = "";
+        let testToc = await rawString.match(/\n#.+/g);
+        for (let t = 0; t < testToc.length; ++t) {
+          testMenu = testMenu + testToc[t];
         }
-        let finalMenu = Toc(apiTocString, { bullets: "-" }).content;
+        let finalMenu = Toc(testMenu, { bullets: "-" }).content;
 
         //Split API menu from content
         let finalDisplay = await rawString
