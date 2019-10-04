@@ -63,12 +63,13 @@ export default {
         return false;
       }
     },
-    onScroll() {
+    setClasses() {
+      //Set TOC classes
       let anchors = document.querySelectorAll(
-        ".ecosystem-nav-select-wrapper a"
+        ".family-nav-select-wrapper a"
       );
       let code = document.querySelectorAll(
-        ".ecosystem-nav-select-wrapper a code"
+        ".family-nav-select-wrapper a code"
       );
 
       for (let link of anchors) {
@@ -98,7 +99,7 @@ export default {
       }
 
       let familyUls = document.querySelectorAll(
-        ".ecosystem-nav-select-wrapper > ul ul"
+        ".family-nav-select-wrapper > ul ul"
       );
 
       for (let ul of familyUls) {
@@ -109,8 +110,7 @@ export default {
         };
       }
 
-      let links = [];
-      links = document.querySelectorAll("#" + this.$route.params.family + " a");
+      let links = document.querySelectorAll("#" + this.$route.params.family + " a");
       let points = {};
       let offsets = [];
       for (let i = 0; i < links.length; i++) {
@@ -152,6 +152,7 @@ export default {
       let currentElement = document.querySelector(".markdown-wrapper");
 
       for (let ul of familyUls) {
+        ul.parentNode.children[0].classList.remove("family-minus");
         ul.parentNode.children[0].classList.add("family-plus");
         ul.classList.add("family-hide");
       }
@@ -162,7 +163,7 @@ export default {
       window.onscroll = function() {
         let location = document.documentElement.scrollTop;
         let locationBody = document.body.scrollTop;
-        let actives = document.getElementsByClassName("ecosystem-active");
+        let actives = document.getElementsByClassName("family-active");
         let active;
         let element;
         let i = 0;
@@ -170,7 +171,7 @@ export default {
           if (offsets[i] <= location || offsets[i] <= locationBody) {
             let aClass = points[offsets[i]].name;
             for (let active of actives) {
-              active.classList.remove("ecosystem-active");
+              active.classList.remove("family-active");
             }
             element = document.querySelector(
               `.side-nav-wrapper a[href*='${aClass}']`
@@ -178,13 +179,13 @@ export default {
             if (element && element.children.length !== 0) {
               document
                 .querySelector(`a[href*='${aClass}']`)
-                .classList.add("ecosystem-active");
-              active = document.querySelector(".ecosystem-active");
+                .classList.add("family-active");
+              active = document.querySelector(".family-active");
             } else if (element && element.children.length === 0) {
               document
                 .querySelector(`a[href*='${aClass}']`)
-                .classList.add("ecosystem-active");
-              active = document.querySelector(".ecosystem-active");
+                .classList.add("family-active");
+              active = document.querySelector(".family-active");
             }
           }
         }
@@ -195,14 +196,7 @@ export default {
           if (bottom > window.innerHeight) {
             element.scrollIntoView(false);
           }
-          if (that.$route.hash === active.hash && bottom === 0) {
-            let wrapperHeight = document
-              .querySelector(".api-nav-wrapper")
-              .getBoundingClientRect().height;
-            activeClass = that.$route.hash;
-          } else {
-            activeClass = active.hash;
-          }
+          activeClass = active.hash;
           let activeLink = document.querySelector(`a[href*='${activeClass}']`);
           let activePosition = that.links[activeLink.hash];
           for (let key in that.uls) {
@@ -283,42 +277,42 @@ export default {
 
         for (let branch of branches) {
           if (branch.name.match(/^v+[0-9]+/g)) {
-            const v = await $axios.$get(
+            const apiPackage = await $axios.$get(
               "https://api.github.com/repos/hapijs/" +
                 params.family +
                 "/contents/package.json?ref=" +
                 branch.name,
               options
             );
-            if (v.version === sortedMilestones[0].title) {
+            if (apiPackage.version === sortedMilestones[0].title) {
               moduleAPI[params.family].versions[sortedMilestones[0].title] =
                 branch.name;
-            } else if (!versionsArray.includes(v.version)) {
-              moduleAPI[params.family].versions[v.version] = branch.name;
-              await versionsArray.push(v.version);
+            } else if (!versionsArray.includes(apiPackage.version)) {
+              moduleAPI[params.family].versions[apiPackage.version] = branch.name;
+              await versionsArray.push(apiPackage.version);
             }
           }
         }
 
-        for (let v of versionsArray) {
-          const res = await $axios.$get(
+        for (let apiVersion of versionsArray) {
+          const api = await $axios.$get(
             "https://api.github.com/repos/hapijs/" +
               params.family +
               "/contents/API.md?ref=" +
-              moduleAPI[params.family].versions[v],
+              moduleAPI[params.family].versions[apiVersion],
             options
           );
 
-          let raw = await res;
-          let rawString = await raw.toString();
+          let rawString = await api.toString();
 
-          let testMenu = "";
-          let testToc = await rawString.match(/\n#.+/g);
+          //Auto generate TOC
+          let apiTocString = "";
+          let apiTocArray = await rawString.match(/\n#.+/g);
 
-          for (let t = 0; t < testToc.length; ++t) {
-            testMenu = testMenu + testToc[t];
+          for (let i = 0; i < apiTocArray.length; ++i) {
+            apiTocString = apiTocString + apiTocArray[i];
           }
-          let finalMenu = Toc(testMenu, { bullets: "-" }).content;
+          let finalMenu = Toc(apiTocString, { bullets: "-" }).content;
 
           //Split API menu from content
           let finalDisplay = await rawString.replace(/\/>/g, "></a>");
@@ -338,22 +332,11 @@ export default {
           );
           let apiString = await apiHTML.toString();
           let finalHtmlDisplay = await apiString.replace(/user-content-/g, "");
-          moduleAPI[params.family].menus[v] = await finalMenu;
-          moduleAPI[params.family].displays[v] = await finalHtmlDisplay;
+          moduleAPI[params.family].menus[apiVersion] = await finalMenu;
+          moduleAPI[params.family].displays[apiVersion] = await finalHtmlDisplay;
         }
       } catch (err) {
         console.log(err.message);
-      }
-      try {
-        const r = await $axios.$get(
-          "https://api.github.com/repos/hapijs/" +
-            params.family +
-            "/contents/package.json",
-          options
-        );
-        version = await r.version;
-      } catch (err) {
-        console.log(err);
       }
     }
 
@@ -382,7 +365,7 @@ export default {
     ];
   },
   mounted() {
-    this.onScroll();
+    this.setClasses();
     this.goToAnchor();
   }
 };
@@ -393,7 +376,7 @@ export default {
 @import "../../assets/styles/api.scss";
 @import "../../assets/styles/markdown.scss";
 
-.ecosystem-title {
+.family-title {
   margin: 20px 0 -16px 100px;
   padding-bottom: 16px;
   box-sizing: border-box;
@@ -468,7 +451,6 @@ export default {
   z-index: 100;
 }
 
-
 .family-active,
 .family-active * {
   position: relative;
@@ -495,10 +477,8 @@ export default {
   display: none;
 }
 
-
 .family-ul-display {
   display: block !important;
-
 }
 
 h1 a {
