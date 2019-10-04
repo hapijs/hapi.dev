@@ -1,6 +1,6 @@
 <template>
   <li
-    :class="this.$route.params.family === name || (!this.$route.params.family && name === 'bell') ? 'side-nav-select-link family-side-nav-item side-nav-active' : 'side-nav-select-link family-side-nav-item'"
+    :class="this.$route.params.family === name || (!this.$route.params.family && name === 'bell') ? 'side-nav-select-link ecosystem-side-nav-item side-nav-active' : 'side-nav-select-link ecosystem-side-nav-item'"
     :ref="name"
   >
     <a :href="'/family/' + name">{{name}}</a>
@@ -14,6 +14,7 @@
     </span>
     <div
       v-if="this.$props.active[name]"
+
       class="family-nav-select-wrapper family-display"
       :id='name'
       :key='version'
@@ -40,41 +41,42 @@ export default {
 <style lang="scss">
 @import "../../assets/styles/sideNav.scss";
 
-.family-side-nav-item {
+.ecosystem-side-nav-item {
   margin: 0 !important;
 }
 
-.family-side-nav-item:hover {
+.ecosystem-side-nav-item:hover {
   text-decoration: none !important;
 }
 
-.family-nav-select-wrapper {
+.ecosystem-nav-select-wrapper {
   display: none;
   width: 100%;
   font-weight: 400;
   margin: 0 0 10px 10px;
 }
 
-.family-nav-select-wrapper li {
+.ecosystem-nav-select-wrapper li {
   list-style-type: none;
   text-decoration: none;
   margin: 0;
   color: $gray;
 }
 
-.family-nav-select-wrapper ul {
+.ecosystem-nav-select-wrapper ul {
   margin: 0;
 }
 
-.family-nav-select-wrapper li ul {
+.ecosystem-nav-select-wrapper li ul {
   margin-left: 10px;
 }
 
-.family-nav-select-wrapper ul li {
+.ecosystem-nav-select-wrapper ul li {
   color: $gray !important;
   margin: 0;
   list-style-type: none;
 }
+
 
 .family-display {
   display: block;
