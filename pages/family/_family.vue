@@ -78,16 +78,16 @@ export default {
         link.addEventListener("click", function(event) {
           if (
             link.parentElement.children[1] &&
-            link.parentElement.children[1].classList.contains("family-display")
+            link.parentElement.children[1].classList.contains("family-ul-display")
           ) {
-            link.parentElement.children[1].classList.remove("family-display");
+            link.parentElement.children[1].classList.remove("family-ul-display");
             link.classList.remove("family-minus");
             link.classList.add("family-plus");
           } else if (
             link.parentElement.children[1] &&
-            !link.parentElement.children[1].classList.contains("family-display")
+            !link.parentElement.children[1].classList.contains("family-ul-display")
           ) {
-            link.parentElement.children[1].classList.add("family-display");
+            link.parentElement.children[1].classList.add("family-ul-display");
             link.classList.remove("family-plus");
             link.classList.add("family-minus");
           }
@@ -108,7 +108,6 @@ export default {
           top: ul.getBoundingClientRect().top,
           bottom: ul.getBoundingClientRect().bottom
         };
-        ul.classList.remove("family-display")
       }
 
       let links = document.querySelectorAll("#" + this.$route.params.family + " a");
@@ -205,7 +204,7 @@ export default {
               activePosition >= that.uls[key].top &&
               activePosition < that.uls[key].bottom
             ) {
-              that.uls[key].name.classList.add("family-display");
+              that.uls[key].name.classList.add("family-ul-display");
               that.uls[key].name.parentElement.children[0].classList.remove(
                 "family-plus"
               );
@@ -346,6 +345,7 @@ export default {
     return { moduleAPI, version, versionsArray, license };
   },
   created() {
+    console.log("CREATED")
     if (!this.$store.getters.loadModules.includes(this.$route.params.family)) {
       return this.$nuxt.error({ statusCode: 404 });
     }
@@ -452,11 +452,33 @@ export default {
   z-index: 100;
 }
 
+.family-active,
+.family-active * {
+  position: relative;
+  color: #fff !important;
+  background: $gray !important;
+  height: 31px;
+}
+
+.family-active {
+  display: inline-block;
+  left: -70px;
+  padding: 2px 30px 2px 70px !important;
+  width: 402px !important;
+  overflow-wrap: break-word;
+}
+
+.family-active:after {
+  position: absolute;
+  left: 53px;
+  height: 31px;
+}
+
 .family-hide {
   display: none;
 }
 
-.family-display {
+.family-ul-display {
   display: block !important;
 }
 

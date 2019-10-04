@@ -15,7 +15,8 @@
     <div
       v-if="this.$props.active[name]"
       class="family-nav-select-wrapper family-display"
-      :id="name"
+      :id='name'
+      :key='version'
       v-html="$md.render(this.$props.menu)"
     ></div>
   </li>
@@ -75,26 +76,8 @@ export default {
   list-style-type: none;
 }
 
-.family-active,
-.family-active * {
-  position: relative;
-  color: #fff !important;
-  background: $gray !important;
-  height: 31px;
-}
-
-.family-active {
-  display: inline-block;
-  left: -70px;
-  padding: 2px 30px 2px 70px !important;
-  width: 402px !important;
-  overflow-wrap: break-word;
-}
-
-.family-active:after {
-  position: absolute;
-  left: 53px;
-  height: 31px;
+.family-display {
+  display: block;
 }
 
 </style>
