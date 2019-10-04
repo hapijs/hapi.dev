@@ -65,7 +65,6 @@ export default {
         query: { v: value }
       });
       window.scrollTo(0, 0);
-      this.$forceUpdate();
       this.$parent.setClasses();
     }
   },
