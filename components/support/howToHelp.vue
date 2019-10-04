@@ -42,7 +42,7 @@
       >
         <a
           class="support-link"
-          href="https://join.slack.com/t/hapihour/shared_invite/enQtNTA5MDUzOTAzOTU4LTUyZmFiYjkyMTBmNDcyMmI2MmRjMzg4Y2YzNTlmNzUzNjViN2U1NmYyY2NjYjhiYWU4MGE2OTFhZDRlYWMyZDY"
+          href="https://join.slack.com/t/hapihour/shared_invite/enQtNTA5MDUzOTAzOTU4LTY1YzY0ZDM4YTZkNzYzOGExNDYzZjQ3YzJkNTVhNmExMDdlMjY3NDhkNDUxNjU4NTY1YjkzMTcxMzBkMzFiNWE"
           title="Slack"
           target="__blank"
         >hapi Slack channel</a>
@@ -72,11 +72,11 @@ export default {};
 @import "../../assets/styles/markdown.scss";
 
 .support-link {
-  color: $black;
+  color: $orange;
 }
 
 .support-link:hover {
-  text-decoration: none;
-  color: $black;
+  text-decoration: underline;
+  color: $orange;
 }
 </style>
