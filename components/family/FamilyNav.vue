@@ -65,7 +65,7 @@ export default {
         query: { v: value }
       });
       window.scrollTo(0, 0);
-      await this.$parent.onScroll();
+      await this.$parent.setClasses();
     }
   },
   data() {
