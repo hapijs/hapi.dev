@@ -14,8 +14,10 @@
     </span>
     <div
       v-if="this.$props.active[name]"
-      class="ecosystem-nav-select-wrapper ecosystem-display"
-      :id="name"
+
+      class="family-nav-select-wrapper family-display"
+      :id='name'
+      :key='version'
       v-html="$md.render(this.$props.menu)"
     ></div>
   </li>
@@ -75,26 +77,9 @@ export default {
   list-style-type: none;
 }
 
-.ecosystem-display {
-  display: block !important;
-  height: auto;
-  transition: all 0.3 ease;
-}
 
-.ecosystem-active,
-.ecosystem-active * {
-  position: relative;
-  color: #fff !important;
-  background: $gray !important;
-  height: 31px;
-}
-
-.ecosystem-active {
-  display: inline-block;
-  left: -70px;
-  padding: 2px 30px 2px 70px !important;
-  width: 402px !important;
-  overflow-wrap: break-word;
+.family-display {
+  display: block;
 }
 
 </style>
