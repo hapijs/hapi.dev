@@ -182,8 +182,6 @@ export default {
       for (let p of plus) {
         methods.push(p);
       }
-
-      //Remove extra text from TOC elements
       for (let i = code.length - 1; i >= 0; i--) {
         code[i].classList.add("api-nav-code");
         let matchHeader = "";
