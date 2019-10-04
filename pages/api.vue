@@ -88,7 +88,7 @@ export default {
       } else {
         return false;
       }
-    },
+    }, 
     onChildSearch(uls, links) {
       let headlines = [];
       let text = [];
