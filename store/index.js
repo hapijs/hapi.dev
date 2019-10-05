@@ -7,6 +7,7 @@ export const state = () => ({
   version: "",
   modules: [
     "accept",
+    "address",
     "ammo",
     "b64",
     "basic",
