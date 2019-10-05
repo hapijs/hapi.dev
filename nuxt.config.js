@@ -26,6 +26,7 @@ module.exports = {
       '/family/bossy',
       '/family/bounce',
       '/family/bourne',
+      '/family/call',
       '/family/catbox',
       '/family/catbox-memcached',
       '/family/catbox-memory',
