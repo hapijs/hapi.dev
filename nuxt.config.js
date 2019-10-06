@@ -53,6 +53,7 @@ module.exports = {
       '/family/mimos',
       '/family/nes',
       '/family/oppsy',
+      '/family/pinpoint',
       '/family/podium',
       '/family/rule-capitalize-modules',
       '/family/rule-for-loop',
