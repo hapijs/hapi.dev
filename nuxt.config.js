@@ -38,6 +38,7 @@ module.exports = {
       '/family/cookie',
       '/family/crumb',
       '/family/cryptiles',
+      '/family/formula',
       '/family/glue',
       '/family/good',
       '/family/good-console',
