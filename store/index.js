@@ -42,6 +42,7 @@ export const state = () => ({
     "mimos",
     "nes",
     "oppsy",
+    "pinpoint",
     "podium",
     "rule-capitalize-modules",
     "rule-for-loop",
