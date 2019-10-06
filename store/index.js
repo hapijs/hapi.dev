@@ -27,6 +27,7 @@ export const state = () => ({
     "cookie",
     "cryptiles",
     "crumb",
+    "formula",
     "glue",
     "good",
     "good-console",
