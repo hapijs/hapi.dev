@@ -18,6 +18,7 @@ module.exports = {
       '/tutorials/views',
       '/tutorials/expresstohapi',
       '/family/accept',
+      '/family/address',
       '/family/ammo',
       '/family/b64',
       '/family/basic',
