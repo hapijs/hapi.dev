@@ -228,7 +228,7 @@ This function will run at `onRequest`, which is the first extension point. `onRe
 
 ### <a name="creating" ></a> Creating a Plugin
 
-As you know, you can write you own middleware in Express. The same is true with hapi plugins. A plugin is an object with with required `name` and `register` properties. The `register` property is a function with the signature of `async function (server, option)`. Lets look at how to create a basic plugin:
+As you know, you can write your own middleware in Express. The same is true with hapi plugins. A plugin is an object with with required `name` and `register` properties. The `register` property is a function with the signature of `async function (server, option)`. Lets look at how to create a basic plugin:
 
 Express:
 ```js
