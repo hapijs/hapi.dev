@@ -3,7 +3,20 @@
     <div class="side-nav-wrapper">
       <div class="side-nav-inner-wrapper">
         <div class="mobile-top-wrapper">
-          <div class="side-nav-title">Family</div>
+          <div class="side-nav-title">
+            {{header}}
+            <span
+              class="family-span"
+            >
+              <select @change="onChange($event)" class="family-version-select" :value="version">
+                <option
+                  v-for="version in versions"
+                  v-bind:key="version"
+                  :value="version"
+                >{{version}}</option>
+              </select>
+            </span>
+          </div>
           <div class="mobile-family-info">
             <div class="mobile-family-title">
               {{title}}
@@ -22,9 +35,7 @@
         <div class="side-nav-select-wrapper">
           <ul class="side-nav-select-list">
             <FamilyNavItem
-              v-for="name in getModules"
-              v-bind:key="name"
-              :name="name"
+              :name="header"
               :menu="menu"
               :active="moduleAPI"
               :page="page"
@@ -70,6 +81,7 @@ export default {
   },
   data() {
     return {
+      header: this.$route.params.family,
       title: !this.$route.params.family
         ? "Bell"
         : this.$route.params.family.charAt(0).toUpperCase(0) +

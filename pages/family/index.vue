@@ -6,7 +6,7 @@
       <div class="family-grid">
         <div class="family-grid-cell" v-for="module in modules" v-bind:key="module">
           <div class="family-grid-text-wrapper">
-            <div class="family-grid-cell-name">{{module}}</div>
+            <a :href='"/family/" + module' class="family-grid-link"><div class="family-grid-cell-name">{{module}}</div></a>
             <div class="family-grid-cell-slogan" v-html="$md.render(moduleData[module].slogan)"></div>
           </div>
           <div class="family-grid-cell-stats">
@@ -115,6 +115,10 @@ export default {
   color: $orange;
   font-size: 1.2em;
   font-weight: 700;
+}
+
+.family-grid-link:hover {
+  color: $orange;
 }
 
 .family-grid-cell-slogan {

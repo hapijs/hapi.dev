@@ -3,17 +3,7 @@
     :class="this.$route.params.family === name || (!this.$route.params.family && name === 'bell') ? 'side-nav-select-link family-side-nav-item side-nav-active' : 'side-nav-select-link family-side-nav-item'"
     :ref="name"
   >
-    <a :href="'/family/' + name">{{name}}</a>
-    <span
-      v-if="this.$route.params.family === name || (!this.$route.params.family && name === 'bell')"
-      class="family-span"
-    >
-      <select @change="onChange($event)" class="family-version-select" :value="version">
-        <option v-for="version in versions" v-bind:key="version" :value="version">{{version}}</option>
-      </select>
-    </span>
     <div
-      v-if="this.$props.active[name]"
       class="family-nav-select-wrapper family-display"
       :id='name'
       :key='version'
