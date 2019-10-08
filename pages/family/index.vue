@@ -2,11 +2,17 @@
   <div class="container">
     <FamilyIndexNav />
     <div class="family-grid-wrapper">
-      <h1>Family Modules</h1>
+      <h1 class="family-header">Family Modules</h1>
       <div class="family-grid">
         <div class="family-grid-cell" v-for="module in modules" v-bind:key="module">
-          <div class="family-grid-cell-name">{{module}}</div>
-          <div class="family-grid-cell-slogan" v-html="$md.render(moduleData[module])"></div>
+          <div class="family-grid-text-wrapper">
+            <div class="family-grid-cell-name">{{module}}</div>
+            <div class="family-grid-cell-slogan" v-html="$md.render(moduleData[module].slogan)"></div>
+          </div>
+          <div class="family-grid-cell-stats">
+            <div class="family-stats"><span><img class="stats-img-star" src="/img/star.png" alt="star"></span>{{moduleData[module].stars}}</div>
+            <div class="family-stats"><span><img class="stats-img-fork" src="/img/fork.png" alt="fork"></span>{{moduleData[module].forks}}</div>
+          </div>
         </div>
       </div>
     </div>
@@ -51,8 +57,16 @@ export default {
           "https://api.github.com/repos/hapijs/" + 
             module + "/contents/README.md", options
         )
-        let slogan = await readme.match(/####(.*)/gm) !== null ? await readme.match(/####(.*)/gm)[0].substring(5) : "";
-        moduleData[module] = await slogan
+        let forks = await $axios.$get(
+          "https://api.github.com/repos/hapijs/" +
+            module, options
+        )
+        let slogan = await readme.match(/####(.*)/gm) !== null ? await readme.match(/####(.*)/gm)[0].substring(5) : "Description coming soon...";
+        moduleData[module] = {
+          slogan: await slogan,
+          forks: await forks.forks_count,
+          stars: await forks.stargazers_count
+        }
       } catch (err) {
         console.log(err)
       }
@@ -65,10 +79,14 @@ export default {
 <style lang="scss">
 @import "../../assets/styles/main.scss";
 @import "../../assets/styles/api.scss";
-@import "../../assets/styles/markdown.scss";
 
 .family-grid-wrapper {
   padding: 20px 100px 10px 100px;
+}
+
+.family-header {
+  margin-bottom: 30px;
+  font-size: 2rem;
 }
 
 .family-grid {
@@ -78,8 +96,51 @@ export default {
 }
 
 .family-grid-cell {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
   border: 1px solid $dark-white;
   padding: 10px 15px;
   margin: 0;
+  background: $off-white;
+}
+
+.family-grid-text-wrapper {
+  margin: 0;
+}
+
+.family-grid-cell-name {
+  color: $orange;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.family-grid-cell-slogan {
+  font-size: .95em;
+}
+
+.family-grid-cell-stats {
+  position: relative;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.family-stats {
+  margin: 10px 0 0 0;
+  padding-right: 30px;
+}
+
+.stats-img-star {
+  height: 15px;
+  margin-right: 5px;
+}
+
+.stats-img-fork {
+  height: 14px;
+  margin-right: 5px;
 }
 </style>
