@@ -23,8 +23,19 @@
 import SideFooter from "~/components/Footers/SideFooter.vue";
 
 export default {
+  props: ["search"],
   components: {
     SideFooter
+  },
+  methods: {
+    onInput(event) {
+      this.$emit("input", event.target.value);
+    },
+    onSearch() {
+      if (this.search !== "") {
+        this.$emit("search");
+      }
+    }
   }
 };
 </script>

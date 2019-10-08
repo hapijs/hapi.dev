@@ -1,10 +1,10 @@
 <template>
   <div class="container">
-    <FamilyIndexNav />
+    <FamilyIndexNav :search="search" @input="onChildInput" @search="onChildSearch" />
     <div class="family-grid-wrapper">
       <h1 class="family-header">Family Modules</h1>
       <div class="family-grid">
-        <div class="family-grid-cell" v-for="module in modules" v-bind:key="module">
+        <div class="family-grid-cell" :id='module' v-for="module in modules" v-bind:key="module">
           <div class="family-grid-text-wrapper">
             <a :href='"/family/" + module' class="family-grid-link"><div class="family-grid-cell-name">{{module}}</div></a>
             <div class="family-grid-cell-slogan" v-html="$md.render(moduleData[module].slogan)"></div>
@@ -28,7 +28,8 @@ export default {
   },
   data() {
     return {
-      modules: this.$store.getters.loadModules
+      modules: this.$store.getters.loadModules,
+      search: ""
     }
   },
   head() {
@@ -42,6 +43,18 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    onChildInput(value){
+      this.$data.search = value;
+    },
+    onChildSearch(){
+      for (let module of this.$data.modules) {
+        if (!module.includes(this.$data.search.toLowerCase())) {
+          document.querySelector("#" + module).classList.add("hide");
+        }
+      }
+    }
   },
   async asyncData({ params, $axios, route, store }) {
     const options = {
