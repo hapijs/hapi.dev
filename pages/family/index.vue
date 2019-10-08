@@ -10,8 +10,11 @@
             <div class="family-grid-cell-slogan" v-html="$md.render(moduleData[module].slogan)"></div>
           </div>
           <div class="family-grid-cell-stats">
-            <div class="family-stats"><span><img class="stats-img-star" src="/img/star.png" alt="star"></span>{{moduleData[module].stars}}</div>
-            <div class="family-stats"><span><img class="stats-img-fork" src="/img/fork.png" alt="fork"></span>{{moduleData[module].forks}}</div>
+            <div class="stats-wrapper">
+              <div class="family-stats"><span><img class="stats-img-star" src="/img/star.png" alt="star"></span>{{moduleData[module].stars}}</div>
+              <div class="family-stats"><span><img class="stats-img-fork" src="/img/fork.png" alt="fork"></span>{{moduleData[module].forks}}</div>
+            </div>
+            <div class="family-updated">Updated On: {{moduleData[module].updated}}</div>
           </div>
         </div>
       </div>
@@ -78,10 +81,12 @@ export default {
             module, options
         )
         let slogan = await readme.match(/####(.*)/gm) !== null ? await readme.match(/####(.*)/gm)[0].substring(5) : "Description coming soon...";
+        let date = await new Date(forks.updated_at);
         moduleData[module] = {
           slogan: await slogan,
           forks: await forks.forks_count,
-          stars: await forks.stargazers_count
+          stars: await forks.stargazers_count,
+          updated: await date.toDateString()
         }
       } catch (err) {
         console.log(err)
@@ -89,6 +94,9 @@ export default {
     }
     return { moduleData }
   },
+  created() {
+    this.$store.commit("setDisplay", "family");
+  }
 };
 </script>
 
@@ -97,7 +105,7 @@ export default {
 @import "../../assets/styles/api.scss";
 
 .family-grid-wrapper {
-  padding: 20px 100px 10px 100px;
+  padding: 20px 100px;
 }
 
 .family-header {
@@ -145,12 +153,18 @@ export default {
   position: relative;
   bottom: 0;
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  margin: 10px 0 0 0;
+  width: 100%;
+}
+
+.stats-wrapper {
+  display: flex;
   margin: 0;
 }
 
 .family-stats {
-  margin: 10px 0 0 0;
   padding-right: 30px;
 }
 
@@ -162,5 +176,12 @@ export default {
 .stats-img-fork {
   height: 14px;
   margin-right: 5px;
+}
+
+.family-updated {
+  font-size: .80em;
+  font-style: italic;
+  justify-self: flex-end;
+  margin: 0;
 }
 </style>
