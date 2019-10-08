@@ -7,6 +7,7 @@ export const state = () => ({
   version: "",
   modules: [
     "accept",
+    "address",
     "ammo",
     "b64",
     "basic",
@@ -26,6 +27,7 @@ export const state = () => ({
     "cookie",
     "cryptiles",
     "crumb",
+    "formula",
     "glue",
     "good",
     "good-console",
@@ -41,6 +43,7 @@ export const state = () => ({
     "mimos",
     "nes",
     "oppsy",
+    "pinpoint",
     "podium",
     "rule-capitalize-modules",
     "rule-for-loop",
