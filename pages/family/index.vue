@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <FamilyIndexNav :search="search" @input="onChildInput" @search="onChildSearch" />
+    <FamilyIndexNav :search="search" @input="onChildInput" @search="onChildSearch" @clear="onChildClear"/>
     <div class="family-grid-wrapper">
       <h1 class="family-header">Family Modules</h1>
       <div class="family-grid">
@@ -54,6 +54,9 @@ export default {
           document.querySelector("#" + module).classList.add("hide");
         }
       }
+    },
+    onChildClear() {
+      this.$data.search = "";
     }
   },
   async asyncData({ params, $axios, route, store }) {

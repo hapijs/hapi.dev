@@ -13,6 +13,7 @@
           />
           <div class="family-module-search-img" v-on:click="onSearch"></div>
         </div>
+        <button class="module-clear-button hide" v-on:click="onClear">Clear</button>
       </div>
       <SideFooter />
     </div>
@@ -34,7 +35,16 @@ export default {
     onSearch() {
       if (this.search !== "") {
         this.$emit("search");
+        document.querySelector(".module-clear-button").classList.remove("hide")
       }
+    },
+    onClear() {
+      let hidden = document.querySelectorAll(".hide")
+      for (let hide of hidden) {
+        hide.classList.remove("hide")
+      }
+      document.querySelector(".module-clear-button").classList.add("hide")
+      this.$emit("clear");
     }
   }
 };
@@ -75,5 +85,15 @@ export default {
   width: 30px;
   z-index: 25;
   cursor: pointer;
+}
+
+.module-clear-button {
+  outline: 0;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 4px 10px;
+  color: #333;
+  cursor: pointer;
+  margin: 10px 0 0 0;
 }
 </style>
