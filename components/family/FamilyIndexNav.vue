@@ -3,6 +3,18 @@
     <div class="side-nav-wrapper">
       <div class="side-nav-inner-wrapper">
         <div class="side-nav-title">Family</div>
+        <div class="family-checkbox-wrapper">
+          <input type="checkbox" id="module-checkbox" checked />
+          <div>Sort by User-Facing/Core Modules</div>
+        </div>
+        <div class="family-sort-wrapper">
+          <div>Sort By: </div>
+          <select @change="onChange($event)" class="family-sort" value="Alphabetical">
+            <option value="Alphabetical">Alphabetical</option>
+            <option value="Stars">Stars</option>
+            <option value="Forks">Forks</option>
+          </select>
+        </div>
         <div class="family-module-search">
           <input
             class="family-module-search-box"
@@ -35,15 +47,15 @@ export default {
     onSearch() {
       if (this.search !== "") {
         this.$emit("search");
-        document.querySelector(".module-clear-button").classList.remove("hide")
+        document.querySelector(".module-clear-button").classList.remove("hide");
       }
     },
     onClear() {
-      let hidden = document.querySelectorAll(".hide")
+      let hidden = document.querySelectorAll(".hide");
       for (let hide of hidden) {
-        hide.classList.remove("hide")
+        hide.classList.remove("hide");
       }
-      document.querySelector(".module-clear-button").classList.add("hide")
+      document.querySelector(".module-clear-button").classList.add("hide");
       this.$emit("clear");
     }
   }
@@ -52,6 +64,36 @@ export default {
 
 <style lang="scss">
 @import "../../assets/styles/sideNav.scss";
+
+.family-checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 10px 0 0 0;
+}
+
+#module-checkbox {
+  margin-right: 10px;
+}
+
+.family-sort-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 10px 0 0 0;
+}
+
+.family-sort {
+  width: 120px;
+  padding: 0 5px;
+  margin-left: 10px;
+  border: none;
+  height: 30px;
+  font-size: 1em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(/img/down.png) 96%/10% no-repeat #f8f8f8;
+  cursor: pointer;
+}
 
 .family-module-search {
   position: relative;

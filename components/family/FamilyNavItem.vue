@@ -19,10 +19,6 @@ export default {
     onChange(event) {
       this.$emit("change", event.target.value);
     },
-  },
-  mounted() {
-    let active = document.querySelector(".side-nav-active");
-    active.scrollIntoView(true);
   }
 };
 </script>

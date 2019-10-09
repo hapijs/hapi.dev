@@ -1,18 +1,35 @@
 <template>
   <div class="container">
-    <FamilyIndexNav :search="search" @input="onChildInput" @search="onChildSearch" @clear="onChildClear"/>
+    <FamilyIndexNav
+      :search="search"
+      @input="onChildInput"
+      @search="onChildSearch"
+      @clear="onChildClear"
+    />
     <div class="family-grid-wrapper">
       <h1 class="family-header">Family Modules</h1>
       <div class="family-grid">
-        <div class="family-grid-cell" :id='module' v-for="module in modules" v-bind:key="module">
+        <div class="family-grid-cell" :id="module" v-for="module in modules" v-bind:key="module">
           <div class="family-grid-text-wrapper">
-            <a :href='"/family/" + module' class="family-grid-link"><div class="family-grid-cell-name">{{module}}</div></a>
+            <a :href='"/family/" + module' class="family-grid-link">
+              <div class="family-grid-cell-name">{{module}}</div>
+            </a>
             <div class="family-grid-cell-slogan" v-html="$md.render(moduleData[module].slogan)"></div>
           </div>
           <div class="family-grid-cell-stats">
             <div class="stats-wrapper">
-              <div class="family-stats"><span><img class="stats-img-star" src="/img/star.png" alt="star"></span>{{moduleData[module].stars}}</div>
-              <div class="family-stats"><span><img class="stats-img-fork" src="/img/fork.png" alt="fork"></span>{{moduleData[module].forks}}</div>
+              <div class="family-stats">
+                <span>
+                  <img class="stats-img-star" src="/img/star.png" alt="star" />
+                </span>
+                {{moduleData[module].stars}}
+              </div>
+              <div class="family-stats">
+                <span>
+                  <img class="stats-img-fork" src="/img/fork.png" alt="fork" />
+                </span>
+                {{moduleData[module].forks}}
+              </div>
             </div>
             <div class="family-updated">Updated On: {{moduleData[module].updated}}</div>
           </div>
@@ -32,8 +49,30 @@ export default {
   data() {
     return {
       modules: this.$store.getters.loadModules,
-      search: ""
-    }
+      search: "",
+      core: "",
+      topModules: [
+        "joi",
+        "boom",
+        "bounce",
+        "wreck",
+        "hoek",
+        "bell",
+        "hawk",
+        "cookie",
+        "basic",
+        "code",
+        "lab",
+        "inert",
+        "vision",
+        "nes",
+        "catbox",
+        "catbox-memcached",
+        "catbox-memory",
+        "catbox-object",
+        "catbox-redis"
+      ]
+    };
   },
   head() {
     return {
@@ -48,10 +87,10 @@ export default {
     };
   },
   methods: {
-    onChildInput(value){
+    onChildInput(value) {
       this.$data.search = value;
     },
-    onChildSearch(){
+    onChildSearch() {
       for (let module of this.$data.modules) {
         if (!module.includes(this.$data.search.toLowerCase())) {
           document.querySelector("#" + module).classList.add("hide");
@@ -69,18 +108,23 @@ export default {
         authorization: "token " + process.env.GITHUB_TOKEN
       }
     };
-    let moduleData = {}
+    let moduleData = {};
     for (let module of store.getters.loadModules) {
       try {
         let readme = await $axios.$get(
-          "https://api.github.com/repos/hapijs/" + 
-            module + "/contents/README.md", options
-        )
-        let forks = await $axios.$get(
           "https://api.github.com/repos/hapijs/" +
-            module, options
-        )
-        let slogan = await readme.match(/####(.*)/gm) !== null ? await readme.match(/####(.*)/gm)[0].substring(5) : "Description coming soon...";
+            module +
+            "/contents/README.md",
+          options
+        );
+        let forks = await $axios.$get(
+          "https://api.github.com/repos/hapijs/" + module,
+          options
+        );
+        let slogan =
+          (await readme.match(/####(.*)/gm)) !== null
+            ? await readme.match(/####(.*)/gm)[0].substring(5)
+            : "Description coming soon...";
         let date = await new Date(forks.updated_at);
         moduleData[module] = {
           name: module,
@@ -89,15 +133,21 @@ export default {
           stars: await forks.stargazers_count,
           date,
           updated: await date.toDateString()
-        }
+        };
       } catch (err) {
-        console.log(err)
+        console.log(err);
       }
     }
-    return { moduleData }
+    return { moduleData };
+  },
+  mounted() {
+    this.$data.core === "true"
+      ? (document.getElementById("module-checkbox").checked = true)
+      : (document.getElementById("module-checkbox").checked = false);
   },
   created() {
     this.$store.commit("setDisplay", "family");
+    this.$route.query.core && this.$route.query.core === "true" ? this.$data.core = "true" : this.$data.core = "false"
   }
 };
 </script>
@@ -148,7 +198,7 @@ export default {
 }
 
 .family-grid-cell-slogan {
-  font-size: .95em;
+  font-size: 0.95em;
 }
 
 .family-grid-cell-stats {
@@ -181,7 +231,7 @@ export default {
 }
 
 .family-updated {
-  font-size: .80em;
+  font-size: 0.8em;
   font-style: italic;
   justify-self: flex-end;
   margin: 0;
