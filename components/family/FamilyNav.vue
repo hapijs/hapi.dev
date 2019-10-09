@@ -6,7 +6,7 @@
           <div class="family-nav-title">
             {{header}}
             <span class="family-span">
-              <select @change="onChange($event)" class="family-version-select" :value="version">
+              <select @change="onVersionChange($event)" class="family-version-select" :value="version">
                 <option
                   v-for="version in versions"
                   v-bind:key="version"
@@ -79,20 +79,19 @@ export default {
     "search"
   ],
   methods: {
-    async onChange(event) {
+    async onVersionChange(event) {
       this.$store.commit("setVersion", event.target.value);
       await this.$router.push({
         path: this.$route.path,
         query: { v: event.target.value }
       });
-      window.scrollTo(0, 0);
-    },
-    async onVersionChange(value) {
-      this.$store.commit("setVersion", value);
-      await this.$router.push({
-        path: this.$route.path,
-        query: { v: value }
-      });
+      this.$emit("input", "");
+      document
+        .querySelector(".family-search-results")
+        .classList.remove("nav-display");
+      document
+        .querySelector(".family-search-error")
+        .classList.remove("nav-display");
       window.scrollTo(0, 0);
       this.$parent.setClasses();
     },
