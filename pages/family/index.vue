@@ -83,9 +83,11 @@ export default {
         let slogan = await readme.match(/####(.*)/gm) !== null ? await readme.match(/####(.*)/gm)[0].substring(5) : "Description coming soon...";
         let date = await new Date(forks.updated_at);
         moduleData[module] = {
+          name: module,
           slogan: await slogan,
           forks: await forks.forks_count,
           stars: await forks.stargazers_count,
+          date,
           updated: await date.toDateString()
         }
       } catch (err) {

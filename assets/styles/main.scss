@@ -79,6 +79,10 @@ body {
   display: inline-block;
 }
 
+.nav-display {
+  display: block !important;
+}
+
 @media screen and (min-width: 1088px) {
   .container {
     max-width: 100%;

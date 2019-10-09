@@ -626,10 +626,6 @@ export default {
   border: none;
 }
 
-.nav-display {
-  display: block !important;
-}
-
 .api-nav-select-wrapper ul {
   margin: 0 0 0 30px;
 }
