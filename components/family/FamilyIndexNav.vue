@@ -39,7 +39,7 @@ export default {
   },
   methods: {
     onInput(event) {
-      this.$emit("input", event.target.value);
+      this.$emit("input", event);
     },
     onSearch() {
       if (this.search !== "") {

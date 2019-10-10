@@ -39,7 +39,7 @@
                 {{module.forks}}
               </div>
             </div>
-            <div class="family-updated">Updated On: {{module.updated}}</div>
+            <div class="family-updated">Updated: {{module.updated}}</div>
           </div>
         </div>
       </div>
@@ -49,7 +49,6 @@
 
 <script>
 import FamilyIndexNav from "~/components/family/FamilyIndexNav.vue";
-let Hoek = require("@hapi/hoek");
 
 export default {
   components: {
@@ -76,8 +75,14 @@ export default {
     };
   },
   methods: {
-    onChildInput(value) {
-      this.$data.search = value;
+    onChildInput(event) {
+      this.$data.search = event.target.value;
+      if (event.data === null) {
+        let hidden = document.querySelectorAll(".hide");
+        for (let hide of hidden) {
+          hide.classList.remove("hide");
+        }
+      }
     },
     onChildSearch() {
       for (let module of this.moduleData) {
@@ -154,7 +159,6 @@ export default {
     }
   },
   updated() {
-    console.log("UPDATED")
     this.$router.push({
       query: { sort: this.$data.sort },
       });
@@ -178,7 +182,7 @@ export default {
 
 .family-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 20px;
 }
 
@@ -226,22 +230,22 @@ export default {
   display: flex;
   align-items: center;
   margin: 0;
-  font-size: .95em;
+  font-size: .90em;
 }
 
 .family-stats {
   display: flex;
   align-items: center;
-  min-width: 48px;
 }
 
 .family-stats:nth-child(-n + 2) {
-  padding-right: 25px;
+  padding-right: 20px;
 }
 
 .status-link {
   display: inline-block;
   height: 18px;
+  margin: 0;
 }
 
 .stats-img-github {
@@ -263,5 +267,17 @@ export default {
   font-style: italic;
   justify-self: flex-end;
   margin: 0;
+}
+
+@media screen and (max-width: 1500px) {
+  .family-grid-wrapper {
+    padding: 20px 40px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .family-grid-wrapper {
+    padding: 5px;
+  }
 }
 </style>
