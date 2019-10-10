@@ -87,7 +87,7 @@ export default {
   margin-left: 10px;
   border: none;
   height: 30px;
-  font-size: 1em;
+  font-size: .91em;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

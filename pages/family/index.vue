@@ -26,7 +26,7 @@
           <div class="family-grid-cell-stats">
             <div class="stats-wrapper">
               <div class="family-stats">
-                <a class="status-link" :href='module.link'>
+                <a class="status-link" :href="module.link">
                   <img class="stats-img-github" src="/img/githubLogo.png" alt="github logo" />
                 </a>
               </div>
@@ -77,10 +77,20 @@ export default {
   methods: {
     onChildInput(event) {
       this.$data.search = event.target.value;
+      if (this.$data.search === "") {
+        let hidden = document.querySelectorAll(".hide");
+        for (let hide of hidden) {
+          hide.classList.remove("hide");
+        }
+        document.querySelector(".module-clear-button").classList.add("hide");
+      }
     },
     onChildSearch() {
       for (let module of this.moduleData) {
-        if (!module.name.includes(this.$data.search.toLowerCase()) && !module.slogan.toLowerCase().includes(this.$data.search.toLowerCase())) {
+        if (
+          !module.name.includes(this.$data.search.toLowerCase()) &&
+          !module.slogan.toLowerCase().includes(this.$data.search.toLowerCase())
+        ) {
           document.querySelector("#" + module.name).classList.add("hide");
         }
       }
@@ -145,18 +155,18 @@ export default {
     this.$store.commit("setDisplay", "family");
     const sortedBy = ["name", "stars", "forks", "updated"];
     if (sortedBy.includes(this.$route.query.sort)) {
-      this.sortModules(this.$route.query.sort)
+      this.sortModules(this.$route.query.sort);
     } else {
       this.$router.push({
-        query: { sort: "name"}
+        query: { sort: "name" }
       });
-      this.sortModules("name")
+      this.sortModules("name");
     }
   },
   updated() {
     this.$router.push({
-      query: { sort: this.$data.sort },
-      });
+      query: { sort: this.$data.sort }
+    });
   }
 };
 </script>
@@ -177,7 +187,7 @@ export default {
 
 .family-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   grid-gap: 20px;
 }
 
@@ -229,7 +239,7 @@ export default {
   display: flex;
   align-items: center;
   margin: 0;
-  font-size: .90em;
+  font-size: 0.9em;
 }
 
 .family-stats {
@@ -278,5 +288,9 @@ export default {
   .family-grid-wrapper {
     padding: 5px;
   }
+
+.family-grid {
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
 }
 </style>
