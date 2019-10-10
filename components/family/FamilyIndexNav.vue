@@ -6,10 +6,10 @@
         <div class="family-sort-wrapper">
           <div>Sort By: </div>
           <select @change="onChange($event)" class="family-sort" :value='sort'>
-            <option value="alphabetical">Alphabetical</option>
+            <option value="name">Name</option>
             <option value="stars">Stars</option>
             <option value="forks">Forks</option>
-            <option value="last_updated">Last Updated</option>
+            <option value="updated">Updated</option>
           </select>
         </div>
         <div class="family-module-search">
@@ -82,7 +82,7 @@ export default {
 }
 
 .family-sort {
-  width: 120px;
+  width: 90px;
   padding: 0 5px;
   margin-left: 10px;
   border: none;
@@ -91,7 +91,8 @@ export default {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: url(/img/down.png) 96%/10% no-repeat #f8f8f8;
+  background: url(/img/down.png) 96%/12% no-repeat #fff;
+  border: 1px solid $dark-white;
   cursor: pointer;
 }
 

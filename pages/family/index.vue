@@ -26,7 +26,7 @@
           <div class="family-grid-cell-stats">
             <div class="stats-wrapper">
               <div class="family-stats">
-                <a class="status-link" :href='"https://github.com/hapijs/" + module.name'>
+                <a class="status-link" :href='module.link'>
                   <img class="stats-img-github" src="/img/githubLogo.png" alt="github logo" />
                 </a>
               </div>
@@ -59,7 +59,7 @@ export default {
       modules: this.$store.getters.loadModules,
       search: "",
       core: true,
-      sort: "alphabetical"
+      sort: "name"
     };
   },
   head() {
@@ -77,12 +77,6 @@ export default {
   methods: {
     onChildInput(event) {
       this.$data.search = event.target.value;
-      if (event.data === null) {
-        let hidden = document.querySelectorAll(".hide");
-        for (let hide of hidden) {
-          hide.classList.remove("hide");
-        }
-      }
     },
     onChildSearch() {
       for (let module of this.moduleData) {
@@ -100,9 +94,9 @@ export default {
         this.moduleData.sort((a, b) =>
           a[value.toLowerCase()] < b[value] ? 1 : -1
         );
-      } else if (value === "alphabetical") {
+      } else if (value === "name") {
         this.moduleData.sort((a, b) => (a.name > b.name ? 1 : -1));
-      } else if (value === "last_updated") {
+      } else if (value === "updated") {
         this.moduleData.sort((a, b) => (a.date < b.date ? 1 : -1));
       }
     }
@@ -138,7 +132,8 @@ export default {
           forks: await Number(forks.forks_count),
           stars: await Number(forks.stargazers_count),
           date: await forks.pushed_at,
-          updated: await date.toDateString()
+          updated: await date.toDateString(),
+          link: "https://github.com/hapijs/" + module
         });
       } catch (err) {
         console.log(err);
@@ -148,14 +143,14 @@ export default {
   },
   created() {
     this.$store.commit("setDisplay", "family");
-    const sortedBy = ["alphabetical", "stars", "forks", "last_dated"];
+    const sortedBy = ["name", "stars", "forks", "updated"];
     if (sortedBy.includes(this.$route.query.sort)) {
       this.sortModules(this.$route.query.sort)
     } else {
-      this.router.push({
-        query: { sort: "alphabetical"}
+      this.$router.push({
+        query: { sort: "name"}
       });
-      this.sortModules("alphabetcial")
+      this.sortModules("name")
     }
   },
   updated() {
@@ -214,6 +209,10 @@ export default {
 
 .family-grid-cell-slogan {
   font-size: 0.95em;
+}
+
+.family-grid-cell-slogan p {
+  margin: 0;
 }
 
 .family-grid-cell-stats {
