@@ -2,36 +2,44 @@
   <div class="container">
     <FamilyIndexNav
       :search="search"
+      :sort="sort"
       @input="onChildInput"
       @search="onChildSearch"
       @clear="onChildClear"
+      @change="sortModules"
     />
     <div class="family-grid-wrapper">
       <h1 class="family-header">Family Modules</h1>
       <div class="family-grid">
-        <div class="family-grid-cell" :id="module" v-for="module in modules" v-bind:key="module">
+        <div
+          class="family-grid-cell"
+          :id="module.name"
+          v-for="module in moduleData"
+          v-bind:key="module.name"
+        >
           <div class="family-grid-text-wrapper">
-            <a :href='"/family/" + module' class="family-grid-link">
-              <div class="family-grid-cell-name">{{module}}</div>
+            <a :href='"/family/" + module.name' class="family-grid-link">
+              <div class="family-grid-cell-name">{{module.name}}</div>
             </a>
-            <div class="family-grid-cell-slogan" v-html="$md.render(moduleData[module].slogan)"></div>
+            <div class="family-grid-cell-slogan" v-html="$md.render(module.slogan)"></div>
           </div>
           <div class="family-grid-cell-stats">
             <div class="stats-wrapper">
               <div class="family-stats">
-                <span>
-                  <img class="stats-img-star" src="/img/star.png" alt="star" />
-                </span>
-                {{moduleData[module].stars}}
+                <a class="status-link" :href='"https://github.com/hapijs/" + module.name'>
+                  <img class="stats-img-github" src="/img/githubLogo.png" alt="github logo" />
+                </a>
               </div>
               <div class="family-stats">
-                <span>
-                  <img class="stats-img-fork" src="/img/fork.png" alt="fork" />
-                </span>
-                {{moduleData[module].forks}}
+                <img class="stats-img-star" src="/img/star.png" alt="star" />
+                {{module.stars}}
+              </div>
+              <div class="family-stats">
+                <img class="stats-img-fork" src="/img/fork.png" alt="fork" />
+                {{module.forks}}
               </div>
             </div>
-            <div class="family-updated">Updated On: {{moduleData[module].updated}}</div>
+            <div class="family-updated">Updated On: {{module.updated}}</div>
           </div>
         </div>
       </div>
@@ -41,6 +49,7 @@
 
 <script>
 import FamilyIndexNav from "~/components/family/FamilyIndexNav.vue";
+let Hoek = require("@hapi/hoek");
 
 export default {
   components: {
@@ -50,28 +59,8 @@ export default {
     return {
       modules: this.$store.getters.loadModules,
       search: "",
-      core: "",
-      topModules: [
-        "joi",
-        "boom",
-        "bounce",
-        "wreck",
-        "hoek",
-        "bell",
-        "hawk",
-        "cookie",
-        "basic",
-        "code",
-        "lab",
-        "inert",
-        "vision",
-        "nes",
-        "catbox",
-        "catbox-memcached",
-        "catbox-memory",
-        "catbox-object",
-        "catbox-redis"
-      ]
+      core: true,
+      sort: "alphabetical"
     };
   },
   head() {
@@ -91,14 +80,26 @@ export default {
       this.$data.search = value;
     },
     onChildSearch() {
-      for (let module of this.$data.modules) {
-        if (!module.includes(this.$data.search.toLowerCase())) {
-          document.querySelector("#" + module).classList.add("hide");
+      for (let module of this.moduleData) {
+        if (!module.name.includes(this.$data.search.toLowerCase()) && !module.slogan.toLowerCase().includes(this.$data.search.toLowerCase())) {
+          document.querySelector("#" + module.name).classList.add("hide");
         }
       }
     },
     onChildClear() {
       this.$data.search = "";
+    },
+    sortModules(value) {
+      this.$data.sort = value;
+      if (value === "stars" || value === "forks") {
+        this.moduleData.sort((a, b) =>
+          a[value.toLowerCase()] < b[value] ? 1 : -1
+        );
+      } else if (value === "alphabetical") {
+        this.moduleData.sort((a, b) => (a.name > b.name ? 1 : -1));
+      } else if (value === "last_updated") {
+        this.moduleData.sort((a, b) => (a.date < b.date ? 1 : -1));
+      }
     }
   },
   async asyncData({ params, $axios, route, store }) {
@@ -108,7 +109,7 @@ export default {
         authorization: "token " + process.env.GITHUB_TOKEN
       }
     };
-    let moduleData = {};
+    let moduleData = [];
     for (let module of store.getters.loadModules) {
       try {
         let readme = await $axios.$get(
@@ -125,29 +126,38 @@ export default {
           (await readme.match(/####(.*)/gm)) !== null
             ? await readme.match(/####(.*)/gm)[0].substring(5)
             : "Description coming soon...";
-        let date = await new Date(forks.updated_at);
-        moduleData[module] = {
+        let date = await new Date(forks.pushed_at);
+        moduleData.push({
           name: module,
           slogan: await slogan,
-          forks: await forks.forks_count,
-          stars: await forks.stargazers_count,
-          date,
+          forks: await Number(forks.forks_count),
+          stars: await Number(forks.stargazers_count),
+          date: await forks.pushed_at,
           updated: await date.toDateString()
-        };
+        });
       } catch (err) {
         console.log(err);
       }
     }
     return { moduleData };
   },
-  mounted() {
-    this.$data.core === "true"
-      ? (document.getElementById("module-checkbox").checked = true)
-      : (document.getElementById("module-checkbox").checked = false);
-  },
   created() {
     this.$store.commit("setDisplay", "family");
-    this.$route.query.core && this.$route.query.core === "true" ? this.$data.core = "true" : this.$data.core = "false"
+    const sortedBy = ["alphabetical", "stars", "forks", "last_dated"];
+    if (sortedBy.includes(this.$route.query.sort)) {
+      this.sortModules(this.$route.query.sort)
+    } else {
+      this.router.push({
+        query: { sort: "alphabetical"}
+      });
+      this.sortModules("alphabetcial")
+    }
+  },
+  updated() {
+    console.log("UPDATED")
+    this.$router.push({
+      query: { sort: this.$data.sort },
+      });
   }
 };
 </script>
@@ -158,6 +168,7 @@ export default {
 
 .family-grid-wrapper {
   padding: 20px 100px;
+  width: 100%;
 }
 
 .family-header {
@@ -213,15 +224,32 @@ export default {
 
 .stats-wrapper {
   display: flex;
+  align-items: center;
   margin: 0;
+  font-size: .95em;
 }
 
 .family-stats {
-  padding-right: 30px;
+  display: flex;
+  align-items: center;
+  min-width: 48px;
+}
+
+.family-stats:nth-child(-n + 2) {
+  padding-right: 25px;
+}
+
+.status-link {
+  display: inline-block;
+  height: 18px;
+}
+
+.stats-img-github {
+  height: 18px;
 }
 
 .stats-img-star {
-  height: 15px;
+  height: 16px;
   margin-right: 5px;
 }
 

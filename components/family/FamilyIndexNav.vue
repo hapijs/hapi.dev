@@ -3,16 +3,13 @@
     <div class="side-nav-wrapper">
       <div class="side-nav-inner-wrapper">
         <div class="side-nav-title">Family</div>
-        <div class="family-checkbox-wrapper">
-          <input type="checkbox" id="module-checkbox" checked />
-          <div>Sort by User-Facing/Core Modules</div>
-        </div>
         <div class="family-sort-wrapper">
           <div>Sort By: </div>
-          <select @change="onChange($event)" class="family-sort" value="Alphabetical">
-            <option value="Alphabetical">Alphabetical</option>
-            <option value="Stars">Stars</option>
-            <option value="Forks">Forks</option>
+          <select @change="onChange($event)" class="family-sort" :value='sort'>
+            <option value="alphabetical">Alphabetical</option>
+            <option value="stars">Stars</option>
+            <option value="forks">Forks</option>
+            <option value="last_updated">Last Updated</option>
           </select>
         </div>
         <div class="family-module-search">
@@ -36,7 +33,7 @@
 import SideFooter from "~/components/Footers/SideFooter.vue";
 
 export default {
-  props: ["search"],
+  props: ["search", "sort"],
   components: {
     SideFooter
   },
@@ -57,6 +54,9 @@ export default {
       }
       document.querySelector(".module-clear-button").classList.add("hide");
       this.$emit("clear");
+    },
+    onChange(event){
+      this.$emit("change", event.target.value)
     }
   }
 };
