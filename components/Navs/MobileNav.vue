@@ -90,7 +90,7 @@
         </ul>
       </li>
       <li class="mobile-links-li">
-        <a class="mobile-link" title="Family" href="/family/accept">Family</a>
+        <a class="mobile-link" title="Family" href="/family">Modules</a>
         <ul>
           <li v-for="name in getModules" v-bind:key="name" :name="name" class="mobile-link mobile-tutorial-link" :title='name'>
             <a :href='"/family/" + name'>{{name}}</a>
@@ -99,6 +99,9 @@
       </li>
       <li class="mobile-links-li">
         <a class="mobile-link" title="Plugins" href="/plugins">Plugins</a>
+      </li>
+      <li class="mobile-links-li">
+        <a class="mobile-link" title="Shop" href="https://hapi.threadless.com">Shop</a>
       </li>
       <li class="mobile-links-li">
         <a class="mobile-link" title="Support" href="/support">Support</a>

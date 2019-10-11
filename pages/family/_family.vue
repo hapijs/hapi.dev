@@ -5,6 +5,13 @@
       :menu="getMenu"
       :version="getVersion"
       :versions="versionsArray"
+      :results="results"
+      :indexResults="indexResults"
+      :search="search"
+      @search="onChildSearch"
+      @previous="onChildIndex"
+      @next="onChildIndex"
+      @input="onChildInput"
     />
     <div class="tutorial-markdown-window">
       <Install :name="name" :moduleAPI="moduleAPI" :version="version" />
@@ -45,6 +52,9 @@ export default {
       version: "",
       menu: "",
       name: this.$route.params.family,
+      indexResults: 0,
+      search: "",
+      results: [],
       uls: {},
       links: {}
     };
@@ -63,14 +73,53 @@ export default {
         return false;
       }
     },
+    onChildSearch() {
+      let headlines = [];
+      let text = [];
+      this.indexResults = 0;
+      const headers = ["H2", "H3", "H4", "H5", "H6"];
+      let pages = document
+        .querySelector(".family-markdown-wrapper")
+        .querySelectorAll("*");
+
+      //Check if search item is in a headline
+      for (let page of pages) {
+        if (
+          headers.indexOf(page.nodeName) !== -1 &&
+          page.innerHTML.indexOf(this.search.toLowerCase()) !== -1
+        ) {
+          headlines.push(page);
+        } else if (
+          headers.indexOf(page.nodeName) === -1 &&
+          page.innerHTML.indexOf(this.search.toLowerCase()) !== -1
+        ) {
+          text.push(page);
+        }
+      }
+
+      this.results = headlines.concat(text);
+      if (this.results.length) {
+        document
+          .querySelector(".family-search-results")
+          .classList.add("nav-display");
+        window.scrollTo(0, this.results[this.indexResults].offsetTop + 200);
+      } else if (this.results.length === 0) {
+        document
+          .querySelector(".family-search-error")
+          .classList.add("nav-display");
+      }
+    },
+    onChildIndex(value) {
+      this.$data.indexResults = value;
+      window.scrollTo(0, this.results[this.indexResults].offsetTop);
+    },
+    onChildInput(value) {
+      this.$data.search = value;
+    },
     setClasses() {
       //Set TOC classes
-      let anchors = document.querySelectorAll(
-        ".family-nav-select-wrapper a"
-      );
-      let code = document.querySelectorAll(
-        ".family-nav-select-wrapper a code"
-      );
+      let anchors = document.querySelectorAll(".family-nav-select-wrapper a");
+      let code = document.querySelectorAll(".family-nav-select-wrapper a code");
 
       for (let link of anchors) {
         link.classList.add("family-anchor");
@@ -78,14 +127,20 @@ export default {
         link.addEventListener("click", function(event) {
           if (
             link.parentElement.children[1] &&
-            link.parentElement.children[1].classList.contains("family-ul-display")
+            link.parentElement.children[1].classList.contains(
+              "family-ul-display"
+            )
           ) {
-            link.parentElement.children[1].classList.remove("family-ul-display");
+            link.parentElement.children[1].classList.remove(
+              "family-ul-display"
+            );
             link.classList.remove("family-minus");
             link.classList.add("family-plus");
           } else if (
             link.parentElement.children[1] &&
-            !link.parentElement.children[1].classList.contains("family-ul-display")
+            !link.parentElement.children[1].classList.contains(
+              "family-ul-display"
+            )
           ) {
             link.parentElement.children[1].classList.add("family-ul-display");
             link.classList.remove("family-plus");
@@ -110,7 +165,9 @@ export default {
         };
       }
 
-      let links = document.querySelectorAll("#" + this.$route.params.family + " a");
+      let links = document.querySelectorAll(
+        "#" + this.$route.params.family + " a"
+      );
       let points = {};
       let offsets = [];
       for (let i = 0; i < links.length; i++) {
@@ -288,7 +345,8 @@ export default {
               moduleAPI[params.family].versions[sortedMilestones[0].title] =
                 branch.name;
             } else if (!versionsArray.includes(apiPackage.version)) {
-              moduleAPI[params.family].versions[apiPackage.version] = branch.name;
+              moduleAPI[params.family].versions[apiPackage.version] =
+                branch.name;
               await versionsArray.push(apiPackage.version);
             }
           }
@@ -333,7 +391,9 @@ export default {
           let apiString = await apiHTML.toString();
           let finalHtmlDisplay = await apiString.replace(/user-content-/g, "");
           moduleAPI[params.family].menus[apiVersion] = await finalMenu;
-          moduleAPI[params.family].displays[apiVersion] = await finalHtmlDisplay;
+          moduleAPI[params.family].displays[
+            apiVersion
+          ] = await finalHtmlDisplay;
         }
       } catch (err) {
         console.log(err.message);
