@@ -286,11 +286,15 @@ export default {
 
 @media screen and (max-width: 900px) {
   .family-grid-wrapper {
-    padding: 5px;
+    padding: 10px;
   }
 
 .family-grid {
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+
+.family-grid-cell-slogan p {
+  font-size: .97em;
 }
 }
 </style>
