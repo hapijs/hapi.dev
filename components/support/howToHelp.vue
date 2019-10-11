@@ -14,7 +14,7 @@
           target="__blank"
         >hapi Developer Portal</a>
       </span> contains plenty of resources to help you get
-      started and use hapi. But when that’s not enough… 
+      started and use hapi. But when that’s not enough…
     </div>
     <h4 class="support-minor-heading">Curious about commercial support plans?</h4>
     <div class="support-content">
@@ -29,11 +29,12 @@
       <a
         class="support-button"
         href="#plans"
-        aria-label="plans-button" 
+        aria-label="plans-button"
       >Choose the plan that fits your team</a>
     </div>
     <h4 class="support-minor-heading">No worries, we're here to help!</h4>
     <div class="support-content">
+      <img src="/img/icon_helmets_support.svg" alt="support helmet" class="support-helmet" />
       <span class="bold">Free support</span> is always available on GitHub.
       Just open an issue with your question and a community member will try to help. For faster response,
       join the
@@ -70,6 +71,19 @@ export default {};
 <style lang="scss">
 @import "../../assets/styles/main.scss";
 @import "../../assets/styles/markdown.scss";
+
+.support-header {
+  margin: 0 0 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.support-helmet {
+  width: 160px;
+  float: left;
+  margin: -5px 10px 0 0;
+}
 
 .support-link {
   color: $orange;
