@@ -9,7 +9,7 @@
       @change="sortModules"
     />
     <div class="family-grid-wrapper">
-      <h1 class="family-header">Family Modules</h1>
+      <h1 class="family-header">hapi Modules</h1>
       <div class="family-grid">
         <div
           class="family-grid-cell"
