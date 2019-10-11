@@ -20,7 +20,7 @@
         </div>
       </div>
       <h2 class="home-text-heading">Recognized for Industry Leading Quality Standards</h2>
-      <div class="quality-content">
+      <div class="quality-content"><img src="/img/icon_helmets_quality.svg" alt="securty helmet" class="qua-helmet" />
         hapi has been
         <span class="bold">pushing the envelope</span> on quality from day one. It was the first node framework to
         require and achieve 100% code coverage across every dependency – when everyone thought it was
@@ -39,10 +39,8 @@
       </div>
     </div>
     <div class="quality-lower-wrapper">
-      <div class="home-header">
-        <img src="/img/icon_helmets_quality.svg" alt="securty helmet" class="home2-helmet" />
         <div class="quality-content">
-          On practically every measurable quality metric,<br>
+          On practically every measurable quality metric,
           <span
             class="bold"
           >hapi scores at the very top</span>:

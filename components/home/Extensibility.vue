@@ -22,6 +22,11 @@
         <br class="break" />Safely and Predictably
       </h2>
       <div class="extensibility-content">
+        <img
+          src="/img/icon_helmets_extensibility.svg"
+          alt="extensibility helmet"
+          class="ext-helmet"
+        />
         hapi comes pretty loaded out-of-the-box, but it also has the most
         <span
           class="bold"
@@ -41,14 +46,7 @@
         class="bold"
       >security and predictability first</span>.
     </div>
-    <div class="home-header">
-      <img
-        src="/img/icon_helmets_extensibility.svg"
-        alt="extensibility helmet"
-        class="ext-helmet"
-      />
-      <h3 class="bold">Make it Yours.</h3>
-    </div>
+    <h3 class="home-text-heading">Make it Yours.</h3>
     <div class="extensibility-content">
       hapi has always led the way with tools to make the server yours. It was the first to introduce these
       (often imitated but poorly executed) features:

@@ -28,15 +28,13 @@
       </div>
     </div>
     <div class="predict-middle-wrapper">
-      <div class="home-header">
+      <h3 class="home-text-heading">Say goodbye to middleware hell</h3>
+      <div class="predict-content">
         <img
           src="/img/icon_helmets_predictability.svg"
           alt="predictability helmet"
-          class="home-helmet"
+          class="pre-helmet"
         />
-        <h3 class="bold">Say goodbye to middleware hell</h3>
-      </div>
-      <div class="predict-content">
         hapi was the first node framework (and in some ways, still the only) to provide
         <span
           class="bold"
@@ -79,5 +77,4 @@ export default {};
 .predict-middle-wrapper {
   margin: 30px 0;
 }
-
 </style>

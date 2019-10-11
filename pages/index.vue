@@ -263,19 +263,28 @@ export default {
   margin: 40px 0;
 }
 
-.home-helmet {
-  height: 70px;
-  margin: 0 10px 0 0;
+.sec-helmet {
+  height: 125px;
+  float: left;
+  margin: 15px 0 0 0;
 }
 
-.home2-helmet {
-  width: 80px;
-  margin: 0 20px 0 0;
+.qua-helmet {
+  width: 130px;
+  float: left;
+  margin: -5px 10px 0 0;
+}
+
+.pre-helmet {
+  width: 115px;
+  float: left;
+  margin: 0;
 }
 
 .ext-helmet {
-  width: 90px;
-  margin: 0 20px 0 0;
+  width: 125px;
+  float: left;
+  margin: -15px 10px 0 0;
 }
 
 @media screen and (max-width: 900px) {

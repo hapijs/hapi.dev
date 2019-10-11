@@ -1,13 +1,6 @@
 <template>
   <div>
-    <div class="support-header">
-      <img
-        src="/img/icon_helmets_support.svg"
-        alt="support helmet"
-        class="support-helmet"
-      />
-      <h2 class="support-main-heading">How can we help?</h2>
-    </div>
+    <h2 class="support-main-heading">How can we help?</h2>
     <div class="support-content">
       Got a question or a problem with your hapi application? Not to worry!
       The
@@ -41,6 +34,7 @@
     </div>
     <h4 class="support-minor-heading">No worries, we're here to help!</h4>
     <div class="support-content">
+      <img src="/img/icon_helmets_support.svg" alt="support helmet" class="support-helmet" />
       <span class="bold">Free support</span> is always available on GitHub.
       Just open an issue with your question and a community member will try to help. For faster response,
       join the
@@ -86,8 +80,9 @@ export default {};
 }
 
 .support-helmet {
-  width: 80px;
-  margin: 0 20px 0 0;
+  width: 160px;
+  float: left;
+  margin: -5px 10px 0 0;
 }
 
 .support-link {

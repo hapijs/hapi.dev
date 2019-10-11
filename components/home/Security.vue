@@ -27,8 +27,9 @@
       <div class="security-percent">* npm Inc. 2019 Trends in JavaScript report</div>
     </div>
     <div class="security-middle-wrapper">
-      <h3 class="security-heading">You’ve got nothing to worry about with hapi.</h3>
+      <h3 class="home-text-heading">You’ve got nothing to worry about with hapi.</h3>
       <div class="security-content">
+        <img src="/img/icon_helmets_security.svg" alt="securty helmet" class="sec-helmet" />
         When you
         <span class="code">npm install @hapi/hapi</span>, every single line of code you get has been verified. You
         never have to worry about some deep dependency being poorly maintained (or handed over to
@@ -37,10 +38,7 @@
       </div>
     </div>
     <div class="security-lower-wrapper">
-      <div class="home-header">
-        <img src="/img/icon_helmets_security.svg" alt="securty helmet" class="home-helmet" />
-        <h3 class="bold">How do we keep hapi secure?</h3>
-      </div>
+      <h3 class="home-text-heading">How do we keep hapi secure?</h3>
       <ul class="security-list">
         <li class="content-list">
           <span class="bold">End-to-end Code Hygiene</span> — hapi requires the most secure settings to manage, control, and distribute
@@ -94,6 +92,12 @@ export default {};
   bottom: -25px;
   right: 0;
   font-size: 0.75em;
+}
+
+.security-heading {
+  text-align: center;
+  font-weight: 900;
+  margin: 40px 0;
 }
 
 .security-middle-wrapper {
