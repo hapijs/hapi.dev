@@ -250,6 +250,34 @@ export default {
   font-weight: 700;
 }
 
+.home-header {
+  margin: 0 0 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-text-heading {
+  text-align: center;
+  font-weight: 900;
+  margin: 40px 0;
+}
+
+.home-helmet {
+  height: 70px;
+  margin: 0 10px 0 0;
+}
+
+.home2-helmet {
+  width: 80px;
+  margin: 0 20px 0 0;
+}
+
+.ext-helmet {
+  width: 90px;
+  margin: 0 20px 0 0;
+}
+
 @media screen and (max-width: 900px) {
   .home-container {
     margin-top: 70px;
@@ -317,6 +345,13 @@ export default {
 
   .bottom-button {
     margin: 10px 0;
+  }
+
+  .home-header {
+    margin: 0 0 10px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
 }
 

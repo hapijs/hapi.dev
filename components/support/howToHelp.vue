@@ -1,6 +1,13 @@
 <template>
   <div>
-    <h2 class="support-main-heading">How can we help?</h2>
+    <div class="support-header">
+      <img
+        src="/img/icon_helmets_support.svg"
+        alt="support helmet"
+        class="support-helmet"
+      />
+      <h2 class="support-main-heading">How can we help?</h2>
+    </div>
     <div class="support-content">
       Got a question or a problem with your hapi application? Not to worry!
       The
@@ -14,7 +21,7 @@
           target="__blank"
         >hapi Developer Portal</a>
       </span> contains plenty of resources to help you get
-      started and use hapi. But when that’s not enough… 
+      started and use hapi. But when that’s not enough…
     </div>
     <h4 class="support-minor-heading">Curious about commercial support plans?</h4>
     <div class="support-content">
@@ -29,7 +36,7 @@
       <a
         class="support-button"
         href="#plans"
-        aria-label="plans-button" 
+        aria-label="plans-button"
       >Choose the plan that fits your team</a>
     </div>
     <h4 class="support-minor-heading">No worries, we're here to help!</h4>
@@ -70,6 +77,18 @@ export default {};
 <style lang="scss">
 @import "../../assets/styles/main.scss";
 @import "../../assets/styles/markdown.scss";
+
+.support-header {
+  margin: 0 0 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.support-helmet {
+  width: 80px;
+  margin: 0 20px 0 0;
+}
 
 .support-link {
   color: $orange;
