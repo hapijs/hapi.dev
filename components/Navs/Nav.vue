@@ -64,7 +64,7 @@
                 class="nav-link"
                 ref="shop"
                 title="Shop"
-                target="__blank"
+                target="_blank"
                 href="https://hapi.threadless.com"
               >Shop</a>
             </li>
