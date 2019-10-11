@@ -48,7 +48,7 @@
                 title="Family"
                 href="/family?sort=alphabetical"
                 v-on:click="addActive('family')"
-              >Family</a>
+              >Modules</a>
             </li>
             <li class="nav-links-li">
               <a
@@ -58,6 +58,15 @@
                 href="/plugins"
                 v-on:click="addActive('plugins')"
               >Plugins</a>
+            </li>
+            <li class="nav-links-li">
+              <a
+                class="nav-link"
+                ref="shop"
+                title="Shop"
+                target="__blank"
+                href="https://hapi.threadless.com"
+              >Shop</a>
             </li>
             <li class="nav-links-li">
               <a
