@@ -102,12 +102,12 @@ export default {
       for (let page of pages) {
         if (
           headers.indexOf(page.nodeName) !== -1 &&
-          page.innerHTML.toLowerCase().indexOf(this.search.toLowerCase()) !== -1
+          page.innerHTML.toLowerCase().replace(/[^a-z]/g, '').indexOf(this.search.toLowerCase().replace(/[^a-z]/g, '')) !== -1
         ) {
           headlines.push(page);
         } else if (
           headers.indexOf(page.nodeName) === -1 &&
-          page.innerHTML.toLowerCase().indexOf(this.search.toLowerCase()) !== -1
+          page.innerHTML.toLowerCase().replace(/[^a-z]/g, '').indexOf(this.search.toLowerCase().replace(/[^a-z]/g, '')) !== -1
         ) {
           text.push(page);
         }
