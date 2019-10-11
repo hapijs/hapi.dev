@@ -2,7 +2,7 @@
   <div class="side-nav-window">
     <div class="side-nav-wrapper">
       <div class="side-nav-inner-wrapper">
-        <div class="side-nav-title">Family</div>
+        <div class="side-nav-title">Modules</div>
         <div class="family-sort-wrapper">
           <div>Sort By: </div>
           <select @change="onChange($event)" class="family-sort" :value='sort'>
