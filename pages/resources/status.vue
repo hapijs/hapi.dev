@@ -204,7 +204,7 @@ export default {
               if (
                 gitHubVersion.version ===
                   repos[repositories[r].name].versions[0].name &&
-                branch.name !== "master"
+                branch.name !== "master" && !gitHubVersion.name.includes("commercial")
               ) {
                 repos[repositories[r].name].versions.shift();
               }
@@ -250,6 +250,17 @@ export default {
     } catch (err) {
       console.log(err);
     }
+
+    for (let key of Object.keys(repos)) {
+      if (repos[key].versions.length > 1){
+        if (repos[key].versions[0].name === repos[key].versions[1].name && repos[key].versions[0].license === "Commercial"){
+          let temp = repos[key].versions[0]
+          repos[key].versions[0] = repos[key].versions[1]
+          repos[key].versions[1] = temp
+        }
+      }
+    }
+
     const orderedRepos = {};
     Object.keys(repos)
       .sort()
