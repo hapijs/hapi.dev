@@ -87,6 +87,9 @@
           <li class="mobile-link mobile-tutorial-link">
             <a title="Style Guide" href="/policies/styleguide">Style Guide</a>
           </li>
+          <li class="mobile-link mobile-tutorial-link">
+            <a title="Support" href="/policies/support">Support</a>
+          </li>
         </ul>
       </li>
       <li class="mobile-links-li">

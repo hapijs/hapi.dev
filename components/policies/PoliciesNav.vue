@@ -34,6 +34,12 @@
                 :class="$props.page === 'styleguide' ? 'side-nav-select-link policies-active' : 'side-nav-select-link'"
                 href="/policies/styleguide"
               >Style Guide</a>
+            <li class="policies-header-link">
+              <a
+                :class="$props.page === 'support' ? 'side-nav-select-link policies-active' : 'side-nav-select-link'"
+                href="/policies/support"
+              >Support</a>
+            </li>
             </li>
           </ul>
         </div>
