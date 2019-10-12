@@ -102,12 +102,18 @@ export default {
       for (let page of pages) {
         if (
           headers.indexOf(page.nodeName) !== -1 &&
-          page.innerHTML.toLowerCase().replace(/[^a-z]/g, '').indexOf(this.search.toLowerCase().replace(/[^a-z]/g, '')) !== -1
+          page.innerHTML
+            .toLowerCase()
+            .replace(/[^a-z]/g, "")
+            .indexOf(this.search.toLowerCase().replace(/[^a-z]/g, "")) !== -1
         ) {
           headlines.push(page);
         } else if (
           headers.indexOf(page.nodeName) === -1 &&
-          page.innerHTML.toLowerCase().replace(/[^a-z]/g, '').indexOf(this.search.toLowerCase().replace(/[^a-z]/g, '')) !== -1
+          page.innerHTML
+            .toLowerCase()
+            .replace(/[^a-z]/g, "")
+            .indexOf(this.search.toLowerCase().replace(/[^a-z]/g, "")) !== -1
         ) {
           text.push(page);
         }
@@ -128,6 +134,7 @@ export default {
   },
   async asyncData({ params, $axios }) {
     let versions = [];
+    let branchVersions = {};
     const options = {
       headers: {
         accept: "application/vnd.github.v3.raw+json",
@@ -153,50 +160,55 @@ export default {
               branch.name,
             options
           );
-          versions.push(v.version);
-        }
-        versions = await versions.sort((a, b) => Semver.compare(b, a));
-        const res = await $axios.$get(
-          "https://api.github.com/repos/hapijs/hapi/contents/API.md?ref=" +
-            branch.name,
-          options
-        );
-        let raw = await res;
-        let rawString = await raw.toString();
-
-
-        //Auto generate TOC
-        let apiTocString = "";
-        let apiTocArray = await rawString.match(/\n#.+/g);
-
-        for (let i = 0; i < apiTocArray.length; ++i) {
-          apiTocString = apiTocString + apiTocArray[i];
-        }
-        let finalMenu = Toc(apiTocString, { bullets: "-" }).content;
-
-        //Split API menu from content
-        let finalDisplay = await rawString
-          .replace(/\/>/g, "></a>")
-          .replace(/-\s\[(?:.+[\n\r])+/, "");
-        menus[v.version] = await finalMenu;
-        const apiHTML = await $axios.$post(
-          "https://api.github.com/markdown",
-          {
-            text: finalDisplay,
-            mode: "markdown"
-          },
-          {
-            headers: {
-              authorization: "token " + process.env.GITHUB_TOKEN
-            }
+          if (versions.indexOf(v.version) === -1) {
+            let branchVersion = v.version
+            versions.push(v.version);
+            branchVersions[v.version] = branch.name
           }
-        );
-        let apiString = await apiHTML.toString();
-        let finalHtmlDisplay = await apiString.replace(/user-content-/g, "");
-        apis[v.version] = await finalHtmlDisplay;
+        }
       } catch (err) {
         console.log(err);
       }
+    }
+    versions = await versions.sort((a, b) => Semver.compare(b, a));
+    for (let version of versions) {
+      const res = await $axios.$get(
+        "https://api.github.com/repos/hapijs/hapi/contents/API.md?ref=" +
+          branchVersions[version],
+        options
+      );
+      let raw = await res;
+      let rawString = await raw.toString();
+
+      //Auto generate TOC
+      let apiTocString = "";
+      let apiTocArray = await rawString.match(/\n#.+/g);
+
+      for (let i = 0; i < apiTocArray.length; ++i) {
+        apiTocString = apiTocString + apiTocArray[i];
+      }
+      let finalMenu = Toc(apiTocString, { bullets: "-" }).content;
+
+      //Split API menu from content
+      let finalDisplay = await rawString
+        .replace(/\/>/g, "></a>")
+        .replace(/-\s\[(?:.+[\n\r])+/, "");
+      menus[version] = await finalMenu;
+      const apiHTML = await $axios.$post(
+        "https://api.github.com/markdown",
+        {
+          text: finalDisplay,
+          mode: "markdown"
+        },
+        {
+          headers: {
+            authorization: "token " + process.env.GITHUB_TOKEN
+          }
+        }
+      );
+      let apiString = await apiHTML.toString();
+      let finalHtmlDisplay = await apiString.replace(/user-content-/g, "");
+      apis[version] = await finalHtmlDisplay;
     }
     return {
       apis,
