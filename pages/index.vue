@@ -250,6 +250,43 @@ export default {
   font-weight: 700;
 }
 
+.home-header {
+  margin: 0 0 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-text-heading {
+  text-align: center;
+  font-weight: 900;
+  margin: 40px 0;
+}
+
+.sec-helmet {
+  height: 125px;
+  float: left;
+  margin: 15px 0 0 0;
+}
+
+.qua-helmet {
+  width: 130px;
+  float: left;
+  margin: -5px 10px 0 0;
+}
+
+.pre-helmet {
+  width: 115px;
+  float: left;
+  margin: 0;
+}
+
+.ext-helmet {
+  width: 125px;
+  float: left;
+  margin: -15px 10px 0 0;
+}
+
 @media screen and (max-width: 900px) {
   .home-container {
     margin-top: 70px;
@@ -317,6 +354,13 @@ export default {
 
   .bottom-button {
     margin: 10px 0;
+  }
+
+  .home-header {
+    margin: 0 0 10px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
 }
 

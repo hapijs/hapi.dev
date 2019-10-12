@@ -1,22 +1,24 @@
 <template>
   <div class="page-container">
     <div class="predict-upper-wrapper" id="predictability">
-        <div class="quote-wrapper">
-          <div class="quote">"hapi allows us to develop loosely coupled capabilities
-                in a distributed development environment. It is easy to test and has 
-                excellent documentation. hapi is the enterprise grade foundation that 
-                drives our next generation web applications."</div>
-          <div class="quote-container">
-            <div class="quote-text">
-              <div class="quote-author">- Patrick Ritchie</div>
-              <div class="quote-company">Director of Engineering, Vrbo</div>
-            </div>
-            <div class="quote-img-container">
-              <img class="quote-img" src="/img/vrbo-logo.png" alt="vrbo-logo">
-            </div>
+      <div class="quote-wrapper">
+        <div class="quote">
+          "hapi allows us to develop loosely coupled capabilities
+          in a distributed development environment. It is easy to test and has
+          excellent documentation. hapi is the enterprise grade foundation that
+          drives our next generation web applications."
+        </div>
+        <div class="quote-container">
+          <div class="quote-text">
+            <div class="quote-author">- Patrick Ritchie</div>
+            <div class="quote-company">Director of Engineering, Vrbo</div>
+          </div>
+          <div class="quote-img-container">
+            <img class="quote-img" src="/img/vrbo-logo.png" alt="vrbo-logo" />
           </div>
         </div>
-      <h2 class="predict-heading">Keeps Large Distributed Teams on the Same Page</h2>
+      </div>
+      <h2 class="home-text-heading">Keeps Large Distributed Teams on the Same Page</h2>
       <div class="predict-content">
         hapi was designed from the group-up to
         <span
@@ -26,8 +28,13 @@
       </div>
     </div>
     <div class="predict-middle-wrapper">
-      <h3 class="predict-heading">Say goodbye to middleware hell.</h3>
+      <h3 class="home-text-heading">Say goodbye to middleware hell</h3>
       <div class="predict-content">
+        <img
+          src="/img/icon_helmets_predictability.svg"
+          alt="predictability helmet"
+          class="pre-helmet"
+        />
         hapi was the first node framework (and in some ways, still the only) to provide
         <span
           class="bold"
@@ -60,8 +67,7 @@
 </template>
 
 <script>
-export default {
-};
+export default {};
 </script>
 
 <style lang="scss">
@@ -70,11 +76,5 @@ export default {
 
 .predict-middle-wrapper {
   margin: 30px 0;
-}
-
-.predict-heading {
-  text-align: center;
-  font-weight: 900;
-  margin: 40px 0;
 }
 </style>
