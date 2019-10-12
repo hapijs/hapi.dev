@@ -3,7 +3,8 @@ module.exports = {
 
   generate: {
     fallback: true,
-    interval: 1,
+    interval: 100,
+    concurrency: 50,
     routes: [
       '/tutorials/gettingstarted',
       '/tutorials/auth',
