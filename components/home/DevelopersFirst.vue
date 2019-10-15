@@ -1,23 +1,25 @@
 <template>
   <div class="page-container">
     <div class="develop-upper-wrapper" id="developersfirst">
-        <div class="quote-wrapper">
-          <div class="quote">“With a well-planned interface
-                and selection of patterns, hapi has allowed 
-                us to get started on business logic on day one 
-                of each new project, knowing that we have a solid,
-                yet extendable code base with great test coverage 
-                to build off of.”</div>
-          <div class="quote-container">
-            <div class="quote-text">
-              <div class="quote-author">- Johnny Megahan</div>
-              <div class="quote-company">Beats Music</div>
-            </div>
-            <div class="quote-img-container">
-              <img class="quote-img beats-logo" src="/img/beats-logo.svg" alt="beats-logo">
-            </div>
+      <div class="quote-wrapper">
+        <div class="quote">
+          “With a well-planned interface
+          and selection of patterns, hapi has allowed
+          us to get started on business logic on day one
+          of each new project, knowing that we have a solid,
+          yet extendable code base with great test coverage
+          to build off of.”
+        </div>
+        <div class="quote-container">
+          <div class="quote-text">
+            <div class="quote-author">- Johnny Megahan</div>
+            <div class="quote-company">Beats Music</div>
+          </div>
+          <div class="quote-img-container">
+            <img class="quote-img beats-logo" src="/img/beats-logo.svg" alt="beats-logo" />
           </div>
         </div>
+      </div>
       <h2 class="develop-heading">Relied on for Friction-Free Development and Intuitive Internals</h2>
       <div class="develop-content">
         The question we care most about is,
@@ -27,6 +29,11 @@
         <span class="bold">hapi is developer-first</span> — so you can spend your brainpower on the places that matter.
       </div>
       <div class="develop-content">
+        <img
+          src="/img/icon_devs_greylines.svg"
+          alt="deveoper's first helmet"
+          class="dev-helmet"
+        />
         Every hapi feature is designed to make the platform
         <span
           class="bold"
@@ -56,8 +63,7 @@
 </template>
 
 <script>
-export default {
-};
+export default {};
 </script>
 
 <style lang="scss">
@@ -81,8 +87,7 @@ export default {
 
 @media screen and (max-width: 900px) {
   .beats-logo {
-    width: 46px !important; 
+    width: 46px !important;
   }
-  
 }
 </style>
