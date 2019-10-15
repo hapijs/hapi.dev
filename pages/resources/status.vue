@@ -30,7 +30,7 @@
                         <div class="module-version-wrapper">
                           <div class="version-name">{{version.name}}</div>
                           <a
-                            target="__blank"
+                            target="_blank"
                             class="version-helmet"
                             :href='getModules.includes(repo.name) ? "/family/" + repo.name + "/?v=" + version.name : (repo.name === "hapi" ? "/api/?v=" + version.name : ("https://github.com/hapijs/" + repo.name + "/tree/" + version.branch))'
                           >
@@ -38,7 +38,7 @@
                           </a>
                           <a
                             :href='"https://github.com/hapijs/" + repo.name + "/tree/" + version.branch'
-                            target="__blank"
+                            target="_blank"
                           >
                             <img src="/img/githubLogo.png" alt="github logo" class="version-img" />
                           </a>
@@ -58,7 +58,7 @@
                       <td class="status-badge">
                         <a
                           :href='repo.versions.length > 1 ? "https://travis-ci.org/hapijs/" + repo.name + "/branches" : "https://travis-ci.org/hapijs/" + repo.name'
-                          target="__blank"
+                          target="_blank"
                         >
                           <img
                             :src='"https://travis-ci.org/hapijs/" + repo.name + ".svg?branch=" + version.branch'
