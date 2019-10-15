@@ -275,6 +275,12 @@ export default {
   margin: -5px 10px 0 0;
 }
 
+.dev-helmet {
+  width: 150px;
+  float: left;
+  margin: 0 10px 0 0;
+}
+
 .pre-helmet {
   width: 115px;
   float: left;
