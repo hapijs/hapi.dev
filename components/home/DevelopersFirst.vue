@@ -31,7 +31,7 @@
       <div class="develop-content">
         <img
           src="/img/icon_devs_greylines.svg"
-          alt="deveoper's first helmet"
+          alt="developer's first helmet"
           class="dev-helmet"
         />
         Every hapi feature is designed to make the platform
