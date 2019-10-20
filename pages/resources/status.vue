@@ -51,7 +51,7 @@
                           :src='"https://david-dm.org/hapijs/" + repo.name + ".svg?branch=" + version.branch'
                           alt="Dependency Status"
                           class="hide"
-                          @load="swapImg('depend' + repo.name + version.name)"
+                          @load="swapImg('depend' + repo.name + version.name, version.branch)"
                           :id='"depend" + repo.name + version.name'
                         />
                       </td>
@@ -119,7 +119,8 @@ export default {
         126: '<div class="status-code status-passing"></div>',
         149: '<div class="status-code status-unknown"></div>',
         156: '<div class="status-code status-passing"></div>',
-        160: '<div class="status-code status-failing"></div>'
+        160: '<div class="status-code status-failing"></div>',
+       "nonMaster":'<div class="status-code status-nonMaster"></div>'
       },
       life: life
     };
@@ -133,9 +134,13 @@ export default {
     camelName(name) {
       return _.camelCase(name);
     },
-    async swapImg(id) {
+    async swapImg(id, branch) {
       let badge = await document.getElementById(id);
-      badge.parentNode.innerHTML = await this.img[badge.naturalWidth];
+      if (branch === "master" || !branch){
+        badge.parentNode.innerHTML = await this.img[badge.naturalWidth];
+      } else {
+        badge.parentNode.innerHTML = await this.img["nonMaster"];
+      }
     }
   },
   async asyncData({ params, $axios }) {
@@ -192,21 +197,17 @@ export default {
                 options
               );
               let nodeVersions = Yaml.safeLoad(nodeYaml).node_js.reverse();
-
-              repos[repositories[r].name].versions.push({
-                name: gitHubVersion.version,
-                branch: branch.name,
-                license: gitHubVersion.name.includes("commercial")
-                  ? "Commercial"
-                  : "BSD",
-                node: nodeVersions.join(", ").replace("node,", "")
-              });
               if (
-                gitHubVersion.version ===
-                  repos[repositories[r].name].versions[0].name &&
-                branch.name !== "master" && !gitHubVersion.name.includes("commercial")
+                !repos[repositories[r].name].versions.some(v => v.branch === "master" && v.name === gitHubVersion.version) || gitHubVersion.name.includes("commercial")
               ) {
-                repos[repositories[r].name].versions.shift();
+                  repos[repositories[r].name].versions.push({
+                  name: gitHubVersion.version,
+                  branch: branch.name,
+                  license: gitHubVersion.name.includes("commercial")
+                    ? "Commercial"
+                    : "BSD",
+                  node: nodeVersions.join(", ").replace("node,", "")
+              });
               }
             }
             await repos[repositories[r].name].versions.sort(function(a, b) {
@@ -458,6 +459,13 @@ export default {
   height: 12px;
   border-radius: 50%;
   background: #1dd022;
+}
+
+.status-nonMaster {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #10872a;
 }
 
 .status-failing {
