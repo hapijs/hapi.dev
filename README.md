@@ -10,7 +10,7 @@ The home of the [hapi.dev](http://hapi.dev) developer portal.
 
 * Next, you need to make an .env file in the root directory. 
 
-* Obtain a token from Github [here](https://github.com/settings/tokens/new) and select checked scopes only (only two)
+* Obtain a token from GitHub [here](https://github.com/settings/tokens/new) and select checked scopes only (only two)
 
   - [ ] **repo**              :   *Full control of private repositories*
     - [x] **repo status**     :   *Access commit status*
@@ -18,7 +18,7 @@ The home of the [hapi.dev](http://hapi.dev) developer portal.
     - [x] **public_repo**     :   *Access public repositories*
     - [ ] **repo:invite**     :   *Access repository invitations*
 
-* Copy your Github token and place it in your .env file by entering:
+* Copy your GitHub token and place it in your .env file by entering:
 ```GITHUB_TOKEN = "YOUR TOKEN"```
 
 * Run ```npm run dev``` and go to ```http://localhost:3000``` to view the site. The dev server hot loads, which will automatically show your changes without having to restart the server. 
