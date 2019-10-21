@@ -64,7 +64,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.dev - Family",
+      title: "hapi.dev - Modules",
       meta: [
         {
           hid: "description",
