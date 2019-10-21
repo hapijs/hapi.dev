@@ -2,7 +2,7 @@
   <footer class="side-footer">
     <ul class="footer-links">
       <li class="footer-links-li">
-        <a class="footer-link" title="Github" target="__blank" href="https://github.com/hapijs/hapi">Github</a>
+        <a class="footer-link" title="GitHub" target="__blank" href="https://github.com/hapijs/hapi">GitHub</a>
       </li>
       <li class="footer-links-li">
         <a class="footer-link" title="Twitter" target="_blank" href="https://twitter.com/hapijs">Twitter</a>
