@@ -137,6 +137,11 @@ export default {
           link.classList.add("api-nav-plus");
         }
         link.addEventListener("click", function(event) {
+          let currentActive = document.querySelector(".api-active")
+          if (currentActive) {
+            currentActive.classList.remove("api-active")
+          }
+          link.classList.add("api-active")
           if (
             link.parentElement.children[1] &&
             link.parentElement.children[1].classList.contains("nav-display")
@@ -281,10 +286,9 @@ export default {
         let aClass;
         for (i in offsets) {
           aClass = points[offsets[i]].name;
-          let element = document.querySelector(`a[href*='${aClass}']`);
+          let element = document.querySelector(`a[href='${aClass}']`);
           if (
-            (offsets[i] <= location || offsets[i] <= locationBody) &&
-            !element.classList.contains("api-header")
+            (offsets[i] <= location || offsets[i] <= locationBody)
           ) {
             for (let a of actives) {
               a.classList.remove("api-active");
