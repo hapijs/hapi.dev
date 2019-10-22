@@ -125,6 +125,11 @@ export default {
         link.classList.add("family-anchor");
         this.links[link.hash] = link.getBoundingClientRect().top;
         link.addEventListener("click", function(event) {
+          let currentActive = document.querySelector(".family-active")
+          if (currentActive) {
+            currentActive.classList.remove("family-active");
+          }
+          link.classList.add("family-active")
           if (
             link.parentElement.children[1] &&
             link.parentElement.children[1].classList.contains(
@@ -224,27 +229,29 @@ export default {
         let active;
         let element;
         let i = 0;
-        for (i in offsets) {
-          if (offsets[i] <= location || offsets[i] <= locationBody) {
-            let aClass = points[offsets[i]].name;
-            for (let active of actives) {
-              active.classList.remove("family-active");
+        if ((window.innerHeight + window.scrollY) < document.body.offsetHeight + 96) {
+          for (i in offsets) {
+            if (offsets[i] <= location || offsets[i] <= locationBody) {
+              let aClass = points[offsets[i]].name;
+              for (let active of actives) {
+                active.classList.remove("family-active");
+              }
+              element = document.querySelector(
+                `.side-nav-wrapper a[href='${aClass}']`
+              );
+              if (element && element.children.length !== 0) {
+                document
+                  .querySelector(`a[href*='${aClass}']`)
+                  .classList.add("family-active");
+                active = document.querySelector(".family-active");
+              } else if (element && element.children.length === 0) {
+                document
+                  .querySelector(`a[href*='${aClass}']`)
+                  .classList.add("family-active");
+                active = document.querySelector(".family-active");
+              }
             }
-            element = document.querySelector(
-              `.side-nav-wrapper a[href*='${aClass}']`
-            );
-            if (element && element.children.length !== 0) {
-              document
-                .querySelector(`a[href*='${aClass}']`)
-                .classList.add("family-active");
-              active = document.querySelector(".family-active");
-            } else if (element && element.children.length === 0) {
-              document
-                .querySelector(`a[href*='${aClass}']`)
-                .classList.add("family-active");
-              active = document.querySelector(".family-active");
-            }
-          }
+          } 
         }
 
         if (active) {
