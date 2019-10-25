@@ -283,8 +283,6 @@ export default {
 
 .api-doc-header {
   position: relative;
-  display: inline-block;
-  width: auto;
 }
 
 .api-clipboardCheck {
