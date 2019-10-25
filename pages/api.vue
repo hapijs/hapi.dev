@@ -16,6 +16,9 @@
     <div class="tutorial-markdown-window">
       <HTML :display="htmlDisplay" />
     </div>
+    <div class="preload">
+      <img src="/img/clipboardCheck.png" alt="clipboard">
+    </div>
   </div>
 </template>
 
@@ -130,6 +133,34 @@ export default {
           .querySelector(".api-search-error")
           .classList.add("nav-display");
       }
+    },
+    setClipboards() {
+      let headers = document.querySelectorAll(".markdown-wrapper h2, .markdown-wrapper h3, .markdown-wrapper h4, .markdown-wrapper h5")
+
+      for (let header of headers) {
+        header.classList.add("api-doc-header")
+        header.innerHTML = header.innerHTML + "<span class='api-clipboardCheck api-clipboard' title='Copy link to clipboard'></span>"
+      }
+
+      let clipboards = document.querySelectorAll(".api-clipboard")
+
+      for (let clipboard of clipboards) {
+        clipboard.addEventListener("click", function(event) {
+          let copyLink = clipboard.parentNode.firstElementChild.href;
+          const el = document.createElement('textarea');
+          el.value = copyLink;
+          document.body.appendChild(el);
+          el.select();
+          document.execCommand('copy');
+          document.body.removeChild(el);
+          clipboard.classList.remove("api-clipboard")
+          clipboard.classList.add("api-clipboardCheck")
+          setTimeout(function() {
+            clipboard.classList.add("api-clipboard")
+            clipboard.classList.remove("api-clipboardCheck")
+          }, 3000)
+        })
+      }
     }
   },
   async asyncData({ params, $axios }) {
@@ -236,6 +267,7 @@ export default {
     this.$store.commit("setDisplay", "api");
   },
   mounted() {
+    this.setClipboards();
     this.goToAnchor();
   }
 };
@@ -244,4 +276,42 @@ export default {
 <style lang="scss">
 @import "../assets/styles/main.scss";
 @import "../assets/styles/api.scss";
+
+.preload {
+  display: none;
+}
+
+.api-doc-header {
+  position: relative;
+}
+
+.api-clipboardCheck {
+  position: relative;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin: 0 0 0 5px;
+  opacity: .7;
+  background: url("/img/clipboardCheck.png");
+  background-size: contain;
+  transition: all .2s;
+}
+
+.api-clipboard {
+  position: relative;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin: 0 0 0 5px;
+  background: url("/img/clipboard.png");
+  background-size: contain;
+  opacity: .3;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.api-clipboard:hover {
+  opacity: .7;
+}
+
 </style>
