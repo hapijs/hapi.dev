@@ -138,6 +138,29 @@ export default {
         header.classList.add("api-doc-header")
         header.innerHTML = header.innerHTML + "<span class='api-clipboard' title='Copy link to clipboard'></span>"
       }
+
+      let clipboards = document.querySelectorAll(".api-clipboard")
+      console.log(clipboards);
+
+      for (let clipboard of clipboards) {
+        clipboard.addEventListener("click", function(event) {
+          console.log("clicked")
+          let copyLink = clipboard.parentNode.firstElementChild.href;
+          console.log(copyLink)
+          const el = document.createElement('textarea');
+          el.value = copyLink;
+          document.body.appendChild(el);
+          el.select();
+          document.execCommand('copy');
+          document.body.removeChild(el);
+          clipboard.classList.add("api-clipboardCheck")
+          clipboard.classList.remove("api-clipboard")
+          setTimeout(function() {
+            clipboard.classList.remove("api-clipboardCheck")
+            clipboard.classList.add("api-clipboard")
+          }, 3000)
+        })
+      }
     }
   },
   async asyncData({ params, $axios }) {
@@ -275,6 +298,17 @@ export default {
 
 .api-clipboard:hover {
   opacity: 1;
+}
+
+.api-clipboardCheck {
+  position: relative;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin: 0 0 0 5px;
+  background: url("/img/clipboardCheck.png");
+  background-size: contain;
+  transition: all .2s;
 }
 
 </style>
