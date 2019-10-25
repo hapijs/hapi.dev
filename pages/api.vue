@@ -130,6 +130,14 @@ export default {
           .querySelector(".api-search-error")
           .classList.add("nav-display");
       }
+    },
+    setClipboards() {
+      let headers = document.querySelectorAll(".markdown-wrapper h2, .markdown-wrapper h3, .markdown-wrapper h4, .markdown-wrapper h5")
+
+      for (let header of headers) {
+        header.classList.add("api-doc-header")
+        header.innerHTML = header.innerHTML + "<span class='api-clipboard' title='Copy link to clipboard'></span>"
+      }
     }
   },
   async asyncData({ params, $axios }) {
@@ -236,6 +244,7 @@ export default {
     this.$store.commit("setDisplay", "api");
   },
   mounted() {
+    this.setClipboards();
     this.goToAnchor();
   }
 };
@@ -244,4 +253,28 @@ export default {
 <style lang="scss">
 @import "../assets/styles/main.scss";
 @import "../assets/styles/api.scss";
+
+.api-doc-header {
+  position: relative;
+  display: inline-block;
+  width: auto;
+}
+
+.api-clipboard {
+  position: relative;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin: 0 0 0 5px;
+  background: url("/img/clipboard.png");
+  background-size: contain;
+  opacity: .3;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.api-clipboard:hover {
+  opacity: 1;
+}
+
 </style>

@@ -18,7 +18,12 @@ h2 code, h3 .api-nav-code, h4 .api-nav-code, h3 code, h4 code {
       font-weight: 400;
       -webkit-font-smoothing: antialiased;
       padding: 5px 0;
+      margin: 0;
   }
+
+h2 code, h3 code, h4 code, h5 code {
+  margin-right: -5px;
+}
 
 h5 code {
   background: #fff;
