@@ -110,6 +110,8 @@ export default {
   border: 1px solid $dark-white;
   width: 100%;
   font-size: 0.85rem;
+  border-radius: 0;
+  -webkit-appearance: none;
 }
 
 .family-module-search-img {

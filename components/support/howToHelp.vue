@@ -93,4 +93,10 @@ export default {};
   text-decoration: underline;
   color: $orange;
 }
+
+@media screen and (max-width: 900px) {
+  .support-helmet {
+    width: 80px;
+  }
+}
 </style>

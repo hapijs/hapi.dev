@@ -18,7 +18,7 @@
       <FamilyDisplay :display="getDisplay" />
     </div>
     <div class="preload">
-      <img src="/img/clipboardCheck.png" alt="clipboard">
+      <img src="/img/clipboardCheck.png" alt="clipboard" />
     </div>
   </div>
 </template>
@@ -105,7 +105,14 @@ export default {
         document
           .querySelector(".family-search-results")
           .classList.add("nav-display");
-        window.scrollTo(0, this.results[this.indexResults].offsetTop + 200);
+        if (window.innerWidth <= 900) {
+          document.body.scrollTo(
+            0,
+            this.results[this.indexResults].offsetTop + 166
+          );
+        } else {
+          window.scrollTo(0, this.results[this.indexResults].offsetTop);
+        }
       } else if (this.results.length === 0) {
         document
           .querySelector(".family-search-error")
@@ -120,31 +127,35 @@ export default {
       this.$data.search = value;
     },
     setClipboards() {
-      let headers = document.querySelectorAll(".family-markdown-wrapper h2, .family-markdown-wrapper h3, .family-markdown-wrapper h4, .family-markdown-wrapper h5")
+      let headers = document.querySelectorAll(
+        ".family-markdown-wrapper h2, .family-markdown-wrapper h3, .family-markdown-wrapper h4, .family-markdown-wrapper h5"
+      );
 
       for (let header of headers) {
-        header.classList.add("api-doc-header")
-        header.innerHTML = header.innerHTML + "<span class='api-clipboardCheck api-clipboard' title='Copy link to clipboard'></span>"
+        header.classList.add("api-doc-header");
+        header.innerHTML =
+          header.innerHTML +
+          "<span class='api-clipboardCheck api-clipboard' title='Copy link to clipboard'></span>";
       }
 
-      let clipboards = document.querySelectorAll(".api-clipboard")
+      let clipboards = document.querySelectorAll(".api-clipboard");
 
       for (let clipboard of clipboards) {
         clipboard.addEventListener("click", function(event) {
           let copyLink = clipboard.parentNode.firstElementChild.href;
-          const el = document.createElement('textarea');
+          const el = document.createElement("textarea");
           el.value = copyLink;
           document.body.appendChild(el);
           el.select();
-          document.execCommand('copy');
+          document.execCommand("copy");
           document.body.removeChild(el);
-          clipboard.classList.remove("api-clipboard")
-          clipboard.classList.add("api-clipboardCheck")
+          clipboard.classList.remove("api-clipboard");
+          clipboard.classList.add("api-clipboardCheck");
           setTimeout(function() {
-            clipboard.classList.add("api-clipboard")
-            clipboard.classList.remove("api-clipboardCheck")
-          }, 3000)
-        })
+            clipboard.classList.add("api-clipboard");
+            clipboard.classList.remove("api-clipboardCheck");
+          }, 3000);
+        });
       }
     },
     setClasses() {
@@ -156,11 +167,11 @@ export default {
         link.classList.add("family-anchor");
         this.links[link.hash] = link.getBoundingClientRect().top;
         link.addEventListener("click", function(event) {
-          let currentActive = document.querySelector(".family-active")
+          let currentActive = document.querySelector(".family-active");
           if (currentActive) {
             currentActive.classList.remove("family-active");
           }
-          link.classList.add("family-active")
+          link.classList.add("family-active");
           if (
             link.parentElement.children[1] &&
             link.parentElement.children[1].classList.contains(
@@ -260,7 +271,10 @@ export default {
         let active;
         let element;
         let i = 0;
-        if ((window.innerHeight + window.scrollY) < document.body.offsetHeight + 96) {
+        if (
+          window.innerHeight + window.scrollY <
+          document.body.offsetHeight + 96
+        ) {
           for (i in offsets) {
             if (offsets[i] <= location || offsets[i] <= locationBody) {
               let aClass = points[offsets[i]].name;
@@ -282,7 +296,7 @@ export default {
                 active = document.querySelector(".family-active");
               }
             }
-          } 
+          }
         }
 
         if (active) {
@@ -601,10 +615,10 @@ h1 a {
   width: 17px;
   height: 17px;
   margin: 0 0 0 5px;
-  opacity: .7;
+  opacity: 0.7;
   background: url("/img/clipboardCheck.png");
   background-size: contain;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .api-clipboard {
@@ -615,13 +629,13 @@ h1 a {
   margin: 0 0 0 5px;
   background: url("/img/clipboard.png");
   background-size: contain;
-  opacity: .3;
+  opacity: 0.3;
   cursor: pointer;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .api-clipboard:hover {
-  opacity: .7;
+  opacity: 0.7;
 }
 
 @media screen and (max-width: 900px) {
