@@ -123,11 +123,16 @@ export default {
       }
 
       this.results = headlines.concat(text);
+      console.log(window.innerWidth)
       if (this.results.length) {
         document
           .querySelector(".api-search-results")
           .classList.add("nav-display");
-        window.scrollTo(0, this.results[this.indexResults].offsetTop);
+        if (window.innerWidth <= 900) {
+          document.body.scrollTo(0, this.results[this.indexResults].offsetTop + 166);
+        } else {
+          window.scrollTo(0, this.results[this.indexResults].offsetTop);
+        }
       } else if (this.results.length === 0) {
         document
           .querySelector(".api-search-error")
