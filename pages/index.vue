@@ -368,6 +368,15 @@ export default {
     justify-content: flex-start;
     align-items: center;
   }
+
+  .sec-helmet, .qua-helmet, .dev-helmet, .pre-helmet, .ext-helmet {
+    width: 65px;
+    height: 65px;
+  }
+
+  .ext-helmet {
+    margin-top: 0;
+  }
 }
 
 @media screen and (max-width: 330px) {
