@@ -20,7 +20,7 @@
             <tr v-for="repo in newRepos" v-bind:key="repo.name" class="module-row">
               <td class="module-name">
                 {{repo.name}}
-                <a class="module-name-link" :id='repo.name' :href='"#" + repo.name'></a>
+                <a class="module-name-link" :id="repo.name" :href='"#" + repo.name'></a>
               </td>
               <td colspan="6" class="nested-td">
                 <table class="nested-table">
@@ -120,7 +120,7 @@ export default {
         149: '<div class="status-code status-unknown"></div>',
         156: '<div class="status-code status-passing"></div>',
         160: '<div class="status-code status-failing"></div>',
-       "nonMaster":'<div class="status-code status-nonMaster"></div>'
+        nonMaster: '<div class="status-code status-nonMaster"></div>'
       },
       life: life
     };
@@ -136,7 +136,7 @@ export default {
     },
     async swapImg(id, branch) {
       let badge = await document.getElementById(id);
-      if (branch === "master" || !branch){
+      if (branch === "master" || !branch) {
         badge.parentNode.innerHTML = await this.img[badge.naturalWidth];
       } else {
         badge.parentNode.innerHTML = await this.img["nonMaster"];
@@ -157,29 +157,21 @@ export default {
         options
       );
       for (let r = 0; r < repositories.length; ++r) {
-        let milestones = await $axios.$get(
+        let branches = await $axios.$get(
           "https://api.github.com/repos/hapijs/" +
             repositories[r].name +
-            "/milestones?state=closed&per_page=100&direction=desc",
+            "/branches",
           options
         );
-        if (milestones.length > 0) {
-          let sortedMilestones = await milestones.sort(function(a, b) {
-            if (!Semver.valid(a.title)) {
-              a.title = Semver.clean(a.title + ".0", { loose: true });
-            }
-            return Semver.compare(b.title, a.title);
-          });
+        if (
+          repositories[r].name !== "assets" &&
+          repositories[r].name !== ".github" &&
+          repositories[r].name !== "hapi.dev"
+        ) {
           repos[repositories[r].name] = {
             name: repositories[r].name,
             versions: []
           };
-          let branches = await $axios.$get(
-            "https://api.github.com/repos/hapijs/" +
-              repositories[r].name +
-              "/branches",
-            options
-          );
           for (let branch of branches) {
             if (branch.name.match(/^v+[0-9]+|\bmaster\b/g)) {
               const gitHubVersion = await $axios.$get(
@@ -198,54 +190,25 @@ export default {
               );
               let nodeVersions = Yaml.safeLoad(nodeYaml).node_js.reverse();
               if (
-                !repos[repositories[r].name].versions.some(v => v.branch === "master" && v.name === gitHubVersion.version) || gitHubVersion.name.includes("commercial")
+                !repos[repositories[r].name].versions.some(
+                  v => v.branch === "master" && v.name === gitHubVersion.version
+                ) ||
+                gitHubVersion.name.includes("commercial")
               ) {
-                  repos[repositories[r].name].versions.push({
+                repos[repositories[r].name].versions.push({
                   name: gitHubVersion.version,
                   branch: branch.name,
                   license: gitHubVersion.name.includes("commercial")
                     ? "Commercial"
                     : "BSD",
                   node: nodeVersions.join(", ").replace("node,", "")
-              });
+                });
               }
             }
             await repos[repositories[r].name].versions.sort(function(a, b) {
               return Semver.compare(b.name, a.name);
             });
           }
-        } else if (
-          repositories[r].name !== "assets" &&
-          repositories[r].name !== ".github" &&
-          repositories[r].name !== "hapi.dev"
-        ) {
-          let gitHubVersion = await $axios.$get(
-            "https://api.github.com/repos/hapijs/" +
-              repositories[r].name +
-              "/contents/package.json",
-            options
-          );
-          const nodeYaml = await $axios.$get(
-            "https://api.github.com/repos/hapijs/" +
-              repositories[r].name +
-              "/contents/.travis.yml",
-            options
-          );
-          let nodeVersions = Yaml.safeLoad(nodeYaml).node_js.reverse();
-
-          repos[repositories[r].name] = {
-            name: repositories[r].name,
-            versions: []
-          };
-          let version = await gitHubVersion.version;
-          repos[repositories[r].name].versions.push({
-            name: version,
-            branch: "master",
-            license: gitHubVersion.name.includes("commercial")
-              ? "Commercial"
-              : "BSD",
-            node: nodeVersions.join(", ").replace("node,", "")
-          });
         }
       }
     } catch (err) {
@@ -253,11 +216,14 @@ export default {
     }
 
     for (let key of Object.keys(repos)) {
-      if (repos[key].versions.length > 1){
-        if (repos[key].versions[0].name === repos[key].versions[1].name && repos[key].versions[0].license === "Commercial"){
-          let temp = repos[key].versions[0]
-          repos[key].versions[0] = repos[key].versions[1]
-          repos[key].versions[1] = temp
+      if (repos[key].versions.length > 1) {
+        if (
+          repos[key].versions[0].name === repos[key].versions[1].name &&
+          repos[key].versions[0].license === "Commercial"
+        ) {
+          let temp = repos[key].versions[0];
+          repos[key].versions[0] = repos[key].versions[1];
+          repos[key].versions[1] = temp;
         }
       }
     }
