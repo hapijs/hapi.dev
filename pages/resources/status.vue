@@ -398,6 +398,11 @@ export default {
   align-items: center;
 }
 
+.module-version-wrapper a {
+  display: flex;
+  justify-content: center;
+}
+
 .version-name {
   color: $orange;
   font-weight: 700;
