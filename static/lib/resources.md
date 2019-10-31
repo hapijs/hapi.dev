@@ -12,9 +12,9 @@
 
     Packed with examples, this book takes you from your first simple server through the skills you'll need to build a complete application. In it, you'll learn how to build websites and APIs, implement caching, authentication, validation, error handling, and a lot more. You'll also explore vital techniques for production applications, such as testing, monitoring, deployment, and documentation.
 
-*   [hapi with Typescript <img src="/img/hapiTypescript.png" class="resources-book" />](http://hapibook.jjude.com)
+*   [hapi with TypeScript <img src="/img/hapiTypescript.png" class="resources-book" />](http://hapibook.jjude.com)
 
-    This book introduces Typescript into developing web applications with hapi. Typescript, a language developed by Microsoft, brings the benefits of strong types and object-oriented programming to Javascript. With ample code samples, this book teaches all aspects of developing a web application in hapi with Typescript. It also introduces, hapidock, a docker container with all required components for developing in hapi. With hapidock, you can develop and test hapi applications in a production-like environment. Through this book, you will learn to build stable enterprise-level server applications. The book is free to read at http://hapibook.jjude.com. E-books (pdf, mobi, and epub) and fully executable code samples are available after purchase.
+    This book introduces TypeScript into developing web applications with hapi. TypeScript, a language developed by Microsoft, brings the benefits of strong types and object-oriented programming to JavaScript. With ample code samples, this book teaches all aspects of developing a web application in hapi with TypeScript. It also introduces, hapidock, a docker container with all required components for developing in hapi. With hapidock, you can develop and test hapi applications in a production-like environment. Through this book, you will learn to build stable enterprise-level server applications. The book is free to read at http://hapibook.jjude.com. E-books (pdf, mobi, and epub) and fully executable code samples are available after purchase.
 
 *   [Hapi.js Handbook <img src="/img/hapiHandbook.png" class="resources-book" />](https://leanpub.com/hapi-handbook)
 
@@ -134,7 +134,7 @@
 
 *   [typehapily](https://github.com/tejzpr/typehapily)
 
-    A Typescript based boilerplate for HAPIJS with TypeORM & Dynamic Linting
+    A TypeScript based boilerplate for HAPIJS with TypeORM & Dynamic Linting
 
 ## <a name="projects"></a> Projects built with hapi.js
 
