@@ -41,6 +41,7 @@ export default {
   methods: {
     onChangeChild(value) {
       this.$store.commit("setLanguage", value);
+      this.$router.push({ path: this.$route.path, query: { lang: value } });
       this.$store.commit("setPage", page[value].gettingstarted.default);
       window.scrollTo(0, 0);
     }
@@ -48,7 +49,10 @@ export default {
   created() {
     this.$store.commit("setDisplay", "tutorials");
     this.$store.commit("setLanguage", this.$route.query.lang);
-    this.$store.commit("setPage", page.en_US.gettingstarted.default);
+        this.$store.commit(
+      "setPage",
+      page[this.$store.getters.loadLanguage].gettingstarted.default
+    );
   }
 };
 </script>
