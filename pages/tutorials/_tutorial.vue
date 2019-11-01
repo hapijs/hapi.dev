@@ -47,6 +47,7 @@ export default {
   methods: {
     onChangeChild(value) {
       this.$store.commit("setLanguage", value);
+      this.$router.push({ path: this.$route.path, query: { lang: value } });
       this.$store.commit(
         "setPage",
         page[value][this.$route.params.tutorial].default
