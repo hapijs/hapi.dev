@@ -48,7 +48,10 @@ export default {
   },
   created() {
     this.$store.commit("setDisplay", "tutorials");
-    this.$store.commit("setLanguage", this.$route.query.lang);
+    this.$store.commit(
+      "setLanguage",
+      this.$route.query.lang ? this.$route.query.lang : "en_US"
+    );
         this.$store.commit(
       "setPage",
       page[this.$store.getters.loadLanguage].gettingstarted.default
