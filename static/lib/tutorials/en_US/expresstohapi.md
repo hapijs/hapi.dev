@@ -210,7 +210,7 @@ To extend its functionality, Express uses middleware. Middleware essentially is 
 
 Plugins allow you to break your application logic into isolated pieces of business logic, and reusable utilities. Each plugin comes with its own dependencies which are explicitly specified in the plugins themselves. This means you don't have to install dependencies yourself to make your plugins work. You can either add an existing hapi plugin, or write your own. For a more extensive tutorial on plugins, please see the [plugins](/tutorials/plugins/?lang=en_US) tutorial.  
 
-Each request in hapi follows a predefined path, the request lifecycle. hapi has extension points that let you create custom functionlity along the lifecycle. Extension points in hapi let you know the precise order at which you application will run. For more info, please see the hapi [request lifecycle](/api/#request-lifecycle).
+Each request in hapi follows a predefined path, the request lifecycle. hapi has extension points that let you create custom functionality along the lifecycle. Extension points in hapi let you know the precise order at which you application will run. For more info, please see the hapi [request lifecycle](/api/#request-lifecycle).
 
 ### <a name="extension" ></a> Extension Points
 
