@@ -362,30 +362,13 @@ export default {
 
     if (store.getters.loadModules.includes(params.family)) {
       try {
-        let milestones = await $axios.$get(
-          "https://api.github.com/repos/hapijs/" +
-            params.family +
-            "/milestones?state=closed&per_page=100&direction=desc",
-          options
-        );
-
-        let sortedMilestones = await milestones.sort(function(a, b) {
-          if (!Semver.valid(a.title)) {
-            a.title = Semver.clean(a.title + ".0", { loose: true });
-          }
-          return Semver.compare(b.title, a.title);
-        });
-
-        moduleAPI[params.family].versions[sortedMilestones[0].title] = "master";
-        versionsArray.push(sortedMilestones[0].title);
-
         let branches = await $axios.$get(
           "https://api.github.com/repos/hapijs/" + params.family + "/branches",
           options
         );
 
         for (let branch of branches) {
-          if (branch.name.match(/^v+[0-9]+/g)) {
+          if (branch.name.match(/^v+[0-9]+|\bmaster\b/g)) {
             const apiPackage = await $axios.$get(
               "https://api.github.com/repos/hapijs/" +
                 params.family +
@@ -393,10 +376,7 @@ export default {
                 branch.name,
               options
             );
-            if (apiPackage.version === sortedMilestones[0].title) {
-              moduleAPI[params.family].versions[sortedMilestones[0].title] =
-                branch.name;
-            } else if (!versionsArray.includes(apiPackage.version)) {
+            if (!versionsArray.includes(apiPackage.version)) {
               moduleAPI[params.family].versions[apiPackage.version] =
                 branch.name;
               await versionsArray.push(apiPackage.version);
