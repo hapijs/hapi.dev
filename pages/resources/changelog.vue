@@ -49,9 +49,11 @@ export default {
     await this.$store.commit("setDisplay", "resources");
   },
   async asyncData({ $axios, params, store }) {
+    let count = 0;
     let milestoneList = [];
     let m = [];
     let milestones = [];
+    let breaking = {};
 
     const mileOptions = {
       headers: {
@@ -65,6 +67,8 @@ export default {
           p,
         mileOptions
       );
+      count++
+      console.log(count)
       await m.push(milestones);
     }
 
@@ -76,18 +80,22 @@ export default {
 
     //Get milestone issues
     for (let milestone of sortedMilestones) {
+      let changes = [];
       let m = await $axios.$get(
         "https://api.github.com/repos/hapijs/hapi/issues?state=closed&milestone=" +
           milestone.number,
         mileOptions
       );
+      count++
+      console.log(count)
       if (m.length > 0) {
         milestoneList.push(m);
       }
     }
 
     return {
-      milestoneList
+      milestoneList,
+      breaking
     };
   },
   methods: {
