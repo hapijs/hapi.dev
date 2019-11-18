@@ -97,4 +97,8 @@ export default {
   color: $orange;
   margin: 0 10px 0 0;
 }
+
+.changelogtext-wrapper {
+  margin: 0;
+}
 </style>

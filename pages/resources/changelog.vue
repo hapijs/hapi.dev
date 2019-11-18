@@ -49,11 +49,9 @@ export default {
     await this.$store.commit("setDisplay", "resources");
   },
   async asyncData({ $axios, params, store }) {
-    let count = 0;
     let milestoneList = [];
     let m = [];
     let milestones = [];
-    let breaking = {};
 
     const mileOptions = {
       headers: {
@@ -67,8 +65,6 @@ export default {
           p,
         mileOptions
       );
-      count++
-      console.log(count)
       await m.push(milestones);
     }
 
@@ -86,16 +82,13 @@ export default {
           milestone.number,
         mileOptions
       );
-      count++
-      console.log(count)
       if (m.length > 0) {
         milestoneList.push(m);
       }
     }
 
     return {
-      milestoneList,
-      breaking
+      milestoneList
     };
   },
   methods: {
@@ -115,6 +108,15 @@ export default {
 .community-wrapper {
   margin: 0;
   width: 100%;
+}
+
+.changelog-header {
+  margin: 20px 0 10px 0;
+  border-bottom: 1px solid #ddd;
+  border-top: none;
+  padding-bottom: 10px;
+  width: auto;
+  display: inline-block;
 }
 
 @media screen and (max-width: 900px) {
