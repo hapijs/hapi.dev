@@ -65,6 +65,7 @@
                 ref="shop"
                 title="Shop"
                 target="_blank"
+                rel="noopener"
                 href="https://hapi.threadless.com"
               >Shop</a>
             </li>
