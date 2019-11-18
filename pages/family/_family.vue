@@ -222,6 +222,7 @@ export default {
           offsets.push(point.offsetTop + 220);
         }
         if (point.id === 'changelog') {
+          console.log(document.querySelectorAll("#changelog"));
           points[point.offsetTop] = {
             name: '#' + point.id
           };
@@ -229,6 +230,8 @@ export default {
         }
       }
       offsets = [...new Set(offsets)];
+      console.log(points)
+      console.log(offsets)
 
       let currentElement = document.querySelector('.markdown-wrapper');
 
@@ -252,6 +255,7 @@ export default {
           for (i in offsets) {
             if (offsets[i] <= location || offsets[i] <= locationBody) {
               let aClass = points[offsets[i]].name;
+              console.log(aClass)
               for (let active of actives) {
                 active.classList.remove('family-active');
               }
@@ -268,6 +272,7 @@ export default {
         }
 
         if (active) {
+          console.log(active)
           let activeClass;
           let bottom = active.getBoundingClientRect().bottom;
           if (bottom > window.innerHeight) {
@@ -558,8 +563,7 @@ export default {
 }
 
 .changelog-header {
-  position: relative;
-  margin-top: 20px;
+  margin: 20px 0 10px 0;
   padding-top: 10px;
   border-top: 1px solid #ddd;
   width: 100%;
