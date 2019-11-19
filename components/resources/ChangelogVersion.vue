@@ -23,7 +23,20 @@
         :issueText="issue.title"
         :issueLabels="issue.labels"
       />
-      <button v-if="showMoreButton">Show More</button>
+      <div class="moreIssues" v-if="showMoreIssues">
+        <ChangelogText
+          v-for="issue in hiddenIssues"
+          v-bind:key="issue.number"
+          :issueUrl="issue.html_url"
+          :issueNumber="issue.number"
+          :issueText="issue.title"
+          :issueLabels="issue.labels"
+        />
+      </div>
+      <button v-if="showMoreButton" v-on:click="showIssues()">
+        {{ !getShowMoreIssues ? 'Show More' : 'Hide Issues' }}
+      </button>
+      </div>
     </div>
   </div>
 </template>
@@ -47,6 +60,17 @@ export default {
       hiddenIssues: []
     };
   },
+  methods: {
+    showIssues() {
+      this.$data.showMoreIssues = !this.$data.showMoreIssues;
+      console.log(this.$data.hiddenIssues);
+    }
+  },
+  computed: {
+    getShowMoreIssues() {
+      return this.$data.showMoreIssues;
+    }
+  },
   created() {
     this.$data.issuesArray = this.$props.issues;
     for (let issue of this.$data.issuesArray) {
@@ -60,7 +84,9 @@ export default {
     }
     if (this.$data.issuesArray.length > 10) {
       this.$data.issuesArray = this.$data.issuesArray.slice(1, 11);
+      this.$data.hiddenIssues = this.$props.issues.slice(11, this.$props.issues.length);
       this.$data.showMoreButton = true;
+      console.log(this.$data.issuesArray);
     }
   }
 };

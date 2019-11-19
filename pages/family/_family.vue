@@ -222,7 +222,6 @@ export default {
           offsets.push(point.offsetTop + 220);
         }
         if (point.id === 'changelog') {
-          console.log(document.querySelectorAll('#changelog'));
           points[point.offsetTop] = {
             name: '#' + point.id
           };
@@ -230,8 +229,6 @@ export default {
         }
       }
       offsets = [...new Set(offsets)];
-      console.log(points);
-      console.log(offsets);
 
       let currentElement = document.querySelector('.markdown-wrapper');
 
@@ -255,7 +252,6 @@ export default {
           for (i in offsets) {
             if (offsets[i] <= location || offsets[i] <= locationBody) {
               let aClass = points[offsets[i]].name;
-              console.log(aClass);
               for (let active of actives) {
                 active.classList.remove('family-active');
               }
@@ -272,7 +268,6 @@ export default {
         }
 
         if (active) {
-          console.log(active);
           let activeClass;
           let bottom = active.getBoundingClientRect().bottom;
           if (bottom > window.innerHeight) {
@@ -361,13 +356,17 @@ export default {
           //Auto generate TOC
           let apiTocString = '';
           let apiTocArray = await rawString.match(/\n#.+/g);
+          let pattern = '####'
 
           for (let i = 0; i < apiTocArray.length; ++i) {
+            let testPattern = apiTocArray[i].match(/(?=#)(.*)(?=\s)/);
+            if (testPattern[0].length < pattern.length) {
+              pattern = testPattern[0]
+            }
             apiTocString = apiTocString + apiTocArray[i];
           }
           let test = apiTocArray[0];
-          let pattern = test.match(/(?=#)(.*)(?=\s)/);
-          apiTocString = apiTocString + '\n' + pattern[0] + ' Changelog';
+          apiTocString = apiTocString + '\n' + pattern + ' Changelog';
           let finalMenu = Toc(apiTocString, { bullets: '-' }).content;
 
           //Split API menu from content
