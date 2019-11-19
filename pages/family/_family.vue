@@ -222,7 +222,7 @@ export default {
           offsets.push(point.offsetTop + 220);
         }
         if (point.id === 'changelog') {
-          console.log(document.querySelectorAll("#changelog"));
+          console.log(document.querySelectorAll('#changelog'));
           points[point.offsetTop] = {
             name: '#' + point.id
           };
@@ -230,8 +230,8 @@ export default {
         }
       }
       offsets = [...new Set(offsets)];
-      console.log(points)
-      console.log(offsets)
+      console.log(points);
+      console.log(offsets);
 
       let currentElement = document.querySelector('.markdown-wrapper');
 
@@ -255,7 +255,7 @@ export default {
           for (i in offsets) {
             if (offsets[i] <= location || offsets[i] <= locationBody) {
               let aClass = points[offsets[i]].name;
-              console.log(aClass)
+              console.log(aClass);
               for (let active of actives) {
                 active.classList.remove('family-active');
               }
@@ -272,7 +272,7 @@ export default {
         }
 
         if (active) {
-          console.log(active)
+          console.log(active);
           let activeClass;
           let bottom = active.getBoundingClientRect().bottom;
           if (bottom > window.innerHeight) {
@@ -361,11 +361,13 @@ export default {
           //Auto generate TOC
           let apiTocString = '';
           let apiTocArray = await rawString.match(/\n#.+/g);
-          await apiTocArray.push('\n## Changelog');
 
           for (let i = 0; i < apiTocArray.length; ++i) {
             apiTocString = apiTocString + apiTocArray[i];
           }
+          let test = apiTocArray[0];
+          let pattern = test.match(/(?=#)(.*)(?=\s)/);
+          apiTocString = apiTocString + '\n' + pattern[0] + ' Changelog';
           let finalMenu = Toc(apiTocString, { bullets: '-' }).content;
 
           //Split API menu from content
@@ -400,7 +402,7 @@ export default {
           authorization: 'token ' + process.env.GITHUB_TOKEN
         }
       };
-      for (let p = 1; p <= 2; p++) {
+      for (let p = 1; p <= 2; ++p) {
         milestones = await $axios.$get(
           'https://api.github.com/repos/hapijs/' + params.family + '/milestones?state=closed&per_page=100&page=' + p,
           mileOptions
@@ -410,13 +412,21 @@ export default {
 
       let flatM = await [].concat(...m);
 
-      let sortedMilestones = await flatM.sort((a, b) => Semver.compare(b.title, a.title));
+      let sortedMilestones = await flatM.sort(function(a, b) {
+        if (!Semver.valid(a.title)) {
+          a.title = Semver.clean(a.title + '.0', { loose: true });
+        }
+        return Semver.compare(b.title, a.title);
+      });
 
       //Get milestone issues
       for (let milestone of sortedMilestones) {
-        let changes = [];
         let m = await $axios.$get(
-          'https://api.github.com/repos/hapijs/' + params.family + '/issues?state=closed&milestone=' + milestone.number,
+          'https://api.github.com/repos/hapijs/' +
+            params.family +
+            '/issues?state=closed&milestone=' +
+            milestone.number +
+            '&per_page=200',
           mileOptions
         );
         if (m.length > 0) {

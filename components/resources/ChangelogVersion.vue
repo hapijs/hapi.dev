@@ -2,18 +2,28 @@
   <div class="logWrapper">
     <div class="logVersionWrapper">
       <a :href="versionUrl" target="__blank" class="log-title">{{ version }}</a>
-      <a :href=releaseURL v-if=release class="releaseLink" target="_blank"><div class="release"><img class="releaseNotesImg" src="/img/release-notes.png" alt="Release Notes" title="View Release Notes">additional information</div></a>
-      <div v-if=breaking class="breaking">breaking changes</div>
+      <a :href="releaseURL" v-if="release" class="releaseLink" target="_blank"
+        ><div class="release">
+          <img
+            class="releaseNotesImg"
+            src="/img/release-notes.png"
+            alt="Release Notes"
+            title="View Release Notes"
+          />additional information
+        </div></a
+      >
+      <div v-if="breaking" class="breaking">breaking changes</div>
     </div>
     <div class="changelogtext-wrapper">
       <ChangelogText
-        v-for="issue in issues"
+        v-for="issue in issuesArray"
         v-bind:key="issue.number"
         :issueUrl="issue.html_url"
         :issueNumber="issue.number"
         :issueText="issue.title"
         :issueLabels="issue.labels"
       />
+      <button v-if="showMoreButton">Show More</button>
     </div>
   </div>
 </template>
@@ -28,20 +38,29 @@ export default {
   props: ['version', 'versionUrl', 'issues'],
   data() {
     return {
+      issuesArray: [],
       breaking: false,
       release: false,
-      releaseURL: ""
+      releaseURL: '',
+      showMoreButton: false,
+      showMoreIssues: false,
+      hiddenIssues: []
     };
   },
   created() {
-    for (let issue of this.$props.issues) {
+    this.$data.issuesArray = this.$props.issues;
+    for (let issue of this.$data.issuesArray) {
       if (issue.labels.some(label => label.name === 'breaking changes')) {
         this.$data.breaking = true;
       }
       if (issue.labels.some(label => label.name === 'release notes')) {
         this.$data.release = true;
-        this.$data.releaseURL = issue.html_url
+        this.$data.releaseURL = issue.html_url;
       }
+    }
+    if (this.$data.issuesArray.length > 10) {
+      this.$data.issuesArray = this.$data.issuesArray.slice(1, 11);
+      this.$data.showMoreButton = true;
     }
   }
 };
@@ -68,12 +87,13 @@ export default {
 
 .breaking {
   padding: 2px 4px;
-  font-size: .8em;
+  font-size: 0.8em;
   font-weight: 600;
-  background: $orange
+  background: $orange;
 }
 
-.releaseLink, .releaseLink:hover {
+.releaseLink,
+.releaseLink:hover {
   color: $black;
 }
 
@@ -82,7 +102,7 @@ export default {
   align-items: center;
   margin: 0 10px 0 0;
   padding: 2px 4px;
-  font-size: .8em;
+  font-size: 0.8em;
   font-weight: 600;
   background: #fad8c7;
 }
