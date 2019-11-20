@@ -1,7 +1,7 @@
 <template>
   <div class="logWrapper">
     <div class="logVersionWrapper">
-      <a :href="versionUrl" target="__blank" class="log-title">{{ version }}</a>
+      <a :href="versionUrl" target="__blank" class="log-title" :id='version'>{{ version }}</a>
       <a :href="releaseURL" v-if="release" class="releaseLink" target="_blank"
         ><div class="release">
           <img
@@ -23,7 +23,7 @@
         :issueText="issue.title"
         :issueLabels="issue.labels"
       />
-      <div class="moreIssues" v-if="showMoreIssues">
+      <div :class="showMoreIssues ? 'hidden-issues-wrapper activeIssues' : 'hidden-issues-wrapper'">
         <ChangelogText
           v-for="issue in hiddenIssues"
           v-bind:key="issue.number"
@@ -33,10 +33,9 @@
           :issueLabels="issue.labels"
         />
       </div>
-      <button v-if="showMoreButton" v-on:click="showIssues()">
-        {{ !getShowMoreIssues ? 'Show More' : 'Hide Issues' }}
+      <button class="issuesButton" v-if="showMoreButton" v-on:click="showIssues()">
+        <img src="/img/down.png" alt="down arrow" :class="showMoreIssues ? 'issuesButtonUpArrow' : 'issuesButtonDownArrow'" />{{ !getShowMoreIssues ? 'Show More' : 'Hide Issues' }}
       </button>
-      </div>
     </div>
   </div>
 </template>
@@ -63,7 +62,10 @@ export default {
   methods: {
     showIssues() {
       this.$data.showMoreIssues = !this.$data.showMoreIssues;
-      console.log(this.$data.hiddenIssues);
+      if (!this.$data.showMoreIssues) {
+        let id = document.getElementById(this.$props.version)
+        window.scrollTo(0, id.offsetTop)
+      }
     }
   },
   computed: {
@@ -86,7 +88,6 @@ export default {
       this.$data.issuesArray = this.$data.issuesArray.slice(1, 11);
       this.$data.hiddenIssues = this.$props.issues.slice(11, this.$props.issues.length);
       this.$data.showMoreButton = true;
-      console.log(this.$data.issuesArray);
     }
   }
 };
@@ -146,5 +147,43 @@ export default {
 
 .changelogtext-wrapper {
   margin: 0;
+}
+
+.hidden-issues-wrapper {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.hidden-issues-wrapper.activeIssues {
+  max-height: 5000px;
+  transition: max-height 1s ease-in-out;
+}
+
+.issuesButton {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 2px 4px;
+  font-size: .95em;
+  cursor: pointer;
+}
+
+.issuesButton:focus {
+  outline: none;
+}
+
+.issuesButtonDownArrow {
+  width: 14px;
+  margin-right: 5px;
+}
+
+.issuesButtonUpArrow {
+  width: 14px;
+  margin-right: 5px;
+  transform: rotate(180deg);
 }
 </style>
