@@ -3,7 +3,7 @@ module.exports = {
 
   generate: {
     fallback: true,
-    interval: 15000,
+    concurrency: 1,
     routes: [
       '/tutorials/gettingstarted',
       '/tutorials/auth',
@@ -157,6 +157,19 @@ module.exports = {
   build: {
     splitChunks: {
       layouts: true
+    },
+    html: {
+      minify: {
+        collapseBooleanAttributes: true,
+        decodeEntities: true,
+        minifyCSS: false,
+        minifyJS: false,
+        processConditionalComments: true,
+        removeEmptyAttributes: true,
+        removeRedundantAttributes: true,
+        trimCustomFragments: true,
+        useShortDoctype: true
+      }
     }
     /*
      ** You can extend webpack config here
