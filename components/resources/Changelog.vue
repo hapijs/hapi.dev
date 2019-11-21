@@ -1,6 +1,8 @@
 <template>
   <div class="changelog-wrapper">
-    <h2 class="resources-header">Changelog</h2>
+    <h2 class="changelog-header">
+      <a id="changelog" href="#changelog" class="anchor" aria-hidden="true"></a>Changelog
+    </h2>
     <ChangelogVersion
       v-for="change in milestones"
       v-bind:key="change[0].id"
@@ -12,17 +14,17 @@
 </template>
 
 <script>
-import ChangelogVersion from "./ChangelogVersion.vue";
+import ChangelogVersion from './ChangelogVersion.vue';
 export default {
   components: {
     ChangelogVersion
   },
-  props: ["milestones"],
+  props: ['milestones']
 };
 </script>
 
 <style lang="scss">
-@import "../../assets/styles/main.scss";
+@import '../../assets/styles/main.scss';
 
 .changelog-wrapper {
   width: 100%;

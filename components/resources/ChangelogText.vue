@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  props: ["issueUrl", "issueNumber", "issueText"]
+  props: ["issueUrl", "issueNumber", "issueText", "issueLabels"]
 };
 </script>
 
