@@ -391,7 +391,7 @@ export default {
           moduleAPI[params.family].displays[apiVersion] = await finalHtmlDisplay;
         }
       } catch (err) {
-        console.log(err.message);
+        console.log("GITHUB ERRRORRRRRRRR!!!", err.message);
       }
 
       //Changelog
