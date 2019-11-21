@@ -76,6 +76,7 @@ export default {
 
     //Get milestone issues
     for (let milestone of sortedMilestones) {
+      let changes = [];
       let m = await $axios.$get(
         "https://api.github.com/repos/hapijs/hapi/issues?state=closed&milestone=" +
           milestone.number,
@@ -107,6 +108,15 @@ export default {
 .community-wrapper {
   margin: 0;
   width: 100%;
+}
+
+.changelog-header {
+  margin: 20px 0 10px 0;
+  border-bottom: 1px solid #ddd;
+  border-top: none;
+  padding-bottom: 10px;
+  width: auto;
+  display: inline-block;
 }
 
 @media screen and (max-width: 900px) {
