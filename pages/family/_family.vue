@@ -222,10 +222,10 @@ export default {
           offsets.push(point.offsetTop + 220);
         }
         if (point.id === 'changelog') {
-          points[point.offsetTop] = {
+          points[point.getBoundingClientRect().top] = {
             name: '#' + point.id
           };
-          offsets.push(point.offsetTop);
+          offsets.push(point.getBoundingClientRect().top);
         }
       }
       offsets = [...new Set(offsets)];
