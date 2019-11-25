@@ -2,7 +2,64 @@ let axios = require("axios")
 let Semver = require("semver")
 let Yaml = require("js-yaml")
 let fs = require("fs")
+let Toc = require('markdown-toc')
 require("dotenv").config()
+
+const modules = [
+  "accept",
+  "address",
+  "ammo",
+  "b64",
+  "basic",
+  "bell",
+  "boom",
+  "bossy",
+  "bounce",
+  "bourne",
+  "call",
+  "catbox",
+  "catbox-memcached",
+  "catbox-memory",
+  "catbox-object",
+  "catbox-redis",
+  "code",
+  "content",
+  "cookie",
+  "crumb",
+  "cryptiles",
+  "formula",
+  "glue",
+  "good",
+  "good-console",
+  "good-squeeze",
+  "h2o2",
+  "hawk",
+  "hoek",
+  "inert",
+  "iron",
+  "joi",
+  "joi-date",
+  "lab",
+  "mimos",
+  "nes",
+  "oppsy",
+  "pinpoint",
+  "podium",
+  "rule-capitalize-modules",
+  "rule-for-loop",
+  "rule-scope-start",
+  "scooter",
+  "shot",
+  "sntp",
+  "subtext",
+  "topo",
+  "vision",
+  "wreck",
+  "yar"
+]
+let finalHtmlDisplay = ""
+let finalMenu = ""
+
 getInfo()
 
 async function getInfo() {
@@ -13,13 +70,12 @@ async function getInfo() {
       accept: "application/vnd.github.v3.raw+json",
       authorization: "token " + process.env.GITHUB_TOKEN
     }
-  };
+  }
   let repositories = await axios.get(
     "https://api.github.com/orgs/hapijs/repos?per_page=100",
     options
-  );
+  )
   for (let r = 0; r < repositories.data.length; ++r) {
-    console.log(repositories.data.length)
     let branches = await axios.get(
       "https://api.github.com/repos/hapijs/" +
         repositories.data[r].name +
@@ -33,7 +89,8 @@ async function getInfo() {
     ) {
       repos[repositories.data[r].name] = {
         name: repositories.data[r].name,
-        versions: []
+        versions: [],
+        versionsArray: []
       }
       for (let branch of branches.data) {
         if (branch.name.match(/^v+[0-9]+|\bmaster\b/g)) {
@@ -51,6 +108,62 @@ async function getInfo() {
               branch.name,
             options
           )
+
+          //Get API
+          try {
+            if (modules.includes(repositories.data[r].name)) {
+              console.log('https://api.github.com/repos/hapijs/' +
+              repositories.data[r].name +
+                '/contents/API.md?ref=' +
+                branch.name)
+              const api = await axios.get(
+                'https://api.github.com/repos/hapijs/' +
+                repositories.data[r].name +
+                  '/contents/API.md?ref=' +
+                  branch.name,
+                options
+              )
+              let rawString = await api.data.toString()
+    
+              //Auto generate TOC
+              let apiTocString = ''
+              let apiTocArray = await rawString.match(/\n#.+/g)
+              let pattern = '####'
+    
+              for (let i = 0; i < apiTocArray.length; ++i) {
+                let testPattern = apiTocArray[i].match(/(?=#)(.*)(?=\s)/)
+                if (testPattern[0].length < pattern.length) {
+                  pattern = testPattern[0]
+                }
+                apiTocString = apiTocString + apiTocArray[i]
+              }
+              apiTocString = apiTocString + '\n' + pattern + ' Changelog'
+              finalMenu = Toc(apiTocString, { bullets: '-' }).content
+    
+              //Split API menu from content
+              let finalDisplay = await rawString.replace(/\/>/g, '></a>')
+              finalMenu = await finalMenu.replace(/Boom\./g, '')
+              finalMenu = await finalMenu.replace(/\(([^#*]+)\)/g, '()')
+              const apiHTML = await axios.post(
+                'https://api.github.com/markdown',
+                {
+                  text: finalDisplay,
+                  mode: 'markdown'
+                },
+                {
+                  headers: {
+                    authorization: 'token ' + process.env.GITHUB_TOKEN
+                  }
+                }
+              )
+              let apiString = await apiHTML.data.toString()
+              finalHtmlDisplay = await apiString.replace(/user-content-/g, '') 
+            }
+          } catch (err) {
+            console.log(err)
+          }
+
+
           let nodeVersions = Yaml.safeLoad(nodeYaml.data).node_js.reverse()
           if (
             !repos[repositories.data[r].name].versions.some(
@@ -59,17 +172,25 @@ async function getInfo() {
             ) ||
             gitHubVersion.data.name.includes("commercial")
           ) {
+            repos[repositories.data[r].name].versionsArray.push(gitHubVersion.data.version)
             repos[repositories.data[r].name].versions.push({
               name: gitHubVersion.data.version,
               branch: branch.name,
               license: gitHubVersion.data.name.includes("commercial")
                 ? "Commercial"
                 : "BSD",
-              node: nodeVersions.join(", ").replace("node,", "")
+              node: nodeVersions.join(", ").replace("node,", ""),
             })
+            repos[repositories.data[r].name][gitHubVersion.data.version] = {
+              menu: finalMenu,
+              api: await finalHtmlDisplay,
+              license: gitHubVersion.data.name.includes("commercial")
+                ? "Commercial"
+                : "BSD",
+            }
           }
           await repos[repositories.data[r].name].versions.sort(function(a, b) {
-            return Semver.compare(b.name, a.name);
+            return Semver.compare(b.name, a.name)
           })
         }
       }
@@ -101,8 +222,7 @@ async function getInfo() {
 
     newRepos = await Object.assign({ hapi }, orderedRepos)
   }
-  await console.log(newRepos);
-  await fs.writeFile('./static/lib/moduleInfo.js', JSON.stringify(newRepos), function(err) {
+  await fs.writeFile('./static/lib/moduleInfo.json', JSON.stringify(newRepos), function(err) {
     if (err) throw err
   })
 }
