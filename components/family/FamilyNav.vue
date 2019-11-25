@@ -93,7 +93,7 @@ export default {
         .querySelector(".family-search-error")
         .classList.remove("nav-display");
       window.scrollTo(0, 0);
-      this.$parent.setClasses();
+      await this.$parent.setClasses()
     },
     onSearch() {
       if (this.search !== "") {
