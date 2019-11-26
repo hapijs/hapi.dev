@@ -1,8 +1,8 @@
 <template>
   <div class="install-wrapper">
     <div class="install-header">Installation:</div>
-    <p class="install-how"><a class="install-link" target="__blank" :href='moduleAPI[name][routeQuery].license === "Commercial" ? "https://www.npmjs.com/package/@commercial/" + name : "https://www.npmjs.com/package/@hapi/" + name'>npm</a>: <span><code>{{moduleAPI[name][routeQuery].license === "Commercial" ? "npm install @commercial/" + name : "npm install @hapi/" + name}}</code></span></p>
-    <p class="install-how"><a class="install-link" target="__blank" :href='moduleAPI[name][routeQuery].license === "Commercial" ? "https://yarnpkg.com/en/package/@commercial/" + name : "https://yarnpkg.com/en/package/@hapi/" + name'>yarn</a>: <span><code>{{moduleAPI[name][routeQuery].license === "Commercial" ? "yarn add @commercial/" + name : "yarn add @hapi/" + name}}</code></span></p>
+    <p class="install-how"><a class="install-link" target="__blank" :href='moduleAPI[name].versions[routeQuery].includes("commercial") ? "https://www.npmjs.com/package/@commercial/" + name : "https://www.npmjs.com/package/@hapi/" + name'>npm</a>: <span><code>{{moduleAPI[name].versions[routeQuery].includes("commercial") ? "npm install @commercial/" + name : "npm install @hapi/" + name}}</code></span></p>
+    <p class="install-how"><a class="install-link" target="__blank" :href='moduleAPI[name].versions[routeQuery].includes("commercial") === "Commercial" ? "https://yarnpkg.com/en/package/@commercial/" + name : "https://yarnpkg.com/en/package/@hapi/" + name'>yarn</a>: <span><code>{{moduleAPI[name].versions[routeQuery].includes("commercial") ? "yarn add @commercial/" + name : "yarn add @hapi/" + name}}</code></span></p>
   </div>
 </template>
 
