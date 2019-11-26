@@ -160,9 +160,8 @@ async function getInfo() {
               finalHtmlDisplay = await apiString.replace(/user-content-/g, '') 
             }
           } catch (err) {
-            console.log(err)
+            continue
           }
-
 
           let nodeVersions = Yaml.safeLoad(nodeYaml.data).node_js.reverse()
           if (
@@ -196,18 +195,44 @@ async function getInfo() {
       }
     }
 
-    for (let key of Object.keys(repos)) {
-      if (repos[key].versions.length > 1) {
-        if (
-          repos[key].versions[0].name === repos[key].versions[1].name &&
-          repos[key].versions[0].license === "Commercial"
-        ) {
-          let temp = repos[key].versions[0]
-          repos[key].versions[0] = repos[key].versions[1]
-          repos[key].versions[1] = temp
+    if (modules.includes(repositories.data[r].name)) {
+      console.log("HERE", repositories.data[r].name)
+      let readme = await axios.get(
+        "https://api.github.com/repos/hapijs/" +
+        repositories.data[r].name +
+          "/contents/README.md",
+        options
+      )
+      let forks = await axios.get(
+        "https://api.github.com/repos/hapijs/" + repositories.data[r].name,
+        options
+      )
+      let slogan =
+        (await readme.data.match(/####(.*)/gm)) !== null
+          ? await readme.data.match(/####(.*)/gm)[0].substring(5)
+          : "Description coming soon..."
+      let date = await new Date(forks.data.pushed_at)
+      repos[repositories.data[r].name].slogan = await slogan,
+      repos[repositories.data[r].name].forks = await Number(forks.data.forks_count),
+      repos[repositories.data[r].name].stars = await Number(forks.data.stargazers_count),
+      repos[repositories.data[r].name].date = await forks.data.pushed_at,
+      repos[repositories.data[r].name].updated = await date.toDateString(),
+      repos[repositories.data[r].name].link = "https://github.com/hapijs/" + repositories.data[r].name
+  
+      for (let key of Object.keys(repos)) {
+        if (repos[key].versions.length > 1) {
+          if (
+            repos[key].versions[0].name === repos[key].versions[1].name &&
+            repos[key].versions[0].license === "Commercial"
+          ) {
+            let temp = repos[key].versions[0]
+            repos[key].versions[0] = repos[key].versions[1]
+            repos[key].versions[1] = temp
+          }
         }
       }
     }
+
 
     const orderedRepos = {}
     await Object.keys(repos)

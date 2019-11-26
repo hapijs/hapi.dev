@@ -14,12 +14,15 @@
         <div
           class="family-grid-cell"
           :id="module.name"
-          v-for="module in moduleData"
+          v-for="module in sorted"
           v-bind:key="module.name"
         >
           <div class="family-grid-text-wrapper">
-            <a :href='"/family/" + module.name' class="family-grid-link">
-              <div class="family-grid-cell-name">{{module.name}}</div>
+            <a
+              :href="'/family/' + module.name"
+              class="family-grid-link"
+            >
+              <div class="family-grid-cell-name">{{ module.name }}</div>
             </a>
             <div class="family-grid-cell-slogan" v-html="$md.render(module.slogan)"></div>
           </div>
@@ -27,19 +30,25 @@
             <div class="stats-wrapper">
               <div class="family-stats">
                 <a class="status-link" :href="module.link">
-                  <img class="stats-img-github" src="/img/githubLogo.png" alt="github logo" />
+                  <img
+                    class="stats-img-github"
+                    src="/img/githubLogo.png"
+                    alt="github logo"
+                  />
                 </a>
               </div>
               <div class="family-stats">
                 <img class="stats-img-star" src="/img/star.png" alt="star" />
-                {{module.stars}}
+                {{ module.stars }}
               </div>
               <div class="family-stats">
                 <img class="stats-img-fork" src="/img/fork.png" alt="fork" />
-                {{module.forks}}
+                {{ module.forks }}
               </div>
             </div>
-            <div class="family-updated">Updated: {{module.updated}}</div>
+            <div class="family-updated">
+              Updated: {{ module.updated }}
+            </div>
           </div>
         </div>
       </div>
@@ -49,6 +58,7 @@
 
 <script>
 import FamilyIndexNav from "~/components/family/FamilyIndexNav.vue";
+import moduleInfo from "../../static/lib/moduleInfo.json";
 
 export default {
   components: {
@@ -57,7 +67,9 @@ export default {
   data() {
     return {
       modules: this.$store.getters.loadModules,
+      moduleData: moduleInfo,
       search: "",
+      sorted: [],
       core: true,
       sort: "name"
     };
@@ -101,57 +113,18 @@ export default {
     sortModules(value) {
       this.$data.sort = value;
       if (value === "stars" || value === "forks") {
-        this.moduleData.sort((a, b) =>
+        this.sorted.sort((a, b) =>
           a[value.toLowerCase()] < b[value] ? 1 : -1
         );
       } else if (value === "name") {
-        this.moduleData.sort((a, b) => (a.name > b.name ? 1 : -1));
+        this.sorted.sort((a, b) => (a.name > b.name ? 1 : -1));
       } else if (value === "updated") {
-        this.moduleData.sort((a, b) => (a.date < b.date ? 1 : -1));
+        this.sorted.sort((a, b) => (a.date < b.date ? 1 : -1));
       }
     }
-  },
-  async asyncData({ params, $axios, route, store }) {
-    const options = {
-      headers: {
-        accept: "application/vnd.github.v3.raw+json",
-        authorization: "token " + process.env.GITHUB_TOKEN
-      }
-    };
-    let moduleData = [];
-    for (let module of store.getters.loadModules) {
-      try {
-        let readme = await $axios.$get(
-          "https://api.github.com/repos/hapijs/" +
-            module +
-            "/contents/README.md",
-          options
-        );
-        let forks = await $axios.$get(
-          "https://api.github.com/repos/hapijs/" + module,
-          options
-        );
-        let slogan =
-          (await readme.match(/####(.*)/gm)) !== null
-            ? await readme.match(/####(.*)/gm)[0].substring(5)
-            : "Description coming soon...";
-        let date = await new Date(forks.pushed_at);
-        moduleData.push({
-          name: module,
-          slogan: await slogan,
-          forks: await Number(forks.forks_count),
-          stars: await Number(forks.stargazers_count),
-          date: await forks.pushed_at,
-          updated: await date.toDateString(),
-          link: "https://github.com/hapijs/" + module
-        });
-      } catch (err) {
-        console.log(err);
-      }
-    }
-    return { moduleData };
   },
   created() {
+    this.$data.sorted = Object.values(this.moduleData).filter(item => this.$data.modules.includes(item.name))
     this.$store.commit("setDisplay", "family");
     const sortedBy = ["name", "stars", "forks", "updated"];
     if (sortedBy.includes(this.$route.query.sort)) {
@@ -289,12 +262,12 @@ export default {
     padding: 20px;
   }
 
-.family-grid {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  .family-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 
-.family-grid-cell-slogan p {
-  font-size: .97em;
-}
+  .family-grid-cell-slogan p {
+    font-size: 0.97em;
+  }
 }
 </style>
