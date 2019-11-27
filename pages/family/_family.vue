@@ -280,8 +280,9 @@ export default {
             }
           }
           let bottom = active.getBoundingClientRect().bottom;
-          if (bottom > window.innerHeight) {
-            element.scrollIntoView(false);
+          let location = active.getBoundingClientRect();
+          if (bottom > window.innerHeight || location.top < 131) {
+            active.scrollIntoView(false);
           }
           if (that.$route.hash === active.hash && bottom === 0) {
             active.scrollIntoView(false);
