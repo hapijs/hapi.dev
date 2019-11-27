@@ -157,6 +157,11 @@ export default {
   align-items: flex-start;
   width: 100%;
   margin: 0;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  background: $off-white;
+  z-index: 1000;
 }
 
 .family-nav-title {
@@ -167,7 +172,6 @@ export default {
 
 .family-search {
   position: relative;
-  padding-right: 20px;
   width: 100%;
   margin: 20px 0 0 0;
 }
@@ -188,7 +192,7 @@ export default {
   background-color: #fff;
   background-size: contain;
   padding: 10px;
-  right: 20px;
+  right: 0px;
   top: 0px;
   border-top: 1px solid $dark-white;
   border-right: 1px solid $dark-white;
@@ -243,6 +247,10 @@ export default {
 
   .family-span {
     font-size: 1.2rem;
+  }
+
+  .family-top-wrapper {
+    padding: 0;
   }
 
   .family-version-select {
