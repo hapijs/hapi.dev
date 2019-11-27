@@ -144,7 +144,6 @@ export default {
     }
   },
   async created() {
-    console.log(moduleInfo)
     await this.$store.commit("setDisplay", "resources");
   }
 };

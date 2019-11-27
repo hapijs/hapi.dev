@@ -28,10 +28,9 @@
 import FamilyDisplay from '~/components/family/FamilyDisplay.vue';
 import FamilyNav from '~/components/family/FamilyNav.vue';
 import Install from '~/components/family/Install.vue';
-import Changelog from '../../components/resources/Changelog.vue';
+import Changelog from '~/components/resources/Changelog.vue';
 let Toc = require('markdown-toc');
 let Semver = require('semver');
-import moduleInfo from "../../static/lib/moduleInfo.json";
 
 export default {
   components: {
@@ -463,9 +462,9 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../assets/styles/main.scss';
-@import '../../assets/styles/api.scss';
-@import '../../assets/styles/markdown.scss';
+@import '../../../assets/styles/main.scss';
+@import '../../../assets/styles/api.scss';
+@import '../../../assets/styles/markdown.scss';
 
 .family-title {
   margin: 20px 0 -16px 100px;
