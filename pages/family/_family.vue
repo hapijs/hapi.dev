@@ -269,10 +269,12 @@ export default {
 
         if (active) {
           let activeClass;
-          let bottom = active.getBoundingClientRect().bottom;
-          if (bottom > window.innerHeight) {
-            element.scrollIntoView(false);
-          }
+          setTimeout(function() {
+            let bottom = active.getBoundingClientRect().bottom;
+            if (bottom > window.innerHeight) {
+              element.scrollIntoView(false);
+            }
+          }, 100)
           activeClass = active.hash;
           let activeLink = document.querySelector(`a[href*='${activeClass}']`);
           let activePosition = that.links[activeLink.hash];
