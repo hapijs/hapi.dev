@@ -2,43 +2,58 @@
   <div class="api-nav-window">
     <div class="api-nav-wrapper">
       <div class="api-nav-inner-wrapper">
-        <div class="api-nav-title-wrapper">
-          <div class="api-nav-title">API</div>
-          <div class="api-lang-wrapper">
-            <select @change="onChange($event)" class="api-lang-select" :value="version">
-              <option
-                    v-for="version in versions"
-                    v-bind:key="version"
-                    :value="version"
-                  >{{version}}</option>
-            </select>
+        <div class="api-header-wrapper">
+          <div class="api-nav-title-wrapper">
+            <div class="api-nav-title">API</div>
+            <div class="api-lang-wrapper">
+              <select
+                @change="onChange($event)"
+                class="api-lang-select"
+                :value="version"
+              >
+                <option
+                  v-for="version in versions"
+                  v-bind:key="version"
+                  :value="version"
+                  >{{ version }}</option
+                >
+              </select>
+            </div>
           </div>
-        </div>
-        <div class="api-search">
-          <input
-            class="api-search-box"
-            :value="search"
-            v-on:keyup.enter="onSearch"
-            @input="onInput($event)"
-            placeholder="Search API"
-          />
-          <div class="api-search-img" v-on:click="onSearch"></div>
-          <div class="api-search-info">
-            <div class="api-search-results">
-              <div class="api-search-results-wrapper">
-                <div
-                  class="api-search-results-text"
-                >Showing result {{indexResults + 1}} of {{results.length}}</div>
-                <div class="api-search-buttons">
-                  <button class="api-search-button" v-on:click="onPrevious">Previous</button>
-                  <button class="api-search-button" v-on:click="onNext">Next</button>
+          <div class="api-search">
+            <input
+              class="api-search-box"
+              :value="search"
+              v-on:keyup.enter="onSearch"
+              @input="onInput($event)"
+              placeholder="Search API"
+            />
+            <div class="api-search-img" v-on:click="onSearch"></div>
+            <div class="api-search-info">
+              <div class="api-search-results">
+                <div class="api-search-results-wrapper">
+                  <div class="api-search-results-text">
+                    Showing result {{ indexResults + 1 }} of
+                    {{ results.length }}
+                  </div>
+                  <div class="api-search-buttons">
+                    <button class="api-search-button" v-on:click="onPrevious">
+                      Previous
+                    </button>
+                    <button class="api-search-button" v-on:click="onNext">
+                      Next
+                    </button>
+                  </div>
                 </div>
               </div>
+              <div class="api-search-error">No results found</div>
             </div>
-            <div class="api-search-error">No results found</div>
           </div>
         </div>
-        <div class="api-nav-select-wrapper" v-html="$md.render(this.$props.menu)"></div>
+        <div
+          class="api-nav-select-wrapper"
+          v-html="$md.render(this.$props.menu)"
+        ></div>
       </div>
       <div class="api-side-footer-wrapper">
         <SideFooter />
@@ -58,7 +73,8 @@ export default {
   data: function() {
     return {
       uls: {},
-      links: {}
+      links: {},
+      seaching: false
     };
   },
   methods: {
@@ -77,6 +93,7 @@ export default {
     onSearch() {
       if (this.search !== "") {
         this.$emit("search", this.uls, this.links);
+        this.$data.searching = true;
       }
     },
     onPrevious() {
@@ -137,11 +154,11 @@ export default {
           link.classList.add("api-nav-plus");
         }
         link.addEventListener("click", function(event) {
-          let currentActive = document.querySelector(".api-active")
+          let currentActive = document.querySelector(".api-active");
           if (currentActive) {
-            currentActive.classList.remove("api-active")
+            currentActive.classList.remove("api-active");
           }
-          link.classList.add("api-active")
+          link.classList.add("api-active");
           if (
             link.parentElement.children[1] &&
             link.parentElement.children[1].classList.contains("nav-display")
@@ -273,7 +290,6 @@ export default {
         }
       }
 
-
       let that = this;
 
       //Add active class to elements on scroll
@@ -287,9 +303,7 @@ export default {
         for (i in offsets) {
           aClass = points[offsets[i]].name;
           let element = document.querySelector(`a[href='${aClass}']`);
-          if (
-            (offsets[i] <= location || offsets[i] <= locationBody)
-          ) {
+          if (offsets[i] <= location || offsets[i] <= locationBody) {
             for (let a of actives) {
               a.classList.remove("api-active");
             }
@@ -382,7 +396,7 @@ export default {
   overflow-y: auto;
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
-  padding: 20px 0 5px 0;
+  padding: 0 0 5px 0;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -408,7 +422,8 @@ export default {
   flex-direction: column;
   align-items: flex-start;
   margin: 0;
-  overflow-x: hidden;
+  // overflow-x: hidden;
+  position: relative;
 }
 
 .api-nav-title-wrapper {
@@ -417,6 +432,16 @@ export default {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
+}
+
+.api-header-wrapper {
+  margin: 0;
+  width: 100%;
+  top: 0;
+  position: sticky;
+  z-index: 1000;
+  padding: 20px 0;
+  background: $off-white;
 }
 
 .api-nav-title {
@@ -522,11 +547,12 @@ export default {
 }
 
 .api-nav-select-wrapper {
-  margin-top: 20px;
+  margin: 0;
   font-size: 1.1em;
   color: $orange;
   line-height: 30px;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .api-nav-ul {
