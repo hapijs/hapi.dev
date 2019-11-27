@@ -74,7 +74,6 @@ export default {
     return {
       uls: {},
       links: {},
-      seaching: false
     };
   },
   methods: {
@@ -93,7 +92,6 @@ export default {
     onSearch() {
       if (this.search !== "") {
         this.$emit("search", this.uls, this.links);
-        this.$data.searching = true;
       }
     },
     onPrevious() {
@@ -315,10 +313,6 @@ export default {
         }
         if (active) {
           let activeClass;
-          let bottom = active.getBoundingClientRect().bottom;
-          if (bottom > window.innerHeight) {
-            active.scrollIntoView(false);
-          }
           if (that.$route.hash === active.hash && bottom === 0) {
             let wrapperHeight = document
               .querySelector(".api-nav-wrapper")
@@ -342,6 +336,11 @@ export default {
                 "api-nav-minus"
               );
             }
+          }
+          let bottom = active.getBoundingClientRect().bottom;
+          let location = active.getBoundingClientRect();
+          if (bottom > window.innerHeight || location.top < 131) {
+            active.scrollIntoView(false);
           }
           if (that.$route.hash === active.hash && bottom === 0) {
             active.scrollIntoView(false);
