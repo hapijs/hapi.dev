@@ -269,12 +269,6 @@ export default {
 
         if (active) {
           let activeClass;
-          setTimeout(function() {
-            let bottom = active.getBoundingClientRect().bottom;
-            if (bottom > window.innerHeight) {
-              element.scrollIntoView(false);
-            }
-          }, 100)
           activeClass = active.hash;
           let activeLink = document.querySelector(`a[href*='${activeClass}']`);
           let activePosition = that.links[activeLink.hash];
@@ -284,6 +278,10 @@ export default {
               that.uls[key].name.parentElement.children[0].classList.remove('family-plus');
               that.uls[key].name.parentElement.children[0].classList.add('family-minus');
             }
+          }
+          let bottom = active.getBoundingClientRect().bottom;
+          if (bottom > window.innerHeight) {
+            element.scrollIntoView(false);
           }
           if (that.$route.hash === active.hash && bottom === 0) {
             active.scrollIntoView(false);
