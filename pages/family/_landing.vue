@@ -9,6 +9,7 @@
         </div>
         <img src="/img/family.svg" alt="hapi-family" class="landing-family-img">
       </div>
+      <div>Latest Version: <span class="bold">{{modules[name].versionsArray[0]}}</span></div>
     </div>
   </div>
 </template>
@@ -133,6 +134,9 @@ export default {
     getMilestones() {
       return this.milestoneList;
     }
+  },
+  created() {
+    console.log(moduleInfo)
   }
 };
 </script>
@@ -156,7 +160,7 @@ export default {
 
 .landing-title-wrapper {
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .landing-title {
