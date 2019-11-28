@@ -18,7 +18,7 @@
 import LandingNav from "~/components/family/LandingNav.vue";
 import Install from "~/components/family/Install.vue";
 import Changelog from "~/components/resources/Changelog.vue";
-import moduleInfo from "../../static/lib/moduleInfo.json";
+import moduleInfo from "../../../static/lib/moduleInfo.json";
 let Toc = require("markdown-toc");
 let Semver = require("semver");
 
@@ -30,7 +30,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.dev - " + this.$route.params.landing,
+      title: "hapi.dev - " + this.$route.params.family,
       meta: [
         {
           hid: "description",
@@ -142,9 +142,9 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../assets/styles/main.scss";
-@import "../../assets/styles/api.scss";
-@import "../../assets/styles/markdown.scss";
+@import "../../../assets/styles/main.scss";
+@import "../../../assets/styles/api.scss";
+@import "../../../assets/styles/markdown.scss";
 
 .landing-wrapper {
   width: 100%;

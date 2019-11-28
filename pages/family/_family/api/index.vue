@@ -305,6 +305,7 @@ export default {
     }
   },
   async asyncData({ params, $axios, route, store }) {
+    console.log(params)
     const options = {
       headers: {
         accept: 'application/vnd.github.v3.raw+json',
@@ -462,9 +463,9 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../../assets/styles/main.scss';
-@import '../../../assets/styles/api.scss';
-@import '../../../assets/styles/markdown.scss';
+@import '../../../../assets/styles/main.scss';
+@import '../../../../assets/styles/api.scss';
+@import '../../../../assets/styles/markdown.scss';
 
 .family-title {
   margin: 20px 0 -16px 100px;
