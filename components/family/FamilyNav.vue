@@ -1,7 +1,7 @@
 <template>
-  <div class="side-nav-window">
-    <div class="side-nav-wrapper">
-      <div class="side-nav-inner-wrapper">
+  <div class="api-nav-window">
+    <div class="api-nav-wrapper">
+      <div class="api-nav-inner-wrapper">
         <div class="family-top-wrapper">
           <div class="family-nav-title">
             {{header}}
@@ -40,8 +40,8 @@
             </div>
           </div>
         </div>
-        <div class="side-nav-select-wrapper">
-          <ul class="side-nav-select-list">
+        <div class="side-nav-select-wrapper family-nav-no-margin">
+          <ul class="side-nav-select-list family-nav-select-list">
             <FamilyNavItem
               :name="header"
               :menu="menu"

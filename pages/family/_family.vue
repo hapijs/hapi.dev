@@ -149,6 +149,7 @@ export default {
       //Set TOC classes
       let anchors = document.querySelectorAll('.family-nav-select-wrapper a');
       let code = document.querySelectorAll('.family-nav-select-wrapper a code');
+      console.log(anchors)
 
       for (let link of anchors) {
         link.classList.add('family-anchor');
@@ -255,7 +256,7 @@ export default {
               for (let active of actives) {
                 active.classList.remove('family-active');
               }
-              element = document.querySelector(`.side-nav-wrapper a[href='${aClass}']`);
+              element = document.querySelector(`.api-nav-wrapper a[href='${aClass}']`);
               if (element && element.children.length !== 0) {
                 document.querySelector(`a[href*='${aClass}']`).classList.add('family-active');
                 active = document.querySelector('.family-active');
