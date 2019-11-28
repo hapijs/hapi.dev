@@ -305,7 +305,6 @@ export default {
     }
   },
   async asyncData({ params, $axios, route, store }) {
-    console.log(params)
     const options = {
       headers: {
         accept: 'application/vnd.github.v3.raw+json',
