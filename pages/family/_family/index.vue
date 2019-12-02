@@ -1,15 +1,32 @@
 <template>
   <div class="container">
-    <LandingNav />
+    <LandingNav 
+      :menu="getMenu"
+      :version="getVersion"
+      :results="results"
+      :indexResults="indexResults"
+      :search="search"
+      :page="page"
+      @search="onChildSearch"
+      @previous="onChildIndex"
+      @next="onChildIndex"
+      @input="onChildInput"/>
     <div class="landing-wrapper">
       <div class="landing-title-flex">
         <div class="landing-title-wrapper">
-          <h1 class="landing-title">{{name}}</h1>
-          <h5 class="landing-slogan">{{modules[name].slogan}}</h5>
+          <h1 class="landing-title">{{ name }}</h1>
+          <h5 class="landing-slogan">{{ modules[name].slogan }}</h5>
         </div>
-        <img src="/img/family.svg" alt="hapi-family" class="landing-family-img">
+        <img
+          src="/img/family.svg"
+          alt="hapi-family"
+          class="landing-family-img"
+        />
       </div>
-      <div>Latest Version: <span class="bold">{{modules[name].versionsArray[0]}}</span></div>
+      <div>
+        Latest Version:
+        <span class="bold">{{ modules[name].versionsArray[0] }}</span>
+      </div>
     </div>
   </div>
 </template>
@@ -42,11 +59,12 @@ export default {
   },
   data() {
     return {
+      page: "home",
       display: "",
       modules: moduleInfo,
       version: "",
       menu: "",
-      name: this.$route.params.landing,
+      name: this.$route.params.family,
       indexResults: 0,
       search: "",
       results: [],
@@ -119,6 +137,25 @@ export default {
       this.$data.search = value;
     }
   },
+  created() {
+    let versionsArray = moduleInfo[this.$route.params.family].versionsArray
+    if (!this.$store.getters.loadModules.includes(this.$route.params.family)) {
+      return this.$nuxt.error({ statusCode: 404 });
+    }
+    let version = versionsArray.includes(this.$route.query.v)
+      ? this.$route.query.v
+      : versionsArray[0];
+    this.$store.commit("setDisplay", "family");
+    this.$store.commit("setVersion", version);
+    (!this.$route.query.v ||
+      !versionsArray.includes(this.$route.query.v)) &&
+      this.$router.push({
+        path: this.$route.path,
+        query: { v: versionsArray[0] },
+        hash: this.$route.hash
+      });
+    this.$data.menu = moduleInfo[this.$route.params.family][this.getVersion].menu;
+  },
   computed: {
     getDisplay() {
       return this.moduleAPI[this.$route.params.family].displays[
@@ -129,14 +166,11 @@ export default {
       return this.$store.getters.loadVersion;
     },
     getMenu() {
-      return this.moduleAPI[this.$route.params.family].menus[this.getVersion];
+      return moduleInfo[this.$route.params.family][this.getVersion].menu;
     },
     getMilestones() {
       return this.milestoneList;
     }
-  },
-  created() {
-    console.log(moduleInfo)
   }
 };
 </script>

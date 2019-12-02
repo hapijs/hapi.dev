@@ -1,8 +1,9 @@
 <template>
   <div class="container">
-    <FamilyNav
+    <LandingNav
       :moduleAPI="moduleAPI"
       :menu="getMenu"
+      :page="page"
       :version="getVersion"
       :versions="versionsArray"
       :results="results"
@@ -26,7 +27,7 @@
 
 <script>
 import FamilyDisplay from '~/components/family/FamilyDisplay.vue';
-import FamilyNav from '~/components/family/FamilyNav.vue';
+import LandingNav from '~/components/family/LandingNav.vue';
 import Install from '~/components/family/Install.vue';
 import Changelog from '~/components/resources/Changelog.vue';
 let Toc = require('markdown-toc');
@@ -35,7 +36,7 @@ let Semver = require('semver');
 export default {
   components: {
     FamilyDisplay,
-    FamilyNav,
+    LandingNav,
     Install,
     Changelog
   },
@@ -54,6 +55,7 @@ export default {
   data() {
     return {
       display: '',
+      page: "api",
       modules: this.modules,
       version: '',
       menu: '',
@@ -359,14 +361,9 @@ export default {
           let pattern = '####'
 
           for (let i = 0; i < apiTocArray.length; ++i) {
-            let testPattern = apiTocArray[i].match(/(?=#)(.*)(?=\s)/);
-            if (testPattern[0].length < pattern.length) {
-              pattern = testPattern[0]
-            }
             apiTocString = apiTocString + apiTocArray[i];
           }
           let test = apiTocArray[0];
-          apiTocString = apiTocString + '\n' + pattern + ' Changelog';
           let finalMenu = Toc(apiTocString, { bullets: '-' }).content;
 
           //Split API menu from content
@@ -394,49 +391,11 @@ export default {
         console.log("GITHUB ERRRORRRRRRRR!!!", err.message);
       }
 
-      //Changelog
-      const mileOptions = {
-        headers: {
-          accept: 'application/vnd.github.v3.raw+json',
-          authorization: 'token ' + process.env.GITHUB_TOKEN
-        }
-      };
-      for (let p = 1; p <= 2; ++p) {
-        milestones = await $axios.$get(
-          'https://api.github.com/repos/hapijs/' + params.family + '/milestones?state=closed&per_page=100&page=' + p,
-          mileOptions
-        );
-        await m.push(milestones);
-      }
-
-      let flatM = await [].concat(...m);
-
-      let sortedMilestones = await flatM.sort(function(a, b) {
-        if (!Semver.valid(a.title)) {
-          a.title = Semver.clean(a.title + '.0', { loose: true });
-        }
-        return Semver.compare(b.title, a.title);
-      });
-
-      //Get milestone issues
-      for (let milestone of sortedMilestones) {
-        let m = await $axios.$get(
-          'https://api.github.com/repos/hapijs/' +
-            params.family +
-            '/issues?state=closed&milestone=' +
-            milestone.number +
-            '&per_page=200',
-          mileOptions
-        );
-        if (m.length > 0) {
-          milestoneList.push(m);
-        }
-      }
     }
 
     versionsArray = await versionsArray.sort((a, b) => Semver.compare(b, a));
 
-    return { moduleAPI, version, versionsArray, license, milestoneList };
+    return { moduleAPI, version, versionsArray, license };
   },
   created() {
     if (!this.$store.getters.loadModules.includes(this.$route.params.family)) {

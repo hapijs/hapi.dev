@@ -4,10 +4,55 @@
       <div class="side-nav-inner-wrapper">
         <div class="family-top-wrapper">
           <div class="family-nav-title">
-            {{header}}
+            <a :href='"/family/" + header'>{{header}}</a>
+            <span class="family-span" v-if="page === 'api'">
+              <select @change="onVersionChange($event)" class="family-version-select" :value="version">
+                <option
+                  v-for="version in versions"
+                  v-bind:key="version"
+                  :value="version"
+                >{{version}}</option>
+              </select>
+            </span>
+          </div>
+          <div class="family-search" v-if="page === 'api'">
+            <input
+              class="family-search-box"
+              :value="search"
+              v-on:keyup.enter="onSearch"
+              @input="onInput($event)"
+              placeholder="Search API"
+            />
+            <div class="family-search-img" v-on:click="onSearch"></div>
+            <div class="family-search-info">
+              <div class="family-search-results">
+                <div class="family-search-results-wrapper">
+                  <div
+                    class="family-search-results-text"
+                  >Showing result {{indexResults + 1}} of {{results.length}}</div>
+                  <div class="family-search-buttons">
+                    <button class="family-search-button" v-on:click="onPrevious">Previous</button>
+                    <button class="family-search-button" v-on:click="onNext">Next</button>
+                  </div>
+                </div>
+              </div>
+              <div class="family-search-error">No results found</div>
+            </div>
           </div>
         </div>
         <div class="side-nav-select-wrapper">
+          <div :class="page === 'api' ? 'landing-nav-api-title bold' : 'landing-nav-api-title'"><a :href='"/family/" + header + "/api"'>API</a></div>
+          <ul class="side-nav-select-list" v-if="page === 'api'">
+            <FamilyNavItem
+              :name="header"
+              :menu="menu"
+              :page="page"
+              :version="version"
+              :versions="versions"
+              @change="onVersionChange"
+            />
+          </ul>
+          <div :class="page === 'changelog' ? 'landing-nav-changelog-title bold' : 'landing-nav-changelog-title'"><a :href='"/family/" + header + "/changelog"'>Changelog</a></div>
         </div>
       </div>
       <SideFooter />
@@ -17,10 +62,13 @@
 
 <script>
 import SideFooter from "~/components/Footers/SideFooter.vue";
+import FamilyNavItem from "~/components/family/FamilyNavItem.vue";
+import moduleInfo from "../../static/lib/moduleInfo.json";
 
 export default {
   components: {
     SideFooter,
+    FamilyNavItem
   },
   props: [
     "page",
@@ -76,14 +124,20 @@ export default {
   },
   data() {
     return {
-      header: this.$route.params.landing,
-      title: this.$route.params.landing
+      header: this.$route.params.family,
+      showAPI: false
     };
   },
   computed: {
     getModules() {
       return this.$store.getters.loadModules;
-    }
+    },
+    getVersion() {
+      return this.$store.getters.loadVersion;
+    },
+  },
+  created() {
+    console.log(this.page)
   },
   mounted() {
     let aClass = this.$route.hash;
@@ -114,6 +168,14 @@ export default {
   font-size: 1.5rem;
   color: $black;
   margin: 0;
+}
+
+.family-nav-title a {
+  color: $black;
+}
+
+.family-nav-title a:hover {
+  color: $black;
 }
 
 .family-search {
