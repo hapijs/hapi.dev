@@ -103,7 +103,7 @@ async function getInfo() {
 
     newRepos = await Object.assign({ hapi }, orderedRepos)
   }
-  await fs.writeFile('./static/lib/moduleInfo.json', JSON.stringify(newRepos), function(err) {
+  await fs.writeFile('./static/moduleInfo.json', JSON.stringify(newRepos), function(err) {
     if (err) throw err
   })
   console.log("FILLLLLLLLLLEEESSSSSSSSSSSSSSSSSSSSSSSSSSSS")
