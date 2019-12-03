@@ -190,7 +190,7 @@ export default {
   },
   async asyncData({ $axios }) {
     let moduleInfo = await $axios.$get(
-      "https://hapi-modules.netlify.com/moduleInfo.json"
+      "https://hapi-modules.netlify.com/mods/moduleInfo.json"
     );
 
     return { moduleInfo };

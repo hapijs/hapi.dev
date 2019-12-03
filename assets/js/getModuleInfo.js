@@ -9,6 +9,12 @@ getInfo()
 async function getInfo() {
   let repos = {}
   let newRepos = {}
+  if (!fs.existsSync("./static/mods")) {
+    fs.mkdir("./static/mods", err => {
+      if (err) throw err
+    })
+  }
+
   const options = {
     headers: {
       accept: "application/vnd.github.v3.raw+json",
@@ -103,7 +109,7 @@ async function getInfo() {
 
     newRepos = await Object.assign({ hapi }, orderedRepos)
   }
-  await fs.writeFile('./static/moduleInfo.json', JSON.stringify(newRepos), function(err) {
+  await fs.writeFile('./static/mods/moduleInfo.json', JSON.stringify(newRepos), function(err) {
     if (err) throw err
   })
   console.log("FILLLLLLLLLLEEESSSSSSSSSSSSSSSSSSSSSSSSSSSS")
