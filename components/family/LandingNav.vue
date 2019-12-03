@@ -40,7 +40,7 @@
             </div>
           </div>
         </div>
-        <div class="side-nav-select-wrapper">
+        <div class="side-nav-select-wrapper landing-nav-select-wrapper">
           <div :class="page === 'api' ? 'landing-nav-api-title bold' : 'landing-nav-api-title'"><a :href='"/family/" + header + "/api"'>API</a></div>
           <ul class="side-nav-select-list" v-if="page === 'api'">
             <FamilyNavItem
@@ -247,6 +247,10 @@ export default {
 }
 
 @media screen and (max-width: 900px) {
+  .landing-nav-select-wrapper {
+    display: block;
+  }
+  
   .mobile-top-wrapper {
     align-items: center;
   }
