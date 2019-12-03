@@ -17,61 +17,120 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="repo in newRepos" v-bind:key="repo.name" class="module-row">
+            <tr
+              v-for="repo in newRepos"
+              v-bind:key="repo.name"
+              class="module-row"
+            >
               <td class="module-name">
-                {{repo.name}}
-                <a class="module-name-link" :id="repo.name" :href='"#" + repo.name'></a>
+                {{ repo.name }}
+                <a
+                  class="module-name-link"
+                  :id="repo.name"
+                  :href="'#' + repo.name"
+                ></a>
               </td>
               <td colspan="6" class="nested-td">
                 <table class="nested-table">
                   <tbody class="nested-tbody">
-                    <tr v-for="version in repo.versions" v-bind:key="version.name">
+                    <tr
+                      v-for="version in repo.versions"
+                      v-bind:key="version.name"
+                    >
                       <td class="module-version">
                         <div class="module-version-wrapper">
-                          <div class="version-name">{{version.name}}</div>
+                          <div class="version-name">{{ version.name }}</div>
                           <a
                             target="_blank"
                             class="version-helmet"
-                            :href='getModules.includes(repo.name) ? "/family/" + repo.name + "/?v=" + version.name : (repo.name === "hapi" ? "/api/?v=" + version.name : ("https://github.com/hapijs/" + repo.name + "/tree/" + version.branch))'
+                            :href="
+                              getModules.includes(repo.name)
+                                ? '/family/' + repo.name + '/?v=' + version.name
+                                : repo.name === 'hapi'
+                                ? '/api/?v=' + version.name
+                                : 'https://github.com/hapijs/' +
+                                  repo.name +
+                                  '/tree/' +
+                                  version.branch
+                            "
                           >
-                            <img src="/img/helmet.png" alt="hapi helmet" class="version-img" />
+                            <img
+                              src="/img/helmet.png"
+                              alt="hapi helmet"
+                              class="version-img"
+                            />
                           </a>
                           <a
-                            :href='"https://github.com/hapijs/" + repo.name + "/tree/" + version.branch'
+                            :href="
+                              'https://github.com/hapijs/' +
+                                repo.name +
+                                '/tree/' +
+                                version.branch
+                            "
                             target="_blank"
                           >
-                            <img src="/img/githubLogo.png" alt="github logo" class="version-img" />
+                            <img
+                              src="/img/githubLogo.png"
+                              alt="github logo"
+                              class="version-img"
+                            />
                           </a>
                         </div>
                       </td>
-                      <td class="module-license">{{version.license}}</td>
-                      <td>{{version.node}}</td>
+                      <td class="module-license">{{ version.license }}</td>
+                      <td>{{ version.node }}</td>
                       <td class="status-badge">
                         <img
-                          :src='"https://david-dm.org/hapijs/" + repo.name + ".svg?branch=" + version.branch'
+                          :src="
+                            'https://david-dm.org/hapijs/' +
+                              repo.name +
+                              '.svg?branch=' +
+                              version.branch
+                          "
                           alt="Dependency Status"
                           class="hide"
-                          @load="swapImg('depend' + repo.name + version.name, version.branch)"
-                          :id='"depend" + repo.name + version.name'
+                          @load="
+                            swapImg(
+                              'depend' + repo.name + version.name,
+                              version.branch
+                            )
+                          "
+                          :id="'depend' + repo.name + version.name"
                         />
                       </td>
                       <td class="status-badge">
                         <a
-                          :href='repo.versions.length > 1 ? "https://travis-ci.org/hapijs/" + repo.name + "/branches" : "https://travis-ci.org/hapijs/" + repo.name'
+                          :href="
+                            repo.versions.length > 1
+                              ? 'https://travis-ci.org/hapijs/' +
+                                repo.name +
+                                '/branches'
+                              : 'https://travis-ci.org/hapijs/' + repo.name
+                          "
                           target="_blank"
                         >
                           <img
-                            :src='"https://travis-ci.org/hapijs/" + repo.name + ".svg?branch=" + version.branch'
+                            :src="
+                              'https://travis-ci.org/hapijs/' +
+                                repo.name +
+                                '.svg?branch=' +
+                                version.branch
+                            "
                             alt="Build Status"
                             class="hide"
                             @load="swapImg('travis' + repo.name + version.name)"
-                            :id='"travis" + repo.name + version.name'
+                            :id="'travis' + repo.name + version.name"
                           />
                         </a>
                       </td>
-                      <td
-                        class="module-life"
-                      >{{ life.endOfLife[camelName(repo.name)] && life.endOfLife[camelName(repo.name)][version.name] ? life.endOfLife[camelName(repo.name)][version.name] : null }}</td>
+                      <td class="module-life">
+                        {{
+                          life.endOfLife[camelName(repo.name)] &&
+                          life.endOfLife[camelName(repo.name)][version.name]
+                            ? life.endOfLife[camelName(repo.name)][version.name]
+                            : null
+                        }}
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -88,7 +147,6 @@
 import ResourcesNav from "../../components/resources/ResourcesNav.vue";
 const life = require("../../static/lib/endOfLife.js");
 import _ from "lodash";
-import moduleInfo from "../../static/lib/moduleInfo.json";
 
 export default {
   components: {
@@ -109,7 +167,7 @@ export default {
   data() {
     return {
       page: "status",
-      newRepos: moduleInfo,
+      newRepos: this.moduleInfo,
       img: {
         0: '<div class="status-code status-unknown"></div>',
         76: '<div class="status-code status-unknown"></div>',
@@ -129,6 +187,13 @@ export default {
     getModules() {
       return this.$store.getters.loadModules;
     }
+  },
+  async asyncData({ $axios }) {
+    let moduleInfo = await $axios.$get(
+      "https://hapi-modules.netlify.com/moduleInfo.json"
+    );
+
+    return { moduleInfo };
   },
   methods: {
     camelName(name) {

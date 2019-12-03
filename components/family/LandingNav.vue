@@ -63,7 +63,6 @@
 <script>
 import SideFooter from "~/components/Footers/SideFooter.vue";
 import FamilyNavItem from "~/components/family/FamilyNavItem.vue";
-import moduleInfo from "../../static/lib/moduleInfo.json";
 
 export default {
   components: {
@@ -78,7 +77,8 @@ export default {
     "menu",
     "results",
     "indexResults",
-    "search"
+    "search",
+    "modules"
   ],
   methods: {
     async onVersionChange(event) {
@@ -250,7 +250,7 @@ export default {
   .landing-nav-select-wrapper {
     display: block;
   }
-  
+
   .mobile-top-wrapper {
     align-items: center;
   }

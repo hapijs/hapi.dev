@@ -6,6 +6,7 @@
       :indexResults="indexResults"
       :search="search"
       :page="page"
+      :moduleInfo="modules"
       @search="onChildSearch"
       @previous="onChildIndex"
       @next="onChildIndex"
@@ -80,7 +81,6 @@
 <script>
 import LandingNav from "~/components/family/LandingNav.vue";
 import LandingTable from "~/components/family/LandingTable.vue";
-import moduleInfo from "../../../static/lib/moduleInfo.json";
 let Toc = require("markdown-toc");
 let Semver = require("semver");
 
@@ -105,7 +105,7 @@ export default {
     return {
       page: "home",
       display: "",
-      modules: moduleInfo,
+      modules: this.moduleInfo,
       version: "",
       menu: "",
       name: this.$route.params.family,
@@ -180,6 +180,13 @@ export default {
     onChildInput(value) {
       this.$data.search = value;
     }
+  },
+  async asyncData({ $axios }) {
+    let moduleInfo = await $axios.$get(
+      'https://hapi-modules.netlify.com/moduleInfo.json'
+    )
+
+    return { moduleInfo }
   },
   created() {
     let versionsArray = moduleInfo[this.$route.params.family].versionsArray;
