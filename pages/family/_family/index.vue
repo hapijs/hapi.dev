@@ -81,6 +81,7 @@
 <script>
 import LandingNav from "~/components/family/LandingNav.vue";
 import LandingTable from "~/components/family/LandingTable.vue";
+const moduleInfo = require("../../static/lib/moduleinfo.json");
 let Toc = require("markdown-toc");
 let Semver = require("semver");
 
@@ -105,7 +106,7 @@ export default {
     return {
       page: "home",
       display: "",
-      modules: this.moduleInfo,
+      modules: moduleInfo,
       version: "",
       menu: "",
       name: this.$route.params.family,
@@ -181,13 +182,13 @@ export default {
       this.$data.search = value;
     }
   },
-  async asyncData({ $axios }) {
-    let moduleInfo = await $axios.$get(
-      'https://hapi-modules.netlify.com/mods/moduleInfo.json'
-    )
+  // async asyncData({ $axios }) {
+  //   let moduleInfo = await $axios.$get(
+  //     'https://hapi-modules.netlify.com/mods/moduleInfo.json'
+  //   )
 
-    return { moduleInfo }
-  },
+  //   return { moduleInfo }
+  // },
   created() {
     let versionsArray = moduleInfo[this.$route.params.family].versionsArray;
     if (!this.$store.getters.loadModules.includes(this.$route.params.family)) {

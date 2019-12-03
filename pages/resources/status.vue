@@ -146,7 +146,7 @@
 <script>
 import ResourcesNav from "../../components/resources/ResourcesNav.vue";
 const life = require("../../static/lib/endOfLife.js");
-const moduleInfo = require("../../static/lib/moduleInfo.json");
+const moduleInfo = require("../../static/lib/moduleinfo.json");
 import _ from "lodash";
 
 export default {
@@ -189,13 +189,9 @@ export default {
       return this.$store.getters.loadModules;
     }
   },
-  // async asyncData({ $axios }) {
-  //   let moduleInfo = await $axios.$get(
-  //     "https://hapi-modules.netlify.com/mods/moduleInfo.json"
-  //   );
-
-  //   return { moduleInfo };
-  // },
+  async asyncData({ $axios }) {
+    console.log("INFO", moduleInfo)
+  },
   methods: {
     camelName(name) {
       return _.camelCase(name);
