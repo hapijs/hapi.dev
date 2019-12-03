@@ -3,3 +3,4 @@
 exports.tutorials = require('./tutorials')
 exports.plugins = require('./plugins.md')
 exports.resources = require('./resources.md')
+exports.moduleInfo = require('./moduleInfo.json')
