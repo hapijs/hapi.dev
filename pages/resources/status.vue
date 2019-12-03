@@ -146,7 +146,7 @@
 <script>
 import ResourcesNav from "../../components/resources/ResourcesNav.vue";
 const life = require("../../static/lib/endOfLife.js");
-const moduleInfo = require("/lib/moduleInfo.json");
+const moduleInfo = require("../../static/lib/moduleInfo.json");
 import _ from "lodash";
 
 export default {
