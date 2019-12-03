@@ -31,6 +31,7 @@ async function getInfo() {
       repositories.data[r].name !== ".github" &&
       repositories.data[r].name !== "hapi.dev"
     ) {
+      console.log(repositories.data[r].name)
       let readme = await axios.get(
         "https://api.github.com/repos/hapijs/" +
           repositories.data[r].name +
@@ -105,5 +106,6 @@ async function getInfo() {
   await fs.writeFile('./static/lib/moduleInfo.json', JSON.stringify(newRepos), function(err) {
     if (err) throw err
   })
+  console.log("FILLLLLLLLLLEEESSSSSSSSSSSSSSSSSSSSSSSSSSSS")
 }
 
