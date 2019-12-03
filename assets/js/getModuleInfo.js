@@ -31,7 +31,18 @@ async function getInfo() {
       repositories.data[r].name !== ".github" &&
       repositories.data[r].name !== "hapi.dev"
     ) {
+      let readme = await axios.get(
+        "https://api.github.com/repos/hapijs/" +
+          repositories.data[r].name +
+          "/contents/README.md",
+        options
+      )
+      let slogan =
+          (await readme.data.match(/####(.*)/gm)) !== null
+            ? await readme.data.match(/####(.*)/gm)[0].substring(5)
+            : "Description coming soon..."
       repos[repositories.data[r].name] = {
+        slogan: slogan,
         name: repositories.data[r].name,
         versions: [],
         versionsArray: []

@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <LandingNav 
-      :menu="getMenu"
       :version="getVersion"
       :results="results"
       :indexResults="indexResults"
@@ -27,23 +26,23 @@
         Latest Version:
         <span class="bold">{{ modules[name].versionsArray[0] }}</span>
       </div>
+      <div class="landing-version-status-header">Module Status:</div>
+      <LandingTable :module="modules[name]" :name="name"/>
     </div>
   </div>
 </template>
 
 <script>
 import LandingNav from "~/components/family/LandingNav.vue";
-import Install from "~/components/family/Install.vue";
-import Changelog from "~/components/resources/Changelog.vue";
+import LandingTable from "~/components/family/LandingTable.vue";
 import moduleInfo from "../../../static/lib/moduleInfo.json";
 let Toc = require("markdown-toc");
 let Semver = require("semver");
 
 export default {
   components: {
-    Install,
-    Changelog,
-    LandingNav
+    LandingNav,
+    LandingTable
   },
   head() {
     return {
@@ -138,6 +137,7 @@ export default {
     }
   },
   created() {
+    console.log(moduleInfo)
     let versionsArray = moduleInfo[this.$route.params.family].versionsArray
     if (!this.$store.getters.loadModules.includes(this.$route.params.family)) {
       return this.$nuxt.error({ statusCode: 404 });
@@ -154,7 +154,6 @@ export default {
         query: { v: versionsArray[0] },
         hash: this.$route.hash
       });
-    this.$data.menu = moduleInfo[this.$route.params.family][this.getVersion].menu;
   },
   computed: {
     getDisplay() {
@@ -164,9 +163,6 @@ export default {
     },
     getVersion() {
       return this.$store.getters.loadVersion;
-    },
-    getMenu() {
-      return moduleInfo[this.$route.params.family][this.getVersion].menu;
     },
     getMilestones() {
       return this.milestoneList;
@@ -212,5 +208,12 @@ export default {
   padding-top: 10px;
   border-top: 1px solid #ddd;
   font-size: 1.15em;
+}
+
+.landing-version-status-header {
+  font-size: 1.4em;
+  margin: 30px 0 15px 0;
+  display: inline-block;
+  border-bottom: 1px solid $dark-white;
 }
 </style>

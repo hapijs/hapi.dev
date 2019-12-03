@@ -136,9 +136,6 @@ export default {
       return this.$store.getters.loadVersion;
     },
   },
-  created() {
-    console.log(this.page)
-  },
   mounted() {
     let aClass = this.$route.hash;
     if (this.$route.hash) {
