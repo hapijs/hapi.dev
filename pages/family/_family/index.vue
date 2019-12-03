@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <LandingNav 
+    <LandingNav
       :version="getVersion"
       :results="results"
       :indexResults="indexResults"
@@ -9,12 +9,17 @@
       @search="onChildSearch"
       @previous="onChildIndex"
       @next="onChildIndex"
-      @input="onChildInput"/>
+      @input="onChildInput"
+    />
     <div class="landing-wrapper">
       <div class="landing-title-flex">
         <div class="landing-title-wrapper">
           <h1 class="landing-title">{{ name }}</h1>
           <h5 class="landing-slogan">{{ modules[name].slogan }}</h5>
+          <div class="landing-latest-version">
+            Latest Version:
+            <span class="bold">{{ modules[name].versionsArray[0] }}</span>
+          </div>
         </div>
         <img
           src="/img/family.svg"
@@ -22,12 +27,52 @@
           class="landing-family-img"
         />
       </div>
-      <div>
-        Latest Version:
-        <span class="bold">{{ modules[name].versionsArray[0] }}</span>
+      <div class="landing-install-wrapper">
+        <div class="install-wrapper">
+          <div class="landing-version-status-header">Installation:</div>
+          <p class="install-how">
+            <a
+              class="install-link"
+              target="__blank"
+              :href="
+                modules[name].versions[0].license === 'commercial'
+                  ? 'https://www.npmjs.com/package/@commercial/' + name
+                  : 'https://www.npmjs.com/package/@hapi/' + name
+              "
+              >npm</a
+            >:
+            <span
+              ><code>{{
+                modules[name].versions[0].license === "commercial"
+                  ? "npm install @commercial/" + name
+                  : "npm install @hapi/" + name
+              }}</code></span
+            >
+          </p>
+          <p class="install-how">
+            <a
+              class="install-link"
+              target="__blank"
+              :href="
+                (modules[name].versions[0].license === 'commercial') ===
+                'Commercial'
+                  ? 'https://yarnpkg.com/en/package/@commercial/' + name
+                  : 'https://yarnpkg.com/en/package/@hapi/' + name
+              "
+              >yarn</a
+            >:
+            <span
+              ><code>{{
+                modules[name].versions[0].license === "commercial"
+                  ? "yarn add @commercial/" + name
+                  : "yarn add @hapi/" + name
+              }}</code></span
+            >
+          </p>
+        </div>
       </div>
       <div class="landing-version-status-header">Module Status:</div>
-      <LandingTable :module="modules[name]" :name="name"/>
+      <LandingTable :module="modules[name]" :name="name" />
     </div>
   </div>
 </template>
@@ -137,8 +182,8 @@ export default {
     }
   },
   created() {
-    console.log(moduleInfo)
-    let versionsArray = moduleInfo[this.$route.params.family].versionsArray
+    console.log(moduleInfo);
+    let versionsArray = moduleInfo[this.$route.params.family].versionsArray;
     if (!this.$store.getters.loadModules.includes(this.$route.params.family)) {
       return this.$nuxt.error({ statusCode: 404 });
     }
@@ -147,13 +192,6 @@ export default {
       : versionsArray[0];
     this.$store.commit("setDisplay", "family");
     this.$store.commit("setVersion", version);
-    (!this.$route.query.v ||
-      !versionsArray.includes(this.$route.query.v)) &&
-      this.$router.push({
-        path: this.$route.path,
-        query: { v: versionsArray[0] },
-        hash: this.$route.hash
-      });
   },
   computed: {
     getDisplay() {
@@ -186,11 +224,12 @@ export default {
   display: flex;
   align-items: center;
   width: 100%;
+  margin-bottom: -10px;
 }
 
 .landing-title-wrapper {
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .landing-title {
@@ -200,7 +239,7 @@ export default {
 
 .landing-family-img {
   width: 170px;
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 .landing-slogan {
@@ -210,10 +249,37 @@ export default {
   font-size: 1.15em;
 }
 
+.landing-latest-version {
+  padding: 10px 0 0 0;
+}
+
+.install-how {
+  margin: 0 0 1em 0;
+}
+
+.install-link {
+  font-size: 1.05em;
+  font-weight: 700;
+}
+
 .landing-version-status-header {
   font-size: 1.4em;
   margin: 30px 0 15px 0;
   display: inline-block;
   border-bottom: 1px solid $dark-white;
+}
+@media screen and (max-width: 900px) {
+  .landing-wrapper {
+    padding: 10px;
+    overflow-x: auto;
+  }
+
+  .landing-family-img {
+    display: none;
+  }
+
+  .landing-table {
+    margin-right: 10px;
+  }
 }
 </style>

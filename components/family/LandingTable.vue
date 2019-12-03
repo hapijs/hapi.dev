@@ -17,11 +17,10 @@
             <div class="module-version-wrapper">
               <div class="version-name">{{ version.name }}</div>
               <a
-                target="_blank"
                 class="version-helmet"
                 :href="
                   getModules.includes(name)
-                    ? '/family/' + name + '/?v=' + version.name
+                    ? '/family/' + name + '/api?v=' + version.name
                     : name === 'hapi'
                     ? '/api/?v=' + version.name
                     : 'https://github.com/hapijs/' +
