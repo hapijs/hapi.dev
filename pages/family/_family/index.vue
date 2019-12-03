@@ -81,9 +81,9 @@
 <script>
 import LandingNav from "~/components/family/LandingNav.vue";
 import LandingTable from "~/components/family/LandingTable.vue";
-const moduleInfo = require("../../static/lib/moduleinfo.json");
 let Toc = require("markdown-toc");
 let Semver = require("semver");
+let Yaml = require("js-yaml")
 
 export default {
   components: {
@@ -106,7 +106,7 @@ export default {
     return {
       page: "home",
       display: "",
-      modules: moduleInfo,
+      modules: this.newRepos,
       version: "",
       menu: "",
       name: this.$route.params.family,
@@ -182,15 +182,103 @@ export default {
       this.$data.search = value;
     }
   },
-  // async asyncData({ $axios }) {
-  //   let moduleInfo = await $axios.$get(
-  //     'https://hapi-modules.netlify.com/mods/moduleInfo.json'
-  //   )
+  async asyncData({ $axios, params }) {
+    let repos = {};
+    let newRepos = {};
 
-  //   return { moduleInfo }
-  // },
+    const options = {
+      headers: {
+        accept: "application/vnd.github.v3.raw+json",
+        authorization: "token " + process.env.GITHUB_TOKEN
+      }
+    };
+      let branches = await $axios.$get(
+        "https://api.github.com/repos/hapijs/" +
+          params.family +
+          "/branches",
+        options
+      );
+        let readme = await $axios.$get(
+          "https://api.github.com/repos/hapijs/" +
+            params.family +
+            "/contents/README.md",
+          options
+        );
+        let slogan =
+          (await readme.match(/####(.*)/gm)) !== null
+            ? await readme.match(/####(.*)/gm)[0].substring(5)
+            : "Description coming soon...";
+        repos[params.family] = {
+          slogan: slogan,
+          name: params.family,
+          versions: [],
+          versionsArray: []
+        }
+        for (let branch of branches) {
+          if (branch.name.match(/^v+[0-9]+|\bmaster\b/g)) {
+            const gitHubVersion = await $axios.$get(
+              "https://api.github.com/repos/hapijs/" +
+                params.family +
+                "/contents/package.json?ref=" +
+                branch.name,
+              options
+            );
+            const nodeYaml = await $axios.$get(
+              "https://api.github.com/repos/hapijs/" +
+                params.family +
+                "/contents/.travis.yml?ref=" +
+                branch.name,
+              options
+            );
+
+            let nodeVersions = Yaml.safeLoad(nodeYaml).node_js.reverse();
+            if (
+              !repos[params.family].versions.some(
+                v =>
+                  v.branch === "master" && v.name === gitHubVersion.version
+              ) ||
+              gitHubVersion.name.includes("commercial")
+            ) {
+              repos[params.family].versionsArray.push(
+                gitHubVersion.version
+              );
+              repos[params.family].versions.push({
+                name: gitHubVersion.version,
+                branch: branch.name,
+                license: gitHubVersion.name.includes("commercial")
+                  ? "Commercial"
+                  : "BSD",
+                node: nodeVersions.join(", ").replace("node,", "")
+              });
+            }
+            await repos[params.family].versions.sort(function(
+              a,
+              b
+            ) {
+              return Semver.compare(b.name, a.name);
+            });
+          }
+        }
+      
+
+      const orderedRepos = {};
+      await Object.keys(repos)
+        .sort()
+        .forEach(function(key) {
+          orderedRepos[key] = repos[key];
+        });
+
+      let hapi = orderedRepos.hapi;
+
+      delete orderedRepos.hapi;
+
+      newRepos = await Object.assign({ hapi }, orderedRepos);
+
+      return { newRepos }
+    },
   created() {
-    let versionsArray = moduleInfo[this.$route.params.family].versionsArray;
+    this.$data.modules = this.newRepos;
+    let versionsArray = this.newRepos[this.$route.params.family].versionsArray;
     if (!this.$store.getters.loadModules.includes(this.$route.params.family)) {
       return this.$nuxt.error({ statusCode: 404 });
     }

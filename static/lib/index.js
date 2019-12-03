@@ -1,6 +1,5 @@
 'use strict'
 
-exports.tutorials = require('./tutorials')
-exports.plugins = require('./plugins.md')
-exports.resources = require('./resources.md')
-exports.moduleInfo = require('./moduleInfo.json')
+export const tutorials = require('./tutorials')
+export const plugins = require('./plugins.md')
+export const resources = require('./resources.md')
