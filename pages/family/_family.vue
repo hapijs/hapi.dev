@@ -149,7 +149,6 @@ export default {
       //Set TOC classes
       let anchors = document.querySelectorAll('.family-nav-select-wrapper a');
       let code = document.querySelectorAll('.family-nav-select-wrapper a code');
-      console.log(anchors)
 
       for (let link of anchors) {
         link.classList.add('family-anchor');

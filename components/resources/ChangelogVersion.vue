@@ -85,8 +85,8 @@ export default {
       }
     }
     if (this.$data.issuesArray.length > 10) {
-      this.$data.issuesArray = this.$data.issuesArray.slice(1, 11);
-      this.$data.hiddenIssues = this.$props.issues.slice(11, this.$props.issues.length);
+      this.$data.issuesArray = this.$data.issuesArray.slice(0, 10);
+      this.$data.hiddenIssues = this.$props.issues.slice(10);
       this.$data.showMoreButton = true;
     }
   }
