@@ -9,11 +9,6 @@ getInfo()
 async function getInfo() {
   let repos = {}
   let newRepos = {}
-  if (!fs.existsSync("./static/mods")) {
-    fs.mkdir("./static/mods", err => {
-      if (err) throw err
-    })
-  }
 
   const options = {
     headers: {
