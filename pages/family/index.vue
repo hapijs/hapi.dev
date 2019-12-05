@@ -23,7 +23,7 @@
             </a>
             <div
               class="family-grid-cell-slogan"
-              v-html="$md.render(module.slogan)"
+              v-html="$md.render(moduleInfo[module.name].slogan)"
             ></div>
           </div>
           <div class="family-grid-cell-stats">
@@ -56,6 +56,7 @@
 
 <script>
 import FamilyIndexNav from "~/components/family/FamilyIndexNav.vue";
+const moduleInfo = require("../../static/lib/moduleInfo.json");
 export default {
   components: {
     FamilyIndexNav
@@ -63,6 +64,7 @@ export default {
   data() {
     return {
       modules: this.$store.getters.loadModules,
+      moduleInfo: moduleInfo,
       search: "",
       core: true,
       sort: "name"
@@ -127,24 +129,13 @@ export default {
     let moduleData = [];
     for (let module of store.getters.loadModules) {
       try {
-        let readme = await $axios.$get(
-          "https://api.github.com/repos/hapijs/" +
-            module +
-            "/contents/README.md",
-          options
-        );
         let forks = await $axios.$get(
           "https://api.github.com/repos/hapijs/" + module,
           options
         );
-        let slogan =
-          (await readme.match(/####(.*)/gm)) !== null
-            ? await readme.match(/####(.*)/gm)[0].substring(5)
-            : "Description coming soon...";
         let date = await new Date(forks.pushed_at);
         moduleData.push({
           name: module,
-          slogan: await slogan,
           forks: await Number(forks.forks_count),
           stars: await Number(forks.stargazers_count),
           date: await forks.pushed_at,
