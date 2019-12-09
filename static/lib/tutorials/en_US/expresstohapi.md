@@ -192,9 +192,9 @@ server.route({
     handler: function (request, h) {
 
         const user = {
-            firstName: John,
-            lastName: Doe,
-            userName: JohnDoe,
+            firstName: 'John',
+            lastName: 'Doe',
+            userName: 'JohnDoe',
             id: 123
         }
 
