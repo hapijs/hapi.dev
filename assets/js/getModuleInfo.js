@@ -66,6 +66,7 @@ getInfo()
 async function getInfo() {
   let repos = {}
   let newRepos = {}
+  let intro = ""
   const options = {
     headers: {
       accept: "application/vnd.github.v3.raw+json",
@@ -95,6 +96,7 @@ async function getInfo() {
         versionsArray: [],
       }
       for (let branch of branches.data) {
+        intro = ""
         if (branch.name.match(/^v+[0-9]+|\bmaster\b/g)) {
           const gitHubVersion = await axios.get(
             "https://api.github.com/repos/hapijs/" +
@@ -123,6 +125,12 @@ async function getInfo() {
               )
               let rawString = await api.data.toString()
 
+              let intros = await rawString.match(/(?=#.*Intro)([\s\S]*?)(?=\n#)/g)
+              if (intros) {
+                rawString = await rawString.replace(/(?=#.*Intro)([\s\S]*?)(?=\n#)/g, "")
+                intro = intros[0]
+              }
+
               //Auto generate TOC
               let apiTocString = ""
               let apiTocArray = await rawString.match(/\n#.+/g)
@@ -138,7 +146,7 @@ async function getInfo() {
               apiTocString = apiTocString + "\n" + pattern + " Changelog"
               finalMenu = Toc(apiTocString, { bullets: "-" }).content
 
-              //Split API menu from content
+              //Generate API and Menu HTML
               let finalDisplay = await rawString.replace(/\/>/g, "></a>")
               finalMenu = await finalMenu.replace(/Boom\./g, "")
               finalMenu = await finalMenu.replace(/\(([^#*]+)\)/g, "()")
@@ -183,6 +191,7 @@ async function getInfo() {
             repos[repositories.data[r].name][gitHubVersion.data.version] = {
               menu: finalMenu,
               api: await finalHtmlDisplay,
+              intro: intro,
               license: gitHubVersion.data.name.includes("commercial")
                 ? "Commercial"
                 : "BSD"
