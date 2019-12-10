@@ -74,6 +74,12 @@
       </div>
       <div class="landing-version-status-header">Module Status:</div>
       <LandingTable :module="modules[name]" :name="name" />
+      <div v-if="intro" class="intro-wrapper">
+        <div v-html="$md.render(modules[name][getVersion].intro)"></div>
+      </div>
+      <div v-if="example" class="intro-wrapper">
+        <div v-html="$md.render(modules[name][getVersion].example)"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -115,7 +121,9 @@ export default {
       search: "",
       results: [],
       uls: {},
-      links: {}
+      links: {},
+      intro: false,
+      example: false
     };
   },
   methods: {
@@ -195,6 +203,12 @@ export default {
       : versionsArray[0];
     this.$store.commit("setDisplay", "family");
     this.$store.commit("setVersion", version);
+    if (this.modules[this.$route.params.family][version].intro) {
+      this.$data.intro = true
+    }
+    if (this.modules[this.$route.params.family][version].example) {
+      this.$data.example = true
+    }
   },
   computed: {
     getDisplay() {
@@ -271,6 +285,11 @@ export default {
   display: inline-block;
   border-bottom: 1px solid $dark-white;
 }
+
+.intro-wrapper {
+  margin-top: 30px;
+}
+
 @media screen and (max-width: 900px) {
   .landing-wrapper {
     padding: 10px;

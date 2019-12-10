@@ -85,6 +85,7 @@ async function getInfo() {
         "/branches",
       options
     )
+    console.log(repositories.data[r].name)
     if (
       repositories.data[r].name !== "assets" &&
       repositories.data[r].name !== ".github" &&
@@ -184,7 +185,8 @@ async function getInfo() {
                 v.branch === "master" && v.name === gitHubVersion.data.version
             ) ||
             gitHubVersion.data.name.includes("commercial")
-          ) {
+          ) 
+          {
             repos[repositories.data[r].name].versionsArray.push(
               gitHubVersion.data.version
             )
@@ -214,7 +216,6 @@ async function getInfo() {
     }
 
     if (modules.includes(repositories.data[r].name)) {
-      console.log(repositories.data[r].name)
       let readme = await axios.get(
         "https://api.github.com/repos/hapijs/" +
           repositories.data[r].name +
