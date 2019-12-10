@@ -100,6 +100,7 @@ async function getInfo() {
       for (let branch of branches.data) {
         intro = ""
         example = ""
+        console.log(repositories.data[r].name, branch.name)
         if (branch.name.match(/^v+[0-9]+|\bmaster\b/g)) {
           const gitHubVersion = await axios.get(
             "https://api.github.com/repos/hapijs/" +
@@ -108,6 +109,7 @@ async function getInfo() {
               branch.name,
             options
           )
+          console.log(repositories.data[r].name, gitHubVersion.data.version)
           const nodeYaml = await axios.get(
             "https://api.github.com/repos/hapijs/" +
               repositories.data[r].name +
@@ -132,12 +134,15 @@ async function getInfo() {
               let examples = await rawString.match(/(?=#.*Example)([\s\S]*?)(?=\n#)/g)
 
               if (intros) {
+                console.log (repositories.data[r].name, "INTRO!!!!")
                 rawString = await rawString.replace(/(?=#.*Intro)([\s\S]*?)(?=\n#)/g, "")
                 intro = intros[0]
               }
-              if (intros) {
+              if (examples) {
+                console.log (repositories.data[r].name, "Examples!!!!")
                 rawString = await rawString.replace(/(?=#.*Example)([\s\S]*?)(?=\n#)/g, "")
                 example = examples[0]
+                await console.log(examples)
               }
 
               //Auto generate TOC
@@ -152,6 +157,7 @@ async function getInfo() {
                 }
                 apiTocString = apiTocString + apiTocArray[i]
               }
+              console.log(repositories.data[r].name, "TOC!!")
               apiTocString = apiTocString + "\n" + pattern + " Changelog"
               finalMenu = Toc(apiTocString, { bullets: "-" }).content
 
@@ -179,6 +185,7 @@ async function getInfo() {
           }
 
           let nodeVersions = Yaml.safeLoad(nodeYaml.data).node_js.reverse()
+          console.log(repositories.data[r].name, repos[repositories.data[r].name].versions)
           if (
             !repos[repositories.data[r].name].versions.some(
               v =>

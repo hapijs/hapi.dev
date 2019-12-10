@@ -290,6 +290,13 @@ export default {
   margin-top: 30px;
 }
 
+.intro-wrapper h2, .intro-wrapper h3, .intro-wrapper h4 {
+  font-size: 1.4em;
+  border-bottom: 1px solid #ddd;
+  display: inline-block;
+  border-top: none;
+}
+
 @media screen and (max-width: 900px) {
   .landing-wrapper {
     padding: 10px;
