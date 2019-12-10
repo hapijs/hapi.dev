@@ -67,6 +67,7 @@ async function getInfo() {
   let repos = {}
   let newRepos = {}
   let intro = ""
+  let example = ""
   const options = {
     headers: {
       accept: "application/vnd.github.v3.raw+json",
@@ -97,6 +98,7 @@ async function getInfo() {
       }
       for (let branch of branches.data) {
         intro = ""
+        example = ""
         if (branch.name.match(/^v+[0-9]+|\bmaster\b/g)) {
           const gitHubVersion = await axios.get(
             "https://api.github.com/repos/hapijs/" +
@@ -126,9 +128,15 @@ async function getInfo() {
               let rawString = await api.data.toString()
 
               let intros = await rawString.match(/(?=#.*Intro)([\s\S]*?)(?=\n#)/g)
+              let examples = await rawString.match(/(?=#.*Example)([\s\S]*?)(?=\n#)/g)
+
               if (intros) {
                 rawString = await rawString.replace(/(?=#.*Intro)([\s\S]*?)(?=\n#)/g, "")
                 intro = intros[0]
+              }
+              if (intros) {
+                rawString = await rawString.replace(/(?=#.*Example)([\s\S]*?)(?=\n#)/g, "")
+                example = examples[0]
               }
 
               //Auto generate TOC
@@ -192,6 +200,7 @@ async function getInfo() {
               menu: finalMenu,
               api: await finalHtmlDisplay,
               intro: intro,
+              example: example,
               license: gitHubVersion.data.name.includes("commercial")
                 ? "Commercial"
                 : "BSD"
