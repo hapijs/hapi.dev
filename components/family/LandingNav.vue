@@ -75,6 +75,7 @@
             <a :href="'/family/' + header + '#status'">Status</a>
           </div>
           <div
+            v-if="intro"
             id="introduction1"
             :class="
               getHash === '#introduction'
@@ -85,6 +86,7 @@
             <a :href="'/family/' + header + '#introduction'">Introduction</a>
           </div>
           <div
+            v-if="example"
             id="example1"
             :class="
               getHash === '#example'
@@ -95,6 +97,7 @@
             <a :href="'/family/' + header + '#example'">Example</a>
           </div>
           <div
+            v-if="usage"
             id="usage1"
             :class="
               getHash === '#usage'
@@ -157,7 +160,10 @@ export default {
     "results",
     "indexResults",
     "search",
-    "modules"
+    "modules",
+    "intro",
+    "example",
+    "usage"
   ],
   methods: {
     async onVersionChange(event) {
