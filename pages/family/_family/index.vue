@@ -30,7 +30,10 @@
       </div>
       <div class="landing-install-wrapper">
         <div class="install-wrapper">
-          <div class="landing-version-status-header">Installation:</div>
+          <div class="landing-version-status-header">
+            <a name="install" class="landing-link landing-anchor"></a>
+            Installation:
+          </div>
           <p class="install-how">
             <a
               class="install-link"
@@ -72,15 +75,20 @@
           </p>
         </div>
       </div>
-      <div class="landing-version-status-header">Module Status:</div>
+      <div class="landing-version-status-header">
+        <a name="status" class="landing-link landing-anchor"></a>Module Status:
+      </div>
       <LandingTable :module="modules[name]" :name="name" />
       <div v-if="intro" class="intro-wrapper">
+        <a name="introduction" class="landing-link2 landing-anchor"></a>
         <div v-html="$md.render(modules[name][getVersion].intro)"></div>
       </div>
       <div v-if="example" class="intro-wrapper">
+        <a name="example" class="landing-link2 landing-anchor"></a>
         <div v-html="exampleHTML"></div>
       </div>
       <div v-if="usage" class="intro-wrapper">
+        <a name="usage" class="landing-link2 landing-anchor"></a>
         <div v-html="usageHTML"></div>
       </div>
     </div>
@@ -268,6 +276,9 @@ export default {
     getMilestones() {
       return this.milestoneList;
     }
+  },
+  mounted() {
+    this.goToAnchor();
   }
 };
 </script>
@@ -344,6 +355,20 @@ export default {
 
 .intro-wrapper p {
   margin: 0;
+}
+
+.landing-link {
+  display: block;
+  position: relative;
+  top: -116px;
+  visibility: hidden;
+}
+
+.landing-link2 {
+  display: block;
+  position: relative;
+  top: -76px;
+  visibility: hidden;
 }
 
 @media screen and (max-width: 900px) {
