@@ -158,7 +158,6 @@ async function getInfo() {
                 apiTocString = apiTocString + apiTocArray[i]
               }
               console.log(repositories.data[r].name, "TOC!!")
-              apiTocString = apiTocString + "\n" + pattern + " Changelog"
               finalMenu = Toc(apiTocString, { bullets: "-" }).content
 
               //Generate API and Menu HTML
