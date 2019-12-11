@@ -224,8 +224,6 @@ export default {
       }
       offsets = [...new Set(offsets)];
 
-      console.log(points);
-
       //Add active class to elements on scroll
       window.onscroll = function() {
         let location = document.documentElement.scrollTop;
