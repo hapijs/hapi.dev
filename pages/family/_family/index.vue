@@ -80,6 +80,9 @@
       <div v-if="example" class="intro-wrapper">
         <div v-html="exampleHTML"></div>
       </div>
+      <div v-if="usage" class="intro-wrapper">
+        <div v-html="usageHTML"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -123,7 +126,8 @@ export default {
       uls: {},
       links: {},
       intro: false,
-      example: false
+      example: false,
+      usage: false
     };
   },
   methods: {
@@ -198,9 +202,11 @@ export default {
         authorization: "token " + process.env.GITHUB_TOKEN
       }
     };
+    let exampleHTML = "";
+    let usageHTML = "";
     let version = moduleInfo[params.family].versionsArray[0];
     if (moduleInfo[params.family][version].example) {
-      const exampleHTML = await $axios.$post(
+      exampleHTML = await $axios.$post(
         "https://api.github.com/markdown",
         {
           text: moduleInfo[params.family][version].example,
@@ -212,8 +218,22 @@ export default {
           }
         }
       );
-      return { exampleHTML }
     }
+    if (moduleInfo[params.family][version].usage) {
+      usageHTML = await $axios.$post(
+        "https://api.github.com/markdown",
+        {
+          text: moduleInfo[params.family][version].usage,
+          mode: "markdown"
+        },
+        {
+          headers: {
+            authorization: "token " + process.env.GITHUB_TOKEN
+          }
+        }
+      );
+    }
+    return { exampleHTML, usageHTML };
   },
   created() {
     this.$data.modules = moduleInfo;
@@ -231,6 +251,9 @@ export default {
     }
     if (this.modules[this.$route.params.family][version].example) {
       this.$data.example = true;
+    }
+    if (this.modules[this.$route.params.family][version].usage) {
+      this.$data.usage = true;
     }
   },
   computed: {
