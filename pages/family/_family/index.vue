@@ -78,7 +78,7 @@
         <div v-html="$md.render(modules[name][getVersion].intro)"></div>
       </div>
       <div v-if="example" class="intro-wrapper">
-        <div v-html="$md.render(modules[name][getVersion].example)"></div>
+        <div v-html="exampleHTML"></div>
       </div>
     </div>
   </div>
@@ -90,7 +90,7 @@ import LandingTable from "~/components/family/LandingTable.vue";
 const moduleInfo = require("../../../static/lib/moduleInfo.json");
 let Toc = require("markdown-toc");
 let Semver = require("semver");
-let Yaml = require("js-yaml")
+let Yaml = require("js-yaml");
 
 export default {
   components: {
@@ -191,7 +191,32 @@ export default {
       this.$data.search = value;
     }
   },
+  async asyncData({ $axios, params }) {
+    const options = {
+      headers: {
+        accept: "application/vnd.github.v3.raw+json",
+        authorization: "token " + process.env.GITHUB_TOKEN
+      }
+    };
+    let version = moduleInfo[params.family].versionsArray[0];
+    if (moduleInfo[params.family][version].example) {
+      const exampleHTML = await $axios.$post(
+        "https://api.github.com/markdown",
+        {
+          text: moduleInfo[params.family][version].example,
+          mode: "markdown"
+        },
+        {
+          headers: {
+            authorization: "token " + process.env.GITHUB_TOKEN
+          }
+        }
+      );
+      return { exampleHTML }
+    }
+  },
   created() {
+    console.log(moduleInfo);
     this.$data.modules = moduleInfo;
     let versionsArray = moduleInfo[this.$route.params.family].versionsArray;
     if (!this.$store.getters.loadModules.includes(this.$route.params.family)) {
@@ -203,10 +228,10 @@ export default {
     this.$store.commit("setDisplay", "family");
     this.$store.commit("setVersion", version);
     if (this.modules[this.$route.params.family][version].intro) {
-      this.$data.intro = true
+      this.$data.intro = true;
     }
     if (this.modules[this.$route.params.family][version].example) {
-      this.$data.example = true
+      this.$data.example = true;
     }
   },
   computed: {
@@ -279,21 +304,24 @@ export default {
 }
 
 .landing-version-status-header {
-  font-size: 1.4em;
+  font-size: 1.5em;
   margin: 30px 0 15px 0;
   display: inline-block;
   border-bottom: 1px solid $dark-white;
 }
 
-.intro-wrapper {
-  margin-top: 30px;
-}
-
-.intro-wrapper h2, .intro-wrapper h3, .intro-wrapper h4 {
-  font-size: 1.4em;
+.intro-wrapper h2,
+.intro-wrapper h3,
+.intro-wrapper h4 {
+  font-size: 1.5em;
   border-bottom: 1px solid #ddd;
   display: inline-block;
   border-top: none;
+  margin: 30px 0 15px 0;
+}
+
+.intro-wrapper p {
+  margin: 0;
 }
 
 @media screen and (max-width: 900px) {
