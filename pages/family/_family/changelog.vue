@@ -1,6 +1,11 @@
 <template>
   <div class="container">
-    <LandingNav page="changelog" />
+    <LandingNav
+      page="changelog"
+      :intro="intro"
+      :example="example"
+      :usage="usage"
+    />
     <div class="community-wrapper">
       <Changelog :milestones="getMilestones" />
     </div>
@@ -10,6 +15,7 @@
 <script>
 import Changelog from "../../../components/resources/Changelog.vue";
 import LandingNav from "../../../components/family/LandingNav.vue";
+const moduleInfo = require("../../../static/lib/moduleInfo.json");
 let Semver = require("semver");
 
 export default {
@@ -19,7 +25,11 @@ export default {
   },
   data() {
     return {
-      page: "changelog"
+      moduleAPI: moduleInfo,
+      page: "changelog",
+      intro: false,
+      example: false,
+      usage: false
     };
   },
   head() {
@@ -88,9 +98,6 @@ export default {
     }
     return { milestoneList };
   },
-  created() {
-    console.log(this.milestoneList)
-  },
   computed: {
     getCommunity() {
       return this.$store.getters.loadCommunity;
@@ -100,7 +107,17 @@ export default {
     }
   },
   async created() {
-    await this.$store.commit("setDisplay", "resources");
+    await this.$store.commit("setDisplay", "family");
+    let versionsArray = this.moduleAPI[this.$route.params.family].versionsArray;
+    if (this.moduleAPI[this.$route.params.family][versionsArray[0]].intro) {
+      this.$data.intro = true;
+    }
+    if (this.moduleAPI[this.$route.params.family][versionsArray[0]].example) {
+      this.$data.example = true;
+    }
+    if (this.moduleAPI[this.$route.params.family][versionsArray[0]].usage) {
+      this.$data.usage = true;
+    }
   },
   methods: {
     changePage(value) {

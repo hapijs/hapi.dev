@@ -9,6 +9,9 @@
       :results="results"
       :indexResults="indexResults"
       :search="search"
+      :intro="intro"
+      :example="example"
+      :usage="usage"
       @search="onChildSearch"
       @previous="onChildIndex"
       @next="onChildIndex"
@@ -66,7 +69,10 @@ export default {
       search: '',
       results: [],
       uls: {},
-      links: {}
+      links: {},
+      intro: false,
+      example: false,
+      usage: false
     };
   },
   methods: {
@@ -405,6 +411,15 @@ export default {
         hash: this.$route.hash
       });
     this.$data.menu = this.moduleAPI[this.$route.params.family][this.getVersion].menu;
+    if (this.moduleAPI[this.$route.params.family][versionsArray[0]].intro) {
+      this.$data.intro = true;
+    }
+    if (this.moduleAPI[this.$route.params.family][versionsArray[0]].example) {
+      this.$data.example = true;
+    }
+    if (this.moduleAPI[this.$route.params.family][versionsArray[0]].usage) {
+      this.$data.usage = true;
+    }
   },
   mounted() {
     this.setClasses();
