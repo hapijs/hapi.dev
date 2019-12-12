@@ -62,7 +62,7 @@
                 : 'landing-nav-api-title'
             "
           >
-            <a :href="'/family/' + header + '#install'">Installation</a>
+            <a :href='page === "home" ? "#install" : "/family/" + header + "#install"'>Installation</a>
           </div>
           <div
             id="status1"
@@ -72,7 +72,7 @@
                 : 'landing-nav-api-title'
             "
           >
-            <a :href="'/family/' + header + '#status'">Status</a>
+            <a :href='page === "home" ? "#status" : "/family/" + header + "#status"'>Status</a>
           </div>
           <div
             v-if="intro"
@@ -83,7 +83,7 @@
                 : 'landing-nav-api-title'
             "
           >
-            <a :href="'/family/' + header + '#introduction'">Introduction</a>
+            <a :href='page === "home" ? "#introduction" : "/family/" + header + "#introduction"'>Introduction</a>
           </div>
           <div
             v-if="example"
@@ -94,7 +94,7 @@
                 : 'landing-nav-api-title'
             "
           >
-            <a :href="'/family/' + header + '#example'">Example</a>
+            <a :href='page === "home" ? "#example" : "/family/" + header + "#example"'>Example</a>
           </div>
           <div
             v-if="usage"
@@ -105,7 +105,7 @@
                 : 'landing-nav-api-title'
             "
           >
-            <a :href="'/family/' + header + '#usage'">Usage</a>
+            <a :href='page === "home" ? "#usage" : "/family/" + header + "#usage"'>Usage</a>
           </div>
           <div
             :class="
