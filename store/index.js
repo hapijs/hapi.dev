@@ -5,6 +5,9 @@ export const state = () => ({
   display: "home",
   language: "en_US",
   version: "",
+  example: false,
+  intro: false,
+  usage: false,
   modules: [
     "accept",
     "address",
@@ -71,6 +74,15 @@ export const mutations = {
   },
   setVersion (state, version) {
     state.version = version
+  },
+  setExample (state, example) {
+    state.example = example
+  },
+  setIntro (state, intro) {
+    state.intro = intro
+  },
+  setUsage (state, usage) {
+    state.usage = usage
   }
 }
 
@@ -89,5 +101,14 @@ export const getters = {
   },
   loadModules (state) {
     return state.modules
+  },
+  loadExample (state) {
+    return state.example
+  },
+  loadIntro (state) {
+    return state.intro
+  },
+  loadUsage (state) {
+    return state.usage
   }
 }

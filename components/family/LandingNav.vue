@@ -78,7 +78,7 @@
             v-if="intro"
             id="introduction1"
             :class="
-              getHash === '#introduction'
+              hash === '#introduction'
                 ? 'landing-nav-api-title bold'
                 : 'landing-nav-api-title'
             "
@@ -89,7 +89,7 @@
             v-if="example"
             id="example1"
             :class="
-              getHash === '#example'
+              hash === '#example'
                 ? 'landing-nav-api-title bold'
                 : 'landing-nav-api-title'
             "
@@ -100,7 +100,7 @@
             v-if="usage"
             id="usage1"
             :class="
-              getHash === '#usage'
+              hash === '#usage'
                 ? 'landing-nav-api-title bold'
                 : 'landing-nav-api-title'
             "
@@ -230,15 +230,30 @@ export default {
         let locationBody = document.body.scrollTop;
         let actives = document.getElementsByClassName("bold");
         let i = 0;
-        for (i in offsets) {
-          if (offsets[i] <= location || offsets[i] <= locationBody) {
-            let aClass = points[offsets[i]].name;
-            for (let active of actives) {
-              active.classList.remove("bold");
-            }
+        // for (i in offsets) {
+        //   if (offsets[i] <= location || offsets[i] <= locationBody) {
+        //     let aClass = points[offsets[i]].name;
+        //     for (let active of actives) {
+        //       active.classList.remove("bold");
+        //     }
 
-            let element = document.querySelector(aClass + "1");
-            element.classList.add("bold")
+        //     let element = document.querySelector(aClass + "1");
+        //     element.classList.add("bold");
+        //   }
+        // }
+        if (
+          window.innerHeight + window.scrollY <
+          document.body.offsetHeight + 96
+        ) {
+          for (i in offsets) {
+            if (offsets[i] <= location || offsets[i] <= locationBody) {
+              let aClass = points[offsets[i]].name;
+              for (let active of actives) {
+                active.classList.remove("bold");
+              }
+              let element = document.querySelector(aClass + "1");
+              element.classList.add("bold");
+            }
           }
         }
       };
@@ -247,7 +262,8 @@ export default {
   data() {
     return {
       header: this.$route.params.family,
-      showAPI: false
+      showAPI: false,
+      hash: ""
     };
   },
   computed: {
@@ -263,6 +279,10 @@ export default {
   },
   mounted() {
     this.onScroll();
+    this.$data.hash = this.getHash
+  },
+  updated() {
+    this.$data.hash = this.getHash
   }
 };
 </script>
