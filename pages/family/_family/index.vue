@@ -268,6 +268,7 @@ export default {
     return { exampleHTML, usageHTML, faqHTML };
   },
   created() {
+    console.log(moduleInfo)
     this.$data.modules = moduleInfo;
     let versionsArray = moduleInfo[this.$route.params.family].versionsArray;
     if (!this.$store.getters.loadModules.includes(this.$route.params.family)) {

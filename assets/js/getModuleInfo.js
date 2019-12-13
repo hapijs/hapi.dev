@@ -135,24 +135,24 @@ async function getInfo() {
               rawString = await rawString + "#"
               
               if (branch.name === "master") {
-                let intros = await rawString.match(/(?=#.*Intro)([\s\S]*?)(?=\n#)/g)
-                let examples = await rawString.match(/(?=#.*Example)([\s\S]*?)(?=\n#)/g)
-                let usages = await rawString.match(/(?=#.*Usage)([\s\S]*?)(?=\n#)/g)
-                let faqs = await rawString.match(/(?=#.*F.A.Q.)([\s\S]*?)(?=\n#)/g)
+                let intros = await rawString.match(/(?=#.*Intro)([\s\S]*?)(?=\n#)/)
                 if (intros) {
-                  rawString = await rawString.replace(/(?=#.*Intro)([\s\S]*?)(?=\n#)/g, "")
+                  rawString = await rawString.replace(/(?=#.*Intro)([\s\S]*?)(?=\n#)/, "")
                   intro = intros[0]
                 }
-                if (examples) {
-                  rawString = await rawString.replace(/(?=#.*Example)([\s\S]*?)(?=\n#)/g, "")
-                  example = examples[0]
-                }
-                if (usages && usages[0] !== examples[0]) {
-                  rawString = await rawString.replace(/(?=#.*Usage)([\s\S]*?)(?=\n#)/g, "")
+                let usages = await rawString.match(/(?=#.*Usage)([\s\S]*?)(?=\n#)/)
+                if (usages) {
+                  rawString = await rawString.replace(/(?=#.*Usage)([\s\S]*?)(?=\n#)/, "")
                   usage = usages[0]
                 }
+                let examples = await rawString.match(/(?=#.*Example)([\s\S]*?)(?=\n#)/)
+                if (examples) {
+                  rawString = await rawString.replace(/(?=#.*Example)([\s\S]*?)(?=\n#)/, "")
+                  example = examples[0]
+                }
+                let faqs = await rawString.match(/(?=#.*F.A.Q.)([\s\S]*?)(?=\n#)/)
                 if (faqs) {
-                  rawString = await rawString.replace(/(?=#.*F.A.Q.)([\s\S]*?)(?=\n#)/g, "")
+                  rawString = await rawString.replace(/(?=#.*F.A.Q.)([\s\S]*?)(?=\n#)/, "")
                   faq = faqs[0]
                 }
               }
