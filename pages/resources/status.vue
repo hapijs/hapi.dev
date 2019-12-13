@@ -281,18 +281,18 @@ export default {
 .node-header,
 .life-header {
   width: 10.546875%;
-  text-align: center;
+  text-align: center !important;
   font-weight: 900;
 }
 
 .version-header {
   width: 18.75%;
-  text-align: center;
+  text-align: center !important;
   font-weight: 900;
 }
 
 .header-module {
-  text-align: center;
+  text-align: center !important;
 }
 
 .header-row {
@@ -303,7 +303,7 @@ export default {
 .module-name {
   width: 25%;
   border-right: 1px solid $dark-white;
-  text-align: center;
+  text-align: center !important;
   vertical-align: middle;
   font-size: 1.15em;
   font-weight: 700;
@@ -337,7 +337,7 @@ export default {
 
 .nested-table td {
   width: 14.0625%;
-  text-align: center;
+  text-align: center !important;
 }
 
 .module-license {
