@@ -10,6 +10,7 @@
       :intro="intro"
       :example="example"
       :usage="usage"
+      :faq="faq"
       @search="onChildSearch"
       @previous="onChildIndex"
       @next="onChildIndex"
@@ -94,6 +95,10 @@
         <a name="usage" class="landing-link2 landing-anchor"></a>
         <div v-html="usageHTML"></div>
       </div>
+      <div v-if="faq" class="intro-wrapper">
+        <a name="faq" class="landing-link2 landing-anchor"></a>
+        <div v-html="faqHTML"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -138,7 +143,8 @@ export default {
       links: {},
       intro: false,
       example: false,
-      usage: false
+      usage: false,
+      faq: false
     };
   },
   methods: {
@@ -215,6 +221,7 @@ export default {
     };
     let exampleHTML = "";
     let usageHTML = "";
+    let faqHTML = "";
     let version = moduleInfo[params.family].versionsArray[0];
     if (moduleInfo[params.family][version].example) {
       exampleHTML = await $axios.$post(
@@ -244,7 +251,21 @@ export default {
         }
       );
     }
-    return { exampleHTML, usageHTML };
+    if (moduleInfo[params.family][version].faq) {
+      faqHTML = await $axios.$post(
+        "https://api.github.com/markdown",
+        {
+          text: moduleInfo[params.family][version].faq,
+          mode: "markdown"
+        },
+        {
+          headers: {
+            authorization: "token " + process.env.GITHUB_TOKEN
+          }
+        }
+      );
+    }
+    return { exampleHTML, usageHTML, faqHTML };
   },
   created() {
     this.$data.modules = moduleInfo;
@@ -265,6 +286,9 @@ export default {
     }
     if (this.modules[this.$route.params.family][version].usage) {
       this.$data.usage = true;
+    }
+    if (this.modules[this.$route.params.family][version].faq) {
+      this.$data.faq = true;
     }
   },
   computed: {
@@ -346,6 +370,7 @@ export default {
   border-bottom: 1px solid $dark-white;
 }
 
+.intro-wrapper h1,
 .intro-wrapper h2,
 .intro-wrapper h3,
 .intro-wrapper h4 {

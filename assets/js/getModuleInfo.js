@@ -69,6 +69,7 @@ async function getInfo() {
   let intro = ""
   let example = ""
   let usage = ""
+  let faq = ""
   const options = {
     headers: {
       accept: "application/vnd.github.v3.raw+json",
@@ -102,6 +103,7 @@ async function getInfo() {
         intro = ""
         example = ""
         usage = ""
+        faq = ""
         if (branch.name.match(/^v+[0-9]+|\bmaster\b/g)) {
           const gitHubVersion = await axios.get(
             "https://api.github.com/repos/hapijs/" +
@@ -130,22 +132,32 @@ async function getInfo() {
               )
               let rawString = await api.data.toString()
 
-              let intros = await rawString.match(/(?=#.*Intro)([\s\S]*?)(?=\n#)/g)
-              let examples = await rawString.match(/(?=#.*Example)([\s\S]*?)(?=\n#)/g)
-              let usages = await rawString.match(/(?=#.*Usage)([\s\S]*?)(?=\n#)/g)
+              rawString = await rawString + "#"
+              
+              if (branch.name === "master") {
+                let intros = await rawString.match(/(?=#.*Intro)([\s\S]*?)(?=\n#)/g)
+                let examples = await rawString.match(/(?=#.*Example)([\s\S]*?)(?=\n#)/g)
+                let usages = await rawString.match(/(?=#.*Usage)([\s\S]*?)(?=\n#)/g)
+                let faqs = await rawString.match(/(?=#.*F.A.Q.)([\s\S]*?)(?=\n#)/g)
+                if (intros) {
+                  rawString = await rawString.replace(/(?=#.*Intro)([\s\S]*?)(?=\n#)/g, "")
+                  intro = intros[0]
+                }
+                if (examples) {
+                  rawString = await rawString.replace(/(?=#.*Example)([\s\S]*?)(?=\n#)/g, "")
+                  example = examples[0]
+                }
+                if (usages && usages[0] !== examples[0]) {
+                  rawString = await rawString.replace(/(?=#.*Usage)([\s\S]*?)(?=\n#)/g, "")
+                  usage = usages[0]
+                }
+                if (faqs) {
+                  rawString = await rawString.replace(/(?=#.*F.A.Q.)([\s\S]*?)(?=\n#)/g, "")
+                  faq = faqs[0]
+                }
+              }
 
-              if (intros) {
-                rawString = await rawString.replace(/(?=#.*Intro)([\s\S]*?)(?=\n#)/g, "")
-                intro = intros[0]
-              }
-              if (examples) {
-                rawString = await rawString.replace(/(?=#.*Example)([\s\S]*?)(?=\n#)/g, "")
-                example = examples[0]
-              }
-              if (usages) {
-                rawString = await rawString.replace(/(?=#.*Usage)([\s\S]*?)(?=\n#)/g, "")
-                usage = usages[0]
-              }
+              rawString = rawString.substring(0, rawString.length - 1)
 
               //Auto generate TOC
               let apiTocString = ""
@@ -211,6 +223,7 @@ async function getInfo() {
               intro: intro,
               example: example,
               usage: usage,
+              faq: faq,
               license: gitHubVersion.data.name.includes("commercial")
                 ? "Commercial"
                 : "BSD"

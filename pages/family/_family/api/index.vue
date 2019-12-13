@@ -12,6 +12,7 @@
       :intro="intro"
       :example="example"
       :usage="usage"
+      :faq="faq"
       @search="onChildSearch"
       @previous="onChildIndex"
       @next="onChildIndex"
@@ -74,7 +75,8 @@ export default {
       links: {},
       intro: false,
       example: false,
-      usage: false
+      usage: false,
+      faq: false
     };
   },
   methods: {
@@ -461,6 +463,9 @@ export default {
     }
     if (this.moduleAPI[this.$route.params.family][versionsArray[0]].usage) {
       this.$data.usage = true;
+    }
+    if (this.moduleAPI[this.$route.params.family][versionsArray[0]].faq) {
+      this.$data.faq = true;
     }
   },
   mounted() {

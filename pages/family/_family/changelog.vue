@@ -5,6 +5,7 @@
       :intro="intro"
       :example="example"
       :usage="usage"
+      :faq="faq"
     />
     <div class="community-wrapper">
       <Changelog :milestones="getMilestones" />
@@ -29,7 +30,8 @@ export default {
       page: "changelog",
       intro: false,
       example: false,
-      usage: false
+      usage: false,
+      faq: false
     };
   },
   head() {
@@ -117,6 +119,9 @@ export default {
     }
     if (this.moduleAPI[this.$route.params.family][versionsArray[0]].usage) {
       this.$data.usage = true;
+    }
+    if (this.moduleAPI[this.$route.params.family][versionsArray[0]].faq) {
+      this.$data.faq = true;
     }
   },
   methods: {

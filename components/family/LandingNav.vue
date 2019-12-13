@@ -108,6 +108,17 @@
             <a :href='page === "home" ? "#usage" : "/family/" + header + "#usage"'>Usage</a>
           </div>
           <div
+            v-if="faq"
+            id="faq1"
+            :class="
+              hash === '#faq'
+                ? 'landing-nav-api-title bold'
+                : 'landing-nav-api-title'
+            "
+          >
+            <a :href='page === "home" ? "#faq" : "/family/" + header + "#faq"'>F.A.Q.</a>
+          </div>
+          <div
             :class="
               page === 'api'
                 ? 'landing-nav-api-title bold'
@@ -163,7 +174,8 @@ export default {
     "modules",
     "intro",
     "example",
-    "usage"
+    "usage",
+    "faq"
   ],
   methods: {
     async onVersionChange(event) {
