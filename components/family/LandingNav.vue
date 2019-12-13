@@ -409,7 +409,7 @@ export default {
 }
 
 .landing-nav-select-wrapper {
-  margin: 0 0 0 30px;
+  margin: 0 0 0 30px !important;
   overflow-x: hidden;
 }
 
