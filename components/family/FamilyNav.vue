@@ -241,6 +241,10 @@ export default {
 }
 
 @media screen and (max-width: 900px) {
+  .family-top-wrapper {
+    padding: 0;
+    z-index: 0;
+  }
   .mobile-top-wrapper {
     align-items: center;
   }
