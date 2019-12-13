@@ -131,8 +131,6 @@ async function getInfo() {
                 options
               )
               let rawString = await api.data.toString()
-
-              rawString = await rawString + "#"
               
               if (branch.name === "master") {
                 let intros = await rawString.match(/(?=#.*Intro)([\s\S]*?)(?=\n#)/)
@@ -150,6 +148,7 @@ async function getInfo() {
                   rawString = await rawString.replace(/(?=#.*Example)([\s\S]*?)(?=\n#)/, "")
                   example = examples[0]
                 }
+                rawString = await rawString + "#"
                 let faqs = await rawString.match(/(?=#.*F.A.Q.)([\s\S]*?)(?=\n#)/)
                 if (faqs) {
                   rawString = await rawString.replace(/(?=#.*F.A.Q.)([\s\S]*?)(?=\n#)/, "")

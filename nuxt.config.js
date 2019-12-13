@@ -145,7 +145,7 @@ module.exports = {
       '/family/rule-scope-start/api',
       '/family/rule-scope-start/changelog',
       '/family/scooter',
-      // '/family/scooter/api',
+      '/family/scooter/api',
       '/family/scooter/changelog',
       '/family/shot',
       '/family/shot/api',
