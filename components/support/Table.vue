@@ -176,19 +176,19 @@ table {
 
 table th {
   font-size: 1.3rem;
-  text-align: center;
+  text-align: center !important;
 }
 
 table td {
   padding: 10px 5px;
   height: 76px;
-  text-align: center;
+  text-align: center !important;
   vertical-align: middle;
   width: 192px;
 }
 
 .table-feature {
-  text-align: left;
+  text-align: left !important;
   width: auto !important;
 }
 
