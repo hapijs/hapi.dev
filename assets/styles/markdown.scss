@@ -14,7 +14,7 @@
   width: 100%;
   box-sizing: border-box;
   margin: 0;
-  padding: 0 100px;
+  padding: 0 100px 10px 100px;
   word-wrap: break-all;
 }
 
@@ -156,8 +156,8 @@ pre {
     padding: 20px 40px;
   }
 
-  .family-markdown-wrapper, {
-    padding: 0 40px;
+  .family-markdown-wrapper {
+    padding: 0 40px 10px 40px;
   }
 }
 
