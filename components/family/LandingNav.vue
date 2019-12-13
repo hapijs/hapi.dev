@@ -1,5 +1,5 @@
 <template>
-  <div class="side-nav-window">
+  <div class="api-nav-window">
     <div class="side-nav-wrapper">
       <div class="side-nav-inner-wrapper">
         <div class="family-top-wrapper">
@@ -309,6 +309,11 @@ export default {
   align-items: flex-start;
   width: 100%;
   margin: 0;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  background: $off-white;
+  z-index: 1000;
 }
 
 .family-nav-title {
@@ -401,6 +406,11 @@ export default {
   color: $orange !important;
   font-weight: 900;
   transition: all 0.2s ease;
+}
+
+.landing-nav-select-wrapper {
+  margin: 0 0 0 30px;
+  overflow-x: hidden;
 }
 
 @media screen and (max-width: 900px) {

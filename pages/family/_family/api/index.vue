@@ -306,10 +306,6 @@ export default {
 
         if (active) {
           let activeClass;
-          let bottom = active.getBoundingClientRect().bottom;
-          if (bottom > window.innerHeight) {
-            element.scrollIntoView(false);
-          }
           activeClass = active.hash;
           let activeLink = document.querySelector(`a[href*='${activeClass}']`);
           let activePosition = that.links[activeLink.hash];
@@ -326,6 +322,10 @@ export default {
                 "family-minus"
               );
             }
+          }
+          let bottom = active.getBoundingClientRect().bottom;
+          if (bottom > window.innerHeight) {
+            element.scrollIntoView(false);
           }
           if (that.$route.hash === active.hash && bottom === 0) {
             active.scrollIntoView(false);
