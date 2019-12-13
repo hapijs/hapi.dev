@@ -198,7 +198,7 @@ select:focus {
 }
 
 @media screen and (max-width: 900px) {
-  .side-nav-window {
+  .side-nav-window, .api-nav-window {
     flex-direction: row;
     align-items: center;
     position: relative;

@@ -647,6 +647,9 @@ export default {
   padding: 0 20px;
 }
 @media screen and (max-width: 900px) {
+  .api-header-wrapper {
+    z-index: 0;
+  }
   .api-nav-window {
     flex-direction: row;
     position: relative;
