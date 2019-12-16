@@ -145,9 +145,9 @@ async function getInfo() {
                   rawString = await rawString.replace(/(?=#.*Usage)([\s\S]*?)(?=\n#)/, "")
                   usage = usages[0]
                 }
-                let advanced = await rawString.match(/(?=#.*Advanced)([\s\S]*?)(?=\n#)/)
+                let advanced = await rawString.match(/(?=#.*Advanced\W\W)([\s\S]*?)(?=\n#)/)
                 if (advanced) {
-                  rawString = await rawString.replace(/(?=#.*Advanced)([\s\S]*?)(?=\n#)/, "")
+                  rawString = await rawString.replace(/(?=#.*Advanced\W\W)([\s\S]*?)(?=\n#)/, "")
                   advance = advanced[0]
                 }
                 let examples = await rawString.match(/(?=#.*Example)([\s\S]*?)(?=\n#)/)
