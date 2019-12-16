@@ -70,6 +70,7 @@ async function getInfo() {
   let example = ""
   let usage = ""
   let faq = ""
+  let advance = ""
   const options = {
     headers: {
       accept: "application/vnd.github.v3.raw+json",
@@ -104,6 +105,7 @@ async function getInfo() {
         example = ""
         usage = ""
         faq = ""
+        advance = ""
         if (branch.name.match(/^v+[0-9]+|\bmaster\b/g)) {
           const gitHubVersion = await axios.get(
             "https://api.github.com/repos/hapijs/" +
@@ -142,6 +144,11 @@ async function getInfo() {
                 if (usages) {
                   rawString = await rawString.replace(/(?=#.*Usage)([\s\S]*?)(?=\n#)/, "")
                   usage = usages[0]
+                }
+                let advanced = await rawString.match(/(?=#.*Advanced)([\s\S]*?)(?=\n#)/)
+                if (advanced) {
+                  rawString = await rawString.replace(/(?=#.*Advanced)([\s\S]*?)(?=\n#)/, "")
+                  advance = advanced[0]
                 }
                 let examples = await rawString.match(/(?=#.*Example)([\s\S]*?)(?=\n#)/)
                 if (examples) {
@@ -223,6 +230,7 @@ async function getInfo() {
               example: example,
               usage: usage,
               faq: faq,
+              advanced: advance,
               license: gitHubVersion.data.name.includes("commercial")
                 ? "Commercial"
                 : "BSD"

@@ -108,6 +108,17 @@
             <a :href='page === "home" ? "#usage" : "/family/" + header + "#usage"'>Usage</a>
           </div>
           <div
+            v-if="advanced"
+            id="advanced1"
+            :class="
+              hash === '#advanced'
+                ? 'landing-nav-api-title bold'
+                : 'landing-nav-api-title'
+            "
+          >
+            <a :href='page === "home" ? "#advanced" : "/family/" + header + "#advanced"'>Advanced</a>
+          </div>
+          <div
             v-if="faq"
             id="faq1"
             :class="
@@ -175,7 +186,8 @@ export default {
     "intro",
     "example",
     "usage",
-    "faq"
+    "faq",
+    "advanced"
   ],
   methods: {
     async onVersionChange(event) {

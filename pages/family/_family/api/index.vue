@@ -13,6 +13,7 @@
       :example="example"
       :usage="usage"
       :faq="faq"
+      :advanced="advanced"
       @search="onChildSearch"
       @previous="onChildIndex"
       @next="onChildIndex"
@@ -76,7 +77,8 @@ export default {
       intro: false,
       example: false,
       usage: false,
-      faq: false
+      faq: false,
+      advanced: false
     };
   },
   methods: {
@@ -466,6 +468,9 @@ export default {
     }
     if (this.moduleAPI[this.$route.params.family][versionsArray[0]].faq) {
       this.$data.faq = true;
+    }
+    if (this.moduleAPI[this.$route.params.family][versionsArray[0]].advanced) {
+      this.$data.advanced = true;
     }
   },
   mounted() {

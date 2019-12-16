@@ -6,6 +6,7 @@
       :example="example"
       :usage="usage"
       :faq="faq"
+      :advanced="advanced"
     />
     <div class="community-wrapper">
       <Changelog :milestones="getMilestones" />
@@ -31,7 +32,8 @@ export default {
       intro: false,
       example: false,
       usage: false,
-      faq: false
+      faq: false,
+      advanced: false
     };
   },
   head() {
@@ -122,6 +124,9 @@ export default {
     }
     if (this.moduleAPI[this.$route.params.family][versionsArray[0]].faq) {
       this.$data.faq = true;
+    }
+    if (this.moduleAPI[this.$route.params.family][versionsArray[0]].advanced) {
+      this.$data.advanced = true;
     }
   },
   methods: {

@@ -11,6 +11,7 @@
       :example="example"
       :usage="usage"
       :faq="faq"
+      :advanced="advanced"
       @search="onChildSearch"
       @previous="onChildIndex"
       @next="onChildIndex"
@@ -95,6 +96,10 @@
         <a name="usage" class="landing-link2 landing-anchor"></a>
         <div v-html="usageHTML"></div>
       </div>
+      <div v-if="advanced" class="intro-wrapper">
+        <a name="advanced" class="landing-link2 landing-anchor"></a>
+        <div v-html="advancedHTML"></div>
+      </div>
       <div v-if="faq" class="intro-wrapper">
         <a name="faq" class="landing-link2 landing-anchor"></a>
         <div v-html="faqHTML"></div>
@@ -144,7 +149,8 @@ export default {
       intro: false,
       example: false,
       usage: false,
-      faq: false
+      faq: false,
+      advanced: false
     };
   },
   methods: {
@@ -222,6 +228,7 @@ export default {
     let exampleHTML = "";
     let usageHTML = "";
     let faqHTML = "";
+    let advancedHTML = "";
     let version = moduleInfo[params.family].versionsArray[0];
     if (moduleInfo[params.family][version].example) {
       exampleHTML = await $axios.$post(
@@ -265,7 +272,21 @@ export default {
         }
       );
     }
-    return { exampleHTML, usageHTML, faqHTML };
+    if (moduleInfo[params.family][version].advanced) {
+      advancedHTML = await $axios.$post(
+        "https://api.github.com/markdown",
+        {
+          text: moduleInfo[params.family][version].advanced,
+          mode: "markdown"
+        },
+        {
+          headers: {
+            authorization: "token " + process.env.GITHUB_TOKEN
+          }
+        }
+      );
+    }
+    return { exampleHTML, usageHTML, faqHTML, advancedHTML };
   },
   created() {
     this.$data.modules = moduleInfo;
@@ -289,6 +310,9 @@ export default {
     }
     if (this.modules[this.$route.params.family][version].faq) {
       this.$data.faq = true;
+    }
+    if (this.modules[this.$route.params.family][version].advanced) {
+      this.$data.advanced = true;
     }
   },
   computed: {
