@@ -12,6 +12,7 @@
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@hapi/joi": "^16.1.8",
     "@nuxtjs/axios": "^5.4.1",
     "@nuxtjs/dotenv": "^1.3.0",
     "@nuxtjs/google-analytics": "^2.2.0",
@@ -29,6 +30,7 @@
     "markdown-toc": "^1.2.0",
     "nuxt": "^2.4.0",
     "semver": "^6.0.0",
+    "vue-codemirror": "^4.0.6",
     "vue-js-modal": "^1.3.31"
   },
   "devDependencies": {

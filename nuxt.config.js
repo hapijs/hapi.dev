@@ -220,7 +220,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/vue-js-modal'],
+  plugins: ['~/plugins/vue-js-modal', '~/plugins/vue-codemirror'],
 
   /*
    ** Nuxt.js modules
