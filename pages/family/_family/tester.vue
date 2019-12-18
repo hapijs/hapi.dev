@@ -110,7 +110,8 @@ export default {
         );
         let validatedResults = joiSchema(Joi).validate(validatedObject);
         if (validatedResults.error) {
-          this.result = validatedResults.error.toString();
+          console.log(validatedResults)
+          this.result = validatedResults.error.stack.toString();
         } else {
           this.result = "Validation Passed";
         }
