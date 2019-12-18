@@ -114,6 +114,7 @@ module.exports = {
       '/family/joi',
       '/family/joi/api',
       '/family/joi/changelog',
+      '/family/joi/tester',
       '/family/joi-date',
       '/family/joi-date/api',
       '/family/joi-date/changelog',

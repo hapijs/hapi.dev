@@ -130,6 +130,17 @@
             <a :href='page === "home" ? "#faq" : "/family/" + header + "#faq"'>F.A.Q.</a>
           </div>
           <div
+            :v-if='header === "joi"'
+            id="joi1"
+            :class="
+              page === 'tester'
+                ? 'landing-nav-api-title bold'
+                : 'landing-nav-api-title'
+            "
+          >
+            <a href="/family/joi/tester">Tester</a>
+          </div>
+          <div
             :class="
               page === 'api'
                 ? 'landing-nav-api-title bold'
@@ -313,6 +324,7 @@ export default {
 
 <style lang="scss">
 @import "../../assets/styles/sideNav.scss";
+@import "../../assets/styles/markdown.scss";
 
 .family-top-wrapper {
   display: flex;
