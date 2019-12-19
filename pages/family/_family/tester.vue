@@ -12,7 +12,7 @@
       />
       <div class="test-wrapper">
         <h1 class="tester-title">
-          joi Tester <span class="tester-version">v16.1.8</span>
+          joi Schema Tester <span class="tester-version">v16.1.8</span>
         </h1>
         <h2 class="tester-subTitle">Schema:</h2>
         <codemirror
@@ -64,6 +64,7 @@ export default {
   data() {
     return {
       schema:
+        "//Insert your joi schema here \n" +
         "Joi.object({\n" +
         "  username: Joi.string().alphanum().min(3).max(30).required(),\n" +
         "  password: Joi.string().pattern(/^[a-zA-Z0-9]{3,30}$/),\n" +
@@ -73,14 +74,21 @@ export default {
         '  email: Joi.string().email({ minDomainSegments: 2, tlds: { allow: ["com", "net"] } } )\n' +
         "}).with('username', 'birth_year').xor('password', 'access_token').with('password', 'repeat_password')",
       validate:
-        '{ username: "abc", password: "password", repeat_password: "password", birth_year: 1994 }',
+        "//Insert data to validate here \n" +
+        "{ \n" +
+        ' username: "abc",\n' +
+        ' password: "password",\n' +
+        ' repeat_password: "password",\n' +
+        " birth_year: 1994\n" +
+        "}",
       result: "",
       options: {
         theme: "eclipse",
         tabSize: 2,
         mode: "text/javascript",
         lineNumbers: true,
-        line: true
+        lineWrapping: true,
+        addModeClass: true
       },
       moduleAPI: moduleInfo,
       page: "tester",
@@ -99,7 +107,6 @@ export default {
       this.validate = input;
     },
     onValidateClick() {
-      this.result = "";
       try {
         let validatedObject = Function(
           '"use strict";return (' + this.validate + ")"
@@ -110,7 +117,6 @@ export default {
         );
         let validatedResults = joiSchema(Joi).validate(validatedObject);
         if (validatedResults.error) {
-          console.log(validatedResults)
           this.result = validatedResults.error.stack.toString();
         } else {
           this.result = "Validation Passed";
@@ -164,6 +170,7 @@ export default {
 
 .tester-subTitle {
   font-size: 1.5em;
+  margin-bottom: 5px;
 }
 
 .CodeMirror {
@@ -187,18 +194,46 @@ export default {
 }
 
 .validate-button {
+  border-radius: 10px;
+  border: none;
+  background: $orange;
+  padding: 5px 15px;
+  font-size: 1em;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  border: 4px solid rgba(0, 0, 0, 0);
   margin-bottom: 30px;
 }
 
-.tester-result {
-  height: 100px;
+.validate-button:hover {
+  border: 4px solid $orange;
+  background: #fff;
+  color: $orange;
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
 }
 
-// .cm-property {
-//   color: #2A00FF !important;
-// }
+.validate-button:focus {
+  outline: none;
+}
 
-// .cm-string {
-//   color: #2a9705 !important;
-// }
+.tester-result {
+  min-height: 66px;
+  box-sizing: border-box;
+  height: auto;
+  color: #000;
+}
+
+.cm-number {
+  color: #1131cb !important;
+}
+
+.cm-string-2 {
+  color: #fa0000 !important;
+}
+
+.cm-string {
+  color: #28813f !important;
+}
 </style>

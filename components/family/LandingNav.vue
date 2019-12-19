@@ -62,7 +62,12 @@
                 : 'landing-nav-api-title'
             "
           >
-            <a :href='page === "home" ? "#install" : "/family/" + header + "#install"'>Installation</a>
+            <a
+              :href="
+                page === 'home' ? '#install' : '/family/' + header + '#install'
+              "
+              >Installation</a
+            >
           </div>
           <div
             id="status1"
@@ -72,7 +77,12 @@
                 : 'landing-nav-api-title'
             "
           >
-            <a :href='page === "home" ? "#status" : "/family/" + header + "#status"'>Status</a>
+            <a
+              :href="
+                page === 'home' ? '#status' : '/family/' + header + '#status'
+              "
+              >Status</a
+            >
           </div>
           <div
             v-if="intro"
@@ -83,7 +93,14 @@
                 : 'landing-nav-api-title'
             "
           >
-            <a :href='page === "home" ? "#introduction" : "/family/" + header + "#introduction"'>Introduction</a>
+            <a
+              :href="
+                page === 'home'
+                  ? '#introduction'
+                  : '/family/' + header + '#introduction'
+              "
+              >Introduction</a
+            >
           </div>
           <div
             v-if="example"
@@ -94,7 +111,12 @@
                 : 'landing-nav-api-title'
             "
           >
-            <a :href='page === "home" ? "#example" : "/family/" + header + "#example"'>Example</a>
+            <a
+              :href="
+                page === 'home' ? '#example' : '/family/' + header + '#example'
+              "
+              >Example</a
+            >
           </div>
           <div
             v-if="usage"
@@ -105,7 +127,12 @@
                 : 'landing-nav-api-title'
             "
           >
-            <a :href='page === "home" ? "#usage" : "/family/" + header + "#usage"'>Usage</a>
+            <a
+              :href="
+                page === 'home' ? '#usage' : '/family/' + header + '#usage'
+              "
+              >Usage</a
+            >
           </div>
           <div
             v-if="advanced"
@@ -116,7 +143,14 @@
                 : 'landing-nav-api-title'
             "
           >
-            <a :href='page === "home" ? "#advanced" : "/family/" + header + "#advanced"'>Advanced</a>
+            <a
+              :href="
+                page === 'home'
+                  ? '#advanced'
+                  : '/family/' + header + '#advanced'
+              "
+              >Advanced</a
+            >
           </div>
           <div
             v-if="faq"
@@ -127,10 +161,12 @@
                 : 'landing-nav-api-title'
             "
           >
-            <a :href='page === "home" ? "#faq" : "/family/" + header + "#faq"'>F.A.Q.</a>
+            <a :href="page === 'home' ? '#faq' : '/family/' + header + '#faq'"
+              >F.A.Q.</a
+            >
           </div>
           <div
-            :v-if='header === "joi"'
+            :v-if="header === 'joi'"
             id="joi1"
             :class="
               page === 'tester'
@@ -138,7 +174,7 @@
                 : 'landing-nav-api-title'
             "
           >
-            <a href="/family/joi/tester">Tester</a>
+            <a href="/family/joi/tester">Schema Tester</a>
           </div>
           <div
             :class="
@@ -314,10 +350,10 @@ export default {
   },
   mounted() {
     this.onScroll();
-    this.$data.hash = this.getHash
+    this.$data.hash = this.getHash;
   },
   updated() {
-    this.$data.hash = this.getHash
+    this.$data.hash = this.getHash;
   }
 };
 </script>
@@ -433,12 +469,11 @@ export default {
 }
 
 .landing-nav-select-wrapper {
-  margin: 0 0 0 30px !important;
+  margin: 0 0 0 20px !important;
   overflow-x: hidden;
 }
 
 @media screen and (max-width: 900px) {
-
   .family-top-wrapper {
     padding: 0;
     z-index: 0;

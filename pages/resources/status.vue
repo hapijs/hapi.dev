@@ -147,8 +147,8 @@
 import ResourcesNav from "../../components/resources/ResourcesNav.vue";
 const life = require("../../static/lib/endOfLife.js");
 const moduleInfo = require("../../static/lib/moduleInfo.json");
-let Semver = require("semver")
-let Yaml = require("js-yaml")
+let Semver = require("semver");
+let Yaml = require("js-yaml");
 import _ from "lodash";
 
 export default {
