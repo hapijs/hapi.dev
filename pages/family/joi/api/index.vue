@@ -439,7 +439,6 @@ export default {
   //   return { moduleAPI, version, versionsArray, license };
   // },
   created() {
-    let module = this.$route.params.family;
     let versionsArray = this.moduleAPI[this.$route.params.family].versionsArray;
     if (!this.$store.getters.loadModules.includes(this.$route.params.family)) {
       return this.$nuxt.error({ statusCode: 404 });
@@ -458,20 +457,20 @@ export default {
     this.$data.menu = this.moduleAPI[this.$route.params.family][
       this.getVersion
     ].menu;
-    this.$store.commit("setFamily", module);
-    if (this.moduleAPI[module][version].intro) {
+    this.$store.commit("setFamily", "joi");
+    if (this.moduleAPI.joi[version].intro) {
       this.$store.commit("setIntro", true);
     }
-    if (this.moduleAPI[module][version].example) {
+    if (this.moduleAPI.joi[version].example) {
       this.$store.commit("setExample", true);
     }
-    if (this.moduleAPI[module][version].usage) {
+    if (this.moduleAPI.joi[version].usage) {
       this.$store.commit("setUsage", true);
     }
-    if (this.moduleAPI[module][version].faq) {
+    if (this.moduleAPI.joi[version].faq) {
       this.$store.commit("setFaq", true);
     }
-    if (this.moduleAPI[module][version].advanced) {
+    if (this.moduleAPI.joi[version].advanced) {
       this.$store.commit("setAdvanced", true);
     }
   },

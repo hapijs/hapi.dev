@@ -56,7 +56,7 @@ export default {
     let milestoneList = [];
     let m = [];
     let milestones = [];
-    if (store.getters.loadModules.includes(params.family)) {
+    if (store.getters.loadModules.includes("joi")) {
       try {
         //Changelog
         const mileOptions = {
@@ -67,9 +67,7 @@ export default {
         };
         for (let p = 1; p <= 2; ++p) {
           milestones = await $axios.$get(
-            "https://api.github.com/repos/hapijs/" +
-              params.family +
-              "/milestones?state=closed&per_page=100&page=" +
+            "https://api.github.com/repos/hapijs/joi/milestones?state=closed&per_page=100&page=" +
               p,
             mileOptions
           );
@@ -85,9 +83,7 @@ export default {
         //Get milestone issues
         for (let milestone of sortedMilestones) {
           let m = await $axios.$get(
-            "https://api.github.com/repos/hapijs/" +
-              params.family +
-              "/issues?state=closed&milestone=" +
+            "https://api.github.com/repos/hapijs/joi/issues?state=closed&milestone=" +
               milestone.number +
               "&per_page=200",
             mileOptions
@@ -111,23 +107,22 @@ export default {
     }
   },
   async created() {
-    let module = this.$route.params.family;
     await this.$store.commit("setDisplay", "family");
-    let versionsArray = this.moduleAPI[this.$route.params.family].versionsArray;
-    this.$store.commit("setFamily", module);
-    if (this.moduleAPI[module][version].intro) {
+    let versionsArray = this.moduleAPI.joi.versionsArray;
+    this.$store.commit("setFamily", "joi");
+    if (this.moduleAPI.joi[version].intro) {
       this.$store.commit("setIntro", true);
     }
-    if (this.moduleAPI[module][version].example) {
+    if (this.moduleAPI.joi[version].example) {
       this.$store.commit("setExample", true);
     }
-    if (this.moduleAPI[module][version].usage) {
+    if (this.moduleAPI.joi[version].usage) {
       this.$store.commit("setUsage", true);
     }
-    if (this.moduleAPI[module][version].faq) {
+    if (this.moduleAPI.joi[version].faq) {
       this.$store.commit("setFaq", true);
     }
-    if (this.moduleAPI[module][version].advanced) {
+    if (this.moduleAPI.joi[version].advanced) {
       this.$store.commit("setAdvanced", true);
     }
   },

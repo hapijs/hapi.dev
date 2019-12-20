@@ -166,7 +166,7 @@
             >
           </div>
           <div
-            v-if="header === 'joi'"
+            v-if="family === 'joi'"
             id="joi1"
             :class="
               page === 'tester'
@@ -229,12 +229,7 @@ export default {
     "results",
     "indexResults",
     "search",
-    "modules",
-    "intro",
-    "example",
-    "usage",
-    "faq",
-    "advanced"
+    "modules"
   ],
   methods: {
     async onVersionChange(event) {
@@ -334,7 +329,13 @@ export default {
     return {
       header: this.$route.params.family,
       showAPI: false,
-      hash: ""
+      hash: "",
+      family: "",
+      intro: false,
+      example: false,
+      usage: false,
+      faq: false,
+      advanced: false
     };
   },
   computed: {
@@ -346,7 +347,33 @@ export default {
     },
     getHash() {
       return this.$route.hash;
+    },
+    getFamily() {
+      return this.$store.getters.loadFamily;
+    },
+    getIntro() {
+      return this.$store.getters.loadIntro;
+    },
+    getExample() {
+      return this.$store.getters.loadExample;
+    },
+    getUsage() {
+      return this.$store.getters.loadUsage;
+    },
+    getFaq() {
+      return this.$store.getters.loadFaq;
+    },
+    getAdvanced() {
+      return this.$store.getters.loadAdvanced;
     }
+  },
+  created() {
+    this.$data.family = this.getFamily;
+    this.$data.intro = this.getIntro;
+    this.$data.example = this.getExample;
+    this.$data.usage = this.getUsage;
+    this.$data.faq = this.getFaq;
+    this.$data.advanced = this.getAdvanced;
   },
   mounted() {
     this.onScroll();

@@ -123,7 +123,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.dev - " + this.$route.params.family,
+      title: "hapi.dev - joi",
       meta: [
         {
           hid: "description",
@@ -140,7 +140,7 @@ export default {
       modules: moduleInfo,
       version: "",
       menu: "",
-      name: this.$route.params.family,
+      name: "joi",
       indexResults: 0,
       search: "",
       results: [],
@@ -229,12 +229,12 @@ export default {
     let usageHTML = "";
     let faqHTML = "";
     let advancedHTML = "";
-    let version = moduleInfo[params.family].versionsArray[0];
-    if (moduleInfo[params.family][version].example) {
+    let version = moduleInfo.joi.versionsArray[0];
+    if (moduleInfo.joi[version].example) {
       exampleHTML = await $axios.$post(
         "https://api.github.com/markdown",
         {
-          text: moduleInfo[params.family][version].example,
+          text: moduleInfo.joi[version].example,
           mode: "markdown"
         },
         {
@@ -244,11 +244,11 @@ export default {
         }
       );
     }
-    if (moduleInfo[params.family][version].usage) {
+    if (moduleInfo.joi[version].usage) {
       usageHTML = await $axios.$post(
         "https://api.github.com/markdown",
         {
-          text: moduleInfo[params.family][version].usage,
+          text: moduleInfo.joi[version].usage,
           mode: "markdown"
         },
         {
@@ -258,11 +258,11 @@ export default {
         }
       );
     }
-    if (moduleInfo[params.family][version].faq) {
+    if (moduleInfo.joi[version].faq) {
       faqHTML = await $axios.$post(
         "https://api.github.com/markdown",
         {
-          text: moduleInfo[params.family][version].faq,
+          text: moduleInfo.joi[version].faq,
           mode: "markdown"
         },
         {
@@ -272,11 +272,11 @@ export default {
         }
       );
     }
-    if (moduleInfo[params.family][version].advanced) {
+    if (moduleInfo.joi[version].advanced) {
       advancedHTML = await $axios.$post(
         "https://api.github.com/markdown",
         {
-          text: moduleInfo[params.family][version].advanced,
+          text: moduleInfo.joi[version].advanced,
           mode: "markdown"
         },
         {
@@ -290,9 +290,8 @@ export default {
   },
   created() {
     this.$data.modules = moduleInfo;
-    let module = this.$route.params.family;
-    let versionsArray = moduleInfo[module].versionsArray;
-    if (!this.$store.getters.loadModules.includes(module)) {
+    let versionsArray = moduleInfo.joi.versionsArray;
+    if (!this.$store.getters.loadModules.includes("joi")) {
       return this.$nuxt.error({ statusCode: 404 });
     }
     let version = versionsArray.includes(this.$route.query.v)
@@ -300,28 +299,26 @@ export default {
       : versionsArray[0];
     this.$store.commit("setDisplay", "family");
     this.$store.commit("setVersion", version);
-    this.$store.commit("setFamily", module);
-    if (this.modules[module][version].intro) {
+    this.$store.commit("setFamily", "joi");
+    if (this.modules.joi[version].intro) {
       this.$store.commit("setIntro", true);
     }
-    if (this.modules[module][version].example) {
+    if (this.modules.joi[version].example) {
       this.$store.commit("setExample", true);
     }
-    if (this.modules[module][version].usage) {
+    if (this.modules.joi[version].usage) {
       this.$store.commit("setUsage", true);
     }
-    if (this.modules[module][version].faq) {
+    if (this.modules.joi[version].faq) {
       this.$store.commit("setFaq", true);
     }
-    if (this.modules[module][version].advanced) {
+    if (this.modules.joi[version].advanced) {
       this.$store.commit("setAdvanced", true);
     }
   },
   computed: {
     getDisplay() {
-      return this.moduleAPI[this.$route.params.family].displays[
-        this.getVersion
-      ];
+      return this.moduleAPI.joi.displays[this.getVersion];
     },
     getVersion() {
       return this.$store.getters.loadVersion;

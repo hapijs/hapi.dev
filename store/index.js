@@ -1,4 +1,4 @@
-import start from '../static/lib/tutorials/en_US/'
+import start from "../static/lib/tutorials/en_US/";
 
 export const state = () => ({
   page: start.gettingstarted.default,
@@ -8,6 +8,9 @@ export const state = () => ({
   example: false,
   intro: false,
   usage: false,
+  faq: false,
+  advanced: false,
+  family: "joi",
   modules: [
     "accept",
     "address",
@@ -60,55 +63,73 @@ export const state = () => ({
     "wreck",
     "yar"
   ]
-})
+});
 
 export const mutations = {
-  setPage (state, page) {
-    state.page = page
+  setPage(state, page) {
+    state.page = page;
   },
-  setDisplay (state, display) {
-    state.display = display
+  setDisplay(state, display) {
+    state.display = display;
   },
-  setLanguage (state, language) {
-    state.language = language
+  setLanguage(state, language) {
+    state.language = language;
   },
-  setVersion (state, version) {
-    state.version = version
+  setVersion(state, version) {
+    state.version = version;
   },
-  setExample (state, example) {
-    state.example = example
+  setExample(state, example) {
+    state.example = example;
   },
-  setIntro (state, intro) {
-    state.intro = intro
+  setIntro(state, intro) {
+    state.intro = intro;
   },
-  setUsage (state, usage) {
-    state.usage = usage
+  setUsage(state, usage) {
+    state.usage = usage;
+  },
+  setFaq(state, faq) {
+    state.faq = faq;
+  },
+  setAdvanced(state, advanced) {
+    state.advanced = advanced;
+  },
+  setFamily(state, family) {
+    state.family = family;
   }
-}
+};
 
 export const getters = {
-  loadPage (state) {
-    return state.page
+  loadPage(state) {
+    return state.page;
   },
-  loadDisplay (state) {
-    return state.display
+  loadDisplay(state) {
+    return state.display;
   },
-  loadLanguage (state) {
-    return state.language
+  loadLanguage(state) {
+    return state.language;
   },
-  loadVersion (state) {
-    return state.version
+  loadVersion(state) {
+    return state.version;
   },
-  loadModules (state) {
-    return state.modules
+  loadModules(state) {
+    return state.modules;
   },
-  loadExample (state) {
-    return state.example
+  loadExample(state) {
+    return state.example;
   },
-  loadIntro (state) {
-    return state.intro
+  loadIntro(state) {
+    return state.intro;
   },
-  loadUsage (state) {
-    return state.usage
+  loadUsage(state) {
+    return state.usage;
+  },
+  loadFaq(state) {
+    return state.faq;
+  },
+  loadAdvanced(state) {
+    return state.advanced;
+  },
+  loadFamily(state) {
+    return state.family;
   }
-}
+};
