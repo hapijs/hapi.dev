@@ -47,7 +47,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.dev - " + this.$route.params.family + " v" + this.getVersion,
+      title: "hapi.dev - joi v" + this.getVersion,
       meta: [
         {
           hid: "description",
@@ -60,15 +60,15 @@ export default {
   data() {
     return {
       moduleAPI: moduleInfo,
-      versionsArray: moduleInfo[this.$route.params.family].versionsArray.sort(
-        (a, b) => Semver.compare(b, a)
+      versionsArray: moduleInfo.joi.versionsArray.sort((a, b) =>
+        Semver.compare(b, a)
       ),
       display: "",
       page: "api",
       modules: this.modules,
       version: "",
       menu: "",
-      name: this.$route.params.family,
+      name: "joi",
       indexResults: 0,
       search: "",
       results: [],
@@ -231,9 +231,7 @@ export default {
         };
       }
 
-      let links = document.querySelectorAll(
-        "#" + this.$route.params.family + " a"
-      );
+      let links = document.querySelectorAll("#joi a");
       let points = {};
       let offsets = [];
       for (let i = 0; i < links.length; i++) {
@@ -338,13 +336,13 @@ export default {
   },
   computed: {
     getAPI() {
-      return this.moduleAPI[this.$route.params.family][this.getVersion].api;
+      return this.moduleAPI.joi[this.getVersion].api;
     },
     getVersion() {
       return this.$store.getters.loadVersion;
     },
     getMenu() {
-      return this.moduleAPI[this.$route.params.family][this.getVersion].menu;
+      return this.moduleAPI.joi[this.getVersion].menu;
     }
   },
   // async asyncData({ params, $axios, route, store }) {
@@ -440,7 +438,7 @@ export default {
   // },
   created() {
     let versionsArray = this.moduleAPI.joi.versionsArray;
-    if (!this.$store.getters.loadModules.includes(this.$route.params.family)) {
+    if (!this.$store.getters.loadModules.includes("joi")) {
       return this.$nuxt.error({ statusCode: 404 });
     }
     let version = versionsArray.includes(this.$route.query.v)
@@ -454,9 +452,7 @@ export default {
         query: { v: versionsArray[0] },
         hash: this.$route.hash
       });
-    this.$data.menu = this.moduleAPI[this.$route.params.family][
-      this.getVersion
-    ].menu;
+    this.$data.menu = this.moduleAPI.joi[this.getVersion].menu;
     this.$store.commit("setFamily", "joi");
     if (this.moduleAPI.joi[version].intro) {
       this.$store.commit("setIntro", true);

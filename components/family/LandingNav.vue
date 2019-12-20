@@ -183,11 +183,11 @@
                 : 'landing-nav-api-title'
             "
           >
-            <a :href="'/family/' + header + '/api'">API</a>
+            <a :href="'/family/' + family + '/api'">API</a>
           </div>
           <ul class="side-nav-select-list" v-if="page === 'api'">
             <FamilyNavItem
-              :name="header"
+              :name="getFamily"
               :menu="menu"
               :page="page"
               :version="version"
@@ -202,7 +202,7 @@
                 : 'landing-nav-changelog-title'
             "
           >
-            <a :href="'/family/' + header + '/changelog'">Changelog</a>
+            <a :href="'/family/' + family + '/changelog'">Changelog</a>
           </div>
         </div>
       </div>

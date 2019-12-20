@@ -131,20 +131,21 @@ export default {
     let versionsArray = this.moduleAPI.joi.versionsArray;
     this.$data.version = versionsArray[0];
     this.$store.commit("setDisplay", "family");
+    this.$store.commit("setFamily", "joi");
     if (this.moduleAPI.joi[versionsArray[0]].intro) {
-      this.$data.intro = true;
+      this.$store.commit("setIntro", true);
     }
     if (this.moduleAPI.joi[versionsArray[0]].example) {
-      this.$data.example = true;
+      this.$store.commit("setExample", true);
     }
     if (this.moduleAPI.joi[versionsArray[0]].usage) {
-      this.$data.usage = true;
+      this.$store.commit("setUsage", true);
     }
     if (this.moduleAPI.joi[versionsArray[0]].faq) {
-      this.$data.faq = true;
+      this.$store.commit("setFaq", true);
     }
     if (this.moduleAPI.joi[versionsArray[0]].advanced) {
-      this.$data.advanced = true;
+      this.$store.commit("setAdvanced", true);
     }
   }
 };
