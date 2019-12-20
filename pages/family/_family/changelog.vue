@@ -110,9 +110,9 @@ export default {
       return this.milestoneList;
     }
   },
-  async created() {
+  created() {
     let module = this.$route.params.family;
-    await this.$store.commit("setDisplay", "family");
+    this.$store.commit("setDisplay", "family");
     let versionsArray = this.moduleAPI[this.$route.params.family].versionsArray;
     this.$store.commit("setFamily", module);
     if (this.moduleAPI[module][versionsArray[0]].intro) {
