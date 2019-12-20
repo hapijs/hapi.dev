@@ -12,7 +12,7 @@
       />
       <div class="test-wrapper">
         <h1 class="tester-title">
-          joi Schema Tester <span class="tester-version">v16.1.8</span>
+          joi Schema Tester <span class="tester-version">v{{ version }}</span>
         </h1>
         <h2 class="tester-subTitle">Schema:</h2>
         <codemirror
@@ -51,7 +51,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.dev - joi Tester",
+      title: "hapi.dev - joi Schema Tester v" + this.version,
       meta: [
         {
           hid: "description",
@@ -96,7 +96,8 @@ export default {
       example: false,
       usage: false,
       faq: false,
-      advanced: false
+      advanced: false,
+      version: ""
     };
   },
   methods: {
@@ -128,6 +129,7 @@ export default {
   },
   created() {
     let versionsArray = this.moduleAPI.joi.versionsArray;
+    this.$data.version = versionsArray[0];
     this.$store.commit("setDisplay", "family");
     if (this.moduleAPI[this.$route.params.family][versionsArray[0]].intro) {
       this.$data.intro = true;
