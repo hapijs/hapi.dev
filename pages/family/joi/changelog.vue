@@ -1,13 +1,6 @@
 <template>
   <div class="container">
-    <LandingNav
-      page="changelog"
-      :intro="intro"
-      :example="example"
-      :usage="usage"
-      :faq="faq"
-      :advanced="advanced"
-    />
+    <LandingNav page="changelog" />
     <div class="community-wrapper">
       <Changelog :milestones="getMilestones" />
     </div>

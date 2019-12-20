@@ -381,6 +381,12 @@ export default {
   },
   updated() {
     this.$data.hash = this.getHash;
+    this.$data.family = this.getFamily;
+    this.$data.intro = this.getIntro;
+    this.$data.example = this.getExample;
+    this.$data.usage = this.getUsage;
+    this.$data.faq = this.getFaq;
+    this.$data.advanced = this.getAdvanced;
   }
 };
 </script>
