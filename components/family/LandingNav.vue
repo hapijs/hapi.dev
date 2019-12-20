@@ -166,7 +166,7 @@
             >
           </div>
           <div
-            :v-if="header === 'joi'"
+            v-if="header === 'joi'"
             id="joi1"
             :class="
               page === 'tester'
@@ -380,6 +380,10 @@ export default {
   font-size: 1.5rem;
   color: $black;
   margin: 0;
+}
+
+.family-nav-slogan {
+  font-size: 0.7rem;
 }
 
 .family-nav-title a {
