@@ -94,8 +94,8 @@ export default {
       return this.milestoneList;
     }
   },
-  async created() {
-    await this.$store.commit("setDisplay", "family");
+  created() {
+    this.$store.commit("setDisplay", "family");
     let versionsArray = this.moduleAPI.joi.versionsArray;
     this.$store.commit("setFamily", "joi");
     if (this.moduleAPI.joi[versionsArray[0]].intro) {
