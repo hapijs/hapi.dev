@@ -110,19 +110,19 @@ export default {
     await this.$store.commit("setDisplay", "family");
     let versionsArray = this.moduleAPI.joi.versionsArray;
     this.$store.commit("setFamily", "joi");
-    if (this.moduleAPI.joi[version].intro) {
+    if (this.moduleAPI.joi[versionsArray[0]].intro) {
       this.$store.commit("setIntro", true);
     }
-    if (this.moduleAPI.joi[version].example) {
+    if (this.moduleAPI.joi[versionsArray[0]].example) {
       this.$store.commit("setExample", true);
     }
-    if (this.moduleAPI.joi[version].usage) {
+    if (this.moduleAPI.joi[versionsArray[0]].usage) {
       this.$store.commit("setUsage", true);
     }
-    if (this.moduleAPI.joi[version].faq) {
+    if (this.moduleAPI.joi[versionsArray[0]].faq) {
       this.$store.commit("setFaq", true);
     }
-    if (this.moduleAPI.joi[version].advanced) {
+    if (this.moduleAPI.joi[versionsArray[0]].advanced) {
       this.$store.commit("setAdvanced", true);
     }
   },

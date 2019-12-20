@@ -439,7 +439,7 @@ export default {
   //   return { moduleAPI, version, versionsArray, license };
   // },
   created() {
-    let versionsArray = this.moduleAPI[this.$route.params.family].versionsArray;
+    let versionsArray = this.moduleAPI.joi.versionsArray;
     if (!this.$store.getters.loadModules.includes(this.$route.params.family)) {
       return this.$nuxt.error({ statusCode: 404 });
     }

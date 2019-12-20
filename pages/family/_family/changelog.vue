@@ -115,19 +115,19 @@ export default {
     await this.$store.commit("setDisplay", "family");
     let versionsArray = this.moduleAPI[this.$route.params.family].versionsArray;
     this.$store.commit("setFamily", module);
-    if (this.moduleAPI[module][version].intro) {
+    if (this.moduleAPI[module][versionsArray[0]].intro) {
       this.$store.commit("setIntro", true);
     }
-    if (this.moduleAPI[module][version].example) {
+    if (this.moduleAPI[module][versionsArray[0]].example) {
       this.$store.commit("setExample", true);
     }
-    if (this.moduleAPI[module][version].usage) {
+    if (this.moduleAPI[module][versionsArray[0]].usage) {
       this.$store.commit("setUsage", true);
     }
-    if (this.moduleAPI[module][version].faq) {
+    if (this.moduleAPI[module][versionsArray[0]].faq) {
       this.$store.commit("setFaq", true);
     }
-    if (this.moduleAPI[module][version].advanced) {
+    if (this.moduleAPI[module][versionsArray[0]].advanced) {
       this.$store.commit("setAdvanced", true);
     }
   },
