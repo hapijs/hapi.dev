@@ -64,7 +64,7 @@
           >
             <a
               :href="
-                page === 'home' ? '#install' : '/family/' + header + '#install'
+                page === 'home' ? '#install' : '/family/' + family + '#install'
               "
               >Installation</a
             >
@@ -79,13 +79,13 @@
           >
             <a
               :href="
-                page === 'home' ? '#status' : '/family/' + header + '#status'
+                page === 'home' ? '#status' : '/family/' + family + '#status'
               "
               >Status</a
             >
           </div>
           <div
-            v-if="intro"
+            v-if="getIntro"
             id="introduction1"
             :class="
               hash === '#introduction'
@@ -97,13 +97,13 @@
               :href="
                 page === 'home'
                   ? '#introduction'
-                  : '/family/' + header + '#introduction'
+                  : '/family/' + family + '#introduction'
               "
               >Introduction</a
             >
           </div>
           <div
-            v-if="example"
+            v-if="getExample"
             id="example1"
             :class="
               hash === '#example'
@@ -113,13 +113,13 @@
           >
             <a
               :href="
-                page === 'home' ? '#example' : '/family/' + header + '#example'
+                page === 'home' ? '#example' : '/family/' + family + '#example'
               "
               >Example</a
             >
           </div>
           <div
-            v-if="usage"
+            v-if="getUsage"
             id="usage1"
             :class="
               hash === '#usage'
@@ -129,13 +129,13 @@
           >
             <a
               :href="
-                page === 'home' ? '#usage' : '/family/' + header + '#usage'
+                page === 'home' ? '#usage' : '/family/' + family + '#usage'
               "
               >Usage</a
             >
           </div>
           <div
-            v-if="advanced"
+            v-if="getAdvanced"
             id="advanced1"
             :class="
               hash === '#advanced'
@@ -153,7 +153,7 @@
             >
           </div>
           <div
-            v-if="faq"
+            v-if="getFaq"
             id="faq1"
             :class="
               hash === '#faq'
@@ -161,7 +161,7 @@
                 : 'landing-nav-api-title'
             "
           >
-            <a :href="page === 'home' ? '#faq' : '/family/' + header + '#faq'"
+            <a :href="page === 'home' ? '#faq' : '/family/' + family + '#faq'"
               >F.A.Q.</a
             >
           </div>
@@ -330,12 +330,7 @@ export default {
       header: this.$route.params.family,
       showAPI: false,
       hash: "",
-      family: "",
-      intro: false,
-      example: false,
-      usage: false,
-      faq: false,
-      advanced: false
+      family: ""
     };
   },
   computed: {
@@ -369,11 +364,6 @@ export default {
   },
   created() {
     this.$data.family = this.getFamily;
-    this.$data.intro = this.getIntro;
-    this.$data.example = this.getExample;
-    this.$data.usage = this.getUsage;
-    this.$data.faq = this.getFaq;
-    this.$data.advanced = this.getAdvanced;
   },
   mounted() {
     this.onScroll();
@@ -382,11 +372,6 @@ export default {
   updated() {
     this.$data.hash = this.getHash;
     this.$data.family = this.getFamily;
-    this.$data.intro = this.getIntro;
-    this.$data.example = this.getExample;
-    this.$data.usage = this.getUsage;
-    this.$data.faq = this.getFaq;
-    this.$data.advanced = this.getAdvanced;
   }
 };
 </script>
