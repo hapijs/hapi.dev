@@ -28,12 +28,7 @@ export default {
   data() {
     return {
       moduleAPI: moduleInfo,
-      page: "changelog",
-      intro: false,
-      example: false,
-      usage: false,
-      faq: false,
-      advanced: false
+      page: "changelog"
     };
   },
   head() {
