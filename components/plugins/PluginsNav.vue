@@ -3,6 +3,7 @@
     <div class="side-nav-wrapper">
       <div class="side-nav-inner-wrapper">
         <div class="side-nav-title">Plugins</div>
+        <Ads />
         <div class="side-nav-select-wrapper">
           <ul class="side-nav-select-list plugins-ul">
             <li class="side-nav-select-link">
@@ -50,17 +51,19 @@
           </ul>
         </div>
       </div>
-      <SideFooter/>
+      <SideFooter />
     </div>
   </div>
 </template>
 
 <script>
 import SideFooter from "~/components/Footers/SideFooter.vue";
+import Ads from "~/components/Ads.vue";
 
 export default {
   components: {
-    SideFooter
+    SideFooter,
+    Ads
   },
   methods: {
     onScroll() {
@@ -123,5 +126,9 @@ export default {
   color: $orange !important;
   font-weight: 900;
   transition: all 0.2s ease;
+}
+
+.ads-wrapper {
+  padding: 15px 0 0 0;
 }
 </style>

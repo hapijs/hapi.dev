@@ -3,43 +3,75 @@
     <div class="side-nav-wrapper">
       <div class="side-nav-inner-wrapper">
         <div class="side-nav-title">Policies</div>
+        <Ads />
         <div class="side-nav-select-wrapper">
           <ul class="side-nav-select-list">
             <li class="policies-header-link">
               <a
-                :class="$props.page === 'conduct' ? 'side-nav-select-link policies-active' : 'side-nav-select-link'"
+                :class="
+                  $props.page === 'conduct'
+                    ? 'side-nav-select-link policies-active'
+                    : 'side-nav-select-link'
+                "
                 href="/policies/coc"
-              >Code of Conduct</a>
+                >Code of Conduct</a
+              >
             </li>
             <li class="policies-header-link">
               <a
-                :class="$props.page === 'contributing' ? 'side-nav-select-link policies-active' : 'side-nav-select-link'"
+                :class="
+                  $props.page === 'contributing'
+                    ? 'side-nav-select-link policies-active'
+                    : 'side-nav-select-link'
+                "
                 href="/policies/contributing"
-              >Contributing</a>
+                >Contributing</a
+              >
             </li>
             <li class="policies-header-link">
               <a
-                :class="$props.page === 'license' ? 'side-nav-select-link policies-active' : 'side-nav-select-link'"
+                :class="
+                  $props.page === 'license'
+                    ? 'side-nav-select-link policies-active'
+                    : 'side-nav-select-link'
+                "
                 href="/policies/license"
-              >License</a>
+                >License</a
+              >
             </li>
             <li class="policies-header-link">
               <a
-                :class="$props.page === 'security' ? 'side-nav-select-link policies-active' : 'side-nav-select-link'"
+                :class="
+                  $props.page === 'security'
+                    ? 'side-nav-select-link policies-active'
+                    : 'side-nav-select-link'
+                "
                 href="/policies/security"
-              >Security</a>
+                >Security</a
+              >
             </li>
             <li class="policies-header-link">
               <a
-                :class="$props.page === 'styleguide' ? 'side-nav-select-link policies-active' : 'side-nav-select-link'"
+                :class="
+                  $props.page === 'styleguide'
+                    ? 'side-nav-select-link policies-active'
+                    : 'side-nav-select-link'
+                "
                 href="/policies/styleguide"
-              >Style Guide</a>
+                >Style Guide</a
+              >
+            </li>
+
             <li class="policies-header-link">
               <a
-                :class="$props.page === 'support' ? 'side-nav-select-link policies-active' : 'side-nav-select-link'"
+                :class="
+                  $props.page === 'support'
+                    ? 'side-nav-select-link policies-active'
+                    : 'side-nav-select-link'
+                "
                 href="/policies/support"
-              >Support</a>
-            </li>
+                >Support</a
+              >
             </li>
           </ul>
         </div>
@@ -51,10 +83,12 @@
 
 <script>
 import SideFooter from "~/components/Footers/SideFooter.vue";
+import Ads from "~/components/Ads.vue";
 
 export default {
   components: {
-    SideFooter
+    SideFooter,
+    Ads
   },
   props: ["page"],
   methods: {
@@ -75,6 +109,10 @@ export default {
   position: relative;
   list-style-type: none;
   margin-bottom: 5px;
+}
+
+.ads-wrapper {
+  padding: 15px 0 0 0;
 }
 
 .side-nav-select-link a {
