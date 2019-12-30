@@ -418,7 +418,7 @@ export default {
   position: relative;
 }
 .api-nav-title-wrapper {
-  padding: 0 20px 20px 20px;
+  padding: 0 20px;
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -457,7 +457,7 @@ export default {
   cursor: pointer;
 }
 .ads-wrapper {
-  padding: 0 20px 20px 20px;
+  padding: 15px 20px 20px 20px;
 }
 .api-search {
   position: relative;

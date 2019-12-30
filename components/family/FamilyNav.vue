@@ -4,16 +4,22 @@
       <div class="side-nav-inner-wrapper">
         <div class="family-top-wrapper">
           <div class="family-nav-title">
-            {{header}}
+            {{ header }}
             <span class="family-span">
-              <select @change="onVersionChange($event)" class="family-version-select" :value="version">
+              <select
+                @change="onVersionChange($event)"
+                class="family-version-select"
+                :value="version"
+              >
                 <option
                   v-for="version in versions"
                   v-bind:key="version"
                   :value="version"
-                >{{version}}</option>
+                  >{{ version }}</option
+                >
               </select>
             </span>
+            <Ads />
           </div>
           <div class="family-search">
             <input
@@ -27,12 +33,20 @@
             <div class="family-search-info">
               <div class="family-search-results">
                 <div class="family-search-results-wrapper">
-                  <div
-                    class="family-search-results-text"
-                  >Showing result {{indexResults + 1}} of {{results.length}}</div>
+                  <div class="family-search-results-text">
+                    Showing result {{ indexResults + 1 }} of
+                    {{ results.length }}
+                  </div>
                   <div class="family-search-buttons">
-                    <button class="family-search-button" v-on:click="onPrevious">Previous</button>
-                    <button class="family-search-button" v-on:click="onNext">Next</button>
+                    <button
+                      class="family-search-button"
+                      v-on:click="onPrevious"
+                    >
+                      Previous
+                    </button>
+                    <button class="family-search-button" v-on:click="onNext">
+                      Next
+                    </button>
                   </div>
                 </div>
               </div>
@@ -62,11 +76,13 @@
 <script>
 import SideFooter from "~/components/Footers/SideFooter.vue";
 import FamilyNavItem from "./FamilyNavItem.vue";
+import Ads from "~/components/Ads.vue";
 
 export default {
   components: {
     SideFooter,
-    FamilyNavItem
+    FamilyNavItem,
+    Ads
   },
   props: [
     "page",
