@@ -404,7 +404,7 @@ export default {
 }
 
 .ads-wrapper {
-  padding: 20px 0 0 0;
+  padding: 15px 0 0 0;
 }
 
 .family-nav-title a {
