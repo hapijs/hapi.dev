@@ -456,6 +456,9 @@ export default {
   background: url(/img/down.png) 96% / 15% no-repeat $off-white;
   cursor: pointer;
 }
+.ads-wrapper {
+  padding: 0 20px 20px 20px;
+}
 .api-search {
   position: relative;
   padding: 0 20px;

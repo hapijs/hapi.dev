@@ -24,9 +24,6 @@ export default {
 
 <style lang="scss">
 @import "../assets/styles/main.scss";
-.ads-wrapper {
-  padding: 0 20px 20px 20px;
-}
 
 #carbonads {
   font-family: "Lato", sans-serif;

@@ -4,7 +4,7 @@
       <div class="side-nav-inner-wrapper">
         <div class="family-top-wrapper">
           <div class="family-nav-title">
-            <a :href="'/family/' + header">{{ header }}</a>
+            <a :href="'/family/' + family">{{ family }}</a>
             <span class="family-span" v-if="page === 'api'">
               <select
                 @change="onVersionChange($event)"
@@ -19,6 +19,7 @@
                 >
               </select>
             </span>
+            <Ads />
           </div>
           <div class="family-search" v-if="page === 'api'">
             <input
@@ -214,11 +215,13 @@
 <script>
 import SideFooter from "~/components/Footers/SideFooter.vue";
 import FamilyNavItem from "~/components/family/FamilyNavItem.vue";
+import Ads from "~/components/Ads.vue";
 
 export default {
   components: {
     SideFooter,
-    FamilyNavItem
+    FamilyNavItem,
+    Ads
   },
   props: [
     "page",
@@ -400,8 +403,8 @@ export default {
   margin: 0;
 }
 
-.family-nav-slogan {
-  font-size: 0.7rem;
+.ads-wrapper {
+  padding: 20px 0 0 0;
 }
 
 .family-nav-title a {
