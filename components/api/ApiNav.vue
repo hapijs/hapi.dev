@@ -20,6 +20,7 @@
               </select>
             </div>
           </div>
+          <Ads />
           <div class="api-search">
             <input
               class="api-search-box"
@@ -64,15 +65,17 @@
 
 <script>
 import SideFooter from "~/components/Footers/SideFooter.vue";
+import Ads from "~/components/Ads.vue";
 export default {
   components: {
-    SideFooter
+    SideFooter,
+    Ads
   },
   props: ["menu", "search", "version", "results", "indexResults", "versions"],
   data: function() {
     return {
       uls: {},
-      links: {},
+      links: {}
     };
   },
   methods: {
@@ -412,7 +415,6 @@ export default {
   flex-direction: column;
   align-items: flex-start;
   margin: 0;
-  // overflow-x: hidden;
   position: relative;
 }
 .api-nav-title-wrapper {
