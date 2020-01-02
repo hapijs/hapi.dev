@@ -2,10 +2,22 @@
   <footer class="side-footer">
     <ul class="footer-links">
       <li class="footer-links-li">
-        <a class="footer-link" title="GitHub" target="__blank" href="https://github.com/hapijs/hapi">GitHub</a>
+        <a
+          class="footer-link"
+          title="GitHub"
+          target="__blank"
+          href="https://github.com/hapijs/hapi"
+          >GitHub</a
+        >
       </li>
       <li class="footer-links-li">
-        <a class="footer-link" title="Twitter" target="_blank" href="https://twitter.com/hapijs">Twitter</a>
+        <a
+          class="footer-link"
+          title="Twitter"
+          target="_blank"
+          href="https://twitter.com/hapijs"
+          >Twitter</a
+        >
       </li>
       <li class="footer-links-li">
         <a
@@ -13,17 +25,22 @@
           title="Slack"
           target="__blank"
           href="https://join.slack.com/t/hapihour/shared_invite/enQtNTA5MDUzOTAzOTU4LTY1YzY0ZDM4YTZkNzYzOGExNDYzZjQ3YzJkNTVhNmExMDdlMjY3NDhkNDUxNjU4NTY1YjkzMTcxMzBkMzFiNWE"
-        >Slack</a>
+          >Slack</a
+        >
       </li>
     </ul>
-    <div class="footer-text">
-      &copy; 2012 - 2019 Sideway Inc.
-    </div>
+    <div class="footer-text">&copy; 2012 - {{ year }} Sideway Inc.</div>
   </footer>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      year: new Date().getFullYear()
+    };
+  }
+};
 </script>
 
 <style lang="scss">
