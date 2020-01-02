@@ -1,4 +1,4 @@
-@import './assets/styles/main.scss';
+@import "./assets/styles/main.scss";
 
 .markdown-wrapper {
   position: relative;
@@ -60,7 +60,7 @@ h3 a {
 
 code,
 .code {
-  font-family: 'inconsolata', menlo, consolas, monospace;
+  font-family: "inconsolata", menlo, consolas, monospace;
   padding: 0.2rem 0.33rem;
   font-size: 1rem;
   color: $gray;
@@ -95,7 +95,7 @@ p {
 
 p code,
 li code {
-  font-family: 'inconsolata', menlo, consolas, monospace;
+  font-family: "inconsolata", menlo, consolas, monospace;
   padding: 0.2rem 0.33rem;
   color: #6f6f6f;
   background-color: #f3f3f3;
@@ -103,7 +103,7 @@ li code {
 }
 
 pre {
-  font-family: 'inconsolata', menlo, consolas, monospace;
+  font-family: "inconsolata", menlo, consolas, monospace;
   font-size: 1rem;
 }
 
@@ -179,13 +179,15 @@ pre {
     font-size: 15.25px;
   }
 
-  .markdown-wrapper, .family-markdown-wrapper {
-    padding: 5px;
+  .markdown-wrapper,
+  .family-markdown-wrapper {
+    padding: 5px 0;
   }
 }
 
 @media print {
-  .markdown-wrapper, .family-markdown-wrapper {
+  .markdown-wrapper,
+  .family-markdown-wrapper {
     padding: 0;
   }
 }

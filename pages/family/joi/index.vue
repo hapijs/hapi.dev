@@ -442,7 +442,7 @@ export default {
 
 @media screen and (max-width: 900px) {
   .landing-wrapper {
-    padding: 10px;
+    padding: 5px 20px;
     overflow-x: auto;
   }
 

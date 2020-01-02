@@ -1,4 +1,4 @@
-@import '../../assets/styles/main.scss';
+@import "../../assets/styles/main.scss";
 
 .side-nav-window {
   position: -webkit-sticky;
@@ -198,17 +198,26 @@ select:focus {
 }
 
 @media screen and (max-width: 900px) {
-  .side-nav-window, .api-nav-window {
+  .side-nav-window,
+  .api-nav-window {
     flex-direction: row;
     align-items: center;
     position: relative;
     top: 0;
-    padding: 15px;
+    padding: 10px 20px;
     min-height: auto;
     max-height: auto;
     border-right: none;
     border-bottom: 1px solid $dark-white;
     width: 100%;
+  }
+
+  .side-nav-inner-wrapper {
+    margin: 0;
+  }
+
+  #carbonads {
+    max-width: none;
   }
 
   .side-nav-wrapper {
