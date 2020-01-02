@@ -166,6 +166,7 @@
               >F.A.Q.</a
             >
           </div>
+          <hr v-if="family === 'joi'" class="landing-hr" />
           <div
             v-if="family === 'joi'"
             id="joi1"
@@ -177,6 +178,7 @@
           >
             <a href="/family/joi/tester">Schema Tester</a>
           </div>
+          <hr class="landing-hr" />
           <div
             :class="
               page === 'api'
@@ -196,6 +198,7 @@
               @change="onVersionChange"
             />
           </ul>
+          <hr class="landing-hr" />
           <div
             :class="
               page === 'changelog'
@@ -498,6 +501,15 @@ export default {
   overflow-x: hidden;
 }
 
+.landing-hr {
+  position: relative;
+  left: -30px;
+  height: 1px;
+  background-color: $dark-white;
+  width: calc(100% - 10px);
+  margin: 0;
+}
+
 @media screen and (max-width: 900px) {
   .family-top-wrapper {
     padding: 0;
@@ -518,6 +530,10 @@ export default {
 
   .family-version-select {
     width: 80px;
+  }
+
+  .landing-hr {
+    display: none;
   }
 }
 </style>
