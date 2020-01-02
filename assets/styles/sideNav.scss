@@ -1,4 +1,4 @@
-@import '../../assets/styles/main.scss';
+@import "../../assets/styles/main.scss";
 
 .side-nav-window {
   position: -webkit-sticky;
@@ -32,6 +32,7 @@
   max-height: calc(100vh - 96px);
   min-height: calc(100vh - 96px);
   overflow-y: auto;
+  overflow-x: hidden;
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
   padding: 0 0 5px 0;
@@ -197,12 +198,13 @@ select:focus {
 }
 
 @media screen and (max-width: 900px) {
-  .side-nav-window, .api-nav-window {
+  .side-nav-window,
+  .api-nav-window {
     flex-direction: row;
     align-items: center;
     position: relative;
     top: 0;
-    padding: 15px;
+    padding: 10px 20px;
     min-height: auto;
     max-height: auto;
     border-right: none;
@@ -210,7 +212,15 @@ select:focus {
     width: 100%;
   }
 
-  .side-nav-wrapper, .api-nav-wrapper {
+  .side-nav-inner-wrapper {
+    margin: 0;
+  }
+
+  #carbonads {
+    max-width: none;
+  }
+
+  .side-nav-wrapper {
     min-height: auto;
   }
 

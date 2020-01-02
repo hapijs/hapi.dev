@@ -3,9 +3,10 @@
     <div class="side-nav-wrapper">
       <div class="side-nav-inner-wrapper">
         <div class="side-nav-title">Modules</div>
+        <Ads />
         <div class="family-sort-wrapper">
-          <div>Sort By: </div>
-          <select @change="onChange($event)" class="family-sort" :value='sort'>
+          <div>Sort By:</div>
+          <select @change="onChange($event)" class="family-sort" :value="sort">
             <option value="name">Name</option>
             <option value="stars">Stars</option>
             <option value="forks">Forks</option>
@@ -22,7 +23,9 @@
           />
           <div class="family-module-search-img" v-on:click="onSearch"></div>
         </div>
-        <button class="module-clear-button hide" v-on:click="onClear">Clear</button>
+        <button class="module-clear-button hide" v-on:click="onClear">
+          Clear
+        </button>
       </div>
       <SideFooter />
     </div>
@@ -31,11 +34,13 @@
 
 <script>
 import SideFooter from "~/components/Footers/SideFooter.vue";
+import Ads from "~/components/Ads.vue";
 
 export default {
   props: ["search", "sort"],
   components: {
-    SideFooter
+    SideFooter,
+    Ads
   },
   methods: {
     onInput(event) {
@@ -55,8 +60,8 @@ export default {
       document.querySelector(".module-clear-button").classList.add("hide");
       this.$emit("clear");
     },
-    onChange(event){
-      this.$emit("change", event.target.value)
+    onChange(event) {
+      this.$emit("change", event.target.value);
     }
   }
 };
@@ -75,6 +80,10 @@ export default {
   margin-right: 10px;
 }
 
+.ads-wrapper {
+  padding: 15px 0 0 0;
+}
+
 .family-sort-wrapper {
   display: flex;
   align-items: center;
@@ -87,7 +96,7 @@ export default {
   margin-left: 10px;
   border: none;
   height: 30px;
-  font-size: .91em;
+  font-size: 0.91em;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -98,7 +107,6 @@ export default {
 
 .family-module-search {
   position: relative;
-  padding-right: 20px;
   width: 100%;
   margin-top: 20px;
 }
@@ -121,7 +129,7 @@ export default {
   background-color: #fff;
   background-size: contain;
   padding: 10px;
-  right: 20px;
+  right: 0;
   top: 0px;
   border-top: 1px solid $dark-white;
   border-right: 1px solid $dark-white;
