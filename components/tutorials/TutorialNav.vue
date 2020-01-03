@@ -3,9 +3,14 @@
     <div class="side-nav-wrapper">
       <div class="side-nav-inner-wrapper">
         <div class="side-nav-title">Tutorials</div>
+        <Ads />
         <div class="lang-wrapper">
           <div class="lang-text">Languages:</div>
-          <select @change="onChange($event)" :value="getLanguage" class="tutorial-lang-select">
+          <select
+            @change="onChange($event)"
+            :value="getLanguage"
+            class="tutorial-lang-select"
+          >
             <option value="en_US">en-US</option>
             <option value="pt_BR">pt-BR</option>
             <option value="ko_KR">ko-KR</option>
@@ -16,86 +21,163 @@
         <div class="side-nav-select-wrapper">
           <ul class="side-nav-select-list">
             <li
-              :class="$route.params.tutorial === 'gettingstarted' || !$route.params.tutorial ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+              :class="
+                $route.params.tutorial === 'gettingstarted' ||
+                !$route.params.tutorial
+                  ? 'side-nav-select-link side-nav-active'
+                  : 'side-nav-select-link'
+              "
             >
               <a
                 ref="gettingstarted"
                 :href="'/tutorials/gettingstarted/?lang=' + getLanguage"
-              >Getting Started</a>
+                >Getting Started</a
+              >
             </li>
             <li
-              :class="$route.params.tutorial === 'expresstohapi' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+              :class="
+                $route.params.tutorial === 'expresstohapi'
+                  ? 'side-nav-select-link side-nav-active'
+                  : 'side-nav-select-link'
+              "
             >
               <a
                 ref="expresstohapi"
                 :href="'/tutorials/expresstohapi/?lang=' + getLanguage"
-              >Express Migration</a>
+                >Express Migration</a
+              >
             </li>
             <li
-              :class="$route.params.tutorial === 'auth' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+              :class="
+                $route.params.tutorial === 'auth'
+                  ? 'side-nav-select-link side-nav-active'
+                  : 'side-nav-select-link'
+              "
             >
-              <a ref="auth" :href="'/tutorials/auth/?lang=' + getLanguage">Authentication</a>
+              <a ref="auth" :href="'/tutorials/auth/?lang=' + getLanguage"
+                >Authentication</a
+              >
             </li>
             <li
-              :class="$route.params.tutorial === 'caching' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+              :class="
+                $route.params.tutorial === 'caching'
+                  ? 'side-nav-select-link side-nav-active'
+                  : 'side-nav-select-link'
+              "
             >
-              <a ref="caching" :href="'/tutorials/caching/?lang=' + getLanguage">Caching</a>
+              <a ref="caching" :href="'/tutorials/caching/?lang=' + getLanguage"
+                >Caching</a
+              >
             </li>
             <li
-              :class="$route.params.tutorial === 'cookies' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+              :class="
+                $route.params.tutorial === 'cookies'
+                  ? 'side-nav-select-link side-nav-active'
+                  : 'side-nav-select-link'
+              "
             >
-              <a ref="cookies" :href="'/tutorials/cookies/?lang=' + getLanguage">Cookies</a>
+              <a ref="cookies" :href="'/tutorials/cookies/?lang=' + getLanguage"
+                >Cookies</a
+              >
             </li>
             <li
-              :class="$route.params.tutorial === 'logging' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+              :class="
+                $route.params.tutorial === 'logging'
+                  ? 'side-nav-select-link side-nav-active'
+                  : 'side-nav-select-link'
+              "
             >
-              <a ref="logging" :href="'/tutorials/logging/?lang=' + getLanguage">Logging</a>
+              <a ref="logging" :href="'/tutorials/logging/?lang=' + getLanguage"
+                >Logging</a
+              >
             </li>
             <li
-              :class="$route.params.tutorial === 'plugins' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+              :class="
+                $route.params.tutorial === 'plugins'
+                  ? 'side-nav-select-link side-nav-active'
+                  : 'side-nav-select-link'
+              "
             >
-              <a ref="plugins" :href="'/tutorials/plugins/?lang=' + getLanguage">Plugins</a>
+              <a ref="plugins" :href="'/tutorials/plugins/?lang=' + getLanguage"
+                >Plugins</a
+              >
             </li>
             <li
-              :class="$route.params.tutorial === 'routing' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+              :class="
+                $route.params.tutorial === 'routing'
+                  ? 'side-nav-select-link side-nav-active'
+                  : 'side-nav-select-link'
+              "
             >
-              <a ref="routing" :href="'/tutorials/routing/?lang=' + getLanguage">Routing</a>
+              <a ref="routing" :href="'/tutorials/routing/?lang=' + getLanguage"
+                >Routing</a
+              >
             </li>
             <li
-              :class="$route.params.tutorial === 'servermethods' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+              :class="
+                $route.params.tutorial === 'servermethods'
+                  ? 'side-nav-select-link side-nav-active'
+                  : 'side-nav-select-link'
+              "
             >
               <a
                 ref="servermethods"
                 :href="'/tutorials/servermethods/?lang=' + getLanguage"
-              >Server Methods</a>
+                >Server Methods</a
+              >
             </li>
             <li
-              :class="$route.params.tutorial === 'servingfiles' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+              :class="
+                $route.params.tutorial === 'servingfiles'
+                  ? 'side-nav-select-link side-nav-active'
+                  : 'side-nav-select-link'
+              "
             >
               <a
                 ref="servingfiles"
                 :href="'/tutorials/servingfiles/?lang=' + getLanguage"
-              >Serving Static Files</a>
+                >Serving Static Files</a
+              >
             </li>
             <li
-              :class="$route.params.tutorial === 'testing' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+              :class="
+                $route.params.tutorial === 'testing'
+                  ? 'side-nav-select-link side-nav-active'
+                  : 'side-nav-select-link'
+              "
             >
-              <a ref="testing" :href="'/tutorials/testing/?lang=' + getLanguage">Testing</a>
+              <a ref="testing" :href="'/tutorials/testing/?lang=' + getLanguage"
+                >Testing</a
+              >
             </li>
             <li
-              :class="$route.params.tutorial === 'validation' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+              :class="
+                $route.params.tutorial === 'validation'
+                  ? 'side-nav-select-link side-nav-active'
+                  : 'side-nav-select-link'
+              "
             >
-              <a ref="validation" :href="'/tutorials/validation/?lang=' + getLanguage">Validation</a>
+              <a
+                ref="validation"
+                :href="'/tutorials/validation/?lang=' + getLanguage"
+                >Validation</a
+              >
             </li>
             <li
-              :class="$route.params.tutorial === 'views' ? 'side-nav-select-link side-nav-active' : 'side-nav-select-link'"
+              :class="
+                $route.params.tutorial === 'views'
+                  ? 'side-nav-select-link side-nav-active'
+                  : 'side-nav-select-link'
+              "
             >
-              <a ref="views" :href="'/tutorials/views/?lang=' + getLanguage">Views</a>
+              <a ref="views" :href="'/tutorials/views/?lang=' + getLanguage"
+                >Views</a
+              >
             </li>
           </ul>
         </div>
       </div>
-      <SideFooter/>
+      <SideFooter />
     </div>
   </div>
 </template>
@@ -103,6 +185,7 @@
 <script>
 import SideFooter from "~/components/Footers/SideFooter.vue";
 const page = require("../../static/lib/tutorials/");
+import Ads from "~/components/Ads.vue";
 
 export default {
   props: ["language"],
@@ -117,11 +200,16 @@ export default {
     }
   },
   components: {
-    SideFooter
+    SideFooter,
+    Ads
   }
 };
 </script>
 
 <style lang="scss">
 @import "../../assets/styles/sideNav.scss";
+
+.ads-wrapper {
+  padding: 15px 0 0 0;
+}
 </style>

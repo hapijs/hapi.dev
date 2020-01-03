@@ -17,61 +17,120 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="repo in newRepos" v-bind:key="repo.name" class="module-row">
+            <tr
+              v-for="repo in newRepos"
+              v-bind:key="repo.name"
+              class="module-row"
+            >
               <td class="module-name">
-                {{repo.name}}
-                <a class="module-name-link" :id="repo.name" :href='"#" + repo.name'></a>
+                {{ repo.name }}
+                <a
+                  class="module-name-link"
+                  :id="repo.name"
+                  :href="'#' + repo.name"
+                ></a>
               </td>
               <td colspan="6" class="nested-td">
                 <table class="nested-table">
                   <tbody class="nested-tbody">
-                    <tr v-for="version in repo.versions" v-bind:key="version.name">
+                    <tr
+                      v-for="version in repo.versions"
+                      v-bind:key="version.name"
+                    >
                       <td class="module-version">
                         <div class="module-version-wrapper">
-                          <div class="version-name">{{version.name}}</div>
+                          <div class="version-name">{{ version.name }}</div>
                           <a
                             target="_blank"
                             class="version-helmet"
-                            :href='getModules.includes(repo.name) ? "/family/" + repo.name + "/?v=" + version.name : (repo.name === "hapi" ? "/api/?v=" + version.name : ("https://github.com/hapijs/" + repo.name + "/tree/" + version.branch))'
+                            :href="
+                              getModules.includes(repo.name)
+                                ? '/family/' + repo.name + '/?v=' + version.name
+                                : repo.name === 'hapi'
+                                ? '/api/?v=' + version.name
+                                : 'https://github.com/hapijs/' +
+                                  repo.name +
+                                  '/tree/' +
+                                  version.branch
+                            "
                           >
-                            <img src="/img/helmet.png" alt="hapi helmet" class="version-img" />
+                            <img
+                              src="/img/helmet.png"
+                              alt="hapi helmet"
+                              class="version-img"
+                            />
                           </a>
                           <a
-                            :href='"https://github.com/hapijs/" + repo.name + "/tree/" + version.branch'
+                            :href="
+                              'https://github.com/hapijs/' +
+                                repo.name +
+                                '/tree/' +
+                                version.branch
+                            "
                             target="_blank"
                           >
-                            <img src="/img/githubLogo.png" alt="github logo" class="version-img" />
+                            <img
+                              src="/img/githubLogo.png"
+                              alt="github logo"
+                              class="version-img"
+                            />
                           </a>
                         </div>
                       </td>
-                      <td class="module-license">{{version.license}}</td>
-                      <td>{{version.node}}</td>
+                      <td class="module-license">{{ version.license }}</td>
+                      <td>{{ version.node }}</td>
                       <td class="status-badge">
                         <img
-                          :src='"https://david-dm.org/hapijs/" + repo.name + ".svg?branch=" + version.branch'
+                          :src="
+                            'https://david-dm.org/hapijs/' +
+                              repo.name +
+                              '.svg?branch=' +
+                              version.branch
+                          "
                           alt="Dependency Status"
                           class="hide"
-                          @load="swapImg('depend' + repo.name + version.name, version.branch)"
-                          :id='"depend" + repo.name + version.name'
+                          @load="
+                            swapImg(
+                              'depend' + repo.name + version.name,
+                              version.branch
+                            )
+                          "
+                          :id="'depend' + repo.name + version.name"
                         />
                       </td>
                       <td class="status-badge">
                         <a
-                          :href='repo.versions.length > 1 ? "https://travis-ci.org/hapijs/" + repo.name + "/branches" : "https://travis-ci.org/hapijs/" + repo.name'
+                          :href="
+                            repo.versions.length > 1
+                              ? 'https://travis-ci.org/hapijs/' +
+                                repo.name +
+                                '/branches'
+                              : 'https://travis-ci.org/hapijs/' + repo.name
+                          "
                           target="_blank"
                         >
                           <img
-                            :src='"https://travis-ci.org/hapijs/" + repo.name + ".svg?branch=" + version.branch'
+                            :src="
+                              'https://travis-ci.org/hapijs/' +
+                                repo.name +
+                                '.svg?branch=' +
+                                version.branch
+                            "
                             alt="Build Status"
                             class="hide"
                             @load="swapImg('travis' + repo.name + version.name)"
-                            :id='"travis" + repo.name + version.name'
+                            :id="'travis' + repo.name + version.name"
                           />
                         </a>
                       </td>
-                      <td
-                        class="module-life"
-                      >{{ life.endOfLife[camelName(repo.name)] && life.endOfLife[camelName(repo.name)][version.name] ? life.endOfLife[camelName(repo.name)][version.name] : null }}</td>
+                      <td class="module-life">
+                        {{
+                          life.endOfLife[camelName(repo.name)] &&
+                          life.endOfLife[camelName(repo.name)][version.name]
+                            ? life.endOfLife[camelName(repo.name)][version.name]
+                            : null
+                        }}
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -87,6 +146,7 @@
 <script>
 import ResourcesNav from "../../components/resources/ResourcesNav.vue";
 const life = require("../../static/lib/endOfLife.js");
+const moduleInfo = require("../../static/lib/moduleInfo.json");
 let Semver = require("semver");
 let Yaml = require("js-yaml");
 import _ from "lodash";
@@ -110,6 +170,7 @@ export default {
   data() {
     return {
       page: "status",
+      newRepos: moduleInfo,
       img: {
         0: '<div class="status-code status-unknown"></div>',
         76: '<div class="status-code status-unknown"></div>',
@@ -143,108 +204,9 @@ export default {
       }
     }
   },
-  async asyncData({ params, $axios }) {
-    let repos = {};
-    const options = {
-      headers: {
-        accept: "application/vnd.github.v3.raw+json",
-        authorization: "token " + process.env.GITHUB_TOKEN
-      }
-    };
-    try {
-      let repositories = await $axios.$get(
-        "https://api.github.com/orgs/hapijs/repos?per_page=100",
-        options
-      );
-      for (let r = 0; r < repositories.length; ++r) {
-        let branches = await $axios.$get(
-          "https://api.github.com/repos/hapijs/" +
-            repositories[r].name +
-            "/branches",
-          options
-        );
-        if (
-          repositories[r].name !== "assets" &&
-          repositories[r].name !== ".github" &&
-          repositories[r].name !== "hapi.dev"
-        ) {
-          repos[repositories[r].name] = {
-            name: repositories[r].name,
-            versions: []
-          };
-          for (let branch of branches) {
-            if (branch.name.match(/^v+[0-9]+|\bmaster\b/g)) {
-              const gitHubVersion = await $axios.$get(
-                "https://api.github.com/repos/hapijs/" +
-                  repositories[r].name +
-                  "/contents/package.json?ref=" +
-                  branch.name,
-                options
-              );
-              const nodeYaml = await $axios.$get(
-                "https://api.github.com/repos/hapijs/" +
-                  repositories[r].name +
-                  "/contents/.travis.yml?ref=" +
-                  branch.name,
-                options
-              );
-              let nodeVersions = Yaml.safeLoad(nodeYaml).node_js.reverse();
-              if (
-                !repos[repositories[r].name].versions.some(
-                  v => v.branch === "master" && v.name === gitHubVersion.version
-                ) ||
-                gitHubVersion.name.includes("commercial")
-              ) {
-                repos[repositories[r].name].versions.push({
-                  name: gitHubVersion.version,
-                  branch: branch.name,
-                  license: gitHubVersion.name.includes("commercial")
-                    ? "Commercial"
-                    : "BSD",
-                  node: nodeVersions.join(", ").replace("node,", "")
-                });
-              }
-            }
-            await repos[repositories[r].name].versions.sort(function(a, b) {
-              return Semver.compare(b.name, a.name);
-            });
-          }
-        }
-      }
-    } catch (err) {
-      console.log(err);
-    }
-
-    for (let key of Object.keys(repos)) {
-      if (repos[key].versions.length > 1) {
-        if (
-          repos[key].versions[0].name === repos[key].versions[1].name &&
-          repos[key].versions[0].license === "Commercial"
-        ) {
-          let temp = repos[key].versions[0];
-          repos[key].versions[0] = repos[key].versions[1];
-          repos[key].versions[1] = temp;
-        }
-      }
-    }
-
-    const orderedRepos = {};
-    Object.keys(repos)
-      .sort()
-      .forEach(function(key) {
-        orderedRepos[key] = repos[key];
-      });
-
-    let hapi = orderedRepos.hapi;
-
-    delete orderedRepos.hapi;
-
-    let newRepos = Object.assign({ hapi }, orderedRepos);
-
-    return { newRepos };
-  },
   async created() {
     await this.$store.commit("setDisplay", "resources");
+    this.$data.newRepos = this.newRepos;
   }
 };
 </script>

@@ -3,19 +3,30 @@
     <div class="side-nav-wrapper">
       <div class="side-nav-inner-wrapper">
         <div class="side-nav-title">Resources</div>
+        <Ads />
         <div class="side-nav-select-wrapper">
           <ul class="side-nav-select-list">
             <li class="resources-header-link">
               <a
-                :class="$props.page === 'changelog' ? 'side-nav-select-link resources-active' : 'side-nav-select-link'"
+                :class="
+                  $props.page === 'changelog'
+                    ? 'side-nav-select-link resources-active'
+                    : 'side-nav-select-link'
+                "
                 href="/resources/changelog"
-              >Changelog</a>
+                >Changelog</a
+              >
             </li>
             <li class="resources-header-link">
               <a
-                :class="$props.page === 'status' ? 'side-nav-select-link resources-active' : 'side-nav-select-link'"
+                :class="
+                  $props.page === 'status'
+                    ? 'side-nav-select-link resources-active'
+                    : 'side-nav-select-link'
+                "
                 href="/resources/status"
-              >Module Status</a>
+                >Module Status</a
+              >
             </li>
             <ul class="resources-ul">
               <li class="resources-header-link">
@@ -24,7 +35,8 @@
                   :class="$props.page === '#books' ? 'resources-active' : ''"
                   v-on:click="onClick('books')"
                   href="/resources/list#books"
-                >Books</a>
+                  >Books</a
+                >
               </li>
               <li class="resources-header-link">
                 <a
@@ -32,15 +44,19 @@
                   :class="$props.page === '#gists' ? 'resources-active' : ''"
                   v-on:click="onClick('gists')"
                   href="/resources/list#gists"
-                >Gists and code samples</a>
+                  >Gists and code samples</a
+                >
               </li>
               <li class="resources-header-link">
                 <a
                   ref="boilerplates"
-                  :class="$props.page === '#boilerplates' ? 'resources-active' : ''"
+                  :class="
+                    $props.page === '#boilerplates' ? 'resources-active' : ''
+                  "
                   v-on:click="onClick('boilerplates')"
                   href="/resources/list#boilerplates"
-                >Boilerplates</a>
+                  >Boilerplates</a
+                >
               </li>
               <li class="resources-header-link">
                 <a
@@ -48,15 +64,19 @@
                   :class="$props.page === '#projects' ? 'resources-active' : ''"
                   v-on:click="onClick('projects')"
                   href="/resources/list#projects"
-                >Projects built with hapi</a>
+                  >Projects built with hapi</a
+                >
               </li>
               <li class="resources-header-link">
                 <a
                   ref="tutorials"
-                  :class="$props.page === '#tutorials' ? 'resources-active' : ''"
+                  :class="
+                    $props.page === '#tutorials' ? 'resources-active' : ''
+                  "
                   v-on:click="onClick('tutorials')"
                   href="/resources/list#tutorials"
-                >Tutorials</a>
+                  >Tutorials</a
+                >
               </li>
               <li class="resources-header-link">
                 <a
@@ -64,7 +84,8 @@
                   :class="$props.page === '#videos' ? 'resources-active' : ''"
                   v-on:click="onClick('videos')"
                   href="/resources/list#videos"
-                >Videos</a>
+                  >Videos</a
+                >
               </li>
             </ul>
           </ul>
@@ -77,10 +98,12 @@
 
 <script>
 import SideFooter from "~/components/Footers/SideFooter.vue";
+import Ads from "~/components/Ads.vue";
 
 export default {
   components: {
-    SideFooter
+    SideFooter,
+    Ads
   },
   props: ["page"],
   methods: {
@@ -154,6 +177,10 @@ export default {
   position: relative;
   list-style-type: none;
   margin-bottom: 5px;
+}
+
+.ads-wrapper {
+  padding: 15px 0 0 0;
 }
 
 .resources-ul {

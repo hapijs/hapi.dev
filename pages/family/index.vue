@@ -18,28 +18,35 @@
           v-bind:key="module.name"
         >
           <div class="family-grid-text-wrapper">
-            <a :href='"/family/" + module.name' class="family-grid-link">
-              <div class="family-grid-cell-name">{{module.name}}</div>
+            <a :href="'/family/' + module.name" class="family-grid-link">
+              <div class="family-grid-cell-name">{{ module.name }}</div>
             </a>
-            <div class="family-grid-cell-slogan" v-html="$md.render(module.slogan)"></div>
+            <div
+              class="family-grid-cell-slogan"
+              v-html="$md.render(moduleInfo[module.name].slogan)"
+            ></div>
           </div>
           <div class="family-grid-cell-stats">
             <div class="stats-wrapper">
               <div class="family-stats">
                 <a class="status-link" :href="module.link">
-                  <img class="stats-img-github" src="/img/githubLogo.png" alt="github logo" />
+                  <img
+                    class="stats-img-github"
+                    src="/img/githubLogo.png"
+                    alt="github logo"
+                  />
                 </a>
               </div>
               <div class="family-stats">
                 <img class="stats-img-star" src="/img/star.png" alt="star" />
-                {{module.stars}}
+                {{ module.stars }}
               </div>
               <div class="family-stats">
                 <img class="stats-img-fork" src="/img/fork.png" alt="fork" />
-                {{module.forks}}
+                {{ module.forks }}
               </div>
             </div>
-            <div class="family-updated">Updated: {{module.updated}}</div>
+            <div class="family-updated">Updated: {{ module.updated }}</div>
           </div>
         </div>
       </div>
@@ -49,7 +56,7 @@
 
 <script>
 import FamilyIndexNav from "~/components/family/FamilyIndexNav.vue";
-
+const moduleInfo = require("../../static/lib/moduleInfo.json");
 export default {
   components: {
     FamilyIndexNav
@@ -57,6 +64,7 @@ export default {
   data() {
     return {
       modules: this.$store.getters.loadModules,
+      moduleInfo: moduleInfo,
       search: "",
       core: true,
       sort: "name"
@@ -121,24 +129,13 @@ export default {
     let moduleData = [];
     for (let module of store.getters.loadModules) {
       try {
-        let readme = await $axios.$get(
-          "https://api.github.com/repos/hapijs/" +
-            module +
-            "/contents/README.md",
-          options
-        );
         let forks = await $axios.$get(
           "https://api.github.com/repos/hapijs/" + module,
           options
         );
-        let slogan =
-          (await readme.match(/####(.*)/gm)) !== null
-            ? await readme.match(/####(.*)/gm)[0].substring(5)
-            : "Description coming soon...";
         let date = await new Date(forks.pushed_at);
         moduleData.push({
           name: module,
-          slogan: await slogan,
           forks: await Number(forks.forks_count),
           stars: await Number(forks.stargazers_count),
           date: await forks.pushed_at,
@@ -174,23 +171,19 @@ export default {
 <style lang="scss">
 @import "../../assets/styles/main.scss";
 @import "../../assets/styles/api.scss";
-
 .family-grid-wrapper {
   padding: 20px 100px;
   width: 100%;
 }
-
 .family-header {
   margin-bottom: 30px;
   font-size: 2rem;
 }
-
 .family-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   grid-gap: 20px;
 }
-
 .family-grid-cell {
   position: relative;
   display: flex;
@@ -202,29 +195,23 @@ export default {
   margin: 0;
   background: $off-white;
 }
-
 .family-grid-text-wrapper {
   margin: 0;
 }
-
 .family-grid-cell-name {
   color: $orange;
   font-size: 1.2em;
   font-weight: 700;
 }
-
 .family-grid-link:hover {
   color: $orange;
 }
-
 .family-grid-cell-slogan {
   font-size: 0.95em;
 }
-
 .family-grid-cell-slogan p {
   margin: 0;
 }
-
 .family-grid-cell-stats {
   position: relative;
   bottom: 0;
@@ -234,67 +221,55 @@ export default {
   margin: 10px 0 0 0;
   width: 100%;
 }
-
 .stats-wrapper {
   display: flex;
   align-items: center;
   margin: 0;
   font-size: 0.9em;
 }
-
 .family-stats {
   display: flex;
   align-items: center;
 }
-
 .family-stats:nth-child(-n + 2) {
   padding-right: 20px;
 }
-
 .status-link {
   display: inline-block;
   height: 18px;
   margin: 0;
 }
-
 .stats-img-github {
   height: 18px;
 }
-
 .stats-img-star {
   height: 16px;
   margin-right: 5px;
 }
-
 .stats-img-fork {
   height: 14px;
   margin-right: 5px;
 }
-
 .family-updated {
   font-size: 0.8em;
   font-style: italic;
   justify-self: flex-end;
   margin: 0;
 }
-
 @media screen and (max-width: 1500px) {
   .family-grid-wrapper {
     padding: 20px 40px;
   }
 }
-
 @media screen and (max-width: 900px) {
   .family-grid-wrapper {
     padding: 20px;
   }
-
-.family-grid {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  .family-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
-
-.family-grid-cell-slogan p {
-  font-size: .97em;
-}
+  .family-grid-cell-slogan p {
+    font-size: 0.97em;
+  }
 }
 </style>

@@ -123,7 +123,6 @@ export default {
       }
 
       this.results = headlines.concat(text);
-      console.log(window.innerWidth)
       if (this.results.length) {
         document
           .querySelector(".api-search-results")
