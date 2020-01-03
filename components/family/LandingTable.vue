@@ -12,7 +12,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="version in module.versions" v-bind:key="version.name" class="module-row landing-table-row">
+        <tr
+          v-for="version in module.versions"
+          v-bind:key="version.name"
+          class="module-row landing-table-row"
+        >
           <td>
             <div class="module-version-wrapper">
               <div class="version-name">{{ version.name }}</div>
@@ -166,7 +170,10 @@ export default {
   width: 16.6%;
 }
 
-.landing-table .travis-header,.landing-table .license-header,.landing-table .node-header,.landing-table .life-header {
+.landing-table .travis-header,
+.landing-table .license-header,
+.landing-table .node-header,
+.landing-table .life-header {
   width: 16.6%;
   text-align: center;
   font-weight: 900;
@@ -176,12 +183,13 @@ export default {
   border: 3px solid $dark-white;
 }
 
-.landing-table-row td{
+.landing-table-row td {
   padding: 10px;
 }
 
-.landing-table-row .module-license, .table-version {
-  text-align: center;
+.landing-table-row .module-license,
+.table-version {
+  text-align: center !important;
 }
 
 .landing-table-row .status-badge {
