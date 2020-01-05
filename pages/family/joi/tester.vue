@@ -63,24 +63,8 @@ export default {
   },
   data() {
     return {
-      schema:
-        "//Insert your joi schema here \n" +
-        "Joi.object({\n" +
-        "  username: Joi.string().alphanum().min(3).max(30).required(),\n" +
-        "  password: Joi.string().pattern(/^[a-zA-Z0-9]{3,30}$/),\n" +
-        '  repeat_password: Joi.ref("password"),\n' +
-        "  access_token: [Joi.string(), Joi.number()],\n" +
-        "  birth_year: Joi.number().integer().min(1900).max(2013),\n" +
-        '  email: Joi.string().email({ minDomainSegments: 2, tlds: { allow: ["com", "net"] } } )\n' +
-        "}).with('username', 'birth_year').xor('password', 'access_token').with('password', 'repeat_password')",
-      validate:
-        "//Insert data to validate here \n" +
-        "{ \n" +
-        ' username: "abc",\n' +
-        ' password: "password",\n' +
-        ' repeat_password: "password",\n' +
-        " birth_year: 1994\n" +
-        "}",
+      schema: "",
+      validate: "",
       result: "",
       options: {
         theme: "eclipse",
@@ -100,14 +84,31 @@ export default {
       version: ""
     };
   },
+  computed: {
+    getSchema() {
+      return this.$store.getters.loadSchema;
+    },
+    getValidate() {
+      return this.$store.getters.loadValidate;
+    }
+  },
   methods: {
     onSchemaChange(input) {
-      this.schema = input;
+      this.$store.commit("setSchema", input);
+      this.$data.schema = this.getSchema;
     },
     onValidateChange(input) {
-      this.validate = input;
+      this.$store.commit("setValidate", input);
+      this.$data.validate = this.getValidate;
     },
     onValidateClick() {
+      let isSchema;
+      if (this.schema[this.schema.length - 1] === ";") {
+        this.schema = this.schema.slice(0, -1);
+      }
+      if (this.validate[this.validate.length - 1] === ";") {
+        this.validate = this.validate.slice(0, -1);
+      }
       try {
         let validatedObject = Function(
           '"use strict";return (' + this.validate + ")"
@@ -116,20 +117,33 @@ export default {
           "Joi",
           '"use strict";return (' + this.schema + ")"
         );
-        let validatedResults = joiSchema(Joi).validate(validatedObject);
+        let isSchema = Joi.isSchema(joiSchema(Joi));
+        let validatedResults = joiSchema(Joi).validate(validatedObject, {
+          abortEarly: false
+        });
         if (validatedResults.error) {
-          this.result = validatedResults.error.stack.toString();
+          console.log(validatedResults);
+          this.result = validatedResults.error.stack
+            .toString()
+            .replace("ValidationError", "Validation Error");
         } else {
           this.result = "Validation Passed";
         }
       } catch (error) {
-        this.result = error.toString();
+        if (!isSchema && error instanceof TypeError) {
+          this.result = "Not a valid joi Schema";
+          console.log(error);
+        } else {
+          this.result = error.toString();
+        }
       }
     }
   },
   created() {
     let versionsArray = this.moduleAPI.joi.versionsArray;
     this.$data.version = versionsArray[0];
+    this.$data.schema = this.getSchema;
+    this.$data.validate = this.getValidate;
     this.$store.commit("setDisplay", "family");
     this.$store.commit("setFamily", "joi");
     if (this.moduleAPI.joi[versionsArray[0]].intro) {

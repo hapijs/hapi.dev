@@ -11,6 +11,24 @@ export const state = () => ({
   faq: false,
   advanced: false,
   family: "joi",
+  schema:
+    "//Insert your joi schema here \n" +
+    "Joi.object({\n" +
+    "  username: Joi.string().alphanum().min(3).max(30).required(),\n" +
+    "  password: Joi.string().pattern(/^[a-zA-Z0-9]{3,30}$/),\n" +
+    '  repeat_password: Joi.ref("password"),\n' +
+    "  access_token: [Joi.string(), Joi.number()],\n" +
+    "  birth_year: Joi.number().integer().min(1900).max(2013),\n" +
+    '  email: Joi.string().email({ minDomainSegments: 2, tlds: { allow: ["com", "net"] } } )\n' +
+    "}).with('username', 'birth_year').xor('password', 'access_token').with('password', 'repeat_password')",
+  validate:
+    "//Insert data to validate here \n" +
+    "{ \n" +
+    ' username: "abc",\n' +
+    ' password: "password",\n' +
+    ' repeat_password: "password",\n' +
+    " birth_year: 1994\n" +
+    "}",
   modules: [
     "accept",
     "address",
@@ -95,6 +113,12 @@ export const mutations = {
   },
   setFamily(state, family) {
     state.family = family;
+  },
+  setSchema(state, schema) {
+    state.schema = schema;
+  },
+  setValidate(state, validate) {
+    state.validate = validate;
   }
 };
 
@@ -131,5 +155,11 @@ export const getters = {
   },
   loadFamily(state) {
     return state.family;
+  },
+  loadSchema(state) {
+    return state.schema;
+  },
+  loadValidate(state) {
+    return state.validate;
   }
 };
