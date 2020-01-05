@@ -447,14 +447,14 @@ export default {
 }
 
 h5 a {
-  display: inline-block;
-  position: relative;
-  top: 0;
-  visibility: visible;
+  display: inline-block !important;
+  position: relative !important;
+  top: 0 !important;
+  visibility: visible !important;
 }
 
 h5 p {
-  margin: 0;
+  margin: 0 !important;
 }
 
 @media screen and (max-width: 900px) {
