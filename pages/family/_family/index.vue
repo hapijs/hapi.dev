@@ -21,7 +21,10 @@
       <div class="landing-title-flex">
         <div class="landing-title-wrapper">
           <h1 class="landing-title">{{ name }}</h1>
-          <h5 class="landing-slogan">{{ modules[name].slogan }}</h5>
+          <h5
+            class="landing-slogan"
+            v-html="$md.render(modules[name].slogan)"
+          ></h5>
           <div class="landing-latest-version">
             Latest Version:
             <span class="bold">{{ modules[name].versionsArray[0] }}</span>
@@ -441,6 +444,17 @@ export default {
   position: relative;
   top: -76px;
   visibility: hidden;
+}
+
+h5 a {
+  display: inline-block;
+  position: relative;
+  top: 0;
+  visibility: visible;
+}
+
+h5 p {
+  margin: 0;
 }
 
 @media screen and (max-width: 900px) {
