@@ -140,6 +140,7 @@ export default {
           stars: await Number(forks.stargazers_count),
           date: await forks.pushed_at,
           updated: await date.toDateString(),
+          slogan: await forks.description,
           link: "https://github.com/hapijs/" + module
         });
       } catch (err) {
