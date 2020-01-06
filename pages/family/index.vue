@@ -97,7 +97,7 @@ export default {
       for (let module of this.moduleData) {
         if (
           !module.name.includes(this.$data.search.toLowerCase()) &&
-          !module.name.toLowerCase().includes(this.$data.search.toLowerCase())
+          !module.slogan.toLowerCase().includes(this.$data.search.toLowerCase())
         ) {
           document.querySelector("#" + module.name).classList.add("hide");
         }
@@ -140,6 +140,7 @@ export default {
           stars: await Number(forks.stargazers_count),
           date: await forks.pushed_at,
           updated: await date.toDateString(),
+          slogan: await forks.description,
           link: "https://github.com/hapijs/" + module
         });
       } catch (err) {
