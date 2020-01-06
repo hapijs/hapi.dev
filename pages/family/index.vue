@@ -97,7 +97,7 @@ export default {
       for (let module of this.moduleData) {
         if (
           !module.name.includes(this.$data.search.toLowerCase()) &&
-          !module.slogan.toLowerCase().includes(this.$data.search.toLowerCase())
+          !module.name.toLowerCase().includes(this.$data.search.toLowerCase())
         ) {
           document.querySelector("#" + module.name).classList.add("hide");
         }
