@@ -181,6 +181,21 @@ export default {
       //Set TOC classes
       let anchors = document.querySelectorAll(".family-nav-select-wrapper a");
       let code = document.querySelectorAll(".family-nav-select-wrapper a code");
+      let pre = document.querySelectorAll("pre");
+
+      for (let p of pre) {
+        console.log(p.innerHTML);
+        if (
+          p.innerHTML.includes(
+            '<span class="pl-smi">Joi</span>.<span class="pl-c1">object</span>'
+          )
+        ) {
+          p.insertAdjacentHTML(
+            "afterend",
+            "<img src='/img/joiTestIcon.png' class='test-icon' title='Import to joi Schmea Tester'/>"
+          );
+        }
+      }
 
       for (let link of anchors) {
         link.classList.add("family-anchor");
@@ -545,6 +560,25 @@ h1 a {
 }
 
 .api-clipboard:hover {
+  opacity: 0.7;
+}
+
+.highlight {
+  position: relative;
+}
+
+.test-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 25px;
+  width: 25px;
+  opacity: 0.3;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.test-icon:hover {
   opacity: 0.7;
 }
 
