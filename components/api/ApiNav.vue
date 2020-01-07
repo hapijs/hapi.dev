@@ -197,6 +197,8 @@ export default {
             link.classList.remove("api-nav-plus");
             link.classList.add("api-nav-minus");
           }
+          if (!document.getElementById("carbonads")) return;
+          if (typeof _carbonads !== "undefined") _carbonads.refresh();
         });
       }
       let plus = document.querySelectorAll(".api-nav-plus");

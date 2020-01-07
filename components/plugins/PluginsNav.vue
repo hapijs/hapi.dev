@@ -68,6 +68,13 @@ export default {
   methods: {
     onScroll() {
       let links = [];
+      let anchors = document.querySelectorAll(".side-nav-select-link");
+      for (let anchor of anchors) {
+        anchor.addEventListener("click", function(event) {
+          if (!document.getElementById("carbonads")) return;
+          if (typeof _carbonads !== "undefined") _carbonads.refresh();
+        });
+      }
       links = document.querySelectorAll(".plugins-ul a");
       let points = {};
       let offsets = [];
