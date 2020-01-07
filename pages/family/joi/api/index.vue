@@ -182,9 +182,11 @@ export default {
       let anchors = document.querySelectorAll(".family-nav-select-wrapper a");
       let code = document.querySelectorAll(".family-nav-select-wrapper a code");
       let pre = document.querySelectorAll("pre");
+      let count = 0;
+      let store = this.$store;
+      let router = this.$router;
 
       for (let p of pre) {
-        console.log(p.innerHTML);
         if (
           p.innerHTML.includes(
             '<span class="pl-smi">Joi</span>.<span class="pl-c1">object</span>'
@@ -192,9 +194,34 @@ export default {
         ) {
           p.insertAdjacentHTML(
             "afterend",
-            "<img src='/img/joiTestIcon.png' class='test-icon' title='Import to joi Schmea Tester'/>"
+            "<img src='/img/joiTestIcon.png' class='test-icon' id='icon" +
+              count +
+              "' title='Import to joi Schmea Tester'/>"
           );
+          p.classList.add("pre-icon");
+          p.id = "pre-icon" + count;
         }
+        count++;
+      }
+
+      let testIcons = document.querySelectorAll(".test-icon");
+      for (let icon of testIcons) {
+        icon.addEventListener("click", function(event) {
+          let text = document.getElementById("pre-" + icon.id).textContent;
+          let schema = text.match(/Joi.object([\s\S]*?)(?=;)/);
+          schema = schema[0];
+          store.commit(
+            "setSchema",
+            "//Insert your joi schema here \n" + schema
+          );
+          store.commit(
+            "setValidate",
+            "//Insert data to validate here \n" + "{ \n" + " \n" + "}"
+          );
+          router.push({
+            path: "/family/joi/tester"
+          });
+        });
       }
 
       for (let link of anchors) {

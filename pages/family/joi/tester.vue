@@ -122,7 +122,6 @@ export default {
           abortEarly: false
         });
         if (validatedResults.error) {
-          console.log(validatedResults);
           this.result = validatedResults.error.stack
             .toString()
             .replace("ValidationError", "Validation Error");
@@ -132,7 +131,6 @@ export default {
       } catch (error) {
         if (!isSchema && error instanceof TypeError) {
           this.result = "Not a valid joi Schema";
-          console.log(error);
         } else {
           this.result = error.toString();
         }
@@ -188,6 +186,9 @@ export default {
 .tester-subTitle {
   font-size: 1.5em;
   margin-bottom: 5px;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  border: none !important;
 }
 
 .CodeMirror {
