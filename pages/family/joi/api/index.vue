@@ -187,10 +187,10 @@ export default {
       let router = this.$router;
 
       for (let p of pre) {
+        let textContent = p.textContent;
         if (
-          p.innerHTML.includes(
-            '<span class="pl-smi">Joi</span>.<span class="pl-c1">object</span>'
-          )
+          textContent.match(/(?<=schema\W\=\W)Joi.*\{(.|\n)*?[^\)]\);/) ||
+          textContent.match(/(?<=schema\W\=\W)Joi.*\(\)([\s\S]*?)(?<=\);)/)
         ) {
           p.insertAdjacentHTML(
             "afterend",
@@ -208,7 +208,12 @@ export default {
       for (let icon of testIcons) {
         icon.addEventListener("click", function(event) {
           let text = document.getElementById("pre-" + icon.id).textContent;
-          let schema = text.match(/Joi.object([\s\S]*?)(?=;)/);
+          let schema = text.match(
+            /(?<=schema\W\=\W)Joi.*\(\)([\s\S]*?)(?<=\);)/
+          );
+          if (!schema) {
+            schema = text.match(/(?<=schema\W\=\W)Joi.*\{(.|\n)*?[^\)]\);/);
+          }
           schema = schema[0];
           store.commit(
             "setSchema",
