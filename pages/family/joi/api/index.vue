@@ -219,10 +219,18 @@ export default {
             "setSchema",
             "//Insert your joi schema here \n" + schema
           );
-          store.commit(
-            "setValidate",
-            "//Insert data to validate here \n" + "{ \n" + " \n" + "}"
-          );
+          if (schema.includes("object")) {
+            store.commit(
+              "setValidate",
+              "//Insert data to validate here \n" + "{ \n" + " \n" + "}"
+            );
+          } else {
+            store.commit(
+              "setValidate",
+              "//Insert data to validate here \n" + ""
+            );
+          }
+
           router.push({
             path: "/family/joi/tester"
           });
