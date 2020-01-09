@@ -12,7 +12,7 @@
       />
       <div class="test-wrapper">
         <h1 class="tester-title">
-          joi Schema Tester <span class="tester-version">v{{ version }}</span>
+          joi Schema Tester <span class="tester-version">v16.1.8</span>
         </h1>
         <h2 class="tester-subTitle">Schema:</h2>
         <codemirror
