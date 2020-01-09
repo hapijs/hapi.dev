@@ -181,6 +181,61 @@ export default {
       //Set TOC classes
       let anchors = document.querySelectorAll(".family-nav-select-wrapper a");
       let code = document.querySelectorAll(".family-nav-select-wrapper a code");
+      let pre = document.querySelectorAll("pre");
+      let count = 0;
+      let store = this.$store;
+      let router = this.$router;
+
+      for (let p of pre) {
+        let textContent = p.textContent;
+        if (
+          textContent.match(/(?<=schema\W\=\W)Joi.*\{(.|\n)*?[^\)]\);/) ||
+          textContent.match(/(?<=schema\W\=\W)Joi.*\(\)([\s\S]*?)(?<=\);)/)
+        ) {
+          p.insertAdjacentHTML(
+            "afterend",
+            "<img src='/img/joiTestIcon.png' class='test-icon' id='icon" +
+              count +
+              "' title='Import to joi Schmea Tester'/>"
+          );
+          p.classList.add("pre-icon");
+          p.id = "pre-icon" + count;
+        }
+        count++;
+      }
+
+      let testIcons = document.querySelectorAll(".test-icon");
+      for (let icon of testIcons) {
+        icon.addEventListener("click", function(event) {
+          let text = document.getElementById("pre-" + icon.id).textContent;
+          let schema = text.match(
+            /(?<=schema\W\=\W)Joi.*\(\)([\s\S]*?)(?<=\);)/
+          );
+          if (!schema) {
+            schema = text.match(/(?<=schema\W\=\W)Joi.*\{(.|\n)*?[^\)]\);/);
+          }
+          schema = schema[0];
+          store.commit(
+            "setSchema",
+            "//Insert your joi schema here \n" + schema
+          );
+          if (schema.includes("object")) {
+            store.commit(
+              "setValidate",
+              "//Insert data to validate here \n" + "{ \n" + " \n" + "}"
+            );
+          } else {
+            store.commit(
+              "setValidate",
+              "//Insert data to validate here \n" + ""
+            );
+          }
+
+          router.push({
+            path: "/family/joi/tester"
+          });
+        });
+      }
 
       for (let link of anchors) {
         link.classList.add("family-anchor");
@@ -545,6 +600,25 @@ h1 a {
 }
 
 .api-clipboard:hover {
+  opacity: 0.7;
+}
+
+.highlight {
+  position: relative;
+}
+
+.test-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 25px;
+  width: 25px;
+  opacity: 0.3;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.test-icon:hover {
   opacity: 0.7;
 }
 

@@ -45,7 +45,7 @@
                             class="version-helmet"
                             :href="
                               getModules.includes(repo.name)
-                                ? '/family/' + repo.name + '/?v=' + version.name
+                                ? '/family/' + repo.name + '/api?v=' + version.name
                                 : repo.name === 'hapi'
                                 ? '/api/?v=' + version.name
                                 : 'https://github.com/hapijs/' +
