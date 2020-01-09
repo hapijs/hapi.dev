@@ -12,7 +12,7 @@
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
-    "@hapi/joi": "16.x.x",
+    "@hapi/joi": "17.x.x",
     "@nuxtjs/axios": "^5.4.1",
     "@nuxtjs/dotenv": "^1.3.0",
     "@nuxtjs/google-analytics": "^2.2.0",
