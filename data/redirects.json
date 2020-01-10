@@ -1,0 +1,14 @@
+[
+  {
+    "from": "/family/hapi",
+    "to": "/api"
+  },
+  {
+    "from": "/family/hapi/api",
+    "to": "/api"
+  },
+  {
+    "from": "/family/hapi/changelog",
+    "to": "/resources/changelog"
+  }
+]
