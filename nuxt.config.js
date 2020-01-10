@@ -266,8 +266,6 @@ module.exports = {
     id: "UA-144917045-1"
   },
 
-  serverMiddleware: ["~/serverMiddleware/redirects.js"],
-
   env: {
     GITHUB_TOKEN: process.env.GITHUB_TOKEN
   },
