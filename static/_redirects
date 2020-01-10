@@ -1,0 +1,4 @@
+# Redirects from what the browser requests to what we serve
+/family/hapi            /api
+/family/hapi/api        /api
+/family/hapi/changelog  /resources/changelog
