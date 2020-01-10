@@ -35,7 +35,7 @@
                   <tbody class="nested-tbody">
                     <tr
                       v-for="version in repo.versions"
-                      v-bind:key="version.name"
+                      v-bind:key="version.name + version.license"
                     >
                       <td class="module-version">
                         <div class="module-version-wrapper">
@@ -128,11 +128,7 @@
                       </td>
                       <td class="module-life">
                         {{
-                          life.endOfLife[camelName(repo.name)] &&
-                          life.endOfLife[camelName(repo.name)][version.name] &&
-                          version.license !== "Commercial"
-                            ? life.endOfLife[camelName(repo.name)][version.name]
-                            : null
+                          getSemver(repo.name, version.name, version.license)
                         }}
                       </td>
                     </tr>
@@ -196,6 +192,19 @@ export default {
     }
   },
   methods: {
+    getSemver(name, version, license) {
+      if (life.endOfLife[_.camelCase(name)] && license !== "Commercial") {
+        for (let v in life.endOfLife[_.camelCase(name)]) {
+          if (Semver.satisfies(version, v)) {
+            return life.endOfLife[_.camelCase(name)][v];
+          }
+          return null;
+        }
+      }
+    },
+    test() {
+      return "Hi";
+    },
     camelName(name) {
       return _.camelCase(name);
     },

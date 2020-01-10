@@ -6,8 +6,5 @@ export const endOfLife = {
   },
   call: {
     // '4.1.0': 'Dec 1, 2019'
-  },
-  hapi: {
-    "18.4.0": "Dec 1, 2020"
   }
 };
