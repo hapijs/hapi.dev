@@ -122,9 +122,8 @@ export default {
           abortEarly: false
         });
         if (validatedResults.error) {
-          this.result = validatedResults.error.stack
-            .toString()
-            .replace("ValidationError", "Validation Error");
+          this.result =
+            "Validation Error: " + validatedResults.error.message.toString();
         } else {
           this.result = "Validation Passed";
         }

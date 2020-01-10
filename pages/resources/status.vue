@@ -45,7 +45,10 @@
                             class="version-helmet"
                             :href="
                               getModules.includes(repo.name)
-                                ? '/family/' + repo.name + '/api?v=' + version.name
+                                ? '/family/' +
+                                  repo.name +
+                                  '/api?v=' +
+                                  version.name
                                 : repo.name === 'hapi'
                                 ? '/api/?v=' + version.name
                                 : 'https://github.com/hapijs/' +
@@ -126,7 +129,8 @@
                       <td class="module-life">
                         {{
                           life.endOfLife[camelName(repo.name)] &&
-                          life.endOfLife[camelName(repo.name)][version.name]
+                          life.endOfLife[camelName(repo.name)][version.name] &&
+                          version.license !== "Commercial"
                             ? life.endOfLife[camelName(repo.name)][version.name]
                             : null
                         }}
