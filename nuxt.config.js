@@ -83,7 +83,7 @@ module.exports = {
       "/family/cryptiles",
       "/family/cryptiles/api",
       "/family/cryptiles/changelog",
-      "/family/fild",
+      "/family/file",
       "/family/file/changelog",
       "/family/formula",
       "/family/formula/api",
