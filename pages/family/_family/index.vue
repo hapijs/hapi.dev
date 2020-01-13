@@ -47,7 +47,7 @@
               class="install-link"
               target="__blank"
               :href="
-                modules[name].versions[0].license === 'commercial'
+                modules[name].versions[0].license === 'Commercial'
                   ? 'https://www.npmjs.com/package/@commercial/' + name
                   : 'https://www.npmjs.com/package/@hapi/' + name
               "
@@ -55,7 +55,7 @@
             >:
             <span
               ><code>{{
-                modules[name].versions[0].license === "commercial"
+                modules[name].versions[0].license === "Commercial"
                   ? "npm install @commercial/" + name
                   : "npm install @hapi/" + name
               }}</code></span
@@ -66,8 +66,7 @@
               class="install-link"
               target="__blank"
               :href="
-                (modules[name].versions[0].license === 'commercial') ===
-                'Commercial'
+                modules[name].versions[0].license === 'Commercial'
                   ? 'https://yarnpkg.com/en/package/@commercial/' + name
                   : 'https://yarnpkg.com/en/package/@hapi/' + name
               "
@@ -75,7 +74,7 @@
             >:
             <span
               ><code>{{
-                modules[name].versions[0].license === "commercial"
+                modules[name].versions[0].license === "Commercial"
                   ? "yarn add @commercial/" + name
                   : "yarn add @hapi/" + name
               }}</code></span
