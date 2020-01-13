@@ -180,7 +180,7 @@
           </div>
           <hr class="landing-hr" />
           <div
-            v-if="moduleInfo[family][version].api !== ''"
+            v-if="moduleInfo[family].api === true"
             :class="
               page === 'api'
                 ? 'landing-nav-api-title bold'

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <LandingNav
-      :moduleAPI="moduleAPI"
+      :moduleInfo="moduleAPI"
       :menu="getMenu"
       :page="page"
       :version="getVersion"
@@ -408,7 +408,7 @@ export default {
       : versionsArray[0];
     this.$store.commit("setDisplay", "family");
     this.$store.commit("setVersion", version);
-    (!this.$route.query.v || versionsArray.includes(this.$route.query.v)) &&
+    (!this.$route.query.v || !versionsArray.includes(this.$route.query.v)) &&
       this.$router.push({
         path: this.$route.path,
         query: { v: versionsArray[0] },

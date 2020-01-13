@@ -98,7 +98,8 @@ async function getInfo() {
       repos[repositories.data[r].name] = {
         name: repositories.data[r].name,
         versions: [],
-        versionsArray: []
+        versionsArray: [],
+        api: false
       };
       for (let branch of branches.data) {
         intro = "";
@@ -132,6 +133,7 @@ async function getInfo() {
                   branch.name,
                 options
               );
+              repos[repositories.data[r].name].api = true;
               let rawString = await api.data.toString();
 
               if (branch.name === "master") {

@@ -7,6 +7,7 @@
       :usage="usage"
       :faq="faq"
       :advanced="advanced"
+      :moduleInfo="moduleAPI"
     />
     <div class="community-wrapper">
       <Changelog :milestones="getMilestones" />

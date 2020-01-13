@@ -2,7 +2,7 @@
   <no-ssr>
     <div class="container">
       <LandingNav
-        :moduleAPI="moduleAPI"
+        :moduleInfo="moduleAPI"
         :intro="intro"
         :example="example"
         :usage="usage"
