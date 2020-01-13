@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <LandingNav page="changelog" />
+    <LandingNav page="changelog" :moduleInfo="moduleAPI" />
     <div class="community-wrapper">
       <Changelog :milestones="getMilestones" />
     </div>

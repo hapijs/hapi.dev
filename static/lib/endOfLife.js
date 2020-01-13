@@ -2,11 +2,10 @@
 
 export const endOfLife = {
   accept: {
-    '3.x.x': 'Apr 30, 2020'
+    "3.x.x": "Apr 30, 2020"
   },
-<<<<<<< HEAD
   address: {
-    '2.x.x': 'Apr 30, 2020'
+    "2.x.x": "Apr 30, 2020"
   },
   ammo: {},
   b64: {},
@@ -36,7 +35,7 @@ export const endOfLife = {
   goodSqueeze: {},
   h2o2: {},
   hapi: {
-    '18.4.0': 'Apr 30, 2020'
+    "18.4.0": "Apr 30, 2020"
   },
   hawk: {},
   heavy: {},
@@ -68,10 +67,4 @@ export const endOfLife = {
   vision: {},
   wreck: {},
   yar: {}
-}
-=======
-  call: {
-    // '4.1.0': 'Dec 1, 2019'
-  }
 };
->>>>>>> 3106518faf2aa8e9ecca3722b0f4483d0589049c
