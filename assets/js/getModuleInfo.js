@@ -57,8 +57,6 @@ const modules = [
   "wreck",
   "yar"
 ];
-let finalHtmlDisplay = "";
-let finalMenu = "";
 
 getInfo();
 
@@ -70,6 +68,8 @@ async function getInfo() {
   let usage = "";
   let faq = "";
   let advance = "";
+  let finalHtmlDisplay = "";
+  let finalMenu = "";
   const options = {
     headers: {
       accept: "application/vnd.github.v3.raw+json",
@@ -81,6 +81,8 @@ async function getInfo() {
     options
   );
   for (let r = 0; r < repositories.data.length; ++r) {
+    finalHtmlDisplay = "";
+    finalMenu = "";
     let branches = await axios.get(
       "https://api.github.com/repos/hapijs/" +
         repositories.data[r].name +
@@ -264,7 +266,11 @@ async function getInfo() {
       }
     }
 
-    if (modules.includes(repositories.data[r].name)) {
+    if (
+      repositories.data[r].name !== "assets" &&
+      repositories.data[r].name !== ".github" &&
+      repositories.data[r].name !== "hapi.dev"
+    ) {
       let readme = await axios.get(
         "https://api.github.com/repos/hapijs/" +
           repositories.data[r].name +

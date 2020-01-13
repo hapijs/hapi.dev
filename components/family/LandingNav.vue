@@ -180,6 +180,7 @@
           </div>
           <hr class="landing-hr" />
           <div
+            v-if="moduleInfo[family][version].api !== ''"
             :class="
               page === 'api'
                 ? 'landing-nav-api-title bold'
@@ -235,7 +236,7 @@ export default {
     "results",
     "indexResults",
     "search",
-    "modules"
+    "moduleInfo"
   ],
   methods: {
     async onVersionChange(event) {
