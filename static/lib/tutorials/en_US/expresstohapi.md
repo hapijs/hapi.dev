@@ -192,9 +192,9 @@ server.route({
     handler: function (request, h) {
 
         const user = {
-            firstName: John,
-            lastName: Doe,
-            userName: JohnDoe,
+            firstName: 'John',
+            lastName: 'Doe',
+            userName: 'JohnDoe',
             id: 123
         }
 
@@ -603,7 +603,7 @@ npm install @hapi/joi
 <br />
 
 ```js
-const Joi = require('joi')
+const Joi = require('@hapi/joi')
 
 server.route({
     method: 'POST',
@@ -614,9 +614,9 @@ server.route({
     },
     options: {
         validate: {
-            payload: {
+            payload: Joi.object({
                 post: Joi.string().max(140)
-            }
+            })
         }
     }
 });
@@ -673,7 +673,7 @@ app.set('view engine', 'pug');
 
 To set the views engine in hapi, you first must register the vision plugin, then configure `server.views`:
 ```js
-await server.register(require('vision'));
+await server.register(require('@hapi/vision'));
 
 server.views({
     engines: {

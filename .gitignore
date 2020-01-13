@@ -82,6 +82,10 @@ dist
 
 # Service worker
 sw.*
+<<<<<<< HEAD
+
+# Visual Studio
+.vs
 
 # DS store
 .DS_Store
