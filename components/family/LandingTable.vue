@@ -14,7 +14,7 @@
       <tbody>
         <tr
           v-for="version in module.versions"
-          v-bind:key="version.name"
+          v-bind:key="version.name + version.license"
           class="module-row landing-table-row"
         >
           <td>
@@ -96,12 +96,7 @@
             </a>
           </td>
           <td class="module-life">
-            {{
-              life.endOfLife[camelName(name)] &&
-              life.endOfLife[camelName(name)][version.name]
-                ? life.endOfLife[camelName(name)][version.name]
-                : null
-            }}
+            {{ getSemver(name, version.name, version.license) }}
           </td>
         </tr>
       </tbody>
@@ -111,6 +106,7 @@
 
 <script>
 const life = require("../../static/lib/endOfLife.js");
+let Semver = require("semver");
 import _ from "lodash";
 
 export default {
@@ -133,6 +129,16 @@ export default {
     };
   },
   methods: {
+    getSemver(name, version, license) {
+      if (life.endOfLife[_.camelCase(name)] && license !== "Commercial") {
+        for (let v in life.endOfLife[_.camelCase(name)]) {
+          if (Semver.satisfies(version, v)) {
+            return life.endOfLife[_.camelCase(name)][v];
+          }
+          return null;
+        }
+      }
+    },
     camelName(name) {
       return _.camelCase(name);
     },
@@ -194,5 +200,9 @@ export default {
 
 .landing-table-row .status-badge {
   vertical-align: middle;
+}
+
+.module-life {
+  text-align: center !important;
 }
 </style>
