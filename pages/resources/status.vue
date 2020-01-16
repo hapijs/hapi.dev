@@ -202,9 +202,6 @@ export default {
         }
       }
     },
-    test() {
-      return "Hi";
-    },
     camelName(name) {
       return _.camelCase(name);
     },
