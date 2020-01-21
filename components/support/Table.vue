@@ -46,6 +46,23 @@
             <td>&#10004;</td>
           </tr>
           <tr>
+            <td class="table-feature">hapi versions</td>
+            <td>v19, v18</td>
+            <td>v19, v18</td>
+            <td>v19, v18, <span class="bold">v17</span></td>
+            <td>v19, v18, <span class="bold">v17</span>, <span class="bold">v16</span></td>
+          </tr>
+          <tr>
+            <td class="table-feature">
+              Custom open source allowance
+              <span class="table-span">(Accrued monthly development hours)</span>
+            </td>
+            <td>-</td>
+            <td><span class="bold">20 minutes (up to 4 hours)</span></td>
+            <td><span class="bold">1 hour (up to 16 hours)</span></td>
+            <td><span class="bold">3 hours (up to 40 hours) </span></td>
+          </tr>
+          <tr>
             <td class="table-feature">
               Max response time for GitHub issues
               <span class="table-span">(business days)</span>
@@ -54,13 +71,6 @@
             <td><span class="bold">3 days</span></td>
             <td><span class="bold">3 days</span></td>
             <td><span class="bold">2 days</span></td>
-          </tr>
-          <tr>
-            <td class="table-feature">hapi versions</td>
-            <td>v18</td>
-            <td>v18</td>
-            <td>v18, <span class="bold">v17</span></td>
-            <td>v18, <span class="bold">v17</span>, <span class="bold">v16</span></td>
           </tr>
           <tr>
             <td class="table-feature">Version lock-in</td>
@@ -86,9 +96,7 @@
           <tr>
             <td class="table-feature">
               Private priority issues/month
-              <span
-                class="table-span"
-              >(Up to 2 business days response time)</span>
+              <span class="table-span">(Up to 2 business days response time)</span>
             </td>
             <td>-</td>
             <td><span class="bold">1</span></td>
@@ -103,7 +111,7 @@
             <td>-</td>
             <td>-</td>
             <td>-</td>
-            <td><span class="bold">3</span></td> 
+            <td><span class="bold">3</span></td>
           </tr>
           <tr>
             <td class="table-feature">Advance security notifications</td>
@@ -117,7 +125,7 @@
             <td>-</td>
             <td>-</td>
             <td>&#10004;</td>
-            <td>&#10004;</td> 
+            <td>&#10004;</td>
           </tr>
           <tr>
             <td class="table-feature">Private Slack channel</td>
