@@ -42,6 +42,17 @@
             <li class="policies-header-link">
               <a
                 :class="
+                  $props.page === 'commercial'
+                    ? 'side-nav-select-link policies-active'
+                    : 'side-nav-select-link'
+                "
+                href="/policies/commercial"
+                >Commercial License</a
+              >
+            </li>
+            <li class="policies-header-link">
+              <a
+                :class="
                   $props.page === 'security'
                     ? 'side-nav-select-link policies-active'
                     : 'side-nav-select-link'
