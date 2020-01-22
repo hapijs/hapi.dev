@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <PoliciesNav page="commercial" />
-    <div class="community-wrapper">
+    <div class="commercial-wrapper">
       <HTML :display="page" />
     </div>
   </div>
@@ -52,13 +52,66 @@ export default {
 @import "../../assets/styles/markdown.scss";
 @import "../../assets/styles/api.scss";
 
-.community-wrapper {
+.commercial-wrapper {
   margin: 0;
   width: 100%;
 }
 
+.commercial-wrapper h1 {
+  font-size: 1.8rem;
+  text-align: center;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.commercial-wrapper h2 {
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 700;
+  border: none;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.commercial-wrapper h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  border: none;
+}
+
+.commercial-wrapper h4 {
+  border: none;
+  text-align: center;
+  margin: 30px 0 0 0;
+  padding: 0;
+}
+
+.commercial-wrapper h4 u {
+  margin-bottom: 20px;
+}
+
+.commercial-wrapper h5 {
+  font-size: 1.3rem;
+  border: none;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+ol {
+  list-style: decimal;
+  margin-left: 20px;
+}
+
+li {
+  list-style-type: decimal;
+}
+
+blockquote {
+  margin-left: 20px;
+}
+
 @media screen and (max-width: 900px) {
-  .community-wrapper {
+  .commercial-wrapper {
     padding: 0 20px;
   }
 }
