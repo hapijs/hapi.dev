@@ -44,7 +44,7 @@
                             target="_blank"
                             class="version-helmet"
                             :href="
-                              getModules.includes(repo.name)
+                              newRepos[repo.name][version.name].api
                                 ? '/family/' +
                                   repo.name +
                                   '/api?v=' +
