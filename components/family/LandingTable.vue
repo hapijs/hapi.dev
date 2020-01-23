@@ -23,7 +23,7 @@
               <a
                 class="version-helmet"
                 :href="
-                  getModules.includes(name)
+                  newRepos[name][version.name].api
                     ? '/family/' + name + '/api?v=' + version.name
                     : name === 'hapi'
                     ? '/api/?v=' + version.name
@@ -106,6 +106,7 @@
 
 <script>
 const life = require("../../static/lib/endOfLife.js");
+const moduleInfo = require("../../static/lib/moduleInfo.json");
 let Semver = require("semver");
 import _ from "lodash";
 
@@ -125,7 +126,8 @@ export default {
         160: '<div class="status-code status-failing"></div>',
         nonMaster: '<div class="status-code status-nonMaster"></div>'
       },
-      life: life
+      life: life,
+      newRepos: moduleInfo
     };
   },
   methods: {
