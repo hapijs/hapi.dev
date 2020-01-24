@@ -116,6 +116,7 @@ module.exports = {
       "/family/iron/api",
       "/family/iron/changelog",
       "/family/items",
+      "/family/items/api",
       "/family/items/changelog",
       "/family/joi",
       "/family/joi/api",
