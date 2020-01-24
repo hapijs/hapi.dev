@@ -37,6 +37,7 @@ const modules = [
   "hoek",
   "inert",
   "iron",
+  "items",
   "joi",
   "joi-date",
   "lab",
