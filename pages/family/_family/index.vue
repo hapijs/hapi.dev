@@ -246,7 +246,7 @@ export default {
         }
       );
     }
-    if (moduleInfo[params.family][version].usage) {
+    if (moduleInfo[params.family][version].usage && moduleInfo[params.family][version].usage.length > 10) {
       usageHTML = await $axios.$post(
         "https://api.github.com/markdown",
         {
@@ -309,7 +309,7 @@ export default {
     if (this.modules[module][version].example) {
       this.$store.commit("setExample", true);
     }
-    if (this.modules[module][version].usage) {
+    if (this.modules[module][version].usage && this.modules[module][version].usage.length > 10) {
       this.$store.commit("setUsage", true);
     }
     if (this.modules[module][version].faq) {
