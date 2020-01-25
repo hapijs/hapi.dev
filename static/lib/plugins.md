@@ -438,6 +438,10 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 *   [wurst](https://github.com/felixheck/wurst)
 
     Directory based autoloader for routes
+    
+*   [Wildcard API](https://github.com/reframejs/wildcard-api)
+
+    RPC implementation for browser ⇔ Node.js communication.
 
 ## <a name="validation"></a> Validation
 
