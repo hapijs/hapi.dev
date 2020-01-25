@@ -25,6 +25,8 @@
 <script>
 import HTML from "~/components/HTML.vue";
 import ApiNav from "~/components/api/ApiNav.vue";
+import { copyToClipboard } from '~/utils/clipboard';
+
 let Toc = require("markdown-toc");
 let Semver = require("semver");
 
@@ -151,12 +153,8 @@ export default {
       for (let clipboard of clipboards) {
         clipboard.addEventListener("click", function(event) {
           let copyLink = clipboard.parentNode.firstElementChild.href;
-          const el = document.createElement('textarea');
-          el.value = copyLink;
-          document.body.appendChild(el);
-          el.select();
-          document.execCommand('copy');
-          document.body.removeChild(el);
+          copyToClipboard(copyLink);
+
           clipboard.classList.remove("api-clipboard")
           clipboard.classList.add("api-clipboardCheck")
           setTimeout(function() {
