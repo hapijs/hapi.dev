@@ -1,6 +1,7 @@
 # Validation
 
-_This tutorial is compatible with hapi v17 and newer_
+_This tutorial is compatible with hapi v17 and newer; and joi v16 and newer_
+
 
 1. [Overview](#overview)
 1. [Joi](#joi)
@@ -35,7 +36,20 @@ Then, you must import it to your project:
 
 ## <a name="input"></a> Input Validation
 
-The first type of validation hapi can perform is input validation. This is defined in the `options` object on a route, and is able to validate headers, path parameters, query parameters, and payload data. Note: In the below examples, you'll see that we give a JS object to `route.options.validate`. Be aware that the `validate` option accepts either JS or `joi` objects for its properties. The latter allows you to set `joi` options for that particular schema. Here is a partial rewrite of the [Query Parameters](#queryparams) example:
+The first type of validation hapi can perform is input validation. This is defined in the `options` object on a route, and is able to validate headers, path parameters, query parameters, and payload data. Note: In the below examples, you'll see that we give a JS object to `route.options.validate`. The `validate` option has a default value of:
+
+ ```json5
+ { 
+    headers: true, 
+    params: true, 
+    query: true, 
+    payload: true, 
+    state: true, 
+    failAction: 'error'
+ }
+ ```
+ 
+If a key has a value of `true`,  there will be no validation. Keys can also be either a validation function using the signature `async function(value, options)` or a `joi` validation object for its properties. The latter allows you to set `joi` options for that particular schema. Here is a partial rewrite of the [Query Parameters](#queryparams) example:
 
 ```js
 options: {
@@ -46,7 +60,7 @@ options: {
     }
 }
 ```
-Look [here](/family/joi#any) for details about such options.
+Look [here](/family/joi/api#any) for details about such options.
 
 ### <a name="pathparams"></a> Path parameters
 
@@ -62,9 +76,9 @@ server.route({
     },
     options: {
         validate: {
-            params: {
+            params: Joi.object({
                 name: Joi.string().min(3).max(10)
-            }
+            })
         }
     }
 });
@@ -100,9 +114,9 @@ server.route({
     },
     options: {
         validate: {
-            query: {
+            query: Joi.object({
                 limit: Joi.number().integer().min(1).max(100).default(10)
-            }
+            })
         }
     }
 });
@@ -126,10 +140,10 @@ server.route({
     },
     options: {
         validate: {
-            payload: {
+            payload: Joi.object({
                 post: Joi.string().min(1).max(140),
                 date: Joi.date().required()
-            }
+            })
         }
     }
 });
@@ -160,9 +174,9 @@ server.route({
     },
     options: {
         validate: {
-            headers: {
+            headers: Joi.object({
                 cookie: Joi.string().required()
-            },
+            }),
             options: {
                 allowUnknown: true
             }
@@ -178,7 +192,7 @@ hapi can also validate responses before they are sent back to the client. This v
 
 If a response does not pass the response validation, the client will receive an Internal Server Error (500) response by default (see `response.failAction` below).
 
-Output validation is useful for ensuring that your API is serving data that is consistent with its documentation/contract. Additionally, plugins like [hapi-swagger](https://github.com/glennjones/hapi-swagger) and [lout](https://github.com/hapijs/lout) can use the response-validation schemas to automatically document each endpoint's output format, thus ensuring that your documentation is always up to date.
+Output validation is useful for ensuring that your API is serving data that is consistent with its documentation/contract. Additionally, plugins like [hapi-swagger](https://github.com/glennjones/hapi-swagger) can use the response-validation schemas to automatically document each endpoint's output format, thus ensuring that your documentation is always up to date.
 
 hapi supports quite a few options to fine-tune output validation. Here are a few of them:
 
