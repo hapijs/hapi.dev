@@ -30,7 +30,7 @@ For more info, please see [here](/family/vision).
 
 ## <a name="server"></a> Configuring the server
 
-To get started with views, first you have to configure at least one templating engine on the server. This is done by using the [`server.views()`](/family/vision#serverviewsoptions) method provided by `vision`:
+To get started with views, first you have to configure at least one templating engine on the server. This is done by using the [`server.views()`](/family/vision/api#serverviewsoptions) method provided by `vision`:
 
 ```javascript
 'use strict';
@@ -67,7 +67,7 @@ Next, you tell the server that your templates are located in the `templates` dir
 
 ## <a name="options"></a> server.views() Options
 
-There are many options available to the views engine in hapi. Full documentation can be found in the [vision API reference](/family/vision#serverviewsoptions), but we'll go over some of them here as well.
+There are many options available to the views engine in hapi. Full documentation can be found in the [vision API reference](/family/vision/api#serverviewsoptions), but we'll go over some of them here as well.
 
 Note that all options may be set either globally, which configures them for all registered engines, or local to one specific engine, for example:
 
@@ -287,7 +287,7 @@ return h.view('myview', null, { layout: 'another_layout' });
 
 ## <a name="render"></a> Rendering a view
 
-There are two options for rendering a view, you can use either the [`h.view()`](/family/vision#hviewtemplate-context-options) method, where `h` is the [response toolkit](/api#response-toolkit) or the view handler.
+There are two options for rendering a view, you can use either the [`h.view()`](/family/vision/api#hviewtemplate-context-options) method, where `h` is the [response toolkit](/api#response-toolkit) or the view handler.
 
 ### <a name="hview"></a> h.view()
 

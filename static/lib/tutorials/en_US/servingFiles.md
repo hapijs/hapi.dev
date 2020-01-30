@@ -70,7 +70,7 @@ When you set an option under `server.options.routes`, such as above, it will app
 
 ## <a name="hfile"></a> `h.file(path, [options])`
 
-Now, let's see how to use the [`h.file()`](/family/inert#hfilepath-options) method:
+Now, let's see how to use the [`h.file()`](/family/inert/api#hfilepath-options) method:
 
 ```javascript
 const start = async () => {
