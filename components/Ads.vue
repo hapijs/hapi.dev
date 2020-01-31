@@ -1,11 +1,13 @@
 <template>
-  <div class="ads-wrapper" v-if="loadAd">
-    <script
-      async
-      type="text/javascript"
-      src="//cdn.carbonads.com/carbon.js?serve=CE7DK5QL&placement=hapidev"
-      id="_carbonads_js"
-    ></script>
+  <div class="ads-wrapper">
+    <div v-if="loadAd">
+      <script
+        async
+        type="text/javascript"
+        src="//cdn.carbonads.com/carbon.js?serve=CE7DK5QL&placement=hapidev"
+        id="_carbonads_js"
+      ></script>
+    </div>
   </div>
 </template>
 
