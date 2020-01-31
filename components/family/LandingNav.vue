@@ -178,6 +178,18 @@
           >
             <a href="/family/joi/tester">Schema Tester</a>
           </div>
+          <hr v-if="family === 'bell'" class="landing-hr" />
+          <div
+            v-if="family === 'bell'"
+            id="bell1"
+            :class="
+              page === 'providers'
+                ? 'landing-nav-api-title bold'
+                : 'landing-nav-api-title'
+            "
+          >
+            <a href="/family/bell/providers">Providers</a>
+          </div>
           <hr class="landing-hr" />
           <div
             v-if="moduleInfo[family].api === true"
