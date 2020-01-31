@@ -460,6 +460,9 @@ export default {
 }
 .ads-wrapper {
   padding: 15px 20px 20px 20px;
+  width: 369px;
+  height: 162px;
+  box-sizing: border-box;
 }
 .api-search {
   position: relative;
