@@ -84,7 +84,7 @@ body {
 }
 
 .copy-clipboard {
-  position: absolute;
+  position: relative;
   top: 5px;
   right: 5px;
   display: inline-block;
@@ -96,6 +96,10 @@ body {
   opacity: .3;
   cursor: pointer;
   transition: all .2s;
+
+  &-absolute {
+    position: absolute;
+  }
 
   &:hover {
     opacity: .3;

@@ -15,7 +15,7 @@ export default {
 
     for (let snippet of snippets) {
       const copyClipBoardElement = document.createElement("span");
-      copyClipBoardElement.classList.add("copy-clipboard");
+      copyClipBoardElement.classList.add("copy-clipboard", "copy-clipboard-absolute");
       copyClipBoardElement.title = "Copy code snippet";
 
       const eventListener = function() {
