@@ -9,12 +9,16 @@
 <script>
 import Nav from "~/components/Navs/Nav.vue";
 import Footer from "~/components/Footers/Footer.vue";
+import CopyCodeSnippetMixin from '~/mixins/CopyCodeSnippet';
 
 export default {
   components: {
     Nav,
     Footer
-  }
+  },
+  mixins: [
+    CopyCodeSnippetMixin
+  ],
 };
 </script>
 

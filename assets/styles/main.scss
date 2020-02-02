@@ -83,6 +83,34 @@ body {
   display: block !important;
 }
 
+.copy-clipboard {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin: 0 0 0 5px;
+  background-image: url("/img/clipboard.png");
+  background-size: contain;
+  opacity: .3;
+  cursor: pointer;
+  transition: all .2s;
+
+  &:hover {
+    opacity: .3;
+  }
+
+  &-checked {
+    background-image: url("/img/clipboardCheck.png");
+    opacity: .7;
+  }
+}
+
+.highlight-source-js {
+  position: relative;
+}
+
 @media screen and (min-width: 1088px) {
   .container {
     max-width: 100%;
