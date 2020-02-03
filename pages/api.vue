@@ -25,6 +25,8 @@
 <script>
 import HTML from "~/components/HTML.vue";
 import ApiNav from "~/components/api/ApiNav.vue";
+import { copyToClipboard } from '~/utils/clipboard';
+
 let Toc = require("markdown-toc");
 let Semver = require("semver");
 
@@ -48,7 +50,8 @@ export default {
       menu: "",
       search: "",
       indexResults: 0,
-      results: []
+      results: [],
+      listeners: new Map()
     };
   },
   methods: {
@@ -143,27 +146,24 @@ export default {
 
       for (let header of headers) {
         header.classList.add("api-doc-header")
-        header.innerHTML = header.innerHTML + "<span class='api-clipboardCheck api-clipboard' title='Copy link to clipboard'></span>"
-      }
 
-      let clipboards = document.querySelectorAll(".api-clipboard")
+        const copyClipBoardElement = document.createElement("span");
+        copyClipBoardElement.classList.add("copy-clipboard");
+        copyClipBoardElement.title = "Copy link to clipboard";
 
-      for (let clipboard of clipboards) {
-        clipboard.addEventListener("click", function(event) {
-          let copyLink = clipboard.parentNode.firstElementChild.href;
-          const el = document.createElement('textarea');
-          el.value = copyLink;
-          document.body.appendChild(el);
-          el.select();
-          document.execCommand('copy');
-          document.body.removeChild(el);
-          clipboard.classList.remove("api-clipboard")
-          clipboard.classList.add("api-clipboardCheck")
-          setTimeout(function() {
-            clipboard.classList.add("api-clipboard")
-            clipboard.classList.remove("api-clipboardCheck")
+        const eventListener = function() {
+          const copyLink = this.parentNode.firstElementChild.href;
+          copyToClipboard(copyLink);
+
+          this.classList.add('copy-clipboard-checked');
+          setTimeout(() => {
+            this.classList.remove('copy-clipboard-checked');
           }, 3000)
-        })
+        };
+        copyClipBoardElement.addEventListener("click", eventListener);
+
+        this.listeners.set(copyClipBoardElement, eventListener);
+        header.appendChild(copyClipBoardElement);
       }
     }
   },
@@ -273,6 +273,12 @@ export default {
   mounted() {
     this.setClipboards();
     this.goToAnchor();
+  },
+  beforeDestroy() {
+    for (const [element, listener] of this.listeners) {
+      element.removeEventListener('click', listener);
+    }
+    this.listeners.clear();
   }
 };
 </script>
@@ -288,34 +294,4 @@ export default {
 .api-doc-header {
   position: relative;
 }
-
-.api-clipboardCheck {
-  position: relative;
-  display: inline-block;
-  width: 17px;
-  height: 17px;
-  margin: 0 0 0 5px;
-  opacity: .7;
-  background: url("/img/clipboardCheck.png");
-  background-size: contain;
-  transition: all .2s;
-}
-
-.api-clipboard {
-  position: relative;
-  display: inline-block;
-  width: 17px;
-  height: 17px;
-  margin: 0 0 0 5px;
-  background: url("/img/clipboard.png");
-  background-size: contain;
-  opacity: .3;
-  cursor: pointer;
-  transition: all .2s;
-}
-
-.api-clipboard:hover {
-  opacity: .7;
-}
-
 </style>
