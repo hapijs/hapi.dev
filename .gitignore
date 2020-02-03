@@ -86,6 +86,7 @@ sw.*
 
 # Visual Studio
 .vs
+.vscode
 
 # DS store
 .DS_Store
