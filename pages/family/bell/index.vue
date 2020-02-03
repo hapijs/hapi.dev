@@ -21,7 +21,10 @@
       <div class="landing-title-flex">
         <div class="landing-title-wrapper">
           <h1 class="landing-title">{{ name }}</h1>
-          <h5 class="landing-slogan">{{ modules[name].slogan }}</h5>
+          <h5
+            class="landing-slogan"
+            v-html="$md.render(modules[name].slogan)"
+          ></h5>
           <div class="landing-latest-version">
             Latest Version:
             <span class="bold">{{ modules[name].versionsArray[0] }}</span>
@@ -44,7 +47,7 @@
               class="install-link"
               target="__blank"
               :href="
-                modules[name].versions[0].license === 'commercial'
+                modules[name].versions[0].license === 'Commercial'
                   ? 'https://www.npmjs.com/package/@commercial/' + name
                   : 'https://www.npmjs.com/package/@hapi/' + name
               "
@@ -52,7 +55,7 @@
             >:
             <span
               ><code>{{
-                modules[name].versions[0].license === "commercial"
+                modules[name].versions[0].license === "Commercial"
                   ? "npm install @commercial/" + name
                   : "npm install @hapi/" + name
               }}</code></span
@@ -63,8 +66,7 @@
               class="install-link"
               target="__blank"
               :href="
-                (modules[name].versions[0].license === 'commercial') ===
-                'Commercial'
+                modules[name].versions[0].license === 'Commercial'
                   ? 'https://yarnpkg.com/en/package/@commercial/' + name
                   : 'https://yarnpkg.com/en/package/@hapi/' + name
               "
@@ -72,7 +74,7 @@
             >:
             <span
               ><code>{{
-                modules[name].versions[0].license === "commercial"
+                modules[name].versions[0].license === "Commercial"
                   ? "yarn add @commercial/" + name
                   : "yarn add @hapi/" + name
               }}</code></span
@@ -123,7 +125,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.dev - joi",
+      title: "hapi.dev - bell",
       meta: [
         {
           hid: "description",
@@ -140,7 +142,7 @@ export default {
       modules: moduleInfo,
       version: "",
       menu: "",
-      name: "joi",
+      name: "bell",
       indexResults: 0,
       search: "",
       results: [],
@@ -165,61 +167,6 @@ export default {
         }, 1);
       } else {
         return false;
-      }
-    },
-    setClasses() {
-      let pre = document.querySelectorAll("pre");
-      let count = 0;
-      let store = this.$store;
-      let router = this.$router;
-
-      for (let p of pre) {
-        let textContent = p.textContent;
-        if (
-          textContent.match(/schema\s=\s(Joi.*\{(.|\n)*?[^\)]\));/) ||
-          textContent.match(/schema\s=\s(Joi.*\(\)([\s\S]*?\);))/)
-        ) {
-          p.insertAdjacentHTML(
-            "afterend",
-            "<img src='/img/joiTestIcon.png' class='test-icon' id='icon" +
-              count +
-              "' title='Import to joi Schmea Tester'/>"
-          );
-          p.classList.add("pre-icon");
-          p.id = "pre-icon" + count;
-        }
-        count++;
-      }
-
-      let testIcons = document.querySelectorAll(".test-icon");
-      for (let icon of testIcons) {
-        icon.addEventListener("click", function(event) {
-          let text = document.getElementById("pre-" + icon.id).textContent;
-          let schema = text.match(/schema\s=\s(Joi.*\(\)([\s\S]*?\);))/);
-          if (!schema) {
-            schema = text.match(/schema\s=\s(Joi.*\{(.|\n)*?[^\)]\));/);
-          }
-          schema = schema[1];
-          store.commit(
-            "setSchema",
-            "//Insert your joi schema here \n" + schema
-          );
-          if (schema.includes("object")) {
-            store.commit(
-              "setValidate",
-              "//Insert data to validate here \n" + "{ \n" + " \n" + "}"
-            );
-          } else {
-            store.commit(
-              "setValidate",
-              "//Insert data to validate here \n" + ""
-            );
-          }
-
-          router.push({
-            path: "/family/joi/tester"
-          });
-        });
       }
     },
     onChildSearch() {
@@ -284,12 +231,13 @@ export default {
     let usageHTML = "";
     let faqHTML = "";
     let advancedHTML = "";
-    let version = moduleInfo.joi.versionsArray[0];
-    if (moduleInfo.joi[version].example) {
+    let providersHTML = "";
+    let version = moduleInfo.bell.versionsArray[0];
+    if (moduleInfo.bell[version].example) {
       exampleHTML = await $axios.$post(
         "https://api.github.com/markdown",
         {
-          text: moduleInfo.joi[version].example,
+          text: moduleInfo.bell[version].example,
           mode: "markdown"
         },
         {
@@ -299,11 +247,14 @@ export default {
         }
       );
     }
-    if (moduleInfo.joi[version].usage) {
+    if (
+      moduleInfo.bell[version].usage &&
+      moduleInfo.bell[version].usage.length > 10
+    ) {
       usageHTML = await $axios.$post(
         "https://api.github.com/markdown",
         {
-          text: moduleInfo.joi[version].usage,
+          text: moduleInfo.bell[version].usage,
           mode: "markdown"
         },
         {
@@ -313,11 +264,11 @@ export default {
         }
       );
     }
-    if (moduleInfo.joi[version].faq) {
+    if (moduleInfo.bell[version].faq) {
       faqHTML = await $axios.$post(
         "https://api.github.com/markdown",
         {
-          text: moduleInfo.joi[version].faq,
+          text: moduleInfo.bell[version].faq,
           mode: "markdown"
         },
         {
@@ -327,11 +278,11 @@ export default {
         }
       );
     }
-    if (moduleInfo.joi[version].advanced) {
+    if (moduleInfo.bell[version].advanced) {
       advancedHTML = await $axios.$post(
         "https://api.github.com/markdown",
         {
-          text: moduleInfo.joi[version].advanced,
+          text: moduleInfo.bell[version].advanced,
           mode: "markdown"
         },
         {
@@ -341,12 +292,29 @@ export default {
         }
       );
     }
-    return { exampleHTML, usageHTML, faqHTML, advancedHTML };
+    const providers = await $axios.$get(
+      "https://api.github.com/repos/hapijs/bell/contents/Providers.md",
+      options
+    );
+    providersHTML = await $axios.$post(
+      "https://api.github.com/markdown",
+      {
+        text: providers,
+        mode: "markdown"
+      },
+      {
+        headers: {
+          authorization: "token " + process.env.GITHUB_TOKEN
+        }
+      }
+    );
+    return { exampleHTML, usageHTML, faqHTML, advancedHTML, providersHTML };
   },
   created() {
     this.$data.modules = moduleInfo;
-    let versionsArray = moduleInfo.joi.versionsArray;
-    if (!this.$store.getters.loadModules.includes("joi")) {
+    let module = "bell";
+    let versionsArray = moduleInfo.bell.versionsArray;
+    if (!this.$store.getters.loadModules.includes(module)) {
       return this.$nuxt.error({ statusCode: 404 });
     }
     let version = versionsArray.includes(this.$route.query.v)
@@ -354,26 +322,31 @@ export default {
       : versionsArray[0];
     this.$store.commit("setDisplay", "family");
     this.$store.commit("setVersion", version);
-    this.$store.commit("setFamily", "joi");
-    if (this.modules.joi[version].intro) {
+    this.$store.commit("setFamily", module);
+    if (this.modules.bell[version].intro) {
       this.$store.commit("setIntro", true);
     }
-    if (this.modules.joi[version].example) {
+    if (this.modules.bell[version].example) {
       this.$store.commit("setExample", true);
     }
-    if (this.modules.joi[version].usage) {
+    if (
+      this.modules.bell[version].usage &&
+      this.modules.bell[version].usage.length > 10
+    ) {
       this.$store.commit("setUsage", true);
     }
-    if (this.modules.joi[version].faq) {
+    if (this.modules.bell[version].faq) {
       this.$store.commit("setFaq", true);
     }
-    if (this.modules.joi[version].advanced) {
+    if (this.modules.bell[version].advanced) {
       this.$store.commit("setAdvanced", true);
     }
   },
   computed: {
     getDisplay() {
-      return this.moduleAPI.joi.displays[this.getVersion];
+      return this.moduleAPI[this.$route.params.family].displays[
+        this.getVersion
+      ];
     },
     getVersion() {
       return this.$store.getters.loadVersion;
@@ -402,7 +375,6 @@ export default {
   },
   mounted() {
     this.goToAnchor();
-    this.setClasses();
   }
 };
 </script>
@@ -496,28 +468,20 @@ export default {
   visibility: hidden;
 }
 
-.highlight {
-  position: relative;
+h5 a {
+  display: inline-block !important;
+  position: relative !important;
+  top: 0 !important;
+  visibility: visible !important;
 }
 
-.test-icon {
-  position: absolute;
-  top: 5px;
-  right: 28px;
-  height: 21px;
-  width: 21px;
-  opacity: 0.3;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.test-icon:hover {
-  opacity: 0.7;
+h5 p {
+  margin: 0 !important;
 }
 
 @media screen and (max-width: 900px) {
   .landing-wrapper {
-    padding: 5px 20px;
+    padding: 10px;
     overflow-x: auto;
   }
 
