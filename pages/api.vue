@@ -294,4 +294,14 @@ export default {
 .api-doc-header {
   position: relative;
 }
+
+.copy-clipboard {
+  top: 0 !important;
+  right: 0 !important;
+}
+
+.copy-clipboard-absolute {
+  top: 5px !important;
+  right: 5px !important;
+}
 </style>
