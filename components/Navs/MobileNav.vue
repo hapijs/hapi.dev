@@ -145,6 +145,9 @@
               <li v-if="name === 'joi'" class="mobile-sublink">
                 <a href="/family/joi/tester">Schema Tester</a>
               </li>
+              <li v-if="name === 'bell'" class="mobile-sublink">
+                <a href="/family/bell/providers">Providers</a>
+              </li>
               <li class="mobile-sublink">
                 <a :href="'/family/' + name + '/api'">API</a>
               </li>

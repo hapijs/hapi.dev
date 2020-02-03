@@ -270,7 +270,6 @@ export default {
 
       let that = this;
 
-      console.log(offsets)
       //Add active class to elements on scroll
       window.onscroll = function() {
         let location = document.documentElement.scrollTop;

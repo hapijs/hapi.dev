@@ -190,6 +190,16 @@
           >
             <a href="/family/bell/providers">Providers</a>
           </div>
+          <ul class="side-nav-select-list" v-if="page === 'providers'">
+            <FamilyNavItem
+              :name="getFamily"
+              :menu="menuProvider"
+              :page="page"
+              :version="version"
+              :versions="versions"
+              @change="onVersionChange"
+            />
+          </ul>
           <hr class="landing-hr" />
           <div
             v-if="moduleInfo[family].api === true"
@@ -248,7 +258,8 @@ export default {
     "results",
     "indexResults",
     "search",
-    "moduleInfo"
+    "moduleInfo",
+    "menuProvider"
   ],
   methods: {
     async onVersionChange(event) {
@@ -510,7 +521,8 @@ export default {
 }
 
 .landing-nav-select-wrapper {
-  margin: 0 0 0 20px !important;
+  margin: 0;
+  padding-left: 20px;
   overflow-x: hidden;
 }
 
