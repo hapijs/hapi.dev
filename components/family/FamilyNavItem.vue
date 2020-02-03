@@ -1,6 +1,6 @@
 <template>
   <li
-    :class="this.$route.params.family === name || (!this.$route.params.family && name === 'bell') ? 'side-nav-select-link family-side-nav-item side-nav-active' : 'side-nav-select-link family-side-nav-item'"
+    :class="this.$route.params.family === name ? 'side-nav-select-link family-side-nav-item side-nav-active' : 'side-nav-select-link family-side-nav-item'"
     :ref="name"
   >
     <div
