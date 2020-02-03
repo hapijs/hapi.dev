@@ -607,10 +607,10 @@ h1 a {
 
 .test-icon {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  height: 25px;
-  width: 25px;
+  top: 5px;
+  right: 28px;
+  height: 21px;
+  width: 21px;
   opacity: 0.3;
   cursor: pointer;
   transition: all 0.2s;
