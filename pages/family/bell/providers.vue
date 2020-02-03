@@ -13,6 +13,9 @@
     <div class="tutorial-markdown-window">
       <HTML :display="providersHTML" />
     </div>
+    <div class="preload">
+      <img src="/img/clipboardCheck.png" alt="clipboard" />
+    </div>
   </div>
 </template>
 
@@ -100,6 +103,51 @@ export default {
     fixAPILink() {
       let apiLink = document.querySelector(".markdown-wrapper p a");
       apiLink.setAttribute("href", "/family/bell/api");
+    },
+    goToAnchor() {
+      let hash = document.location.hash;
+      if (hash != "") {
+        setTimeout(function() {
+          if (location.hash) {
+            window.scrollTo(0, 0);
+            window.location.href = hash;
+          }
+        }, 1);
+      } else {
+        return false;
+      }
+    },
+    setClipboards() {
+      let headers = document.querySelectorAll(
+        ".markdown-wrapper h2, .markdown-wrapper h3, .markdown-wrapper h4, .markdown-wrapper h5"
+      );
+
+      for (let header of headers) {
+        header.classList.add("api-doc-header");
+        header.innerHTML =
+          header.innerHTML +
+          "<span class='api-clipboardCheck api-clipboard' title='Copy link to clipboard'></span>";
+      }
+
+      let clipboards = document.querySelectorAll(".api-clipboard");
+
+      for (let clipboard of clipboards) {
+        clipboard.addEventListener("click", function(event) {
+          let copyLink = clipboard.parentNode.firstElementChild.href;
+          const el = document.createElement("textarea");
+          el.value = copyLink;
+          document.body.appendChild(el);
+          el.select();
+          document.execCommand("copy");
+          document.body.removeChild(el);
+          clipboard.classList.remove("api-clipboard");
+          clipboard.classList.add("api-clipboardCheck");
+          setTimeout(function() {
+            clipboard.classList.add("api-clipboard");
+            clipboard.classList.remove("api-clipboardCheck");
+          }, 3000);
+        });
+      }
     },
     setClasses() {
       //Set TOC classes
@@ -196,8 +244,6 @@ export default {
       }
 
       let that = this;
-
-      console.log(offsets);
 
       //Add active class to elements on scroll
       window.onscroll = function() {
@@ -323,6 +369,8 @@ export default {
   mounted() {
     this.fixAPILink();
     this.setClasses();
+    this.setClipboards();
+    this.goToAnchor();
   }
 };
 </script>
@@ -429,16 +477,16 @@ export default {
 
 .family-active,
 .family-active * {
-    position: relative;
-    color: #fff!important;
-    background: #6f6f6f;
+  position: relative;
+  color: #fff !important;
+  background: #6f6f6f;
 }
 
 .family-active {
   display: inline-block;
-    left: -70px;
-    padding: 2px 30px 2px 70px!important;
-    width: 405px!important;
+  left: -70px;
+  padding: 2px 30px 2px 70px !important;
+  width: 405px !important;
 }
 
 .family-active:after {
@@ -453,5 +501,42 @@ export default {
 
 .family-ul-display {
   display: block !important;
+}
+
+.preload {
+  display: none;
+}
+
+.api-doc-header {
+  position: relative;
+}
+
+.api-clipboardCheck {
+  position: relative;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin: 0 0 0 5px;
+  opacity: 0.7;
+  background: url("/img/clipboardCheck.png");
+  background-size: contain;
+  transition: all 0.2s;
+}
+
+.api-clipboard {
+  position: relative;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin: 0 0 0 5px;
+  background: url("/img/clipboard.png");
+  background-size: contain;
+  opacity: 0.3;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.api-clipboard:hover {
+  opacity: 0.7;
 }
 </style>
