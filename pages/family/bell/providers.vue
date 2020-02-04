@@ -31,12 +31,12 @@ export default {
   },
   head() {
     return {
-      title: "hapi.dev - bell",
+      title: "hapi.dev - bell Providers",
       meta: [
         {
           hid: "description",
           name: "description",
-          content: "View the APIs for the hapi modules"
+          content: "View providers for bell"
         }
       ]
     };

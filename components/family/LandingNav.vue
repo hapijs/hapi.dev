@@ -202,6 +202,18 @@
           </ul>
           <hr class="landing-hr" />
           <div
+            v-if="family === 'bell'"
+            id="bell2"
+            :class="
+              page === 'examples'
+                ? 'landing-nav-api-title bold'
+                : 'landing-nav-api-title'
+            "
+          >
+            <a href="/family/bell/examples">Examples</a>
+          </div>
+          <hr class="landing-hr" />
+          <div
             v-if="moduleInfo[family].api === true"
             :class="
               page === 'api'
