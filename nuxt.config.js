@@ -259,7 +259,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ["~/plugins/vue-js-modal", "~/plugins/vue-codemirror"],
+  plugins: ["~/plugins/vue-js-modal", "~/plugins/vue-codemirror", "~/plugins/vue-highlightjs"],
 
   /*
    ** Nuxt.js modules

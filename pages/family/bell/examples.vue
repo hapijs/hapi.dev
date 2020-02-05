@@ -3,15 +3,39 @@
     <LandingNav
       :moduleInfo="moduleAPI"
       :intro="intro"
-      :menuProvider="menu"
+      :menu="menu"
       :example="example"
       :usage="usage"
       :faq="faq"
       :page="page"
       :advanced="advanced"
     />
-    <div class="tutorial-markdown-window">
-      <HTML :display="providersHTML" />
+    <div class="example-code-main">
+      <h2 class="example-header">bell Examples</h2>
+      <div
+        class="example-code-wrapper"
+        v-for="example in examples"
+        v-bind:key="example.name"
+      >
+        <h4 class="example-name">
+          <a
+            :id="example.name.replace(/\.([^.]+)$/, '')"
+            class="anchor"
+            :href="'#' + example.name.replace(/\.([^.]+)$/, '')"
+            aria-hidden="true"
+            ><span aria-hidden="true" class="octicon octicon-link"></span
+          ></a>
+          {{
+            example.name.charAt(0).toUpperCase() +
+              example.name.slice(1).replace(/\.([^.]+)$/, "")
+          }}
+        </h4>
+        <div class="highlight-source-js example-wrapper">
+          <pre v-highlightjs="example.code" class="example-pre">
+            <code class="javascript"></code>
+          </pre>
+        </div>
+      </div>
     </div>
     <div class="preload">
       <img src="/img/clipboardCheck.png" alt="clipboard" />
@@ -20,35 +44,33 @@
 </template>
 
 <script>
-import HTML from "~/components/HTML.vue";
 import LandingNav from "~/components/family/LandingNav.vue";
 const moduleInfo = require("../../../static/lib/moduleInfo.json");
 let Toc = require("markdown-toc");
 export default {
   components: {
-    HTML,
     LandingNav
   },
   head() {
     return {
-      title: "hapi.dev - bell Providers",
+      title: "hapi.dev - bell Examples",
       meta: [
         {
           hid: "description",
           name: "description",
-          content: "View providers for bell"
+          content: "View examples for bell"
         }
       ]
     };
   },
   data() {
     return {
-      page: this.providersHTML,
-      menu: "",
+      examples: "",
       moduleAPI: moduleInfo,
+      menu: "",
       uls: {},
       links: {},
-      page: "providers",
+      page: "examples",
       intro: false,
       example: false,
       usage: false,
@@ -56,54 +78,7 @@ export default {
       advanced: false
     };
   },
-  async asyncData({ $axios, params }) {
-    const options = {
-      headers: {
-        accept: "application/vnd.github.v3.raw+json",
-        authorization: "token " + process.env.GITHUB_TOKEN
-      }
-    };
-    let providersHTML = "";
-    let finalMenu = "";
-    const providers = await $axios.$get(
-      "https://api.github.com/repos/hapijs/bell/contents/Providers.md",
-      options
-    );
-    let rawString = await providers.toString();
-    let apiTocString = "";
-    let apiTocArray = await rawString.match(/\n#.+/g);
-    let pattern = "####";
-
-    for (let i = 0; i < apiTocArray.length; ++i) {
-      let testPattern = apiTocArray[i].match(/(?=#)(.*)(?=\s)/);
-      if (testPattern[0].length < pattern.length) {
-        pattern = testPattern[0];
-      }
-      apiTocString = apiTocString + apiTocArray[i];
-    }
-    finalMenu = Toc(apiTocString, { bullets: "-" }).content;
-
-    //Generate API and Menu HTML
-    finalMenu = await finalMenu.replace(/\(([^#*]+)\)/g, "()");
-    providersHTML = await $axios.$post(
-      "https://api.github.com/markdown",
-      {
-        text: providers,
-        mode: "markdown"
-      },
-      {
-        headers: {
-          authorization: "token " + process.env.GITHUB_TOKEN
-        }
-      }
-    );
-    return { providersHTML, finalMenu };
-  },
   methods: {
-    fixAPILink() {
-      let apiLink = document.querySelector(".markdown-wrapper p a");
-      apiLink.setAttribute("href", "/family/bell/api");
-    },
     goToAnchor() {
       let hash = document.location.hash;
       if (hash != "") {
@@ -119,7 +94,7 @@ export default {
     },
     setClipboards() {
       let headers = document.querySelectorAll(
-        ".markdown-wrapper h2, .markdown-wrapper h3, .markdown-wrapper h4, .markdown-wrapper h5"
+        ".example-code-main h3, .example-code-main h4, .example-code-main h5"
       );
 
       for (let header of headers) {
@@ -212,13 +187,12 @@ export default {
       let offsets = [];
       for (let i = 0; i < links.length; i++) {
         let point = document.querySelector(
-          `.tutorial-markdown-window h1 a[href='${links[i].hash}'],
-          .tutorial-markdown-window h2 a[href='${links[i].hash}'],
-          .tutorial-markdown-window h3 a[href='${links[i].hash}'], 
-          .tutorial-markdown-window h4 a[href='${links[i].hash}'],
-           .tutorial-markdown-window h5 a[href='${links[i].hash}']`
+          `.example-code-main h1 a[href='${links[i].hash}'],
+          .example-code-main h2 a[href='${links[i].hash}'],
+          .example-code-main h3 a[href='${links[i].hash}'], 
+          .example-code-main h4 a[href='${links[i].hash}'],
+           .example-code-main h5 a[href='${links[i].hash}']`
         );
-        point.id = point.id.replace("user-content-", "");
         if (point) {
           if (point.id) {
             points[point.offsetTop] = {
@@ -235,7 +209,7 @@ export default {
       }
       offsets = [...new Set(offsets)];
 
-      let currentElement = document.querySelector(".markdown-wrapper");
+      let currentElement = document.querySelector(".example-code-main");
 
       for (let ul of familyUls) {
         ul.parentNode.children[0].classList.remove("family-minus");
@@ -311,6 +285,38 @@ export default {
       };
     }
   },
+  async asyncData({ $axios, params }) {
+    const options = {
+      headers: {
+        accept: "application/vnd.github.v3.raw+json",
+        authorization: "token " + process.env.GITHUB_TOKEN
+      }
+    };
+    let tocString = "";
+    let finalMenu = "";
+    let examplesArray = [];
+    const examples = await $axios.$get(
+      "https://api.github.com/repos/hapijs/bell/contents/examples",
+      options
+    );
+
+    for (let example of examples) {
+      const exampleCode = await $axios.$get(
+        "https://api.github.com/repos/hapijs/bell/contents/examples/" +
+          example.name,
+        options
+      );
+      await examplesArray.push({ name: example.name, code: exampleCode });
+      tocString =
+        (await tocString) +
+        "### " +
+        example.name.charAt(0).toUpperCase() +
+        example.name.slice(1).replace(/\.([^.]+)$/, "") +
+        "\n";
+    }
+    finalMenu = await Toc(tocString, { bullets: "-" }).content;
+    return { examplesArray, finalMenu };
+  },
   computed: {
     getDisplay() {
       return this.moduleAPI[this.$route.params.family].displays[
@@ -344,6 +350,7 @@ export default {
   },
   created() {
     this.$data.menu = this.finalMenu;
+    this.$data.examples = this.examplesArray;
     let versionsArray = this.moduleAPI.bell.versionsArray;
     this.$data.version = versionsArray[0];
     this.$data.schema = this.getSchema;
@@ -367,7 +374,6 @@ export default {
     }
   },
   mounted() {
-    this.fixAPILink();
     this.setClasses();
     this.setClipboards();
     this.goToAnchor();
@@ -377,35 +383,50 @@ export default {
 
 <style lang="scss">
 @import "../../../assets/styles/main.scss";
-@import "../../../assets/styles/api.scss";
+@import "../../../assets/styles/markdown.scss";
 
-.tutorial-markdown-window {
-  position: relative;
+.example-code-main {
   width: 100%;
-  padding: 0 20px;
-  box-sizing: border-box;
+  max-width: calc(100% - 370px);
+  margin: 0;
+  padding: 20px 40px;
+}
+
+.example-code-wrapper {
+  width: 100%;
   margin: 0;
 }
 
-.markdown-wrapper a {
-  position: relative;
+.example-header {
+  margin: 20px 0 0 0;
+  border-bottom: 1px solid #ddd;
+  border-top: none;
+  padding-bottom: 10px;
+  width: auto;
+  display: inline-block;
 }
 
-.plugins-logo {
-  position: absolute;
-  top: -8px;
-  right: -40px;
-  width: 35px;
-  height: 35px;
-  max-width: none;
+.example-name {
+  font-size: 1.55rem;
+  margin: 30px 0 15px 0;
+  display: inline-block;
+  border-bottom: 1px solid #ddd;
 }
 
-.plugins-logo-top {
+.example-wrapper {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+}
+
+pre > code {
+  margin-top: -1em;
+  display: block;
+  word-wrap: break-word;
+}
+
+.hljs-meta {
   position: relative;
-  top: 10px;
-  width: 35px;
-  height: 35px;
-  max-width: none;
+  left: 0;
 }
 
 .family-anchor {
@@ -538,5 +559,12 @@ export default {
 
 .api-clipboard:hover {
   opacity: 0.7;
+}
+
+@media screen and (max-width: 900px) {
+  .example-code-main {
+    max-width: 100%;
+    padding: 10px 20px;
+  }
 }
 </style>
