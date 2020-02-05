@@ -30,10 +30,15 @@
               example.name.slice(1).replace(/\.([^.]+)$/, "")
           }}
         </h4>
-        <pre v-highlightjs="example.code" class="example-pre">
-          <code class="javascript"></code>
-        </pre>
+        <div class="highlight-source-js">
+          <pre v-highlightjs="example.code" class="example-pre">
+            <code class="javascript"></code>
+          </pre>
+        </div>
       </div>
+    </div>
+    <div class="preload">
+      <img src="/img/clipboardCheck.png" alt="clipboard" />
     </div>
   </div>
 </template>
@@ -74,6 +79,38 @@ export default {
     };
   },
   methods: {
+    setClipboards() {
+      let headers = document.querySelectorAll(
+        ".example-code-main h2, .example-code-main h3, .example-code-main h4, .example-code-main h5"
+      );
+
+      for (let header of headers) {
+        header.classList.add("api-doc-header");
+        header.innerHTML =
+          header.innerHTML +
+          "<span class='api-clipboardCheck api-clipboard' title='Copy link to clipboard'></span>";
+      }
+
+      let clipboards = document.querySelectorAll(".api-clipboard");
+
+      for (let clipboard of clipboards) {
+        clipboard.addEventListener("click", function(event) {
+          let copyLink = clipboard.parentNode.firstElementChild.href;
+          const el = document.createElement("textarea");
+          el.value = copyLink;
+          document.body.appendChild(el);
+          el.select();
+          document.execCommand("copy");
+          document.body.removeChild(el);
+          clipboard.classList.remove("api-clipboard");
+          clipboard.classList.add("api-clipboardCheck");
+          setTimeout(function() {
+            clipboard.classList.add("api-clipboard");
+            clipboard.classList.remove("api-clipboardCheck");
+          }, 3000);
+        });
+      }
+    },
     setClasses() {
       //Set TOC classes
       let anchors = document.querySelectorAll(".family-nav-select-wrapper a");
@@ -168,7 +205,6 @@ export default {
       }
 
       let that = this;
-
 
       //Add active class to elements on scroll
       window.onscroll = function() {
@@ -326,6 +362,7 @@ export default {
   },
   mounted() {
     this.setClasses();
+    this.setClipboards();
   }
 };
 </script>
@@ -498,5 +535,9 @@ pre > code {
   opacity: 0.3;
   cursor: pointer;
   transition: all 0.2s;
+}
+
+.api-clipboard:hover {
+  opacity: 0.7;
 }
 </style>
