@@ -30,7 +30,7 @@
               example.name.slice(1).replace(/\.([^.]+)$/, "")
           }}
         </h4>
-        <div class="highlight-source-js">
+        <div class="highlight-source-js example-wrapper">
           <pre v-highlightjs="example.code" class="example-pre">
             <code class="javascript"></code>
           </pre>
@@ -94,7 +94,7 @@ export default {
     },
     setClipboards() {
       let headers = document.querySelectorAll(
-        ".example-code-main h2, .example-code-main h3, .example-code-main h4, .example-code-main h5"
+        ".example-code-main h3, .example-code-main h4, .example-code-main h5"
       );
 
       for (let header of headers) {
@@ -407,9 +407,14 @@ export default {
 }
 
 .example-name {
-  font-size: 1.5em;
+  font-size: 1.55rem;
   margin: 30px 0 15px 0;
   display: inline-block;
+  border-bottom: 1px solid #ddd;
+}
+
+.example-wrapper {
+  padding-bottom: 30px;
   border-bottom: 1px solid #ddd;
 }
 
