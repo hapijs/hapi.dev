@@ -79,6 +79,19 @@ export default {
     };
   },
   methods: {
+    goToAnchor() {
+      let hash = document.location.hash;
+      if (hash != "") {
+        setTimeout(function() {
+          if (location.hash) {
+            window.scrollTo(0, 0);
+            window.location.href = hash;
+          }
+        }, 1);
+      } else {
+        return false;
+      }
+    },
     setClipboards() {
       let headers = document.querySelectorAll(
         ".example-code-main h2, .example-code-main h3, .example-code-main h4, .example-code-main h5"
@@ -363,6 +376,7 @@ export default {
   mounted() {
     this.setClasses();
     this.setClipboards();
+    this.goToAnchor();
   }
 };
 </script>
@@ -373,6 +387,7 @@ export default {
 
 .example-code-main {
   width: 100%;
+  max-width: calc(100% - 370px);
   margin: 0;
   padding: 20px 40px;
 }
@@ -399,9 +414,9 @@ export default {
 }
 
 pre > code {
-  white-space: pre;
   margin-top: -1em;
   display: block;
+  word-wrap: break-word;
 }
 
 .hljs-meta {
@@ -539,5 +554,12 @@ pre > code {
 
 .api-clipboard:hover {
   opacity: 0.7;
+}
+
+@media screen and (max-width: 900px) {
+  .example-code-main {
+    max-width: 100%;
+    padding: 10px 20px;
+  }
 }
 </style>
