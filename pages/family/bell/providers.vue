@@ -23,6 +23,7 @@
 import HTML from "~/components/HTML.vue";
 import LandingNav from "~/components/family/LandingNav.vue";
 const moduleInfo = require("../../../static/lib/moduleInfo.json");
+import { copyToClipboard } from "~/utils/clipboard";
 let Toc = require("markdown-toc");
 export default {
   components: {
@@ -134,12 +135,7 @@ export default {
       for (let clipboard of clipboards) {
         clipboard.addEventListener("click", function(event) {
           let copyLink = clipboard.parentNode.firstElementChild.href;
-          const el = document.createElement("textarea");
-          el.value = copyLink;
-          document.body.appendChild(el);
-          el.select();
-          document.execCommand("copy");
-          document.body.removeChild(el);
+          copyToClipboard(copyLink);
           clipboard.classList.remove("api-clipboard");
           clipboard.classList.add("api-clipboardCheck");
           setTimeout(function() {
