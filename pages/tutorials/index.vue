@@ -4,6 +4,9 @@
     <div class="tutorial-markdown-window">
       <Tutorial :display="getPage" :language="language" />
     </div>
+    <div class="preload">
+      <img src="/img/clipboardCheck.png" alt="clipboard" />
+    </div>
   </div>
 </template>
 
@@ -11,6 +14,7 @@
 import Tutorial from "../../components/tutorials/Tutorial.vue";
 import TutorialNav from "../../components/tutorials/TutorialNav.vue";
 const page = require("../../static/lib/tutorials/");
+import { copyToClipboard } from "~/utils/clipboard";
 export default {
   components: {
     Tutorial,
@@ -20,7 +24,11 @@ export default {
     return {
       title: "hapi.dev - Getting Started",
       meta: [
-        { hid: "description", name: "description", content: "Learn how to use hapi" }
+        {
+          hid: "description",
+          name: "description",
+          content: "Learn how to use hapi"
+        }
       ]
     };
   },
@@ -44,6 +52,42 @@ export default {
       this.$router.push({ path: this.$route.path, query: { lang: value } });
       this.$store.commit("setPage", page[value].gettingstarted.default);
       window.scrollTo(0, 0);
+    },
+    setAnchors() {
+      let headings = document.querySelectorAll(
+        ".markdown-wrapper h2 a, .markdown-wrapper h3 a, .markdown-wrapper h4 a, .markdown-wrapper h5 a"
+      );
+
+      for (let head of headings) {
+        head.href = "#" + head.name;
+      }
+    },
+    setClipboards() {
+      let headers = document.querySelectorAll(
+        ".markdown-wrapper h2, .markdown-wrapper h3, .markdown-wrapper h4, .markdown-wrapper h5"
+      );
+
+      for (let header of headers) {
+        header.classList.add("api-doc-header");
+        header.innerHTML =
+          header.innerHTML +
+          "<span class='api-clipboardCheck api-clipboard' title='Copy link to clipboard'></span>";
+      }
+
+      let clipboards = document.querySelectorAll(".api-clipboard");
+
+      for (let clipboard of clipboards) {
+        clipboard.addEventListener("click", function(event) {
+          let copyLink = clipboard.parentNode.firstElementChild.href;
+          copyToClipboard(copyLink);
+          clipboard.classList.remove("api-clipboard");
+          clipboard.classList.add("api-clipboardCheck");
+          setTimeout(function() {
+            clipboard.classList.add("api-clipboard");
+            clipboard.classList.remove("api-clipboardCheck");
+          }, 3000);
+        });
+      }
     }
   },
   created() {
@@ -52,10 +96,14 @@ export default {
       "setLanguage",
       this.$route.query.lang ? this.$route.query.lang : "en_US"
     );
-        this.$store.commit(
+    this.$store.commit(
       "setPage",
       page[this.$store.getters.loadLanguage].gettingstarted.default
     );
+  },
+  mounted() {
+    this.setAnchors();
+    this.setClipboards();
   }
 };
 </script>

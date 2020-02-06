@@ -57,7 +57,7 @@ export default {
     let milestoneList = [];
     let m = [];
     let milestones = [];
-    if (store.getters.loadModules.includes(params.family)) {
+    if (store.getters.loadModules.includes("bell")) {
       try {
         //Changelog
         const mileOptions = {
@@ -68,9 +68,7 @@ export default {
         };
         for (let p = 1; p <= 2; ++p) {
           milestones = await $axios.$get(
-            "https://api.github.com/repos/hapijs/" +
-              params.family +
-              "/milestones?state=closed&per_page=100&page=" +
+            "https://api.github.com/repos/hapijs/bell/milestones?state=closed&per_page=100&page=" +
               p,
             mileOptions
           );
@@ -86,9 +84,7 @@ export default {
         //Get milestone issues
         for (let milestone of sortedMilestones) {
           let m = await $axios.$get(
-            "https://api.github.com/repos/hapijs/" +
-              params.family +
-              "/issues?state=closed&milestone=" +
+            "https://api.github.com/repos/hapijs/bell/issues?state=closed&milestone=" +
               milestone.number +
               "&per_page=200",
             mileOptions
@@ -112,9 +108,9 @@ export default {
     }
   },
   created() {
-    let module = this.$route.params.family;
+    let module = "bell";
     this.$store.commit("setDisplay", "family");
-    let versionsArray = this.moduleAPI[this.$route.params.family].versionsArray;
+    let versionsArray = this.moduleAPI.bell.versionsArray;
     this.$store.commit("setFamily", module);
     if (this.moduleAPI[module][versionsArray[0]].intro) {
       this.$store.commit("setIntro", true);
