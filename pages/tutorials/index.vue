@@ -53,6 +53,16 @@ export default {
       this.$store.commit("setPage", page[value].gettingstarted.default);
       window.scrollTo(0, 0);
     },
+    wrapPre() {
+      let el = document.querySelectorAll("pre");
+
+      for (let e of el) {
+        let wrapper = document.createElement("div");
+        wrapper.classList.add("highlight-source-js");
+        e.parentNode.insertBefore(wrapper, e);
+        wrapper.appendChild(e);
+      }
+    },
     setAnchors() {
       let headings = document.querySelectorAll(
         ".markdown-wrapper h2 a, .markdown-wrapper h3 a, .markdown-wrapper h4 a, .markdown-wrapper h5 a"
@@ -102,6 +112,7 @@ export default {
     );
   },
   mounted() {
+    this.wrapPre();
     this.setAnchors();
     this.setClipboards();
   }
