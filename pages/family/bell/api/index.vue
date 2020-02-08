@@ -79,7 +79,8 @@ export default {
       example: false,
       usage: false,
       faq: false,
-      advanced: false
+      advanced: false,
+      listeners: new Map()
     };
   },
   methods: {
@@ -227,9 +228,7 @@ export default {
         };
       }
 
-      let links = document.querySelectorAll(
-        "#bell a"
-      );
+      let links = document.querySelectorAll("#bell a");
       let points = {};
       let offsets = [];
       for (let i = 0; i < links.length; i++) {
@@ -381,6 +380,12 @@ export default {
     this.setClasses();
     this.goToAnchor();
     this.setClipboards();
+  },
+  beforeDestroy() {
+    for (let [element, listener] of this.listeners) {
+      element.removeEventListener("click", listener);
+    }
+    this.listeners.clear();
   }
 };
 </script>
