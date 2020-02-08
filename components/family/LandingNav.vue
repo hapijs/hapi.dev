@@ -200,7 +200,7 @@
               @change="onVersionChange"
             />
           </ul>
-          <hr class="landing-hr" />
+          <hr class="landing-hr" v-if="family === 'bell'"/>
           <div
             v-if="family === 'bell'"
             id="bell2"
