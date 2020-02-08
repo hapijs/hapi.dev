@@ -91,6 +91,7 @@ async function getInfo() {
       options
     );
     console.log(repositories.data[r].name);
+    branches = branches.data.sort((a, b) => (a.name > b.name) ? 1 : -1)
     if (
       repositories.data[r].name !== "assets" &&
       repositories.data[r].name !== ".github" &&
@@ -102,7 +103,7 @@ async function getInfo() {
         versionsArray: [],
         api: false
       };
-      for (let branch of branches.data) {
+      for (let branch of branches) {
         intro = "";
         example = "";
         usage = "";
@@ -231,13 +232,7 @@ async function getInfo() {
           }
 
           let nodeVersions = Yaml.safeLoad(nodeYaml.data).node_js.reverse();
-          if (
-            !repos[repositories.data[r].name].versions.some(
-              v =>
-                v.branch === "master" && v.name === gitHubVersion.data.version
-            ) ||
-            gitHubVersion.data.name.includes("commercial")
-          ) {
+          if (repos[repositories.data[r].name].versionsArray.indexOf(gitHubVersion.data.version) === -1) {
             repos[repositories.data[r].name].versionsArray.push(
               gitHubVersion.data.version
             );
