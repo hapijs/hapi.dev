@@ -61,7 +61,7 @@ export default {
   data() {
     return {
       moduleAPI: moduleInfo,
-      versionsArray: moduleInfo.joi.versionsArray.sort((a, b) =>
+      versionsArray: moduleInfo.bell.versionsArray.sort((a, b) =>
         Semver.compare(b, a)
       ),
       display: "",
@@ -344,7 +344,7 @@ export default {
   },
   created() {
     let versionsArray = this.moduleAPI.bell.versionsArray;
-    if (!this.$store.getters.loadModules.includes("joi")) {
+    if (!this.$store.getters.loadModules.includes("bell")) {
       return this.$nuxt.error({ statusCode: 404 });
     }
     let version = versionsArray.includes(this.$route.query.v)
