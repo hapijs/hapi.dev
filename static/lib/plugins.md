@@ -27,15 +27,15 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
 ## <a name="authentication"></a> Authentication
 
-*   [basic <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/basic)
+*   [basic <img src="/img/family.svg" class="plugins-logo" />](https://hapi.dev/family/basic)
 
     An HTTP Basic authentication scheme
 
-*   [bell <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/bell)
+*   [bell <img src="/img/family.svg" class="plugins-logo" />](https://hapi.dev/family/bell)
 
     Third-party login plugin for hapi with built in Facebook, GitHub, Google, Instagram, LinkedIn, Twitter, Yahoo, Foursquare, VK, ArcGIS Online and Windows Live support
 
-*   [cookie <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/cookie)
+*   [cookie <img src="/img/family.svg" class="plugins-logo" />](https://hapi.dev/family/cookie)
 
     A cookie-based session authentication scheme
 
@@ -67,9 +67,13 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     A Hapi plugin that wraps passport-saml for SAML SSO
 
-*   [hawk <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/hawk)
+*   [hawk <img src="/img/family.svg" class="plugins-logo" />](https://hapi.dev/family/hawk)
 
     Hawk authentication plugin
+
+*   [jwt <img src="/img/family.svg" class="plugins-logo" />](https://hapi.dev/family/jwt)
+
+    JWT (JSON Web Token) Authentication.
 
 ## <a name="documentation"></a> Documentation
 
@@ -88,10 +92,6 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 *   [hapi-swaggered-ui](https://github.com/z0mt3c/hapi-swaggered-ui)
 
     A plugin to serve and configure swagger-ui
-
-*   [lout <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/lout)
-
-    A browsable documentation generator
 
 ## <a name="encoding"></a> Encoding
 
@@ -169,7 +169,7 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     A plugin that makes Content-Security-Policy headers easy
 
-*   [crumb <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/crumb)
+*   [crumb <img src="/img/family.svg" class="plugins-logo" />](https://hapi.dev/family/crumb)
 
     CSRF crumb generation and validation for hapi
 
@@ -183,7 +183,7 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     Simple server-side session support for hapi
 
-*   [yar <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/yar)
+*   [yar <img src="/img/family.svg" class="plugins-logo" />](https://hapi.dev/family/yar)
 
     A hapi session plugin and cookie jar
 
@@ -407,7 +407,7 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     A model layer for hapi integrating Objection ORM
 
-*   [scooter <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/scooter)
+*   [scooter <img src="/img/family.svg" class="plugins-logo" />](https://hapi.dev/family/scooter)
 
     User-agent information plugin
 
@@ -491,7 +491,7 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
 ## <a name="universe"></a> The extended hapi universe
 
-*   [boom <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/boom)
+*   [boom <img src="/img/family.svg" class="plugins-logo" />](https://hapi.dev/family/boom)
 
     HTTP-friendly error objects
 
@@ -499,11 +499,11 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     A configuration document format, an API, and a foundation for A/B testing
 
-*   [glue <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/glue)
+*   [glue <img src="/img/family.svg" class="plugins-logo" />](https://hapi.dev/family/glue)
 
     Server composer
 
-*   [h2o2 <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/h2o2)
+*   [h2o2 <img src="/img/family.svg" class="plugins-logo" />](https://hapi.dev/family/h2o2)
 
     Proxy handler
 
@@ -519,23 +519,23 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     HAPI plugin for integrating GraphiQL, an interactive GraphQL user interface
 
-*   [hoek <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/hoek)
+*   [hoek <img src="/img/family.svg" class="plugins-logo" />](https://hapi.dev/family/hoek)
 
     General purpose node utilities
 
-*   [inert <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/inert)
+*   [inert <img src="/img/family.svg" class="plugins-logo" />](https://hapi.dev/family/inert)
 
     Static file and directory handlers
 
-*   [joi <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/joi)
+*   [joi <img src="/img/family.svg" class="plugins-logo" />](https://hapi.dev/family/joi)
 
     Object schema description language and validator for JavaScript objects
 
-*   [lab <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/lab)
+*   [lab <img src="/img/family.svg" class="plugins-logo" />](https://hapi.dev/family/lab)
 
     A simple testing utility with code coverage analysis
 
-*   [nes <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/nes)
+*   [nes <img src="/img/family.svg" class="plugins-logo" />](https://hapi.dev/family/nes)
 
     WebSocket adapter plugin for hapi routes
 
@@ -551,7 +551,7 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     A querystring parser with support for arrays and objects
 
-*   [shot <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/shot)
+*   [shot <img src="/img/family.svg" class="plugins-logo" />](https://hapi.dev/family/shot)
 
     Injects a fake HTTP request/response into your node server logic
 
@@ -559,14 +559,14 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     Add tarmount handler for serving tar file contents
 
-*   [topo <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/topo)
+*   [topo <img src="/img/family.svg" class="plugins-logo" />](https://hapi.dev/family/topo)
 
     Topological sorting with grouping support
 
-*   [vision <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/vision)
+*   [vision <img src="/img/family.svg" class="plugins-logo" />](https://hapi.dev/family/vision)
 
     Templates rendering support
 
-*   [wreck <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/wreck)
+*   [wreck <img src="/img/family.svg" class="plugins-logo" />](https://hapi.dev/family/wreck)
 
     HTTP Client utilities
