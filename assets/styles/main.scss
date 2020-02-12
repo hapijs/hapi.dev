@@ -83,6 +83,10 @@ body {
   display: block !important;
 }
 
+code + .copy-clipboard {
+  margin-left: 0;
+}
+
 .copy-clipboard {
   position: relative;
   top: 5px;
