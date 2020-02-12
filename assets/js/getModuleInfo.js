@@ -55,6 +55,7 @@ const modules = [
   "sntp",
   "subtext",
   "topo",
+  "vise",
   "vision",
   "wreck",
   "yar"

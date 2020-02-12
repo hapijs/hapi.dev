@@ -88,6 +88,7 @@ export const state = () => ({
     "subtext",
     "teamwork",
     "topo",
+    "vise",
     "vision",
     "wreck",
     "yar"

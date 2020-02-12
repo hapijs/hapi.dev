@@ -183,6 +183,8 @@ module.exports = {
       "/family/topo",
       "/family/topo/api",
       "/family/topo/changelog",
+      "/family/vise",
+      "/family/vise/changelog",
       "/family/vision",
       "/family/vision/api",
       "/family/vision/changelog",
