@@ -60,6 +60,7 @@ export const state = () => ({
     "good-squeeze",
     "h2o2",
     "hawk",
+    "heavy",
     "hoek",
     "inert",
     "iron",
@@ -87,6 +88,7 @@ export const state = () => ({
     "subtext",
     "teamwork",
     "topo",
+    "vise",
     "vision",
     "wreck",
     "yar"

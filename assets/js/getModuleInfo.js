@@ -34,6 +34,7 @@ const modules = [
   "good-squeeze",
   "h2o2",
   "hawk",
+  "heavy",
   "hoek",
   "inert",
   "iron",
@@ -54,6 +55,7 @@ const modules = [
   "sntp",
   "subtext",
   "topo",
+  "vise",
   "vision",
   "wreck",
   "yar"
