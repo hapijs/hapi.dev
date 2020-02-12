@@ -106,6 +106,8 @@ module.exports = {
       "/family/hawk",
       "/family/hawk/api",
       "/family/hawk/changelog",
+      "/family/heavy",
+      "family/heavy/changelog",
       "/family/hoek",
       "/family/hoek/api",
       "/family/hoek/changelog",

@@ -51,10 +51,8 @@
                                   version.name
                                 : repo.name === 'hapi'
                                 ? '/api/?v=' + version.name
-                                : 'https://github.com/hapijs/' +
-                                  repo.name +
-                                  '/tree/' +
-                                  version.branch
+                                : '/family/' +
+                                  repo.name
                             "
                           >
                             <img
