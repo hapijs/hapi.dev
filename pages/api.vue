@@ -304,4 +304,8 @@ export default {
   top: 5px !important;
   right: 5px !important;
 }
+
+#-failaction-configuration ~ .copy-clipboard {
+  margin-left: 5px;
+}
 </style>
