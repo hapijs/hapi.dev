@@ -202,7 +202,7 @@ server.route({
     }
 });
 ```
-hapi has the functionality to respond with JSON data by default. They only thing you have to do is just return a valid JavaScript object and hapi will take care of the rest for you.
+hapi has the functionality to respond with JSON data by default. The only thing you have to do is just return a valid JavaScript object and hapi will take care of the rest for you.
 
 ## <a name="plugins" ></a> Middleware vs Plugins and Extensions
 
