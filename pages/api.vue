@@ -258,30 +258,31 @@ export default {
   },
   created() {
     let apiVersion = this.versions[0];
-    for (let v of this.versions) {
-      let version = this.$route.query.v.match(/^([^.]+)/);
-      if (!this.$route.query.v) {
-        this.$router.push({
-          query: { v: this.versions[0] },
-          hash: this.$route.hash
-        });
-        break;
-      }
-      if (v.startsWith(version[0])) {
-        apiVersion = v;
-        if (!this.versions.includes(this.$route.query.v)) {
-          this.$router.push({
-            query: { v: v },
-            hash: this.$route.hash
-          });
-        }
-        break;
-      }
+    if (!this.$route.query.v) {
       this.$router.push({
         query: { v: this.versions[0] },
         hash: this.$route.hash
       });
+    } else {
+      for (let v of this.versions) {
+        let version = this.$route.query.v.match(/^([^.]+)/);
+        if (v.startsWith(version[0])) {
+          apiVersion = v;
+          if (!this.versions.includes(this.$route.query.v)) {
+            this.$router.push({
+              query: { v: v },
+              hash: this.$route.hash
+            });
+          }
+          break;
+        }
+        this.$router.push({
+          query: { v: this.versions[0] },
+          hash: this.$route.hash
+        });
+      }
     }
+
     this.$data.version = apiVersion;
     // if (
     //   !this.versions.includes(this.$route.query.v) &&
