@@ -17,7 +17,7 @@
       <HTML :display="htmlDisplay" />
     </div>
     <div class="preload">
-      <img src="/img/clipboardCheck.png" alt="clipboard">
+      <img src="/img/clipboardCheck.png" alt="clipboard" />
     </div>
   </div>
 </template>
@@ -25,7 +25,7 @@
 <script>
 import HTML from "~/components/HTML.vue";
 import ApiNav from "~/components/api/ApiNav.vue";
-import { copyToClipboard } from '~/utils/clipboard';
+import { copyToClipboard } from "~/utils/clipboard";
 
 let Toc = require("markdown-toc");
 let Semver = require("semver");
@@ -131,7 +131,10 @@ export default {
           .querySelector(".api-search-results")
           .classList.add("nav-display");
         if (window.innerWidth <= 900) {
-          document.body.scrollTo(0, this.results[this.indexResults].offsetTop + 166);
+          document.body.scrollTo(
+            0,
+            this.results[this.indexResults].offsetTop + 166
+          );
         } else {
           window.scrollTo(0, this.results[this.indexResults].offsetTop);
         }
@@ -142,10 +145,12 @@ export default {
       }
     },
     setClipboards() {
-      let headers = document.querySelectorAll(".markdown-wrapper h2, .markdown-wrapper h3, .markdown-wrapper h4, .markdown-wrapper h5")
+      let headers = document.querySelectorAll(
+        ".markdown-wrapper h2, .markdown-wrapper h3, .markdown-wrapper h4, .markdown-wrapper h5"
+      );
 
       for (let header of headers) {
-        header.classList.add("api-doc-header")
+        header.classList.add("api-doc-header");
 
         const copyClipBoardElement = document.createElement("span");
         copyClipBoardElement.classList.add("copy-clipboard");
@@ -155,10 +160,10 @@ export default {
           const copyLink = this.parentNode.firstElementChild.href;
           copyToClipboard(copyLink);
 
-          this.classList.add('copy-clipboard-checked');
+          this.classList.add("copy-clipboard-checked");
           setTimeout(() => {
-            this.classList.remove('copy-clipboard-checked');
-          }, 3000)
+            this.classList.remove("copy-clipboard-checked");
+          }, 3000);
         };
         copyClipBoardElement.addEventListener("click", eventListener);
 
@@ -196,9 +201,9 @@ export default {
             options
           );
           if (versions.indexOf(v.version) === -1) {
-            let branchVersion = v.version
+            let branchVersion = v.version;
             versions.push(v.version);
-            branchVersions[v.version] = branch.name
+            branchVersions[v.version] = branch.name;
           }
         }
       } catch (err) {
@@ -252,20 +257,38 @@ export default {
     };
   },
   created() {
-    this.$data.version = this.versions.includes(this.$route.query.v)
-      ? this.$route.query.v
-      : this.versions[0];
-    !this.$route.query.v &&
+    let apiVersion = this.versions[0];
+    for (let v of this.versions) {
+      let version = this.$route.query.v.match(/^([^.]+)/);
+      if (!this.$route.query.v) {
+        this.$router.push({
+          query: { v: this.versions[0] },
+          hash: this.$route.hash
+        });
+        break;
+      }
+      if (v.startsWith(version[0])) {
+        apiVersion = v;
+        if (!this.versions.includes(this.$route.query.v)) {
+          this.$router.push({
+            query: { v: v },
+            hash: this.$route.hash
+          });
+        }
+        break;
+      }
       this.$router.push({
         query: { v: this.versions[0] },
         hash: this.$route.hash
       });
-    if (
-      !this.versions.includes(this.$route.query.v) &&
-      typeof this.$route.query.v === "string"
-    ) {
-      return this.$nuxt.error({ statusCode: 404 });
     }
+    this.$data.version = apiVersion;
+    // if (
+    //   !this.versions.includes(this.$route.query.v) &&
+    //   typeof this.$route.query.v === "string"
+    // ) {
+    //   return this.$nuxt.error({ statusCode: 404 });
+    // }
     this.$data.htmlDisplay = this.apis[this.$data.version];
     this.$data.menu = this.menus[this.$data.version];
     this.$store.commit("setDisplay", "api");
@@ -276,7 +299,7 @@ export default {
   },
   beforeDestroy() {
     for (const [element, listener] of this.listeners) {
-      element.removeEventListener('click', listener);
+      element.removeEventListener("click", listener);
     }
     this.listeners.clear();
   }
