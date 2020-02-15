@@ -352,7 +352,6 @@ export default {
     }
 
     let apiVersion = this.versionsArray[0];
-    console.log(versionsArray, this.$route.query.v)
     if (!this.$route.query.v) {
       this.$router.push({
         query: { v: this.versionsArray[0] },
