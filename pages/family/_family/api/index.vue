@@ -61,9 +61,9 @@ export default {
   data() {
     return {
       moduleAPI: moduleInfo,
-      versionsArray: moduleInfo[
-        this.$route.params.family
-      ].versionsArray.sort((a, b) => Semver.compare(b, a)),
+      versionsArray: moduleInfo[this.$route.params.family].versionsArray.sort(
+        (a, b) => Semver.compare(b, a)
+      ),
       display: "",
       page: "api",
       modules: this.modules,
@@ -350,34 +350,51 @@ export default {
     if (!this.$store.getters.loadModules.includes(this.$route.params.family)) {
       return this.$nuxt.error({ statusCode: 404 });
     }
-    let version = versionsArray.includes(this.$route.query.v)
-      ? this.$route.query.v
-      : versionsArray[0];
-    this.$store.commit("setDisplay", "family");
-    this.$store.commit("setVersion", version);
-    (!this.$route.query.v || !versionsArray.includes(this.$route.query.v)) &&
+
+    let apiVersion = this.versionsArray[0];
+    if (!this.$route.query.v) {
       this.$router.push({
-        path: this.$route.path,
-        query: { v: versionsArray[0] },
+        query: { v: this.versionsArray[0] },
         hash: this.$route.hash
       });
+    } else {
+      for (let v of this.versionsArray) {
+        let version = this.$route.query.v.match(/^([^.]+)/);
+        if (v.startsWith(version[0])) {
+          apiVersion = v;
+          if (!this.versionsArray.includes(this.$route.query.v)) {
+            this.$router.push({
+              query: { v: v },
+              hash: this.$route.hash
+            });
+          }
+          break;
+        }
+        this.$router.push({
+          query: { v: this.versionsArray[0] },
+          hash: this.$route.hash
+        });
+      }
+    }
+    this.$store.commit("setDisplay", "family");
+    this.$store.commit("setVersion", apiVersion);
     this.$data.menu = this.moduleAPI[this.$route.params.family][
       this.getVersion
     ].menu;
     this.$store.commit("setFamily", module);
-    if (this.moduleAPI[module][version].intro) {
+    if (this.moduleAPI[module][apiVersion].intro) {
       this.$store.commit("setIntro", true);
     }
-    if (this.moduleAPI[module][version].example) {
+    if (this.moduleAPI[module][apiVersion].example) {
       this.$store.commit("setExample", true);
     }
-    if (this.moduleAPI[module][version].usage) {
+    if (this.moduleAPI[module][apiVersion].usage) {
       this.$store.commit("setUsage", true);
     }
-    if (this.moduleAPI[module][version].faq) {
+    if (this.moduleAPI[module][apiVersion].faq) {
       this.$store.commit("setFaq", true);
     }
-    if (this.moduleAPI[module][version].advanced) {
+    if (this.moduleAPI[module][apiVersion].advanced) {
       this.$store.commit("setAdvanced", true);
     }
   },
