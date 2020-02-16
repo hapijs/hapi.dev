@@ -37,7 +37,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.dev - " + this.version + " API Reference",
+      title: "hapi.dev - " + this.$route.query.v + " API Reference",
       meta: [
         { hid: "description", name: "description", content: "The hapi API" }
       ]
@@ -284,12 +284,6 @@ export default {
     }
 
     this.$data.version = apiVersion;
-    // if (
-    //   !this.versions.includes(this.$route.query.v) &&
-    //   typeof this.$route.query.v === "string"
-    // ) {
-    //   return this.$nuxt.error({ statusCode: 404 });
-    // }
     this.$data.htmlDisplay = this.apis[this.$data.version];
     this.$data.menu = this.menus[this.$data.version];
     this.$store.commit("setDisplay", "api");
