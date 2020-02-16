@@ -48,7 +48,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.dev - joi v" + this.getVersion,
+      title: "hapi.dev - joi v" + this.$route.query.v,
       meta: [
         {
           hid: "description",
