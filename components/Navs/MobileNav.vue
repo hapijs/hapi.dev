@@ -1,14 +1,5 @@
 <template>
   <div ref="nav" class="mobile-nav">
-    <div class="mobile-nav-header">
-      <img src="/img/hapi.svg" class="mobile-hapi" alt="hapi-logo" />
-      <img
-        src="/img/close.png"
-        class="mobile-close"
-        alt="close"
-        v-on:click="closeNav()"
-      />
-    </div>
     <div class="mobile-nav-flex-wrapper">
       <div class="mobile-nav-flex-left">
         <ul class="mobile-links">
@@ -51,7 +42,7 @@
       </div>
       <div class="mobile-nav-flex-right">
         <div class="mobile-nav-flex-right-background"></div>
-        <div class="hide" id="mobile-tutorials">
+        <div class="hide4" id="mobile-tutorials">
           <ul>
             <li class="mobile-link mobile-tutorial-link">
               <a title="Tutorials" href="/tutorials/gettingstarted/?lang=en_US"
@@ -221,21 +212,8 @@ export default {
 .mobile-nav {
   position: relative;
   width: 100%;
-  height: auto;
   z-index: 20;
   background: $off-white;
-  border-right: 1px solid $dark-white;
-  padding: 5px 0 5px 0;
-}
-
-.mobile-nav-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px 0 10px;
-  width: 100%;
-  height: 65px;
-  border-bottom: 2px solid $dark-white;
 }
 
 .mobile-hapi {
@@ -243,27 +221,28 @@ export default {
   margin: 0;
 }
 
-.mobile-close {
-  width: 15px;
-  height: 15px;
-  cursor: pointer;
-  margin: 0;
-}
-
 .mobile-nav-flex-wrapper {
   position: relative;
   display: flex;
+  justify-content: space-between;
   min-height: calc(100vh - 65px);
 }
 
 .mobile-nav-flex-left {
+  position: sticky;
+  top: 0;
+  bottom: 0;
   width: 30%;
-  border-right: 3px solid $dark-white;
+  border-right: 1px solid $dark-white;
+  align-self: flex-start;
+  height: auto;
 }
 
 .mobile-nav-flex-right {
   position: relative;
   width: 70%;
+  overflow-y: auto;
+  margin: 20px 0;
 }
 
 .mobile-nav-flex-right-background {
@@ -295,7 +274,7 @@ export default {
   padding-right: 0px !important;
   margin: 0;
   text-align: center;
-  border-bottom: 2px solid $dark-white;
+  border-bottom: 1px solid $dark-white;
 }
 
 .mobile-link {
