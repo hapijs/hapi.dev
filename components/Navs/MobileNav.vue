@@ -51,6 +51,141 @@
       </div>
       <div class="mobile-nav-flex-right">
         <div class="mobile-nav-flex-right-background"></div>
+        <div class="hide" id="mobile-tutorials">
+          <ul>
+            <li class="mobile-link mobile-tutorial-link">
+              <a title="Tutorials" href="/tutorials/gettingstarted/?lang=en_US"
+                >Getting Started</a
+              >
+            </li>
+            <li class="mobile-link mobile-tutorial-link">
+              <a title="ExpressToHapi" href="/tutorials/expresstohapi/?lang=en_US"
+                >Express Migration</a
+              >
+            </li>
+            <li class="mobile-link mobile-tutorial-link">
+              <a title="Tutorials" href="/tutorials/auth/?lang=en_US"
+                >Authentication</a
+              >
+            </li>
+            <li class="mobile-link mobile-tutorial-link">
+              <a title="Tutorials" href="/tutorials/caching/?lang=en_US"
+                >Caching</a
+              >
+            </li>
+            <li class="mobile-link mobile-tutorial-link">
+              <a title="Tutorials" href="/tutorials/cookies/?lang=en_US"
+                >Cookies</a
+              >
+            </li>
+            <li class="mobile-link mobile-tutorial-link">
+              <a title="Tutorials" href="/tutorials/logging/?lang=en_US"
+                >Logging</a
+              >
+            </li>
+            <li class="mobile-link mobile-tutorial-link">
+              <a title="Tutorials" href="/tutorials/plugins/?lang=en_US"
+                >Plugins</a
+              >
+            </li>
+            <li class="mobile-link mobile-tutorial-link">
+              <a title="Tutorials" href="/tutorials/routing/?lang=en_US"
+                >Routing</a
+              >
+            </li>
+            <li class="mobile-link mobile-tutorial-link">
+              <a title="Tutorials" href="/tutorials/servermethods/?lang=en_US"
+                >Server Methods</a
+              >
+            </li>
+            <li class="mobile-link mobile-tutorial-link">
+              <a title="Tutorials" href="/tutorials/servingfiles/?lang=en_US"
+                >Serving Static Files</a
+              >
+            </li>
+            <li class="mobile-link mobile-tutorial-link">
+              <a title="Tutorials" href="/tutorials/testing/?lang=en_US"
+                >Testing</a
+              >
+            </li>
+            <li class="mobile-link mobile-tutorial-link">
+              <a title="Tutorials" href="/tutorials/validation/?lang=en_US"
+                >Validation</a
+              >
+            </li>
+            <li class="mobile-link mobile-tutorial-link">
+              <a title="Tutorials" href="/tutorials/views/?lang=en_US">Views</a>
+            </li>
+          </ul>
+        </div>
+        <div class="hide" id="mobile-resources">
+          <ul>
+            <li class="mobile-link mobile-tutorial-link">
+              <a title="Changelog" href="/resources/changelog">Changelog</a>
+            </li>
+            <li class="mobile-link mobile-tutorial-link">
+              <a title="Changelog" href="/resources/status">Module Status</a>
+            </li>
+            <li class="mobile-link mobile-tutorial-link">
+              <a title="List" href="/resources/list">List</a>
+            </li>
+          </ul>
+        </div>
+        <div class="hide" id="mobile-policies">
+          <ul>
+            <li class="mobile-link mobile-tutorial-link">
+              <a title="COC" href="/policies/coc">Code of Conduct</a>
+            </li>
+            <li class="mobile-link mobile-tutorial-link">
+              <a title="COC" href="/policies/contributing">Contributing</a>
+            </li>
+            <li class="mobile-link mobile-tutorial-link">
+              <a title="COC" href="/policies/license">License</a>
+            </li>
+            <li class="mobile-link mobile-tutorial-link">
+              <a title="COC" href="/policies/commercial">Commercial License</a>
+            </li>
+            <li class="mobile-link mobile-tutorial-link">
+              <a title="Security" href="/policies/security">Security</a>
+            </li>
+            <li class="mobile-link mobile-tutorial-link">
+              <a title="Style Guide" href="/policies/styleguide">Style Guide</a>
+            </li>
+            <li class="mobile-link mobile-tutorial-link">
+              <a title="Support" href="/policies/support">Support</a>
+            </li>
+          </ul>          
+        </div>
+        <div class="hide" id="mobile-family">
+          <ul class="module-ul">
+            <li
+              v-for="name in getModules"
+              v-bind:key="name"
+              :name="name"
+              class="mobile-link mobile-tutorial-link mobile-module-link"
+              :title="name"
+            >
+              <a :href="'/family/' + name">{{ name }}</a>
+              <ul class="mobile-subul">
+                <li v-if="name === 'joi'" class="mobile-sublink">
+                  <a href="/family/joi/tester">Schema Tester</a>
+                </li>
+                <li v-if="name === 'bell'" class="mobile-sublink">
+                  <a href="/family/bell/providers">Providers</a>
+                </li>
+                <li v-if="name === 'bell'" class="mobile-sublink">
+                  <a href="/family/bell/examples">Examples</a>
+                </li>
+                <li class="mobile-sublink">
+                  <a :href="'/family/' + name + '/api'">API</a>
+                </li>
+                <li class="mobile-sublink">
+                  <a :href="'/family/' + name + '/changelog'">Changelog</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
