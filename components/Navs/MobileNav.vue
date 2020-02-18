@@ -100,7 +100,7 @@ export default {
   padding: 0 20px 0 10px;
   width: 100%;
   height: 65px;
-  border-bottom: 1px solid $dark-white;
+  border-bottom: 2px solid $dark-white;
 }
 
 .mobile-hapi {
@@ -123,7 +123,7 @@ export default {
 
 .mobile-nav-flex-left {
   width: 30%;
-  border-right: 2px solid $dark-white;
+  border-right: 3px solid $dark-white;
 }
 
 .mobile-nav-flex-right {
@@ -159,14 +159,15 @@ export default {
   padding: 10px 0;
   padding-right: 0px !important;
   margin: 0;
-  border-bottom: 1px solid $dark-white;
+  text-align: center;
+  border-bottom: 2px solid $dark-white;
 }
 
 .mobile-link {
   position: relative;
   color: $orange;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 700;
   box-sizing: border-box;
   border-radius: 6px;
   padding: 10px 20px;
