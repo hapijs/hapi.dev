@@ -273,8 +273,9 @@ export default {
     display: block;
     position: absolute;
     top: 0px;
-    left: -220px;
-    width: 220px;
+    left: -375px;
+    width: 100%;
+    max-width: 375px;
     height: 100vh;
     background: $off-white;
     border-right: 1px solid $dark-white;
