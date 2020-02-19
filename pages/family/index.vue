@@ -13,7 +13,7 @@
       <div class="family-grid">
         <div
           class="family-grid-cell"
-          :id="module.name"
+          :id="module.name + 1"
           v-for="module in moduleData"
           v-bind:key="module.name"
         >
@@ -99,7 +99,7 @@ export default {
           !module.name.includes(this.$data.search.toLowerCase()) &&
           !module.slogan.toLowerCase().includes(this.$data.search.toLowerCase())
         ) {
-          document.querySelector("#" + module.name).classList.add("hide");
+          document.querySelector("#" + module.name + 1).classList.add("hide");
         }
       }
     },
