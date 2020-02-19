@@ -304,7 +304,7 @@ export default {
   margin: 0 auto;
   height: 100%;
   width: 200px;
-  opacity: 0.2;
+  opacity: 0.1;
   background-image: url("../../static/img/helmet.png");
   background-position: center;
   background-size: contain;
@@ -320,7 +320,7 @@ export default {
   font-size: 18px;
   font-weight: 700;
   color: $black;
-  margin: 21px 0 0 0;
+  margin: 25px 0 0 0;
   padding-left: 10px;
   border-bottom: 1px solid $dark-white;
 }

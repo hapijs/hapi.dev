@@ -100,6 +100,7 @@
         />
       </div>
       <div ref="mobileNav" class="mobile-nav-wrapper">
+        <div ref="overlay" class="mobile-overlay" v-on:click="closeNav()"></div>
         <MobileNav />
       </div>
     </nav>
@@ -123,6 +124,7 @@ export default {
       this.$refs.hamburger.classList.add("hide");
       this.$refs.mobileClose.classList.remove("hide");
       this.$refs.mobileNav.classList.add("show-nav");
+      this.$refs.overlay.classList.add("show-nav");
       let body = document.body;
       body.classList.add("no-scroll");
     },
@@ -130,6 +132,7 @@ export default {
       this.$refs.mobileNav.classList.remove("show-nav");
       this.$refs.hamburger.classList.remove("hide");
       this.$refs.mobileClose.classList.add("hide");
+      this.$refs.overlay.classList.remove("show-nav");
       let body = document.body;
       body.classList.remove("no-scroll");
     },
