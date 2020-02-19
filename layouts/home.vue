@@ -65,8 +65,6 @@ html {
   .navbar {
     position: fixed !important;
     top: 0;
-    margin: 0 auto;
-    border-bottom: 1px solid $dark-white;
   }
 
   .logo {

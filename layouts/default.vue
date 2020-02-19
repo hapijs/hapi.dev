@@ -63,9 +63,15 @@ html {
 
 @media screen and (max-width: 900px) {
   .logo {
+    position: relative;
+    top: 0;
     height: 50px !important;
     width: calc(100px * (2 / 3)) !important;
     margin: 0 auto;
+  }
+
+  .nav-container, .navbar {
+    min-height: 39px;
   }
 }
 
