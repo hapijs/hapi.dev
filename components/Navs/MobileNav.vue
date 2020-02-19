@@ -10,25 +10,18 @@
             <a class="mobile-link" title="API" href="/api">API</a>
           </li>
           <li class="mobile-links-li">
-            <a
-              class="mobile-link"
-              title="Tutorials"
-              href="/tutorials/?lang=en_US"
-              >Tutorials</a
-            >
+            <div class="mobile-link" title="Tutorials" v-on:click="showMenu('tutorials')">Tutorials</div>
           </li>
           <li class="mobile-links-li">
-            <a class="mobile-link" title="Resources" href="/resources/changelog"
-              >Resources</a
-            >
+            <div class="mobile-link" title="Resources" v-on:click="showMenu('resources')">Resources</div>
           </li>
           <li class="mobile-links-li">
-            <a class="mobile-link" title="Policies" href="/policies/coc"
-              >Policies</a
-            >
+            <div class="mobile-link" title="Policies" href="/policies/coc" v-on:click="showMenu('policies')">
+              Policies
+            </div>
           </li>
           <li class="mobile-links-li">
-            <a class="mobile-link" title="Family" href="/family">Modules</a>
+            <div class="mobile-link" title="Family" href="/family" v-on:click="showMenu('modules')">Modules</div>
           </li>
           <li class="mobile-links-li">
             <a class="mobile-link" title="Plugins" href="/plugins">Plugins</a>
@@ -167,7 +160,7 @@
               </li>
             </ul>
           </div>
-          <div class="hide4" id="mobile-family">
+          <div class="hide" id="mobile-modules">
             <h5 class="mobile-content-header">Modules</h5>
             <ul class="module-ul mobile-content-ul">
               <li
@@ -239,6 +232,16 @@ export default {
         wrapper.classList.remove("mobile-family-minus");
         wrapper.classList.add("mobile-family-plus");
       }
+    },
+    showMenu(name) {
+      let visible = document.querySelector(".visible");
+      if(visible) {
+        visible.classList.remove("visible");
+        visible.classList.add("hide")
+      }
+      let menu = document.querySelector("#mobile-" + name);
+      menu.classList.add("visible");
+      menu.classList.remove("hide")
     }
   },
   computed: {
@@ -276,10 +279,11 @@ export default {
 .mobile-nav-flex-left {
   position: sticky;
   top: 0;
-  bottom: 0;
   width: 30%;
   align-self: flex-start;
   height: auto;
+  overflow-y: auto;
+  padding-bottom: 50px;
 }
 
 .mobile-nav-flex-right {
@@ -323,6 +327,8 @@ export default {
 
 .mobile-content-ul {
   margin-top: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .mobile-family-link:after {
@@ -374,6 +380,7 @@ export default {
 
 .mobile-link {
   position: relative;
+  display: inline;
   color: $orange;
   font-size: 16px;
   font-weight: 700;

@@ -302,7 +302,6 @@ export default {
     max-width: 375px;
     height: 100vh;
     background: $off-white;
-    border-right: 1px solid $dark-white;
     z-index: 10;
     overflow-y: auto;
   }
