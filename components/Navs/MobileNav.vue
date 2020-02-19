@@ -283,7 +283,7 @@ export default {
   align-self: flex-start;
   height: auto;
   overflow-y: auto;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 
 .mobile-nav-flex-right {
@@ -320,7 +320,7 @@ export default {
   font-size: 18px;
   font-weight: 700;
   color: $black;
-  margin: 25px 0 0 0;
+  margin: 21px 0 0 0;
   padding-left: 10px;
   border-bottom: 1px solid $dark-white;
 }

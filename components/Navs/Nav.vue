@@ -7,57 +7,85 @@
           <ul class="nav-links">
             <li class="nav-links-li">
               <a
-                :class="getDisplay === 'api' ? 'nav-link nav-link-active' : 'nav-link'"
+                :class="
+                  getDisplay === 'api' ? 'nav-link nav-link-active' : 'nav-link'
+                "
                 ref="api"
                 title="API"
                 href="/api"
                 v-on:click="addActive('api')"
-              >API</a>
+                >API</a
+              >
             </li>
             <li class="nav-links-li">
               <a
-                :class="getDisplay === 'tutorials' ? 'nav-link nav-link-active' : 'nav-link'"
+                :class="
+                  getDisplay === 'tutorials'
+                    ? 'nav-link nav-link-active'
+                    : 'nav-link'
+                "
                 ref="tutorials"
                 title="Tutorials"
                 href="/tutorials/?lang=en_US"
                 v-on:click="addActive('tutorials')"
-              >Tutorials</a>
+                >Tutorials</a
+              >
             </li>
             <li class="nav-links-li">
               <a
-                :class="getDisplay === 'resources' ? 'nav-link nav-link-active' : 'nav-link'"
+                :class="
+                  getDisplay === 'resources'
+                    ? 'nav-link nav-link-active'
+                    : 'nav-link'
+                "
                 ref="resources"
                 title="Resources"
                 href="/resources/changelog"
                 v-on:click="addActive('resources')"
-              >Resources</a>
+                >Resources</a
+              >
             </li>
             <li class="nav-links-li">
               <a
-                :class="getDisplay === 'policies' ? 'nav-link nav-link-active' : 'nav-link'"
+                :class="
+                  getDisplay === 'policies'
+                    ? 'nav-link nav-link-active'
+                    : 'nav-link'
+                "
                 ref="policies"
                 title="Policies"
                 href="/policies/coc"
                 v-on:click="addActive('policies')"
-              >Policies</a>
+                >Policies</a
+              >
             </li>
             <li class="nav-links-li">
               <a
-                :class="getDisplay === 'family' ? 'nav-link nav-link-active' : 'nav-link'"
+                :class="
+                  getDisplay === 'family'
+                    ? 'nav-link nav-link-active'
+                    : 'nav-link'
+                "
                 ref="family"
                 title="Family"
                 href="/family?sort=alphabetical"
                 v-on:click="addActive('family')"
-              >Modules</a>
+                >Modules</a
+              >
             </li>
             <li class="nav-links-li">
               <a
-                :class="getDisplay === 'plugins' ? 'nav-link nav-link-active' : 'nav-link'"
+                :class="
+                  getDisplay === 'plugins'
+                    ? 'nav-link nav-link-active'
+                    : 'nav-link'
+                "
                 ref="plugins"
                 title="Plugins"
                 href="/plugins"
                 v-on:click="addActive('plugins')"
-              >Plugins</a>
+                >Plugins</a
+              >
             </li>
             <li class="nav-links-li">
               <a
@@ -67,16 +95,22 @@
                 target="_blank"
                 rel="noopener"
                 href="https://hapi.threadless.com"
-              >Shop</a>
+                >Shop</a
+              >
             </li>
             <li class="nav-links-li">
               <a
-                :class="getDisplay === 'support' ? 'nav-link nav-link-active' : 'nav-link'"
+                :class="
+                  getDisplay === 'support'
+                    ? 'nav-link nav-link-active'
+                    : 'nav-link'
+                "
                 ref="support"
                 title="Support"
                 href="/support"
                 v-on:click="addActive('support')"
-              >Support</a>
+                >Support</a
+              >
             </li>
           </ul>
         </div>
@@ -133,12 +167,20 @@ export default {
       this.$refs.hamburger.classList.remove("hide");
       this.$refs.mobileClose.classList.add("hide");
       this.$refs.overlay.classList.remove("show-nav");
-      let body = document.body;
-      body.classList.remove("no-scroll");
-    },
-    hideNav() {
-      this.$refs.mobileNav.classList.remove("show-nav");
-      this.$refs.overlay.classList.remove("show-nav");
+      let visible = document.querySelector(".visible");
+      let minus = document.querySelectorAll(".mobile-family-minus");
+      let display = document.querySelectorAll(".nav-display");
+      for (let d of display) {
+        d.classList.remove("nav-display");
+      }
+      for (let m of minus) {
+        m.classList.remove("mobile-family-minus");
+        m.classList.add("mobile-family-plus");
+      }
+      if (visible) {
+        visible.classList.remove("visible");
+        visible.classList.add("hide");
+      }
       let body = document.body;
       body.classList.remove("no-scroll");
     },
@@ -300,9 +342,9 @@ export default {
     display: block;
     position: absolute;
     top: 50px;
-    left: -375px;
+    left: -100%;
     width: 100%;
-    max-width: 375px;
+    max-width: 500px;
     height: 100vh;
     background: $off-white;
     z-index: 10;
