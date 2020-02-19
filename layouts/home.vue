@@ -62,6 +62,11 @@ html {
     padding-bottom: 100px;
   }
 
+  .navbar {
+    position: fixed !important;
+    top: 0;
+  }
+
   .logo {
     height: 50px !important;
     width: calc(100px * (2 / 3)) !important;
