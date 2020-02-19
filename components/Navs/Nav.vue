@@ -83,6 +83,7 @@
         <a
           href="javascript:void(0);"
           class="hamburger"
+          ref="hamburger"
           aria-label="hamburger"
           v-on:click="showNav()"
         >
@@ -90,9 +91,16 @@
           <span class="hamburger-line hamburger-line-middle" />
           <span class="hamburger-line hamburger-line-lower" />
         </a>
+        <img
+          src="/img/close.png"
+          class="mobile-close hide"
+          ref="mobileClose"
+          alt="close"
+          v-on:click="closeNav()"
+        />
       </div>
       <div ref="mobileNav" class="mobile-nav-wrapper">
-        <div ref="overlay" class="mobile-overlay" v-on:click="hideNav()"></div>
+        <div ref="overlay" class="mobile-overlay" v-on:click="closeNav()"></div>
         <MobileNav />
       </div>
     </nav>
@@ -113,10 +121,20 @@ export default {
   },
   methods: {
     showNav() {
+      this.$refs.hamburger.classList.add("hide");
+      this.$refs.mobileClose.classList.remove("hide");
       this.$refs.mobileNav.classList.add("show-nav");
       this.$refs.overlay.classList.add("show-nav");
       let body = document.body;
       body.classList.add("no-scroll");
+    },
+    closeNav() {
+      this.$refs.mobileNav.classList.remove("show-nav");
+      this.$refs.hamburger.classList.remove("hide");
+      this.$refs.mobileClose.classList.add("hide");
+      this.$refs.overlay.classList.remove("show-nav");
+      let body = document.body;
+      body.classList.remove("no-scroll");
     },
     hideNav() {
       this.$refs.mobileNav.classList.remove("show-nav");
@@ -163,7 +181,6 @@ export default {
   height: 100vh;
   left: -100%;
   z-index: 10;
-  overflow: hidden;
 }
 
 .nav-collapse {
@@ -249,6 +266,16 @@ export default {
   background: $black;
 }
 
+.mobile-close {
+  position: absolute;
+  margin: 5px 0;
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+  margin: 0;
+  left: 21px;
+}
+
 @media screen and (max-width: 900px) {
   .navbar {
     position: fixed;
@@ -272,12 +299,12 @@ export default {
     margin: 0;
     display: block;
     position: absolute;
-    top: 0px;
-    left: -220px;
-    width: 220px;
+    top: 50px;
+    left: -375px;
+    width: 100%;
+    max-width: 375px;
     height: 100vh;
     background: $off-white;
-    border-right: 1px solid $dark-white;
     z-index: 10;
     overflow-y: auto;
   }
