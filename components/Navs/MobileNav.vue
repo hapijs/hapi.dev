@@ -178,7 +178,7 @@
                 >
                   {{ name }}
                 </div>
-                <ul class="mobile-subul" :id="name">
+                <ul class="mobile-subul" :id="name + '2'">
                   <li class="mobile-sublink">
                     <a :href="'/family/' + name">Home</a>
                   </li>
@@ -224,11 +224,11 @@ export default {
     triggerMenu(name) {
       let wrapper = document.querySelector("#" + name + "-wrapper");
       if (wrapper.classList.contains("mobile-family-plus")) {
-        document.querySelector("#" + name).classList.add("nav-display");
+        document.querySelector("#" + name + 2).classList.add("nav-display");
         wrapper.classList.add("mobile-family-minus");
         wrapper.classList.remove("mobile-family-plus");
       } else {
-        document.querySelector("#" + name).classList.remove("nav-display");
+        document.querySelector("#" + name + 2).classList.remove("nav-display");
         wrapper.classList.remove("mobile-family-minus");
         wrapper.classList.add("mobile-family-plus");
       }
