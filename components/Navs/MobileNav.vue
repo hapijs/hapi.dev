@@ -10,18 +10,42 @@
             <a class="mobile-link" title="API" href="/api">API</a>
           </li>
           <li class="mobile-links-li">
-            <div class="mobile-link" title="Tutorials" v-on:click="showMenu('tutorials')">Tutorials</div>
+            <div
+              class="mobile-link"
+              title="Tutorials"
+              v-on:click="showMenu('tutorials')"
+            >
+              Tutorials
+            </div>
           </li>
           <li class="mobile-links-li">
-            <div class="mobile-link" title="Resources" v-on:click="showMenu('resources')">Resources</div>
+            <div
+              class="mobile-link"
+              title="Resources"
+              v-on:click="showMenu('resources')"
+            >
+              Resources
+            </div>
           </li>
           <li class="mobile-links-li">
-            <div class="mobile-link" title="Policies" href="/policies/coc" v-on:click="showMenu('policies')">
+            <div
+              class="mobile-link"
+              title="Policies"
+              href="/policies/coc"
+              v-on:click="showMenu('policies')"
+            >
               Policies
             </div>
           </li>
           <li class="mobile-links-li">
-            <div class="mobile-link" title="Family" href="/family" v-on:click="showMenu('modules')">Modules</div>
+            <div
+              class="mobile-link"
+              title="Family"
+              href="/family"
+              v-on:click="showMenu('modules')"
+            >
+              Modules
+            </div>
           </li>
           <li class="mobile-links-li">
             <a class="mobile-link" title="Plugins" href="/plugins">Plugins</a>
@@ -191,7 +215,10 @@
                   <li v-if="name === 'bell'" class="mobile-sublink">
                     <a href="/family/bell/examples">Examples</a>
                   </li>
-                  <li class="mobile-sublink">
+                  <li
+                    class="mobile-sublink"
+                    v-if="moduleInfo[name].api === true"
+                  >
                     <a :href="'/family/' + name + '/api'">API</a>
                   </li>
                   <li class="mobile-sublink">
@@ -210,12 +237,17 @@
 <script>
 const tutorial = require("../../static/lib/tutorials/");
 const page = require("../../static/lib/");
+const moduleInfo = require("../../static/lib/moduleInfo.json");
 
 export default {
+  data() {
+    return {
+      moduleInfo: moduleInfo
+    };
+  },
   methods: {
     closeNav() {
       this.$refs.nav.parentNode.classList.remove("show-nav");
-      // this.$refs.overlay.classList.remove("show-nav");
       let overlay = document.querySelector(".mobile-overlay");
       overlay.classList.remove("show-nav");
       let body = document.body;
@@ -235,13 +267,13 @@ export default {
     },
     showMenu(name) {
       let visible = document.querySelector(".visible");
-      if(visible) {
+      if (visible) {
         visible.classList.remove("visible");
-        visible.classList.add("hide")
+        visible.classList.add("hide");
       }
       let menu = document.querySelector("#mobile-" + name);
       menu.classList.add("visible");
-      menu.classList.remove("hide")
+      menu.classList.remove("hide");
     }
   },
   computed: {
