@@ -74,6 +74,7 @@ export default {
           clearInterval(checkIfPageLoaded);
         }
       }, 25);
+      this.setClipboards();
     },
     onChildInput(value) {
       this.$data.search = value;
@@ -145,12 +146,20 @@ export default {
       }
     },
     setClipboards() {
+      let wrapper = document.querySelector(".markdown-wrapper");
+      let hapiHeader = document.createElement('h1');
+      hapiHeader.textContent = "API v" + this.version.match(/.*(?=\.)/)[0] + ".x";
+      hapiHeader.setAttribute('class', 'hapi-header');
+      wrapper.insertBefore(hapiHeader, wrapper.firstChild);
       let headers = document.querySelectorAll(
         ".markdown-wrapper h2, .markdown-wrapper h3, .markdown-wrapper h4, .markdown-wrapper h5"
       );
 
-      for (let header of headers) {
-        header.classList.add("api-doc-header");
+      for (let [i, header] of headers.entries()) {
+        if (i === 0) {
+          header.classList.add("api-top-doc-header");
+        }
+        header.classList.add("api-main-doc-header");
 
         const copyClipBoardElement = document.createElement("span");
         copyClipBoardElement.classList.add("copy-clipboard");

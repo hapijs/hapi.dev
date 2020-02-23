@@ -2,7 +2,7 @@
   <div class="container">
     <ResourcesNav page="status" />
     <div class="module-status-wrapper">
-      <h2 class="resources-header">Module Status</h2>
+      <h1 class="hapi-header">Module Status</h1>
       <div class="module-status-table-wrapper">
         <table class="status-table">
           <thead>

@@ -70,13 +70,13 @@ body {
   display: none;
 }
 
-.resources-header {
-  margin: 20px 0 10px 0;
-  border-bottom: 1px solid #ddd;
+.hapi-header {
+  margin: 10px 0;
   border-top: none;
-  padding-bottom: 10px;
   width: auto;
   display: inline-block;
+  font-weight: 700;
+  font-size: 2rem;
 }
 
 .nav-display {
