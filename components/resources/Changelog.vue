@@ -1,6 +1,6 @@
 <template>
   <div class="changelog-wrapper">
-    <h2 class="changelog-header">
+    <h2 class="hapi-header">
       <a id="changelog" href="#changelog" class="anchor" aria-hidden="true"></a>Changelog
     </h2>
     <ChangelogVersion

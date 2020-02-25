@@ -9,7 +9,7 @@
       @change="sortModules"
     />
     <div class="family-grid-wrapper">
-      <h1 class="family-header">hapi Modules</h1>
+      <h1 class="hapi-header">hapi Modules</h1>
       <div class="family-grid">
         <div
           class="family-grid-cell"
@@ -184,6 +184,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   grid-gap: 20px;
+  margin-top: 1em;
 }
 .family-grid-cell {
   position: relative;

@@ -64,9 +64,12 @@ export default {
       }
     },
     setAnchors() {
+      let header = document.querySelector(".markdown-wrapper h1");
       let headings = document.querySelectorAll(
         ".markdown-wrapper h2 a, .markdown-wrapper h3 a, .markdown-wrapper h4 a, .markdown-wrapper h5 a"
       );
+
+      header.classList.add("hapi-header")
 
       for (let head of headings) {
         head.href = "#" + head.name;

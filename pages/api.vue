@@ -25,7 +25,7 @@
 <script>
 import HTML from "~/components/HTML.vue";
 import ApiNav from "~/components/api/ApiNav.vue";
-import { copyToClipboard } from "~/utils/clipboard";
+import { copyToClipboard, setCodeClipboards } from "~/utils/clipboard";
 
 let Toc = require("markdown-toc");
 let Semver = require("semver");
@@ -74,6 +74,8 @@ export default {
           clearInterval(checkIfPageLoaded);
         }
       }, 25);
+      this.setClipboards();
+      setCodeClipboards(this.listeners);
     },
     onChildInput(value) {
       this.$data.search = value;
@@ -145,14 +147,24 @@ export default {
       }
     },
     setClipboards() {
+      let wrapper = document.querySelector(".markdown-wrapper");
+      let hapiHeader = document.createElement('h1');
+      hapiHeader.innerHTML = "API <span class='api-version-span'>v" + this.version.match(/.*(?=\.)/)[0] + ".x";
+      hapiHeader.setAttribute('class', 'hapi-header');
+      wrapper.insertBefore(hapiHeader, wrapper.firstChild);
       let headers = document.querySelectorAll(
         ".markdown-wrapper h2, .markdown-wrapper h3, .markdown-wrapper h4, .markdown-wrapper h5"
       );
 
-      for (let header of headers) {
-        header.classList.add("api-doc-header");
+      for (let [i, header] of headers.entries()) {
+        if (i === 0) {
+          header.classList.add("api-top-doc-header");
+        }
+        header.classList.add("api-main-doc-header");
 
         const copyClipBoardElement = document.createElement("span");
+        const spacer = document.createElement("div");
+        spacer.classList.add("spacer");
         copyClipBoardElement.classList.add("copy-clipboard");
         copyClipBoardElement.title = "Copy link to clipboard";
 
@@ -168,7 +180,9 @@ export default {
         copyClipBoardElement.addEventListener("click", eventListener);
 
         this.listeners.set(copyClipBoardElement, eventListener);
-        header.appendChild(copyClipBoardElement);
+        // header.appendChild(copyClipBoardElement);
+        header.parentNode.insertBefore(copyClipBoardElement, header.nextSibling);
+        copyClipBoardElement.parentNode.insertBefore(spacer, copyClipBoardElement.nextSibling);
       }
     }
   },
@@ -186,6 +200,7 @@ export default {
       "https://api.github.com/repos/hapijs/hapi/branches",
       options
     );
+    branches = branches.sort((a, b) => (a.name > b.name) ? 1 : -1)
 
     let apis = {};
     let menus = {};
@@ -321,9 +336,5 @@ export default {
 .copy-clipboard-absolute {
   top: 5px !important;
   right: 5px !important;
-}
-
-#-failaction-configuration ~ .copy-clipboard {
-  margin-left: 5px;
 }
 </style>

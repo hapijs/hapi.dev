@@ -4,11 +4,21 @@ h5 {
     font-size: 1.1rem;
   }
   
-h2, h3, h4 {
-    margin-top: 20px;
-    padding-top: 10px;
-    border-top: 1px solid $dark-white;
+h2, h3, h4, h5 {
+    margin-top: 35px;
+    display: inline-block;
   }
+
+.api-main-doc-header, .api-main-doc-header code {
+  font-weight: 700;
+}
+
+.api-top-doc-header, .api-top-doc-header code {
+  padding-top: 0;
+  margin-top: 1em;
+}
+
+
 
 h2 code, h3 .api-nav-code, h4 .api-nav-code, h3 code, h4 code {
       background: #fff;
@@ -43,4 +53,9 @@ h6 code {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   padding: 5px 0;
+}
+
+.api-version-span {
+  font-weight: 400;
+  font-size: 1.4rem;
 }

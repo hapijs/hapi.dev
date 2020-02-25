@@ -47,6 +47,7 @@ export default {
 
 <style lang="scss">
 @import "../../assets/styles/main.scss";
+@import "../../assets/styles/api.scss";
 
 .markdown-window {
   position: relative;
