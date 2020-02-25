@@ -184,6 +184,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   grid-gap: 20px;
+  margin-top: 1em;
 }
 .family-grid-cell {
   position: relative;

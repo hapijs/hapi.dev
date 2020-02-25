@@ -6,6 +6,7 @@ h5 {
   
 h2, h3, h4, h5 {
     margin-top: 35px;
+    display: inline-block;
   }
 
 .api-main-doc-header, .api-main-doc-header code {
@@ -16,6 +17,8 @@ h2, h3, h4, h5 {
   padding-top: 0;
   margin-top: 1em;
 }
+
+
 
 h2 code, h3 .api-nav-code, h4 .api-nav-code, h3 code, h4 code {
       background: #fff;
@@ -50,4 +53,9 @@ h6 code {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   padding: 5px 0;
+}
+
+.api-version-span {
+  font-weight: 400;
+  font-size: 1.4rem;
 }
