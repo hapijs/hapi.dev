@@ -36,10 +36,7 @@ body {
   min-height: calc(100vh - 116px);
   font-family: 'Lato', sans-serif;
   color: $black;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility !important;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
