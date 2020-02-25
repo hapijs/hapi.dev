@@ -68,7 +68,7 @@
                 "
                 ref="family"
                 title="Family"
-                href="/family?sort=alphabetical"
+                href="/family?sort=name"
                 v-on:click="addActive('family')"
                 >Modules</a
               >
