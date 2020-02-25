@@ -84,6 +84,16 @@ body {
   display: block;
 }
 
+.hapi-family-header {
+  margin: 30px 0 10px 100px;
+  border-top: none;
+  width: auto;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 2rem;
+  display: block;
+}
+
 .nav-display {
   display: block !important;
 }
@@ -161,6 +171,11 @@ code + .copy-clipboard {
 .preload {
   display: none;
 }
+@media screen and (max-width: 1500px) {
+  .hapi-family-header {
+    margin-left: 40px;
+  }
+}
 
 @media screen and (min-width: 1088px) {
   .container {
@@ -190,6 +205,11 @@ code + .copy-clipboard {
 
   .page-wrapper {
     padding: 0 20px;
+  }
+
+  .hapi-family-header {
+    margin-top:  10px;
+    margin-left: 10px;
   }
 }
 

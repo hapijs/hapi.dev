@@ -211,6 +211,7 @@ export default {
 }
 
 .validate-button {
+  display: block;
   border-radius: 10px;
   border: none;
   background: $orange;

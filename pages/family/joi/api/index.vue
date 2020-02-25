@@ -20,6 +20,7 @@
       @input="onChildInput"
     />
     <div class="tutorial-markdown-window">
+      <h1 class="hapi-family-header">API <span class="api-version-span">v{{getVersion.match(/.*(?=\.)/)[0]}}.x</span></h1>
       <Install :name="name" :moduleAPI="moduleAPI" :version="version" />
       <FamilyDisplay :display="getAPI" />
     </div>
@@ -35,7 +36,7 @@ import LandingNav from "~/components/family/LandingNav.vue";
 import Install from "~/components/family/Install.vue";
 import Changelog from "~/components/resources/Changelog.vue";
 const moduleInfo = require("../../../../static/lib/moduleInfo.json");
-import { copyToClipboard } from "~/utils/clipboard";
+import { copyToClipboard, setCodeClipboards } from "~/utils/clipboard";
 let Toc = require("markdown-toc");
 let Semver = require("semver");
 
@@ -146,6 +147,11 @@ export default {
     },
     onChildInput(value) {
       this.$data.search = value;
+      let that = this;
+      setTimeout(function() {
+        that.setClipboards();
+      }, 100);
+      setCodeClipboards(that.listeners);
     },
     setClipboards() {
       let headers = document.querySelectorAll(
@@ -154,6 +160,7 @@ export default {
 
       for (let header of headers) {
         header.classList.add("api-doc-header");
+        header.classList.add("api-main-doc-header");
         header.innerHTML =
           header.innerHTML +
           "<span class='api-clipboardCheck api-clipboard' title='Copy link to clipboard'></span>";
@@ -426,7 +433,6 @@ export default {
         });
       }
     }
-
     this.$store.commit("setDisplay", "family");
     this.$store.commit("setVersion", apiVersion);
     this.$data.menu = this.moduleAPI.joi[this.getVersion].menu;

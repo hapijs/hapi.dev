@@ -2,6 +2,7 @@
   <div class="container">
     <PluginsNav />
     <div class="tutorial-markdown-window">
+      <h1 class="hapi-family-header">Plugins</h1>
       <Plugins />
     </div>
   </div>
@@ -40,6 +41,7 @@ export default {
 
 <style lang="scss">
 @import "../assets/styles/main.scss";
+@import "../assets/styles/api.scss";
 
 .tutorial-markdown-window {
   position: relative;
