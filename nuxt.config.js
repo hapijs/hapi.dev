@@ -273,9 +273,9 @@ module.exports = {
     "@nuxtjs/axios",
     "@nuxtjs/dotenv",
     "@nuxtjs/google-analytics",
-    "@nuxtjs/pwa",
     "cookie-universal-nuxt",
-    "@nuxtjs/svg"
+    "@nuxtjs/svg",
+    "@nuxtjs/pwa"
   ],
 
   // [optional] markdownit options
