@@ -10,9 +10,9 @@
         :page="page"
         :advanced="advanced"
       />
-      <div class="test-wrapper">
-        <h1 class="tester-title">
-          joi Schema Tester <span class="tester-version">v{{ version }}</span>
+      <div class="markdown-wrapper">
+        <h1 class="hapi-header">
+          joi Schema Tester <span class="api-version-span">v{{ version }}</span>
         </h1>
         <h2 class="tester-subTitle">Schema:</h2>
         <codemirror
