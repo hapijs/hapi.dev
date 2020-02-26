@@ -11,6 +11,7 @@
       :advanced="advanced"
     />
     <div class="tutorial-markdown-window">
+      <h1 class="hapi-family-header">Bell Providers</h1>
       <HTML :display="providersHTML" />
     </div>
     <div class="preload">

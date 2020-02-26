@@ -11,7 +11,7 @@
       :advanced="advanced"
     />
     <div class="example-code-main">
-      <h2 class="example-header">bell Examples</h2>
+      <h1 class="hapi-header">Bell Examples</h1>
       <div
         class="example-code-wrapper"
         v-for="example in examples"
@@ -382,10 +382,12 @@ export default {
 @import "../../../assets/styles/markdown.scss";
 
 .example-code-main {
+  position: relative;
   width: 100%;
-  max-width: calc(100% - 370px);
+  box-sizing: border-box;
   margin: 0;
-  padding: 20px 40px;
+  padding: 20px 100px 10px 100px;
+  word-wrap: break-all;
 }
 
 .example-code-wrapper {
