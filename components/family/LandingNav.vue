@@ -299,6 +299,7 @@ export default {
         .classList.remove("nav-display");
       window.scrollTo(0, 0);
       this.$parent.setClasses();
+      this.$emit("clipboards")
     },
     onSearch() {
       if (this.search !== "") {

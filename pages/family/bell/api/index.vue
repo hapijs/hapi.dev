@@ -14,13 +14,19 @@
       :usage="usage"
       :faq="faq"
       :advanced="advanced"
+      @clipboards="onClipboards"
       @search="onChildSearch"
       @previous="onChildIndex"
       @next="onChildIndex"
       @input="onChildInput"
     />
     <div class="tutorial-markdown-window">
-      <h1 class="hapi-family-header">API <span class="api-version-span">v{{getVersion.match(/.*(?=\.)/)[0]}}.x</span></h1>
+      <h1 class="hapi-family-header">
+        API
+        <span class="api-version-span"
+          >v{{ getVersion.match(/.*(?=\.)/)[0] }}.x</span
+        >
+      </h1>
       <Install :name="name" :moduleAPI="moduleAPI" :version="version" />
       <FamilyDisplay :display="getAPI" />
     </div>
@@ -85,6 +91,13 @@ export default {
     };
   },
   methods: {
+    onClipboards() {
+      let that = this;
+      setTimeout(function() {
+        that.setClipboards();
+      }, 100);
+      setCodeClipboards(that.listeners);
+    },
     goToAnchor() {
       let hash = document.location.hash;
       if (hash != "") {
@@ -147,11 +160,6 @@ export default {
     },
     onChildInput(value) {
       this.$data.search = value;
-      let that = this;
-      setTimeout(function() {
-        that.setClipboards();
-      }, 100);
-      setCodeClipboards(that.listeners);
     },
     setClipboards() {
       let headers = document.querySelectorAll(
