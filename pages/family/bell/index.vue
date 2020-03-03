@@ -405,6 +405,7 @@ export default {
 .landing-title {
   font-weight: 700;
   font-size: 2.3em;
+  border-bottom: 1px solid #ddd;
 }
 
 .landing-family-img {
@@ -415,7 +416,6 @@ export default {
 .landing-slogan {
   margin: 0;
   padding-top: 10px;
-  border-top: 1px solid #ddd;
   font-size: 1.15em;
 }
 
