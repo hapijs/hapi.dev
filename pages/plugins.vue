@@ -46,9 +46,12 @@ export default {
 .tutorial-markdown-window {
   position: relative;
   width: 100%;
-  padding: 0 20px;
+  padding: 20px 100px 10px 100px;
   box-sizing: border-box;
-  margin: 0;
+}
+
+section {
+  max-height: calc(100% - 88px);
 }
 
 .markdown-wrapper a {

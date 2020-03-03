@@ -14,6 +14,7 @@
 import Tutorial from "../../components/tutorials/Tutorial.vue";
 import TutorialNav from "../../components/tutorials/TutorialNav.vue";
 const page = require("../../static/lib/tutorials/");
+import test from "../../static/lib/tutorials/";
 import { copyToClipboard } from "~/utils/clipboard";
 export default {
   components: {
@@ -102,6 +103,9 @@ export default {
         });
       }
     }
+  },
+  asyncData({params}) {
+    console.log(test)
   },
   created() {
     this.$store.commit("setDisplay", "tutorials");
