@@ -67,7 +67,6 @@ export default {};
 </script>
 
 <style lang="scss">
-@import "../../assets/styles/main.scss";
 @import "../../assets/styles/markdown.scss";
 
 .develop-content {

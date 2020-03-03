@@ -66,8 +66,6 @@ export default {};
 </script>
 
 <style lang="scss">
-@import "../../assets/styles/main.scss";
-@import "../../assets/styles/markdown.scss";
 
 .commercialSupport-wrapper {
   margin: 100px 0;

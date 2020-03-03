@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../assets/styles/main.scss";
+@import "../assets/styles/variables.scss";
 
 #carbonads {
   font-family: "Lato", sans-serif;

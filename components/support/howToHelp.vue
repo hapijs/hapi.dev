@@ -69,8 +69,7 @@ export default {};
 </script>
 
 <style lang="scss">
-@import "../../assets/styles/main.scss";
-@import "../../assets/styles/markdown.scss";
+@import "../../assets/styles/variables.scss";
 
 .support-header {
   margin: 0 0 40px 0;
