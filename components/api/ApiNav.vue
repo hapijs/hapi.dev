@@ -381,7 +381,7 @@ export default {
 
 <style lang="scss">
 @import "../../assets/styles/sideNav.scss";
-@import "../../assets/styles/main.scss";
+
 .api-nav-window {
   position: sticky;
   top: 96px;

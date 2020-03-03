@@ -104,9 +104,6 @@ export default {
       }
     }
   },
-  asyncData({params}) {
-    console.log(test)
-  },
   created() {
     this.$store.commit("setDisplay", "tutorials");
     this.$store.commit(
