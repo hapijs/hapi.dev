@@ -21,7 +21,7 @@ h2, h3, h4, h5 {
 
 
 h2 code, h3 .api-nav-code, h4 .api-nav-code, h3 code, h4 code {
-      background: #fff;
+      background: $white;
       font-family: "Open Sans", sans-serif;
       font-size: 1.55rem;
       color: $black;
@@ -36,7 +36,7 @@ h2 code, h3 .api-nav-code, h4 .api-nav-code, h3 code, h4 code {
 // }
 
 h5 code {
-  background: #fff;
+  background: $white;
   font-family: "Open Sans", sans-serif;
   font-size: 1.30rem;
   color: $black;
@@ -46,7 +46,7 @@ h5 code {
 }
 
 h6 code {
-  background: #fff;
+  background: $white;
   font-family: "Open Sans", sans-serif;
   font-size: 1.20rem;
   color: $black;

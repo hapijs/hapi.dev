@@ -199,7 +199,7 @@ export default {
   width: 100%;
   margin: 0 auto;
   padding: 10px 50px;
-  background: #fff;
+  background: $white;
 }
 
 .nav-container {

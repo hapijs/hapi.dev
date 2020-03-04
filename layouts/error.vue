@@ -85,14 +85,14 @@ export default {
   font-size: 0.9em;
   font-weight: 700;
   margin: 40px 0;
-  color: #fff;
+  color: $white;
   cursor: pointer;
   border: 4px solid rgba(0, 0, 0, 0);
 }
 
 .error-button:hover {
   border: 4px solid $orange;
-  background: #fff;
+  background: $white;
   color: $orange;
   text-decoration: none;
   transition: all 0.3s ease 0s;
@@ -108,7 +108,7 @@ export default {
   align-items: center;
   height: 50px;
   max-width: 735px;
-  background-color: #fff !important;
+  background-color: $white !important;
   padding: 0 20px !important;
 }
 

@@ -23,7 +23,7 @@ export default {
 
 .install-wrapper {
   margin: 20px 100px 10px 100px;
-  border: 1px solid #ddd;
+  border: 1px solid $dark-white;
   padding: 10px;
   background: #f8f8f8;
 }

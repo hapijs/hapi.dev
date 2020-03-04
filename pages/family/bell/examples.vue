@@ -397,7 +397,7 @@ export default {
 
 .example-header {
   margin: 20px 0 0 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid $dark-white;
   border-top: none;
   padding-bottom: 10px;
   width: auto;
@@ -408,12 +408,12 @@ export default {
   font-size: 1.55rem;
   margin: 30px 0 15px 0;
   display: inline-block;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid $dark-white;
 }
 
 .example-wrapper {
   padding-bottom: 30px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid $dark-white;
 }
 
 pre > code {
@@ -497,7 +497,7 @@ pre > code {
 .family-active,
 .family-active * {
   position: relative;
-  color: #fff !important;
+  color: $white !important;
   background: #6f6f6f;
 }
 

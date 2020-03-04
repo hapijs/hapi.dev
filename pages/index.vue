@@ -115,7 +115,7 @@ export default {
   font-size: 0.9em;
   font-weight: 700;
   margin: 40px 0;
-  color: #fff;
+  color: $white;
   cursor: pointer;
   border: 4px solid rgba(0, 0, 0, 0);
 }
@@ -123,7 +123,7 @@ export default {
 .index-button:hover,
 .bottom-button:hover {
   border: 4px solid $orange;
-  background: #fff;
+  background: $white;
   color: $orange;
   text-decoration: none;
   transition: all 0.3s ease 0s;
@@ -136,7 +136,7 @@ export default {
   padding: 5px 15px;
   font-size: 0.9em;
   font-weight: 700;
-  color: #fff;
+  color: $white;
   cursor: pointer;
   border: 4px solid rgba(0, 0, 0, 0);
   margin: 0 0 50px 0;
@@ -199,7 +199,7 @@ export default {
 
 .quote-wrapper {
   position: relative;
-  background: #f3f3f3;
+  background: $quote-gray;
   padding: 20px 0 40px 0;
   text-align: left;
   margin: 30px 0 80px 0;
@@ -207,7 +207,7 @@ export default {
 
 .quote-wrapper:before {
   content: "";
-  background-color: #f3f3f3;
+  background-color: $quote-gray;
   position: absolute;
   height: 100%;
   top: 0;
