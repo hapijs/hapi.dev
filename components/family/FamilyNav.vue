@@ -205,7 +205,7 @@ export default {
   position: absolute;
   background: url("/img/search.png") no-repeat;
   background-position: center;
-  background-color: #fff;
+  background-color: $white;
   background-size: contain;
   padding: 10px;
   right: 0px;
@@ -249,7 +249,7 @@ export default {
 .family-search-button {
   outline: none;
   border: 1px solid $dark-white;
-  background: #fff;
+  background: $white;
   padding: 4px 10px;
   color: $black;
   cursor: pointer;

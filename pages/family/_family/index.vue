@@ -382,7 +382,7 @@ export default {
 .landing-title {
   font-weight: 700;
   font-size: 2.3em;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid $dark-white;
 }
 
 .landing-family-img {
@@ -421,7 +421,7 @@ export default {
 .intro-wrapper h3,
 .intro-wrapper h4 {
   font-size: 1.5em;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid $dark-white;
   display: inline-block;
   border-top: none;
   margin: 30px 0 15px 0;

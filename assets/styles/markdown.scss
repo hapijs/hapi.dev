@@ -64,7 +64,7 @@ code,
   padding: 0.2rem 0.33rem;
   font-size: 1rem;
   color: $gray;
-  background-color: #f8f8f8;
+  background-color: $off-white;
   // border: 1px solid $dark-white;
 }
 
@@ -97,8 +97,8 @@ p code,
 li code {
   font-family: "inconsolata", menlo, consolas, monospace;
   padding: 0.2rem 0.33rem;
-  color: #6f6f6f;
-  background-color: #f3f3f3;
+  color: $gray;
+  background-color: $quote-gray;
   border: 1px solid $dark-white;
 }
 

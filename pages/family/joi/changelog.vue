@@ -135,7 +135,7 @@ export default {
 
 .changelog-header {
   margin: 20px 0 10px 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid $dark-white;
   border-top: none;
   padding-bottom: 10px;
   width: auto;

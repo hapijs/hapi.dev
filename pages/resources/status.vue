@@ -281,7 +281,7 @@ export default {
 
 .module-row {
   border-bottom: 3px solid $dark-white;
-  background-color: #fff;
+  background-color: $white;
 }
 
 .module-name {
@@ -323,7 +323,7 @@ export default {
   font-size: 1.15em;
   position: sticky;
   top: 90px;
-  background-color: #fff;
+  background-color: $white;
   z-index: 1;
 }
 

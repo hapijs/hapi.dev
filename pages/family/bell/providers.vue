@@ -475,7 +475,7 @@ export default {
 .family-active,
 .family-active * {
   position: relative;
-  color: #fff !important;
+  color: $white !important;
   background: #6f6f6f;
 }
 

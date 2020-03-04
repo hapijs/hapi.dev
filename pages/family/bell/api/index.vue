@@ -505,7 +505,7 @@ export default {
 .family-active,
 .family-active * {
   position: relative;
-  color: #fff !important;
+  color: $white !important;
   background: $gray !important;
   height: 31px;
 }
@@ -535,7 +535,7 @@ export default {
 .changelog-header {
   margin: 20px 0 10px 0;
   padding-top: 10px;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid $dark-white;
   width: 100%;
 }
 

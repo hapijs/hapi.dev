@@ -1,27 +1,9 @@
 /* Colors */
 $orange: #ed7d31;
-$orange-light: lighten($orange, 30%);
 $black: #333;
 $off-white: #f8f8f8;
 $dark-white: #ddd;
-$green: #87997d;
-$green-light: #c5e0b6;
-$green-lighter: lighten($green, 90%);
-$green-dark: darken($green, 30%);
+$quote-gray: #f3f3f3;
 $gray: #6f6f6f;
 $gray-light: lighten($gray, 35%);
-$gray-lighter: lighten($gray, 85%);
-$gray-dark: darken($gray, 50%);
-
-/* Font Sizes */
-$font-size-h1: 2rem;
-$font-size-h2: 1.75rem;
-$font-size-h3: 1.5rem;
-$font-size-h4: 1.25rem;
-$font-size-h5: 1rem;
-$font-size-h6: 0.875rem;
-
-$font-light: 300;
-$font-regular: 400;
-$font-monospaced-regular: 500;
-$font-bold: 700;
+$white: #ffffff;

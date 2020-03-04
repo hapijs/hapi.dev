@@ -100,7 +100,7 @@ export default {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: url(/img/down.png) 96%/12% no-repeat #fff;
+  background: url(/img/down.png) 96%/12% no-repeat $white;
   border: 1px solid $dark-white;
   cursor: pointer;
 }
@@ -126,7 +126,7 @@ export default {
   position: absolute;
   background: url("/img/search.png") no-repeat;
   background-position: center;
-  background-color: #fff;
+  background-color: $white;
   background-size: contain;
   padding: 10px;
   right: 0;
@@ -142,8 +142,8 @@ export default {
 
 .module-clear-button {
   outline: 0;
-  border: 1px solid #ddd;
-  background: #fff;
+  border: 1px solid $dark-white;
+  background: $white;
   padding: 4px 10px;
   color: #333;
   cursor: pointer;

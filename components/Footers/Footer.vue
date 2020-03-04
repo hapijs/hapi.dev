@@ -70,7 +70,7 @@ a {
   align-items: center;
   height: 50px;
   max-width: 735px;
-  background-color: #fff;
+  background-color: $white;
   padding: 0 20px;
 }
 

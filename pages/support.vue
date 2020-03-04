@@ -33,7 +33,7 @@ export default {
     };
   },
   created() {
-    this.$store.commit("setDisplay", "help");
+    this.$store.commit("setDisplay", "support");
   },
   mounted() {
     if (this.$cookies.get("confirmation")) {
@@ -79,13 +79,13 @@ export default {
   padding: 7px 15px;
   font-size: 0.9em;
   font-weight: 700;
-  color: #fff;
+  color: $white;
   cursor: pointer;
   border: 4px solid rgba(0, 0, 0, 0);
 }
 .support-button:hover {
   border: 4px solid $orange;
-  background: #fff;
+  background: $white;
   color: $orange;
   text-decoration: none;
   transition: all 0.3s ease 0s;
@@ -145,13 +145,13 @@ export default {
   padding: 5px 15px;
   font-size: 0.9em;
   font-weight: 700;
-  color: #fff;
+  color: $white;
   cursor: pointer;
   border: 4px solid rgba(0, 0, 0, 0);
 }
 .modal-button:hover {
   border: 4px solid $orange;
-  background: #fff;
+  background: $white;
   color: $orange;
   text-decoration: none;
   transition: all 0.3s ease 0s;

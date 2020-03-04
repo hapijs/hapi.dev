@@ -218,7 +218,7 @@ export default {
   padding: 5px 15px;
   font-size: 1em;
   font-weight: 700;
-  color: #fff;
+  color: $white;
   cursor: pointer;
   border: 4px solid rgba(0, 0, 0, 0);
   margin-bottom: 30px;
@@ -226,7 +226,7 @@ export default {
 
 .validate-button:hover {
   border: 4px solid $orange;
-  background: #fff;
+  background: $white;
   color: $orange;
   text-decoration: none;
   transition: all 0.3s ease 0s;
