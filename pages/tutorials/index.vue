@@ -14,8 +14,8 @@
 import Tutorial from "../../components/tutorials/Tutorial.vue";
 import TutorialNav from "../../components/tutorials/TutorialNav.vue";
 const page = require("../../static/lib/tutorials/");
-import test from "../../static/lib/tutorials/";
 import { copyToClipboard } from "~/utils/clipboard";
+let Toc = require("markdown-toc");
 export default {
   components: {
     Tutorial,
@@ -103,6 +103,33 @@ export default {
         });
       }
     }
+  },
+  async asyncData({params, $axios}) {
+    const dev = process.env.NODE_ENV !== 'production';
+    const server = dev ? 'http://localhost:3000' : 'https://hapi.dev'
+    const options = {
+      headers: {
+        accept: "application/vnd.github.v3.raw+json",
+        authorization: "token " + process.env.GITHUB_TOKEN
+      }
+    };
+
+    let tutorialFile = await $axios.$get(
+      `${server}/lib/tutorials/en_US/gettingStarted.md`,
+      options
+    );
+
+    let rawString = await tutorialFile.toString();
+
+    let apiTocString = "";
+    let apiTocArray = await rawString.match(/\n#.+/g);
+
+    for (let i = 0; i < apiTocArray.length; ++i) {
+      apiTocString = apiTocString + apiTocArray[i];
+    }
+    let finalMenu = Toc(apiTocString, { bullets: "-" }).content;
+    console.log(finalMenu)
+
   },
   created() {
     this.$store.commit("setDisplay", "tutorials");

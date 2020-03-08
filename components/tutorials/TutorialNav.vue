@@ -33,6 +33,13 @@
                 :href="'/tutorials/gettingstarted/?lang=' + getLanguage"
                 >Getting Started</a
               >
+              <ul class="side-nav-select-list" v-if="page === 'examples'">
+                <TutrialNavItem
+                  :name="getFamily"
+                  :menu="menu"
+                  :page="page"
+                />
+              </ul>
             </li>
             <li
               :class="
