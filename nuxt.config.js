@@ -280,12 +280,12 @@ module.exports = {
 
   // [optional] markdownit options
   // See https://github.com/markdown-it/markdown-it
-  // markdownit: {
-  //   linkify: true,
-  //   html: true,
-  //   breaks: true,
-  //   injected: false
-  // },
+  markdownit: {
+    linkify: true,
+    html: true,
+    breaks: true,
+    injected: true
+  },
 
   googleAnalytics: {
     id: "UA-144917045-1"

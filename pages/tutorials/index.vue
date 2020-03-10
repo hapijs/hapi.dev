@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <TutorialNav :language="language" @changed="onChangeChild" />
+    <TutorialNav :language="language" :menu="finalMenu" @changed="onChangeChild" />
     <div class="tutorial-markdown-window">
-      <Tutorial :display="getPage" :language="language" />
+      <Tutorial :display="tutorialHTML" :language="language" />
     </div>
     <div class="preload">
       <img src="/img/clipboardCheck.png" alt="clipboard" />
@@ -119,6 +119,19 @@ export default {
       options
     );
 
+   let tutorialHTML = await $axios.$post(
+      "https://api.github.com/markdown",
+      {
+        text: tutorialFile,
+        mode: "markdown"
+      },
+      {
+        headers: {
+          authorization: "token " + process.env.GITHUB_TOKEN
+        }
+      }
+    );
+
     let rawString = await tutorialFile.toString();
 
     let apiTocString = "";
@@ -127,8 +140,9 @@ export default {
     for (let i = 0; i < apiTocArray.length; ++i) {
       apiTocString = apiTocString + apiTocArray[i];
     }
-    let finalMenu = Toc(apiTocString, { bullets: "-" }).content;
-    console.log(finalMenu)
+    let finalMenu = Toc(apiTocString).content;
+    
+    return { finalMenu, tutorialHTML }
 
   },
   created() {

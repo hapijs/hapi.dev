@@ -1,12 +1,10 @@
 <template>
   <li
-    :class="this.$route.params.family === name ? 'side-nav-select-link family-side-nav-item side-nav-active' : 'side-nav-select-link family-side-nav-item'"
-    :ref="name"
+    :class="$route.params.tutorial === 'gettingstarted' ? 'side-nav-select-link family-side-nav-item side-nav-active' : 'side-nav-select-link family-side-nav-item'"
   >
     <div
-      class="family-nav-select-wrapper family-display"
-      :id='name'
-      :key='version'
+      class="tutorial-nav-select-wrapper family-display"
+      :id="$props.name"
       v-html="$md.render(this.$props.menu)"
     ></div>
   </li>
@@ -14,12 +12,7 @@
 
 <script>
 export default {
-  props: ["active", "name", "page", "version", "versions", "menu"],
-  methods: {
-    onChange(event) {
-      this.$emit("change", event.target.value);
-    },
-  }
+  props: ["menu", "name"],
 };
 </script>
 
@@ -34,29 +27,29 @@ export default {
   text-decoration: none !important;
 }
 
-.family-nav-select-wrapper {
+.tutorial-nav-select-wrapper {
   display: none;
   width: 100%;
   font-weight: 400;
   margin: 0 0 10px 20px;
 }
 
-.family-nav-select-wrapper li {
+.tutorial-nav-select-wrapper li {
   list-style-type: none;
   text-decoration: none;
   margin: 0;
   color: $gray;
 }
 
-.family-nav-select-wrapper ul {
+.tutorial-nav-select-wrapper ul {
   margin: 0;
 }
 
-.family-nav-select-wrapper li ul {
+.tutorial-nav-select-wrapper li ul {
   margin-left: 10px;
 }
 
-.family-nav-select-wrapper ul li {
+.tutorial-nav-select-wrapper ul li {
   color: $gray !important;
   margin: 0;
   list-style-type: none;
