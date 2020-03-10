@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" :key="key">
     <TutorialNav :language="language" :menu="finalMenu" @changed="onChangeChild" />
     <div class="tutorial-markdown-window">
       <Tutorial :display="tutorialHTML" :language="language" />
@@ -41,7 +41,8 @@ export default {
   },
   data() {
     return {
-      language: this.getLanguage
+      language: this.getLanguage,
+      key: 0
     };
   },
   computed: {
@@ -57,11 +58,14 @@ export default {
     onChangeChild(value) {
       this.$store.commit("setLanguage", value);
       this.$router.push({ path: this.$route.path, query: { lang: value } });
+      this.key = Math.random();
+      this.$forceUpdate();
       this.$store.commit(
         "setPage",
         page[value][this.$route.params.tutorial].default
       );
       window.scrollTo(0, 0);
+      window.location = "/tutorials/gettingstarted/?lang=pt_BR"
     },
     wrapPre() {
       let el = document.querySelectorAll("pre");
@@ -79,7 +83,9 @@ export default {
         ".markdown-wrapper h2 a, .markdown-wrapper h3 a, .markdown-wrapper h4 a, .markdown-wrapper h5 a"
       );
 
-      header.classList.add("hapi-header");
+      if(header) {
+        header.classList.add("hapi-header");
+      }
 
       for (let head of headings) {
         head.href = "#" + head.name;
@@ -113,7 +119,7 @@ export default {
       }
     }
   },
-  async asyncData({ params, $axios, store }) {
+  async asyncData({ params, $axios, query }) {
     const dev = process.env.NODE_ENV !== "production";
     const server = dev ? "http://localhost:3000" : "https://hapi.dev";
     const options = {
@@ -122,9 +128,8 @@ export default {
         authorization: "token " + process.env.GITHUB_TOKEN
       }
     };
-
     let tutorialFile = await $axios.$get(
-      `${server}/lib/tutorials/${store.getters.loadLanguage}/${params.tutorial}.md`,
+      `${server}/lib/tutorials/${query.lang}/${params.tutorial}.md`,
       options
     );
 

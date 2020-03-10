@@ -350,8 +350,8 @@ export default {
         let point = document.querySelector(
           `.markdown-wrapper a[href='${links[i].hash}']`
         );
-        point.id = point.id.replace("user-content-", "");
         if (point) {
+          point.id = point.id.replace("user-content-", "");
           if (point.id) {
             points[point.offsetTop] = {
               name: "#" + point.id
