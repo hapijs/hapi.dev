@@ -1,18 +1,6 @@
 # Routing
 
 _This tutorial is compatible with hapi v17 and newer_
-
-
-1. [Overview](#overview)
-1. [Methods](#methods)
-1. [Path](#path)
-1. [Optional Parameters](#optionalParameters)
-1. [Multi-Segment Parameters](#multiParameters)
-1. [Query Parameters](#query)
-1. [Request Payload](#requestpayload)
-1. [Handler](#handler)
-1. [Options](#options)
-1. [404 Handling](#missing)
         
 
 ## <a name="overview"></a> Overview

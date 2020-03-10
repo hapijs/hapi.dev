@@ -2,18 +2,6 @@
 
 _This tutorial is compatible with hapi v17 and newer_
 
-1. [Overview](#overview)
-1. [Inert](#inert)
-1. [Relative Path](#path)
-1. [h.file(path, [options])](#hfile)
-1. [File Handler](#filehandler)
-    1. [File Handler Options](#fileoptions)
-1. [Directory Handler](#directoryhandler)
-    1. [Directory Handler Options](#directoryoptions)
-1. [Static file server](#fileserver)
-
-
-
 
 ## <a name="overview"></a> Overview
 

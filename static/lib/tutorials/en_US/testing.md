@@ -2,13 +2,6 @@
 
 _This tutorial is compatible with hapi v17 and newer_
 
-1. [Overview](#overview)
-1. [lab](#lab)
-1. [code](#code)
-1. [Server Setup](#server)
-1. [Writing a Route Test](#writingTest)
-
-
 
 ## <a name="overview"></a> Overview
 Hapi is designed for creating robust, testable applications. To this end, Hapi includes the ability to test routes without having to actually start a server, completely avoiding the time overheads and added complexity of the TCP protocol.

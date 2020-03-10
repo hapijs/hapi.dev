@@ -57,6 +57,12 @@
                 :href="'/tutorials/expresstohapi/?lang=' + getLanguage"
                 >Express Migration</a
               >
+              <ul
+                class="side-nav-select-list"
+                v-if="$route.params.tutorial === 'expresstohapi'"
+              >
+                <TutorialNavItem :menu="menu" :name="name" />
+              </ul>
             </li>
             <li
               :class="
@@ -68,6 +74,12 @@
               <a ref="auth" :href="'/tutorials/auth/?lang=' + getLanguage"
                 >Authentication</a
               >
+              <ul
+                class="side-nav-select-list"
+                v-if="$route.params.tutorial === 'auth'"
+              >
+                <TutorialNavItem :menu="menu" :name="name" />
+              </ul>
             </li>
             <li
               :class="
@@ -79,6 +91,12 @@
               <a ref="caching" :href="'/tutorials/caching/?lang=' + getLanguage"
                 >Caching</a
               >
+              <ul
+                class="side-nav-select-list"
+                v-if="$route.params.tutorial === 'caching'"
+              >
+                <TutorialNavItem :menu="menu" :name="name" />
+              </ul>
             </li>
             <li
               :class="
@@ -90,6 +108,12 @@
               <a ref="cookies" :href="'/tutorials/cookies/?lang=' + getLanguage"
                 >Cookies</a
               >
+              <ul
+                class="side-nav-select-list"
+                v-if="$route.params.tutorial === 'cookies'"
+              >
+                <TutorialNavItem :menu="menu" :name="name" />
+              </ul>
             </li>
             <li
               :class="
@@ -101,6 +125,12 @@
               <a ref="logging" :href="'/tutorials/logging/?lang=' + getLanguage"
                 >Logging</a
               >
+              <ul
+                class="side-nav-select-list"
+                v-if="$route.params.tutorial === 'logging'"
+              >
+                <TutorialNavItem :menu="menu" :name="name" />
+              </ul>
             </li>
             <li
               :class="
@@ -112,6 +142,12 @@
               <a ref="plugins" :href="'/tutorials/plugins/?lang=' + getLanguage"
                 >Plugins</a
               >
+              <ul
+                class="side-nav-select-list"
+                v-if="$route.params.tutorial === 'plugins'"
+              >
+                <TutorialNavItem :menu="menu" :name="name" />
+              </ul>
             </li>
             <li
               :class="
@@ -123,6 +159,12 @@
               <a ref="routing" :href="'/tutorials/routing/?lang=' + getLanguage"
                 >Routing</a
               >
+              <ul
+                class="side-nav-select-list"
+                v-if="$route.params.tutorial === 'routing'"
+              >
+                <TutorialNavItem :menu="menu" :name="name" />
+              </ul>
             </li>
             <li
               :class="
@@ -136,6 +178,12 @@
                 :href="'/tutorials/servermethods/?lang=' + getLanguage"
                 >Server Methods</a
               >
+              <ul
+                class="side-nav-select-list"
+                v-if="$route.params.tutorial === 'servermethods'"
+              >
+                <TutorialNavItem :menu="menu" :name="name" />
+              </ul>
             </li>
             <li
               :class="
@@ -149,6 +197,12 @@
                 :href="'/tutorials/servingfiles/?lang=' + getLanguage"
                 >Serving Static Files</a
               >
+              <ul
+                class="side-nav-select-list"
+                v-if="$route.params.tutorial === 'servingfiles'"
+              >
+                <TutorialNavItem :menu="menu" :name="name" />
+              </ul>
             </li>
             <li
               :class="
@@ -160,6 +214,12 @@
               <a ref="testing" :href="'/tutorials/testing/?lang=' + getLanguage"
                 >Testing</a
               >
+              <ul
+                class="side-nav-select-list"
+                v-if="$route.params.tutorial === 'testing'"
+              >
+                <TutorialNavItem :menu="menu" :name="name" />
+              </ul>
             </li>
             <li
               :class="
@@ -173,6 +233,12 @@
                 :href="'/tutorials/validation/?lang=' + getLanguage"
                 >Validation</a
               >
+              <ul
+                class="side-nav-select-list"
+                v-if="$route.params.tutorial === 'validation'"
+              >
+                <TutorialNavItem :menu="menu" :name="name" />
+              </ul>
             </li>
             <li
               :class="
@@ -184,6 +250,12 @@
               <a ref="views" :href="'/tutorials/views/?lang=' + getLanguage"
                 >Views</a
               >
+              <ul
+                class="side-nav-select-list"
+                v-if="$route.params.tutorial === 'views'"
+              >
+                <TutorialNavItem :menu="menu" :name="name" />
+              </ul>
             </li>
           </ul>
         </div>
@@ -211,7 +283,7 @@ export default {
       links: {},
       uls: {},
       name: this.$route.params.tutorial
-        ? this.$route.params.tutoral
+        ? this.$route.params.tutorial
         : "gettingstarted"
     };
   },
@@ -260,7 +332,7 @@ export default {
       }
 
       let familyUls = document.querySelectorAll(
-        ".side-nav-select-list > ul ul"
+        ".tutorial-nav-select-wrapper > ul ul"
       );
 
       for (let ul of familyUls) {
@@ -295,7 +367,6 @@ export default {
       }
 
       offsets = [...new Set(offsets)];
-      console.log(offsets);
       let currentElement = document.querySelector(".markdown-wrapper ");
 
       for (let ul of familyUls) {
@@ -495,7 +566,11 @@ export default {
   height: 31px;
 }
 
-.family-hide {
+.tutorial-hide {
   display: none;
+}
+
+.tutorial-ul-display {
+  display: block !important;
 }
 </style>

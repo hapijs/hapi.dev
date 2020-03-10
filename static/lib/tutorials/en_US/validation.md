@@ -3,23 +3,6 @@
 _This tutorial is compatible with hapi v17 and newer; and joi v16 and newer_
 
 
-1. [Overview](#overview)
-1. [Joi](#joi)
-1. [Input Validation](#input)
-    1. [Path Parameters](#pathparams)
-    1. [Query Parameters](#queryparams)
-    1. [Payload Parameters](#payloadparams)
-    1. [Headers](#headers)
-1. [Output Validation](#output)
-    1. [response.failAction](#failaction)
-    1. [response.sample](#sample)
-    1. [response.status](#status)
-    1. [response.options](#options)
-1. [Alternatives to Joi](#alternatives)
-
-
-
-
 ## <a name="overview"></a> Overview
 
 Validating data can be very helpful in making sure that your application is stable and secure. hapi allows this functionality by using the module [Joi](/family/joi), which allows you to create your validations with a simple and clear object syntax.

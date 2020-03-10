@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <TutorialNav :language="language" @changed="onChangeChild" />
+    <TutorialNav :language="language" :menu="finalMenu" @changed="onChangeChild" />
     <div class="tutorial-markdown-window">
-      <Tutorial :display="getPage" :language="language" />
+      <Tutorial :display="tutorialHTML" :language="language" />
     </div>
     <div class="preload">
       <img src="/img/clipboardCheck.png" alt="clipboard" />
@@ -91,7 +91,7 @@ export default {
       );
 
       for (let header of headers) {
-        header.classList.add("api-doc-header");
+        header.classList.add("api-top-doc-header", "api-main-doc-header");
         header.innerHTML =
           header.innerHTML +
           "<span class='api-clipboardCheck api-clipboard' title='Copy link to clipboard'></span>";
@@ -128,6 +128,19 @@ export default {
       options
     );
 
+    let tutorialHTML = await $axios.$post(
+      "https://api.github.com/markdown",
+      {
+        text: tutorialFile,
+        mode: "markdown"
+      },
+      {
+        headers: {
+          authorization: "token " + process.env.GITHUB_TOKEN
+        }
+      }
+    );
+
     let rawString = await tutorialFile.toString();
 
     let apiTocString = "";
@@ -137,7 +150,7 @@ export default {
       apiTocString = apiTocString + apiTocArray[i];
     }
     let finalMenu = Toc(apiTocString, { bullets: "-" }).content;
-    return 
+    return { finalMenu, tutorialHTML}
   },
   created() {
     this.$store.commit("setDisplay", "tutorials");

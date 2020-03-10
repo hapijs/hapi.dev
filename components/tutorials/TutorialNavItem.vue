@@ -1,6 +1,6 @@
 <template>
   <li
-    :class="$route.params.tutorial === 'gettingstarted' ? 'side-nav-select-link family-side-nav-item side-nav-active' : 'side-nav-select-link family-side-nav-item'"
+    :class="$route.params.tutorial === $props.name ? 'side-nav-select-link family-side-nav-item side-nav-active' : 'side-nav-select-link family-side-nav-item'"
   >
     <div
       class="tutorial-nav-select-wrapper family-display"

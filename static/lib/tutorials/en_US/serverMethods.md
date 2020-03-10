@@ -2,17 +2,6 @@
 
 _This tutorial is compatible with hapi v17 and newer_
 
-1. [Overview](#overview)
-1. [server.method()](#server.method)
-    1. [Name](#name)
-    1. [Method](#method)
-1. [Options](#options)
-    1. [Cache](#cache)
-    1. [Generate a Custom Key](#key)
-    1. [Bind](#key)
-1. [server.methods](#server.methods)
-
-
 
 ## <a name="overview"></a> Overview
 
