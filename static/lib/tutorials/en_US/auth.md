@@ -24,7 +24,7 @@ A `scheme` is a method with the signature `function (server, options)`. The `ser
 
 This method must return an object with *at least* the key `authenticate`. Other optional methods that can be used are `payload` and `response`.
 
-You can either write your own authentication `scheme`, or use one of the many hapi auth plugins, such as `hapi-auth-basic` or `hapi-auth-cookie`.
+You can either write your own authentication `scheme`, or use one of the many hapi auth plugins, such as `@hapi/basic` or `@hapi/cookie`.
 
 ### <a name="authenticate"></a> authenticate
 
@@ -66,7 +66,7 @@ As mentioned above, a strategy is essentially a pre-configured instance of a sch
 
 To register a strategy, you must first have a scheme registered. Once that's complete, use `server.auth.strategy(name, scheme, [options])` to register your strategy.
 
-The `name` parameter must be a string, and will be used later to identify this specific strategy. `scheme` is also a string, and is the name of the scheme this strategy is to be an instance of. The `options` parameter is use to customize the options of the `strategy`.  
+The `name` parameter must be a string, and will be used later to identify this specific strategy. `scheme` is also a string, and is the scheme's name this strategy is to be an instance of. The `options` parameter is used to customize the `strategy`'s options.
 
 ```js
 server.auth.strategy('session', 'cookie', {
@@ -103,7 +103,7 @@ When specifying one strategy, you may set the `strategy` property to a string wi
 
 Lastly, the `payload` parameter can be set to `false` denoting the payload is not to be authenticated, `'required'` or `true` meaning that it *must* be authenticated, or `'optional'` meaning that if the client includes payload authentication information, the authentication must be valid.
 
-The `payload` parameter is only possible to use with a strategy that supports the `payload` method in its scheme.
+Is only possible to use the `payload` parameter, with a strategy that supports the `payload` method in its scheme.
 
 ## <a name="basic"></a> basic
 
@@ -289,7 +289,7 @@ const start = async () => {
 
 start();
 ```
-First, you need to do is register the `@hapi/cookie` plugin with `server.register`. Once the plugin is registered, you configure your `strategy` by calling `server.auth.strategy`. `server.auth.strategy` takes three parameters: name of the strategy, what scheme you are using, and an options object. For your strategy, you name it `session`. For the scheme, you will be using the `cookie` scheme. If you were using `@hapi/basic`, this parameter would be `basic`. The last parameter is an options object. This is how you can customized your auth strategy to fit your needs.
+First, you need to do is register the `@hapi/cookie` plugin with `server.register`. Once the plugin is registered, you configure your `strategy` by calling `server.auth.strategy`. `server.auth.strategy` takes three parameters: name of the strategy, what scheme you are using, and an options object. For your strategy, you name it `session`. For the scheme, you will be using the `cookie` scheme. If you were using `@hapi/basic`, this parameter would be `basic`. The last parameter is an options object. This is how you can customize your auth strategy to fit your needs.
 
 The first property you configure is the `cookie` object. In your `strategy`, you will configure three properties of the `cookie` object. First, you set the name of the cookie, in this case `sid-example`.  Next, you set the password that will be used to encrypt the cookie. This should be at least 32 characters long. Last, you set `isSecure` to `false`. This is ok for development while working over HTTP. In production, this should be switched back to `true`, which is the default setting. 
 
@@ -306,8 +306,8 @@ const account = users.find(
     (user) => user.username === username
 );
 ```
-If the user doesn't not exists, or if the provided password is wrong, you redirect the user back to the login page. You use `Bcrypt` to compare the user provided password with the hashed password from the database.  
+If the user doesn't exist, or if the provided password is wrong, you redirect the user back to the login page. You use `Bcrypt` to compare the user provided password with the hashed password from the database.  
 
-Lastly, if the user does exist, and the passwords match, the user is then redirected to the homepage.  
+Lastly, if the user does exist, and the password matches, the user is then redirected to the homepage.  
 
 For more info on additional hapi auth plugins, please see the [plugin section](/plugins).
