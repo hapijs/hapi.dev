@@ -2,11 +2,11 @@
   <div class="container">
     <TutorialNav
       :language="language"
-      :menu="finalMenu"
+      :menu="menu"
       @changed="onChangeChild"
     />
     <div class="tutorial-markdown-window">
-      <Tutorial :display="tutorialHTML" :language="language" />
+      <Tutorial :display="file" :language="language" />
     </div>
     <div class="preload">
       <img src="/img/clipboardCheck.png" alt="clipboard" />
@@ -27,9 +27,7 @@ export default {
   },
   head() {
     return {
-      title:
-        "hapi.dev - " + this.titles[this.$route.params.tutorial]
-      ,
+      title: "hapi.dev - " + this.titles[this.$route.params.tutorial],
       meta: [
         {
           hid: "description",
@@ -42,21 +40,23 @@ export default {
   data() {
     return {
       language: this.getLanguage,
+      menu: "",
+      file: "",
       titles: {
-        "gettingstarted": "Getting Started",
-        "expresstohapi": "Express to hapi Migration",
-        "auth": "Authentication",
-        "caching": "Caching",
-        "cookies": "Cookies",
-        "logging": "Logging",
-        "plugins": "Plugins",
-        "routing": "Routing",
-        "servermethods": "Server Methods",
-        "servingfiles": "Serving Static Files",
-        "testing": "Testing",
-        "validation": "Validation",
-        "views": "Views"
-      },
+        gettingstarted: "Getting Started",
+        expresstohapi: "Express to hapi Migration",
+        auth: "Authentication",
+        caching: "Caching",
+        cookies: "Cookies",
+        logging: "Logging",
+        plugins: "Plugins",
+        routing: "Routing",
+        servermethods: "Server Methods",
+        servingfiles: "Serving Static Files",
+        testing: "Testing",
+        validation: "Validation",
+        views: "Views"
+      }
     };
   },
   computed: {
@@ -152,43 +152,53 @@ export default {
     }
   },
   async asyncData({ params, $axios, query }) {
+    let lang = ["en_US", "pt_BR", "ko_KR", "tr_TR", "zh_CN"];
+    let tutorials = {};
     const dev = process.env.NODE_ENV !== "production";
     const server = dev
-      ? `http://localhost:3000/lib/tutorials/${query.lang}/${params.tutorial}.md`
-      : `https://api.github.com/repos/hapijs/hapi.dev/contents/static/lib/tutorials/${query.lang}/${params.tutorial}.md`;
+      ? `http://localhost:3000/lib/tutorials/`
+      : `https://api.github.com/repos/hapijs/hapi.dev/contents/static/lib/tutorials/`;
     const options = {
       headers: {
         accept: "application/vnd.github.v3.raw+json",
         authorization: "token " + process.env.GITHUB_TOKEN
       }
     };
-    let tutorialFile = await $axios.$get(server, options);
+    for (let l of lang) {
+      let tutorialFile = await $axios.$get(
+        server + `${l}/${params.tutorial}.md`,
+        options
+      );
+      let tutorialHTML = await $axios.$post(
+        "https://api.github.com/markdown",
+        {
+          text: tutorialFile,
+          mode: "markdown"
+        },
+        {
+          headers: {
+            authorization: "token " + process.env.GITHUB_TOKEN
+          }
+        }
+      );
 
-    let tutorialHTML = await $axios.$post(
-      "https://api.github.com/markdown",
-      {
-        text: tutorialFile,
-        mode: "markdown"
-      },
-      {
-        headers: {
-          authorization: "token " + process.env.GITHUB_TOKEN
+      let rawString = await tutorialFile.toString();
+
+      let apiTocString = "";
+      let apiTocArray = await rawString.match(/\n#.+/g);
+
+      if (apiTocArray) {
+        for (let i = 0; i < apiTocArray.length; ++i) {
+          apiTocString = apiTocString + apiTocArray[i];
         }
       }
-    );
-
-    let rawString = await tutorialFile.toString();
-
-    let apiTocString = "";
-    let apiTocArray = await rawString.match(/\n#.+/g);
-
-    if (apiTocArray) {
-      for (let i = 0; i < apiTocArray.length; ++i) {
-        apiTocString = apiTocString + apiTocArray[i];
+      let finalMenu = Toc(apiTocString, { bullets: "-" }).content;
+      tutorials[l] = {
+        file: tutorialHTML,
+        menu: finalMenu
       }
     }
-    let finalMenu = Toc(apiTocString, { bullets: "-" }).content;
-    return { finalMenu, tutorialHTML };
+    return { tutorials };
   },
   created() {
     this.$store.commit("setDisplay", "tutorials");
@@ -201,6 +211,9 @@ export default {
       page[this.$store.getters.loadLanguage][this.$route.params.tutorial]
         .default
     );
+    this.$data.menu = this.tutorials[this.getLanguage].menu;
+    this.$data.file = this.tutorials[this.getLanguage].file;
+    this.$data.language = this.getLanguage;
   },
   mounted() {
     this.wrapPre();
