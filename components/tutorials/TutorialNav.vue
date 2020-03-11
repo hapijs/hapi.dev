@@ -26,8 +26,8 @@
               :class="
                 $route.params.tutorial === 'gettingstarted' ||
                 !$route.params.tutorial
-                  ? 'side-nav-select-link side-nav-active'
-                  : 'side-nav-select-link'
+                  ? 'side-nav-select-link tutorial-link side-nav-active'
+                  : 'side-nav-select-link tutorial-link'
               "
             >
               <a
@@ -45,11 +45,12 @@
                 <TutorialNavItem :menu="menu" :name="name" />
               </ul>
             </li>
+            <hr class="landing-hr" />
             <li
               :class="
                 $route.params.tutorial === 'expresstohapi'
-                  ? 'side-nav-select-link side-nav-active'
-                  : 'side-nav-select-link'
+                  ? 'side-nav-select-link tutorial-link side-nav-active'
+                  : 'side-nav-select-link tutorial-link'
               "
             >
               <a
@@ -64,11 +65,12 @@
                 <TutorialNavItem :menu="menu" :name="name" />
               </ul>
             </li>
+            <hr class="landing-hr" />
             <li
               :class="
                 $route.params.tutorial === 'auth'
-                  ? 'side-nav-select-link side-nav-active'
-                  : 'side-nav-select-link'
+                  ? 'side-nav-select-link tutorial-link side-nav-active'
+                  : 'side-nav-select-link tutorial-link'
               "
             >
               <a ref="auth" :href="'/tutorials/auth/?lang=' + getLanguage"
@@ -81,11 +83,12 @@
                 <TutorialNavItem :menu="menu" :name="name" />
               </ul>
             </li>
+            <hr class="landing-hr" />
             <li
               :class="
                 $route.params.tutorial === 'caching'
-                  ? 'side-nav-select-link side-nav-active'
-                  : 'side-nav-select-link'
+                  ? 'side-nav-select-link tutorial-link side-nav-active'
+                  : 'side-nav-select-link tutorial-link'
               "
             >
               <a ref="caching" :href="'/tutorials/caching/?lang=' + getLanguage"
@@ -98,11 +101,12 @@
                 <TutorialNavItem :menu="menu" :name="name" />
               </ul>
             </li>
+            <hr class="landing-hr" />
             <li
               :class="
                 $route.params.tutorial === 'cookies'
-                  ? 'side-nav-select-link side-nav-active'
-                  : 'side-nav-select-link'
+                  ? 'side-nav-select-link tutorial-link side-nav-active'
+                  : 'side-nav-select-link tutorial-link'
               "
             >
               <a ref="cookies" :href="'/tutorials/cookies/?lang=' + getLanguage"
@@ -115,11 +119,12 @@
                 <TutorialNavItem :menu="menu" :name="name" />
               </ul>
             </li>
+            <hr class="landing-hr" />
             <li
               :class="
                 $route.params.tutorial === 'logging'
-                  ? 'side-nav-select-link side-nav-active'
-                  : 'side-nav-select-link'
+                  ? 'side-nav-select-link tutorial-link side-nav-active'
+                  : 'side-nav-select-link tutorial-link'
               "
             >
               <a ref="logging" :href="'/tutorials/logging/?lang=' + getLanguage"
@@ -132,11 +137,12 @@
                 <TutorialNavItem :menu="menu" :name="name" />
               </ul>
             </li>
+            <hr class="landing-hr" />
             <li
               :class="
                 $route.params.tutorial === 'plugins'
-                  ? 'side-nav-select-link side-nav-active'
-                  : 'side-nav-select-link'
+                  ? 'side-nav-select-link tutorial-link side-nav-active'
+                  : 'side-nav-select-link tutorial-link'
               "
             >
               <a ref="plugins" :href="'/tutorials/plugins/?lang=' + getLanguage"
@@ -149,11 +155,12 @@
                 <TutorialNavItem :menu="menu" :name="name" />
               </ul>
             </li>
+            <hr class="landing-hr" />
             <li
               :class="
                 $route.params.tutorial === 'routing'
-                  ? 'side-nav-select-link side-nav-active'
-                  : 'side-nav-select-link'
+                  ? 'side-nav-select-link tutorial-link side-nav-active'
+                  : 'side-nav-select-link tutorial-link'
               "
             >
               <a ref="routing" :href="'/tutorials/routing/?lang=' + getLanguage"
@@ -166,11 +173,12 @@
                 <TutorialNavItem :menu="menu" :name="name" />
               </ul>
             </li>
+            <hr class="landing-hr" />
             <li
               :class="
                 $route.params.tutorial === 'servermethods'
-                  ? 'side-nav-select-link side-nav-active'
-                  : 'side-nav-select-link'
+                  ? 'side-nav-select-link tutorial-link side-nav-active'
+                  : 'side-nav-select-link tutorial-link'
               "
             >
               <a
@@ -185,11 +193,12 @@
                 <TutorialNavItem :menu="menu" :name="name" />
               </ul>
             </li>
+            <hr class="landing-hr" />
             <li
               :class="
                 $route.params.tutorial === 'servingfiles'
-                  ? 'side-nav-select-link side-nav-active'
-                  : 'side-nav-select-link'
+                  ? 'side-nav-select-link tutorial-link side-nav-active'
+                  : 'side-nav-select-link tutorial-link'
               "
             >
               <a
@@ -204,11 +213,12 @@
                 <TutorialNavItem :menu="menu" :name="name" />
               </ul>
             </li>
+            <hr class="landing-hr" />
             <li
               :class="
                 $route.params.tutorial === 'testing'
-                  ? 'side-nav-select-link side-nav-active'
-                  : 'side-nav-select-link'
+                  ? 'side-nav-select-link tutorial-link side-nav-active'
+                  : 'side-nav-select-link tutorial-link'
               "
             >
               <a ref="testing" :href="'/tutorials/testing/?lang=' + getLanguage"
@@ -221,11 +231,12 @@
                 <TutorialNavItem :menu="menu" :name="name" />
               </ul>
             </li>
+            <hr class="landing-hr" />
             <li
               :class="
                 $route.params.tutorial === 'validation'
-                  ? 'side-nav-select-link side-nav-active'
-                  : 'side-nav-select-link'
+                  ? 'side-nav-select-link tutorial-link side-nav-active'
+                  : 'side-nav-select-link tutorial-link'
               "
             >
               <a
@@ -240,11 +251,12 @@
                 <TutorialNavItem :menu="menu" :name="name" />
               </ul>
             </li>
+            <hr class="landing-hr" />
             <li
               :class="
                 $route.params.tutorial === 'views'
-                  ? 'side-nav-select-link side-nav-active'
-                  : 'side-nav-select-link'
+                  ? 'side-nav-select-link tutorial-link side-nav-active'
+                  : 'side-nav-select-link tutorial-link'
               "
             >
               <a ref="views" :href="'/tutorials/views/?lang=' + getLanguage"
@@ -363,7 +375,6 @@ export default {
               name: point.hash
             };
           }
-
           offsets.push(point.offsetTop - 116);
         }
       }
@@ -570,6 +581,10 @@ export default {
 
 .tutorial-hide {
   display: none;
+}
+
+.tutorial-link {
+  margin: 3px 0;
 }
 
 .tutorial-ul-display {

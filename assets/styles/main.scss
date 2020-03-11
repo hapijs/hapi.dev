@@ -144,6 +144,15 @@ code + .copy-clipboard {
   font-size: 1.4rem;
 }
 
+.landing-hr {
+  position: relative;
+  left: -30px;
+  height: 1px;
+  background-color: $dark-white;
+  width: calc(100% - 10px);
+  margin: 0;
+}
+
 .preload {
   display: none;
 }

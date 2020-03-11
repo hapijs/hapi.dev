@@ -69,6 +69,19 @@ export default {
         wrapper.appendChild(e);
       }
     },
+    goToAnchor() {
+      let hash = document.location.hash;
+      if (hash != "") {
+        setTimeout(function() {
+          if (location.hash) {
+            window.scrollTo(0, 0);
+            window.location.href = hash;
+          }
+        }, 1);
+      } else {
+        return false;
+      }
+    },
     setAnchors() {
       let header = document.querySelector(".markdown-wrapper h1");
       let headings = document.querySelectorAll(
@@ -163,6 +176,7 @@ export default {
     this.wrapPre();
     this.setAnchors();
     this.setClipboards();
+    this.goToAnchor();
   }
 };
 </script>

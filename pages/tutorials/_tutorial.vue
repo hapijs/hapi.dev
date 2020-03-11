@@ -1,5 +1,5 @@
 <template>
-  <div class="container" :key="key">
+  <div class="container">
     <TutorialNav
       :language="language"
       :menu="finalMenu"
@@ -28,12 +28,8 @@ export default {
   head() {
     return {
       title:
-        "hapi.dev - " +
-        this.$route.params.tutorial
-          .replace(/([A-Z])/g, " $1")
-          .replace(/^./, function(str) {
-            return str.toUpperCase();
-          }),
+        "hapi.dev - " + this.titles[this.$route.params.tutorial]
+      ,
       meta: [
         {
           hid: "description",
@@ -46,7 +42,21 @@ export default {
   data() {
     return {
       language: this.getLanguage,
-      key: 0
+      titles: {
+        "gettingstarted": "Getting Started",
+        "expresstohapi": "Express to hapi Migration",
+        "auth": "Authentication",
+        "caching": "Caching",
+        "cookies": "Cookies",
+        "logging": "Logging",
+        "plugins": "Plugins",
+        "routing": "Routing",
+        "servermethods": "Server Methods",
+        "servingfiles": "Serving Static Files",
+        "testing": "Testing",
+        "validation": "Validation",
+        "views": "Views"
+      },
     };
   },
   computed: {
@@ -91,6 +101,19 @@ export default {
 
       for (let head of headings) {
         head.href = "#" + head.name;
+      }
+    },
+    goToAnchor() {
+      let hash = document.location.hash;
+      if (hash != "") {
+        setTimeout(function() {
+          if (location.hash) {
+            window.scrollTo(0, 0);
+            window.location.href = hash;
+          }
+        }, 1);
+      } else {
+        return false;
       }
     },
     setClipboards() {
@@ -183,6 +206,7 @@ export default {
     this.wrapPre();
     this.setAnchors();
     this.setClipboards();
+    this.goToAnchor();
   }
 };
 </script>
