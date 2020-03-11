@@ -302,6 +302,7 @@ export default {
   methods: {
     onChange(event) {
       this.$emit("changed", event.target.value);
+      
     },
     setClasses() {
       //Set TOC classes
@@ -584,7 +585,7 @@ export default {
 }
 
 .tutorial-link {
-  margin: 3px 0;
+  margin: 3px 0 !important;
 }
 
 .tutorial-ul-display {

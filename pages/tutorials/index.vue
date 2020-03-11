@@ -2,11 +2,11 @@
   <div class="container">
     <TutorialNav
       :language="language"
-      :menu="menu"
+      :menu="getMenu"
       @changed="onChangeChild"
     />
     <div class="tutorial-markdown-window">
-      <Tutorial :display="file" :language="language" />
+      <Tutorial :display="getDisplay" :language="language" />
     </div>
     <div class="preload">
       <img src="/img/clipboardCheck.png" alt="clipboard" />
@@ -51,15 +51,30 @@ export default {
     },
     getLanguage() {
       return this.$store.getters.loadLanguage;
+    },
+    getDisplay() {
+      return this.$data.file;
+    },
+    getMenu() {
+      return this.$data.menu;
     }
   },
   methods: {
-    onChangeChild(value) {
+    async onChangeChild(value) {
       this.$store.commit("setLanguage", value);
       this.$router.push({ path: this.$route.path, query: { lang: value } });
       this.$store.commit("setPage", page[value].gettingstarted.default);
-      window.location = `/tutorials/gettingstarted/?lang=${value}`;
+      this.$data.file = this.tutorials[value].file;
+      this.$data.menu = this.tutorials[value].menu;
       window.scrollTo(0, 0);
+      const checkIfPageLoaded = setInterval(() => {
+        if (this.$data.file == this.tutorials[value].file) {
+          this.$children[0].setClasses();
+          this.setClipboards();
+          this.setAnchors();
+          clearInterval(checkIfPageLoaded);
+        }
+      }, 25);
     },
     wrapPre() {
       let el = document.querySelectorAll("pre");
@@ -90,7 +105,9 @@ export default {
         ".markdown-wrapper h2 a, .markdown-wrapper h3 a, .markdown-wrapper h4 a, .markdown-wrapper h5 a"
       );
 
-      header.classList.add("hapi-header");
+      if (header) {
+        header.classList.add("hapi-header");
+      }
 
       for (let head of headings) {
         head.href = "#" + head.name;
@@ -102,7 +119,11 @@ export default {
       );
 
       for (let header of headers) {
-        header.classList.add("api-doc-header");
+        header.classList.add(
+          "api-top-doc-header",
+          "api-main-doc-header",
+          "tutorial-header"
+        );
         header.innerHTML =
           header.innerHTML +
           "<span class='api-clipboardCheck api-clipboard' title='Copy link to clipboard'></span>";
@@ -139,7 +160,7 @@ export default {
     };
     for (let l of lang) {
       let tutorialFile = await $axios.$get(
-        server + `${l}/gettingStarted.md`,
+        server + `${l}/gettingstarted.md`,
         options
       );
       let tutorialHTML = await $axios.$post(

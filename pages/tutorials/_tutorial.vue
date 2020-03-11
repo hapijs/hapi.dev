@@ -2,11 +2,11 @@
   <div class="container">
     <TutorialNav
       :language="language"
-      :menu="menu"
+      :menu="getMenu"
       @changed="onChangeChild"
     />
     <div class="tutorial-markdown-window">
-      <Tutorial :display="file" :language="language" />
+      <Tutorial :display="getDisplay" :language="language" />
     </div>
     <div class="preload">
       <img src="/img/clipboardCheck.png" alt="clipboard" />
@@ -66,18 +66,34 @@ export default {
     },
     getLanguage() {
       return this.$store.getters.loadLanguage;
+    },
+    getDisplay() {
+      return this.$data.file
+    },
+    getMenu() {
+      return this.$data.menu
     }
   },
   methods: {
-    onChangeChild(value) {
+    async onChangeChild(value) {
       this.$store.commit("setLanguage", value);
       this.$router.push({ path: this.$route.path, query: { lang: value } });
       this.$store.commit(
         "setPage",
         page[value][this.$route.params.tutorial].default
       );
+      this.$data.file = this.tutorials[value].file
+      this.$data.menu = this.tutorials[value].menu
       window.scrollTo(0, 0);
-      window.location = `/tutorials/${this.$route.params.tutorial}/?lang=${value}`;
+      const checkIfPageLoaded = setInterval(() => {
+        if ((this.$data.file == this.tutorials[value].file)) {
+          this.$children[0].setClasses();
+          this.setClipboards();
+          this.setAnchors();
+          clearInterval(checkIfPageLoaded);
+        }
+      }, 25);
+      // window.location = `/tutorials/${this.$route.params.tutorial}/?lang=${value}`;
     },
     wrapPre() {
       let el = document.querySelectorAll("pre");
