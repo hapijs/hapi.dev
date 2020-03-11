@@ -6,7 +6,7 @@ exports.caching = require('./caching.md')
 
 exports.cookies = require('./cookies.md')
 
-exports.gettingstarted = require('./gettingStarted.md')
+exports.gettingstarted = require('./gettingstarted.md')
 
 exports.logging= require('./logging.md')
 
@@ -14,9 +14,9 @@ exports.plugins = require('./plugins.md')
 
 exports.routing = require('./routing.md')
 
-exports.servermethods = require('./serverMethods.md')
+exports.servermethods = require('./servermethods.md')
 
-exports.servingfiles = require('./servingFiles.md')
+exports.servingfiles = require('./servingfiles.md')
 
 exports.testing = require('./testing.md')
 
