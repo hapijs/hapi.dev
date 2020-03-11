@@ -1,6 +1,10 @@
 <template>
   <div class="container">
-    <TutorialNav :language="language" :menu="finalMenu" @changed="onChangeChild" />
+    <TutorialNav
+      :language="language"
+      :menu="finalMenu"
+      @changed="onChangeChild"
+    />
     <div class="tutorial-markdown-window">
       <Tutorial :display="tutorialHTML" :language="language" />
     </div>
@@ -52,6 +56,7 @@ export default {
       this.$store.commit("setLanguage", value);
       this.$router.push({ path: this.$route.path, query: { lang: value } });
       this.$store.commit("setPage", page[value].gettingstarted.default);
+      window.location = `/tutorials/gettingstarted/?lang=${value}`;
       window.scrollTo(0, 0);
     },
     wrapPre() {
@@ -70,7 +75,7 @@ export default {
         ".markdown-wrapper h2 a, .markdown-wrapper h3 a, .markdown-wrapper h4 a, .markdown-wrapper h5 a"
       );
 
-      header.classList.add("hapi-header")
+      header.classList.add("hapi-header");
 
       for (let head of headings) {
         head.href = "#" + head.name;
@@ -104,9 +109,11 @@ export default {
       }
     }
   },
-  async asyncData({params, $axios}) {
-    const dev = process.env.NODE_ENV !== 'production';
-    const server = dev ? 'http://localhost:3000' : 'https://hapi.dev'
+  async asyncData({ params, $axios }) {
+    const dev = process.env.NODE_ENV !== "production";
+    const server = dev
+      ? `http://localhost:3000/lib/tutorials/en_US/gettingStarted.md`
+      : `https://api.github.com/repos/hapijs/hapi.dev/contents/static/lib/tutorials/en_US/gettingStarted.md`;
     const options = {
       headers: {
         accept: "application/vnd.github.v3.raw+json",
@@ -114,12 +121,9 @@ export default {
       }
     };
 
-    let tutorialFile = await $axios.$get(
-      `${server}/lib/tutorials/en_US/gettingStarted.md`,
-      options
-    );
+    let tutorialFile = await $axios.$get(server, options);
 
-   let tutorialHTML = await $axios.$post(
+    let tutorialHTML = await $axios.$post(
       "https://api.github.com/markdown",
       {
         text: tutorialFile,
@@ -141,9 +145,8 @@ export default {
       apiTocString = apiTocString + apiTocArray[i];
     }
     let finalMenu = Toc(apiTocString).content;
-    
-    return { finalMenu, tutorialHTML }
 
+    return { finalMenu, tutorialHTML };
   },
   created() {
     this.$store.commit("setDisplay", "tutorials");
@@ -193,5 +196,10 @@ ol {
 .markdown-wrapper ol li:before {
   content: counters(item, ".") ". ";
   counter-increment: item;
+}
+
+.underline {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
 }
 </style>

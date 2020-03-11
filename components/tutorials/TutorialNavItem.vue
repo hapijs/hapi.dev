@@ -1,6 +1,11 @@
 <template>
   <li
-    :class="$route.params.tutorial === $props.name ? 'side-nav-select-link family-side-nav-item side-nav-active' : 'side-nav-select-link family-side-nav-item'"
+    :class="
+      $route.params.tutorial === $props.name
+        ? 'side-nav-select-link family-side-nav-item side-nav-active'
+        : 'side-nav-select-link family-side-nav-item'
+    "
+    v-if="this.$props.menu"
   >
     <div
       class="tutorial-nav-select-wrapper family-display"
@@ -12,7 +17,7 @@
 
 <script>
 export default {
-  props: ["menu", "name"],
+  props: ["menu", "name"]
 };
 </script>
 
@@ -58,5 +63,4 @@ export default {
 .family-display {
   display: block;
 }
-
 </style>

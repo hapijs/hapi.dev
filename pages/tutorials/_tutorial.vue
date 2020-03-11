@@ -1,6 +1,10 @@
 <template>
   <div class="container" :key="key">
-    <TutorialNav :language="language" :menu="finalMenu" @changed="onChangeChild" />
+    <TutorialNav
+      :language="language"
+      :menu="finalMenu"
+      @changed="onChangeChild"
+    />
     <div class="tutorial-markdown-window">
       <Tutorial :display="tutorialHTML" :language="language" />
     </div>
@@ -58,14 +62,12 @@ export default {
     onChangeChild(value) {
       this.$store.commit("setLanguage", value);
       this.$router.push({ path: this.$route.path, query: { lang: value } });
-      this.key = Math.random();
-      this.$forceUpdate();
       this.$store.commit(
         "setPage",
         page[value][this.$route.params.tutorial].default
       );
       window.scrollTo(0, 0);
-      window.location = "/tutorials/gettingstarted/?lang=pt_BR"
+      window.location = `/tutorials/${this.$route.params.tutorial}/?lang=${value}`;
     },
     wrapPre() {
       let el = document.querySelectorAll("pre");
@@ -83,7 +85,7 @@ export default {
         ".markdown-wrapper h2 a, .markdown-wrapper h3 a, .markdown-wrapper h4 a, .markdown-wrapper h5 a"
       );
 
-      if(header) {
+      if (header) {
         header.classList.add("hapi-header");
       }
 
@@ -97,11 +99,18 @@ export default {
       );
 
       for (let header of headers) {
-        header.classList.add("api-top-doc-header", "api-main-doc-header");
+        header.classList.add(
+          "api-top-doc-header",
+          "api-main-doc-header",
+          "tutorial-header"
+        );
         header.innerHTML =
           header.innerHTML +
-          "<span class='api-clipboardCheck api-clipboard' title='Copy link to clipboard'></span>";
+          "<span class='api-clipboardCheck api-clipboard' title='Copy link to clipboard'></span><div class='spacer'> </div>";
       }
+
+      const spacer = document.createElement("div");
+      spacer.classList.add("spacer");
 
       let clipboards = document.querySelectorAll(".api-clipboard");
 
@@ -121,17 +130,16 @@ export default {
   },
   async asyncData({ params, $axios, query }) {
     const dev = process.env.NODE_ENV !== "production";
-    const server = dev ? "http://localhost:3000" : "https://hapi.dev";
+    const server = dev
+      ? `http://localhost:3000/lib/tutorials/${query.lang}/${params.tutorial}.md`
+      : `https://api.github.com/repos/hapijs/hapi.dev/contents/static/lib/tutorials/${query.lang}/${params.tutorial}.md`;
     const options = {
       headers: {
         accept: "application/vnd.github.v3.raw+json",
         authorization: "token " + process.env.GITHUB_TOKEN
       }
     };
-    let tutorialFile = await $axios.$get(
-      `${server}/lib/tutorials/${query.lang}/${params.tutorial}.md`,
-      options
-    );
+    let tutorialFile = await $axios.$get(server, options);
 
     let tutorialHTML = await $axios.$post(
       "https://api.github.com/markdown",
@@ -151,11 +159,13 @@ export default {
     let apiTocString = "";
     let apiTocArray = await rawString.match(/\n#.+/g);
 
-    for (let i = 0; i < apiTocArray.length; ++i) {
-      apiTocString = apiTocString + apiTocArray[i];
+    if (apiTocArray) {
+      for (let i = 0; i < apiTocArray.length; ++i) {
+        apiTocString = apiTocString + apiTocArray[i];
+      }
     }
     let finalMenu = Toc(apiTocString, { bullets: "-" }).content;
-    return { finalMenu, tutorialHTML}
+    return { finalMenu, tutorialHTML };
   },
   created() {
     this.$store.commit("setDisplay", "tutorials");
@@ -206,5 +216,14 @@ ol {
 .markdown-wrapper ol li:before {
   content: counters(item, ".") ". ";
   counter-increment: item;
+}
+
+.tutorial-header {
+  display: block !important;
+}
+
+.underline {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
 }
 </style>

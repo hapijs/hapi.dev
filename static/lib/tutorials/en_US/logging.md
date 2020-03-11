@@ -1,4 +1,3 @@
-
 # Logging
 
 _This tutorial is compatible with hapi v17 and newer_

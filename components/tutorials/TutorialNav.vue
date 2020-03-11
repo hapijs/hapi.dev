@@ -298,6 +298,8 @@ export default {
       let store = this.$store;
       let router = this.$router;
 
+      document.querySelector(".markdown-wrapper p").classList.add("underline");
+
       for (let link of anchors) {
         link.classList.add("tutorial-anchor");
         this.links[link.hash] = link.getBoundingClientRect().top;
@@ -353,16 +355,16 @@ export default {
         if (point) {
           point.id = point.id.replace("user-content-", "");
           if (point.id) {
-            points[point.offsetTop] = {
+            points[point.offsetTop - 116] = {
               name: "#" + point.id
             };
           } else {
-            points[point.offsetTop] = {
+            points[point.offsetTop - 116] = {
               name: point.hash
             };
           }
 
-          offsets.push(point.offsetTop);
+          offsets.push(point.offsetTop - 116);
         }
       }
 
@@ -572,5 +574,25 @@ export default {
 
 .tutorial-ul-display {
   display: block !important;
+}
+
+@media screen and (max-width: 900px) {
+  .tutorial-nav-window {
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    top: 0;
+    padding: 10px 20px;
+    min-height: auto;
+    max-height: auto;
+    border-right: none;
+    border-bottom: 1px solid $dark-white;
+    width: 100%;
+  }
+
+  .tutorial-top-nav-wrapper {
+    padding: 0;
+    margin: 0;
+  }
 }
 </style>

@@ -168,6 +168,10 @@ code + .copy-clipboard {
     height: 100%;
   }
 
+  :root {
+    font-size: 14px;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
