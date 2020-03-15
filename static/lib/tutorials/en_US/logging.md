@@ -1,17 +1,6 @@
-
 # Logging
 
 _This tutorial is compatible with hapi v17 and newer_
-
-1. [Overview](#overview)
-1. [Built-in Methods](#methods)
-    1. [request.log()](#request.log)
-    1. [server.log()](#server.log)
-1. [Retrieving and Displaying Logs](#display)
-1. [Debug Mode](#debug)
-1. [Logging Plugins](#plugins)
-
-
 
 
 ## <a name="overview"></a> Overview

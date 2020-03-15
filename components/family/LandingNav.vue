@@ -549,15 +549,6 @@ export default {
   overflow-x: hidden;
 }
 
-.landing-hr {
-  position: relative;
-  left: -30px;
-  height: 1px;
-  background-color: $dark-white;
-  width: calc(100% - 10px);
-  margin: 0;
-}
-
 @media screen and (max-width: 900px) {
   .family-top-wrapper {
     padding: 0;

@@ -2,18 +2,6 @@
 
 _This tutorial is compatible with hapi v17 and newer_
 
-1. [Overview](#overview)
-1. [Client-side Caching](#client-side)
-    1. [Cache-Control](#cache-control)
-    1. [Last-Modified](#last-modified)
-    1. [ETag](#etag)
-1. [Server-side Caching](#server-side)
-    1. [catbox](#catbox)
-    1. [Client](#client)
-    1. [Policy](#policy)
-    1. [Server Methods](#serverMethods)
-1. [Client and Server Caching](#clientandserver)
-
 
 ## <a name="overview"></a> Overview
 

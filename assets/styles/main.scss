@@ -51,7 +51,7 @@ body {
   width: auto;
   display: inline-block;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 2.3rem;
   display: block;
 }
 
@@ -144,6 +144,15 @@ code + .copy-clipboard {
   font-size: 1.4rem;
 }
 
+.landing-hr {
+  position: relative;
+  left: -30px;
+  height: 1px;
+  background-color: $dark-white;
+  width: calc(100% - 10px);
+  margin: 0;
+}
+
 .preload {
   display: none;
 }
@@ -168,6 +177,10 @@ code + .copy-clipboard {
     height: 100%;
   }
 
+  :root {
+    font-size: 14px;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
@@ -181,6 +194,10 @@ code + .copy-clipboard {
 
   .page-wrapper {
     padding: 0 20px;
+  }
+
+  .hapi-header {
+    font-size: 2rem;
   }
 
   .hapi-family-header {

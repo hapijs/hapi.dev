@@ -3,15 +3,6 @@
 _This tutorial is compatible with hapi v17 and newer_
 
 
-1. [Overview](#overview)
-1. [Installing hapi](#installing)
-1. [Creating a server](#server)
-1. [Adding Routes](#routes)
-1. [Everything Else](#everything)
-
-        
-        
-
 ## <a name="overview"></a> Overview
 
 This tutorial will show how to set up a basic hapi server that displays "Hello World!" in your browser.
