@@ -140,15 +140,11 @@
   border-bottom: 1px solid $dark-white;
 }
 
-.module-version-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
+.module-version-wrapper,
 .module-version-wrapper a {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .version-name {

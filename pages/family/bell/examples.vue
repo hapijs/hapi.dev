@@ -427,6 +427,10 @@ pre > code {
   left: 0;
 }
 
+.hljs-comment {
+  color: #9a9a9a;
+}
+
 .family-anchor {
   display: inline-block;
   color: $gray;
