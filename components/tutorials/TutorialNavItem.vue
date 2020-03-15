@@ -5,7 +5,7 @@
         ? 'side-nav-select-link family-side-nav-item side-nav-active'
         : 'side-nav-select-link family-side-nav-item'
     "
-    v-if="this.$props.menu"
+    v-if="this.$props.menu !== ''"
   >
     <div
       class="tutorial-nav-select-wrapper family-display"

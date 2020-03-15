@@ -311,8 +311,6 @@ export default {
       let store = this.$store;
       let router = this.$router;
 
-      document.querySelector(".markdown-wrapper p").classList.add("underline");
-
       for (let link of anchors) {
         link.classList.add("tutorial-anchor");
         this.links[link.hash] = link.getBoundingClientRect().top;
@@ -369,6 +367,7 @@ export default {
         let point = document.querySelector(
           `.markdown-wrapper a[href='${links[i].hash}']`
         );
+        console.log(links[i].hash)
         if (point) {
           point.id = point.id.replace("user-content-", "");
           if (point.id) {
@@ -383,6 +382,9 @@ export default {
           offsets.push(point.offsetTop - 116);
         }
       }
+
+      console.log(points);
+
 
       offsets = [...new Set(offsets)];
       let currentElement = document.querySelector(".markdown-wrapper ");
@@ -466,9 +468,12 @@ export default {
     Ads,
     TutorialNavItem
   },
-  mounted() {
-    this.setClasses();
-  }
+  // mounted() {
+  //   this.setClasses()
+  // }
+  // updated() {
+  //   this.setClasses();
+  // }
 };
 </script>
 

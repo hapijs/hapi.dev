@@ -206,11 +206,11 @@ export default {
       "setPage",
       page[this.$store.getters.loadLanguage].gettingstarted.default
     );
-    this.$data.menu = this.tutorials[this.getLanguage].menu;
     this.$data.file = this.tutorials[this.getLanguage].file;
     this.$data.language = this.getLanguage;
   },
   mounted() {
+    this.$data.menu = this.tutorials[this.getLanguage].menu;
     this.wrapPre();
     this.setAnchors();
     this.setClipboards();

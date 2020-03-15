@@ -82,8 +82,8 @@ export default {
         "setPage",
         page[value][this.$route.params.tutorial].default
       );
-      this.$data.file = this.tutorials[value].file
-      this.$data.menu = this.tutorials[value].menu
+      this.$data.file = await this.tutorials[value].file
+      this.$data.menu = await this.tutorials[value].menu
       window.scrollTo(0, 0);
       const checkIfPageLoaded = setInterval(() => {
         if ((this.$data.file == this.tutorials[value].file)) {
@@ -119,7 +119,7 @@ export default {
         head.href = "#" + head.name;
       }
 
-      document.querySelector(".markdown-wrapper p").classList.add("tutorial-subhead");
+      document.querySelector(".markdown-wrapper p").classList.add("tutorial-subhead", "underline");
     },
     goToAnchor() {
       let hash = document.location.hash;
@@ -229,15 +229,13 @@ export default {
       page[this.$store.getters.loadLanguage][this.$route.params.tutorial]
         .default
     );
-    this.$data.menu = this.tutorials[this.getLanguage].menu;
+
     this.$data.file = this.tutorials[this.getLanguage].file;
     this.$data.language = this.getLanguage;
+    this.$data.menu = this.tutorials[this.getLanguage].menu;
   },
   mounted() {
-    this.wrapPre();
-    this.setAnchors();
-    this.setClipboards();
-    this.goToAnchor();
+    this.onChangeChild(this.getLanguage)
   }
 };
 </script>
