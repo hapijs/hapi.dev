@@ -1,27 +1,27 @@
 'use strict'
 
-exports.auth = require('./auth.md')
+export const auth = require('./auth.md')
 
-exports.caching = require('./caching.md')
+export const caching = require('./caching.md')
 
-exports.cookies = require('./cookies.md')
+export const cookies = require('./cookies.md')
 
-exports.gettingstarted = require('./gettingstarted.md')
+export const gettingstarted = require('./gettingstarted.md')
 
-exports.logging= require('./logging.md')
+export const logging= require('./logging.md')
 
-exports.plugins = require('./plugins.md')
+export const plugins = require('./plugins.md')
 
-exports.routing = require('./routing.md')
+export const routing = require('./routing.md')
 
-exports.servermethods = require('./servermethods.md')
+export const servermethods = require('./servermethods.md')
 
-exports.servingfiles = require('./servingfiles.md')
+export const servingfiles = require('./servingfiles.md')
 
-exports.testing = require('./testing.md')
+export const testing = require('./testing.md')
 
-exports.validation = require('./validation.md')
+export const validation = require('./validation.md')
 
-exports.views = require('./views.md')
+export const views = require('./views.md')
 
-exports.expresstohapi = require('./expresstohapi.md')
+export const expresstohapi = require('./expresstohapi.md')

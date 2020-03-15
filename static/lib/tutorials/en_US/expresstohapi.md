@@ -2,38 +2,6 @@
 
 _This guide is compatible with hapi v17 and newer_
 
-1. [Overview](#overview)
-1. [Setup](#setup)
-    1. [Installation](#installation)
-    1. [Creating a Server](#server)
-1. [Routes](#routes)
-    1. [Methods](#methods)
-    1. [Path](#path)
-    1. [Parameters](#parameters)
-    1. [Handler](#handler)
-    1. [Parsing](#parsing)
-1. [Middleware vs Plugins and Extensions](#plugins)
-    1. [Extension Points](#extension)
-    1. [Creating a Plugin](#creating)
-    1. [Loading a Plugin](#load)
-        1. [Options](#options)
-1. [body-parser](#bodyParser)
-1. [cookie-parser](#config)
-    1. [Setting a Cookie](#settingCookie)
-    1. [Getting a Cookie Value](#getCookie)
-1. [Passport -> bell](#bell)
-1. [express-validator -> joi](#joi)
-    1. [Input Validation](#input)
-    1. [Output Validation](#output)
-1. [app.set('view engine') -> vision](#vision)
-    1. [Setting the View Engine](#viewengine)
-    1. [Rendering a View](#view)
-1. [express.static() -> inert](#inert)
-    1. [Serving Single Files](#single)
-    1. [Static File Server](#static)
-1. [Error handling -> boom](#boom)
-    1. [Custom messages](#custom)
-
 
 ## <a name="overview" ></a> Overview
 

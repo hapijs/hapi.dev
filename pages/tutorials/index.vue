@@ -1,8 +1,12 @@
 <template>
   <div class="container">
-    <TutorialNav :language="language" @changed="onChangeChild" />
+    <TutorialNav
+      :language="language"
+      :menu="getMenu"
+      @changed="onChangeChild"
+    />
     <div class="tutorial-markdown-window">
-      <Tutorial :display="getPage" :language="language" />
+      <Tutorial :display="getDisplay" :language="language" />
     </div>
     <div class="preload">
       <img src="/img/clipboardCheck.png" alt="clipboard" />
@@ -14,8 +18,8 @@
 import Tutorial from "../../components/tutorials/Tutorial.vue";
 import TutorialNav from "../../components/tutorials/TutorialNav.vue";
 const page = require("../../static/lib/tutorials/");
-import test from "../../static/lib/tutorials/";
 import { copyToClipboard } from "~/utils/clipboard";
+let Toc = require("markdown-toc");
 export default {
   components: {
     Tutorial,
@@ -35,7 +39,9 @@ export default {
   },
   data() {
     return {
-      language: this.getLanguage
+      language: this.getLanguage,
+      menu: "",
+      file: ""
     };
   },
   computed: {
@@ -45,14 +51,30 @@ export default {
     },
     getLanguage() {
       return this.$store.getters.loadLanguage;
+    },
+    getDisplay() {
+      return this.$data.file;
+    },
+    getMenu() {
+      return this.$data.menu;
     }
   },
   methods: {
-    onChangeChild(value) {
+    async onChangeChild(value) {
       this.$store.commit("setLanguage", value);
       this.$router.push({ path: this.$route.path, query: { lang: value } });
       this.$store.commit("setPage", page[value].gettingstarted.default);
+      this.$data.file = this.tutorials[value].file;
+      this.$data.menu = this.tutorials[value].menu;
       window.scrollTo(0, 0);
+      const checkIfPageLoaded = setInterval(() => {
+        if (this.$data.file == this.tutorials[value].file) {
+          this.$children[0].setClasses();
+          this.setClipboards();
+          this.setAnchors();
+          clearInterval(checkIfPageLoaded);
+        }
+      }, 25);
     },
     wrapPre() {
       let el = document.querySelectorAll("pre");
@@ -64,17 +86,34 @@ export default {
         wrapper.appendChild(e);
       }
     },
+    goToAnchor() {
+      let hash = document.location.hash;
+      if (hash != "") {
+        setTimeout(function() {
+          if (location.hash) {
+            window.scrollTo(0, 0);
+            window.location.href = hash;
+          }
+        }, 1);
+      } else {
+        return false;
+      }
+    },
     setAnchors() {
       let header = document.querySelector(".markdown-wrapper h1");
       let headings = document.querySelectorAll(
         ".markdown-wrapper h2 a, .markdown-wrapper h3 a, .markdown-wrapper h4 a, .markdown-wrapper h5 a"
       );
 
-      header.classList.add("hapi-header")
+      if (header) {
+        header.classList.add("hapi-header");
+      }
 
       for (let head of headings) {
         head.href = "#" + head.name;
       }
+
+      document.querySelector(".markdown-wrapper p").classList.add("tutorial-subhead");
     },
     setClipboards() {
       let headers = document.querySelectorAll(
@@ -82,7 +121,11 @@ export default {
       );
 
       for (let header of headers) {
-        header.classList.add("api-doc-header");
+        header.classList.add(
+          "api-top-doc-header",
+          "api-main-doc-header",
+          "tutorial-header"
+        );
         header.innerHTML =
           header.innerHTML +
           "<span class='api-clipboardCheck api-clipboard' title='Copy link to clipboard'></span>";
@@ -104,6 +147,55 @@ export default {
       }
     }
   },
+  async asyncData({ params, $axios, query }) {
+    let lang = ["en_US", "pt_BR", "ko_KR", "tr_TR", "zh_CN"];
+    let tutorials = {};
+    const dev = process.env.NODE_ENV !== "production";
+    const server = dev
+      ? `http://localhost:3000/lib/tutorials/`
+      : `https://api.github.com/repos/hapijs/hapi.dev/contents/static/lib/tutorials/`;
+    const options = {
+      headers: {
+        accept: "application/vnd.github.v3.raw+json",
+        authorization: "token " + process.env.GITHUB_TOKEN
+      }
+    };
+    for (let l of lang) {
+      let tutorialFile = await $axios.$get(
+        server + `${l}/gettingstarted.md`,
+        options
+      );
+      let tutorialHTML = await $axios.$post(
+        "https://api.github.com/markdown",
+        {
+          text: tutorialFile,
+          mode: "markdown"
+        },
+        {
+          headers: {
+            authorization: "token " + process.env.GITHUB_TOKEN
+          }
+        }
+      );
+
+      let rawString = await tutorialFile.toString();
+
+      let apiTocString = "";
+      let apiTocArray = await rawString.match(/\n#.+/g);
+
+      if (apiTocArray) {
+        for (let i = 0; i < apiTocArray.length; ++i) {
+          apiTocString = apiTocString + apiTocArray[i];
+        }
+      }
+      let finalMenu = Toc(apiTocString, { bullets: "-" }).content;
+      tutorials[l] = {
+        file: tutorialHTML,
+        menu: finalMenu
+      };
+    }
+    return { tutorials };
+  },
   created() {
     this.$store.commit("setDisplay", "tutorials");
     this.$store.commit(
@@ -114,11 +206,15 @@ export default {
       "setPage",
       page[this.$store.getters.loadLanguage].gettingstarted.default
     );
+    this.$data.menu = this.tutorials[this.getLanguage].menu;
+    this.$data.file = this.tutorials[this.getLanguage].file;
+    this.$data.language = this.getLanguage;
   },
   mounted() {
     this.wrapPre();
     this.setAnchors();
     this.setClipboards();
+    this.goToAnchor();
   }
 };
 </script>
@@ -152,5 +248,15 @@ ol {
 .markdown-wrapper ol li:before {
   content: counters(item, ".") ". ";
   counter-increment: item;
+}
+
+.underline {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tutorial-subhead {
+  margin-top: 0;
+  padding-bottom: 10px;
 }
 </style>
