@@ -23,7 +23,7 @@ The home of the [hapi.dev](http://hapi.dev) developer portal.
 
 * Run ```npm run dev``` and go to ```http://localhost:3000``` to view the site. The dev server hot loads, which will automatically show your changes without having to restart the server. 
 
-* After you make your changes, simply open a plull request. 
+* After you make your changes, simply open a pull request. 
 
 ## Add a translation for the tutorials
 In the directory `static/lib/tutorials` we have some directories with the name of the languages translated, to add a new translation, simply add a new folder in the `static/lib/tutorials` with your translation.

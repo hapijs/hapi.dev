@@ -78,7 +78,7 @@
 
 *   [hapi-moon](https://github.com/metoikos/hapi-moon)
 
-    Opinionated hapi.js (V >= 17) Server Boilerplate
+    Hassle-free and production ready hapi.js Server boilerplate
 
 *   [hapi-ninja](https://github.com/poeticninja/hapi-ninja)
 
