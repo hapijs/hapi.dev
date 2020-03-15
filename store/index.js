@@ -1,4 +1,4 @@
-import start from "../static/lib/tutorials/en_US/";
+const start = require("../static/lib/tutorials/en_US");
 
 export const state = () => ({
   page: start.gettingstarted.default,

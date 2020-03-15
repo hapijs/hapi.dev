@@ -302,11 +302,11 @@ export default {
   methods: {
     onChange(event) {
       this.$emit("changed", event.target.value);
-      
     },
     setClasses() {
       //Set TOC classes
       let anchors = document.querySelectorAll(".tutorial-nav-select-wrapper a");
+      let code = document.querySelectorAll(".tutorial-nav-select-wrapper code");
       let count = 0;
       let store = this.$store;
       let router = this.$router;
@@ -344,6 +344,10 @@ export default {
             link.classList.add("tutorial-minus");
           }
         });
+      }
+
+      for (let i = code.length - 1; i >= 0; i--) {
+        code[i].classList.add("tutorial-nav-code");
       }
 
       let familyUls = document.querySelectorAll(
@@ -590,6 +594,20 @@ export default {
 
 .tutorial-ul-display {
   display: block !important;
+}
+
+.tutorial-nav-code {
+  background: rgba(0, 0, 0, 0);
+  font-family: "Lato", sans-serif;
+  color: $gray;
+  font-size: 1rem;
+  margin: 0 5px 0 0;
+  padding: 0;
+  border: none;
+}
+
+.tutorial-anchor:hover .tutorial-nav-code{
+  color: $orange !important;
 }
 
 @media screen and (max-width: 900px) {

@@ -118,6 +118,8 @@ export default {
       for (let head of headings) {
         head.href = "#" + head.name;
       }
+
+      document.querySelector(".markdown-wrapper p").classList.add("tutorial-subhead");
     },
     goToAnchor() {
       let hash = document.location.hash;
@@ -279,4 +281,10 @@ ol {
   padding-bottom: 20px;
   border-bottom: 1px solid #ddd;
 }
+
+.tutorial-subhead {
+  margin-top: 0;
+  padding-bottom: 10px;
+}
+
 </style>
