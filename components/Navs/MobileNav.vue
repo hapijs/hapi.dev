@@ -204,25 +204,25 @@
                 </div>
                 <ul class="mobile-subul" :id="name + '2'">
                   <li class="mobile-sublink">
-                    <a :href="'/family/' + name">Home</a>
+                    <a :href="'/module/' + name">Home</a>
                   </li>
                   <li v-if="name === 'joi'" class="mobile-sublink">
-                    <a href="/family/joi/tester">Schema Tester</a>
+                    <a href="/module/joi/tester">Schema Tester</a>
                   </li>
                   <li v-if="name === 'bell'" class="mobile-sublink">
-                    <a href="/family/bell/providers">Providers</a>
+                    <a href="/module/bell/providers">Providers</a>
                   </li>
                   <li v-if="name === 'bell'" class="mobile-sublink">
-                    <a href="/family/bell/examples">Examples</a>
+                    <a href="/module/bell/examples">Examples</a>
                   </li>
                   <li
                     class="mobile-sublink"
                     v-if="moduleInfo[name].api === true"
                   >
-                    <a :href="'/family/' + name + '/api'">API</a>
+                    <a :href="'/module/' + name + '/api'">API</a>
                   </li>
                   <li class="mobile-sublink">
-                    <a :href="'/family/' + name + '/changelog'">Changelog</a>
+                    <a :href="'/module/' + name + '/changelog'">Changelog</a>
                   </li>
                 </ul>
               </li>
