@@ -21,7 +21,12 @@
       @input="onChildInput"
     />
     <div class="tutorial-markdown-window">
-      <h1 class="hapi-family-header">API <span class="api-version-span">v{{getVersion.match(/.*(?=\.)/)[0]}}.x</span></h1>
+      <h1 class="hapi-family-header">
+        API
+        <span class="api-version-span"
+          >v{{ getVersion.match(/.*(?=\.)/)[0] }}.x</span
+        >
+      </h1>
       <Install :name="name" :moduleAPI="moduleAPI" :version="version" />
       <FamilyDisplay :display="getAPI" />
     </div>
@@ -63,9 +68,9 @@ export default {
   data() {
     return {
       moduleAPI: moduleInfo,
-      versionsArray: moduleInfo[this.$route.params.family].versionsArray.sort(
-        (a, b) => Semver.compare(b, a)
-      ),
+      versionsArray: moduleInfo[
+        this.$route.params.family
+      ].versionsArray.sort((a, b) => Semver.compare(b, a)),
       display: "",
       page: "api",
       modules: this.modules,
@@ -86,7 +91,7 @@ export default {
     };
   },
   methods: {
-        onClipboards() {
+    onClipboards() {
       let that = this;
       setTimeout(function() {
         that.setClipboards();
@@ -163,7 +168,7 @@ export default {
 
       for (let header of headers) {
         header.classList.add("api-doc-header");
-        header.classList.add("api-main-doc-header");
+        header.classList.add("api-main-doc-header", "tutorial-header");
         header.innerHTML =
           header.innerHTML +
           "<span class='api-clipboardCheck api-clipboard' title='Copy link to clipboard'></span>";
@@ -581,6 +586,10 @@ h1 a {
 
 .api-clipboard:hover {
   opacity: 0.7;
+}
+
+.tutorial-header {
+  display: block !important;
 }
 
 @media screen and (max-width: 900px) {

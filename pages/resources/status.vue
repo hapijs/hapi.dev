@@ -45,7 +45,7 @@
                             class="version-helmet"
                             :href="
                               newRepos[repo.name][version.name].api
-                                ? '/family/' +
+                                ? '/module/' +
                                   repo.name +
                                   '/api?v=' +
                                   version.name

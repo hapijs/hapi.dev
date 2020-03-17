@@ -2,3 +2,4 @@
 /family/hapi            /api
 /family/hapi/api        /api
 /family/hapi/changelog  /resources/changelog
+/family/*               /module/:splat

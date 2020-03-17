@@ -65,7 +65,7 @@
           >
             <a
               :href="
-                page === 'home' ? '#install' : '/family/' + family + '#install'
+                page === 'home' ? '#install' : '/module/' + family + '#install'
               "
               >Installation</a
             >
@@ -80,7 +80,7 @@
           >
             <a
               :href="
-                page === 'home' ? '#status' : '/family/' + family + '#status'
+                page === 'home' ? '#status' : '/module/' + family + '#status'
               "
               >Status</a
             >
@@ -98,7 +98,7 @@
               :href="
                 page === 'home'
                   ? '#introduction'
-                  : '/family/' + family + '#introduction'
+                  : '/module/' + family + '#introduction'
               "
               >Introduction</a
             >
@@ -114,7 +114,7 @@
           >
             <a
               :href="
-                page === 'home' ? '#example' : '/family/' + family + '#example'
+                page === 'home' ? '#example' : '/module/' + family + '#example'
               "
               >Example</a
             >
@@ -130,7 +130,7 @@
           >
             <a
               :href="
-                page === 'home' ? '#usage' : '/family/' + family + '#usage'
+                page === 'home' ? '#usage' : '/module/' + family + '#usage'
               "
               >Usage</a
             >
@@ -148,7 +148,7 @@
               :href="
                 page === 'home'
                   ? '#advanced'
-                  : '/family/' + header + '#advanced'
+                  : '/module/' + header + '#advanced'
               "
               >Advanced</a
             >
@@ -162,7 +162,7 @@
                 : 'landing-nav-api-title'
             "
           >
-            <a :href="page === 'home' ? '#faq' : '/family/' + family + '#faq'"
+            <a :href="page === 'home' ? '#faq' : '/module/' + family + '#faq'"
               >F.A.Q.</a
             >
           </div>
@@ -176,7 +176,7 @@
                 : 'landing-nav-api-title'
             "
           >
-            <a href="/family/joi/tester">Schema Tester</a>
+            <a href="/module/joi/tester">Schema Tester</a>
           </div>
           <hr v-if="family === 'bell'" class="landing-hr" />
           <div
@@ -188,7 +188,7 @@
                 : 'landing-nav-api-title'
             "
           >
-            <a href="/family/bell/providers">Providers</a>
+            <a href="/module/bell/providers">Providers</a>
           </div>
           <ul class="side-nav-select-list" v-if="page === 'providers'">
             <FamilyNavItem
@@ -210,7 +210,7 @@
                 : 'landing-nav-api-title'
             "
           >
-            <a href="/family/bell/examples">Examples</a>
+            <a href="/module/bell/examples">Examples</a>
           </div>
           <ul class="side-nav-select-list" v-if="page === 'examples'">
             <FamilyNavItem
@@ -231,7 +231,7 @@
                 : 'landing-nav-api-title'
             "
           >
-            <a :href="'/family/' + family + '/api'">API</a>
+            <a :href="'/module/' + family + '/api'">API</a>
           </div>
           <ul class="side-nav-select-list" v-if="page === 'api'">
             <FamilyNavItem
@@ -251,7 +251,7 @@
                 : 'landing-nav-changelog-title'
             "
           >
-            <a :href="'/family/' + family + '/changelog'">Changelog</a>
+            <a :href="'/module/' + family + '/changelog'">Changelog</a>
           </div>
         </div>
       </div>

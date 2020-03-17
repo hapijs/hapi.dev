@@ -67,8 +67,8 @@
                     : 'nav-link'
                 "
                 ref="family"
-                title="Family"
-                href="/family?sort=name"
+                title="Modules"
+                href="/module?sort=name"
                 v-on:click="addActive('family')"
                 >Modules</a
               >
