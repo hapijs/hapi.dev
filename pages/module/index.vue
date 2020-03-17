@@ -18,7 +18,7 @@
           v-bind:key="module.name"
         >
           <div class="family-grid-text-wrapper">
-            <a :href="'/family/' + module.name" class="family-grid-link">
+            <a :href="'/module/' + module.name" class="family-grid-link">
               <div class="family-grid-cell-name">{{ module.name }}</div>
             </a>
             <div

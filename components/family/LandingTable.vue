@@ -24,7 +24,7 @@
                 class="version-helmet"
                 :href="
                   newRepos[name][version.name].api
-                    ? '/family/' + name + '/api?v=' + version.name
+                    ? '/module/' + name + '/api?v=' + version.name
                     : name === 'hapi'
                     ? '/api/?v=' + version.name
                     : 'https://github.com/hapijs/' +
