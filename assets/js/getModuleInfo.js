@@ -170,7 +170,7 @@ async function getInfo() {
                   advance = advanced[0];
                 }
                 let examples = await rawString.match(
-                  /(?=#.*Example)([\s\S]*?)(?=\n#)/
+                  /(?=#.*Example\s\s)([\s\S]*?)(?=\n#)/
                 );
                 if (examples && repositories.data[r].name !== "bell") {
                   rawString = await rawString.replace(
