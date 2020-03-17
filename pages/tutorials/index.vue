@@ -113,7 +113,10 @@ export default {
         head.href = "#" + head.name;
       }
 
-      document.querySelector(".markdown-wrapper p").classList.add("tutorial-subhead");
+      let subtitle = document.querySelector("h1 + p")
+      if (subtitle) {
+        subtitle.classList.add("tutorial-subhead", "underline");
+      }
     },
     setClipboards() {
       let headers = document.querySelectorAll(
@@ -206,15 +209,11 @@ export default {
       "setPage",
       page[this.$store.getters.loadLanguage].gettingstarted.default
     );
-    this.$data.menu = this.tutorials[this.getLanguage].menu;
     this.$data.file = this.tutorials[this.getLanguage].file;
     this.$data.language = this.getLanguage;
   },
   mounted() {
-    this.wrapPre();
-    this.setAnchors();
-    this.setClipboards();
-    this.goToAnchor();
+    this.onChangeChild(this.getLanguage)
   }
 };
 </script>
