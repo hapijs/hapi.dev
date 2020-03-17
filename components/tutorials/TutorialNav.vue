@@ -367,7 +367,6 @@ export default {
         let point = document.querySelector(
           `.markdown-wrapper a[href='${links[i].hash}']`
         );
-        console.log(links[i].hash)
         if (point) {
           point.id = point.id.replace("user-content-", "");
           if (point.id) {
@@ -382,8 +381,6 @@ export default {
           offsets.push(point.offsetTop - 116);
         }
       }
-
-      console.log(points);
 
 
       offsets = [...new Set(offsets)];

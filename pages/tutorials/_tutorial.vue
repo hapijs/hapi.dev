@@ -119,7 +119,10 @@ export default {
         head.href = "#" + head.name;
       }
 
-      document.querySelector(".markdown-wrapper p").classList.add("tutorial-subhead", "underline");
+      let subtitle = document.querySelector("h1 + p")
+      if (subtitle) {
+        subtitle.classList.add("tutorial-subhead", "underline");
+      }
     },
     goToAnchor() {
       let hash = document.location.hash;
