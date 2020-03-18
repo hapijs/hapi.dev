@@ -242,7 +242,7 @@ export default {
           }
 
           router.push({
-            path: "/family/joi/tester"
+            path: "/module/joi/tester"
           });
         });
       }

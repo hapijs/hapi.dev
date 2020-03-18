@@ -93,7 +93,7 @@ The parameters mean:
 * `segment`: an optional segment name used to isolate cache items.
 * `cache`: an optional string with the name of the cache connection configured on your server to use
 
-More information on the caching options can be found in the [API Reference](/api#server.methods) as well as the documentation for [catbox](/family/catbox#policy).
+More information on the caching options can be found in the [API Reference](/api#server.methods) as well as the documentation for [catbox](/module/catbox#policy).
 
 You can override the `ttl` (time-to-live) of a server method result per-invocation by setting the `ttl` flag. Let's see how this works with the earlier example:
 

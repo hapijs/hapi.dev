@@ -51,7 +51,7 @@ See [route-options](/api#route-options) for more information about common `cache
 
 ### <a name="last-modified"></a> Last-Modified
 
-In some cases, the server can provide information about when a resource was last modified. When using the [inert](/family/inert) plugin for serving static content, a `Last-Modified` header is added automatically to every response.
+In some cases, the server can provide information about when a resource was last modified. When using the [inert](/module/inert) plugin for serving static content, a `Last-Modified` header is added automatically to every response.
 
 When the `Last-Modified` header is set on a response, hapi compares it with the `If-Modified-Since` header coming from the client to decide if the response status code should be `304 Not Modified`. This is also known as a conditional GET request. The advantage being that there's no need for the browser to download the file again for a `304` response.
 
@@ -77,11 +77,11 @@ Check the documentation of `etag` under the [response object](/api#response-obje
 
 ## <a name="server-side"></a> Server-side Caching
 
-hapi provides powerful, convenient server-side caching via [catbox](/family/catbox). This tutorial section will help you understand how to use catbox.
+hapi provides powerful, convenient server-side caching via [catbox](/module/catbox). This tutorial section will help you understand how to use catbox.
 
 ### <a name="catbox"></a> catbox
 
-[catbox](/family/catbox) is a multi-strategy key-value object store. It comes with extensions supporting a memory cache, [Redis](https://redis.io), and [Memcached](http://memcached.org).
+[catbox](/module/catbox) is a multi-strategy key-value object store. It comes with extensions supporting a memory cache, [Redis](https://redis.io), and [Memcached](http://memcached.org).
 
 In order to reduce module dependencies, catbox does not include the external caching strategies. To use other strategies, each service must be manually installed via npm or package dependencies manually.
 
@@ -89,9 +89,9 @@ catbox has two interfaces; client and policy.
 
 ### <a name="client"></a> Client
 
-[Client](/family/catbox/api#client) is a low-level interface that allows you set/get key-value pairs. It is initialized with one of the available adapters: ([Memory](/family/catbox-memory), [Redis](/family/catbox-redis), or [Memcached](/family/catbox-memcached).
+[Client](/module/catbox/api#client) is a low-level interface that allows you set/get key-value pairs. It is initialized with one of the available adapters: ([Memory](/module/catbox-memory), [Redis](/module/catbox-redis), or [Memcached](/module/catbox-memcached).
 
-hapi initializes a default [client](/family/catbox#client) using the [catbox memory](/family/catbox-memory) adapter. Let's see how you can define another client using the [redis](http://redis.io/) strategy.
+hapi initializes a default [client](/module/catbox#client) using the [catbox memory](/module/catbox-memory) adapter. Let's see how you can define another client using the [redis](http://redis.io/) strategy.
 
 ```javascript
 'use strict';
@@ -123,7 +123,7 @@ In the above example, you defined a new catbox client, `my_cache`. Including the
 
 ### <a name="policy" /> Policy
 
-[Policy](/family/catbox/api#policy) is a more high-level interface than Client. The following is a simple example of caching the result of adding two numbers together. The principles of this simple example can be applied to any situation where you want to cache the result of a function call, async or otherwise. [server.cache(options)](/api#server.cache()) creates a new [policy](/family/catbox/api#policy), which is then used in the route handler.
+[Policy](/module/catbox/api#policy) is a more high-level interface than Client. The following is a simple example of caching the result of adding two numbers together. The principles of this simple example can be applied to any situation where you want to cache the result of a function call, async or otherwise. [server.cache(options)](/api#server.cache()) creates a new [policy](/module/catbox/api#policy), which is then used in the route handler.
 
 ```javascript
 const start = async () => {
@@ -173,7 +173,7 @@ If you make a request to `http://localhost:8000/add/1/5`, you should get the res
 
 `expiresIn` states the time, in milliseconds, the cache will expire in relation to the time the item was saved in the cache. In this case, our cache will expire 10 seconds after the item was saved. 
 
-`segment` that allow you to further isolate caches within one [client](/family/catbox/api#client) partition. If you want to cache results from two different methods, you usually don't want to mix the results together. In [redis](http://redis.io/), `segment` is an additional prefix along with the `partition` option. The default value for `segment` when [server.cache()](/api#-servercacheoptions) is called inside of a plugin will be `'!pluginName'`. When creating [server methods](/tutorials/server-methods), the `segment` value will be `'#methodName'`. If you have a use case for multiple policies sharing one segment there is a [shared](/api#-servercacheoptions) option available as well.
+`segment` that allow you to further isolate caches within one [client](/module/catbox/api#client) partition. If you want to cache results from two different methods, you usually don't want to mix the results together. In [redis](http://redis.io/), `segment` is an additional prefix along with the `partition` option. The default value for `segment` when [server.cache()](/api#-servercacheoptions) is called inside of a plugin will be `'!pluginName'`. When creating [server methods](/tutorials/server-methods), the `segment` value will be `'#methodName'`. If you have a use case for multiple policies sharing one segment there is a [shared](/api#-servercacheoptions) option available as well.
 
 `generateFunc` is a function that will generate a new cache item if one is not found in the cache when calling `get()`. In this example, the generate function will generate a value of two numbers add together. The `generateFunc` function will also be called if an item in the cache exists, but is found to be stale. You can set the time when an item in the cache will be stale by configuring the `staleIn` option. `staleIn` is a number in milliseconds to mark an item stored in cache as stale and attempt to regenerate it when `generateFunc` is provided. `staleIn` must be less than `expiredIn`.
 
@@ -183,7 +183,7 @@ If you make a request to `http://localhost:8000/add/1/5`, you should get the res
 
 The first parameter of the `sumCache.get()` function is an id, which may either be a string or an object with a mandatory property `id`, which is a unique cache item identifier.
 
-Look into catbox policy [options](/family/catbox/api#policy) and pay extra attention to `staleIn`, `staleTimeout`, `generateTimeout`, to leverage the full potential of catbox caching.
+Look into catbox policy [options](/module/catbox/api#policy) and pay extra attention to `staleIn`, `staleTimeout`, `generateTimeout`, to leverage the full potential of catbox caching.
 
 ### <a name="serverMethods"></a> Server methods
 
@@ -218,11 +218,11 @@ const start = async () => {
 
 start();
 ```
-[server.method()](/api#server.method()) created a new [policy](/family/catbox/api#policy) with `segment: '#sum'` automatically for us. Also the unique item `id` (cache key) was automatically generated from parameters. By default, it handles `string`, `number` and `boolean` parameters. For more complex parameters, you have to provide your own `generateKey` function to create unique ids based on the parameters - check out the server methods tutorial for more information.
+[server.method()](/api#server.method()) created a new [policy](/module/catbox/api#policy) with `segment: '#sum'` automatically for us. Also the unique item `id` (cache key) was automatically generated from parameters. By default, it handles `string`, `number` and `boolean` parameters. For more complex parameters, you have to provide your own `generateKey` function to create unique ids based on the parameters - check out the server methods tutorial for more information.
 
 ## <a name="clientandserver"></a> Client and Server caching
 
-Optionally, [Catbox Policy](/family/catbox/api#policy) can provide more information about the value retrieved from the cache. To enable this set the `getDecoratedValue` option to `true` when creating the policy. Any value returned from the server method will then be an object `{ value, cached, report }`. `value` is just the item from the cache, `cached` and `report` provides some extra details about the cache state of the item.
+Optionally, [Catbox Policy](/module/catbox/api#policy) can provide more information about the value retrieved from the cache. To enable this set the `getDecoratedValue` option to `true` when creating the policy. Any value returned from the server method will then be an object `{ value, cached, report }`. `value` is just the item from the cache, `cached` and `report` provides some extra details about the cache state of the item.
 
 An example of server-side and client-side caching working together is using the `cached.stored` timestamp to set the `last-modified` header:
 
@@ -259,4 +259,4 @@ const start = async () => {
 };
 ```
 
-You can find more details about `cached` and `report` in the [Catbox Policy API docs](/family/catbox/api#api-1).
+You can find more details about `cached` and `report` in the [Catbox Policy API docs](/module/catbox/api#api-1).

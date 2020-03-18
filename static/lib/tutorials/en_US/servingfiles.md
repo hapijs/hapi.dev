@@ -5,7 +5,7 @@ _This tutorial is compatible with hapi v17 and newer_
 
 ## <a name="overview"></a> Overview
 
-Inevitably while building any web application, the need arises to serve a simple file from disk. There is a hapi plugin called [inert](/family/inert) that adds this functionality to hapi through the use of additional handlers. 
+Inevitably while building any web application, the need arises to serve a simple file from disk. There is a hapi plugin called [inert](/module/inert) that adds this functionality to hapi through the use of additional handlers. 
 
 First you need to install and add `inert` as a dependency to your project:
 
@@ -58,7 +58,7 @@ When you set an option under `server.options.routes`, such as above, it will app
 
 ## <a name="hfile"></a> `h.file(path, [options])`
 
-Now, let's see how to use the [`h.file()`](/family/inert/api#hfilepath-options) method:
+Now, let's see how to use the [`h.file()`](/module/inert/api#hfilepath-options) method:
 
 ```javascript
 const start = async () => {

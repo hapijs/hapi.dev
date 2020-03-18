@@ -5,19 +5,19 @@ _This tutorial is compatible with hapi v17 and newer_
 
 ## <a name="overview"></a> Overview
 
-hapi has extensive support for template rendering, including the ability to load and leverage multiple templating engines, partials, helpers (functions used in templates to manipulate data), and layouts. These capabilities are provided by the [vision](/family/vision) plugin.
+hapi has extensive support for template rendering, including the ability to load and leverage multiple templating engines, partials, helpers (functions used in templates to manipulate data), and layouts. These capabilities are provided by the [vision](/module/vision) plugin.
 
 ## <a name="vision"></a> Vision
 
-[Vision](/family/vision) is a templates rendering plugin for hapi.js. `Vision` decorates the `server`, `request`, and `h` response toolkit interfaces with additional methods for managing view engines that can be used to render templated responses. `Vision` also provides a built-in handler implementation for creating templated responses.  
+[Vision](/module/vision) is a templates rendering plugin for hapi.js. `Vision` decorates the `server`, `request`, and `h` response toolkit interfaces with additional methods for managing view engines that can be used to render templated responses. `Vision` also provides a built-in handler implementation for creating templated responses.  
 
-`Vision` is compatible with most major templating engines out of the box, such as ejs, handlebars, pug, twig, etc. Engines that don't follow the normal API pattern can still be used by mapping their API to the [vision API](/family/vision).
+`Vision` is compatible with most major templating engines out of the box, such as ejs, handlebars, pug, twig, etc. Engines that don't follow the normal API pattern can still be used by mapping their API to the [vision API](/module/vision).
 
-For more info, please see [here](/family/vision).
+For more info, please see [here](/module/vision).
 
 ## <a name="server"></a> Configuring the server
 
-To get started with views, first you have to configure at least one templating engine on the server. This is done by using the [`server.views()`](/family/vision/api#serverviewsoptions) method provided by `vision`:
+To get started with views, first you have to configure at least one templating engine on the server. This is done by using the [`server.views()`](/module/vision/api#serverviewsoptions) method provided by `vision`:
 
 ```javascript
 'use strict';
@@ -46,7 +46,7 @@ const start = async () => {
 start();
 ```
 
-You're doing several things here. First, you load the [vision](/family/vision) module as a plugin. It adds template rendering support to hapi.
+You're doing several things here. First, you load the [vision](/module/vision) module as a plugin. It adds template rendering support to hapi.
 
 Secondly, you register the `handlebars` module as the engine responsible for rendering templates with an extension of `.html`.
 
@@ -54,7 +54,7 @@ Next, you tell the server that your templates are located in the `templates` dir
 
 ## <a name="options"></a> server.views() Options
 
-There are many options available to the views engine in hapi. Full documentation can be found in the [vision API reference](/family/vision/api#serverviewsoptions), but we'll go over some of them here as well.
+There are many options available to the views engine in hapi. Full documentation can be found in the [vision API reference](/module/vision/api#serverviewsoptions), but we'll go over some of them here as well.
 
 Note that all options may be set either globally, which configures them for all registered engines, or local to one specific engine, for example:
 
@@ -274,7 +274,7 @@ return h.view('myview', null, { layout: 'another_layout' });
 
 ## <a name="render"></a> Rendering a view
 
-There are two options for rendering a view, you can use either the [`h.view()`](/family/vision/api#hviewtemplate-context-options) method, where `h` is the [response toolkit](/api#response-toolkit) or the view handler.
+There are two options for rendering a view, you can use either the [`h.view()`](/module/vision/api#hviewtemplate-context-options) method, where `h` is the [response toolkit](/api#response-toolkit) or the view handler.
 
 ### <a name="hview"></a> h.view()
 
