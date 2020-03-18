@@ -48,7 +48,7 @@ server.route({
 });
 ```
 
-Note: It is best practice to always to return escaped and validated user inputs such as query/path parameters. This is done to prevent echo or XSS attacks. One way to do this is to use [Hoek](/family/hoek) `escapeHtml()` method. With escaping in place, the above example would look like the following:
+Note: It is best practice to always to return escaped and validated user inputs such as query/path parameters. This is done to prevent echo or XSS attacks. One way to do this is to use [Hoek](/module/hoek) `escapeHtml()` method. With escaping in place, the above example would look like the following:
 
 ```js
 return `Hello ${Hoek.escapeHtml(request.params.user)}!`
@@ -245,7 +245,7 @@ server.route({
 ```
 The first property under `options` is `auth`. `auth` will set the authentication configuration for the route. Since this route is for a new user signing up, you will disable authentication.  
 
-The second property is `validate`. This allows you to set validation rules for various request components, such as `headers`, `params`, `payload`, and `failAction`. You use the [joi](/family/joi) package to validate the `request.payload`. For more info, please check the validation tutorial.
+The second property is `validate`. This allows you to set validation rules for various request components, such as `headers`, `params`, `payload`, and `failAction`. You use the [joi](/module/joi) package to validate the `request.payload`. For more info, please check the validation tutorial.
 
 ## <a name="missing"></a> 404 Handling
 

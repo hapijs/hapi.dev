@@ -51,7 +51,7 @@
                                   version.name
                                 : repo.name === 'hapi'
                                 ? '/api/?v=' + version.name
-                                : '/family/' +
+                                : '/module/' +
                                   repo.name
                             "
                           >

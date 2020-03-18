@@ -41,7 +41,7 @@
             <div
               class="mobile-link"
               title="Family"
-              href="/family"
+              href="/module"
               v-on:click="showMenu('modules')"
             >
               Modules

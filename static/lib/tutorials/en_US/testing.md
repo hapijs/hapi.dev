@@ -6,7 +6,7 @@ _This tutorial is compatible with hapi v17 and newer_
 ## <a name="overview"></a> Overview
 Hapi is designed for creating robust, testable applications. To this end, Hapi includes the ability to test routes without having to actually start a server, completely avoiding the time overheads and added complexity of the TCP protocol.
 
-This tutorial goes into a basic setup for testing routes, and outlines one possible setup for a testable application using [lab](/family/lab) and [code](/family/code).
+This tutorial goes into a basic setup for testing routes, and outlines one possible setup for a testable application using [lab](/module/lab) and [code](/module/code).
 
 ## <a name="lab"></a> lab
 
@@ -79,7 +79,7 @@ What you've created here is a way of starting the server normally by calling its
 
 ## <a name="writingTest"></a> Writing a Route Test
 
-In this example you'll use [lab](/family/lab), but the same method can be used for any testing tool such as [Mocha](https://mochajs.org/), [Jest](https://jestjs.io/), [Tap](https://www.node-tap.org/), [Ava](https://github.com/avajs) etc.
+In this example you'll use [lab](/module/lab), but the same method can be used for any testing tool such as [Mocha](https://mochajs.org/), [Jest](https://jestjs.io/), [Tap](https://www.node-tap.org/), [Ava](https://github.com/avajs) etc.
 
 By default, `lab` loads all the '*.js' files inside the local `test` directory and executes the tests found. To use different directories or files, pass the file or directories as arguments:
 
@@ -121,7 +121,7 @@ Note that you call `init` rather than `start` to set up the server, which means 
 
 The `it()` function is what will run your test. `it()` takes two parameters, a description of a successful test, and a function to run the test. 
 
-You will note the use of `inject` on the server. `inject` uses [Shot](/family/shot) to `inject` a request directly into hapi's route handler. This is the magic which allows us to test HTTP methods.
+You will note the use of `inject` on the server. `inject` uses [Shot](/module/shot) to `inject` a request directly into hapi's route handler. This is the magic which allows us to test HTTP methods.
 
 To run the tests, you can modify the `package.json` of your project to run your test runner:
 

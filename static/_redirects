@@ -1,5 +1,8 @@
 # Redirects from what the browser requests to what we serve
-/family/hapi            /api
-/family/hapi/api        /api
-/family/hapi/changelog  /resources/changelog
-/family/*               /module/:splat
+/family/hapi                /api
+/family/hapi/api            /api
+/family/hapi/changelog      /resources/changelog
+/family/:module             /module/:module
+/family/:module/:api        /module/:module/:api
+/family/:module/:changelog  /module/:module/:changelog
+/family/*                   /module/:splat
