@@ -169,7 +169,7 @@ export default {
         copyClipBoardElement.title = "Copy link to clipboard";
 
         const eventListener = function() {
-          const copyLink = this.parentNode.firstElementChild.href;
+          const copyLink = header.firstElementChild.href;
           copyToClipboard(copyLink);
 
           this.classList.add("copy-clipboard-checked");
@@ -337,4 +337,5 @@ export default {
   top: 5px !important;
   right: 5px !important;
 }
+
 </style>
