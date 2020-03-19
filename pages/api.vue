@@ -337,4 +337,5 @@ export default {
   top: 5px !important;
   right: 5px !important;
 }
+
 </style>

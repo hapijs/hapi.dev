@@ -168,7 +168,7 @@ export default {
 
       for (let header of headers) {
         header.classList.add("api-doc-header");
-        header.classList.add("api-main-doc-header");
+        header.classList.add("api-main-doc-header", "tutorial-header");
         header.innerHTML =
           header.innerHTML +
           "<span class='api-clipboardCheck api-clipboard' title='Copy link to clipboard'></span>";
@@ -600,6 +600,10 @@ h1 a {
 
 .test-icon:hover {
   opacity: 0.7;
+}
+
+.tutorial-header {
+    display: block !important;
 }
 
 @media screen and (max-width: 900px) {
