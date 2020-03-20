@@ -414,7 +414,7 @@ const Hapi = require('@hapi/hapi');
 
 const server = Hapi.server({ port: 8000 });
 
-server.state('data', {
+server.state('username', {
     ttl: null,
     isSecure: true,
     isHttpOnly: true
@@ -425,7 +425,7 @@ server.route({
     path: '/',
     handler: async (request, h) => {
 
-        await h.state('data', {username: 'tom'});
+        await h.state('username', 'tom');
         return h.response(request.state.username);
     }
 });
