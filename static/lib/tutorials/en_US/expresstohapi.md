@@ -371,7 +371,7 @@ const Hapi = require('@hapi/hapi');
 
 const server = Hapi.server({ port: 8000 });
 
-server.state('data', {
+server.state('username', {
     ttl: null,
     isSecure: true,
     isHttpOnly: true
@@ -382,7 +382,7 @@ server.route({
     path: '/',
     handler: function (request, h) {
 
-        h.state('data', {username: 'tom'});
+        h.state('username', 'tom');
         return h.response('Hello');
     }
 });
