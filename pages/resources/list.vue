@@ -69,4 +69,8 @@ export default {
   max-width: none;
   border: 1px solid $dark-white;
 }
+
+.resources-header {
+  font-weight: 700;
+}
 </style>

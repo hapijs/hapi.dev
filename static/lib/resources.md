@@ -96,6 +96,10 @@
 
     Simple Hapi server boilerplate with user authentication (MongoDB)
 
+*   [hapify boilerplate](https://github.com/Tractr/boilerplate-hapijs/)
+
+    Dynamic boilerplate providing an API built with HapiJS, MongoDB and Docker (build for [Hapify.io](https://hub.hapify.io/))
+
 *   [hapitodo](https://github.com/genediazjr/hapitodo)
 
     A TodoMVC jQuery front-end with a Hapi back-end.
