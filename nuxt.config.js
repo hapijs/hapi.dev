@@ -3,7 +3,7 @@ module.exports = {
 
   generate: {
     fallback: true,
-    interval: 1000,
+    interval: 2000,
     routes: [
       "/tutorials/gettingstarted",
       "/tutorials/auth",
@@ -107,7 +107,7 @@ module.exports = {
       "/module/hawk/api",
       "/module/hawk/changelog",
       "/module/heavy",
-      "module/heavy/changelog",
+      "/module/heavy/changelog",
       "/module/hoek",
       "/module/hoek/api",
       "/module/hoek/changelog",
