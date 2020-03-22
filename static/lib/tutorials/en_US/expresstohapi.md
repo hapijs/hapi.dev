@@ -67,7 +67,7 @@ hapi:
 ```js
 server.route({
     method: 'GET',
-    path:'/',
+    path:'/hello',
     handler: (request, h) => {
 
       return 'Hello World!';
