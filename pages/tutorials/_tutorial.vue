@@ -77,7 +77,7 @@ export default {
   methods: {
     async onChangeChild(value) {
       this.$store.commit("setLanguage", value);
-      this.$router.push({ path: this.$route.path, query: { lang: value } });
+      this.$router.push({ path: this.$route.path, query: { lang: value }, hash: this.$route.hash });
       this.$store.commit(
         "setPage",
         page[value][this.$route.params.tutorial].default
@@ -89,6 +89,7 @@ export default {
         if ((this.$data.file == this.tutorials[value].file)) {
           this.$children[0].setClasses();
           this.setClipboards();
+          this.goToAnchor();
           this.setAnchors();
           clearInterval(checkIfPageLoaded);
         }
@@ -160,7 +161,7 @@ export default {
 
       for (let clipboard of clipboards) {
         clipboard.addEventListener("click", function(event) {
-          let copyLink = clipboard.parentNode.firstElementChild.href;
+          let copyLink = clipboard.parentNode.firstElementChild.href + clipboard.parentNode.firstElementChild.id;
           copyToClipboard(copyLink);
           clipboard.classList.remove("api-clipboard");
           clipboard.classList.add("api-clipboardCheck");
@@ -239,6 +240,7 @@ export default {
   },
   mounted() {
     this.onChangeChild(this.getLanguage)
+    this.goToAnchor();
   }
 };
 </script>
