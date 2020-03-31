@@ -145,45 +145,6 @@ export default {
           .classList.add("nav-display");
       }
     },
-    // setClipboards() {
-    //   let wrapper = document.querySelector(".markdown-wrapper");
-    //   let hapiHeader = document.createElement('h1');
-    //   hapiHeader.innerHTML = "API <span class='api-version-span'>v" + this.version.match(/.*(?=\.)/)[0] + ".x";
-    //   hapiHeader.setAttribute('class', 'hapi-header');
-    //   wrapper.insertBefore(hapiHeader, wrapper.firstChild);
-    //   let headers = document.querySelectorAll(
-    //     ".markdown-wrapper h2, .markdown-wrapper h3, .markdown-wrapper h4, .markdown-wrapper h5"
-    //   );
-
-    //   for (let [i, header] of headers.entries()) {
-    //     if (i === 0) {
-    //       header.classList.add("api-top-doc-header");
-    //     }
-    //     header.classList.add("api-main-doc-header");
-
-    //     const copyClipBoardElement = document.createElement("span");
-    //     const spacer = document.createElement("div");
-    //     spacer.classList.add("spacer");
-    //     copyClipBoardElement.classList.add("copy-clipboard");
-    //     copyClipBoardElement.title = "Copy link to clipboard";
-
-    //     const eventListener = function() {
-    //       const copyLink = header.firstElementChild.href;
-    //       copyToClipboard(copyLink);
-
-    //       this.classList.add("copy-clipboard-checked");
-    //       setTimeout(() => {
-    //         this.classList.remove("copy-clipboard-checked");
-    //       }, 3000);
-    //     };
-    //     copyClipBoardElement.addEventListener("click", eventListener);
-
-    //     this.listeners.set(copyClipBoardElement, eventListener);
-    //     // header.appendChild(copyClipBoardElement);
-    //     header.parentNode.insertBefore(copyClipBoardElement, header.nextSibling);
-    //     copyClipBoardElement.parentNode.insertBefore(spacer, copyClipBoardElement.nextSibling);
-    //   }
-    // }
     setClipboards() {
       let headers = document.querySelectorAll(
         ".markdown-wrapper h2, .markdown-wrapper h3, .markdown-wrapper h4, .markdown-wrapper h5"
