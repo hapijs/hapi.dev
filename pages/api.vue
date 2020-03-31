@@ -71,11 +71,10 @@ export default {
       const checkIfPageLoaded = setInterval(() => {
         if ((this.$data.version = value)) {
           this.$children[0].setClasses();
+          this.setClipboards();
           clearInterval(checkIfPageLoaded);
         }
       }, 25);
-      this.setClipboards();
-      setCodeClipboards(this.listeners);
     },
     onChildInput(value) {
       this.$data.search = value;
@@ -365,6 +364,10 @@ export default {
   background: url("/img/clipboardCheck.png");
   background-size: contain;
   transition: all 0.2s;
+}
+
+code ~ .api-clipboardCheck {
+  margin-left: 0;
 }
 
 .api-clipboard {
