@@ -59,7 +59,7 @@ export default {
         authorization: "token " + process.env.GITHUB_TOKEN
       }
     };
-    for (let p = 1; p <= 2; p++) {
+    for (let p = 1; p <= 3; p++) {
       milestones = await $axios.$get(
         "https://api.github.com/repos/hapijs/hapi/milestones?state=closed&per_page=100&page=" +
           p,
