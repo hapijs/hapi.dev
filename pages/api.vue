@@ -146,43 +146,70 @@ export default {
           .classList.add("nav-display");
       }
     },
+    // setClipboards() {
+    //   let wrapper = document.querySelector(".markdown-wrapper");
+    //   let hapiHeader = document.createElement('h1');
+    //   hapiHeader.innerHTML = "API <span class='api-version-span'>v" + this.version.match(/.*(?=\.)/)[0] + ".x";
+    //   hapiHeader.setAttribute('class', 'hapi-header');
+    //   wrapper.insertBefore(hapiHeader, wrapper.firstChild);
+    //   let headers = document.querySelectorAll(
+    //     ".markdown-wrapper h2, .markdown-wrapper h3, .markdown-wrapper h4, .markdown-wrapper h5"
+    //   );
+
+    //   for (let [i, header] of headers.entries()) {
+    //     if (i === 0) {
+    //       header.classList.add("api-top-doc-header");
+    //     }
+    //     header.classList.add("api-main-doc-header");
+
+    //     const copyClipBoardElement = document.createElement("span");
+    //     const spacer = document.createElement("div");
+    //     spacer.classList.add("spacer");
+    //     copyClipBoardElement.classList.add("copy-clipboard");
+    //     copyClipBoardElement.title = "Copy link to clipboard";
+
+    //     const eventListener = function() {
+    //       const copyLink = header.firstElementChild.href;
+    //       copyToClipboard(copyLink);
+
+    //       this.classList.add("copy-clipboard-checked");
+    //       setTimeout(() => {
+    //         this.classList.remove("copy-clipboard-checked");
+    //       }, 3000);
+    //     };
+    //     copyClipBoardElement.addEventListener("click", eventListener);
+
+    //     this.listeners.set(copyClipBoardElement, eventListener);
+    //     // header.appendChild(copyClipBoardElement);
+    //     header.parentNode.insertBefore(copyClipBoardElement, header.nextSibling);
+    //     copyClipBoardElement.parentNode.insertBefore(spacer, copyClipBoardElement.nextSibling);
+    //   }
+    // }
     setClipboards() {
-      let wrapper = document.querySelector(".markdown-wrapper");
-      let hapiHeader = document.createElement('h1');
-      hapiHeader.innerHTML = "API <span class='api-version-span'>v" + this.version.match(/.*(?=\.)/)[0] + ".x";
-      hapiHeader.setAttribute('class', 'hapi-header');
-      wrapper.insertBefore(hapiHeader, wrapper.firstChild);
       let headers = document.querySelectorAll(
         ".markdown-wrapper h2, .markdown-wrapper h3, .markdown-wrapper h4, .markdown-wrapper h5"
       );
 
-      for (let [i, header] of headers.entries()) {
-        if (i === 0) {
-          header.classList.add("api-top-doc-header");
-        }
-        header.classList.add("api-main-doc-header");
+      for (let header of headers) {
+        header.classList.add("api-doc-header", "api-main-doc-header");
+        header.innerHTML =
+          header.innerHTML +
+          "<span class='api-clipboardCheck api-clipboard' title='Copy link to clipboard'></span>";
+      }
 
-        const copyClipBoardElement = document.createElement("span");
-        const spacer = document.createElement("div");
-        spacer.classList.add("spacer");
-        copyClipBoardElement.classList.add("copy-clipboard");
-        copyClipBoardElement.title = "Copy link to clipboard";
+      let clipboards = document.querySelectorAll(".api-clipboard");
 
-        const eventListener = function() {
-          const copyLink = header.firstElementChild.href;
+      for (let clipboard of clipboards) {
+        clipboard.addEventListener("click", function(event) {
+          let copyLink = clipboard.parentNode.firstElementChild.href;
           copyToClipboard(copyLink);
-
-          this.classList.add("copy-clipboard-checked");
-          setTimeout(() => {
-            this.classList.remove("copy-clipboard-checked");
+          clipboard.classList.remove("api-clipboard");
+          clipboard.classList.add("api-clipboardCheck");
+          setTimeout(function() {
+            clipboard.classList.add("api-clipboard");
+            clipboard.classList.remove("api-clipboardCheck");
           }, 3000);
-        };
-        copyClipBoardElement.addEventListener("click", eventListener);
-
-        this.listeners.set(copyClipBoardElement, eventListener);
-        // header.appendChild(copyClipBoardElement);
-        header.parentNode.insertBefore(copyClipBoardElement, header.nextSibling);
-        copyClipBoardElement.parentNode.insertBefore(spacer, copyClipBoardElement.nextSibling);
+        });
       }
     }
   },
@@ -200,7 +227,7 @@ export default {
       "https://api.github.com/repos/hapijs/hapi/branches",
       options
     );
-    branches = branches.sort((a, b) => (a.name > b.name) ? 1 : -1)
+    branches = branches.sort((a, b) => (a.name > b.name ? 1 : -1));
 
     let apis = {};
     let menus = {};
@@ -304,8 +331,8 @@ export default {
     this.$store.commit("setDisplay", "api");
   },
   mounted() {
-    this.setClipboards();
     this.goToAnchor();
+    this.setClipboards();
   },
   beforeDestroy() {
     for (const [element, listener] of this.listeners) {
@@ -328,14 +355,36 @@ export default {
   position: relative;
 }
 
-.copy-clipboard {
-  top: 0 !important;
-  right: 0 !important;
+.api-clipboardCheck {
+  position: relative;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin: 0 0 0 5px;
+  opacity: 0.7;
+  background: url("/img/clipboardCheck.png");
+  background-size: contain;
+  transition: all 0.2s;
 }
 
-.copy-clipboard-absolute {
-  top: 5px !important;
-  right: 5px !important;
+.api-clipboard {
+  position: relative;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin: 0 0 0 5px;
+  background: url("/img/clipboard.png");
+  background-size: contain;
+  opacity: 0.3;
+  cursor: pointer;
+  transition: all 0.2s;
 }
 
+code ~ .api-clipboard {
+  margin-left: 0;
+}
+
+.api-clipboard:hover {
+  opacity: 0.7;
+}
 </style>
