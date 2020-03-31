@@ -167,8 +167,7 @@ export default {
       );
 
       for (let header of headers) {
-        header.classList.add("api-doc-header");
-        header.classList.add("api-main-doc-header", "tutorial-header");
+        header.classList.add("api-doc-header", "api-main-doc-header");
         header.innerHTML =
           header.innerHTML +
           "<span class='api-clipboardCheck api-clipboard' title='Copy link to clipboard'></span>";
