@@ -277,11 +277,12 @@ export default {
             });
           }
           break;
+        } else if (!this.versions.includes(this.$route.query.v)) {
+          this.$router.push({
+            query: { v: this.versions[0] },
+            hash: this.$route.hash
+          });
         }
-        this.$router.push({
-          query: { v: this.versions[0] },
-          hash: this.$route.hash
-        });
       }
     }
 
