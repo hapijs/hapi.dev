@@ -380,11 +380,12 @@ export default {
             });
           }
           break;
+        } else if (!this.versionsArray.includes(this.$route.query.v)) {
+          this.$router.push({
+            query: { v: this.versionsArray[0] },
+            hash: this.$route.hash
+          });
         }
-        this.$router.push({
-          query: { v: this.versionsArray[0] },
-          hash: this.$route.hash
-        });
       }
     }
     this.$store.commit("setDisplay", "family");
