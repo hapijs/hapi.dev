@@ -110,6 +110,14 @@ export default {
       //Add classes to API nav
       let lis = document.querySelectorAll(".api-nav-select-wrapper li");
       let code = document.querySelectorAll(".api-nav-select-wrapper code");
+      let wrapper = document.querySelector(".markdown-wrapper");
+      let hapiHeader = document.createElement("h1");
+      hapiHeader.innerHTML =
+        "API <span class='api-version-span'>v" +
+        this.version.match(/.*(?=\.)/)[0] +
+        ".x";
+      hapiHeader.setAttribute("class", "hapi-header");
+      wrapper.insertBefore(hapiHeader, wrapper.firstChild);
       const height = document
         .querySelector(".api-nav-select-wrapper")
         .getBoundingClientRect().bottom;
