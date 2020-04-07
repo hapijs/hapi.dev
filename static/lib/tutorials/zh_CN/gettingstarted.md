@@ -8,7 +8,7 @@ _该教程适用于 hapi v17版本_
 
 * 运行: `cd myproject` 跳转到目录内。
 * 运行: `npm init` 根据提示生成文件 package.json。
-* 运行: `npm install --save hapi@17.x.x` 将安装 hapi ，并将相应的依赖并保存至 package.json 中。
+* 运行: `npm install --save @hapi/hapi@17.x.x` 将安装 hapi ，并将相应的依赖并保存至 package.json 中。
 
 就是这么简单! 你现在已经做好了创建一个 hapi 应用的全部准备。
 
@@ -19,7 +19,7 @@ _该教程适用于 hapi v17版本_
 ```javascript
 'use strict';
 
-const Hapi = require('hapi');
+const Hapi = require('@hapi/hapi');
 
 const server = Hapi.server({
     port: 3000,
@@ -52,7 +52,7 @@ Web 服务器可以通过以下方式创建：指定主机名、填写IP地址�
 ```javascript
 'use strict';
 
-const Hapi = require('hapi');
+const Hapi = require('@hapi/hapi');
 
 const server = Hapi.server({
     port: 3000,
@@ -102,14 +102,14 @@ init();
 
 我们已经验证了了可以使用 Hello World 应用程序启动一个简单的hapi应用。 之后我们将使用一个名为 **inert** 的插件去创建静态页面。 在你开始之前，通过命令 **CTRL + C** 停止你的服务器。
 
-安装 [inert](https://github.com/hapijs/inert) 使用以下命令: `npm install --save inert` 这将会下载 [inert](https://github.com/hapijs/inert) 包，并且将其添加到用于记录依赖的 `package.json` 文件中。
+安装 [inert](https://github.com/hapijs/inert) 使用以下命令: `npm install --save @hapi/inert` 这将会下载 [inert](https://github.com/hapijs/inert) 包，并且将其添加到用于记录依赖的 `package.json` 文件中。
 
 在你的 `server.js` 文件中修改 `init` 函数如下:
 
 ``` javascript
 const init = async () => {
 
-    await server.register(require('inert'));
+    await server.register(require('@hapi/inert'));
 
     server.route({
         method: 'GET',
@@ -169,7 +169,7 @@ npm install hapi-pino
 ```javascript
 'use strict';
 
-const Hapi = require('hapi');
+const Hapi = require('@hapi/hapi');
 
 const server = Hapi.server({
     port: 3000,

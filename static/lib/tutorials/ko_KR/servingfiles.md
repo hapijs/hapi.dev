@@ -6,7 +6,7 @@ _이 튜터리얼은 hapi v17과 호환됩니다._
 
 먼저 inert 설치와 프로젝트에 의존성을 추가해야 합니다.:
 
-`npm install --save inert`
+`npm install --save @hapi/inert`
 
 ## `h.file(path, [options])`
 
@@ -15,7 +15,7 @@ _이 튜터리얼은 hapi v17과 호환됩니다._
 ```javascript
 const start = async () => {
 
-    await server.register(require('inert'));
+    await server.register(require('@hapi/inert'));
 
     server.route({
         method: 'GET',
@@ -43,7 +43,7 @@ start();
 ```javascript
 'use strict';
 
-const Hapi = require('hapi');
+const Hapi = require('@hapi/hapi');
 const Path = require('path');
 
 const server = Hapi.server({
@@ -56,7 +56,7 @@ const server = Hapi.server({
 
 const start = async () => {
 
-    await server.register(require('inert'));
+    await server.register(require('@hapi/inert'));
 
     server.route({
         method: 'GET',

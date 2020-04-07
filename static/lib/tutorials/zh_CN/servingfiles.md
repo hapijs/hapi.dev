@@ -6,7 +6,7 @@ _该教程适用于 hapi v17版本_
 
 首先你需要安装它，并且将 inert 作为依赖添加到你的项目中:
 
-`npm install --save inert`
+`npm install --save @hapi/inert`
 
 ## `h.file(path, [options])`
 
@@ -15,7 +15,7 @@ _该教程适用于 hapi v17版本_
 ```javascript
 const start = async () => {
 
-    await server.register(require('inert'));
+    await server.register(require('@hapi/inert'));
 
     server.route({
         method: 'GET',
@@ -43,7 +43,7 @@ start();
 ```javascript
 'use strict';
 
-const Hapi = require('hapi');
+const Hapi = require('@hapi/hapi');
 const Path = require('path');
 
 const server = Hapi.server({
@@ -56,7 +56,7 @@ const server = Hapi.server({
 
 const start = async () => {
 
-    await server.register(require('inert'));
+    await server.register(require('@hapi/inert'));
 
     server.route({
         method: 'GET',

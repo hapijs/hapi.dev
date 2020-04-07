@@ -12,7 +12,7 @@ hapi 的身份认证基于两个概念：`schemes` 和 `strategies`。
 'use strict';
 
 const Bcrypt = require('bcrypt');
-const Hapi = require('hapi');
+const Hapi = require('@hapi/hapi');
 
 const users = {
     john: {

@@ -12,14 +12,14 @@ hapi 对模板渲染有广泛的支持，包括加载以及使用多个模板引
 'use strict';
 
 const Path = require('path');
-const Hapi = require('hapi');
-const Hoek = require('hoek');
+const Hapi = require('@hapi/hapi');
+const Hoek = require('@hapi/hoek');
 
 const server = Hapi.server();
 
 const start = async () => {
 
-    await server.register(require('vision'));
+    await server.register(require('@hapi/vision'));
 
     server.views({
         engines: {
@@ -230,13 +230,13 @@ module.exports = function () {
 ```javascript
 'use strict';
 
-const Hapi = require('hapi');
+const Hapi = require('@hapi/hapi');
 
 const server = Hapi.server({ port: 8080 });
 
 const start = async () => {
 
-    await server.register(require('vision'));
+    await server.register(require('@hapi/vision'));
 
     server.views({
         engines: {

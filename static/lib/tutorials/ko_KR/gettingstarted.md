@@ -8,7 +8,7 @@ _이 튜터리얼은 hapi v17과 호환됩니다._
 
 * 실행: `cd myproject` 생성한 프로젝트 폴더로 이동합니다.
 * 실행: `npm init` 입력 후, 지시 메시지를 따르세요. package.json 파일을 생성할 것입니다.
-* 실행: `npm install --save hapi@17.x.x` 이 명령은 hapi를 설치하고 프로젝트 의존성을 package.json에 기록합니다.
+* 실행: `npm install --save @hapi/hapi@17.x.x` 이 명령은 hapi를 설치하고 프로젝트 의존성을 package.json에 기록합니다.
 
 이게 전부입니다! hapi를 사용하는 서버를 만드는 데 필요한 모든 것을 갖췄습니다.
 
@@ -19,7 +19,7 @@ _이 튜터리얼은 hapi v17과 호환됩니다._
 ```javascript
 'use strict';
 
-const Hapi = require('hapi');
+const Hapi = require('@hapi/hapi');
 
 const server = Hapi.server({
     port: 3000,
@@ -52,7 +52,7 @@ init();
 ```javascript
 'use strict';
 
-const Hapi = require('hapi');
+const Hapi = require('@hapi/hapi');
 
 const server = Hapi.server({
     port: 3000,
@@ -102,14 +102,14 @@ init();
 
 Hello World 응용프로그램으로 간단한 hapi 앱을 실행할 수 있음을 확인했습니다. 다음은 정적 페이지를 제공하는 **inert**라는 플러그인을 사용할 것입니다. 시작하기 전에 **CTRL + C**로 서버를 중지하세요.
 
-[inert](https://github.com/hapijs/inert)를 설치하려면 명령행에서 이 명령을 실행하세요.: `npm install --save inert` [inert](https://github.com/hapijs/inert)를 내려받고 설치된 패키지를 문서로 만든 `package.json`에 추가합니다.
+[inert](https://github.com/hapijs/inert)를 설치하려면 명령행에서 이 명령을 실행하세요.: `npm install --save @hapi/inert` [inert](https://github.com/hapijs/inert)를 내려받고 설치된 패키지를 문서로 만든 `package.json`에 추가합니다.
 
 `server.js` 파일에 `init` 함수를 변경합니다.:
 
 ``` javascript
 const init = async () => {
 
-    await server.register(require('inert'));
+    await server.register(require('@hapi/inert'));
 
     server.route({
         method: 'GET',
@@ -169,7 +169,7 @@ npm install hapi-pino
 ```javascript
 'use strict';
 
-const Hapi = require('hapi');
+const Hapi = require('@hapi/hapi');
 
 const server = Hapi.server({
     port: 3000,
