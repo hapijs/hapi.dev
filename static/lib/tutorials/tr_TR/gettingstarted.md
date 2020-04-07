@@ -9,7 +9,7 @@ _Bu kurs hapi v17 ile uyumludur_
 
 * `cd myproject` komutunu çalıştırarak proje dizinine gir.
 * `npm init` komutunu çalıştırarak yönergeleri izle, bu komut senin için package.json dosyası oluşturur.
-* `npm install --save hapi@17.x.x` komutunu çalıştır. Bu komut hapiyi kurar ve package.json dosyasına gereksinim olarak kaydeder.
+* `npm install --save @hapi/hapi@17.x.x` komutunu çalıştır. Bu komut hapiyi kurar ve package.json dosyasına gereksinim olarak kaydeder.
 
 Hepsi bu kadar! Artık hapi kullanarak bir sunucu oluşturmak için ihtiyacın olan herşeye sahipsin.
 
@@ -20,7 +20,7 @@ En basit sunucu şöyle bir şeydir:
 ```javascript
 'use strict';
 
-const Hapi = require('hapi');
+const Hapi = require('@hapi/hapi');
 
 const server = Hapi.server({
     port: 3000,
@@ -55,7 +55,7 @@ Artık sunucumuz olduğuna göre, bir iki güzergah eklemeliyiz ki gerçekten bi
 ```javascript
 'use strict';
 
-const Hapi = require('hapi');
+const Hapi = require('@hapi/hapi');
 
 const server = Hapi.server({
     port: 3000,
@@ -105,14 +105,14 @@ name değiştirgesini URI encode (URI kodladığımıza) ettiğimize dikkat et, 
 
 Hello world uygulamamızla basit bir hapi uygulaması başlatabildiğimizi kanıtladık. Şimdi, **inert** denen bir eklenti kullarak durağan bir sayfa sunacağız. Başlamadan önce, **CTRL + C** tuşlarına basarak sunucuyu durdur.
 
-[inert](https://github.com/hapijs/inert)i kurmak için komut satırında `npm install --save inert` komutunu çalıştır. Bu, [inert](https://github.com/hapijs/inert)i indirerek hangi paketlerin kurulu olduğunu dokümante eden `package.json` dosyana ekleyecek.
+[inert](https://github.com/hapijs/inert)i kurmak için komut satırında `npm install --save @hapi/inert` komutunu çalıştır. Bu, [inert](https://github.com/hapijs/inert)i indirerek hangi paketlerin kurulu olduğunu dokümante eden `package.json` dosyana ekleyecek.
 
 `server.js` dosyasını açarak `init` işlevini şu şekilde güncelle:
 
 ``` javascript
 const init = async () => {
 
-    await server.register(require('inert'));
+    await server.register(require('@hapi/inert'));
 
     server.route({
         method: 'GET',
@@ -173,7 +173,7 @@ Sonra `server.js` dosyasını güncelle:
 ```javascript
 'use strict';
 
-const Hapi = require('hapi');
+const Hapi = require('@hapi/hapi');
 
 const server = Hapi.server({
     port: 3000,

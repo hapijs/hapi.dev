@@ -12,7 +12,7 @@ hapi에서 인증은 `schemes`와 `strategies` 개념을 기반으로 하고 있
 'use strict';
 
 const Bcrypt = require('bcrypt');
-const Hapi = require('hapi');
+const Hapi = require('@hapi/hapi');
 
 const users = {
     john: {

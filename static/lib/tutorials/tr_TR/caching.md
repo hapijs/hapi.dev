@@ -88,7 +88,7 @@ hapi varsayılan olarak [catbox memory](https://github.com/hapijs/catbox-memory)
 ```javascript
 'use strict';
 
-const Hapi = require('hapi');
+const Hapi = require('@hapi/hapi');
 
 const server = Hapi.server({
     port: 8000,

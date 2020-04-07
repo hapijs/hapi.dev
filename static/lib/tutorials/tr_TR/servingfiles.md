@@ -6,7 +6,7 @@ Bir ağ uygulaması yazarken eninde sonunda diskten bir dosya sunmanın vakti ge
 
 Önce inerti projene gereksinim olarak ekleyerek kurmalısın:
 
-`npm install --save inert`
+`npm install --save @hapi/inert`
 
 ## `h.file(path, [options])`
 
@@ -15,7 +15,7 @@ Bir ağ uygulaması yazarken eninde sonunda diskten bir dosya sunmanın vakti ge
 ```javascript
 const start = async () => {
 
-    await server.register(require('inert'));
+    await server.register(require('@hapi/inert'));
 
     server.route({
         method: 'GET',
@@ -43,7 +43,7 @@ Yukarıda göreceğin gibi, en basit haliyle `h.file(path)` dönüyorsun.
 ```javascript
 'use strict';
 
-const Hapi = require('hapi');
+const Hapi = require('@hapi/hapi');
 const Path = require('path');
 
 const server = Hapi.server({
@@ -56,7 +56,7 @@ const server = Hapi.server({
 
 const start = async () => {
 
-    await server.register(require('inert'));
+    await server.register(require('@hapi/inert'));
 
     server.route({
         method: 'GET',

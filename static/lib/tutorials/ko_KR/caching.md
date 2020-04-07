@@ -86,7 +86,7 @@ hapi는 [catbox_memory](https://github.com/hapijs/catbox-memory) 어댑터를 �
 ```javascript
 'use strict';
 
-const Hapi = require('hapi');
+const Hapi = require('@hapi/hapi');
 
 const server = Hapi.server({
     port: 8000,
