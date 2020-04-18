@@ -110,9 +110,14 @@ export default {
         this.validate = this.validate.slice(0, -1);
       }
       try {
-        let validatedObject = Function(
-          '"use strict";return (' + this.validate + ")"
-        )();
+        let validatedObject;
+        try {
+          validatedObject = Function(
+            '"use strict";return (' + this.validate + ")"
+          )();
+        } catch (error) {
+          this.result = "Enter in data to validate";
+        }
         let joiSchema = Function(
           "Joi",
           '"use strict";return (' + this.schema + ")"
@@ -131,6 +136,7 @@ export default {
         if (!isSchema && error instanceof TypeError) {
           this.result = "Not a valid joi Schema";
         } else {
+          console.log(error);
           this.result = error.toString();
         }
       }
