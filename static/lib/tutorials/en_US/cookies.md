@@ -100,7 +100,7 @@ In this example the cookie will simply be set to the string `"test"` with no enc
 
 Access a cookie’s value via `request.state` in a route handler, pre-requisite, or request lifecycle extension point.
 
-The `request.state` object contains the parsed HTTP state. Each key represents the cookie name and its value is the defined content.
+The `request.state` object contains the parsed HTTP state. Each key represents the cookie name and its value is the defined content.  If multiple cookies with the same name are present on the request, the values are exposed as an array rather than a single value.
 
 The sample code uses the `data` cookie key from above where the related value is set to `{ firstVisit: false }`:
 

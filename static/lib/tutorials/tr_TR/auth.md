@@ -12,7 +12,7 @@ hapide kimlik doğrulama şema (`schema`) ve stratejilerin (`strategy`) üzerine
 'use strict';
 
 const Bcrypt = require('bcrypt');
-const Hapi = require('hapi');
+const Hapi = require('@hapi/hapi');
 
 const users = {
     john: {

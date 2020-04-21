@@ -12,14 +12,14 @@ view를 시작하려면 먼저 서버에 최소한 하나의 템플릿 엔진을
 'use strict';
 
 const Path = require('path');
-const Hapi = require('hapi');
-const Hoek = require('hoek');
+const Hapi = require('@hapi/hapi');
+const Hoek = require('@hapi/hoek');
 
 const server = Hapi.server();
 
 const start = async () => {
 
-    await server.register(require('vision'));
+    await server.register(require('@hapi/vision'));
 
     server.views({
         engines: {
@@ -230,13 +230,13 @@ module.exports = function () {
 ```javascript
 'use strict';
 
-const Hapi = require('hapi');
+const Hapi = require('@hapi/hapi');
 
 const server = Hapi.server({ port: 8080 });
 
 const start = async () => {
 
-    await server.register(require('vision'));
+    await server.register(require('@hapi/vision'));
 
     server.views({
         engines: {
