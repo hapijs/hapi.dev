@@ -111,13 +111,9 @@ export default {
       }
       try {
         let validatedObject;
-        try {
           validatedObject = Function(
             '"use strict";return (' + this.validate + ")"
           )();
-        } catch (error) {
-          this.result = "Enter in data to validate";
-        }
         let joiSchema = Function(
           "Joi",
           '"use strict";return (' + this.schema + ")"

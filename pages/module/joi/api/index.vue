@@ -218,27 +218,32 @@ export default {
       let testIcons = document.querySelectorAll(".test-icon");
       for (let icon of testIcons) {
         icon.addEventListener("click", function(event) {
+          let object = false;
           let text = document.getElementById("pre-" + icon.id).textContent;
           let schema = text.match(/schema\s=\s(Joi.*\(\)([\s\S]*?\);))/);
           if (!schema) {
             schema = text.match(/schema\s=\s(Joi.*\{(.|\n)*?[^\)]\));/);
+            object = true;
           }
-          schema = schema[1];
-          store.commit(
-            "setSchema",
-            "//Insert your joi schema here \n" + schema
-          );
-          if (schema.includes("object")) {
+          schema = schema[1].replace(";", "");
+          if (!object) {
             store.commit(
-              "setValidate",
-              "//Insert data to validate here \n" + "{ \n" + " \n" + "}"
+              "setSchema",
+              "//Insert your joi schema here \nJoi.object({\n  a: " +
+                schema +
+                "\n})"
             );
           } else {
             store.commit(
-              "setValidate",
-              "//Insert data to validate here \n" + ""
+              "setSchema",
+              "//Insert your joi schema here \n" + schema
             );
           }
+
+          store.commit(
+            "setValidate",
+            "//Insert data to validate here \n" + "{ \n" + " \n" + "}"
+          );
 
           router.push({
             path: "/module/joi/tester"
@@ -656,7 +661,7 @@ h1 a {
 }
 
 .tutorial-header {
-    display: block !important;
+  display: block !important;
 }
 
 @media screen and (max-width: 900px) {
