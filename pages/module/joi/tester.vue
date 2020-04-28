@@ -41,6 +41,7 @@
 <script>
 import LandingNav from "~/components/family/LandingNav.vue";
 const moduleInfo = require("../../../static/lib/moduleInfo.json");
+const stringify = require("json-stringify-pretty-compact");
 const Joi = require("@hapi/joi");
 
 if (process.client) {
@@ -108,9 +109,7 @@ export default {
       let element = document.querySelector(".validated-result");
       let innerText = this.validatedResult;
       for (let e of error) {
-        console.log(e)
         let regEx = new RegExp(e.replace(/["]/gm, ""));
-        console.log(regEx);
         let line = this.validatedResult.match(regEx)[0];
         innerText = innerText.replace(
           line,
@@ -118,15 +117,23 @@ export default {
         );
         element.innerHTML = innerText;
       }
-
     },
     removeJson() {
       let keys = this.validatedResult.match(/".*":/gm);
       let element = document.querySelector(".validated-result");
       for (let key in keys) {
-        this.validatedResult = this.validatedResult.replace(/(?<=^\s\s)"|"(?=:)/gm, "");
+        this.validatedResult = this.validatedResult.replace(
+          /(?<=^\s)\s*"|"(?=:)|/gm,
+          ""
+        );
         element.innerHTML = this.validatedResult;
       }
+    },
+    replaceArray(key, value) {
+      if (value instanceof Array) {
+        return JSON.stringify(value);
+      }
+      return value;
     },
     onValidateClick() {
       this.validatedResult = "";
@@ -149,23 +156,22 @@ export default {
         let validatedResults = joiSchema(Joi).validate(validatedObject, {
           abortEarly: false
         });
-        this.validatedResult = JSON.stringify(validatedResults.value, null, 2);
-        this.removeJson();
+        this.validatedResult = stringify(validatedResults.value)
+        try {
+          this.removeJson();
+        } catch (error) {}
+
         if (validatedResults.error) {
           let errorMessage = validatedResults.error.message.toString();
           this.result = "Validation Error: " + errorMessage;
           let schemaErrors = errorMessage.match(/"(.*?)"/gm);
           try {
             this.findErrors(schemaErrors);
-          } catch (error) {
-
-          }
-          
+          } catch (error) {}
         } else {
           this.result = "Validation Passed";
         }
       } catch (error) {
-        console.log("WHHHHHHHHHHHHHHHHHHHH");
         if (!isSchema && error instanceof TypeError) {
           this.result = "Not a valid joi Schema";
         } else {
@@ -297,7 +303,7 @@ export default {
 
 .error-span {
   display: inline-block;
-  background: rgba(250, 0, 0, 0.5);
+  background: #ff6a6a;
   padding: 5px;
   margin: 1px 0;
 }
