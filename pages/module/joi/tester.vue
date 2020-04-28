@@ -31,6 +31,8 @@
         </button>
         <h2 class="tester-subTitle">Result:</h2>
         <pre class="tester-result">{{ result }}</pre>
+        <h2 class="tester-subTitle">Validated Object:</h2>
+        <pre class="tester-result validated-result"></pre>
       </div>
     </div>
   </no-ssr>
@@ -66,6 +68,7 @@ export default {
       schema: "",
       validate: "",
       result: "",
+      validatedResult: "",
       options: {
         theme: "eclipse",
         tabSize: 2,
@@ -101,8 +104,33 @@ export default {
       this.$store.commit("setValidate", input);
       this.$data.validate = this.getValidate;
     },
+    findErrors(error) {
+      let element = document.querySelector(".validated-result");
+      let innerText = this.validatedResult;
+      for (let e of error) {
+        console.log(e)
+        let regEx = new RegExp(e.replace(/["]/gm, ""));
+        console.log(regEx);
+        let line = this.validatedResult.match(regEx)[0];
+        innerText = innerText.replace(
+          line,
+          "<span class='error-span'>" + line + "</span>"
+        );
+        element.innerHTML = innerText;
+      }
+
+    },
+    removeJson() {
+      let keys = this.validatedResult.match(/".*":/gm);
+      let element = document.querySelector(".validated-result");
+      for (let key in keys) {
+        this.validatedResult = this.validatedResult.replace(/(?<=^\s\s)"|"(?=:)/gm, "");
+        element.innerHTML = this.validatedResult;
+      }
+    },
     onValidateClick() {
-      let isSchema;
+      this.validatedResult = "";
+      let element = document.querySelector(".validated-result");
       if (this.schema[this.schema.length - 1] === ";") {
         this.schema = this.schema.slice(0, -1);
       }
@@ -110,10 +138,9 @@ export default {
         this.validate = this.validate.slice(0, -1);
       }
       try {
-        let validatedObject;
-          validatedObject = Function(
-            '"use strict";return (' + this.validate + ")"
-          )();
+        let validatedObject = Function(
+          '"use strict";return (' + this.validate + ")"
+        )();
         let joiSchema = Function(
           "Joi",
           '"use strict";return (' + this.schema + ")"
@@ -122,13 +149,23 @@ export default {
         let validatedResults = joiSchema(Joi).validate(validatedObject, {
           abortEarly: false
         });
+        this.validatedResult = JSON.stringify(validatedResults.value, null, 2);
+        this.removeJson();
         if (validatedResults.error) {
-          this.result =
-            "Validation Error: " + validatedResults.error.message.toString();
+          let errorMessage = validatedResults.error.message.toString();
+          this.result = "Validation Error: " + errorMessage;
+          let schemaErrors = errorMessage.match(/"(.*?)"/gm);
+          try {
+            this.findErrors(schemaErrors);
+          } catch (error) {
+
+          }
+          
         } else {
           this.result = "Validation Passed";
         }
       } catch (error) {
+        console.log("WHHHHHHHHHHHHHHHHHHHH");
         if (!isSchema && error instanceof TypeError) {
           this.result = "Not a valid joi Schema";
         } else {
@@ -243,6 +280,7 @@ export default {
   box-sizing: border-box;
   height: auto;
   color: #000;
+  margin-bottom: 30px;
 }
 
 .cm-number {
@@ -255,5 +293,12 @@ export default {
 
 .cm-string {
   color: #28813f !important;
+}
+
+.error-span {
+  display: inline-block;
+  background: rgba(250, 0, 0, 0.5);
+  padding: 5px;
+  margin: 1px 0;
 }
 </style>
