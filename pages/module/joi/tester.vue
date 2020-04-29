@@ -157,8 +157,7 @@ export default {
         let validatedResults = joiSchema(Joi).validate(validatedObject, {
           abortEarly: false
         });
-        this.validatedResult = stringify(validatedResults.value, {maxNesting: 1})
-        console.log(this.validatedResult)
+        this.validatedResult = stringify(validatedResults.value, {maxNesting: 1});
         // try {
         // // let tester = Function(
         // //   '"use strict";return (' + validatedResults.value + ")"
