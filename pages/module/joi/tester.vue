@@ -41,7 +41,7 @@
 <script>
 import LandingNav from "~/components/family/LandingNav.vue";
 const moduleInfo = require("../../../static/lib/moduleInfo.json");
-const stringify = require("json-stringify-pretty-compact");
+const stringify = require("@aitodotai/json-stringify-pretty-compact");
 const Joi = require("@hapi/joi");
 
 if (process.client) {
@@ -109,11 +109,12 @@ export default {
       let element = document.querySelector(".validated-result");
       let innerText = this.validatedResult;
       for (let e of error) {
-        let regEx = new RegExp(e.replace(/["]/gm, ""));
+        let f = e + ":"
+        let regEx = new RegExp(f.replace(/["]/gm, ""));
         let line = this.validatedResult.match(regEx)[0];
         innerText = innerText.replace(
           line,
-          "<span class='error-span'>" + line + "</span>"
+          "<span class='error-span'>" + line.slice(0, -1) + "</span>:"
         );
         element.innerHTML = innerText;
       }
@@ -123,7 +124,7 @@ export default {
       let element = document.querySelector(".validated-result");
       for (let key in keys) {
         this.validatedResult = this.validatedResult.replace(
-          /(?<=^\s)\s*"|"(?=:)|/gm,
+          /(?<=(^\s*)|(\{.*)|(\{)|(.*))"(?=.*:)/gm,
           ""
         );
         element.innerHTML = this.validatedResult;
@@ -156,7 +157,18 @@ export default {
         let validatedResults = joiSchema(Joi).validate(validatedObject, {
           abortEarly: false
         });
-        this.validatedResult = stringify(validatedResults.value)
+        this.validatedResult = stringify(validatedResults.value, {maxNesting: 1})
+        console.log(this.validatedResult)
+        // try {
+        // // let tester = Function(
+        // //   '"use strict";return (' + validatedResults.value + ")"
+        // // );
+        // let tester = eval("(" + validatedResults.value + ")")
+        // console.log("TTTTTT", tester)
+        // } catch (e) {
+        //   console.log(e);
+        // }
+
         try {
           this.removeJson();
         } catch (error) {}
