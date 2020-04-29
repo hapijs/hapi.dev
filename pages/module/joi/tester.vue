@@ -31,6 +31,8 @@
         </button>
         <h2 class="tester-subTitle">Result:</h2>
         <pre class="tester-result">{{ result }}</pre>
+        <h2 class="tester-subTitle">Validated Object:</h2>
+        <pre class="tester-result validated-result"></pre>
       </div>
     </div>
   </no-ssr>
@@ -39,6 +41,7 @@
 <script>
 import LandingNav from "~/components/family/LandingNav.vue";
 const moduleInfo = require("../../../static/lib/moduleInfo.json");
+const stringify = require("@aitodotai/json-stringify-pretty-compact");
 const Joi = require("@hapi/joi");
 
 if (process.client) {
@@ -66,6 +69,7 @@ export default {
       schema: "",
       validate: "",
       result: "",
+      validatedResult: "",
       options: {
         theme: "eclipse",
         tabSize: 2,
@@ -101,8 +105,40 @@ export default {
       this.$store.commit("setValidate", input);
       this.$data.validate = this.getValidate;
     },
+    findErrors(error) {
+      let element = document.querySelector(".validated-result");
+      let innerText = this.validatedResult;
+      for (let e of error) {
+        let f = e + ":"
+        let regEx = new RegExp(f.replace(/["]/gm, ""));
+        let line = this.validatedResult.match(regEx)[0];
+        innerText = innerText.replace(
+          line,
+          "<span class='error-span'>" + line.slice(0, -1) + "</span>:"
+        );
+        element.innerHTML = innerText;
+      }
+    },
+    removeJson() {
+      let keys = this.validatedResult.match(/".*":/gm);
+      let element = document.querySelector(".validated-result");
+      for (let key in keys) {
+        this.validatedResult = this.validatedResult.replace(
+          /(?<=(^\s*)|(\{.*)|(\{)|(.*))"(?=.*:)/gm,
+          ""
+        );
+        element.innerHTML = this.validatedResult;
+      }
+    },
+    replaceArray(key, value) {
+      if (value instanceof Array) {
+        return JSON.stringify(value);
+      }
+      return value;
+    },
     onValidateClick() {
-      let isSchema;
+      this.validatedResult = "";
+      let element = document.querySelector(".validated-result");
       if (this.schema[this.schema.length - 1] === ";") {
         this.schema = this.schema.slice(0, -1);
       }
@@ -110,10 +146,9 @@ export default {
         this.validate = this.validate.slice(0, -1);
       }
       try {
-        let validatedObject;
-          validatedObject = Function(
-            '"use strict";return (' + this.validate + ")"
-          )();
+        let validatedObject = Function(
+          '"use strict";return (' + this.validate + ")"
+        )();
         let joiSchema = Function(
           "Joi",
           '"use strict";return (' + this.schema + ")"
@@ -122,9 +157,28 @@ export default {
         let validatedResults = joiSchema(Joi).validate(validatedObject, {
           abortEarly: false
         });
+        this.validatedResult = stringify(validatedResults.value, {maxNesting: 1});
+        // try {
+        // // let tester = Function(
+        // //   '"use strict";return (' + validatedResults.value + ")"
+        // // );
+        // let tester = eval("(" + validatedResults.value + ")")
+        // console.log("TTTTTT", tester)
+        // } catch (e) {
+        //   console.log(e);
+        // }
+
+        try {
+          this.removeJson();
+        } catch (error) {}
+
         if (validatedResults.error) {
-          this.result =
-            "Validation Error: " + validatedResults.error.message.toString();
+          let errorMessage = validatedResults.error.message.toString();
+          this.result = "Validation Error: " + errorMessage;
+          let schemaErrors = errorMessage.match(/"(.*?)"/gm);
+          try {
+            this.findErrors(schemaErrors);
+          } catch (error) {}
         } else {
           this.result = "Validation Passed";
         }
@@ -243,6 +297,7 @@ export default {
   box-sizing: border-box;
   height: auto;
   color: #000;
+  margin-bottom: 30px;
 }
 
 .cm-number {
@@ -255,5 +310,12 @@ export default {
 
 .cm-string {
   color: #28813f !important;
+}
+
+.error-span {
+  display: inline-block;
+  background: #ff6a6a;
+  padding: 5px;
+  margin: 1px 0;
 }
 </style>
