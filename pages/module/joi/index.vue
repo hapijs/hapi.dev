@@ -183,7 +183,7 @@ export default {
             "afterend",
             "<img src='/img/joiTestIcon.png' class='test-icon' id='icon" +
               count +
-              "' title='Import to joi Schmea Tester'/>"
+              "' title='Import to joi Schema Tester'/>"
           );
           p.classList.add("pre-icon");
           p.id = "pre-icon" + count;
