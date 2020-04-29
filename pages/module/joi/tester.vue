@@ -109,12 +109,12 @@ export default {
       let element = document.querySelector(".validated-result");
       let innerText = this.validatedResult;
       for (let e of error) {
-        let f = e + ":"
-        let regEx = new RegExp(f.replace(/["]/gm, ""));
+        let f = "  " + e.replace(/["]/gm, "").replace(/\..*/, "") + ":";
+        let regEx = new RegExp(f);
         let line = this.validatedResult.match(regEx)[0];
         innerText = innerText.replace(
           line,
-          "<span class='error-span'>" + line.slice(0, -1) + "</span>:"
+          "  <span class='error-span'>" + line.slice(2, -1) + "</span>:"
         );
         element.innerHTML = innerText;
       }
@@ -124,7 +124,7 @@ export default {
       let element = document.querySelector(".validated-result");
       for (let key in keys) {
         this.validatedResult = this.validatedResult.replace(
-          /(?<=(^\s*)|(\{.*)|(\{)|(.*))"(?=.*:)/gm,
+          /(?<=(^\s*)|(\{.*)|(\{)|(.*))(?<!:\s)"(?=.*:)(?!,.*:)/gm,
           ""
         );
         element.innerHTML = this.validatedResult;
@@ -138,6 +138,7 @@ export default {
     },
     onValidateClick() {
       this.validatedResult = "";
+      let isSchema;
       let element = document.querySelector(".validated-result");
       if (this.schema[this.schema.length - 1] === ";") {
         this.schema = this.schema.slice(0, -1);
@@ -157,20 +158,11 @@ export default {
         let validatedResults = joiSchema(Joi).validate(validatedObject, {
           abortEarly: false
         });
-        this.validatedResult = stringify(validatedResults.value, {maxNesting: 1});
-        // try {
-        // // let tester = Function(
-        // //   '"use strict";return (' + validatedResults.value + ")"
-        // // );
-        // let tester = eval("(" + validatedResults.value + ")")
-        // console.log("TTTTTT", tester)
-        // } catch (e) {
-        //   console.log(e);
-        // }
+        this.validatedResult = stringify(validatedResults.value, {
+          maxNesting: 1
+        });
 
-        try {
-          this.removeJson();
-        } catch (error) {}
+        this.removeJson();
 
         if (validatedResults.error) {
           let errorMessage = validatedResults.error.message.toString();
@@ -188,6 +180,8 @@ export default {
         } else {
           console.log(error);
           this.result = error.toString();
+          let element = document.querySelector(".validated-result");
+          element.innerHTML = "<span class='error-span'>Error</span>"
         }
       }
     }
