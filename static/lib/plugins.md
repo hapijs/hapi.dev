@@ -149,7 +149,7 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
     
 *   [hapi-k8s-health](https://github.com/radenui/hapi-k8s-health)
 
-    Prometheus metrics ans liveness / readiness probes 
+    Prometheus metrics and liveness / readiness probes 
 
 ## <a name="messaging"></a> Messaging
 
