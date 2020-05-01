@@ -146,6 +146,10 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 *   [laabr](https://github.com/felixheck/laabr)
 
     Well-formatted pino logger for hapi.js - inspired by morgan
+    
+*   [hapi-k8s-health](https://github.com/radenui/hapi-k8s-health)
+
+    Prometheus metrics and liveness / readiness probes 
 
 ## <a name="messaging"></a> Messaging
 
