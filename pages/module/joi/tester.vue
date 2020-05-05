@@ -10,7 +10,7 @@
         :page="page"
         :advanced="advanced"
       />
-      <div class="markdown-wrapper">
+      <div class="markdown-wrapper tester-wrapper">
         <h1 class="hapi-header">
           joi Schema Tester <span class="api-version-span">v{{ version }}</span>
         </h1>
@@ -181,7 +181,7 @@ export default {
           console.log(error);
           this.result = error.toString();
           let element = document.querySelector(".validated-result");
-          element.innerHTML = "<span class='error-span'>Error</span>"
+          element.innerHTML = "<span class='error-span'>Error</span>";
         }
       }
     }
@@ -311,5 +311,11 @@ export default {
   background: #ff6a6a;
   padding: 5px;
   margin: 1px 0;
+}
+
+@media screen and (max-width: 900px) {
+  .tester-wrapper {
+    padding: 0 20px;
+  }
 }
 </style>
