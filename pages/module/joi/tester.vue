@@ -315,7 +315,7 @@ export default {
 
 @media screen and (max-width: 900px) {
   .tester-wrapper {
-    padding: 0 20px;
+    padding: 0 20px !important;
   }
 }
 </style>
