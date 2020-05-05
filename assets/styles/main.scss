@@ -8,9 +8,9 @@ body {
   font-size: 16px;
   height: auto;
   min-height: calc(100vh - 116px);
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   color: $black;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 }
 
 .container {
@@ -81,21 +81,21 @@ code + .copy-clipboard {
   margin: 0 0 0 5px;
   background-image: url("/img/clipboard.png");
   background-size: contain;
-  opacity: .3;
+  opacity: 0.3;
   cursor: pointer;
-  transition: all .2s;
+  transition: all 0.2s;
 
   &-absolute {
     position: absolute;
   }
 
   &:hover {
-    opacity: .7;
+    opacity: 0.7;
   }
 
   &-checked {
     background-image: url("/img/clipboardCheck.png");
-    opacity: .7;
+    opacity: 0.7;
   }
 }
 
@@ -199,7 +199,7 @@ code + .copy-clipboard {
   }
 
   .hapi-family-header {
-    margin-top:  10px;
+    margin-top: 10px;
     margin-left: 10px;
   }
 }
