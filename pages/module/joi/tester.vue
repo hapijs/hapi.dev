@@ -124,7 +124,7 @@ export default {
       let element = document.querySelector(".validated-result");
       for (let key in keys) {
         this.validatedResult = this.validatedResult.replace(
-          /(?<=(^\s*)|(\{.*)|(\{)|(.*))(?<!:\s)"(?=.*:)(?!,.*:)/gm,
+          /(")(?=.*:)(?!,.*:)/gm,
           ""
         );
         element.innerHTML = this.validatedResult;
@@ -161,7 +161,7 @@ export default {
         this.validatedResult = stringify(validatedResults.value, {
           maxNesting: 1
         });
-
+        console.log(this.validatedResult);
         this.removeJson();
 
         if (validatedResults.error) {
