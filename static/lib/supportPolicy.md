@@ -6,7 +6,7 @@ Every **major** version of the [core module](https://github.com/hapijs/hapi) rec
 
 ## Current versions
 
-The full and up to date list of supported moduled under a free open source license and paid commercial license is available at the [module status page](https://hapi.dev/resources/status/).
+The full and up to date list of supported modules under a free open source license is available at the [module status page](https://hapi.dev/resources/status/).
 
 ## Latest version
 
@@ -26,21 +26,18 @@ For example, if:
 - version `v9.0.0` was published on January 1st, 2010, and
 - version `v10.0.0` was published on May 1st, 2010
 
-Support for `v9.x.x` will end on January 1st, 2011 (one year from time of initial publication of
-the `v9.0.0` release).
+Support for `v9.x.x` will end on January 1st, 2011 (one year from time of initial publication of the `v9.0.0` release).
 
 However, if:
 - version `v9.0.0` was published on January 1st, 2010, and
 - version `v10.0.0` was published on December 1st, 2010
 
-Support for `v9.x.x` will end on March 1st, 2011 (three months from time of initial publication of
-the `v10.0.0` release).
+Support for `v9.x.x` will end on March 1st, 2011 (three months from time of initial publication of the `v10.0.0` release).
 
 ## Deprecated versions
 
-When a version is no longer supported, it will be marked as `deprecated` in the npm registry. You
-may continue using it at your own risk, ignoring the warning messages.
+When a version is no longer supported, it will be marked as `deprecated` in the npm registry. You may continue using it at your own risk, ignoring the warning messages.
 
 ## Commercial support
 
-Every module used by hapi v16 or newer has a maintained LTS version available under a commercial license. For more information, visit the [support page](https://hapi.dev/support).
+Every module used by hapi v16 to v19 has a maintained LTS version available under a commercial license. For more information, visit the [commercial support issue](https://github.com/hapijs/hapi/issues/4114) or contact [Sideway Support](mailto:support@sideway.com).

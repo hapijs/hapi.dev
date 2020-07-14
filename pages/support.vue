@@ -1,31 +1,16 @@
 <template>
   <div class="support-wrapper">
-    <Form />
-    <Confirmation />
     <howToHelp />
-    <commercialSupport />
-    <commercialLicense />
-    <Table />
   </div>
 </template>
 
 <script>
 import howToHelp from "~/components/support/howToHelp.vue";
-import commercialSupport from "~/components/support/commercialSupport.vue";
-import commercialLicense from "~/components/support/commercialLicense.vue";
-import Table from "~/components/support/Table.vue";
-import Form from "~/components/support/Form.vue";
-import Confirmation from "~/components/support/Confirmation.vue";
 
 export default {
   layout: "noSide",
   components: {
-    howToHelp,
-    commercialSupport,
-    commercialLicense,
-    Table,
-    Form,
-    Confirmation
+    howToHelp
   },
   head() {
     return {
@@ -34,11 +19,6 @@ export default {
   },
   created() {
     this.$store.commit("setDisplay", "support");
-  },
-  mounted() {
-    if (this.$cookies.get("confirmation")) {
-      this.$modal.show("confirmation");
-    }
   }
 };
 </script>
