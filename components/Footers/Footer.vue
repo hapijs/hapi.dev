@@ -24,7 +24,7 @@
           class="footer-link"
           title="Slack"
           target="__blank"
-          href="https://join.slack.com/t/hapihour/shared_invite/zt-6hutju52-ZcZNOKbXY4oUY_R8LVWmoQ"
+          href="https://join.slack.com/t/hapihour/shared_invite/zt-g5ortpsk-ErlnRA2rUcPIWES21oXBOg"
           >Slack</a
         >
       </li>
