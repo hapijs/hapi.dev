@@ -579,8 +579,7 @@ export default {
 
 @media (prefers-color-scheme: dark) {
   .family-top-wrapper,
-  .family-search-button,
-  .family-search-img {
+  .family-search-button {
     background: $black  !important;;
     border-color: $blackest !important;
     color: $white !important;
