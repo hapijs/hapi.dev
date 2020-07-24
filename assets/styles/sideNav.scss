@@ -253,3 +253,27 @@ select:focus {
     display: none;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+
+  .side-nav-window,
+  .api-nav-window {
+    background: $blacker !important;
+    border-color: $blackest !important;
+  }
+  .side-nav-title {
+    color: $white;
+  }
+  .family-span {
+    color: $white;
+  }
+  .family-version-select, select {
+    background: url(/img/down.png) 96% / 15% no-repeat $blackest;
+    color: $ash;
+    border-color: black;
+  }
+  .api-nav-window {
+    background: $blacker;
+  }
+
+}

@@ -235,3 +235,25 @@
     font-size: 12px;
   }
 }
+
+
+@media (prefers-color-scheme: dark) {
+
+  .module-row {
+    background-color: $black;
+  }
+  .module-row:nth-child(odd) {
+    background-color: $blacker;
+  }
+  .status-table th {
+    background-color: $black;
+  }
+
+  .module-name,
+  .module-row,
+  .status-table th:after,
+  .status-table tbody,
+  .nested-tbody tr:not(:last-child)  {
+    border-color: $blackest !important;
+  }
+}

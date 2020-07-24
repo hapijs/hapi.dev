@@ -92,4 +92,14 @@ export default {
   font-size: 9px;
   line-height: 1;
 }
+
+
+
+@media (prefers-color-scheme: dark) {
+  #carbonads {
+    background-color: $blacker;
+    border: 1px solid $blackest;
+  }
+}
+
 </style>

@@ -385,4 +385,20 @@ export default {
     font-size: 0.9rem;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+
+  .home-container {
+    color: $off-white;
+  }
+  .underline,
+  .code {
+    border-color: $blacker;
+  }
+  .quote-wrapper,
+  .quote-wrapper:before {
+    background-color: $blacker;
+  }
+}
+
 </style>

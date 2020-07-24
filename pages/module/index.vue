@@ -274,4 +274,12 @@ export default {
     font-size: 0.97em;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .family-grid-cell {
+    background: $blacker;
+    border: 1px solid #000;
+  }
+}
+
 </style>

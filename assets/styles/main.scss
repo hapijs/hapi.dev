@@ -213,3 +213,17 @@ code + .copy-clipboard {
     max-width: 100%;
   }
 }
+
+
+@media (prefers-color-scheme: dark) {
+
+  html,
+  body {
+    color: $off-white;
+    background: $black;
+  }
+
+  .landing-hr {
+    background-color: $blacker;
+  }
+}

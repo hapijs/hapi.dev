@@ -191,3 +191,36 @@ pre {
     padding: 0;
   }
 }
+
+
+@media (prefers-color-scheme: dark) {
+
+  pre {
+    background: $blackest;
+    border-color: #000 !important;
+    color: $ash;
+  }
+
+  h2 a,
+  h3 a {
+    color: $white;
+  }
+
+  code,
+  .code {
+    color: $light-gray;
+    background-color: $blacker !important;
+    border: 1px solid #000 !important;
+  }
+
+  p {
+    color: $off-white;
+  }
+
+  p code,
+  li code {
+    color: $light-gray;
+    background-color: $quote-gray-dark;
+  }
+
+}

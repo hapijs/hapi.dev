@@ -378,4 +378,12 @@ export default {
     display: none;
   }
 }
+
+
+@media (prefers-color-scheme: dark) {
+  .navbar {
+    background: $blacker !important;
+    border-bottom: 1px solid $blackest !important;
+  }
+}
 </style>
