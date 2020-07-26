@@ -117,5 +117,7 @@ a {
   .side-footer {
     display: none;
   }
+
+  a:hover { color: $gray; }
 }
 </style>

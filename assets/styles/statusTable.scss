@@ -256,4 +256,8 @@
   .nested-tbody tr:not(:last-child)  {
     border-color: $blackest !important;
   }
+
+  table thead tr th {
+    color: $gray !important;
+  }
 }

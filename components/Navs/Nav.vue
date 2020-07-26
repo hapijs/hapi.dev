@@ -383,7 +383,11 @@ export default {
 @media (prefers-color-scheme: dark) {
   .navbar {
     background: $blacker !important;
-    border-bottom: 1px solid $blackest !important;
+    border-bottom: 1px solid $blacker !important;
+  }
+
+  #__layout .contain > header {
+    background: $blacker;
   }
 }
 </style>

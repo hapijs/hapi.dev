@@ -397,8 +397,9 @@ export default {
   }
   .quote-wrapper,
   .quote-wrapper:before {
-    background-color: $blacker;
+    background-color: $blacker !important;
   }
+
 }
 
 </style>

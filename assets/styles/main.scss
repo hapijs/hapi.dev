@@ -221,9 +221,14 @@ code + .copy-clipboard {
   body {
     color: $off-white;
     background: $black;
+    z-index: -1;
   }
 
   .landing-hr {
     background-color: $blacker;
+  }
+
+  strong, b {
+    color: $off-white;
   }
 }

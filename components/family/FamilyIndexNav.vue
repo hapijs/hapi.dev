@@ -149,4 +149,12 @@ export default {
   cursor: pointer;
   margin: 10px 0 0 0;
 }
+
+@media (prefers-color-scheme: dark) {
+  .family-module-search-box {
+    background: $black;
+    border-color: $blackest;
+  }
+}
+
 </style>
