@@ -23,7 +23,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.dev - License",
+      title: "License - hapi.dev",
       meta: [
         { hid: "description", name: "description", content: "The hapi license" }
       ]

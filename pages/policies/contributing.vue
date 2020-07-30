@@ -23,7 +23,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.dev - Contributing",
+      title: "Contributing - hapi.dev",
       meta: [
         { hid: "description", name: "description", content: "Contributing to hapi" }
       ]

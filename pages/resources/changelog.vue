@@ -28,10 +28,9 @@ export default {
   head() {
     return {
       title:
-        "hapi.dev - " +
         this.page.replace(/([A-Z])/g, " $1").replace(/^./, function(str) {
           return str.toUpperCase();
-        }),
+        }) + " - hapi.dev",
       meta: [
         { hid: "description", name: "description", content: "View hapi's version history" }
       ]

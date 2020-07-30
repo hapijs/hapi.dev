@@ -23,7 +23,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.dev - Security Policy",
+      title: "Security Policy - hapi.dev",
       meta: [
         { hid: "description", name: "description", content: "The official hapi style guide" }
       ]

@@ -26,7 +26,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.dev - Error!"
+      title: "Error! - hapi.dev"
     };
   }
 };

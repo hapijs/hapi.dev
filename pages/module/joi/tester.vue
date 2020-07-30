@@ -54,7 +54,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.dev - joi Schema Tester v" + this.version,
+      title: "joi Schema Tester v" + this.version + " - hapi.dev",
       meta: [
         {
           hid: "description",

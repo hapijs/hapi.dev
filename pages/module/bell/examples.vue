@@ -54,7 +54,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.dev - bell Examples",
+      title: "bell Examples - hapi.dev",
       meta: [
         {
           hid: "description",

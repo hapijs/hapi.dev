@@ -27,7 +27,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.dev - Getting Started",
+      title: "Getting Started - hapi.dev",
       meta: [
         {
           hid: "description",

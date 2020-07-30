@@ -14,7 +14,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.dev - Help"
+      title: "Help - hapi.dev"
     };
   },
   created() {

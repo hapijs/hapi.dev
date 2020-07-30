@@ -23,7 +23,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.dev - Code of Conduct",
+      title: "Code of Conduct - hapi.dev",
       meta: [
         { hid: "description", name: "description", content: "The hapi code of conduct" }
       ]
