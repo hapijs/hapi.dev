@@ -687,4 +687,36 @@ export default {
     display: none;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+
+  .api-nav-window,
+  .api-header-wrapper,
+  .api-search-img,
+  .api-search-button {
+    background-color: $blacker !important;
+  }
+
+  .api-nav-title {
+    color: $ash;
+  }
+  .api-lang-select,
+  .api-search-box  {
+    background-color: $blackest;
+    border-color: #000
+  }
+  .api-search-box {
+    border: 1px solid $dark-white;
+  }
+  .api-search-img {
+    background-color: $white;
+  }
+  .api-search-button {
+    border: 1px solid $dark-white;
+    background: $white;
+    color: $black;
+  }
+
+}
+
 </style>

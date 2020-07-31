@@ -108,7 +108,7 @@ export default {
   align-items: center;
   height: 50px;
   max-width: 735px;
-  background-color: $white !important;
+  // background-color: $white !important;
   padding: 0 20px !important;
 }
 

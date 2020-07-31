@@ -207,4 +207,11 @@ export default {
 .module-life {
   text-align: center !important;
 }
+
+@media (prefers-color-scheme: dark) {
+  .landing-table tbody {
+    border-color: $blackest !important;
+  }
+}
+
 </style>

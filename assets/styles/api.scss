@@ -60,3 +60,23 @@ h6 code {
   -webkit-font-smoothing: antialiased;
   padding: 5px 0;
 }
+
+@media (prefers-color-scheme: dark) {
+  h2 code,
+  h3 .api-nav-code,
+  h4 .api-nav-code,
+  h3 code,
+  h4 code {
+    background: $blacker;
+    color: $white;
+  }
+  h5 code {
+    background: $blacker;
+    color: $white;
+  }
+  h6 code {
+    background: $blacker;
+    color: $white;
+  }
+
+}

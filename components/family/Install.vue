@@ -52,4 +52,12 @@ export default {
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .install-wrapper {
+
+    background: mix($blacker, $black);
+    border-color: $blackest;
+  }
+}
+
 </style>

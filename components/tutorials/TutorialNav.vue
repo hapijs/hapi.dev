@@ -631,4 +631,12 @@ export default {
     margin: 0;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+
+.tutorial-nav-window {
+    background: $blacker;
+  }
+
+}
 </style>

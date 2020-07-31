@@ -126,4 +126,11 @@ a {
 .netlify {
   max-width: 50px;
 }
+
+@media (prefers-color-scheme: dark) {
+
+  .footer {
+    background-color: $black !important;
+  }
+}
 </style>

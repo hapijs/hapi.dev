@@ -575,4 +575,23 @@ export default {
     display: none;
   }
 }
+
+
+@media (prefers-color-scheme: dark) {
+  .family-top-wrapper,
+  .family-search-button,
+  .family-search-img {
+    background: $black  !important;;
+    border-color: $blackest !important;
+    color: $white !important;
+  }
+  .family-nav-title,
+  .family-nav-title a,
+  .family-nav-title a:hover {
+    color: $white !important;
+  }
+
+}
+
+
 </style>

@@ -277,4 +277,16 @@ export default {
     width: 80px;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .family-top-wrapper,
+  .family-search-button,
+  .family-search-img {
+    background: $black  !important;;
+    border-color: $blackest !important;
+  }
+
+}
+
+
 </style>
