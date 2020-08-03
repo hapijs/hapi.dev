@@ -123,7 +123,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.dev - joi",
+      title: "joi - hapi.dev",
       meta: [
         {
           hid: "description",

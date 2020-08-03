@@ -37,7 +37,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.dev - " + this.$route.query.v + " API Reference",
+      title: this.$route.query.v + " API Reference" + " - hapi.dev",
       meta: [
         { hid: "description", name: "description", content: "The hapi API" }
       ]

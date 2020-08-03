@@ -27,7 +27,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.dev - " + this.titles[this.$route.params.tutorial],
+      title: this.titles[this.$route.params.tutorial] + " - hapi.dev",
       meta: [
         {
           hid: "description",

@@ -55,7 +55,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.dev - joi v" + this.$route.query.v,
+      title: "joi v" + this.$route.query.v + " - hapi.dev",
       meta: [
         {
           hid: "description",

@@ -55,7 +55,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.dev - bell v" + this.getVersion,
+      title: "bell v" + this.getVersion + " - hapi.dev",
       meta: [
         {
           hid: "description",

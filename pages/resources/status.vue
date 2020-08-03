@@ -155,7 +155,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.dev - Module Status",
+      title: "Module Status - hapi.dev",
       meta: [
         {
           hid: "description",

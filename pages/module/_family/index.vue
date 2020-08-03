@@ -125,7 +125,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.dev - " + this.$route.params.family,
+      title: this.$route.params.family + " - hapi.dev",
       meta: [
         {
           hid: "description",

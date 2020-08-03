@@ -33,7 +33,7 @@ export default {
   },
   head() {
     return {
-      title: "hapi.dev - bell Providers",
+      title: "bell Providers - hapi.dev",
       meta: [
         {
           hid: "description",
