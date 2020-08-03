@@ -18,18 +18,13 @@ export default {
   head() {
     return {
       title: "Plugins - hapi.dev",
-      head() {
-        return {
-          title: "hapi.js - " + this.$route.params.family,
-          meta: [
-            {
-              hid: "description",
-              name: "description",
-              content: "View the hapi plugins"
-            }
-          ]
-        };
-      }
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "View the hapi plugins"
+        }
+      ]
     };
   },
   created() {
