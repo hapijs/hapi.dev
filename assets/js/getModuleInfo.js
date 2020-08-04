@@ -81,6 +81,11 @@ async function getInfo() {
     "https://api.github.com/orgs/hapijs/repos?per_page=100",
     options
   );
+  const nodeTravisYaml = await axios.get(
+    "https://api.github.com/repos/hapijs/ci-config-travis/contents/node_js.yml",
+    options
+  );
+  const nodeTravisVersions = Yaml.safeLoad(nodeTravisYaml.data).node_js.reverse();
   for (let r = 0; r < repositories.data.length; ++r) {
     finalHtmlDisplay = "";
     finalMenu = "";
@@ -124,7 +129,6 @@ async function getInfo() {
               branch.name,
             options
           );
-
           //Get API
           try {
             if (modules.includes(repositories.data[r].name)) {
@@ -230,8 +234,12 @@ async function getInfo() {
           } catch (err) {
             continue;
           }
-
-          let nodeVersions = Yaml.safeLoad(nodeYaml.data).node_js.reverse();
+          let nodeVersions;
+          if (Yaml.safeLoad(nodeYaml.data.import)) {
+            nodeVersions = nodeTravisVersions;
+          } else {
+            nodeVersions = Yaml.safeLoad(nodeYaml.data).node_js.reverse();
+          }
           if (repos[repositories.data[r].name].versionsArray.indexOf(gitHubVersion.data.version) === -1) {
             repos[repositories.data[r].name].versionsArray.push(
               gitHubVersion.data.version
