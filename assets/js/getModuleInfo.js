@@ -85,7 +85,7 @@ async function getInfo() {
     "https://api.github.com/repos/hapijs/ci-config-travis/contents/node_js.yml",
     options
   );
-  const nodeTravisVersions = Yaml.safeLoad(nodeTravisYaml.data).node_js.reverse();
+  const nodeTravisVersions = Yaml.safeLoad(nodeTravisYaml.data).node_js.reverse().filter(e=> e !== "node");
   for (let r = 0; r < repositories.data.length; ++r) {
     finalHtmlDisplay = "";
     finalMenu = "";
