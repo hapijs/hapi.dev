@@ -157,7 +157,6 @@ export default {
     color: $light-gray;
   }
 
-
   .family-module-search-img {
     background-color: $blackest;
     border-color: $blackest;
