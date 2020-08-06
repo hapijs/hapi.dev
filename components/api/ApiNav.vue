@@ -476,6 +476,7 @@ export default {
   position: relative;
   padding: 0 20px;
   width: 100%;
+  margin-top: 20px;
 }
 .api-search-box {
   height: 30px;
@@ -692,7 +693,6 @@ export default {
 
   .api-nav-window,
   .api-header-wrapper,
-  .api-search-img,
   .api-search-button {
     background-color: $blacker !important;
   }
@@ -707,9 +707,6 @@ export default {
   }
   .api-search-box {
     border: 1px solid $dark-white;
-  }
-  .api-search-img {
-    background-color: $white;
   }
   .api-search-button {
     border: 1px solid $dark-white;

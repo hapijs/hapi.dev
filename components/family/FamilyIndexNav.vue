@@ -151,10 +151,17 @@ export default {
 }
 
 @media (prefers-color-scheme: dark) {
-  .family-module-search-box {
+  .family-sort, .family-module-search-box {
     background: $black;
     border-color: $blackest;
+    color: $light-gray;
   }
+
+  .family-module-search-img {
+    background-color: $blackest;
+    border-color: $blackest;
+  }
+
 }
 
 </style>
