@@ -279,10 +279,23 @@ export default {
 }
 
 @media (prefers-color-scheme: dark) {
+
+  .family-version-select,
+  .family-search-box {
+    background-color: $black !important;
+    border-color: $blackest !important;
+    color: $light-gray !important;
+  }
+
   .family-top-wrapper,
   .family-search-button,
   .family-search-img {
     background: $black  !important;;
+    border-color: $blackest !important;
+  }
+
+  .family-search-img {
+    background-color: $blackest !important;
     border-color: $blackest !important;
   }
 

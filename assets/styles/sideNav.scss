@@ -276,4 +276,21 @@ select:focus {
     background: $blacker;
   }
 
+  .family-version-select,
+  .family-search-box,
+  .api-search-box {
+    background-color: $blackest !important;
+    border-color: $blackest !important;
+    color: $light-gray !important;
+  }
+
+  .family-top-wrapper,
+  .family-search-button,
+  .family-search-img,
+  .api-search-img {
+    background-color: $blackest  !important;;
+    border-color: $blackest !important;
+    color: $light-gray;
+  }
+
 }
