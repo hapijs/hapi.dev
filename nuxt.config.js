@@ -1,5 +1,6 @@
 module.exports = {
   mode: "universal",
+  telemetry: false,
 
   generate: {
     fallback: true,
@@ -21,9 +22,6 @@ module.exports = {
       "/module/accept",
       "/module/accept/api",
       "/module/accept/changelog",
-      "/module/address",
-      "/module/address/api",
-      "/module/address/changelog",
       "/module/ammo",
       "/module/ammo/api",
       "/module/ammo/changelog",
@@ -89,9 +87,6 @@ module.exports = {
       "/module/eslint-plugin-hapi/changelog",
       "/module/file",
       "/module/file/changelog",
-      "/module/formula",
-      "/module/formula/api",
-      "/module/formula/changelog",
       "/module/glue",
       "/module/glue/api",
       "/module/glue/changelog",
@@ -107,9 +102,6 @@ module.exports = {
       "/module/h2o2",
       "/module/h2o2/api",
       "/module/h2o2/changelog",
-      "/module/hawk",
-      "/module/hawk/api",
-      "/module/hawk/changelog",
       "/module/heavy",
       "/module/heavy/changelog",
       "/module/hoek",
@@ -124,13 +116,6 @@ module.exports = {
       "/module/items",
       "/module/items/api",
       "/module/items/changelog",
-      "/module/joi",
-      "/module/joi/api",
-      "/module/joi/changelog",
-      "/module/joi/tester",
-      "/module/joi-date",
-      "/module/joi-date/api",
-      "/module/joi-date/changelog",
       "/module/jwt",
       "/module/jwt/changelog",
       "/module/lab",
@@ -151,9 +136,6 @@ module.exports = {
       "/module/oppsy/changelog",
       "/module/pez",
       "/module/pez/changelog",
-      "/module/pinpoint",
-      "/module/pinpoint/api",
-      "/module/pinpoint/changelog",
       "/module/podium",
       "/module/podium/api",
       "/module/podium/changelog",
@@ -178,9 +160,6 @@ module.exports = {
       "/module/shot",
       "/module/shot/api",
       "/module/shot/changelog",
-      "/module/sntp",
-      "/module/sntp/api",
-      "/module/sntp/changelog",
       "/module/somever",
       "/module/somever/changelog",
       "/module/statehood",
@@ -274,6 +253,10 @@ module.exports = {
     html: true,
     breaks: true,
     injected: true
+  },
+
+  axios: {
+    retry: true
   },
 
   googleAnalytics: {

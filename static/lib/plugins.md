@@ -533,7 +533,7 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     Static file and directory handlers
 
-*   [joi <img src="/img/family.svg" class="plugins-logo" />](https://hapi.dev/family/joi)
+*   [joi <img src="/img/family.svg" class="plugins-logo" />](https://github.com/sideway/joi)
 
     Object schema description language and validator for JavaScript objects
 
