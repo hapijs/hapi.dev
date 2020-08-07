@@ -69,10 +69,6 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     A Hapi plugin that wraps passport-saml for SAML SSO
 
-*   [hawk <img src="/img/family.svg" class="plugins-logo" />](https://hapi.dev/family/hawk)
-
-    Hawk authentication plugin
-
 *   [jwt <img src="/img/family.svg" class="plugins-logo" />](https://hapi.dev/family/jwt)
 
     JWT (JSON Web Token) Authentication.
