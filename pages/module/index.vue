@@ -23,7 +23,7 @@
             </a>
             <div
               class="family-grid-cell-slogan"
-              v-html="$md.render(moduleInfo[module.name].slogan)"
+              v-if="moduleData[module.name]" v-html="$md.render(moduleData[module.name].slogan)"
             ></div>
           </div>
           <div class="family-grid-cell-stats">

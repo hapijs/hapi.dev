@@ -212,7 +212,7 @@
                   </li>
                   <li
                     class="mobile-sublink"
-                    v-if="moduleInfo[name].api === true"
+                    v-if="moduleInfo[name] && moduleInfo[name].api === true"
                   >
                     <a :href="'/module/' + name + '/api'">API</a>
                   </li>
