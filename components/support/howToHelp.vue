@@ -59,7 +59,7 @@ export default {};
 }
 
 .support-helmet {
-  width: 160px;
+  width: 100px;
   float: left;
   margin: -5px 10px 0 0;
 }

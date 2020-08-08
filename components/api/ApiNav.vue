@@ -657,9 +657,9 @@ export default {
 }
 .api-active {
   display: inline-block;
-  left: -60px;
-  padding: 2px 30px 2px 60px !important;
-  width: 375px !important;
+  left: -70px;
+  padding: 2px 30px 2px 70px!important;
+  width: 410px!important;
 }
 .api-side-footer-wrapper {
   width: 100%;
