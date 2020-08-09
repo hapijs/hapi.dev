@@ -9,7 +9,7 @@ Validating data can be very helpful in making sure that your application is stab
 
 ## <a name="joi"></a> Joi
 
-[Joi](/https://github.com/sideway/joi) is an object schema description language and validator for JavaScript objects. Joi allows you to create blueprints or schemas for JavaScript objects to ensure validation of key information. To get started with joi, you must first install and add it as a dependency to your project:
+[Joi](https://github.com/sideway/joi) is an object schema description language and validator for JavaScript objects. Joi allows you to create blueprints or schemas for JavaScript objects to ensure validation of key information. To get started with joi, you must first install and add it as a dependency to your project:
 
 `npm install @hapi/joi`
 
