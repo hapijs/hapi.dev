@@ -93,6 +93,7 @@ async function getInfo() {
     if (
       repositories.data[r].name !== "assets" &&
       repositories.data[r].name !== ".github" &&
+      repositories.data[r].name !== "validate" &&
       repositories.data[r].name !== "hapi.dev"
     ) {
       repos[repositories.data[r].name] = {
@@ -268,6 +269,7 @@ async function getInfo() {
     if (
       repositories.data[r].name !== "assets" &&
       repositories.data[r].name !== ".github" &&
+      repositories.data[r].name !== "validate" &&
       repositories.data[r].name !== "hapi.dev"
     ) {
       let readme = await axios.get(

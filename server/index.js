@@ -1,6 +1,6 @@
-const Hapi = require("hapi")
+const Hapi = require("@hapi/hapi")
 const consola = require("consola")
-const HapiNuxt = require("hapi-nuxt")
+const HapiNuxt = require("@nuxtjs/hapi")
 
 const server = new Hapi.Server({
   host: process.env.HOST || "0.0.0.0",
