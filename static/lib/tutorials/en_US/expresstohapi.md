@@ -545,7 +545,7 @@ To use bell, simply register the plugin and configure the strategy with `server.
 
 ## <a name="joi" ></a> express-validator -> joi
 
-To validate data in Express, you make use of the `express-validator` plugin. One of the biggest drawbacks to `express-validator` is that while you can validate a request, there is no clear way of validating a response. In hapi, you use the [joi](/module/joi) module, which can validate requests and responses with ease. Joi allows you to create your own validations with a simple and clean object syntax. For a more in-depth look at validation in hapi, please see the [validation](/tutorials/validation/?lang=en_US) tutorial.
+To validate data in Express, you make use of the `express-validator` plugin. One of the biggest drawbacks to `express-validator` is that while you can validate a request, there is no clear way of validating a response. In hapi, you use the [joi](https://github.com/sideway/joi) module, which can validate requests and responses with ease. Joi allows you to create your own validations with a simple and clean object syntax. For a more in-depth look at validation in hapi, please see the [validation](/tutorials/validation/?lang=en_US) tutorial.
 
 ### <a name="input" ></a> Input Validation
 
@@ -713,7 +713,7 @@ To pass context in `h.view`, you pass an object as the second parameter. To pass
 
 ## <a name="inert" ></a> express.static() -> inert
 
-hapi gets its ability to serve static content from a plugin called [inert](/module/inert). inert provides new handler methods for serving static files and directories, as well as adding a `h.file()` method to the response toolkit. For a more in-depth tutorial of server static files in hapi, please see the [serving static files](/tutorials/serving-files/?lang=en_US) tutorial.
+hapi gets its ability to serve static content from a plugin called [inert](/module/inert). inert provides new handler methods for serving static files and directories, as well as adding a `h.file()` method to the response toolkit. For a more in-depth tutorial of server static files in hapi, please see the [serving static files](/tutorials/servingfiles/?lang=en_US) tutorial.
 
 ### <a name="single" ></a> Serving Single Files
 
@@ -805,7 +805,7 @@ server.route({
     }
 });
 ```
-Now, you can access any static files by going to `localhost:3000/filename`. [inert](/module/inert) has many other options and capabilities. To see what all it can do, please see the [serving static files](/tutorials/serving-files/?lang=en_US) tutorial.
+Now, you can access any static files by going to `localhost:3000/filename`. [inert](/module/inert) has many other options and capabilities. To see what all it can do, please see the [serving static files](/tutorials/servingfiles/?lang=en_US) tutorial.
 
 ## <a name="boom" ></a> Error Handling -> boom
 

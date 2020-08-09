@@ -544,7 +544,7 @@ server.route({
 
 ## <a name="joi" ></a> express-validator -> joi
 
-要在Express中验证数据，您可以使用 `express-validator` 插件。`express-validator` 的最大缺点之一是尽管您可以验证请求，但没有明确的方法来验证响应。在hapi中，可以使用 [joi](/module/joi) 模块，该模块可以轻松地验证请求和响应。Joi允许您使用简单干净的对象语法创建自己的验证。 要更深入地了解hapi中的验证，请参见 [validation](/tutorials/validation/?lang=en_US) 教程。
+要在Express中验证数据，您可以使用 `express-validator` 插件。`express-validator` 的最大缺点之一是尽管您可以验证请求，但没有明确的方法来验证响应。在hapi中，可以使用 [joi](https://github.com/sideway/joi) 模块，该模块可以轻松地验证请求和响应。Joi允许您使用简单干净的对象语法创建自己的验证。 要更深入地了解hapi中的验证，请参见 [validation](/tutorials/validation/?lang=en_US) 教程。
 
 ### <a name="input" ></a> 输入验证
 
@@ -713,7 +713,7 @@ server.route({
 
 ## <a name="inert" ></a> express.static() -> inert
 
-hapi可以从名为 [inert](/module/inert) 的插件中提供静态内容。inert提供了用于处理静态文件和目录的新处理程序方法，以及向响应工具箱中添加了 `h.file()` 方法。有关hapi中服务器静态文件的更深入的教程，请参阅 [serving static files](/tutorials/serving-files/?lang=en_US) 教程。
+hapi可以从名为 [inert](/module/inert) 的插件中提供静态内容。inert提供了用于处理静态文件和目录的新处理程序方法，以及向响应工具箱中添加了 `h.file()` 方法。有关hapi中服务器静态文件的更深入的教程，请参阅 [serving static files](/tutorials/servingfiles/?lang=en_US) 教程。
 
 ### <a name="single" ></a> 服务单个文件
 
@@ -804,8 +804,8 @@ server.route({
     }
 });
 ```
-现在，您可以通过访问 `localhost:3000/filename` 来访问任何静态文件。 [inert](/module/inert) 具有许多其他选项和功能。要查看其所有功能，请参阅 [serving static files](/tutorials/serving-files/?lang=en_US) tutorial 教程。
-Now, you can access any static files by going to `localhost:3000/filename`. [inert](/module/inert) has many other options and capabilities. To see what all it can do, please see the [serving static files](/tutorials/serving-files/?lang=en_US) tutorial.
+现在，您可以通过访问 `localhost:3000/filename` 来访问任何静态文件。 [inert](/module/inert) 具有许多其他选项和功能。要查看其所有功能，请参阅 [serving static files](/tutorials/servingfiles/?lang=en_US) tutorial 教程。
+Now, you can access any static files by going to `localhost:3000/filename`. [inert](/module/inert) has many other options and capabilities. To see what all it can do, please see the [serving static files](/tutorials/servingfiles/?lang=en_US) tutorial.
 
 ## <a name="boom" ></a> Error Handling -> boom
 

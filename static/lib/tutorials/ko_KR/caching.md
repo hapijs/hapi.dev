@@ -161,11 +161,11 @@ http://localhost:8000/add/1/5 에 요청하면 1초 뒤에 응답 `6`을 받을 
 
 **partitions**외에도 하나의 [client](https://github.com/hapijs/catbox#client)에서 캐시를 격리할 수 있는 **segments**가 있습니다. 두 개의 다른 메소드로부터의 결과를 캐시 하려고 할 때 보통 그 결과를 같이 섞이는 것을 원하지 않을 것입니다.  [mongoDB](http://www.mongodb.org/) 어댑터에서 `segment`는 collection을 의미하고 [redis](http://redis.io/)에서는 `partition` 옵션과 함께 추가 접두사입니다
 
-플러그인 안에서 [server.cache()](/api#servercacheoptions)가 호출될 때 `segment`의 기본값은 `'!pluginName'`입니다. [server methods](http://hapijs.com/tutorials/server-methods)를 만들 때 `segment`의 값은 `'#mothodName'`입니다. 여러 policy에서 하나의 segment를 공유하려는 여러 policy가 있는 경우라면 [shared](http://hapijs.com/api#servercacheoptions) 옵션을 사용할 수 있습니다.
+플러그인 안에서 [server.cache()](/api#servercacheoptions)가 호출될 때 `segment`의 기본값은 `'!pluginName'`입니다. [server methods](http://hapijs.com/tutorials/servermethods)를 만들 때 `segment`의 값은 `'#mothodName'`입니다. 여러 policy에서 하나의 segment를 공유하려는 여러 policy가 있는 경우라면 [shared](http://hapijs.com/api#servercacheoptions) 옵션을 사용할 수 있습니다.
 
 #### 서버 메소드
 
-더 좋아질 수 있습니다! 보일러 플레이트가 최소로 줄어들기 때문에 95% 경우 캐싱 목적으로 [server methods](/tutorials/server-methods)을 사용할 것입니다. 서버 메소드를 사용하여 앞의 예제를 다시 작성합니다.: 
+더 좋아질 수 있습니다! 보일러 플레이트가 최소로 줄어들기 때문에 95% 경우 캐싱 목적으로 [server methods](/tutorials/servermethods)을 사용할 것입니다. 서버 메소드를 사용하여 앞의 예제를 다시 작성합니다.: 
 
 ```javascript
 const start = async () => {
@@ -197,12 +197,12 @@ const start = async () => {
 
 start();
 ```
-[server.method()](/api#servermethodname-method-options)는 `segment: '#sum'`과 함께 자동으로 새로운 [policy](https://github.com/hapijs/catbox#policy)를 만듭니다. 또한, 고유 항목 `id`(캐시 키)는 인자로부터 자동으로 생성됩니다. 기본으로 `string`, `number`, `boolean` 인자를 받습니다. 더 복잡한 인자들은 인자를 기반으로 고유한 식별자를 만드는 `generateKey` 함수를 제공해야 합니다. - 더 자세한 내용은 서버 메소드 [tutorial](/tutorials/server-methods)에서 확인하세요.
+[server.method()](/api#servermethodname-method-options)는 `segment: '#sum'`과 함께 자동으로 새로운 [policy](https://github.com/hapijs/catbox#policy)를 만듭니다. 또한, 고유 항목 `id`(캐시 키)는 인자로부터 자동으로 생성됩니다. 기본으로 `string`, `number`, `boolean` 인자를 받습니다. 더 복잡한 인자들은 인자를 기반으로 고유한 식별자를 만드는 `generateKey` 함수를 제공해야 합니다. - 더 자세한 내용은 서버 메소드 [tutorial](/tutorials/servermethods)에서 확인하세요.
 
 #### 다음은?
 
 * catbox policy [options](https://github.com/hapijs/catbox#policy)을 살펴보고 catbox 캐싱의 모든 잠재력을 활용하기 위해 `staleIn`, `staleTimeout`, `generateTimeout`에 각별한 주의를 기울여주세요.
-* 많은 예제는 서버 메소드 [tutorial](http://hapijs.com/tutorials/server-methods)을 확인하세요.
+* 많은 예제는 서버 메소드 [tutorial](http://hapijs.com/tutorials/servermethods)을 확인하세요.
 
 ### 클라이언트와 서버 캐싱
 
