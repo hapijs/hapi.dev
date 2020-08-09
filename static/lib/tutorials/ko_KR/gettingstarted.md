@@ -152,7 +152,7 @@ const init = async () => {
 
 [Inert](https://github.com/hapijs/inert)는 요청이 있을 때 하드 드라이브에 저장된 모든 콘텐츠를 제공합니다. 이는 실시간 다시 읽기 동작을 초래합니다. 취향에 맞춰 `/hello`에 대한 페이지를 바꿔보세요.
 
-정적 콘첸츠 제공 방법에 대한 자세한 내용은 [Serving Static Content](/tutorials/serving-files)에 자세히 설명되어 있습니다. 이 기술은 웹 응용프로그램에서 이미지, 스타일 시트 그리고 정적 페이지를 제공하는 데 일반적으로 사용됩니다.
+정적 콘첸츠 제공 방법에 대한 자세한 내용은 [Serving Static Content](/tutorials/servingfiles)에 자세히 설명되어 있습니다. 이 기술은 웹 응용프로그램에서 이미지, 스타일 시트 그리고 정적 페이지를 제공하는 데 일반적으로 사용됩니다.
 
 ### 플러그인 사용하기
 

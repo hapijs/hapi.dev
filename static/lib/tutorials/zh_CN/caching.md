@@ -160,11 +160,11 @@ start();
 
 除了 **分区(partitions)** 之外, 还有 **分段(segments)** ，它允许你在一个 [client](https://github.com/hapijs/catbox#client) 分区中进一步隔离缓存。如果需要缓存来自两种不同方法的结果，你通常不希望结果混在一起。在 [mongoDB](http://www.mongodb.org/) 适配器中, `segment` 代表一个集合，而在 [redis](http://redis.io/) 中它则是一个额外的拥有 `partition` 选项的前缀。
 
-当在插件内部调用 [server.cache()](/api#-servercacheoptions) 时，`segment` 的默认值为 `'!pluginName'`。当创建[server methods](/tutorials/server-methods) 时, `segment` 值将会是 `'#methodName'`。 如果你需要一个用于共享一个分段或者多个分段的用例，可以使用 [shared](/api#-servercacheoptions) 选项。
+当在插件内部调用 [server.cache()](/api#-servercacheoptions) 时，`segment` 的默认值为 `'!pluginName'`。当创建[server methods](/tutorials/servermethods) 时, `segment` 值将会是 `'#methodName'`。 如果你需要一个用于共享一个分段或者多个分段的用例，可以使用 [shared](/api#-servercacheoptions) 选项。
 
 #### 服务器方法
 
-除此之外我们可以做的更好！在 95% 的情况下，可以通过使用 [server methods](/tutorials/server-methods) 进行缓存, 可以将样本代码减少到最小。让我们使用服务器方法重写前面的示例：
+除此之外我们可以做的更好！在 95% 的情况下，可以通过使用 [server methods](/tutorials/servermethods) 进行缓存, 可以将样本代码减少到最小。让我们使用服务器方法重写前面的示例：
 
 ```javascript
 const start = async () => {
@@ -196,12 +196,12 @@ const start = async () => {
 
 start();
 ```
-[server.method()](/api#-servermethodname-method-options) 创建一个新的包含 `segment: '#sum'` 的 [policy](https://github.com/hapijs/catbox#policy)，以及通过参数自动生成的唯一的 `id` (缓存的键)。 默认来说它只处理 `string`， `number` 以及 `boolean` 参数。对于更复杂的参数，需要提供 `generateKey` 函数去创建一个基于参数的唯一id。  - 请参阅教程的这部分内容 [服务器方法](/tutorials/server-methods) 。
+[server.method()](/api#-servermethodname-method-options) 创建一个新的包含 `segment: '#sum'` 的 [policy](https://github.com/hapijs/catbox#policy)，以及通过参数自动生成的唯一的 `id` (缓存的键)。 默认来说它只处理 `string`， `number` 以及 `boolean` 参数。对于更复杂的参数，需要提供 `generateKey` 函数去创建一个基于参数的唯一id。  - 请参阅教程的这部分内容 [服务器方法](/tutorials/servermethods) 。
 
 #### 接下来呢?
 
 * 更深入的了解 catbox policy [options](https://github.com/hapijs/catbox#policy) ，了解更多关于 `staleIn`, `staleTimeout`, `generateTimeout`的信息, 以充分利用 catbox 缓存的潜力。
-* 阅读服务器方法的教程 [服务器方法](http://hapijs.com/tutorials/server-methods) 了解更多示例。
+* 阅读服务器方法的教程 [服务器方法](http://hapijs.com/tutorials/servermethods) 了解更多示例。
 
 ### 客户端和服务器端缓存
 

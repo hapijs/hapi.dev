@@ -152,7 +152,7 @@ const init = async () => {
 
 当你对硬盘上的文件作出修改的时候 [Inert](https://github.com/hapijs/inert) 将会自动重新加载这些文件。 你可以根据自己的喜好调整这个页面。
 
-更多关于静态内容的细节请访问 [静态内容](/tutorials/serving-files)。这项技术一般用于图片，css样式文件以及静态页面。
+更多关于静态内容的细节请访问 [静态内容](/tutorials/servingfiles)。这项技术一般用于图片，css样式文件以及静态页面。
 
 ### 使用插件
 

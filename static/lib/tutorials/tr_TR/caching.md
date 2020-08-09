@@ -164,11 +164,11 @@ Eğer http://localhost:8000/add/1/5 adresine bir istekte bulunursan bir saniye s
 
 **partitionlar**a ek olarak, bir [istemci (client)](https://github.com/hapijs/catbox#client) bölmelendirmesi içerisinde daha fazla izolasyon sağlayacak **segmentler** var. İki farklı yöntem sonucunu önbelleklemek istersen genelde bunları birbirine karıştırmak istemezsin. [mongoDB](http://www.mongodb.org/) adaptörlerinde `segment` bir koleksiyonu temsil ederken, [redis](http://redis.io/)te `partition` için eklenen öneke ek olarak eklenen bir önektir.
 
-Bir eklenti içerisinden [server.cache()](/api#-servercacheoptions) çağırıldığında `segment`in varsayılan değeri `'!pluginName'` olur. [Sunucu yöntemleri (server methods)](/tutorials/server-methods) oluştururken `segment` değeri `'#methodName'` olur. Eğer bir segmenti paylaşan birden fazla politikanın olduğu bir durum varsa, bunun için de [paylasılan (shared)](/api#-servercacheoptions) seçeneği mevcut.
+Bir eklenti içerisinden [server.cache()](/api#-servercacheoptions) çağırıldığında `segment`in varsayılan değeri `'!pluginName'` olur. [Sunucu yöntemleri (server methods)](/tutorials/servermethods) oluştururken `segment` değeri `'#methodName'` olur. Eğer bir segmenti paylaşan birden fazla politikanın olduğu bir durum varsa, bunun için de [paylasılan (shared)](/api#-servercacheoptions) seçeneği mevcut.
 
 #### Sunucu Yöntemi
 
-Daha iyi olabilir! Yüzde doksan beş ihtimal önbellekleme için [sunucu yöntemleri (server methods)](/tutorials/server-methods)ni kullanacaksın çünkü daha az basmakalıp kullanmak gerekiyor. Hadi önceki örneği sunucu yöntemi ile tekrar yazalım:
+Daha iyi olabilir! Yüzde doksan beş ihtimal önbellekleme için [sunucu yöntemleri (server methods)](/tutorials/servermethods)ni kullanacaksın çünkü daha az basmakalıp kullanmak gerekiyor. Hadi önceki örneği sunucu yöntemi ile tekrar yazalım:
 
 ```javascript
 const start = async () => {
@@ -200,12 +200,12 @@ const start = async () => {
 
 start();
 ```
-[server.method()](/api#-servermethodname-method-options) otomatik olarak `segment: '#sum'` kesitiyle yeni bir [politika (policy)](https://github.com/hapijs/catbox#policy) oluşturdu. Ayrıca değiştirgelerle tekil bir `id` (önbellek anahtarı) de oluşturuldu. Varsayılan olarak, `string`, `number` ve `boolean` değiştirgelerle çalışabilir. Daha kompleks değiştirgeler için değiştirgeleri kullanarak nasıl tekil tanımlayıcılar üretileceğini belirleyen bir `generateKey` işlevi tanımlamalısın. - [Sunucu yöntemleri](/tutorials/server-methods) öğreticisinden daha fazla bilgi alabilirsin.
+[server.method()](/api#-servermethodname-method-options) otomatik olarak `segment: '#sum'` kesitiyle yeni bir [politika (policy)](https://github.com/hapijs/catbox#policy) oluşturdu. Ayrıca değiştirgelerle tekil bir `id` (önbellek anahtarı) de oluşturuldu. Varsayılan olarak, `string`, `number` ve `boolean` değiştirgelerle çalışabilir. Daha kompleks değiştirgeler için değiştirgeleri kullanarak nasıl tekil tanımlayıcılar üretileceğini belirleyen bir `generateKey` işlevi tanımlamalısın. - [Sunucu yöntemleri](/tutorials/servermethods) öğreticisinden daha fazla bilgi alabilirsin.
 
 #### Sırada ne var?
 
 * catbox politikasının [seçenekler](https://github.com/hapijs/catbox#policy)inin içine bak ve catbox önbelleklemenin tüm potansiyelinden faydalanmak için `staleIn`, `staleTimeout`, `generateTimeout` kısımlarına özellikle dikkat et.
-* Daha fazla örnek için [sunucu yöntemleri (server methods)](http://hapijs.com/tutorials/server-methods) öğreticisine göz at.
+* Daha fazla örnek için [sunucu yöntemleri (server methods)](http://hapijs.com/tutorials/servermethods) öğreticisine göz at.
 
 ### Istemci ve Sunucu önbellekleme
 

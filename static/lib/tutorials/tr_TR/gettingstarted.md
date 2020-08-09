@@ -155,7 +155,7 @@ Bu basit bir HTML5 dokümanı.
 
 [Inert](https://github.com/hapijs/inert) istek yapıldığında diskinde ne varsa onu sunar. Bu canlı yenileme olayına sebep olan da bu. `/hello` yolunu zevkine göre düzenle.
 
-Durağan içeriklerin nasıl sunulduğu [Durağan İçerik Sunmak](/tutorials/serving-files) adresinde detaylandırılıyor. Bu teknik genelde resim, biçem sayfaları (stylesheet) ve durağan sayfaları sunmak için kullanırılır.
+Durağan içeriklerin nasıl sunulduğu [Durağan İçerik Sunmak](/tutorials/servingfiles) adresinde detaylandırılıyor. Bu teknik genelde resim, biçem sayfaları (stylesheet) ve durağan sayfaları sunmak için kullanırılır.
 ___
 
 ### Eklentileri Kullanmak

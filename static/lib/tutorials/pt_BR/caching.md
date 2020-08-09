@@ -150,11 +150,11 @@ O primeiro parâmeto da função `sumCache.get` é um objeto com uma chave obrig
 
 Além de **partições**, tem **segmentos** que permite você isolar os caches sem um [client](https://github.com/hapids/catbox#client). Se você deseja armazernar o resultado em cache por dois firentes métodos, você geralmente não vai querer misturar os resultados juntos. No adaptador [mongoDB](http://www.mongodb.org), `segment` representa uma colcação e no [redis](http://redis.io/) isto é um prefixo adiciona, juntamento com a opção `partition`.
 
-O valor padrão para `segment` quando [server.cache](http://hapijs.com/api#servercacheoptions) é chamado dentro de um plugin será `'!pluginName'`. Ao criar [server methods](http://hapijs.com/tutorials/server-methods), o valor do `segment` será `'#methodName'`. Se você tiver usando em um caso várias policies que compartilham um segment exite uma opção [shared](http://hapijs.com/api#servercacheoptions) disponível também.
+O valor padrão para `segment` quando [server.cache](http://hapijs.com/api#servercacheoptions) é chamado dentro de um plugin será `'!pluginName'`. Ao criar [server methods](http://hapijs.com/tutorials/servermethods), o valor do `segment` será `'#methodName'`. Se você tiver usando em um caso várias policies que compartilham um segment exite uma opção [shared](http://hapijs.com/api#servercacheoptions) disponível também.
 
 ### Métodos de servidor
 
-Mas ele pode ficar melhor que isto! Em 95% dos casos você pode user [server methods](http://hapijs.com/tutorials/server-methods) para fins de armazenamento em cache, porque isso reduz a padronização para o minimo. Vamos reescrever a Listagem 5 usando os métodos do servidor:
+Mas ele pode ficar melhor que isto! Em 95% dos casos você pode user [server methods](http://hapijs.com/tutorials/servermethods) para fins de armazenamento em cache, porque isso reduz a padronização para o minimo. Vamos reescrever a Listagem 5 usando os métodos do servidor:
 
 ```javascript
 const add = function (a, b, next) {
@@ -187,12 +187,12 @@ server.route({
 ```
 **Listagem 6** Usando cache via métodos do servidor
 
-[server.method()](http://hapijs.com/api#servermethodname-method-options) cria uma nova [policy](https://github.com/hapijs/catbox#policy) com `segment: '#sum'` automaticamente para nós. Além disso, o único item `id` (chave do cache) esta gerda automaticamente a partir dos parâmetros. Por padrão, ele lida com parâmetros do tipo `string`, `number` e `boolean`. Para parâmetros mais complexos, você tem que fornecer sua próprio função `generateKey` para criar os ids único baseado nos parêmetros - confira os métodos do servidor [tutorial](http://hapijs.com/tutorials/server-methods) para mais informações.
+[server.method()](http://hapijs.com/api#servermethodname-method-options) cria uma nova [policy](https://github.com/hapijs/catbox#policy) com `segment: '#sum'` automaticamente para nós. Além disso, o único item `id` (chave do cache) esta gerda automaticamente a partir dos parâmetros. Por padrão, ele lida com parâmetros do tipo `string`, `number` e `boolean`. Para parâmetros mais complexos, você tem que fornecer sua próprio função `generateKey` para criar os ids único baseado nos parêmetros - confira os métodos do servidor [tutorial](http://hapijs.com/tutorials/servermethods) para mais informações.
 
 ### Qual a próxima?
 
 * De uma olhada melhor em catbox policy [options](https://github.com/hapijs/catbox#policy) e preste bastante atenção em `staleIn`, `staleTimeout`, `generateTimeout`, que aproveita todo o potencial do armazenamento em cache do catbox.
-* Varifique os métodos do servidor [tutorial](http://hapijs.com/tutorials/server-methods) para mais exemplos.
+* Varifique os métodos do servidor [tutorial](http://hapijs.com/tutorials/servermethods) para mais exemplos.
 
 ## Caheando no lado do cliente e servidor.
 

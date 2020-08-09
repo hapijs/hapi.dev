@@ -113,7 +113,7 @@ Crie um diretório chamado `public` na raiz do seu projeto. Depois, crie um arqu
 
 Inert exibirá qualquer conteúdo salvo no seu disco rígido quando a requisição for feita, isto é o que leva a carregar em tempo real. Você pode personalizar a página `/hello` ao seu gosto.
 
-Para mais detalhes sobre como o conteúdo estático funciona acesse [Servindo Conteúdo Estático](/tutorials/serving-files). Essa técnica é comumente usada para imagens, folhas de estilos e páginas estáticas em aplicações web.
+Para mais detalhes sobre como o conteúdo estático funciona acesse [Servindo Conteúdo Estático](/tutorials/servingfiles). Essa técnica é comumente usada para imagens, folhas de estilos e páginas estáticas em aplicações web.
 
 ## Usando plugins
 
