@@ -529,7 +529,7 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     Static file and directory handlers
 
-*   [joi <img src="/img/family.svg" class="plugins-logo" />](https://github.com/sideway/joi)
+*   [joi](https://joi.dev)
 
     Object schema description language and validator for JavaScript objects
 
@@ -549,7 +549,7 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     Hapi plugin for writing Micro Frontend Fragment servers with Podium - https://podium-lib.io
 
-*   [qs <img src="/img/family.svg" class="plugins-logo" />](https://github.com/hapijs/qs)
+*   [qs](https://github.com/ljharb/qs)
 
     A querystring parser with support for arrays and objects
 
