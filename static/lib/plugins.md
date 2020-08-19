@@ -505,6 +505,10 @@ There are dozens of plugins for hapi, ranging from documentation to authenticati
 
     Server composer
 
+*   [graphi](https://github.com/geek/graphi)
+
+    hapi GraphQL server plugin
+
 *   [h2o2 <img src="/img/family.svg" class="plugins-logo" />](https://hapi.dev/family/h2o2)
 
     Proxy handler
