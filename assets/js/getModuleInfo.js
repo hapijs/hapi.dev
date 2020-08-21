@@ -94,6 +94,7 @@ async function getInfo() {
       repositories.data[r].name !== "assets" &&
       repositories.data[r].name !== ".github" &&
       repositories.data[r].name !== "validate" &&
+      repositories.data[r].name !== "ci-config-travis" &&
       repositories.data[r].name !== "hapi.dev"
     ) {
       repos[repositories.data[r].name] = {
@@ -108,6 +109,10 @@ async function getInfo() {
         usage = "";
         faq = "";
         advance = "";
+        // skip commercial branches
+        if (branch.name.match(/commercial$/g)) {
+          continue;
+        }
         if (branch.name.match(/^v+[0-9]+|\bmaster\b/g)) {
           const gitHubVersion = await axios.get(
             "https://api.github.com/repos/hapijs/" +
@@ -270,6 +275,7 @@ async function getInfo() {
       repositories.data[r].name !== "assets" &&
       repositories.data[r].name !== ".github" &&
       repositories.data[r].name !== "validate" &&
+      repositories.data[r].name !== "ci-config-travis" &&
       repositories.data[r].name !== "hapi.dev"
     ) {
       let readme = await axios.get(
