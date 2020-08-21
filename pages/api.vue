@@ -196,6 +196,9 @@ export default {
     for (let branch of branches) {
       let v = "";
       try {
+        if (branch.name.match(/commercial$/g)) {
+          continue;
+        }
         if (branch.name.match(/^v+[0-9]+/g)) {
           v = await $axios.$get(
             "https://api.github.com/repos/hapijs/hapi/contents/package.json?ref=" +
