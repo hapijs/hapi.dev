@@ -5,6 +5,8 @@ let fs = require("fs");
 let Toc = require("markdown-toc");
 require("dotenv").config();
 
+// need to handle this more gracefully
+// its really a list of modules with API.md
 const modules = [
   "accept",
   "ammo",
@@ -26,6 +28,8 @@ const modules = [
   "cookie",
   "crumb",
   "cryptiles",
+  "eslint-plugin-hapi",
+  "file",
   "glue",
   "good",
   "good-console",
@@ -34,15 +38,12 @@ const modules = [
   "hoek",
   "inert",
   "iron",
-  "items",
+  "jwt",
   "lab",
   "mimos",
   "nes",
   "oppsy",
   "podium",
-  "rule-capitalize-modules",
-  "rule-for-loop",
-  "rule-scope-start",
   "scooter",
   "shot",
   "subtext",
@@ -50,6 +51,26 @@ const modules = [
   "vision",
   "wreck",
   "yar"
+];
+
+// exclude these modules
+const excludeModules = [
+  ".github",
+  "assets",
+  "beam",
+  "ci-config-travis",
+  "eslint-config-hapi",
+  "eslint-config-hapi",
+  "hapi.dev",
+  "items",
+  "lab-external-module-test",
+  "ratrace",
+  "rule-capitalize-modules",
+  "rule-for-loop",
+  "rule-no-arrowception",
+  "rule-no-var",
+  "rule-scope-start",
+  "validate"
 ];
 
 getInfo();
@@ -80,6 +101,9 @@ async function getInfo() {
   );
   const nodeTravisVersions = Yaml.safeLoad(nodeTravisYaml.data).node_js.reverse().filter(e=> e !== "node");
   for (let r = 0; r < repositories.data.length; ++r) {
+    if (excludeModules.includes(repositories.data[r].name)) {
+      continue;
+    }
     finalHtmlDisplay = "";
     finalMenu = "";
     let branches = await axios.get(
