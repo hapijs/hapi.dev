@@ -176,33 +176,10 @@ export default {
   async asyncData({ params, $axios, query }) {
     let lang = ["en_US", "pt_BR", "ko_KR", "tr_TR", "zh_CN"];
     let tutorials = {};
-    const dev = process.env.NODE_ENV !== "production";
-    const server = dev
-      ? `http://localhost:3000/lib/tutorials/`
-      : `https://api.github.com/repos/hapijs/hapi.dev/contents/static/lib/tutorials/`;
-    const options = {
-      headers: {
-        accept: "application/vnd.github.v3.raw+json",
-        authorization: "token " + process.env.GITHUB_TOKEN
-      }
-    };
+
     for (let l of lang) {
-      let tutorialFile = await $axios.$get(
-        server + `${l}/${params.tutorial}.md`,
-        options
-      );
-      let tutorialHTML = await $axios.$post(
-        "https://api.github.com/markdown",
-        {
-          text: tutorialFile,
-          mode: "markdown"
-        },
-        {
-          headers: {
-            authorization: "token " + process.env.GITHUB_TOKEN
-          }
-        }
-      );
+      let tutorialFile = await import(`../../static/lib/tutorials/${l}/${params.tutorial}.md`);
+      let tutorialHTML = tutorialFile.default;
 
       let rawString = await tutorialFile.toString();
 
