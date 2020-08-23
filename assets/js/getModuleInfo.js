@@ -358,7 +358,7 @@ async function getInfo() {
   }
   await fs.writeFile(
     "./static/lib/moduleInfo.json",
-    JSON.stringify(newRepos),
+    JSON.stringify(newRepos, null, 2),
     function(err) {
       if (err) throw err;
     }
