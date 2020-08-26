@@ -22,6 +22,7 @@ The home of the [hapi.dev](http://hapi.dev) developer portal.
 ```GITHUB_TOKEN = "YOUR TOKEN"```
 
 * Run ```npm run dev``` and go to ```http://localhost:3000``` to view the site. The dev server hot loads, which will automatically show your changes without having to restart the server. 
+* Run ```npm run static``` and go to ```http://localhost:3000``` to view the site with the actual resulting /dist folder.
 
 * After you make your changes, simply open a pull request. 
 
@@ -29,7 +30,14 @@ The home of the [hapi.dev](http://hapi.dev) developer portal.
 In the directory `static/lib/tutorials` we have some directories with the name of the languages translated, to add a new translation, simply add a new folder in the `static/lib/tutorials` with your translation.
 An Example, if you translate the tutorials, to Brazilian Portuguese, you must use the `pt_BR` as the name of the directory.
 Inside the directory `pt_BR`, you need to follow the same struture we use in `en_US`, with all tutorials separated in markdown files and an `index.js` file that's export the tutorials and the titles.
-After finish the translations, you also need add your translation in the `index.js` file inside `staic/lib/tutorials`.
+After finish the translations, you also need add your translation in the `index.js` file inside `static/lib/tutorials`.
 
 ## Plugins
 hapijs.com maintains a list of community-created plugins [here](http://hapi.dev/plugins). If there are any plugins you have created or one you use often that isn't listed please send a [pull request](https://github.com/hapijs/hapi.dev/blob/master/static/lib/plugins.md). Please note the existing categories, but if your plugin does not fit one feel free to create your own. Please keep the plugins in alphabetical order to be fair to all contributors.
+
+## Building the docker image
+  - npm install (installs dependencies in order to run the generate)
+  - npm run generate (builds the static dist folder)
+  - npm run docker-build (creates hapi.dev image with just static content)
+
+This builds a static docker image without any secrets. It relies on the dist folder being created from the npm run generate step.
