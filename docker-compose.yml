@@ -1,0 +1,7 @@
+version: '3.7'
+services:
+  hapi.dev:
+    image: hapi.dev
+    container_name: hapi.dev
+    ports:
+      - 3000:3000

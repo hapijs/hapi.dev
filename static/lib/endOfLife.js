@@ -4,13 +4,9 @@ export const endOfLife = {
   accept: {
     "3.x.x": "Apr 30, 2020"
   },
-  address: {
-    "2.x.x": "Apr 30, 2020"
-  },
   ammo: {},
   b64: {},
   basic: {},
-  beam: {},
   bell: {},
   boom: {},
   bossy: {},
@@ -28,7 +24,6 @@ export const endOfLife = {
   crumb: {},
   cryptiles: {},
   file: {},
-  formula: {},
   glue: {},
   good: {},
   goodConsole: {},
@@ -42,7 +37,6 @@ export const endOfLife = {
   hoek: {},
   inert: {},
   iron: {},
-  items: {},
   joi: {},
   joiDate: {},
   jwt: {},
@@ -52,12 +46,9 @@ export const endOfLife = {
   nigel: {},
   oppsy: {},
   pez: {},
-  pinpoint: {},
   podium: {},
-  ratrace: {},
   scooter: {},
   shot: {},
-  sntp: {},
   somever: {},
   statehood: {},
   subtext: {},
