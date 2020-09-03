@@ -6,9 +6,9 @@ The home of the [hapi.dev](http://hapi.dev) developer portal.
 
 ## Running/developing
 
-* First, clone or download the repo and run ```npm install```. 
+* First, clone or download the repo and run ```npm install```.
 
-* Next, you need to make an .env file in the root directory. 
+* Next, you need to make an .env file in the root directory.
 
 * Obtain a token from GitHub [here](https://github.com/settings/tokens/new) and select checked scopes only (only two)
 
@@ -21,10 +21,10 @@ The home of the [hapi.dev](http://hapi.dev) developer portal.
 * Copy your GitHub token and place it in your .env file by entering:
 ```GITHUB_TOKEN = "YOUR TOKEN"```
 
-* Run ```npm run dev``` and go to ```http://localhost:3000``` to view the site. The dev server hot loads, which will automatically show your changes without having to restart the server. 
+* Run ```npm run dev``` and go to ```http://localhost:3000``` to view the site. The dev server hot loads, which will automatically show your changes without having to restart the server.
 * Run ```npm run static``` and go to ```http://localhost:3000``` to view the site with the actual resulting /dist folder.
 
-* After you make your changes, simply open a pull request. 
+* After you make your changes, simply open a pull request.
 
 ## Add a translation for the tutorials
 In the directory `static/lib/tutorials` we have some directories with the name of the languages translated, to add a new translation, simply add a new folder in the `static/lib/tutorials` with your translation.
