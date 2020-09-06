@@ -1,6 +1,7 @@
 [
   {
     "name": "Authorization",
+    "anchor": "authorization",
     "modules": [
       {
         "name": "hacli",
@@ -31,6 +32,7 @@
   },
   {
     "name": "Authentication",
+    "anchor": "authentication",
     "modules": [
       {
         "name": "basic",
@@ -101,6 +103,7 @@
   },
   {
     "name": "Documentation",
+    "anchor": "documentation",
     "modules": [
       {
         "name": "hapi-ending",
@@ -126,6 +129,7 @@
   },
   {
     "name": "Encoding",
+    "anchor": "encoding",
     "modules": [
       {
         "name": "brok",
@@ -136,6 +140,7 @@
   },
   {
     "name": "Hypermedia",
+    "anchor": "hypermedia",
     "modules": [
       {
         "name": "hapi-http-problem-details",
@@ -146,6 +151,7 @@
   },
   {
     "name": "Localization/Internationalization",
+    "anchor": "localization",
     "modules": [
       {
         "name": "hapi-i18n",
@@ -161,6 +167,7 @@
   },
   {
     "name": "Logging/Metrics",
+    "anchor": "logging",
     "modules": [
       {
         "name": "blipp",
@@ -206,6 +213,7 @@
   },
   {
     "name": "Messaging",
+    "anchor": "messaging",
     "modules": [
       {
         "name": "hapi-plugin-websocket",
@@ -231,6 +239,7 @@
   },
   {
     "name": "Security",
+    "anchor": "security",
     "modules": [
       {
         "name": "blankie",
@@ -252,6 +261,7 @@
   },
   {
     "name": "Session",
+    "anchor": "session",
     "modules": [
       {
         "name": "hapi-server-session",
@@ -268,6 +278,7 @@
   },
   {
     "name": "Templating",
+    "anchor": "templating",
     "modules": [
       {
         "name": "hapi-react-views",
@@ -278,6 +289,7 @@
   },
   {
     "name": "Utility",
+    "anchor": "utility",
     "modules": [
       {
         "name": "admin-bro-hapijs",
@@ -594,6 +606,7 @@
   },
   {
     "name": "Validation",
+    "anchor": "validation",
     "modules": [
       {
         "name": "blaine",
@@ -659,7 +672,8 @@
     ]
   },
   {
-    "name": "universe",
+    "name": "The extended hapi universe",
+    "anchor": "universe",
     "modules": [
       {
         "name": "boom",

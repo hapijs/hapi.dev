@@ -6,16 +6,14 @@
       <p>
         There are dozens of plugins for hapi, ranging from documentation to authentication,
         and much more. If you wrote or use a plugin that you don't see on this list, please
-        send us a <a href="https://github.com/hapijs/hapi.dev/blob/master/static/lib/plugins.md">pull request</a>.
+        send us a <a href="https://github.com/hapijs/hapi.dev/blob/master/static/lib/plugins.json">pull request</a>.
       </p>
       <p>
         <img src="/img/family.svg" class="plugins-logo-top">
         -   Designates an offical hapi family plugin
       </p>
-      <div :id="category.name + 1"
-        v-for="category in categories"
-        v-bind:key="category.name">
-      <h2><a :name="category.name.toLowerCase()"></a> {{ category.name }}</h2>
+      <div v-for="category in categories" v-bind:key="category.name">
+      <h2><a :name="category.anchor"></a> {{ category.name }}</h2>
       <div class="family-grid">
         <div
           class="family-grid-cell"
