@@ -131,7 +131,7 @@ const init = async () => {
 
 `node server.js`로 서버를 시작하고 브라우저에서 [`http://localhost:3000/hello`](http://localhost:3000/hello)로 이동하세요. 오 이런! `hello.html` 파일을 만들지 않았기 때문에 에러를 받았습니다. 이 에러를 제거하기 위해 빠진 파일을 만들어야 합니다.
 
-`hello.html` 파일을 저장할 `public`이라는 폴더를 디렉터리의 루트에 만들어주세요. `hello.html` 안에 다음 HTML을 넣어주세요.: 
+`hello.html` 파일을 저장할 `public`이라는 폴더를 디렉터리의 루트에 만들어주세요. `hello.html` 안에 다음 HTML을 넣어주세요.:
 
 ```html
 <!DOCTYPE html>
@@ -244,4 +244,4 @@ init();
 
 ### 그 밖의 모든 것
 
-hapi는 많은 다른 기능들을 가지고 있으며 여기에서는 선택된 몇가지만 기술했습니다. 많은 기능들을 확인하려면 오른쪽 목록을 사용해주세요. 다른 모든 것은 [API reference](/api)에 문서화 되어 있으며 언제나처럼 [github](https://github.com/hapijs/discuss/issues)과 [gitter](https://gitter.im/hapijs/hapi)에 자유롭게 질문을 하거나 [slack](https://join.slack.com/t/hapihour/shared_invite/enQtNTA5MDUzOTAzOTU4LTUyZmFiYjkyMTBmNDcyMmI2MmRjMzg4Y2YzNTlmNzUzNjViN2U1NmYyY2NjYjhiYWU4MGE2OTFhZDRlYWMyZDY)을 방문해주세요.
+hapi는 많은 다른 기능들을 가지고 있으며 여기에서는 선택된 몇가지만 기술했습니다. 많은 기능들을 확인하려면 오른쪽 목록을 사용해주세요. 다른 모든 것은 [API reference](/api)에 문서화 되어 있으며 언제나처럼 [github](https://github.com/hapijs/discuss/issues)과 [gitter](https://gitter.im/hapijs/hapi)에 자유롭게 질문을 하거나 [slack](https://join.slack.com/t/hapihour/shared_invite/zt-g5ortpsk-ErlnRA2rUcPIWES21oXBOg)을 방문해주세요.

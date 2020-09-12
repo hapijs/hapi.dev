@@ -247,4 +247,4 @@ Güzel! Bu yalnızca eklentilerin neler yapabildiğini gösteren kısa bir örne
 
 ### Geriye kalan her sey
 
-Buradaki örneklerde hapi'nin başlıca birkaç kabiliyeti dokümante edilmiş olsada, onun daha bir çok yeteneği var. Bunlara ulaşmak için sağındaki listeyi kullanabilirsin. Geriye kalan her şey [API reference](/api) altında dökümante ediliyor. Her zaman olduğu gibi, [github](https://github.com/hapijs/discuss/issues)'ı soru sormak için kullanabilir ya da bizi [slack](https://join.slack.com/t/hapihour/shared_invite/enQtNTA5MDUzOTAzOTU4LTUyZmFiYjkyMTBmNDcyMmI2MmRjMzg4Y2YzNTlmNzUzNjViN2U1NmYyY2NjYjhiYWU4MGE2OTFhZDRlYWMyZDY) üzerinde ziyaret edebilirsin.
+Buradaki örneklerde hapi'nin başlıca birkaç kabiliyeti dokümante edilmiş olsada, onun daha bir çok yeteneği var. Bunlara ulaşmak için sağındaki listeyi kullanabilirsin. Geriye kalan her şey [API reference](/api) altında dökümante ediliyor. Her zaman olduğu gibi, [github](https://github.com/hapijs/discuss/issues)'ı soru sormak için kullanabilir ya da bizi [slack](https://join.slack.com/t/hapihour/shared_invite/zt-g5ortpsk-ErlnRA2rUcPIWES21oXBOg) üzerinde ziyaret edebilirsin.

@@ -91,7 +91,7 @@ init();
 
 Save the above as `index.js` and start the server with the command `node index.js`. Now you'll find that if you visit `http://localhost:3000` in your browser, you'll see the text 'Hello, World!'.
 
-The `method` property can be any valid HTTP method, array of HTTP methods, or an asterisk to allow any method. 
+The `method` property can be any valid HTTP method, array of HTTP methods, or an asterisk to allow any method.
 
 The `path` property defines the path including parameters. It can contain optional parameters, numbered parameters, and even wildcards. For more details, see the routing tutorial.
 
@@ -99,4 +99,4 @@ The `handler` function performs the main business logic of the route and sets th
 
 ## <a name="everything"></a> Everything Else
 
-hapi has many, many other capabilities and only a select few are documented in tutorials here. This tutorial was intentionally minimal, we highly recommend you to check out the plugins tutorial. It will give some more knowledge to better organize your hapi project. We also have other tutorials of interest, please use the list to your left to check them out. Everything else is documented in the [API reference](/api) and, as always, feel free to ask questions on [github](https://github.com/hapijs/hapi/issues) or just visit us on [slack](https://hapihour.slack.com/join/shared_invite/enQtNTA5MDUzOTAzOTU4LTY1YzY0ZDM4YTZkNzYzOGExNDYzZjQ3YzJkNTVhNmExMDdlMjY3NDhkNDUxNjU4NTY1YjkzMTcxMzBkMzFiNWE).
+hapi has many, many other capabilities and only a select few are documented in tutorials here. This tutorial was intentionally minimal, we highly recommend you to check out the plugins tutorial. It will give some more knowledge to better organize your hapi project. We also have other tutorials of interest, please use the list to your left to check them out. Everything else is documented in the [API reference](/api) and, as always, feel free to ask questions on [github](https://github.com/hapijs/hapi/issues) or just visit us on [slack](https://join.slack.com/t/hapihour/shared_invite/zt-g5ortpsk-ErlnRA2rUcPIWES21oXBOg).
