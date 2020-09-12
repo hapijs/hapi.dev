@@ -112,7 +112,7 @@ async function getInfo() {
         "/branches",
       options
     );
-    console.log(repositories.data[r].name);
+    console.log('Processing repo: ' + repositories.data[r].name);
     branches = branches.data.sort((a, b) => (a.name > b.name) ? 1 : -1)
     if (
       repositories.data[r].name !== "assets" &&
@@ -258,10 +258,16 @@ async function getInfo() {
             continue;
           }
           let nodeVersions;
-          if (Yaml.safeLoad(nodeYaml.data.import)) {
+          const importData = Yaml.safeLoad(nodeYaml.data);
+          if (importData.import) {
             nodeVersions = nodeTravisVersions;
+            if (importData.import.toString().match(/install_plugin/)) {
+              repos[repositories.data[r].name].isPlugin = true;
+            } else {
+              repos[repositories.data[r].name].isPlugin = false;
+            }
           } else {
-            nodeVersions = Yaml.safeLoad(nodeYaml.data).node_js.reverse();
+            nodeVersions = importData.node_js.reverse();
           }
           if (repos[repositories.data[r].name].versionsArray.indexOf(gitHubVersion.data.version) === -1) {
             repos[repositories.data[r].name].versionsArray.push(
