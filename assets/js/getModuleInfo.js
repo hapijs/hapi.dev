@@ -261,7 +261,7 @@ async function getInfo() {
           const importData = Yaml.safeLoad(nodeYaml.data);
           if (importData.import) {
             nodeVersions = nodeTravisVersions;
-            if (importData.import.toString().match(/install_plugin/)) {
+            if (/install_plugin/.test(importData.import.toString())) {
               repos[repositories.data[r].name].isPlugin = true;
             } else {
               repos[repositories.data[r].name].isPlugin = false;
