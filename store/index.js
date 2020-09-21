@@ -50,7 +50,7 @@ export const state = () => ({
     "cookie",
     "crumb",
     "cryptiles",
-    "eslint-plugin-hapi",
+    "eslint-plugin",
     "file",
     "glue",
     "good",
