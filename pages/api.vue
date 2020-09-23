@@ -196,9 +196,6 @@ export default {
     for (let branch of branches) {
       let v = "";
       try {
-        if (branch.name.match(/commercial$/g)) {
-          continue;
-        }
         if (branch.name.match(/^v+[0-9]+/g)) {
           v = await $axios.$get(
             "https://api.github.com/repos/hapijs/hapi/contents/package.json?ref=" +
@@ -252,6 +249,9 @@ export default {
         }
       );
       let apiString = await apiHTML.toString();
+      if (branchVersions[version].match(/commercial$/g)) {
+        apiString = "\n<span style=color:red><b>**Note**</b><br/>This is a commercial API version and is not officially supported by the TSC.</span>\n" + apiString;
+      }
       let finalHtmlDisplay = await apiString.replace(/user-content-/g, "");
       apis[version] = await finalHtmlDisplay;
     }
