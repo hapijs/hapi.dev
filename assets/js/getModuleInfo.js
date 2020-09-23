@@ -133,7 +133,7 @@ async function getInfo() {
         faq = "";
         advance = "";
         // skip commercial branches
-        if (branch.name.match(/commercial$/g)) {
+        if (branch.name.match(/commercial$/g) && repositories.data[r].name != 'hapi') {
           continue;
         }
         if (branch.name.match(/^v+[0-9]+|\bmaster\b/g)) {
