@@ -175,8 +175,8 @@
 *   [Building a modern backend with TypeScript, Hapi, PostgreSQL and Prisma](https://www.prisma.io/blog/series/modern-backend-bdes2ps5kibb)
 
     A series of live streams and articles on building a backend with TypeScript, Hapi, PostgreSQL, and Prisma.
-    The series covers data modeling, CRUD, aggregations, REST, validation with Joi, testing, authentication, authorization, integration with other APIs, continuous     integration and deployment with GitHub Actions and Heroku.
-    The series explores and demonstrates different patterns, problems, and architectures for a modern backend by solving a concrete problem: a grading system for       online courses. This is a good example because it features diverse relations types and is complex enough to represent a real-world use case.
+    The series covers data modeling, CRUD, aggregations, REST, validation with Joi, testing, authentication, authorization, integration with other APIs, continuous integration and deployment with GitHub Actions and Heroku.
+    The series explores and demonstrates different patterns, problems, and architectures for a modern backend by solving a concrete problem: a grading system for online courses. This is a good example because it features diverse relations types and is complex enough to represent a real-world use case.
 
 *   [Handling plugin dependencies](https://hapipal.com/best-practices/handling-plugin-dependencies)
 
