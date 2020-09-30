@@ -227,6 +227,9 @@ async function getInfo() {
 
               for (let i = 0; i < apiTocArray.length; ++i) {
                 let testPattern = apiTocArray[i].match(/(?=#)(.*)(?=\s)/);
+                if (testPattern == null) {
+                  continue;
+                }
                 if (testPattern[0].length < pattern.length) {
                   pattern = testPattern[0];
                 }
@@ -254,6 +257,7 @@ async function getInfo() {
               finalHtmlDisplay = await apiString.replace(/user-content-/g, "");
             }
           } catch (err) {
+            console.log(err);
             continue;
           }
           let nodeVersions;
