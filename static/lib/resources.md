@@ -172,6 +172,12 @@
 
     Real-time chat application built using hapi.js, Socket.io and Redis Pub/Sub with end-to-end tests.
 
+*   [Building a modern backend with TypeScript, Hapi, PostgreSQL and Prisma](https://www.prisma.io/blog/series/modern-backend-bdes2ps5kibb)
+
+    A series of live streams and articles on building a backend with TypeScript, Hapi, PostgreSQL, and Prisma.
+    The series covers data modeling, CRUD, aggregations, REST, validation with Joi, testing, authentication, authorization, integration with other APIs, continuous integration and deployment with GitHub Actions and Heroku.
+    The series explores and demonstrates different patterns, problems, and architectures for a modern backend by solving a concrete problem: a grading system for online courses. This is a good example because it features diverse relations types and is complex enough to represent a real-world use case.
+
 *   [Handling plugin dependencies](https://hapipal.com/best-practices/handling-plugin-dependencies)
 
     In celebration of hapi plugin boundaries, here we offer a concrete approach to taming inter-plugin dependencies.
@@ -208,11 +214,16 @@
 
     Tutorial on how to integrate Socket.io with hapi.js
 
+
 ## <a name="videos"></a> Videos
 
 *   [Hapi Days Conf 2014 Videos](https://www.youtube.com/playlist?list=PLzc1AUDlJ7WvcMnv3NaEwgh0i2nJKl0GX)
 
     hapi days is a one day conference that's focused on hapi and the people that use it.
+    
+*   [Modern backend with TypeScript, Hapi, PostgreSQL and Prisma](https://www.youtube.com/watch?v=d9v7umfMNkM&list=PLn2e1F9Rfr6k7ULe0gzQvtaXLoXrPqpki&index=2&ab_channel=Prisma)
+
+    A series of live streams and articles on building a backend with TypeScript, Hapi, PostgreSQL, and Prisma.
 
 *   [Nodevember Conf 2014 hapi.js Workshop](https://www.youtube.com/watch?v=TEKFocYepFY)
 
