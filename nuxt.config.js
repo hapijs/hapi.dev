@@ -1,5 +1,4 @@
 module.exports = {
-  mode: "universal",
   telemetry: false,
 
   generate: {
