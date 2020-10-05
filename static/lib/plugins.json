@@ -58,6 +58,11 @@
         "description": "A bearer token based authentication scheme"
       },
       {
+        "name": "hapi-auth-jwt2",
+        "link": "https://www.npmjs.com/package/hapi-auth-jwt2",
+        "description": "Simplified JSON Web Token (JWT) authentication plugin"
+      },
+      {
         "name": "hapi-jsonwebtoken",
         "link": "https://github.com/odorisioe/hapi-jsonwebtoken",
         "description": "JsonWebToken implementation for Hapi.js v17+ with authentication plugin"
