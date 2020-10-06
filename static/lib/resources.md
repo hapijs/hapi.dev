@@ -1,6 +1,6 @@
 ## <a name="books"></a> Books
 
-*   [Practical Hapi <img src="/img/practical-hapi.jpg" class="resources-book" />](https://www.amazon.com/Practical-hapi-Build-Industry-Studies/dp/1484258045)
+*   [Practical Hapi <img src="/img/practical-hapi-book.jpg" class="resources-book" />](https://www.amazon.com/Practical-hapi-Build-Industry-Studies/dp/1484258045)
 
     This book walks you through an end to end implementation of hapi, nodejs and asynchronous programming, right through Node JS Event Loop, Rest API best practices, Hapi Server Setup, Routing, Post and Get Requests with Payload and Parameters, Database Connectivity, Sequelize, Validation, Plugin Architecture, npm repository and its optimum use, swaggerui Integration, Postman tricks, Tricks and Tips for Neater Code, Constructs like await, fetch etc., Nodemon and much much more!!!! A capstone project with industry level challenges is what takes the cake in explaining Hapi in context. The framework is a great choice since it was tried and tested for high production demands and is backed by the best. With further releases coming, this framework is here to stay and is certainly an addition to your skills.
 
