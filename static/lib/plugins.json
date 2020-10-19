@@ -37,18 +37,21 @@
       {
         "name": "basic",
         "isHapi": true,
+        "github": "https://github.com/hapijs/basic",
         "link": "https://hapi.dev/family/basic",
         "description": "An HTTP Basic authentication scheme"
       },
       {
         "name": "bell",
         "isHapi": true,
+        "github": "https://github.com/hapijs/bell",
         "link": "https://hapi.dev/family/bell",
         "description": "Third-party login plugin for hapi with built in Facebook, GitHub, Google, Instagram, LinkedIn, Twitter, Yahoo, Foursquare, VK, ArcGIS Online and Windows Live support"
       },
       {
         "name": "cookie",
         "isHapi": true,
+        "github": "https://github.com/hapijs/cookie",
         "link": "https://hapi.dev/family/cookie",
         "description": "A cookie-based session authentication scheme"
       },
@@ -96,6 +99,7 @@
       {
         "name": "jwt",
         "isHapi": true,
+        "github": "https://github.com/hapijs/jwt",
         "link": "https://hapi.dev/family/jwt",
         "description": "JWT (JSON Web Token) Authentication."
       }
@@ -139,13 +143,49 @@
     ]
   },
   {
+    "name": "GraphQL",
+    "anchor": "graphql",
+    "modules": [
+      {
+        "name": "hapi-plugin-graphiql",
+        "link": "https://github.com/rse/hapi-plugin-graphiql",
+        "description": "HAPI plugin for integrating GraphiQL, an interactive GraphQL user interface"
+      },
+      {
+        "name": "graphi",
+        "link": "https://www.npmjs.com/package/graphi",
+        "github": "https://github.com/geek/graphi",
+        "description": "Simple to use hapi GraphQL server plugin"
+      }
+    ]
+  },
+  {
     "name": "Hypermedia",
     "anchor": "hypermedia",
     "modules": [
       {
+        "name": "boom",
+        "isHapi": true,
+        "github": "https://github.com/hapijs/boom",
+        "link": "https://hapi.dev/family/boom",
+        "description": "HTTP-friendly error objects"
+      },
+      {
+        "name": "hapi-openapi",
+        "link": "https://github.com/krakenjs/hapi-openapi",
+        "description": "hapi plugin to build design-driven apis with OpenAPI (formerly swagger)."
+      },
+      {
         "name": "hapi-http-problem-details",
         "link": "https://github.com/PDMLab/hapi-http-problem-details",
         "description": "Create HTTP Problem Details (RFC7807) for hapi application errors"
+      },
+      {
+        "name": "inert",
+        "isHapi": true,
+        "github": "https://github.com/hapijs/inert",
+        "link": "https://hapi.dev/family/inert",
+        "description": "Static file and directory handlers"
       }
     ]
   },
@@ -226,6 +266,13 @@
         "description": "Support for multi-process publish/subscribe for nes"
       },
       {
+        "name": "nes",
+        "isHapi": true,
+        "github": "https://github.com/hapijs/nes",
+        "link": "https://hapi.dev/family/nes",
+        "description": "WebSocket adapter plugin for hapi routes"
+      },
+      {
         "name": "susie",
         "link": "https://github.com/mtharrison/susie",
         "description": "Server-Sent Events for hapi with support for streaming events"
@@ -249,6 +296,7 @@
       {
         "name": "crumb",
         "isHapi": true,
+        "github": "https://github.com/hapijs/crumb",
         "link": "https://hapi.dev/family/crumb",
         "description": "CSRF crumb generation and validation for hapi"
       },
@@ -271,6 +319,7 @@
       {
         "name": "yar",
         "isHapi": true,
+        "github": "https://github.com/hapijs/yar",
         "link": "https://hapi.dev/family/yar",
         "description": "A hapi session plugin and cookie jar"
       }
@@ -284,6 +333,33 @@
         "name": "hapi-react-views",
         "link": "https://github.com/jedireza/hapi-react-views",
         "description": "A hapi view engine for React components"
+      },
+      {
+        "name": "vision",
+        "isHapi": true,
+        "github": "https://github.com/hapijs/vision",
+        "link": "https://hapi.dev/family/vision",
+        "description": "Templates rendering support"
+      }
+    ]
+  },
+  {
+    "name": "Testing",
+    "anchor": "testing",
+    "modules": [
+      {
+        "name": "lab",
+        "isHapi": true,
+        "github": "https://github.com/hapijs/lab",
+        "link": "https://hapi.dev/family/lab",
+        "description": "A simple testing utility with code coverage analysis"
+      },
+      {
+        "name": "shot",
+        "isHapi": true,
+        "github": "https://github.com/hapijs/shot",
+        "link": "https://hapi.dev/family/shot",
+        "description": "Injects a fake HTTP request/response into your node server logic"
       }
     ]
   },
@@ -502,6 +578,13 @@
         "description": "A Hapi plugin for Sequelize ORM"
       },
       {
+        "name": "hoek",
+        "isHapi": true,
+        "github": "https://github.com/hapijs/hoek",
+        "link": "https://hapi.dev/family/hoek",
+        "description": "General purpose node utilities"
+      },
+      {
         "name": "mrhorse",
         "link": "https://github.com/mark-bradshaw/mrhorse",
         "description": "Plugin for adding pre-handlers and post-handlers to routes"
@@ -529,6 +612,7 @@
       {
         "name": "scooter",
         "isHapi": true,
+        "github": "https://github.com/hapijs/scooter",
         "link": "https://hapi.dev/family/scooter",
         "description": "User-agent information plugin"
       },
@@ -556,6 +640,59 @@
         "name": "Wildcard API",
         "link": "https://github.com/reframejs/wildcard-api",
         "description": "RPC implementation for browser ⇔ Node.js communication."
+      },
+      {
+        "name": "topo",
+        "isHapi": true,
+        "link": "https://hapi.dev/family/topo",
+        "description": "Topological sorting with grouping support"
+      },
+      {
+        "name": "wreck",
+        "isHapi": true,
+        "github": "https://github.com/hapijs/wreck",
+        "link": "https://hapi.dev/family/wreck",
+        "description": "HTTP Client utilities"
+      },
+      {
+        "name": "glue",
+        "isHapi": true,
+        "github": "https://github.com/hapijs/glue",
+        "link": "https://hapi.dev/family/glue",
+        "description": "Server composer"
+      },
+      {
+        "name": "h2o2",
+        "isHapi": true,
+        "github": "https://github.com/hapijs/h2o2",
+        "link": "https://hapi.dev/family/h2o2",
+        "description": "Proxy handler"
+      },
+      {
+        "name": "hapi-graceful-pm2",
+        "link": "https://github.com/roylines/hapi-graceful-pm2",
+        "description": "Handle true zero downtime reloads when issuing a pm2 gracefulReload command"
+      },
+      {
+        "name": "podium-hapi-layout",
+        "link": "https://github.com/podium-lib/hapi-layout",
+        "description": "Hapi plugin for writing Micro Frontend Layout servers with Podium - https://podium-lib.io"
+      },
+      {
+        "name": "podium-hapi-podlet",
+        "link": "https://github.com/podium-lib/hapi-podlet",
+        "description": "Hapi plugin for writing Micro Frontend Fragment servers with Podium - https://podium-lib.io"
+      },
+      {
+        "name": "qs",
+        "isHapi": true,
+        "link": "https://github.com/hapijs/qs",
+        "description": "A querystring parser with support for arrays and objects"
+      },
+      {
+        "name": "tarm",
+        "link": "https://github.com/kanongil/tarm",
+        "description": "Add tarmount handler for serving tar file contents"
       }
     ]
   },
@@ -602,6 +739,11 @@
         "name": "houdin",
         "link": "https://github.com/ruiquelhas/houdin",
         "description": "Route-level file signature validation for request payloads in memory"
+      },
+      {
+        "name": "joi",
+        "link": "https://joi.dev",
+        "description": "Object schema description language and validator for JavaScript objects"
       },
       {
         "name": "lafayette",
@@ -698,119 +840,6 @@
         "name": "underdog",
         "link": "https://github.com/hapipal/underdog",
         "description": "HTTP/2 server-push for hapi"
-      }
-    ]
-  },
-  {
-    "name": "The extended hapi universe",
-    "anchor": "universe",
-    "modules": [
-      {
-        "name": "boom",
-        "isHapi": true,
-        "link": "https://hapi.dev/family/boom",
-        "description": "HTTP-friendly error objects"
-      },
-      {
-        "name": "glue",
-        "isHapi": true,
-        "link": "https://hapi.dev/family/glue",
-        "description": "Server composer"
-      },
-      {
-        "name": "h2o2",
-        "isHapi": true,
-        "link": "https://hapi.dev/family/h2o2",
-        "description": "Proxy handler"
-      },
-      {
-        "name": "hapi-graceful-pm2",
-        "link": "https://github.com/roylines/hapi-graceful-pm2",
-        "description": "Handle true zero downtime reloads when issuing a pm2 gracefulReload command"
-      },
-      {
-        "name": "hapi-openapi",
-        "link": "https://github.com/krakenjs/hapi-openapi",
-        "description": "hapi plugin to build design-driven apis with OpenAPI (formerly swagger)."
-      },
-      {
-        "name": "hapi-plugin-graphiql",
-        "link": "https://github.com/rse/hapi-plugin-graphiql",
-        "description": "HAPI plugin for integrating GraphiQL, an interactive GraphQL user interface"
-      },
-      {
-        "name": "hoek",
-        "isHapi": true,
-        "link": "https://hapi.dev/family/hoek",
-        "description": "General purpose node utilities"
-      },
-      {
-        "name": "inert",
-        "isHapi": true,
-        "link": "https://hapi.dev/family/inert",
-        "description": "Static file and directory handlers"
-      },
-      {
-        "name": "joi",
-        "link": "https://joi.dev",
-        "description": "Object schema description language and validator for JavaScript objects"
-      },
-      {
-        "name": "lab",
-        "isHapi": true,
-        "link": "https://hapi.dev/family/lab",
-        "description": "A simple testing utility with code coverage analysis"
-      },
-      {
-        "name": "nes",
-        "isHapi": true,
-        "link": "https://hapi.dev/family/nes",
-        "description": "WebSocket adapter plugin for hapi routes"
-      },
-      {
-        "name": "podium-hapi-layout",
-        "link": "https://github.com/podium-lib/hapi-layout",
-        "description": "Hapi plugin for writing Micro Frontend Layout servers with Podium - https://podium-lib.io"
-      },
-      {
-        "name": "podium-hapi-podlet",
-        "link": "https://github.com/podium-lib/hapi-podlet",
-        "description": "Hapi plugin for writing Micro Frontend Fragment servers with Podium - https://podium-lib.io"
-      },
-      {
-        "name": "qs",
-        "isHapi": true,
-        "link": "https://github.com/hapijs/qs",
-        "description": "A querystring parser with support for arrays and objects"
-      },
-      {
-        "name": "shot",
-        "isHapi": true,
-        "link": "https://hapi.dev/family/shot",
-        "description": "Injects a fake HTTP request/response into your node server logic"
-      },
-      {
-        "name": "tarm",
-        "link": "https://github.com/kanongil/tarm",
-        "description": "Add tarmount handler for serving tar file contents"
-      },
-      {
-        "name": "topo",
-        "isHapi": true,
-        "link": "https://hapi.dev/family/topo",
-        "description": "Topological sorting with grouping support"
-      },
-      {
-        "name": "vision",
-        "isHapi": true,
-        "link": "https://hapi.dev/family/vision",
-        "description": "Templates rendering support"
-      },
-      {
-        "name": "wreck",
-        "isHapi": true,
-        "link": "https://hapi.dev/family/wreck",
-        "description": "HTTP Client utilities"
       }
     ]
   }
