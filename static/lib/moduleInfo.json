@@ -110,10 +110,10 @@
       "license": "BSD"
     },
     "slogan": "The Simple, Secure Framework Developers Trust",
-    "forks": 1304,
-    "stars": 12765,
-    "date": "2020-09-28T17:13:15Z",
-    "updated": "Mon Sep 28 2020",
+    "forks": 1309,
+    "stars": 12797,
+    "date": "2020-10-21T12:11:04Z",
+    "updated": "Wed Oct 21 2020",
     "link": "https://github.com/hapijs/hapi"
   },
   "accept": {
@@ -143,7 +143,7 @@
     },
     "slogan": "HTTP Accept-* headers parsing.",
     "forks": 23,
-    "stars": 41,
+    "stars": 42,
     "date": "2020-09-26T18:11:27Z",
     "updated": "Sat Sep 26 2020",
     "link": "https://github.com/hapijs/accept"
@@ -271,7 +271,7 @@
     },
     "slogan": "Third-party login plugin for hapi.js.",
     "forks": 214,
-    "stars": 623,
+    "stars": 622,
     "date": "2020-09-27T00:12:42Z",
     "updated": "Sat Sep 26 2020",
     "link": "https://github.com/hapijs/bell"
@@ -302,8 +302,8 @@
       "license": "BSD"
     },
     "slogan": "HTTP-friendly error objects.",
-    "forks": 199,
-    "stars": 2791,
+    "forks": 203,
+    "stars": 2789,
     "date": "2020-09-26T19:01:24Z",
     "updated": "Sat Sep 26 2020",
     "link": "https://github.com/hapijs/boom"
@@ -399,7 +399,7 @@
     },
     "slogan": "JSON.parse() drop-in replacement with prototype poisoning protection.",
     "forks": 13,
-    "stars": 119,
+    "stars": 118,
     "date": "2020-09-26T19:12:36Z",
     "updated": "Sat Sep 26 2020",
     "link": "https://github.com/hapijs/bourne"
@@ -431,7 +431,7 @@
     },
     "slogan": "Simple HTTP Router.",
     "forks": 25,
-    "stars": 34,
+    "stars": 33,
     "date": "2020-09-30T19:33:04Z",
     "updated": "Wed Sep 30 2020",
     "link": "https://github.com/hapijs/call"
@@ -463,7 +463,7 @@
     },
     "slogan": "Multi-strategy object caching service.",
     "forks": 72,
-    "stars": 497,
+    "stars": 495,
     "date": "2020-09-26T19:19:18Z",
     "updated": "Sat Sep 26 2020",
     "link": "https://github.com/hapijs/catbox"
@@ -623,7 +623,7 @@
     },
     "slogan": "BDD assertion library.",
     "forks": 78,
-    "stars": 233,
+    "stars": 234,
     "date": "2020-09-26T19:35:34Z",
     "updated": "Sat Sep 26 2020",
     "link": "https://github.com/hapijs/code"
@@ -846,7 +846,7 @@
       "license": "BSD"
     },
     "slogan": "Server composer for hapi.js.",
-    "forks": 60,
+    "forks": 59,
     "stars": 245,
     "date": "2020-09-26T19:53:37Z",
     "updated": "Sat Sep 26 2020",
@@ -879,7 +879,7 @@
     },
     "slogan": "hapi process monitoring.",
     "forks": 163,
-    "stars": 528,
+    "stars": 526,
     "date": "2020-09-26T17:31:42Z",
     "updated": "Sat Sep 26 2020",
     "link": "https://github.com/hapijs/good"
@@ -1038,10 +1038,10 @@
       "license": "BSD"
     },
     "slogan": "Utility methods for the hapi ecosystem.",
-    "forks": 162,
+    "forks": 164,
     "stars": 464,
-    "date": "2020-09-26T20:11:22Z",
-    "updated": "Sat Sep 26 2020",
+    "date": "2020-10-09T15:34:57Z",
+    "updated": "Fri Oct 09 2020",
     "link": "https://github.com/hapijs/hoek"
   },
   "inert": {
@@ -1103,7 +1103,7 @@
     },
     "slogan": "Encapsulated tokens (encrypted and mac'ed objects).",
     "forks": 52,
-    "stars": 536,
+    "stars": 538,
     "date": "2020-09-26T20:16:24Z",
     "updated": "Sat Sep 26 2020",
     "link": "https://github.com/hapijs/iron"
@@ -1135,7 +1135,7 @@
     },
     "slogan": "JWT (JSON Web Token) Authentication.",
     "forks": 15,
-    "stars": 21,
+    "stars": 22,
     "date": "2020-09-30T14:08:05Z",
     "updated": "Wed Sep 30 2020",
     "link": "https://github.com/hapijs/jwt"
@@ -1166,10 +1166,10 @@
       "license": "BSD"
     },
     "slogan": "Node test utility.",
-    "forks": 177,
-    "stars": 731,
-    "date": "2020-09-23T02:28:31Z",
-    "updated": "Tue Sep 22 2020",
+    "forks": 179,
+    "stars": 732,
+    "date": "2020-10-21T12:58:37Z",
+    "updated": "Wed Oct 21 2020",
     "link": "https://github.com/hapijs/lab"
   },
   "mimos": {
@@ -1230,8 +1230,8 @@
       "license": "BSD"
     },
     "slogan": "WebSocket adapter plugin for hapi routes.",
-    "forks": 81,
-    "stars": 489,
+    "forks": 82,
+    "stars": 490,
     "date": "2020-09-26T16:58:07Z",
     "updated": "Sat Sep 26 2020",
     "link": "https://github.com/hapijs/nes"
@@ -1422,7 +1422,7 @@
       "license": "BSD"
     },
     "slogan": "Injects a fake HTTP request/response into your node server logic.",
-    "forks": 43,
+    "forks": 44,
     "stars": 199,
     "date": "2020-09-26T20:56:12Z",
     "updated": "Sat Sep 26 2020",
@@ -1646,7 +1646,7 @@
       "license": "BSD"
     },
     "slogan": "Template rendering support for hapi.js.",
-    "forks": 66,
+    "forks": 67,
     "stars": 188,
     "date": "2020-09-26T21:40:12Z",
     "updated": "Sat Sep 26 2020",
