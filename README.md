@@ -41,3 +41,7 @@ hapijs.com maintains a list of community-created plugins [here](http://hapi.dev/
   - npm run docker-build (creates hapi.dev image with just static content)
 
 This builds a static docker image without any secrets. It relies on the dist folder being created from the npm run generate step.
+
+## Deployment process
+
+See [DEPLOY.md](DEPLOY.md)
