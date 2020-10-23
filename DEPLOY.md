@@ -16,13 +16,13 @@ At this point if everything looks good and you don't notice any regression, you 
 
 ## Deploying
 
-You need to go [Netlify's login page](https://app.netlify.com/). Once logged in make sure you are on the hapi team account and not your personal one:
+You need to go to [Netlify's login page](https://app.netlify.com/). Once logged in make sure you are on the hapi team account and not your personal one:
 <div align="center"><img src="https://user-images.githubusercontent.com/583657/96974202-30154c80-1519-11eb-8247-684b3f6bfc98.png" alt="hapi team account switch" /></div>
 
 Pick the **hapi.dev** from the list of sites available either from the dashboard or the "sites" tab:
 <div align="center"><img src="https://user-images.githubusercontent.com/583657/96975430-b67e5e00-151a-11eb-8dda-50d613b741cd.png" alt="hapi site select" /></div>
 
-Active the automatic builds for that site:
+Activate the automatic builds for that site:
 <div align="center"><img src="https://user-images.githubusercontent.com/583657/96975661-0a894280-151b-11eb-9813-55e88c275e7e.png" alt="enable hapi.dev automatic build button" /></div>
 
 We don't keep the automatic build enabled so we don't build the website on every commit push to the repo. This is intended to decrease the build minutes consumption on our account otherwise 💸.
@@ -45,4 +45,3 @@ Just click that "Stop builds" radio button and hit save:
 <div align="center"><img src="https://user-images.githubusercontent.com/583657/96977528-7ff61280-151d-11eb-8eab-3afd5c493ca4.png" alt="hapi.dev site setting to disable automatic builds" /></div>
 
 Good job!
-
