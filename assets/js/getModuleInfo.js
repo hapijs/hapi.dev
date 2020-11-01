@@ -113,241 +113,225 @@ async function getInfo() {
     );
     console.log('Processing repo: ' + repositories.data[r].name);
     branches = branches.data.sort((a, b) => (a.name > b.name) ? 1 : -1)
-    if (
-      repositories.data[r].name !== "assets" &&
-      repositories.data[r].name !== ".github" &&
-      repositories.data[r].name !== "validate" &&
-      repositories.data[r].name !== "ci-config-travis" &&
-      repositories.data[r].name !== "hapi.dev"
-    ) {
-      repos[repositories.data[r].name] = {
-        name: repositories.data[r].name,
-        versions: [],
-        versionsArray: [],
-        api: false
-      };
-      for (let branch of branches) {
-        intro = "";
-        example = "";
-        usage = "";
-        faq = "";
-        advance = "";
-        // skip commercial branches
-        if (branch.name.match(/commercial$/g) && repositories.data[r].name != 'hapi') {
+    repos[repositories.data[r].name] = {
+      name: repositories.data[r].name,
+      versions: [],
+      versionsArray: [],
+      api: false
+    };
+    for (let branch of branches) {
+      intro = "";
+      example = "";
+      usage = "";
+      faq = "";
+      advance = "";
+      // skip commercial branches
+      if (branch.name.match(/commercial$/g) && repositories.data[r].name != 'hapi') {
+        continue;
+      }
+      if (branch.name.match(/^v+[0-9]+|\bmaster\b/g)) {
+        const gitHubVersion = await axios.get(
+          "https://api.github.com/repos/hapijs/" +
+            repositories.data[r].name +
+            "/contents/package.json?ref=" +
+            branch.name,
+          options
+        );
+        const nodeYaml = await axios.get(
+          "https://api.github.com/repos/hapijs/" +
+            repositories.data[r].name +
+            "/contents/.travis.yml?ref=" +
+            branch.name,
+          options
+        );
+        //Get API
+        try {
+          if (modules.includes(repositories.data[r].name)) {
+            const api = await axios.get(
+              "https://api.github.com/repos/hapijs/" +
+                repositories.data[r].name +
+                "/contents/API.md?ref=" +
+                branch.name,
+              options
+            );
+            repos[repositories.data[r].name].api = true;
+            let rawString = await api.data.toString();
+
+            if (branch.name === "master") {
+              let intros = await rawString.match(
+                /(?=#.*Intro)([\s\S]*?)(?=\n#)/
+              );
+              if (intros) {
+                rawString = await rawString.replace(
+                  /(?=#.*Intro)([\s\S]*?)(?=\n#)/,
+                  ""
+                );
+                intro = intros[0];
+              }
+              let usages = await rawString.match(
+                /(?=#.*Usage)([\s\S]*?)(?=\n#)/
+              );
+              if (usages) {
+                rawString = await rawString.replace(
+                  /(?=#.*Usage)([\s\S]*?)(?=\n#)/,
+                  ""
+                );
+                usage = usages[0];
+              }
+              let advanced = await rawString.match(
+                /(?=#.*Advanced\W\W)([\s\S]*?)(?=\n#)/
+              );
+              if (advanced) {
+                rawString = await rawString.replace(
+                  /(?=#.*Advanced\W\W)([\s\S]*?)(?=\n#)/,
+                  ""
+                );
+                advance = advanced[0];
+              }
+              let examples = await rawString.match(
+                /(?=#.*Example\s\s)([\s\S]*?)(?=\n#)/
+              );
+              if (examples && repositories.data[r].name !== "bell") {
+                rawString = await rawString.replace(
+                  /(?=#.*Example)([\s\S]*?)(?=\n#)/,
+                  ""
+                );
+                example = examples[0];
+              }
+              rawString = (await rawString) + "#";
+              let faqs = await rawString.match(
+                /(?=#.*F.A.Q.)([\s\S]*?)(?=\n#)/
+              );
+              if (faqs) {
+                rawString = await rawString.replace(
+                  /(?=#.*F.A.Q.)([\s\S]*?)(?=\n#)/,
+                  ""
+                );
+                faq = faqs[0];
+              }
+            }
+
+            rawString = rawString.substring(0, rawString.length - 1);
+
+            //Auto generate TOC
+            let apiTocString = "";
+            let apiTocArray = await rawString.match(/\n#.+/g);
+            let pattern = "####";
+
+            for (let i = 0; i < apiTocArray.length; ++i) {
+              let testPattern = apiTocArray[i].match(/(?=#)(.*)(?=\s)/);
+              if (testPattern == null) {
+                continue;
+              }
+              if (testPattern[0].length < pattern.length) {
+                pattern = testPattern[0];
+              }
+             apiTocString = apiTocString + apiTocArray[i];
+            }
+            finalMenu = Toc(apiTocString, { bullets: "-" }).content;
+
+            //Generate API and Menu HTML
+            let finalDisplay = await rawString.replace(/\/>/g, "></a>");
+            finalMenu = await finalMenu.replace(/Boom\./g, "");
+            finalMenu = await finalMenu.replace(/\(([^#*]+)\)/g, "()");
+            const apiHTML = await axios.post(
+              "https://api.github.com/markdown",
+              {
+                text: finalDisplay,
+                mode: "markdown"
+              },
+              {
+                headers: {
+                  authorization: "token " + process.env.GITHUB_TOKEN
+                }
+              }
+            );
+            let apiString = await apiHTML.data.toString();
+            finalHtmlDisplay = await apiString.replace(/user-content-/g, "");
+          }
+        } catch (err) {
+          console.log(err);
           continue;
         }
-        if (branch.name.match(/^v+[0-9]+|\bmaster\b/g)) {
-          const gitHubVersion = await axios.get(
-            "https://api.github.com/repos/hapijs/" +
-              repositories.data[r].name +
-              "/contents/package.json?ref=" +
-              branch.name,
-            options
-          );
-          const nodeYaml = await axios.get(
-            "https://api.github.com/repos/hapijs/" +
-              repositories.data[r].name +
-              "/contents/.travis.yml?ref=" +
-              branch.name,
-            options
-          );
-          //Get API
-          try {
-            if (modules.includes(repositories.data[r].name)) {
-              const api = await axios.get(
-                "https://api.github.com/repos/hapijs/" +
-                  repositories.data[r].name +
-                  "/contents/API.md?ref=" +
-                  branch.name,
-                options
-              );
-              repos[repositories.data[r].name].api = true;
-              let rawString = await api.data.toString();
-
-              if (branch.name === "master") {
-                let intros = await rawString.match(
-                  /(?=#.*Intro)([\s\S]*?)(?=\n#)/
-                );
-                if (intros) {
-                  rawString = await rawString.replace(
-                    /(?=#.*Intro)([\s\S]*?)(?=\n#)/,
-                    ""
-                  );
-                  intro = intros[0];
-                }
-                let usages = await rawString.match(
-                  /(?=#.*Usage)([\s\S]*?)(?=\n#)/
-                );
-                if (usages) {
-                  rawString = await rawString.replace(
-                    /(?=#.*Usage)([\s\S]*?)(?=\n#)/,
-                    ""
-                  );
-                  usage = usages[0];
-                }
-                let advanced = await rawString.match(
-                  /(?=#.*Advanced\W\W)([\s\S]*?)(?=\n#)/
-                );
-                if (advanced) {
-                  rawString = await rawString.replace(
-                    /(?=#.*Advanced\W\W)([\s\S]*?)(?=\n#)/,
-                    ""
-                  );
-                  advance = advanced[0];
-                }
-                let examples = await rawString.match(
-                  /(?=#.*Example\s\s)([\s\S]*?)(?=\n#)/
-                );
-                if (examples && repositories.data[r].name !== "bell") {
-                  rawString = await rawString.replace(
-                    /(?=#.*Example)([\s\S]*?)(?=\n#)/,
-                    ""
-                  );
-                  example = examples[0];
-                }
-                rawString = (await rawString) + "#";
-                let faqs = await rawString.match(
-                  /(?=#.*F.A.Q.)([\s\S]*?)(?=\n#)/
-                );
-                if (faqs) {
-                  rawString = await rawString.replace(
-                    /(?=#.*F.A.Q.)([\s\S]*?)(?=\n#)/,
-                    ""
-                  );
-                  faq = faqs[0];
-                }
-              }
-
-              rawString = rawString.substring(0, rawString.length - 1);
-
-              //Auto generate TOC
-              let apiTocString = "";
-              let apiTocArray = await rawString.match(/\n#.+/g);
-              let pattern = "####";
-
-              for (let i = 0; i < apiTocArray.length; ++i) {
-                let testPattern = apiTocArray[i].match(/(?=#)(.*)(?=\s)/);
-                if (testPattern == null) {
-                  continue;
-                }
-                if (testPattern[0].length < pattern.length) {
-                  pattern = testPattern[0];
-                }
-                apiTocString = apiTocString + apiTocArray[i];
-              }
-              finalMenu = Toc(apiTocString, { bullets: "-" }).content;
-
-              //Generate API and Menu HTML
-              let finalDisplay = await rawString.replace(/\/>/g, "></a>");
-              finalMenu = await finalMenu.replace(/Boom\./g, "");
-              finalMenu = await finalMenu.replace(/\(([^#*]+)\)/g, "()");
-              const apiHTML = await axios.post(
-                "https://api.github.com/markdown",
-                {
-                  text: finalDisplay,
-                  mode: "markdown"
-                },
-                {
-                  headers: {
-                    authorization: "token " + process.env.GITHUB_TOKEN
-                  }
-                }
-              );
-              let apiString = await apiHTML.data.toString();
-              finalHtmlDisplay = await apiString.replace(/user-content-/g, "");
-            }
-          } catch (err) {
-            console.log(err);
-            continue;
-          }
-          let nodeVersions;
-          const importData = Yaml.safeLoad(nodeYaml.data);
-          if (importData.import) {
-            nodeVersions = nodeTravisVersions;
-            if (/install_plugin/.test(importData.import.toString())) {
-              repos[repositories.data[r].name].isPlugin = true;
-            } else {
-              repos[repositories.data[r].name].isPlugin = false;
-            }
+        let nodeVersions;
+        const importData = Yaml.safeLoad(nodeYaml.data);
+        if (importData.import) {
+          nodeVersions = nodeTravisVersions;
+          if (/install_plugin/.test(importData.import.toString())) {
+            repos[repositories.data[r].name].isPlugin = true;
           } else {
-            nodeVersions = importData.node_js.reverse();
+            repos[repositories.data[r].name].isPlugin = false;
           }
-          if (repos[repositories.data[r].name].versionsArray.indexOf(gitHubVersion.data.version) === -1) {
-            repos[repositories.data[r].name].versionsArray.push(
-              gitHubVersion.data.version
-            );
-            repos[repositories.data[r].name].versions.push({
-              name: gitHubVersion.data.version,
-              branch: branch.name,
-              license: gitHubVersion.data.name.includes("commercial")
-                ? "Commercial"
-                : "BSD",
-              node: nodeVersions.join(", ").replace("node,", "")
-            });
-            repos[repositories.data[r].name][gitHubVersion.data.version] = {
-              menu: finalMenu,
-              api: await finalHtmlDisplay,
-              intro: intro,
-              example: example,
-              usage: usage,
-              faq: faq,
-              advanced: advance,
-              license: gitHubVersion.data.name.includes("commercial")
-                ? "Commercial"
-                : "BSD"
-            };
-          }
-          await repos[repositories.data[r].name].versions.sort(function(a, b) {
-            return Semver.compare(b.name, a.name);
-          });
+        } else {
+          nodeVersions = importData.node_js.reverse();
         }
+        if (repos[repositories.data[r].name].versionsArray.indexOf(gitHubVersion.data.version) === -1) {
+          repos[repositories.data[r].name].versionsArray.push(
+            gitHubVersion.data.version
+          );
+          repos[repositories.data[r].name].versions.push({
+            name: gitHubVersion.data.version,
+            branch: branch.name,
+            license: gitHubVersion.data.name.includes("commercial")
+              ? "Commercial"
+              : "BSD",
+            node: nodeVersions.join(", ").replace("node,", "")
+          });
+          repos[repositories.data[r].name][gitHubVersion.data.version] = {
+            menu: finalMenu,
+            api: await finalHtmlDisplay,
+            intro: intro,
+            example: example,
+            usage: usage,
+            faq: faq,
+            advanced: advance,
+            license: gitHubVersion.data.name.includes("commercial")
+              ? "Commercial"
+              : "BSD"
+          };
+        }
+        await repos[repositories.data[r].name].versions.sort(function(a, b) {
+          return Semver.compare(b.name, a.name);
+        });
       }
     }
 
-    if (
-      repositories.data[r].name !== "assets" &&
-      repositories.data[r].name !== ".github" &&
-      repositories.data[r].name !== "validate" &&
-      repositories.data[r].name !== "ci-config-travis" &&
-      repositories.data[r].name !== "hapi.dev"
-    ) {
-      let readme = await axios.get(
-        "https://api.github.com/repos/hapijs/" +
-          repositories.data[r].name +
-          "/contents/README.md",
-        options
-      );
-      let forks = await axios.get(
-        "https://api.github.com/repos/hapijs/" + repositories.data[r].name,
-        options
-      );
-      let slogan =
-        (await readme.data.match(/####(.*)/gm)) !== null
-          ? await readme.data.match(/####(.*)/gm)[0].substring(5)
-          : "Description coming soon...";
-      let date = await new Date(forks.data.pushed_at);
-      (repos[repositories.data[r].name].slogan = await slogan),
-        (repos[repositories.data[r].name].forks = await Number(
-          forks.data.forks_count
-        )),
-        (repos[repositories.data[r].name].stars = await Number(
-          forks.data.stargazers_count
-        )),
-        (repos[repositories.data[r].name].date = await forks.data.pushed_at),
-        (repos[repositories.data[r].name].updated = await date.toDateString()),
-        (repos[repositories.data[r].name].link =
-          "https://github.com/hapijs/" + repositories.data[r].name);
+    let readme = await axios.get(
+      "https://api.github.com/repos/hapijs/" +
+        repositories.data[r].name +
+        "/contents/README.md",
+      options
+    );
+    let forks = await axios.get(
+      "https://api.github.com/repos/hapijs/" + repositories.data[r].name,
+      options
+    );
+    let slogan =
+      (await readme.data.match(/####(.*)/gm)) !== null
+        ? await readme.data.match(/####(.*)/gm)[0].substring(5)
+        : "Description coming soon...";
+    let date = await new Date(forks.data.pushed_at);
+    (repos[repositories.data[r].name].slogan = await slogan),
+      (repos[repositories.data[r].name].forks = await Number(
+        forks.data.forks_count
+      )),
+      (repos[repositories.data[r].name].stars = await Number(
+        forks.data.stargazers_count
+      )),
+      (repos[repositories.data[r].name].date = await forks.data.pushed_at),
+      (repos[repositories.data[r].name].updated = await date.toDateString()),
+      (repos[repositories.data[r].name].link =
+        "https://github.com/hapijs/" + repositories.data[r].name);
 
-      for (let key of Object.keys(repos)) {
-        if (repos[key].versions.length > 1) {
-          if (
-            repos[key].versions[0].name === repos[key].versions[1].name &&
-            repos[key].versions[0].license === "Commercial"
-          ) {
-            let temp = repos[key].versions[0];
-            repos[key].versions[0] = repos[key].versions[1];
-            repos[key].versions[1] = temp;
-          }
+    for (let key of Object.keys(repos)) {
+      if (repos[key].versions.length > 1) {
+        if (
+          repos[key].versions[0].name === repos[key].versions[1].name &&
+          repos[key].versions[0].license === "Commercial"
+        ) {
+          let temp = repos[key].versions[0];
+          repos[key].versions[0] = repos[key].versions[1];
+          repos[key].versions[1] = temp;
         }
       }
     }
