@@ -40,15 +40,6 @@
               </li>
               <li class="resources-header-link">
                 <a
-                  ref="gists"
-                  :class="$props.page === '#gists' ? 'resources-active' : ''"
-                  v-on:click="onClick('gists')"
-                  href="/resources/list#gists"
-                  >Gists and code samples</a
-                >
-              </li>
-              <li class="resources-header-link">
-                <a
                   ref="boilerplates"
                   :class="
                     $props.page === '#boilerplates' ? 'resources-active' : ''

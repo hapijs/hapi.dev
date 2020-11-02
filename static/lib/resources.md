@@ -24,20 +24,6 @@
 
     This handbook is a collection of tutorials for Hapi.js framework. You can find tutorials about validation, working with 3rd plugins, sending/getting data, template engines, integrations with DB and etc.
 
-## <a name="gists"></a> Gists and code samples
-
-*   [Code style tips](https://gist.github.com/hueniverse/a06f6315ea736ed1b46d)
-
-    Simple node.js code style tips to improve code quality
-
-*   [rate-limiter-flexible-plugin-example](https://github.com/animir/node-rate-limiter-flexible/wiki/Hapi-plugin)
-
-    Plugin example of rate limiting and DDoS protection with rate-limiter-flexible package
-
-*   [Walmart Mobile node.js setup](https://gist.github.com/hueniverse/7686452)
-
-    An insight into how hapi.js is used at Walmart
-
 ## <a name="boilerplates"></a> Boilerplates
 
 *   [appy](https://github.com/JKHeadley/appy)
@@ -218,6 +204,9 @@
 
     Tutorial on how to integrate Socket.io with hapi.js
 
+*   [rate-limiter-flexible-plugin-example](https://github.com/animir/node-rate-limiter-flexible/wiki/Hapi-plugin)
+
+    Plugin example of rate limiting and DDoS protection with rate-limiter-flexible package
 
 ## <a name="videos"></a> Videos
 
