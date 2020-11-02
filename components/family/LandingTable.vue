@@ -8,7 +8,6 @@
           <th class="node-header">Node</th>
           <th class="dependencies-header">Dependencies</th>
           <th class="travis-header">Travis</th>
-          <th class="life-header">End of Life</th>
         </tr>
       </thead>
       <tbody>
@@ -95,9 +94,6 @@
               />
             </a>
           </td>
-          <td class="module-life">
-            {{ getSemver(name, version.name, version.license) }}
-          </td>
         </tr>
       </tbody>
     </table>
@@ -105,7 +101,6 @@
 </template>
 
 <script>
-const life = require("../../static/lib/endOfLife.js");
 const moduleInfo = require("../../static/lib/moduleInfo.json");
 let Semver = require("semver");
 import _ from "lodash";
@@ -126,21 +121,10 @@ export default {
         160: '<div class="status-code status-failing"></div>',
         nonMaster: '<div class="status-code status-nonMaster"></div>'
       },
-      life: life,
       newRepos: moduleInfo
     };
   },
   methods: {
-    getSemver(name, version, license) {
-      if (life.endOfLife[_.camelCase(name)] && license !== "Commercial") {
-        for (let v in life.endOfLife[_.camelCase(name)]) {
-          if (Semver.satisfies(version, v)) {
-            return life.endOfLife[_.camelCase(name)][v];
-          }
-          return null;
-        }
-      }
-    },
     camelName(name) {
       return _.camelCase(name);
     },
@@ -180,8 +164,7 @@ export default {
 
 .landing-table .travis-header,
 .landing-table .license-header,
-.landing-table .node-header,
-.landing-table .life-header {
+.landing-table .node-header {
   width: 16.6%;
   text-align: center;
   font-weight: 900;
@@ -202,10 +185,6 @@ export default {
 
 .landing-table-row .status-badge {
   vertical-align: middle;
-}
-
-.module-life {
-  text-align: center !important;
 }
 
 @media (prefers-color-scheme: dark) {
