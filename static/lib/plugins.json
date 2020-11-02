@@ -768,17 +768,20 @@
     "modules": [
       {
         "name": "ahem",
-        "link": "https://github.com/hapipal/ahem",
+        "link": "https://hapipal.com/docs/ahem",
+        "github": "https://github.com/hapipal/ahem",
         "description": "hapi plugins as libraries"
       },
       {
         "name": "avocat",
-        "link": "https://github.com/hapipal/avocat",
+        "link": "https://hapipal.com/docs/avocat",
+        "github": "https://github.com/hapipal/avocat",
         "description": "Convert objection DB errors to boom HTTP errors"
       },
       {
         "name": "boilerplate",
-        "link": "https://github.com/hapipal/boilerplate",
+        "link": "https://hapipal.com/docs/boilerplate",
+        "github": "https://github.com/hapipal/boilerplate",
         "description": "A friendly, proven starting place for your next hapi plugin or deployment"
       },
       {
@@ -788,57 +791,68 @@
       },
       {
         "name": "haute-couture",
-        "link": "https://github.com/hapipal/haute-couture",
+        "link": "https://hapipal.com/docs/haute-couture",
+        "github": "https://github.com/hapipal/haute-couture",
         "description": "File-based hapi plugin composer"
       },
       {
         "name": "hecks",
-        "link": "https://github.com/hapipal/hecks",
+        "link": "https://hapipal.com/docs/hecks",
+        "github": "https://github.com/hapipal/hecks",
         "description": "Mount your express app onto your hapi server, aw heck!"
       },
       {
         "name": "hodgepodge",
-        "link": "https://github.com/hapipal/hodgepodge",
+        "link": "https://hapipal.com/docs/hodgepodge",
+        "github": "https://github.com/hapipal/hodgepodge",
         "description": "A plugin dependency resolver"
       },
       {
         "name": "hpal",
-        "link": "https://github.com/hapipal/hpal",
+        "link": "https://hapipal.com/docs/hpal",
+        "github": "https://github.com/hapipal/hpal",
         "description": "The hapi pal CLI, for searching hapi docs, scaffolding projects, and running custom server commands"
       },
       {
         "name": "hpal-debug",
-        "link": "https://github.com/hapipal/hpal-debug",
+        "link": "https://hapipal.com/docs/hpal-debug",
+        "github": "https://github.com/hapipal/hpal-debug",
         "description": "hapijs debugging tools for the hapi pal CLI"
       },
       {
         "name": "lalalambda",
-        "link": "https://github.com/hapipal/lalalambda",
+        "link": "https://hapipal.com/docs/lalalambda",
+        "github": "https://github.com/hapipal/lalalambda",
         "description": "Serverless functions powered by hapijs"
       },
       {
         "name": "schmervice",
-        "link": "https://github.com/hapipal/schmervice",
+        "link": "https://hapipal.com/docs/schmervice",
+        "github": "https://github.com/hapipal/schmervice",
         "description": "A service layer for hapi"
       },
       {
         "name": "schwifty",
-        "link": "https://github.com/hapipal/schwifty",
+        "link": "https://hapipal.com/docs/schwifty",
+        "github": "https://github.com/hapipal/schwifty",
         "description": "A model layer for hapi integrating Objection ORM"
       },
       {
         "name": "tandy",
-        "link": "https://github.com/hapipal/tandy",
+        "link": "https://hapipal.com/docs/tandy",
+        "github": "https://github.com/hapipal/tandy",
         "description": "Auto-generated, RESTful, CRUDdy route handlers for Objection models"
       },
       {
         "name": "toys",
-        "link": "https://github.com/hapipal/toys",
+        "link": "https://hapipal.com/docs/toys",
+        "github": "https://github.com/hapipal/toys",
         "description": "The hapi utility toy chest"
       },
       {
         "name": "underdog",
-        "link": "https://github.com/hapipal/underdog",
+        "link": "https://hapipal.com/docs/underdog",
+        "github": "https://github.com/hapipal/underdog",
         "description": "HTTP/2 server-push for hapi"
       }
     ]
