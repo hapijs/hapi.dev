@@ -13,7 +13,6 @@
               <th class="node-header">Node</th>
               <th class="dependencies-header">Dependencies</th>
               <th class="travis-header">Travis</th>
-              <th class="life-header">End of Life</th>
             </tr>
           </thead>
           <tbody>
@@ -30,7 +29,7 @@
                   :href="'#' + repo.name"
                 ></a>
               </td>
-              <td colspan="6" class="nested-td">
+              <td colspan="5" class="nested-td">
                 <table class="nested-table">
                   <tbody class="nested-tbody">
                     <tr
@@ -124,11 +123,6 @@
                           />
                         </a>
                       </td>
-                      <td class="module-life">
-                        {{
-                          getSemver(repo.name, version.name, version.license)
-                        }}
-                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -143,7 +137,6 @@
 
 <script>
 import ResourcesNav from "../../components/resources/ResourcesNav.vue";
-const life = require("../../static/lib/endOfLife.js");
 const moduleInfo = require("../../static/lib/moduleInfo.json");
 let Semver = require("semver");
 let Yaml = require("js-yaml");
@@ -181,7 +174,6 @@ export default {
         160: '<div class="status-code status-failing"></div>',
         nonMaster: '<div class="status-code status-nonMaster"></div>'
       },
-      life: life
     };
   },
   computed: {
@@ -190,16 +182,6 @@ export default {
     }
   },
   methods: {
-    getSemver(name, version, license) {
-      if (life.endOfLife[_.camelCase(name)] && license !== "Commercial") {
-        for (let v in life.endOfLife[_.camelCase(name)]) {
-          if (Semver.satisfies(version, v)) {
-            return life.endOfLife[_.camelCase(name)][v];
-          }
-          return null;
-        }
-      }
-    },
     camelName(name) {
       return _.camelCase(name);
     },
@@ -248,8 +230,7 @@ export default {
 .dependencies-header,
 .travis-header,
 .license-header,
-.node-header,
-.life-header {
+.node-header {
   width: 10.546875%;
   text-align: center !important;
   font-weight: 900;
