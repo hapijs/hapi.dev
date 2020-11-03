@@ -26,6 +26,7 @@
 import HTML from "~/components/HTML.vue";
 import ApiNav from "~/components/api/ApiNav.vue";
 import { copyToClipboard, setCodeClipboards } from "~/utils/clipboard";
+const moduleInfo = require("~/static/lib/moduleInfo.json");
 
 let Toc = require("markdown-toc");
 let Semver = require("semver");
@@ -182,37 +183,13 @@ export default {
         authorization: "token " + process.env.GITHUB_TOKEN
       }
     };
-
-    let branches = await $axios.$get(
-      "https://api.github.com/repos/hapijs/hapi/branches",
-      options
-    );
-    branches = branches.sort((a, b) => (a.name > b.name ? 1 : -1));
-
     let apis = {};
     let menus = {};
-
-    //Grab and store APIs
-    for (let branch of branches) {
-      let v = "";
-      try {
-        if (branch.name.match(/^v+[0-9]+/g)) {
-          v = await $axios.$get(
-            "https://api.github.com/repos/hapijs/hapi/contents/package.json?ref=" +
-              branch.name,
-            options
-          );
-          if (versions.indexOf(v.version) === -1) {
-            let branchVersion = v.version;
-            versions.push(v.version);
-            branchVersions[v.version] = branch.name;
-          }
-        }
-      } catch (err) {
-        console.log(err);
-      }
+    for (let version of moduleInfo['hapi'].versions) {
+      branchVersions[version.name] = version.branch;
     }
-    versions = await versions.sort((a, b) => Semver.compare(b, a));
+    // need to sort them so that the newest is on top
+    versions = await moduleInfo['hapi'].versionsArray.sort((a, b) => Semver.compare(b, a));
     for (let version of versions) {
       const res = await $axios.$get(
         "https://api.github.com/repos/hapijs/hapi/contents/API.md?ref=" +
