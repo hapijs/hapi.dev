@@ -128,24 +128,15 @@ export default {
     };
     let moduleData = [];
     for (let module of store.getters.loadModules) {
-      try {
-        let forks = await $axios.$get(
-          "https://api.github.com/repos/hapijs/" + module,
-          options
-        );
-        let date = await new Date(forks.pushed_at);
-        moduleData.push({
-          name: module,
-          forks: await Number(forks.forks_count),
-          stars: await Number(forks.stargazers_count),
-          date: await forks.pushed_at,
-          updated: await date.toDateString(),
-          slogan: await forks.description,
-          link: "https://github.com/hapijs/" + module
-        });
-      } catch (err) {
-        console.log(err);
-      }
+      moduleData.push({
+        name: moduleInfo[module].name,
+        forks: moduleInfo[module].forks,
+        stars: moduleInfo[module].stars,
+        date: moduleInfo[module].date,
+        updated: moduleInfo[module].updated,
+        slogan: moduleInfo[module].slogan,
+        link: moduleInfo[module].link
+      });
     }
     return { moduleData };
   },
