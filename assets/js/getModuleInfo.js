@@ -33,6 +33,7 @@ const apiModules = [
   "good",
   "good-console",
   "good-squeeze",
+  "hapi",
   "h2o2",
   "hoek",
   "inert",
@@ -277,6 +278,10 @@ async function getInfo() {
               }
             );
             let apiString = await apiHTML.data.toString();
+            // add note that tsc does not support commercial for hapi
+            if (branch.name.match(/commercial$/g)) {
+              apiString = "\n<span style=color:red><b>**Note**</b><br/>This is a commercial API version and is not officially supported by the TSC.</span>\n" + apiString;
+            }
             finalHtmlDisplay = await apiString.replace(/user-content-/g, "");
           }
         } catch (err) {
