@@ -5,9 +5,8 @@ let fs = require("fs");
 let Toc = require("markdown-toc");
 require("dotenv").config();
 
-// need to handle this more gracefully
-// its really a list of modules with API.md
-const modules = [
+// hard code to avoid github api calls
+const apiModules = [
   "accept",
   "ammo",
   "b64",
@@ -53,6 +52,24 @@ const modules = [
   "yar"
 ];
 
+// hard code to avoid github api calls
+const hapiPlugins = [
+  "basic",
+  "bell",
+  "catbox-redis",
+  "cookie",
+  "crumb",
+  "good",
+  "h2o2",
+  "inert",
+  "jwt",
+  "nes",
+  "ratrace",
+  "scooter",
+  "vision",
+  "yar"
+];
+
 // exclude these modules
 const excludeModules = [
   ".github",
@@ -94,11 +111,11 @@ async function getInfo() {
     "https://api.github.com/orgs/hapijs/repos?per_page=100",
     options
   );
-  const nodeTravisYaml = await axios.get(
+  const nodeYaml = await axios.get(
     "https://api.github.com/repos/hapijs/ci-config-travis/contents/node_js.yml",
     options
   );
-  const nodeTravisVersions = Yaml.safeLoad(nodeTravisYaml.data).node_js.reverse().filter(e=> e !== "node");
+  let nodeGlobalVersions = Yaml.safeLoad(nodeYaml.data).node_js.reverse().filter(e=> e !== "node");
   for (let r = 0; r < repositories.data.length; ++r) {
     if (excludeModules.includes(repositories.data[r].name)) {
       continue;
@@ -125,9 +142,29 @@ async function getInfo() {
       usage = "";
       faq = "";
       advance = "";
-      // skip commercial branches
+      // skip commercial branches except for hapi
       if (branch.name.match(/commercial$/g) && repositories.data[r].name != 'hapi') {
         continue;
+      }
+      // due to supporting commercial hapi on the site
+      // hard code versions so we can reduce github api calls
+      if (branch.name.match(/commercial$/g) && repositories.data[r].name == 'hapi') {
+        if (branch.name == "v19-commercial") {
+          nodeVersions = ["12", "14"];
+        } else if (branch.name == "v18-commercial") {
+          nodeVersions = ["8", "10", "12"];
+        } else if (branch.name == "v17-commercial") {
+          nodeVersions = ["8", "10", "12"];
+        } else if (branch.name == "v16-commercial") {
+          nodeVersions = ["6", "8", "10", "12"];
+        }
+      } else {
+          nodeVersions = nodeGlobalVersions;
+      }
+      if (hapiPlugins.includes(repositories.data[r].name)) {
+        repos[repositories.data[r].name].isPlugin = true;
+      } else {
+        repos[repositories.data[r].name].isPlugin = false;
       }
       if (branch.name.match(/^v+[0-9]+|\bmaster\b/g)) {
         const gitHubVersion = await axios.get(
@@ -137,16 +174,9 @@ async function getInfo() {
             branch.name,
           options
         );
-        const nodeYaml = await axios.get(
-          "https://api.github.com/repos/hapijs/" +
-            repositories.data[r].name +
-            "/contents/.travis.yml?ref=" +
-            branch.name,
-          options
-        );
         //Get API
         try {
-          if (modules.includes(repositories.data[r].name)) {
+          if (apiModules.includes(repositories.data[r].name)) {
             const api = await axios.get(
               "https://api.github.com/repos/hapijs/" +
                 repositories.data[r].name +
@@ -252,18 +282,6 @@ async function getInfo() {
         } catch (err) {
           console.log(err);
           continue;
-        }
-        let nodeVersions;
-        const importData = Yaml.safeLoad(nodeYaml.data);
-        if (importData.import) {
-          nodeVersions = nodeTravisVersions;
-          if (/install_plugin/.test(importData.import.toString())) {
-            repos[repositories.data[r].name].isPlugin = true;
-          } else {
-            repos[repositories.data[r].name].isPlugin = false;
-          }
-        } else {
-          nodeVersions = importData.node_js.reverse();
         }
         if (repos[repositories.data[r].name].versionsArray.indexOf(gitHubVersion.data.version) === -1) {
           repos[repositories.data[r].name].versionsArray.push(
