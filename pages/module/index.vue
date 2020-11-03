@@ -65,6 +65,7 @@ export default {
     return {
       modules: this.$store.getters.loadModules,
       moduleInfo: moduleInfo,
+      moduleData: [],
       search: "",
       core: true,
       sort: "name"
@@ -119,16 +120,9 @@ export default {
       }
     }
   },
-  async asyncData({ params, $axios, route, store }) {
-    const options = {
-      headers: {
-        accept: "application/vnd.github.v3.raw+json",
-        authorization: "token " + process.env.GITHUB_TOKEN
-      }
-    };
-    let moduleData = [];
-    for (let module of store.getters.loadModules) {
-      moduleData.push({
+  created() {
+    for (let module of this.modules) {
+      this.moduleData.push({
         name: moduleInfo[module].name,
         forks: moduleInfo[module].forks,
         stars: moduleInfo[module].stars,
@@ -138,9 +132,6 @@ export default {
         link: moduleInfo[module].link
       });
     }
-    return { moduleData };
-  },
-  created() {
     this.$store.commit("setDisplay", "family");
     const sortedBy = ["name", "stars", "forks", "updated"];
     if (sortedBy.includes(this.$route.query.sort)) {
