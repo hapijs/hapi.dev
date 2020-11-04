@@ -26,7 +26,7 @@
 import HTML from "~/components/HTML.vue";
 import ApiNav from "~/components/api/ApiNav.vue";
 import { copyToClipboard, setCodeClipboards } from "~/utils/clipboard";
-const moduleInfo = require("~/static/lib/moduleInfo.json");
+const hapiInfo = require("~/static/lib/hapiInfo.json");
 
 let Toc = require("markdown-toc");
 let Semver = require("semver");
@@ -179,14 +179,14 @@ export default {
     let branchVersions = {};
     let apis = {};
     let menus = {};
-    for (let version of moduleInfo['hapi'].versions) {
+    for (let version of hapiInfo.versions) {
       branchVersions[version.name] = version.branch;
     }
     // need to sort them so that the newest is on top
-    versions = await moduleInfo['hapi'].versionsArray.sort((a, b) => Semver.compare(b, a));
+    versions = await hapiInfo.versionsArray.sort((a, b) => Semver.compare(b, a));
     for (let version of versions) {
-      apis[version] = moduleInfo['hapi'][version].api;
-      menus[version] = moduleInfo['hapi'][version].menu;
+      apis[version] = hapiInfo[version].api;
+      menus[version] = hapiInfo[version].menu;
     }
     return {
       apis,
