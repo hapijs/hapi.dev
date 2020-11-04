@@ -55,7 +55,8 @@ export default {
         servingfiles: "Serving Static Files",
         testing: "Testing",
         validation: "Validation",
-        views: "Views"
+        views: "Views",
+        community: "Community"
       }
     };
   },

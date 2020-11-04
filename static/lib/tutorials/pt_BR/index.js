@@ -6,6 +6,8 @@ exports.caching = require('./caching.md')
 
 exports.cookies = require('./cookies.md')
 
+exports.community = require('./community.md')
+
 exports.gettingstarted = require('./gettingstarted.md')
 
 exports.logging= require('./logging.md')
