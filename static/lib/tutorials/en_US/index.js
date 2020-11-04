@@ -6,6 +6,8 @@ export const caching = require('./caching.md')
 
 export const cookies = require('./cookies.md')
 
+export const community = require('./community.md')
+
 export const gettingstarted = require('./gettingstarted.md')
 
 export const logging= require('./logging.md')

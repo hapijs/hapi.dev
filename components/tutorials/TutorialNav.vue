@@ -269,6 +269,24 @@
                 <TutorialNavItem :menu="menu" :name="name" />
               </ul>
             </li>
+            <hr class="landing-hr" />
+            <li
+              :class="
+                $route.params.tutorial === 'community'
+                  ? 'side-nav-select-link tutorial-link side-nav-active'
+                  : 'side-nav-select-link tutorial-link'
+              "
+            >
+              <a ref="community" :href="'/tutorials/community/?lang=' + getLanguage"
+                >Community Tutorials</a
+              >
+              <ul
+                class="side-nav-select-list"
+                v-if="$route.params.tutorial === 'community'"
+              >
+                <TutorialNavItem :menu="menu" :name="name" />
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
