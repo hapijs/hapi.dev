@@ -6,7 +6,7 @@ let Toc = require("markdown-toc");
 require("dotenv").config();
 
 // hard code to avoid github api calls
-const apiModules = [
+const apiRepos = [
   "accept",
   "ammo",
   "b64",
@@ -95,6 +95,7 @@ getInfo();
 async function getInfo() {
   let repos = {};
   let newRepos = {};
+  let hapiRepo = {};
   let intro = "";
   let example = "";
   let usage = "";
@@ -177,7 +178,7 @@ async function getInfo() {
         );
         //Get API
         try {
-          if (apiModules.includes(repositories.data[r].name)) {
+          if (apiRepos.includes(repositories.data[r].name)) {
             const api = await axios.get(
               "https://api.github.com/repos/hapijs/" +
                 repositories.data[r].name +
@@ -366,15 +367,22 @@ async function getInfo() {
         orderedRepos[key] = repos[key];
       });
 
-    let hapi = orderedRepos.hapi;
+    hapiRepo = orderedRepos.hapi;
 
     delete orderedRepos.hapi;
 
-    newRepos = await Object.assign({ hapi }, orderedRepos);
+    newRepos = orderedRepos;
   }
-  await fs.writeFile(
+  fs.writeFile(
     "./static/lib/moduleInfo.json",
     JSON.stringify(newRepos, null, 2),
+    function(err) {
+      if (err) throw err;
+    }
+  );
+  fs.writeFile(
+    "./static/lib/hapiInfo.json",
+    JSON.stringify(hapiRepo, null, 2),
     function(err) {
       if (err) throw err;
     }
