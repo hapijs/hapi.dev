@@ -177,12 +177,6 @@ export default {
   async asyncData({ params, $axios }) {
     let versions = [];
     let branchVersions = {};
-    const options = {
-      headers: {
-        accept: "application/vnd.github.v3.raw+json",
-        authorization: "token " + process.env.GITHUB_TOKEN
-      }
-    };
     let apis = {};
     let menus = {};
     for (let version of moduleInfo['hapi'].versions) {
@@ -191,46 +185,8 @@ export default {
     // need to sort them so that the newest is on top
     versions = await moduleInfo['hapi'].versionsArray.sort((a, b) => Semver.compare(b, a));
     for (let version of versions) {
-      const res = await $axios.$get(
-        "https://api.github.com/repos/hapijs/hapi/contents/API.md?ref=" +
-          branchVersions[version],
-        options
-      );
-      let raw = await res;
-      let rawString = await raw.toString();
-
-      //Auto generate TOC
-      let apiTocString = "";
-      let apiTocArray = await rawString.match(/\n#.+/g);
-
-      for (let i = 0; i < apiTocArray.length; ++i) {
-        apiTocString = apiTocString + apiTocArray[i];
-      }
-      let finalMenu = Toc(apiTocString, { bullets: "-" }).content;
-
-      //Split API menu from content
-      let finalDisplay = await rawString
-        .replace(/\/>/g, "></a>")
-        .replace(/-\s\[(?:.+[\n\r])+/, "");
-      menus[version] = await finalMenu;
-      const apiHTML = await $axios.$post(
-        "https://api.github.com/markdown",
-        {
-          text: finalDisplay,
-          mode: "markdown"
-        },
-        {
-          headers: {
-            authorization: "token " + process.env.GITHUB_TOKEN
-          }
-        }
-      );
-      let apiString = await apiHTML.toString();
-      if (branchVersions[version].match(/commercial$/g)) {
-        apiString = "\n<span style=color:red><b>**Note**</b><br/>This is a commercial API version and is not officially supported by the TSC.</span>\n" + apiString;
-      }
-      let finalHtmlDisplay = await apiString.replace(/user-content-/g, "");
-      apis[version] = await finalHtmlDisplay;
+      apis[version] = moduleInfo['hapi'][version].api;
+      menus[version] = moduleInfo['hapi'][version].menu;
     }
     return {
       apis,
