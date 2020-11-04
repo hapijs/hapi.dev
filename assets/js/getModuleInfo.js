@@ -373,14 +373,14 @@ async function getInfo() {
 
     newRepos = orderedRepos;
   }
-  await fs.writeFile(
+  fs.writeFile(
     "./static/lib/moduleInfo.json",
     JSON.stringify(newRepos, null, 2),
     function(err) {
       if (err) throw err;
     }
   );
-  await fs.writeFile(
+  fs.writeFile(
     "./static/lib/hapiInfo.json",
     JSON.stringify(hapiRepo, null, 2),
     function(err) {
