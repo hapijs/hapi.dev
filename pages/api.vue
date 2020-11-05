@@ -174,27 +174,16 @@ export default {
       }
     }
   },
-  async asyncData({ params, $axios }) {
-    let versions = [];
-    let branchVersions = {};
-    let apis = {};
-    let menus = {};
-    for (let version of hapiInfo.versions) {
-      branchVersions[version.name] = version.branch;
-    }
-    // need to sort them so that the newest is on top
-    versions = await hapiInfo.versionsArray.sort((a, b) => Semver.compare(b, a));
-    for (let version of versions) {
-      apis[version] = hapiInfo[version].api;
-      menus[version] = hapiInfo[version].menu;
-    }
-    return {
-      apis,
-      menus,
-      versions
-    };
-  },
   created() {
+    this.versions = [];
+    this.apis = {};
+    this.menus = {};
+    // need to sort them so that the newest is on top
+    this.versions = hapiInfo.versionsArray.sort((a, b) => Semver.compare(b, a));
+    for (let version of this.versions) {
+      this.apis[version] = hapiInfo[version].api;
+      this.menus[version] = hapiInfo[version].menu;
+    }
     let apiVersion = this.versions[0];
     if (!this.$route.query.v) {
       this.$router.push({
