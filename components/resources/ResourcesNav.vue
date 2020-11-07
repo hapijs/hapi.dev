@@ -60,17 +60,6 @@
               </li>
               <li class="resources-header-link">
                 <a
-                  ref="tutorials"
-                  :class="
-                    $props.page === '#tutorials' ? 'resources-active' : ''
-                  "
-                  v-on:click="onClick('tutorials')"
-                  href="/resources/list#tutorials"
-                  >Tutorials</a
-                >
-              </li>
-              <li class="resources-header-link">
-                <a
                   ref="videos"
                   :class="$props.page === '#videos' ? 'resources-active' : ''"
                   v-on:click="onClick('videos')"
