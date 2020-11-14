@@ -114,10 +114,10 @@ async function getInfo() {
     options
   );
   const nodeYaml = await axios.get(
-    "https://api.github.com/repos/hapijs/ci-config-travis/contents/node_js.yml",
+    "https://api.github.com/repos/hapijs/.github/contents/workflow-templates/ci-module.yml",
     options
   );
-  let nodeGlobalVersions = Yaml.safeLoad(nodeYaml.data).node_js.reverse().filter(e=> e !== "node");
+  let nodeGlobalVersions = Yaml.safeLoad(nodeYaml.data).jobs.test.strategy.matrix.node.reverse().filter(e=> e !== "*");
   for (let r = 0; r < repositories.data.length; ++r) {
     if (excludeModules.includes(repositories.data[r].name)) {
       continue;
