@@ -9,6 +9,7 @@ module.exports = {
       "/tutorials/gettingstarted",
       "/tutorials/auth",
       "/tutorials/caching",
+      "/tutorials/community",
       "/tutorials/cookies",
       "/tutorials/logging",
       "/tutorials/plugins",

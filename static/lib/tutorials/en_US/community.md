@@ -4,10 +4,6 @@
 
     Article on how to secure your hapi application.
 
-*   [Build a RESTful API using hapi.js and MongoDB](http://mph-web.de/build-a-restful-api-using-hapi-js-and-mongodb/)
-
-    Tutorial about how to create a basic RESTful API with MongoDB as database using the mongojs module.
-
 *   [Building a Chat Application with hapi.js, Socket.io and Redis](https://github.com/dwyl/hapi-socketio-redis-chat-example)
 
     Real-time chat application built using hapi.js, Socket.io and Redis Pub/Sub with end-to-end tests.
@@ -42,18 +38,6 @@
 
     Plugin example of rate limiting and DDoS protection with rate-limiter-flexible package
 
-*   [Realtime timeline with hapi.js, nes and RethinkDB](http://mph-web.de/realtime-timeline-with-hapi-js-nes-and-rethinkdb/)
-
-    A tutorial that shows how to build a realtime timeline with the nes plugin for hapi.
-
 *   [Run hapi.js on Google Cloud Platform](https://cloud.google.com/nodejs/resources/frameworks/hapi)
 
     Tutorial and cloneable sample app showing how to create and deploy a hapi.js application on Google App Engine.
-
-*   [Social Login with Twitter using hapi.js](http://mph-web.de/social-signup-with-twitter-using-hapi-js/)
-
-    Playground project for authentication with Twitter using the bell plugin and hapi-auth-cookie.
-
-*   [Using hapi.js with Socket.io](http://matt-harrison.com/using-hapi-js-with-socket-io/)
-
-    Tutorial on how to integrate Socket.io with hapi.js
