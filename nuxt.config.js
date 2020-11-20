@@ -1,6 +1,5 @@
 module.exports = {
   telemetry: false,
-  target: 'static',
 
   generate: {
     fallback: true,
