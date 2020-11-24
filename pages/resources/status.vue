@@ -12,7 +12,7 @@
               <th class="license-header">License</th>
               <th class="node-header">Node</th>
               <th class="dependencies-header">Dependencies</th>
-              <th class="travis-header">Travis</th>
+              <th class="ci-header">CI</th>
             </tr>
           </thead>
           <tbody>
@@ -102,24 +102,22 @@
                         <a
                           :href="
                             repo.versions.length > 1
-                              ? 'https://travis-ci.org/hapijs/' +
-                                repo.name +
-                                '/branches'
-                              : 'https://travis-ci.org/hapijs/' + repo.name
+                              ? 'https://github.com/hapijs/' + repo.name + '/branches/actions?query=workflow%3Aci'
+                              : 'https://github.com/hapijs/' + repo.name + '/actions?query=workflow%3Aci'
                           "
                           target="_blank"
                         >
                           <img
                             :src="
-                              'https://travis-ci.org/hapijs/' +
-                                repo.name +
+                              'https://github.com/hapijs/' +
+                               repo.name + '/workflows/ci/badge' +
                                 '.svg?branch=' +
                                 version.branch
                             "
                             alt="Build Status"
                             class="hide"
-                            @load="swapImg('travis' + repo.name + version.name)"
-                            :id="'travis' + repo.name + version.name"
+                            @load="swapImg('ci' + repo.name + version.name, version.branch)"
+                            :id="'ci' + repo.name + version.name"
                           />
                         </a>
                       </td>
@@ -165,8 +163,13 @@ export default {
       img: {
         0: '<div class="status-code status-unknown"></div>',
         76: '<div class="status-code status-unknown"></div>',
+        // github action failing
+        79: '<div class="status-code status-failing"></div>',
         81: '<div class="status-code status-failing"></div>',
-        90: '<div class="status-code status-passing"></div>',
+        // github action pass
+        86: '<div class="status-code status-passing"></div>',
+        // github action no status
+        96: '<div class="status-code status-unknown"></div>',
         98: '<div class="status-code status-unknown"></div>',
         126: '<div class="status-code status-passing"></div>',
         149: '<div class="status-code status-unknown"></div>',
@@ -228,7 +231,7 @@ export default {
 }
 
 .dependencies-header,
-.travis-header,
+.ci-header,
 .license-header,
 .node-header {
   width: 10.546875%;

@@ -7,7 +7,7 @@
           <th class="license-header">License</th>
           <th class="node-header">Node</th>
           <th class="dependencies-header">Dependencies</th>
-          <th class="travis-header">Travis</th>
+          <th class="ci-header">CI</th>
         </tr>
       </thead>
       <tbody>
@@ -75,22 +75,22 @@
             <a
               :href="
                 module.versions.length > 1
-                  ? 'https://travis-ci.org/hapijs/' + name + '/branches'
-                  : 'https://travis-ci.org/hapijs/' + name
+                  ? 'https://github.com/hapijs/' + name + '/branches/actions?query=workflow%3Aci'
+                  : 'https://github.com/hapijs/' + name + '/actions?query=workflow%3Aci'
               "
               target="_blank"
             >
               <img
                 :src="
-                  'https://travis-ci.org/hapijs/' +
-                    name +
+                  'https://github.com/hapijs/' +
+                    name + '/workflows/ci/badge' +
                     '.svg?branch=' +
                     version.branch
                 "
                 alt="Build Status"
                 class="hide"
-                @load="swapImg('travis' + name + version.name)"
-                :id="'travis' + name + version.name"
+                @load="swapImg('ci' + name + version.name, version.branch)"
+                :id="'ci' + name + version.name"
               />
             </a>
           </td>
@@ -112,8 +112,13 @@ export default {
       img: {
         0: '<div class="status-code status-unknown"></div>',
         76: '<div class="status-code status-unknown"></div>',
+        // github action failing
+        79: '<div class="status-code status-failing"></div>',
         81: '<div class="status-code status-failing"></div>',
-        90: '<div class="status-code status-passing"></div>',
+        // github action pass
+        86: '<div class="status-code status-passing"></div>',
+        // github action no status
+        96: '<div class="status-code status-unknown"></div>',
         98: '<div class="status-code status-unknown"></div>',
         126: '<div class="status-code status-passing"></div>',
         149: '<div class="status-code status-unknown"></div>',
@@ -130,6 +135,7 @@ export default {
     },
     async swapImg(id, branch) {
       let badge = await document.getElementById(id);
+      // this uses the width of the svg image to determine what to swap it out with
       if (branch === "master" || !branch) {
         badge.parentNode.innerHTML = await this.img[badge.naturalWidth];
       } else {
@@ -162,7 +168,7 @@ export default {
   width: 16.6%;
 }
 
-.landing-table .travis-header,
+.landing-table .ci-header,
 .landing-table .license-header,
 .landing-table .node-header {
   width: 16.6%;
