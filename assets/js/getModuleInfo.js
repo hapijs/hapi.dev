@@ -80,6 +80,7 @@ const excludeModules = [
   "hapi.dev",
   "items",
   "lab-external-module-test",
+  "log",
   "ratrace",
   "rule-capitalize-modules",
   "rule-for-loop",
