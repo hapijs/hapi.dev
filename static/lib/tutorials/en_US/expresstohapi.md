@@ -545,7 +545,7 @@ To use bell, simply register the plugin and configure the strategy with `server.
 
 ## <a name="joi" ></a> express-validator -> joi
 
-To validate data in Express, you make use of the `express-validator` plugin. One of the biggest drawbacks to `express-validator` is that while you can validate a request, there is no clear way of validating a response. In hapi, you use the [joi](https://github.com/sideway/joi) module, which can validate requests and responses with ease. Joi allows you to create your own validations with a simple and clean object syntax. For a more in-depth look at validation in hapi, please see the [validation](/tutorials/validation/?lang=en_US) tutorial.
+To validate data in Express, you make use of the `express-validator` plugin. One of the biggest drawbacks to `express-validator` is that while you can validate a request, there is no clear way of validating a response. In hapi, you use the [joi](https://joi.dev) module, which can validate requests and responses with ease. Joi allows you to create your own validations with a simple and clean object syntax. For a more in-depth look at validation in hapi, please see the [validation](/tutorials/validation/?lang=en_US) tutorial.
 
 ### <a name="input" ></a> Input Validation
 
@@ -580,12 +580,12 @@ app.post('/post', function (req, res) {
 
 hapi:
 ```
-npm install @hapi/joi
+npm install joi
 ```
 <br />
 
 ```js
-const Joi = require('@hapi/joi')
+const Joi = require('joi')
 
 server.route({
     method: 'POST',
