@@ -544,7 +544,7 @@ server.route({
 
 ## <a name="joi" ></a> express-validator -> joi
 
-要在Express中验证数据，您可以使用 `express-validator` 插件。`express-validator` 的最大缺点之一是尽管您可以验证请求，但没有明确的方法来验证响应。在hapi中，可以使用 [joi](https://github.com/sideway/joi) 模块，该模块可以轻松地验证请求和响应。Joi允许您使用简单干净的对象语法创建自己的验证。 要更深入地了解hapi中的验证，请参见 [validation](/tutorials/validation/?lang=en_US) 教程。
+要在Express中验证数据，您可以使用 `express-validator` 插件。`express-validator` 的最大缺点之一是尽管您可以验证请求，但没有明确的方法来验证响应。在hapi中，可以使用 [joi](https://joi.dev) 模块，该模块可以轻松地验证请求和响应。Joi允许您使用简单干净的对象语法创建自己的验证。 要更深入地了解hapi中的验证，请参见 [validation](/tutorials/validation/?lang=en_US) 教程。
 
 ### <a name="input" ></a> 输入验证
 
@@ -579,12 +579,12 @@ app.post('/post', function (req, res) {
 
 hapi:
 ```
-npm install @hapi/joi
+npm install joi
 ```
 <br />
 
 ```js
-const Joi = require('@hapi/joi')
+const Joi = require('joi')
 
 server.route({
     method: 'POST',

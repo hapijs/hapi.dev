@@ -5,17 +5,17 @@ _This tutorial is compatible with hapi v17 and newer; and joi v16 and newer_
 
 ## <a name="overview"></a> Overview
 
-Validating data can be very helpful in making sure that your application is stable and secure. hapi allows this functionality by using the module [Joi](https://github.com/sideway/joi), which allows you to create your validations with a simple and clear object syntax.
+Validating data can be very helpful in making sure that your application is stable and secure. hapi allows this functionality by using the module [Joi](https://joi.dev), which allows you to create your validations with a simple and clear object syntax.
 
 ## <a name="joi"></a> Joi
 
-[Joi](https://github.com/sideway/joi) is an object schema description language and validator for JavaScript objects. Joi allows you to create blueprints or schemas for JavaScript objects to ensure validation of key information. To get started with joi, you must first install and add it as a dependency to your project:
+[Joi](https://joi.dev) is an object schema description language and validator for JavaScript objects. Joi allows you to create blueprints or schemas for JavaScript objects to ensure validation of key information. To get started with joi, you must first install and add it as a dependency to your project:
 
-`npm install @hapi/joi`
+`npm install joi`
 
 Then, you must import it to your project:
 
-`const Joi = require('@hapi/joi');`
+`const Joi = require('joi');`
 
 ## <a name="input"></a> Input Validation
 
@@ -43,7 +43,7 @@ options: {
     }
 }
 ```
-Look [here](https://github.com/sideway/joi) for details about such options.
+Look [here](https://joi.dev) for details about such options.
 
 ### <a name="pathparams"></a> Path parameters
 
