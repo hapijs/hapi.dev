@@ -29,7 +29,7 @@
     "@nuxtjs/markdownit": "^1.2.4",
     "@nuxtjs/pwa": "^3.2.2",
     "@nuxtjs/svg": "^0.1.6",
-    "axios": "^0.21.0",
+    "axios": "^0.21.1",
     "bulma": "^0.9.1",
     "cookie-universal-nuxt": "^2.0.17",
     "cross-env": "^7.0.2",
