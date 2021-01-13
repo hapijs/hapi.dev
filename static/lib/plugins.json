@@ -160,6 +160,17 @@
     ]
   },
   {
+    "name": "Kubernetes",
+    "anchor": "kubernetes",
+    "modules": [
+      {
+        "name": "hapi-on-kubernetes",
+        "link": "https://github.com/NextStepGuru/hapi-on-kubernetes",
+        "description": "A simple plugin design to connect the kubernetes probes to the lifecycles of Hapi"
+      }
+    ]
+  },
+  {
     "name": "Hypermedia",
     "anchor": "hypermedia",
     "modules": [
