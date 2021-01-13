@@ -48,7 +48,7 @@ server.route({
 });
 ```
 
-Note: It is best practice to always to return escaped and validated user inputs such as query/path parameters. This is done to prevent echo or XSS attacks. One way to do this is to use [Hoek](/module/hoek) `escapeHtml()` method. With escaping in place, the above example would look like the following:
+Note: It is best practice to always return escaped and validated user inputs such as query/path parameters. This is done to prevent echo or XSS attacks. One way to do this is to use [Hoek](/module/hoek) `escapeHtml()` method. With escaping in place, the above example would look like the following:
 
 ```js
 return `Hello ${Hoek.escapeHtml(request.params.user)}!`
