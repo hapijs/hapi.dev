@@ -117,7 +117,7 @@ async function getInfo() {
     "https://api.github.com/repos/hapijs/.github/contents/workflow-templates/ci-module.yml",
     options
   );
-  let nodeGlobalVersions = Yaml.safeLoad(nodeYaml.data).jobs.test.strategy.matrix.node.reverse().filter(e=> e !== "*");
+  let nodeGlobalVersions = Yaml.load(nodeYaml.data).jobs.test.strategy.matrix.node.reverse().filter(e=> e !== "*");
   for (let r = 0; r < repositories.data.length; ++r) {
     if (excludeModules.includes(repositories.data[r].name)) {
       continue;
