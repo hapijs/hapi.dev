@@ -170,6 +170,9 @@
                 <a title="Security" href="/policies/security">Security</a>
               </li>
               <li class="mobile-link mobile-tutorial-link">
+                <a title="Sponsors" href="/policies/sponsors">Sponsors</a>
+              </li>
+              <li class="mobile-link mobile-tutorial-link">
                 <a title="Style Guide" href="/policies/styleguide"
                   >Style Guide</a
                 >
