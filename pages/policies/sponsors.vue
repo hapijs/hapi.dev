@@ -78,9 +78,21 @@ export default {
   width: 100%;
 }
 
+.markdown-wrapper ul {
+  columns: 3;
+  li {
+    list-style: none;
+    border-left: 2px solid $orange;
+    padding-left: 15px;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .community-wrapper {
     padding: 0 20px;
+  }
+  .markdown-wrapper ul {
+    columns: 2;
   }
 }
 </style>
