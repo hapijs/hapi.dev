@@ -148,10 +148,6 @@ async function getInfo() {
       if (branch.name.match(/commercial$/g) && repositories.data[r].name != 'hapi') {
         continue;
       }
-      // skip hapi master branch for api
-      if (branch.name.match(/master$/g) && repositories.data[r].name == 'hapi') {
-        continue;
-      }
       // due to supporting commercial hapi on the site
       // hard code versions so we can reduce github api calls
       if (branch.name.match(/commercial$/g) && repositories.data[r].name == 'hapi') {

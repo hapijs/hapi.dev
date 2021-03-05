@@ -43,15 +43,12 @@
                             target="_blank"
                             class="version-helmet"
                             :href="
-                              newRepos[repo.name][version.name].api
-                                ? '/module/' +
-                                  repo.name +
-                                  '/api?v=' +
-                                  version.name
-                                : repo.name === 'hapi'
-                                ? '/api/?v=' + version.name
-                                : '/module/' +
-                                  repo.name
+                              repo.name === 'hapi'
+                              ? '/api/?v=' + version.name
+                              : '/module/' +
+                                repo.name +
+                                '/api?v=' +
+                                version.name
                             "
                           >
                             <img
@@ -82,10 +79,12 @@
                       <td class="status-badge">
                         <img
                           :src="
-                            'https://david-dm.org/hapijs/' +
+                             version.license === 'BSD'
+                            ? 'https://david-dm.org/hapijs/' +
                               repo.name +
                               '.svg?branch=' +
                               version.branch
+                            : ''
                           "
                           alt="Dependency Status"
                           class="hide"
@@ -101,18 +100,20 @@
                       <td class="status-badge">
                         <a
                           :href="
-                            repo.versions.length > 1
-                              ? 'https://github.com/hapijs/' + repo.name + '/branches/actions?query=workflow%3Aci'
-                              : 'https://github.com/hapijs/' + repo.name + '/actions?query=workflow%3Aci'
+                             version.license === 'BSD'
+                             ? 'https://github.com/hapijs/' + repo.name + '/actions?query=workflow%3Aci'
+                             : ''
                           "
                           target="_blank"
                         >
                           <img
                             :src="
-                              'https://github.com/hapijs/' +
+                             version.license === 'BSD'
+                              ? 'https://github.com/hapijs/' +
                                repo.name + '/workflows/ci/badge' +
                                 '.svg?branch=' +
                                 version.branch
+                              : ''
                             "
                             alt="Build Status"
                             class="hide"
@@ -136,6 +137,8 @@
 <script>
 import ResourcesNav from "../../components/resources/ResourcesNav.vue";
 const moduleInfo = require("../../static/lib/moduleInfo.json");
+const hapiInfo = require("../../static/lib/hapiInfo.json");
+const repos = { hapi: hapiInfo, ...moduleInfo };
 let Semver = require("semver");
 let Yaml = require("js-yaml");
 import _ from "lodash";
@@ -159,7 +162,7 @@ export default {
   data() {
     return {
       page: "status",
-      newRepos: moduleInfo,
+      newRepos: repos,
       img: {
         0: '<div class="status-code status-unknown"></div>',
         76: '<div class="status-code status-unknown"></div>',
@@ -190,7 +193,7 @@ export default {
     },
     async swapImg(id, branch) {
       let badge = await document.getElementById(id);
-      if (branch === "master" || !branch) {
+      if (branch === "master") {
         badge.parentNode.innerHTML = await this.img[badge.naturalWidth];
       } else {
         badge.parentNode.innerHTML = await this.img["nonMaster"];
