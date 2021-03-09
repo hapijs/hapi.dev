@@ -33,7 +33,7 @@ Inside the directory `pt_BR`, you need to follow the same struture we use in `en
 After finish the translations, you also need add your translation in the `index.js` file inside `static/lib/tutorials`.
 
 ## Plugins
-hapijs.com maintains a list of community-created plugins [here](http://hapi.dev/plugins). If there are any plugins you have created or one you use often that isn't listed please send a [pull request](https://github.com/hapijs/hapi.dev/blob/master/static/lib/plugins.md). Please note the existing categories, but if your plugin does not fit one feel free to create your own. Please keep the plugins in alphabetical order to be fair to all contributors.
+hapijs.com maintains a list of community-created plugins [here](http://hapi.dev/plugins). If there are any plugins you have created or one you use often that isn't listed please send a [pull request](https://github.com/hapijs/hapi.dev/blob/master/static/lib/plugins.json). Please note the existing categories, but if your plugin does not fit one feel free to create your own. Please keep the plugins in alphabetical order to be fair to all contributors.
 
 ## Building the docker image
   - npm install (installs dependencies in order to run the generate)
