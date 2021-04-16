@@ -133,8 +133,6 @@ start();
 
 这个方法接受一个参数, 这个参数可以是一个默认 strategy 的名字，或者与路由handler [auth options](#route-configuration) 同样格式的对象。
 
-请注意任何 *先于* `server.auth.default()` 添加的路由将不会被这个默认的 strategy 调用到。如果你希望默认的 strategy 被所有的路由接受，你必须在添加所有的路由之前调用 `server.auth.default()`，或者在注册 strategy 的时候使用默认模式。
-
 ## 路由配置
 
 身份认证也可以在一个路由上通过 `options.auth` 参数进行配置。如果设置为 `false` 将会在路由上关闭身份验证。

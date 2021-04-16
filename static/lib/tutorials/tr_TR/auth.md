@@ -136,8 +136,6 @@ Son değiştirge ise adlandırılan şemaya direk olarak gönderilecek şeçenek
 
 Bu metod bir değiştirge kabul eder. Bu değiştirge ya varsayılan stratejinin adını taşıyan metin, ya da yol işleyicinin kullandığı gibi bir [kimlik doğrulama seçenekleri (auth options)](#yol-route-ayarları) nesnesi olmalıdır.
 
-Burada `server.auth.default()` **çağırılmadan önce** eklenen yollara (route) varsayılan stratejinin uygulanmayacağına dikkat et. Eğer tüm yollara (routelara) stratejinin (strategy) uygulandığından emin olmak istersen ya `server.auth.default()`u daha hiç yol (route) eklemeden önce çağırmalı ya da stratejiyi kaydederken varsayılan modu ayarlamalısın.
-
 ## Yol (Route) Ayarlari
 
 Kimlik doğrulama (authentication) aynı zamanda `options.auth` değiştirgesi vasıtasıyla yol (route) üzerine ayarlanabilir. Eğer `false` olarak ayarlanırsa bu yolda (route) kimlik doğrulama kapatılır.
