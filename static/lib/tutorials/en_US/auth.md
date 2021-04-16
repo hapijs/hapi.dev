@@ -72,7 +72,7 @@ You may set a default strategy by using `server.auth.default()`.
 
 This method accepts one parameter, which may be either a string with the name of the strategy to be used as default, or an object in the same format as the route handler's [auth options](#route-configuration).
 
-Note that any routes added *before* `server.auth.default()` is called will not have the default applied to them. If you need to make sure that all routes have the default strategy applied, you must either call `server.auth.default()` before adding any of your routes, or set the default mode when registering the strategy.
+Note that all routes will have the default applied to them, even the ones added *before* `server.auth.default()` is called.
 
 ## <a name="route"></a> Route Configuration
 
