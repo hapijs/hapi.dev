@@ -134,8 +134,6 @@ strategy를 등록하려면 먼저 등록된 scheme이 있어야 합니다. sche
 
 이 메소드는 하나의 인자를 받습니다. 이 인자는 기본으로 사용할 strategy의 이름이거나 경로 처리기의 [auth options](#경로-설정)과 같은 형식의 객체입니다.
 
-`server.auth.default()`가 호출되기 전에 추가된 경로에는 기본 값이 적용되지 않습니다. 모든 경로에 기본 strategy를 적용하려면 경로가 추가되기 전에 `server.auth.default()`를 호출하거나 strategy를 등록할 때 기본으로 설정해야 합니다.
-
 ## 경로 설정
 
 `options.auth` 인자로 경로에서 인증을 설정할 수 있습니다. 만약 `false`로 설정되어 있다면 그 경로에서 인증은 비활성화 됩니다.
