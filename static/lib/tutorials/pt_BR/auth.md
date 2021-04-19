@@ -159,6 +159,8 @@ Como previamente mencionado, o parâmetro `mode` pode ser usado com `server.auth
 
 Este método aceita um parâmetro, que pode ser uma string com o nome da estratégia a ser utilizada por padrão, ou um objeto formatado da mesma forma como os manipuladores de rota [auth options](#route-configuration).
 
+É importante observar que a estratégia padrão é aplicada a todas as rotas, inclusive as rotas que foram definidas *antes* da chamada do método `server.auth.default()`.
+
 ## Configuração de rota
 
 A autenticação também pode ser configurada em uma rota, pelo parâmetro `options.auth`. Se definido para `false`, a autenticação é desabilitada para a rota.
