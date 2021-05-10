@@ -60,6 +60,7 @@ export const state = () => ({
     "iron",
     "jwt",
     "lab",
+    "log",
     "mimos",
     "nes",
     "nigel",
