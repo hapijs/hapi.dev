@@ -174,7 +174,7 @@ hapi has the functionality to respond with JSON data by default. The only thing 
 
 ## <a name="plugins" ></a> Middleware vs Plugins and Extensions
 
-To extend its functionality, Express uses middleware. Middleware essentially is a sequence of functions using callbacks to execute the next function. The issue with this is as your application grows in size and complexity, the order at which middleware executes becomes more crucial and more difficult to maintain. Having a middleware execute before one it's dependant on will cause you application to fail. hapi fixes this issue with its robust plugin and extension system. 
+To extend its functionality, Express uses middleware. Middleware essentially is a sequence of functions using callbacks to execute the next function. The issue with this is as your application grows in size and complexity, the order at which middleware executes becomes more crucial and more difficult to maintain. Having a middleware execute before one it is dependant on will cause your application to fail. hapi fixes this issue with its robust plugin and extension system. 
 
 Plugins allow you to break your application logic into isolated pieces of business logic, and reusable utilities. Each plugin comes with its own dependencies which are explicitly specified in the plugins themselves. This means you don't have to install dependencies yourself to make your plugins work. You can either add an existing hapi plugin, or write your own. For a more extensive tutorial on plugins, please see the [plugins](/tutorials/plugins/?lang=en_US) tutorial.  
 
