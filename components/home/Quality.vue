@@ -4,7 +4,7 @@
       <div class="quote-wrapper">
         <div class="quote">
           "We love hapi’s clear structure. In particular, its plugin
-          system and request lifecycle - they makes it easy for us to separate cross-cutting
+          system and request lifecycle - they make it easy for us to separate cross-cutting
           concerns from our API business logic. It allows us to add features and fix bugs
           at a fast pace. The hapi ecosystem provides a consistent and secure building
           block to develop HTTP services at scale."
