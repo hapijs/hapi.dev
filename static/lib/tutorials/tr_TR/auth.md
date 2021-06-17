@@ -33,7 +33,7 @@ const validate = async (request, username, password) => {
     const isValid = await Bcrypt.compare(password, user.password);
     const credentials = { id: user.id, name: user.name };
 
-    return { isValid, credentials };
+    return { 'isValid' : isValid, 'credentials' : credentials };
 };
 
 const start = async () => {
