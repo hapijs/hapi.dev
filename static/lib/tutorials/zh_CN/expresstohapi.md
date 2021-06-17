@@ -284,7 +284,7 @@ Express:
 ```js
 const getDate = require('./mw/getDate.js');
 
-app.use(getDate({ name: Tom }));
+app.use(getDate({ name: 'Tom' }));
 ```
 
 hapi:
