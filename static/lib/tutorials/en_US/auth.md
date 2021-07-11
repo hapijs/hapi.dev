@@ -256,7 +256,7 @@ const start = async () => {
 
                 if (!account || !(await Bcrypt.compare(password, account.password))) {
 
-                    return h.view('/login');
+                    return h.redirect('/login');
         }
 
                 request.cookieAuth.set({ id: account.id });
