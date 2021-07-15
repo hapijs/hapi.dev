@@ -128,6 +128,12 @@
         "name": "hapi-swaggered-ui",
         "link": "https://github.com/z0mt3c/hapi-swaggered-ui",
         "description": "A plugin to serve and configure swagger-ui"
+      },
+      {
+        "name": "optic-hapi-middleware",
+        "github": "https://github.com/opticdev/optic-node/tree/main/frameworks/hapi",
+        "link": "https://www.npmjs.com/package/@useoptic/hapi-middleware",
+        "description": "Document API endpoints using Optic"
       }
     ]
   },
