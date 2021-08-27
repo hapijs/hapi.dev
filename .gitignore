@@ -82,7 +82,6 @@ dist
 
 # Service worker
 sw.*
-<<<<<<< HEAD
 
 # Visual Studio
 .vs
