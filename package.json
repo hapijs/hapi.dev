@@ -28,7 +28,7 @@
     "@nuxtjs/hapi": "^3.0.0",
     "@nuxtjs/markdownit": "^2.0.0",
     "@nuxtjs/pwa": "^3.2.2",
-    "@nuxtjs/svg": "^0.1.6",
+    "@nuxtjs/svg": "^0.2.0",
     "axios": "^0.21.1",
     "bulma": "^0.9.1",
     "cookie-universal-nuxt": "^2.0.17",
