@@ -711,7 +711,7 @@ export default {
   .api-search-button {
     border: 1px solid $dark-white;
     background: $white;
-    color: $black;
+    color: $white;
   }
 
 }
