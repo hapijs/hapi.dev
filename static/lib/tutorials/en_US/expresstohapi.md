@@ -604,7 +604,7 @@ server.route({
 });
 ```
 
-First you install `joi`, then require it in your project. To validate the input date, you specify what data type you are expecting, then set rules on that data. In this case, `post` will be a `string` with a maximum number of characters of 140. In `joi` you can string rules together like:
+First you install `joi`, then require it in your project. To validate the input data, you specify what data type you are expecting, then set rules on that data. In this case, `post` will be a `string` with a maximum number of characters of 140. In `joi` you can string rules together like:
 
 ```js
 Joi.string().min(1).max(140).
