@@ -91,12 +91,6 @@
         "description": "A Hapi plugin that wraps passport-saml for SAML SSO"
       },
       {
-        "name": "hawk",
-        "isHapi": true,
-        "link": "https://hapi.dev/family/hawk",
-        "description": "Hawk authentication plugin"
-      },
-      {
         "name": "jwt",
         "isHapi": true,
         "github": "https://github.com/hapijs/jwt",
