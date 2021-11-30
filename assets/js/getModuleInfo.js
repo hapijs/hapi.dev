@@ -115,7 +115,7 @@ async function getInfo() {
     options
   );
   const nodeYaml = await axios.get(
-    "https://api.github.com/repos/hapijs/.github/contents/workflow-templates/ci-module.yml",
+    "https://api.github.com/repos/hapijs/.github/contents/.github/workflows/ci-module.yml",
     options
   );
   let nodeGlobalVersions = Yaml.load(nodeYaml.data).jobs.test.strategy.matrix.node.reverse().filter(e=> e !== "*");
