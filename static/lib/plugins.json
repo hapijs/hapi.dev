@@ -1,5 +1,16 @@
 [
   {
+    "name": "Auditing",
+    "anchor": "auditing",
+    "modules": [
+      {
+        "name": "hapi-audit-rest",
+        "link": "https://github.com/denlap007/hapi-audit-rest",
+        "description": "Hapi.js plugin that generates audit logs for RESTful APIs"
+      }
+    ]
+  },
+  {
     "name": "Authorization",
     "anchor": "authorization",
     "modules": [
