@@ -1,16 +1,5 @@
 [
   {
-    "name": "Auditing",
-    "anchor": "auditing",
-    "modules": [
-      {
-        "name": "hapi-audit-rest",
-        "link": "https://github.com/denlap007/hapi-audit-rest",
-        "description": "Hapi.js plugin that generates audit logs for RESTful APIs"
-      }
-    ]
-  },
-  {
     "name": "Authorization",
     "anchor": "authorization",
     "modules": [
@@ -270,6 +259,11 @@
         "name": "hapi-k8s-health",
         "link": "https://github.com/radenui/hapi-k8s-health",
         "description": "Prometheus metrics and liveness / readiness probes"
+      },
+      {
+        "name": "hapi-audit-rest",
+        "link": "https://github.com/denlap007/hapi-audit-rest",
+        "description": "Hapi.js plugin that generates audit logs for RESTful APIs"
       }
     ]
   },
