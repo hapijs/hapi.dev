@@ -1,4 +1,4 @@
-FROM node:12.18.0-alpine
+FROM node:16.14.0-alpine
 
 # Add curl for readiness check and git for version information.
 RUN apk --no-cache add curl git
