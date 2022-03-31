@@ -6,7 +6,7 @@ hapide kimlik doğrulama şema (`schema`) ve stratejilerin (`strategy`) üzerine
 
 Şemayı genel bir kimlik doğrulama tipi olarak düşün. "basic" ya da "digest" gibi. Bir strateji ise, önceden ayarlanmış ve adlandırılmış bir şemadır.
 
-Önce, [hapi-auth-basic](https://github.com/hapijs/hapi-auth-basic)i kullandığımız bir örneğe bakalım:
+Önce, [hapi-auth-basic](https://github.com/hapijs/hapi-auth-basic)'i kullandığımız bir örneğe bakalım:
 
 ```javascript
 'use strict';
@@ -64,7 +64,7 @@ const start = async () => {
 start();
 ```
 
-Önce, bu örnekte basit bir nesne olan kullanıcı veritabanımızı (`users`) tanımlıyoruz. Daha sonra [hapi-auth-basic](https://github.com/hapijs/hapi-auth-basic)e özel olan ve kullanıcının doğru kimlik bilgilerini verdiğini doğrulayan bir doğrulama işlevi tanımlıyoruz.
+Önce, bu örnekte basit bir nesne olan kullanıcı veri tabanımızı (`users`) tanımlıyoruz. Daha sonra [hapi-auth-basic](https://github.com/hapijs/hapi-auth-basic)e özel olan ve kullanıcının doğru kimlik bilgilerini verdiğini doğrulayan bir doğrulama işlevi tanımlıyoruz.
 
 Daha sonra, `basic` adında bir şema yaratan eklentiyi kaydediyoruz. Bu, eklenti içerisinde [server.auth.scheme()](/api#serverauthschemename-scheme) ile gerçekleştiriliyor.
 
@@ -80,13 +80,13 @@ Bu yöntem içerisinde *en az* `authenticate` anahtarı olan bir nesne dönmelid
 
 ### `authenticate`
 
-`authenticate` yönteminin imzası `function (request, h)`dir ve bir şemada *gerekli* olan tek yöntemdir.
+`authenticate` yönteminin imzası `function (request, h)`'dir ve bir şemada *gerekli* olan tek yöntemdir.
 
 Bu kapsamda, istek (`request`) sunucu tarafından oluşturulan `request` nesnesidir. Yol işleyici içerisinde erişilebilir olan nesne ile aynı nesnedir ve [API Referansı](/api#request-object)nda dokümantasyonu bulunabilir.
 
 `h` standart hapi [yanıt alet takımı (response toolkit)](https://hapijs.com/api#response-toolkit)dır.
 
-Kimlik doğrulama başarılı olduğunda `h.authenticated({ credentials, artifacts })` yöntemini çağırmalı ve dönmelisin. Kimlik bilgileri (`credentials`) özelliği doğrulanan kullanıcının bilgilerini (ya da doğrulama için kullandığı kimlik bilgilerini) içeren bir nesnedir. Ayrıca kullanıcı bilgileri haricinde üretilen kimlik doğrulama ile ilgili bilgileri içeren bir üretiler (`artifacts`) anahtarın da olabilir.
+Kimlik doğrulama başarılı olduğunda `h.authenticated({ credentials, artifacts })` yöntemini çağırmalı ve dönmelisiniz. Kimlik bilgileri (`credentials`) özelliği doğrulanan kullanıcının bilgilerini (ya da doğrulama için kullandığı kimlik bilgilerini) içeren bir nesnedir. Ayrıca kullanıcı bilgileri haricinde üretilen kimlik doğrulama ile ilgili bilgileri içeren bir üretiler (`artifacts`) anahtarın da olabilir.
 
 Kimlik bilgileri (`credentials`) ve üretiler (`artifacts`) özellikleri daha sonra (örneğin yol işleyicisinde) `request.auth` nesnesinden erişilebilir.
 
