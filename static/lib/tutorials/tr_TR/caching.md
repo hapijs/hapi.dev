@@ -2,9 +2,9 @@
 
 _Bu kurs hapi v17 ile uyumludur_
 
-### Istemci taraflı önbellekleme
+### İstemci taraflı önbellekleme
 
-HTTP protokolü, tarayıcı ve benzeri istemcilerin kaynakları önbelleklemeleri için bazı HTTP başlıkları tayin eder. Bu başlıklar hakkında daha fazla bilgi edinmek ve kullanım senaryona hangisinin yatkın olduğuna karar vermek için [Google tarafından oluşturulan bu rehbere](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching) bir göz at.
+HTTP protokolü, tarayıcı ve benzeri istemcilerin kaynakları önbelleklemeleri için bazı HTTP başlıkları tayin eder. Bu başlıklar hakkında daha fazla bilgi edinmek ve kullanım senaryonuza hangisinin yatkın olduğuna karar vermek için [Google tarafından oluşturulan bu rehbere](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching) bir göz atabilirsiniz.
 
 Bu öğreticinin ilk bölümü, hapinin istemcilere bu başlıkları göndermek üzere nasıl yapılandırılacağını gösterir.
 
@@ -43,7 +43,7 @@ Bu örnek aynı zamanda `expiresIn` değerinin  üzerine [yanıt nesnesi](/api#r
 
 `/hapi`ye bir istekte bulunursak yanıt başlığı olarak `cache-control: max-age=30, must-revalidate, private` alırız. Eper isteği `/hapi/5000`e yaparsak bunun yerine şu başlık gelir: `cache-control: max-age=5, must-revalidate, private`.
 
-[yol-secenekleri (route options)](/api#route-options) bağlantısından daha fazla genel `cache` yapılandırma seçeneği bulabilirsin.
+[yol-secenekleri (route options)](/api#route-options) bağlantısından daha fazla genel `cache` yapılandırma seçeneği bulabilirsiniz.
 
 #### Last-Modified
 
@@ -53,7 +53,7 @@ Bazı durumlarda, sunucu bir kaynağın son düzenlendiği tarihi sağlayabilir.
 Bir yanıtta `Last-Modified` başlığı ayarlandığında hapi bu bilgiyi istemciden gelen `If-Modified-Since` başlığıyla karşılaştırarak yanıt durum kodunun `304 Not Modified` olup olmayacağına karar verir. Bu olay anı zamanda koşullu GET isteği olarak da bilinir. Bu yanıtın güzel tarafı, `304` yanıtı alan tarayıcının aynı içeriği tekrar indirmesine gerek kalmamasıdır.
 
 
-`lastModified` bilgsinin bir `Date` nesnesi olduğunu varsayarsak bu başlığı [yanıt nesnesi (response object)](/api#response-object) kullanarak şu şekilde ayarlayabilirsin:
+`lastModified` bilgsinin bir `Date` nesnesi olduğunu varsayarsak bu başlığı [yanıt nesnesi (response object)](/api#response-object) kullanarak şu şekilde ayarlayabilirsiniz:
 
 ```javascript
 return h.response(result)
@@ -65,23 +65,23 @@ Bu yazının [son bölümünde](#istemci-ve-sunucu-önbellekleme) `Last-Modified
 
 ETag, zaman damgası paylaşan `Last-Modified` başlığına alternatif olarak sunucunun bir jeton (genellikle kaynağın sağlama toplamı (checksum)) paylaştığı başlıktır. Tarayıcı bu jetonu bir sonraki isteğinde `If-None-Match` başlığını ayarlamak için kullanır. Sunucu bu başlığın değerini güncel `ETag` sağlama toplamıyla karşılaştırarak aynı ise `304` döner.
 
-Başlığınızda `ETag` kullanmak için yalnızca `etag(tag, options)` işlevini kullanman yeterli:
+Başlığınızda `ETag` kullanmak için yalnızca `etag(tag, options)` işlevini kullanmanız yeterli:
 
 ```javascript
 return h.response(result).etag('xxxxxxxxx');
 ```
 
-Kullanılabilecek daha fazla argüman ve seçenek için [yanıt nesnesi (response object)](/api#response-object) altında bulunan `etag` dokümantasyonuna bir göz at.
+Kullanılabilecek daha fazla argüman ve seçenek için [yanıt nesnesi (response object)](/api#response-object) altında bulunan `etag` dokümantasyonuna bir göz atabilirsin.
 
 ### Sunucu taraflı önbellekleme
 
-hapi [catbox](https://www.github.com/hapijs/catbox) ile güçlü ve pratik sunucu taraflı önbellekleme sunar. Bu öğretici bölümü catboxı nasıl kullanman gerektiğini anlamana yardımcı olacak.
+hapi [catbox](https://www.github.com/hapijs/catbox) ile güçlü ve pratik sunucu taraflı önbellekleme sunar. Bu öğretici bölümü catbox'ı nasıl kullanman gerektiğini anlamana yardımcı olacaktır.
 
-Catboxın iki arayüzü bulunur: istemci (client) ve politika (policy).
+Catbox'ın iki arayüzü bulunur: istemci (client) ve politika (policy).
 
 #### Client (Istemci)
 
-[İstemci (client)](https://github.com/hapijs/catbox#client) anahtar-değer eşleri alıp-verebileceğin alt seviye bir arayüzdür. Şu adaptörlerden birisi ile başlatılır: ([Hafıza (memory)](https://github.com/hapijs/catbox-memory), [Redis](https://github.com/hapijs/catbox-redis), [mongoDB](https://github.com/hapijs/catbox-mongodb), [Memcached](https://github.com/hapijs/catbox-memcached), or [Riak](https://github.com/DanielBarnes/catbox-riak)).
+[İstemci (client)](https://github.com/hapijs/catbox#client) anahtar-değer eşleri alıp-verebileceğin alt seviye bir arayüzdür. Şu adaptörlerden birisi ile başlatılır: ([Hafıza (memory)](https://github.com/hapijs/catbox-memory), [Redis](https://github.com/hapijs/catbox-redis), [mongoDB](https://github.com/hapijs/catbox-mongodb), [Memcached](https://github.com/hapijs/catbox-memcached), ya da [Riak](https://github.com/DanielBarnes/catbox-riak)).
 
 hapi varsayılan olarak [catbox memory](https://github.com/hapijs/catbox-memory) adaptörünü kullanarak bir [İstemci (client)](https://github.com/hapijs/catbox#client) başlatır. Nasıl daha fazla istemci başlatacağına bir bakalım:
 
@@ -109,7 +109,7 @@ const server = Hapi.server({
 });
 ```
 
-Yukarıdaki örnekte, iki tane catbox istemcisi tanımladık: mongoCache ve redisCache. hapi tarafından oluşturulan hafıza önbelleğini de sayarsak üç tane önbellek istemcisi oldu. Yeni bir önbellek istemcisi tanımlarken `name` özelliğini es geçerek varsayılan istemciyi değiştirebilirsin. `partition` adaptöre önbelleğin nasıl adlandırılacağini söyler (varsayılan olarak 'catbox'). [mongoDB](http://www.mongodb.org/)de bu veritabanı adı ve [redis](http://redis.io/)te anahtar ön eki olarak karşımıza çıkar.
+Yukarıdaki örnekte, iki tane catbox istemcisi tanımladık: mongoCache ve redisCache. hapi tarafından oluşturulan hafıza önbelleğini de sayarsak üç tane önbellek istemcisi oldu. Yeni bir önbellek istemcisi tanımlarken `name` özelliğini es geçerek varsayılan istemciyi değiştirebilirsiniz. `partition` adaptöre önbelleğin nasıl adlandırılacağını söyler (varsayılan olarak 'catbox'). [mongoDB](http://www.mongodb.org/)'de bu veri tabanı adı ve [redis](http://redis.io/)'te anahtar ön eki olarak karşımıza çıkar.
 
 #### Policy (Politika)
 
@@ -162,13 +162,13 @@ Eğer http://localhost:8000/add/1/5 adresine bir istekte bulunursan bir saniye s
 
 `sumCache.get()` işlevinin ilk değiştirgesi `id` olarak kullanılmak üzere bir metin ya da içerisinde tekil tanımlayıcı olarak kullanılmak üzere `id` özelliği olan bir nesne olabilir.
 
-**partitionlar**a ek olarak, bir [istemci (client)](https://github.com/hapijs/catbox#client) bölmelendirmesi içerisinde daha fazla izolasyon sağlayacak **segmentler** var. İki farklı yöntem sonucunu önbelleklemek istersen genelde bunları birbirine karıştırmak istemezsin. [mongoDB](http://www.mongodb.org/) adaptörlerinde `segment` bir koleksiyonu temsil ederken, [redis](http://redis.io/)te `partition` için eklenen öneke ek olarak eklenen bir önektir.
+**partitionlar**a ek olarak, bir [istemci (client)](https://github.com/hapijs/catbox#client) bölmelendirmesi içerisinde daha fazla izolasyon sağlayacak **segmentler** var. İki farklı yöntem sonucunu önbelleklemek isterseniz genelde bunları birbirine karıştırmak istemezsiniz. [mongoDB](http://www.mongodb.org/) adaptörlerinde `segment` bir koleksiyonu temsil ederken, [redis](http://redis.io/)'te `partition` için eklenen öneke ek olarak eklenen bir önektir.
 
 Bir eklenti içerisinden [server.cache()](/api#-servercacheoptions) çağırıldığında `segment`in varsayılan değeri `'!pluginName'` olur. [Sunucu yöntemleri (server methods)](/tutorials/servermethods) oluştururken `segment` değeri `'#methodName'` olur. Eğer bir segmenti paylaşan birden fazla politikanın olduğu bir durum varsa, bunun için de [paylasılan (shared)](/api#-servercacheoptions) seçeneği mevcut.
 
 #### Sunucu Yöntemi
 
-Daha iyi olabilir! Yüzde doksan beş ihtimal önbellekleme için [sunucu yöntemleri (server methods)](/tutorials/servermethods)ni kullanacaksın çünkü daha az basmakalıp kullanmak gerekiyor. Hadi önceki örneği sunucu yöntemi ile tekrar yazalım:
+Daha iyi olabilir! Yüzde doksan beş ihtimal önbellekleme için [sunucu yöntemleri (server methods)](/tutorials/servermethods)ni kullanacaksınız çünkü daha az basmakalıp kullanmak gerekiyor. Hadi önceki örneği sunucu yöntemi ile tekrar yazalım:
 
 ```javascript
 const start = async () => {
@@ -200,18 +200,18 @@ const start = async () => {
 
 start();
 ```
-[server.method()](/api#-servermethodname-method-options) otomatik olarak `segment: '#sum'` kesitiyle yeni bir [politika (policy)](https://github.com/hapijs/catbox#policy) oluşturdu. Ayrıca değiştirgelerle tekil bir `id` (önbellek anahtarı) de oluşturuldu. Varsayılan olarak, `string`, `number` ve `boolean` değiştirgelerle çalışabilir. Daha kompleks değiştirgeler için değiştirgeleri kullanarak nasıl tekil tanımlayıcılar üretileceğini belirleyen bir `generateKey` işlevi tanımlamalısın. - [Sunucu yöntemleri](/tutorials/servermethods) öğreticisinden daha fazla bilgi alabilirsin.
+[server.method()](/api#-servermethodname-method-options) otomatik olarak `segment: '#sum'` kesitiyle yeni bir [politika (policy)](https://github.com/hapijs/catbox#policy) oluşturdu. Ayrıca değiştirgelerle tekil bir `id`(önbellek anahtarı)'de oluşturuldu. Varsayılan olarak, `string`, `number` ve `boolean` değiştirgelerle çalışabilir. Daha kompleks değiştirgeler için değiştirgeleri kullanarak nasıl tekil tanımlayıcılar üretileceğini belirleyen bir `generateKey` işlevi tanımlamalısın. - [Sunucu yöntemleri](/tutorials/servermethods) öğreticisinden daha fazla bilgi alabilirsin.
 
 #### Sırada ne var?
 
-* catbox politikasının [seçenekler](https://github.com/hapijs/catbox#policy)inin içine bak ve catbox önbelleklemenin tüm potansiyelinden faydalanmak için `staleIn`, `staleTimeout`, `generateTimeout` kısımlarına özellikle dikkat et.
-* Daha fazla örnek için [sunucu yöntemleri (server methods)](http://hapijs.com/tutorials/servermethods) öğreticisine göz at.
+* catbox politikasının [seçenekler](https://github.com/hapijs/catbox#policy)inin içine bakarak ve catbox önbelleklemenin tüm potansiyelinden faydalanmak için `staleIn`, `staleTimeout`, `generateTimeout` kısımlarına özellikle dikkat etmelisiniz.
+* Daha fazla örnek için [sunucu yöntemleri (server methods)](http://hapijs.com/tutorials/servermethods) öğreticisine göz atabilirsin.
 
-### Istemci ve Sunucu önbellekleme
+### İstemci ve Sunucu önbellekleme
 
-İsteğe bağlı olarak, [Carbox Politikası (Catbox Policy)](https://github.com/hapijs/catbox#policy) önbellekten döndürülen değer hakkında daha fazla bilgi verebilir. Bunun için politikayı yaratırken `getDecoratedValue` seçeneğini true olarak ayarla. Bu şekilde sunucu yönteminden dönen tüm değerler `{ value, cached, report }` şeklinde birer nesne olur. `value` önbellekten dönen değeri barındırırken, `cached` ve `report` değerim önbellek durumu hakkında daha fazla bilgi sunar.
+İsteğe bağlı olarak, [Catbox Politikası (Catbox Policy)](https://github.com/hapijs/catbox#policy) önbellekten döndürülen değer hakkında daha fazla bilgi verebilir. Bunun için politikayı yaratırken `getDecoratedValue` seçeneği true olarak ayarlanır. Bu şekilde sunucu yönteminden dönen tüm değerler `{ value, cached, report }` şeklinde birer nesne olur. `value` önbellekten dönen değeri barındırırken, `cached` ve `report` değeri önbellek durumu hakkında daha fazla bilgi sunar.
 
-`cached.stored` zaman damgasının `last-modified` başlığını ayarlamak için kullanılması güzel bir beraber çalışan sunucu taraflı-istemci taraflı önbellekleme örneğidir.
+`cached.stored` zaman damgasının `last-modified` başlığını ayarlamak için beraber çalışan kullanışı güzel bir sunucu taraflı-istemci taraflı önbellekleme örneğidir.
 
 ```javascript
 const start = async () => {
