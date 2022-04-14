@@ -1,6 +1,5 @@
 let axios = require("axios");
 let Semver = require("semver");
-let Yaml = require("js-yaml");
 let fs = require("fs");
 let Toc = require("markdown-toc");
 require("dotenv").config();
@@ -110,15 +109,35 @@ async function getInfo() {
       authorization: "token " + process.env.GITHUB_TOKEN
     }
   };
-  let repositories = await axios.get(
+  let repositoriesPromise = axios.get(
     "https://api.github.com/orgs/hapijs/repos?per_page=100",
     options
   );
-  const nodeYaml = await axios.get(
-    "https://api.github.com/repos/hapijs/.github/contents/.github/workflows/ci-module.yml",
+
+  const nodeVersionsSchedulePromise = axios.get(
+    "https://api.github.com/repos/nodejs/Release/contents/schedule.json",
     options
   );
-  let nodeGlobalVersions = Yaml.load(nodeYaml.data).jobs.test.strategy.matrix.node.reverse().filter(e=> e !== "*");
+  const hapiPackageJsonPromise = axios.get(
+    "https://api.github.com/repos/hapijs/hapi/contents/package.json",
+    options
+  );
+
+  const [repositories, nodeVersionsScheduleResponse, hapiPackageJsonResponse] =
+    await Promise.all([
+      repositoriesPromise,
+      nodeVersionsSchedulePromise,
+      hapiPackageJsonPromise,
+    ]);
+
+  if (nodeVersionsScheduleResponse.status !== 200 || !nodeVersionsScheduleResponse.data) {
+    throw new Error("Cannot fetch list of nodejs versions");
+  } else if (hapiPackageJsonResponse.status !== 200 || !hapiPackageJsonResponse.data) {
+    throw new Error("Cannot fetch @hapi/hapi package.json");
+  }
+
+  let nodeGlobalVersions = getSupportedNodeLtsVersions(nodeVersionsScheduleResponse.data, hapiPackageJsonResponse.data);
+
   for (let r = 0; r < repositories.data.length; ++r) {
     if (excludeModules.includes(repositories.data[r].name)) {
       continue;
@@ -388,4 +407,20 @@ async function getInfo() {
       if (err) throw err;
     }
   );
+}
+
+function getSupportedNodeLtsVersions(nodeVersionsSchedule, hapiPackageJson) {
+  const now = Date.now();
+
+  const ltsVersions = Object.entries(nodeVersionsSchedule)
+    .filter(
+      ([, versionData]) =>
+        Boolean(versionData.lts) && new Date(versionData.lts).getTime() < now
+    )
+    .map(([readableVersion]) => Semver.coerce(readableVersion));
+
+  return ltsVersions
+    .filter((lts) => Semver.satisfies(lts, hapiPackageJson.engines.node))
+    .map((supportedLts) => supportedLts.major)
+    .sort();
 }
