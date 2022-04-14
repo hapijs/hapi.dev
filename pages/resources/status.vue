@@ -326,6 +326,7 @@ export default {
 
 .status-table td {
   padding: 10px;
+  color: $black;
 }
 
 .status-table tbody {
