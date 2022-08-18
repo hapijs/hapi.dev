@@ -264,11 +264,6 @@
         "name": "hapi-audit-rest",
         "link": "https://github.com/denlap007/hapi-audit-rest",
         "description": "Hapi.js plugin that generates audit logs for RESTful APIs"
-      },
-      {
-        "name": "new relic",
-        "link": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/node-js/hapi",
-        "description": "Monitor your Hapi.js application performance using Node.js agent"
       }
     ]
   },
