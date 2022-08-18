@@ -92,4 +92,4 @@ You can find more information on debug mode in the [API documentation](/api#serv
 
 ## <a name="plugins"></a>Logging Plugins
 
-The built-in methods provided by hapi for retrieving and printing logs are fairly minimal. For a more feature-rich logging experience, you can look into using a plugin like [hapi-pino](https://www.npmjs.com/package/hapi-pino), or any of the other [hapi logging plugins](/plugins#logging).
+The built-in methods provided by hapi for retrieving and printing logs are fairly minimal. For a more feature-rich logging experience, you can look into using a plugin like [hapi-pino](https://www.npmjs.com/package/hapi-pino), [New Relic](https://newrelic.com/instant-observability/hapi/2124da5b-0174-457a-be5a-e0068673b2b5) or any of the other [hapi logging plugins](/plugins#logging).
