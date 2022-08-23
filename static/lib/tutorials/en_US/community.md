@@ -41,3 +41,7 @@
 *   [Run hapi.js on Google Cloud Platform](https://cloud.google.com/nodejs/resources/frameworks/hapi)
 
     Tutorial and cloneable sample app showing how to create and deploy a hapi.js application on Google App Engine.
+
+*   [Catbox-Redis and Cookie Auth Example](https://github.com/johnmanko/catbox-redis-example)
+
+    Demonstrate how to use @hapi/catbox-redis and @hapi/cookie. 
