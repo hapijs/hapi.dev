@@ -71,15 +71,21 @@ const hapiPlugins = [
 // exclude these modules
 const excludeModules = [
   ".github",
+  "address",
   "assets",
   "beam",
   "ci-config-travis",
   "eslint-config-hapi",
+  "formula",
   "good",
   "good-console",
   "good-squeeze",
   "hapi.dev",
   "items",
+  "joi",
+  "joi-date",
+  "joi.dev",
+  "pinpoint",
   "lab-external-module-test",
   "ratrace",
   "rule-capitalize-modules",
@@ -310,6 +316,9 @@ async function getInfo() {
           continue;
         }
         if (repos[repositories.data[r].name].versionsArray.indexOf(gitHubVersion.data.version) === -1) {
+          if (!Semver.valid(gitHubVersion.data.version)) {
+            continue;
+          }
           repos[repositories.data[r].name].versionsArray.push(
             gitHubVersion.data.version
           );
