@@ -93,6 +93,7 @@ const excludeModules = [
   "rule-no-arrowception",
   "rule-no-var",
   "rule-scope-start",
+  "tlds",
   "validate"
 ];
 
