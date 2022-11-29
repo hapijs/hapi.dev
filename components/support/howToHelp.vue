@@ -21,15 +21,24 @@
       <img src="/img/icon_helmets_support.svg" alt="support helmet" class="support-helmet" />
       <span class="bold">Free support</span> is always available on GitHub.
       Just open an issue with your question and a community member will try to help. For faster response,
-      join the
+      join either the
       <span
         class="underline"
       >
         <a
           class="support-link"
+          href="https://discord.gg/YYxZhpKKvu"
+          title="Discord"
+          target="__blank"
+          rel="noopener"
+        >hapi Discord server</a>
+        or
+        <a
+          class="support-link"
           href="https://join.slack.com/t/hapihour/shared_invite/zt-g5ortpsk-ErlnRA2rUcPIWES21oXBOg"
           title="Slack"
           target="__blank"
+          rel="noopener"
         >hapi Slack channel</a>
       </span> – it’s where many community members hang out and help each other.
     </div>
