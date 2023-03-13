@@ -1,33 +1,32 @@
-# Testing
+# 测试
 
-此教程兼容hapi v17以及更高版本.
+_本教程适用于 hapi v17 及以上_
 
-## <a name="overview"></a> Overview
+## <a name="overview"></a> 总览
 
-Hapi设计理念是创建健壮的、可测试的应用.为此,Hapi具备不用启动服务就可以测试路由的功能, 减少了TCP协议连接的时间成本,降低了复杂度.
+Hapi 设计理念是创建健壮的、可测试的应用。为此，无需真启动 Hapi 服务器，也可测试路由，没有了 TCP 协议连接开销，降低了复杂度。
 
-此教程带你进行路由测试的基本设置, 并提出了一种通过[lab](/module/lab)和[code](/module/code)创建可测试应用的一种可能.
-
+此教程演示路由测试的基本设置，并概述测试套件 [lab](/module/lab) 和 [code](/module/code)。
 
 ## <a name="lab"></a> lab
 
-`lab` 是Node.js的一个简单的测试套件. 区别于其他测试套件, lab 只使用 async/await 特性,并且包含了所有你在现代化Node.js测试套件里所需要的工具. `lab` 可以和任何其他的断言库兼容,在条件不符合时候掏出错误. 在本教程中,你将使用 `code` 断言库.
+`lab` 是个简单测试套件。与其他测试套件不同，lab 不仅有 async/await 特性，而且内置了诸多测试 Node.js 所需工具。`lab` 兼容其他断言库，在条件不符合时抛出错误。本教程中，使用 `code` 断言库。
 
-首先安装 `lab`, 在terminal里面输入:
+在终端执行以下命令以安装 `lab`：
 
 `npm install --save-dev @hapi/lab`
 
 ## <a name="code"></a> code
 
-`code` 建立在 `chai` 断言库基础上,被设计成小巧,简单且直观的断言库. 可以不通需要任何插件,拓展库直接运行,并且开销很小.
+`code` 断言库出自于 `chai`，小巧、简单、直观。可以直接运行，无需额外插件或扩展，开销很小。
 
-然后安装 `code`, 在terminal里输入:
+安装 `code`：
 
 `npm install --save-dev @hapi/code`
 
-## <a name="server"></a> Server Setup
+## <a name="server"></a> 服务器设置
 
-从Getting Started教程中拿到例子的服务代码, 我们对它进行一下小修改, 比如让它在被我们的测试用例引用的时候不自动重启服务. 你可以把这个文件保存为`server.js`,然后放在工程的 `lib`目录下:
+以快速入门教程中的代码为例。小小修改一下，以在测试时，不自动启动服务。可以将此文件保存为 `server.js`，放在项目 `lib` 目录下：
 
 ```js
 'use strict';
@@ -57,7 +56,7 @@ exports.init = async () => {
 exports.start = async () => {
 
     await server.start();
-    console.log(`Server running at: ${server.info.uri}`);
+    console.log(`服务器运行于： ${server.info.uri}`);
     return server;
 };
 
@@ -67,7 +66,7 @@ process.on('unhandledRejection', (err) => {
     process.exit(1);
 });
 ```
-现在用导出 `init()` 和 `start()`方法代替原来的调用这两个方法. 这样我们可以在别的文件中来初始化、启动服务. `init()` 方法可以初始化 (开启缓存, 完成插件注册) 但是并未启动服务. 接下来要在测试用例中启动服务. `start()` 会自动启动服务. 我们将要在入口文件中调用:
+导出两个函数：`init()`、`start()`，不直接调用，以在其他文件中初始化、启动服务。函数 `init()` 用来初始化服务器，开启缓存，完成插件注册，但并未启动服务。测试用例中用到此函数。函数 `start()` 会真启动服务。这个函数要在入口文件中调用：
 
 ```js
 `use strict`;
@@ -76,17 +75,17 @@ const { start } = require('lib/server');
 
 start();
 ```
-你在这里创建的,是通常启动服务时候使用的,在入口文件通过调用start方法来启动服务的一种方式, 这种方式对外暴露出一个外部HTTP端口, 此外你也可以在我们的测试用例中使用一个什么都不做的模块.
+正常启动服务时，调用 `start` 函数，会对外暴露 HTTP 端口。在测试用例中，不需要真启动服务，只需初始化服务即可。因此，调用 `init` 函数，而不是 `start` 函数。
 
-## <a name="writingTest"></a> Writing a Route Test
+## <a name="writingTest"></a> 路由测试
 
-在这个例子中你将使用 [lab](/module/lab), 同样的方法也可以在任何测试工具中使用,例如 [Mocha](https://mochajs.org/), [Jest](https://jestjs.io/), [Tap](https://www.node-tap.org/), [Ava](https://github.com/avajs) 等.
+这个例子用到的 [lab](/module/lab)，可以推广应用到其他测试工具，例如 [Mocha](https://mochajs.org/)、[Jest](https://jestjs.io/)、[Tap](https://www.node-tap.org/)、[Ava](https://github.com/avajs) 等。
 
-默认情况下, `lab` 加载所有文件'*.js' 在本地的 `test` 目录里,并执行所有发现的测试用例. 如果想设置其他的文件夹或者文件, 需要将文件或者文件夹路径作为参数传入:
+默认, `lab` 加载本立目录 `test`，及其中 '*.js'，而后执行测试用例。如果想自定义文件夹或者文件，可参数传入路径：
 
 `$  lab unit.js`
 
-准备开始,创建一个 `example.test.js` 在 `test` 目录里:
+测试前，在 `test` 目录里，创建文件 `example.test.js`：
 
 ```js
 'use strict';
@@ -116,15 +115,15 @@ describe('GET /', () => {
     });
 });
 ```
-这里你将要测试我们的 `'GET'` 路由是否会响应 `200` 状态码. 首先调用 `describe()` 来给你的测试用例提供一个构造函数. `describe()` 接受2个参数, 一个是测试用例的描述, 另一个是设置测试用例的方法.  
+此处测试 `'GET'` 请求，看是否会响应状态码 `200`。首先调用 `describe()`，`describe()` 接收 2 个参数, 一个是测试用例描述， 一个是测试用例方法。
 
-请注意 `init` 代替 `start` 来设置服务, 意味着我们启动了服务, 但是没有监听任何端口. 每个测试用例后都会调用 `stop` 来清理和停止服务.
+请注意，启动服务用 `init`，而不是 `start`。以启动服务器，而不监听端口。每次测试后，调用 `stop` 来清理并停止服务。
 
-`it()` 方法将会运行你的测试用例. `it()` 接受2个参数, 一个是测试用例通过的描述语句, 另一个是运行测试用例的方法. 
+函数 `it()` 用来执行测试用例。`it()` 接受 2 个参数，一个是测试用例通过的描述语句，一个是运行测试用例的函数。
 
-你需要了解服务器上的 `inject`. `inject` 使用 [Shot](/module/shot) 来 `inject` 直接向hapi的hanlder注入请求. 这就是让我们能够测试HTTP方法的关键所在.
+例子中用到了 `inject`。`inject` 用到了 [Shot](/module/shot)，直接将请求注入到路由处理方法，这就是不启动服务而能够测试的关键所在。
 
-为了让我们的测试用例运行, 你可以修改项目中的 `package.json` 来测试你的测试用例:
+要运行测试，可以修改项目中的 `package.json`：
 
 ```json
   "scripts": {
