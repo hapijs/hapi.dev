@@ -45,3 +45,7 @@
 *   [Catbox-Redis and Cookie Auth Example](https://github.com/johnmanko/catbox-redis-example)
 
     Demonstrate how to use @hapi/catbox-redis and @hapi/cookie. 
+    
+*   [WittCode's Hapi Tutorial Series](https://youtube.com/playlist?list=PLkqiWyX-_LotaQ9AuppIAXl0xyV-P5Ms-)
+
+    10 videos starting from creating a Hapi server, adding routes, plugins, through to using Sequelize/MySQL and cookie authentication.
