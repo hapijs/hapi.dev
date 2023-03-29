@@ -28,6 +28,15 @@
           >Slack</a
         >
       </li>
+      <li class="footer-links-li">
+        <a
+          class="footer-link"
+          title="Discord"
+          target="__blank"
+          href="https://discord.gg/YYxZhpKKvu"
+          >Discord</a
+        >
+      </li>
     </ul>
     <div class="footer-text-wrapper">
       <a class="netlify-link" href="https://www.netlify.com" name="Netlify">
