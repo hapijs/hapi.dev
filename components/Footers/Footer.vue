@@ -96,8 +96,8 @@ a {
   line-height: 1rem;
 }
 
-.footer-links-li:nth-child(-n + 2) {
-  padding-right: 10px;
+.footer-links-li + .footer-links-li {
+  padding-left: 10px;
 }
 
 .footer-link {
