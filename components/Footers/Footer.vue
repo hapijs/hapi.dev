@@ -28,6 +28,15 @@
           >Slack</a
         >
       </li>
+      <li class="footer-links-li">
+        <a
+          class="footer-link"
+          title="Discord"
+          target="__blank"
+          href="https://discord.gg/YYxZhpKKvu"
+          >Discord</a
+        >
+      </li>
     </ul>
     <div class="footer-text-wrapper">
       <a class="netlify-link" href="https://www.netlify.com" name="Netlify">
@@ -87,8 +96,8 @@ a {
   line-height: 1rem;
 }
 
-.footer-links-li:nth-child(-n + 2) {
-  padding-right: 10px;
+.footer-links-li + .footer-links-li {
+  padding-left: 10px;
 }
 
 .footer-link {
