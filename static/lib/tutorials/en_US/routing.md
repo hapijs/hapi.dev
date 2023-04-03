@@ -269,8 +269,7 @@ const init = async () => {
         method: '*',
         path: '/{any*}',
         handler: function (request, h) {
-
-            return '404 Error! Page Not Found!';
+            return h.response('404 Error! Page Not Found!').code(404);
         }
     });
 
