@@ -709,6 +709,11 @@
         "name": "tarm",
         "link": "https://github.com/kanongil/tarm",
         "description": "Add tarmount handler for serving tar file contents"
+      },
+      {
+        "name": "hapi-orientdb",
+        "link": "https://github.com/petervavro/hapi-orientdb",
+        "description": "OrientDB plugin for hapijs."
       }
     ]
   },
