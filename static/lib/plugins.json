@@ -306,7 +306,7 @@
     "modules": [
       {
         "name": "blankie",
-        "link": "https://github.com/nlf/blankie",
+        "link": "https://github.com/arafel/blankie",
         "description": "A plugin that makes Content-Security-Policy headers easy"
       },
       {
