@@ -519,6 +519,11 @@
         "description": "Another mysql plugin for Hapijs that supports multiple connections, inspired by Marsup/hapi-mongodb"
       },
       {
+        "name": "hapi-postgres",
+        "link": "https://github.com/liviaerxin/hapi-postgres",
+        "description": "Hapi postgres connection plugin, supports both client and pool mode, inspired by Marsup/hapi-mongodb"
+      },
+      {
         "name": "hapi-named-routes",
         "link": "https://github.com/poeticninja/hapi-named-routes",
         "description": "Add named routes to your view templates"
