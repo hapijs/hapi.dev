@@ -196,7 +196,7 @@ const start = async () => {
             isSecure: false
         },
         redirectTo: '/login',
-        validateFunc: async (request, session) => {
+        validate: async (request, session) => {
 
             const account = await users.find(
                 (user) => (user.id === session.id)
@@ -204,10 +204,10 @@ const start = async () => {
 
             if (!account) {
 
-                return { valid: false };
+                return { isValid: false };
             }
 
-            return { valid: true, credentials: account };
+            return { isValid: true, credentials: account };
         }
     });
 
@@ -284,7 +284,7 @@ The first property you configure is the `cookie` object. In your `strategy`, you
 
 The next property is `redirectTo`. This will tell the server where to redirect to if an unauthenticated user tries to access a resource that requires authentication.  
 
-The last property is the `validateFunc` function. The `validateFunc` validates that a current cookie is still valid. For example, if a user authenticates themselves successfully, receives a cookie, and then leaves the site. Once they return, the `validateFunc` will check if their current cookie is still valid. 
+The last property is the `validate` function, which validates that a current cookie is still valid. For example, if a user authenticates themselves successfully, receives a cookie, and then leaves the site. Once they return, the `validate` function will check if their current cookie is still valid. 
 
 You setup the default strategy by calling `server.auth.default('session')`. This will set the default auth strategy for all routes.   
 

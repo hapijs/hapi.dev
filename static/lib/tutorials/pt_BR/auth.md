@@ -45,7 +45,7 @@ server.register(Basic, (err) => {
         throw err;
     }
 
-    server.auth.strategy('simple', 'basic', { validateFunc: validate });
+    server.auth.strategy('simple', 'basic', { validate });
     server.route({
         method: 'GET',
         path: '/',
