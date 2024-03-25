@@ -1,16 +1,5 @@
 [
   {
-    "name": "Design Patterns",
-    "anchor": "patterns",
-    "modules": [
-      {
-        "name": "hapi-mvc",
-        "link": "https://github.com/the-provost/hapi-mvc",
-        "description": "MVC structure and boilerplating for Hapi.js Projects"
-      },
-    ]
-  },
-  {
     "name": "Authorization",
     "anchor": "authorization",
     "modules": [
@@ -108,6 +97,17 @@
         "link": "https://hapi.dev/family/jwt",
         "description": "JWT (JSON Web Token) Authentication."
       }
+    ]
+  },
+  {
+    "name": "Boilerplate",
+    "anchor": "boilerplate",
+    "modules": [
+      {
+        "name": "hapi-mvc",
+        "link": "https://github.com/the-provost/hapi-mvc",
+        "description": "MVC structure and boilerplating for Hapi.js Projects"
+      },
     ]
   },
   {
