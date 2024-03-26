@@ -100,6 +100,17 @@
     ]
   },
   {
+    "name": "Boilerplate",
+    "anchor": "boilerplate",
+    "modules": [
+      {
+        "name": "hapi-mvc",
+        "link": "https://github.com/the-provost/hapi-mvc",
+        "description": "MVC structure and boilerplating for Hapi.js Projects"
+      },
+    ]
+  },
+  {
     "name": "Documentation",
     "anchor": "documentation",
     "modules": [
