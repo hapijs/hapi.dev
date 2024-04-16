@@ -469,11 +469,11 @@ passport.use(new TwitterStrategy({
 ));
 
 passport.seralizeUser(function(user, cb) {
-    cd(null, user);
+    cb(null, user);
 })
 
 passport.deserializeUser(function(user, cb) {
-    cd(null, obj);
+    cb(null, obj);
 })
 
 app.get('/auth/twitter', passport.authenticate('twitter'));
