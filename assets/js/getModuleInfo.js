@@ -68,33 +68,58 @@ const hapiPlugins = [
   "yar"
 ];
 
-// exclude these modules
-const excludeModules = [
-  ".github",
-  "address",
-  "assets",
-  "beam",
-  "ci-config-travis",
-  "eslint-config-hapi",
-  "formula",
-  "good",
-  "good-console",
-  "good-squeeze",
-  "hapi.dev",
-  "items",
-  "joi",
-  "joi-date",
-  "joi.dev",
-  "pinpoint",
-  "lab-external-module-test",
-  "ratrace",
-  "rule-capitalize-modules",
-  "rule-for-loop",
-  "rule-no-arrowception",
-  "rule-no-var",
-  "rule-scope-start",
-  "tlds",
-  "validate"
+// include only these modules
+const includedModules = [
+  "accept",
+  "ammo",
+  "b64",
+  "basic",
+  "bell",
+  "boom",
+  "bossy",
+  "bounce",
+  "bourne",
+  "call",
+  "catbox",
+  "catbox-memcached",
+  "catbox-memory",
+  "catbox-object",
+  "catbox-redis",
+  "code",
+  "content",
+  "cookie",
+  "crumb",
+  "cryptiles",
+  "eslint-plugin",
+  "file",
+  "glue",
+  "h2o2",
+  "hapi",
+  "hapi-pino",
+  "heavy",
+  "hoek",
+  "inert",
+  "iron",
+  "jwt",
+  "lab",
+  "log",
+  "mimos",
+  "nes",
+  "nigel",
+  "oppsy",
+  "pez",
+  "podium",
+  "scooter",
+  "shot",
+  "somever",
+  "statehood",
+  "subtext",
+  "teamwork",
+  "topo",
+  "vise",
+  "vision",
+  "wreck",
+  "yar",
 ];
 
 getInfo();
@@ -145,8 +170,10 @@ async function getInfo() {
 
   let nodeGlobalVersions = getSupportedNodeLtsVersions(nodeVersionsScheduleResponse.data, hapiPackageJsonResponse.data);
 
+  repositories.data.sort((a, b) => a.name.localeCompare(b.name));
+
   for (let r = 0; r < repositories.data.length; ++r) {
-    if (excludeModules.includes(repositories.data[r].name)) {
+    if (!includedModules.includes(repositories.data[r].name)) {
       continue;
     }
     finalHtmlDisplay = "";

@@ -107,7 +107,7 @@
         "name": "hapi-mvc",
         "link": "https://github.com/the-provost/hapi-mvc",
         "description": "MVC structure and boilerplating for Hapi.js Projects"
-      },
+      }
     ]
   },
   {
