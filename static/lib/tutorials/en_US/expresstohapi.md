@@ -270,24 +270,6 @@ module.exports = function (options) {
 
 hapi:
 ```js
-server.register({
-    plugin: getDate,
-    options: {
-        name: 'Tom'
-    }
-})
-```
-To get access to the options in hapi, you simply refer to the `options` object when you create the plugin:
-
-Express:
-```js
-const getDate = require('./mw/getDate.js');
-
-app.use(getDate({ name: 'Tom' }));
-```
-
-hapi:
-```js
 const getDate = {
     name: 'getDate',
     version: '1.0.0',
@@ -302,6 +284,24 @@ const getDate = {
         server.decorate('toolkit', 'getDate', currentDate);
     }
 };
+```
+To get access to the options in hapi, you simply refer to the `options` object when you create the plugin:
+
+Express:
+```js
+const getDate = require('./mw/getDate.js');
+
+app.use(getDate({ name: 'Tom' }));
+```
+
+hapi:
+```js
+server.register({
+    plugin: getDate,
+    options: {
+        name: 'Tom'
+    }
+})
 ```
 
 ## <a name="bodyParser" ></a> body-parser
