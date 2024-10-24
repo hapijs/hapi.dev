@@ -95,7 +95,6 @@ const includedModules = [
   "glue",
   "h2o2",
   "hapi",
-  "hapi-pino",
   "heavy",
   "hoek",
   "inert",
