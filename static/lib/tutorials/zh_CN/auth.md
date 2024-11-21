@@ -1,154 +1,95 @@
-## 身份认证
+# 鉴别（Authentication）
 
-_该教程适用于 hapi v17版本_
+_本教程适用于 hapi v17 及以上_
 
-hapi 的身份认证基于两个概念：`schemes` 和 `strategies`。
+## <a name="overview"></a> 总览
 
-可以将 scheme 视为一般类型的认证, 例如 "basic" 或 "digest"。而 strategy 是一个预先配置好并且命名好的 scheme 实例。
+现在网页应用，大多都会用到鉴别（Authentication）。hapi 的鉴别有两个概念：`计划（schemes）`、`策略（strategies）`。`计划`乃 hapi 中的一种鉴别方式。例如，`@hapi/basic`、`@hapi/cookie`。`策略`是`计划`的实例，预先配置并且命名。
 
-首先我们来看一下如何使用 [hapi-auth-basic](https://github.com/hapijs/hapi-auth-basic):
+## <a name="schemes"></a> 计划（Schemes）
 
-```javascript
-'use strict';
+`计划` 是个方法，其签名为 `function (server, options)`。参数 `server` 服务器对象的引用，参数 `options` 是该计划的配置项。
 
-const Bcrypt = require('bcrypt');
-const Hapi = require('@hapi/hapi');
+此方法返回对象，必须带有属性方法 `authenticate`。剩余属性可选，如 `payload` 和 `response`。
 
-const users = {
-    john: {
-        username: 'john',
-        password: '$2a$10$iqJSHD.BGr0E2IxQwYgJmeP3NvhPrXAeLSaGCj6IR/XU5QtjVu5Tm',   // '密码: secret'
-        name: 'John Doe',
-        id: '2133d32a'
-    }
-};
+`计划`可自定义，或者使用 hapi 提供的插件。如 `@hapi/basic`、`@hapi/cookie`。
 
-const validate = async (request, username, password) => {
+### <a name="authenticate"></a> 属性方法 `authenticate`
 
-    const user = users[username];
-    if (!user) {
-        return { credentials: null, isValid: false };
-    }
+方法 `authenticate` 签名为 `function (request, h)`, 必选。
 
-    const isValid = await Bcrypt.compare(password, user.password);
-    const credentials = { id: user.id, name: user.name };
+其中，参数 `request` 为服务器创建的 `request` 对象。这个对象与路由处理函数中的相同，详情请参阅 [API](/api#request-object)。
 
-    return { isValid, credentials };
-};
+参数 `h` 是 hapi 的[响应工具包](https://hapijs.com/api#response-toolkit).
 
-const start = async () => {
+当鉴别成功时, 该方法必须返回 `h.authenticated({ credentials, artifacts })`。两属性皆是对象。其中，属性 `credentials` 用以存用户鉴别数据，或用户凭证（credentials）。属性 `artifacts` 用以存其他鉴别信息。
 
-    const server = Hapi.server({ port: 4000 });
+返回的两属性 `credentials` 和 `artifacts`，存于对象 `request.auth`，可随时访问（如路由处理函数）。
 
-    await server.register(require('hapi-auth-basic'));
+若鉴别失败, 可抛出错误或返回 `h.unauthenticated(error, [data])`。此处，参数 `error` 是鉴别错误，参数 `data` 是个可选对象，其包含 `credentials`、`artifacts`。如果自定义抛出错误且没提供 `data` 对象，这与直接调用 `return h.unauthenticated(error)` 一样。所传错误会影响后续行为。详情参见 [`server.auth.scheme(name, scheme)`](/api#server.auth.scheme())。此外，处理错误，推荐使用 [boom](/module/boom)。
 
-    server.auth.strategy('simple', 'basic', { validate });
+### <a name="payload"></a> 属性方法 payload
 
-    server.route({
-        method: 'GET',
-        path: '/',
-        options: {
-            auth: 'simple'
-        },
-        handler: function (request, h) {
+方法 `payload` 签名为 `function (request, h)`。
 
-            return 'welcome';
-        }
-    });
+同样，方法提供 hapi 响应工具包。处理错误，再次建议使用 [boom](/module/boom)。
 
-    await server.start();
+鉴别成功，请返回 `h.continue`。
 
-    console.log('server running at: ' + server.info.uri);
-};
+### <a name="response"></a> 属性方法 response
 
-start();
+方法 `response` 签名为 `function (request, h)`，也提供 hapi 响应工具包。
+
+响应发送之前，此方法可装饰响应对象 (`request.response`)，为其添加头信息。
+
+包装毕，必须返回 `h.continue`, 以发送响应。
+
+处理错误，仍建议用 [boom](/module/boom)。
+
+## <a name="strategies"></a> 策略（Strategies）
+
+`计划`注册后，如何使用。这就要靠`策略（Strategies）`了。
+
+如上所述，`策略（Strategies）`其实`计划（scheme）`实例的拷贝。
+
+欲注册`策略（Strategies）`，需先注册`计划（scheme）`。而后，调用 `server.auth.strategy(name, scheme, [options])` 来注册`策略（Strategies）`。
+
+参数 `name` 为字符串，必填，用以标识`策略（Strategies）`。参数 `scheme` 也是字符串，必填，是`计划（scheme）`名。参数 `options` 为对象，可选，是`计划（scheme）`配置项。
+
+```js
+server.auth.strategy('session', 'cookie', {
+    name: 'sid-example',
+    password: '!wsYhFA*C2U6nz=Bu^%A@^F#SF3&kSR6',
+    isSecure: false
+});
 ```
 
-首先定义我们的 `users` 数据库, 在这个示例中只是一个简单的对象。之后我们定一个验证函数, 这个函数是 [hapi-auth-basic](https://github.com/hapijs/hapi-auth-basic) 的一个特性，可以允许我们验证用户是否提供了有效的凭证，
-之后我们注册这个插件。随后我们创建一个名为 `basic`的 scheme ，这个可以通过[server.auth.scheme()](/api#serverauthschemename-scheme)来完成。
+上述例子，注册了一个`策略（Strategies）`，名为 `session` ，其`计划（scheme）`用 `cookie`。并配置`策略（Strategies）`，给其 `name`、`password`、`isSecure`。
 
-当这个插件被注册后, 我们可以使用 [server.auth.strategy()](/api#serverauthstrategyname-scheme-mode-options) 去创建一个名为 `simple` 的 strategy。 这个代表的就是我们名为 `basic` 的 scheme。 同时也传递了一个选项对象，这样我们可以配置 scheme 的行为。
+### <a name="default"></a> 默认策略（Default Strategies）
 
-最后我们告诉路由使用名为 `simple` 的 strategy 来做身份验证。
+用 `server.auth.default()` 来设置默认`策略（Strategies）`。
 
-## Schemes
+此方法接受一个参数, 可传`策略（Strategies）`名，可传对象，其格式与[路由鉴别选项](#route-configuration) 同。
 
-`scheme` 是一个拥有签名 `function (server, options)` 的方法。 `server` 参数是需要添加这个 scheme 的服务器对象的引用，`options` 参数是使用它注册 strategy 时的配置。
+需注意，所有路由都会使用默认`策略（Strategies）`，即使路由添加在 `server.auth.strategy()` 前。
 
-这个方法返回的对象 *至少* 包含了 `authenticate` 方法。而其他可用的非必须返回的方法是 `payload` 和 `response`。
+## <a name="route"></a> 路由配置（Route Configuration）
 
-### `authenticate`
+鉴别（Authentication）亦可配置于路由，在 `options.auth`。设置为 `false` 即在该路由上停用鉴别。
 
-`authenticate` 方法的签名为 `function (request, h)`, 也是 scheme 中唯一 *必须* 有的方法。
+其值可为`策略（Strategies）`名，或对象，改对象属性如右：`mode`、`strategies`、`payload`。
 
-在这里 `request` 为服务器创建的 `request` 对象。 这个对象与路由 handler 中的对象为同一个, 完整的文档可以参阅 [API reference](/api#request-object)。
+参数 `mode` 可为 `'required'`、`'optional'`、`'try'`。此三者与注册`策略（Strategies）`时同。
 
-`h` 是 hapi 中的 [response toolkit](https://hapijs.com/api#response-toolkit).
+如果 `mode` 为 `'required'`，访问路由时，必须鉴别用户，且鉴别必须通过，否则报错。
 
-当身份认证成功时, 你必须调用并且返回 `h.authenticated({ credentials, artifacts })`。 `credentials` 是一个代表身份验证用户 (或者用户将要进行身份认证的凭证) 的对象。 另外 `artifacts` 包含了除用户凭证之外的其余验证信息。
+如果 `mode` 为 `'optional'`, 路由仍会使用这个策略。不过**无需**鉴别用户。但若提供了鉴别信息，则必须是有效的。
 
-`credentials` 和 `artifacts` 作为 `request.auth`对象的一部分，也可以在之后的处理过程中访问 (例如：路由 handler)。
+`mode` 也可为 `'try'`。`'try'` 与 `'optional'` 的区别在于，使用 `try` 鉴别失败，依然会进入路由处理程序。
 
-如果身份验证不成功, 你可以抛出一个错误或者调用并返回 `h.unauthenticated(error, [data])`。 这里的 `error` 是一个身份验证错误，`data` 是一个可选对象，它包含了 `credentials` 和 `artifacts`。 如果你抛出的错误没有 `data` 对象，那么将和你调用 `return h.unauthenticated(error)` 没有什么区别。 这些错误传递的细节将会对行为有一定的影响，更多细节可以 API 文档中找到 [`server.auth.scheme(name, scheme)`](https://hapijs.com/api#-serverauthschemename-scheme)。我们推荐你使用 [boom](https://github.com/hapijs/boom) 来处理错误。
+当只需一个策略，可以设置属性 `strategy` 为策略名。如果需要多个, 必须使用属性 `strategies`，其值为策略名数组。这些策略会被依次执行，直到有第一个成功, 或者全部失败。
 
-### `payload`
+最后，参数 `payload` 设为 `false`，表示不鉴别荷载。如果设为 `'required'` 或 `true`，则**必须**鉴别。如果设为 `'optional'`，则若客户端带有鉴别信息，这些信息必须有效。
 
-`payload` 方法拥有签名 `function (request, h)`。
-
-同样，这里也可以获得到 hapi 的响应对象。 我们同样建议你使用 [boom](https://github.com/hapijs/boom) 进行错误处理。
-
-要发出身份验证成功的信号请返回 `h.continue`。
-
-### `response`
-
-`response` 方法拥有签名 `function (request, h)` 也拥有 hapi标准的 response toolkit。
-
-在响应发送会给用户之前，此方法旨在装饰响应对象 (`request.response`)，可以为其添加额外的头部信息。
-
-当包装完毕后，你必须返回 `h.continue`, 这样响应才会被发送出去。
-
-当错误发生时，我们依然建议你使用 [boom](https://github.com/hapijs/boom) 进行错误处理。
-
-### 注册
-
-注册一个 scheme 使用 `server.auth.scheme(name, scheme)`。其中 `name` 是一个字符串，用于标明特定的 scheme, 而 `scheme` 就是上文提到的方法。
-
-## Strategies
-
-当你注册了你的 scheme 后，你需要一种方式去使用它。这就是为什么引入了 strategies 。
-
-正如之前提到的，strategy 其实是一个预先配置好的 scheme 实例拷贝。
-
-使用 strategy 时, 我们必须保证有一个 scheme 已经被注册。准本好之后，你就可以使用 `server.auth.strategy(name, scheme, [options])` 去注册你的 strategy。
-
-`name` 参数必须是一个字符串, 用于标明一个特定的 strategy。 `scheme` 其实也是一个字符串, 是实例化这个 strategy 的 scheme 的名称。
-
-### 选项
-
-最后的可选参数是 `options`, 这个参数将直接传递给已经命名的 scheme 。
-
-### 设置一个默认的 strategy
-
-你可以通过使用 `server.auth.default()` 设置一个默认的 strategy。
-
-这个方法接受一个参数, 这个参数可以是一个默认 strategy 的名字，或者与路由handler [auth options](#route-configuration) 同样格式的对象。
-
-## 路由配置
-
-身份认证也可以在一个路由上通过 `options.auth` 参数进行配置。如果设置为 `false` 将会在路由上关闭身份验证。
-
-它可以通过 strategy 将要使用的名字去配置，或者一个拥有 `mode`, `strategies`, 和`payload` 参数的对象去配置。
-
-`mode` 参数可以被设置为 `'required'`, `'optional'`, 或者`'try'`。 这三种参数在注册 strategy 的时候方式相同。
-
-如果 `mode` 设置为 `'required'` ，在访问路由的时候必须对用户进行身份进行验证，并且验证必须有效，否则他们将收到错误。
-
-如果 `mode` 设置为 `'optional'` , 路由也将会使用这个 strategy 。但是用户 *不必* 进行身份验证。一旦如果验证信息提供了，那就必须是有效的。
-
-最后 `mode` 可以被设置为 `'try'`。 `'try'` 与 `'optional'` 的区别在于：如果用 `'try'` ，不合法的身份验证是被接受的, 用户依然可以访问路由 handler。
-
-当只需一个 strategy 时，你可以设置 `strategy` 属性为 strategy 的名字。如果指定多个 strategy 时, 参数名称必须为 `strategies`， 属性为 strategy 名称的数组。 这些 strategies 将会按照顺序执行一直到有第一个成功的, 否则的话将全部失败。
-
-最后 `payload` 参数可以被设置为 `false` 表示内容信息不需要被认证。如果设置为 `'required'` 或者 `true` 则意味着内容 *必须* 被验证。 如果设置为 `'optional'` 意味着如果客户端一旦包含了内容认证的信息，这些信息就必须是有效的。
-
-`payload` 只有在支持`payload` 方法的 strategy 中才会生效。
+策略方法支持 `payload` 时，`payload`生效。

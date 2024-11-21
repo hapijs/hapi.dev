@@ -1,30 +1,53 @@
-## 日志
+# 日志
 
-_该教程适用于 hapi v17版本_
+_本教程适用于 hapi v17 及以上_
 
-对于软件开发而言，日志的重要性不言而喻。 hapi 内建的日志方法已经基本可以满足日常开发的需要。
+## <a name="overview"></a> 总览
 
-### 内建方法
+服务器日志重要与否，不言而喻。hapi 内置了日志功能。
 
-在你的应用程序内，你可以使用 [`server.log(tags, [data, [timestamp]])`](/api#-serverlogtags-data-timestamp), 以及[`request.log(tags, [data])`](https://hapijs.com/api#-requestlogtags-data) 这两种日志方法。 你可以通过调用 `request.log()` 记录一个请求的上下文信息。 例如在路由的处理过程中. 记录请求的生命周期扩展以及授权方案。你也可以通过调用 `server.log()` 记录除请求之外的其余信息。 例如服务的启动信息以及插件的 `register()` 方法。
+## <a name="methods"></a> 内建方法
 
-以上两种方法前两个参数都一样，分别是 `tags` 和 `data`。
+有两个几乎相同的日志方法，`server.log(tags, [data, [timestamp]]` 和 `request.log(tags, [data])`，便于随时随地调用。
 
-`tags` 可以是一个字符串或者字符串数组用于鉴别事件。 你可以把它当作日志等级，或者添加更多可描述的内容。 例如：记录一个从数据库中的读取错误你可以这样写：
+### <a name="request.log"></a> request.log()
 
-```javascript
-server.log(['error', 'database', 'read']);
+当需要在请求上下文中记录日志时，调用`request.log()`，例如路由处理函数内、请求生命周期中、鉴别时。该方法参数有二：
+
+`tags`：日志标签，为字符串或字符串数组，例如 `['error', 'database', 'read']`。以标识事件。标签代替日志级别，事件描述更细腻。
+
+`data`：可选，日志数据，为字符串或对象。如果 data 是函数，函数签名是 `function()`，会调用一次，获取返回值，存储数据。
+
+例如：
+
+```js
+server.route({
+    method: 'GET',
+    path: '/',
+    handler: function (request, h) {
+
+        request.log('error', '事件错误');
+        return 'Hello World';
+    }
+});
 ```
 
-hapi 中所有生成的日志事件，都会有一个 `hapi` 标签。
+在这个例子中，请求路由 `/`，会触发事件，并记录。此时控制台会输出传入的 `data` 参数，即 `事件错误`。`data` 可自定义。
 
-第二个参数 `data` 是一个可选的字符串或者对象。 这里你可以传入错误信息，或者其余相关细节。
+### <a name="server.log"></a> server.log()
 
-除此之外 `server.log()` 可以接受 `timestamp` 作为第三个参数。 它的默认值是 `Date.now()`, 除非有特殊的原因，我们不建议你覆盖这个默认值。
+`server.log()` 用于没有特定请求的上下文中，例如，服务器启动后、插件的 `register()` 方法中。其参数有三，其中 `tags` 和 `data` 与 `request.log()` 一致。参数 `timestamp` 可选，默认为 `Date.now()`，通常不建议覆盖。
 
-### 检索以及显示日志
+```js
+const Hapi = require('@hapi/hapi');
+const server = Hapi.server({ port: 80 });
 
-hapi 服务器对象为每个日志事件都发出了事件。你可以通过标准的 EventEmitter API 去监听这些事件并做处理。
+server.log(['test', 'error'], '事件测试');
+```
+
+## <a name="display"></a> 日志检索展示
+
+hapi 服务器对象会发出所有日志事件。可以通过标准的 EventEmitter 接口去监听处理。
 
 
 ```javascript
@@ -36,9 +59,9 @@ server.events.on('log', (event, tags) => {
 });
 ```
 
-调用 `server.log()` 时将会发出 `log` 事件，而调用 `request.log()` 时将会发出一个 `request` 事件。
+本例，调用 `server.events.on()` 来监听全部 `log` 事件。包括 `server.log()` 和 `request.log()`。
 
-你可以通过 `request.logs` 一次性获取到所有日志。 这将返回一个包含所有请求日志事件的数组。想要使用这个功能需要将路由的 `log.collect` 选项设置为 `true`，否则只能得到一个空的数组。
+还可以用 `request.logs` 一次获取该请求所有日志。此方法返回一个数组，包含所有请求日志事件。欲用此功能，需将路由的 `log.collect` 选项设置为 `true`，否则只能返回空数组。
 
 ```javascript
 server.route({
@@ -51,23 +74,24 @@ server.route({
     },
     handler: function (request, h) {
 
-        return 'hello';
+        return '你好';
     }
 });
 ```
 
-### Debug 模式 (只针对开发)
+## <a name="debug"></a> 调试模式 (只针对开发)
 
-hapi 拥有 debug 模式, 它可以直接显示所有日志事件到控制台，而不需要额外去配置或者使用一些插件。
+开启调试模式，可直接显示所有日志事件到控制台，不需要额外配置或插件。
 
-默认情况，debug 模式只会输出应用未捕获的错误、运行时错误以及错误实现hapi API所带来错误等。你可以在服务器配置中配置 debug 模式需要打印哪些 tag 的错误。例如你想将所有请求中的错误信息在 debug 模式中输出，可以如下配置:
+默认情况，调试模式只会输出未捕获错误、运行时错误以及 hapi 调用错误。不过，在服务器配置中配置后，调试模式可以输出标签事件。例如，要获取请求错误信息，可以如下配置：
 
 ```javascript
 const server = Hapi.server({ debug: { request: ['error'] } });
 ```
 
-更多关于 debug 模式的信息请参阅 [API documentation](https://hapijs.com/api#-serveroptionsdebug).
+详情请参阅 [API](/api#server.options.debug)。
 
-## 日志插件
+## <a name="plugins"></a> 日志插件
 
-hapi 内建的日志方法已经基本满足了开发的需求。如果需要更多的日志功能，可以使用如[hapi-pino](https://www.npmjs.com/package/hapi-pino)之类的日志插件。
+hapi 内建的日志方法可基本满足开发需求。如果需要更多的日志功能，可以使用如 [hapi-pino](https://www.npmjs.com/package/hapi-pino)
+[New Relic](https://newrelic.com/instant-observability/hapi/2124da5b-0174-457a-be5a-e0068673b2b5) 之类的[日志插件](/plugins#logging)。

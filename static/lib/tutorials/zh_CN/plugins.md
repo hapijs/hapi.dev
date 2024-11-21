@@ -1,14 +1,16 @@
-## 插件
+# 插件
 
-_该教程适用于 hapi v17版本_
+_本教程适用于 hapi v17 及以上_
 
-hapi 拥有一个可扩展并且强健的插件系统，它允许你将应用分割为独立的业务逻辑或者可重用的组件。
+## <a name="overview"></a> 总览
 
-## 创建一个插件
+hapi 插件系统格外强大，可以方便地将应用分割为独立的业务逻辑，或者可重用工具。你可以添加现有插件，或自建插件。
 
-插件很容易去实现，它的核心是一个拥有 `register` 属性的对象。属性的值是一个拥有 `async function (server, options)` 签名的函数。 除此之外，插件必须拥有 `name` 属性以及多个包括 `version` 在内的可选属性。
+## <a name="create"></a> 创建
 
-一个简单的插件如下:
+插件很好写，其核心是一个对象，带有 `register` 属性。`register` 属性值是一个函数，其签名为 `async function (server, options)`。 此外，插件必须有 `name` 属性，还有诸多可选属性，如 `version`。
+
+例:
 
 ```javascript
 'use strict';
@@ -18,7 +20,7 @@ const myPlugin = {
     version: '1.0.0',
     register: async function (server, options) {
 
-        // 创建一个路由作为示例
+        // 创建路由以为示例
 
         server.route({
             method: 'GET',
@@ -29,13 +31,15 @@ const myPlugin = {
             }
         });
 
-        // etc ...
+        // 诸如此类 ...
         await someAsyncMethods();
     }
 };
 ```
 
-当作为一个外部模块时, 你需要指定 `pkg` 属性:
+注册此插件，访问路由 `/test`，显示 `'hello, world'`。
+
+当是外部模块时, 需要指定 `pkg` 属性:
 
 ```javascript
 'use strict';
@@ -44,7 +48,7 @@ exports.plugin = {
     pkg: require('./package.json'),
     register: async function (server, options) {
 
-        // 创建一个路由作为示例
+        // 创建路由以为示例
 
         server.route({
             method: 'GET',
@@ -55,48 +59,56 @@ exports.plugin = {
             }
         });
 
-        // etc...
+        // 诸如此类...
         await someAsyncMethods();
     }
 };
 ```
 
-请注意在第一个例子中，我们显示的设定了 `name` 和 `version` 属性, 然而在第二个例子中，我们将 package.json 中的内容设置为 `pkg` 属性的值。两种方法都是可以的。
+请注意，第一个例子中，明确了属性 `name` 和 `version`。在第二个例子中，将 package.json 中的内容赋给属性 `pkg`。两种方法都行。
 
-当作为模块编写时, 插件可以作为模块被导出，如 `module.exports = { register, name, version }` 。如果你希望你的模块以多个hapi插件导出时，可以 `exports.plugin = { register, name, version }`。
+当编写为模块, 插件可以当作默认模块导出，如 `module.exports = { register, name, version }`。如果希望你导出多个插件，可以 `exports.plugin = { register, name, version }`。
 
-除此之外，当一个插件的 `multiple` 属性设置为 `true`的时候，这表明一个插件可以被重复注册多次。
+此外，当插件属性 `multiple` 设为 `true`，表明当前服务器内，该插件可以重复注册。
 
-另外一个可用的属性是`once`，当它设置为 `true` 时意味着 hapi 将会忽略掉之后的注册，并且也不会抛出错误。
+另一个可用属性是 `once`，当设置为 `true`，仅注册一次，hapi 会忽略之后的注册，且也不会抛出错误。
 
-### 注册方法
+###  <a name="register"></a> 注册方法
 
-综上所述， `register` 方法接受两个参数， `server` 和 `options`。
+综上所述，方法 `register` 参数有二：`server`、`options`。
 
-`options` 参数只是用户在调用 `server.register(plugin, options)` 时传递给插件的选项内容。不做任何更改，这个对象将直接传递给 `register` 方法。
+`register` 是个异步函数，插件注册完成即返回。函数内应当处理注册错误。
 
-`register` 应为异步函数，一旦你的插件完成了注册的所有步骤后它将被返回。 另外当注册插件出现异常时，需要抛出一个错误。
+参数 `server` 为当前服务器对象。
 
-`server` 对象是需要载入你的插件的 `server` 对象的引用。
-
-## 载入一个插件
-
-插件可以一次载入一个，也可以通过方法 `server.register()` 分组载入, 例如:
+参数 `options` 为插件配置对项。在调用 `server.register(plugins, [options])` 时传递给插件。该对象直接传递给的 `register` 方法。例：
 
 ```javascript
-const start = async function () {
+'use strict';
 
-    // 载入一个插件
+exports.plugin = {
+    pkg: require('./package.json'),
+    register: async function (server, options) {
 
-    await server.register(require('myplugin'));
+        // 创建路由以为示例
 
-    // 载入多个插件
+        server.route({
+            method: 'GET',
+            path: '/test',
+            handler: function (request, h) {
 
-    await server.register([require('myplugin'), require('yourplugin')]);
+                const name = options.name;
+                return `你好 ${name}`;
+            }
+        });
+
+        // 诸如此类...
+        await someAsyncMethods();
+    }
 };
 ```
 
-要将选项传递给插件时，我们将传递一个拥有 `plugin` 和 `options` 作为键的对象, 例如:
+此处， `options.name` 获取名字。而后用这个名字来返回消息给用户。来看看插件注册时：
 
 ```javascript
 const start = async function () {
@@ -104,13 +116,46 @@ const start = async function () {
     await server.register({
         plugin: require('myplugin'),
         options: {
-            message: 'hello'
+            name: '张三'
         }
     });
 };
 ```
 
-这些对象也可以以数组的方式传入:
+注册插件时，传递选项可以用 `server.register(plugins, [options])`。这里把 `{name: "张三" }` 传给插件，如上述，创建插件时，可以用 `options` 对象来获取。
+
+## <a name="loading"></a> 插件加载
+
+插件可以单独载入，也可以按数组载入，用到方法 `server.register()`。例如：
+
+```javascript
+const start = async function () {
+
+    // 载入单插件
+
+    await server.register(require('myplugin'));
+
+    // 载入多插件
+
+    await server.register([require('myplugin'), require('yourplugin')]);
+};
+```
+
+要给插件传选项，改用对象注册，属性有 `plugin` 和 `options`，例如：
+
+```javascript
+const start = async function () {
+
+    await server.register({
+        plugin: require('myplugin'),
+        options: {
+            message: '你好'
+        }
+    });
+};
+```
+
+数组对象方式:
 
 ```javascript
 const start = async function () {
@@ -125,13 +170,13 @@ const start = async function () {
 };
 ```
 
-### 注册选项
+###  <a name="registration"></a> 注册选项
 
-你也可以传递第二个可选参数到 `server.register()`。 关于这个对象的文档可以在 [API reference](/api#-await-serverregisterplugins-options) 中找到。
+`server.register()` 第二个参数，可选。参见 [API](/api#server.register() 。
 
-options 对象将被 hapi 使用，并且 *不会* 传递到被装载的插件中。它可以将`vhost`或`prefix`修饰符添加到使用插件的路由上。
+该选项 hapi 自用，**不会** 传给插件。比如将 `vhost` 或 `prefix` 属性添加到使用插件的路由上。
 
-例如我们有这样一个插件:
+例:
 
 ```javascript
 'use strict';
@@ -155,10 +200,12 @@ exports.plugin = {
 };
 ```
 
-通常来说, 当插件载入的时候将会创建一个 `GET` 路由在 `/test` 路径上。 我们可以通过添加 `prefix` 的值来修改任意使用这个插件生成的路由。 
+通常，加载此插件，会创建 `GET` 路由 `/test`。添加选项 `prefix` 来修改这个插件生成的路由。
 
 ```javascript
 const start = async function () {
+
+    const server = Hapi.server();
 
     await server.register(require('myplugin'), {
         routes: {
@@ -168,6 +215,6 @@ const start = async function () {
 };
 ```
 
-现在当插件被载入时, 因为修改了 `prefix` ，`GET` 路由将注册为 `/plugins/test`.
+现在，因为修改了 `prefix`，加载插件，`GET` 路由注册为 `/plugins/test`.
 
-与之类似，通过修改 `options.routes.vhost` 属性，将为所有使用插件创建的路由分配默认的 `vhost`配置。 更多关于 `vhost` 的配置信息可以在这里找到 [API reference](/api#-serverrouteroute).
+与之类似，修改 `options.routes.vhost` 属性，将为所有使用插件创建的路由分配默认的 `vhost` 配置。更多关于 `vhost` 的配置信息参见[API](/api#server.route())。
