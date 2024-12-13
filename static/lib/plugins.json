@@ -1,5 +1,16 @@
 [
   {
+    "name": "Automation/Integrations",
+    "anchor": "automation",
+    "modules": [
+      {
+        "name": "apitraffic-hapi",
+        "link": "https://github.com/apitraffic/apitraffic-hapi",
+        "description": "Seamlessly integrate with over 240 external systems"
+      },
+    ]
+  },
+  {
     "name": "Authorization",
     "anchor": "authorization",
     "modules": [
@@ -236,6 +247,11 @@
     "name": "Logging/Metrics",
     "anchor": "logging",
     "modules": [
+      {
+        "name": "apitraffic-hapi",
+        "link": "https://github.com/apitraffic/apitraffic-hapi",
+        "description": "Collects API request/response data for monitoring and analytical purposes"
+      },
       {
         "name": "blipp",
         "link": "https://github.com/danielb2/blipp",
