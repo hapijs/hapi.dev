@@ -1,16 +1,5 @@
 [
   {
-    "name": "Automation/Integrations",
-    "anchor": "automation",
-    "modules": [
-      {
-        "name": "apitraffic-hapi",
-        "link": "https://github.com/apitraffic/apitraffic-hapi",
-        "description": "Seamlessly integrate with over 240 external systems"
-      },
-    ]
-  },
-  {
     "name": "Authorization",
     "anchor": "authorization",
     "modules": [
@@ -113,6 +102,17 @@
         "link": "https://hapi.dev/family/jwt",
         "description": "JWT (JSON Web Token) Authentication."
       }
+    ]
+  },
+  {
+    "name": "Automation/Integrations",
+    "anchor": "automation",
+    "modules": [
+      {
+        "name": "apitraffic-hapi",
+        "link": "https://github.com/apitraffic/apitraffic-hapi",
+        "description": "Seamlessly integrate with over 240 external systems"
+      },
     ]
   },
   {
