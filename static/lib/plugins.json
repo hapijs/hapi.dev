@@ -465,6 +465,11 @@
         "description": "Exposes boom errors through the hapi reply interface"
       },
       {
+        "name": "hapi-ecma-decorators",
+        "link": "https://github.com/mehl/hapi-ecma-decorators",
+        "description": "New Decorators for hapi routes following ECMA/TC39 Proposal Stage 3"
+      },
+      {
         "name": "hapi-decorators",
         "link": "https://github.com/knownasilya/hapi-decorators",
         "description": "Decorators for HapiJS routes"
