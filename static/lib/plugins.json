@@ -91,6 +91,11 @@
         "description": "A Hapi plugin that wraps passport-saml for SAML SSO"
       },
       {
+        "name": "hapi-saml2",
+        "link": "https://github.com/toriihq/hapi-saml2",
+        "description": "A Hapi plugin that wraps node-saml for SAML SSO"
+      },
+      {
         "name": "jwt",
         "isHapi": true,
         "github": "https://github.com/hapijs/jwt",
