@@ -39,11 +39,11 @@ export default {
       window.scrollTo(0, 0);
     }
   },
-  async asyncData({ params, $axios }) {
+  async asyncData({ params, $axios, $config }) {
     const options = {
       headers: {
         accept: "application/vnd.github.v3.raw+json",
-        authorization: "token " + process.env.GITHUB_TOKEN
+        authorization: "token " + $config.GITHUB_TOKEN
       }
     };
     let sponsorsmd = await $axios.$get(
@@ -59,7 +59,7 @@ export default {
       },
       {
         headers: {
-          authorization: "token " + process.env.GITHUB_TOKEN
+          authorization: "token " + $config.GITHUB_TOKEN
         }
       }
     );

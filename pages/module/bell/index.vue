@@ -220,11 +220,11 @@ export default {
       this.$data.search = value;
     }
   },
-  async asyncData({ $axios, params }) {
+  async asyncData({ $axios, $config, params }) {
     const options = {
       headers: {
         accept: "application/vnd.github.v3.raw+json",
-        authorization: "token " + process.env.GITHUB_TOKEN
+        authorization: "token " + $config.GITHUB_TOKEN
       }
     };
     let exampleHTML = "";
@@ -242,7 +242,7 @@ export default {
         },
         {
           headers: {
-            authorization: "token " + process.env.GITHUB_TOKEN
+            authorization: "token " + $config.GITHUB_TOKEN
           }
         }
       );
@@ -259,7 +259,7 @@ export default {
         },
         {
           headers: {
-            authorization: "token " + process.env.GITHUB_TOKEN
+            authorization: "token " + $config.GITHUB_TOKEN
           }
         }
       );
@@ -273,7 +273,7 @@ export default {
         },
         {
           headers: {
-            authorization: "token " + process.env.GITHUB_TOKEN
+            authorization: "token " + $config.GITHUB_TOKEN
           }
         }
       );
@@ -287,7 +287,7 @@ export default {
         },
         {
           headers: {
-            authorization: "token " + process.env.GITHUB_TOKEN
+            authorization: "token " + $config.GITHUB_TOKEN
           }
         }
       );
@@ -304,7 +304,7 @@ export default {
       },
       {
         headers: {
-          authorization: "token " + process.env.GITHUB_TOKEN
+          authorization: "token " + $config.GITHUB_TOKEN
         }
       }
     );

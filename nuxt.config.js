@@ -233,7 +233,7 @@ module.exports = {
     id: "UA-144917045-1"
   },
 
-  env: {
+  privateRuntimeConfig: {
     GITHUB_TOKEN: process.env.GITHUB_TOKEN
   },
 

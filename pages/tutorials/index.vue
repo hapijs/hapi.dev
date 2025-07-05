@@ -153,7 +153,7 @@ export default {
       }
     }
   },
-  async asyncData({ params, $axios, query }) {
+  async asyncData({ params, $axios, $config, query }) {
     let lang = ["en_US", "pt_BR", "ko_KR", "tr_TR", "zh_CN"];
     let tutorials = {};
     const dev = process.env.NODE_ENV !== "production";
@@ -163,7 +163,7 @@ export default {
     const options = {
       headers: {
         accept: "application/vnd.github.v3.raw+json",
-        authorization: "token " + process.env.GITHUB_TOKEN
+        authorization: "token " + $config.GITHUB_TOKEN
       }
     };
     for (let l of lang) {
@@ -179,7 +179,7 @@ export default {
         },
         {
           headers: {
-            authorization: "token " + process.env.GITHUB_TOKEN
+            authorization: "token " + $config.GITHUB_TOKEN
           }
         }
       );

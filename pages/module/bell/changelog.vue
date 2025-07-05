@@ -52,7 +52,7 @@ export default {
       ]
     };
   },
-  async asyncData({ params, $axios, route, store }) {
+  async asyncData({ params, $axios, $config, route, store }) {
     let milestoneList = [];
     let m = [];
     let milestones = [];
@@ -62,7 +62,7 @@ export default {
         const mileOptions = {
           headers: {
             accept: "application/vnd.github.v3.raw+json",
-            authorization: "token " + process.env.GITHUB_TOKEN
+            authorization: "token " + $config.GITHUB_TOKEN
           }
         };
         for (let p = 1; p <= 2; ++p) {

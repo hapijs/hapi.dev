@@ -58,11 +58,11 @@ export default {
       advanced: false
     };
   },
-  async asyncData({ $axios, params }) {
+  async asyncData({ $axios, $config, params }) {
     const options = {
       headers: {
         accept: "application/vnd.github.v3.raw+json",
-        authorization: "token " + process.env.GITHUB_TOKEN
+        authorization: "token " + $config.GITHUB_TOKEN
       }
     };
     let providersHTML = "";
@@ -95,7 +95,7 @@ export default {
       },
       {
         headers: {
-          authorization: "token " + process.env.GITHUB_TOKEN
+          authorization: "token " + $config.GITHUB_TOKEN
         }
       }
     );
@@ -211,7 +211,7 @@ export default {
         let point = document.querySelector(
           `.tutorial-markdown-window h1 a[href='${links[i].hash}'],
           .tutorial-markdown-window h2 a[href='${links[i].hash}'],
-          .tutorial-markdown-window h3 a[href='${links[i].hash}'], 
+          .tutorial-markdown-window h3 a[href='${links[i].hash}'],
           .tutorial-markdown-window h4 a[href='${links[i].hash}'],
            .tutorial-markdown-window h5 a[href='${links[i].hash}']`
         );
