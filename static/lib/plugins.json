@@ -379,7 +379,7 @@
     "modules": [
       {
         "name": "ndsk",
-        "link": "https://github.com/rockyshi1993/ndsk",
+        "link": "https://github.com/ndskstack/ndsk",
         "description": "React framework developed based on hapi"
       },
       {
