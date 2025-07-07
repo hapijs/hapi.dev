@@ -1,14 +1,21 @@
-## Cookies
+# Cookies
 
-_该教程适用于 hapi v17版本_
+_本教程适用于 hapi v17 及以上_
 
-当创建一个 web 应用时, cookies 通常用于保存一个用户在每个请求之间的状态。在 hapi 中, cookies 可以被灵活、安全以及便捷的使用。
+## <a name="overview"></a> 总览
 
-## 配置服务器
+网页应用中, cookies 通常用于维持两次请求间的用户状态。hapi 中，使用 cookies 更灵活、更安全、更便捷。
 
-hapi 有许多配置选项用于处理 cookies。默认的配置已经可以适用于大多数场景了，当然也可以在需要时进行替换。
+## <a name="server"></a> 配置
 
-使用 cookie, 首先你需要调用 [`server.state(name, [options])`](/api#-serverstatename-options)来配置。这里`name` 是 cookie 的名字, `options` 是用来配置 cookie 的对象。
+处理 cookie，hapi 提供了诸多配置选项。默认配置已足够适用，当然也可以自定义。
+
+### <a name="server.state"></a> server.state()
+
+使用 cookie，要先命名并配置。可调用 `server.state(name, [options])`。其中，`name` 是 cookie 名，`options` 是配置对象。
+
+通常，使用默认配置即可。此处为了演示，自定义配置：
+
 
 ```javascript
 server.state('data', {
@@ -16,14 +23,28 @@ server.state('data', {
     isSecure: true,
     isHttpOnly: true,
     encoding: 'base64json',
-    clearInvalid: false, // remove invalid cookies
-    strictHeader: true // don't allow violations of RFC 6265
+    clearInvalid: true,
+    strictHeader: true
 });
 ```
 
-这份配置将 cookie 命名为 `data` ，它拥有一个 session 生命周期 (当浏览器关闭时将被删除)，它标记为安全以及只支持 HTTP (参见 [RFC 6265](http://tools.ietf.org/html/rfc6265)，的章节 [4.1.2.5](http://tools.ietf.org/html/rfc6265#section-4.1.2.5) 以及 [4.1.2.6](http://tools.ietf.org/html/rfc6265#section-4.1.2.6) 以了解这个标记的更多信息)， 之后告诉 hapi 内容是 base64 编码的JSON字符串。关于 `server.state()` 的完整文档可以在 [the API reference](/api#serverstatename-options) 中找到。
+此例，命名 cookie 为 `data`，配置选项如下：
 
-除此之外，你也可以通过路由级别的两个属性更以进一步的配置 cookie 的行为，这两个属性位于路由的 `options.state` 对象中:
+`ttl`，cookie 的生命周期，单位为毫秒。默认为 `null`，即浏览器关闭时删除。
+
+`isSecure` 和 `isHttpOnly`，参见 [RFC 6265](http://tools.ietf.org/html/rfc6265)，特别是 [4.1.2.5](http://tools.ietf.org/html/rfc6265#section-4.1.2.5) 和 [4.1.2.6](http://tools.ietf.org/html/rfc6265#section-4.1.2.6)。
+
+`encoding`，cookie 的值是 base64 编码的 JSON 字符串。
+
+`clearInvalid`，当 cookie 无效时，是否清理。默认为 `false`。
+
+`strictHeader`，是否严格检查 cookie 的值。默认为 `true`。参见 [RFC 6265](https://tools.ietf.org/html/rfc6265)。
+
+### <a name="options.state"></a> route.options.state()
+
+除此之外，每条路有还可单独配置。有两个属性，位于路由的 `options.state` 对象。
+
+需注意，路由 cookie 是 `server.state` 的补充。
 
 ```json5
 {
@@ -36,50 +57,67 @@ server.state('data', {
 }
 ```
 
-## 设置一个 cookie
+`parse`，是否解析 cookie。默认为 `false`。
 
-cookie 的设置可以通过 [response toolkit](/api#response-toolkit)。这个设置可以在请求的 handler, 预处理或者请求生命周期的扩展的位置中使用，示例如下:
+`failAction`，解析失败时的行为。默认为 `'error'`，即返回错误。可选 `'ignore'` 或 `'log'`。
 
-```javascript
-h.state('data', { firstVisit: false });
-return h.response('Hello');
-```
+## <a name="setting"></a> 设置 cookie
 
-这个例子中, hapi 将会返回字符串 `Hello` 同时也设置一个 cookie 名为 `data` 内容为 `{ firstVisit: false }` 的 base64 编码的 JSON 字符串。
+cookie 设置点有三：[响应工具包](/api#response-toolkit)、前置条件（pre-requisite）、请求生命周期。
 
-`state()` 方法也可以在 [response 对象](/api#response-object) 中使用，这样可以方便链式调用，使用的例子如下:
+### <a name="h.state"></a> h.state()
 
-```javascript
-return h.response('Hello').state('data', { firstVisit: false });
-```
-
-### 重载选项
-
-当设置 cookie 的时候，您也可以将 `server.state()` 可用的选项作为第三个参数传递，例如
+调用[`h.state(name, value, [options]`](/api#h.state())，可设置 cookie。例：
 
 ```javascript
-return h.response('Hello').state('data', 'test', { encoding: 'none' });
+server.route({
+    method: 'GET',
+    path: '/',
+    handler: function (request, h) {
+
+        h.state('data', { firstVisit: false });
+        return h.response('你好');
+    }
+});
 ```
 
-这个例子中 cookie 将会被简单的设置为字符串 `"test"` 而不使用任何编码。
+本例，用到上节配置的 cookie。返回 `你好`，以及一个名为 `data` 的 cookie，内容为 `{ firstVisit: false }`，base64 编码的 JSON 字符串。
 
-## 获取一个 cookie 的值
+`state()` 方法也可用于[响应对象](/api#response-object)，方便链式调用。上面例子可以这样写：
 
-在路由 handler，预处理或请求生命周期扩展的位置中通过 `request.state` 可以访问 cookie 的值。
+```javascript
+return h.response('你好').state('data', { firstVisit: false });
+```
 
-`request.state` 对象包含了解析后的 HTTP 状态。每一个键代表了 cookie 的名字，而值代表了定义的内容。
+## <a name="override"></a> 选项重载
+
+`server.state()` 可接收第三个可选参数，来配置 cookie。例如：
+
+```javascript
+return h.response('你好').state('data', 'test', { encoding: 'none' });
+```
+
+这个例子，仅设置 cookie 为字符串 `"test"`，不编码。
+
+## <a name="value"></a> cookie 获取
+
+用 `request.state` 来获取 cookie。有三处位置：路由处理函数、预处理、请求生命周期。
+
+`request.state` 对象包含解析的 HTTP 状态。键为 cookie 名，值为内容。
+
+示例代码用到了上面的 `data` cookie，其中的值是 `{ firstVisit: false }`：
 
 ```javascript
 const value = request.state.data;
-// console.log(value) 将会得到 { firstVisit : false }
+// console.log(value) 会收到 { firstVisit : false }
 ```
 
-示例代码使用了 `data` cookie 键，而相关的值被设定为了 `{ firstVisit: false }`.
-
-## 清理一个 cookie
-cookie 可以通过调用 `unstate()` 来清理，这个方法在[response toolkit](/api#response-toolkit) 或者[response object](/api#response-object) 中:
+## <a name="clear"></a> cookie 清除
+欲清除 cookie，可调用 `unstate()`，此方法见[响应工具包](/api#response-toolkit) 或 [响应对象](/api#response-object)：
 
 ```javascript
-return h.response('Bye').unstate('data');
+return h.response('再会').unstate('data');
 ```
+
+此处，将 cookie 名传给 `unstate()`，就可以清除 cookie。
 
