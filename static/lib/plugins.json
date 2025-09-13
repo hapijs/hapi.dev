@@ -254,6 +254,11 @@
     "anchor": "logging",
     "modules": [
       {
+        "name": "apitally",
+        "link": "https://github.com/apitally/apitally-js",
+        "description": "Simple API monitoring and analytics with metrics, logs, and alerts"
+      },
+      {
         "name": "apitraffic-hapi",
         "link": "https://github.com/apitraffic/apitraffic-hapi",
         "description": "Collects API request/response data for monitoring and analytical purposes"
