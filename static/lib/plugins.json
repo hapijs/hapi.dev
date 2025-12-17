@@ -56,6 +56,12 @@
         "description": "A cookie-based session authentication scheme"
       },
       {
+        "name": "hapi-auth-api-key",
+        "github": "https://github.com/johnwatson484/hapi-auth-api-key",
+        "link": "https://github.com/johnwatson484/hapi-auth-api-key",
+        "description": "A Hapi plugin for API key authentication"
+      },
+      {
         "name": "hapi-auth-bearer-token",
         "link": "https://github.com/johnbrett/hapi-auth-bearer-token",
         "description": "A bearer token based authentication scheme"
@@ -101,12 +107,6 @@
         "github": "https://github.com/hapijs/jwt",
         "link": "https://hapi.dev/family/jwt",
         "description": "JWT (JSON Web Token) Authentication."
-      },
-      {
-        "name": "hapi-auth-api-key",
-        "github": "https://github.com/johnwatson484/hapi-auth-api-key",
-        "link": "https://github.com/johnwatson484/hapi-auth-api-key",
-        "description": "A Hapi plugin for API key authentication"
       }
     ]
   },
