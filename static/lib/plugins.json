@@ -442,6 +442,12 @@
         "description": "Generate URIs fast based on named hapi routes their parameters"
       },
       {
+        "name": "apiv",
+        "github": "https://github.com/johnwatson484/apiv",
+        "link": "https://github.com/johnwatson484/apiv",
+        "description": "A Hapi.js plugin that automatically adds version prefixes to all your API routes, making it easy to version your API endpoints."
+      },
+      {
         "name": "bissle",
         "link": "https://github.com/felixheck/bissle",
         "description": "Minimalist HALicious pagination reply interface for HapiJS"
