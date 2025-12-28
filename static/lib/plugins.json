@@ -352,6 +352,12 @@
         "name": "ralphi",
         "link": "https://github.com/yonjah/ralphi",
         "description": "Simple and minimal rate limiting and bruteforce protection"
+      },
+      {
+        "name": "ratli",
+        "link": "https://github.com/johnwatson484/ratli",
+        "github": "https://github.com/johnwatson484/ratli",
+        "description": "Hapi.js rate limiting plugin"
       }
     ]
   },
