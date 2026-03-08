@@ -304,6 +304,11 @@
     "anchor": "messaging",
     "modules": [
       {
+        "name": "@glidemq/hapi",
+        "link": "https://github.com/avifenesh/glidemq-hapi",
+        "description": "Queue management REST API and SSE events for glide-mq (Valkey/Redis Streams message queue)"
+      },
+      {
         "name": "hapi-plugin-websocket",
         "link": "https://github.com/rse/hapi-plugin-websocket",
         "description": "Seamless WebSocket integration by injecting WebSocket messages as HTTP request"
