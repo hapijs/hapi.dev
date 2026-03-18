@@ -481,9 +481,9 @@
         "description": "Automatically load routes from directory"
       },
       {
-        "name": "hapi-aws",
+        "name": "@ar4mirez/hapi-aws",
         "link": "https://github.com/ar4mirez/hapi-aws",
-        "description": "A HapiJS plugin for AWS services."
+        "description": "AWS SDK v3 plugin for HapiJS — instantiate and expose AWS service clients via server and request decorators."
       },
       {
         "name": "hapi-bookshelf-serializer",
@@ -581,7 +581,7 @@
         "description": "A simple bridge plugin between HapiJS and SocketIO"
       },
       {
-        "name": "hapi-octopus",
+        "name": "@ar4mirez/hapi-octopus",
         "link": "https://github.com/ar4mirez/hapi-octopus",
         "description": "A multi-purpose plugin that allows you to autoload methods, handlers, routes and decorators using a simple signature convention."
       },
@@ -604,6 +604,11 @@
         "name": "hapi-plugin-header",
         "link": "https://github.com/rse/hapi-plugin-header",
         "description": "Always send one or more custom HTTP headers, independent of the current route"
+      },
+      {
+        "name": "@ar4mirez/hapi-pres",
+        "link": "https://github.com/ar4mirez/hapi-pres",
+        "description": "Autoload pre-requirements for HapiJS routes from a directory."
       },
       {
         "name": "hapi-pulse",
@@ -634,6 +639,11 @@
         "name": "hapi-router",
         "link": "https://github.com/bsiddiqui/hapi-router",
         "description": "A plugin to automatically load your routes"
+      },
+      {
+        "name": "@ar4mirez/hapi-safe-route",
+        "link": "https://github.com/ar4mirez/hapi-safe-route",
+        "description": "Register routes in a safer way, avoiding server crash on duplicate routes while running or at startup time."
       },
       {
         "name": "hapi-sanitize-payload",
