@@ -1,0 +1,22 @@
+{
+  "api": false,
+  "forks": 12,
+  "isPlugin": false,
+  "link": "https://github.com/hapijs/vise",
+  "name": "vise",
+  "package": "@hapi/vise",
+  "slogan": "Treat multiple buffers as one.",
+  "sloganHtml": "Treat multiple buffers as one.",
+  "stars": 7,
+  "updated": "2024-10-23T15:41:23Z",
+  "versions": [
+    {
+      "branch": "v5.0.1",
+      "license": "BSD",
+      "name": "5.0.1",
+      "node": ">= 16"
+    }
+  ],
+  "versionsArray": ["5.0.1"],
+  "latestVersion": "5.x.x"
+}

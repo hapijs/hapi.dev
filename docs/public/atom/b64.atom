@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/b64</id>
+    <title>@hapi/b64 changelog</title>
+    <updated>2023-02-11T17:55:46.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/b64"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/b64 v6.0.1]]></title>
+        <id>https://github.com/hapijs/b64/milestone/18</id>
+        <link href="https://hapi.dev/module/b64/changelog#6.0.1"/>
+        <updated>2023-02-11T17:55:46.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/b64 v6.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/b64/pull/41">[#41]</a> chore: bump hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/b64 v6.0.0]]></title>
+        <id>https://github.com/hapijs/b64/milestone/17</id>
+        <link href="https://hapi.dev/module/b64/changelog#6.0.0"/>
+        <updated>2023-02-11T17:55:48.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/b64 v6.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/b64/pull/40">[#40]</a> Support node v18 and drop node v12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/b64 v5.0.0]]></title>
+        <id>https://github.com/hapijs/b64/milestone/15</id>
+        <link href="https://hapi.dev/module/b64/changelog#5.0.0"/>
+        <updated>2020-01-04T22:10:05.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/b64 v5.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/b64/issues/33">[#33]</a> Only node 12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/b64 v4.2.2]]></title>
+        <id>https://github.com/hapijs/b64/milestone/14</id>
+        <link href="https://hapi.dev/module/b64/changelog#4.2.2"/>
+        <updated>2020-09-26T18:12:20.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/b64 v4.2.2]]></summary>
+        <content type="html"><![CDATA[<ul></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/b64 v4.2.1]]></title>
+        <id>https://github.com/hapijs/b64/milestone/13</id>
+        <link href="https://hapi.dev/module/b64/changelog#4.2.1"/>
+        <updated>2019-08-13T20:49:32.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/b64 v4.2.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/b64/issues/26">[#26]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/b64 v4.2.0]]></title>
+        <id>https://github.com/hapijs/b64/milestone/10</id>
+        <link href="https://hapi.dev/module/b64/changelog#4.2.0"/>
+        <updated>2019-04-02T06:29:59.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/b64 v4.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/b64/issues/25">[#25]</a> Change module namespace</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/b64 v4.1.2]]></title>
+        <id>https://github.com/hapijs/b64/milestone/9</id>
+        <link href="https://hapi.dev/module/b64/changelog#4.1.2"/>
+        <updated>2018-11-03T00:15:44.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/b64 v4.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/b64/issues/22">[#22]</a> Remove engines</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/b64 v4.1.1]]></title>
+        <id>https://github.com/hapijs/b64/milestone/8</id>
+        <link href="https://hapi.dev/module/b64/changelog#4.1.1"/>
+        <updated>2018-11-01T07:24:53.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/b64 v4.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/b64/issues/21">[#21]</a> Update hoek v6</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/b64 v4.1.0]]></title>
+        <id>https://github.com/hapijs/b64/milestone/7</id>
+        <link href="https://hapi.dev/module/b64/changelog#4.1.0"/>
+        <updated>2018-10-31T01:14:32.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/b64 v4.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/b64/issues/20">[#20]</a> Move base64 methods from hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/b64 v4.0.0]]></title>
+        <id>https://github.com/hapijs/b64/milestone/6</id>
+        <link href="https://hapi.dev/module/b64/changelog#4.0.0"/>
+        <updated>2017-09-26T05:55:20.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/b64 v4.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/b64/issues/18">[#18]</a> Node 8</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/b64 v3.1.1]]></title>
+        <id>https://github.com/hapijs/b64/milestone/12</id>
+        <link href="https://hapi.dev/module/b64/changelog#3.1.1"/>
+        <updated>2020-09-26T18:12:22.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/b64 v3.1.1]]></summary>
+        <content type="html"><![CDATA[<ul></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/b64 v3.1.0]]></title>
+        <id>https://github.com/hapijs/b64/milestone/11</id>
+        <link href="https://hapi.dev/module/b64/changelog#3.1.0"/>
+        <updated>2019-03-25T18:23:05.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/b64 v3.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/b64/issues/24">[#24]</a> Commercial version of v3 branch</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/b64 v3.0.3]]></title>
+        <id>https://github.com/hapijs/b64/milestone/5</id>
+        <link href="https://hapi.dev/module/b64/changelog#3.0.3"/>
+        <updated>2017-07-31T15:29:44.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/b64 v3.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/b64/issues/17">[#17]</a> 3.0.3 Release notes</li><li><a href="https://github.com/hapijs/b64/pull/16">[#16]</a> Remove deprecated buffer usage</li><li><a href="https://github.com/hapijs/b64/issues/15">[#15]</a> Pending deprecation for new Buffer()</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/b64 v3.0.2]]></title>
+        <id>https://github.com/hapijs/b64/milestone/4</id>
+        <link href="https://hapi.dev/module/b64/changelog#3.0.2"/>
+        <updated>2016-07-28T19:40:33.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/b64 v3.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/b64/issues/14">[#14]</a> Update deps</li><li><a href="https://github.com/hapijs/b64/pull/13">[#13]</a> Document API</li><li><a href="https://github.com/hapijs/b64/pull/12">[#12]</a> Separate decode/encode modules</li><li><a href="https://github.com/hapijs/b64/issues/10">[#10]</a> Document API</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/b64 v3.0.1]]></title>
+        <id>https://github.com/hapijs/b64/milestone/3</id>
+        <link href="https://hapi.dev/module/b64/changelog#3.0.1"/>
+        <updated>2016-05-19T18:02:58.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/b64 v3.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/b64/pull/11">[#11]</a> update hoek to 4.x.x</li><li><a href="https://github.com/hapijs/b64/pull/9">[#9]</a> Update lab and travis node version</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/b64 v3.0.0]]></title>
+        <id>https://github.com/hapijs/b64/milestone/2</id>
+        <link href="https://hapi.dev/module/b64/changelog#3.0.0"/>
+        <updated>2015-10-31T20:07:20.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/b64 v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/b64/pull/8">[#8]</a> es6. Closes #7</li><li><a href="https://github.com/hapijs/b64/issues/7">[#7]</a> ES6 style, node v4</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/b64 v2.0.1]]></title>
+        <id>https://github.com/hapijs/b64/milestone/1</id>
+        <link href="https://hapi.dev/module/b64/changelog#2.0.1"/>
+        <updated>2015-06-28T01:56:43.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/b64 v2.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/b64/pull/5">[#5]</a> Update to Lab 5.x.x and Code 1.x.x</li><li><a href="https://github.com/hapijs/b64/pull/4">[#4]</a> Update .travis.yml</li></ul>]]></content>
+    </entry>
+</feed>

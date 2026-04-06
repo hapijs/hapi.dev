@@ -1,0 +1,22 @@
+{
+  "api": true,
+  "forks": 49,
+  "isPlugin": true,
+  "link": "https://github.com/hapijs/inert",
+  "name": "inert",
+  "package": "@hapi/inert",
+  "slogan": "Static file and directory handlers for hapi.js.",
+  "sloganHtml": "Static file and directory handlers for hapi.js.",
+  "stars": 236,
+  "updated": "2024-10-23T15:13:24Z",
+  "versions": [
+    {
+      "branch": "v7.1.0",
+      "license": "BSD",
+      "name": "7.1.0",
+      "node": ">= 16"
+    }
+  ],
+  "versionsArray": ["7.1.0"],
+  "latestVersion": "7.x.x"
+}

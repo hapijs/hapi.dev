@@ -1,0 +1,22 @@
+{
+  "api": false,
+  "forks": 13,
+  "isPlugin": false,
+  "link": "https://github.com/hapijs/teamwork",
+  "name": "teamwork",
+  "package": "@hapi/teamwork",
+  "slogan": "Wait for multiple callbacks",
+  "sloganHtml": "Wait for multiple callbacks",
+  "stars": 14,
+  "updated": "2025-08-21T15:04:16Z",
+  "versions": [
+    {
+      "branch": "v6.0.1",
+      "license": "BSD",
+      "name": "6.0.1",
+      "node": ">= 16"
+    }
+  ],
+  "versionsArray": ["6.0.1"],
+  "latestVersion": "6.x.x"
+}

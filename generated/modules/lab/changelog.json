@@ -1,0 +1,6272 @@
+[
+  {
+    "date": "2026-03-26T19:26:11Z",
+    "id": 15310747,
+    "issues": [
+      {
+        "id": 3969245812,
+        "labels": ["bug"],
+        "number": 1087,
+        "title": "fix: guard parent access in `addTsEsmHook` for ESM-to-CJS sub-dependency resolution",
+        "url": "https://github.com/hapijs/lab/pull/1087"
+      },
+      {
+        "id": 3967639716,
+        "labels": ["bug"],
+        "number": 1086,
+        "title": "`@hapi/lab` crashes when TypeScript tests depend on ESM packages",
+        "url": "https://github.com/hapijs/lab/issues/1086"
+      }
+    ],
+    "number": 202,
+    "url": "https://github.com/hapijs/lab/milestone/202",
+    "version": "26.0.1"
+  },
+  {
+    "date": "2024-10-24T08:05:55Z",
+    "id": 11773498,
+    "issues": [
+      {
+        "id": 2605570739,
+        "labels": ["breaking changes"],
+        "number": 1081,
+        "title": "chore: report node 18+ support",
+        "url": "https://github.com/hapijs/lab/pull/1081"
+      },
+      {
+        "id": 2605559541,
+        "labels": ["breaking changes", "release notes"],
+        "number": 1080,
+        "title": "26.0.0 Release Notes",
+        "url": "https://github.com/hapijs/lab/issues/1080"
+      },
+      {
+        "id": 2605548991,
+        "labels": ["breaking changes"],
+        "number": 1079,
+        "title": "chore: next version",
+        "url": "https://github.com/hapijs/lab/pull/1079"
+      },
+      {
+        "id": 2433661752,
+        "labels": ["breaking changes"],
+        "number": 1076,
+        "title": "feat: target ESLint v9",
+        "url": "https://github.com/hapijs/lab/pull/1076"
+      },
+      {
+        "id": 2058782718,
+        "labels": ["feature", "breaking changes"],
+        "number": 1071,
+        "title": "Tighten type checking config",
+        "url": "https://github.com/hapijs/lab/pull/1071"
+      }
+    ],
+    "number": 201,
+    "url": "https://github.com/hapijs/lab/milestone/201",
+    "version": "26.0.0"
+  },
+  {
+    "date": "2024-10-22T13:15:46Z",
+    "id": 11746408,
+    "issues": [
+      {
+        "id": 2591038481,
+        "labels": ["bug"],
+        "number": 1078,
+        "title": "Ignore new TypeScript global leak",
+        "url": "https://github.com/hapijs/lab/pull/1078"
+      }
+    ],
+    "number": 200,
+    "url": "https://github.com/hapijs/lab/milestone/200",
+    "version": "25.3.2"
+  },
+  {
+    "date": "2024-10-17T13:15:31Z",
+    "id": 11369083,
+    "issues": [
+      {
+        "id": 2433406320,
+        "labels": ["bug"],
+        "number": 1075,
+        "title": "fix: coverage for arrow functions returning literals",
+        "url": "https://github.com/hapijs/lab/pull/1075"
+      },
+      {
+        "id": 2433386267,
+        "labels": ["bug"],
+        "number": 1074,
+        "title": "fix: lint typescript files",
+        "url": "https://github.com/hapijs/lab/pull/1074"
+      }
+    ],
+    "number": 199,
+    "url": "https://github.com/hapijs/lab/milestone/199",
+    "version": "25.3.1"
+  },
+  {
+    "date": "2024-07-26T06:32:57Z",
+    "id": 11362775,
+    "issues": [
+      {
+        "id": 2431088096,
+        "labels": ["feature"],
+        "number": 1073,
+        "title": "feat: add explicit extension support when using Typescript and ESM",
+        "url": "https://github.com/hapijs/lab/pull/1073"
+      }
+    ],
+    "number": 198,
+    "url": "https://github.com/hapijs/lab/milestone/198",
+    "version": "25.3.0"
+  },
+  {
+    "date": "2024-01-15T13:14:31Z",
+    "id": 10420366,
+    "issues": [
+      {
+        "id": 1992212686,
+        "labels": ["feature"],
+        "number": 1069,
+        "title": "Always lint .ts",
+        "url": "https://github.com/hapijs/lab/pull/1069"
+      },
+      {
+        "id": 1818438189,
+        "labels": ["feature"],
+        "number": 1065,
+        "title": "Add `.ts` to the default `extensions` for `--lint`",
+        "url": "https://github.com/hapijs/lab/issues/1065"
+      }
+    ],
+    "number": 197,
+    "url": "https://github.com/hapijs/lab/milestone/197",
+    "version": "25.2.0"
+  },
+  {
+    "date": "2024-01-15T13:10:57Z",
+    "id": 10420346,
+    "issues": [
+      {
+        "id": 2058766656,
+        "labels": ["bug"],
+        "number": 1070,
+        "title": "Make report an allow list",
+        "url": "https://github.com/hapijs/lab/pull/1070"
+      }
+    ],
+    "number": 196,
+    "url": "https://github.com/hapijs/lab/milestone/196",
+    "version": "25.1.4"
+  },
+  {
+    "date": "2023-02-11T18:20:06Z",
+    "id": 9033180,
+    "issues": [
+      {
+        "id": 1559436368,
+        "labels": ["feature"],
+        "number": 1061,
+        "title": "Fix: add more typescript leaks",
+        "url": "https://github.com/hapijs/lab/pull/1061"
+      }
+    ],
+    "number": 195,
+    "url": "https://github.com/hapijs/lab/milestone/195",
+    "version": "25.1.2"
+  },
+  {
+    "date": "2023-02-11T18:18:28Z",
+    "id": 9033178,
+    "issues": [
+      {
+        "id": 1551792105,
+        "labels": ["dependency"],
+        "number": 1060,
+        "title": "chore: bump hoek",
+        "url": "https://github.com/hapijs/lab/pull/1060"
+      }
+    ],
+    "number": 194,
+    "url": "https://github.com/hapijs/lab/milestone/194",
+    "version": "25.1.1"
+  },
+  {
+    "date": "2023-02-11T18:18:30Z",
+    "id": 7954546,
+    "issues": [
+      {
+        "id": 1502816570,
+        "labels": ["bug", "types"],
+        "number": 1059,
+        "title": "Bump @types/node",
+        "url": "https://github.com/hapijs/lab/pull/1059"
+      },
+      {
+        "id": 1501589848,
+        "labels": ["bug"],
+        "number": 1058,
+        "title": "Deal with `Symbol(undici.globalDispatcher.1)` in Node.js 18+",
+        "url": "https://github.com/hapijs/lab/pull/1058"
+      },
+      {
+        "id": 1407465316,
+        "labels": [],
+        "number": 1057,
+        "title": "Enable linting of *.cjs and *.mjs files",
+        "url": "https://github.com/hapijs/lab/pull/1057"
+      },
+      {
+        "id": 1243224288,
+        "labels": ["bug"],
+        "number": 1052,
+        "title": "Add missing space after colon",
+        "url": "https://github.com/hapijs/lab/pull/1052"
+      }
+    ],
+    "number": 193,
+    "url": "https://github.com/hapijs/lab/milestone/193",
+    "version": "25.1.0"
+  },
+  {
+    "date": "2022-05-08T00:32:23Z",
+    "id": 7954474,
+    "issues": [
+      {
+        "id": 1228740974,
+        "labels": ["bug"],
+        "number": 1051,
+        "title": "Add check for TS error 2820",
+        "url": "https://github.com/hapijs/lab/pull/1051"
+      }
+    ],
+    "number": 192,
+    "url": "https://github.com/hapijs/lab/milestone/192",
+    "version": "25.0.1"
+  },
+  {
+    "date": "2022-05-07T22:58:25Z",
+    "id": 7832089,
+    "issues": [
+      {
+        "id": 1227413091,
+        "labels": ["breaking changes", "dependency"],
+        "number": 1050,
+        "title": "Upgrade dependences",
+        "url": "https://github.com/hapijs/lab/pull/1050"
+      },
+      {
+        "id": 1222922943,
+        "labels": ["feature"],
+        "number": 1048,
+        "title": "Update target to ES2020 to match node 14+",
+        "url": "https://github.com/hapijs/lab/pull/1048"
+      },
+      {
+        "id": 1213347615,
+        "labels": ["feature", "dependency"],
+        "number": 1045,
+        "title": "Support node v18",
+        "url": "https://github.com/hapijs/lab/pull/1045"
+      },
+      {
+        "id": 1198958528,
+        "labels": ["feature", "breaking changes"],
+        "number": 1037,
+        "title": "Remove undocumented --coverage-module option",
+        "url": "https://github.com/hapijs/lab/pull/1037"
+      },
+      {
+        "id": 1191248070,
+        "labels": ["feature", "breaking changes", "dependency"],
+        "number": 1035,
+        "title": "Upgrade to eslint v8",
+        "url": "https://github.com/hapijs/lab/pull/1035"
+      },
+      {
+        "id": 1191172849,
+        "labels": ["breaking changes"],
+        "number": 1034,
+        "title": "Drop support for node v12",
+        "url": "https://github.com/hapijs/lab/pull/1034"
+      },
+      {
+        "id": 994054730,
+        "labels": ["feature"],
+        "number": 1021,
+        "title": "Update linter to work with ESLint 8",
+        "url": "https://github.com/hapijs/lab/issues/1021"
+      }
+    ],
+    "number": 190,
+    "url": "https://github.com/hapijs/lab/milestone/190",
+    "version": "25.0.0"
+  },
+  {
+    "date": "2022-04-30T23:33:18Z",
+    "id": 7832088,
+    "issues": [
+      {
+        "id": 1213064738,
+        "labels": ["feature"],
+        "number": 1044,
+        "title": "Revise leak detection to use fresh node globals",
+        "url": "https://github.com/hapijs/lab/pull/1044"
+      },
+      {
+        "id": 1206106423,
+        "labels": ["feature"],
+        "number": 1043,
+        "title": "New --coverage-predicates option",
+        "url": "https://github.com/hapijs/lab/pull/1043"
+      },
+      {
+        "id": 1205886093,
+        "labels": ["feature"],
+        "number": 1042,
+        "title": "Remove node 8 compat fix",
+        "url": "https://github.com/hapijs/lab/pull/1042"
+      },
+      {
+        "id": 1205806858,
+        "labels": [],
+        "number": 1041,
+        "title": "feat: 🎸 depedencies cli option",
+        "url": "https://github.com/hapijs/lab/pull/1041"
+      },
+      {
+        "id": 1198973177,
+        "labels": ["dependency"],
+        "number": 1038,
+        "title": "Update sindresorhus deps to pre ESM versions",
+        "url": "https://github.com/hapijs/lab/pull/1038"
+      },
+      {
+        "id": 1198893406,
+        "labels": ["feature"],
+        "number": 1036,
+        "title": "Coverage for nullish coalescing operator",
+        "url": "https://github.com/hapijs/lab/pull/1036"
+      },
+      {
+        "id": 1190529016,
+        "labels": ["feature"],
+        "number": 1033,
+        "title": "tsconfig paths alias",
+        "url": "https://github.com/hapijs/lab/issues/1033"
+      }
+    ],
+    "number": 189,
+    "url": "https://github.com/hapijs/lab/milestone/189",
+    "version": "24.7.0"
+  },
+  {
+    "date": "2022-04-02T22:20:53Z",
+    "id": 7590000,
+    "issues": [
+      {
+        "id": 1173620066,
+        "labels": ["feature"],
+        "number": 1032,
+        "title": "add Node.js 18 globals",
+        "url": "https://github.com/hapijs/lab/pull/1032"
+      },
+      {
+        "id": 1137674150,
+        "labels": ["feature"],
+        "number": 1031,
+        "title": "Support for ES modules",
+        "url": "https://github.com/hapijs/lab/pull/1031"
+      }
+    ],
+    "number": 188,
+    "url": "https://github.com/hapijs/lab/milestone/188",
+    "version": "24.6.0"
+  },
+  {
+    "date": "2022-01-19T18:48:34Z",
+    "id": 7529360,
+    "issues": [
+      {
+        "id": 1106829691,
+        "labels": ["bug"],
+        "number": 1029,
+        "title": "Add inline typescript sources to transformed output",
+        "url": "https://github.com/hapijs/lab/pull/1029"
+      },
+      {
+        "id": 1103277102,
+        "labels": ["bug"],
+        "number": 1028,
+        "title": "Skip coverage on non-mapped transpiled code",
+        "url": "https://github.com/hapijs/lab/pull/1028"
+      },
+      {
+        "id": 946311418,
+        "labels": ["bug"],
+        "number": 1018,
+        "title": "Add @hapi/eslint-plugin as peer dependency",
+        "url": "https://github.com/hapijs/lab/pull/1018"
+      },
+      {
+        "id": 943537816,
+        "labels": ["bug"],
+        "number": 1017,
+        "title": "Using the coverage reporter requires \"@hapi/eslint-plugin\" to be installed, even if it’s not used.",
+        "url": "https://github.com/hapijs/lab/issues/1017"
+      },
+      {
+        "id": 832071826,
+        "labels": [],
+        "number": 1002,
+        "title": "Code coverage reports on transpiled JavaScript, instead of TypeScript source",
+        "url": "https://github.com/hapijs/lab/issues/1002"
+      },
+      {
+        "id": 570739682,
+        "labels": ["support"],
+        "number": 972,
+        "title": "Original files in HTML reporter",
+        "url": "https://github.com/hapijs/lab/issues/972"
+      }
+    ],
+    "number": 187,
+    "url": "https://github.com/hapijs/lab/milestone/187",
+    "version": "24.5.1"
+  },
+  {
+    "date": "2021-12-31T07:46:14Z",
+    "id": 7339933,
+    "issues": [
+      {
+        "id": 1088214303,
+        "labels": ["feature"],
+        "number": 1026,
+        "title": "Add TypeScript support. Closes #1025",
+        "url": "https://github.com/hapijs/lab/pull/1026"
+      },
+      {
+        "id": 822048399,
+        "labels": ["bug"],
+        "number": 1001,
+        "title": "Introduce an upper limit to how much actual vs. expected is diffed",
+        "url": "https://github.com/hapijs/lab/pull/1001"
+      }
+    ],
+    "number": 186,
+    "url": "https://github.com/hapijs/lab/milestone/186",
+    "version": "24.5.0"
+  },
+  {
+    "date": "2021-11-09T05:10:49Z",
+    "id": 6954387,
+    "issues": [
+      {
+        "id": 1007659587,
+        "labels": ["test"],
+        "number": 1023,
+        "title": "Cleanup flaky tests, lint CLI scripts",
+        "url": "https://github.com/hapijs/lab/pull/1023"
+      },
+      {
+        "id": 981358944,
+        "labels": ["feature"],
+        "number": 1020,
+        "title": "Add DOMException and structuredClone globals to leaks module",
+        "url": "https://github.com/hapijs/lab/pull/1020"
+      },
+      {
+        "id": 976314841,
+        "labels": ["feature"],
+        "number": 1019,
+        "title": "DOMException will be a global in Node.js 17+",
+        "url": "https://github.com/hapijs/lab/issues/1019"
+      }
+    ],
+    "number": 185,
+    "url": "https://github.com/hapijs/lab/milestone/185",
+    "version": "v24.4.0"
+  },
+  {
+    "date": "2021-07-16T12:59:22Z",
+    "id": 6954385,
+    "issues": [
+      {
+        "id": 942495254,
+        "labels": ["bug"],
+        "number": 1016,
+        "title": "fix: never instrument eslint configs for coverage",
+        "url": "https://github.com/hapijs/lab/pull/1016"
+      }
+    ],
+    "number": 184,
+    "url": "https://github.com/hapijs/lab/milestone/184",
+    "version": "v24.3.2"
+  },
+  {
+    "date": "2021-07-16T12:58:49Z",
+    "id": 6931554,
+    "issues": [
+      {
+        "id": 942240269,
+        "labels": ["bug"],
+        "number": 1015,
+        "title": "fix: correct semver range for @hapi/eslint-plugin",
+        "url": "https://github.com/hapijs/lab/pull/1015"
+      }
+    ],
+    "number": 183,
+    "url": "https://github.com/hapijs/lab/milestone/183",
+    "version": "v24.3.1"
+  },
+  {
+    "date": "2021-07-09T07:45:45Z",
+    "id": 6900376,
+    "issues": [
+      {
+        "id": 925570187,
+        "labels": ["dependency"],
+        "number": 1014,
+        "title": "Add eslint configuration",
+        "url": "https://github.com/hapijs/lab/pull/1014"
+      },
+      {
+        "id": 925563698,
+        "labels": ["feature"],
+        "number": 1013,
+        "title": "Add eslint-plugin module config to lint/coverage feature",
+        "url": "https://github.com/hapijs/lab/pull/1013"
+      },
+      {
+        "id": 898780652,
+        "labels": ["feature"],
+        "number": 1012,
+        "title": "Use the new module ESLint configuration",
+        "url": "https://github.com/hapijs/lab/issues/1012"
+      }
+    ],
+    "number": 182,
+    "url": "https://github.com/hapijs/lab/milestone/182",
+    "version": "v24.3.0"
+  },
+  {
+    "date": "2021-06-29T17:25:40Z",
+    "id": 6689932,
+    "issues": [
+      {
+        "id": 873779009,
+        "labels": ["bug"],
+        "number": 1007,
+        "title": "Report on private/protected class type errors",
+        "url": "https://github.com/hapijs/lab/pull/1007"
+      },
+      {
+        "id": 869786463,
+        "labels": ["bug"],
+        "number": 1006,
+        "title": "Incorrect type error detection",
+        "url": "https://github.com/hapijs/lab/issues/1006"
+      }
+    ],
+    "number": 181,
+    "url": "https://github.com/hapijs/lab/milestone/181",
+    "version": "24.2.1"
+  },
+  {
+    "date": "2021-04-23T03:31:51Z",
+    "id": 6684299,
+    "issues": [
+      {
+        "id": 863825022,
+        "labels": ["feature"],
+        "number": 1004,
+        "title": "Add new globals for node v16",
+        "url": "https://github.com/hapijs/lab/pull/1004"
+      }
+    ],
+    "number": 180,
+    "url": "https://github.com/hapijs/lab/milestone/180",
+    "version": "24.2.0"
+  },
+  {
+    "date": "2021-02-21T16:24:55Z",
+    "id": 6021623,
+    "issues": [
+      {
+        "id": 780481768,
+        "labels": ["bug"],
+        "number": 1000,
+        "title": "Fix retrying of passing tests",
+        "url": "https://github.com/hapijs/lab/pull/1000"
+      }
+    ],
+    "number": 178,
+    "url": "https://github.com/hapijs/lab/milestone/178",
+    "version": "24.1.1"
+  },
+  {
+    "date": "2020-10-22T15:59:02Z",
+    "id": 5907881,
+    "issues": [
+      {
+        "id": 721543843,
+        "labels": ["feature"],
+        "number": 997,
+        "title": "lib: add new globals from Node.js 15.x",
+        "url": "https://github.com/hapijs/lab/pull/997"
+      }
+    ],
+    "number": 177,
+    "url": "https://github.com/hapijs/lab/milestone/177",
+    "version": "24.1.0"
+  },
+  {
+    "date": "2020-09-23T02:29:34Z",
+    "id": 5195677,
+    "issues": [
+      {
+        "id": 706882982,
+        "labels": ["breaking changes", "release notes"],
+        "number": 996,
+        "title": "24.0.0 Release Notes",
+        "url": "https://github.com/hapijs/lab/issues/996"
+      },
+      {
+        "id": 695274947,
+        "labels": ["feature"],
+        "number": 995,
+        "title": "Wait for pending ticks started by test",
+        "url": "https://github.com/hapijs/lab/pull/995"
+      },
+      {
+        "id": 690249019,
+        "labels": ["breaking changes"],
+        "number": 993,
+        "title": "Shallow clone context",
+        "url": "https://github.com/hapijs/lab/pull/993"
+      },
+      {
+        "id": 683463673,
+        "labels": ["breaking changes", "dependency"],
+        "number": 992,
+        "title": "Allow typescript to be updated by clients",
+        "url": "https://github.com/hapijs/lab/pull/992"
+      },
+      {
+        "id": 682770513,
+        "labels": ["feature"],
+        "number": 990,
+        "title": "Use eslint-plugin-hapi embedded config",
+        "url": "https://github.com/hapijs/lab/pull/990"
+      },
+      {
+        "id": 677176243,
+        "labels": ["breaking changes"],
+        "number": 987,
+        "title": "throw error if an async experiment function is provided",
+        "url": "https://github.com/hapijs/lab/pull/987"
+      }
+    ],
+    "number": 176,
+    "url": "https://github.com/hapijs/lab/milestone/176",
+    "version": "24.0.0"
+  },
+  {
+    "date": "2020-03-12T17:10:15Z",
+    "id": 4972606,
+    "issues": [
+      {
+        "id": 579782324,
+        "labels": ["security", "dependency"],
+        "number": 975,
+        "title": "Replace mkdirp with Fs.mkdirSync with recursive: true",
+        "url": "https://github.com/hapijs/lab/pull/975"
+      },
+      {
+        "id": 579782203,
+        "labels": ["security", "dependency"],
+        "number": 974,
+        "title": "Vulnerability in a dep of mkdirp",
+        "url": "https://github.com/hapijs/lab/issues/974"
+      }
+    ],
+    "number": 175,
+    "url": "https://github.com/hapijs/lab/milestone/175",
+    "version": "22.0.4"
+  },
+  {
+    "date": "2020-01-04T09:24:50Z",
+    "id": 4961118,
+    "issues": [
+      {
+        "id": 545263279,
+        "labels": ["dependency"],
+        "number": 968,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/lab/issues/968"
+      }
+    ],
+    "number": 174,
+    "url": "https://github.com/hapijs/lab/milestone/174",
+    "version": "22.0.3"
+  },
+  {
+    "date": "2019-12-28T17:25:00Z",
+    "id": 4960457,
+    "issues": [
+      {
+        "id": 543252424,
+        "labels": ["feature"],
+        "number": 963,
+        "title": "Record retries",
+        "url": "https://github.com/hapijs/lab/issues/963"
+      },
+      {
+        "id": 543239099,
+        "labels": ["feature", "breaking changes", "dependency"],
+        "number": 962,
+        "title": "Replace Espree with babel-eslint",
+        "url": "https://github.com/hapijs/lab/issues/962"
+      }
+    ],
+    "number": 173,
+    "url": "https://github.com/hapijs/lab/milestone/173",
+    "version": "22.0.2"
+  },
+  {
+    "date": "2019-12-28T07:27:49Z",
+    "id": 4960451,
+    "issues": [
+      {
+        "id": 543085871,
+        "labels": ["bug"],
+        "number": 961,
+        "title": "Update es lint version",
+        "url": "https://github.com/hapijs/lab/issues/961"
+      }
+    ],
+    "number": 172,
+    "url": "https://github.com/hapijs/lab/milestone/172",
+    "version": "22.0.1"
+  },
+  {
+    "date": "2019-12-28T07:09:49Z",
+    "id": 4746568,
+    "issues": [
+      {
+        "id": 543083341,
+        "labels": ["breaking changes", "dependency"],
+        "number": 960,
+        "title": "Drop node 10",
+        "url": "https://github.com/hapijs/lab/issues/960"
+      },
+      {
+        "id": 543076515,
+        "labels": ["breaking changes", "dependency"],
+        "number": 959,
+        "title": "Update lint rules",
+        "url": "https://github.com/hapijs/lab/issues/959"
+      },
+      {
+        "id": 541912426,
+        "labels": ["test"],
+        "number": 957,
+        "title": "update test assertion for node core changes",
+        "url": "https://github.com/hapijs/lab/pull/957"
+      },
+      {
+        "id": 541207991,
+        "labels": ["bug", "types"],
+        "number": 955,
+        "title": "TS: String object type -> string literal type",
+        "url": "https://github.com/hapijs/lab/pull/955"
+      },
+      {
+        "id": 541202398,
+        "labels": ["bug", "types"],
+        "number": 954,
+        "title": "TS: Uses an inferred generic on flags.mustCall",
+        "url": "https://github.com/hapijs/lab/pull/954"
+      }
+    ],
+    "number": 171,
+    "url": "https://github.com/hapijs/lab/milestone/171",
+    "version": "22.0.0"
+  },
+  {
+    "date": "2019-10-14T07:47:36Z",
+    "id": 4723278,
+    "issues": [
+      {
+        "id": 506259152,
+        "labels": ["breaking changes", "types"],
+        "number": 950,
+        "title": "Update types",
+        "url": "https://github.com/hapijs/lab/issues/950"
+      },
+      {
+        "id": 506259109,
+        "labels": ["breaking changes", "dependency"],
+        "number": 949,
+        "title": "Drop node 8",
+        "url": "https://github.com/hapijs/lab/issues/949"
+      }
+    ],
+    "number": 170,
+    "url": "https://github.com/hapijs/lab/milestone/170",
+    "version": "21.0.0"
+  },
+  {
+    "date": "2019-10-05T02:51:10Z",
+    "id": 4684451,
+    "issues": [
+      {
+        "id": 502866979,
+        "labels": ["feature"],
+        "number": 948,
+        "title": "Tags to skip types test line execution",
+        "url": "https://github.com/hapijs/lab/issues/948"
+      },
+      {
+        "id": 498521608,
+        "labels": ["bug"],
+        "number": 945,
+        "title": "coverage-all option triggers TypeError: Cannot set property 'source' of undefined",
+        "url": "https://github.com/hapijs/lab/issues/945"
+      }
+    ],
+    "number": 169,
+    "url": "https://github.com/hapijs/lab/milestone/169",
+    "version": "20.4.0"
+  },
+  {
+    "date": "2019-09-23T19:23:35Z",
+    "id": 4681562,
+    "issues": [
+      {
+        "id": 497278200,
+        "labels": ["bug"],
+        "number": 943,
+        "title": "Fails to load npm modules in ts tests",
+        "url": "https://github.com/hapijs/lab/issues/943"
+      }
+    ],
+    "number": 168,
+    "url": "https://github.com/hapijs/lab/milestone/168",
+    "version": "20.3.2"
+  },
+  {
+    "date": "2019-09-23T07:09:07Z",
+    "id": 4681297,
+    "issues": [
+      {
+        "id": 496928353,
+        "labels": ["bug"],
+        "number": 942,
+        "title": "Support types test execution on windows",
+        "url": "https://github.com/hapijs/lab/issues/942"
+      }
+    ],
+    "number": 167,
+    "url": "https://github.com/hapijs/lab/milestone/167",
+    "version": "20.3.1"
+  },
+  {
+    "date": "2019-09-23T04:52:06Z",
+    "id": 4619480,
+    "issues": [
+      {
+        "id": 496747948,
+        "labels": ["bug"],
+        "number": 941,
+        "title": "External modules coverage fails on windows due to path",
+        "url": "https://github.com/hapijs/lab/issues/941"
+      },
+      {
+        "id": 496083799,
+        "labels": ["feature"],
+        "number": 940,
+        "title": "Run TS tests, not just validate them",
+        "url": "https://github.com/hapijs/lab/issues/940"
+      },
+      {
+        "id": 451217916,
+        "labels": ["bug"],
+        "number": 924,
+        "title": "New diff is broken",
+        "url": "https://github.com/hapijs/lab/issues/924"
+      },
+      {
+        "id": 356041774,
+        "labels": ["bug"],
+        "number": 856,
+        "title": "coverage analysis modifies a function return",
+        "url": "https://github.com/hapijs/lab/issues/856"
+      }
+    ],
+    "number": 166,
+    "url": "https://github.com/hapijs/lab/milestone/166",
+    "version": "20.3.0"
+  },
+  {
+    "date": "2019-09-01T07:31:52Z",
+    "id": 4599562,
+    "issues": [
+      {
+        "id": 487852293,
+        "labels": ["bug", "dependency"],
+        "number": 938,
+        "title": "Stupid typescript",
+        "url": "https://github.com/hapijs/lab/issues/938"
+      }
+    ],
+    "number": 165,
+    "url": "https://github.com/hapijs/lab/milestone/165",
+    "version": "20.2.2"
+  },
+  {
+    "date": "2019-08-24T00:55:35Z",
+    "id": 4577272,
+    "issues": [
+      {
+        "id": 484757752,
+        "labels": ["feature"],
+        "number": 937,
+        "title": "Support coverage of external modules with own coverage reports",
+        "url": "https://github.com/hapijs/lab/issues/937"
+      }
+    ],
+    "number": 164,
+    "url": "https://github.com/hapijs/lab/milestone/164",
+    "version": "20.2.1"
+  },
+  {
+    "date": "2019-08-15T23:22:50Z",
+    "id": 4409992,
+    "issues": [
+      {
+        "id": 481023511,
+        "labels": ["feature"],
+        "number": 936,
+        "title": "Ignore symbol leaks",
+        "url": "https://github.com/hapijs/lab/issues/936"
+      }
+    ],
+    "number": 162,
+    "url": "https://github.com/hapijs/lab/milestone/162",
+    "version": "20.1.0"
+  },
+  {
+    "date": "2019-08-07T20:02:18Z",
+    "id": 4556266,
+    "issues": [
+      {
+        "id": 478102114,
+        "labels": ["breaking changes", "release notes", "dependency"],
+        "number": 933,
+        "title": "Update to eslint 6",
+        "url": "https://github.com/hapijs/lab/issues/933"
+      },
+      {
+        "id": 478089339,
+        "labels": ["feature"],
+        "number": 932,
+        "title": "Single line coverage ignore",
+        "url": "https://github.com/hapijs/lab/issues/932"
+      }
+    ],
+    "number": 163,
+    "url": "https://github.com/hapijs/lab/milestone/163",
+    "version": "20.0.0"
+  },
+  {
+    "date": "2019-06-14T20:35:58Z",
+    "id": 4325619,
+    "issues": [
+      {
+        "id": 453926589,
+        "labels": ["feature"],
+        "number": 926,
+        "title": "Implement coverage bypass stack",
+        "url": "https://github.com/hapijs/lab/pull/926"
+      },
+      {
+        "id": 447702301,
+        "labels": ["bug"],
+        "number": 923,
+        "title": "Support multiple \"only\" flags",
+        "url": "https://github.com/hapijs/lab/pull/923"
+      },
+      {
+        "id": 447343962,
+        "labels": ["bug"],
+        "number": 922,
+        "title": "Support for multiple \"only\"",
+        "url": "https://github.com/hapijs/lab/issues/922"
+      },
+      {
+        "id": 408047574,
+        "labels": ["feature"],
+        "number": 904,
+        "title": "Add affordance for coverage flag stack",
+        "url": "https://github.com/hapijs/lab/issues/904"
+      }
+    ],
+    "number": 161,
+    "url": "https://github.com/hapijs/lab/milestone/161",
+    "version": "19.1.0"
+  },
+  {
+    "date": "2019-05-17T18:16:26Z",
+    "id": 4319783,
+    "issues": [
+      {
+        "id": 445559536,
+        "labels": ["bug"],
+        "number": 921,
+        "title": "Handle ts \"Cannot find name\" error when expected",
+        "url": "https://github.com/hapijs/lab/issues/921"
+      }
+    ],
+    "number": 160,
+    "url": "https://github.com/hapijs/lab/milestone/160",
+    "version": "19.0.1"
+  },
+  {
+    "date": "2019-05-16T07:43:32Z",
+    "id": 4252648,
+    "issues": [
+      {
+        "id": 444803704,
+        "labels": ["breaking changes", "release notes"],
+        "number": 920,
+        "title": "19.0.0 Release Notes",
+        "url": "https://github.com/hapijs/lab/issues/920"
+      },
+      {
+        "id": 444802175,
+        "labels": ["breaking changes"],
+        "number": 919,
+        "title": "Change console reporter labels",
+        "url": "https://github.com/hapijs/lab/issues/919"
+      },
+      {
+        "id": 443069719,
+        "labels": ["feature"],
+        "number": 918,
+        "title": "Typescript test support",
+        "url": "https://github.com/hapijs/lab/issues/918"
+      },
+      {
+        "id": 443038205,
+        "labels": ["breaking changes"],
+        "number": 917,
+        "title": "Remove debug-brk",
+        "url": "https://github.com/hapijs/lab/issues/917"
+      },
+      {
+        "id": 440921222,
+        "labels": ["bug", "breaking changes"],
+        "number": 916,
+        "title": "Global leak detector skips Symbol() properties",
+        "url": "https://github.com/hapijs/lab/issues/916"
+      },
+      {
+        "id": 439146173,
+        "labels": ["bug", "feature", "breaking changes"],
+        "number": 915,
+        "title": "Use util.inspect() for console reporter",
+        "url": "https://github.com/hapijs/lab/pull/915"
+      },
+      {
+        "id": 438270598,
+        "labels": ["bug"],
+        "number": 914,
+        "title": "\"console\" reporter crashes if object contains a BigInt",
+        "url": "https://github.com/hapijs/lab/issues/914"
+      },
+      {
+        "id": 152034037,
+        "labels": ["bug"],
+        "number": 572,
+        "title": "No mismatch highlighted on -0 !== 0 deep equality mismatch",
+        "url": "https://github.com/hapijs/lab/issues/572"
+      }
+    ],
+    "number": 159,
+    "url": "https://github.com/hapijs/lab/milestone/159",
+    "version": "19.0.0"
+  },
+  {
+    "date": "2019-04-23T16:54:23Z",
+    "id": 4184477,
+    "issues": [
+      {
+        "id": 436288057,
+        "labels": ["dependency"],
+        "number": 913,
+        "title": "Update lint rules modules",
+        "url": "https://github.com/hapijs/lab/issues/913"
+      },
+      {
+        "id": 436287715,
+        "labels": ["bug"],
+        "number": 912,
+        "title": "Add globalThis to symbols",
+        "url": "https://github.com/hapijs/lab/issues/912"
+      }
+    ],
+    "number": 158,
+    "url": "https://github.com/hapijs/lab/milestone/158",
+    "version": "18.1.2"
+  },
+  {
+    "date": "2019-04-23T16:45:14Z",
+    "id": 4184434,
+    "issues": [
+      {
+        "id": 427199608,
+        "labels": ["dependency"],
+        "number": 911,
+        "title": "Update code",
+        "url": "https://github.com/hapijs/lab/issues/911"
+      }
+    ],
+    "number": 157,
+    "url": "https://github.com/hapijs/lab/milestone/157",
+    "version": "18.1.1"
+  },
+  {
+    "date": "2019-03-29T21:40:22Z",
+    "id": 4049403,
+    "issues": [
+      {
+        "id": 427188223,
+        "labels": ["non issue"],
+        "number": 910,
+        "title": "Change module namespace",
+        "url": "https://github.com/hapijs/lab/issues/910"
+      }
+    ],
+    "number": 156,
+    "url": "https://github.com/hapijs/lab/milestone/156",
+    "version": "18.1.0"
+  },
+  {
+    "date": "2019-02-12T01:05:36Z",
+    "id": 3908506,
+    "issues": [
+      {
+        "id": 409059131,
+        "labels": ["dependency"],
+        "number": 905,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/lab/issues/905"
+      }
+    ],
+    "number": 155,
+    "url": "https://github.com/hapijs/lab/milestone/155",
+    "version": "18.0.2"
+  },
+  {
+    "date": "2018-12-17T23:01:47Z",
+    "id": 3819611,
+    "issues": [
+      {
+        "id": 384006300,
+        "labels": ["bug", "dependency"],
+        "number": 898,
+        "title": "Switch back to Hoek.clone from lodash.deepClone.",
+        "url": "https://github.com/hapijs/lab/pull/898"
+      },
+      {
+        "id": 381946973,
+        "labels": ["bug"],
+        "number": 895,
+        "title": "Fix coverage with sourcemaps inlined via Transform API.",
+        "url": "https://github.com/hapijs/lab/pull/895"
+      }
+    ],
+    "number": 154,
+    "url": "https://github.com/hapijs/lab/milestone/154",
+    "version": "18.0.1"
+  },
+  {
+    "date": "2018-11-13T22:46:35Z",
+    "id": 3792012,
+    "issues": [
+      {
+        "id": 380387019,
+        "labels": ["bug", "breaking changes"],
+        "number": 894,
+        "title": "Have correct exit code with multiple reporters",
+        "url": "https://github.com/hapijs/lab/pull/894"
+      },
+      {
+        "id": 380002574,
+        "labels": ["lts"],
+        "number": 893,
+        "title": "Properly propagate term sig to child lab process",
+        "url": "https://github.com/hapijs/lab/pull/893"
+      },
+      {
+        "id": 379995072,
+        "labels": ["documentation"],
+        "number": 892,
+        "title": "Add note about how to get a tests ID",
+        "url": "https://github.com/hapijs/lab/pull/892"
+      },
+      {
+        "id": 379993286,
+        "labels": ["dependency", "lts"],
+        "number": 891,
+        "title": "Update eslint version",
+        "url": "https://github.com/hapijs/lab/pull/891"
+      },
+      {
+        "id": 379989688,
+        "labels": ["lts"],
+        "number": 890,
+        "title": "Remove deprecated espree option",
+        "url": "https://github.com/hapijs/lab/pull/890"
+      },
+      {
+        "id": 379987001,
+        "labels": ["documentation"],
+        "number": 889,
+        "title": "Remove docs about custom linter option",
+        "url": "https://github.com/hapijs/lab/pull/889"
+      },
+      {
+        "id": 379982831,
+        "labels": ["bug"],
+        "number": 888,
+        "title": "Compare coverage pattern to canonical path",
+        "url": "https://github.com/hapijs/lab/pull/888"
+      },
+      {
+        "id": 379369203,
+        "labels": ["lts"],
+        "number": 885,
+        "title": "Centralize espree options",
+        "url": "https://github.com/hapijs/lab/pull/885"
+      },
+      {
+        "id": 379367206,
+        "labels": ["lts"],
+        "number": 884,
+        "title": "Remove old parallel flag from test",
+        "url": "https://github.com/hapijs/lab/pull/884"
+      },
+      {
+        "id": 379364149,
+        "labels": ["bug"],
+        "number": 883,
+        "title": " Use correct gray color code",
+        "url": "https://github.com/hapijs/lab/pull/883"
+      },
+      {
+        "id": 378503724,
+        "labels": ["test"],
+        "number": 882,
+        "title": "Add missing coverage and remove unnecessary checks",
+        "url": "https://github.com/hapijs/lab/pull/882"
+      },
+      {
+        "id": 376722829,
+        "labels": ["breaking changes"],
+        "number": 878,
+        "title": "Fix false-positive coverage of if statements (REDUCES REPORTED COVERAGE!)",
+        "url": "https://github.com/hapijs/lab/pull/878"
+      },
+      {
+        "id": 355575171,
+        "labels": ["bug"],
+        "number": 855,
+        "title": "Update linter configuration?",
+        "url": "https://github.com/hapijs/lab/issues/855"
+      },
+      {
+        "id": 353342955,
+        "labels": ["bug"],
+        "number": 852,
+        "title": "Console reporter: \"gray\" is actually light green",
+        "url": "https://github.com/hapijs/lab/issues/852"
+      },
+      {
+        "id": 336702275,
+        "labels": ["bug"],
+        "number": 842,
+        "title": "Coverage fails for multiple conditionals on same line (logical operators)",
+        "url": "https://github.com/hapijs/lab/issues/842"
+      },
+      {
+        "id": 274439781,
+        "labels": ["documentation"],
+        "number": 788,
+        "title": "Documentation on using --id",
+        "url": "https://github.com/hapijs/lab/issues/788"
+      },
+      {
+        "id": 261145156,
+        "labels": ["lts"],
+        "number": 762,
+        "title": "Request to consolidate parsers",
+        "url": "https://github.com/hapijs/lab/issues/762"
+      },
+      {
+        "id": 260357665,
+        "labels": ["bug", "test"],
+        "number": 758,
+        "title": "CLI failure test doesn't appear to test what it claims",
+        "url": "https://github.com/hapijs/lab/issues/758"
+      }
+    ],
+    "number": 152,
+    "url": "https://github.com/hapijs/lab/milestone/152",
+    "version": "18.0.0"
+  },
+  {
+    "date": "2018-11-05T15:17:31Z",
+    "id": 3792161,
+    "issues": [
+      {
+        "id": 377032713,
+        "labels": ["feature"],
+        "number": 881,
+        "title": "Add coverage-pattern option",
+        "url": "https://github.com/hapijs/lab/pull/881"
+      },
+      {
+        "id": 376998481,
+        "labels": ["non issue"],
+        "number": 880,
+        "title": "Remove engines",
+        "url": "https://github.com/hapijs/lab/issues/880"
+      },
+      {
+        "id": 354360333,
+        "labels": ["feature"],
+        "number": 853,
+        "title": "Coverage being analized on the test file",
+        "url": "https://github.com/hapijs/lab/issues/853"
+      }
+    ],
+    "number": 153,
+    "url": "https://github.com/hapijs/lab/milestone/153",
+    "version": "17.3.0"
+  },
+  {
+    "date": "2018-11-02T21:30:05Z",
+    "id": 3789019,
+    "issues": [
+      {
+        "id": 376965969,
+        "labels": ["feature"],
+        "number": 879,
+        "title": "Check file pattern on coverage traversal",
+        "url": "https://github.com/hapijs/lab/pull/879"
+      },
+      {
+        "id": 376631018,
+        "labels": ["feature"],
+        "number": 877,
+        "title": "Add --coverage-all option",
+        "url": "https://github.com/hapijs/lab/pull/877"
+      },
+      {
+        "id": 232073949,
+        "labels": ["feature"],
+        "number": 710,
+        "title": "setting coverage-path doesn't include all code in path",
+        "url": "https://github.com/hapijs/lab/issues/710"
+      }
+    ],
+    "number": 151,
+    "url": "https://github.com/hapijs/lab/milestone/151",
+    "version": "17.2.0"
+  },
+  {
+    "date": "2018-11-01T20:09:47Z",
+    "id": 3787396,
+    "issues": [
+      {
+        "id": 376547926,
+        "labels": ["dependency"],
+        "number": 876,
+        "title": "Update dependencies",
+        "url": "https://github.com/hapijs/lab/pull/876"
+      },
+      {
+        "id": 376544687,
+        "labels": ["non issue"],
+        "number": 875,
+        "title": "Revert console cov report truncation",
+        "url": "https://github.com/hapijs/lab/pull/875"
+      },
+      {
+        "id": 375730097,
+        "labels": ["feature"],
+        "number": 871,
+        "title": "Improve console coverage report readability",
+        "url": "https://github.com/hapijs/lab/pull/871"
+      }
+    ],
+    "number": 150,
+    "url": "https://github.com/hapijs/lab/milestone/150",
+    "version": "17.1.0"
+  },
+  {
+    "date": "2018-11-01T07:08:05Z",
+    "id": 3786521,
+    "issues": [
+      {
+        "id": 376278628,
+        "labels": ["dependency"],
+        "number": 874,
+        "title": "Update hoek v6",
+        "url": "https://github.com/hapijs/lab/issues/874"
+      }
+    ],
+    "number": 149,
+    "url": "https://github.com/hapijs/lab/milestone/149",
+    "version": "17.0.4"
+  },
+  {
+    "date": "2018-10-31T20:53:09Z",
+    "id": 3769405,
+    "issues": [
+      {
+        "id": 376073214,
+        "labels": ["bug"],
+        "number": 873,
+        "title": "Fails to handle non-Error errors",
+        "url": "https://github.com/hapijs/lab/issues/873"
+      },
+      {
+        "id": 374744353,
+        "labels": ["bug"],
+        "number": 870,
+        "title": "Update type definitions to match documented API",
+        "url": "https://github.com/hapijs/lab/pull/870"
+      }
+    ],
+    "number": 148,
+    "url": "https://github.com/hapijs/lab/milestone/148",
+    "version": "17.0.3"
+  },
+  {
+    "date": "2018-10-25T17:55:24Z",
+    "id": 3766142,
+    "issues": [
+      {
+        "id": 374047602,
+        "labels": ["bug"],
+        "number": 869,
+        "title": "[ENHANCEMENT] Nullified test context on finish to prevent memory leaks",
+        "url": "https://github.com/hapijs/lab/pull/869"
+      },
+      {
+        "id": 374003101,
+        "labels": ["bug"],
+        "number": 868,
+        "title": "Possible context memory leak?",
+        "url": "https://github.com/hapijs/lab/issues/868"
+      }
+    ],
+    "number": 147,
+    "url": "https://github.com/hapijs/lab/milestone/147",
+    "version": "17.0.2"
+  },
+  {
+    "date": "2018-10-24T17:57:53Z",
+    "id": 3763162,
+    "issues": [
+      {
+        "id": 373563999,
+        "labels": ["bug"],
+        "number": 867,
+        "title": "No longer skip scripts when multiple only",
+        "url": "https://github.com/hapijs/lab/pull/867"
+      }
+    ],
+    "number": 146,
+    "url": "https://github.com/hapijs/lab/milestone/146",
+    "version": "17.0.1"
+  },
+  {
+    "date": "2018-10-23T20:25:38Z",
+    "id": 3641717,
+    "issues": [
+      {
+        "id": 373176218,
+        "labels": ["lts"],
+        "number": 866,
+        "title": "Add node 11 to travis",
+        "url": "https://github.com/hapijs/lab/pull/866"
+      },
+      {
+        "id": 373173229,
+        "labels": ["lts"],
+        "number": 865,
+        "title": "handle queueMicrotask global added in Node 11",
+        "url": "https://github.com/hapijs/lab/pull/865"
+      },
+      {
+        "id": 373163702,
+        "labels": ["feature", "breaking changes"],
+        "number": 864,
+        "title": "Add testsuites output to junit",
+        "url": "https://github.com/hapijs/lab/pull/864"
+      },
+      {
+        "id": 373088519,
+        "labels": ["bug", "breaking changes", "dependency"],
+        "number": 863,
+        "title": "Upgrade source-map and support limited sourcemap descriptors",
+        "url": "https://github.com/hapijs/lab/pull/863"
+      },
+      {
+        "id": 363310766,
+        "labels": ["bug"],
+        "number": 860,
+        "title": "Fixed skipped console output color",
+        "url": "https://github.com/hapijs/lab/pull/860"
+      },
+      {
+        "id": 345553787,
+        "labels": ["feature", "breaking changes"],
+        "number": 846,
+        "title": "Only is no longer limited to 1 test",
+        "url": "https://github.com/hapijs/lab/pull/846"
+      },
+      {
+        "id": 344974148,
+        "labels": ["bug"],
+        "number": 845,
+        "title": "junit report generated has both classname and the name as \"classname + ' ' + name\".",
+        "url": "https://github.com/hapijs/lab/issues/845"
+      },
+      {
+        "id": 258271091,
+        "labels": ["bug"],
+        "number": 750,
+        "title": "html reporter errors when encountering sourcemap chunks with typescript",
+        "url": "https://github.com/hapijs/lab/issues/750"
+      }
+    ],
+    "number": 145,
+    "url": "https://github.com/hapijs/lab/milestone/145",
+    "version": "17.0.0"
+  },
+  {
+    "date": "2018-09-10T21:02:09Z",
+    "id": 3588004,
+    "issues": [
+      {
+        "id": 356335646,
+        "labels": ["lts"],
+        "number": 858,
+        "title": "Update ecmaversion in eslint",
+        "url": "https://github.com/hapijs/lab/pull/858"
+      },
+      {
+        "id": 353337976,
+        "labels": ["feature"],
+        "number": 851,
+        "title": "Fix stack trace trimming",
+        "url": "https://github.com/hapijs/lab/pull/851"
+      },
+      {
+        "id": 353285642,
+        "labels": ["documentation"],
+        "number": 850,
+        "title": "Document `paths` parameter in .labrc.js",
+        "url": "https://github.com/hapijs/lab/pull/850"
+      }
+    ],
+    "number": 144,
+    "url": "https://github.com/hapijs/lab/milestone/144",
+    "version": "16.1.0"
+  },
+  {
+    "date": "2018-08-21T19:37:04Z",
+    "id": 3402431,
+    "issues": [
+      {
+        "id": 352672715,
+        "labels": ["bug", "dependency"],
+        "number": 849,
+        "title": "Update to eslint v5",
+        "url": "https://github.com/hapijs/lab/pull/849"
+      },
+      {
+        "id": 344450011,
+        "labels": ["bug", "breaking changes"],
+        "number": 844,
+        "title": "Disable dep timeout, which is doc default",
+        "url": "https://github.com/hapijs/lab/pull/844"
+      },
+      {
+        "id": 344077040,
+        "labels": ["feature"],
+        "number": 843,
+        "title": "Allow custom handling for global errors/rejections",
+        "url": "https://github.com/hapijs/lab/pull/843"
+      },
+      {
+        "id": 333817071,
+        "labels": ["breaking changes"],
+        "number": 840,
+        "title": "update eslint-config-hapi dependency",
+        "url": "https://github.com/hapijs/lab/pull/840"
+      },
+      {
+        "id": 270175090,
+        "labels": ["feature"],
+        "number": 782,
+        "title": "Disable \"uncaughtException\" handler for tests",
+        "url": "https://github.com/hapijs/lab/issues/782"
+      },
+      {
+        "id": 246292317,
+        "labels": ["bug"],
+        "number": 729,
+        "title": "-M, --context-timeout is ignored; test passed even it is not triggered",
+        "url": "https://github.com/hapijs/lab/issues/729"
+      }
+    ],
+    "number": 143,
+    "url": "https://github.com/hapijs/lab/milestone/143",
+    "version": "16.0.0"
+  },
+  {
+    "date": "2018-06-05T15:38:53Z",
+    "id": 3342034,
+    "issues": [
+      {
+        "id": 328568401,
+        "labels": ["feature"],
+        "number": 838,
+        "title": "Support test context from befores",
+        "url": "https://github.com/hapijs/lab/pull/838"
+      },
+      {
+        "id": 328555290,
+        "labels": ["feature"],
+        "number": 837,
+        "title": "Add BigInt globals",
+        "url": "https://github.com/hapijs/lab/pull/837"
+      },
+      {
+        "id": 324178571,
+        "labels": ["feature"],
+        "number": 836,
+        "title": "Update coverage ECMA version to 9 (2018).",
+        "url": "https://github.com/hapijs/lab/pull/836"
+      }
+    ],
+    "number": 142,
+    "url": "https://github.com/hapijs/lab/milestone/142",
+    "version": "15.5.0"
+  },
+  {
+    "date": "2018-05-13T14:53:07Z",
+    "id": 3326910,
+    "issues": [
+      {
+        "id": 322599504,
+        "labels": ["bug"],
+        "number": 833,
+        "title": "Add WHATWG Encoding API globals",
+        "url": "https://github.com/hapijs/lab/pull/833"
+      }
+    ],
+    "number": 141,
+    "url": "https://github.com/hapijs/lab/milestone/141",
+    "version": "15.4.5"
+  },
+  {
+    "date": "2018-05-07T18:35:21Z",
+    "id": 3325967,
+    "issues": [
+      {
+        "id": 320906902,
+        "labels": ["bug"],
+        "number": 831,
+        "title": "Revert \"Wait for stdout to stop writing to exit\"",
+        "url": "https://github.com/hapijs/lab/pull/831"
+      }
+    ],
+    "number": 140,
+    "url": "https://github.com/hapijs/lab/milestone/140",
+    "version": "15.4.4"
+  },
+  {
+    "date": "2018-05-07T15:09:19Z",
+    "id": 3325843,
+    "issues": [
+      {
+        "id": 318614645,
+        "labels": ["bug"],
+        "number": 829,
+        "title": "Wait for stdout to stop writing to exit",
+        "url": "https://github.com/hapijs/lab/pull/829"
+      },
+      {
+        "id": 310052692,
+        "labels": ["bug"],
+        "number": 824,
+        "title": "Calculate relative filename using node's path",
+        "url": "https://github.com/hapijs/lab/pull/824"
+      },
+      {
+        "id": 310049654,
+        "labels": ["bug"],
+        "number": 823,
+        "title": "Transforming files does not work with yarn workspaces",
+        "url": "https://github.com/hapijs/lab/issues/823"
+      }
+    ],
+    "number": 139,
+    "url": "https://github.com/hapijs/lab/milestone/139",
+    "version": "15.4.3"
+  },
+  {
+    "date": "2018-05-07T14:28:06Z",
+    "id": 3204223,
+    "issues": [
+      {
+        "id": 320596196,
+        "labels": ["bug"],
+        "number": 830,
+        "title": "Fix coverage on transformed files. Fixes #826.",
+        "url": "https://github.com/hapijs/lab/pull/830"
+      }
+    ],
+    "number": 138,
+    "url": "https://github.com/hapijs/lab/milestone/138",
+    "version": "15.4.2"
+  },
+  {
+    "date": "2018-03-20T18:14:16Z",
+    "id": 3180957,
+    "issues": [
+      {
+        "id": 306970002,
+        "labels": ["dependency"],
+        "number": 821,
+        "title": "Update eslint",
+        "url": "https://github.com/hapijs/lab/pull/821"
+      },
+      {
+        "id": 306890924,
+        "labels": ["bug"],
+        "number": 820,
+        "title": "Ignore default-plan-threshold for anything else than tests",
+        "url": "https://github.com/hapijs/lab/pull/820"
+      }
+    ],
+    "number": 137,
+    "url": "https://github.com/hapijs/lab/milestone/137",
+    "version": "15.4.1"
+  },
+  {
+    "date": "2018-03-12T16:05:57Z",
+    "id": 3172736,
+    "issues": [
+      {
+        "id": 304342903,
+        "labels": ["feature"],
+        "number": 819,
+        "title": "Implement minimum assertions threshold. Closes #690.",
+        "url": "https://github.com/hapijs/lab/pull/819"
+      },
+      {
+        "id": 214388590,
+        "labels": ["feature"],
+        "number": 690,
+        "title": "Allow to specify minimum number of executed assertions",
+        "url": "https://github.com/hapijs/lab/issues/690"
+      }
+    ],
+    "number": 135,
+    "url": "https://github.com/hapijs/lab/milestone/135",
+    "version": "15.4.0"
+  },
+  {
+    "date": "2018-03-08T21:31:40Z",
+    "id": 3144715,
+    "issues": [
+      {
+        "id": 303014576,
+        "labels": ["security", "dependency"],
+        "number": 816,
+        "title": "Bump diff to 3.5",
+        "url": "https://github.com/hapijs/lab/pull/816"
+      }
+    ],
+    "number": 134,
+    "url": "https://github.com/hapijs/lab/milestone/134",
+    "version": "15.3.1"
+  },
+  {
+    "date": "2018-02-26T17:45:39Z",
+    "id": 3103352,
+    "issues": [
+      {
+        "id": 300330902,
+        "labels": ["dependency"],
+        "number": 815,
+        "title": "Update eslint dep",
+        "url": "https://github.com/hapijs/lab/pull/815"
+      },
+      {
+        "id": 299389009,
+        "labels": ["bug"],
+        "number": 813,
+        "title": "Fail test if a falsy value is thrown by the test",
+        "url": "https://github.com/hapijs/lab/pull/813"
+      },
+      {
+        "id": 299341766,
+        "labels": ["bug"],
+        "number": 812,
+        "title": "awaiting a rejected promise can still pass test",
+        "url": "https://github.com/hapijs/lab/issues/812"
+      },
+      {
+        "id": 296553572,
+        "labels": ["feature"],
+        "number": 811,
+        "title": "Can exclude files from coverage",
+        "url": "https://github.com/hapijs/lab/pull/811"
+      }
+    ],
+    "number": 133,
+    "url": "https://github.com/hapijs/lab/milestone/133",
+    "version": "15.3.0"
+  },
+  {
+    "date": "2018-02-09T17:40:15Z",
+    "id": 3075580,
+    "issues": [
+      {
+        "id": 295939208,
+        "labels": ["bug"],
+        "number": 810,
+        "title": "Write CLI errors to stderr",
+        "url": "https://github.com/hapijs/lab/pull/810"
+      },
+      {
+        "id": 295927472,
+        "labels": ["dependency"],
+        "number": 809,
+        "title": "Update eslint version",
+        "url": "https://github.com/hapijs/lab/pull/809"
+      },
+      {
+        "id": 295808036,
+        "labels": ["lts"],
+        "number": 808,
+        "title": "add URL and URLSearchParams to global variables",
+        "url": "https://github.com/hapijs/lab/pull/808"
+      },
+      {
+        "id": 93918006,
+        "labels": ["bug"],
+        "number": 399,
+        "title": "Missing exports.lab causes error when generating html coverage report ",
+        "url": "https://github.com/hapijs/lab/issues/399"
+      }
+    ],
+    "number": 132,
+    "url": "https://github.com/hapijs/lab/milestone/132",
+    "version": "15.2.2"
+  },
+  {
+    "date": "2018-01-30T17:29:41Z",
+    "id": 3023445,
+    "issues": [
+      {
+        "id": 292855071,
+        "labels": ["bug"],
+        "number": 807,
+        "title": "Report correct exit code with multiple reporters",
+        "url": "https://github.com/hapijs/lab/pull/807"
+      },
+      {
+        "id": 292477233,
+        "labels": ["test"],
+        "number": 806,
+        "title": "Add multiple reporter tests",
+        "url": "https://github.com/hapijs/lab/pull/806"
+      },
+      {
+        "id": 292454692,
+        "labels": ["dependency"],
+        "number": 805,
+        "title": "Update eslint version",
+        "url": "https://github.com/hapijs/lab/pull/805"
+      },
+      {
+        "id": 291894481,
+        "labels": ["bug"],
+        "number": 804,
+        "title": "Using multiple reporters results into wrong exit code if test fails",
+        "url": "https://github.com/hapijs/lab/issues/804"
+      }
+    ],
+    "number": 131,
+    "url": "https://github.com/hapijs/lab/milestone/131",
+    "version": "15.2.1"
+  },
+  {
+    "date": "2018-01-09T16:45:24Z",
+    "id": 2882205,
+    "issues": [
+      {
+        "id": 287152838,
+        "labels": ["dependency"],
+        "number": 803,
+        "title": "Update eslint",
+        "url": "https://github.com/hapijs/lab/pull/803"
+      },
+      {
+        "id": 286877687,
+        "labels": ["feature"],
+        "number": 802,
+        "title": "Support object rest/spread under eslint",
+        "url": "https://github.com/hapijs/lab/pull/802"
+      },
+      {
+        "id": 286162374,
+        "labels": ["documentation"],
+        "number": 801,
+        "title": "update to use expect from code",
+        "url": "https://github.com/hapijs/lab/pull/801"
+      },
+      {
+        "id": 280751501,
+        "labels": ["lts"],
+        "number": 797,
+        "title": "Update TypeScript typings",
+        "url": "https://github.com/hapijs/lab/pull/797"
+      },
+      {
+        "id": 278810397,
+        "labels": ["documentation"],
+        "number": 794,
+        "title": "Fix usage example of flags.onCleanup",
+        "url": "https://github.com/hapijs/lab/pull/794"
+      },
+      {
+        "id": 277537147,
+        "labels": ["bug"],
+        "number": 793,
+        "title": "Added index.d.ts to npmignore",
+        "url": "https://github.com/hapijs/lab/pull/793"
+      },
+      {
+        "id": 272344090,
+        "labels": ["feature"],
+        "number": 786,
+        "title": "Add mustCall feature",
+        "url": "https://github.com/hapijs/lab/pull/786"
+      },
+      {
+        "id": 271201654,
+        "labels": ["documentation"],
+        "number": 784,
+        "title": "Updated readme to include alias of ignore",
+        "url": "https://github.com/hapijs/lab/pull/784"
+      },
+      {
+        "id": 176684579,
+        "labels": ["documentation"],
+        "number": 641,
+        "title": "ignore setting not supported in .labrc.js",
+        "url": "https://github.com/hapijs/lab/issues/641"
+      }
+    ],
+    "number": 129,
+    "url": "https://github.com/hapijs/lab/milestone/129",
+    "version": "15.2.0"
+  },
+  {
+    "date": "2017-11-01T23:56:07Z",
+    "id": 2873176,
+    "issues": [
+      {
+        "id": 270483247,
+        "labels": ["bug"],
+        "number": 783,
+        "title": "Fix for node 9",
+        "url": "https://github.com/hapijs/lab/pull/783"
+      },
+      {
+        "id": 269663411,
+        "labels": ["documentation"],
+        "number": 779,
+        "title": "Remove outdated assert statements",
+        "url": "https://github.com/hapijs/lab/pull/779"
+      },
+      {
+        "id": 269546864,
+        "labels": ["documentation"],
+        "number": 778,
+        "title": "assertion library \"code\" is not set by default / documentation is wrong",
+        "url": "https://github.com/hapijs/lab/issues/778"
+      },
+      {
+        "id": 258202742,
+        "labels": ["bug"],
+        "number": 748,
+        "title": "New globals are coming",
+        "url": "https://github.com/hapijs/lab/issues/748"
+      }
+    ],
+    "number": 128,
+    "url": "https://github.com/hapijs/lab/milestone/128",
+    "version": "15.1.2"
+  },
+  {
+    "date": "2017-10-30T01:28:09Z",
+    "id": 2872014,
+    "issues": [
+      {
+        "id": 269371718,
+        "labels": ["bug"],
+        "number": 776,
+        "title": "Fix test script error duplicates",
+        "url": "https://github.com/hapijs/lab/pull/776"
+      }
+    ],
+    "number": 127,
+    "url": "https://github.com/hapijs/lab/milestone/127",
+    "version": "15.1.1"
+  },
+  {
+    "date": "2017-10-29T05:05:39Z",
+    "id": 2860487,
+    "issues": [
+      {
+        "id": 268467280,
+        "labels": ["dependency"],
+        "number": 774,
+        "title": "Update eslint",
+        "url": "https://github.com/hapijs/lab/pull/774"
+      },
+      {
+        "id": 268065885,
+        "labels": ["bug"],
+        "number": 772,
+        "title": "Remove code as default assertion library. Resolves #771",
+        "url": "https://github.com/hapijs/lab/pull/772"
+      },
+      {
+        "id": 267871574,
+        "labels": ["feature"],
+        "number": 769,
+        "title": "Display parser errors when requiring scripts",
+        "url": "https://github.com/hapijs/lab/pull/769"
+      },
+      {
+        "id": 267851826,
+        "labels": ["documentation"],
+        "number": 768,
+        "title": "Update README.md",
+        "url": "https://github.com/hapijs/lab/pull/768"
+      }
+    ],
+    "number": 126,
+    "url": "https://github.com/hapijs/lab/milestone/126",
+    "version": "15.1.0"
+  },
+  {
+    "date": "2017-10-23T20:17:40Z",
+    "id": 2833407,
+    "issues": [
+      {
+        "id": 268057402,
+        "labels": ["breaking changes", "release notes"],
+        "number": 770,
+        "title": "15.0.0 Release Notes",
+        "url": "https://github.com/hapijs/lab/issues/770"
+      },
+      {
+        "id": 265011154,
+        "labels": ["breaking changes"],
+        "number": 766,
+        "title": "Remove domains and callbacks",
+        "url": "https://github.com/hapijs/lab/pull/766"
+      },
+      {
+        "id": 263324379,
+        "labels": ["feature", "breaking changes"],
+        "number": 765,
+        "title": "Use of onCleanup() when test returns a promise",
+        "url": "https://github.com/hapijs/lab/issues/765"
+      },
+      {
+        "id": 258310982,
+        "labels": ["breaking changes"],
+        "number": 752,
+        "title": "Remove domains in favor of try/catch on async/await",
+        "url": "https://github.com/hapijs/lab/issues/752"
+      }
+    ],
+    "number": 125,
+    "url": "https://github.com/hapijs/lab/milestone/125",
+    "version": "15.0.0"
+  },
+  {
+    "date": "2018-03-08T21:34:51Z",
+    "id": 2940549,
+    "issues": [
+      {
+        "id": 303045253,
+        "labels": ["dependency"],
+        "number": 817,
+        "title": "Bump diff to 3.5 (v14.x.x)",
+        "url": "https://github.com/hapijs/lab/pull/817"
+      }
+    ],
+    "number": 130,
+    "url": "https://github.com/hapijs/lab/milestone/130",
+    "version": "14.3.3"
+  },
+  {
+    "date": "2017-10-23T20:17:39Z",
+    "id": 2786923,
+    "issues": [
+      {
+        "id": 276941893,
+        "labels": ["bug"],
+        "number": 792,
+        "title": "Fix for node 9",
+        "url": "https://github.com/hapijs/lab/pull/792"
+      },
+      {
+        "id": 261722291,
+        "labels": ["dependency"],
+        "number": 763,
+        "title": "Update deps: eslint, source-map",
+        "url": "https://github.com/hapijs/lab/pull/763"
+      },
+      {
+        "id": 260365080,
+        "labels": ["bug"],
+        "number": 760,
+        "title": "Helpful message when path not found",
+        "url": "https://github.com/hapijs/lab/pull/760"
+      },
+      {
+        "id": 260363235,
+        "labels": ["bug"],
+        "number": 759,
+        "title": "More helpful message when test path not found",
+        "url": "https://github.com/hapijs/lab/issues/759"
+      }
+    ],
+    "number": 124,
+    "url": "https://github.com/hapijs/lab/milestone/124",
+    "version": "14.3.2"
+  },
+  {
+    "date": "2017-09-23T14:24:05Z",
+    "id": 2770611,
+    "issues": [
+      {
+        "id": 260001470,
+        "labels": ["bug"],
+        "number": 755,
+        "title": "Fix RangeError for --id when skipping a large number of tests",
+        "url": "https://github.com/hapijs/lab/pull/755"
+      }
+    ],
+    "number": 123,
+    "url": "https://github.com/hapijs/lab/milestone/123",
+    "version": "14.3.1"
+  },
+  {
+    "date": "2017-09-16T04:01:12Z",
+    "id": 2736260,
+    "issues": [
+      {
+        "id": 258205449,
+        "labels": ["feature"],
+        "number": 749,
+        "title": "update eslint parser version to 8",
+        "url": "https://github.com/hapijs/lab/pull/749"
+      },
+      {
+        "id": 256227114,
+        "labels": ["documentation"],
+        "number": 746,
+        "title": "#647 add example of multiple reporters in .labrc.js",
+        "url": "https://github.com/hapijs/lab/pull/746"
+      }
+    ],
+    "number": 122,
+    "url": "https://github.com/hapijs/lab/milestone/122",
+    "version": "14.3.0"
+  },
+  {
+    "date": "2017-08-31T15:59:07Z",
+    "id": 2724088,
+    "issues": [
+      {
+        "id": 254382668,
+        "labels": ["dependency"],
+        "number": 745,
+        "title": "Update deps: eslint/supports-color",
+        "url": "https://github.com/hapijs/lab/pull/745"
+      },
+      {
+        "id": 254357714,
+        "labels": ["bug"],
+        "number": 744,
+        "title": "Better color detection",
+        "url": "https://github.com/hapijs/lab/pull/744"
+      }
+    ],
+    "number": 121,
+    "url": "https://github.com/hapijs/lab/milestone/121",
+    "version": "14.2.2"
+  },
+  {
+    "date": "2017-08-25T21:16:09Z",
+    "id": 2702556,
+    "issues": [
+      {
+        "id": 253018824,
+        "labels": ["documentation"],
+        "number": 743,
+        "title": "Document verbosity value",
+        "url": "https://github.com/hapijs/lab/pull/743"
+      },
+      {
+        "id": 253015719,
+        "labels": ["documentation"],
+        "number": 742,
+        "title": "Fix readme linting issues",
+        "url": "https://github.com/hapijs/lab/pull/742"
+      },
+      {
+        "id": 252976730,
+        "labels": ["bug"],
+        "number": 740,
+        "title": "add object spread option",
+        "url": "https://github.com/hapijs/lab/pull/740"
+      },
+      {
+        "id": 252974949,
+        "labels": ["bug"],
+        "number": 739,
+        "title": "Coverage is broken when using object spread operator",
+        "url": "https://github.com/hapijs/lab/issues/739"
+      },
+      {
+        "id": 251367522,
+        "labels": ["support", "documentation"],
+        "number": 737,
+        "title": "Please add an explanation of verbosity; what does 'verbosity: 3.00' mean?",
+        "url": "https://github.com/hapijs/lab/issues/737"
+      }
+    ],
+    "number": 120,
+    "url": "https://github.com/hapijs/lab/milestone/120",
+    "version": "14.2.1"
+  },
+  {
+    "date": "2017-08-15T14:02:20Z",
+    "id": 2697170,
+    "issues": [
+      {
+        "id": 250186966,
+        "labels": ["lts"],
+        "number": 735,
+        "title": "Document definition file",
+        "url": "https://github.com/hapijs/lab/pull/735"
+      },
+      {
+        "id": 249897280,
+        "labels": ["feature"],
+        "number": 734,
+        "title": "Add TypeScript definition file",
+        "url": "https://github.com/hapijs/lab/pull/734"
+      },
+      {
+        "id": 247753017,
+        "labels": ["feature"],
+        "number": 731,
+        "title": "Typescript support",
+        "url": "https://github.com/hapijs/lab/issues/731"
+      }
+    ],
+    "number": 119,
+    "url": "https://github.com/hapijs/lab/milestone/119",
+    "version": "14.2.0"
+  },
+  {
+    "date": "2017-08-11T20:11:29Z",
+    "id": 2638921,
+    "issues": [
+      {
+        "id": 249735086,
+        "labels": ["dependency"],
+        "number": 733,
+        "title": "Update dependencies: eslint, espree",
+        "url": "https://github.com/hapijs/lab/pull/733"
+      },
+      {
+        "id": 249729319,
+        "labels": ["bug"],
+        "number": 732,
+        "title": "Be explicit about errors thrown in before/afters",
+        "url": "https://github.com/hapijs/lab/pull/732"
+      },
+      {
+        "id": 245440880,
+        "labels": ["bug"],
+        "number": 728,
+        "title": "Help: Multiple callbacks error with mongo AND lab.before",
+        "url": "https://github.com/hapijs/lab/issues/728"
+      }
+    ],
+    "number": 118,
+    "url": "https://github.com/hapijs/lab/milestone/118",
+    "version": "14.1.2"
+  },
+  {
+    "date": "2017-07-13T11:23:53Z",
+    "id": 2601804,
+    "issues": [
+      {
+        "id": 242667588,
+        "labels": ["test"],
+        "number": 727,
+        "title": "Fix failing test",
+        "url": "https://github.com/hapijs/lab/pull/727"
+      },
+      {
+        "id": 242315128,
+        "labels": ["bug"],
+        "number": 726,
+        "title": "Fix npm 5.2 error",
+        "url": "https://github.com/hapijs/lab/pull/726"
+      }
+    ],
+    "number": 117,
+    "url": "https://github.com/hapijs/lab/milestone/117",
+    "version": "14.1.1"
+  },
+  {
+    "date": "2017-06-24T01:09:51Z",
+    "id": 2581545,
+    "issues": [
+      {
+        "id": 238273195,
+        "labels": ["feature"],
+        "number": 722,
+        "title": "Expose Code features directly on script",
+        "url": "https://github.com/hapijs/lab/pull/722"
+      },
+      {
+        "id": 237072019,
+        "labels": ["bug"],
+        "number": 721,
+        "title": "Failed befores properly fail related tests",
+        "url": "https://github.com/hapijs/lab/pull/721"
+      },
+      {
+        "id": 87055283,
+        "labels": ["bug"],
+        "number": 370,
+        "title": "Fail conditions documentation is unclear",
+        "url": "https://github.com/hapijs/lab/issues/370"
+      }
+    ],
+    "number": 116,
+    "url": "https://github.com/hapijs/lab/milestone/116",
+    "version": "14.1.0"
+  },
+  {
+    "date": "2017-06-13T22:27:23Z",
+    "id": 2581424,
+    "issues": [
+      {
+        "id": 235708927,
+        "labels": ["bug"],
+        "number": 720,
+        "title": "Support eslint 4 ignore path",
+        "url": "https://github.com/hapijs/lab/pull/720"
+      }
+    ],
+    "number": 115,
+    "url": "https://github.com/hapijs/lab/milestone/115",
+    "version": "14.0.1"
+  },
+  {
+    "date": "2017-06-13T20:49:06Z",
+    "id": 2525188,
+    "issues": [
+      {
+        "id": 235687024,
+        "labels": ["breaking changes", "release notes"],
+        "number": 719,
+        "title": "14.0.0 Release Notes",
+        "url": "https://github.com/hapijs/lab/issues/719"
+      },
+      {
+        "id": 235621814,
+        "labels": ["bug", "breaking changes"],
+        "number": 718,
+        "title": "Error on tests with both promise and callback",
+        "url": "https://github.com/hapijs/lab/pull/718"
+      },
+      {
+        "id": 235600505,
+        "labels": ["breaking changes", "dependency"],
+        "number": 717,
+        "title": "Update eslint/code versions",
+        "url": "https://github.com/hapijs/lab/pull/717"
+      },
+      {
+        "id": 235429623,
+        "labels": ["breaking changes", "dependency"],
+        "number": 715,
+        "title": "Upgrade to ESLint v4",
+        "url": "https://github.com/hapijs/lab/issues/715"
+      },
+      {
+        "id": 232430144,
+        "labels": ["feature", "breaking changes"],
+        "number": 713,
+        "title": "Bundle code as default assertion library",
+        "url": "https://github.com/hapijs/lab/pull/713"
+      },
+      {
+        "id": 232424259,
+        "labels": ["feature", "breaking changes"],
+        "number": 712,
+        "title": "Include code assertion library",
+        "url": "https://github.com/hapijs/lab/issues/712"
+      },
+      {
+        "id": 154633360,
+        "labels": ["bug", "breaking changes"],
+        "number": 580,
+        "title": "Confusing warning when mixing Promise and callback style",
+        "url": "https://github.com/hapijs/lab/issues/580"
+      }
+    ],
+    "number": 114,
+    "url": "https://github.com/hapijs/lab/milestone/114",
+    "version": "14.0.0"
+  },
+  {
+    "date": "2017-05-16T20:02:52Z",
+    "id": 2491802,
+    "issues": [
+      {
+        "id": 229148260,
+        "labels": ["dependency"],
+        "number": 707,
+        "title": "Update espree version",
+        "url": "https://github.com/hapijs/lab/pull/707"
+      },
+      {
+        "id": 229146376,
+        "labels": ["dependency"],
+        "number": 706,
+        "title": "upgrade eslint to 3.19.x",
+        "url": "https://github.com/hapijs/lab/pull/706"
+      },
+      {
+        "id": 228838079,
+        "labels": ["dependency"],
+        "number": 705,
+        "title": "Error when doing code coverage: \"ecmaVersion must be 3, 5, 6, or 7.\"",
+        "url": "https://github.com/hapijs/lab/issues/705"
+      },
+      {
+        "id": 227158508,
+        "labels": ["feature"],
+        "number": 704,
+        "title": "Add WebAssembly to allowed globals",
+        "url": "https://github.com/hapijs/lab/pull/704"
+      },
+      {
+        "id": 221119919,
+        "labels": ["feature"],
+        "number": 697,
+        "title": "Node 8 will add `WebAssembly` global",
+        "url": "https://github.com/hapijs/lab/issues/697"
+      }
+    ],
+    "number": 113,
+    "url": "https://github.com/hapijs/lab/milestone/113",
+    "version": "13.1.0"
+  },
+  {
+    "date": "2017-05-01T15:09:15Z",
+    "id": 2489806,
+    "issues": [
+      {
+        "id": 225399880,
+        "labels": ["bug"],
+        "number": 701,
+        "title": "Ignore while a promise returns inside a test with a value. Only watch for rejection",
+        "url": "https://github.com/hapijs/lab/pull/701"
+      },
+      {
+        "id": 225397446,
+        "labels": ["bug"],
+        "number": 700,
+        "title": "Promises that return values now error on finished",
+        "url": "https://github.com/hapijs/lab/issues/700"
+      }
+    ],
+    "number": 112,
+    "url": "https://github.com/hapijs/lab/milestone/112",
+    "version": "13.0.4"
+  },
+  {
+    "date": "2017-04-29T16:30:45Z",
+    "id": 2455727,
+    "issues": [
+      {
+        "id": 225267509,
+        "labels": ["bug"],
+        "number": 699,
+        "title": "Fix a domain leak and onCleanup failures",
+        "url": "https://github.com/hapijs/lab/pull/699"
+      }
+    ],
+    "number": 111,
+    "url": "https://github.com/hapijs/lab/milestone/111",
+    "version": "13.0.3"
+  },
+  {
+    "date": "2017-04-13T15:59:55Z",
+    "id": 2379927,
+    "issues": [
+      {
+        "id": 221589491,
+        "labels": ["bug"],
+        "number": 698,
+        "title": "Improve bail strategy not to execute next befores/afters",
+        "url": "https://github.com/hapijs/lab/pull/698"
+      },
+      {
+        "id": 219250158,
+        "labels": ["documentation"],
+        "number": 696,
+        "title": "Extending linting",
+        "url": "https://github.com/hapijs/lab/issues/696"
+      },
+      {
+        "id": 215162595,
+        "labels": ["documentation"],
+        "number": 693,
+        "title": "plan and Lab.assertions not working",
+        "url": "https://github.com/hapijs/lab/issues/693"
+      },
+      {
+        "id": 214227039,
+        "labels": ["test"],
+        "number": 689,
+        "title": "Fix test",
+        "url": "https://github.com/hapijs/lab/pull/689"
+      },
+      {
+        "id": 214109810,
+        "labels": ["test"],
+        "number": 688,
+        "title": "Add failing test for conditional value",
+        "url": "https://github.com/hapijs/lab/pull/688"
+      }
+    ],
+    "number": 110,
+    "url": "https://github.com/hapijs/lab/milestone/110",
+    "version": "13.0.2"
+  },
+  {
+    "date": "2017-03-12T01:29:34Z",
+    "id": 2379649,
+    "issues": [
+      {
+        "id": 213573276,
+        "labels": ["bug"],
+        "number": 686,
+        "title": "Fix coverage of zero-comment scripts",
+        "url": "https://github.com/hapijs/lab/pull/686"
+      },
+      {
+        "id": 213553237,
+        "labels": ["bug"],
+        "number": 685,
+        "title": "TypeError: Reduce of empty array with no initial value",
+        "url": "https://github.com/hapijs/lab/issues/685"
+      }
+    ],
+    "number": 109,
+    "url": "https://github.com/hapijs/lab/milestone/109",
+    "version": "13.0.1"
+  },
+  {
+    "date": "2017-03-11T18:25:11Z",
+    "id": 2281370,
+    "issues": [
+      {
+        "id": 213548534,
+        "labels": ["breaking changes", "release notes"],
+        "number": 684,
+        "title": "13.0.0 Release Notes",
+        "url": "https://github.com/hapijs/lab/issues/684"
+      },
+      {
+        "id": 213546841,
+        "labels": ["dependency", "lts"],
+        "number": 683,
+        "title": "Minor cleanup",
+        "url": "https://github.com/hapijs/lab/pull/683"
+      },
+      {
+        "id": 211956905,
+        "labels": ["bug"],
+        "number": 681,
+        "title": "Reduce leaked memory via domains and timers",
+        "url": "https://github.com/hapijs/lab/pull/681"
+      },
+      {
+        "id": 209632663,
+        "labels": ["dependency"],
+        "number": 677,
+        "title": "Update eslint version",
+        "url": "https://github.com/hapijs/lab/pull/677"
+      },
+      {
+        "id": 180940443,
+        "labels": ["feature", "breaking changes"],
+        "number": 648,
+        "title": "Original files in HTML reporter",
+        "url": "https://github.com/hapijs/lab/pull/648"
+      },
+      {
+        "id": 163328727,
+        "labels": ["bug"],
+        "number": 614,
+        "title": "Test coverage shows untransformed output",
+        "url": "https://github.com/hapijs/lab/issues/614"
+      }
+    ],
+    "number": 108,
+    "url": "https://github.com/hapijs/lab/milestone/108",
+    "version": "13.0.0"
+  },
+  {
+    "date": "2017-01-27T02:02:49Z",
+    "id": 2266256,
+    "issues": [
+      {
+        "id": 202340870,
+        "labels": ["feature"],
+        "number": 674,
+        "title": "Typos and inspect supports port",
+        "url": "https://github.com/hapijs/lab/pull/674"
+      },
+      {
+        "id": 202142016,
+        "labels": ["feature"],
+        "number": 673,
+        "title": "Add support for Node.js and WebStorm debuggers",
+        "url": "https://github.com/hapijs/lab/pull/673"
+      },
+      {
+        "id": 184359773,
+        "labels": ["feature"],
+        "number": 651,
+        "title": "Implement --inspect so debugging inside a test is possible?",
+        "url": "https://github.com/hapijs/lab/issues/651"
+      }
+    ],
+    "number": 107,
+    "url": "https://github.com/hapijs/lab/milestone/107",
+    "version": "12.1.0"
+  },
+  {
+    "date": "2017-01-20T05:09:12Z",
+    "id": 2247674,
+    "issues": [
+      {
+        "id": 202051882,
+        "labels": ["breaking changes", "release notes"],
+        "number": 672,
+        "title": "12.0.0 Release Notes",
+        "url": "https://github.com/hapijs/lab/issues/672"
+      },
+      {
+        "id": 201176805,
+        "labels": ["feature"],
+        "number": 671,
+        "title": "Add --bail support",
+        "url": "https://github.com/hapijs/lab/pull/671"
+      },
+      {
+        "id": 200997489,
+        "labels": ["feature", "breaking changes"],
+        "number": 670,
+        "title": "upgrade espree parser to use ECMAScript latest 8",
+        "url": "https://github.com/hapijs/lab/pull/670"
+      },
+      {
+        "id": 200849089,
+        "labels": ["feature", "breaking changes"],
+        "number": 668,
+        "title": ".labrc.js with --harmony options execute failed",
+        "url": "https://github.com/hapijs/lab/issues/668"
+      },
+      {
+        "id": 176481833,
+        "labels": ["bug"],
+        "number": 640,
+        "title": "cli `--help` command showing incorrect commands",
+        "url": "https://github.com/hapijs/lab/issues/640"
+      },
+      {
+        "id": 43270778,
+        "labels": ["feature"],
+        "number": 214,
+        "title": "Stop Tests On First Failure",
+        "url": "https://github.com/hapijs/lab/issues/214"
+      }
+    ],
+    "number": 106,
+    "url": "https://github.com/hapijs/lab/milestone/106",
+    "version": "12.0.0"
+  },
+  {
+    "date": "2017-01-12T15:40:16Z",
+    "id": 2129829,
+    "issues": [
+      {
+        "id": 200398261,
+        "labels": ["dependency"],
+        "number": 666,
+        "title": "Update eslint",
+        "url": "https://github.com/hapijs/lab/pull/666"
+      },
+      {
+        "id": 200268535,
+        "labels": ["test"],
+        "number": 665,
+        "title": "Fix test and deprecation warning",
+        "url": "https://github.com/hapijs/lab/pull/665"
+      },
+      {
+        "id": 198281065,
+        "labels": ["dependency"],
+        "number": 664,
+        "title": "Update eslint version",
+        "url": "https://github.com/hapijs/lab/pull/664"
+      }
+    ],
+    "number": 105,
+    "url": "https://github.com/hapijs/lab/milestone/105",
+    "version": "11.2.2"
+  },
+  {
+    "date": "2016-11-11T17:13:36Z",
+    "id": 2120029,
+    "issues": [
+      {
+        "id": 188768263,
+        "labels": ["bug"],
+        "number": 662,
+        "title": "fix: don't show seed when shuffle was not enabled",
+        "url": "https://github.com/hapijs/lab/pull/662"
+      }
+    ],
+    "number": 104,
+    "url": "https://github.com/hapijs/lab/milestone/104",
+    "version": "11.2.1"
+  },
+  {
+    "date": "2016-11-07T19:39:10Z",
+    "id": 2029596,
+    "issues": [
+      {
+        "id": 187802139,
+        "labels": ["dependency"],
+        "number": 659,
+        "title": "Node 7, update deps",
+        "url": "https://github.com/hapijs/lab/pull/659"
+      },
+      {
+        "id": 187242713,
+        "labels": ["feature"],
+        "number": 658,
+        "title": "Added a flag (-R, --rejections) to make the test fail if an unhandled Promise rejection happened during its execution",
+        "url": "https://github.com/hapijs/lab/pull/658"
+      },
+      {
+        "id": 187170158,
+        "labels": ["feature"],
+        "number": 657,
+        "title": "feat: allow to set the seed for --shuffle with --seed.",
+        "url": "https://github.com/hapijs/lab/pull/657"
+      },
+      {
+        "id": 187129473,
+        "labels": ["feature"],
+        "number": 656,
+        "title": "when tests fail with `--shuffle`, how to run tests in the failing order?",
+        "url": "https://github.com/hapijs/lab/issues/656"
+      },
+      {
+        "id": 186828504,
+        "labels": ["dependency"],
+        "number": 654,
+        "title": "Update eslint to 3.9.x",
+        "url": "https://github.com/hapijs/lab/pull/654"
+      },
+      {
+        "id": 185531905,
+        "labels": ["bug"],
+        "number": 653,
+        "title": "fixes logic for lab.before timeout #652",
+        "url": "https://github.com/hapijs/lab/pull/653"
+      },
+      {
+        "id": 184476576,
+        "labels": ["bug"],
+        "number": 652,
+        "title": "disable lab before timeout",
+        "url": "https://github.com/hapijs/lab/issues/652"
+      },
+      {
+        "id": 183988243,
+        "labels": ["feature"],
+        "number": 649,
+        "title": "Make the test fail on a Promise unhandled rejection",
+        "url": "https://github.com/hapijs/lab/issues/649"
+      }
+    ],
+    "number": 103,
+    "url": "https://github.com/hapijs/lab/milestone/103",
+    "version": "11.2.0"
+  },
+  {
+    "date": "2016-09-26T18:05:34Z",
+    "id": 1953874,
+    "issues": [
+      {
+        "id": 179295149,
+        "labels": ["feature", "dependency"],
+        "number": 646,
+        "title": "Update deps: eslint, diff",
+        "url": "https://github.com/hapijs/lab/pull/646"
+      },
+      {
+        "id": 178943275,
+        "labels": ["dependency"],
+        "number": 645,
+        "title": "Update eslint",
+        "url": "https://github.com/hapijs/lab/pull/645"
+      },
+      {
+        "id": 178502074,
+        "labels": ["bug"],
+        "number": 644,
+        "title": "fixing invalid markup on filter checkboxes",
+        "url": "https://github.com/hapijs/lab/pull/644"
+      },
+      {
+        "id": 177616742,
+        "labels": ["documentation"],
+        "number": 643,
+        "title": "Docs: Fix URL in CONTRIBUTING.md",
+        "url": "https://github.com/hapijs/lab/pull/643"
+      },
+      {
+        "id": 176169691,
+        "labels": ["documentation"],
+        "number": 639,
+        "title": "Docs: Added documentation for the assert argument",
+        "url": "https://github.com/hapijs/lab/pull/639"
+      },
+      {
+        "id": 175296621,
+        "labels": ["documentation"],
+        "number": 634,
+        "title": "The `assert` command line flag should be properly documented",
+        "url": "https://github.com/hapijs/lab/issues/634"
+      }
+    ],
+    "number": 102,
+    "url": "https://github.com/hapijs/lab/milestone/102",
+    "version": "11.1.0"
+  },
+  {
+    "date": "2016-08-21T22:29:43Z",
+    "id": 1942789,
+    "issues": [
+      {
+        "id": 172344998,
+        "labels": ["bug"],
+        "number": 630,
+        "title": "Disable debug mode by default",
+        "url": "https://github.com/hapijs/lab/pull/630"
+      },
+      {
+        "id": 172334532,
+        "labels": ["bug"],
+        "number": 629,
+        "title": "Failed tests reported twice",
+        "url": "https://github.com/hapijs/lab/issues/629"
+      }
+    ],
+    "number": 101,
+    "url": "https://github.com/hapijs/lab/milestone/101",
+    "version": "11.0.1"
+  },
+  {
+    "date": "2016-08-15T16:14:58Z",
+    "id": 1875731,
+    "issues": [
+      {
+        "id": 171202897,
+        "labels": ["breaking changes", "release notes"],
+        "number": 624,
+        "title": "11.0.0 Release Notes",
+        "url": "https://github.com/hapijs/lab/issues/624"
+      },
+      {
+        "id": 171078718,
+        "labels": ["bug"],
+        "number": 622,
+        "title": "Test entire node range before bypassing",
+        "url": "https://github.com/hapijs/lab/pull/622"
+      },
+      {
+        "id": 171075938,
+        "labels": ["dependency"],
+        "number": 621,
+        "title": "Update eslint dep",
+        "url": "https://github.com/hapijs/lab/pull/621"
+      },
+      {
+        "id": 170987855,
+        "labels": ["bug"],
+        "number": 620,
+        "title": "Ensure we're not bypassing loc that should be covered",
+        "url": "https://github.com/hapijs/lab/pull/620"
+      },
+      {
+        "id": 170788789,
+        "labels": ["breaking changes", "dependency"],
+        "number": 619,
+        "title": "update to eslint-config-hapi@10.x.x",
+        "url": "https://github.com/hapijs/lab/pull/619"
+      },
+      {
+        "id": 109237200,
+        "labels": ["bug"],
+        "number": 459,
+        "title": "`/* `$lab:coverage:(off|on)$` */` disables coverage for a whole module",
+        "url": "https://github.com/hapijs/lab/issues/459"
+      }
+    ],
+    "number": 100,
+    "url": "https://github.com/hapijs/lab/milestone/100",
+    "version": "11.0.0"
+  },
+  {
+    "date": "2016-07-11T12:57:08Z",
+    "id": 1827871,
+    "issues": [
+      {
+        "id": 164828702,
+        "labels": ["feature"],
+        "number": 615,
+        "title": "Upgrade eslint to v3",
+        "url": "https://github.com/hapijs/lab/issues/615"
+      },
+      {
+        "id": 162791787,
+        "labels": ["feature"],
+        "number": 613,
+        "title": "labrc.js can override all cli options",
+        "url": "https://github.com/hapijs/lab/pull/613"
+      },
+      {
+        "id": 162189951,
+        "labels": ["dependency"],
+        "number": 611,
+        "title": "closes #610",
+        "url": "https://github.com/hapijs/lab/pull/611"
+      },
+      {
+        "id": 162188334,
+        "labels": ["dependency"],
+        "number": 610,
+        "title": "Upgrade to eslint@2.13.x",
+        "url": "https://github.com/hapijs/lab/issues/610"
+      },
+      {
+        "id": 162179625,
+        "labels": ["bug"],
+        "number": 609,
+        "title": "some options can't be configured with .labrc.js ",
+        "url": "https://github.com/hapijs/lab/issues/609"
+      }
+    ],
+    "number": 99,
+    "url": "https://github.com/hapijs/lab/milestone/99",
+    "version": "10.9.0"
+  },
+  {
+    "date": "2016-06-14T23:58:31Z",
+    "id": 1824923,
+    "issues": [
+      {
+        "id": 160309436,
+        "labels": ["bug"],
+        "number": 608,
+        "title": "Fix NODE_ENV not being set (fixes #606)",
+        "url": "https://github.com/hapijs/lab/pull/608"
+      },
+      {
+        "id": 160291914,
+        "labels": ["bug"],
+        "number": 606,
+        "title": "NODE_ENV is no longer defaulting to 'test'",
+        "url": "https://github.com/hapijs/lab/issues/606"
+      }
+    ],
+    "number": 98,
+    "url": "https://github.com/hapijs/lab/milestone/98",
+    "version": "10.8.2"
+  },
+  {
+    "date": "2016-06-14T02:22:14Z",
+    "id": 1824845,
+    "issues": [
+      {
+        "id": 160081846,
+        "labels": ["bug"],
+        "number": 603,
+        "title": "Display a warning for failed patterns",
+        "url": "https://github.com/hapijs/lab/pull/603"
+      },
+      {
+        "id": 126688752,
+        "labels": ["bug"],
+        "number": 511,
+        "title": "Show better error message when -P fails to find matching patterns",
+        "url": "https://github.com/hapijs/lab/issues/511"
+      }
+    ],
+    "number": 97,
+    "url": "https://github.com/hapijs/lab/milestone/97",
+    "version": "10.8.1"
+  },
+  {
+    "date": "2016-06-14T01:33:36Z",
+    "id": 1788698,
+    "issues": [
+      {
+        "id": 159062419,
+        "labels": ["feature"],
+        "number": 601,
+        "title": "Support .labrc.js for configuration",
+        "url": "https://github.com/hapijs/lab/pull/601"
+      },
+      {
+        "id": 158507266,
+        "labels": ["bug"],
+        "number": 599,
+        "title": "Cleanup leak harmony checks",
+        "url": "https://github.com/hapijs/lab/pull/599"
+      },
+      {
+        "id": 158485189,
+        "labels": ["feature"],
+        "number": 598,
+        "title": "Support .labrc files for configuration defaults",
+        "url": "https://github.com/hapijs/lab/issues/598"
+      }
+    ],
+    "number": 96,
+    "url": "https://github.com/hapijs/lab/milestone/96",
+    "version": "10.8.0"
+  },
+  {
+    "date": "2016-05-25T23:58:38Z",
+    "id": 1785532,
+    "issues": [
+      {
+        "id": 156855960,
+        "labels": ["bug"],
+        "number": 597,
+        "title": "Add space after failed test x",
+        "url": "https://github.com/hapijs/lab/pull/597"
+      },
+      {
+        "id": 156653870,
+        "labels": ["bug"],
+        "number": 596,
+        "title": "Adjust gray to comply with solarized dark theme",
+        "url": "https://github.com/hapijs/lab/pull/596"
+      }
+    ],
+    "number": 95,
+    "url": "https://github.com/hapijs/lab/milestone/95",
+    "version": "10.7.1"
+  },
+  {
+    "date": "2016-05-24T18:30:55Z",
+    "id": 1780005,
+    "issues": [
+      {
+        "id": 156576621,
+        "labels": ["dependency"],
+        "number": 595,
+        "title": "Update eslint to v2.10.x",
+        "url": "https://github.com/hapijs/lab/pull/595"
+      },
+      {
+        "id": 156574444,
+        "labels": ["feature"],
+        "number": 594,
+        "title": "Cleanup lint-fix setting",
+        "url": "https://github.com/hapijs/lab/pull/594"
+      },
+      {
+        "id": 156413640,
+        "labels": ["feature"],
+        "number": 593,
+        "title": "Support ability to add notes to a test",
+        "url": "https://github.com/hapijs/lab/pull/593"
+      },
+      {
+        "id": 156317151,
+        "labels": ["feature"],
+        "number": 591,
+        "title": "Add --lint-fix option.",
+        "url": "https://github.com/hapijs/lab/pull/591"
+      },
+      {
+        "id": 94780799,
+        "labels": ["feature"],
+        "number": 402,
+        "title": "Add ability to attach notes to test results",
+        "url": "https://github.com/hapijs/lab/issues/402"
+      }
+    ],
+    "number": 94,
+    "url": "https://github.com/hapijs/lab/milestone/94",
+    "version": "10.7.0"
+  },
+  {
+    "date": "2016-05-21T02:53:04Z",
+    "id": 1775323,
+    "issues": [
+      {
+        "id": 156079934,
+        "labels": ["dependency"],
+        "number": 589,
+        "title": "Update to code v3",
+        "url": "https://github.com/hapijs/lab/pull/589"
+      },
+      {
+        "id": 155641061,
+        "labels": ["bug"],
+        "number": 588,
+        "title": "Make coverage excludes more explicit",
+        "url": "https://github.com/hapijs/lab/pull/588"
+      },
+      {
+        "id": 155637470,
+        "labels": ["bug"],
+        "number": 587,
+        "title": "Support the same test name in diff experiments",
+        "url": "https://github.com/hapijs/lab/pull/587"
+      },
+      {
+        "id": 109679735,
+        "labels": ["bug"],
+        "number": 461,
+        "title": "File Name Coverage Issue",
+        "url": "https://github.com/hapijs/lab/issues/461"
+      },
+      {
+        "id": 89642128,
+        "labels": ["bug"],
+        "number": 375,
+        "title": "Experiment description not showing in output",
+        "url": "https://github.com/hapijs/lab/issues/375"
+      }
+    ],
+    "number": 93,
+    "url": "https://github.com/hapijs/lab/milestone/93",
+    "version": "10.6.1"
+  },
+  {
+    "date": "2016-05-19T00:59:31Z",
+    "id": 1752305,
+    "issues": [
+      {
+        "id": 155411669,
+        "labels": ["feature"],
+        "number": 586,
+        "title": "Default output to stdout",
+        "url": "https://github.com/hapijs/lab/pull/586"
+      },
+      {
+        "id": 155408905,
+        "labels": ["documentation"],
+        "number": 585,
+        "title": "Document how to only run linting",
+        "url": "https://github.com/hapijs/lab/pull/585"
+      },
+      {
+        "id": 155388536,
+        "labels": ["feature"],
+        "number": 584,
+        "title": "Don't execute before/after on experiments that lack tests",
+        "url": "https://github.com/hapijs/lab/pull/584"
+      },
+      {
+        "id": 155381554,
+        "labels": ["documentation"],
+        "number": 583,
+        "title": "Better documentation for schedule",
+        "url": "https://github.com/hapijs/lab/pull/583"
+      },
+      {
+        "id": 146269548,
+        "labels": ["support", "documentation"],
+        "number": 559,
+        "title": "Run linting only",
+        "url": "https://github.com/hapijs/lab/issues/559"
+      },
+      {
+        "id": 106271059,
+        "labels": ["feature"],
+        "number": 440,
+        "title": "before and after blocks",
+        "url": "https://github.com/hapijs/lab/issues/440"
+      },
+      {
+        "id": 92445908,
+        "labels": ["feature"],
+        "number": 390,
+        "title": "Enable output for single-file usage",
+        "url": "https://github.com/hapijs/lab/issues/390"
+      },
+      {
+        "id": 66948859,
+        "labels": ["feature"],
+        "number": 337,
+        "title": "Skipped tests should have their beforeEach() skipped too?",
+        "url": "https://github.com/hapijs/lab/issues/337"
+      },
+      {
+        "id": 53089220,
+        "labels": ["documentation"],
+        "number": 288,
+        "title": "self-run scripts don't generate output or respect CLI arguments",
+        "url": "https://github.com/hapijs/lab/issues/288"
+      }
+    ],
+    "number": 92,
+    "url": "https://github.com/hapijs/lab/milestone/92",
+    "version": "10.6.0"
+  },
+  {
+    "date": "2016-05-06T19:31:25Z",
+    "id": 1752135,
+    "issues": [
+      {
+        "id": 153521449,
+        "labels": ["bug"],
+        "number": 579,
+        "title": "Promise test check should allow more than one argument",
+        "url": "https://github.com/hapijs/lab/issues/579"
+      }
+    ],
+    "number": 91,
+    "url": "https://github.com/hapijs/lab/milestone/91",
+    "version": "10.5.1"
+  },
+  {
+    "date": "2016-05-06T18:14:01Z",
+    "id": 1746605,
+    "issues": [
+      {
+        "id": 153506534,
+        "labels": ["feature"],
+        "number": 578,
+        "title": "Post test cleanup. Closes #577",
+        "url": "https://github.com/hapijs/lab/pull/578"
+      },
+      {
+        "id": 153506242,
+        "labels": ["feature"],
+        "number": 577,
+        "title": "Post test cleanup",
+        "url": "https://github.com/hapijs/lab/issues/577"
+      },
+      {
+        "id": 152925715,
+        "labels": ["dependency"],
+        "number": 576,
+        "title": "Support bossy 3",
+        "url": "https://github.com/hapijs/lab/pull/576"
+      }
+    ],
+    "number": 90,
+    "url": "https://github.com/hapijs/lab/milestone/90",
+    "version": "10.5.0"
+  },
+  {
+    "date": "2016-05-04T02:56:57Z",
+    "id": 1734332,
+    "issues": [
+      {
+        "id": 152918380,
+        "labels": ["dependency"],
+        "number": 575,
+        "title": "Update dependencies",
+        "url": "https://github.com/hapijs/lab/pull/575"
+      },
+      {
+        "id": 152676105,
+        "labels": ["feature"],
+        "number": 574,
+        "title": "id-557: Error thrown when I use --coverage-exclude",
+        "url": "https://github.com/hapijs/lab/pull/574"
+      },
+      {
+        "id": 152505527,
+        "labels": ["feature"],
+        "number": 573,
+        "title": "use stable stringify for better objects diff",
+        "url": "https://github.com/hapijs/lab/pull/573"
+      },
+      {
+        "id": 146018774,
+        "labels": ["feature"],
+        "number": 557,
+        "title": "Error thrown when I use --coverage-exclude",
+        "url": "https://github.com/hapijs/lab/issues/557"
+      }
+    ],
+    "number": 89,
+    "url": "https://github.com/hapijs/lab/milestone/89",
+    "version": "10.4.0"
+  },
+  {
+    "date": "2016-04-27T15:28:14Z",
+    "id": 1685339,
+    "issues": [
+      {
+        "id": 151414136,
+        "labels": ["bug"],
+        "number": 570,
+        "title": "Works correctly with node v6",
+        "url": "https://github.com/hapijs/lab/pull/570"
+      },
+      {
+        "id": 151396000,
+        "labels": ["bug"],
+        "number": 569,
+        "title": "Add Reflect to whitelist",
+        "url": "https://github.com/hapijs/lab/pull/569"
+      },
+      {
+        "id": 151390393,
+        "labels": ["bug"],
+        "number": 568,
+        "title": "leaks detected:Reflect using node v6.0.0",
+        "url": "https://github.com/hapijs/lab/issues/568"
+      }
+    ],
+    "number": 88,
+    "url": "https://github.com/hapijs/lab/milestone/88",
+    "version": "10.3.2"
+  },
+  {
+    "date": "2016-04-05T18:13:31Z",
+    "id": 1646135,
+    "issues": [
+      {
+        "id": 144862665,
+        "labels": ["bug"],
+        "number": 556,
+        "title": "Code coverage: Always surround expressions in ternary operator with parenthesis",
+        "url": "https://github.com/hapijs/lab/pull/556"
+      },
+      {
+        "id": 144520504,
+        "labels": ["bug"],
+        "number": 555,
+        "title": "Code coverage for conditional operator with comma operator isn't handled correctly",
+        "url": "https://github.com/hapijs/lab/issues/555"
+      },
+      {
+        "id": 144083383,
+        "labels": ["dependency"],
+        "number": 554,
+        "title": "Update eslint to v2.5",
+        "url": "https://github.com/hapijs/lab/pull/554"
+      },
+      {
+        "id": 142972219,
+        "labels": ["documentation"],
+        "number": 548,
+        "title": "Update README.md",
+        "url": "https://github.com/hapijs/lab/pull/548"
+      }
+    ],
+    "number": 87,
+    "url": "https://github.com/hapijs/lab/milestone/87",
+    "version": "10.3.1"
+  },
+  {
+    "date": "2016-03-15T17:07:44Z",
+    "id": 1618721,
+    "issues": [
+      {
+        "id": 141037837,
+        "labels": ["bug", "dependency"],
+        "number": 545,
+        "title": "Update deps and fix flushing to stdout",
+        "url": "https://github.com/hapijs/lab/pull/545"
+      },
+      {
+        "id": 140934331,
+        "labels": ["feature"],
+        "number": 544,
+        "title": "Feature/silent skips",
+        "url": "https://github.com/hapijs/lab/pull/544"
+      },
+      {
+        "id": 139300403,
+        "labels": ["bug"],
+        "number": 541,
+        "title": "Allow stdout to flush",
+        "url": "https://github.com/hapijs/lab/pull/541"
+      }
+    ],
+    "number": 86,
+    "url": "https://github.com/hapijs/lab/milestone/86",
+    "version": "10.3.0"
+  },
+  {
+    "date": "2016-03-02T20:23:39Z",
+    "id": 1610400,
+    "issues": [
+      {
+        "id": 137678113,
+        "labels": ["feature"],
+        "number": 538,
+        "title": "Add `plan` option for tests",
+        "url": "https://github.com/hapijs/lab/pull/538"
+      },
+      {
+        "id": 46519793,
+        "labels": ["feature"],
+        "number": 257,
+        "title": "Set expected number of assertions",
+        "url": "https://github.com/hapijs/lab/issues/257"
+      }
+    ],
+    "number": 85,
+    "url": "https://github.com/hapijs/lab/milestone/85",
+    "version": "10.2.0"
+  },
+  {
+    "date": "2016-02-28T18:56:11Z",
+    "id": 1604140,
+    "issues": [
+      {
+        "id": 136945448,
+        "labels": ["feature"],
+        "number": 537,
+        "title": "Feature: promises",
+        "url": "https://github.com/hapijs/lab/pull/537"
+      },
+      {
+        "id": 136912331,
+        "labels": ["feature"],
+        "number": 536,
+        "title": "Support promises in tests and setup / teardown",
+        "url": "https://github.com/hapijs/lab/issues/536"
+      },
+      {
+        "id": 136502751,
+        "labels": ["bug"],
+        "number": 534,
+        "title": "Fix \"multiple only\" error with multiple outputs",
+        "url": "https://github.com/hapijs/lab/pull/534"
+      },
+      {
+        "id": 136313154,
+        "labels": ["documentation"],
+        "number": 533,
+        "title": "Update readme for global only",
+        "url": "https://github.com/hapijs/lab/pull/533"
+      }
+    ],
+    "number": 84,
+    "url": "https://github.com/hapijs/lab/milestone/84",
+    "version": "10.1.0"
+  },
+  {
+    "date": "2016-02-24T23:38:00Z",
+    "id": 1596177,
+    "issues": [
+      {
+        "id": 136213898,
+        "labels": ["breaking changes", "release notes"],
+        "number": 530,
+        "title": "10.0.0 Release Notes",
+        "url": "https://github.com/hapijs/lab/issues/530"
+      },
+      {
+        "id": 136092402,
+        "labels": ["breaking changes"],
+        "number": 527,
+        "title": "Global \"only\" (#524)",
+        "url": "https://github.com/hapijs/lab/pull/527"
+      },
+      {
+        "id": 134842295,
+        "labels": ["feature", "breaking changes", "documentation"],
+        "number": 524,
+        "title": "Add a global `only` flag to improve TDD experience",
+        "url": "https://github.com/hapijs/lab/issues/524"
+      }
+    ],
+    "number": 83,
+    "url": "https://github.com/hapijs/lab/milestone/83",
+    "version": "10.0.0"
+  },
+  {
+    "date": "2016-02-22T03:35:05Z",
+    "id": 1591966,
+    "issues": [
+      {
+        "id": 134997797,
+        "labels": ["feature"],
+        "number": 525,
+        "title": "Support shuffling execution of scripts",
+        "url": "https://github.com/hapijs/lab/pull/525"
+      }
+    ],
+    "number": 82,
+    "url": "https://github.com/hapijs/lab/milestone/82",
+    "version": "9.1.0"
+  },
+  {
+    "date": "2016-02-18T23:56:00Z",
+    "id": 1591297,
+    "issues": [
+      {
+        "id": 134733108,
+        "labels": ["breaking changes", "release notes"],
+        "number": 523,
+        "title": "9.0.0 Release Notes",
+        "url": "https://github.com/hapijs/lab/issues/523"
+      },
+      {
+        "id": 134727323,
+        "labels": ["breaking changes"],
+        "number": 522,
+        "title": "Remove jslint and support custom linters",
+        "url": "https://github.com/hapijs/lab/pull/522"
+      },
+      {
+        "id": 124826239,
+        "labels": ["feature"],
+        "number": 507,
+        "title": "Add JavaScript Standard Style (`standard`) as a linter option",
+        "url": "https://github.com/hapijs/lab/issues/507"
+      },
+      {
+        "id": 51812153,
+        "labels": ["feature"],
+        "number": 282,
+        "title": "Make linter pluggable? (PR offer)",
+        "url": "https://github.com/hapijs/lab/issues/282"
+      }
+    ],
+    "number": 81,
+    "url": "https://github.com/hapijs/lab/milestone/81",
+    "version": "9.0.0"
+  },
+  {
+    "date": "2016-02-18T18:38:50Z",
+    "id": 1589323,
+    "issues": [
+      {
+        "id": 134583278,
+        "labels": ["bug"],
+        "number": 521,
+        "title": "Fix coverage of trailing function declaration",
+        "url": "https://github.com/hapijs/lab/pull/521"
+      },
+      {
+        "id": 134391689,
+        "labels": ["feature"],
+        "number": 520,
+        "title": "Fix coverage report for single-line functions and single-expression arrow functions",
+        "url": "https://github.com/hapijs/lab/pull/520"
+      },
+      {
+        "id": 48838103,
+        "labels": ["bug"],
+        "number": 274,
+        "title": "Single line functions are not property tested for coverage",
+        "url": "https://github.com/hapijs/lab/issues/274"
+      }
+    ],
+    "number": 80,
+    "url": "https://github.com/hapijs/lab/milestone/80",
+    "version": "8.4.0"
+  },
+  {
+    "date": "2016-02-17T20:06:05Z",
+    "id": 1531833,
+    "issues": [
+      {
+        "id": 134372757,
+        "labels": ["dependency"],
+        "number": 519,
+        "title": "update to eslint@2.x.x",
+        "url": "https://github.com/hapijs/lab/pull/519"
+      }
+    ],
+    "number": 79,
+    "url": "https://github.com/hapijs/lab/milestone/79",
+    "version": "8.3.0"
+  },
+  {
+    "date": "2016-01-21T20:52:43Z",
+    "id": 1528046,
+    "issues": [
+      {
+        "id": 127835890,
+        "labels": ["feature", "dependency"],
+        "number": 516,
+        "title": "upgrade to espree@3.x.x",
+        "url": "https://github.com/hapijs/lab/pull/516"
+      }
+    ],
+    "number": 78,
+    "url": "https://github.com/hapijs/lab/milestone/78",
+    "version": "8.2.0"
+  },
+  {
+    "date": "2016-01-20T22:09:17Z",
+    "id": 1502647,
+    "issues": [
+      {
+        "id": 127756344,
+        "labels": ["feature"],
+        "number": 515,
+        "title": "enable parsing the spread operator",
+        "url": "https://github.com/hapijs/lab/pull/515"
+      },
+      {
+        "id": 127755895,
+        "labels": ["feature"],
+        "number": 514,
+        "title": "use of the spread operator breaks coverage",
+        "url": "https://github.com/hapijs/lab/issues/514"
+      }
+    ],
+    "number": 77,
+    "url": "https://github.com/hapijs/lab/milestone/77",
+    "version": "8.1.0"
+  },
+  {
+    "date": "2016-01-12T17:22:57Z",
+    "id": 1475332,
+    "issues": [
+      {
+        "id": 125873416,
+        "labels": ["bug"],
+        "number": 510,
+        "title": "Fix coverage when require cache is reset",
+        "url": "https://github.com/hapijs/lab/pull/510"
+      },
+      {
+        "id": 125011818,
+        "labels": ["documentation"],
+        "number": 508,
+        "title": "--coverage-exclude should support multiple paths",
+        "url": "https://github.com/hapijs/lab/issues/508"
+      },
+      {
+        "id": 123982126,
+        "labels": ["bug"],
+        "number": 505,
+        "title": "Coverage calculated wrong.",
+        "url": "https://github.com/hapijs/lab/issues/505"
+      }
+    ],
+    "number": 76,
+    "url": "https://github.com/hapijs/lab/milestone/76",
+    "version": "8.0.2"
+  },
+  {
+    "date": "2015-12-27T22:49:45Z",
+    "id": 1444824,
+    "issues": [
+      {
+        "id": 123900840,
+        "labels": ["bug"],
+        "number": 504,
+        "title": "Lab .eslintrc rules overrides local eslint rules.",
+        "url": "https://github.com/hapijs/lab/issues/504"
+      },
+      {
+        "id": 123900660,
+        "labels": ["bug"],
+        "number": 503,
+        "title": "Fix eslint configuration file format support.",
+        "url": "https://github.com/hapijs/lab/pull/503"
+      },
+      {
+        "id": 120885064,
+        "labels": ["bug"],
+        "number": 500,
+        "title": "fix diff text visibility for console reporter",
+        "url": "https://github.com/hapijs/lab/pull/500"
+      },
+      {
+        "id": 118722902,
+        "labels": ["bug"],
+        "number": 493,
+        "title": "Diff colors render diff text unreadable",
+        "url": "https://github.com/hapijs/lab/issues/493"
+      }
+    ],
+    "number": 75,
+    "url": "https://github.com/hapijs/lab/milestone/75",
+    "version": "8.0.1"
+  },
+  {
+    "date": "2015-12-04T19:52:36Z",
+    "id": 1407824,
+    "issues": [
+      {
+        "id": 120473965,
+        "labels": ["breaking changes", "release notes"],
+        "number": 499,
+        "title": "8.0.0 release notes",
+        "url": "https://github.com/hapijs/lab/issues/499"
+      },
+      {
+        "id": 120472322,
+        "labels": ["dependency"],
+        "number": 498,
+        "title": "Update dependencies",
+        "url": "https://github.com/hapijs/lab/pull/498"
+      },
+      {
+        "id": 119624842,
+        "labels": ["feature", "breaking changes"],
+        "number": 496,
+        "title": "update to eslint-config-hapi@8.x.x",
+        "url": "https://github.com/hapijs/lab/pull/496"
+      },
+      {
+        "id": 119520318,
+        "labels": ["feature"],
+        "number": 495,
+        "title": "Add objectLiteralShorthandMethods to supported ES6 features",
+        "url": "https://github.com/hapijs/lab/pull/495"
+      },
+      {
+        "id": 118526802,
+        "labels": ["dependency"],
+        "number": 492,
+        "title": "Update dependencies items and eslint",
+        "url": "https://github.com/hapijs/lab/pull/492"
+      },
+      {
+        "id": 118460977,
+        "labels": ["feature"],
+        "number": 491,
+        "title": "Coverage reporting does not support parsing ES6 objectLiteralComputedProperties",
+        "url": "https://github.com/hapijs/lab/issues/491"
+      },
+      {
+        "id": 117008398,
+        "labels": ["documentation"],
+        "number": 487,
+        "title": "Es6-ify the README examples",
+        "url": "https://github.com/hapijs/lab/pull/487"
+      },
+      {
+        "id": 114421846,
+        "labels": ["dependency"],
+        "number": 479,
+        "title": "Update hapijs/items to 2.0.0 from 1.1.1",
+        "url": "https://github.com/hapijs/lab/issues/479"
+      }
+    ],
+    "number": 74,
+    "url": "https://github.com/hapijs/lab/milestone/74",
+    "version": "8.0.0"
+  },
+  {
+    "date": "2015-11-12T04:23:41Z",
+    "id": 1394332,
+    "issues": [
+      {
+        "id": 116475668,
+        "labels": ["feature", "dependency"],
+        "number": 484,
+        "title": "Update linter to include for loop rules",
+        "url": "https://github.com/hapijs/lab/pull/484"
+      }
+    ],
+    "number": 73,
+    "url": "https://github.com/hapijs/lab/milestone/73",
+    "version": "7.3.0"
+  },
+  {
+    "date": "2015-11-04T20:30:28Z",
+    "id": 1386318,
+    "issues": [
+      {
+        "id": 115137489,
+        "labels": ["feature"],
+        "number": 480,
+        "title": "Update hapi linter dependencies",
+        "url": "https://github.com/hapijs/lab/pull/480"
+      }
+    ],
+    "number": 72,
+    "url": "https://github.com/hapijs/lab/milestone/72",
+    "version": "7.2.0"
+  },
+  {
+    "date": "2015-10-30T22:59:47Z",
+    "id": 1379215,
+    "issues": [
+      {
+        "id": 114368330,
+        "labels": ["feature"],
+        "number": 478,
+        "title": "Update to use ES6 style and lint rules",
+        "url": "https://github.com/hapijs/lab/pull/478"
+      },
+      {
+        "id": 114361519,
+        "labels": ["feature"],
+        "number": 477,
+        "title": "Es6",
+        "url": "https://github.com/hapijs/lab/pull/477"
+      },
+      {
+        "id": 114323480,
+        "labels": ["feature"],
+        "number": 476,
+        "title": "ES6 linting rules",
+        "url": "https://github.com/hapijs/lab/issues/476"
+      },
+      {
+        "id": 113884362,
+        "labels": ["bug"],
+        "number": 475,
+        "title": "consider testing arg passed to done is an error object",
+        "url": "https://github.com/hapijs/lab/issues/475"
+      }
+    ],
+    "number": 71,
+    "url": "https://github.com/hapijs/lab/milestone/71",
+    "version": "7.1.0"
+  },
+  {
+    "date": "2015-10-27T11:45:30Z",
+    "id": 1340761,
+    "issues": [
+      {
+        "id": 113564486,
+        "labels": ["breaking changes", "release notes"],
+        "number": 474,
+        "title": "7.0.0 release notes",
+        "url": "https://github.com/hapijs/lab/issues/474"
+      },
+      {
+        "id": 113554360,
+        "labels": ["breaking changes"],
+        "number": 473,
+        "title": "Remove node 0.10 support",
+        "url": "https://github.com/hapijs/lab/pull/473"
+      },
+      {
+        "id": 113309851,
+        "labels": ["bug"],
+        "number": 471,
+        "title": "Do not add tracking code before \"var\" in \"for(var x of xs)\"",
+        "url": "https://github.com/hapijs/lab/pull/471"
+      },
+      {
+        "id": 113051088,
+        "labels": ["bug"],
+        "number": 470,
+        "title": "for(var x of xs) is not handled correctly when coverage is turned on",
+        "url": "https://github.com/hapijs/lab/issues/470"
+      }
+    ],
+    "number": 70,
+    "url": "https://github.com/hapijs/lab/milestone/70",
+    "version": "7.0.0"
+  },
+  {
+    "date": "2015-10-06T16:52:03Z",
+    "id": 1328079,
+    "issues": [
+      {
+        "id": 109637355,
+        "labels": ["feature"],
+        "number": 460,
+        "title": "Add objectLiteralShorthandMethods to supported ES6 features",
+        "url": "https://github.com/hapijs/lab/pull/460"
+      }
+    ],
+    "number": 69,
+    "url": "https://github.com/hapijs/lab/milestone/69",
+    "version": "6.2.0"
+  },
+  {
+    "date": "2015-09-29T00:25:06Z",
+    "id": 1327673,
+    "issues": [
+      {
+        "id": 108769507,
+        "labels": ["feature"],
+        "number": 457,
+        "title": "Error data",
+        "url": "https://github.com/hapijs/lab/pull/457"
+      }
+    ],
+    "number": 68,
+    "url": "https://github.com/hapijs/lab/milestone/68",
+    "version": "6.1.0"
+  },
+  {
+    "date": "2015-09-28T19:10:28Z",
+    "id": 1316712,
+    "issues": [
+      {
+        "id": 108726549,
+        "labels": ["breaking changes", "release notes"],
+        "number": 455,
+        "title": "6.0.0 release notes",
+        "url": "https://github.com/hapijs/lab/issues/455"
+      },
+      {
+        "id": 108478623,
+        "labels": ["feature"],
+        "number": 454,
+        "title": "Update to eslint-config-hapi@3.x.x",
+        "url": "https://github.com/hapijs/lab/pull/454"
+      },
+      {
+        "id": 108415823,
+        "labels": ["feature"],
+        "number": 453,
+        "title": "Lint warning for unused variables except internals",
+        "url": "https://github.com/hapijs/lab/issues/453"
+      },
+      {
+        "id": 107619039,
+        "labels": ["feature"],
+        "number": 452,
+        "title": "-V/--version flag to show version",
+        "url": "https://github.com/hapijs/lab/pull/452"
+      },
+      {
+        "id": 107544047,
+        "labels": ["feature"],
+        "number": 449,
+        "title": "Add --version to CLI",
+        "url": "https://github.com/hapijs/lab/issues/449"
+      }
+    ],
+    "number": 67,
+    "url": "https://github.com/hapijs/lab/milestone/67",
+    "version": "6.0.0"
+  },
+  {
+    "date": "2015-09-21T16:20:59Z",
+    "id": 1316693,
+    "issues": [
+      {
+        "id": 107547318,
+        "labels": ["bug"],
+        "number": 451,
+        "title": "Rename template for npm publish",
+        "url": "https://github.com/hapijs/lab/pull/451"
+      }
+    ],
+    "number": 66,
+    "url": "https://github.com/hapijs/lab/milestone/66",
+    "version": "5.18.1"
+  },
+  {
+    "date": "2015-09-21T16:16:48Z",
+    "id": 1308904,
+    "issues": [
+      {
+        "id": 107456452,
+        "labels": ["feature"],
+        "number": 448,
+        "title": "Add linting information and test failures to html",
+        "url": "https://github.com/hapijs/lab/pull/448"
+      },
+      {
+        "id": 107319632,
+        "labels": ["test", "dependency"],
+        "number": 447,
+        "title": "Upgrade deps and avoid relying on unix commands",
+        "url": "https://github.com/hapijs/lab/pull/447"
+      },
+      {
+        "id": 106241159,
+        "labels": ["feature"],
+        "number": 439,
+        "title": "Document html coverage report source markup",
+        "url": "https://github.com/hapijs/lab/issues/439"
+      }
+    ],
+    "number": 65,
+    "url": "https://github.com/hapijs/lab/milestone/65",
+    "version": "5.18.0"
+  },
+  {
+    "date": "2015-09-16T17:12:24Z",
+    "id": 1307547,
+    "issues": [
+      {
+        "id": 106678104,
+        "labels": ["feature"],
+        "number": 445,
+        "title": "JSON reporter now supports lint output",
+        "url": "https://github.com/hapijs/lab/pull/445"
+      },
+      {
+        "id": 106615195,
+        "labels": ["feature"],
+        "number": 443,
+        "title": "add lint results to json reporter",
+        "url": "https://github.com/hapijs/lab/issues/443"
+      }
+    ],
+    "number": 64,
+    "url": "https://github.com/hapijs/lab/milestone/64",
+    "version": "5.17.0"
+  },
+  {
+    "date": "2015-09-16T01:10:32Z",
+    "id": 1301611,
+    "issues": [
+      {
+        "id": 106601983,
+        "labels": ["dependency"],
+        "number": 442,
+        "title": "Update insecure dependencies (eslint, handlebars)",
+        "url": "https://github.com/hapijs/lab/pull/442"
+      },
+      {
+        "id": 106391668,
+        "labels": ["documentation"],
+        "number": 441,
+        "title": "Document coverage ignore syntax, fixes #438",
+        "url": "https://github.com/hapijs/lab/pull/441"
+      }
+    ],
+    "number": 63,
+    "url": "https://github.com/hapijs/lab/milestone/63",
+    "version": "5.16.2"
+  },
+  {
+    "date": "2015-09-11T19:06:03Z",
+    "id": 1286785,
+    "issues": [
+      {
+        "id": 105735059,
+        "labels": ["bug"],
+        "number": 437,
+        "title": "Drop camelcase lint rule",
+        "url": "https://github.com/hapijs/lab/issues/437"
+      },
+      {
+        "id": 105628454,
+        "labels": ["dependency"],
+        "number": 436,
+        "title": "Update to eslint-config-hapi@2.x.x",
+        "url": "https://github.com/hapijs/lab/pull/436"
+      },
+      {
+        "id": 104905781,
+        "labels": ["bug"],
+        "number": 433,
+        "title": "Add Infinity to stringify",
+        "url": "https://github.com/hapijs/lab/pull/433"
+      },
+      {
+        "id": 104627130,
+        "labels": ["dependency"],
+        "number": 432,
+        "title": "Updated eslint version",
+        "url": "https://github.com/hapijs/lab/pull/432"
+      }
+    ],
+    "number": 62,
+    "url": "https://github.com/hapijs/lab/milestone/62",
+    "version": "5.16.1"
+  },
+  {
+    "date": "2015-09-02T16:59:41Z",
+    "id": 1266724,
+    "issues": [
+      {
+        "id": 104392271,
+        "labels": ["documentation"],
+        "number": 431,
+        "title": "Add docs for extending lab's linter",
+        "url": "https://github.com/hapijs/lab/pull/431"
+      },
+      {
+        "id": 102869685,
+        "labels": ["feature"],
+        "number": 429,
+        "title": "Use a shareable config for ESLint",
+        "url": "https://github.com/hapijs/lab/pull/429"
+      },
+      {
+        "id": 88897303,
+        "labels": ["documentation"],
+        "number": 372,
+        "title": ".eslintrc files should build on default settings",
+        "url": "https://github.com/hapijs/lab/issues/372"
+      }
+    ],
+    "number": 61,
+    "url": "https://github.com/hapijs/lab/milestone/61",
+    "version": "5.16.0"
+  },
+  {
+    "date": "2015-08-21T17:54:09Z",
+    "id": 1249342,
+    "issues": [
+      {
+        "id": 101860096,
+        "labels": ["bug"],
+        "number": 428,
+        "title": "Show invisible tokens on stringify",
+        "url": "https://github.com/hapijs/lab/pull/428"
+      },
+      {
+        "id": 101100196,
+        "labels": ["bug"],
+        "number": 424,
+        "title": "Fix stack traces when using transforms",
+        "url": "https://github.com/hapijs/lab/pull/424"
+      }
+    ],
+    "number": 60,
+    "url": "https://github.com/hapijs/lab/milestone/60",
+    "version": "5.15.2"
+  },
+  {
+    "date": "2015-08-11T03:00:51Z",
+    "id": 1242452,
+    "issues": [
+      {
+        "id": 99879575,
+        "labels": ["bug"],
+        "number": 421,
+        "title": "Fix circular JSON for console reporter",
+        "url": "https://github.com/hapijs/lab/pull/421"
+      }
+    ],
+    "number": 59,
+    "url": "https://github.com/hapijs/lab/milestone/59",
+    "version": "5.15.1"
+  },
+  {
+    "date": "2015-08-05T17:13:18Z",
+    "id": 1239543,
+    "issues": [
+      {
+        "id": 99076586,
+        "labels": ["feature"],
+        "number": 420,
+        "title": "Add command line options to override coverage path and excludes",
+        "url": "https://github.com/hapijs/lab/pull/420"
+      }
+    ],
+    "number": 58,
+    "url": "https://github.com/hapijs/lab/milestone/58",
+    "version": "5.15.0"
+  },
+  {
+    "date": "2015-08-04T04:05:37Z",
+    "id": 1228076,
+    "issues": [
+      {
+        "id": 98884595,
+        "labels": ["bug"],
+        "number": 416,
+        "title": "Allow custom reporters from CLI",
+        "url": "https://github.com/hapijs/lab/pull/416"
+      },
+      {
+        "id": 98884535,
+        "labels": ["bug"],
+        "number": 415,
+        "title": "Custom reporters not allowed from cli",
+        "url": "https://github.com/hapijs/lab/issues/415"
+      },
+      {
+        "id": 98879069,
+        "labels": ["test"],
+        "number": 414,
+        "title": "Fix test for equal call with extra param",
+        "url": "https://github.com/hapijs/lab/pull/414"
+      },
+      {
+        "id": 98762264,
+        "labels": ["test"],
+        "number": 413,
+        "title": "Fix extra params passed to equal that are invalid",
+        "url": "https://github.com/hapijs/lab/issues/413"
+      },
+      {
+        "id": 98639223,
+        "labels": ["dependency"],
+        "number": 412,
+        "title": "Update eslint to 1.0.x",
+        "url": "https://github.com/hapijs/lab/pull/412"
+      }
+    ],
+    "number": 57,
+    "url": "https://github.com/hapijs/lab/milestone/57",
+    "version": "5.14.1"
+  },
+  {
+    "date": "2015-07-27T18:53:02Z",
+    "id": 1193934,
+    "issues": [
+      {
+        "id": 95047362,
+        "labels": ["bug"],
+        "number": 406,
+        "title": "Fix exit code when multiple reporters encounter a failure",
+        "url": "https://github.com/hapijs/lab/pull/406"
+      },
+      {
+        "id": 95027055,
+        "labels": ["feature"],
+        "number": 404,
+        "title": "enable more es6 features for Espree",
+        "url": "https://github.com/hapijs/lab/pull/404"
+      },
+      {
+        "id": 93330417,
+        "labels": ["bug"],
+        "number": 397,
+        "title": "Attach sub-reporters to the multiple reporter",
+        "url": "https://github.com/hapijs/lab/pull/397"
+      },
+      {
+        "id": 92818980,
+        "labels": ["bug"],
+        "number": 393,
+        "title": "Exit code always 0 with multiple reporters",
+        "url": "https://github.com/hapijs/lab/issues/393"
+      }
+    ],
+    "number": 56,
+    "url": "https://github.com/hapijs/lab/milestone/56",
+    "version": "5.14.0"
+  },
+  {
+    "date": "2015-07-05T23:56:12Z",
+    "id": 1192822,
+    "issues": [
+      {
+        "id": 93157293,
+        "labels": ["feature"],
+        "number": 395,
+        "title": "Support filename pattern matching in CLI",
+        "url": "https://github.com/hapijs/lab/pull/395"
+      },
+      {
+        "id": 90928151,
+        "labels": ["feature"],
+        "number": 384,
+        "title": "File name matching glob pattern",
+        "url": "https://github.com/hapijs/lab/issues/384"
+      }
+    ],
+    "number": 55,
+    "url": "https://github.com/hapijs/lab/milestone/55",
+    "version": "5.13.0"
+  },
+  {
+    "date": "2015-07-03T22:40:22Z",
+    "id": 1191539,
+    "issues": [
+      {
+        "id": 92944656,
+        "labels": ["bug"],
+        "number": 394,
+        "title": "Revert lint rule on spaced comments",
+        "url": "https://github.com/hapijs/lab/pull/394"
+      }
+    ],
+    "number": 54,
+    "url": "https://github.com/hapijs/lab/milestone/54",
+    "version": "5.12.1"
+  },
+  {
+    "date": "2015-07-02T20:43:04Z",
+    "id": 1181582,
+    "issues": [
+      {
+        "id": 92729031,
+        "labels": ["bug"],
+        "number": 392,
+        "title": "Attach results to the reporter",
+        "url": "https://github.com/hapijs/lab/pull/392"
+      },
+      {
+        "id": 92232676,
+        "labels": ["feature"],
+        "number": 389,
+        "title": "Multiple reporters and multiple outputs",
+        "url": "https://github.com/hapijs/lab/pull/389"
+      },
+      {
+        "id": 91323550,
+        "labels": ["dependency"],
+        "number": 387,
+        "title": "Update to eslint 0.24.x and add array bracket spacing linting rule",
+        "url": "https://github.com/hapijs/lab/pull/387"
+      },
+      {
+        "id": 91038754,
+        "labels": ["feature"],
+        "number": 386,
+        "title": "enable code coverage support with ES6",
+        "url": "https://github.com/hapijs/lab/pull/386"
+      },
+      {
+        "id": 90353005,
+        "labels": ["feature"],
+        "number": 381,
+        "title": "Added space after comment rule",
+        "url": "https://github.com/hapijs/lab/pull/381"
+      }
+    ],
+    "number": 53,
+    "url": "https://github.com/hapijs/lab/milestone/53",
+    "version": "5.12.0"
+  },
+  {
+    "date": "2015-06-25T19:21:18Z",
+    "id": 1175318,
+    "issues": [
+      {
+        "id": 90989623,
+        "labels": ["bug"],
+        "number": 385,
+        "title": "Support more relaxed no-shadow rule",
+        "url": "https://github.com/hapijs/lab/pull/385"
+      },
+      {
+        "id": 90251316,
+        "labels": ["dependency"],
+        "number": 380,
+        "title": "Update source-map-support to 0.3.x ",
+        "url": "https://github.com/hapijs/lab/pull/380"
+      },
+      {
+        "id": 90242843,
+        "labels": ["bug"],
+        "number": 379,
+        "title": "Shadow lint error going too far",
+        "url": "https://github.com/hapijs/lab/issues/379"
+      }
+    ],
+    "number": 52,
+    "url": "https://github.com/hapijs/lab/milestone/52",
+    "version": "5.11.1"
+  },
+  {
+    "date": "2015-06-22T15:15:26Z",
+    "id": 1157031,
+    "issues": [
+      {
+        "id": 90126606,
+        "labels": ["bug"],
+        "number": 377,
+        "title": "Remove lint rule for line around comments",
+        "url": "https://github.com/hapijs/lab/pull/377"
+      },
+      {
+        "id": 89970756,
+        "labels": ["bug"],
+        "number": 376,
+        "title": "Lint too aggressive with empty lines before comments",
+        "url": "https://github.com/hapijs/lab/issues/376"
+      },
+      {
+        "id": 87063640,
+        "labels": ["feature"],
+        "number": 371,
+        "title": "Use no-shadow lint rule",
+        "url": "https://github.com/hapijs/lab/pull/371"
+      },
+      {
+        "id": 86884189,
+        "labels": ["feature"],
+        "number": 369,
+        "title": "no-catch-shadow",
+        "url": "https://github.com/hapijs/lab/issues/369"
+      }
+    ],
+    "number": 51,
+    "url": "https://github.com/hapijs/lab/milestone/51",
+    "version": "5.11.0"
+  },
+  {
+    "date": "2015-06-09T15:12:31Z",
+    "id": 1121383,
+    "issues": [
+      {
+        "id": 86279061,
+        "labels": ["feature"],
+        "number": 368,
+        "title": "Enforce capitalization of imported module variable names",
+        "url": "https://github.com/hapijs/lab/pull/368"
+      },
+      {
+        "id": 80971373,
+        "labels": ["feature", "dependency"],
+        "number": 366,
+        "title": "Linting update",
+        "url": "https://github.com/hapijs/lab/pull/366"
+      },
+      {
+        "id": 80206941,
+        "labels": ["non issue"],
+        "number": 365,
+        "title": "Update license attribute",
+        "url": "https://github.com/hapijs/lab/pull/365"
+      },
+      {
+        "id": 79941684,
+        "labels": ["non issue"],
+        "number": 364,
+        "title": "Cleanup repo style",
+        "url": "https://github.com/hapijs/lab/pull/364"
+      }
+    ],
+    "number": 50,
+    "url": "https://github.com/hapijs/lab/milestone/50",
+    "version": "5.10.0"
+  },
+  {
+    "date": "2015-05-20T15:11:00Z",
+    "id": 1107216,
+    "issues": [
+      {
+        "id": 78025638,
+        "labels": ["feature"],
+        "number": 362,
+        "title": "Default both linting thresholds to 0.",
+        "url": "https://github.com/hapijs/lab/pull/362"
+      },
+      {
+        "id": 77983757,
+        "labels": ["bug"],
+        "number": 361,
+        "title": "Lint option -L should fail test if any linting problems are found",
+        "url": "https://github.com/hapijs/lab/issues/361"
+      },
+      {
+        "id": 77002039,
+        "labels": ["bug"],
+        "number": 360,
+        "title": "Use global handle for __$$labCov for use strict.",
+        "url": "https://github.com/hapijs/lab/pull/360"
+      },
+      {
+        "id": 76894141,
+        "labels": ["bug"],
+        "number": 359,
+        "title": "Change afterEaches to run in more natural order",
+        "url": "https://github.com/hapijs/lab/pull/359"
+      },
+      {
+        "id": 76867860,
+        "labels": ["bug"],
+        "number": 358,
+        "title": "unable to test when employing template strings",
+        "url": "https://github.com/hapijs/lab/issues/358"
+      },
+      {
+        "id": 76186385,
+        "labels": ["bug"],
+        "number": 357,
+        "title": "afterEach's run in unnatural order",
+        "url": "https://github.com/hapijs/lab/issues/357"
+      }
+    ],
+    "number": 49,
+    "url": "https://github.com/hapijs/lab/milestone/49",
+    "version": "5.9.0"
+  },
+  {
+    "date": "2015-05-12T17:30:25Z",
+    "id": 1085591,
+    "issues": [
+      {
+        "id": 75646223,
+        "labels": ["bug"],
+        "number": 356,
+        "title": "Fix coverage on loop labels. Fixes #355.",
+        "url": "https://github.com/hapijs/lab/pull/356"
+      },
+      {
+        "id": 75480039,
+        "labels": ["bug"],
+        "number": 355,
+        "title": "Error when running lab with coverage on babel compiled code",
+        "url": "https://github.com/hapijs/lab/issues/355"
+      },
+      {
+        "id": 73252695,
+        "labels": ["bug"],
+        "number": 354,
+        "title": "Fix coverage modifying \"use strict\" statements.",
+        "url": "https://github.com/hapijs/lab/pull/354"
+      }
+    ],
+    "number": 48,
+    "url": "https://github.com/hapijs/lab/milestone/48",
+    "version": "5.8.1"
+  },
+  {
+    "date": "2015-04-27T15:36:27Z",
+    "id": 1082809,
+    "issues": [
+      {
+        "id": 71089250,
+        "labels": ["documentation"],
+        "number": 352,
+        "title": "Fix #351. Add message about threshold and npm error message.",
+        "url": "https://github.com/hapijs/lab/pull/352"
+      },
+      {
+        "id": 71080760,
+        "labels": ["documentation"],
+        "number": 351,
+        "title": "npm ERR! Exit status 1 when threshold is not met",
+        "url": "https://github.com/hapijs/lab/issues/351"
+      },
+      {
+        "id": 70901045,
+        "labels": ["feature"],
+        "number": 350,
+        "title": "Lint thresholds",
+        "url": "https://github.com/hapijs/lab/pull/350"
+      }
+    ],
+    "number": 47,
+    "url": "https://github.com/hapijs/lab/milestone/47",
+    "version": "5.8.0"
+  },
+  {
+    "date": "2015-04-24T20:04:59Z",
+    "id": 1076229,
+    "issues": [
+      {
+        "id": 70730148,
+        "labels": ["feature"],
+        "number": 349,
+        "title": "Add 4 space indent rule",
+        "url": "https://github.com/hapijs/lab/pull/349"
+      },
+      {
+        "id": 70527449,
+        "labels": ["feature"],
+        "number": 348,
+        "title": "Add some more rules to ESLint",
+        "url": "https://github.com/hapijs/lab/issues/348"
+      },
+      {
+        "id": 70526613,
+        "labels": ["feature"],
+        "number": 347,
+        "title": "Added two eslint rules to lab to enforce the hapi code style.",
+        "url": "https://github.com/hapijs/lab/pull/347"
+      }
+    ],
+    "number": 46,
+    "url": "https://github.com/hapijs/lab/milestone/46",
+    "version": "5.7.0"
+  },
+  {
+    "date": "2015-04-20T23:19:16Z",
+    "id": 1075506,
+    "issues": [
+      {
+        "id": 69670487,
+        "labels": ["dependency"],
+        "number": 345,
+        "title": "Switch to espree",
+        "url": "https://github.com/hapijs/lab/pull/345"
+      },
+      {
+        "id": 69617464,
+        "labels": ["dependency"],
+        "number": 344,
+        "title": "Update dependencies",
+        "url": "https://github.com/hapijs/lab/pull/344"
+      },
+      {
+        "id": 63761506,
+        "labels": ["feature", "dependency"],
+        "number": 332,
+        "title": "using `espree` or `acorn` instead of esprima",
+        "url": "https://github.com/hapijs/lab/issues/332"
+      }
+    ],
+    "number": 45,
+    "url": "https://github.com/hapijs/lab/milestone/45",
+    "version": "5.6.1"
+  },
+  {
+    "date": "2015-04-20T15:26:55Z",
+    "id": 1034978,
+    "issues": [
+      {
+        "id": 67507980,
+        "labels": ["bug"],
+        "number": 341,
+        "title": "Fix HTML reporter when using live-transformed code",
+        "url": "https://github.com/hapijs/lab/pull/341"
+      },
+      {
+        "id": 67170507,
+        "labels": ["feature"],
+        "number": 339,
+        "title": "Add ESLint rule for blank line at beginning of function scope",
+        "url": "https://github.com/hapijs/lab/pull/339"
+      }
+    ],
+    "number": 44,
+    "url": "https://github.com/hapijs/lab/milestone/44",
+    "version": "5.6.0"
+  },
+  {
+    "date": "2015-03-23T19:24:19Z",
+    "id": 1015007,
+    "issues": [
+      {
+        "id": 61895461,
+        "labels": ["dependency"],
+        "number": 327,
+        "title": "[DEP] eslint 0.14 to 0.17",
+        "url": "https://github.com/hapijs/lab/pull/327"
+      },
+      {
+        "id": 61879721,
+        "labels": ["dependency"],
+        "number": 326,
+        "title": "Update eslint to 0.17.0",
+        "url": "https://github.com/hapijs/lab/issues/326"
+      }
+    ],
+    "number": 43,
+    "url": "https://github.com/hapijs/lab/milestone/43",
+    "version": "5.5.1"
+  },
+  {
+    "date": "2015-03-10T16:07:30Z",
+    "id": 1006028,
+    "issues": [
+      {
+        "id": 60059510,
+        "labels": ["feature"],
+        "number": 324,
+        "title": "Allow test files to have different extensions with transform",
+        "url": "https://github.com/hapijs/lab/pull/324"
+      },
+      {
+        "id": 59956792,
+        "labels": ["bug"],
+        "number": 323,
+        "title": "Fix EventEmitter bug",
+        "url": "https://github.com/hapijs/lab/pull/323"
+      },
+      {
+        "id": 59921293,
+        "labels": ["bug"],
+        "number": 322,
+        "title": "Fix domain not exited",
+        "url": "https://github.com/hapijs/lab/pull/322"
+      },
+      {
+        "id": 59590479,
+        "labels": ["feature"],
+        "number": 317,
+        "title": "Support custom reporters - closes #216 & closes #309",
+        "url": "https://github.com/hapijs/lab/pull/317"
+      }
+    ],
+    "number": 42,
+    "url": "https://github.com/hapijs/lab/milestone/42",
+    "version": "5.5.0"
+  },
+  {
+    "date": "2015-03-04T16:20:34Z",
+    "id": 999281,
+    "issues": [
+      {
+        "id": 59732649,
+        "labels": ["feature"],
+        "number": 321,
+        "title": "Allow --lint-options to be passed to configure linters",
+        "url": "https://github.com/hapijs/lab/pull/321"
+      },
+      {
+        "id": 59625077,
+        "labels": ["feature"],
+        "number": 320,
+        "title": "Fixes #319: Instructs --output to create given directory recursively.",
+        "url": "https://github.com/hapijs/lab/pull/320"
+      },
+      {
+        "id": 59623293,
+        "labels": ["feature"],
+        "number": 319,
+        "title": "--output should create given directory tree",
+        "url": "https://github.com/hapijs/lab/issues/319"
+      },
+      {
+        "id": 59606847,
+        "labels": ["feature"],
+        "number": 318,
+        "title": "add debug option to show domain error stack",
+        "url": "https://github.com/hapijs/lab/pull/318"
+      },
+      {
+        "id": 59437843,
+        "labels": ["feature"],
+        "number": 316,
+        "title": "Properly support sourcemaps when using the transform option",
+        "url": "https://github.com/hapijs/lab/pull/316"
+      }
+    ],
+    "number": 41,
+    "url": "https://github.com/hapijs/lab/milestone/41",
+    "version": "5.4.0"
+  },
+  {
+    "date": "2015-02-27T19:36:56Z",
+    "id": 947123,
+    "issues": [
+      {
+        "id": 58452261,
+        "labels": ["feature"],
+        "number": 311,
+        "title": "Add live transform of source code before coverage analysis",
+        "url": "https://github.com/hapijs/lab/pull/311"
+      },
+      {
+        "id": 57806435,
+        "labels": ["dependency"],
+        "number": 308,
+        "title": " Remove Makefile and advice about it. Closes #284.",
+        "url": "https://github.com/hapijs/lab/pull/308"
+      },
+      {
+        "id": 57804231,
+        "labels": ["dependency"],
+        "number": 307,
+        "title": "Linting update",
+        "url": "https://github.com/hapijs/lab/pull/307"
+      }
+    ],
+    "number": 40,
+    "url": "https://github.com/hapijs/lab/milestone/40",
+    "version": "5.3.0"
+  },
+  {
+    "date": "2015-01-22T16:43:37Z",
+    "id": 928851,
+    "issues": [
+      {
+        "id": 55061608,
+        "labels": ["bug"],
+        "number": 297,
+        "title": "Add Intl global",
+        "url": "https://github.com/hapijs/lab/issues/297"
+      },
+      {
+        "id": 55022532,
+        "labels": ["bug"],
+        "number": 295,
+        "title": "Ignore Intl global",
+        "url": "https://github.com/hapijs/lab/pull/295"
+      },
+      {
+        "id": 50326872,
+        "labels": ["feature"],
+        "number": 280,
+        "title": "Ignoring files in linting",
+        "url": "https://github.com/hapijs/lab/issues/280"
+      }
+    ],
+    "number": 39,
+    "url": "https://github.com/hapijs/lab/milestone/39",
+    "version": "5.2.1"
+  },
+  {
+    "date": "2015-01-09T16:22:40Z",
+    "id": 878797,
+    "issues": [
+      {
+        "id": 53628939,
+        "labels": ["feature"],
+        "number": 290,
+        "title": "make linter pluggable",
+        "url": "https://github.com/hapijs/lab/pull/290"
+      },
+      {
+        "id": 52748453,
+        "labels": ["bug"],
+        "number": 286,
+        "title": "Avoid double timeout on before/after",
+        "url": "https://github.com/hapijs/lab/pull/286"
+      }
+    ],
+    "number": 38,
+    "url": "https://github.com/hapijs/lab/milestone/38",
+    "version": "5.2.0"
+  },
+  {
+    "date": "2014-11-24T18:41:06Z",
+    "id": 873901,
+    "issues": [
+      {
+        "id": 49729639,
+        "labels": ["feature"],
+        "number": 278,
+        "title": "Fix before/after exceptions to be reported",
+        "url": "https://github.com/hapijs/lab/pull/278"
+      },
+      {
+        "id": 49705098,
+        "labels": ["feature"],
+        "number": 277,
+        "title": "Errors thrown in after & afterEach can cause immediate exit with code 0",
+        "url": "https://github.com/hapijs/lab/issues/277"
+      }
+    ],
+    "number": 37,
+    "url": "https://github.com/hapijs/lab/milestone/37",
+    "version": "5.1.0"
+  },
+  {
+    "date": "2014-11-20T07:50:54Z",
+    "id": 856840,
+    "issues": [
+      {
+        "id": 49506445,
+        "labels": ["bug"],
+        "number": 276,
+        "title": "(true ? true : false) ? 'x' : false === true when coverage enabled (should be 'x')",
+        "url": "https://github.com/hapijs/lab/issues/276"
+      }
+    ],
+    "number": 36,
+    "url": "https://github.com/hapijs/lab/milestone/36",
+    "version": "5.0.3"
+  },
+  {
+    "date": "2014-11-07T02:55:39Z",
+    "id": 837429,
+    "issues": [
+      {
+        "id": 48015403,
+        "labels": ["bug"],
+        "number": 271,
+        "title": "Add Map, Set, and WeakSet to the Harmony globals and improve testing",
+        "url": "https://github.com/hapijs/lab/pull/271"
+      },
+      {
+        "id": 46735086,
+        "labels": ["bug"],
+        "number": 262,
+        "title": "Fix console reporting",
+        "url": "https://github.com/hapijs/lab/pull/262"
+      }
+    ],
+    "number": 35,
+    "url": "https://github.com/hapijs/lab/milestone/35",
+    "version": "5.0.2"
+  },
+  {
+    "date": "2014-10-23T13:46:47Z",
+    "id": 836292,
+    "issues": [
+      {
+        "id": 46625919,
+        "labels": ["bug"],
+        "number": 261,
+        "title": "Remove extra hoek typo in package.json",
+        "url": "https://github.com/hapijs/lab/issues/261"
+      },
+      {
+        "id": 46540243,
+        "labels": ["feature"],
+        "number": 260,
+        "title": "Add verbosity index",
+        "url": "https://github.com/hapijs/lab/pull/260"
+      }
+    ],
+    "number": 34,
+    "url": "https://github.com/hapijs/lab/milestone/34",
+    "version": "5.0.1"
+  },
+  {
+    "date": "2014-10-22T17:53:46Z",
+    "id": 830636,
+    "issues": [
+      {
+        "id": 46538350,
+        "labels": ["breaking changes", "release notes"],
+        "number": 259,
+        "title": "5.0.0 Release Notes",
+        "url": "https://github.com/hapijs/lab/issues/259"
+      },
+      {
+        "id": 46537096,
+        "labels": ["bug"],
+        "number": 258,
+        "title": "Remove extra line breaks in lint report",
+        "url": "https://github.com/hapijs/lab/pull/258"
+      },
+      {
+        "id": 46458413,
+        "labels": ["feature"],
+        "number": 256,
+        "title": "Assertions library option",
+        "url": "https://github.com/hapijs/lab/pull/256"
+      },
+      {
+        "id": 46451752,
+        "labels": ["documentation"],
+        "number": 254,
+        "title": "Fix documentation to exclude chai ",
+        "url": "https://github.com/hapijs/lab/issues/254"
+      },
+      {
+        "id": 46450110,
+        "labels": ["breaking changes", "dependency"],
+        "number": 253,
+        "title": "Remove Chai",
+        "url": "https://github.com/hapijs/lab/pull/253"
+      },
+      {
+        "id": 46357134,
+        "labels": ["bug"],
+        "number": 252,
+        "title": "Lint report formatting",
+        "url": "https://github.com/hapijs/lab/issues/252"
+      },
+      {
+        "id": 46039262,
+        "labels": ["breaking changes", "dependency"],
+        "number": 250,
+        "title": "Remove chai",
+        "url": "https://github.com/hapijs/lab/issues/250"
+      }
+    ],
+    "number": 33,
+    "url": "https://github.com/hapijs/lab/milestone/33",
+    "version": "5.0.0"
+  },
+  {
+    "date": "2014-10-17T19:31:11Z",
+    "id": 820055,
+    "issues": [
+      {
+        "id": 45929548,
+        "labels": ["feature"],
+        "number": 249,
+        "title": "Fix #217: throw on invalid function declaration",
+        "url": "https://github.com/hapijs/lab/pull/249"
+      },
+      {
+        "id": 45517444,
+        "labels": ["bug"],
+        "number": 247,
+        "title": "Run linting in child process",
+        "url": "https://github.com/hapijs/lab/pull/247"
+      },
+      {
+        "id": 45501273,
+        "labels": ["bug"],
+        "number": 246,
+        "title": "Remove extra line breaks in report",
+        "url": "https://github.com/hapijs/lab/pull/246"
+      },
+      {
+        "id": 45419177,
+        "labels": ["bug"],
+        "number": 245,
+        "title": "Spawn linting in child process",
+        "url": "https://github.com/hapijs/lab/issues/245"
+      },
+      {
+        "id": 45416982,
+        "labels": ["bug"],
+        "number": 244,
+        "title": "Remove extra line breaks",
+        "url": "https://github.com/hapijs/lab/issues/244"
+      }
+    ],
+    "number": 32,
+    "url": "https://github.com/hapijs/lab/milestone/32",
+    "version": "4.7.0"
+  },
+  {
+    "date": "2014-10-09T16:14:02Z",
+    "id": 818463,
+    "issues": [
+      {
+        "id": 45382651,
+        "labels": ["bug"],
+        "number": 243,
+        "title": "Remove brace-style rule",
+        "url": "https://github.com/hapijs/lab/pull/243"
+      },
+      {
+        "id": 45381958,
+        "labels": ["bug"],
+        "number": 242,
+        "title": "Remove brace-style lint rule",
+        "url": "https://github.com/hapijs/lab/issues/242"
+      },
+      {
+        "id": 45379531,
+        "labels": ["feature"],
+        "number": 241,
+        "title": "Lint arg is now a boolean",
+        "url": "https://github.com/hapijs/lab/pull/241"
+      },
+      {
+        "id": 45299340,
+        "labels": ["bug"],
+        "number": 240,
+        "title": "Removing consistent-return",
+        "url": "https://github.com/hapijs/lab/pull/240"
+      },
+      {
+        "id": 45299182,
+        "labels": ["bug"],
+        "number": 239,
+        "title": "Drop consistent-return lint rule",
+        "url": "https://github.com/hapijs/lab/issues/239"
+      },
+      {
+        "id": 45298521,
+        "labels": ["bug"],
+        "number": 238,
+        "title": "Remove no-lonely-if",
+        "url": "https://github.com/hapijs/lab/pull/238"
+      },
+      {
+        "id": 45298347,
+        "labels": ["feature"],
+        "number": 237,
+        "title": "Switch -L to be boolean and only use eslint",
+        "url": "https://github.com/hapijs/lab/issues/237"
+      },
+      {
+        "id": 45298291,
+        "labels": ["bug"],
+        "number": 236,
+        "title": "Remove no-lonely-if",
+        "url": "https://github.com/hapijs/lab/issues/236"
+      }
+    ],
+    "number": 31,
+    "url": "https://github.com/hapijs/lab/milestone/31",
+    "version": "4.6.2"
+  },
+  {
+    "date": "2014-10-08T14:58:18Z",
+    "id": 817128,
+    "issues": [
+      {
+        "id": 45253297,
+        "labels": ["test"],
+        "number": 234,
+        "title": "Ignore tests for lab",
+        "url": "https://github.com/hapijs/lab/pull/234"
+      },
+      {
+        "id": 45253028,
+        "labels": ["test"],
+        "number": 233,
+        "title": "Add eslintignore for labs tests",
+        "url": "https://github.com/hapijs/lab/issues/233"
+      },
+      {
+        "id": 45251451,
+        "labels": ["feature"],
+        "number": 232,
+        "title": "Fixing lint rules and only showing files when issues",
+        "url": "https://github.com/hapijs/lab/pull/232"
+      },
+      {
+        "id": 45247402,
+        "labels": ["feature"],
+        "number": 231,
+        "title": "Only show linted files if there are issues",
+        "url": "https://github.com/hapijs/lab/issues/231"
+      }
+    ],
+    "number": 30,
+    "url": "https://github.com/hapijs/lab/milestone/30",
+    "version": "4.6.1"
+  },
+  {
+    "date": "2014-10-07T17:21:13Z",
+    "id": 811863,
+    "issues": [
+      {
+        "id": 43214932,
+        "labels": ["feature"],
+        "number": 213,
+        "title": "WIP - Add linting support",
+        "url": "https://github.com/hapijs/lab/pull/213"
+      }
+    ],
+    "number": 29,
+    "url": "https://github.com/hapijs/lab/milestone/29",
+    "version": "4.6.0"
+  },
+  {
+    "date": "2014-10-02T19:29:18Z",
+    "id": 802712,
+    "issues": [
+      {
+        "id": 44717271,
+        "labels": ["bug"],
+        "number": 226,
+        "title": "Support windows console output",
+        "url": "https://github.com/hapijs/lab/pull/226"
+      },
+      {
+        "id": 44717107,
+        "labels": ["bug"],
+        "number": 225,
+        "title": "Console reporter doesn't display well on windows",
+        "url": "https://github.com/hapijs/lab/issues/225"
+      }
+    ],
+    "number": 28,
+    "url": "https://github.com/hapijs/lab/milestone/28",
+    "version": "4.5.2"
+  },
+  {
+    "date": "2014-09-25T15:25:55Z",
+    "id": 801645,
+    "issues": [
+      {
+        "id": 43890354,
+        "labels": ["bug"],
+        "number": 219,
+        "title": "Fix mistakes on previous pull requests",
+        "url": "https://github.com/hapijs/lab/pull/219"
+      }
+    ],
+    "number": 27,
+    "url": "https://github.com/hapijs/lab/milestone/27",
+    "version": "4.5.1"
+  },
+  {
+    "date": "2014-09-24T19:39:53Z",
+    "id": 791889,
+    "issues": [
+      {
+        "id": 43323172,
+        "labels": ["feature"],
+        "number": 215,
+        "title": "Add optional timeouts on before(Each), after(Each)",
+        "url": "https://github.com/hapijs/lab/pull/215"
+      },
+      {
+        "id": 42701627,
+        "labels": ["feature"],
+        "number": 207,
+        "title": "Fix #178: Add sourcemaps support",
+        "url": "https://github.com/hapijs/lab/pull/207"
+      },
+      {
+        "id": 41792408,
+        "labels": ["feature"],
+        "number": 178,
+        "title": "Code coverage with sourcemaps support",
+        "url": "https://github.com/hapijs/lab/issues/178"
+      }
+    ],
+    "number": 26,
+    "url": "https://github.com/hapijs/lab/milestone/26",
+    "version": "4.5.0"
+  },
+  {
+    "date": "2014-09-16T16:44:16Z",
+    "id": 790004,
+    "issues": [
+      {
+        "id": 42893421,
+        "labels": ["bug"],
+        "number": 212,
+        "title": "Fix #209: omit undefined options",
+        "url": "https://github.com/hapijs/lab/pull/212"
+      },
+      {
+        "id": 42834797,
+        "labels": ["bug"],
+        "number": 209,
+        "title": "code error results in all tests passing",
+        "url": "https://github.com/hapijs/lab/issues/209"
+      }
+    ],
+    "number": 25,
+    "url": "https://github.com/hapijs/lab/milestone/25",
+    "version": "4.4.4"
+  },
+  {
+    "date": "2014-09-15T14:54:23Z",
+    "id": 787951,
+    "issues": [
+      {
+        "id": 42735514,
+        "labels": ["bug"],
+        "number": 208,
+        "title": "Support multiple tests from the command line.",
+        "url": "https://github.com/hapijs/lab/pull/208"
+      }
+    ],
+    "number": 24,
+    "url": "https://github.com/hapijs/lab/milestone/24",
+    "version": "4.4.3"
+  },
+  {
+    "date": "2014-09-12T18:39:19Z",
+    "id": 787890,
+    "issues": [
+      {
+        "id": 42656105,
+        "labels": ["bug"],
+        "number": 205,
+        "title": "Output and leaks are honored",
+        "url": "https://github.com/hapijs/lab/pull/205"
+      },
+      {
+        "id": 42656033,
+        "labels": ["bug"],
+        "number": 204,
+        "title": "CLI: -o not honored",
+        "url": "https://github.com/hapijs/lab/issues/204"
+      }
+    ],
+    "number": 23,
+    "url": "https://github.com/hapijs/lab/milestone/23",
+    "version": "4.4.2"
+  },
+  {
+    "date": "2014-09-12T17:43:55Z",
+    "id": 787777,
+    "issues": [
+      {
+        "id": 42651684,
+        "labels": ["bug"],
+        "number": 203,
+        "title": "Support junit as reporter on cli",
+        "url": "https://github.com/hapijs/lab/pull/203"
+      },
+      {
+        "id": 42646576,
+        "labels": ["bug"],
+        "number": 200,
+        "title": "junit reporter unavailable",
+        "url": "https://github.com/hapijs/lab/issues/200"
+      }
+    ],
+    "number": 22,
+    "url": "https://github.com/hapijs/lab/milestone/22",
+    "version": "4.4.1"
+  },
+  {
+    "date": "2014-09-12T16:16:01Z",
+    "id": 778915,
+    "issues": [
+      {
+        "id": 42643607,
+        "labels": ["feature"],
+        "number": 199,
+        "title": "Add --ignore option and document alias arguments",
+        "url": "https://github.com/hapijs/lab/pull/199"
+      },
+      {
+        "id": 42642279,
+        "labels": ["test"],
+        "number": 198,
+        "title": "Add test for unknown arguments",
+        "url": "https://github.com/hapijs/lab/pull/198"
+      },
+      {
+        "id": 42639125,
+        "labels": ["feature"],
+        "number": 197,
+        "title": "Restrict CLI reporter checks and add usage on errors",
+        "url": "https://github.com/hapijs/lab/pull/197"
+      },
+      {
+        "id": 42638958,
+        "labels": ["feature"],
+        "number": 196,
+        "title": "Globals",
+        "url": "https://github.com/hapijs/lab/issues/196"
+      },
+      {
+        "id": 42636264,
+        "labels": ["dependency"],
+        "number": 193,
+        "title": "Upping to bossy 1.0.0",
+        "url": "https://github.com/hapijs/lab/pull/193"
+      },
+      {
+        "id": 42483561,
+        "labels": ["dependency"],
+        "number": 192,
+        "title": "Switching from optimist to bossy",
+        "url": "https://github.com/hapijs/lab/pull/192"
+      },
+      {
+        "id": 42483446,
+        "labels": ["dependency"],
+        "number": 191,
+        "title": "Switch from optimist to bossy",
+        "url": "https://github.com/hapijs/lab/issues/191"
+      },
+      {
+        "id": 42206408,
+        "labels": ["feature"],
+        "number": 187,
+        "title": "Added clover reporter",
+        "url": "https://github.com/hapijs/lab/pull/187"
+      }
+    ],
+    "number": 21,
+    "url": "https://github.com/hapijs/lab/milestone/21",
+    "version": "4.4.0"
+  },
+  {
+    "date": "2014-09-04T19:17:18Z",
+    "id": 766654,
+    "issues": [
+      {
+        "id": 41966889,
+        "labels": ["feature"],
+        "number": 182,
+        "title": "Adding lcov format reporter",
+        "url": "https://github.com/hapijs/lab/pull/182"
+      },
+      {
+        "id": 41950278,
+        "labels": ["documentation"],
+        "number": 180,
+        "title": "Stray asterisk in README",
+        "url": "https://github.com/hapijs/lab/issues/180"
+      },
+      {
+        "id": 41828997,
+        "labels": ["test"],
+        "number": 179,
+        "title": "Add tests for coverage that throws",
+        "url": "https://github.com/hapijs/lab/pull/179"
+      },
+      {
+        "id": 36653773,
+        "labels": ["feature"],
+        "number": 109,
+        "title": "Option to output coverage in lcov format",
+        "url": "https://github.com/hapijs/lab/issues/109"
+      }
+    ],
+    "number": 20,
+    "url": "https://github.com/hapijs/lab/milestone/20",
+    "version": "4.3.0"
+  },
+  {
+    "date": "2014-08-26T21:18:31Z",
+    "id": 760674,
+    "issues": [
+      {
+        "id": 41202105,
+        "labels": ["feature"],
+        "number": 176,
+        "title": "Adding test run data to html report",
+        "url": "https://github.com/hapijs/lab/pull/176"
+      },
+      {
+        "id": 41097110,
+        "labels": ["test"],
+        "number": 175,
+        "title": "Cleanup tests for timeout overrides",
+        "url": "https://github.com/hapijs/lab/pull/175"
+      },
+      {
+        "id": 40969785,
+        "labels": ["feature"],
+        "number": 174,
+        "title": "Add lines covered and not covered to the CC report",
+        "url": "https://github.com/hapijs/lab/pull/174"
+      },
+      {
+        "id": 38036162,
+        "labels": ["feature"],
+        "number": 118,
+        "title": "Way to get coverage report in HTML at the same time as console",
+        "url": "https://github.com/hapijs/lab/issues/118"
+      }
+    ],
+    "number": 19,
+    "url": "https://github.com/hapijs/lab/milestone/19",
+    "version": "4.2.0"
+  },
+  {
+    "date": "2014-08-20T21:21:08Z",
+    "id": 752740,
+    "issues": [
+      {
+        "id": 40746047,
+        "labels": [],
+        "number": 172,
+        "title": "Upping to version 4.1.0",
+        "url": "https://github.com/hapijs/lab/pull/172"
+      },
+      {
+        "id": 40745472,
+        "labels": ["release notes"],
+        "number": 171,
+        "title": "4.1.0 Release Notes",
+        "url": "https://github.com/hapijs/lab/issues/171"
+      },
+      {
+        "id": 40626256,
+        "labels": ["documentation"],
+        "number": 168,
+        "title": "updated README to cover JUnit reporter",
+        "url": "https://github.com/hapijs/lab/pull/168"
+      },
+      {
+        "id": 40621859,
+        "labels": ["documentation"],
+        "number": 167,
+        "title": "Document JUnit reporter",
+        "url": "https://github.com/hapijs/lab/issues/167"
+      },
+      {
+        "id": 40578983,
+        "labels": ["feature"],
+        "number": 166,
+        "title": "Added junit reporter",
+        "url": "https://github.com/hapijs/lab/pull/166"
+      },
+      {
+        "id": 40469258,
+        "labels": ["feature"],
+        "number": 165,
+        "title": "Junit output",
+        "url": "https://github.com/hapijs/lab/issues/165"
+      },
+      {
+        "id": 40456605,
+        "labels": ["feature"],
+        "number": 164,
+        "title": "Feature - Prevent clobbered timer globals from interfering with runner",
+        "url": "https://github.com/hapijs/lab/pull/164"
+      },
+      {
+        "id": 40395473,
+        "labels": ["feature"],
+        "number": 163,
+        "title": "Updating TAP reporter to specification version 13",
+        "url": "https://github.com/hapijs/lab/pull/163"
+      },
+      {
+        "id": 40386162,
+        "labels": ["feature"],
+        "number": 162,
+        "title": "cli override. Closes #161",
+        "url": "https://github.com/hapijs/lab/pull/162"
+      },
+      {
+        "id": 40383421,
+        "labels": ["feature"],
+        "number": 161,
+        "title": "Allow setting CLI options programatically ",
+        "url": "https://github.com/hapijs/lab/issues/161"
+      },
+      {
+        "id": 40271367,
+        "labels": ["bug"],
+        "number": 159,
+        "title": "Detect missing exports.lab in the cli runner",
+        "url": "https://github.com/hapijs/lab/pull/159"
+      },
+      {
+        "id": 40162316,
+        "labels": ["bug"],
+        "number": 157,
+        "title": "Handle tests without a \"exports.lab\" gracefully",
+        "url": "https://github.com/hapijs/lab/issues/157"
+      },
+      {
+        "id": 38222959,
+        "labels": ["feature"],
+        "number": 119,
+        "title": "Duration of tests shown via TAP",
+        "url": "https://github.com/hapijs/lab/issues/119"
+      }
+    ],
+    "number": 18,
+    "url": "https://github.com/hapijs/lab/milestone/18",
+    "version": "4.1.0"
+  },
+  {
+    "date": "2014-08-13T19:41:04Z",
+    "id": 748101,
+    "issues": [
+      {
+        "id": 40086596,
+        "labels": ["bug"],
+        "number": 156,
+        "title": "Remove skipped tests from total run count",
+        "url": "https://github.com/hapijs/lab/pull/156"
+      },
+      {
+        "id": 40086439,
+        "labels": ["documentation"],
+        "number": 155,
+        "title": "Clarify how `only` behaves",
+        "url": "https://github.com/hapijs/lab/issues/155"
+      },
+      {
+        "id": 40080381,
+        "labels": ["bug"],
+        "number": 154,
+        "title": "Skipped tests still reported on console reporter as being run",
+        "url": "https://github.com/hapijs/lab/issues/154"
+      },
+      {
+        "id": 40005417,
+        "labels": ["bug"],
+        "number": 152,
+        "title": "Set env variable immediately in cli",
+        "url": "https://github.com/hapijs/lab/pull/152"
+      },
+      {
+        "id": 40005337,
+        "labels": ["bug"],
+        "number": 151,
+        "title": "Environment not set before require when using CLI",
+        "url": "https://github.com/hapijs/lab/issues/151"
+      },
+      {
+        "id": 39989543,
+        "labels": ["bug"],
+        "number": 150,
+        "title": "Default to test environment",
+        "url": "https://github.com/hapijs/lab/pull/150"
+      },
+      {
+        "id": 39963220,
+        "labels": ["bug"],
+        "number": 149,
+        "title": "Changed session errors to script errors.",
+        "url": "https://github.com/hapijs/lab/pull/149"
+      },
+      {
+        "id": 39941911,
+        "labels": ["bug"],
+        "number": 148,
+        "title": "Environment set too late",
+        "url": "https://github.com/hapijs/lab/issues/148"
+      },
+      {
+        "id": 39866655,
+        "labels": ["dependency"],
+        "number": 147,
+        "title": "Replace async with items",
+        "url": "https://github.com/hapijs/lab/pull/147"
+      },
+      {
+        "id": 39866639,
+        "labels": ["bug"],
+        "number": 146,
+        "title": "Reword session errors to test script errors",
+        "url": "https://github.com/hapijs/lab/issues/146"
+      },
+      {
+        "id": 39864977,
+        "labels": ["feature"],
+        "number": 145,
+        "title": "Replace use of async with items",
+        "url": "https://github.com/hapijs/lab/issues/145"
+      }
+    ],
+    "number": 17,
+    "url": "https://github.com/hapijs/lab/milestone/17",
+    "version": "4.0.2"
+  },
+  {
+    "date": "2014-08-08T21:21:59Z",
+    "id": 746489,
+    "issues": [
+      {
+        "id": 39861780,
+        "labels": ["test"],
+        "number": 144,
+        "title": "Fixing issue with missing labCov reference",
+        "url": "https://github.com/hapijs/lab/pull/144"
+      },
+      {
+        "id": 39776942,
+        "labels": ["bug"],
+        "number": 143,
+        "title": "lab throws with ReferenceError: __$$labCov is not defined when run with coverage enabled and no code to cover",
+        "url": "https://github.com/hapijs/lab/issues/143"
+      },
+      {
+        "id": 39767021,
+        "labels": [],
+        "number": 141,
+        "title": "Add test for while coverage",
+        "url": "https://github.com/hapijs/lab/pull/141"
+      },
+      {
+        "id": 39747186,
+        "labels": ["bug"],
+        "number": 140,
+        "title": "Default to null for colors on cli for using tty capabilities",
+        "url": "https://github.com/hapijs/lab/pull/140"
+      },
+      {
+        "id": 39747142,
+        "labels": ["bug"],
+        "number": 139,
+        "title": "CLI colors aren't defaulted to tty capabilities",
+        "url": "https://github.com/hapijs/lab/issues/139"
+      }
+    ],
+    "number": 15,
+    "url": "https://github.com/hapijs/lab/milestone/15",
+    "version": "4.0.1"
+  },
+  {
+    "date": "2014-08-07T16:13:16Z",
+    "id": 663888,
+    "issues": [
+      {
+        "id": 39658431,
+        "labels": ["breaking changes", "release notes"],
+        "number": 138,
+        "title": "4.0.0 Release Notes",
+        "url": "https://github.com/hapijs/lab/issues/138"
+      },
+      {
+        "id": 39654396,
+        "labels": ["documentation"],
+        "number": 137,
+        "title": "Moving to authors file and adding my name",
+        "url": "https://github.com/hapijs/lab/pull/137"
+      },
+      {
+        "id": 39649578,
+        "labels": ["feature"],
+        "number": 136,
+        "title": "Notebook updates",
+        "url": "https://github.com/hapijs/lab/pull/136"
+      },
+      {
+        "id": 39641787,
+        "labels": ["test"],
+        "number": 135,
+        "title": "Fix for paths with hyphens and increase timeout",
+        "url": "https://github.com/hapijs/lab/pull/135"
+      },
+      {
+        "id": 39565637,
+        "labels": ["test"],
+        "number": 133,
+        "title": "Cli tests",
+        "url": "https://github.com/hapijs/lab/pull/133"
+      },
+      {
+        "id": 39380767,
+        "labels": ["documentation"],
+        "number": 132,
+        "title": "Update readme to reflect all the latest cli options",
+        "url": "https://github.com/hapijs/lab/issues/132"
+      },
+      {
+        "id": 39319190,
+        "labels": ["test"],
+        "number": 130,
+        "title": "Add lib/cli.js to coverage tests",
+        "url": "https://github.com/hapijs/lab/issues/130"
+      },
+      {
+        "id": 39319162,
+        "labels": ["feature"],
+        "number": 129,
+        "title": "Expose notebook.errors in console reporter",
+        "url": "https://github.com/hapijs/lab/issues/129"
+      },
+      {
+        "id": 39253065,
+        "labels": ["feature", "breaking changes", "test"],
+        "number": 128,
+        "title": "Refactor to test lab with lab",
+        "url": "https://github.com/hapijs/lab/pull/128"
+      },
+      {
+        "id": 38908814,
+        "labels": ["bug"],
+        "number": 126,
+        "title": "Checking leaks on non-enumerable properties",
+        "url": "https://github.com/hapijs/lab/pull/126"
+      },
+      {
+        "id": 38536508,
+        "labels": ["breaking changes"],
+        "number": 124,
+        "title": "4.0 Breaking Change",
+        "url": "https://github.com/hapijs/lab/issues/124"
+      },
+      {
+        "id": 38373989,
+        "labels": ["feature"],
+        "number": 123,
+        "title": "Add new ES6 types to knownGlobals",
+        "url": "https://github.com/hapijs/lab/issues/123"
+      },
+      {
+        "id": 38025716,
+        "labels": ["feature"],
+        "number": 117,
+        "title": "\"Infinite\" Timeout",
+        "url": "https://github.com/hapijs/lab/issues/117"
+      },
+      {
+        "id": 37936349,
+        "labels": ["feature"],
+        "number": 116,
+        "title": "Add describe.skip/only and it.skip/only",
+        "url": "https://github.com/hapijs/lab/pull/116"
+      },
+      {
+        "id": 37401956,
+        "labels": ["feature"],
+        "number": 113,
+        "title": "Repeat failure count at end of errors listing.",
+        "url": "https://github.com/hapijs/lab/pull/113"
+      },
+      {
+        "id": 36943098,
+        "labels": ["feature"],
+        "number": 110,
+        "title": "Lab.test.only and Lab.test.skip",
+        "url": "https://github.com/hapijs/lab/issues/110"
+      },
+      {
+        "id": 36632812,
+        "labels": ["bug"],
+        "number": 108,
+        "title": "Adding coverage tests skew the line-numbers in stack statements.",
+        "url": "https://github.com/hapijs/lab/issues/108"
+      },
+      {
+        "id": 36546413,
+        "labels": ["bug"],
+        "number": 107,
+        "title": "Lab doesn't show the assertion message when an assertion fails",
+        "url": "https://github.com/hapijs/lab/issues/107"
+      },
+      {
+        "id": 35528598,
+        "labels": ["feature"],
+        "number": 104,
+        "title": "Display Test duration once completed (even with errors)",
+        "url": "https://github.com/hapijs/lab/pull/104"
+      },
+      {
+        "id": 34608812,
+        "labels": ["bug"],
+        "number": 103,
+        "title": "tests should fail if before etc call back with an error or crash",
+        "url": "https://github.com/hapijs/lab/issues/103"
+      },
+      {
+        "id": 34177983,
+        "labels": ["feature"],
+        "number": 100,
+        "title": "Fix #99: ignore custom globals in leak detection",
+        "url": "https://github.com/hapijs/lab/pull/100"
+      },
+      {
+        "id": 33854299,
+        "labels": ["feature"],
+        "number": 98,
+        "title": "Add total missing lines to the coverage reporter",
+        "url": "https://github.com/hapijs/lab/issues/98"
+      },
+      {
+        "id": 30335034,
+        "labels": ["test"],
+        "number": 60,
+        "title": "Add tests",
+        "url": "https://github.com/hapijs/lab/issues/60"
+      }
+    ],
+    "number": 13,
+    "url": "https://github.com/hapijs/lab/milestone/13",
+    "version": "4.0.0"
+  },
+  {
+    "date": "2014-08-01T20:44:24Z",
+    "id": 740178,
+    "issues": [
+      {
+        "id": 39324579,
+        "labels": ["documentation"],
+        "number": 131,
+        "title": "Rename spumko to hapijs",
+        "url": "https://github.com/hapijs/lab/issues/131"
+      }
+    ],
+    "number": 14,
+    "url": "https://github.com/hapijs/lab/milestone/14",
+    "version": "3.2.3"
+  },
+  {
+    "date": "2014-05-20T00:18:00Z",
+    "id": 663885,
+    "issues": [],
+    "number": 12,
+    "url": "https://github.com/hapijs/lab/milestone/12",
+    "version": "3.2.1"
+  },
+  {
+    "date": "2014-05-20T00:08:16Z",
+    "id": 663813,
+    "issues": [
+      {
+        "id": 33697884,
+        "labels": ["test"],
+        "number": 96,
+        "title": "simplify package.json example",
+        "url": "https://github.com/hapijs/lab/pull/96"
+      },
+      {
+        "id": 33486713,
+        "labels": ["feature"],
+        "number": 94,
+        "title": "Add chai optional message to output",
+        "url": "https://github.com/hapijs/lab/pull/94"
+      },
+      {
+        "id": 32851227,
+        "labels": ["feature"],
+        "number": 90,
+        "title": "Allow ability to execute specific subset of tests",
+        "url": "https://github.com/hapijs/lab/issues/90"
+      }
+    ],
+    "number": 11,
+    "url": "https://github.com/hapijs/lab/milestone/11",
+    "version": "3.2.0"
+  },
+  {
+    "date": "2014-05-19T22:08:21Z",
+    "id": 646150,
+    "issues": [
+      {
+        "id": 33231954,
+        "labels": ["feature"],
+        "number": 92,
+        "title": "Prints execution time for each test on console",
+        "url": "https://github.com/hapijs/lab/pull/92"
+      },
+      {
+        "id": 33231122,
+        "labels": ["bug"],
+        "number": 91,
+        "title": "Coverage file filter function modified to support Windows paths #32",
+        "url": "https://github.com/hapijs/lab/pull/91"
+      },
+      {
+        "id": 19241813,
+        "labels": ["bug"],
+        "number": 32,
+        "title": "Coverage not working on Windows",
+        "url": "https://github.com/hapijs/lab/issues/32"
+      }
+    ],
+    "number": 10,
+    "url": "https://github.com/hapijs/lab/milestone/10",
+    "version": "3.1.4"
+  },
+  {
+    "date": "2014-05-01T15:25:16Z",
+    "id": 641022,
+    "issues": [
+      {
+        "id": 32621368,
+        "labels": ["bug"],
+        "number": 88,
+        "title": "updated double call check on done to provide error to internals.output",
+        "url": "https://github.com/hapijs/lab/pull/88"
+      }
+    ],
+    "number": 9,
+    "url": "https://github.com/hapijs/lab/milestone/9",
+    "version": "3.1.1"
+  },
+  {
+    "date": "2014-04-26T03:59:09Z",
+    "id": 615836,
+    "issues": [
+      {
+        "id": 32274810,
+        "labels": ["feature"],
+        "number": 83,
+        "title": "Ability to skip coverage for a code section",
+        "url": "https://github.com/hapijs/lab/issues/83"
+      },
+      {
+        "id": 32087670,
+        "labels": ["feature"],
+        "number": 81,
+        "title": "Add command like option to force color output",
+        "url": "https://github.com/hapijs/lab/pull/81"
+      },
+      {
+        "id": 31724397,
+        "labels": ["feature"],
+        "number": 78,
+        "title": "Support passing 'done' as async callback",
+        "url": "https://github.com/hapijs/lab/pull/78"
+      },
+      {
+        "id": 31706385,
+        "labels": ["bug"],
+        "number": 77,
+        "title": "Show error message not just for boom",
+        "url": "https://github.com/hapijs/lab/issues/77"
+      },
+      {
+        "id": 31655768,
+        "labels": ["feature"],
+        "number": 76,
+        "title": "Expose Chai's assert flavour. Closes #75.",
+        "url": "https://github.com/hapijs/lab/pull/76"
+      }
+    ],
+    "number": 8,
+    "url": "https://github.com/hapijs/lab/milestone/8",
+    "version": "3.1.0"
+  },
+  {
+    "date": "2014-03-31T18:35:45Z",
+    "id": 612953,
+    "issues": [
+      {
+        "id": 30536301,
+        "labels": ["feature"],
+        "number": 71,
+        "title": "Todo tests",
+        "url": "https://github.com/hapijs/lab/issues/71"
+      },
+      {
+        "id": 30533973,
+        "labels": ["feature"],
+        "number": 70,
+        "title": "Skip test or experiment",
+        "url": "https://github.com/hapijs/lab/issues/70"
+      },
+      {
+        "id": 30474999,
+        "labels": ["feature"],
+        "number": 69,
+        "title": "Allow setting per test of experiment timeout",
+        "url": "https://github.com/hapijs/lab/issues/69"
+      },
+      {
+        "id": 30474628,
+        "labels": ["feature"],
+        "number": 68,
+        "title": "Allow setting parallel execution",
+        "url": "https://github.com/hapijs/lab/issues/68"
+      },
+      {
+        "id": 30474618,
+        "labels": ["bug", "breaking changes"],
+        "number": 67,
+        "title": "Combine spec+console+summary with -s/-v flags",
+        "url": "https://github.com/hapijs/lab/issues/67"
+      },
+      {
+        "id": 30464633,
+        "labels": ["bug"],
+        "number": 66,
+        "title": "before/beforeEach/afterEach/after not run in correct order when using nested experiments",
+        "url": "https://github.com/hapijs/lab/issues/66"
+      },
+      {
+        "id": 30461472,
+        "labels": ["breaking changes"],
+        "number": 65,
+        "title": "Rename -g to -l and make it disable detection",
+        "url": "https://github.com/hapijs/lab/issues/65"
+      },
+      {
+        "id": 30459862,
+        "labels": ["breaking changes"],
+        "number": 64,
+        "title": "Remove coverage reporter",
+        "url": "https://github.com/hapijs/lab/issues/64"
+      },
+      {
+        "id": 30459739,
+        "labels": ["non issue"],
+        "number": 63,
+        "title": "Remove verbose mode",
+        "url": "https://github.com/hapijs/lab/issues/63"
+      },
+      {
+        "id": 30459007,
+        "labels": ["feature"],
+        "number": 62,
+        "title": "Tap reporter",
+        "url": "https://github.com/hapijs/lab/issues/62"
+      },
+      {
+        "id": 30001872,
+        "labels": ["feature"],
+        "number": 56,
+        "title": "spec style formatting",
+        "url": "https://github.com/hapijs/lab/pull/56"
+      },
+      {
+        "id": 29997503,
+        "labels": ["bug"],
+        "number": 55,
+        "title": "fixed failure count so that non-zero exit code is return on test failure",
+        "url": "https://github.com/hapijs/lab/pull/55"
+      },
+      {
+        "id": 29983300,
+        "labels": ["feature"],
+        "number": 53,
+        "title": "Support verbose mode for console",
+        "url": "https://github.com/hapijs/lab/pull/53"
+      },
+      {
+        "id": 28733334,
+        "labels": ["feature"],
+        "number": 48,
+        "title": "Adding spec reporter",
+        "url": "https://github.com/hapijs/lab/pull/48"
+      }
+    ],
+    "number": 7,
+    "url": "https://github.com/hapijs/lab/milestone/7",
+    "version": "3.0.0"
+  },
+  {
+    "date": "2022-05-07T00:51:54Z",
+    "id": 7931437,
+    "issues": [
+      {
+        "id": 1222487373,
+        "labels": ["bug"],
+        "number": 1047,
+        "title": "Fix coverage ignore flag when ts comments are removed",
+        "url": "https://github.com/hapijs/lab/pull/1047"
+      },
+      {
+        "id": 1222018052,
+        "labels": ["bug"],
+        "number": 1046,
+        "title": "Report \"Type T has no properties in common with type U\" as a type error",
+        "url": "https://github.com/hapijs/lab/issues/1046"
+      }
+    ],
+    "number": 191,
+    "url": "https://github.com/hapijs/lab/milestone/191",
+    "version": "2.47.1"
+  },
+  {
+    "date": "2014-03-28T08:09:25Z",
+    "id": 612952,
+    "issues": [
+      {
+        "id": 30369076,
+        "labels": ["bug"],
+        "number": 61,
+        "title": "Remove SwitchCase from statement coverage",
+        "url": "https://github.com/hapijs/lab/issues/61"
+      }
+    ],
+    "number": 6,
+    "url": "https://github.com/hapijs/lab/milestone/6",
+    "version": "2.0.2"
+  },
+  {
+    "date": "2014-03-28T08:07:52Z",
+    "id": 603049,
+    "issues": [
+      {
+        "id": 29983335,
+        "labels": ["feature", "breaking changes"],
+        "number": 54,
+        "title": "Move coverage functionality internally",
+        "url": "https://github.com/hapijs/lab/issues/54"
+      }
+    ],
+    "number": 5,
+    "url": "https://github.com/hapijs/lab/milestone/5",
+    "version": "2.0.0"
+  },
+  {
+    "date": "2014-03-19T18:59:17Z",
+    "id": 591715,
+    "issues": [
+      {
+        "id": 29757923,
+        "labels": ["feature"],
+        "number": 51,
+        "title": "update chai dependency, fix deprecation warning in chai",
+        "url": "https://github.com/hapijs/lab/pull/51"
+      }
+    ],
+    "number": 4,
+    "url": "https://github.com/hapijs/lab/milestone/4",
+    "version": "1.9.0"
+  },
+  {
+    "date": "2014-03-09T05:54:16Z",
+    "id": 580311,
+    "issues": [
+      {
+        "id": 29037509,
+        "labels": ["feature"],
+        "number": 49,
+        "title": "Allow specifying tests by id",
+        "url": "https://github.com/hapijs/lab/issues/49"
+      },
+      {
+        "id": 27671956,
+        "labels": ["feature"],
+        "number": 41,
+        "title": "Support beforeEach() (and afterEach())",
+        "url": "https://github.com/hapijs/lab/issues/41"
+      }
+    ],
+    "number": 2,
+    "url": "https://github.com/hapijs/lab/milestone/2",
+    "version": "1.8.0"
+  },
+  {
+    "date": "2014-03-06T20:48:21Z",
+    "id": 589808,
+    "issues": [
+      {
+        "id": 28677395,
+        "labels": ["bug"],
+        "number": 47,
+        "title": "Fixed branch checking",
+        "url": "https://github.com/hapijs/lab/pull/47"
+      }
+    ],
+    "number": 3,
+    "url": "https://github.com/hapijs/lab/milestone/3",
+    "version": "1.7.1"
+  },
+  {
+    "date": "2014-02-25T20:52:41Z",
+    "id": 580274,
+    "issues": [
+      {
+        "id": 28280164,
+        "labels": ["documentation"],
+        "number": 46,
+        "title": "update readme",
+        "url": "https://github.com/hapijs/lab/pull/46"
+      },
+      {
+        "id": 28279411,
+        "labels": ["bug"],
+        "number": 45,
+        "title": "Fix double domain implicit enter()",
+        "url": "https://github.com/hapijs/lab/issues/45"
+      },
+      {
+        "id": 27988710,
+        "labels": ["documentation"],
+        "number": 43,
+        "title": "fix for readme",
+        "url": "https://github.com/hapijs/lab/issues/43"
+      },
+      {
+        "id": 27673060,
+        "labels": ["feature"],
+        "number": 42,
+        "title": "add beforeEach() and afterEach()",
+        "url": "https://github.com/hapijs/lab/pull/42"
+      }
+    ],
+    "number": 1,
+    "url": "https://github.com/hapijs/lab/milestone/1",
+    "version": "1.7.0"
+  }
+]

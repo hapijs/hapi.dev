@@ -1,0 +1,22 @@
+{
+  "api": true,
+  "forks": 61,
+  "isPlugin": true,
+  "link": "https://github.com/hapijs/h2o2",
+  "name": "h2o2",
+  "package": "@hapi/h2o2",
+  "slogan": "Proxy handler for hapi.js.",
+  "sloganHtml": "Proxy handler for hapi.js.",
+  "stars": 164,
+  "updated": "2024-10-23T15:12:00Z",
+  "versions": [
+    {
+      "branch": "v10.0.4",
+      "license": "BSD",
+      "name": "10.0.4",
+      "node": ">= 16"
+    }
+  ],
+  "versionsArray": ["10.0.4"],
+  "latestVersion": "10.x.x"
+}

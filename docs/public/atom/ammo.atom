@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/ammo</id>
+    <title>@hapi/ammo changelog</title>
+    <updated>2023-02-11T19:39:49.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/ammo"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/ammo v6.0.1]]></title>
+        <id>https://github.com/hapijs/ammo/milestone/22</id>
+        <link href="https://hapi.dev/module/ammo/changelog#6.0.1"/>
+        <updated>2023-02-11T19:39:49.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/ammo v6.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/ammo/pull/54">[#54]</a> chore: bump hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/ammo v6.0.0]]></title>
+        <id>https://github.com/hapijs/ammo/milestone/21</id>
+        <link href="https://hapi.dev/module/ammo/changelog#6.0.0"/>
+        <updated>2023-02-11T19:39:47.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/ammo v6.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/ammo/pull/53">[#53]</a> Support node v18 and drop node v12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/ammo v5.0.1]]></title>
+        <id>https://github.com/hapijs/ammo/milestone/19</id>
+        <link href="https://hapi.dev/module/ammo/changelog#5.0.1"/>
+        <updated>2020-02-13T05:14:49.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/ammo v5.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/ammo/issues/37">[#37]</a> Strict parsing</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/ammo v5.0.0]]></title>
+        <id>https://github.com/hapijs/ammo/milestone/18</id>
+        <link href="https://hapi.dev/module/ammo/changelog#5.0.0"/>
+        <updated>2020-01-04T21:08:13.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/ammo v5.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/ammo/issues/35">[#35]</a> Only node 12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/ammo v4.0.1]]></title>
+        <id>https://github.com/hapijs/ammo/milestone/17</id>
+        <link href="https://hapi.dev/module/ammo/changelog#4.0.1"/>
+        <updated>2020-02-13T05:36:22.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/ammo v4.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/ammo/issues/38">[#38]</a> Backport #37</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/ammo v4.0.0]]></title>
+        <id>https://github.com/hapijs/ammo/milestone/16</id>
+        <link href="https://hapi.dev/module/ammo/changelog#4.0.0"/>
+        <updated>2019-10-15T00:23:26.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/ammo v4.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/ammo/issues/32">[#32]</a> Add types</li><li><a href="https://github.com/hapijs/ammo/issues/31">[#31]</a> Drop node 8</li><li><a href="https://github.com/hapijs/ammo/issues/16">[#16]</a> Stream early exit</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/ammo v3.1.2]]></title>
+        <id>https://github.com/hapijs/ammo/milestone/15</id>
+        <link href="https://hapi.dev/module/ammo/changelog#3.1.2"/>
+        <updated>2020-02-13T05:36:20.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/ammo v3.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/ammo/issues/39">[#39]</a> Backport #37</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/ammo v3.1.1]]></title>
+        <id>https://github.com/hapijs/ammo/milestone/14</id>
+        <link href="https://hapi.dev/module/ammo/changelog#3.1.1"/>
+        <updated>2019-08-13T20:47:40.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/ammo v3.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/ammo/issues/25">[#25]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/ammo v3.1.0]]></title>
+        <id>https://github.com/hapijs/ammo/milestone/11</id>
+        <link href="https://hapi.dev/module/ammo/changelog#3.1.0"/>
+        <updated>2019-03-30T07:47:40.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/ammo v3.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/ammo/issues/23">[#23]</a> Change module namespace</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/ammo v3.0.3]]></title>
+        <id>https://github.com/hapijs/ammo/milestone/10</id>
+        <link href="https://hapi.dev/module/ammo/changelog#3.0.3"/>
+        <updated>2018-11-03T00:14:46.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/ammo v3.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/ammo/issues/20">[#20]</a> Remove engines</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/ammo v3.0.2]]></title>
+        <id>https://github.com/hapijs/ammo/milestone/9</id>
+        <link href="https://hapi.dev/module/ammo/changelog#3.0.2"/>
+        <updated>2018-11-01T07:22:13.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/ammo v3.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/ammo/issues/19">[#19]</a> Update hoek v6</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/ammo v3.0.1]]></title>
+        <id>https://github.com/hapijs/ammo/milestone/8</id>
+        <link href="https://hapi.dev/module/ammo/changelog#3.0.1"/>
+        <updated>2018-04-29T18:17:38.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/ammo v3.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/ammo/pull/18">[#18]</a> Improve error handling</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/ammo v3.0.0]]></title>
+        <id>https://github.com/hapijs/ammo/milestone/7</id>
+        <link href="https://hapi.dev/module/ammo/changelog#3.0.0"/>
+        <updated>2017-09-26T05:47:37.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/ammo v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/ammo/issues/17">[#17]</a> Node 8</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/ammo v2.1.1]]></title>
+        <id>https://github.com/hapijs/ammo/milestone/13</id>
+        <link href="https://hapi.dev/module/ammo/changelog#2.1.1"/>
+        <updated>2020-02-13T05:36:18.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/ammo v2.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/ammo/issues/40">[#40]</a> Backport #37</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/ammo v2.1.0]]></title>
+        <id>https://github.com/hapijs/ammo/milestone/12</id>
+        <link href="https://hapi.dev/module/ammo/changelog#2.1.0"/>
+        <updated>2019-03-22T05:49:25.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/ammo v2.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/ammo/issues/22">[#22]</a> Commercial version of v2 branch</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/ammo v2.0.4]]></title>
+        <id>https://github.com/hapijs/ammo/milestone/6</id>
+        <link href="https://hapi.dev/module/ammo/changelog#2.0.4"/>
+        <updated>2017-05-28T05:55:23.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/ammo v2.0.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/ammo/issues/15">[#15]</a> Update deps.</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/ammo v2.0.3]]></title>
+        <id>https://github.com/hapijs/ammo/milestone/5</id>
+        <link href="https://hapi.dev/module/ammo/changelog#2.0.3"/>
+        <updated>2016-11-29T01:46:45.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/ammo v2.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/ammo/issues/14">[#14]</a> Update deps</li><li><a href="https://github.com/hapijs/ammo/pull/10">[#10]</a> dependency update</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/ammo v2.0.2]]></title>
+        <id>https://github.com/hapijs/ammo/milestone/4</id>
+        <link href="https://hapi.dev/module/ammo/changelog#2.0.2"/>
+        <updated>2016-07-27T19:25:24.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/ammo v2.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/ammo/issues/8">[#8]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/ammo v2.0.1]]></title>
+        <id>https://github.com/hapijs/ammo/milestone/3</id>
+        <link href="https://hapi.dev/module/ammo/changelog#2.0.1"/>
+        <updated>2016-05-19T18:00:33.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/ammo v2.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/ammo/pull/6">[#6]</a> Test on node v6, update dependencies</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/ammo v2.0.0]]></title>
+        <id>https://github.com/hapijs/ammo/milestone/2</id>
+        <link href="https://hapi.dev/module/ammo/changelog#2.0.0"/>
+        <updated>2016-05-19T17:31:59.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/ammo v2.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/ammo/issues/4">[#4]</a> ES6 style changes and node v4</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/ammo v1.0.1]]></title>
+        <id>https://github.com/hapijs/ammo/milestone/1</id>
+        <link href="https://hapi.dev/module/ammo/changelog#1.0.1"/>
+        <updated>2015-06-28T02:26:21.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/ammo v1.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/ammo/issues/3">[#3]</a> Apply hapi project style</li></ul>]]></content>
+    </entry>
+</feed>

@@ -1,0 +1,502 @@
+[
+  {
+    "date": "2023-02-11T18:39:18Z",
+    "id": 7933522,
+    "issues": [
+      {
+        "id": 1551763339,
+        "labels": [],
+        "number": 70,
+        "title": "chore: bump hoek",
+        "url": "https://github.com/hapijs/topo/pull/70"
+      }
+    ],
+    "number": 32,
+    "url": "https://github.com/hapijs/topo/milestone/32",
+    "version": "6.0.1"
+  },
+  {
+    "date": "2023-02-11T18:38:17Z",
+    "id": 7933521,
+    "issues": [
+      {
+        "id": 1222424260,
+        "labels": ["dependency", "breaking changes"],
+        "number": 69,
+        "title": "Support node v18 and drop node v12",
+        "url": "https://github.com/hapijs/topo/pull/69"
+      }
+    ],
+    "number": 31,
+    "url": "https://github.com/hapijs/topo/milestone/31",
+    "version": "6.0.0"
+  },
+  {
+    "date": "2021-06-28T21:54:35Z",
+    "id": 6896824,
+    "issues": [
+      {
+        "id": 931027686,
+        "labels": ["feature"],
+        "number": 66,
+        "title": "Support manual sorting (performance)",
+        "url": "https://github.com/hapijs/topo/pull/66"
+      },
+      {
+        "id": 709597599,
+        "labels": [],
+        "number": 64,
+        "title": "upgrade lab to v24 and devDependency of typescript",
+        "url": "https://github.com/hapijs/topo/pull/64"
+      }
+    ],
+    "number": 29,
+    "url": "https://github.com/hapijs/topo/milestone/29",
+    "version": "5.1.0"
+  },
+  {
+    "date": "2020-01-04T09:03:46Z",
+    "id": 4972536,
+    "issues": [
+      {
+        "id": 545261286,
+        "labels": ["dependency", "breaking changes"],
+        "number": 61,
+        "title": "Only node 12",
+        "url": "https://github.com/hapijs/topo/issues/61"
+      }
+    ],
+    "number": 27,
+    "url": "https://github.com/hapijs/topo/milestone/27",
+    "version": "5.0.0"
+  },
+  {
+    "date": "2019-10-11T21:01:33Z",
+    "id": 4724612,
+    "issues": [
+      {
+        "id": 504722666,
+        "labels": ["bug", "dependency"],
+        "number": 57,
+        "title": "Adjust hoek to `^8.3.x`",
+        "url": "https://github.com/hapijs/topo/pull/57"
+      }
+    ],
+    "number": 23,
+    "url": "https://github.com/hapijs/topo/milestone/23",
+    "version": "4.0.1"
+  },
+  {
+    "date": "2019-10-06T04:14:54Z",
+    "id": 4724611,
+    "issues": [
+      {
+        "id": 503048209,
+        "labels": ["breaking changes"],
+        "number": 55,
+        "title": "Move default export to Sorter",
+        "url": "https://github.com/hapijs/topo/issues/55"
+      },
+      {
+        "id": 503048144,
+        "labels": ["dependency", "breaking changes"],
+        "number": 54,
+        "title": "Drop node 8",
+        "url": "https://github.com/hapijs/topo/issues/54"
+      }
+    ],
+    "number": 22,
+    "url": "https://github.com/hapijs/topo/milestone/22",
+    "version": "4.0.0"
+  },
+  {
+    "date": "2019-10-11T21:01:31Z",
+    "id": 4724618,
+    "issues": [
+      {
+        "id": 506055401,
+        "labels": ["bug", "dependency"],
+        "number": 58,
+        "title": "Update hoek dep",
+        "url": "https://github.com/hapijs/topo/issues/58"
+      }
+    ],
+    "number": 24,
+    "url": "https://github.com/hapijs/topo/milestone/24",
+    "version": "3.1.6"
+  },
+  {
+    "date": "2019-10-06T04:13:19Z",
+    "id": 4675625,
+    "issues": [
+      {
+        "id": 503048260,
+        "labels": ["bug", "types"],
+        "number": 56,
+        "title": "Remove types",
+        "url": "https://github.com/hapijs/topo/issues/56"
+      }
+    ],
+    "number": 21,
+    "url": "https://github.com/hapijs/topo/milestone/21",
+    "version": "3.1.5"
+  },
+  {
+    "date": "2019-09-19T22:17:36Z",
+    "id": 4556619,
+    "issues": [
+      {
+        "id": 487394016,
+        "labels": ["types"],
+        "number": 46,
+        "title": "Added TS declarations",
+        "url": "https://github.com/hapijs/topo/pull/46"
+      }
+    ],
+    "number": 20,
+    "url": "https://github.com/hapijs/topo/milestone/20",
+    "version": "3.1.4"
+  },
+  {
+    "date": "2019-08-07T21:54:45Z",
+    "id": 4444145,
+    "issues": [
+      {
+        "id": 478156648,
+        "labels": ["dependency"],
+        "number": 43,
+        "title": "Direct hoek method require",
+        "url": "https://github.com/hapijs/topo/issues/43"
+      }
+    ],
+    "number": 19,
+    "url": "https://github.com/hapijs/topo/milestone/19",
+    "version": "3.1.3"
+  },
+  {
+    "date": "2019-06-26T18:51:16Z",
+    "id": 4184499,
+    "issues": [
+      {
+        "id": 461127334,
+        "labels": ["dependency"],
+        "number": 42,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/topo/issues/42"
+      }
+    ],
+    "number": 18,
+    "url": "https://github.com/hapijs/topo/milestone/18",
+    "version": "3.1.2"
+  },
+  {
+    "date": "2019-03-29T22:38:28Z",
+    "id": 4184256,
+    "issues": [
+      {
+        "id": 427202809,
+        "labels": ["dependency"],
+        "number": 41,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/topo/issues/41"
+      }
+    ],
+    "number": 17,
+    "url": "https://github.com/hapijs/topo/milestone/17",
+    "version": "3.1.1"
+  },
+  {
+    "date": "2019-03-29T20:02:17Z",
+    "id": 3792293,
+    "issues": [
+      {
+        "id": 427155448,
+        "labels": ["non issue"],
+        "number": 40,
+        "title": "Change module namespace",
+        "url": "https://github.com/hapijs/topo/issues/40"
+      }
+    ],
+    "number": 14,
+    "url": "https://github.com/hapijs/topo/milestone/14",
+    "version": "3.1.0"
+  },
+  {
+    "date": "2018-11-03T00:39:46Z",
+    "id": 3788934,
+    "issues": [
+      {
+        "id": 377003424,
+        "labels": ["non issue"],
+        "number": 35,
+        "title": "Remove engines",
+        "url": "https://github.com/hapijs/topo/issues/35"
+      }
+    ],
+    "number": 13,
+    "url": "https://github.com/hapijs/topo/milestone/13",
+    "version": "3.0.3"
+  },
+  {
+    "date": "2018-11-01T19:26:29Z",
+    "id": 3786771,
+    "issues": [
+      {
+        "id": 376535118,
+        "labels": ["dependency"],
+        "number": 33,
+        "title": "Update hoek v6",
+        "url": "https://github.com/hapijs/topo/issues/33"
+      }
+    ],
+    "number": 12,
+    "url": "https://github.com/hapijs/topo/milestone/12",
+    "version": "3.0.2"
+  },
+  {
+    "date": "2018-10-31T23:52:08Z",
+    "id": 2794180,
+    "issues": [
+      {
+        "id": 376202435,
+        "labels": ["non issue"],
+        "number": 31,
+        "title": "Cleanup",
+        "url": "https://github.com/hapijs/topo/issues/31"
+      },
+      {
+        "id": 347253231,
+        "labels": [],
+        "number": 30,
+        "title": "Update implementation to use classes. Update license and travis.",
+        "url": "https://github.com/hapijs/topo/pull/30"
+      }
+    ],
+    "number": 11,
+    "url": "https://github.com/hapijs/topo/milestone/11",
+    "version": "3.0.1"
+  },
+  {
+    "date": "2017-09-26T09:01:28Z",
+    "id": 2794179,
+    "issues": [
+      {
+        "id": 260545467,
+        "labels": ["breaking changes"],
+        "number": 28,
+        "title": "Node 8",
+        "url": "https://github.com/hapijs/topo/issues/28"
+      }
+    ],
+    "number": 10,
+    "url": "https://github.com/hapijs/topo/milestone/10",
+    "version": "3.0.0"
+  },
+  {
+    "date": "2019-03-22T06:44:53Z",
+    "id": 4162845,
+    "issues": [
+      {
+        "id": 424066166,
+        "labels": ["lts"],
+        "number": 39,
+        "title": "Commercial version of v2 branch",
+        "url": "https://github.com/hapijs/topo/issues/39"
+      }
+    ],
+    "number": 15,
+    "url": "https://github.com/hapijs/topo/milestone/15",
+    "version": "2.1.0"
+  },
+  {
+    "date": "2017-09-26T09:00:44Z",
+    "id": 1955971,
+    "issues": [
+      {
+        "id": 192190040,
+        "labels": ["feature"],
+        "number": 26,
+        "title": "Cleanup sort routine, clarify usage of seq vs index",
+        "url": "https://github.com/hapijs/topo/pull/26"
+      }
+    ],
+    "number": 9,
+    "url": "https://github.com/hapijs/topo/milestone/9",
+    "version": "2.0.3"
+  },
+  {
+    "date": "2016-07-17T18:46:24Z",
+    "id": 1777544,
+    "issues": [
+      {
+        "id": 165935653,
+        "labels": ["bug"],
+        "number": 25,
+        "title": "Ensure groups can be named after props of Object.prototype",
+        "url": "https://github.com/hapijs/topo/pull/25"
+      },
+      {
+        "id": 165791581,
+        "labels": ["bug"],
+        "number": 23,
+        "title": "A problem with group names that are also property names of Object.prototype",
+        "url": "https://github.com/hapijs/topo/issues/23"
+      },
+      {
+        "id": 158922115,
+        "labels": ["feature", "dependency"],
+        "number": 22,
+        "title": "Add .npmignore, update code to v3",
+        "url": "https://github.com/hapijs/topo/issues/22"
+      }
+    ],
+    "number": 8,
+    "url": "https://github.com/hapijs/topo/milestone/8",
+    "version": "2.0.2"
+  },
+  {
+    "date": "2016-05-19T20:13:32Z",
+    "id": 1387569,
+    "issues": [
+      {
+        "id": 155821651,
+        "labels": ["dependency", "test", "documentation"],
+        "number": 21,
+        "title": "Test on node v6, update dependencies",
+        "url": "https://github.com/hapijs/topo/pull/21"
+      }
+    ],
+    "number": 7,
+    "url": "https://github.com/hapijs/topo/milestone/7",
+    "version": "2.0.1"
+  },
+  {
+    "date": "2015-11-01T20:11:30Z",
+    "id": 1337345,
+    "issues": [
+      {
+        "id": 114489912,
+        "labels": ["breaking changes"],
+        "number": 19,
+        "title": "es6. Closes #18",
+        "url": "https://github.com/hapijs/topo/pull/19"
+      },
+      {
+        "id": 114489234,
+        "labels": ["breaking changes"],
+        "number": 18,
+        "title": "ES6 style changes and node v4",
+        "url": "https://github.com/hapijs/topo/issues/18"
+      }
+    ],
+    "number": 6,
+    "url": "https://github.com/hapijs/topo/milestone/6",
+    "version": "2.0.0"
+  },
+  {
+    "date": "2015-10-05T03:51:40Z",
+    "id": 1337322,
+    "issues": [
+      {
+        "id": 109726331,
+        "labels": ["dependency", "test"],
+        "number": 17,
+        "title": "Lab v6 and travis node versions",
+        "url": "https://github.com/hapijs/topo/pull/17"
+      },
+      {
+        "id": 109724642,
+        "labels": ["dependency", "test"],
+        "number": 16,
+        "title": "Update to lab v6",
+        "url": "https://github.com/hapijs/topo/issues/16"
+      },
+      {
+        "id": 109711928,
+        "labels": ["feature"],
+        "number": 15,
+        "title": "merge() support. Closes #14",
+        "url": "https://github.com/hapijs/topo/pull/15"
+      },
+      {
+        "id": 109711916,
+        "labels": ["feature"],
+        "number": 14,
+        "title": "Add merge() support",
+        "url": "https://github.com/hapijs/topo/issues/14"
+      }
+    ],
+    "number": 5,
+    "url": "https://github.com/hapijs/topo/milestone/5",
+    "version": "1.1.0"
+  },
+  {
+    "date": "2015-07-29T17:49:24Z",
+    "id": 814581,
+    "issues": [
+      {
+        "id": 97855108,
+        "labels": ["feature", "documentation"],
+        "number": 10,
+        "title": "Linting and repo style updates.",
+        "url": "https://github.com/hapijs/topo/pull/10"
+      },
+      {
+        "id": 96689375,
+        "labels": ["bug"],
+        "number": 9,
+        "title": "`before` option as array misbehaves",
+        "url": "https://github.com/hapijs/topo/issues/9"
+      },
+      {
+        "id": 94536289,
+        "labels": ["bug"],
+        "number": 7,
+        "title": "Fix bug with usage of `before` as array.",
+        "url": "https://github.com/hapijs/topo/pull/7"
+      },
+      {
+        "id": 59513103,
+        "labels": ["dependency", "test"],
+        "number": 6,
+        "title": "Update to Lab 5.x.x and Code 1.x.x",
+        "url": "https://github.com/hapijs/topo/pull/6"
+      }
+    ],
+    "number": 3,
+    "url": "https://github.com/hapijs/topo/milestone/3",
+    "version": "1.0.3"
+  },
+  {
+    "date": "2014-10-06T06:13:43Z",
+    "id": 740874,
+    "issues": [
+      {
+        "id": 44950795,
+        "labels": ["dependency"],
+        "number": 4,
+        "title": "lab 4.0",
+        "url": "https://github.com/hapijs/topo/issues/4"
+      }
+    ],
+    "number": 2,
+    "url": "https://github.com/hapijs/topo/milestone/2",
+    "version": "1.0.2"
+  },
+  {
+    "date": "2014-08-03T06:54:38Z",
+    "id": 740873,
+    "issues": [
+      {
+        "id": 34671209,
+        "labels": [],
+        "number": 1,
+        "title": "Don't die when user adds enumerable properties to Array.prototype",
+        "url": "https://github.com/hapijs/topo/pull/1"
+      }
+    ],
+    "number": 1,
+    "url": "https://github.com/hapijs/topo/milestone/1",
+    "version": "1.0.1"
+  }
+]

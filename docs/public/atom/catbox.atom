@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/catbox</id>
+    <title>@hapi/catbox changelog</title>
+    <updated>2023-02-11T20:38:22.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/catbox"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v12.1.1]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/58</id>
+        <link href="https://hapi.dev/module/catbox/changelog#12.1.1"/>
+        <updated>2023-02-11T20:38:22.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v12.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/pull/243">[#243]</a> chore: bump hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v12.1.0]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/57</id>
+        <link href="https://hapi.dev/module/catbox/changelog#12.1.0"/>
+        <updated>2022-11-17T23:30:25.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v12.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/pull/242">[#242]</a> Add typescript types</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v12.0.1]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/56</id>
+        <link href="https://hapi.dev/module/catbox/changelog#12.0.1"/>
+        <updated>2022-11-17T23:09:04.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v12.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/240">[#240]</a> Validate engines to detect legacy adaptor modules</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v12.0.0]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/55</id>
+        <link href="https://hapi.dev/module/catbox/changelog#12.0.0"/>
+        <updated>2022-11-17T23:09:02.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v12.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/pull/239">[#239]</a> Support node v18 and drop node v12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v11.1.1]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/54</id>
+        <link href="https://hapi.dev/module/catbox/changelog#11.1.1"/>
+        <updated>2022-05-08T21:31:43.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v11.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/pull/231">[#231]</a> Replace joi with validate</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v11.1.0]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/53</id>
+        <link href="https://hapi.dev/module/catbox/changelog#11.1.0"/>
+        <updated>2020-03-14T21:26:04.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v11.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/229">[#229]</a> Expose cache client in policy</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v11.0.1]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/52</id>
+        <link href="https://hapi.dev/module/catbox/changelog#11.0.1"/>
+        <updated>2020-01-20T08:48:04.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v11.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/228">[#228]</a> pendingGenerateTimeout causes weird timing situation</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v11.0.0]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/51</id>
+        <link href="https://hapi.dev/module/catbox/changelog#11.0.0"/>
+        <updated>2020-01-04T23:25:30.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v11.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/227">[#227]</a> Only node 12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v10.2.3]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/49</id>
+        <link href="https://hapi.dev/module/catbox/changelog#10.2.3"/>
+        <updated>2019-09-12T22:36:08.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v10.2.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/220">[#220]</a> Update joi</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v10.2.2]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/48</id>
+        <link href="https://hapi.dev/module/catbox/changelog#10.2.2"/>
+        <updated>2019-08-14T05:08:49.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v10.2.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/217">[#217]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v10.2.1]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/47</id>
+        <link href="https://hapi.dev/module/catbox/changelog#10.2.1"/>
+        <updated>2019-04-02T05:01:00.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v10.2.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/216">[#216]</a> Update joi dep</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v10.2.0]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/46</id>
+        <link href="https://hapi.dev/module/catbox/changelog#10.2.0"/>
+        <updated>2019-04-01T21:26:47.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v10.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/215">[#215]</a> Old pendingGenerateTimeout can clear new one</li><li><a href="https://github.com/hapijs/catbox/issues/210">[#210]</a> If generate takes longer than staleTimeout, errors get swallowed</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v10.1.0]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/43</id>
+        <link href="https://hapi.dev/module/catbox/changelog#10.1.0"/>
+        <updated>2019-03-30T21:13:47.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v10.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/214">[#214]</a> Change module namespace</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v10.0.6]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/42</id>
+        <link href="https://hapi.dev/module/catbox/changelog#10.0.6"/>
+        <updated>2018-12-18T15:38:45.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v10.0.6]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/pull/208">[#208]</a> Add changelog.md</li><li><a href="https://github.com/hapijs/catbox/pull/206">[#206]</a> Support ioredis client option for catbox-redis</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v10.0.5]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/41</id>
+        <link href="https://hapi.dev/module/catbox/changelog#10.0.5"/>
+        <updated>2018-11-03T00:19:51.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v10.0.5]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/205">[#205]</a> Remove engines</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v10.0.4]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/40</id>
+        <link href="https://hapi.dev/module/catbox/changelog#10.0.4"/>
+        <updated>2018-11-01T07:51:26.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v10.0.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/204">[#204]</a> Update hoek v6</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v10.0.3]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/39</id>
+        <link href="https://hapi.dev/module/catbox/changelog#10.0.3"/>
+        <updated>2018-09-17T17:07:12.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v10.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/201">[#201]</a> Update lab</li><li><a href="https://github.com/hapijs/catbox/pull/200">[#200]</a> Unhandled rejection on get() errors</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v10.0.2]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/38</id>
+        <link href="https://hapi.dev/module/catbox/changelog#10.0.2"/>
+        <updated>2017-11-03T20:29:31.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v10.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/194">[#194]</a> Add bounce protection</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v10.0.1]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/37</id>
+        <link href="https://hapi.dev/module/catbox/changelog#10.0.1"/>
+        <updated>2017-11-03T06:39:14.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v10.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/193">[#193]</a> Update boom</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v10.0.0]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/36</id>
+        <link href="https://hapi.dev/module/catbox/changelog#10.0.0"/>
+        <updated>2017-11-03T06:34:43.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v10.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/192">[#192]</a> Require clients to be async</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v9.0.0]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/35</id>
+        <link href="https://hapi.dev/module/catbox/changelog#9.0.0"/>
+        <updated>2017-10-17T20:01:05.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v9.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/191">[#191]</a> Change policy.get() return value to plain (with override option)</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v8.0.1]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/34</id>
+        <link href="https://hapi.dev/module/catbox/changelog#8.0.1"/>
+        <updated>2017-09-27T10:09:09.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v8.0.1]]></summary>
+        <content type="html"><![CDATA[<ul></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v8.0.0]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/33</id>
+        <link href="https://hapi.dev/module/catbox/changelog#8.0.0"/>
+        <updated>2017-09-26T06:47:58.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v8.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/pull/190">[#190]</a> Migrate to async/await</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v7.2.0]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/44</id>
+        <link href="https://hapi.dev/module/catbox/changelog#7.2.0"/>
+        <updated>2019-03-30T21:02:21.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v7.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/213">[#213]</a> Commercial version of v7 branch</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v7.1.5]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/32</id>
+        <link href="https://hapi.dev/module/catbox/changelog#7.1.5"/>
+        <updated>2017-07-14T11:52:26.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v7.1.5]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/pull/185">[#185]</a> Fix pendingGenerateTimeout timeout issue</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v7.1.4]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/31</id>
+        <link href="https://hapi.dev/module/catbox/changelog#7.1.4"/>
+        <updated>2017-05-28T00:06:13.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v7.1.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/pull/178">[#178]</a> Ensure generate timeout is triggered when staleTimeout &gt; ttl</li><li><a href="https://github.com/hapijs/catbox/issues/166">[#166]</a> Can we remove the max() from staleIn?</li><li><a href="https://github.com/hapijs/catbox/issues/165">[#165]</a> Can't drop method without arguments</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v7.1.3]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/30</id>
+        <link href="https://hapi.dev/module/catbox/changelog#7.1.3"/>
+        <updated>2016-11-29T01:57:59.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v7.1.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/176">[#176]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v7.1.2]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/29</id>
+        <link href="https://hapi.dev/module/catbox/changelog#7.1.2"/>
+        <updated>2016-07-27T19:31:34.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v7.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/168">[#168]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v7.1.1]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/28</id>
+        <link href="https://hapi.dev/module/catbox/changelog#7.1.1"/>
+        <updated>2016-05-19T18:04:58.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v7.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/pull/162">[#162]</a> Test on node v6, update dependencies</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v7.1.0]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/27</id>
+        <link href="https://hapi.dev/module/catbox/changelog#7.1.0"/>
+        <updated>2016-01-04T22:21:59.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v7.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/pull/152">[#152]</a> Adding pendingGenerateTimeout</li><li><a href="https://github.com/hapijs/catbox/issues/149">[#149]</a> Proposal: Stale while revalidate - prevent multiple generate calls</li><li><a href="https://github.com/hapijs/catbox/pull/147">[#147]</a> Update drop function to allow for object keys</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v7.0.0]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/26</id>
+        <link href="https://hapi.dev/module/catbox/changelog#7.0.0"/>
+        <updated>2015-11-02T00:22:12.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v7.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/146">[#146]</a> ES6 style changes and node v4</li><li><a href="https://github.com/hapijs/catbox/pull/145">[#145]</a> Fixed this.constructor issue</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v6.0.0]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/25</id>
+        <link href="https://hapi.dev/module/catbox/changelog#6.0.0"/>
+        <updated>2015-08-12T06:25:43.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v6.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/140">[#140]</a> Replace generate cache error handing options</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v5.0.0]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/24</id>
+        <link href="https://hapi.dev/module/catbox/changelog#5.0.0"/>
+        <updated>2015-08-10T00:11:31.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v5.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/137">[#137]</a> Add generateOnGetError option</li><li><a href="https://github.com/hapijs/catbox/issues/136">[#136]</a> Pass cache set() errors when generating value on get()</li><li><a href="https://github.com/hapijs/catbox/pull/134">[#134]</a> Require generateTimeout with generateFunc.</li><li><a href="https://github.com/hapijs/catbox/pull/128">[#128]</a> Explicitly binding process.domain to the callback</li><li><a href="https://github.com/hapijs/catbox/issues/127">[#127]</a> callbacks are called with wrong process.domain</li><li><a href="https://github.com/hapijs/catbox/issues/115">[#115]</a> get() can get stuck when first request never returns</li><li><a href="https://github.com/hapijs/catbox/issues/70">[#70]</a> No way to monitor cache error rates</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v4.3.0]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/23</id>
+        <link href="https://hapi.dev/module/catbox/changelog#4.3.0"/>
+        <updated>2015-06-06T16:49:09.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v4.3.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/pull/114">[#114]</a> Expose cache engine connection isReady as public method</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v4.2.2]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/22</id>
+        <link href="https://hapi.dev/module/catbox/changelog#4.2.2"/>
+        <updated>2015-03-11T22:18:29.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v4.2.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/pull/120">[#120]</a> Upgrade to Joi 6</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v4.2.1]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/21</id>
+        <link href="https://hapi.dev/module/catbox/changelog#4.2.1"/>
+        <updated>2015-01-22T20:40:43.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v4.2.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/pull/116">[#116]</a> Prefix keys with a `'+'` when using object as a hash</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v4.2.0]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/20</id>
+        <link href="https://hapi.dev/module/catbox/changelog#4.2.0"/>
+        <updated>2014-11-19T23:06:29.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v4.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/113">[#113]</a> Allow empty keys</li><li><a href="https://github.com/hapijs/catbox/pull/109">[#109]</a> Return cached on error when dropOnError is false</li><li><a href="https://github.com/hapijs/catbox/pull/105">[#105]</a> StaleIn can be function.</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v4.1.0]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/19</id>
+        <link href="https://hapi.dev/module/catbox/changelog#4.1.0"/>
+        <updated>2014-11-05T02:57:07.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v4.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/111">[#111]</a> Allow changing policy rules after construction</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v4.0.3]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/18</id>
+        <link href="https://hapi.dev/module/catbox/changelog#4.0.3"/>
+        <updated>2014-10-09T07:59:02.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v4.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/104">[#104]</a> Fix tests</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v4.0.2]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/17</id>
+        <link href="https://hapi.dev/module/catbox/changelog#4.0.2"/>
+        <updated>2014-10-09T07:44:23.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v4.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/103">[#103]</a> Explicitly allow hapi keys in policy instead of allowUnknown</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v4.0.1]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/16</id>
+        <link href="https://hapi.dev/module/catbox/changelog#4.0.1"/>
+        <updated>2014-10-09T07:28:57.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v4.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/102">[#102]</a> Use joi for validating policy rules</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v4.0.0]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/15</id>
+        <link href="https://hapi.dev/module/catbox/changelog#4.0.0"/>
+        <updated>2014-10-09T07:03:44.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v4.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/101">[#101]</a> Change policy.get() callback to use a consistent signature regardless of generateFunc</li><li><a href="https://github.com/hapijs/catbox/issues/100">[#100]</a> Require generateFunc options for staleIn, staleTimeout, and generateTimeout</li><li><a href="https://github.com/hapijs/catbox/issues/99">[#99]</a> Remove getOrGenerate()</li><li><a href="https://github.com/hapijs/catbox/pull/98">[#98]</a> Adding ability to retain a stale value when generate function fails</li><li><a href="https://github.com/hapijs/catbox/issues/97">[#97]</a> Retain stale on error</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v3.4.3]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/14</id>
+        <link href="https://hapi.dev/module/catbox/changelog#3.4.3"/>
+        <updated>2014-10-08T23:49:36.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v3.4.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/95">[#95]</a> Leftover background timeouts can interlace with new requests</li><li><a href="https://github.com/hapijs/catbox/pull/93">[#93]</a> Rarely cache can serve old value having slower backend</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v3.4.2]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/13</id>
+        <link href="https://hapi.dev/module/catbox/changelog#3.4.2"/>
+        <updated>2014-09-16T21:14:22.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v3.4.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/pull/86">[#86]</a> Fix concurrent getOrGenerate bug. Closes #85</li><li><a href="https://github.com/hapijs/catbox/pull/85">[#85]</a> Problems with concurrent invocation of getOrGenerate.</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v3.4.1]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/12</id>
+        <link href="https://hapi.dev/module/catbox/changelog#3.4.1"/>
+        <updated>2014-09-09T21:14:01.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v3.4.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/84">[#84]</a> null or undefined expiresIn/At break compile</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v3.4.0]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/11</id>
+        <link href="https://hapi.dev/module/catbox/changelog#3.4.0"/>
+        <updated>2014-09-09T21:14:02.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v3.4.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/83">[#83]</a> Errors thrown in get() block pending queue</li><li><a href="https://github.com/hapijs/catbox/issues/82">[#82]</a> Allow setting cache with default expiresIn 0 (no cache)</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v3.3.0]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/10</id>
+        <link href="https://hapi.dev/module/catbox/changelog#3.3.0"/>
+        <updated>2014-09-08T19:10:15.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v3.3.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/80">[#80]</a> Allow setting policy without expiration when server side disabled</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v3.2.0]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/9</id>
+        <link href="https://hapi.dev/module/catbox/changelog#3.2.0"/>
+        <updated>2014-09-08T15:15:32.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v3.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/pull/79">[#79]</a> Queue get requests</li><li><a href="https://github.com/hapijs/catbox/issues/78">[#78]</a> Incomplete coverage when testing at 23:00</li><li><a href="https://github.com/hapijs/catbox/issues/77">[#77]</a> expiredAt fails to zero milliseconds</li><li><a href="https://github.com/hapijs/catbox/issues/76">[#76]</a> expiredAt returns negative ttl on created &lt; expired &lt; now</li><li><a href="https://github.com/hapijs/catbox/issues/75">[#75]</a> Move generate method to policy config</li><li><a href="https://github.com/hapijs/catbox/issues/73">[#73]</a> Chain concurrent gets</li><li><a href="https://github.com/hapijs/catbox/pull/71">[#71]</a> Update to Lab 4</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v3.1.0]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/8</id>
+        <link href="https://hapi.dev/module/catbox/changelog#3.1.0"/>
+        <updated>2014-08-03T04:35:51.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v3.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/69">[#69]</a> Error fails to clear cache is error arrives before stale timeout</li><li><a href="https://github.com/hapijs/catbox/issues/68">[#68]</a> staleTimeout for first request should returns null if no data at timeout time</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox v3.0.0]]></title>
+        <id>https://github.com/hapijs/catbox/milestone/6</id>
+        <link href="https://hapi.dev/module/catbox/changelog#3.0.0"/>
+        <updated>2014-06-11T05:43:03.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox/issues/67">[#67]</a> Remove internal require() call</li><li><a href="https://github.com/hapijs/catbox/pull/66">[#66]</a> Remove large ttl check</li><li><a href="https://github.com/hapijs/catbox/issues/65">[#65]</a> Move 32bit ttl restriction to catbox-memory</li></ul>]]></content>
+    </entry>
+</feed>

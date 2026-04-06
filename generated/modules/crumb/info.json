@@ -1,0 +1,22 @@
+{
+  "api": true,
+  "forks": 48,
+  "isPlugin": true,
+  "link": "https://github.com/hapijs/crumb",
+  "name": "crumb",
+  "package": "@hapi/crumb",
+  "slogan": "CSRF crumb generation and validation for hapi.",
+  "sloganHtml": "CSRF crumb generation and validation for hapi.",
+  "stars": 170,
+  "updated": "2024-10-23T15:29:18Z",
+  "versions": [
+    {
+      "branch": "v9.0.1",
+      "license": "BSD",
+      "name": "9.0.1",
+      "node": ">= 16"
+    }
+  ],
+  "versionsArray": ["9.0.1"],
+  "latestVersion": "9.x.x"
+}

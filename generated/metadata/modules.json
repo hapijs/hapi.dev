@@ -1,0 +1,1038 @@
+{
+  "accept": {
+    "forks": 30,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/accept",
+    "package": "@hapi/accept",
+    "slogan": "HTTP Accept-* headers parsing.",
+    "sloganHtml": "HTTP Accept-* headers parsing.",
+    "stars": 55,
+    "updated": "2024-10-23T14:51:04Z",
+    "versions": [
+      {
+        "branch": "v6.0.3",
+        "license": "BSD",
+        "name": "6.0.3",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["6.0.3"],
+    "latestVersion": "6.x.x"
+  },
+  "ammo": {
+    "forks": 9,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/ammo",
+    "package": "@hapi/ammo",
+    "slogan": "HTTP Range processing utilities.",
+    "sloganHtml": "HTTP Range processing utilities.",
+    "stars": 1,
+    "updated": "2024-10-23T15:38:18Z",
+    "versions": [
+      {
+        "branch": "v6.0.1",
+        "license": "BSD",
+        "name": "6.0.1",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["6.0.1"],
+    "latestVersion": "6.x.x"
+  },
+  "b64": {
+    "forks": 12,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/b64",
+    "package": "@hapi/b64",
+    "slogan": "Base64 streaming encoder and decoder.",
+    "sloganHtml": "Base64 streaming encoder and decoder.",
+    "stars": 42,
+    "updated": "2024-10-23T15:42:49Z",
+    "versions": [
+      {
+        "branch": "v6.0.1",
+        "license": "BSD",
+        "name": "6.0.1",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["6.0.1"],
+    "latestVersion": "6.x.x"
+  },
+  "basic": {
+    "forks": 64,
+    "isPlugin": true,
+    "link": "https://github.com/hapijs/basic",
+    "package": "@hapi/basic",
+    "slogan": "Basic authentication plugin.",
+    "sloganHtml": "Basic authentication plugin.",
+    "stars": 146,
+    "updated": "2024-10-23T14:42:22Z",
+    "versions": [
+      {
+        "branch": "v7.0.2",
+        "license": "BSD",
+        "name": "7.0.2",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["7.0.2"],
+    "latestVersion": "7.x.x"
+  },
+  "bell": {
+    "forks": 210,
+    "isPlugin": true,
+    "link": "https://github.com/hapijs/bell",
+    "package": "@hapi/bell",
+    "slogan": "Third-party login plugin for hapi.js.",
+    "sloganHtml": "Third-party login plugin for hapi.js.",
+    "stars": 620,
+    "updated": "2025-03-12T12:09:23Z",
+    "versions": [
+      {
+        "branch": "v13.1.0",
+        "license": "BSD",
+        "name": "13.1.0",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["13.1.0"],
+    "latestVersion": "13.x.x"
+  },
+  "boom": {
+    "forks": 191,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/boom",
+    "package": "@hapi/boom",
+    "slogan": "HTTP-friendly error objects.",
+    "sloganHtml": "HTTP-friendly error objects.",
+    "stars": 2925,
+    "updated": "2024-10-23T14:38:54Z",
+    "versions": [
+      {
+        "branch": "v10.0.1",
+        "license": "BSD",
+        "name": "10.0.1",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["10.0.1"],
+    "latestVersion": "10.x.x"
+  },
+  "bossy": {
+    "forks": 30,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/bossy",
+    "package": "@hapi/bossy",
+    "slogan": "Command line options parser.",
+    "sloganHtml": "Command line options parser.",
+    "stars": 46,
+    "updated": "2024-10-23T15:40:09Z",
+    "versions": [
+      {
+        "branch": "v5.1.1",
+        "license": "BSD",
+        "name": "5.1.1",
+        "node": ">= 16"
+      },
+      {
+        "branch": "v6.0.1",
+        "license": "BSD",
+        "name": "6.0.1",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["6.0.1", "5.1.1"],
+    "latestVersion": "6.x.x"
+  },
+  "bounce": {
+    "forks": 13,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/bounce",
+    "package": "@hapi/bounce",
+    "slogan": "Selective error catching and rewrite rules.",
+    "sloganHtml": "Selective error catching and rewrite rules.",
+    "stars": 176,
+    "updated": "2024-10-23T15:47:48Z",
+    "versions": [
+      {
+        "branch": "v3.0.2",
+        "license": "BSD",
+        "name": "3.0.2",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["3.0.2"],
+    "latestVersion": "3.x.x"
+  },
+  "bourne": {
+    "forks": 11,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/bourne",
+    "package": "@hapi/bourne",
+    "slogan": "JSON.parse() drop-in replacement with prototype poisoning protection.",
+    "sloganHtml": "JSON.parse() drop-in replacement with prototype poisoning protection.",
+    "stars": 179,
+    "updated": "2024-10-23T15:09:24Z",
+    "versions": [
+      {
+        "branch": "v3.0.0",
+        "license": "BSD",
+        "name": "3.0.0",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["3.0.0"],
+    "latestVersion": "3.x.x"
+  },
+  "call": {
+    "forks": 27,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/call",
+    "package": "@hapi/call",
+    "slogan": "Simple HTTP Router.",
+    "sloganHtml": "Simple HTTP Router.",
+    "stars": 37,
+    "updated": "2024-10-23T15:38:49Z",
+    "versions": [
+      {
+        "branch": "v9.0.1",
+        "license": "BSD",
+        "name": "9.0.1",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["9.0.1"],
+    "latestVersion": "9.x.x"
+  },
+  "catbox": {
+    "forks": 72,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/catbox",
+    "package": "@hapi/catbox",
+    "slogan": "Multi-strategy object caching service.",
+    "sloganHtml": "Multi-strategy object caching service.",
+    "stars": 494,
+    "updated": "2024-10-23T15:27:54Z",
+    "versions": [
+      {
+        "branch": "v12.1.1",
+        "license": "BSD",
+        "name": "12.1.1",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["12.1.1"],
+    "latestVersion": "12.x.x"
+  },
+  "catbox-memcached": {
+    "forks": 17,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/catbox-memcached",
+    "package": "@hapi/catbox-memcached",
+    "slogan": "Memcached adaptor for [catbox](https://github.com/hapijs/catbox).",
+    "sloganHtml": "Memcached adaptor for <a href=\"https://github.com/hapijs/catbox\" target=\"_blank\" rel=\"noreferrer\">catbox</a>.",
+    "stars": 11,
+    "updated": "2022-11-06T04:05:12Z",
+    "versions": [
+      {
+        "branch": "v4.0.0",
+        "license": "BSD",
+        "name": "4.0.0",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["4.0.0"],
+    "latestVersion": "4.x.x"
+  },
+  "catbox-memory": {
+    "forks": 29,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/catbox-memory",
+    "package": "@hapi/catbox-memory",
+    "slogan": "Memory adaptor for [catbox](https://github.com/hapijs/catbox).",
+    "sloganHtml": "Memory adaptor for <a href=\"https://github.com/hapijs/catbox\" target=\"_blank\" rel=\"noreferrer\">catbox</a>.",
+    "stars": 33,
+    "updated": "2024-10-23T15:27:21Z",
+    "versions": [
+      {
+        "branch": "v6.0.2",
+        "license": "BSD",
+        "name": "6.0.2",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["6.0.2"],
+    "latestVersion": "6.x.x"
+  },
+  "catbox-object": {
+    "forks": 6,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/catbox-object",
+    "package": "@hapi/catbox-object",
+    "slogan": "Object cache adaptor for [catbox](https://github.com/hapijs/catbox).",
+    "sloganHtml": "Object cache adaptor for <a href=\"https://github.com/hapijs/catbox\" target=\"_blank\" rel=\"noreferrer\">catbox</a>.",
+    "stars": 2,
+    "updated": "2024-10-23T15:26:43Z",
+    "versions": [
+      {
+        "branch": "v3.0.1",
+        "license": "BSD",
+        "name": "3.0.1",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["3.0.1"],
+    "latestVersion": "3.x.x"
+  },
+  "catbox-redis": {
+    "forks": 62,
+    "isPlugin": true,
+    "link": "https://github.com/hapijs/catbox-redis",
+    "package": "@hapi/catbox-redis",
+    "slogan": "Redis adapter for [catbox](https://github.com/hapijs/catbox).",
+    "sloganHtml": "Redis adapter for <a href=\"https://github.com/hapijs/catbox\" target=\"_blank\" rel=\"noreferrer\">catbox</a>.",
+    "stars": 70,
+    "updated": "2024-10-23T15:26:12Z",
+    "versions": [
+      {
+        "branch": "v7.0.2",
+        "license": "BSD",
+        "name": "7.0.2",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["7.0.2"],
+    "latestVersion": "7.x.x"
+  },
+  "code": {
+    "forks": 73,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/code",
+    "package": "@hapi/code",
+    "slogan": "BDD assertion library.",
+    "sloganHtml": "BDD assertion library.",
+    "stars": 231,
+    "updated": "2024-10-23T15:37:52Z",
+    "versions": [
+      {
+        "branch": "v9.0.3",
+        "license": "BSD",
+        "name": "9.0.3",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["9.0.3"],
+    "latestVersion": "9.x.x"
+  },
+  "content": {
+    "forks": 13,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/content",
+    "package": "@hapi/content",
+    "slogan": "HTTP Content-* headers parsing.",
+    "sloganHtml": "HTTP Content-* headers parsing.",
+    "stars": 7,
+    "updated": "2026-04-02T08:04:34Z",
+    "versions": [
+      {
+        "branch": "v6.0.1",
+        "license": "BSD",
+        "name": "6.0.1",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["6.0.1"],
+    "latestVersion": "6.x.x"
+  },
+  "cookie": {
+    "forks": 98,
+    "isPlugin": true,
+    "link": "https://github.com/hapijs/cookie",
+    "package": "@hapi/cookie",
+    "slogan": "Cookie authentication plugin.",
+    "sloganHtml": "Cookie authentication plugin.",
+    "stars": 229,
+    "updated": "2024-10-23T15:43:20Z",
+    "versions": [
+      {
+        "branch": "v12.0.1",
+        "license": "BSD",
+        "name": "12.0.1",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["12.0.1"],
+    "latestVersion": "12.x.x"
+  },
+  "crumb": {
+    "forks": 48,
+    "isPlugin": true,
+    "link": "https://github.com/hapijs/crumb",
+    "package": "@hapi/crumb",
+    "slogan": "CSRF crumb generation and validation for hapi.",
+    "sloganHtml": "CSRF crumb generation and validation for hapi.",
+    "stars": 170,
+    "updated": "2024-10-23T15:29:18Z",
+    "versions": [
+      {
+        "branch": "v9.0.1",
+        "license": "BSD",
+        "name": "9.0.1",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["9.0.1"],
+    "latestVersion": "9.x.x"
+  },
+  "cryptiles": {
+    "forks": 25,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/cryptiles",
+    "package": "@hapi/cryptiles",
+    "slogan": "General purpose crypto utilities.",
+    "sloganHtml": "General purpose crypto utilities.",
+    "stars": 183,
+    "updated": "2025-12-11T11:38:33Z",
+    "versions": [
+      {
+        "branch": "v6.0.3",
+        "license": "BSD",
+        "name": "6.0.3",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["6.0.3"],
+    "latestVersion": "6.x.x"
+  },
+  "eslint-plugin": {
+    "forks": 10,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/eslint-plugin",
+    "package": "@hapi/eslint-plugin",
+    "slogan": "ESLint plugin containing hapi style guide rules and config.",
+    "sloganHtml": "ESLint plugin containing hapi style guide rules and config.",
+    "stars": 22,
+    "updated": "2026-04-01T09:41:45Z",
+    "versions": [
+      {
+        "branch": "v6.0.0",
+        "license": "BSD",
+        "name": "6.0.0",
+        "node": ">= 16"
+      },
+      {
+        "branch": "v7.0.0",
+        "license": "BSD",
+        "name": "7.0.0",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["7.0.0", "6.0.0"],
+    "latestVersion": "7.x.x"
+  },
+  "file": {
+    "forks": 6,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/file",
+    "package": "@hapi/file",
+    "slogan": "General purpose file utilities.",
+    "sloganHtml": "General purpose file utilities.",
+    "stars": 5,
+    "updated": "2022-05-30T23:06:24Z",
+    "versions": [
+      {
+        "branch": "v3.0.0",
+        "license": "BSD",
+        "name": "3.0.0",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["3.0.0"],
+    "latestVersion": "3.x.x"
+  },
+  "glue": {
+    "forks": 60,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/glue",
+    "package": "@hapi/glue",
+    "slogan": "Server composer for hapi.js.",
+    "sloganHtml": "Server composer for hapi.js.",
+    "stars": 244,
+    "updated": "2024-10-23T15:39:45Z",
+    "versions": [
+      {
+        "branch": "v9.0.1",
+        "license": "BSD",
+        "name": "9.0.1",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["9.0.1"],
+    "latestVersion": "9.x.x"
+  },
+  "h2o2": {
+    "forks": 61,
+    "isPlugin": true,
+    "link": "https://github.com/hapijs/h2o2",
+    "package": "@hapi/h2o2",
+    "slogan": "Proxy handler for hapi.js.",
+    "sloganHtml": "Proxy handler for hapi.js.",
+    "stars": 164,
+    "updated": "2024-10-23T15:12:00Z",
+    "versions": [
+      {
+        "branch": "v10.0.4",
+        "license": "BSD",
+        "name": "10.0.4",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["10.0.4"],
+    "latestVersion": "10.x.x"
+  },
+  "hapi": {
+    "forks": 1346,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/hapi",
+    "package": "@hapi/hapi",
+    "slogan": "The Simple, Secure Framework Developers Trust",
+    "sloganHtml": "The Simple, Secure Framework Developers Trust",
+    "stars": 14782,
+    "updated": "2026-04-02T08:28:56Z",
+    "versions": [
+      {
+        "branch": "v20.3.0",
+        "license": "BSD",
+        "name": "20.3.0",
+        "node": ">= 16"
+      },
+      {
+        "branch": "v21.4.8",
+        "license": "BSD",
+        "name": "21.4.8",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["21.4.8", "20.3.0"],
+    "latestVersion": "21.x.x"
+  },
+  "heavy": {
+    "forks": 15,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/heavy",
+    "package": "@hapi/heavy",
+    "slogan": "Measure process load.",
+    "sloganHtml": "Measure process load.",
+    "stars": 75,
+    "updated": "2024-10-23T14:51:56Z",
+    "versions": [
+      {
+        "branch": "v8.0.1",
+        "license": "BSD",
+        "name": "8.0.1",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["8.0.1"],
+    "latestVersion": "8.x.x"
+  },
+  "hoek": {
+    "forks": 179,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/hoek",
+    "package": "@hapi/hoek",
+    "slogan": "Utility methods for the hapi ecosystem.",
+    "sloganHtml": "Utility methods for the hapi ecosystem.",
+    "stars": 484,
+    "updated": "2026-02-25T07:24:45Z",
+    "versions": [
+      {
+        "branch": "v11.0.7",
+        "license": "BSD",
+        "name": "11.0.7",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["11.0.7"],
+    "latestVersion": "11.x.x"
+  },
+  "inert": {
+    "forks": 49,
+    "isPlugin": true,
+    "link": "https://github.com/hapijs/inert",
+    "package": "@hapi/inert",
+    "slogan": "Static file and directory handlers for hapi.js.",
+    "sloganHtml": "Static file and directory handlers for hapi.js.",
+    "stars": 236,
+    "updated": "2024-10-23T15:13:24Z",
+    "versions": [
+      {
+        "branch": "v7.1.0",
+        "license": "BSD",
+        "name": "7.1.0",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["7.1.0"],
+    "latestVersion": "7.x.x"
+  },
+  "iron": {
+    "forks": 53,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/iron",
+    "package": "@hapi/iron",
+    "slogan": "Encapsulated tokens (encrypted and mac'ed objects).",
+    "sloganHtml": "Encapsulated tokens (encrypted and mac'ed objects).",
+    "stars": 631,
+    "updated": "2024-10-23T15:37:19Z",
+    "versions": [
+      {
+        "branch": "v7.0.1",
+        "license": "BSD",
+        "name": "7.0.1",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["7.0.1"],
+    "latestVersion": "7.x.x"
+  },
+  "jwt": {
+    "forks": 25,
+    "isPlugin": true,
+    "link": "https://github.com/hapijs/jwt",
+    "package": "@hapi/jwt",
+    "slogan": "JWT (JSON Web Token) Authentication.",
+    "sloganHtml": "JWT (JSON Web Token) Authentication.",
+    "stars": 35,
+    "updated": "2025-12-11T11:42:47Z",
+    "versions": [
+      {
+        "branch": "v3.2.3",
+        "license": "BSD",
+        "name": "3.2.3",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["3.2.3"],
+    "latestVersion": "3.x.x"
+  },
+  "lab": {
+    "forks": 177,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/lab",
+    "package": "@hapi/lab",
+    "slogan": "Node test utility.",
+    "sloganHtml": "Node test utility.",
+    "stars": 738,
+    "updated": "2026-03-26T19:23:31Z",
+    "versions": [
+      {
+        "branch": "v25.3.2",
+        "license": "BSD",
+        "name": "25.3.2",
+        "node": ">= 16"
+      },
+      {
+        "branch": "v26.0.1",
+        "license": "BSD",
+        "name": "26.0.1",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["26.0.1", "25.3.2"],
+    "latestVersion": "26.x.x"
+  },
+  "log": {
+    "forks": 5,
+    "isPlugin": true,
+    "link": "https://github.com/hapijs/log",
+    "package": "@hapi/log",
+    "slogan": "Logging for hapi framework.",
+    "sloganHtml": "Logging for hapi framework.",
+    "stars": 6,
+    "updated": "2024-10-23T15:40:54Z",
+    "versions": [
+      {
+        "branch": "v2.0.1",
+        "license": "BSD",
+        "name": "2.0.1",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["2.0.1"],
+    "latestVersion": "2.x.x"
+  },
+  "mimos": {
+    "forks": 13,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/mimos",
+    "package": "@hapi/mimos",
+    "slogan": "Mime database interface.",
+    "sloganHtml": "Mime database interface.",
+    "stars": 20,
+    "updated": "2024-10-23T21:34:46Z",
+    "versions": [
+      {
+        "branch": "v7.0.1",
+        "license": "BSD",
+        "name": "7.0.1",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["7.0.1"],
+    "latestVersion": "7.x.x"
+  },
+  "nes": {
+    "forks": 86,
+    "isPlugin": true,
+    "link": "https://github.com/hapijs/nes",
+    "package": "@hapi/nes",
+    "slogan": "WebSocket adapter plugin for hapi routes.",
+    "sloganHtml": "WebSocket adapter plugin for hapi routes.",
+    "stars": 501,
+    "updated": "2025-01-08T21:42:46Z",
+    "versions": [
+      {
+        "branch": "v13.0.1",
+        "license": "BSD",
+        "name": "13.0.1",
+        "node": ">= 16"
+      },
+      {
+        "branch": "v14.0.1",
+        "license": "BSD",
+        "name": "14.0.1",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["14.0.1", "13.0.1"],
+    "latestVersion": "14.x.x"
+  },
+  "nigel": {
+    "forks": 10,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/nigel",
+    "package": "@hapi/nigel",
+    "slogan": "Boyer-Moore-Horspool algorithms",
+    "sloganHtml": "Boyer-Moore-Horspool algorithms",
+    "stars": 16,
+    "updated": "2025-08-24T14:33:19Z",
+    "versions": [
+      {
+        "branch": "v5.0.1",
+        "license": "BSD",
+        "name": "5.0.1",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["5.0.1"],
+    "latestVersion": "5.x.x"
+  },
+  "oppsy": {
+    "forks": 19,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/oppsy",
+    "package": "@hapi/oppsy",
+    "slogan": "An EventEmitter useful for collecting hapi server ops information.",
+    "sloganHtml": "An EventEmitter useful for collecting hapi server ops information.",
+    "stars": 25,
+    "updated": "2024-10-23T14:52:58Z",
+    "versions": [
+      {
+        "branch": "v3.0.0",
+        "license": "BSD",
+        "name": "3.0.0",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["3.0.0"],
+    "latestVersion": "3.x.x"
+  },
+  "pez": {
+    "forks": 18,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/pez",
+    "package": "@hapi/pez",
+    "slogan": "Multipart parser.",
+    "sloganHtml": "Multipart parser.",
+    "stars": 34,
+    "updated": "2026-04-02T08:12:22Z",
+    "versions": [
+      {
+        "branch": "v6.1.1",
+        "license": "BSD",
+        "name": "6.1.1",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["6.1.1"],
+    "latestVersion": "6.x.x"
+  },
+  "podium": {
+    "forks": 21,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/podium",
+    "package": "@hapi/podium",
+    "slogan": "Event emitter with async features.",
+    "sloganHtml": "Event emitter with async features.",
+    "stars": 86,
+    "updated": "2025-01-07T22:49:33Z",
+    "versions": [
+      {
+        "branch": "v5.0.2",
+        "license": "BSD",
+        "name": "5.0.2",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["5.0.2"],
+    "latestVersion": "5.x.x"
+  },
+  "scooter": {
+    "forks": 24,
+    "isPlugin": true,
+    "link": "https://github.com/hapijs/scooter",
+    "package": "@hapi/scooter",
+    "slogan": "User-agent information plugin.",
+    "sloganHtml": "User-agent information plugin.",
+    "stars": 46,
+    "updated": "2026-03-23T08:49:02Z",
+    "versions": [
+      {
+        "branch": "v7.0.0",
+        "license": "BSD",
+        "name": "7.0.0",
+        "node": ">= 16"
+      },
+      {
+        "branch": "v8.0.0",
+        "license": "BSD",
+        "name": "8.0.0",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["8.0.0", "7.0.0"],
+    "latestVersion": "8.x.x"
+  },
+  "shot": {
+    "forks": 40,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/shot",
+    "package": "@hapi/shot",
+    "slogan": "Injects a fake HTTP request/response into your node server logic.",
+    "sloganHtml": "Injects a fake HTTP request/response into your node server logic.",
+    "stars": 196,
+    "updated": "2025-08-13T22:28:35Z",
+    "versions": [
+      {
+        "branch": "v6.0.2",
+        "license": "BSD",
+        "name": "6.0.2",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["6.0.2"],
+    "latestVersion": "6.x.x"
+  },
+  "somever": {
+    "forks": 10,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/somever",
+    "package": "@hapi/somever",
+    "slogan": "Semantic versioning rules parser, compatible with version ranges used in package.json files and the canonical [semver](https://www.npmjs.com/package/semver) module.",
+    "sloganHtml": "Semantic versioning rules parser, compatible with version ranges used in package.json files and the canonical <a href=\"https://www.npmjs.com/package/semver\" target=\"_blank\" rel=\"noreferrer\">semver</a> module.",
+    "stars": 0,
+    "updated": "2024-10-23T14:45:10Z",
+    "versions": [
+      {
+        "branch": "v4.1.1",
+        "license": "BSD",
+        "name": "4.1.1",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["4.1.1"],
+    "latestVersion": "4.x.x"
+  },
+  "sse": {
+    "forks": 0,
+    "isPlugin": true,
+    "link": "https://github.com/hapijs/sse",
+    "package": "@hapi/sse",
+    "slogan": "Server-Sent Events plugin for hapi.",
+    "sloganHtml": "Server-Sent Events plugin for hapi.",
+    "stars": 0,
+    "updated": "2026-04-07T18:44:00Z",
+    "versions": [
+      {
+        "branch": "v1.0.0",
+        "license": "BSD",
+        "name": "1.0.0",
+        "node": ">= 22"
+      }
+    ],
+    "versionsArray": ["1.0.0"],
+    "latestVersion": "1.x.x"
+  },
+  "statehood": {
+    "forks": 26,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/statehood",
+    "package": "@hapi/statehood",
+    "slogan": "HTTP State Management Utilities.",
+    "sloganHtml": "HTTP State Management Utilities.",
+    "stars": 21,
+    "updated": "2025-11-06T09:32:35Z",
+    "versions": [
+      {
+        "branch": "v8.2.1",
+        "license": "BSD",
+        "name": "8.2.1",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["8.2.1"],
+    "latestVersion": "8.x.x"
+  },
+  "subtext": {
+    "forks": 26,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/subtext",
+    "package": "@hapi/subtext",
+    "slogan": "HTTP payload parser.",
+    "sloganHtml": "HTTP payload parser.",
+    "stars": 24,
+    "updated": "2026-04-02T08:19:58Z",
+    "versions": [
+      {
+        "branch": "v8.1.2",
+        "license": "BSD",
+        "name": "8.1.2",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["8.1.2"],
+    "latestVersion": "8.x.x"
+  },
+  "teamwork": {
+    "forks": 13,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/teamwork",
+    "package": "@hapi/teamwork",
+    "slogan": "Wait for multiple callbacks",
+    "sloganHtml": "Wait for multiple callbacks",
+    "stars": 14,
+    "updated": "2025-08-21T15:04:16Z",
+    "versions": [
+      {
+        "branch": "v6.0.1",
+        "license": "BSD",
+        "name": "6.0.1",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["6.0.1"],
+    "latestVersion": "6.x.x"
+  },
+  "topo": {
+    "forks": 26,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/topo",
+    "package": "@hapi/topo",
+    "slogan": "Topological sorting with grouping support.",
+    "sloganHtml": "Topological sorting with grouping support.",
+    "stars": 108,
+    "updated": "2024-10-23T15:22:31Z",
+    "versions": [
+      {
+        "branch": "v6.0.2",
+        "license": "BSD",
+        "name": "6.0.2",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["6.0.2"],
+    "latestVersion": "6.x.x"
+  },
+  "vise": {
+    "forks": 12,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/vise",
+    "package": "@hapi/vise",
+    "slogan": "Treat multiple buffers as one.",
+    "sloganHtml": "Treat multiple buffers as one.",
+    "stars": 7,
+    "updated": "2024-10-23T15:41:23Z",
+    "versions": [
+      {
+        "branch": "v5.0.1",
+        "license": "BSD",
+        "name": "5.0.1",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["5.0.1"],
+    "latestVersion": "5.x.x"
+  },
+  "vision": {
+    "forks": 68,
+    "isPlugin": true,
+    "link": "https://github.com/hapijs/vision",
+    "package": "@hapi/vision",
+    "slogan": "Template rendering support for hapi.js.",
+    "sloganHtml": "Template rendering support for hapi.js.",
+    "stars": 198,
+    "updated": "2024-10-23T21:57:52Z",
+    "versions": [
+      {
+        "branch": "v7.0.3",
+        "license": "BSD",
+        "name": "7.0.3",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["7.0.3"],
+    "latestVersion": "7.x.x"
+  },
+  "wreck": {
+    "forks": 103,
+    "isPlugin": false,
+    "link": "https://github.com/hapijs/wreck",
+    "package": "@hapi/wreck",
+    "slogan": "HTTP client utilities.",
+    "sloganHtml": "HTTP client utilities.",
+    "stars": 378,
+    "updated": "2024-04-10T17:35:00Z",
+    "versions": [
+      {
+        "branch": "v18.1.0",
+        "license": "BSD",
+        "name": "18.1.0",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["18.1.0"],
+    "latestVersion": "18.x.x"
+  },
+  "yar": {
+    "forks": 58,
+    "isPlugin": true,
+    "link": "https://github.com/hapijs/yar",
+    "package": "@hapi/yar",
+    "slogan": "A hapi session manager.",
+    "sloganHtml": "A hapi session manager.",
+    "stars": 133,
+    "updated": "2025-03-22T11:36:48Z",
+    "versions": [
+      {
+        "branch": "v11.0.3",
+        "license": "BSD",
+        "name": "11.0.3",
+        "node": ">= 16"
+      }
+    ],
+    "versionsArray": ["11.0.3"],
+    "latestVersion": "11.x.x"
+  }
+}

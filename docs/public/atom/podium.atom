@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/podium</id>
+    <title>@hapi/podium changelog</title>
+    <updated>2025-01-07T22:49:01.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/podium"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v5.0.2]]></title>
+        <id>https://github.com/hapijs/podium/milestone/38</id>
+        <link href="https://hapi.dev/module/podium/changelog#5.0.2"/>
+        <updated>2025-01-07T22:49:01.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v5.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/pull/84">[#84]</a> fix: typescript exactOptionalPropertyTypes issue</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v5.0.1]]></title>
+        <id>https://github.com/hapijs/podium/milestone/37</id>
+        <link href="https://hapi.dev/module/podium/changelog#5.0.1"/>
+        <updated>2025-01-07T22:48:24.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v5.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/pull/82">[#82]</a> chore: bump hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v5.0.0]]></title>
+        <id>https://github.com/hapijs/podium/milestone/36</id>
+        <link href="https://hapi.dev/module/podium/changelog#5.0.0"/>
+        <updated>2022-05-08T19:54:56.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v5.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/pull/80">[#80]</a> Upgrade deps for node v14+</li><li><a href="https://github.com/hapijs/podium/pull/79">[#79]</a> Support podium.gauge() method</li><li><a href="https://github.com/hapijs/podium/pull/76">[#76]</a> Prepare a breaking build</li><li><a href="https://github.com/hapijs/podium/issues/75">[#75]</a> Drop node 12 support</li><li><a href="https://github.com/hapijs/podium/issues/74">[#74]</a> Prepare for ESM</li><li><a href="https://github.com/hapijs/podium/issues/73">[#73]</a> Don't return promise from emit()</li><li><a href="https://github.com/hapijs/podium/issues/65">[#65]</a> Remove "podium" event source</li><li><a href="https://github.com/hapijs/podium/issues/64">[#64]</a> A thrown error in a handler can prevent other handlers from being called</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v4.1.3]]></title>
+        <id>https://github.com/hapijs/podium/milestone/34</id>
+        <link href="https://hapi.dev/module/podium/changelog#4.1.3"/>
+        <updated>2021-04-12T15:37:39.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v4.1.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/pull/70">[#70]</a> Fix typings to accomodate spread flag</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v4.1.2]]></title>
+        <id>https://github.com/hapijs/podium/milestone/33</id>
+        <link href="https://hapi.dev/module/podium/changelog#4.1.2"/>
+        <updated>2021-03-29T21:15:10.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v4.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/pull/67">[#67]</a> Clone the data array before using it as args</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v4.1.1]]></title>
+        <id>https://github.com/hapijs/podium/milestone/32</id>
+        <link href="https://hapi.dev/module/podium/changelog#4.1.1"/>
+        <updated>2021-03-29T21:15:19.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v4.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/pull/62">[#62]</a> upgrade lab to v24</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v4.1.0]]></title>
+        <id>https://github.com/hapijs/podium/milestone/31</id>
+        <link href="https://hapi.dev/module/podium/changelog#4.1.0"/>
+        <updated>2020-02-21T07:29:54.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v4.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/issues/58">[#58]</a> few()</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v4.0.0]]></title>
+        <id>https://github.com/hapijs/podium/milestone/30</id>
+        <link href="https://hapi.dev/module/podium/changelog#4.0.0"/>
+        <updated>2020-01-04T23:23:32.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v4.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/issues/57">[#57]</a> Only node 12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v3.4.3]]></title>
+        <id>https://github.com/hapijs/podium/milestone/28</id>
+        <link href="https://hapi.dev/module/podium/changelog#3.4.3"/>
+        <updated>2019-11-01T22:37:43.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v3.4.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/issues/55">[#55]</a> Optimize emit()</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v3.4.2]]></title>
+        <id>https://github.com/hapijs/podium/milestone/27</id>
+        <link href="https://hapi.dev/module/podium/changelog#3.4.2"/>
+        <updated>2019-09-12T22:43:26.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v3.4.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/issues/49">[#49]</a> Update joi</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v3.4.1]]></title>
+        <id>https://github.com/hapijs/podium/milestone/26</id>
+        <link href="https://hapi.dev/module/podium/changelog#3.4.1"/>
+        <updated>2019-08-15T01:15:03.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v3.4.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/issues/48">[#48]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v3.4.0]]></title>
+        <id>https://github.com/hapijs/podium/milestone/25</id>
+        <link href="https://hapi.dev/module/podium/changelog#3.4.0"/>
+        <updated>2019-04-02T05:03:10.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v3.4.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/issues/43">[#43]</a> Update joi dep</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v3.3.0]]></title>
+        <id>https://github.com/hapijs/podium/milestone/22</id>
+        <link href="https://hapi.dev/module/podium/changelog#3.3.0"/>
+        <updated>2019-04-01T19:59:59.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v3.3.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/issues/42">[#42]</a> Change module namespace</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v3.2.0]]></title>
+        <id>https://github.com/hapijs/podium/milestone/21</id>
+        <link href="https://hapi.dev/module/podium/changelog#3.2.0"/>
+        <updated>2018-11-11T05:00:05.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v3.2.0]]></summary>
+        <content type="html"><![CDATA[<ul></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v3.1.5]]></title>
+        <id>https://github.com/hapijs/podium/milestone/20</id>
+        <link href="https://hapi.dev/module/podium/changelog#3.1.5"/>
+        <updated>2018-11-03T00:35:37.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v3.1.5]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/issues/39">[#39]</a> Remove engines</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v3.1.4]]></title>
+        <id>https://github.com/hapijs/podium/milestone/19</id>
+        <link href="https://hapi.dev/module/podium/changelog#3.1.4"/>
+        <updated>2018-11-01T18:49:51.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v3.1.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/issues/38">[#38]</a> Update hoek v6</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v3.1.3]]></title>
+        <id>https://github.com/hapijs/podium/milestone/18</id>
+        <link href="https://hapi.dev/module/podium/changelog#3.1.3"/>
+        <updated>2018-10-31T22:53:27.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v3.1.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/issues/37">[#37]</a> Cleanup and node 11</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v3.1.2]]></title>
+        <id>https://github.com/hapijs/podium/milestone/17</id>
+        <link href="https://hapi.dev/module/podium/changelog#3.1.2"/>
+        <updated>2017-10-20T22:12:19.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v3.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/issues/34">[#34]</a> Only remove once handler if actually called</li><li><a href="https://github.com/hapijs/podium/issues/33">[#33]</a> Do not modify criteria objects</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v3.1.1]]></title>
+        <id>https://github.com/hapijs/podium/milestone/16</id>
+        <link href="https://hapi.dev/module/podium/changelog#3.1.1"/>
+        <updated>2017-10-03T20:39:45.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v3.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/issues/32">[#32]</a> Remove emit() return values</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v3.1.0]]></title>
+        <id>https://github.com/hapijs/podium/milestone/15</id>
+        <link href="https://hapi.dev/module/podium/changelog#3.1.0"/>
+        <updated>2017-10-03T20:02:39.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v3.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/pull/31">[#31]</a> Return consistent results from the emit function</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v3.0.0]]></title>
+        <id>https://github.com/hapijs/podium/milestone/14</id>
+        <link href="https://hapi.dev/module/podium/changelog#3.0.0"/>
+        <updated>2017-09-28T19:13:12.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/issues/30">[#30]</a> Remove block option</li><li><a href="https://github.com/hapijs/podium/issues/29">[#29]</a> emit() no longer waits for previous emits to complete</li><li><a href="https://github.com/hapijs/podium/issues/28">[#28]</a> Remove error handler</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v2.1.0]]></title>
+        <id>https://github.com/hapijs/podium/milestone/13</id>
+        <link href="https://hapi.dev/module/podium/changelog#2.1.0"/>
+        <updated>2017-09-28T00:58:02.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v2.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/issues/27">[#27]</a> Expose events validation method</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v2.0.3]]></title>
+        <id>https://github.com/hapijs/podium/milestone/12</id>
+        <link href="https://hapi.dev/module/podium/changelog#2.0.3"/>
+        <updated>2017-09-26T19:15:44.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v2.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/issues/26">[#26]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v2.0.2]]></title>
+        <id>https://github.com/hapijs/podium/milestone/11</id>
+        <link href="https://hapi.dev/module/podium/changelog#2.0.2"/>
+        <updated>2017-09-17T22:15:26.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v2.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/issues/25">[#25]</a> Return consistent result on once()</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v2.0.1]]></title>
+        <id>https://github.com/hapijs/podium/milestone/10</id>
+        <link href="https://hapi.dev/module/podium/changelog#2.0.1"/>
+        <updated>2017-09-16T08:14:26.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v2.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/issues/24">[#24]</a> Cleanup emit()</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v2.0.0]]></title>
+        <id>https://github.com/hapijs/podium/milestone/9</id>
+        <link href="https://hapi.dev/module/podium/changelog#2.0.0"/>
+        <updated>2017-09-16T07:08:55.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v2.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/issues/23">[#23]</a> Convert emit() to async function</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v1.4.0]]></title>
+        <id>https://github.com/hapijs/podium/milestone/23</id>
+        <link href="https://hapi.dev/module/podium/changelog#1.4.0"/>
+        <updated>2019-03-25T07:02:20.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v1.4.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/issues/41">[#41]</a> Commercial version of v1 branch</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v1.3.0]]></title>
+        <id>https://github.com/hapijs/podium/milestone/8</id>
+        <link href="https://hapi.dev/module/podium/changelog#1.3.0"/>
+        <updated>2017-07-18T07:06:24.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v1.3.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/issues/22">[#22]</a> Method to create new emitters based on existing configuration</li><li><a href="https://github.com/hapijs/podium/issues/18">[#18]</a> throwing inside an event breaks new events from emitting</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v1.2.5]]></title>
+        <id>https://github.com/hapijs/podium/milestone/7</id>
+        <link href="https://hapi.dev/module/podium/changelog#1.2.5"/>
+        <updated>2016-11-29T21:17:46.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v1.2.5]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/pull/17">[#17]</a> Defer using process.nextTick</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v1.2.4]]></title>
+        <id>https://github.com/hapijs/podium/milestone/6</id>
+        <link href="https://hapi.dev/module/podium/changelog#1.2.4"/>
+        <updated>2016-11-29T01:43:27.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v1.2.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/issues/16">[#16]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v1.2.3]]></title>
+        <id>https://github.com/hapijs/podium/milestone/5</id>
+        <link href="https://hapi.dev/module/podium/changelog#1.2.3"/>
+        <updated>2016-09-01T00:04:21.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v1.2.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/issues/10">[#10]</a> Generate data once across podiums</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v1.2.2]]></title>
+        <id>https://github.com/hapijs/podium/milestone/4</id>
+        <link href="https://hapi.dev/module/podium/changelog#1.2.2"/>
+        <updated>2016-08-31T19:50:50.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v1.2.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/issues/9">[#9]</a> emit() callback not called on next tick</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v1.2.1]]></title>
+        <id>https://github.com/hapijs/podium/milestone/3</id>
+        <link href="https://hapi.dev/module/podium/changelog#1.2.1"/>
+        <updated>2016-08-23T06:02:55.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v1.2.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/issues/8">[#8]</a> Function data not allowed with spread</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v1.2.0]]></title>
+        <id>https://github.com/hapijs/podium/milestone/2</id>
+        <link href="https://hapi.dev/module/podium/changelog#1.2.0"/>
+        <updated>2016-08-22T23:49:29.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v1.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/issues/7">[#7]</a> Support function data to generate data once</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/podium v1.1.0]]></title>
+        <id>https://github.com/hapijs/podium/milestone/1</id>
+        <link href="https://hapi.dev/module/podium/changelog#1.1.0"/>
+        <updated>2016-08-21T07:48:30.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/podium v1.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/podium/issues/5">[#5]</a> Allow emit() to be overridden</li></ul>]]></content>
+    </entry>
+</feed>

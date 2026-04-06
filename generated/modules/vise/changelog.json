@@ -1,0 +1,208 @@
+[
+  {
+    "date": "2023-02-11T17:58:10Z",
+    "id": 7956808,
+    "issues": [
+      {
+        "id": 1551766581,
+        "labels": ["dependency"],
+        "number": 30,
+        "title": "chore: bump hoek",
+        "url": "https://github.com/hapijs/vise/pull/30"
+      }
+    ],
+    "number": 15,
+    "url": "https://github.com/hapijs/vise/milestone/15",
+    "version": "5.0.1"
+  },
+  {
+    "date": "2022-05-23T03:59:44Z",
+    "id": 7956807,
+    "issues": [
+      {
+        "id": 1229172028,
+        "labels": ["breaking changes", "dependency"],
+        "number": 29,
+        "title": "Support node v18 and drop node v12",
+        "url": "https://github.com/hapijs/vise/pull/29"
+      }
+    ],
+    "number": 14,
+    "url": "https://github.com/hapijs/vise/milestone/14",
+    "version": "5.0.0"
+  },
+  {
+    "date": "2020-01-05T06:33:19Z",
+    "id": 4973411,
+    "issues": [
+      {
+        "id": 545378957,
+        "labels": ["breaking changes", "dependency"],
+        "number": 20,
+        "title": "Only node 12",
+        "url": "https://github.com/hapijs/vise/issues/20"
+      }
+    ],
+    "number": 12,
+    "url": "https://github.com/hapijs/vise/milestone/12",
+    "version": "4.0.0"
+  },
+  {
+    "date": "2019-08-15T00:57:28Z",
+    "id": 4194587,
+    "issues": [
+      {
+        "id": 480895784,
+        "labels": ["dependency"],
+        "number": 18,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/vise/issues/18"
+      }
+    ],
+    "number": 10,
+    "url": "https://github.com/hapijs/vise/milestone/10",
+    "version": "3.1.1"
+  },
+  {
+    "date": "2019-04-02T17:43:33Z",
+    "id": 3792294,
+    "issues": [
+      {
+        "id": 428355742,
+        "labels": ["dependency"],
+        "number": 16,
+        "title": "Change module namespace",
+        "url": "https://github.com/hapijs/vise/issues/16"
+      }
+    ],
+    "number": 7,
+    "url": "https://github.com/hapijs/vise/milestone/7",
+    "version": "3.1.0"
+  },
+  {
+    "date": "2018-11-03T00:40:42Z",
+    "id": 3788946,
+    "issues": [
+      {
+        "id": 377003469,
+        "labels": ["non issue"],
+        "number": 13,
+        "title": "Remove engines",
+        "url": "https://github.com/hapijs/vise/issues/13"
+      }
+    ],
+    "number": 6,
+    "url": "https://github.com/hapijs/vise/milestone/6",
+    "version": "3.0.2"
+  },
+  {
+    "date": "2018-11-01T19:31:13Z",
+    "id": 2794130,
+    "issues": [
+      {
+        "id": 376536765,
+        "labels": ["dependency"],
+        "number": 12,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/vise/issues/12"
+      }
+    ],
+    "number": 5,
+    "url": "https://github.com/hapijs/vise/milestone/5",
+    "version": "3.0.1"
+  },
+  {
+    "date": "2018-11-01T19:30:44Z",
+    "id": 1910382,
+    "issues": [
+      {
+        "id": 260540399,
+        "labels": ["breaking changes"],
+        "number": 10,
+        "title": "Node 8",
+        "url": "https://github.com/hapijs/vise/issues/10"
+      }
+    ],
+    "number": 4,
+    "url": "https://github.com/hapijs/vise/milestone/4",
+    "version": "3.0.0"
+  },
+  {
+    "date": "2019-03-25T18:35:09Z",
+    "id": 4171037,
+    "issues": [
+      {
+        "id": 425052999,
+        "labels": ["lts"],
+        "number": 15,
+        "title": "Commercial version of v2 branch",
+        "url": "https://github.com/hapijs/vise/issues/15"
+      }
+    ],
+    "number": 8,
+    "url": "https://github.com/hapijs/vise/milestone/8",
+    "version": "2.1.0"
+  },
+  {
+    "date": "2016-07-28T19:46:31Z",
+    "id": 1750059,
+    "issues": [
+      {
+        "id": 168180255,
+        "labels": ["dependency"],
+        "number": 9,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/vise/issues/9"
+      }
+    ],
+    "number": 3,
+    "url": "https://github.com/hapijs/vise/milestone/3",
+    "version": "2.0.2"
+  },
+  {
+    "date": "2016-05-05T17:02:07Z",
+    "id": 1390424,
+    "issues": [
+      {
+        "id": 152696702,
+        "labels": ["test", "dependency"],
+        "number": 7,
+        "title": "Fix linting and update node/lab versions",
+        "url": "https://github.com/hapijs/vise/pull/7"
+      }
+    ],
+    "number": 2,
+    "url": "https://github.com/hapijs/vise/milestone/2",
+    "version": "2.0.1"
+  },
+  {
+    "date": "2015-11-03T04:12:25Z",
+    "id": 811746,
+    "issues": [
+      {
+        "id": 114738449,
+        "labels": ["breaking changes"],
+        "number": 5,
+        "title": "ES6 style changes and node v4",
+        "url": "https://github.com/hapijs/vise/issues/5"
+      },
+      {
+        "id": 59528632,
+        "labels": ["test", "dependency"],
+        "number": 4,
+        "title": "Update to Lab 5.x.x and Code 1.x.x",
+        "url": "https://github.com/hapijs/vise/pull/4"
+      },
+      {
+        "id": 58949434,
+        "labels": ["test"],
+        "number": 3,
+        "title": "Update .travis.yml",
+        "url": "https://github.com/hapijs/vise/pull/3"
+      }
+    ],
+    "number": 1,
+    "url": "https://github.com/hapijs/vise/milestone/1",
+    "version": "2.0.0"
+  }
+]

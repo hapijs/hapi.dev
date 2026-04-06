@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/glue</id>
+    <title>@hapi/glue changelog</title>
+    <updated>2023-02-11T20:18:12.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/glue"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/glue v9.0.1]]></title>
+        <id>https://github.com/hapijs/glue/milestone/29</id>
+        <link href="https://hapi.dev/module/glue/changelog#9.0.1"/>
+        <updated>2023-02-11T20:18:12.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/glue v9.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/glue/pull/149">[#149]</a> chore: bump hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/glue v9.0.0]]></title>
+        <id>https://github.com/hapijs/glue/milestone/28</id>
+        <link href="https://hapi.dev/module/glue/changelog#9.0.0"/>
+        <updated>2022-10-29T20:20:06.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/glue v9.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/glue/pull/148">[#148]</a> Support for node v18 and hapi v21, ESM support</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/glue v8.0.0]]></title>
+        <id>https://github.com/hapijs/glue/milestone/26</id>
+        <link href="https://hapi.dev/module/glue/changelog#8.0.0"/>
+        <updated>2020-08-13T22:48:26.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/glue v8.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/glue/pull/142">[#142]</a> fix: 🐛 bump hapi 20 dependency</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/glue v7.0.0]]></title>
+        <id>https://github.com/hapijs/glue/milestone/25</id>
+        <link href="https://hapi.dev/module/glue/changelog#7.0.0"/>
+        <updated>2020-01-12T04:47:15.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/glue v7.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/glue/issues/138">[#138]</a> Only node 12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/glue v6.2.0]]></title>
+        <id>https://github.com/hapijs/glue/milestone/23</id>
+        <link href="https://hapi.dev/module/glue/changelog#6.2.0"/>
+        <updated>2019-09-12T22:29:28.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/glue v6.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/glue/issues/133">[#133]</a> Update joi</li><li><a href="https://github.com/hapijs/glue/pull/129">[#129]</a> #128 Add support for constructor property and additional options in server cache configuration</li><li><a href="https://github.com/hapijs/glue/issues/128">[#128]</a> Server cache options in hapi 18 cannot be passed</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/glue v6.1.1]]></title>
+        <id>https://github.com/hapijs/glue/milestone/20</id>
+        <link href="https://hapi.dev/module/glue/changelog#6.1.1"/>
+        <updated>2019-08-14T22:32:56.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/glue v6.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/glue/issues/132">[#132]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/glue v6.1.0]]></title>
+        <id>https://github.com/hapijs/glue/milestone/19</id>
+        <link href="https://hapi.dev/module/glue/changelog#6.1.0"/>
+        <updated>2019-04-14T00:17:39.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/glue v6.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/glue/issues/126">[#126]</a> Change module namespace</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/glue v6.0.0]]></title>
+        <id>https://github.com/hapijs/glue/milestone/18</id>
+        <link href="https://hapi.dev/module/glue/changelog#6.0.0"/>
+        <updated>2019-01-22T14:06:45.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/glue v6.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/glue/pull/124">[#124]</a> Updates to hapi 18; refactors cache.engine to cache.provider</li><li><a href="https://github.com/hapijs/glue/pull/121">[#121]</a> Updating package dependencies.</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/glue v5.1.0]]></title>
+        <id>https://github.com/hapijs/glue/milestone/21</id>
+        <link href="https://hapi.dev/module/glue/changelog#5.1.0"/>
+        <updated>2019-04-16T05:03:21.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/glue v5.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/glue/issues/127">[#127]</a> Change module namespace for v5 branch</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/glue v5.0.0]]></title>
+        <id>https://github.com/hapijs/glue/milestone/17</id>
+        <link href="https://hapi.dev/module/glue/changelog#5.0.0"/>
+        <updated>2017-11-06T00:14:32.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/glue v5.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/glue/pull/104">[#104]</a> Update to hapi v17.</li><li><a href="https://github.com/hapijs/glue/issues/102">[#102]</a> Hapi 17</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/glue v4.2.1]]></title>
+        <id>https://github.com/hapijs/glue/milestone/16</id>
+        <link href="https://hapi.dev/module/glue/changelog#4.2.1"/>
+        <updated>2017-10-28T22:57:30.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/glue v4.2.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/glue/issues/98">[#98]</a> Promises aren't quite right</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/glue v4.2.0]]></title>
+        <id>https://github.com/hapijs/glue/milestone/15</id>
+        <link href="https://hapi.dev/module/glue/changelog#4.2.0"/>
+        <updated>2017-07-28T05:56:49.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/glue v4.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/glue/pull/95">[#95]</a> This is for issue #89</li><li><a href="https://github.com/hapijs/glue/issues/89">[#89]</a> Plugin as function</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/glue v4.1.0]]></title>
+        <id>https://github.com/hapijs/glue/milestone/14</id>
+        <link href="https://hapi.dev/module/glue/changelog#4.1.0"/>
+        <updated>2016-12-23T05:23:13.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/glue v4.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/glue/pull/85">[#85]</a> Hapi v16</li><li><a href="https://github.com/hapijs/glue/pull/84">[#84]</a> Refactors Joi.array() to utilize .items()</li><li><a href="https://github.com/hapijs/glue/issues/83">[#83]</a> Joi.array() does not accept arguments</li><li><a href="https://github.com/hapijs/glue/issues/82">[#82]</a> Add Hapi 16 support</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/glue v4.0.0]]></title>
+        <id>https://github.com/hapijs/glue/milestone/13</id>
+        <link href="https://hapi.dev/module/glue/changelog#4.0.0"/>
+        <updated>2016-08-27T20:24:40.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/glue v4.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/glue/issues/74">[#74]</a> Support hapi 15</li><li><a href="https://github.com/hapijs/glue/issues/72">[#72]</a> Make compose callback always execute async</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/glue v3.4.0]]></title>
+        <id>https://github.com/hapijs/glue/milestone/12</id>
+        <link href="https://hapi.dev/module/glue/changelog#3.4.0"/>
+        <updated>2016-08-17T16:38:35.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/glue v3.4.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/glue/issues/73">[#73]</a> Add Hapi 14.x.x to dependencies</li><li><a href="https://github.com/hapijs/glue/issues/71">[#71]</a> using Hoek.clone makes some plugins stop working</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/glue v3.3.0]]></title>
+        <id>https://github.com/hapijs/glue/milestone/11</id>
+        <link href="https://hapi.dev/module/glue/changelog#3.3.0"/>
+        <updated>2016-06-04T15:48:15.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/glue v3.3.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/glue/pull/64">[#64]</a> add plugin-specific registration options to schema</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/glue v3.2.1]]></title>
+        <id>https://github.com/hapijs/glue/milestone/10</id>
+        <link href="https://hapi.dev/module/glue/changelog#3.2.1"/>
+        <updated>2016-05-20T15:08:17.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/glue v3.2.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/glue/pull/68">[#68]</a> Test on node v6, update dependencies</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/glue v3.2.0]]></title>
+        <id>https://github.com/hapijs/glue/milestone/9</id>
+        <link href="https://hapi.dev/module/glue/changelog#3.2.0"/>
+        <updated>2016-05-20T15:07:13.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/glue v3.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/glue/pull/62">[#62]</a> Support hapi 13</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/glue v3.1.0]]></title>
+        <id>https://github.com/hapijs/glue/milestone/8</id>
+        <link href="https://hapi.dev/module/glue/changelog#3.1.0"/>
+        <updated>2016-01-15T06:05:54.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/glue v3.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/glue/pull/57">[#57]</a> Remove boom dependency</li><li><a href="https://github.com/hapijs/glue/pull/54">[#54]</a> compose() returns a Promise if no callback is provided</li><li><a href="https://github.com/hapijs/glue/pull/53">[#53]</a> Support hapi v12</li><li><a href="https://github.com/hapijs/glue/issues/52">[#52]</a> Support promises</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/glue v3.0.0]]></title>
+        <id>https://github.com/hapijs/glue/milestone/7</id>
+        <link href="https://hapi.dev/module/glue/changelog#3.0.0"/>
+        <updated>2015-12-28T16:30:17.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/glue v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/glue/issues/47">[#47]</a> when is glue 3.x going to be completed?</li><li><a href="https://github.com/hapijs/glue/pull/44">[#44]</a> Don't force object for plugin options</li><li><a href="https://github.com/hapijs/glue/pull/42">[#42]</a> update to es6 based hapi style guide and lab 7 + Dependencies update</li><li><a href="https://github.com/hapijs/glue/issues/41">[#41]</a> update to es6 based hapi style guide and lab 7</li><li><a href="https://github.com/hapijs/glue/issues/40">[#40]</a> Breaking changes on 2.3.0 and 2.4.0</li><li><a href="https://github.com/hapijs/glue/issues/31">[#31]</a> Prefix is passed only when plugin in manifest is an array</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/glue v2.3.0]]></title>
+        <id>https://github.com/hapijs/glue/milestone/5</id>
+        <link href="https://hapi.dev/module/glue/changelog#2.3.0"/>
+        <updated>2015-09-14T15:29:23.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/glue v2.3.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/glue/pull/32">[#32]</a> Support Hapi 10</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/glue v2.2.0]]></title>
+        <id>https://github.com/hapijs/glue/milestone/4</id>
+        <link href="https://hapi.dev/module/glue/changelog#2.2.0"/>
+        <updated>2015-08-18T20:08:36.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/glue v2.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/glue/pull/28">[#28]</a> README: Use the svg Travis image</li><li><a href="https://github.com/hapijs/glue/pull/26">[#26]</a> Fix typos in docs</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/glue v2.1.1]]></title>
+        <id>https://github.com/hapijs/glue/milestone/3</id>
+        <link href="https://hapi.dev/module/glue/changelog#2.1.1"/>
+        <updated>2015-07-24T21:55:42.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/glue v2.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/glue/pull/25">[#25]</a> Linting update</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/glue v2.1.0]]></title>
+        <id>https://github.com/hapijs/glue/milestone/2</id>
+        <link href="https://hapi.dev/module/glue/changelog#2.1.0"/>
+        <updated>2015-06-17T23:14:07.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/glue v2.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/glue/pull/22">[#22]</a> Add usage section to README file.</li><li><a href="https://github.com/hapijs/glue/pull/20">[#20]</a> Added ability to pass array of plugins</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/glue v2.0.0]]></title>
+        <id>https://github.com/hapijs/glue/milestone/1</id>
+        <link href="https://hapi.dev/module/glue/changelog#2.0.0"/>
+        <updated>2015-03-02T19:47:30.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/glue v2.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/glue/pull/8">[#8]</a> Update Hapi dependency</li><li><a href="https://github.com/hapijs/glue/issues/7">[#7]</a> Publish 2.0.0</li><li><a href="https://github.com/hapijs/glue/issues/6">[#6]</a> revamp test code to only test functionality relevant to glue</li><li><a href="https://github.com/hapijs/glue/issues/5">[#5]</a> Improve validation and documentation of manifest plugins entry</li><li><a href="https://github.com/hapijs/glue/pull/4">[#4]</a> Update to hapi@8.0.0-rc7</li><li><a href="https://github.com/hapijs/glue/issues/3">[#3]</a> add support for preConnection and preRegister options handlers</li><li><a href="https://github.com/hapijs/glue/issues/2">[#2]</a> manifest limitation on server options</li><li><a href="https://github.com/hapijs/glue/issues/1">[#1]</a> hapi 8.0 API</li></ul>]]></content>
+    </entry>
+</feed>

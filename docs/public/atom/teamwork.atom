@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/teamwork</id>
+    <title>@hapi/teamwork changelog</title>
+    <updated>2025-08-21T15:05:34.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/teamwork"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/teamwork v6.0.1]]></title>
+        <id>https://github.com/hapijs/teamwork/milestone/21</id>
+        <link href="https://hapi.dev/module/teamwork/changelog#6.0.1"/>
+        <updated>2025-08-21T15:05:34.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/teamwork v6.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/teamwork/pull/39">[#39]</a> Handle non-integer and empty meetings</li><li><a href="https://github.com/hapijs/teamwork/pull/38">[#38]</a> Properly handle multiple iterators for Events</li><li><a href="https://github.com/hapijs/teamwork/pull/37">[#37]</a> Fix regroup() to work after team error</li><li><a href="https://github.com/hapijs/teamwork/issues/36">[#36]</a> Regroup should return the work output</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/teamwork v6.0.0]]></title>
+        <id>https://github.com/hapijs/teamwork/milestone/20</id>
+        <link href="https://hapi.dev/module/teamwork/changelog#6.0.0"/>
+        <updated>2022-05-07T01:05:19.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/teamwork v6.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/teamwork/pull/34">[#34]</a> Support node v18 and drop node v12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/teamwork v5.1.1]]></title>
+        <id>https://github.com/hapijs/teamwork/milestone/18</id>
+        <link href="https://hapi.dev/module/teamwork/changelog#5.1.1"/>
+        <updated>2022-04-13T11:29:46.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/teamwork v5.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/teamwork/pull/33">[#33]</a> Fix memory leaks on attend for infinite teamwork instance</li><li><a href="https://github.com/hapijs/teamwork/pull/28">[#28]</a> upgrade lab to v24 and devDependency of typescript</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/teamwork v5.1.0]]></title>
+        <id>https://github.com/hapijs/teamwork/milestone/17</id>
+        <link href="https://hapi.dev/module/teamwork/changelog#5.1.0"/>
+        <updated>2020-05-07T04:40:03.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/teamwork v5.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/teamwork/pull/26">[#26]</a> Add strict mode</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/teamwork v5.0.0]]></title>
+        <id>https://github.com/hapijs/teamwork/milestone/16</id>
+        <link href="https://hapi.dev/module/teamwork/changelog#5.0.0"/>
+        <updated>2020-03-23T01:10:32.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/teamwork v5.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/teamwork/issues/25">[#25]</a> Move Options to Team.Options</li><li><a href="https://github.com/hapijs/teamwork/issues/24">[#24]</a> Add events iterator</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/teamwork v4.0.0]]></title>
+        <id>https://github.com/hapijs/teamwork/milestone/15</id>
+        <link href="https://hapi.dev/module/teamwork/changelog#4.0.0"/>
+        <updated>2020-01-04T23:17:35.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/teamwork v4.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/teamwork/issues/20">[#20]</a> Change module to export Team instead of default class</li><li><a href="https://github.com/hapijs/teamwork/issues/19">[#19]</a> Only node 12</li><li><a href="https://github.com/hapijs/teamwork/issues/18">[#18]</a> Initialize all properties in constructor</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/teamwork v3.3.2]]></title>
+        <id>https://github.com/hapijs/teamwork/milestone/14</id>
+        <link href="https://hapi.dev/module/teamwork/changelog#3.3.2"/>
+        <updated>2020-07-16T23:48:10.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/teamwork v3.3.2]]></summary>
+        <content type="html"><![CDATA[<ul></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/teamwork v3.3.1]]></title>
+        <id>https://github.com/hapijs/teamwork/milestone/13</id>
+        <link href="https://hapi.dev/module/teamwork/changelog#3.3.1"/>
+        <updated>2019-05-16T08:13:48.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/teamwork v3.3.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/teamwork/issues/15">[#15]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/teamwork v3.3.0]]></title>
+        <id>https://github.com/hapijs/teamwork/milestone/12</id>
+        <link href="https://hapi.dev/module/teamwork/changelog#3.3.0"/>
+        <updated>2019-04-01T19:50:50.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/teamwork v3.3.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/teamwork/issues/13">[#13]</a> Change module namespace</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/teamwork v3.2.0]]></title>
+        <id>https://github.com/hapijs/teamwork/milestone/11</id>
+        <link href="https://hapi.dev/module/teamwork/changelog#3.2.0"/>
+        <updated>2019-03-26T17:59:27.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/teamwork v3.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/teamwork/pull/12">[#12]</a> Add TypeScript definitions</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/teamwork v3.1.0]]></title>
+        <id>https://github.com/hapijs/teamwork/milestone/10</id>
+        <link href="https://hapi.dev/module/teamwork/changelog#3.1.0"/>
+        <updated>2019-03-13T00:08:53.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/teamwork v3.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/teamwork/issues/11">[#11]</a> Support regroup()</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/teamwork v3.0.3]]></title>
+        <id>https://github.com/hapijs/teamwork/milestone/9</id>
+        <link href="https://hapi.dev/module/teamwork/changelog#3.0.3"/>
+        <updated>2018-11-03T07:45:33.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/teamwork v3.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/teamwork/issues/9">[#9]</a> Relocate to hapi org</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/teamwork v3.0.2]]></title>
+        <id>https://github.com/hapijs/teamwork/milestone/8</id>
+        <link href="https://hapi.dev/module/teamwork/changelog#3.0.2"/>
+        <updated>2018-11-03T00:48:39.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/teamwork v3.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/teamwork/issues/8">[#8]</a> Remove engines</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/teamwork v3.0.1]]></title>
+        <id>https://github.com/hapijs/teamwork/milestone/7</id>
+        <link href="https://hapi.dev/module/teamwork/changelog#3.0.1"/>
+        <updated>2018-11-03T00:47:55.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/teamwork v3.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/teamwork/issues/7">[#7]</a> Remove Team</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/teamwork v3.0.0]]></title>
+        <id>https://github.com/hapijs/teamwork/milestone/6</id>
+        <link href="https://hapi.dev/module/teamwork/changelog#3.0.0"/>
+        <updated>2017-10-26T06:23:44.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/teamwork v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/teamwork/issues/6">[#6]</a> Remove members and add notes support</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/teamwork v2.1.0]]></title>
+        <id>https://github.com/hapijs/teamwork/milestone/5</id>
+        <link href="https://hapi.dev/module/teamwork/changelog#2.1.0"/>
+        <updated>2017-09-23T22:11:31.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/teamwork v2.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/teamwork/issues/5">[#5]</a> Add options</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/teamwork v2.0.0]]></title>
+        <id>https://github.com/hapijs/teamwork/milestone/4</id>
+        <link href="https://hapi.dev/module/teamwork/changelog#2.0.0"/>
+        <updated>2017-09-23T22:07:08.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/teamwork v2.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/teamwork/issues/4">[#4]</a> Migrate to async/await interface</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/teamwork v1.1.2]]></title>
+        <id>https://github.com/hapijs/teamwork/milestone/3</id>
+        <link href="https://hapi.dev/module/teamwork/changelog#1.1.2"/>
+        <updated>2016-12-01T06:01:25.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/teamwork v1.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/teamwork/issues/3">[#3]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/teamwork v1.1.1]]></title>
+        <id>https://github.com/hapijs/teamwork/milestone/2</id>
+        <link href="https://hapi.dev/module/teamwork/changelog#1.1.1"/>
+        <updated>2016-07-28T23:10:26.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/teamwork v1.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/teamwork/issues/2">[#2]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/teamwork v1.1.0]]></title>
+        <id>https://github.com/hapijs/teamwork/milestone/1</id>
+        <link href="https://hapi.dev/module/teamwork/changelog#1.1.0"/>
+        <updated>2015-11-04T08:14:34.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/teamwork v1.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/teamwork/issues/1">[#1]</a> Add meetings()</li></ul>]]></content>
+    </entry>
+</feed>

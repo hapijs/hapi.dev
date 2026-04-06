@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/eslint-plugin</id>
+    <title>@hapi/eslint-plugin changelog</title>
+    <updated>2024-10-22T13:42:11.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/eslint-plugin"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/eslint-plugin v7.0.0]]></title>
+        <id>https://github.com/hapijs/eslint-plugin/milestone/14</id>
+        <link href="https://hapi.dev/module/eslint-plugin/changelog#7.0.0"/>
+        <updated>2024-10-22T13:42:11.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/eslint-plugin v7.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/eslint-plugin/pull/33">[#33]</a> feat: target ESLint v9</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/eslint-plugin v6.0.0]]></title>
+        <id>https://github.com/hapijs/eslint-plugin/milestone/12</id>
+        <link href="https://hapi.dev/module/eslint-plugin/changelog#6.0.0"/>
+        <updated>2024-10-22T13:42:03.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/eslint-plugin v6.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/eslint-plugin/pull/31">[#31]</a> Drop support for node v12, support node v18, upgrade eslint</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/eslint-plugin v5.1.0]]></title>
+        <id>https://github.com/hapijs/eslint-plugin/milestone/10</id>
+        <link href="https://hapi.dev/module/eslint-plugin/changelog#5.1.0"/>
+        <updated>2021-05-21T17:30:07.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/eslint-plugin v5.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/eslint-plugin/pull/27">[#27]</a> Migrate lab internal eslint config</li><li><a href="https://github.com/hapijs/eslint-plugin/issues/26">[#26]</a> Update to @babel/eslint-parser</li><li><a href="https://github.com/hapijs/eslint-plugin/pull/24">[#24]</a> upgrade lab to v24</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/eslint-plugin v5.0.0]]></title>
+        <id>https://github.com/hapijs/eslint-plugin/milestone/9</id>
+        <link href="https://hapi.dev/module/eslint-plugin/changelog#5.0.0"/>
+        <updated>2020-09-15T00:06:00.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/eslint-plugin v5.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/eslint-plugin/pull/23">[#23]</a> Rename to eslint-plugin</li><li><a href="https://github.com/hapijs/eslint-plugin/issues/21">[#21]</a> Change package name to @hapi/eslint-plugin</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/eslint-plugin v4.3.6]]></title>
+        <id>https://github.com/hapijs/eslint-plugin/milestone/8</id>
+        <link href="https://hapi.dev/module/eslint-plugin/changelog#4.3.6"/>
+        <updated>2020-09-13T14:51:39.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/eslint-plugin v4.3.6]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/eslint-plugin/pull/22">[#22]</a> Update rules for modern eslint</li><li><a href="https://github.com/hapijs/eslint-plugin/pull/20">[#20]</a> Merge eslint-config-hapi and rules</li><li><a href="https://github.com/hapijs/eslint-plugin/pull/19">[#19]</a> update to travis templates and test on node 14</li><li><a href="https://github.com/hapijs/eslint-plugin/pull/17">[#17]</a> Create API.md</li><li><a href="https://github.com/hapijs/eslint-plugin/pull/16">[#16]</a> Update README.md</li><li><a href="https://github.com/hapijs/eslint-plugin/pull/15">[#15]</a> fix(package.json): repository url</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/eslint-plugin v4.3.5]]></title>
+        <id>https://github.com/hapijs/eslint-plugin/milestone/7</id>
+        <link href="https://hapi.dev/module/eslint-plugin/changelog#4.3.5"/>
+        <updated>2020-01-05T01:14:59.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/eslint-plugin v4.3.5]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/eslint-plugin/issues/14">[#14]</a> Cleanup</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/eslint-plugin v4.3.4]]></title>
+        <id>https://github.com/hapijs/eslint-plugin/milestone/6</id>
+        <link href="https://hapi.dev/module/eslint-plugin/changelog#4.3.4"/>
+        <updated>2019-08-07T20:19:01.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/eslint-plugin v4.3.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/eslint-plugin/issues/11">[#11]</a> eslint 6 support</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/eslint-plugin v4.3.3]]></title>
+        <id>https://github.com/hapijs/eslint-plugin/milestone/5</id>
+        <link href="https://hapi.dev/module/eslint-plugin/changelog#4.3.3"/>
+        <updated>2019-04-23T16:20:53.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/eslint-plugin v4.3.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/eslint-plugin/issues/10">[#10]</a> Fix names</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/eslint-plugin v4.2.0]]></title>
+        <id>https://github.com/hapijs/eslint-plugin/milestone/4</id>
+        <link href="https://hapi.dev/module/eslint-plugin/changelog#4.2.0"/>
+        <updated>2019-04-23T07:02:53.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/eslint-plugin v4.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/eslint-plugin/issues/9">[#9]</a> Change module namespace</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/eslint-plugin v3.0.0]]></title>
+        <id>https://github.com/hapijs/eslint-plugin/milestone/3</id>
+        <link href="https://hapi.dev/module/eslint-plugin/changelog#3.0.0"/>
+        <updated>2015-11-04T18:29:10.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/eslint-plugin v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/eslint-plugin/issues/6">[#6]</a> Remove no-shadow-relaxed</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/eslint-plugin vv2.0.0]]></title>
+        <id>https://github.com/hapijs/eslint-plugin/milestone/2</id>
+        <link href="https://hapi.dev/module/eslint-plugin/changelog#v2.0.0"/>
+        <updated>2015-10-30T20:35:59.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/eslint-plugin vv2.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/eslint-plugin/issues/5">[#5]</a> Add rule no-arrowception</li><li><a href="https://github.com/hapijs/eslint-plugin/issues/4">[#4]</a> Update to hapi-scope-start@2.0.0</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/eslint-plugin vv1.2.0]]></title>
+        <id>https://github.com/hapijs/eslint-plugin/milestone/1</id>
+        <link href="https://hapi.dev/module/eslint-plugin/changelog#v1.2.0"/>
+        <updated>2015-06-25T14:52:50.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/eslint-plugin vv1.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/eslint-plugin/pull/3">[#3]</a> Add no-shadow-relaxed rule to plugin</li></ul>]]></content>
+    </entry>
+</feed>

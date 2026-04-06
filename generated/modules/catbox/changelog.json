@@ -1,0 +1,1140 @@
+[
+  {
+    "date": "2023-02-11T20:38:22Z",
+    "id": 9033307,
+    "issues": [
+      {
+        "id": 1551776398,
+        "labels": [],
+        "number": 243,
+        "title": "chore: bump hoek",
+        "url": "https://github.com/hapijs/catbox/pull/243"
+      }
+    ],
+    "number": 58,
+    "url": "https://github.com/hapijs/catbox/milestone/58",
+    "version": "12.1.1"
+  },
+  {
+    "date": "2022-11-17T23:30:25Z",
+    "id": 8667291,
+    "issues": [
+      {
+        "id": 1450693141,
+        "labels": ["feature", "types"],
+        "number": 242,
+        "title": "Add typescript types",
+        "url": "https://github.com/hapijs/catbox/pull/242"
+      }
+    ],
+    "number": 57,
+    "url": "https://github.com/hapijs/catbox/milestone/57",
+    "version": "12.1.0"
+  },
+  {
+    "date": "2022-11-17T23:09:04Z",
+    "id": 7955936,
+    "issues": [
+      {
+        "id": 1237634410,
+        "labels": ["feature"],
+        "number": 240,
+        "title": "Validate engines to detect legacy adaptor modules",
+        "url": "https://github.com/hapijs/catbox/issues/240"
+      }
+    ],
+    "number": 56,
+    "url": "https://github.com/hapijs/catbox/milestone/56",
+    "version": "12.0.1"
+  },
+  {
+    "date": "2022-11-17T23:09:02Z",
+    "id": 7955935,
+    "issues": [
+      {
+        "id": 1228991875,
+        "labels": ["breaking changes", "dependency"],
+        "number": 239,
+        "title": "Support node v18 and drop node v12",
+        "url": "https://github.com/hapijs/catbox/pull/239"
+      }
+    ],
+    "number": 55,
+    "url": "https://github.com/hapijs/catbox/milestone/55",
+    "version": "12.0.0"
+  },
+  {
+    "date": "2022-05-08T21:31:43Z",
+    "id": 5202203,
+    "issues": [
+      {
+        "id": 660345972,
+        "labels": ["dependency"],
+        "number": 231,
+        "title": "Replace joi with validate",
+        "url": "https://github.com/hapijs/catbox/pull/231"
+      }
+    ],
+    "number": 54,
+    "url": "https://github.com/hapijs/catbox/milestone/54",
+    "version": "11.1.1"
+  },
+  {
+    "date": "2020-03-14T21:26:04Z",
+    "id": 5023594,
+    "issues": [
+      {
+        "id": 581370896,
+        "labels": ["feature"],
+        "number": 229,
+        "title": "Expose cache client in policy",
+        "url": "https://github.com/hapijs/catbox/issues/229"
+      }
+    ],
+    "number": 53,
+    "url": "https://github.com/hapijs/catbox/milestone/53",
+    "version": "11.1.0"
+  },
+  {
+    "date": "2020-01-20T08:48:04Z",
+    "id": 4973180,
+    "issues": [
+      {
+        "id": 550924778,
+        "labels": ["bug"],
+        "number": 228,
+        "title": "pendingGenerateTimeout causes weird timing situation",
+        "url": "https://github.com/hapijs/catbox/issues/228"
+      }
+    ],
+    "number": 52,
+    "url": "https://github.com/hapijs/catbox/milestone/52",
+    "version": "11.0.1"
+  },
+  {
+    "date": "2020-01-04T23:25:30Z",
+    "id": 4973178,
+    "issues": [
+      {
+        "id": 545341258,
+        "labels": ["breaking changes", "dependency"],
+        "number": 227,
+        "title": "Only node 12",
+        "url": "https://github.com/hapijs/catbox/issues/227"
+      }
+    ],
+    "number": 51,
+    "url": "https://github.com/hapijs/catbox/milestone/51",
+    "version": "11.0.0"
+  },
+  {
+    "date": "2019-09-12T22:36:08Z",
+    "id": 4571384,
+    "issues": [
+      {
+        "id": 493060058,
+        "labels": ["dependency"],
+        "number": 220,
+        "title": "Update joi",
+        "url": "https://github.com/hapijs/catbox/issues/220"
+      }
+    ],
+    "number": 49,
+    "url": "https://github.com/hapijs/catbox/milestone/49",
+    "version": "10.2.3"
+  },
+  {
+    "date": "2019-08-14T05:08:49Z",
+    "id": 4192097,
+    "issues": [
+      {
+        "id": 480482459,
+        "labels": ["dependency"],
+        "number": 217,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/catbox/issues/217"
+      }
+    ],
+    "number": 48,
+    "url": "https://github.com/hapijs/catbox/milestone/48",
+    "version": "10.2.2"
+  },
+  {
+    "date": "2019-04-02T05:01:00Z",
+    "id": 4191447,
+    "issues": [
+      {
+        "id": 428024821,
+        "labels": ["dependency"],
+        "number": 216,
+        "title": "Update joi dep",
+        "url": "https://github.com/hapijs/catbox/issues/216"
+      }
+    ],
+    "number": 47,
+    "url": "https://github.com/hapijs/catbox/milestone/47",
+    "version": "10.2.1"
+  },
+  {
+    "date": "2019-04-01T21:26:47Z",
+    "id": 4185560,
+    "issues": [
+      {
+        "id": 427819400,
+        "labels": ["bug"],
+        "number": 215,
+        "title": "Old pendingGenerateTimeout can clear new one",
+        "url": "https://github.com/hapijs/catbox/issues/215"
+      },
+      {
+        "id": 405500557,
+        "labels": ["feature"],
+        "number": 210,
+        "title": "If generate takes longer than staleTimeout, errors get swallowed",
+        "url": "https://github.com/hapijs/catbox/issues/210"
+      }
+    ],
+    "number": 46,
+    "url": "https://github.com/hapijs/catbox/milestone/46",
+    "version": "10.2.0"
+  },
+  {
+    "date": "2019-03-30T21:13:47Z",
+    "id": 3910426,
+    "issues": [
+      {
+        "id": 427327815,
+        "labels": ["dependency"],
+        "number": 214,
+        "title": "Change module namespace",
+        "url": "https://github.com/hapijs/catbox/issues/214"
+      }
+    ],
+    "number": 43,
+    "url": "https://github.com/hapijs/catbox/milestone/43",
+    "version": "10.1.0"
+  },
+  {
+    "date": "2018-12-18T15:38:45Z",
+    "id": 3792174,
+    "issues": [
+      {
+        "id": 384982091,
+        "labels": ["documentation"],
+        "number": 208,
+        "title": "Add changelog.md",
+        "url": "https://github.com/hapijs/catbox/pull/208"
+      },
+      {
+        "id": 381778620,
+        "labels": ["bug"],
+        "number": 206,
+        "title": "Support ioredis client option for catbox-redis",
+        "url": "https://github.com/hapijs/catbox/pull/206"
+      }
+    ],
+    "number": 42,
+    "url": "https://github.com/hapijs/catbox/milestone/42",
+    "version": "10.0.6"
+  },
+  {
+    "date": "2018-11-03T00:19:51Z",
+    "id": 3787560,
+    "issues": [
+      {
+        "id": 377000838,
+        "labels": ["non issue"],
+        "number": 205,
+        "title": "Remove engines",
+        "url": "https://github.com/hapijs/catbox/issues/205"
+      }
+    ],
+    "number": 41,
+    "url": "https://github.com/hapijs/catbox/milestone/41",
+    "version": "10.0.5"
+  },
+  {
+    "date": "2018-11-01T07:51:26Z",
+    "id": 3661958,
+    "issues": [
+      {
+        "id": 376289115,
+        "labels": ["dependency"],
+        "number": 204,
+        "title": "Update hoek v6",
+        "url": "https://github.com/hapijs/catbox/issues/204"
+      }
+    ],
+    "number": 40,
+    "url": "https://github.com/hapijs/catbox/milestone/40",
+    "version": "10.0.4"
+  },
+  {
+    "date": "2018-09-17T17:07:12Z",
+    "id": 2886921,
+    "issues": [
+      {
+        "id": 360819484,
+        "labels": ["dependency"],
+        "number": 201,
+        "title": "Update lab",
+        "url": "https://github.com/hapijs/catbox/issues/201"
+      },
+      {
+        "id": 358260060,
+        "labels": ["bug"],
+        "number": 200,
+        "title": "Unhandled rejection on get() errors",
+        "url": "https://github.com/hapijs/catbox/pull/200"
+      }
+    ],
+    "number": 39,
+    "url": "https://github.com/hapijs/catbox/milestone/39",
+    "version": "10.0.3"
+  },
+  {
+    "date": "2017-11-03T20:29:31Z",
+    "id": 2885233,
+    "issues": [
+      {
+        "id": 271109542,
+        "labels": ["feature"],
+        "number": 194,
+        "title": "Add bounce protection",
+        "url": "https://github.com/hapijs/catbox/issues/194"
+      }
+    ],
+    "number": 38,
+    "url": "https://github.com/hapijs/catbox/milestone/38",
+    "version": "10.0.2"
+  },
+  {
+    "date": "2017-11-03T06:39:14Z",
+    "id": 2884877,
+    "issues": [
+      {
+        "id": 270889105,
+        "labels": ["dependency"],
+        "number": 193,
+        "title": "Update boom",
+        "url": "https://github.com/hapijs/catbox/issues/193"
+      }
+    ],
+    "number": 37,
+    "url": "https://github.com/hapijs/catbox/milestone/37",
+    "version": "10.0.1"
+  },
+  {
+    "date": "2017-11-03T06:34:43Z",
+    "id": 2844423,
+    "issues": [
+      {
+        "id": 270830563,
+        "labels": ["breaking changes"],
+        "number": 192,
+        "title": "Require clients to be async",
+        "url": "https://github.com/hapijs/catbox/issues/192"
+      }
+    ],
+    "number": 36,
+    "url": "https://github.com/hapijs/catbox/milestone/36",
+    "version": "10.0.0"
+  },
+  {
+    "date": "2017-10-17T20:01:05Z",
+    "id": 2797122,
+    "issues": [
+      {
+        "id": 266258135,
+        "labels": ["breaking changes"],
+        "number": 191,
+        "title": "Change policy.get() return value to plain (with override option)",
+        "url": "https://github.com/hapijs/catbox/issues/191"
+      }
+    ],
+    "number": 35,
+    "url": "https://github.com/hapijs/catbox/milestone/35",
+    "version": "9.0.0"
+  },
+  {
+    "date": "2017-09-27T10:09:09Z",
+    "id": 2787291,
+    "issues": [],
+    "number": 34,
+    "url": "https://github.com/hapijs/catbox/milestone/34",
+    "version": "8.0.1"
+  },
+  {
+    "date": "2017-09-26T06:47:58Z",
+    "id": 2641281,
+    "issues": [
+      {
+        "id": 260054355,
+        "labels": ["feature", "breaking changes"],
+        "number": 190,
+        "title": "Migrate to async/await",
+        "url": "https://github.com/hapijs/catbox/pull/190"
+      }
+    ],
+    "number": 33,
+    "url": "https://github.com/hapijs/catbox/milestone/33",
+    "version": "8.0.0"
+  },
+  {
+    "date": "2019-03-30T21:02:21Z",
+    "id": 4162833,
+    "issues": [
+      {
+        "id": 424062481,
+        "labels": ["lts"],
+        "number": 213,
+        "title": "Commercial version of v7 branch",
+        "url": "https://github.com/hapijs/catbox/issues/213"
+      }
+    ],
+    "number": 44,
+    "url": "https://github.com/hapijs/catbox/milestone/44",
+    "version": "7.2.0"
+  },
+  {
+    "date": "2017-07-14T11:52:26Z",
+    "id": 2546635,
+    "issues": [
+      {
+        "id": 236521860,
+        "labels": ["bug"],
+        "number": 185,
+        "title": "Fix pendingGenerateTimeout timeout issue",
+        "url": "https://github.com/hapijs/catbox/pull/185"
+      }
+    ],
+    "number": 32,
+    "url": "https://github.com/hapijs/catbox/milestone/32",
+    "version": "7.1.5"
+  },
+  {
+    "date": "2017-05-28T00:06:13Z",
+    "id": 2162641,
+    "issues": [
+      {
+        "id": 202504412,
+        "labels": ["bug"],
+        "number": 178,
+        "title": "Ensure generate timeout is triggered when staleTimeout > ttl",
+        "url": "https://github.com/hapijs/catbox/pull/178"
+      },
+      {
+        "id": 164665345,
+        "labels": ["bug"],
+        "number": 166,
+        "title": "Can we remove the max() from staleIn?",
+        "url": "https://github.com/hapijs/catbox/issues/166"
+      },
+      {
+        "id": 160651047,
+        "labels": ["bug"],
+        "number": 165,
+        "title": "Can't drop method without arguments",
+        "url": "https://github.com/hapijs/catbox/issues/165"
+      }
+    ],
+    "number": 31,
+    "url": "https://github.com/hapijs/catbox/milestone/31",
+    "version": "7.1.4"
+  },
+  {
+    "date": "2016-11-29T01:57:59Z",
+    "id": 1907956,
+    "issues": [
+      {
+        "id": 192167827,
+        "labels": ["dependency"],
+        "number": 176,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/catbox/issues/176"
+      }
+    ],
+    "number": 30,
+    "url": "https://github.com/hapijs/catbox/milestone/30",
+    "version": "7.1.3"
+  },
+  {
+    "date": "2016-07-27T19:31:34Z",
+    "id": 1777287,
+    "issues": [
+      {
+        "id": 167936005,
+        "labels": ["dependency"],
+        "number": 168,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/catbox/issues/168"
+      }
+    ],
+    "number": 29,
+    "url": "https://github.com/hapijs/catbox/milestone/29",
+    "version": "7.1.2"
+  },
+  {
+    "date": "2016-05-19T18:04:58Z",
+    "id": 1483576,
+    "issues": [
+      {
+        "id": 155616952,
+        "labels": ["documentation", "test", "dependency"],
+        "number": 162,
+        "title": "Test on node v6, update dependencies",
+        "url": "https://github.com/hapijs/catbox/pull/162"
+      }
+    ],
+    "number": 28,
+    "url": "https://github.com/hapijs/catbox/milestone/28",
+    "version": "7.1.1"
+  },
+  {
+    "date": "2016-01-04T22:21:59Z",
+    "id": 1387718,
+    "issues": [
+      {
+        "id": 121711728,
+        "labels": ["feature"],
+        "number": 152,
+        "title": "Adding pendingGenerateTimeout",
+        "url": "https://github.com/hapijs/catbox/pull/152"
+      },
+      {
+        "id": 116371661,
+        "labels": ["feature"],
+        "number": 149,
+        "title": "Proposal: Stale while revalidate - prevent multiple generate calls",
+        "url": "https://github.com/hapijs/catbox/issues/149"
+      },
+      {
+        "id": 114775471,
+        "labels": ["feature"],
+        "number": 147,
+        "title": "Update drop function to allow for object keys",
+        "url": "https://github.com/hapijs/catbox/pull/147"
+      }
+    ],
+    "number": 27,
+    "url": "https://github.com/hapijs/catbox/milestone/27",
+    "version": "7.1.0"
+  },
+  {
+    "date": "2015-11-02T00:22:12Z",
+    "id": 1251149,
+    "issues": [
+      {
+        "id": 114488898,
+        "labels": ["breaking changes"],
+        "number": 146,
+        "title": "ES6 style changes and node v4",
+        "url": "https://github.com/hapijs/catbox/issues/146"
+      },
+      {
+        "id": 106352230,
+        "labels": ["bug"],
+        "number": 145,
+        "title": "Fixed this.constructor issue",
+        "url": "https://github.com/hapijs/catbox/pull/145"
+      }
+    ],
+    "number": 26,
+    "url": "https://github.com/hapijs/catbox/milestone/26",
+    "version": "7.0.0"
+  },
+  {
+    "date": "2015-08-12T06:25:43Z",
+    "id": 1247380,
+    "issues": [
+      {
+        "id": 100474036,
+        "labels": ["bug", "breaking changes"],
+        "number": 140,
+        "title": "Replace generate cache error handing options",
+        "url": "https://github.com/hapijs/catbox/issues/140"
+      }
+    ],
+    "number": 25,
+    "url": "https://github.com/hapijs/catbox/milestone/25",
+    "version": "6.0.0"
+  },
+  {
+    "date": "2015-08-10T00:11:31Z",
+    "id": 1152821,
+    "issues": [
+      {
+        "id": 99931746,
+        "labels": ["feature"],
+        "number": 137,
+        "title": "Add generateOnGetError option",
+        "url": "https://github.com/hapijs/catbox/issues/137"
+      },
+      {
+        "id": 99926963,
+        "labels": ["feature", "breaking changes"],
+        "number": 136,
+        "title": "Pass cache set() errors when generating value on get()",
+        "url": "https://github.com/hapijs/catbox/issues/136"
+      },
+      {
+        "id": 99199975,
+        "labels": ["bug", "breaking changes"],
+        "number": 134,
+        "title": "Require generateTimeout with generateFunc.",
+        "url": "https://github.com/hapijs/catbox/pull/134"
+      },
+      {
+        "id": 97714578,
+        "labels": ["bug"],
+        "number": 128,
+        "title": "Explicitly binding process.domain to the callback",
+        "url": "https://github.com/hapijs/catbox/pull/128"
+      },
+      {
+        "id": 97713393,
+        "labels": ["bug"],
+        "number": 127,
+        "title": "callbacks are called with wrong process.domain",
+        "url": "https://github.com/hapijs/catbox/issues/127"
+      },
+      {
+        "id": 55089788,
+        "labels": ["bug", "breaking changes"],
+        "number": 115,
+        "title": "get() can get stuck when first request never returns",
+        "url": "https://github.com/hapijs/catbox/issues/115"
+      },
+      {
+        "id": 40370507,
+        "labels": ["feature"],
+        "number": 70,
+        "title": "No way to monitor cache error rates",
+        "url": "https://github.com/hapijs/catbox/issues/70"
+      }
+    ],
+    "number": 24,
+    "url": "https://github.com/hapijs/catbox/milestone/24",
+    "version": "5.0.0"
+  },
+  {
+    "date": "2015-06-06T16:49:09Z",
+    "id": 1017366,
+    "issues": [
+      {
+        "id": 51401257,
+        "labels": ["feature"],
+        "number": 114,
+        "title": "Expose cache engine connection isReady as public method",
+        "url": "https://github.com/hapijs/catbox/pull/114"
+      }
+    ],
+    "number": 23,
+    "url": "https://github.com/hapijs/catbox/milestone/23",
+    "version": "4.3.0"
+  },
+  {
+    "date": "2015-03-11T22:18:29Z",
+    "id": 947503,
+    "issues": [
+      {
+        "id": 60732025,
+        "labels": ["dependency"],
+        "number": 120,
+        "title": "Upgrade to Joi 6",
+        "url": "https://github.com/hapijs/catbox/pull/120"
+      }
+    ],
+    "number": 22,
+    "url": "https://github.com/hapijs/catbox/milestone/22",
+    "version": "4.2.2"
+  },
+  {
+    "date": "2015-01-22T20:40:43Z",
+    "id": 873493,
+    "issues": [
+      {
+        "id": 55131974,
+        "labels": ["bug"],
+        "number": 116,
+        "title": "Prefix keys with a `'+'` when using object as a hash",
+        "url": "https://github.com/hapijs/catbox/pull/116"
+      }
+    ],
+    "number": 21,
+    "url": "https://github.com/hapijs/catbox/milestone/21",
+    "version": "4.2.1"
+  },
+  {
+    "date": "2014-11-19T23:06:29Z",
+    "id": 854011,
+    "issues": [
+      {
+        "id": 49351699,
+        "labels": ["feature"],
+        "number": 113,
+        "title": "Allow empty keys",
+        "url": "https://github.com/hapijs/catbox/issues/113"
+      },
+      {
+        "id": 46924693,
+        "labels": ["feature"],
+        "number": 109,
+        "title": "Return cached on error when dropOnError is false",
+        "url": "https://github.com/hapijs/catbox/pull/109"
+      },
+      {
+        "id": 45861582,
+        "labels": ["feature"],
+        "number": 105,
+        "title": "StaleIn can be function.",
+        "url": "https://github.com/hapijs/catbox/pull/105"
+      }
+    ],
+    "number": 20,
+    "url": "https://github.com/hapijs/catbox/milestone/20",
+    "version": "4.2.0"
+  },
+  {
+    "date": "2014-11-05T02:57:07Z",
+    "id": 819447,
+    "issues": [
+      {
+        "id": 47786648,
+        "labels": ["feature"],
+        "number": 111,
+        "title": "Allow changing policy rules after construction",
+        "url": "https://github.com/hapijs/catbox/issues/111"
+      }
+    ],
+    "number": 19,
+    "url": "https://github.com/hapijs/catbox/milestone/19",
+    "version": "4.1.0"
+  },
+  {
+    "date": "2014-10-09T07:59:02Z",
+    "id": 819438,
+    "issues": [
+      {
+        "id": 45337984,
+        "labels": ["test"],
+        "number": 104,
+        "title": "Fix tests",
+        "url": "https://github.com/hapijs/catbox/issues/104"
+      }
+    ],
+    "number": 18,
+    "url": "https://github.com/hapijs/catbox/milestone/18",
+    "version": "4.0.3"
+  },
+  {
+    "date": "2014-10-09T07:44:23Z",
+    "id": 819427,
+    "issues": [
+      {
+        "id": 45336889,
+        "labels": ["feature"],
+        "number": 103,
+        "title": "Explicitly allow hapi keys in policy instead of allowUnknown",
+        "url": "https://github.com/hapijs/catbox/issues/103"
+      }
+    ],
+    "number": 17,
+    "url": "https://github.com/hapijs/catbox/milestone/17",
+    "version": "4.0.2"
+  },
+  {
+    "date": "2014-10-09T07:28:57Z",
+    "id": 819413,
+    "issues": [
+      {
+        "id": 45335949,
+        "labels": ["dependency"],
+        "number": 102,
+        "title": "Use joi for validating policy rules",
+        "url": "https://github.com/hapijs/catbox/issues/102"
+      }
+    ],
+    "number": 16,
+    "url": "https://github.com/hapijs/catbox/milestone/16",
+    "version": "4.0.1"
+  },
+  {
+    "date": "2014-10-09T07:03:44Z",
+    "id": 812173,
+    "issues": [
+      {
+        "id": 45333860,
+        "labels": ["breaking changes"],
+        "number": 101,
+        "title": "Change policy.get() callback to use a consistent signature regardless of generateFunc",
+        "url": "https://github.com/hapijs/catbox/issues/101"
+      },
+      {
+        "id": 45321823,
+        "labels": ["breaking changes"],
+        "number": 100,
+        "title": "Require generateFunc options for staleIn, staleTimeout, and generateTimeout",
+        "url": "https://github.com/hapijs/catbox/issues/100"
+      },
+      {
+        "id": 45312378,
+        "labels": ["breaking changes"],
+        "number": 99,
+        "title": "Remove getOrGenerate()",
+        "url": "https://github.com/hapijs/catbox/issues/99"
+      },
+      {
+        "id": 45128964,
+        "labels": ["feature"],
+        "number": 98,
+        "title": "Adding ability to retain a stale value when generate function fails",
+        "url": "https://github.com/hapijs/catbox/pull/98"
+      },
+      {
+        "id": 44795335,
+        "labels": ["feature"],
+        "number": 97,
+        "title": "Retain stale on error",
+        "url": "https://github.com/hapijs/catbox/issues/97"
+      }
+    ],
+    "number": 15,
+    "url": "https://github.com/hapijs/catbox/milestone/15",
+    "version": "4.0.0"
+  },
+  {
+    "date": "2014-10-08T23:49:36Z",
+    "id": 792275,
+    "issues": [
+      {
+        "id": 44760753,
+        "labels": ["bug"],
+        "number": 95,
+        "title": "Leftover background timeouts can interlace with new requests",
+        "url": "https://github.com/hapijs/catbox/issues/95"
+      },
+      {
+        "id": 44583726,
+        "labels": ["bug"],
+        "number": 93,
+        "title": "Rarely cache can serve old value having slower backend",
+        "url": "https://github.com/hapijs/catbox/pull/93"
+      }
+    ],
+    "number": 14,
+    "url": "https://github.com/hapijs/catbox/milestone/14",
+    "version": "3.4.3"
+  },
+  {
+    "date": "2014-09-16T21:14:22Z",
+    "id": 784182,
+    "issues": [
+      {
+        "id": 42927683,
+        "labels": ["bug"],
+        "number": 86,
+        "title": "Fix concurrent getOrGenerate bug. Closes #85",
+        "url": "https://github.com/hapijs/catbox/pull/86"
+      },
+      {
+        "id": 42894049,
+        "labels": ["bug"],
+        "number": 85,
+        "title": "Problems with concurrent invocation of getOrGenerate.",
+        "url": "https://github.com/hapijs/catbox/pull/85"
+      }
+    ],
+    "number": 13,
+    "url": "https://github.com/hapijs/catbox/milestone/13",
+    "version": "3.4.2"
+  },
+  {
+    "date": "2014-09-09T21:14:01Z",
+    "id": 784049,
+    "issues": [
+      {
+        "id": 42352168,
+        "labels": ["bug"],
+        "number": 84,
+        "title": "null or undefined expiresIn/At break compile",
+        "url": "https://github.com/hapijs/catbox/issues/84"
+      }
+    ],
+    "number": 12,
+    "url": "https://github.com/hapijs/catbox/milestone/12",
+    "version": "3.4.1"
+  },
+  {
+    "date": "2014-09-09T21:14:02Z",
+    "id": 782591,
+    "issues": [
+      {
+        "id": 42342165,
+        "labels": ["bug"],
+        "number": 83,
+        "title": "Errors thrown in get() block pending queue",
+        "url": "https://github.com/hapijs/catbox/issues/83"
+      },
+      {
+        "id": 42322869,
+        "labels": ["bug"],
+        "number": 82,
+        "title": "Allow setting cache with default expiresIn 0 (no cache)",
+        "url": "https://github.com/hapijs/catbox/issues/82"
+      }
+    ],
+    "number": 11,
+    "url": "https://github.com/hapijs/catbox/milestone/11",
+    "version": "3.4.0"
+  },
+  {
+    "date": "2014-09-08T19:10:15Z",
+    "id": 782589,
+    "issues": [
+      {
+        "id": 42231232,
+        "labels": ["bug"],
+        "number": 80,
+        "title": "Allow setting policy without expiration when server side disabled",
+        "url": "https://github.com/hapijs/catbox/issues/80"
+      }
+    ],
+    "number": 10,
+    "url": "https://github.com/hapijs/catbox/milestone/10",
+    "version": "3.3.0"
+  },
+  {
+    "date": "2014-09-08T15:15:32Z",
+    "id": 740632,
+    "issues": [
+      {
+        "id": 42127764,
+        "labels": ["bug"],
+        "number": 79,
+        "title": "Queue get requests",
+        "url": "https://github.com/hapijs/catbox/pull/79"
+      },
+      {
+        "id": 42126031,
+        "labels": ["test"],
+        "number": 78,
+        "title": "Incomplete coverage when testing at 23:00",
+        "url": "https://github.com/hapijs/catbox/issues/78"
+      },
+      {
+        "id": 42125999,
+        "labels": ["bug"],
+        "number": 77,
+        "title": "expiredAt fails to zero milliseconds",
+        "url": "https://github.com/hapijs/catbox/issues/77"
+      },
+      {
+        "id": 42125986,
+        "labels": ["bug"],
+        "number": 76,
+        "title": "expiredAt returns negative ttl on created < expired < now",
+        "url": "https://github.com/hapijs/catbox/issues/76"
+      },
+      {
+        "id": 42092951,
+        "labels": ["feature"],
+        "number": 75,
+        "title": "Move generate method to policy config",
+        "url": "https://github.com/hapijs/catbox/issues/75"
+      },
+      {
+        "id": 41854874,
+        "labels": ["bug"],
+        "number": 73,
+        "title": "Chain concurrent gets",
+        "url": "https://github.com/hapijs/catbox/issues/73"
+      },
+      {
+        "id": 41094342,
+        "labels": ["test"],
+        "number": 71,
+        "title": "Update to Lab 4",
+        "url": "https://github.com/hapijs/catbox/pull/71"
+      }
+    ],
+    "number": 9,
+    "url": "https://github.com/hapijs/catbox/milestone/9",
+    "version": "3.2.0"
+  },
+  {
+    "date": "2014-08-03T04:35:51Z",
+    "id": 687669,
+    "issues": [
+      {
+        "id": 39358401,
+        "labels": ["bug"],
+        "number": 69,
+        "title": "Error fails to clear cache is error arrives before stale timeout",
+        "url": "https://github.com/hapijs/catbox/issues/69"
+      },
+      {
+        "id": 37589098,
+        "labels": ["feature"],
+        "number": 68,
+        "title": "staleTimeout for first request should returns null if no data at timeout time",
+        "url": "https://github.com/hapijs/catbox/issues/68"
+      }
+    ],
+    "number": 8,
+    "url": "https://github.com/hapijs/catbox/milestone/8",
+    "version": "3.1.0"
+  },
+  {
+    "date": "2014-06-11T05:43:03Z",
+    "id": 603044,
+    "issues": [
+      {
+        "id": 35453106,
+        "labels": ["feature", "breaking changes"],
+        "number": 67,
+        "title": "Remove internal require() call",
+        "url": "https://github.com/hapijs/catbox/issues/67"
+      },
+      {
+        "id": 34931434,
+        "labels": ["bug"],
+        "number": 66,
+        "title": "Remove large ttl check",
+        "url": "https://github.com/hapijs/catbox/pull/66"
+      },
+      {
+        "id": 34288196,
+        "labels": ["feature"],
+        "number": 65,
+        "title": "Move 32bit ttl restriction to catbox-memory",
+        "url": "https://github.com/hapijs/catbox/issues/65"
+      }
+    ],
+    "number": 6,
+    "url": "https://github.com/hapijs/catbox/milestone/6",
+    "version": "3.0.0"
+  },
+  {
+    "date": "2014-05-01T06:49:02Z",
+    "id": 645788,
+    "issues": [
+      {
+        "id": 32596575,
+        "labels": ["test"],
+        "number": 62,
+        "title": "Bring coverage back to 100%",
+        "url": "https://github.com/hapijs/catbox/issues/62"
+      }
+    ],
+    "number": 7,
+    "url": "https://github.com/hapijs/catbox/milestone/7",
+    "version": "2.2.1"
+  },
+  {
+    "date": "2014-03-19T18:56:58Z",
+    "id": 591594,
+    "issues": [
+      {
+        "id": 29631376,
+        "labels": ["bug"],
+        "number": 58,
+        "title": "Allow falsey values to be cached",
+        "url": "https://github.com/hapijs/catbox/pull/58"
+      }
+    ],
+    "number": 5,
+    "url": "https://github.com/hapijs/catbox/milestone/5",
+    "version": "2.2.0"
+  },
+  {
+    "date": "2014-03-08T23:31:51Z",
+    "id": 580403,
+    "issues": [
+      {
+        "id": 28471608,
+        "labels": ["bug", "breaking changes"],
+        "number": 56,
+        "title": "Policy.getOrGenerate returns content in two different formats",
+        "url": "https://github.com/hapijs/catbox/issues/56"
+      },
+      {
+        "id": 26925485,
+        "labels": ["feature"],
+        "number": 51,
+        "title": "Impossible to use a custom storage backend with the Hapi CLI",
+        "url": "https://github.com/hapijs/catbox/issues/51"
+      }
+    ],
+    "number": 4,
+    "url": "https://github.com/hapijs/catbox/milestone/4",
+    "version": "2.1.0"
+  },
+  {
+    "date": "2014-02-27T19:09:10Z",
+    "id": 580402,
+    "issues": [
+      {
+        "id": 24861122,
+        "labels": ["bug"],
+        "number": 49,
+        "title": "Close the redis connection on error",
+        "url": "https://github.com/hapijs/catbox/pull/49"
+      }
+    ],
+    "number": 3,
+    "url": "https://github.com/hapijs/catbox/milestone/3",
+    "version": "1.2.0"
+  },
+  {
+    "date": "2013-01-26T08:51:15Z",
+    "id": 235725,
+    "issues": [
+      {
+        "id": 9560411,
+        "labels": ["feature", "test"],
+        "number": 14,
+        "title": "Remove redis and mongodb dependencies (and move to devdeps)",
+        "url": "https://github.com/hapijs/catbox/issues/14"
+      },
+      {
+        "id": 9560381,
+        "labels": ["test"],
+        "number": 13,
+        "title": "Remove hapi dependencies",
+        "url": "https://github.com/hapijs/catbox/issues/13"
+      },
+      {
+        "id": 9560362,
+        "labels": ["documentation"],
+        "number": 12,
+        "title": "Need to better organize config options",
+        "url": "https://github.com/hapijs/catbox/issues/12"
+      },
+      {
+        "id": 9340658,
+        "labels": ["documentation"],
+        "number": 6,
+        "title": "Add examples",
+        "url": "https://github.com/hapijs/catbox/issues/6"
+      },
+      {
+        "id": 9340645,
+        "labels": ["documentation"],
+        "number": 5,
+        "title": "Document interfaces, features",
+        "url": "https://github.com/hapijs/catbox/issues/5"
+      },
+      {
+        "id": 9340633,
+        "labels": ["test"],
+        "number": 4,
+        "title": "Bring test coverage to 100%",
+        "url": "https://github.com/hapijs/catbox/issues/4"
+      }
+    ],
+    "number": 2,
+    "url": "https://github.com/hapijs/catbox/milestone/2",
+    "version": "0.1.0"
+  }
+]

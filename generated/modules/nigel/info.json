@@ -1,0 +1,22 @@
+{
+  "api": false,
+  "forks": 10,
+  "isPlugin": false,
+  "link": "https://github.com/hapijs/nigel",
+  "name": "nigel",
+  "package": "@hapi/nigel",
+  "slogan": "Boyer-Moore-Horspool algorithms",
+  "sloganHtml": "Boyer-Moore-Horspool algorithms",
+  "stars": 16,
+  "updated": "2025-08-24T14:33:19Z",
+  "versions": [
+    {
+      "branch": "v5.0.1",
+      "license": "BSD",
+      "name": "5.0.1",
+      "node": ">= 16"
+    }
+  ],
+  "versionsArray": ["5.0.1"],
+  "latestVersion": "5.x.x"
+}

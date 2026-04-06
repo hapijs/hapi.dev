@@ -1,0 +1,22 @@
+{
+  "api": true,
+  "forks": 15,
+  "isPlugin": false,
+  "link": "https://github.com/hapijs/heavy",
+  "name": "heavy",
+  "package": "@hapi/heavy",
+  "slogan": "Measure process load.",
+  "sloganHtml": "Measure process load.",
+  "stars": 75,
+  "updated": "2024-10-23T14:51:56Z",
+  "versions": [
+    {
+      "branch": "v8.0.1",
+      "license": "BSD",
+      "name": "8.0.1",
+      "node": ">= 16"
+    }
+  ],
+  "versionsArray": ["8.0.1"],
+  "latestVersion": "8.x.x"
+}

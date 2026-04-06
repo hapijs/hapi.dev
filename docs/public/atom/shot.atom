@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/shot</id>
+    <title>@hapi/shot changelog</title>
+    <updated>2025-08-13T22:35:10.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/shot"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v6.0.2]]></title>
+        <id>https://github.com/hapijs/shot/milestone/55</id>
+        <link href="https://hapi.dev/module/shot/changelog#6.0.2"/>
+        <updated>2025-08-13T22:35:10.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v6.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/pull/151">[#151]</a> Improve argument validation and messaging</li><li><a href="https://github.com/hapijs/shot/pull/150">[#150]</a> Support handlers calling res.destroy() to abort sending a response</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v6.0.1]]></title>
+        <id>https://github.com/hapijs/shot/milestone/54</id>
+        <link href="https://hapi.dev/module/shot/changelog#6.0.1"/>
+        <updated>2023-02-11T20:29:00.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v6.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/pull/147">[#147]</a> chore: bump hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v6.0.0]]></title>
+        <id>https://github.com/hapijs/shot/milestone/53</id>
+        <link href="https://hapi.dev/module/shot/changelog#6.0.0"/>
+        <updated>2022-05-09T04:05:08.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v6.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/pull/145">[#145]</a> More realistic request socket interface</li><li><a href="https://github.com/hapijs/shot/pull/144">[#144]</a> Drop node v12 support</li><li><a href="https://github.com/hapijs/shot/pull/140">[#140]</a> Add initial typescript support</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v5.0.5]]></title>
+        <id>https://github.com/hapijs/shot/milestone/51</id>
+        <link href="https://hapi.dev/module/shot/changelog#5.0.5"/>
+        <updated>2021-01-23T07:04:19.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v5.0.5]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/pull/139">[#139]</a> When simulating close, ensure res emits close.</li><li><a href="https://github.com/hapijs/shot/pull/137">[#137]</a> remove unused lib/schema.js</li><li><a href="https://github.com/hapijs/shot/pull/134">[#134]</a> upgrade lab to v24</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v5.0.4]]></title>
+        <id>https://github.com/hapijs/shot/milestone/50</id>
+        <link href="https://hapi.dev/module/shot/changelog#5.0.4"/>
+        <updated>2020-09-26T19:26:01.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v5.0.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/pull/133">[#133]</a> Another attempt at #129</li><li><a href="https://github.com/hapijs/shot/pull/132">[#132]</a> fix: do not auto destroy request stream</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v5.0.3]]></title>
+        <id>https://github.com/hapijs/shot/milestone/49</id>
+        <link href="https://hapi.dev/module/shot/changelog#5.0.3"/>
+        <updated>2020-08-25T22:53:38.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v5.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/pull/130">[#130]</a> Revert "Fix cleanup to be consistent across node releases"</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v5.0.2]]></title>
+        <id>https://github.com/hapijs/shot/milestone/48</id>
+        <link href="https://hapi.dev/module/shot/changelog#5.0.2"/>
+        <updated>2020-08-25T15:26:23.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v5.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/pull/129">[#129]</a> Fix cleanup to be consistent across node releases</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v5.0.1]]></title>
+        <id>https://github.com/hapijs/shot/milestone/47</id>
+        <link href="https://hapi.dev/module/shot/changelog#5.0.1"/>
+        <updated>2020-08-25T15:25:45.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v5.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/pull/127">[#127]</a> test on node 14</li><li><a href="https://github.com/hapijs/shot/pull/124">[#124]</a> Replace joi with validate</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v5.0.0]]></title>
+        <id>https://github.com/hapijs/shot/milestone/46</id>
+        <link href="https://hapi.dev/module/shot/changelog#5.0.0"/>
+        <updated>2020-01-08T21:17:23.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v5.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/issues/120">[#120]</a> Only node 12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v4.1.2]]></title>
+        <id>https://github.com/hapijs/shot/milestone/44</id>
+        <link href="https://hapi.dev/module/shot/changelog#4.1.2"/>
+        <updated>2019-09-12T23:17:38.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v4.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/issues/112">[#112]</a> Update joi</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v4.1.1]]></title>
+        <id>https://github.com/hapijs/shot/milestone/43</id>
+        <link href="https://hapi.dev/module/shot/changelog#4.1.1"/>
+        <updated>2019-09-12T23:17:21.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v4.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/pull/109">[#109]</a> work around Node's DEP0066</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v4.1.0]]></title>
+        <id>https://github.com/hapijs/shot/milestone/40</id>
+        <link href="https://hapi.dev/module/shot/changelog#4.1.0"/>
+        <updated>2019-04-02T05:57:58.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v4.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/issues/108">[#108]</a> Node V12 deprecation warning [DEP0066] OutgoingMessage.prototype._headers is deprecated</li><li><a href="https://github.com/hapijs/shot/issues/106">[#106]</a> Change module name</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v4.0.7]]></title>
+        <id>https://github.com/hapijs/shot/milestone/39</id>
+        <link href="https://hapi.dev/module/shot/changelog#4.0.7"/>
+        <updated>2018-11-03T00:36:49.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v4.0.7]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/issues/101">[#101]</a> Remove engines</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v4.0.6]]></title>
+        <id>https://github.com/hapijs/shot/milestone/38</id>
+        <link href="https://hapi.dev/module/shot/changelog#4.0.6"/>
+        <updated>2018-11-01T19:01:21.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v4.0.6]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/issues/100">[#100]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v4.0.5]]></title>
+        <id>https://github.com/hapijs/shot/milestone/37</id>
+        <link href="https://hapi.dev/module/shot/changelog#4.0.5"/>
+        <updated>2018-11-01T19:00:52.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v4.0.5]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/pull/99">[#99]</a> Updated lab to v17 to pass on Node v11</li><li><a href="https://github.com/hapijs/shot/pull/92">[#92]</a> skip not covered lines on node master</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v4.0.4]]></title>
+        <id>https://github.com/hapijs/shot/milestone/36</id>
+        <link href="https://hapi.dev/module/shot/changelog#4.0.4"/>
+        <updated>2017-11-14T22:30:34.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v4.0.4]]></summary>
+        <content type="html"><![CDATA[<ul></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v4.0.3]]></title>
+        <id>https://github.com/hapijs/shot/milestone/35</id>
+        <link href="https://hapi.dev/module/shot/changelog#4.0.3"/>
+        <updated>2017-10-22T08:34:58.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v4.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/issues/90">[#90]</a> Update joi</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v4.0.2]]></title>
+        <id>https://github.com/hapijs/shot/milestone/34</id>
+        <link href="https://hapi.dev/module/shot/changelog#4.0.2"/>
+        <updated>2017-10-04T07:47:43.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v4.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/issues/89">[#89]</a> Replace instanceof with symbol</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v4.0.1]]></title>
+        <id>https://github.com/hapijs/shot/milestone/33</id>
+        <link href="https://hapi.dev/module/shot/changelog#4.0.1"/>
+        <updated>2017-09-28T06:15:19.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v4.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/issues/88">[#88]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v4.0.0]]></title>
+        <id>https://github.com/hapijs/shot/milestone/32</id>
+        <link href="https://hapi.dev/module/shot/changelog#4.0.0"/>
+        <updated>2017-09-28T06:15:21.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v4.0.0]]></summary>
+        <content type="html"><![CDATA[<ul></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v3.5.1]]></title>
+        <id>https://github.com/hapijs/shot/milestone/42</id>
+        <link href="https://hapi.dev/module/shot/changelog#3.5.1"/>
+        <updated>2020-06-29T20:53:35.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v3.5.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/issues/122">[#122]</a> Support node 12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v3.5.0]]></title>
+        <id>https://github.com/hapijs/shot/milestone/41</id>
+        <link href="https://hapi.dev/module/shot/changelog#3.5.0"/>
+        <updated>2019-03-25T16:19:48.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v3.5.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/issues/105">[#105]</a> Commercial version of v3 branch</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v3.4.2]]></title>
+        <id>https://github.com/hapijs/shot/milestone/31</id>
+        <link href="https://hapi.dev/module/shot/changelog#3.4.2"/>
+        <updated>2017-09-23T10:00:11.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v3.4.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/pull/85">[#85]</a> Fix for node 8</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v3.4.1]]></title>
+        <id>https://github.com/hapijs/shot/milestone/30</id>
+        <link href="https://hapi.dev/module/shot/changelog#3.4.1"/>
+        <updated>2017-09-23T10:00:12.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v3.4.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/pull/84">[#84]</a> Fix node 8 issues</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v3.4.0]]></title>
+        <id>https://github.com/hapijs/shot/milestone/29</id>
+        <link href="https://hapi.dev/module/shot/changelog#3.4.0"/>
+        <updated>2016-11-29T01:41:05.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v3.4.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/issues/83">[#83]</a> Update deps</li><li><a href="https://github.com/hapijs/shot/pull/81">[#81]</a> Handle streams of utf8 encoded strings</li><li><a href="https://github.com/hapijs/shot/pull/79">[#79]</a> Remove custom output parsing and buffer payload chunks via write()</li><li><a href="https://github.com/hapijs/shot/pull/76">[#76]</a> Updated API docs to reflect new validate flag</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v3.3.1]]></title>
+        <id>https://github.com/hapijs/shot/milestone/28</id>
+        <link href="https://hapi.dev/module/shot/changelog#3.3.1"/>
+        <updated>2016-08-26T21:46:09.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v3.3.1]]></summary>
+        <content type="html"><![CDATA[<ul></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v3.3.0]]></title>
+        <id>https://github.com/hapijs/shot/milestone/27</id>
+        <link href="https://hapi.dev/module/shot/changelog#3.3.0"/>
+        <updated>2016-08-26T21:37:05.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v3.3.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/issues/75">[#75]</a> Cleanup validation and make it optional</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v3.2.1]]></title>
+        <id>https://github.com/hapijs/shot/milestone/26</id>
+        <link href="https://hapi.dev/module/shot/changelog#3.2.1"/>
+        <updated>2016-08-26T08:42:55.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v3.2.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/pull/73">[#73]</a> Add status message to response object</li><li><a href="https://github.com/hapijs/shot/pull/71">[#71]</a> add validation schema to shot</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v3.2.0]]></title>
+        <id>https://github.com/hapijs/shot/milestone/25</id>
+        <link href="https://hapi.dev/module/shot/changelog#3.2.0"/>
+        <updated>2016-08-23T05:19:50.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v3.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/issues/74">[#74]</a> Include statusMessage</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v3.1.1]]></title>
+        <id>https://github.com/hapijs/shot/milestone/24</id>
+        <link href="https://hapi.dev/module/shot/changelog#3.1.1"/>
+        <updated>2016-08-22T08:58:35.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v3.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/issues/72">[#72]</a> npmignore</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v3.1.0]]></title>
+        <id>https://github.com/hapijs/shot/milestone/23</id>
+        <link href="https://hapi.dev/module/shot/changelog#3.1.0"/>
+        <updated>2016-07-28T19:11:47.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v3.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/pull/69">[#69]</a> Update code to 3.x.x</li><li><a href="https://github.com/hapijs/shot/pull/68">[#68]</a> Test on node 6, update lab and fix tests</li><li><a href="https://github.com/hapijs/shot/pull/67">[#67]</a> Support stream payloads</li><li><a href="https://github.com/hapijs/shot/pull/65">[#65]</a> Adds quotes around node versions in travis file</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v3.0.1]]></title>
+        <id>https://github.com/hapijs/shot/milestone/22</id>
+        <link href="https://hapi.dev/module/shot/changelog#3.0.1"/>
+        <updated>2016-02-09T17:13:27.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v3.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/pull/63">[#63]</a> Add default port to host header when no port specified. Fixes #62</li><li><a href="https://github.com/hapijs/shot/pull/61">[#61]</a> Reduce function generation</li><li><a href="https://github.com/hapijs/shot/pull/60">[#60]</a> Refactor index.js into separate files</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v3.0.0]]></title>
+        <id>https://github.com/hapijs/shot/milestone/21</id>
+        <link href="https://hapi.dev/module/shot/changelog#3.0.0"/>
+        <updated>2015-12-30T08:55:07.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/issues/59">[#59]</a> Update README with ES6 styles</li><li><a href="https://github.com/hapijs/shot/pull/58">[#58]</a> Updated README for ES6 styles closes #59</li><li><a href="https://github.com/hapijs/shot/pull/57">[#57]</a> Set trailers in res.trailers rather than res.headers. Fixes #56</li><li><a href="https://github.com/hapijs/shot/issues/56">[#56]</a> Trailers should be added to res.trailers, not res.headers</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v2.0.1]]></title>
+        <id>https://github.com/hapijs/shot/milestone/20</id>
+        <link href="https://hapi.dev/module/shot/changelog#2.0.1"/>
+        <updated>2015-11-02T18:15:08.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v2.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/issues/55">[#55]</a> Fix broken tests</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v2.0.0]]></title>
+        <id>https://github.com/hapijs/shot/milestone/19</id>
+        <link href="https://hapi.dev/module/shot/changelog#2.0.0"/>
+        <updated>2015-11-02T18:10:02.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v2.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/issues/52">[#52]</a> Node &gt;= 4 / es2015 updates</li><li><a href="https://github.com/hapijs/shot/pull/51">[#51]</a> Upgrade lab to 7.x.x. Closes #50</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v1.7.0]]></title>
+        <id>https://github.com/hapijs/shot/milestone/17</id>
+        <link href="https://hapi.dev/module/shot/changelog#1.7.0"/>
+        <updated>2015-10-05T22:31:29.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v1.7.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/pull/47">[#47]</a> Add authority option. Closes #46</li><li><a href="https://github.com/hapijs/shot/issues/46">[#46]</a> Add authority option for overriding default host header</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v1.6.1]]></title>
+        <id>https://github.com/hapijs/shot/milestone/16</id>
+        <link href="https://hapi.dev/module/shot/changelog#1.6.1"/>
+        <updated>2015-09-24T22:04:22.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v1.6.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/pull/44">[#44]</a> Always include a host header. Closes #43</li><li><a href="https://github.com/hapijs/shot/issues/43">[#43]</a> host header is not always set</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v1.6.0]]></title>
+        <id>https://github.com/hapijs/shot/milestone/15</id>
+        <link href="https://hapi.dev/module/shot/changelog#1.6.0"/>
+        <updated>2015-08-04T07:33:25.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v1.6.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/pull/36">[#36]</a> Inject request with specified the remote client IP address</li><li><a href="https://github.com/hapijs/shot/issues/35">[#35]</a> Client IP address</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v1.5.4]]></title>
+        <id>https://github.com/hapijs/shot/milestone/14</id>
+        <link href="https://hapi.dev/module/shot/changelog#1.5.4"/>
+        <updated>2015-08-04T07:33:46.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v1.5.4]]></summary>
+        <content type="html"><![CDATA[<ul></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v1.5.3]]></title>
+        <id>https://github.com/hapijs/shot/milestone/13</id>
+        <link href="https://hapi.dev/module/shot/changelog#1.5.3"/>
+        <updated>2015-06-05T11:39:29.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v1.5.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/issues/33">[#33]</a> Inconsistent assignment of rawPayload</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v1.5.2]]></title>
+        <id>https://github.com/hapijs/shot/milestone/12</id>
+        <link href="https://hapi.dev/module/shot/changelog#1.5.2"/>
+        <updated>2015-06-05T11:13:13.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v1.5.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/pull/32">[#32]</a> use rawPayload, convert to UTF8 after the whole buffer is available</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v1.5.1]]></title>
+        <id>https://github.com/hapijs/shot/milestone/11</id>
+        <link href="https://hapi.dev/module/shot/changelog#1.5.1"/>
+        <updated>2015-06-04T15:41:11.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v1.5.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/pull/30">[#30]</a> fix #7</li><li><a href="https://github.com/hapijs/shot/issues/7">[#7]</a> deprecated encoding 'binary' is used</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v1.5.0]]></title>
+        <id>https://github.com/hapijs/shot/milestone/10</id>
+        <link href="https://hapi.dev/module/shot/changelog#1.5.0"/>
+        <updated>2015-04-14T20:32:04.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v1.5.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/pull/28">[#28]</a> Add 'content-length' header matching payload length if none set</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v1.4.2]]></title>
+        <id>https://github.com/hapijs/shot/milestone/9</id>
+        <link href="https://hapi.dev/module/shot/changelog#1.4.2"/>
+        <updated>2015-04-14T20:25:17.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v1.4.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/pull/27">[#27]</a> add -L to test and test-cov</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v1.4.1]]></title>
+        <id>https://github.com/hapijs/shot/milestone/8</id>
+        <link href="https://hapi.dev/module/shot/changelog#1.4.1"/>
+        <updated>2015-02-19T23:40:14.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v1.4.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/pull/24">[#24]</a> Added Hoek.applyToDefaults.</li><li><a href="https://github.com/hapijs/shot/pull/23">[#23]</a> Use Hoek to assign defaults to options passed to inject. Fixes #22</li><li><a href="https://github.com/hapijs/shot/issues/22">[#22]</a> Use hoek to assign defaults to options passed to inject</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v1.4.0]]></title>
+        <id>https://github.com/hapijs/shot/milestone/7</id>
+        <link href="https://hapi.dev/module/shot/changelog#1.4.0"/>
+        <updated>2015-02-19T23:40:13.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v1.4.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/pull/19">[#19]</a> optionally accept an object as the `url`</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v1.3.5]]></title>
+        <id>https://github.com/hapijs/shot/milestone/6</id>
+        <link href="https://hapi.dev/module/shot/changelog#1.3.5"/>
+        <updated>2014-09-05T21:22:55.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v1.3.5]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/issues/14">[#14]</a> lab 4.0</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v1.3.4]]></title>
+        <id>https://github.com/hapijs/shot/milestone/4</id>
+        <link href="https://hapi.dev/module/shot/changelog#1.3.4"/>
+        <updated>2014-08-02T07:42:34.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v1.3.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/pull/12">[#12]</a> Remove repeated assignment</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v1.3.3]]></title>
+        <id>https://github.com/hapijs/shot/milestone/5</id>
+        <link href="https://hapi.dev/module/shot/changelog#1.3.3"/>
+        <updated>2014-05-01T21:10:24.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v1.3.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/issues/11">[#11]</a> Bring coverage back to 100%</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/shot v1.3.2]]></title>
+        <id>https://github.com/hapijs/shot/milestone/3</id>
+        <link href="https://hapi.dev/module/shot/changelog#1.3.2"/>
+        <updated>2014-03-08T19:47:41.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/shot v1.3.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/shot/issues/10">[#10]</a> Bring coverage back to 100% after lab fix</li></ul>]]></content>
+    </entry>
+</feed>

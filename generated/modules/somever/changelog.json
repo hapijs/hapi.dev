@@ -1,0 +1,160 @@
+[
+  {
+    "date": "2023-02-11T20:26:26Z",
+    "id": 8182738,
+    "issues": [
+      {
+        "id": 1551778742,
+        "labels": ["dependency"],
+        "number": 23,
+        "title": "chore: bump hoek",
+        "url": "https://github.com/hapijs/somever/pull/23"
+      }
+    ],
+    "number": 12,
+    "url": "https://github.com/hapijs/somever/milestone/12",
+    "version": "4.1.1"
+  },
+  {
+    "date": "2023-02-11T20:26:24Z",
+    "id": 8182737,
+    "issues": [
+      {
+        "id": 1300174333,
+        "labels": ["feature"],
+        "number": 22,
+        "title": "Support includePrerelease option to permit prereleases when matching ranges",
+        "url": "https://github.com/hapijs/somever/pull/22"
+      }
+    ],
+    "number": 11,
+    "url": "https://github.com/hapijs/somever/milestone/11",
+    "version": "4.1.0"
+  },
+  {
+    "date": "2022-07-11T04:05:02Z",
+    "id": 7936949,
+    "issues": [
+      {
+        "id": 1223561292,
+        "labels": ["breaking changes", "dependency"],
+        "number": 21,
+        "title": "Support node v18 and drop node v12",
+        "url": "https://github.com/hapijs/somever/pull/21"
+      }
+    ],
+    "number": 9,
+    "url": "https://github.com/hapijs/somever/milestone/9",
+    "version": "4.0.0"
+  },
+  {
+    "date": "2021-05-05T18:32:18Z",
+    "id": 4987627,
+    "issues": [
+      {
+        "id": 876336083,
+        "labels": ["bug"],
+        "number": 17,
+        "title": "fix: use pre-release number for comparison",
+        "url": "https://github.com/hapijs/somever/pull/17"
+      },
+      {
+        "id": 709596466,
+        "labels": [],
+        "number": 15,
+        "title": "upgrade lab to v24",
+        "url": "https://github.com/hapijs/somever/pull/15"
+      }
+    ],
+    "number": 7,
+    "url": "https://github.com/hapijs/somever/milestone/7",
+    "version": "3.0.1"
+  },
+  {
+    "date": "2020-01-09T00:16:23Z",
+    "id": 4987626,
+    "issues": [
+      {
+        "id": 511247347,
+        "labels": ["feature"],
+        "number": 8,
+        "title": "Expose Somever.compare()",
+        "url": "https://github.com/hapijs/somever/pull/8"
+      },
+      {
+        "id": 511246754,
+        "labels": ["feature"],
+        "number": 7,
+        "title": "Expose a public Somever.compare()",
+        "url": "https://github.com/hapijs/somever/issues/7"
+      }
+    ],
+    "number": 6,
+    "url": "https://github.com/hapijs/somever/milestone/6",
+    "version": "3.0.0"
+  },
+  {
+    "date": "2020-07-17T07:49:35Z",
+    "id": 4574325,
+    "issues": [],
+    "number": 5,
+    "url": "https://github.com/hapijs/somever/milestone/5",
+    "version": "2.1.2"
+  },
+  {
+    "date": "2019-08-15T01:03:51Z",
+    "id": 4192173,
+    "issues": [
+      {
+        "id": 480897946,
+        "labels": ["dependency"],
+        "number": 5,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/somever/issues/5"
+      }
+    ],
+    "number": 4,
+    "url": "https://github.com/hapijs/somever/milestone/4",
+    "version": "2.1.1"
+  },
+  {
+    "date": "2019-04-02T06:06:06Z",
+    "id": 4170453,
+    "issues": [
+      {
+        "id": 428038703,
+        "labels": ["dependency"],
+        "number": 3,
+        "title": "Change module namespace",
+        "url": "https://github.com/hapijs/somever/issues/3"
+      }
+    ],
+    "number": 3,
+    "url": "https://github.com/hapijs/somever/milestone/3",
+    "version": "2.1.0"
+  },
+  {
+    "date": "2020-07-17T07:49:37Z",
+    "id": 4170452,
+    "issues": [],
+    "number": 2,
+    "url": "https://github.com/hapijs/somever/milestone/2",
+    "version": "1.1.1"
+  },
+  {
+    "date": "2019-03-25T16:35:59Z",
+    "id": 4170447,
+    "issues": [
+      {
+        "id": 424999315,
+        "labels": ["lts"],
+        "number": 2,
+        "title": "Commercial version of v1 branch",
+        "url": "https://github.com/hapijs/somever/issues/2"
+      }
+    ],
+    "number": 1,
+    "url": "https://github.com/hapijs/somever/milestone/1",
+    "version": "1.1.0"
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "date": "2023-02-11T20:43:44Z",
+    "id": 8207137,
+    "issues": [
+      {
+        "id": 1551799762,
+        "labels": ["dependency"],
+        "number": 14,
+        "title": "chore: bump hoek",
+        "url": "https://github.com/hapijs/catbox-object/pull/14"
+      }
+    ],
+    "number": 5,
+    "url": "https://github.com/hapijs/catbox-object/milestone/5",
+    "version": "3.0.1"
+  },
+  {
+    "date": "2022-07-19T01:07:18Z",
+    "id": 8207136,
+    "issues": [
+      {
+        "id": 1307369682,
+        "labels": ["dependency", "breaking changes"],
+        "number": 13,
+        "title": "Support for node v18, change default export, ESM tests",
+        "url": "https://github.com/hapijs/catbox-object/pull/13"
+      }
+    ],
+    "number": 4,
+    "url": "https://github.com/hapijs/catbox-object/milestone/4",
+    "version": "3.0.0"
+  },
+  {
+    "date": "2020-01-04T23:56:03Z",
+    "id": 4571408,
+    "issues": [
+      {
+        "id": 545347051,
+        "labels": ["dependency", "breaking changes"],
+        "number": 6,
+        "title": "Only node 12",
+        "url": "https://github.com/hapijs/catbox-object/issues/6"
+      }
+    ],
+    "number": 2,
+    "url": "https://github.com/hapijs/catbox-object/milestone/2",
+    "version": "2.0.0"
+  },
+  {
+    "date": "2019-08-14T05:23:12Z",
+    "id": 4571407,
+    "issues": [
+      {
+        "id": 480486023,
+        "labels": ["dependency"],
+        "number": 1,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/catbox-object/issues/1"
+      }
+    ],
+    "number": 1,
+    "url": "https://github.com/hapijs/catbox-object/milestone/1",
+    "version": "1.0.1"
+  }
+]

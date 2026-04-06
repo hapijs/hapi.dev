@@ -1,4 +1,4 @@
 [[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "SAMEORIGIN"
+for = "/*"
+[headers.values]
+X-Frame-Options = "SAMEORIGIN"

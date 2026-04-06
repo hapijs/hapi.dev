@@ -1,0 +1,22 @@
+{
+  "api": true,
+  "forks": 53,
+  "isPlugin": false,
+  "link": "https://github.com/hapijs/iron",
+  "name": "iron",
+  "package": "@hapi/iron",
+  "slogan": "Encapsulated tokens (encrypted and mac'ed objects).",
+  "sloganHtml": "Encapsulated tokens (encrypted and mac'ed objects).",
+  "stars": 631,
+  "updated": "2024-10-23T15:37:19Z",
+  "versions": [
+    {
+      "branch": "v7.0.1",
+      "license": "BSD",
+      "name": "7.0.1",
+      "node": ">= 16"
+    }
+  ],
+  "versionsArray": ["7.0.1"],
+  "latestVersion": "7.x.x"
+}

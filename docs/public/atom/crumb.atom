@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/crumb</id>
+    <title>@hapi/crumb changelog</title>
+    <updated>2023-02-11T19:29:58.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/crumb"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/crumb v9.0.1]]></title>
+        <id>https://github.com/hapijs/crumb/milestone/22</id>
+        <link href="https://hapi.dev/module/crumb/changelog#9.0.1"/>
+        <updated>2023-02-11T19:29:58.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/crumb v9.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/crumb/pull/163">[#163]</a> chore: bump hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/crumb v9.0.0]]></title>
+        <id>https://github.com/hapijs/crumb/milestone/21</id>
+        <link href="https://hapi.dev/module/crumb/changelog#9.0.0"/>
+        <updated>2022-10-29T20:21:00.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/crumb v9.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/crumb/pull/162">[#162]</a> Support for hapi v21, node v18, ESM tests</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/crumb v8.0.1]]></title>
+        <id>https://github.com/hapijs/crumb/milestone/19</id>
+        <link href="https://hapi.dev/module/crumb/changelog#8.0.1"/>
+        <updated>2020-09-26T23:19:23.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/crumb v8.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/crumb/pull/153">[#153]</a> upgrade lab to v24</li><li><a href="https://github.com/hapijs/crumb/pull/150">[#150]</a> update dependencies</li><li><a href="https://github.com/hapijs/crumb/pull/149">[#149]</a> migrate to new travis format</li><li><a href="https://github.com/hapijs/crumb/pull/147">[#147]</a> upgrade to use the latest lab and joi to validate</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/crumb v8.0.0]]></title>
+        <id>https://github.com/hapijs/crumb/milestone/18</id>
+        <link href="https://hapi.dev/module/crumb/changelog#8.0.0"/>
+        <updated>2020-01-10T07:36:50.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/crumb v8.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/crumb/issues/144">[#144]</a> Drop hapi v17 and v18</li><li><a href="https://github.com/hapijs/crumb/issues/143">[#143]</a> Change plugin name to @hapi/crubm</li><li><a href="https://github.com/hapijs/crumb/issues/142">[#142]</a> Only node 12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/crumb v7.3.2]]></title>
+        <id>https://github.com/hapijs/crumb/milestone/17</id>
+        <link href="https://hapi.dev/module/crumb/changelog#7.3.2"/>
+        <updated>2019-09-12T22:53:52.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/crumb v7.3.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/crumb/issues/135">[#135]</a> Update joi</li><li><a href="https://github.com/hapijs/crumb/pull/131">[#131]</a> validate crumb when autoGenerate is false and crumb not defined on route</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/crumb v7.3.1]]></title>
+        <id>https://github.com/hapijs/crumb/milestone/16</id>
+        <link href="https://hapi.dev/module/crumb/changelog#7.3.1"/>
+        <updated>2019-08-14T22:36:04.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/crumb v7.3.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/crumb/issues/134">[#134]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/crumb v7.3.0]]></title>
+        <id>https://github.com/hapijs/crumb/milestone/15</id>
+        <link href="https://hapi.dev/module/crumb/changelog#7.3.0"/>
+        <updated>2019-08-14T21:10:22.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/crumb v7.3.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/crumb/issues/129">[#129]</a> Change module namespace</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/crumb v7.1.1]]></title>
+        <id>https://github.com/hapijs/crumb/milestone/14</id>
+        <link href="https://hapi.dev/module/crumb/changelog#7.1.1"/>
+        <updated>2018-11-13T18:43:24.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/crumb v7.1.1]]></summary>
+        <content type="html"><![CDATA[<ul></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/crumb v7.1.0]]></title>
+        <id>https://github.com/hapijs/crumb/milestone/13</id>
+        <link href="https://hapi.dev/module/crumb/changelog#7.1.0"/>
+        <updated>2018-04-23T15:22:25.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/crumb v7.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/crumb/pull/112">[#112]</a> adds logUnauthorized option - addresses #56</li><li><a href="https://github.com/hapijs/crumb/pull/111">[#111]</a> Remove new Buffer usage</li><li><a href="https://github.com/hapijs/crumb/pull/103">[#103]</a> Add an option to specify the CSRF header name</li><li><a href="https://github.com/hapijs/crumb/issues/56">[#56]</a> Provide more relevant feedback</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/crumb v7.0.0]]></title>
+        <id>https://github.com/hapijs/crumb/milestone/12</id>
+        <link href="https://hapi.dev/module/crumb/changelog#7.0.0"/>
+        <updated>2017-11-29T22:08:48.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/crumb v7.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/crumb/pull/107">[#107]</a> Update contact details/maintainer</li><li><a href="https://github.com/hapijs/crumb/pull/106">[#106]</a> Upgrade Crumb to Hapi 17</li><li><a href="https://github.com/hapijs/crumb/issues/105">[#105]</a> hapi v17 support</li><li><a href="https://github.com/hapijs/crumb/issues/101">[#101]</a> Enable Crumb for specific routes only</li><li><a href="https://github.com/hapijs/crumb/pull/99">[#99]</a> Add sentence to README about how to disable the plugin for a particular route.</li><li><a href="https://github.com/hapijs/crumb/pull/98">[#98]</a> Make both examples runnable with a package.json and proper dependencies</li><li><a href="https://github.com/hapijs/crumb/issues/97">[#97]</a> Example won't launch: `Server.views is not a function`</li><li><a href="https://github.com/hapijs/crumb/pull/93">[#93]</a> Documentation Improvement</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/crumb v6.0.3]]></title>
+        <id>https://github.com/hapijs/crumb/milestone/11</id>
+        <link href="https://hapi.dev/module/crumb/changelog#6.0.3"/>
+        <updated>2016-08-15T14:50:45.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/crumb v6.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/crumb/pull/91">[#91]</a> Cors origin</li><li><a href="https://github.com/hapijs/crumb/issues/90">[#90]</a> Generate function never called when Vision route has CORS enabled</li><li><a href="https://github.com/hapijs/crumb/issues/89">[#89]</a> Generate is running a second time and 500-ing hapi</li><li><a href="https://github.com/hapijs/crumb/pull/87">[#87]</a> remove arrow function to fix context</li><li><a href="https://github.com/hapijs/crumb/issues/54">[#54]</a> Getting 403 forbidden because token has changed</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/crumb v6.0.2]]></title>
+        <id>https://github.com/hapijs/crumb/milestone/10</id>
+        <link href="https://hapi.dev/module/crumb/changelog#6.0.2"/>
+        <updated>2016-06-30T04:58:45.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/crumb v6.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/crumb/pull/84">[#84]</a> #80: fixes crumb route settings bug</li><li><a href="https://github.com/hapijs/crumb/pull/82">[#82]</a> Test on node v6, update dependencies</li><li><a href="https://github.com/hapijs/crumb/issues/80">[#80]</a> 6.0.1 update breaks route-restful option</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/crumb v6.0.1]]></title>
+        <id>https://github.com/hapijs/crumb/milestone/9</id>
+        <link href="https://hapi.dev/module/crumb/changelog#6.0.1"/>
+        <updated>2016-05-12T20:17:54.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/crumb v6.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/crumb/pull/79">[#79]</a> Fixes #74 -- restful configured through routes is not superceded by global config</li><li><a href="https://github.com/hapijs/crumb/pull/78">[#78]</a> Purpose readme contribution</li><li><a href="https://github.com/hapijs/crumb/pull/69">[#69]</a> Update restful example to respond with JSON. Closes #64</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/crumb v6.0.0]]></title>
+        <id>https://github.com/hapijs/crumb/milestone/8</id>
+        <link href="https://hapi.dev/module/crumb/changelog#6.0.0"/>
+        <updated>2016-05-12T20:03:30.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/crumb v6.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/crumb/pull/70">[#70]</a> Hapi12</li><li><a href="https://github.com/hapijs/crumb/issues/68">[#68]</a> Heroku disallows host binding but Crumb requires it</li><li><a href="https://github.com/hapijs/crumb/issues/67">[#67]</a> ES6 style changes and node v4</li><li><a href="https://github.com/hapijs/crumb/issues/61">[#61]</a> Ignore CORS</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/crumb v5.0.0]]></title>
+        <id>https://github.com/hapijs/crumb/milestone/7</id>
+        <link href="https://hapi.dev/module/crumb/changelog#5.0.0"/>
+        <updated>2016-01-15T19:10:59.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/crumb v5.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/crumb/pull/63">[#63]</a> Update 9</li><li><a href="https://github.com/hapijs/crumb/issues/58">[#58]</a> update to hapi 9/10</li><li><a href="https://github.com/hapijs/crumb/issues/51">[#51]</a> crumb request.plugins.crumb: undefined</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/crumb v4.04]]></title>
+        <id>https://github.com/hapijs/crumb/milestone/6</id>
+        <link href="https://hapi.dev/module/crumb/changelog#4.04"/>
+        <updated>2016-01-15T19:11:02.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/crumb v4.04]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/crumb/pull/53">[#53]</a> correct linting issues</li><li><a href="https://github.com/hapijs/crumb/pull/52">[#52]</a> Updated joi to 6.x.x</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/crumb v4.0.3]]></title>
+        <id>https://github.com/hapijs/crumb/milestone/5</id>
+        <link href="https://hapi.dev/module/crumb/changelog#4.0.3"/>
+        <updated>2015-06-05T14:00:44.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/crumb v4.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/crumb/pull/49">[#49]</a> Return error during plugin registration for invalid options.</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/crumb v4.0.2]]></title>
+        <id>https://github.com/hapijs/crumb/milestone/4</id>
+        <link href="https://hapi.dev/module/crumb/changelog#4.0.2"/>
+        <updated>2015-02-26T14:24:19.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/crumb v4.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/crumb/pull/46">[#46]</a> fix internals.originParser + tests to add protocol in all origin/allowOrigins values</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/crumb v4.0.1]]></title>
+        <id>https://github.com/hapijs/crumb/milestone/3</id>
+        <link href="https://hapi.dev/module/crumb/changelog#4.0.1"/>
+        <updated>2015-02-13T04:56:16.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/crumb v4.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/crumb/issues/34">[#34]</a> Host header cannot include URI scheme</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/crumb v4.0.0]]></title>
+        <id>https://github.com/hapijs/crumb/milestone/2</id>
+        <link href="https://hapi.dev/module/crumb/changelog#4.0.0"/>
+        <updated>2015-02-04T21:14:02.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/crumb v4.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/crumb/pull/37">[#37]</a> hapi8. Closes #35. internals bug. Closes #33</li><li><a href="https://github.com/hapijs/crumb/issues/35">[#35]</a> hapi 8.0 API</li><li><a href="https://github.com/hapijs/crumb/issues/33">[#33]</a> Don't use internals for plugin state</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/crumb v1.1.2]]></title>
+        <id>https://github.com/hapijs/crumb/milestone/1</id>
+        <link href="https://hapi.dev/module/crumb/changelog#1.1.2"/>
+        <updated>2014-03-21T00:42:56.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/crumb v1.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/crumb/issues/11">[#11]</a> Support hapi 3.0</li></ul>]]></content>
+    </entry>
+</feed>

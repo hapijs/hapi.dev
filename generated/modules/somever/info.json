@@ -1,0 +1,22 @@
+{
+  "api": false,
+  "forks": 10,
+  "isPlugin": false,
+  "link": "https://github.com/hapijs/somever",
+  "name": "somever",
+  "package": "@hapi/somever",
+  "slogan": "Semantic versioning rules parser, compatible with version ranges used in package.json files and the canonical [semver](https://www.npmjs.com/package/semver) module.",
+  "sloganHtml": "Semantic versioning rules parser, compatible with version ranges used in package.json files and the canonical <a href=\"https://www.npmjs.com/package/semver\" target=\"_blank\" rel=\"noreferrer\">semver</a> module.",
+  "stars": 0,
+  "updated": "2024-10-23T14:45:10Z",
+  "versions": [
+    {
+      "branch": "v4.1.1",
+      "license": "BSD",
+      "name": "4.1.1",
+      "node": ">= 16"
+    }
+  ],
+  "versionsArray": ["4.1.1"],
+  "latestVersion": "4.x.x"
+}

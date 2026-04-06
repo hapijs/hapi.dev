@@ -1,0 +1,750 @@
+[
+  {
+    "date": "2025-11-06T09:39:52Z",
+    "id": 14034370,
+    "issues": [
+      {
+        "id": 3567578349,
+        "labels": ["bug"],
+        "number": 89,
+        "title": "chore: optimize regexps",
+        "url": "https://github.com/hapijs/statehood/pull/89"
+      }
+    ],
+    "number": 45,
+    "url": "https://github.com/hapijs/statehood/milestone/45",
+    "version": "8.2.1"
+  },
+  {
+    "date": "2025-02-28T23:50:15Z",
+    "id": 12416835,
+    "issues": [
+      {
+        "id": 2134672705,
+        "labels": ["feature"],
+        "number": 88,
+        "title": "Add support to cookie partition",
+        "url": "https://github.com/hapijs/statehood/pull/88"
+      }
+    ],
+    "number": 44,
+    "url": "https://github.com/hapijs/statehood/milestone/44",
+    "version": "8.2.0"
+  },
+  {
+    "date": "2023-04-24T21:49:37Z",
+    "id": 9320281,
+    "issues": [
+      {
+        "id": 1681273083,
+        "labels": ["types"],
+        "number": 86,
+        "title": "fix: missing types on exclude",
+        "url": "https://github.com/hapijs/statehood/pull/86"
+      }
+    ],
+    "number": 43,
+    "url": "https://github.com/hapijs/statehood/milestone/43",
+    "version": "8.1.1"
+  },
+  {
+    "date": "2023-04-24T21:49:35Z",
+    "id": 9320036,
+    "issues": [
+      {
+        "id": 1648025513,
+        "labels": ["types"],
+        "number": 85,
+        "title": "feat: add typescript types",
+        "url": "https://github.com/hapijs/statehood/pull/85"
+      }
+    ],
+    "number": 42,
+    "url": "https://github.com/hapijs/statehood/milestone/42",
+    "version": "8.1.0"
+  },
+  {
+    "date": "2023-02-11T19:06:55Z",
+    "id": 7956706,
+    "issues": [
+      {
+        "id": 1551780082,
+        "labels": ["dependency"],
+        "number": 84,
+        "title": "chore: bump hoek",
+        "url": "https://github.com/hapijs/statehood/pull/84"
+      }
+    ],
+    "number": 41,
+    "url": "https://github.com/hapijs/statehood/milestone/41",
+    "version": "8.0.1"
+  },
+  {
+    "date": "2022-05-23T04:21:52Z",
+    "id": 7956705,
+    "issues": [
+      {
+        "id": 1229163252,
+        "labels": ["dependency", "breaking changes"],
+        "number": 82,
+        "title": "Support node v18, drop node v12",
+        "url": "https://github.com/hapijs/statehood/pull/82"
+      }
+    ],
+    "number": 40,
+    "url": "https://github.com/hapijs/statehood/milestone/40",
+    "version": "8.0.0"
+  },
+  {
+    "date": "2022-04-20T02:52:24Z",
+    "id": 5921250,
+    "issues": [
+      {
+        "id": 1206568476,
+        "labels": ["bug", "security"],
+        "number": 81,
+        "title": "Parse cookie pairs without a regex",
+        "url": "https://github.com/hapijs/statehood/pull/81"
+      },
+      {
+        "id": 709596697,
+        "labels": [],
+        "number": 77,
+        "title": "upgrade lab to v24",
+        "url": "https://github.com/hapijs/statehood/pull/77"
+      }
+    ],
+    "number": 38,
+    "url": "https://github.com/hapijs/statehood/milestone/38",
+    "version": "7.0.4"
+  },
+  {
+    "date": "2020-09-26T19:29:40Z",
+    "id": 5101021,
+    "issues": [],
+    "number": 37,
+    "url": "https://github.com/hapijs/statehood/milestone/37",
+    "version": "7.0.3"
+  },
+  {
+    "date": "2020-02-13T08:43:03Z",
+    "id": 4987899,
+    "issues": [
+      {
+        "id": 564524089,
+        "labels": ["bug", "security"],
+        "number": 71,
+        "title": "Explicitly block __proto__ cookie name",
+        "url": "https://github.com/hapijs/statehood/issues/71"
+      }
+    ],
+    "number": 36,
+    "url": "https://github.com/hapijs/statehood/milestone/36",
+    "version": "7.0.2"
+  },
+  {
+    "date": "2020-01-09T00:23:17Z",
+    "id": 4960420,
+    "issues": [
+      {
+        "id": 547177742,
+        "labels": ["dependency"],
+        "number": 69,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/statehood/issues/69"
+      }
+    ],
+    "number": 35,
+    "url": "https://github.com/hapijs/statehood/milestone/35",
+    "version": "7.0.1"
+  },
+  {
+    "date": "2019-12-28T05:08:28Z",
+    "id": 4655580,
+    "issues": [
+      {
+        "id": 543064670,
+        "labels": ["dependency", "breaking changes"],
+        "number": 67,
+        "title": "Drop node 10",
+        "url": "https://github.com/hapijs/statehood/issues/67"
+      },
+      {
+        "id": 543063143,
+        "labels": ["dependency", "breaking changes"],
+        "number": 66,
+        "title": "Drop node 8",
+        "url": "https://github.com/hapijs/statehood/issues/66"
+      },
+      {
+        "id": 543063083,
+        "labels": ["feature"],
+        "number": 65,
+        "title": "Support custom properties via function",
+        "url": "https://github.com/hapijs/statehood/issues/65"
+      },
+      {
+        "id": 543060718,
+        "labels": ["feature"],
+        "number": 64,
+        "title": "Support SameSite=None",
+        "url": "https://github.com/hapijs/statehood/issues/64"
+      }
+    ],
+    "number": 33,
+    "url": "https://github.com/hapijs/statehood/milestone/33",
+    "version": "7.0.0"
+  },
+  {
+    "date": "2019-09-12T22:31:29Z",
+    "id": 4574323,
+    "issues": [
+      {
+        "id": 493058837,
+        "labels": ["dependency"],
+        "number": 62,
+        "title": "Update joi",
+        "url": "https://github.com/hapijs/statehood/issues/62"
+      }
+    ],
+    "number": 32,
+    "url": "https://github.com/hapijs/statehood/milestone/32",
+    "version": "6.1.2"
+  },
+  {
+    "date": "2019-08-15T01:02:09Z",
+    "id": 4192246,
+    "issues": [
+      {
+        "id": 480897339,
+        "labels": ["dependency"],
+        "number": 61,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/statehood/issues/61"
+      }
+    ],
+    "number": 31,
+    "url": "https://github.com/hapijs/statehood/milestone/31",
+    "version": "6.1.1"
+  },
+  {
+    "date": "2019-04-02T06:42:28Z",
+    "id": 4019172,
+    "issues": [
+      {
+        "id": 428049004,
+        "labels": ["dependency"],
+        "number": 59,
+        "title": "Change module namespace",
+        "url": "https://github.com/hapijs/statehood/issues/59"
+      }
+    ],
+    "number": 28,
+    "url": "https://github.com/hapijs/statehood/milestone/28",
+    "version": "6.1.0"
+  },
+  {
+    "date": "2019-01-31T19:46:46Z",
+    "id": 3792291,
+    "issues": [
+      {
+        "id": 405123438,
+        "labels": ["bug", "security"],
+        "number": 55,
+        "title": "Protect against JSON.parse() prototype poisoning",
+        "url": "https://github.com/hapijs/statehood/issues/55"
+      }
+    ],
+    "number": 26,
+    "url": "https://github.com/hapijs/statehood/milestone/26",
+    "version": "6.0.9"
+  },
+  {
+    "date": "2018-11-03T00:38:01Z",
+    "id": 3788925,
+    "issues": [
+      {
+        "id": 377003288,
+        "labels": ["non issue"],
+        "number": 47,
+        "title": "Remove engines",
+        "url": "https://github.com/hapijs/statehood/issues/47"
+      }
+    ],
+    "number": 25,
+    "url": "https://github.com/hapijs/statehood/milestone/25",
+    "version": "6.0.8"
+  },
+  {
+    "date": "2018-11-01T19:21:36Z",
+    "id": 3232153,
+    "issues": [
+      {
+        "id": 376533626,
+        "labels": ["dependency"],
+        "number": 46,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/statehood/issues/46"
+      }
+    ],
+    "number": 23,
+    "url": "https://github.com/hapijs/statehood/milestone/23",
+    "version": "6.0.7"
+  },
+  {
+    "date": "2018-03-31T00:10:43Z",
+    "id": 2886915,
+    "issues": [
+      {
+        "id": 307416653,
+        "labels": ["bug"],
+        "number": 41,
+        "title": "Fix a typo",
+        "url": "https://github.com/hapijs/statehood/pull/41"
+      },
+      {
+        "id": 307172912,
+        "labels": ["bug"],
+        "number": 40,
+        "title": "Remove new Buffer usage",
+        "url": "https://github.com/hapijs/statehood/pull/40"
+      }
+    ],
+    "number": 22,
+    "url": "https://github.com/hapijs/statehood/milestone/22",
+    "version": "6.0.6"
+  },
+  {
+    "date": "2018-03-31T00:12:06Z",
+    "id": 3232154,
+    "issues": [
+      {
+        "id": 271116422,
+        "labels": ["bug"],
+        "number": 38,
+        "title": "Use Cryptiles.fixedTimeComparison()",
+        "url": "https://github.com/hapijs/statehood/issues/38"
+      }
+    ],
+    "number": 24,
+    "url": "https://github.com/hapijs/statehood/milestone/24",
+    "version": "6.0.5"
+  },
+  {
+    "date": "2017-11-03T20:25:01Z",
+    "id": 2885377,
+    "issues": [
+      {
+        "id": 271108347,
+        "labels": ["feature"],
+        "number": 37,
+        "title": "Add bounce",
+        "url": "https://github.com/hapijs/statehood/issues/37"
+      }
+    ],
+    "number": 21,
+    "url": "https://github.com/hapijs/statehood/milestone/21",
+    "version": "6.0.4"
+  },
+  {
+    "date": "2017-11-03T08:42:25Z",
+    "id": 2856588,
+    "issues": [
+      {
+        "id": 270908232,
+        "labels": ["dependency"],
+        "number": 36,
+        "title": "Update dep",
+        "url": "https://github.com/hapijs/statehood/issues/36"
+      }
+    ],
+    "number": 20,
+    "url": "https://github.com/hapijs/statehood/milestone/20",
+    "version": "6.0.3"
+  },
+  {
+    "date": "2017-10-22T08:39:17Z",
+    "id": 2799414,
+    "issues": [
+      {
+        "id": 267446941,
+        "labels": ["dependency"],
+        "number": 35,
+        "title": "Update joi",
+        "url": "https://github.com/hapijs/statehood/issues/35"
+      }
+    ],
+    "number": 19,
+    "url": "https://github.com/hapijs/statehood/milestone/19",
+    "version": "6.0.2"
+  },
+  {
+    "date": "2017-09-28T06:18:50Z",
+    "id": 2788078,
+    "issues": [
+      {
+        "id": 261204726,
+        "labels": ["dependency"],
+        "number": 34,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/statehood/issues/34"
+      }
+    ],
+    "number": 18,
+    "url": "https://github.com/hapijs/statehood/milestone/18",
+    "version": "6.0.1"
+  },
+  {
+    "date": "2017-09-25T05:54:06Z",
+    "id": 2651947,
+    "issues": [
+      {
+        "id": 260128944,
+        "labels": ["breaking changes"],
+        "number": 33,
+        "title": "Migrate to async interface",
+        "url": "https://github.com/hapijs/statehood/issues/33"
+      }
+    ],
+    "number": 17,
+    "url": "https://github.com/hapijs/statehood/milestone/17",
+    "version": "6.0.0"
+  },
+  {
+    "date": "2019-03-25T17:44:33Z",
+    "id": 4170598,
+    "issues": [
+      {
+        "id": 425007163,
+        "labels": ["lts"],
+        "number": 58,
+        "title": "Commercial version of v5 branch",
+        "url": "https://github.com/hapijs/statehood/issues/58"
+      }
+    ],
+    "number": 29,
+    "url": "https://github.com/hapijs/statehood/milestone/29",
+    "version": "5.1.0"
+  },
+  {
+    "date": "2019-01-31T19:45:49Z",
+    "id": 4017367,
+    "issues": [
+      {
+        "id": 405123803,
+        "labels": ["bug", "security", "lts"],
+        "number": 56,
+        "title": "Protect against JSON.parse() prototype poisoning",
+        "url": "https://github.com/hapijs/statehood/issues/56"
+      }
+    ],
+    "number": 27,
+    "url": "https://github.com/hapijs/statehood/milestone/27",
+    "version": "5.0.4"
+  },
+  {
+    "date": "2017-07-20T08:32:47Z",
+    "id": 2546590,
+    "issues": [
+      {
+        "id": 244283653,
+        "labels": ["bug"],
+        "number": 32,
+        "title": "Ignore partial header structure errors when ignoreErrors",
+        "url": "https://github.com/hapijs/statehood/issues/32"
+      }
+    ],
+    "number": 16,
+    "url": "https://github.com/hapijs/statehood/milestone/16",
+    "version": "5.0.3"
+  },
+  {
+    "date": "2017-05-27T22:27:43Z",
+    "id": 2162520,
+    "issues": [
+      {
+        "id": 231832046,
+        "labels": ["dependency"],
+        "number": 31,
+        "title": "Update deps.",
+        "url": "https://github.com/hapijs/statehood/issues/31"
+      }
+    ],
+    "number": 15,
+    "url": "https://github.com/hapijs/statehood/milestone/15",
+    "version": "5.0.2"
+  },
+  {
+    "date": "2016-11-29T00:19:07Z",
+    "id": 1966598,
+    "issues": [
+      {
+        "id": 187208869,
+        "labels": ["bug"],
+        "number": 29,
+        "title": "Fix parse when iron is used with invalid and valid values",
+        "url": "https://github.com/hapijs/statehood/pull/29"
+      },
+      {
+        "id": 183162384,
+        "labels": ["bug"],
+        "number": 28,
+        "title": "Cookies with the same name are ignored if only one is invalid",
+        "url": "https://github.com/hapijs/statehood/issues/28"
+      }
+    ],
+    "number": 14,
+    "url": "https://github.com/hapijs/statehood/milestone/14",
+    "version": "5.0.1"
+  },
+  {
+    "date": "2016-08-26T20:39:23Z",
+    "id": 1964549,
+    "issues": [
+      {
+        "id": 173538509,
+        "labels": ["security", "breaking changes"],
+        "number": 26,
+        "title": "Change Secure, HttpOnly, and SameSite to true by default",
+        "url": "https://github.com/hapijs/statehood/issues/26"
+      }
+    ],
+    "number": 13,
+    "url": "https://github.com/hapijs/statehood/milestone/13",
+    "version": "5.0.0"
+  },
+  {
+    "date": "2016-08-26T08:22:20Z",
+    "id": 1910438,
+    "issues": [
+      {
+        "id": 157330951,
+        "labels": ["bug"],
+        "number": 23,
+        "title": "Assert when input is not a string",
+        "url": "https://github.com/hapijs/statehood/pull/23"
+      },
+      {
+        "id": 156900491,
+        "labels": ["feature"],
+        "number": 21,
+        "title": "Support SameSite attribute",
+        "url": "https://github.com/hapijs/statehood/issues/21"
+      },
+      {
+        "id": 144061731,
+        "labels": ["bug", "security"],
+        "number": 17,
+        "title": "Assert when input is not a string",
+        "url": "https://github.com/hapijs/statehood/issues/17"
+      }
+    ],
+    "number": 12,
+    "url": "https://github.com/hapijs/statehood/milestone/12",
+    "version": "4.1.0"
+  },
+  {
+    "date": "2016-07-28T20:14:07Z",
+    "id": 1910288,
+    "issues": [
+      {
+        "id": 168185653,
+        "labels": ["dependency"],
+        "number": 25,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/statehood/issues/25"
+      }
+    ],
+    "number": 11,
+    "url": "https://github.com/hapijs/statehood/milestone/11",
+    "version": "4.0.3"
+  },
+  {
+    "date": "2016-07-28T19:20:14Z",
+    "id": 1780040,
+    "issues": [
+      {
+        "id": 168174975,
+        "labels": ["documentation"],
+        "number": 24,
+        "title": "npmignore",
+        "url": "https://github.com/hapijs/statehood/issues/24"
+      }
+    ],
+    "number": 10,
+    "url": "https://github.com/hapijs/statehood/milestone/10",
+    "version": "4.0.2"
+  },
+  {
+    "date": "2016-05-21T03:48:29Z",
+    "id": 1554830,
+    "issues": [
+      {
+        "id": 155821044,
+        "labels": ["test", "documentation", "dependency"],
+        "number": 19,
+        "title": "Test on node v6, update dependencies",
+        "url": "https://github.com/hapijs/statehood/pull/19"
+      }
+    ],
+    "number": 9,
+    "url": "https://github.com/hapijs/statehood/milestone/9",
+    "version": "4.0.1"
+  },
+  {
+    "date": "2016-02-01T08:08:03Z",
+    "id": 1480493,
+    "issues": [
+      {
+        "id": 130286832,
+        "labels": ["dependency", "security", "breaking changes"],
+        "number": 16,
+        "title": "Update hueniverse/iron from 3.x.x to 4.x.x",
+        "url": "https://github.com/hapijs/statehood/issues/16"
+      }
+    ],
+    "number": 8,
+    "url": "https://github.com/hapijs/statehood/milestone/8",
+    "version": "4.0.0"
+  },
+  {
+    "date": "2016-01-02T18:19:47Z",
+    "id": 1390395,
+    "issues": [
+      {
+        "id": 124602884,
+        "labels": ["feature"],
+        "number": 15,
+        "title": "Allow empty names in loose mode",
+        "url": "https://github.com/hapijs/statehood/issues/15"
+      }
+    ],
+    "number": 7,
+    "url": "https://github.com/hapijs/statehood/milestone/7",
+    "version": "3.1.0"
+  },
+  {
+    "date": "2015-11-03T03:29:42Z",
+    "id": 1149532,
+    "issues": [
+      {
+        "id": 114733690,
+        "labels": ["breaking changes"],
+        "number": 14,
+        "title": "ES6 style changes and node v4",
+        "url": "https://github.com/hapijs/statehood/issues/14"
+      }
+    ],
+    "number": 6,
+    "url": "https://github.com/hapijs/statehood/milestone/6",
+    "version": "3.0.0"
+  },
+  {
+    "date": "2015-06-04T14:15:26Z",
+    "id": 1149526,
+    "issues": [
+      {
+        "id": 85117868,
+        "labels": ["dependency"],
+        "number": 13,
+        "title": "Update hapijs/joi to 6.4.3 from 4.9.0",
+        "url": "https://github.com/hapijs/statehood/issues/13"
+      }
+    ],
+    "number": 5,
+    "url": "https://github.com/hapijs/statehood/milestone/5",
+    "version": "2.1.1"
+  },
+  {
+    "date": "2015-06-04T14:09:36Z",
+    "id": 898079,
+    "issues": [
+      {
+        "id": 74652403,
+        "labels": ["feature"],
+        "number": 12,
+        "title": "Support isNullOverride in applyToDefaults",
+        "url": "https://github.com/hapijs/statehood/pull/12"
+      }
+    ],
+    "number": 4,
+    "url": "https://github.com/hapijs/statehood/milestone/4",
+    "version": "2.1.0"
+  },
+  {
+    "date": "2014-12-09T22:42:09Z",
+    "id": 781487,
+    "issues": [
+      {
+        "id": 50113345,
+        "labels": ["feature"],
+        "number": 9,
+        "title": "Move passThrough exclude logic from h2o2",
+        "url": "https://github.com/hapijs/statehood/issues/9"
+      },
+      {
+        "id": 49990013,
+        "labels": ["breaking changes"],
+        "number": 8,
+        "title": "Change parse and format to prototype",
+        "url": "https://github.com/hapijs/statehood/issues/8"
+      },
+      {
+        "id": 49988621,
+        "labels": ["breaking changes"],
+        "number": 7,
+        "title": "Replace globals with per cookie defaults",
+        "url": "https://github.com/hapijs/statehood/issues/7"
+      },
+      {
+        "id": 49988581,
+        "labels": ["bug"],
+        "number": 6,
+        "title": "Ignored errors do not stop processing current cookie",
+        "url": "https://github.com/hapijs/statehood/issues/6"
+      }
+    ],
+    "number": 3,
+    "url": "https://github.com/hapijs/statehood/milestone/3",
+    "version": "2.0.0"
+  },
+  {
+    "date": "2014-09-08T03:00:10Z",
+    "id": 781428,
+    "issues": [
+      {
+        "id": 42156463,
+        "labels": ["feature"],
+        "number": 3,
+        "title": "exclude()",
+        "url": "https://github.com/hapijs/statehood/issues/3"
+      },
+      {
+        "id": 42156453,
+        "labels": ["bug"],
+        "number": 2,
+        "title": "Remove support for comma separator",
+        "url": "https://github.com/hapijs/statehood/issues/2"
+      }
+    ],
+    "number": 2,
+    "url": "https://github.com/hapijs/statehood/milestone/2",
+    "version": "1.2.0"
+  },
+  {
+    "date": "2014-09-07T22:33:45Z",
+    "id": 781427,
+    "issues": [
+      {
+        "id": 42154127,
+        "labels": ["feature"],
+        "number": 1,
+        "title": "Add list of cookie names",
+        "url": "https://github.com/hapijs/statehood/issues/1"
+      }
+    ],
+    "number": 1,
+    "url": "https://github.com/hapijs/statehood/milestone/1",
+    "version": "1.1.0"
+  }
+]

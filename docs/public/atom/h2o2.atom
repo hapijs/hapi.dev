@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/h2o2</id>
+    <title>@hapi/h2o2 changelog</title>
+    <updated>2023-08-10T16:31:37.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/h2o2"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/h2o2 v10.0.3]]></title>
+        <id>https://github.com/hapijs/h2o2/milestone/23</id>
+        <link href="https://hapi.dev/module/h2o2/changelog#10.0.3"/>
+        <updated>2023-08-10T16:31:37.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/h2o2 v10.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/h2o2/pull/137">[#137]</a> Fix mapUri type definition</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/h2o2 v10.0.2]]></title>
+        <id>https://github.com/hapijs/h2o2/milestone/22</id>
+        <link href="https://hapi.dev/module/h2o2/changelog#10.0.2"/>
+        <updated>2023-06-09T14:37:02.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/h2o2 v10.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/h2o2/pull/136">[#136]</a> chore: add typings from DT</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/h2o2 v10.0.1]]></title>
+        <id>https://github.com/hapijs/h2o2/milestone/21</id>
+        <link href="https://hapi.dev/module/h2o2/changelog#10.0.1"/>
+        <updated>2023-02-11T20:03:42.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/h2o2 v10.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/h2o2/pull/135">[#135]</a> chore: bump hoek</li><li><a href="https://github.com/hapijs/h2o2/pull/133">[#133]</a> Support delete payload forwarding</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/h2o2 v10.0.0]]></title>
+        <id>https://github.com/hapijs/h2o2/milestone/20</id>
+        <link href="https://hapi.dev/module/h2o2/changelog#10.0.0"/>
+        <updated>2022-09-26T19:58:27.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/h2o2 v10.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/h2o2/pull/132">[#132]</a> Support for hapi v21, node v18, ESM tests</li><li><a href="https://github.com/hapijs/h2o2/pull/131">[#131]</a> add dispatcher and use shared config</li><li><a href="https://github.com/hapijs/h2o2/pull/128">[#128]</a> Add querystring support for uri mapping</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/h2o2 v9.1.0]]></title>
+        <id>https://github.com/hapijs/h2o2/milestone/18</id>
+        <link href="https://hapi.dev/module/h2o2/changelog#9.1.0"/>
+        <updated>2022-09-12T20:29:37.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/h2o2 v9.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/h2o2/pull/125">[#125]</a> propagate request abortion to upstream server</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/h2o2 v9.0.2]]></title>
+        <id>https://github.com/hapijs/h2o2/milestone/17</id>
+        <link href="https://hapi.dev/module/h2o2/changelog#9.0.2"/>
+        <updated>2020-09-26T16:42:17.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/h2o2 v9.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/h2o2/pull/121">[#121]</a> migrate to new travis format</li><li><a href="https://github.com/hapijs/h2o2/pull/120">[#120]</a> upgrade to hapi 20</li><li><a href="https://github.com/hapijs/h2o2/pull/119">[#119]</a> update lab and switch joi to validate</li><li><a href="https://github.com/hapijs/h2o2/pull/117">[#117]</a> Update onResponse for Wreck's async/await syntax</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/h2o2 v9.0.1]]></title>
+        <id>https://github.com/hapijs/h2o2/milestone/16</id>
+        <link href="https://hapi.dev/module/h2o2/changelog#9.0.1"/>
+        <updated>2020-01-12T08:18:44.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/h2o2 v9.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/h2o2/issues/113">[#113]</a> Require hapi 19</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/h2o2 v9.0.0]]></title>
+        <id>https://github.com/hapijs/h2o2/milestone/15</id>
+        <link href="https://hapi.dev/module/h2o2/changelog#9.0.0"/>
+        <updated>2020-01-12T06:20:03.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/h2o2 v9.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/h2o2/issues/112">[#112]</a> Change plugin name to @hapi/h2o2</li><li><a href="https://github.com/hapijs/h2o2/issues/111">[#111]</a> Drop hapi v17</li><li><a href="https://github.com/hapijs/h2o2/issues/110">[#110]</a> Only node 12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/h2o2 v8.3.2]]></title>
+        <id>https://github.com/hapijs/h2o2/milestone/14</id>
+        <link href="https://hapi.dev/module/h2o2/changelog#8.3.2"/>
+        <updated>2019-09-13T06:06:35.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/h2o2 v8.3.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/h2o2/issues/102">[#102]</a> Update joi</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/h2o2 v8.3.1]]></title>
+        <id>https://github.com/hapijs/h2o2/milestone/13</id>
+        <link href="https://hapi.dev/module/h2o2/changelog#8.3.1"/>
+        <updated>2019-08-14T22:25:47.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/h2o2 v8.3.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/h2o2/issues/101">[#101]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/h2o2 v8.3.0]]></title>
+        <id>https://github.com/hapijs/h2o2/milestone/12</id>
+        <link href="https://hapi.dev/module/h2o2/changelog#8.3.0"/>
+        <updated>2019-04-13T22:24:28.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/h2o2 v8.3.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/h2o2/issues/95">[#95]</a> Move agents from internals to server</li><li><a href="https://github.com/hapijs/h2o2/issues/94">[#94]</a> Change module namespace</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/h2o2 v5.3.0]]></title>
+        <id>https://github.com/hapijs/h2o2/milestone/11</id>
+        <link href="https://hapi.dev/module/h2o2/changelog#5.3.0"/>
+        <updated>2018-11-13T18:43:54.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/h2o2 v5.3.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/h2o2/pull/45">[#45]</a> Fix the `uri` vs. `address` variable usage for multiple replacements</li><li><a href="https://github.com/hapijs/h2o2/pull/44">[#44]</a> Allow request.params variable replacement in the uri template</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/h2o2 v5.2.0]]></title>
+        <id>https://github.com/hapijs/h2o2/milestone/10</id>
+        <link href="https://hapi.dev/module/h2o2/changelog#5.2.0"/>
+        <updated>2018-11-13T18:43:58.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/h2o2 v5.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/h2o2/pull/42">[#42]</a> Added X-Forwarded-Host to forward headers</li><li><a href="https://github.com/hapijs/h2o2/pull/41">[#41]</a> X-Forwarded-Proto being set to upstream protocol</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/h2o2 v5.1]]></title>
+        <id>https://github.com/hapijs/h2o2/milestone/9</id>
+        <link href="https://hapi.dev/module/h2o2/changelog#5.1"/>
+        <updated>2018-11-13T18:43:59.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/h2o2 v5.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/h2o2/pull/24">[#24]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/h2o2 v5.0.0]]></title>
+        <id>https://github.com/hapijs/h2o2/milestone/8</id>
+        <link href="https://hapi.dev/module/h2o2/changelog#5.0.0"/>
+        <updated>2018-11-13T18:44:01.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/h2o2 v5.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/h2o2/pull/20">[#20]</a> Migrate to new versions of modules and ES6.</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/h2o2 v4.0.2]]></title>
+        <id>https://github.com/hapijs/h2o2/milestone/7</id>
+        <link href="https://hapi.dev/module/h2o2/changelog#4.0.2"/>
+        <updated>2018-11-13T18:44:03.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/h2o2 v4.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/h2o2/pull/18">[#18]</a> Update Wreck dependency</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/h2o2 v4.0.1]]></title>
+        <id>https://github.com/hapijs/h2o2/milestone/6</id>
+        <link href="https://hapi.dev/module/h2o2/changelog#4.0.1"/>
+        <updated>2015-05-29T05:51:41.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/h2o2 v4.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/h2o2/pull/11">[#11]</a> Bump Joi to v6.x.x</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/h2o2 v4.0.0]]></title>
+        <id>https://github.com/hapijs/h2o2/milestone/5</id>
+        <link href="https://hapi.dev/module/h2o2/changelog#4.0.0"/>
+        <updated>2014-12-09T22:42:28.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/h2o2 v4.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/h2o2/pull/8">[#8]</a> passThrough changes</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/h2o2 v3.0.0]]></title>
+        <id>https://github.com/hapijs/h2o2/milestone/4</id>
+        <link href="https://hapi.dev/module/h2o2/changelog#3.0.0"/>
+        <updated>2014-10-31T00:33:45.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/h2o2 v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/h2o2/pull/7">[#7]</a> Move maxSockets to a handler config instead of server</li><li><a href="https://github.com/hapijs/h2o2/issues/6">[#6]</a> Replace server maxSockets settings with per handler configuration</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/h2o2 v2.0.1]]></title>
+        <id>https://github.com/hapijs/h2o2/milestone/3</id>
+        <link href="https://hapi.dev/module/h2o2/changelog#2.0.1"/>
+        <updated>2014-10-09T20:53:16.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/h2o2 v2.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/h2o2/issues/4">[#4]</a> Change localStatePassThrough default to true</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/h2o2 v2.0.0]]></title>
+        <id>https://github.com/hapijs/h2o2/milestone/2</id>
+        <link href="https://hapi.dev/module/h2o2/changelog#2.0.0"/>
+        <updated>2014-10-09T18:17:15.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/h2o2 v2.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/h2o2/issues/3">[#3]</a> Change handler function to hapi 7.0 API</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/h2o2 v1.0.1]]></title>
+        <id>https://github.com/hapijs/h2o2/milestone/1</id>
+        <link href="https://hapi.dev/module/h2o2/changelog#1.0.1"/>
+        <updated>2014-09-20T07:57:45.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/h2o2 v1.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/h2o2/issues/1">[#1]</a> Use joi.assert()</li></ul>]]></content>
+    </entry>
+</feed>

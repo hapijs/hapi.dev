@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/jwt</id>
+    <title>@hapi/jwt changelog</title>
+    <updated>2025-12-09T17:13:05.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/jwt"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/jwt v3.2.2]]></title>
+        <id>https://github.com/hapijs/jwt/milestone/18</id>
+        <link href="https://hapi.dev/module/jwt/changelog#3.2.2"/>
+        <updated>2025-12-09T17:13:05.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/jwt v3.2.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/jwt/pull/60">[#60]</a> Fix: jwt constant time fixed time</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/jwt v3.2.1]]></title>
+        <id>https://github.com/hapijs/jwt/milestone/17</id>
+        <link href="https://hapi.dev/module/jwt/changelog#3.2.1"/>
+        <updated>2025-12-09T17:13:04.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/jwt v3.2.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/jwt/pull/59">[#59]</a> chore: improve keys typings</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/jwt v3.2.0]]></title>
+        <id>https://github.com/hapijs/jwt/milestone/16</id>
+        <link href="https://hapi.dev/module/jwt/changelog#3.2.0"/>
+        <updated>2025-09-02T13:15:25.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/jwt v3.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/jwt/pull/54">[#54]</a> feat: add local typings</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/jwt v3.1.0]]></title>
+        <id>https://github.com/hapijs/jwt/milestone/15</id>
+        <link href="https://hapi.dev/module/jwt/changelog#3.1.0"/>
+        <updated>2023-02-04T10:17:46.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/jwt v3.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/jwt/pull/53">[#53]</a> feat: EdDSA</li><li><a href="https://github.com/hapijs/jwt/issues/48">[#48]</a> EdDSA (ed25519, ed448) support</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/jwt v3.0.0]]></title>
+        <id>https://github.com/hapijs/jwt/milestone/11</id>
+        <link href="https://hapi.dev/module/jwt/changelog#3.0.0"/>
+        <updated>2022-08-29T20:07:09.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/jwt v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/jwt/pull/47">[#47]</a> Support hapi v21, drop hapi v19, test ESM support</li><li><a href="https://github.com/hapijs/jwt/pull/39">[#39]</a> use utf-8 encoding, closes #21</li><li><a href="https://github.com/hapijs/jwt/issues/21">[#21]</a> Utils.b64stringify() is called wrong</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/jwt v2.2.0]]></title>
+        <id>https://github.com/hapijs/jwt/milestone/14</id>
+        <link href="https://hapi.dev/module/jwt/changelog#2.2.0"/>
+        <updated>2022-08-29T19:33:07.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/jwt v2.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/jwt/pull/43">[#43]</a> add support for reading token from cookie</li><li><a href="https://github.com/hapijs/jwt/issues/28">[#28]</a> Load the JWT from an arbitrary location in the request</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/jwt v2.1.1]]></title>
+        <id>https://github.com/hapijs/jwt/milestone/9</id>
+        <link href="https://hapi.dev/module/jwt/changelog#2.1.1"/>
+        <updated>2022-03-24T23:48:31.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/jwt v2.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/jwt/pull/46">[#46]</a> fix: make compliant with jwt spec</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/jwt v2.1.0]]></title>
+        <id>https://github.com/hapijs/jwt/milestone/8</id>
+        <link href="https://hapi.dev/module/jwt/changelog#2.1.0"/>
+        <updated>2021-08-17T02:41:27.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/jwt v2.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/jwt/pull/37">[#37]</a> headless support.</li><li><a href="https://github.com/hapijs/jwt/pull/34">[#34]</a> Fix serialNumber and remove workarounds</li><li><a href="https://github.com/hapijs/jwt/pull/29">[#29]</a> allow typ in header to be optional. </li><li><a href="https://github.com/hapijs/jwt/pull/23">[#23]</a> Improvements to the API.md</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/jwt v2.0.1]]></title>
+        <id>https://github.com/hapijs/jwt/milestone/7</id>
+        <link href="https://hapi.dev/module/jwt/changelog#2.0.1"/>
+        <updated>2020-12-01T22:01:25.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/jwt v2.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/jwt/pull/20">[#20]</a> Changes to README.md to align with other modules in the family</li><li><a href="https://github.com/hapijs/jwt/pull/18">[#18]</a> Bump node-forge from 0.9.2 to 0.10.0</li><li><a href="https://github.com/hapijs/jwt/pull/14">[#14]</a> Update dependencies and travis</li><li><a href="https://github.com/hapijs/jwt/pull/12">[#12]</a> Add API.md</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/jwt v2.0.0]]></title>
+        <id>https://github.com/hapijs/jwt/milestone/6</id>
+        <link href="https://hapi.dev/module/jwt/changelog#2.0.0"/>
+        <updated>2020-01-22T08:29:33.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/jwt v2.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/jwt/issues/11">[#11]</a> Require hapi 19 or newer</li><li><a href="https://github.com/hapijs/jwt/issues/10">[#10]</a> Change plugin name to @commercial/jwt</li><li><a href="https://github.com/hapijs/jwt/issues/9">[#9]</a> Only node 12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/jwt v1.1.2]]></title>
+        <id>https://github.com/hapijs/jwt/milestone/5</id>
+        <link href="https://hapi.dev/module/jwt/changelog#1.1.2"/>
+        <updated>2019-09-12T22:41:01.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/jwt v1.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/jwt/issues/6">[#6]</a> Update joi</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/jwt v1.1.1]]></title>
+        <id>https://github.com/hapijs/jwt/milestone/4</id>
+        <link href="https://hapi.dev/module/jwt/changelog#1.1.1"/>
+        <updated>2019-08-15T06:35:17.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/jwt v1.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/jwt/issues/5">[#5]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/jwt v1.1.0]]></title>
+        <id>https://github.com/hapijs/jwt/milestone/3</id>
+        <link href="https://hapi.dev/module/jwt/changelog#1.1.0"/>
+        <updated>2019-05-01T05:47:12.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/jwt v1.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/jwt/issues/3">[#3]</a> Support ttlSec on generate()</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/jwt v1.0.2]]></title>
+        <id>https://github.com/hapijs/jwt/milestone/2</id>
+        <link href="https://hapi.dev/module/jwt/changelog#1.0.2"/>
+        <updated>2019-05-01T00:43:01.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/jwt v1.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/jwt/issues/2">[#2]</a> Expire token on exp, not just after</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/jwt v1.0.1]]></title>
+        <id>https://github.com/hapijs/jwt/milestone/1</id>
+        <link href="https://hapi.dev/module/jwt/changelog#1.0.1"/>
+        <updated>2019-04-30T23:41:11.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/jwt v1.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/jwt/issues/1">[#1]</a> Verify payload once, not per key</li></ul>]]></content>
+    </entry>
+</feed>

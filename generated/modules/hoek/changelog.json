@@ -1,0 +1,2166 @@
+[
+  {
+    "date": "2024-11-14T15:55:17Z",
+    "id": 11894370,
+    "issues": [
+      {
+        "id": 2659253191,
+        "labels": ["bug"],
+        "number": 402,
+        "title": "Fix cloning Util.inherit() subclassed errors. Backports #401",
+        "url": "https://github.com/hapijs/hoek/pull/402"
+      },
+      {
+        "id": 2659170673,
+        "labels": ["bug"],
+        "number": 401,
+        "title": "Fix cloning Util.inherit() subclassed errors",
+        "url": "https://github.com/hapijs/hoek/pull/401"
+      },
+      {
+        "id": 2658187297,
+        "labels": ["bug"],
+        "number": 400,
+        "title": "Hoek.clone drop an error with axios errors in version @hapi/hoek 11.0.6+",
+        "url": "https://github.com/hapijs/hoek/issues/400"
+      }
+    ],
+    "number": 108,
+    "url": "https://github.com/hapijs/hoek/milestone/108",
+    "version": "11.0.7"
+  },
+  {
+    "date": "2024-10-24T22:05:42Z",
+    "id": 11793175,
+    "issues": [
+      {
+        "id": 2612070373,
+        "labels": ["bug"],
+        "number": 399,
+        "title": "Fix Error clone() when structuredClone uses bad prototype",
+        "url": "https://github.com/hapijs/hoek/pull/399"
+      }
+    ],
+    "number": 107,
+    "url": "https://github.com/hapijs/hoek/milestone/107",
+    "version": "11.0.6"
+  },
+  {
+    "date": "2024-10-24T22:03:04Z",
+    "id": 10268890,
+    "issues": [
+      {
+        "id": 2611018014,
+        "labels": ["bug"],
+        "number": 398,
+        "title": "fix: missing stack starting from node 21+",
+        "url": "https://github.com/hapijs/hoek/pull/398"
+      },
+      {
+        "id": 2456135918,
+        "labels": ["documentation", "types"],
+        "number": 396,
+        "title": "Fix default values for `merge.Options` interface",
+        "url": "https://github.com/hapijs/hoek/pull/396"
+      },
+      {
+        "id": 2456103097,
+        "labels": ["types"],
+        "number": 395,
+        "title": "Incorrect default documented for `mergeArrays` option",
+        "url": "https://github.com/hapijs/hoek/issues/395"
+      }
+    ],
+    "number": 106,
+    "url": "https://github.com/hapijs/hoek/milestone/106",
+    "version": "11.0.5"
+  },
+  {
+    "date": "2023-12-05T10:49:28Z",
+    "id": 10267490,
+    "issues": [
+      {
+        "id": 1905653321,
+        "labels": ["bug", "types"],
+        "number": 389,
+        "title": "fix: provide reference to TS types for export map",
+        "url": "https://github.com/hapijs/hoek/pull/389"
+      },
+      {
+        "id": 1564951064,
+        "labels": ["bug", "types"],
+        "number": 385,
+        "title": "Missing types in typescript with module resolution nodenext",
+        "url": "https://github.com/hapijs/hoek/issues/385"
+      }
+    ],
+    "number": 105,
+    "url": "https://github.com/hapijs/hoek/milestone/105",
+    "version": "11.0.4"
+  },
+  {
+    "date": "2023-12-05T08:08:59Z",
+    "id": 10267473,
+    "issues": [
+      {
+        "id": 2014158006,
+        "labels": ["bug"],
+        "number": 392,
+        "title": "Support the URL type",
+        "url": "https://github.com/hapijs/hoek/pull/392"
+      }
+    ],
+    "number": 104,
+    "url": "https://github.com/hapijs/hoek/milestone/104",
+    "version": "11.0.3"
+  },
+  {
+    "date": "2023-02-18T18:52:59Z",
+    "id": 8763263,
+    "issues": [
+      {
+        "id": 1496267911,
+        "labels": ["types"],
+        "number": 384,
+        "title": "chore: add individual module types",
+        "url": "https://github.com/hapijs/hoek/pull/384"
+      }
+    ],
+    "number": 102,
+    "url": "https://github.com/hapijs/hoek/milestone/102",
+    "version": "11.0.2"
+  },
+  {
+    "date": "2022-12-13T19:33:59Z",
+    "id": 8759223,
+    "issues": [
+      {
+        "id": 1241558819,
+        "labels": ["feature", "breaking changes"],
+        "number": 380,
+        "title": "Explicitly export modules",
+        "url": "https://github.com/hapijs/hoek/pull/380"
+      }
+    ],
+    "number": 101,
+    "url": "https://github.com/hapijs/hoek/milestone/101",
+    "version": "11.0.1"
+  },
+  {
+    "date": "2022-12-13T08:05:19Z",
+    "id": 8755410,
+    "issues": [
+      {
+        "id": 1309307120,
+        "labels": ["feature", "breaking changes", "types"],
+        "number": 382,
+        "title": "Refactor AssertError",
+        "url": "https://github.com/hapijs/hoek/pull/382"
+      }
+    ],
+    "number": 100,
+    "url": "https://github.com/hapijs/hoek/milestone/100",
+    "version": "11.0.0"
+  },
+  {
+    "date": "2022-07-23T18:31:42Z",
+    "id": 7932233,
+    "issues": [
+      {
+        "id": 1315584562,
+        "labels": ["bug"],
+        "number": 383,
+        "title": "Updates assert() type to declare condition to be true",
+        "url": "https://github.com/hapijs/hoek/pull/383"
+      },
+      {
+        "id": 1241430181,
+        "labels": ["dependency"],
+        "number": 379,
+        "title": "Fix version range",
+        "url": "https://github.com/hapijs/hoek/pull/379"
+      }
+    ],
+    "number": 98,
+    "url": "https://github.com/hapijs/hoek/milestone/98",
+    "version": "10.0.1"
+  },
+  {
+    "date": "2022-05-01T18:02:50Z",
+    "id": 7931449,
+    "issues": [
+      {
+        "id": 1222020915,
+        "labels": ["breaking changes", "dependency"],
+        "number": 377,
+        "title": "Support node v18 and drop node v12",
+        "url": "https://github.com/hapijs/hoek/pull/377"
+      }
+    ],
+    "number": 97,
+    "url": "https://github.com/hapijs/hoek/milestone/97",
+    "version": "10.0.0"
+  },
+  {
+    "date": "2022-05-01T18:00:57Z",
+    "id": 7905503,
+    "issues": [
+      {
+        "id": 1034925394,
+        "labels": ["bug", "feature"],
+        "number": 373,
+        "title": "Handle very long timeouts in Hoek.wait()",
+        "url": "https://github.com/hapijs/hoek/pull/373"
+      },
+      {
+        "id": 1029471849,
+        "labels": [],
+        "number": 372,
+        "title": "Cleanup",
+        "url": "https://github.com/hapijs/hoek/pull/372"
+      }
+    ],
+    "number": 96,
+    "url": "https://github.com/hapijs/hoek/milestone/96",
+    "version": "9.3.0"
+  },
+  {
+    "date": "2021-09-27T20:57:03Z",
+    "id": 6671369,
+    "issues": [
+      {
+        "id": 1008570332,
+        "labels": ["bug", "security"],
+        "number": 371,
+        "title": "Fix reachTemplate() regex timing",
+        "url": "https://github.com/hapijs/hoek/pull/371"
+      }
+    ],
+    "number": 94,
+    "url": "https://github.com/hapijs/hoek/milestone/94",
+    "version": "9.2.1"
+  },
+  {
+    "date": "2021-04-17T21:10:59Z",
+    "id": 6671368,
+    "issues": [
+      {
+        "id": 855917996,
+        "labels": ["feature"],
+        "number": 368,
+        "title": "Support named imports when using node esm loader",
+        "url": "https://github.com/hapijs/hoek/pull/368"
+      }
+    ],
+    "number": 93,
+    "url": "https://github.com/hapijs/hoek/milestone/93",
+    "version": "9.2.0"
+  },
+  {
+    "date": "2020-12-27T17:02:12Z",
+    "id": 5834424,
+    "issues": [
+      {
+        "id": 771970242,
+        "labels": [],
+        "number": 367,
+        "title": "applyToDefaults: respect nullOverride when shallow is used",
+        "url": "https://github.com/hapijs/hoek/pull/367"
+      },
+      {
+        "id": 760414485,
+        "labels": ["bug"],
+        "number": 365,
+        "title": "Fix applyToDefaults to work better with non-object source values",
+        "url": "https://github.com/hapijs/hoek/pull/365"
+      },
+      {
+        "id": 709592786,
+        "labels": [],
+        "number": 361,
+        "title": "upgrade lab to v24 and devDependency of typescript",
+        "url": "https://github.com/hapijs/hoek/pull/361"
+      }
+    ],
+    "number": 92,
+    "url": "https://github.com/hapijs/hoek/milestone/92",
+    "version": "9.1.1"
+  },
+  {
+    "date": "2020-09-02T01:38:07Z",
+    "id": 5193606,
+    "issues": [
+      {
+        "id": 684627117,
+        "labels": ["bug"],
+        "number": 360,
+        "title": "Always call base class methods to inspect Map and Set",
+        "url": "https://github.com/hapijs/hoek/pull/360"
+      },
+      {
+        "id": 683642132,
+        "labels": ["feature"],
+        "number": 359,
+        "title": "Add returnValue option to wait()",
+        "url": "https://github.com/hapijs/hoek/pull/359"
+      },
+      {
+        "id": 675686328,
+        "labels": ["bug"],
+        "number": 357,
+        "title": "deepEqual() can fail on subclassed map",
+        "url": "https://github.com/hapijs/hoek/issues/357"
+      }
+    ],
+    "number": 91,
+    "url": "https://github.com/hapijs/hoek/milestone/91",
+    "version": "9.1.0"
+  },
+  {
+    "date": "2020-03-12T05:11:19Z",
+    "id": 5083634,
+    "issues": [
+      {
+        "id": 558367826,
+        "labels": ["bug"],
+        "number": 351,
+        "title": "Fix 'compare is not a function'",
+        "url": "https://github.com/hapijs/hoek/pull/351"
+      }
+    ],
+    "number": 90,
+    "url": "https://github.com/hapijs/hoek/milestone/90",
+    "version": "9.0.4"
+  },
+  {
+    "date": "2020-02-08T06:59:41Z",
+    "id": 4992142,
+    "issues": [
+      {
+        "id": 561978604,
+        "labels": ["bug", "security"],
+        "number": 352,
+        "title": "Prevent prototype poisoning in clone()",
+        "url": "https://github.com/hapijs/hoek/issues/352"
+      }
+    ],
+    "number": 88,
+    "url": "https://github.com/hapijs/hoek/milestone/88",
+    "version": "9.0.3"
+  },
+  {
+    "date": "2020-01-09T18:26:01Z",
+    "id": 4990067,
+    "issues": [
+      {
+        "id": 547644435,
+        "labels": ["bug"],
+        "number": 350,
+        "title": "Clone fails to copy override array prototype",
+        "url": "https://github.com/hapijs/hoek/issues/350"
+      }
+    ],
+    "number": 87,
+    "url": "https://github.com/hapijs/hoek/milestone/87",
+    "version": "9.0.2"
+  },
+  {
+    "date": "2020-01-09T06:17:18Z",
+    "id": 4972030,
+    "issues": [
+      {
+        "id": 547272812,
+        "labels": ["bug"],
+        "number": 349,
+        "title": "Fix shallow defaults clone",
+        "url": "https://github.com/hapijs/hoek/issues/349"
+      }
+    ],
+    "number": 86,
+    "url": "https://github.com/hapijs/hoek/milestone/86",
+    "version": "9.0.1"
+  },
+  {
+    "date": "2020-01-03T23:06:49Z",
+    "id": 4972029,
+    "issues": [
+      {
+        "id": 545196311,
+        "labels": ["breaking changes", "dependency"],
+        "number": 347,
+        "title": "Support only node 12",
+        "url": "https://github.com/hapijs/hoek/issues/347"
+      },
+      {
+        "id": 508385597,
+        "labels": ["feature", "breaking changes"],
+        "number": 343,
+        "title": "Safer and faster shallow handling",
+        "url": "https://github.com/hapijs/hoek/pull/343"
+      }
+    ],
+    "number": 85,
+    "url": "https://github.com/hapijs/hoek/milestone/85",
+    "version": "9.0.0"
+  },
+  {
+    "date": "2020-02-08T06:59:43Z",
+    "id": 4800392,
+    "issues": [
+      {
+        "id": 561979858,
+        "labels": ["bug", "security", "lts"],
+        "number": 353,
+        "title": "Prevent prototype poisoning in clone() (v8)",
+        "url": "https://github.com/hapijs/hoek/issues/353"
+      }
+    ],
+    "number": 84,
+    "url": "https://github.com/hapijs/hoek/milestone/84",
+    "version": "8.5.1"
+  },
+  {
+    "date": "2019-10-31T00:37:26Z",
+    "id": 4797505,
+    "issues": [
+      {
+        "id": 515070839,
+        "labels": ["feature"],
+        "number": 346,
+        "title": "Add isPromise()",
+        "url": "https://github.com/hapijs/hoek/issues/346"
+      }
+    ],
+    "number": 83,
+    "url": "https://github.com/hapijs/hoek/milestone/83",
+    "version": "8.5.0"
+  },
+  {
+    "date": "2019-10-30T06:35:08Z",
+    "id": 4762255,
+    "issues": [
+      {
+        "id": 514431274,
+        "labels": ["feature", "types"],
+        "number": 345,
+        "title": "Add ts.XOR<>",
+        "url": "https://github.com/hapijs/hoek/issues/345"
+      }
+    ],
+    "number": 82,
+    "url": "https://github.com/hapijs/hoek/milestone/82",
+    "version": "8.4.0"
+  },
+  {
+    "date": "2019-10-17T20:54:08Z",
+    "id": 4752522,
+    "issues": [
+      {
+        "id": 508714894,
+        "labels": ["bug"],
+        "number": 344,
+        "title": "Improve clone() performance",
+        "url": "https://github.com/hapijs/hoek/issues/344"
+      }
+    ],
+    "number": 81,
+    "url": "https://github.com/hapijs/hoek/milestone/81",
+    "version": "8.3.2"
+  },
+  {
+    "date": "2019-10-15T06:28:04Z",
+    "id": 4723288,
+    "issues": [
+      {
+        "id": 507033301,
+        "labels": ["bug"],
+        "number": 342,
+        "title": "contain() part option allows no matches",
+        "url": "https://github.com/hapijs/hoek/issues/342"
+      }
+    ],
+    "number": 80,
+    "url": "https://github.com/hapijs/hoek/milestone/80",
+    "version": "8.3.1"
+  },
+  {
+    "date": "2019-10-05T03:18:40Z",
+    "id": 4700000,
+    "issues": [
+      {
+        "id": 502866572,
+        "labels": ["bug", "types"],
+        "number": 341,
+        "title": "Block once in contain() when subject is an object",
+        "url": "https://github.com/hapijs/hoek/issues/341"
+      },
+      {
+        "id": 502860092,
+        "labels": ["bug"],
+        "number": 340,
+        "title": "Error.captureStackTrace can't be used in Joi's browser build",
+        "url": "https://github.com/hapijs/hoek/issues/340"
+      }
+    ],
+    "number": 79,
+    "url": "https://github.com/hapijs/hoek/milestone/79",
+    "version": "8.3.0"
+  },
+  {
+    "date": "2019-09-28T07:13:14Z",
+    "id": 4642867,
+    "issues": [
+      {
+        "id": 499736310,
+        "labels": ["types"],
+        "number": 338,
+        "title": "Export interfaces",
+        "url": "https://github.com/hapijs/hoek/issues/338"
+      },
+      {
+        "id": 499108377,
+        "labels": ["bug"],
+        "number": 337,
+        "title": "deepEqual with skip seems to ignore missing properties",
+        "url": "https://github.com/hapijs/hoek/issues/337"
+      }
+    ],
+    "number": 78,
+    "url": "https://github.com/hapijs/hoek/milestone/78",
+    "version": "8.2.5"
+  },
+  {
+    "date": "2019-09-09T06:18:56Z",
+    "id": 4642034,
+    "issues": [
+      {
+        "id": 490897665,
+        "labels": ["bug"],
+        "number": 330,
+        "title": "Remove deep limit on contain with object",
+        "url": "https://github.com/hapijs/hoek/issues/330"
+      }
+    ],
+    "number": 77,
+    "url": "https://github.com/hapijs/hoek/milestone/77",
+    "version": "8.2.4"
+  },
+  {
+    "date": "2019-09-08T19:10:33Z",
+    "id": 4642033,
+    "issues": [
+      {
+        "id": 490715452,
+        "labels": ["bug"],
+        "number": 329,
+        "title": "deepEqual() fails to compare errors when prototype is false",
+        "url": "https://github.com/hapijs/hoek/issues/329"
+      },
+      {
+        "id": 483100600,
+        "labels": ["bug"],
+        "number": 327,
+        "title": "contain() passes with extra values with only and not once",
+        "url": "https://github.com/hapijs/hoek/issues/327"
+      }
+    ],
+    "number": 76,
+    "url": "https://github.com/hapijs/hoek/milestone/76",
+    "version": "8.2.3"
+  },
+  {
+    "date": "2019-09-08T19:10:08Z",
+    "id": 4567374,
+    "issues": [],
+    "number": 73,
+    "url": "https://github.com/hapijs/hoek/milestone/73",
+    "version": "8.2.2"
+  },
+  {
+    "date": "2019-08-12T19:48:25Z",
+    "id": 4556604,
+    "issues": [
+      {
+        "id": 478755975,
+        "labels": ["bug"],
+        "number": 324,
+        "title": "Fix empty ref bug in contain when only is true",
+        "url": "https://github.com/hapijs/hoek/pull/324"
+      },
+      {
+        "id": 478753983,
+        "labels": ["bug"],
+        "number": 323,
+        "title": "contain() is always true for empty ref with only and not once",
+        "url": "https://github.com/hapijs/hoek/issues/323"
+      }
+    ],
+    "number": 72,
+    "url": "https://github.com/hapijs/hoek/milestone/72",
+    "version": "8.2.1"
+  },
+  {
+    "date": "2019-08-07T21:35:23Z",
+    "id": 4519353,
+    "issues": [
+      {
+        "id": 478126911,
+        "labels": ["feature"],
+        "number": 322,
+        "title": "Break methods for deep require",
+        "url": "https://github.com/hapijs/hoek/issues/322"
+      },
+      {
+        "id": 478121471,
+        "labels": ["feature"],
+        "number": 321,
+        "title": "Handle no Buffer support",
+        "url": "https://github.com/hapijs/hoek/issues/321"
+      }
+    ],
+    "number": 71,
+    "url": "https://github.com/hapijs/hoek/milestone/71",
+    "version": "8.2.0"
+  },
+  {
+    "date": "2019-07-24T17:41:28Z",
+    "id": 4455481,
+    "issues": [
+      {
+        "id": 472411068,
+        "labels": ["feature"],
+        "number": 319,
+        "title": "skip and deepFunction options for deepEqual()",
+        "url": "https://github.com/hapijs/hoek/issues/319"
+      }
+    ],
+    "number": 70,
+    "url": "https://github.com/hapijs/hoek/milestone/70",
+    "version": "8.1.0"
+  },
+  {
+    "date": "2019-07-01T16:54:08Z",
+    "id": 4443949,
+    "issues": [
+      {
+        "id": 462815163,
+        "labels": ["bug"],
+        "number": 317,
+        "title": "Restore ability to assert with pre-made error",
+        "url": "https://github.com/hapijs/hoek/issues/317"
+      }
+    ],
+    "number": 69,
+    "url": "https://github.com/hapijs/hoek/milestone/69",
+    "version": "8.0.2"
+  },
+  {
+    "date": "2019-06-26T17:18:20Z",
+    "id": 4441949,
+    "issues": [
+      {
+        "id": 460838460,
+        "labels": ["bug"],
+        "number": 316,
+        "title": "Make assert() generate a named Error so bounce can identify",
+        "url": "https://github.com/hapijs/hoek/issues/316"
+      }
+    ],
+    "number": 68,
+    "url": "https://github.com/hapijs/hoek/milestone/68",
+    "version": "8.0.1"
+  },
+  {
+    "date": "2019-06-26T05:57:21Z",
+    "id": 4432735,
+    "issues": [
+      {
+        "id": 460774906,
+        "labels": ["breaking changes", "release notes"],
+        "number": 315,
+        "title": "v8.0.0 Release Notes",
+        "url": "https://github.com/hapijs/hoek/issues/315"
+      },
+      {
+        "id": 460774350,
+        "labels": ["breaking changes"],
+        "number": 314,
+        "title": "Change assert() AssertionError to Error",
+        "url": "https://github.com/hapijs/hoek/issues/314"
+      },
+      {
+        "id": 460769468,
+        "labels": ["breaking changes"],
+        "number": 313,
+        "title": "Remove uniqueFilename()",
+        "url": "https://github.com/hapijs/hoek/issues/313"
+      }
+    ],
+    "number": 67,
+    "url": "https://github.com/hapijs/hoek/milestone/67",
+    "version": "8.0.0"
+  },
+  {
+    "date": "2019-06-23T04:10:44Z",
+    "id": 4431901,
+    "issues": [
+      {
+        "id": 459534336,
+        "labels": ["feature"],
+        "number": 312,
+        "title": "Minor performance",
+        "url": "https://github.com/hapijs/hoek/issues/312"
+      }
+    ],
+    "number": 66,
+    "url": "https://github.com/hapijs/hoek/milestone/66",
+    "version": "7.2.1"
+  },
+  {
+    "date": "2019-06-22T03:50:14Z",
+    "id": 4367023,
+    "issues": [
+      {
+        "id": 459430774,
+        "labels": ["feature"],
+        "number": 311,
+        "title": "Support reach into Set and Map objects",
+        "url": "https://github.com/hapijs/hoek/issues/311"
+      }
+    ],
+    "number": 65,
+    "url": "https://github.com/hapijs/hoek/milestone/65",
+    "version": "7.2.0"
+  },
+  {
+    "date": "2019-06-01T17:49:13Z",
+    "id": 4366103,
+    "issues": [
+      {
+        "id": 451108766,
+        "labels": ["feature"],
+        "number": 308,
+        "title": "Shallow clone of entire object",
+        "url": "https://github.com/hapijs/hoek/issues/308"
+      }
+    ],
+    "number": 64,
+    "url": "https://github.com/hapijs/hoek/milestone/64",
+    "version": "7.1.0"
+  },
+  {
+    "date": "2019-05-31T21:38:24Z",
+    "id": 4350024,
+    "issues": [
+      {
+        "id": 450993414,
+        "labels": ["breaking changes", "release notes"],
+        "number": 306,
+        "title": "v7.0.0 Release Notes",
+        "url": "https://github.com/hapijs/hoek/issues/306"
+      },
+      {
+        "id": 450990375,
+        "labels": ["feature", "breaking changes"],
+        "number": 305,
+        "title": "Support symbols in merge()",
+        "url": "https://github.com/hapijs/hoek/issues/305"
+      },
+      {
+        "id": 450978592,
+        "labels": ["breaking changes"],
+        "number": 304,
+        "title": "Replace applyToDefaultsWithShallow() with applyToDefaults(..., { shallow })",
+        "url": "https://github.com/hapijs/hoek/issues/304"
+      },
+      {
+        "id": 450970637,
+        "labels": ["breaking changes"],
+        "number": 303,
+        "title": "Replace cloneWithShallow() with clone(value, { shallow })",
+        "url": "https://github.com/hapijs/hoek/issues/303"
+      },
+      {
+        "id": 386438346,
+        "labels": ["breaking changes"],
+        "number": 285,
+        "title": "Change all individual option arguments to { options } object",
+        "url": "https://github.com/hapijs/hoek/issues/285"
+      },
+      {
+        "id": 386438231,
+        "labels": ["breaking changes"],
+        "number": 284,
+        "title": "Default handling of symbols to true by default",
+        "url": "https://github.com/hapijs/hoek/issues/284"
+      }
+    ],
+    "number": 63,
+    "url": "https://github.com/hapijs/hoek/milestone/63",
+    "version": "7.0.0"
+  },
+  {
+    "date": "2019-09-01T07:35:48Z",
+    "id": 4570553,
+    "issues": [
+      {
+        "id": 487852623,
+        "labels": ["bug"],
+        "number": 328,
+        "title": "deepEqual() skip fails when number of keys is diff",
+        "url": "https://github.com/hapijs/hoek/issues/328"
+      }
+    ],
+    "number": 74,
+    "url": "https://github.com/hapijs/hoek/milestone/74",
+    "version": "6.2.6"
+  },
+  {
+    "date": "2019-05-27T00:44:26Z",
+    "id": 4325856,
+    "issues": [
+      {
+        "id": 447869097,
+        "labels": ["bug"],
+        "number": 302,
+        "title": "Fix clone of subclassed Set and Map",
+        "url": "https://github.com/hapijs/hoek/pull/302"
+      },
+      {
+        "id": 447697314,
+        "labels": ["bug"],
+        "number": 301,
+        "title": "Fix: Add map and set to seen map",
+        "url": "https://github.com/hapijs/hoek/pull/301"
+      },
+      {
+        "id": 447367853,
+        "labels": ["bug"],
+        "number": 300,
+        "title": "Stack overflow in clone in v6.2.3",
+        "url": "https://github.com/hapijs/hoek/issues/300"
+      },
+      {
+        "id": 445627953,
+        "labels": ["types"],
+        "number": 298,
+        "title": "Typescript enhancements",
+        "url": "https://github.com/hapijs/hoek/pull/298"
+      }
+    ],
+    "number": 62,
+    "url": "https://github.com/hapijs/hoek/milestone/62",
+    "version": "6.2.4"
+  },
+  {
+    "date": "2019-05-17T20:15:56Z",
+    "id": 4325850,
+    "issues": [
+      {
+        "id": 445788640,
+        "labels": ["bug", "breaking changes"],
+        "number": 299,
+        "title": "Set deepEqual() prototype option to true by default, not just when no options are passed",
+        "url": "https://github.com/hapijs/hoek/issues/299"
+      },
+      {
+        "id": 445561512,
+        "labels": ["bug"],
+        "number": 297,
+        "title": "Clone Map and Set",
+        "url": "https://github.com/hapijs/hoek/pull/297"
+      },
+      {
+        "id": 292777807,
+        "labels": ["bug"],
+        "number": 228,
+        "title": "Hoek.clone() issues",
+        "url": "https://github.com/hapijs/hoek/issues/228"
+      }
+    ],
+    "number": 61,
+    "url": "https://github.com/hapijs/hoek/milestone/61",
+    "version": "6.2.3"
+  },
+  {
+    "date": "2019-05-17T20:11:07Z",
+    "id": 4184482,
+    "issues": [
+      {
+        "id": 445110839,
+        "labels": ["types"],
+        "number": 295,
+        "title": "Bootstrap types from @types",
+        "url": "https://github.com/hapijs/hoek/issues/295"
+      },
+      {
+        "id": 440457589,
+        "labels": ["bug"],
+        "number": 294,
+        "title": "Handle promises in deepEqual()",
+        "url": "https://github.com/hapijs/hoek/pull/294"
+      }
+    ],
+    "number": 60,
+    "url": "https://github.com/hapijs/hoek/milestone/60",
+    "version": "6.2.2"
+  },
+  {
+    "date": "2019-03-29T22:27:48Z",
+    "id": 4175362,
+    "issues": [
+      {
+        "id": 427200260,
+        "labels": ["dependency"],
+        "number": 291,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/hoek/issues/291"
+      }
+    ],
+    "number": 58,
+    "url": "https://github.com/hapijs/hoek/milestone/58",
+    "version": "6.2.1"
+  },
+  {
+    "date": "2019-03-27T00:22:51Z",
+    "id": 3863004,
+    "issues": [
+      {
+        "id": 425703347,
+        "labels": ["non issue"],
+        "number": 289,
+        "title": "Change module namespace",
+        "url": "https://github.com/hapijs/hoek/issues/289"
+      }
+    ],
+    "number": 55,
+    "url": "https://github.com/hapijs/hoek/milestone/55",
+    "version": "6.2.0"
+  },
+  {
+    "date": "2019-03-27T00:32:39Z",
+    "id": 4175370,
+    "issues": [
+      {
+        "id": 425706281,
+        "labels": ["bug"],
+        "number": 290,
+        "title": "Fix clone without prototype",
+        "url": "https://github.com/hapijs/hoek/issues/290"
+      }
+    ],
+    "number": 59,
+    "url": "https://github.com/hapijs/hoek/milestone/59",
+    "version": "6.1.3"
+  },
+  {
+    "date": "2018-12-01T08:36:56Z",
+    "id": 3856306,
+    "issues": [
+      {
+        "id": 386438043,
+        "labels": ["bug"],
+        "number": 283,
+        "title": "Revert cloning of symbols to false by default",
+        "url": "https://github.com/hapijs/hoek/issues/283"
+      }
+    ],
+    "number": 54,
+    "url": "https://github.com/hapijs/hoek/milestone/54",
+    "version": "6.1.2"
+  },
+  {
+    "date": "2018-11-28T22:32:05Z",
+    "id": 3844987,
+    "issues": [
+      {
+        "id": 385483648,
+        "labels": ["bug"],
+        "number": 282,
+        "title": "Ignore symbols by default in deepEqual()",
+        "url": "https://github.com/hapijs/hoek/issues/282"
+      },
+      {
+        "id": 384291597,
+        "labels": ["feature"],
+        "number": 281,
+        "title": "Symbol support",
+        "url": "https://github.com/hapijs/hoek/pull/281"
+      }
+    ],
+    "number": 53,
+    "url": "https://github.com/hapijs/hoek/milestone/53",
+    "version": "6.1.1"
+  },
+  {
+    "date": "2018-11-24T12:40:20Z",
+    "id": 3811315,
+    "issues": [
+      {
+        "id": 383948594,
+        "labels": ["bug"],
+        "number": 278,
+        "title": "Hoek.clone() defineProperty issue",
+        "url": "https://github.com/hapijs/hoek/issues/278"
+      }
+    ],
+    "number": 52,
+    "url": "https://github.com/hapijs/hoek/milestone/52",
+    "version": "6.0.4"
+  },
+  {
+    "date": "2018-11-11T02:30:10Z",
+    "id": 3801074,
+    "issues": [
+      {
+        "id": 378510277,
+        "labels": ["bug"],
+        "number": 277,
+        "title": "Don't apply part option to contain() by default",
+        "url": "https://github.com/hapijs/hoek/pull/277"
+      }
+    ],
+    "number": 51,
+    "url": "https://github.com/hapijs/hoek/milestone/51",
+    "version": "6.0.3"
+  },
+  {
+    "date": "2018-11-06T17:42:37Z",
+    "id": 3792340,
+    "issues": [
+      {
+        "id": 377943958,
+        "labels": ["bug"],
+        "number": 276,
+        "title": "Fix contain() with duplicates and only",
+        "url": "https://github.com/hapijs/hoek/pull/276"
+      }
+    ],
+    "number": 50,
+    "url": "https://github.com/hapijs/hoek/milestone/50",
+    "version": "6.0.2"
+  },
+  {
+    "date": "2018-11-03T00:52:45Z",
+    "id": 3787373,
+    "issues": [
+      {
+        "id": 377008000,
+        "labels": ["non issue"],
+        "number": 274,
+        "title": "Remove engines",
+        "url": "https://github.com/hapijs/hoek/issues/274"
+      }
+    ],
+    "number": 49,
+    "url": "https://github.com/hapijs/hoek/milestone/49",
+    "version": "6.0.1"
+  },
+  {
+    "date": "2018-11-01T06:59:31Z",
+    "id": 3555593,
+    "issues": [
+      {
+        "id": 348726048,
+        "labels": ["breaking changes"],
+        "number": 268,
+        "title": "API deprecations",
+        "url": "https://github.com/hapijs/hoek/issues/268"
+      },
+      {
+        "id": 333545166,
+        "labels": ["bug"],
+        "number": 260,
+        "title": "deepEqual does not check both sides in full",
+        "url": "https://github.com/hapijs/hoek/issues/260"
+      },
+      {
+        "id": 324710895,
+        "labels": ["bug", "feature"],
+        "number": 254,
+        "title": "Add Map and Set support to deepEqual()",
+        "url": "https://github.com/hapijs/hoek/pull/254"
+      },
+      {
+        "id": 303263658,
+        "labels": ["bug", "feature"],
+        "number": 242,
+        "title": "Rework deepEqual()",
+        "url": "https://github.com/hapijs/hoek/pull/242"
+      },
+      {
+        "id": 299983602,
+        "labels": ["bug"],
+        "number": 238,
+        "title": "deepEqual and array properties",
+        "url": "https://github.com/hapijs/hoek/issues/238"
+      },
+      {
+        "id": 299135794,
+        "labels": ["bug"],
+        "number": 236,
+        "title": "Hoek.deepEqual false positive",
+        "url": "https://github.com/hapijs/hoek/issues/236"
+      }
+    ],
+    "number": 48,
+    "url": "https://github.com/hapijs/hoek/milestone/48",
+    "version": "6.0.0"
+  },
+  {
+    "date": "2018-08-10T20:35:02Z",
+    "id": 3555591,
+    "issues": [
+      {
+        "id": 349648559,
+        "labels": ["bug"],
+        "number": 269,
+        "title": "Try object ref comparison first in deepClone()",
+        "url": "https://github.com/hapijs/hoek/pull/269"
+      }
+    ],
+    "number": 47,
+    "url": "https://github.com/hapijs/hoek/milestone/47",
+    "version": "5.0.4"
+  },
+  {
+    "date": "2018-05-17T20:31:21Z",
+    "id": 2885305,
+    "issues": [
+      {
+        "id": 292757075,
+        "labels": ["bug"],
+        "number": 227,
+        "title": "Don't use deprecated new Buffer() api",
+        "url": "https://github.com/hapijs/hoek/pull/227"
+      }
+    ],
+    "number": 46,
+    "url": "https://github.com/hapijs/hoek/milestone/46",
+    "version": "5.0.3"
+  },
+  {
+    "date": "2017-11-03T07:57:34Z",
+    "id": 2866784,
+    "issues": [
+      {
+        "id": 270900421,
+        "labels": ["dependency"],
+        "number": 221,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/hoek/issues/221"
+      },
+      {
+        "id": 270704251,
+        "labels": ["feature"],
+        "number": 220,
+        "title": "Throw instances of AssertionError on asserts",
+        "url": "https://github.com/hapijs/hoek/pull/220"
+      }
+    ],
+    "number": 45,
+    "url": "https://github.com/hapijs/hoek/milestone/45",
+    "version": "5.0.2"
+  },
+  {
+    "date": "2017-10-26T08:22:31Z",
+    "id": 2793761,
+    "issues": [
+      {
+        "id": 268667074,
+        "labels": ["bug", "breaking changes"],
+        "number": 218,
+        "title": "base64urlDecode() should throw, not return errors",
+        "url": "https://github.com/hapijs/hoek/issues/218"
+      }
+    ],
+    "number": 44,
+    "url": "https://github.com/hapijs/hoek/milestone/44",
+    "version": "5.0.1"
+  },
+  {
+    "date": "2017-09-26T04:22:34Z",
+    "id": 2646163,
+    "issues": [
+      {
+        "id": 260486505,
+        "labels": ["breaking changes"],
+        "number": 212,
+        "title": "Remove nextTick()",
+        "url": "https://github.com/hapijs/hoek/issues/212"
+      },
+      {
+        "id": 260484570,
+        "labels": ["breaking changes"],
+        "number": 211,
+        "title": "Remove Timer",
+        "url": "https://github.com/hapijs/hoek/issues/211"
+      },
+      {
+        "id": 260484408,
+        "labels": ["breaking changes"],
+        "number": 210,
+        "title": "Require node v8",
+        "url": "https://github.com/hapijs/hoek/issues/210"
+      },
+      {
+        "id": 258333940,
+        "labels": ["feature"],
+        "number": 206,
+        "title": "Add a wait() method",
+        "url": "https://github.com/hapijs/hoek/issues/206"
+      }
+    ],
+    "number": 43,
+    "url": "https://github.com/hapijs/hoek/milestone/43",
+    "version": "5.0.0"
+  },
+  {
+    "date": "2019-03-21T23:05:55Z",
+    "id": 4162359,
+    "issues": [
+      {
+        "id": 423979171,
+        "labels": ["lts"],
+        "number": 288,
+        "title": "Commercial version for 4.x branch",
+        "url": "https://github.com/hapijs/hoek/issues/288"
+      }
+    ],
+    "number": 56,
+    "url": "https://github.com/hapijs/hoek/milestone/56",
+    "version": "4.3.0"
+  },
+  {
+    "date": "2017-07-17T22:15:39Z",
+    "id": 2425278,
+    "issues": [
+      {
+        "id": 219396302,
+        "labels": ["feature"],
+        "number": 204,
+        "title": "Add escape json",
+        "url": "https://github.com/hapijs/hoek/pull/204"
+      }
+    ],
+    "number": 42,
+    "url": "https://github.com/hapijs/hoek/milestone/42",
+    "version": "4.2.0"
+  },
+  {
+    "date": "2017-03-31T19:02:30Z",
+    "id": 2014665,
+    "issues": [
+      {
+        "id": 218577013,
+        "labels": ["bug"],
+        "number": 203,
+        "title": "Fix isInteger for unsafe integers",
+        "url": "https://github.com/hapijs/hoek/pull/203"
+      }
+    ],
+    "number": 41,
+    "url": "https://github.com/hapijs/hoek/milestone/41",
+    "version": "4.1.1"
+  },
+  {
+    "date": "2016-09-19T18:31:44Z",
+    "id": 1907888,
+    "issues": [
+      {
+        "id": 177606141,
+        "labels": ["feature"],
+        "number": 197,
+        "title": "Enhancement: Make contain see non-enumerable's",
+        "url": "https://github.com/hapijs/hoek/pull/197"
+      }
+    ],
+    "number": 40,
+    "url": "https://github.com/hapijs/hoek/milestone/40",
+    "version": "4.1.0"
+  },
+  {
+    "date": "2016-07-27T18:49:58Z",
+    "id": 1802856,
+    "issues": [
+      {
+        "id": 167926452,
+        "labels": ["documentation"],
+        "number": 195,
+        "title": "npmignore",
+        "url": "https://github.com/hapijs/hoek/issues/195"
+      }
+    ],
+    "number": 39,
+    "url": "https://github.com/hapijs/hoek/milestone/39",
+    "version": "4.0.2"
+  },
+  {
+    "date": "2016-06-01T17:13:11Z",
+    "id": 1802807,
+    "issues": [
+      {
+        "id": 157957342,
+        "labels": ["test"],
+        "number": 191,
+        "title": "update to code 3.x.x",
+        "url": "https://github.com/hapijs/hoek/issues/191"
+      },
+      {
+        "id": 157696964,
+        "labels": ["feature"],
+        "number": 190,
+        "title": "Use map for cloning memoizer",
+        "url": "https://github.com/hapijs/hoek/pull/190"
+      }
+    ],
+    "number": 38,
+    "url": "https://github.com/hapijs/hoek/milestone/38",
+    "version": "4.0.1"
+  },
+  {
+    "date": "2016-06-01T16:49:28Z",
+    "id": 1411869,
+    "issues": [
+      {
+        "id": 150943265,
+        "labels": ["test", "dependency"],
+        "number": 186,
+        "title": "update lab",
+        "url": "https://github.com/hapijs/hoek/issues/186"
+      },
+      {
+        "id": 145917518,
+        "labels": ["feature"],
+        "number": 185,
+        "title": "improve .unique to make use of es6 `Set` performance",
+        "url": "https://github.com/hapijs/hoek/pull/185"
+      },
+      {
+        "id": 145627031,
+        "labels": ["feature"],
+        "number": 184,
+        "title": "improve .unique performance",
+        "url": "https://github.com/hapijs/hoek/issues/184"
+      },
+      {
+        "id": 145007404,
+        "labels": ["bug"],
+        "number": 183,
+        "title": "Fix for issue #177",
+        "url": "https://github.com/hapijs/hoek/pull/183"
+      },
+      {
+        "id": 144975941,
+        "labels": ["breaking changes"],
+        "number": 181,
+        "title": "removed isAbsolutePath method",
+        "url": "https://github.com/hapijs/hoek/pull/181"
+      },
+      {
+        "id": 144741934,
+        "labels": ["feature"],
+        "number": 180,
+        "title": "refactor(merge): use !== rather than ^",
+        "url": "https://github.com/hapijs/hoek/pull/180"
+      },
+      {
+        "id": 137368992,
+        "labels": ["feature"],
+        "number": 179,
+        "title": "isAbsolutePath obsolete?",
+        "url": "https://github.com/hapijs/hoek/issues/179"
+      },
+      {
+        "id": 127530221,
+        "labels": ["bug", "security"],
+        "number": 177,
+        "title": "Assert when value is not a string",
+        "url": "https://github.com/hapijs/hoek/issues/177"
+      },
+      {
+        "id": 56808333,
+        "labels": ["bug", "breaking changes"],
+        "number": 124,
+        "title": "transform method does not respect separator option",
+        "url": "https://github.com/hapijs/hoek/issues/124"
+      }
+    ],
+    "number": 37,
+    "url": "https://github.com/hapijs/hoek/milestone/37",
+    "version": "4.0.0"
+  },
+  {
+    "date": "2015-11-14T21:47:33Z",
+    "id": 1411865,
+    "issues": [
+      {
+        "id": 100729194,
+        "labels": ["feature"],
+        "number": 152,
+        "title": "Hoek.reach and non standard JS objects",
+        "url": "https://github.com/hapijs/hoek/issues/152"
+      }
+    ],
+    "number": 36,
+    "url": "https://github.com/hapijs/hoek/milestone/36",
+    "version": "3.0.4"
+  },
+  {
+    "date": "2015-11-14T21:40:05Z",
+    "id": 1411856,
+    "issues": [
+      {
+        "id": 113065165,
+        "labels": ["bug"],
+        "number": 164,
+        "title": "Hoek.deepEqual providing false positive result",
+        "url": "https://github.com/hapijs/hoek/issues/164"
+      }
+    ],
+    "number": 35,
+    "url": "https://github.com/hapijs/hoek/milestone/35",
+    "version": "3.0.3"
+  },
+  {
+    "date": "2015-11-14T21:31:24Z",
+    "id": 1386790,
+    "issues": [
+      {
+        "id": 116953077,
+        "labels": ["bug"],
+        "number": 173,
+        "title": "fix linting error",
+        "url": "https://github.com/hapijs/hoek/issues/173"
+      },
+      {
+        "id": 116951068,
+        "labels": ["documentation"],
+        "number": 171,
+        "title": "fix mapToObject documentation",
+        "url": "https://github.com/hapijs/hoek/pull/171"
+      }
+    ],
+    "number": 34,
+    "url": "https://github.com/hapijs/hoek/milestone/34",
+    "version": "3.0.2"
+  },
+  {
+    "date": "2015-10-31T16:52:58Z",
+    "id": 1386789,
+    "issues": [
+      {
+        "id": 114420785,
+        "labels": ["bug"],
+        "number": 169,
+        "title": "Lint errors. Closes #168",
+        "url": "https://github.com/hapijs/hoek/pull/169"
+      },
+      {
+        "id": 114420729,
+        "labels": ["bug"],
+        "number": 168,
+        "title": "ES6 lint errors",
+        "url": "https://github.com/hapijs/hoek/issues/168"
+      }
+    ],
+    "number": 33,
+    "url": "https://github.com/hapijs/hoek/milestone/33",
+    "version": "3.0.1"
+  },
+  {
+    "date": "2015-10-31T16:52:12Z",
+    "id": 1316931,
+    "issues": [
+      {
+        "id": 114337139,
+        "labels": ["feature", "breaking changes", "dependency"],
+        "number": 167,
+        "title": "Es6",
+        "url": "https://github.com/hapijs/hoek/pull/167"
+      },
+      {
+        "id": 114336956,
+        "labels": ["feature", "breaking changes", "dependency"],
+        "number": 166,
+        "title": "ES6 style, node v4",
+        "url": "https://github.com/hapijs/hoek/issues/166"
+      },
+      {
+        "id": 113452852,
+        "labels": ["bug"],
+        "number": 165,
+        "title": "es6 updates WIP",
+        "url": "https://github.com/hapijs/hoek/pull/165"
+      }
+    ],
+    "number": 32,
+    "url": "https://github.com/hapijs/hoek/milestone/32",
+    "version": "3.0.0"
+  },
+  {
+    "date": "2015-09-21T17:47:59Z",
+    "id": 1309025,
+    "issues": [
+      {
+        "id": 107561940,
+        "labels": ["bug"],
+        "number": 162,
+        "title": "Hoek.clone on process.env",
+        "url": "https://github.com/hapijs/hoek/issues/162"
+      }
+    ],
+    "number": 31,
+    "url": "https://github.com/hapijs/hoek/milestone/31",
+    "version": "2.16.3"
+  },
+  {
+    "date": "2015-09-16T18:31:14Z",
+    "id": 1308896,
+    "issues": [
+      {
+        "id": 106833241,
+        "labels": ["bug"],
+        "number": 161,
+        "title": "hoek.reach should allow empty keys",
+        "url": "https://github.com/hapijs/hoek/issues/161"
+      }
+    ],
+    "number": 30,
+    "url": "https://github.com/hapijs/hoek/milestone/30",
+    "version": "2.16.2"
+  },
+  {
+    "date": "2015-09-16T17:08:13Z",
+    "id": 1308892,
+    "issues": [
+      {
+        "id": 106817523,
+        "labels": ["feature"],
+        "number": 160,
+        "title": "cleanup loop from #148",
+        "url": "https://github.com/hapijs/hoek/issues/160"
+      }
+    ],
+    "number": 29,
+    "url": "https://github.com/hapijs/hoek/milestone/29",
+    "version": "2.16.1"
+  },
+  {
+    "date": "2015-09-16T17:07:24Z",
+    "id": 1301394,
+    "issues": [
+      {
+        "id": 106659960,
+        "labels": ["feature"],
+        "number": 159,
+        "title": "Allow reach to work with falsy values (empty str)",
+        "url": "https://github.com/hapijs/hoek/pull/159"
+      }
+    ],
+    "number": 28,
+    "url": "https://github.com/hapijs/hoek/milestone/28",
+    "version": "2.16.0"
+  },
+  {
+    "date": "2015-09-11T16:19:04Z",
+    "id": 1126262,
+    "issues": [
+      {
+        "id": 80042520,
+        "labels": ["feature"],
+        "number": 148,
+        "title": "generalize Hoek.transform to accept an array of objects",
+        "url": "https://github.com/hapijs/hoek/pull/148"
+      }
+    ],
+    "number": 27,
+    "url": "https://github.com/hapijs/hoek/milestone/27",
+    "version": "2.15.0"
+  },
+  {
+    "date": "2015-05-22T18:14:55Z",
+    "id": 1126191,
+    "issues": [
+      {
+        "id": 79551636,
+        "labels": ["feature"],
+        "number": 147,
+        "title": "Reach template",
+        "url": "https://github.com/hapijs/hoek/pull/147"
+      },
+      {
+        "id": 79551111,
+        "labels": ["feature"],
+        "number": 146,
+        "title": "Add reachTemplate() to apply reach() functionality to a templatized string",
+        "url": "https://github.com/hapijs/hoek/issues/146"
+      },
+      {
+        "id": 67383952,
+        "labels": ["bug"],
+        "number": 139,
+        "title": "Clone fails on objects with null prototypes",
+        "url": "https://github.com/hapijs/hoek/issues/139"
+      }
+    ],
+    "number": 26,
+    "url": "https://github.com/hapijs/hoek/milestone/26",
+    "version": "2.14.0"
+  },
+  {
+    "date": "2015-05-22T17:36:55Z",
+    "id": 1124373,
+    "issues": [
+      {
+        "id": 79212609,
+        "labels": ["bug"],
+        "number": 145,
+        "title": "options for deepEqual don't pass on to recursive calls in arrays",
+        "url": "https://github.com/hapijs/hoek/issues/145"
+      },
+      {
+        "id": 64229154,
+        "labels": ["bug"],
+        "number": 134,
+        "title": "Allow for deep partial contain",
+        "url": "https://github.com/hapijs/hoek/pull/134"
+      }
+    ],
+    "number": 25,
+    "url": "https://github.com/hapijs/hoek/milestone/25",
+    "version": "2.13.1"
+  },
+  {
+    "date": "2015-05-04T20:40:49Z",
+    "id": 1091321,
+    "issues": [
+      {
+        "id": 68815236,
+        "labels": ["feature"],
+        "number": 140,
+        "title": "Add isNullOverride to applyToDefaults",
+        "url": "https://github.com/hapijs/hoek/pull/140"
+      }
+    ],
+    "number": 23,
+    "url": "https://github.com/hapijs/hoek/milestone/23",
+    "version": "2.13.0"
+  },
+  {
+    "date": "2015-03-24T17:17:33Z",
+    "id": 1036682,
+    "issues": [
+      {
+        "id": 62136164,
+        "labels": ["feature"],
+        "number": 133,
+        "title": "Added option parameter to deepEqual.",
+        "url": "https://github.com/hapijs/hoek/pull/133"
+      }
+    ],
+    "number": 21,
+    "url": "https://github.com/hapijs/hoek/milestone/21",
+    "version": "2.12.0"
+  },
+  {
+    "date": "2015-02-28T00:05:42Z",
+    "id": 922462,
+    "issues": [
+      {
+        "id": 59151133,
+        "labels": ["bug"],
+        "number": 131,
+        "title": "Clone even non-enumerable properties.",
+        "url": "https://github.com/hapijs/hoek/pull/131"
+      },
+      {
+        "id": 59079513,
+        "labels": ["bug"],
+        "number": 130,
+        "title": "Hoek.deepEqual({a: 'foo'}, {a: 'foo', b: 'bar'})  return true",
+        "url": "https://github.com/hapijs/hoek/issues/130"
+      },
+      {
+        "id": 58515874,
+        "labels": ["bug"],
+        "number": 128,
+        "title": "Fix deepEqual on empty objects. Fixes #127.",
+        "url": "https://github.com/hapijs/hoek/pull/128"
+      },
+      {
+        "id": 58513974,
+        "labels": ["bug"],
+        "number": 127,
+        "title": "deepEqual behaving unexpectedly with empty object",
+        "url": "https://github.com/hapijs/hoek/issues/127"
+      }
+    ],
+    "number": 19,
+    "url": "https://github.com/hapijs/hoek/milestone/19",
+    "version": "2.11.1"
+  },
+  {
+    "date": "2015-01-05T17:28:19Z",
+    "id": 882194,
+    "issues": [
+      {
+        "id": 51616410,
+        "labels": ["feature"],
+        "number": 117,
+        "title": "Throw error directly if it is the only thing passed in as the message",
+        "url": "https://github.com/hapijs/hoek/pull/117"
+      },
+      {
+        "id": 51614408,
+        "labels": ["feature"],
+        "number": 116,
+        "title": "Hoek.assert - throw error that is passed in as message",
+        "url": "https://github.com/hapijs/hoek/issues/116"
+      },
+      {
+        "id": 51140190,
+        "labels": ["feature"],
+        "number": 115,
+        "title": "Adds ability to do Hoek.reach with negative index",
+        "url": "https://github.com/hapijs/hoek/pull/115"
+      }
+    ],
+    "number": 18,
+    "url": "https://github.com/hapijs/hoek/milestone/18",
+    "version": "2.11.0"
+  },
+  {
+    "date": "2014-11-27T04:03:53Z",
+    "id": 881986,
+    "issues": [
+      {
+        "id": 50252060,
+        "labels": ["feature"],
+        "number": 110,
+        "title": "enhance withShallow methods to support nested keys. Closes #109",
+        "url": "https://github.com/hapijs/hoek/pull/110"
+      },
+      {
+        "id": 50252005,
+        "labels": ["feature"],
+        "number": 109,
+        "title": "Enhance shallow clone methods to support nested keys",
+        "url": "https://github.com/hapijs/hoek/issues/109"
+      }
+    ],
+    "number": 17,
+    "url": "https://github.com/hapijs/hoek/milestone/17",
+    "version": "2.10.0"
+  },
+  {
+    "date": "2014-11-26T22:17:46Z",
+    "id": 860468,
+    "issues": [
+      {
+        "id": 50232245,
+        "labels": ["bug"],
+        "number": 108,
+        "title": "Fix applyToDefaultsWithShallow default clone. Closes #107",
+        "url": "https://github.com/hapijs/hoek/pull/108"
+      },
+      {
+        "id": 50223210,
+        "labels": ["bug"],
+        "number": 107,
+        "title": "applyToDefaultsWithShallow() fail to retain defaults shallow key",
+        "url": "https://github.com/hapijs/hoek/issues/107"
+      }
+    ],
+    "number": 16,
+    "url": "https://github.com/hapijs/hoek/milestone/16",
+    "version": "2.9.1"
+  },
+  {
+    "date": "2014-11-10T18:01:32Z",
+    "id": 838006,
+    "issues": [
+      {
+        "id": 48241213,
+        "labels": ["bug", "feature"],
+        "number": 106,
+        "title": "Clone, shallow, and stringify",
+        "url": "https://github.com/hapijs/hoek/pull/106"
+      },
+      {
+        "id": 48241136,
+        "labels": ["feature"],
+        "number": 105,
+        "title": "Move shallow and stringify from hapi",
+        "url": "https://github.com/hapijs/hoek/issues/105"
+      },
+      {
+        "id": 48239865,
+        "labels": ["bug"],
+        "number": 104,
+        "title": "Clone fails to copy object property if only setter used",
+        "url": "https://github.com/hapijs/hoek/issues/104"
+      }
+    ],
+    "number": 15,
+    "url": "https://github.com/hapijs/hoek/milestone/15",
+    "version": "2.9.0"
+  },
+  {
+    "date": "2014-10-23T18:14:31Z",
+    "id": 832958,
+    "issues": [
+      {
+        "id": 46656074,
+        "labels": ["bug"],
+        "number": 103,
+        "title": "avoid hasOwnProperty so plain objects work",
+        "url": "https://github.com/hapijs/hoek/pull/103"
+      },
+      {
+        "id": 46655922,
+        "labels": ["bug"],
+        "number": 102,
+        "title": "Plain objects can't be compared.",
+        "url": "https://github.com/hapijs/hoek/issues/102"
+      }
+    ],
+    "number": 14,
+    "url": "https://github.com/hapijs/hoek/milestone/14",
+    "version": "2.8.1"
+  },
+  {
+    "date": "2014-10-20T16:21:17Z",
+    "id": 830543,
+    "issues": [
+      {
+        "id": 46235152,
+        "labels": ["bug"],
+        "number": 99,
+        "title": "assert() adds whitespace even when arguments are empty",
+        "url": "https://github.com/hapijs/hoek/issues/99"
+      },
+      {
+        "id": 46167789,
+        "labels": ["bug", "feature"],
+        "number": 97,
+        "title": "Add contain()",
+        "url": "https://github.com/hapijs/hoek/pull/97"
+      },
+      {
+        "id": 46167781,
+        "labels": ["feature"],
+        "number": 96,
+        "title": "Add contain() comparison function for strings, objects, and arrays",
+        "url": "https://github.com/hapijs/hoek/issues/96"
+      },
+      {
+        "id": 46166656,
+        "labels": ["bug"],
+        "number": 95,
+        "title": "deepEqual() fails to compare arrays with non literal members",
+        "url": "https://github.com/hapijs/hoek/issues/95"
+      }
+    ],
+    "number": 13,
+    "url": "https://github.com/hapijs/hoek/milestone/13",
+    "version": "2.8.0"
+  },
+  {
+    "date": "2014-10-17T18:01:24Z",
+    "id": 826060,
+    "issues": [
+      {
+        "id": 46072092,
+        "labels": ["feature"],
+        "number": 94,
+        "title": "deepEqual",
+        "url": "https://github.com/hapijs/hoek/pull/94"
+      }
+    ],
+    "number": 12,
+    "url": "https://github.com/hapijs/hoek/milestone/12",
+    "version": "2.7.0"
+  },
+  {
+    "date": "2014-10-14T16:58:59Z",
+    "id": 810540,
+    "issues": [
+      {
+        "id": 45525377,
+        "labels": ["bug"],
+        "number": 93,
+        "title": "dont execute getters when cloning",
+        "url": "https://github.com/hapijs/hoek/pull/93"
+      },
+      {
+        "id": 45033118,
+        "labels": ["feature"],
+        "number": 91,
+        "title": "Added util.format",
+        "url": "https://github.com/hapijs/hoek/pull/91"
+      },
+      {
+        "id": 44718040,
+        "labels": ["bug"],
+        "number": 89,
+        "title": "Don't clone properties with getter by executing the getter",
+        "url": "https://github.com/hapijs/hoek/issues/89"
+      }
+    ],
+    "number": 10,
+    "url": "https://github.com/hapijs/hoek/milestone/10",
+    "version": "2.6.0"
+  },
+  {
+    "date": "2014-10-10T21:01:24Z",
+    "id": 820415,
+    "issues": [
+      {
+        "id": 44707328,
+        "labels": ["bug"],
+        "number": 88,
+        "title": "Allow falsey values to be used as default value in Hoek.reach()",
+        "url": "https://github.com/hapijs/hoek/pull/88"
+      }
+    ],
+    "number": 11,
+    "url": "https://github.com/hapijs/hoek/milestone/11",
+    "version": "2.5.1"
+  },
+  {
+    "date": "2014-10-01T20:59:37Z",
+    "id": 742911,
+    "issues": [
+      {
+        "id": 44020722,
+        "labels": ["feature"],
+        "number": 84,
+        "title": "Replaced __proto__ with Object.create()",
+        "url": "https://github.com/hapijs/hoek/pull/84"
+      },
+      {
+        "id": 43343968,
+        "labels": ["feature"],
+        "number": 82,
+        "title": "uniqueFilename",
+        "url": "https://github.com/hapijs/hoek/pull/82"
+      },
+      {
+        "id": 42074219,
+        "labels": ["feature"],
+        "number": 79,
+        "title": "Update to lab 4.x",
+        "url": "https://github.com/hapijs/hoek/issues/79"
+      },
+      {
+        "id": 40955211,
+        "labels": ["test"],
+        "number": 76,
+        "title": "Close #75, properly preform test",
+        "url": "https://github.com/hapijs/hoek/pull/76"
+      },
+      {
+        "id": 40954916,
+        "labels": ["bug", "test"],
+        "number": 75,
+        "title": "Test 43 case for applyToDefaults not accurately testing",
+        "url": "https://github.com/hapijs/hoek/issues/75"
+      }
+    ],
+    "number": 9,
+    "url": "https://github.com/hapijs/hoek/milestone/9",
+    "version": "2.5.0"
+  },
+  {
+    "date": "2014-08-05T01:26:40Z",
+    "id": 740457,
+    "issues": [
+      {
+        "id": 39323817,
+        "labels": ["feature"],
+        "number": 71,
+        "title": "Allow assert to be optimized",
+        "url": "https://github.com/hapijs/hoek/pull/71"
+      }
+    ],
+    "number": 8,
+    "url": "https://github.com/hapijs/hoek/milestone/8",
+    "version": "2.4.1"
+  },
+  {
+    "date": "2014-08-02T07:22:36Z",
+    "id": 671134,
+    "issues": [
+      {
+        "id": 39343975,
+        "labels": ["documentation"],
+        "number": 72,
+        "title": "Rename spumko to hapijs",
+        "url": "https://github.com/hapijs/hoek/issues/72"
+      },
+      {
+        "id": 39222021,
+        "labels": ["bug"],
+        "number": 70,
+        "title": "Protect against null prototypes",
+        "url": "https://github.com/hapijs/hoek/pull/70"
+      },
+      {
+        "id": 38734702,
+        "labels": ["feature"],
+        "number": 68,
+        "title": "Transform Function",
+        "url": "https://github.com/hapijs/hoek/pull/68"
+      },
+      {
+        "id": 37989845,
+        "labels": ["feature", "documentation"],
+        "number": 66,
+        "title": "Default Value for Reach",
+        "url": "https://github.com/hapijs/hoek/pull/66"
+      },
+      {
+        "id": 35951554,
+        "labels": ["bug"],
+        "number": 62,
+        "title": "Cannot read property 'isImmutable' of null",
+        "url": "https://github.com/hapijs/hoek/issues/62"
+      }
+    ],
+    "number": 7,
+    "url": "https://github.com/hapijs/hoek/milestone/7",
+    "version": "2.4.0"
+  },
+  {
+    "date": "2014-05-26T18:23:22Z",
+    "id": 663989,
+    "issues": [
+      {
+        "id": 34322828,
+        "labels": ["bug"],
+        "number": 59,
+        "title": "merge() shallow copies array members when merging",
+        "url": "https://github.com/hapijs/hoek/issues/59"
+      },
+      {
+        "id": 34321461,
+        "labels": ["feature"],
+        "number": 58,
+        "title": "Shallow copy objects with prototype.isImmutable flag",
+        "url": "https://github.com/hapijs/hoek/issues/58"
+      },
+      {
+        "id": 34320827,
+        "labels": ["bug"],
+        "number": 57,
+        "title": "clone() creates multiple copies of the same date, regex, or buffer object",
+        "url": "https://github.com/hapijs/hoek/issues/57"
+      }
+    ],
+    "number": 6,
+    "url": "https://github.com/hapijs/hoek/milestone/6",
+    "version": "2.2.0"
+  },
+  {
+    "date": "2014-05-20T03:53:26Z",
+    "id": 637427,
+    "issues": [
+      {
+        "id": 32958885,
+        "labels": ["bug"],
+        "number": 54,
+        "title": "Detect [[Class]] instead of using instanceof",
+        "url": "https://github.com/hapijs/hoek/issues/54"
+      }
+    ],
+    "number": 5,
+    "url": "https://github.com/hapijs/hoek/milestone/5",
+    "version": "2.1.1"
+  },
+  {
+    "date": "2014-04-22T22:20:21Z",
+    "id": 637426,
+    "issues": [
+      {
+        "id": 32016089,
+        "labels": ["feature"],
+        "number": 51,
+        "title": "Add isInteger()",
+        "url": "https://github.com/hapijs/hoek/issues/51"
+      },
+      {
+        "id": 31246084,
+        "labels": ["feature"],
+        "number": 49,
+        "title": "match() -> test()",
+        "url": "https://github.com/hapijs/hoek/pull/49"
+      }
+    ],
+    "number": 4,
+    "url": "https://github.com/hapijs/hoek/milestone/4",
+    "version": "2.1.0"
+  },
+  {
+    "date": "2014-04-22T22:18:45Z",
+    "id": 580315,
+    "issues": [
+      {
+        "id": 30962851,
+        "labels": ["test"],
+        "number": 48,
+        "title": "Bring coverage back to 100% after lab logical statement support",
+        "url": "https://github.com/hapijs/hoek/issues/48"
+      },
+      {
+        "id": 30962819,
+        "labels": ["feature"],
+        "number": 47,
+        "title": "Add isAbsolutePath for unix and windows when using node <0.11",
+        "url": "https://github.com/hapijs/hoek/issues/47"
+      },
+      {
+        "id": 29981367,
+        "labels": ["breaking changes"],
+        "number": 46,
+        "title": "Cleanup API and remove/move unused functions",
+        "url": "https://github.com/hapijs/hoek/issues/46"
+      }
+    ],
+    "number": 1,
+    "url": "https://github.com/hapijs/hoek/milestone/1",
+    "version": "2.0.0"
+  },
+  {
+    "date": "2014-03-23T05:22:33Z",
+    "id": 603052,
+    "issues": [
+      {
+        "id": 29493018,
+        "labels": ["bug"],
+        "number": 45,
+        "title": "Rename should throw an error for invalid property . ",
+        "url": "https://github.com/hapijs/hoek/pull/45"
+      }
+    ],
+    "number": 3,
+    "url": "https://github.com/hapijs/hoek/milestone/3",
+    "version": "1.5.2"
+  },
+  {
+    "date": "2014-03-06T22:42:19Z",
+    "id": 589828,
+    "issues": [
+      {
+        "id": 28916036,
+        "labels": ["test"],
+        "number": 44,
+        "title": "Bring coverage back to 100% after lab fix",
+        "url": "https://github.com/hapijs/hoek/issues/44"
+      }
+    ],
+    "number": 2,
+    "url": "https://github.com/hapijs/hoek/milestone/2",
+    "version": "1.5.1"
+  }
+]

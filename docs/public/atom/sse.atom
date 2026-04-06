@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/sse</id>
+    <title>@hapi/sse changelog</title>
+    <updated>2026-04-07T22:13:58.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/sse"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/sse v1.0.0]]></title>
+        <id>https://github.com/hapijs/sse/milestone/1</id>
+        <link href="https://hapi.dev/module/sse/changelog#1.0.0"/>
+        <updated>2026-04-07T22:13:58.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/sse v1.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/sse/issues/3">[#3]</a> Initial release</li></ul>]]></content>
+    </entry>
+</feed>

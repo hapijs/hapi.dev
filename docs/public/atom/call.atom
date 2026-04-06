@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/call</id>
+    <title>@hapi/call changelog</title>
+    <updated>2020-11-18T03:40:51.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/call"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/call v8.0.1]]></title>
+        <id>https://github.com/hapijs/call/milestone/28</id>
+        <link href="https://hapi.dev/module/call/changelog#8.0.1"/>
+        <updated>2020-11-18T03:40:51.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/call v8.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/call/pull/62">[#62]</a> upgrade lab to v24</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/call v8.0.0]]></title>
+        <id>https://github.com/hapijs/call/milestone/27</id>
+        <link href="https://hapi.dev/module/call/changelog#8.0.0"/>
+        <updated>2020-02-10T08:57:02.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/call v8.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/call/issues/56">[#56]</a> Switch tables to maps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/call v7.0.1]]></title>
+        <id>https://github.com/hapijs/call/milestone/26</id>
+        <link href="https://hapi.dev/module/call/changelog#7.0.1"/>
+        <updated>2020-02-10T05:41:04.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/call v7.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/call/issues/55">[#55]</a> Switch to use maps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/call v7.0.0]]></title>
+        <id>https://github.com/hapijs/call/milestone/25</id>
+        <link href="https://hapi.dev/module/call/changelog#7.0.0"/>
+        <updated>2020-01-04T22:38:39.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/call v7.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/call/issues/54">[#54]</a> Only node 12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/call v6.0.1]]></title>
+        <id>https://github.com/hapijs/call/milestone/23</id>
+        <link href="https://hapi.dev/module/call/changelog#6.0.1"/>
+        <updated>2019-11-01T22:12:31.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/call v6.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/call/issues/52">[#52]</a> Special case '/'</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/call v6.0.0]]></title>
+        <id>https://github.com/hapijs/call/milestone/22</id>
+        <link href="https://hapi.dev/module/call/changelog#6.0.0"/>
+        <updated>2019-10-30T23:54:22.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/call v6.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/call/issues/51">[#51]</a> Improve performance</li><li><a href="https://github.com/hapijs/call/issues/50">[#50]</a> Drop node 8</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/call v5.1.3]]></title>
+        <id>https://github.com/hapijs/call/milestone/21</id>
+        <link href="https://hapi.dev/module/call/changelog#5.1.3"/>
+        <updated>2020-02-13T19:45:13.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/call v5.1.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/call/issues/57">[#57]</a> Check method exists</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/call v5.1.2]]></title>
+        <id>https://github.com/hapijs/call/milestone/20</id>
+        <link href="https://hapi.dev/module/call/changelog#5.1.2"/>
+        <updated>2019-10-30T23:48:27.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/call v5.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/call/pull/49">[#49]</a> Fix typo: wilcard -&gt; wildcard</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/call v5.1.1]]></title>
+        <id>https://github.com/hapijs/call/milestone/19</id>
+        <link href="https://hapi.dev/module/call/changelog#5.1.1"/>
+        <updated>2019-08-14T05:02:31.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/call v5.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/call/issues/42">[#42]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/call v5.1.0]]></title>
+        <id>https://github.com/hapijs/call/milestone/16</id>
+        <link href="https://hapi.dev/module/call/changelog#5.1.0"/>
+        <updated>2019-03-30T20:46:45.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/call v5.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/call/issues/41">[#41]</a> Change module namespace</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/call v5.0.3]]></title>
+        <id>https://github.com/hapijs/call/milestone/15</id>
+        <link href="https://hapi.dev/module/call/changelog#5.0.3"/>
+        <updated>2018-11-03T00:18:57.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/call v5.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/call/issues/37">[#37]</a> Remove engines</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/call v5.0.2]]></title>
+        <id>https://github.com/hapijs/call/milestone/14</id>
+        <link href="https://hapi.dev/module/call/changelog#5.0.2"/>
+        <updated>2018-11-01T07:48:36.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/call v5.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/call/issues/36">[#36]</a> Update hoek v6</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/call v5.0.1]]></title>
+        <id>https://github.com/hapijs/call/milestone/13</id>
+        <link href="https://hapi.dev/module/call/changelog#5.0.1"/>
+        <updated>2017-11-03T06:52:08.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/call v5.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/call/issues/34">[#34]</a> Update boom</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/call v5.0.0]]></title>
+        <id>https://github.com/hapijs/call/milestone/12</id>
+        <link href="https://hapi.dev/module/call/changelog#5.0.0"/>
+        <updated>2017-09-26T06:13:48.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/call v5.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/call/issues/33">[#33]</a> Node 8</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/call v4.1.1]]></title>
+        <id>https://github.com/hapijs/call/milestone/18</id>
+        <link href="https://hapi.dev/module/call/changelog#4.1.1"/>
+        <updated>2020-02-13T19:49:15.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/call v4.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/call/issues/58">[#58]</a> Check method exists</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/call v4.1.0]]></title>
+        <id>https://github.com/hapijs/call/milestone/17</id>
+        <link href="https://hapi.dev/module/call/changelog#4.1.0"/>
+        <updated>2019-03-22T06:11:06.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/call v4.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/call/issues/40">[#40]</a> Commercial version of v4 branch</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/call v4.0.2]]></title>
+        <id>https://github.com/hapijs/call/milestone/11</id>
+        <link href="https://hapi.dev/module/call/changelog#4.0.2"/>
+        <updated>2017-05-28T05:58:30.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/call v4.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/call/issues/32">[#32]</a> Update deps.</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/call v4.0.1]]></title>
+        <id>https://github.com/hapijs/call/milestone/10</id>
+        <link href="https://hapi.dev/module/call/changelog#4.0.1"/>
+        <updated>2017-03-20T20:44:53.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/call v4.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/call/pull/29">[#29]</a> Apply path segment normalization</li><li><a href="https://github.com/hapijs/call/issues/28">[#28]</a> No "Path Segment Normalization"?</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/call v4.0.0]]></title>
+        <id>https://github.com/hapijs/call/milestone/9</id>
+        <link href="https://hapi.dev/module/call/changelog#4.0.0"/>
+        <updated>2016-11-29T23:41:49.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/call v4.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/call/issues/24">[#24]</a> {path*} segments disappear when empty</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/call v3.0.4]]></title>
+        <id>https://github.com/hapijs/call/milestone/8</id>
+        <link href="https://hapi.dev/module/call/changelog#3.0.4"/>
+        <updated>2016-11-29T01:51:02.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/call v3.0.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/call/issues/26">[#26]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/call v3.0.3]]></title>
+        <id>https://github.com/hapijs/call/milestone/7</id>
+        <link href="https://hapi.dev/module/call/changelog#3.0.3"/>
+        <updated>2016-07-27T19:27:19.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/call v3.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/call/issues/23">[#23]</a> npmignore</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/call v3.0.2]]></title>
+        <id>https://github.com/hapijs/call/milestone/6</id>
+        <link href="https://hapi.dev/module/call/changelog#3.0.2"/>
+        <updated>2016-07-04T04:14:46.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/call v3.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/call/pull/21">[#21]</a> Fix empty segment bug</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/call v3.0.1]]></title>
+        <id>https://github.com/hapijs/call/milestone/5</id>
+        <link href="https://hapi.dev/module/call/changelog#3.0.1"/>
+        <updated>2016-05-19T18:07:15.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/call v3.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/call/pull/20">[#20]</a> Test on node v6, update dependencies</li><li><a href="https://github.com/hapijs/call/pull/16">[#16]</a> fix TypeError if path /constructor/foo is accessed</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/call v3.0.0]]></title>
+        <id>https://github.com/hapijs/call/milestone/4</id>
+        <link href="https://hapi.dev/module/call/changelog#3.0.0"/>
+        <updated>2015-11-01T19:45:59.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/call v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/call/issues/17">[#17]</a> ES6 style changes and node v4</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/call v2.0.2]]></title>
+        <id>https://github.com/hapijs/call/milestone/3</id>
+        <link href="https://hapi.dev/module/call/changelog#2.0.2"/>
+        <updated>2015-06-28T03:31:29.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/call v2.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/call/issues/14">[#14]</a> Update project style</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/call v2.0.1]]></title>
+        <id>https://github.com/hapijs/call/milestone/2</id>
+        <link href="https://hapi.dev/module/call/changelog#2.0.1"/>
+        <updated>2014-11-23T08:42:01.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/call v2.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/call/issues/11">[#11]</a> Performance tweaks</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/call v2.0.0]]></title>
+        <id>https://github.com/hapijs/call/milestone/1</id>
+        <link href="https://hapi.dev/module/call/changelog#2.0.0"/>
+        <updated>2014-11-23T08:41:31.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/call v2.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/call/issues/10">[#10]</a> Support route id</li><li><a href="https://github.com/hapijs/call/issues/9">[#9]</a> /a/{p}/{p*} conflicts with /a/{p*} (which is not reachable)</li><li><a href="https://github.com/hapijs/call/issues/8">[#8]</a> '/a/b/{p*}' is more specific than '/{p*5}'</li><li><a href="https://github.com/hapijs/call/issues/7">[#7]</a> /a/b/{p*} is more specific than /a/{b}/{c}</li><li><a href="https://github.com/hapijs/call/issues/6">[#6]</a> '/a/{b*}' is less specific than '/a/{b}/{c*}'</li><li><a href="https://github.com/hapijs/call/issues/3">[#3]</a> Support for flexible routes</li><li><a href="https://github.com/hapijs/call/pull/2">[#2]</a> Match case-insensitive paths with no params</li></ul>]]></content>
+    </entry>
+</feed>

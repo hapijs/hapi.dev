@@ -1,0 +1,151 @@
+[
+  {
+    "date": "2022-04-08T15:01:04Z",
+    "id": 4972543,
+    "issues": [
+      {
+        "id": 1196297054,
+        "labels": ["feature", "types"],
+        "number": 26,
+        "title": "Add Typescript types",
+        "url": "https://github.com/hapijs/bourne/pull/26"
+      },
+      {
+        "id": 709586811,
+        "labels": [],
+        "number": 22,
+        "title": "upgrade lab to v24",
+        "url": "https://github.com/hapijs/bourne/pull/22"
+      }
+    ],
+    "number": 9,
+    "url": "https://github.com/hapijs/bourne/milestone/9",
+    "version": "2.1.0"
+  },
+  {
+    "date": "2020-01-04T09:10:54Z",
+    "id": 4972542,
+    "issues": [
+      {
+        "id": 545261614,
+        "labels": ["dependency", "breaking changes"],
+        "number": 17,
+        "title": "Only node 12",
+        "url": "https://github.com/hapijs/bourne/issues/17"
+      }
+    ],
+    "number": 8,
+    "url": "https://github.com/hapijs/bourne/milestone/8",
+    "version": "2.0.0"
+  },
+  {
+    "date": "2019-04-28T19:07:05Z",
+    "id": 4265696,
+    "issues": [
+      {
+        "id": 438087158,
+        "labels": ["bug", "security"],
+        "number": 10,
+        "title": "Fix uppercase hex strings validating as safe",
+        "url": "https://github.com/hapijs/bourne/pull/10"
+      }
+    ],
+    "number": 6,
+    "url": "https://github.com/hapijs/bourne/milestone/6",
+    "version": "1.3.2"
+  },
+  {
+    "date": "2019-04-27T19:39:27Z",
+    "id": 4184137,
+    "issues": [
+      {
+        "id": 437977002,
+        "labels": ["feature"],
+        "number": 9,
+        "title": "Add safeParse()",
+        "url": "https://github.com/hapijs/bourne/issues/9"
+      }
+    ],
+    "number": 5,
+    "url": "https://github.com/hapijs/bourne/milestone/5",
+    "version": "1.3.0"
+  },
+  {
+    "date": "2019-04-27T19:38:20Z",
+    "id": 4170674,
+    "issues": [
+      {
+        "id": 427141763,
+        "labels": ["non issue"],
+        "number": 8,
+        "title": "Change module namespace",
+        "url": "https://github.com/hapijs/bourne/issues/8"
+      }
+    ],
+    "number": 4,
+    "url": "https://github.com/hapijs/bourne/milestone/4",
+    "version": "1.2.0"
+  },
+  {
+    "date": "2019-03-25T16:54:21Z",
+    "id": 4029941,
+    "issues": [
+      {
+        "id": 408288980,
+        "labels": ["bug", "security"],
+        "number": 7,
+        "title": "Don't assume `hasOwnProperty` is safe",
+        "url": "https://github.com/hapijs/bourne/pull/7"
+      }
+    ],
+    "number": 3,
+    "url": "https://github.com/hapijs/bourne/milestone/3",
+    "version": "1.1.2"
+  },
+  {
+    "date": "2019-02-04T21:26:15Z",
+    "id": 4023137,
+    "issues": [
+      {
+        "id": 405924175,
+        "labels": ["feature"],
+        "number": 5,
+        "title": "Use syntax available down to Node 4.",
+        "url": "https://github.com/hapijs/bourne/pull/5"
+      },
+      {
+        "id": 405907547,
+        "labels": ["bug"],
+        "number": 4,
+        "title": "Improve regex to only flag keys",
+        "url": "https://github.com/hapijs/bourne/issues/4"
+      }
+    ],
+    "number": 2,
+    "url": "https://github.com/hapijs/bourne/milestone/2",
+    "version": "1.1.1"
+  },
+  {
+    "date": "2019-02-01T22:41:40Z",
+    "id": 4023109,
+    "issues": [
+      {
+        "id": 405898476,
+        "labels": ["bug", "security"],
+        "number": 3,
+        "title": "Handle escaped unicode characters",
+        "url": "https://github.com/hapijs/bourne/issues/3"
+      },
+      {
+        "id": 405583120,
+        "labels": ["feature"],
+        "number": 2,
+        "title": "Expose validation logic",
+        "url": "https://github.com/hapijs/bourne/issues/2"
+      }
+    ],
+    "number": 1,
+    "url": "https://github.com/hapijs/bourne/milestone/1",
+    "version": "1.1.0"
+  }
+]

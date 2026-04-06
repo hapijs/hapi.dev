@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/accept</id>
+    <title>@hapi/accept changelog</title>
+    <updated>2023-10-10T08:20:42.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/accept"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/accept v6.0.3]]></title>
+        <id>https://github.com/hapijs/accept/milestone/33</id>
+        <link href="https://hapi.dev/module/accept/changelog#6.0.3"/>
+        <updated>2023-10-10T08:20:42.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/accept v6.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/accept/pull/73">[#73]</a> allow readonly arrays to be used as preferences</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/accept v6.0.2]]></title>
+        <id>https://github.com/hapijs/accept/milestone/32</id>
+        <link href="https://hapi.dev/module/accept/changelog#6.0.2"/>
+        <updated>2023-07-18T13:38:21.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/accept v6.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/accept/pull/72">[#72]</a> update typing of mediaTypes to match actual implementation</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/accept v6.0.1]]></title>
+        <id>https://github.com/hapijs/accept/milestone/31</id>
+        <link href="https://hapi.dev/module/accept/changelog#6.0.1"/>
+        <updated>2023-02-11T19:46:22.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/accept v6.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/accept/pull/71">[#71]</a> chore: bump hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/accept v6.0.0]]></title>
+        <id>https://github.com/hapijs/accept/milestone/30</id>
+        <link href="https://hapi.dev/module/accept/changelog#6.0.0"/>
+        <updated>2023-02-11T19:46:21.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/accept v6.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/accept/pull/70">[#70]</a> Support node v18 and drop node v12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/accept v5.0.2]]></title>
+        <id>https://github.com/hapijs/accept/milestone/28</id>
+        <link href="https://hapi.dev/module/accept/changelog#5.0.2"/>
+        <updated>2021-02-05T05:40:23.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/accept v5.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/accept/pull/65">[#65]</a> Enable prefix matching for language tags</li><li><a href="https://github.com/hapijs/accept/issues/63">[#63]</a> Accept.language does not match more specific language tag</li><li><a href="https://github.com/hapijs/accept/pull/59">[#59]</a> update lab and typescript now needs to be added as a devdependency</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/accept v5.0.1]]></title>
+        <id>https://github.com/hapijs/accept/milestone/26</id>
+        <link href="https://hapi.dev/module/accept/changelog#5.0.1"/>
+        <updated>2020-02-13T06:32:55.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/accept v5.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/accept/issues/53">[#53]</a> Use maps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/accept v5.0.0]]></title>
+        <id>https://github.com/hapijs/accept/milestone/25</id>
+        <link href="https://hapi.dev/module/accept/changelog#5.0.0"/>
+        <updated>2020-01-04T20:55:47.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/accept v5.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/accept/issues/51">[#51]</a> Only node 12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/accept v4.0.1]]></title>
+        <id>https://github.com/hapijs/accept/milestone/24</id>
+        <link href="https://hapi.dev/module/accept/changelog#4.0.1"/>
+        <updated>2020-02-13T06:32:33.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/accept v4.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/accept/issues/54">[#54]</a> Backport #53</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/accept v4.0.0]]></title>
+        <id>https://github.com/hapijs/accept/milestone/23</id>
+        <link href="https://hapi.dev/module/accept/changelog#4.0.0"/>
+        <updated>2019-10-05T22:08:55.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/accept v4.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/accept/issues/48">[#48]</a> Drop node 8</li><li><a href="https://github.com/hapijs/accept/issues/47">[#47]</a> Add types</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/accept v3.2.4]]></title>
+        <id>https://github.com/hapijs/accept/milestone/22</id>
+        <link href="https://hapi.dev/module/accept/changelog#3.2.4"/>
+        <updated>2020-02-13T06:32:53.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/accept v3.2.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/accept/issues/55">[#55]</a> Backport #53</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/accept v3.2.3]]></title>
+        <id>https://github.com/hapijs/accept/milestone/21</id>
+        <link href="https://hapi.dev/module/accept/changelog#3.2.3"/>
+        <updated>2019-08-13T20:43:13.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/accept v3.2.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/accept/issues/42">[#42]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/accept v3.2.2]]></title>
+        <id>https://github.com/hapijs/accept/milestone/20</id>
+        <link href="https://hapi.dev/module/accept/changelog#3.2.2"/>
+        <updated>2019-04-02T22:53:28.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/accept v3.2.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/accept/issues/41">[#41]</a> Missing bias for server preferences among equal q values</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/accept v3.2.1]]></title>
+        <id>https://github.com/hapijs/accept/milestone/19</id>
+        <link href="https://hapi.dev/module/accept/changelog#3.2.1"/>
+        <updated>2019-03-30T00:05:54.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/accept v3.2.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/accept/issues/40">[#40]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/accept v3.2.0]]></title>
+        <id>https://github.com/hapijs/accept/milestone/14</id>
+        <link href="https://hapi.dev/module/accept/changelog#3.2.0"/>
+        <updated>2019-03-29T17:17:57.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/accept v3.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/accept/issues/39">[#39]</a> Change module namespace</li><li><a href="https://github.com/hapijs/accept/issues/34">[#34]</a> headerType() '*' logic is incorrect.</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/accept v3.1.3]]></title>
+        <id>https://github.com/hapijs/accept/milestone/13</id>
+        <link href="https://hapi.dev/module/accept/changelog#3.1.3"/>
+        <updated>2018-11-03T00:14:00.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/accept v3.1.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/accept/issues/32">[#32]</a> Remove engines</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/accept v3.1.2]]></title>
+        <id>https://github.com/hapijs/accept/milestone/12</id>
+        <link href="https://hapi.dev/module/accept/changelog#3.1.2"/>
+        <updated>2018-11-01T07:20:19.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/accept v3.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/accept/issues/31">[#31]</a> Update hoek v6</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/accept v3.1.1]]></title>
+        <id>https://github.com/hapijs/accept/milestone/11</id>
+        <link href="https://hapi.dev/module/accept/changelog#3.1.1"/>
+        <updated>2018-10-30T08:12:03.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/accept v3.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/accept/issues/30">[#30]</a> Fix node 11 sort</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/accept v3.1.0]]></title>
+        <id>https://github.com/hapijs/accept/milestone/10</id>
+        <link href="https://hapi.dev/module/accept/changelog#3.1.0"/>
+        <updated>2018-10-30T04:00:21.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/accept v3.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/accept/pull/28">[#28]</a> add mediaType method</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/accept v3.0.2]]></title>
+        <id>https://github.com/hapijs/accept/milestone/9</id>
+        <link href="https://hapi.dev/module/accept/changelog#3.0.2"/>
+        <updated>2017-11-03T06:41:46.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/accept v3.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/accept/issues/22">[#22]</a> Update boom</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/accept v3.0.1]]></title>
+        <id>https://github.com/hapijs/accept/milestone/8</id>
+        <link href="https://hapi.dev/module/accept/changelog#3.0.1"/>
+        <updated>2017-09-26T09:04:11.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/accept v3.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/accept/issues/21">[#21]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/accept v3.0.0]]></title>
+        <id>https://github.com/hapijs/accept/milestone/7</id>
+        <link href="https://hapi.dev/module/accept/changelog#3.0.0"/>
+        <updated>2017-09-25T23:59:24.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/accept v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/accept/issues/20">[#20]</a> Throw all errors</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/accept v2.2.2]]></title>
+        <id>https://github.com/hapijs/accept/milestone/17</id>
+        <link href="https://hapi.dev/module/accept/changelog#2.2.2"/>
+        <updated>2019-03-22T00:14:24.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/accept v2.2.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/accept/issues/38">[#38]</a> Node 11 (language)</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/accept v2.2.1]]></title>
+        <id>https://github.com/hapijs/accept/milestone/16</id>
+        <link href="https://hapi.dev/module/accept/changelog#2.2.1"/>
+        <updated>2019-03-22T00:08:43.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/accept v2.2.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/accept/issues/37">[#37]</a> Fix node 11</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/accept v2.2.0]]></title>
+        <id>https://github.com/hapijs/accept/milestone/15</id>
+        <link href="https://hapi.dev/module/accept/changelog#2.2.0"/>
+        <updated>2019-03-21T23:58:24.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/accept v2.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/accept/issues/36">[#36]</a> Commercial version of v2 branch</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/accept v2.1.4]]></title>
+        <id>https://github.com/hapijs/accept/milestone/6</id>
+        <link href="https://hapi.dev/module/accept/changelog#2.1.4"/>
+        <updated>2017-05-28T05:52:16.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/accept v2.1.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/accept/issues/18">[#18]</a> Update deps.</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/accept v2.1.2]]></title>
+        <id>https://github.com/hapijs/accept/milestone/5</id>
+        <link href="https://hapi.dev/module/accept/changelog#2.1.2"/>
+        <updated>2016-07-27T18:28:57.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/accept v2.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/accept/issues/17">[#17]</a> Update lab</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/accept v2.1.0]]></title>
+        <id>https://github.com/hapijs/accept/milestone/4</id>
+        <link href="https://hapi.dev/module/accept/changelog#2.1.0"/>
+        <updated>2016-07-27T18:28:21.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/accept v2.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/accept/pull/14">[#14]</a> Mediatypes</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/accept v2.0.0]]></title>
+        <id>https://github.com/hapijs/accept/milestone/2</id>
+        <link href="https://hapi.dev/module/accept/changelog#2.0.0"/>
+        <updated>2015-11-01T18:52:39.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/accept v2.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/accept/issues/15">[#15]</a> ES6 style changes and node v4</li><li><a href="https://github.com/hapijs/accept/issues/13">[#13]</a> Update docs to use API.md</li><li><a href="https://github.com/hapijs/accept/pull/11">[#11]</a> add language() and languages()</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/accept v1.1.0]]></title>
+        <id>https://github.com/hapijs/accept/milestone/1</id>
+        <link href="https://hapi.dev/module/accept/changelog#1.1.0"/>
+        <updated>2015-07-13T16:56:12.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/accept v1.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/accept/pull/9">[#9]</a> Charset</li><li><a href="https://github.com/hapijs/accept/pull/2">[#2]</a> Update to Lab 5.x.x and Code 1.x.x</li><li><a href="https://github.com/hapijs/accept/pull/1">[#1]</a> Update .travis.yml</li></ul>]]></content>
+    </entry>
+</feed>

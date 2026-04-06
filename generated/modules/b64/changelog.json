@@ -1,0 +1,314 @@
+[
+  {
+    "date": "2023-02-11T17:55:46Z",
+    "id": 7956676,
+    "issues": [
+      {
+        "id": 1551768572,
+        "labels": [],
+        "number": 41,
+        "title": "chore: bump hoek",
+        "url": "https://github.com/hapijs/b64/pull/41"
+      }
+    ],
+    "number": 18,
+    "url": "https://github.com/hapijs/b64/milestone/18",
+    "version": "6.0.1"
+  },
+  {
+    "date": "2023-02-11T17:55:48Z",
+    "id": 7956675,
+    "issues": [
+      {
+        "id": 1229150447,
+        "labels": ["breaking changes", "dependency"],
+        "number": 40,
+        "title": "Support node v18 and drop node v12",
+        "url": "https://github.com/hapijs/b64/pull/40"
+      }
+    ],
+    "number": 17,
+    "url": "https://github.com/hapijs/b64/milestone/17",
+    "version": "6.0.0"
+  },
+  {
+    "date": "2020-01-04T22:10:05Z",
+    "id": 4973155,
+    "issues": [
+      {
+        "id": 545338278,
+        "labels": ["breaking changes", "dependency"],
+        "number": 33,
+        "title": "Only node 12",
+        "url": "https://github.com/hapijs/b64/issues/33"
+      }
+    ],
+    "number": 15,
+    "url": "https://github.com/hapijs/b64/milestone/15",
+    "version": "5.0.0"
+  },
+  {
+    "date": "2020-09-26T18:12:20Z",
+    "id": 4570614,
+    "issues": [],
+    "number": 14,
+    "url": "https://github.com/hapijs/b64/milestone/14",
+    "version": "4.2.2"
+  },
+  {
+    "date": "2019-08-13T20:49:32Z",
+    "id": 4192226,
+    "issues": [
+      {
+        "id": 480361647,
+        "labels": ["dependency"],
+        "number": 26,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/b64/issues/26"
+      }
+    ],
+    "number": 13,
+    "url": "https://github.com/hapijs/b64/milestone/13",
+    "version": "4.2.1"
+  },
+  {
+    "date": "2019-04-02T06:29:59Z",
+    "id": 3792169,
+    "issues": [
+      {
+        "id": 428045473,
+        "labels": ["dependency"],
+        "number": 25,
+        "title": "Change module namespace",
+        "url": "https://github.com/hapijs/b64/issues/25"
+      }
+    ],
+    "number": 10,
+    "url": "https://github.com/hapijs/b64/milestone/10",
+    "version": "4.2.0"
+  },
+  {
+    "date": "2018-11-03T00:15:44Z",
+    "id": 3787421,
+    "issues": [
+      {
+        "id": 377000607,
+        "labels": ["non issue"],
+        "number": 22,
+        "title": "Remove engines",
+        "url": "https://github.com/hapijs/b64/issues/22"
+      }
+    ],
+    "number": 9,
+    "url": "https://github.com/hapijs/b64/milestone/9",
+    "version": "4.1.2"
+  },
+  {
+    "date": "2018-11-01T07:24:53Z",
+    "id": 3783746,
+    "issues": [
+      {
+        "id": 376282286,
+        "labels": ["dependency"],
+        "number": 21,
+        "title": "Update hoek v6",
+        "url": "https://github.com/hapijs/b64/issues/21"
+      }
+    ],
+    "number": 8,
+    "url": "https://github.com/hapijs/b64/milestone/8",
+    "version": "4.1.1"
+  },
+  {
+    "date": "2018-10-31T01:14:32Z",
+    "id": 2793858,
+    "issues": [
+      {
+        "id": 375757979,
+        "labels": ["feature"],
+        "number": 20,
+        "title": "Move base64 methods from hoek",
+        "url": "https://github.com/hapijs/b64/issues/20"
+      }
+    ],
+    "number": 7,
+    "url": "https://github.com/hapijs/b64/milestone/7",
+    "version": "4.1.0"
+  },
+  {
+    "date": "2017-09-26T05:55:20Z",
+    "id": 2671618,
+    "issues": [
+      {
+        "id": 260499391,
+        "labels": ["breaking changes"],
+        "number": 18,
+        "title": "Node 8",
+        "url": "https://github.com/hapijs/b64/issues/18"
+      }
+    ],
+    "number": 6,
+    "url": "https://github.com/hapijs/b64/milestone/6",
+    "version": "4.0.0"
+  },
+  {
+    "date": "2020-09-26T18:12:22Z",
+    "id": 4170975,
+    "issues": [],
+    "number": 12,
+    "url": "https://github.com/hapijs/b64/milestone/12",
+    "version": "3.1.1"
+  },
+  {
+    "date": "2019-03-25T18:23:05Z",
+    "id": 4170973,
+    "issues": [
+      {
+        "id": 425046641,
+        "labels": ["lts"],
+        "number": 24,
+        "title": "Commercial version of v3 branch",
+        "url": "https://github.com/hapijs/b64/issues/24"
+      }
+    ],
+    "number": 11,
+    "url": "https://github.com/hapijs/b64/milestone/11",
+    "version": "3.1.0"
+  },
+  {
+    "date": "2017-07-31T15:29:44Z",
+    "id": 1910372,
+    "issues": [
+      {
+        "id": 246813904,
+        "labels": ["release notes"],
+        "number": 17,
+        "title": "3.0.3 Release notes",
+        "url": "https://github.com/hapijs/b64/issues/17"
+      },
+      {
+        "id": 246795009,
+        "labels": ["dependency", "lts"],
+        "number": 16,
+        "title": "Remove deprecated buffer usage",
+        "url": "https://github.com/hapijs/b64/pull/16"
+      },
+      {
+        "id": 246517248,
+        "labels": ["lts"],
+        "number": 15,
+        "title": "Pending deprecation for new Buffer()",
+        "url": "https://github.com/hapijs/b64/issues/15"
+      }
+    ],
+    "number": 5,
+    "url": "https://github.com/hapijs/b64/milestone/5",
+    "version": "3.0.3"
+  },
+  {
+    "date": "2016-07-28T19:40:33Z",
+    "id": 1777280,
+    "issues": [
+      {
+        "id": 168179106,
+        "labels": ["dependency"],
+        "number": 14,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/b64/issues/14"
+      },
+      {
+        "id": 156125938,
+        "labels": ["documentation"],
+        "number": 13,
+        "title": "Document API",
+        "url": "https://github.com/hapijs/b64/pull/13"
+      },
+      {
+        "id": 156121447,
+        "labels": ["dependency"],
+        "number": 12,
+        "title": "Separate decode/encode modules",
+        "url": "https://github.com/hapijs/b64/pull/12"
+      },
+      {
+        "id": 152695917,
+        "labels": ["documentation"],
+        "number": 10,
+        "title": "Document API",
+        "url": "https://github.com/hapijs/b64/issues/10"
+      }
+    ],
+    "number": 4,
+    "url": "https://github.com/hapijs/b64/milestone/4",
+    "version": "3.0.2"
+  },
+  {
+    "date": "2016-05-19T18:02:58Z",
+    "id": 1386891,
+    "issues": [
+      {
+        "id": 155508759,
+        "labels": ["dependency"],
+        "number": 11,
+        "title": "update hoek to 4.x.x",
+        "url": "https://github.com/hapijs/b64/pull/11"
+      },
+      {
+        "id": 152695851,
+        "labels": ["dependency"],
+        "number": 9,
+        "title": "Update lab and travis node version",
+        "url": "https://github.com/hapijs/b64/pull/9"
+      }
+    ],
+    "number": 3,
+    "url": "https://github.com/hapijs/b64/milestone/3",
+    "version": "3.0.1"
+  },
+  {
+    "date": "2015-10-31T20:07:20Z",
+    "id": 1184002,
+    "issues": [
+      {
+        "id": 114430304,
+        "labels": ["breaking changes"],
+        "number": 8,
+        "title": "es6. Closes #7",
+        "url": "https://github.com/hapijs/b64/pull/8"
+      },
+      {
+        "id": 114430274,
+        "labels": ["breaking changes"],
+        "number": 7,
+        "title": "ES6 style, node v4",
+        "url": "https://github.com/hapijs/b64/issues/7"
+      }
+    ],
+    "number": 2,
+    "url": "https://github.com/hapijs/b64/milestone/2",
+    "version": "3.0.0"
+  },
+  {
+    "date": "2015-06-28T01:56:43Z",
+    "id": 811756,
+    "issues": [
+      {
+        "id": 59539062,
+        "labels": ["test", "dependency"],
+        "number": 5,
+        "title": "Update to Lab 5.x.x and Code 1.x.x",
+        "url": "https://github.com/hapijs/b64/pull/5"
+      },
+      {
+        "id": 58949705,
+        "labels": ["test"],
+        "number": 4,
+        "title": "Update .travis.yml",
+        "url": "https://github.com/hapijs/b64/pull/4"
+      }
+    ],
+    "number": 1,
+    "url": "https://github.com/hapijs/b64/milestone/1",
+    "version": "2.0.1"
+  }
+]

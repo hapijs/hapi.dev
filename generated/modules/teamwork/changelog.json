@@ -1,0 +1,363 @@
+[
+  {
+    "date": "2025-08-21T15:05:34Z",
+    "id": 7953220,
+    "issues": [
+      {
+        "id": 3339344151,
+        "labels": ["bug"],
+        "number": 39,
+        "title": "Handle non-integer and empty meetings",
+        "url": "https://github.com/hapijs/teamwork/pull/39"
+      },
+      {
+        "id": 3338315379,
+        "labels": ["bug"],
+        "number": 38,
+        "title": "Properly handle multiple iterators for Events",
+        "url": "https://github.com/hapijs/teamwork/pull/38"
+      },
+      {
+        "id": 3337340434,
+        "labels": ["bug"],
+        "number": 37,
+        "title": "Fix regroup() to work after team error",
+        "url": "https://github.com/hapijs/teamwork/pull/37"
+      },
+      {
+        "id": 3330888322,
+        "labels": ["bug"],
+        "number": 36,
+        "title": "Regroup should return the work output",
+        "url": "https://github.com/hapijs/teamwork/issues/36"
+      }
+    ],
+    "number": 21,
+    "url": "https://github.com/hapijs/teamwork/milestone/21",
+    "version": "6.0.1"
+  },
+  {
+    "date": "2022-05-07T01:05:19Z",
+    "id": 7953219,
+    "issues": [
+      {
+        "id": 1227417223,
+        "labels": ["breaking changes", "dependency"],
+        "number": 34,
+        "title": "Support node v18 and drop node v12",
+        "url": "https://github.com/hapijs/teamwork/pull/34"
+      }
+    ],
+    "number": 20,
+    "url": "https://github.com/hapijs/teamwork/milestone/20",
+    "version": "6.0.0"
+  },
+  {
+    "date": "2022-04-13T11:29:46Z",
+    "id": 5392640,
+    "issues": [
+      {
+        "id": 1175345197,
+        "labels": ["bug"],
+        "number": 33,
+        "title": "Fix memory leaks on attend for infinite teamwork instance",
+        "url": "https://github.com/hapijs/teamwork/pull/33"
+      },
+      {
+        "id": 709597279,
+        "labels": [],
+        "number": 28,
+        "title": "upgrade lab to v24 and devDependency of typescript",
+        "url": "https://github.com/hapijs/teamwork/pull/28"
+      }
+    ],
+    "number": 18,
+    "url": "https://github.com/hapijs/teamwork/milestone/18",
+    "version": "5.1.1"
+  },
+  {
+    "date": "2020-05-07T04:40:03Z",
+    "id": 5225830,
+    "issues": [
+      {
+        "id": 586295054,
+        "labels": ["feature"],
+        "number": 26,
+        "title": "Add strict mode",
+        "url": "https://github.com/hapijs/teamwork/pull/26"
+      }
+    ],
+    "number": 17,
+    "url": "https://github.com/hapijs/teamwork/milestone/17",
+    "version": "5.1.0"
+  },
+  {
+    "date": "2020-03-23T01:10:32Z",
+    "id": 4973187,
+    "issues": [
+      {
+        "id": 585862127,
+        "labels": ["breaking changes", "types"],
+        "number": 25,
+        "title": "Move Options to Team.Options",
+        "url": "https://github.com/hapijs/teamwork/issues/25"
+      },
+      {
+        "id": 585861971,
+        "labels": ["feature"],
+        "number": 24,
+        "title": "Add events iterator",
+        "url": "https://github.com/hapijs/teamwork/issues/24"
+      }
+    ],
+    "number": 16,
+    "url": "https://github.com/hapijs/teamwork/milestone/16",
+    "version": "5.0.0"
+  },
+  {
+    "date": "2020-01-04T23:17:35Z",
+    "id": 4973186,
+    "issues": [
+      {
+        "id": 545343771,
+        "labels": ["breaking changes"],
+        "number": 20,
+        "title": "Change module to export Team instead of default class",
+        "url": "https://github.com/hapijs/teamwork/issues/20"
+      },
+      {
+        "id": 545342020,
+        "labels": ["breaking changes", "dependency"],
+        "number": 19,
+        "title": "Only node 12",
+        "url": "https://github.com/hapijs/teamwork/issues/19"
+      },
+      {
+        "id": 528392315,
+        "labels": ["bug"],
+        "number": 18,
+        "title": "Initialize all properties in constructor",
+        "url": "https://github.com/hapijs/teamwork/issues/18"
+      }
+    ],
+    "number": 15,
+    "url": "https://github.com/hapijs/teamwork/milestone/15",
+    "version": "4.0.0"
+  },
+  {
+    "date": "2020-07-16T23:48:10Z",
+    "id": 4320086,
+    "issues": [],
+    "number": 14,
+    "url": "https://github.com/hapijs/teamwork/milestone/14",
+    "version": "3.3.2"
+  },
+  {
+    "date": "2019-05-16T08:13:48Z",
+    "id": 4191064,
+    "issues": [
+      {
+        "id": 444813872,
+        "labels": ["dependency"],
+        "number": 15,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/teamwork/issues/15"
+      }
+    ],
+    "number": 13,
+    "url": "https://github.com/hapijs/teamwork/milestone/13",
+    "version": "3.3.1"
+  },
+  {
+    "date": "2019-04-01T19:50:50Z",
+    "id": 4174490,
+    "issues": [
+      {
+        "id": 427881157,
+        "labels": ["dependency"],
+        "number": 13,
+        "title": "Change module namespace",
+        "url": "https://github.com/hapijs/teamwork/issues/13"
+      }
+    ],
+    "number": 12,
+    "url": "https://github.com/hapijs/teamwork/milestone/12",
+    "version": "3.3.0"
+  },
+  {
+    "date": "2019-03-26T17:59:27Z",
+    "id": 4135251,
+    "issues": [
+      {
+        "id": 423522083,
+        "labels": ["types"],
+        "number": 12,
+        "title": "Add TypeScript definitions",
+        "url": "https://github.com/hapijs/teamwork/pull/12"
+      }
+    ],
+    "number": 11,
+    "url": "https://github.com/hapijs/teamwork/milestone/11",
+    "version": "3.2.0"
+  },
+  {
+    "date": "2019-03-13T00:08:53Z",
+    "id": 3792578,
+    "issues": [
+      {
+        "id": 420259436,
+        "labels": ["feature"],
+        "number": 11,
+        "title": "Support regroup()",
+        "url": "https://github.com/hapijs/teamwork/issues/11"
+      }
+    ],
+    "number": 10,
+    "url": "https://github.com/hapijs/teamwork/milestone/10",
+    "version": "3.1.0"
+  },
+  {
+    "date": "2018-11-03T07:45:33Z",
+    "id": 3792339,
+    "issues": [
+      {
+        "id": 377032631,
+        "labels": ["non issue"],
+        "number": 9,
+        "title": "Relocate to hapi org",
+        "url": "https://github.com/hapijs/teamwork/issues/9"
+      }
+    ],
+    "number": 9,
+    "url": "https://github.com/hapijs/teamwork/milestone/9",
+    "version": "3.0.3"
+  },
+  {
+    "date": "2018-11-03T00:48:39Z",
+    "id": 2866593,
+    "issues": [
+      {
+        "id": 377007685,
+        "labels": ["non issue"],
+        "number": 8,
+        "title": "Remove engines",
+        "url": "https://github.com/hapijs/teamwork/issues/8"
+      }
+    ],
+    "number": 8,
+    "url": "https://github.com/hapijs/teamwork/milestone/8",
+    "version": "3.0.2"
+  },
+  {
+    "date": "2018-11-03T00:47:55Z",
+    "id": 2866592,
+    "issues": [
+      {
+        "id": 268642588,
+        "labels": ["feature", "breaking changes"],
+        "number": 7,
+        "title": "Remove Team",
+        "url": "https://github.com/hapijs/teamwork/issues/7"
+      }
+    ],
+    "number": 7,
+    "url": "https://github.com/hapijs/teamwork/milestone/7",
+    "version": "3.0.1"
+  },
+  {
+    "date": "2017-10-26T06:23:44Z",
+    "id": 2787210,
+    "issues": [
+      {
+        "id": 268622464,
+        "labels": ["feature", "breaking changes"],
+        "number": 6,
+        "title": "Remove members and add notes support",
+        "url": "https://github.com/hapijs/teamwork/issues/6"
+      }
+    ],
+    "number": 6,
+    "url": "https://github.com/hapijs/teamwork/milestone/6",
+    "version": "3.0.0"
+  },
+  {
+    "date": "2017-09-23T22:11:31Z",
+    "id": 2787209,
+    "issues": [
+      {
+        "id": 260041969,
+        "labels": ["feature"],
+        "number": 5,
+        "title": "Add options",
+        "url": "https://github.com/hapijs/teamwork/issues/5"
+      }
+    ],
+    "number": 5,
+    "url": "https://github.com/hapijs/teamwork/milestone/5",
+    "version": "2.1.0"
+  },
+  {
+    "date": "2017-09-23T22:07:08Z",
+    "id": 2167961,
+    "issues": [
+      {
+        "id": 260041781,
+        "labels": ["feature", "breaking changes"],
+        "number": 4,
+        "title": "Migrate to async/await interface",
+        "url": "https://github.com/hapijs/teamwork/issues/4"
+      }
+    ],
+    "number": 4,
+    "url": "https://github.com/hapijs/teamwork/milestone/4",
+    "version": "2.0.0"
+  },
+  {
+    "date": "2016-12-01T06:01:25Z",
+    "id": 1910692,
+    "issues": [
+      {
+        "id": 192761114,
+        "labels": ["dependency"],
+        "number": 3,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/teamwork/issues/3"
+      }
+    ],
+    "number": 3,
+    "url": "https://github.com/hapijs/teamwork/milestone/3",
+    "version": "1.1.2"
+  },
+  {
+    "date": "2016-07-28T23:10:26Z",
+    "id": 1393155,
+    "issues": [
+      {
+        "id": 168217551,
+        "labels": ["dependency"],
+        "number": 2,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/teamwork/issues/2"
+      }
+    ],
+    "number": 2,
+    "url": "https://github.com/hapijs/teamwork/milestone/2",
+    "version": "1.1.1"
+  },
+  {
+    "date": "2015-11-04T08:14:34Z",
+    "id": 1393117,
+    "issues": [
+      {
+        "id": 114993676,
+        "labels": ["feature"],
+        "number": 1,
+        "title": "Add meetings()",
+        "url": "https://github.com/hapijs/teamwork/issues/1"
+      }
+    ],
+    "number": 1,
+    "url": "https://github.com/hapijs/teamwork/milestone/1",
+    "version": "1.1.0"
+  }
+]

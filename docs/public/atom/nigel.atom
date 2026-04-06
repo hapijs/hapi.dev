@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/nigel</id>
+    <title>@hapi/nigel changelog</title>
+    <updated>2023-02-11T18:06:10.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/nigel"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nigel v5.0.1]]></title>
+        <id>https://github.com/hapijs/nigel/milestone/20</id>
+        <link href="https://hapi.dev/module/nigel/changelog#5.0.1"/>
+        <updated>2023-02-11T18:06:10.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nigel v5.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nigel/pull/33">[#33]</a> chore: bump hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nigel v5.0.0]]></title>
+        <id>https://github.com/hapijs/nigel/milestone/19</id>
+        <link href="https://hapi.dev/module/nigel/changelog#5.0.0"/>
+        <updated>2022-05-24T02:49:20.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nigel v5.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nigel/pull/32">[#32]</a> Support node v18 and drop node v12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nigel v4.0.2]]></title>
+        <id>https://github.com/hapijs/nigel/milestone/17</id>
+        <link href="https://hapi.dev/module/nigel/changelog#4.0.2"/>
+        <updated>2020-07-05T05:26:03.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nigel v4.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nigel/pull/26">[#26]</a> fix duplicate 'close' events</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nigel v4.0.1]]></title>
+        <id>https://github.com/hapijs/nigel/milestone/16</id>
+        <link href="https://hapi.dev/module/nigel/changelog#4.0.1"/>
+        <updated>2020-06-29T06:16:25.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nigel v4.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nigel/issues/25">[#25]</a> close event emitted twice</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nigel v4.0.0]]></title>
+        <id>https://github.com/hapijs/nigel/milestone/15</id>
+        <link href="https://hapi.dev/module/nigel/changelog#4.0.0"/>
+        <updated>2020-01-05T06:36:12.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nigel v4.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nigel/issues/23">[#23]</a> Only node 12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nigel v3.1.1]]></title>
+        <id>https://github.com/hapijs/nigel/milestone/13</id>
+        <link href="https://hapi.dev/module/nigel/changelog#3.1.1"/>
+        <updated>2019-08-15T01:19:30.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nigel v3.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nigel/issues/21">[#21]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nigel v3.1.0]]></title>
+        <id>https://github.com/hapijs/nigel/milestone/10</id>
+        <link href="https://hapi.dev/module/nigel/changelog#3.1.0"/>
+        <updated>2019-04-02T17:45:18.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nigel v3.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nigel/issues/19">[#19]</a> Change module namespace</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nigel v3.0.4]]></title>
+        <id>https://github.com/hapijs/nigel/milestone/9</id>
+        <link href="https://hapi.dev/module/nigel/changelog#3.0.4"/>
+        <updated>2018-11-03T00:33:51.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nigel v3.0.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nigel/issues/16">[#16]</a> Remove engines</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nigel v3.0.3]]></title>
+        <id>https://github.com/hapijs/nigel/milestone/8</id>
+        <link href="https://hapi.dev/module/nigel/changelog#3.0.3"/>
+        <updated>2018-11-01T18:37:34.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nigel v3.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nigel/issues/15">[#15]</a> Update hoek v6</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nigel v3.0.2]]></title>
+        <id>https://github.com/hapijs/nigel/milestone/7</id>
+        <link href="https://hapi.dev/module/nigel/changelog#3.0.2"/>
+        <updated>2018-10-31T05:49:54.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nigel v3.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nigel/issues/14">[#14]</a> Cleanup</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nigel v3.0.1]]></title>
+        <id>https://github.com/hapijs/nigel/milestone/6</id>
+        <link href="https://hapi.dev/module/nigel/changelog#3.0.1"/>
+        <updated>2018-03-31T00:18:14.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nigel v3.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nigel/pull/13">[#13]</a> Remove new Buffer usage</li><li><a href="https://github.com/hapijs/nigel/pull/12">[#12]</a> Remove `noAssert` argument from buffer functions</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nigel v3.0.0]]></title>
+        <id>https://github.com/hapijs/nigel/milestone/5</id>
+        <link href="https://hapi.dev/module/nigel/changelog#3.0.0"/>
+        <updated>2017-09-26T08:56:40.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nigel v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nigel/issues/11">[#11]</a> Node 8</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nigel v2.1.0]]></title>
+        <id>https://github.com/hapijs/nigel/milestone/11</id>
+        <link href="https://hapi.dev/module/nigel/changelog#2.1.0"/>
+        <updated>2019-03-25T18:40:22.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nigel v2.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nigel/issues/18">[#18]</a> Commercial version of v2 branch</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nigel v2.0.2]]></title>
+        <id>https://github.com/hapijs/nigel/milestone/4</id>
+        <link href="https://hapi.dev/module/nigel/changelog#2.0.2"/>
+        <updated>2016-07-28T19:43:23.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nigel v2.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nigel/issues/10">[#10]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nigel v2.0.1]]></title>
+        <id>https://github.com/hapijs/nigel/milestone/3</id>
+        <link href="https://hapi.dev/module/nigel/changelog#2.0.1"/>
+        <updated>2016-05-19T18:11:22.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nigel v2.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nigel/pull/9">[#9]</a> Update hoek & lab</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nigel v2.0.0]]></title>
+        <id>https://github.com/hapijs/nigel/milestone/2</id>
+        <link href="https://hapi.dev/module/nigel/changelog#2.0.0"/>
+        <updated>2015-11-03T04:29:49.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nigel v2.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nigel/issues/5">[#5]</a> ES6 style changes and node v4</li><li><a href="https://github.com/hapijs/nigel/pull/4">[#4]</a> Adjust whitespace after semicolons to fix tests</li><li><a href="https://github.com/hapijs/nigel/pull/3">[#3]</a> Update to Lab 5.x.x and Code 1.x.x</li><li><a href="https://github.com/hapijs/nigel/pull/2">[#2]</a> Update .travis.yml</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nigel v1.0.1]]></title>
+        <id>https://github.com/hapijs/nigel/milestone/1</id>
+        <link href="https://hapi.dev/module/nigel/changelog#1.0.1"/>
+        <updated>2014-10-02T18:18:49.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nigel v1.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nigel/issues/1">[#1]</a> Performance tweaks</li></ul>]]></content>
+    </entry>
+</feed>

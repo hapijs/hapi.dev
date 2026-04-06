@@ -1,0 +1,22 @@
+{
+  "api": true,
+  "forks": 30,
+  "isPlugin": false,
+  "link": "https://github.com/hapijs/accept",
+  "name": "accept",
+  "package": "@hapi/accept",
+  "slogan": "HTTP Accept-* headers parsing.",
+  "sloganHtml": "HTTP Accept-* headers parsing.",
+  "stars": 55,
+  "updated": "2024-10-23T14:51:04Z",
+  "versions": [
+    {
+      "branch": "v6.0.3",
+      "license": "BSD",
+      "name": "6.0.3",
+      "node": ">= 16"
+    }
+  ],
+  "versionsArray": ["6.0.3"],
+  "latestVersion": "6.x.x"
+}
