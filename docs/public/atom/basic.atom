@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/basic</id>
+    <title>@hapi/basic changelog</title>
+    <updated>2023-02-11T19:54:09.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/basic"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/basic v7.0.1]]></title>
+        <id>https://github.com/hapijs/basic/milestone/19</id>
+        <link href="https://hapi.dev/module/basic/changelog#7.0.1"/>
+        <updated>2023-02-11T19:54:09.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/basic v7.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/basic/pull/91">[#91]</a> chore: bump hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/basic v7.0.0]]></title>
+        <id>https://github.com/hapijs/basic/milestone/18</id>
+        <link href="https://hapi.dev/module/basic/changelog#7.0.0"/>
+        <updated>2022-07-23T19:16:19.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/basic v7.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/basic/pull/90">[#90]</a> Support node v18 and hapi v21, drop node v12 and hapi v18/19</li><li><a href="https://github.com/hapijs/basic/pull/83">[#83]</a> upgrade lab to v24</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/basic v6.0.0]]></title>
+        <id>https://github.com/hapijs/basic/milestone/17</id>
+        <link href="https://hapi.dev/module/basic/changelog#6.0.0"/>
+        <updated>2020-01-10T04:37:00.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/basic v6.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/basic/issues/78">[#78]</a> Change plugin name to @hapi/basic</li><li><a href="https://github.com/hapijs/basic/issues/77">[#77]</a> Drop hapi 17</li><li><a href="https://github.com/hapijs/basic/issues/76">[#76]</a> Only support node 12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/basic v5.1.1]]></title>
+        <id>https://github.com/hapijs/basic/milestone/15</id>
+        <link href="https://hapi.dev/module/basic/changelog#5.1.1"/>
+        <updated>2019-08-13T21:57:19.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/basic v5.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/basic/issues/70">[#70]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/basic v5.1.0]]></title>
+        <id>https://github.com/hapijs/basic/milestone/14</id>
+        <link href="https://hapi.dev/module/basic/changelog#5.1.0"/>
+        <updated>2019-04-18T05:07:08.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/basic v5.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/basic/issues/69">[#69]</a> Change module namespace</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/basic v5.0.0]]></title>
+        <id>https://github.com/hapijs/basic/milestone/13</id>
+        <link href="https://hapi.dev/module/basic/changelog#5.0.0"/>
+        <updated>2019-04-18T04:36:08.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/basic v5.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/basic/pull/61">[#61]</a> Update for hapi 17.x.x</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/basic v4.2.0]]></title>
+        <id>https://github.com/hapijs/basic/milestone/12</id>
+        <link href="https://hapi.dev/module/basic/changelog#4.2.0"/>
+        <updated>2019-04-18T04:36:07.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/basic v4.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/basic/pull/51">[#51]</a> Test on node v6, update dependencies</li><li><a href="https://github.com/hapijs/basic/pull/48">[#48]</a> Documentation update</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/basic v4.1.0]]></title>
+        <id>https://github.com/hapijs/basic/milestone/11</id>
+        <link href="https://hapi.dev/module/basic/changelog#4.1.0"/>
+        <updated>2015-11-17T07:08:32.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/basic v4.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/basic/pull/46">[#46]</a> add option to pass attributes to unauthorized replies</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/basic v4.0.0]]></title>
+        <id>https://github.com/hapijs/basic/milestone/10</id>
+        <link href="https://hapi.dev/module/basic/changelog#4.0.0"/>
+        <updated>2015-11-04T12:32:06.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/basic v4.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/basic/pull/44">[#44]</a> Node 4+, Hapi 10+, ES6 changes. Closes #42</li><li><a href="https://github.com/hapijs/basic/issues/42">[#42]</a> Node &gt;= 4 / es2015 updates</li><li><a href="https://github.com/hapijs/basic/pull/41">[#41]</a> Update devDependencies. Closes #40</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/basic v3.0.0]]></title>
+        <id>https://github.com/hapijs/basic/milestone/8</id>
+        <link href="https://hapi.dev/module/basic/changelog#3.0.0"/>
+        <updated>2015-07-04T22:04:08.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/basic v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/basic/pull/34">[#34]</a> Added request object as the first argument in validateFunc</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/basic v2.0.0]]></title>
+        <id>https://github.com/hapijs/basic/milestone/7</id>
+        <link href="https://hapi.dev/module/basic/changelog#2.0.0"/>
+        <updated>2014-12-10T22:55:16.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/basic v2.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/basic/issues/22">[#22]</a> hapi 8.0 API</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/basic v1.1.2]]></title>
+        <id>https://github.com/hapijs/basic/milestone/6</id>
+        <link href="https://hapi.dev/module/basic/changelog#1.1.2"/>
+        <updated>2014-11-12T07:34:45.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/basic v1.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/basic/pull/21">[#21]</a> Update dev deps. Closes #20</li><li><a href="https://github.com/hapijs/basic/issues/20">[#20]</a> Test deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/basic v1.1.1]]></title>
+        <id>https://github.com/hapijs/basic/milestone/5</id>
+        <link href="https://hapi.dev/module/basic/changelog#1.1.1"/>
+        <updated>2014-08-04T08:44:26.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/basic v1.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/basic/issues/11">[#11]</a> Authentication fails when password contains one or more colons</li><li><a href="https://github.com/hapijs/basic/pull/10">[#10]</a> issue passing errors to validateFunc</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/basic v1.1.0]]></title>
+        <id>https://github.com/hapijs/basic/milestone/4</id>
+        <link href="https://hapi.dev/module/basic/changelog#1.1.0"/>
+        <updated>2014-06-12T20:21:41.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/basic v1.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/basic/pull/7">[#7]</a> Updated to Hapi 6.0</li><li><a href="https://github.com/hapijs/basic/issues/6">[#6]</a> Prepare for hapi v6.0</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/basic v1.0.2]]></title>
+        <id>https://github.com/hapijs/basic/milestone/2</id>
+        <link href="https://hapi.dev/module/basic/changelog#1.0.2"/>
+        <updated>2014-05-20T22:33:26.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/basic v1.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/basic/issues/5">[#5]</a> Bring coverage back to 100%</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/basic v1.0.1]]></title>
+        <id>https://github.com/hapijs/basic/milestone/1</id>
+        <link href="https://hapi.dev/module/basic/changelog#1.0.1"/>
+        <updated>2014-03-21T20:19:05.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/basic v1.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/basic/pull/2">[#2]</a> update peerDependency</li><li><a href="https://github.com/hapijs/basic/issues/1">[#1]</a> change hapi peer dependency to 3.0.0</li></ul>]]></content>
+    </entry>
+</feed>

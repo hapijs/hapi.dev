@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/scooter</id>
+    <title>@hapi/scooter changelog</title>
+    <updated>2022-10-29T20:19:56.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/scooter"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/scooter v7.0.0]]></title>
+        <id>https://github.com/hapijs/scooter/milestone/11</id>
+        <link href="https://hapi.dev/module/scooter/changelog#7.0.0"/>
+        <updated>2022-10-29T20:19:56.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/scooter v7.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/scooter/pull/63">[#63]</a> Support for hapi v21, node v18, ESM tests, multiple registration</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/scooter v6.0.1]]></title>
+        <id>https://github.com/hapijs/scooter/milestone/8</id>
+        <link href="https://hapi.dev/module/scooter/changelog#6.0.1"/>
+        <updated>2020-09-26T15:49:42.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/scooter v6.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/scooter/pull/58">[#58]</a> migrate to new travis format</li><li><a href="https://github.com/hapijs/scooter/pull/57">[#57]</a> update to hapi 20</li><li><a href="https://github.com/hapijs/scooter/pull/56">[#56]</a> upgrade semver and lab</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/scooter v6.0.0]]></title>
+        <id>https://github.com/hapijs/scooter/milestone/9</id>
+        <link href="https://hapi.dev/module/scooter/changelog#6.0.0"/>
+        <updated>2020-01-13T12:25:45.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/scooter v6.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/scooter/issues/55">[#55]</a> Only node 12</li><li><a href="https://github.com/hapijs/scooter/issues/54">[#54]</a> Require hapi 18</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/scooter v5.1.1]]></title>
+        <id>https://github.com/hapijs/scooter/milestone/7</id>
+        <link href="https://hapi.dev/module/scooter/changelog#5.1.1"/>
+        <updated>2019-09-15T05:28:07.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/scooter v5.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/scooter/pull/49">[#49]</a> Re-fix issue #44 which was reverted in changeset da33ea7</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/scooter v4.1.0]]></title>
+        <id>https://github.com/hapijs/scooter/milestone/6</id>
+        <link href="https://hapi.dev/module/scooter/changelog#4.1.0"/>
+        <updated>2019-04-21T22:30:47.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/scooter v4.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/scooter/issues/48">[#48]</a> Change module namespace</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/scooter v4.0.1]]></title>
+        <id>https://github.com/hapijs/scooter/milestone/5</id>
+        <link href="https://hapi.dev/module/scooter/changelog#4.0.1"/>
+        <updated>2018-11-11T06:54:34.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/scooter v4.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/scooter/issues/39">[#39]</a> Cleanup</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/scooter v3.0.0]]></title>
+        <id>https://github.com/hapijs/scooter/milestone/4</id>
+        <link href="https://hapi.dev/module/scooter/changelog#3.0.0"/>
+        <updated>2018-11-11T06:53:47.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/scooter v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/scooter/issues/30">[#30]</a> Update to follow node &gt; 4 style standards</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/scooter v2.0.0]]></title>
+        <id>https://github.com/hapijs/scooter/milestone/3</id>
+        <link href="https://hapi.dev/module/scooter/changelog#2.0.0"/>
+        <updated>2016-05-24T03:08:10.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/scooter v2.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/scooter/pull/22">[#22]</a> hapi8. Closes #21</li><li><a href="https://github.com/hapijs/scooter/issues/21">[#21]</a> hapi 8.0 API</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/scooter v1.2.1]]></title>
+        <id>https://github.com/hapijs/scooter/milestone/2</id>
+        <link href="https://hapi.dev/module/scooter/changelog#1.2.1"/>
+        <updated>2014-08-18T21:39:19.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/scooter v1.2.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/scooter/issues/16">[#16]</a> lab 4.0</li><li><a href="https://github.com/hapijs/scooter/issues/15">[#15]</a> Rename spumko to hapijs</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/scooter v1.0.1]]></title>
+        <id>https://github.com/hapijs/scooter/milestone/1</id>
+        <link href="https://hapi.dev/module/scooter/changelog#1.0.1"/>
+        <updated>2014-03-20T08:59:55.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/scooter v1.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/scooter/issues/2">[#2]</a> hapi 3.0</li></ul>]]></content>
+    </entry>
+</feed>

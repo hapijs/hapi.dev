@@ -1,0 +1,22 @@
+{
+  "api": true,
+  "forks": 21,
+  "isPlugin": false,
+  "link": "https://github.com/hapijs/podium",
+  "name": "podium",
+  "package": "@hapi/podium",
+  "slogan": "Event emitter with async features.",
+  "sloganHtml": "Event emitter with async features.",
+  "stars": 86,
+  "updated": "2025-01-07T22:49:33Z",
+  "versions": [
+    {
+      "branch": "v5.0.2",
+      "license": "BSD",
+      "name": "5.0.2",
+      "node": ">= 16"
+    }
+  ],
+  "versionsArray": ["5.0.2"],
+  "latestVersion": "5.x.x"
+}

@@ -1,0 +1,22 @@
+{
+  "api": true,
+  "forks": 13,
+  "isPlugin": false,
+  "link": "https://github.com/hapijs/content",
+  "name": "content",
+  "package": "@hapi/content",
+  "slogan": "HTTP Content-* headers parsing.",
+  "sloganHtml": "HTTP Content-* headers parsing.",
+  "stars": 7,
+  "updated": "2026-04-02T08:04:34Z",
+  "versions": [
+    {
+      "branch": "v6.0.1",
+      "license": "BSD",
+      "name": "6.0.1",
+      "node": ">= 16"
+    }
+  ],
+  "versionsArray": ["6.0.1"],
+  "latestVersion": "6.x.x"
+}

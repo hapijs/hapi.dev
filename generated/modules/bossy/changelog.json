@@ -1,0 +1,583 @@
+[
+  {
+    "date": "2023-02-11T19:12:41Z",
+    "id": 9033252,
+    "issues": [
+      {
+        "id": 1551788890,
+        "labels": ["dependency"],
+        "number": 83,
+        "title": "chore: bump hoek",
+        "url": "https://github.com/hapijs/bossy/pull/83"
+      }
+    ],
+    "number": 25,
+    "url": "https://github.com/hapijs/bossy/milestone/25",
+    "version": "6.0.1"
+  },
+  {
+    "date": "2023-02-11T19:12:39Z",
+    "id": 7938954,
+    "issues": [
+      {
+        "id": 1223532655,
+        "labels": ["breaking changes", "dependency"],
+        "number": 82,
+        "title": "Support node v18 and drop node v12",
+        "url": "https://github.com/hapijs/bossy/pull/82"
+      }
+    ],
+    "number": 24,
+    "url": "https://github.com/hapijs/bossy/milestone/24",
+    "version": "6.0.0"
+  },
+  {
+    "date": "2022-05-05T01:38:12Z",
+    "id": 6424902,
+    "issues": [
+      {
+        "id": 807270160,
+        "labels": ["bug"],
+        "number": 78,
+        "title": "Fix display of defaults for json args and zero",
+        "url": "https://github.com/hapijs/bossy/pull/78"
+      }
+    ],
+    "number": 23,
+    "url": "https://github.com/hapijs/bossy/milestone/23",
+    "version": "5.1.1"
+  },
+  {
+    "date": "2021-02-12T03:46:19Z",
+    "id": 6419950,
+    "issues": [
+      {
+        "id": 792735609,
+        "labels": ["feature"],
+        "number": 77,
+        "title": "Implement object argument type",
+        "url": "https://github.com/hapijs/bossy/pull/77"
+      },
+      {
+        "id": 792680257,
+        "labels": ["feature"],
+        "number": 76,
+        "title": "Implement negation of boolean arguments",
+        "url": "https://github.com/hapijs/bossy/pull/76"
+      }
+    ],
+    "number": 22,
+    "url": "https://github.com/hapijs/bossy/milestone/22",
+    "version": "5.1.0"
+  },
+  {
+    "date": "2021-02-12T03:46:45Z",
+    "id": 4972602,
+    "issues": [
+      {
+        "id": 709586214,
+        "labels": [],
+        "number": 74,
+        "title": "upgrade lab to v24",
+        "url": "https://github.com/hapijs/bossy/pull/74"
+      }
+    ],
+    "number": 21,
+    "url": "https://github.com/hapijs/bossy/milestone/21",
+    "version": "5.0.1"
+  },
+  {
+    "date": "2020-01-04T09:20:18Z",
+    "id": 4655630,
+    "issues": [
+      {
+        "id": 545262632,
+        "labels": ["dependency"],
+        "number": 70,
+        "title": "Only node 12",
+        "url": "https://github.com/hapijs/bossy/issues/70"
+      }
+    ],
+    "number": 20,
+    "url": "https://github.com/hapijs/bossy/milestone/20",
+    "version": "5.0.0"
+  },
+  {
+    "date": "2019-09-12T23:32:18Z",
+    "id": 4556335,
+    "issues": [
+      {
+        "id": 493073848,
+        "labels": ["dependency"],
+        "number": 66,
+        "title": "Update joi",
+        "url": "https://github.com/hapijs/bossy/issues/66"
+      }
+    ],
+    "number": 19,
+    "url": "https://github.com/hapijs/bossy/milestone/19",
+    "version": "4.1.3"
+  },
+  {
+    "date": "2019-08-07T19:25:08Z",
+    "id": 4212623,
+    "issues": [
+      {
+        "id": 478098818,
+        "labels": ["dependency"],
+        "number": 63,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/bossy/issues/63"
+      }
+    ],
+    "number": 18,
+    "url": "https://github.com/hapijs/bossy/milestone/18",
+    "version": "4.1.2"
+  },
+  {
+    "date": "2019-04-09T06:33:09Z",
+    "id": 4184224,
+    "issues": [
+      {
+        "id": 430790358,
+        "labels": ["dependency"],
+        "number": 62,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/bossy/issues/62"
+      }
+    ],
+    "number": 17,
+    "url": "https://github.com/hapijs/bossy/milestone/17",
+    "version": "4.1.1"
+  },
+  {
+    "date": "2019-03-29T20:31:05Z",
+    "id": 3787481,
+    "issues": [
+      {
+        "id": 427150619,
+        "labels": ["non issue"],
+        "number": 61,
+        "title": "Change module namespace",
+        "url": "https://github.com/hapijs/bossy/issues/61"
+      }
+    ],
+    "number": 16,
+    "url": "https://github.com/hapijs/bossy/milestone/16",
+    "version": "4.1.0"
+  },
+  {
+    "date": "2018-11-01T07:31:08Z",
+    "id": 3787480,
+    "issues": [
+      {
+        "id": 376283874,
+        "labels": ["dependency"],
+        "number": 58,
+        "title": "Update hoek v6",
+        "url": "https://github.com/hapijs/bossy/issues/58"
+      }
+    ],
+    "number": 15,
+    "url": "https://github.com/hapijs/bossy/milestone/15",
+    "version": "4.0.3"
+  },
+  {
+    "date": "2018-11-01T07:29:44Z",
+    "id": 2885241,
+    "issues": [
+      {
+        "id": 375801064,
+        "labels": ["non issue"],
+        "number": 57,
+        "title": "Cleanup",
+        "url": "https://github.com/hapijs/bossy/issues/57"
+      }
+    ],
+    "number": 14,
+    "url": "https://github.com/hapijs/bossy/milestone/14",
+    "version": "4.0.2"
+  },
+  {
+    "date": "2017-11-03T06:46:40Z",
+    "id": 2860414,
+    "issues": [
+      {
+        "id": 270890379,
+        "labels": ["dependency"],
+        "number": 55,
+        "title": "Use Boom for errors",
+        "url": "https://github.com/hapijs/bossy/issues/55"
+      }
+    ],
+    "number": 13,
+    "url": "https://github.com/hapijs/bossy/milestone/13",
+    "version": "4.0.1"
+  },
+  {
+    "date": "2017-10-23T19:41:21Z",
+    "id": 2167852,
+    "issues": [
+      {
+        "id": 267790323,
+        "labels": ["breaking changes", "dependency"],
+        "number": 54,
+        "title": "Node v8",
+        "url": "https://github.com/hapijs/bossy/issues/54"
+      }
+    ],
+    "number": 12,
+    "url": "https://github.com/hapijs/bossy/milestone/12",
+    "version": "4.0.0"
+  },
+  {
+    "date": "2016-12-01T03:42:08Z",
+    "id": 2167851,
+    "issues": [
+      {
+        "id": 192747215,
+        "labels": ["dependency"],
+        "number": 52,
+        "title": "node 7",
+        "url": "https://github.com/hapijs/bossy/issues/52"
+      }
+    ],
+    "number": 11,
+    "url": "https://github.com/hapijs/bossy/milestone/11",
+    "version": "3.0.3"
+  },
+  {
+    "date": "2016-12-01T03:40:57Z",
+    "id": 1912487,
+    "issues": [],
+    "number": 10,
+    "url": "https://github.com/hapijs/bossy/milestone/10",
+    "version": "3.0.2"
+  },
+  {
+    "date": "2016-07-29T19:12:34Z",
+    "id": 1910730,
+    "issues": [
+      {
+        "id": 168221444,
+        "labels": ["dependency"],
+        "number": 49,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/bossy/issues/49"
+      }
+    ],
+    "number": 9,
+    "url": "https://github.com/hapijs/bossy/milestone/9",
+    "version": "3.0.1"
+  },
+  {
+    "date": "2016-07-28T23:42:25Z",
+    "id": 1294360,
+    "issues": [
+      {
+        "id": 150876152,
+        "labels": ["feature", "breaking changes"],
+        "number": 47,
+        "title": "Upgrade to current hapi.js standards",
+        "url": "https://github.com/hapijs/bossy/pull/47"
+      },
+      {
+        "id": 150629488,
+        "labels": ["feature"],
+        "number": 46,
+        "title": "Upgrade to current hapi.js standards",
+        "url": "https://github.com/hapijs/bossy/issues/46"
+      },
+      {
+        "id": 105122258,
+        "labels": ["feature"],
+        "number": 43,
+        "title": "Show default value when printing options",
+        "url": "https://github.com/hapijs/bossy/pull/43"
+      }
+    ],
+    "number": 8,
+    "url": "https://github.com/hapijs/bossy/milestone/8",
+    "version": "3.0.0"
+  },
+  {
+    "date": "2015-07-05T20:56:06Z",
+    "id": 874508,
+    "issues": [
+      {
+        "id": 91856141,
+        "labels": ["feature"],
+        "number": 41,
+        "title": "Add `multiple` option parameter",
+        "url": "https://github.com/hapijs/bossy/pull/41"
+      },
+      {
+        "id": 91580434,
+        "labels": ["documentation"],
+        "number": 40,
+        "title": "update project style",
+        "url": "https://github.com/hapijs/bossy/pull/40"
+      },
+      {
+        "id": 91543895,
+        "labels": ["documentation"],
+        "number": 39,
+        "title": "Update project style",
+        "url": "https://github.com/hapijs/bossy/issues/39"
+      },
+      {
+        "id": 88509508,
+        "labels": ["feature"],
+        "number": 37,
+        "title": "Enable multiple values to be passed in",
+        "url": "https://github.com/hapijs/bossy/pull/37"
+      },
+      {
+        "id": 87878220,
+        "labels": ["feature"],
+        "number": 36,
+        "title": "Support multiple values for an option",
+        "url": "https://github.com/hapijs/bossy/issues/36"
+      },
+      {
+        "id": 84046113,
+        "labels": ["feature", "breaking changes"],
+        "number": 35,
+        "title": "Validate input arguments using Joi",
+        "url": "https://github.com/hapijs/bossy/pull/35"
+      },
+      {
+        "id": 49456871,
+        "labels": ["breaking changes"],
+        "number": 24,
+        "title": "Cleanup",
+        "url": "https://github.com/hapijs/bossy/pull/24"
+      }
+    ],
+    "number": 7,
+    "url": "https://github.com/hapijs/bossy/milestone/7",
+    "version": "2.0.0"
+  },
+  {
+    "date": "2015-06-28T01:09:51Z",
+    "id": 790485,
+    "issues": [
+      {
+        "id": 59498394,
+        "labels": ["test"],
+        "number": 32,
+        "title": "Update to Lab 5.x.x and Code 1.x.x",
+        "url": "https://github.com/hapijs/bossy/pull/32"
+      },
+      {
+        "id": 58942308,
+        "labels": ["dependency"],
+        "number": 31,
+        "title": "Update .travis.yml",
+        "url": "https://github.com/hapijs/bossy/pull/31"
+      },
+      {
+        "id": 51919651,
+        "labels": ["feature"],
+        "number": 29,
+        "title": "fix minor lint",
+        "url": "https://github.com/hapijs/bossy/pull/29"
+      },
+      {
+        "id": 51756823,
+        "labels": ["feature"],
+        "number": 28,
+        "title": "Allow numeric arguments to be passed in without spaces",
+        "url": "https://github.com/hapijs/bossy/pull/28"
+      },
+      {
+        "id": 51751655,
+        "labels": ["feature"],
+        "number": 27,
+        "title": "Bossy should support numeric arguments without spaces",
+        "url": "https://github.com/hapijs/bossy/issues/27"
+      },
+      {
+        "id": 49935115,
+        "labels": ["feature"],
+        "number": 26,
+        "title": "Add help type",
+        "url": "https://github.com/hapijs/bossy/pull/26"
+      },
+      {
+        "id": 49425529,
+        "labels": [],
+        "number": 23,
+        "title": "Slice",
+        "url": "https://github.com/hapijs/bossy/issues/23"
+      }
+    ],
+    "number": 6,
+    "url": "https://github.com/hapijs/bossy/milestone/6",
+    "version": "1.0.3"
+  },
+  {
+    "date": "2014-09-15T19:01:49Z",
+    "id": 787737,
+    "issues": [
+      {
+        "id": 42803772,
+        "labels": ["bug"],
+        "number": 20,
+        "title": "Populate all aliases.",
+        "url": "https://github.com/hapijs/bossy/pull/20"
+      },
+      {
+        "id": 42660694,
+        "labels": ["bug"],
+        "number": 18,
+        "title": "Alias keys should be assigned argument value",
+        "url": "https://github.com/hapijs/bossy/issues/18"
+      }
+    ],
+    "number": 5,
+    "url": "https://github.com/hapijs/bossy/milestone/5",
+    "version": "1.0.2"
+  },
+  {
+    "date": "2014-09-12T15:45:37Z",
+    "id": 787670,
+    "issues": [
+      {
+        "id": 42641127,
+        "labels": ["bug"],
+        "number": 17,
+        "title": "Format unknown option error message",
+        "url": "https://github.com/hapijs/bossy/pull/17"
+      },
+      {
+        "id": 42639344,
+        "labels": ["bug"],
+        "number": 16,
+        "title": "Unhelpful message for unknown argument",
+        "url": "https://github.com/hapijs/bossy/issues/16"
+      }
+    ],
+    "number": 4,
+    "url": "https://github.com/hapijs/bossy/milestone/4",
+    "version": "1.0.1"
+  },
+  {
+    "date": "2014-09-12T14:41:57Z",
+    "id": 785743,
+    "issues": [
+      {
+        "id": 42579957,
+        "labels": ["feature"],
+        "number": 15,
+        "title": "Support colorizing usage information",
+        "url": "https://github.com/hapijs/bossy/pull/15"
+      },
+      {
+        "id": 42561942,
+        "labels": ["feature"],
+        "number": 14,
+        "title": "Add valid definition option for arguments",
+        "url": "https://github.com/hapijs/bossy/pull/14"
+      },
+      {
+        "id": 42558729,
+        "labels": ["bug"],
+        "number": 13,
+        "title": "Orders usage message with -shortname, --longname",
+        "url": "https://github.com/hapijs/bossy/pull/13"
+      },
+      {
+        "id": 42545371,
+        "labels": ["feature"],
+        "number": 12,
+        "title": "Add `valid` property to definition objects",
+        "url": "https://github.com/hapijs/bossy/issues/12"
+      },
+      {
+        "id": 42543908,
+        "labels": ["bug"],
+        "number": 11,
+        "title": "Order alias and full name correctly on usage",
+        "url": "https://github.com/hapijs/bossy/issues/11"
+      },
+      {
+        "id": 42539995,
+        "labels": ["feature"],
+        "number": 10,
+        "title": "Colorize the usage/help output",
+        "url": "https://github.com/hapijs/bossy/issues/10"
+      }
+    ],
+    "number": 3,
+    "url": "https://github.com/hapijs/bossy/milestone/3",
+    "version": "1.0.0"
+  },
+  {
+    "date": "2014-09-11T02:31:57Z",
+    "id": 785291,
+    "issues": [
+      {
+        "id": 42482949,
+        "labels": ["feature"],
+        "number": 9,
+        "title": "Can override argv",
+        "url": "https://github.com/hapijs/bossy/pull/9"
+      },
+      {
+        "id": 42482095,
+        "labels": ["feature"],
+        "number": 8,
+        "title": "Support null defaults for boolean",
+        "url": "https://github.com/hapijs/bossy/pull/8"
+      },
+      {
+        "id": 42482016,
+        "labels": ["feature"],
+        "number": 7,
+        "title": "Allow boolean to be defaulted to null",
+        "url": "https://github.com/hapijs/bossy/issues/7"
+      },
+      {
+        "id": 42448642,
+        "labels": ["feature"],
+        "number": 6,
+        "title": "Support argv being passed in options to parse",
+        "url": "https://github.com/hapijs/bossy/issues/6"
+      }
+    ],
+    "number": 2,
+    "url": "https://github.com/hapijs/bossy/milestone/2",
+    "version": "0.0.2"
+  },
+  {
+    "date": "2014-09-10T18:26:07Z",
+    "id": 780949,
+    "issues": [
+      {
+        "id": 42160660,
+        "labels": ["feature"],
+        "number": 4,
+        "title": "Adding help formatting",
+        "url": "https://github.com/hapijs/bossy/pull/4"
+      },
+      {
+        "id": 42158418,
+        "labels": ["feature"],
+        "number": 2,
+        "title": "Implement function for displaying usage",
+        "url": "https://github.com/hapijs/bossy/issues/2"
+      },
+      {
+        "id": 42130981,
+        "labels": ["feature"],
+        "number": 1,
+        "title": "Lab 4, defaults, and require",
+        "url": "https://github.com/hapijs/bossy/pull/1"
+      }
+    ],
+    "number": 1,
+    "url": "https://github.com/hapijs/bossy/milestone/1",
+    "version": "0.0.1"
+  }
+]

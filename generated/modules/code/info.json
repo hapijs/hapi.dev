@@ -1,0 +1,22 @@
+{
+  "api": true,
+  "forks": 73,
+  "isPlugin": false,
+  "link": "https://github.com/hapijs/code",
+  "name": "code",
+  "package": "@hapi/code",
+  "slogan": "BDD assertion library.",
+  "sloganHtml": "BDD assertion library.",
+  "stars": 231,
+  "updated": "2024-10-23T15:37:52Z",
+  "versions": [
+    {
+      "branch": "v9.0.3",
+      "license": "BSD",
+      "name": "9.0.3",
+      "node": ">= 16"
+    }
+  ],
+  "versionsArray": ["9.0.3"],
+  "latestVersion": "9.x.x"
+}

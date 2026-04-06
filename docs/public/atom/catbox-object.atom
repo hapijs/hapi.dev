@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/catbox-object</id>
+    <title>@hapi/catbox-object changelog</title>
+    <updated>2023-02-11T20:43:44.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/catbox-object"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-object v3.0.1]]></title>
+        <id>https://github.com/hapijs/catbox-object/milestone/5</id>
+        <link href="https://hapi.dev/module/catbox-object/changelog#3.0.1"/>
+        <updated>2023-02-11T20:43:44.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-object v3.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-object/pull/14">[#14]</a> chore: bump hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-object v3.0.0]]></title>
+        <id>https://github.com/hapijs/catbox-object/milestone/4</id>
+        <link href="https://hapi.dev/module/catbox-object/changelog#3.0.0"/>
+        <updated>2022-07-19T01:07:18.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-object v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-object/pull/13">[#13]</a> Support for node v18, change default export, ESM tests</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-object v2.0.0]]></title>
+        <id>https://github.com/hapijs/catbox-object/milestone/2</id>
+        <link href="https://hapi.dev/module/catbox-object/changelog#2.0.0"/>
+        <updated>2020-01-04T23:56:03.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-object v2.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-object/issues/6">[#6]</a> Only node 12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-object v1.0.1]]></title>
+        <id>https://github.com/hapijs/catbox-object/milestone/1</id>
+        <link href="https://hapi.dev/module/catbox-object/changelog#1.0.1"/>
+        <updated>2019-08-14T05:23:12.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-object v1.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-object/issues/1">[#1]</a> Update deps</li></ul>]]></content>
+    </entry>
+</feed>

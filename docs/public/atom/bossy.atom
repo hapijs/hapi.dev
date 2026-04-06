@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/bossy</id>
+    <title>@hapi/bossy changelog</title>
+    <updated>2023-02-11T19:12:41.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/bossy"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bossy v6.0.1]]></title>
+        <id>https://github.com/hapijs/bossy/milestone/25</id>
+        <link href="https://hapi.dev/module/bossy/changelog#6.0.1"/>
+        <updated>2023-02-11T19:12:41.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bossy v6.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bossy/pull/83">[#83]</a> chore: bump hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bossy v6.0.0]]></title>
+        <id>https://github.com/hapijs/bossy/milestone/24</id>
+        <link href="https://hapi.dev/module/bossy/changelog#6.0.0"/>
+        <updated>2023-02-11T19:12:39.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bossy v6.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bossy/pull/82">[#82]</a> Support node v18 and drop node v12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bossy v5.1.1]]></title>
+        <id>https://github.com/hapijs/bossy/milestone/23</id>
+        <link href="https://hapi.dev/module/bossy/changelog#5.1.1"/>
+        <updated>2022-05-05T01:38:12.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bossy v5.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bossy/pull/78">[#78]</a> Fix display of defaults for json args and zero</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bossy v5.1.0]]></title>
+        <id>https://github.com/hapijs/bossy/milestone/22</id>
+        <link href="https://hapi.dev/module/bossy/changelog#5.1.0"/>
+        <updated>2021-02-12T03:46:19.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bossy v5.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bossy/pull/77">[#77]</a> Implement object argument type</li><li><a href="https://github.com/hapijs/bossy/pull/76">[#76]</a> Implement negation of boolean arguments</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bossy v5.0.1]]></title>
+        <id>https://github.com/hapijs/bossy/milestone/21</id>
+        <link href="https://hapi.dev/module/bossy/changelog#5.0.1"/>
+        <updated>2021-02-12T03:46:45.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bossy v5.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bossy/pull/74">[#74]</a> upgrade lab to v24</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bossy v5.0.0]]></title>
+        <id>https://github.com/hapijs/bossy/milestone/20</id>
+        <link href="https://hapi.dev/module/bossy/changelog#5.0.0"/>
+        <updated>2020-01-04T09:20:18.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bossy v5.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bossy/issues/70">[#70]</a> Only node 12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bossy v4.1.3]]></title>
+        <id>https://github.com/hapijs/bossy/milestone/19</id>
+        <link href="https://hapi.dev/module/bossy/changelog#4.1.3"/>
+        <updated>2019-09-12T23:32:18.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bossy v4.1.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bossy/issues/66">[#66]</a> Update joi</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bossy v4.1.2]]></title>
+        <id>https://github.com/hapijs/bossy/milestone/18</id>
+        <link href="https://hapi.dev/module/bossy/changelog#4.1.2"/>
+        <updated>2019-08-07T19:25:08.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bossy v4.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bossy/issues/63">[#63]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bossy v4.1.1]]></title>
+        <id>https://github.com/hapijs/bossy/milestone/17</id>
+        <link href="https://hapi.dev/module/bossy/changelog#4.1.1"/>
+        <updated>2019-04-09T06:33:09.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bossy v4.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bossy/issues/62">[#62]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bossy v4.1.0]]></title>
+        <id>https://github.com/hapijs/bossy/milestone/16</id>
+        <link href="https://hapi.dev/module/bossy/changelog#4.1.0"/>
+        <updated>2019-03-29T20:31:05.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bossy v4.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bossy/issues/61">[#61]</a> Change module namespace</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bossy v4.0.3]]></title>
+        <id>https://github.com/hapijs/bossy/milestone/15</id>
+        <link href="https://hapi.dev/module/bossy/changelog#4.0.3"/>
+        <updated>2018-11-01T07:31:08.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bossy v4.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bossy/issues/58">[#58]</a> Update hoek v6</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bossy v4.0.2]]></title>
+        <id>https://github.com/hapijs/bossy/milestone/14</id>
+        <link href="https://hapi.dev/module/bossy/changelog#4.0.2"/>
+        <updated>2018-11-01T07:29:44.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bossy v4.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bossy/issues/57">[#57]</a> Cleanup</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bossy v4.0.1]]></title>
+        <id>https://github.com/hapijs/bossy/milestone/13</id>
+        <link href="https://hapi.dev/module/bossy/changelog#4.0.1"/>
+        <updated>2017-11-03T06:46:40.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bossy v4.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bossy/issues/55">[#55]</a> Use Boom for errors</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bossy v4.0.0]]></title>
+        <id>https://github.com/hapijs/bossy/milestone/12</id>
+        <link href="https://hapi.dev/module/bossy/changelog#4.0.0"/>
+        <updated>2017-10-23T19:41:21.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bossy v4.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bossy/issues/54">[#54]</a> Node v8</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bossy v3.0.3]]></title>
+        <id>https://github.com/hapijs/bossy/milestone/11</id>
+        <link href="https://hapi.dev/module/bossy/changelog#3.0.3"/>
+        <updated>2016-12-01T03:42:08.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bossy v3.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bossy/issues/52">[#52]</a> node 7</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bossy v3.0.2]]></title>
+        <id>https://github.com/hapijs/bossy/milestone/10</id>
+        <link href="https://hapi.dev/module/bossy/changelog#3.0.2"/>
+        <updated>2016-12-01T03:40:57.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bossy v3.0.2]]></summary>
+        <content type="html"><![CDATA[<ul></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bossy v3.0.1]]></title>
+        <id>https://github.com/hapijs/bossy/milestone/9</id>
+        <link href="https://hapi.dev/module/bossy/changelog#3.0.1"/>
+        <updated>2016-07-29T19:12:34.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bossy v3.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bossy/issues/49">[#49]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bossy v3.0.0]]></title>
+        <id>https://github.com/hapijs/bossy/milestone/8</id>
+        <link href="https://hapi.dev/module/bossy/changelog#3.0.0"/>
+        <updated>2016-07-28T23:42:25.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bossy v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bossy/pull/47">[#47]</a> Upgrade to current hapi.js standards</li><li><a href="https://github.com/hapijs/bossy/issues/46">[#46]</a> Upgrade to current hapi.js standards</li><li><a href="https://github.com/hapijs/bossy/pull/43">[#43]</a> Show default value when printing options</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bossy v2.0.0]]></title>
+        <id>https://github.com/hapijs/bossy/milestone/7</id>
+        <link href="https://hapi.dev/module/bossy/changelog#2.0.0"/>
+        <updated>2015-07-05T20:56:06.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bossy v2.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bossy/pull/41">[#41]</a> Add `multiple` option parameter</li><li><a href="https://github.com/hapijs/bossy/pull/40">[#40]</a> update project style</li><li><a href="https://github.com/hapijs/bossy/issues/39">[#39]</a> Update project style</li><li><a href="https://github.com/hapijs/bossy/pull/37">[#37]</a> Enable multiple values to be passed in</li><li><a href="https://github.com/hapijs/bossy/issues/36">[#36]</a> Support multiple values for an option</li><li><a href="https://github.com/hapijs/bossy/pull/35">[#35]</a> Validate input arguments using Joi</li><li><a href="https://github.com/hapijs/bossy/pull/24">[#24]</a> Cleanup</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bossy v1.0.3]]></title>
+        <id>https://github.com/hapijs/bossy/milestone/6</id>
+        <link href="https://hapi.dev/module/bossy/changelog#1.0.3"/>
+        <updated>2015-06-28T01:09:51.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bossy v1.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bossy/pull/32">[#32]</a> Update to Lab 5.x.x and Code 1.x.x</li><li><a href="https://github.com/hapijs/bossy/pull/31">[#31]</a> Update .travis.yml</li><li><a href="https://github.com/hapijs/bossy/pull/29">[#29]</a> fix minor lint</li><li><a href="https://github.com/hapijs/bossy/pull/28">[#28]</a> Allow numeric arguments to be passed in without spaces</li><li><a href="https://github.com/hapijs/bossy/issues/27">[#27]</a> Bossy should support numeric arguments without spaces</li><li><a href="https://github.com/hapijs/bossy/pull/26">[#26]</a> Add help type</li><li><a href="https://github.com/hapijs/bossy/issues/23">[#23]</a> Slice</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bossy v1.0.2]]></title>
+        <id>https://github.com/hapijs/bossy/milestone/5</id>
+        <link href="https://hapi.dev/module/bossy/changelog#1.0.2"/>
+        <updated>2014-09-15T19:01:49.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bossy v1.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bossy/pull/20">[#20]</a> Populate all aliases.</li><li><a href="https://github.com/hapijs/bossy/issues/18">[#18]</a> Alias keys should be assigned argument value</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bossy v1.0.1]]></title>
+        <id>https://github.com/hapijs/bossy/milestone/4</id>
+        <link href="https://hapi.dev/module/bossy/changelog#1.0.1"/>
+        <updated>2014-09-12T15:45:37.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bossy v1.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bossy/pull/17">[#17]</a> Format unknown option error message</li><li><a href="https://github.com/hapijs/bossy/issues/16">[#16]</a> Unhelpful message for unknown argument</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bossy v1.0.0]]></title>
+        <id>https://github.com/hapijs/bossy/milestone/3</id>
+        <link href="https://hapi.dev/module/bossy/changelog#1.0.0"/>
+        <updated>2014-09-12T14:41:57.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bossy v1.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bossy/pull/15">[#15]</a> Support colorizing usage information</li><li><a href="https://github.com/hapijs/bossy/pull/14">[#14]</a> Add valid definition option for arguments</li><li><a href="https://github.com/hapijs/bossy/pull/13">[#13]</a> Orders usage message with -shortname, --longname</li><li><a href="https://github.com/hapijs/bossy/issues/12">[#12]</a> Add `valid` property to definition objects</li><li><a href="https://github.com/hapijs/bossy/issues/11">[#11]</a> Order alias and full name correctly on usage</li><li><a href="https://github.com/hapijs/bossy/issues/10">[#10]</a> Colorize the usage/help output</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bossy v0.0.2]]></title>
+        <id>https://github.com/hapijs/bossy/milestone/2</id>
+        <link href="https://hapi.dev/module/bossy/changelog#0.0.2"/>
+        <updated>2014-09-11T02:31:57.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bossy v0.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bossy/pull/9">[#9]</a> Can override argv</li><li><a href="https://github.com/hapijs/bossy/pull/8">[#8]</a> Support null defaults for boolean</li><li><a href="https://github.com/hapijs/bossy/issues/7">[#7]</a> Allow boolean to be defaulted to null</li><li><a href="https://github.com/hapijs/bossy/issues/6">[#6]</a> Support argv being passed in options to parse</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bossy v0.0.1]]></title>
+        <id>https://github.com/hapijs/bossy/milestone/1</id>
+        <link href="https://hapi.dev/module/bossy/changelog#0.0.1"/>
+        <updated>2014-09-10T18:26:07.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bossy v0.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bossy/pull/4">[#4]</a> Adding help formatting</li><li><a href="https://github.com/hapijs/bossy/issues/2">[#2]</a> Implement function for displaying usage</li><li><a href="https://github.com/hapijs/bossy/pull/1">[#1]</a> Lab 4, defaults, and require</li></ul>]]></content>
+    </entry>
+</feed>

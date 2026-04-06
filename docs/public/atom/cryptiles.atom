@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/cryptiles</id>
+    <title>@hapi/cryptiles changelog</title>
+    <updated>2025-12-09T17:04:51.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/cryptiles"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cryptiles v6.0.2]]></title>
+        <id>https://github.com/hapijs/cryptiles/milestone/31</id>
+        <link href="https://hapi.dev/module/cryptiles/changelog#6.0.2"/>
+        <updated>2025-12-09T17:04:51.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cryptiles v6.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cryptiles/pull/63">[#63]</a> fix: 🐛 Add timing-safe comparison tests and update API docs</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cryptiles v6.0.1]]></title>
+        <id>https://github.com/hapijs/cryptiles/milestone/30</id>
+        <link href="https://hapi.dev/module/cryptiles/changelog#6.0.1"/>
+        <updated>2023-02-11T18:56:26.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cryptiles v6.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cryptiles/pull/60">[#60]</a> chore: bump packages</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cryptiles v6.0.0]]></title>
+        <id>https://github.com/hapijs/cryptiles/milestone/29</id>
+        <link href="https://hapi.dev/module/cryptiles/changelog#6.0.0"/>
+        <updated>2022-05-07T22:43:55.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cryptiles v6.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cryptiles/pull/58">[#58]</a> Support node v18 and drop node v12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cryptiles v5.1.0]]></title>
+        <id>https://github.com/hapijs/cryptiles/milestone/27</id>
+        <link href="https://hapi.dev/module/cryptiles/changelog#5.1.0"/>
+        <updated>2020-05-15T20:25:04.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cryptiles v5.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cryptiles/issues/51">[#51]</a> Add randomAlphanumString()</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cryptiles v5.0.0]]></title>
+        <id>https://github.com/hapijs/cryptiles/milestone/26</id>
+        <link href="https://hapi.dev/module/cryptiles/changelog#5.0.0"/>
+        <updated>2020-01-05T01:06:58.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cryptiles v5.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cryptiles/issues/50">[#50]</a> Only node 12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cryptiles v4.2.1]]></title>
+        <id>https://github.com/hapijs/cryptiles/milestone/24</id>
+        <link href="https://hapi.dev/module/cryptiles/changelog#4.2.1"/>
+        <updated>2019-09-19T18:16:57.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cryptiles v4.2.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cryptiles/pull/45">[#45]</a> Added TS declarations</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cryptiles v4.2.0]]></title>
+        <id>https://github.com/hapijs/cryptiles/milestone/20</id>
+        <link href="https://hapi.dev/module/cryptiles/changelog#4.2.0"/>
+        <updated>2019-04-02T06:15:55.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cryptiles v4.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cryptiles/issues/40">[#40]</a> Change module namespace</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cryptiles v4.1.3]]></title>
+        <id>https://github.com/hapijs/cryptiles/milestone/18</id>
+        <link href="https://hapi.dev/module/cryptiles/changelog#4.1.3"/>
+        <updated>2018-11-03T00:26:25.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cryptiles v4.1.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cryptiles/issues/36">[#36]</a> Remove engines</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cryptiles v4.1.2]]></title>
+        <id>https://github.com/hapijs/cryptiles/milestone/17</id>
+        <link href="https://hapi.dev/module/cryptiles/changelog#4.1.2"/>
+        <updated>2018-06-24T04:07:49.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cryptiles v4.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cryptiles/issues/34">[#34]</a> randomDigits() generates biased random digits</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cryptiles v4.1.1]]></title>
+        <id>https://github.com/hapijs/cryptiles/milestone/16</id>
+        <link href="https://hapi.dev/module/cryptiles/changelog#4.1.1"/>
+        <updated>2017-11-10T20:15:19.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cryptiles v4.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cryptiles/pull/33">[#33]</a> fix(fixedTimeComparison): use Buffer.from</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cryptiles v4.1.0]]></title>
+        <id>https://github.com/hapijs/cryptiles/milestone/15</id>
+        <link href="https://hapi.dev/module/cryptiles/changelog#4.1.0"/>
+        <updated>2017-11-03T20:46:13.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cryptiles v4.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cryptiles/issues/32">[#32]</a> Add fixedTimeComparison()</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cryptiles v4.0.2]]></title>
+        <id>https://github.com/hapijs/cryptiles/milestone/14</id>
+        <link href="https://hapi.dev/module/cryptiles/changelog#4.0.2"/>
+        <updated>2017-11-03T20:45:19.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cryptiles v4.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cryptiles/issues/31">[#31]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cryptiles v4.0.1]]></title>
+        <id>https://github.com/hapijs/cryptiles/milestone/13</id>
+        <link href="https://hapi.dev/module/cryptiles/changelog#4.0.1"/>
+        <updated>2017-09-26T09:08:43.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cryptiles v4.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cryptiles/issues/28">[#28]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cryptiles v4.0.0]]></title>
+        <id>https://github.com/hapijs/cryptiles/milestone/12</id>
+        <link href="https://hapi.dev/module/cryptiles/changelog#4.0.0"/>
+        <updated>2017-09-24T21:26:52.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cryptiles v4.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cryptiles/issues/27">[#27]</a> Throw errors</li><li><a href="https://github.com/hapijs/cryptiles/issues/24">[#24]</a> Use crypto.timingSafeEqual for fixedTimeComparison</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cryptiles v3.2.0]]></title>
+        <id>https://github.com/hapijs/cryptiles/milestone/22</id>
+        <link href="https://hapi.dev/module/cryptiles/changelog#3.2.0"/>
+        <updated>2019-04-02T06:12:23.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cryptiles v3.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cryptiles/issues/39">[#39]</a> Commercial version of v3 branch</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cryptiles v3.1.4]]></title>
+        <id>https://github.com/hapijs/cryptiles/milestone/21</id>
+        <link href="https://hapi.dev/module/cryptiles/changelog#3.1.4"/>
+        <updated>2018-11-05T22:45:49.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cryptiles v3.1.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cryptiles/issues/37">[#37]</a> Remove engines</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cryptiles v3.1.3]]></title>
+        <id>https://github.com/hapijs/cryptiles/milestone/19</id>
+        <link href="https://hapi.dev/module/cryptiles/changelog#3.1.3"/>
+        <updated>2018-11-02T21:48:07.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cryptiles v3.1.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cryptiles/issues/35">[#35]</a> randomDigits() generates biased random digits</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cryptiles v3.1.2]]></title>
+        <id>https://github.com/hapijs/cryptiles/milestone/11</id>
+        <link href="https://hapi.dev/module/cryptiles/changelog#3.1.2"/>
+        <updated>2017-05-28T06:24:36.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cryptiles v3.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cryptiles/issues/26">[#26]</a> Update deps.</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cryptiles v3.1.1]]></title>
+        <id>https://github.com/hapijs/cryptiles/milestone/10</id>
+        <link href="https://hapi.dev/module/cryptiles/changelog#3.1.1"/>
+        <updated>2016-09-05T22:10:42.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cryptiles v3.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cryptiles/issues/23">[#23]</a> Support node 4</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cryptiles v3.1.0]]></title>
+        <id>https://github.com/hapijs/cryptiles/milestone/9</id>
+        <link href="https://hapi.dev/module/cryptiles/changelog#3.1.0"/>
+        <updated>2016-09-05T22:01:59.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cryptiles v3.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cryptiles/issues/22">[#22]</a> Generate random digits</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cryptiles v3.0.2]]></title>
+        <id>https://github.com/hapijs/cryptiles/milestone/8</id>
+        <link href="https://hapi.dev/module/cryptiles/changelog#3.0.2"/>
+        <updated>2016-07-27T19:50:53.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cryptiles v3.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cryptiles/issues/21">[#21]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cryptiles v3.0.1]]></title>
+        <id>https://github.com/hapijs/cryptiles/milestone/7</id>
+        <link href="https://hapi.dev/module/cryptiles/changelog#3.0.1"/>
+        <updated>2016-05-19T18:00:07.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cryptiles v3.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cryptiles/pull/19">[#19]</a> Test on node v6, update dependencies</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cryptiles v3.0.0]]></title>
+        <id>https://github.com/hapijs/cryptiles/milestone/6</id>
+        <link href="https://hapi.dev/module/cryptiles/changelog#3.0.0"/>
+        <updated>2015-11-02T03:43:40.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cryptiles v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cryptiles/pull/18">[#18]</a> es6. Closes #17</li><li><a href="https://github.com/hapijs/cryptiles/issues/17">[#17]</a> ES6 style changes and node v4</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cryptiles v2.0.5]]></title>
+        <id>https://github.com/hapijs/cryptiles/milestone/5</id>
+        <link href="https://hapi.dev/module/cryptiles/changelog#2.0.5"/>
+        <updated>2015-09-09T06:09:59.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cryptiles v2.0.5]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cryptiles/issues/16">[#16]</a> Update hapi style</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cryptiles v2.0.4]]></title>
+        <id>https://github.com/hapijs/cryptiles/milestone/4</id>
+        <link href="https://hapi.dev/module/cryptiles/changelog#2.0.4"/>
+        <updated>2014-09-15T22:11:54.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cryptiles v2.0.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cryptiles/issues/10">[#10]</a> Move to hapijs</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cryptiles v2.0.3]]></title>
+        <id>https://github.com/hapijs/cryptiles/milestone/3</id>
+        <link href="https://hapi.dev/module/cryptiles/changelog#2.0.3"/>
+        <updated>2014-09-05T19:43:02.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cryptiles v2.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cryptiles/issues/9">[#9]</a> lab 4.0</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cryptiles v2.0.2]]></title>
+        <id>https://github.com/hapijs/cryptiles/milestone/2</id>
+        <link href="https://hapi.dev/module/cryptiles/changelog#2.0.2"/>
+        <updated>2014-08-02T07:22:12.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cryptiles v2.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cryptiles/issues/8">[#8]</a> Update contact</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cryptiles v2.0.1]]></title>
+        <id>https://github.com/hapijs/cryptiles/milestone/1</id>
+        <link href="https://hapi.dev/module/cryptiles/changelog#2.0.1"/>
+        <updated>2014-04-08T07:41:09.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cryptiles v2.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cryptiles/issues/5">[#5]</a> Bring coverage back to 100% after lab partial condition result coverage</li></ul>]]></content>
+    </entry>
+</feed>

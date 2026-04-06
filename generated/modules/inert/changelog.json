@@ -1,0 +1,911 @@
+[
+  {
+    "date": "2023-03-13T15:42:42Z",
+    "id": 9153136,
+    "issues": [
+      {
+        "id": 1614090914,
+        "labels": ["feature", "types"],
+        "number": 169,
+        "title": "feat: import DT types",
+        "url": "https://github.com/hapijs/inert/pull/169"
+      }
+    ],
+    "number": 43,
+    "url": "https://github.com/hapijs/inert/milestone/43",
+    "version": "7.1.0"
+  },
+  {
+    "date": "2023-02-11T20:54:07Z",
+    "id": 8130486,
+    "issues": [
+      {
+        "id": 1551775240,
+        "labels": ["dependency"],
+        "number": 167,
+        "title": "chore: bump hoek",
+        "url": "https://github.com/hapijs/inert/pull/167"
+      }
+    ],
+    "number": 42,
+    "url": "https://github.com/hapijs/inert/milestone/42",
+    "version": "7.0.1"
+  },
+  {
+    "date": "2022-07-17T21:08:06Z",
+    "id": 8130485,
+    "issues": [
+      {
+        "id": 1285220705,
+        "labels": ["dependency", "breaking changes"],
+        "number": 164,
+        "title": "Support node v18 and hapi v21, drop node v12 and hapi v19",
+        "url": "https://github.com/hapijs/inert/pull/164"
+      }
+    ],
+    "number": 41,
+    "url": "https://github.com/hapijs/inert/milestone/41",
+    "version": "7.0.0"
+  },
+  {
+    "date": "2022-01-16T20:12:16Z",
+    "id": 7105705,
+    "issues": [
+      {
+        "id": 1097939672,
+        "labels": ["bug"],
+        "number": 162,
+        "title": "fix: return 404 for ENOTDIR",
+        "url": "https://github.com/hapijs/inert/pull/162"
+      }
+    ],
+    "number": 39,
+    "url": "https://github.com/hapijs/inert/milestone/39",
+    "version": "6.0.5"
+  },
+  {
+    "date": "2021-08-30T20:44:28Z",
+    "id": 5921095,
+    "issues": [
+      {
+        "id": 983181478,
+        "labels": ["bug", "security"],
+        "number": 160,
+        "title": "Disallow serving absolute paths from directory handler",
+        "url": "https://github.com/hapijs/inert/pull/160"
+      }
+    ],
+    "number": 38,
+    "url": "https://github.com/hapijs/inert/milestone/38",
+    "version": "6.0.4"
+  },
+  {
+    "date": "2020-09-26T18:03:51Z",
+    "id": 5921094,
+    "issues": [
+      {
+        "id": 684041947,
+        "labels": [],
+        "number": 152,
+        "title": "migrate to new travis format",
+        "url": "https://github.com/hapijs/inert/pull/152"
+      },
+      {
+        "id": 677535490,
+        "labels": ["dependency"],
+        "number": 151,
+        "title": "Cleanup & update lru-cache",
+        "url": "https://github.com/hapijs/inert/pull/151"
+      },
+      {
+        "id": 677482161,
+        "labels": ["test"],
+        "number": 150,
+        "title": "Fix travis to test hapi v20 and on node v14",
+        "url": "https://github.com/hapijs/inert/pull/150"
+      },
+      {
+        "id": 677272724,
+        "labels": [],
+        "number": 149,
+        "title": "upgrade to hapi 20",
+        "url": "https://github.com/hapijs/inert/pull/149"
+      }
+    ],
+    "number": 37,
+    "url": "https://github.com/hapijs/inert/milestone/37",
+    "version": "6.0.3"
+  },
+  {
+    "date": "2020-09-26T18:03:47Z",
+    "id": 5921090,
+    "issues": [
+      {
+        "id": 672187752,
+        "labels": [],
+        "number": 148,
+        "title": "update lab and switch joi to validate",
+        "url": "https://github.com/hapijs/inert/pull/148"
+      },
+      {
+        "id": 630918905,
+        "labels": ["documentation"],
+        "number": 144,
+        "title": "Update LICENSE.md",
+        "url": "https://github.com/hapijs/inert/pull/144"
+      },
+      {
+        "id": 610587058,
+        "labels": ["documentation"],
+        "number": 142,
+        "title": "Correct default value for etagsCacheMaxSize",
+        "url": "https://github.com/hapijs/inert/pull/142"
+      }
+    ],
+    "number": 36,
+    "url": "https://github.com/hapijs/inert/milestone/36",
+    "version": "6.0.2"
+  },
+  {
+    "date": "2020-09-26T18:03:43Z",
+    "id": 4973375,
+    "issues": [
+      {
+        "id": 548538721,
+        "labels": ["breaking changes"],
+        "number": 140,
+        "title": "Change plugin name to @hapi/inert",
+        "url": "https://github.com/hapijs/inert/issues/140"
+      },
+      {
+        "id": 548538655,
+        "labels": ["dependency", "breaking changes"],
+        "number": 139,
+        "title": "Require hapi 19",
+        "url": "https://github.com/hapijs/inert/issues/139"
+      },
+      {
+        "id": 548351548,
+        "labels": ["dependency", "breaking changes"],
+        "number": 138,
+        "title": "Update deps for hapi v19",
+        "url": "https://github.com/hapijs/inert/pull/138"
+      }
+    ],
+    "number": 35,
+    "url": "https://github.com/hapijs/inert/milestone/35",
+    "version": "6.0.1"
+  },
+  {
+    "date": "2020-01-05T05:07:35Z",
+    "id": 4973374,
+    "issues": [
+      {
+        "id": 545369726,
+        "labels": ["dependency", "breaking changes"],
+        "number": 137,
+        "title": "Only node 12",
+        "url": "https://github.com/hapijs/inert/issues/137"
+      }
+    ],
+    "number": 34,
+    "url": "https://github.com/hapijs/inert/milestone/34",
+    "version": "6.0.0"
+  },
+  {
+    "date": "2020-09-26T17:44:22Z",
+    "id": 4655606,
+    "issues": [],
+    "number": 33,
+    "url": "https://github.com/hapijs/inert/milestone/33",
+    "version": "5.2.3"
+  },
+  {
+    "date": "2019-09-12T23:10:52Z",
+    "id": 4441985,
+    "issues": [
+      {
+        "id": 493069122,
+        "labels": ["dependency"],
+        "number": 130,
+        "title": "Update joi",
+        "url": "https://github.com/hapijs/inert/issues/130"
+      },
+      {
+        "id": 393611260,
+        "labels": ["bug"],
+        "number": 124,
+        "title": "Directory listing has broken links",
+        "url": "https://github.com/hapijs/inert/pull/124"
+      }
+    ],
+    "number": 32,
+    "url": "https://github.com/hapijs/inert/milestone/32",
+    "version": "5.2.2"
+  },
+  {
+    "date": "2019-06-26T05:59:26Z",
+    "id": 4219002,
+    "issues": [
+      {
+        "id": 460769314,
+        "labels": ["dependency"],
+        "number": 127,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/inert/issues/127"
+      }
+    ],
+    "number": 31,
+    "url": "https://github.com/hapijs/inert/milestone/31",
+    "version": "5.2.1"
+  },
+  {
+    "date": "2019-04-10T22:08:53Z",
+    "id": 4195303,
+    "issues": [
+      {
+        "id": 431739550,
+        "labels": ["dependency"],
+        "number": 126,
+        "title": "Change module namespace",
+        "url": "https://github.com/hapijs/inert/issues/126"
+      }
+    ],
+    "number": 30,
+    "url": "https://github.com/hapijs/inert/milestone/30",
+    "version": "5.2.0"
+  },
+  {
+    "date": "2019-04-02T21:42:23Z",
+    "id": 3802322,
+    "issues": [
+      {
+        "id": 428437663,
+        "labels": ["bug"],
+        "number": 125,
+        "title": "Directory routes doesn't work with relative files.relativeTo",
+        "url": "https://github.com/hapijs/inert/issues/125"
+      },
+      {
+        "id": 364170134,
+        "labels": ["bug"],
+        "number": 119,
+        "title": "Directory listing has broken links, missing a slash between file and directory",
+        "url": "https://github.com/hapijs/inert/issues/119"
+      }
+    ],
+    "number": 29,
+    "url": "https://github.com/hapijs/inert/milestone/29",
+    "version": "5.1.3"
+  },
+  {
+    "date": "2018-11-07T07:34:05Z",
+    "id": 3787590,
+    "issues": [
+      {
+        "id": 378172089,
+        "labels": ["dependency"],
+        "number": 122,
+        "title": "Use new requirements config",
+        "url": "https://github.com/hapijs/inert/issues/122"
+      }
+    ],
+    "number": 28,
+    "url": "https://github.com/hapijs/inert/milestone/28",
+    "version": "5.1.2"
+  },
+  {
+    "date": "2018-11-01T08:07:59Z",
+    "id": 3036084,
+    "issues": [
+      {
+        "id": 376292102,
+        "labels": ["dependency"],
+        "number": 121,
+        "title": "Update deps.",
+        "url": "https://github.com/hapijs/inert/issues/121"
+      }
+    ],
+    "number": 27,
+    "url": "https://github.com/hapijs/inert/milestone/27",
+    "version": "5.1.1"
+  },
+  {
+    "date": "2018-11-01T08:07:58Z",
+    "id": 2887232,
+    "issues": [
+      {
+        "id": 288430075,
+        "labels": ["feature"],
+        "number": 111,
+        "title": "Add failing path to errors",
+        "url": "https://github.com/hapijs/inert/issues/111"
+      }
+    ],
+    "number": 26,
+    "url": "https://github.com/hapijs/inert/milestone/26",
+    "version": "5.1.0"
+  },
+  {
+    "date": "2017-11-04T00:00:19Z",
+    "id": 2887231,
+    "issues": [
+      {
+        "id": 271147536,
+        "labels": ["bug"],
+        "number": 103,
+        "title": "Rethrow developer errors",
+        "url": "https://github.com/hapijs/inert/issues/103"
+      }
+    ],
+    "number": 25,
+    "url": "https://github.com/hapijs/inert/milestone/25",
+    "version": "5.0.1"
+  },
+  {
+    "date": "2017-11-03T23:59:33Z",
+    "id": 2779049,
+    "issues": [
+      {
+        "id": 271086753,
+        "labels": ["dependency", "breaking changes"],
+        "number": 102,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/inert/issues/102"
+      },
+      {
+        "id": 269251669,
+        "labels": ["breaking changes", "release notes"],
+        "number": 100,
+        "title": "5.0.0 Release Notes",
+        "url": "https://github.com/hapijs/inert/issues/100"
+      },
+      {
+        "id": 267498576,
+        "labels": ["bug", "breaking changes"],
+        "number": 99,
+        "title": "Move etagsCacheMaxSize to server option",
+        "url": "https://github.com/hapijs/inert/issues/99"
+      },
+      {
+        "id": 258979491,
+        "labels": ["feature", "breaking changes"],
+        "number": 97,
+        "title": "Internal rewrite to async / await",
+        "url": "https://github.com/hapijs/inert/pull/97"
+      }
+    ],
+    "number": 24,
+    "url": "https://github.com/hapijs/inert/milestone/24",
+    "version": "5.0.0"
+  },
+  {
+    "date": "2017-09-19T22:28:14Z",
+    "id": 2429732,
+    "issues": [
+      {
+        "id": 233650870,
+        "labels": ["test"],
+        "number": 93,
+        "title": "Limit \"node\" tests to only try configured hapi release",
+        "url": "https://github.com/hapijs/inert/pull/93"
+      }
+    ],
+    "number": 23,
+    "url": "https://github.com/hapijs/inert/milestone/23",
+    "version": "4.2.1"
+  },
+  {
+    "date": "2017-04-03T11:37:14Z",
+    "id": 2217994,
+    "issues": [
+      {
+        "id": 218479679,
+        "labels": ["feature"],
+        "number": 87,
+        "title": "Add start end option to file handler",
+        "url": "https://github.com/hapijs/inert/pull/87"
+      }
+    ],
+    "number": 22,
+    "url": "https://github.com/hapijs/inert/milestone/22",
+    "version": "4.2.0"
+  },
+  {
+    "date": "2016-12-27T20:34:04Z",
+    "id": 2211036,
+    "issues": [
+      {
+        "id": 172680051,
+        "labels": ["feature"],
+        "number": 71,
+        "title": "Add lookupMap option",
+        "url": "https://github.com/hapijs/inert/pull/71"
+      }
+    ],
+    "number": 21,
+    "url": "https://github.com/hapijs/inert/milestone/21",
+    "version": "4.1.0"
+  },
+  {
+    "date": "2016-12-22T00:00:45Z",
+    "id": 2162693,
+    "issues": [
+      {
+        "id": 196256733,
+        "labels": ["bug"],
+        "number": 79,
+        "title": "Manually extract last param name from path",
+        "url": "https://github.com/hapijs/inert/pull/79"
+      }
+    ],
+    "number": 20,
+    "url": "https://github.com/hapijs/inert/milestone/20",
+    "version": "4.0.4"
+  },
+  {
+    "date": "2016-11-29T02:54:57Z",
+    "id": 1957752,
+    "issues": [
+      {
+        "id": 192174505,
+        "labels": ["dependency"],
+        "number": 76,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/inert/issues/76"
+      }
+    ],
+    "number": 19,
+    "url": "https://github.com/hapijs/inert/milestone/19",
+    "version": "4.0.3"
+  },
+  {
+    "date": "2016-08-23T11:43:18Z",
+    "id": 1957751,
+    "issues": [
+      {
+        "id": 172677644,
+        "labels": ["bug"],
+        "number": 70,
+        "title": "Errors on old hapi releases",
+        "url": "https://github.com/hapijs/inert/issues/70"
+      }
+    ],
+    "number": 18,
+    "url": "https://github.com/hapijs/inert/milestone/18",
+    "version": "4.0.2"
+  },
+  {
+    "date": "2016-08-23T11:40:12Z",
+    "id": 1754994,
+    "issues": [
+      {
+        "id": 164090773,
+        "labels": ["dependency"],
+        "number": 68,
+        "title": "Update code to v3",
+        "url": "https://github.com/hapijs/inert/issues/68"
+      },
+      {
+        "id": 164084010,
+        "labels": ["bug"],
+        "number": 67,
+        "title": "The hapi response.ranges option is not respected",
+        "url": "https://github.com/hapijs/inert/issues/67"
+      },
+      {
+        "id": 155625778,
+        "labels": ["test"],
+        "number": 63,
+        "title": "Test on node v6",
+        "url": "https://github.com/hapijs/inert/pull/63"
+      }
+    ],
+    "number": 17,
+    "url": "https://github.com/hapijs/inert/milestone/17",
+    "version": "4.0.1"
+  },
+  {
+    "date": "2016-05-09T10:44:30Z",
+    "id": 1373964,
+    "issues": [
+      {
+        "id": 153748531,
+        "labels": ["breaking changes", "release notes"],
+        "number": 62,
+        "title": "4.0.0 Release Notes",
+        "url": "https://github.com/hapijs/inert/issues/62"
+      },
+      {
+        "id": 152598042,
+        "labels": ["bug"],
+        "number": 60,
+        "title": "Hapijs directory route not being scrapped by facebook behind cloudfront",
+        "url": "https://github.com/hapijs/inert/issues/60"
+      },
+      {
+        "id": 144948509,
+        "labels": ["dependency"],
+        "number": 59,
+        "title": "remove hoek.isAbsolutePath for path.isAbsolute",
+        "url": "https://github.com/hapijs/inert/pull/59"
+      },
+      {
+        "id": 128095166,
+        "labels": ["feature"],
+        "number": 56,
+        "title": "Clarify bad path for directory handler message",
+        "url": "https://github.com/hapijs/inert/pull/56"
+      },
+      {
+        "id": 123576066,
+        "labels": ["dependency"],
+        "number": 53,
+        "title": "Update lru-cache",
+        "url": "https://github.com/hapijs/inert/issues/53"
+      },
+      {
+        "id": 122623897,
+        "labels": ["feature", "breaking changes"],
+        "number": 51,
+        "title": "Update dependencies. Update codebase to ES6/Node4",
+        "url": "https://github.com/hapijs/inert/pull/51"
+      },
+      {
+        "id": 116056675,
+        "labels": ["breaking changes"],
+        "number": 49,
+        "title": "ES6 style changes and node v4",
+        "url": "https://github.com/hapijs/inert/issues/49"
+      },
+      {
+        "id": 113156069,
+        "labels": ["feature", "breaking changes", "security"],
+        "number": 47,
+        "title": "Add confine option that confines file responses",
+        "url": "https://github.com/hapijs/inert/pull/47"
+      }
+    ],
+    "number": 16,
+    "url": "https://github.com/hapijs/inert/milestone/16",
+    "version": "4.0.0"
+  },
+  {
+    "date": "2015-10-24T12:09:28Z",
+    "id": 1246231,
+    "issues": [
+      {
+        "id": 94823109,
+        "labels": ["feature"],
+        "number": 30,
+        "title": "Add new etaging options",
+        "url": "https://github.com/hapijs/inert/pull/30"
+      },
+      {
+        "id": 93813889,
+        "labels": ["feature"],
+        "number": 29,
+        "title": "New ETag generation method",
+        "url": "https://github.com/hapijs/inert/issues/29"
+      }
+    ],
+    "number": 12,
+    "url": "https://github.com/hapijs/inert/milestone/12",
+    "version": "3.2.0"
+  },
+  {
+    "date": "2015-10-06T10:46:06Z",
+    "id": 1340022,
+    "issues": [
+      {
+        "id": 109674141,
+        "labels": ["test"],
+        "number": 44,
+        "title": "Test using hapi@10.x",
+        "url": "https://github.com/hapijs/inert/issues/44"
+      },
+      {
+        "id": 109581240,
+        "labels": ["feature"],
+        "number": 43,
+        "title": "Add new attributes: connections: false, once: true",
+        "url": "https://github.com/hapijs/inert/issues/43"
+      }
+    ],
+    "number": 15,
+    "url": "https://github.com/hapijs/inert/milestone/15",
+    "version": "3.1.0"
+  },
+  {
+    "date": "2015-10-04T10:30:12Z",
+    "id": 1334866,
+    "issues": [
+      {
+        "id": 108556806,
+        "labels": ["bug"],
+        "number": 42,
+        "title": "Avoid re-opening files when serving from a directory",
+        "url": "https://github.com/hapijs/inert/pull/42"
+      }
+    ],
+    "number": 14,
+    "url": "https://github.com/hapijs/inert/milestone/14",
+    "version": "3.0.2"
+  },
+  {
+    "date": "2015-08-12T12:52:03Z",
+    "id": 1251598,
+    "issues": [
+      {
+        "id": 100527943,
+        "labels": ["bug"],
+        "number": 36,
+        "title": "Respect the new connection compression option",
+        "url": "https://github.com/hapijs/inert/issues/36"
+      },
+      {
+        "id": 99715614,
+        "labels": ["test"],
+        "number": 32,
+        "title": "Move hapi security tests here",
+        "url": "https://github.com/hapijs/inert/issues/32"
+      }
+    ],
+    "number": 13,
+    "url": "https://github.com/hapijs/inert/milestone/13",
+    "version": "3.0.1"
+  },
+  {
+    "date": "2015-08-08T00:42:44Z",
+    "id": 1194647,
+    "issues": [
+      {
+        "id": 99733933,
+        "labels": ["dependency", "breaking changes"],
+        "number": 35,
+        "title": "Move config to plugin options from hapi server. Closes #34",
+        "url": "https://github.com/hapijs/inert/pull/35"
+      },
+      {
+        "id": 99733808,
+        "labels": ["dependency", "breaking changes"],
+        "number": 34,
+        "title": "Move etags caching config to plugin options",
+        "url": "https://github.com/hapijs/inert/issues/34"
+      }
+    ],
+    "number": 11,
+    "url": "https://github.com/hapijs/inert/milestone/11",
+    "version": "3.0.0"
+  },
+  {
+    "date": "2015-07-06T11:48:06Z",
+    "id": 1123696,
+    "issues": [
+      {
+        "id": 93154249,
+        "labels": ["bug"],
+        "number": 28,
+        "title": "Never store ETags computed on partial data",
+        "url": "https://github.com/hapijs/inert/pull/28"
+      },
+      {
+        "id": 93054915,
+        "labels": ["bug"],
+        "number": 27,
+        "title": "ETag generation can miss data",
+        "url": "https://github.com/hapijs/inert/issues/27"
+      }
+    ],
+    "number": 10,
+    "url": "https://github.com/hapijs/inert/milestone/10",
+    "version": "2.1.6"
+  },
+  {
+    "date": "2015-05-21T17:07:33Z",
+    "id": 1014229,
+    "issues": [
+      {
+        "id": 79071327,
+        "labels": ["dependency", "documentation"],
+        "number": 26,
+        "title": "Misc. Closes #25",
+        "url": "https://github.com/hapijs/inert/pull/26"
+      }
+    ],
+    "number": 9,
+    "url": "https://github.com/hapijs/inert/milestone/9",
+    "version": "2.1.5"
+  },
+  {
+    "date": "2015-03-10T07:21:09Z",
+    "id": 1014212,
+    "issues": [
+      {
+        "id": 60458083,
+        "labels": ["dependency"],
+        "number": 23,
+        "title": "Upgrade to joi 6.0",
+        "url": "https://github.com/hapijs/inert/pull/23"
+      }
+    ],
+    "number": 8,
+    "url": "https://github.com/hapijs/inert/milestone/8",
+    "version": "2.1.4"
+  },
+  {
+    "date": "2015-03-10T06:48:30Z",
+    "id": 951759,
+    "issues": [
+      {
+        "id": 58383087,
+        "labels": ["bug"],
+        "number": 22,
+        "title": "Add io.js support",
+        "url": "https://github.com/hapijs/inert/pull/22"
+      },
+      {
+        "id": 56963603,
+        "labels": ["bug"],
+        "number": 21,
+        "title": "Return 404 for path string with a null byte",
+        "url": "https://github.com/hapijs/inert/pull/21"
+      }
+    ],
+    "number": 7,
+    "url": "https://github.com/hapijs/inert/milestone/7",
+    "version": "2.1.3"
+  },
+  {
+    "date": "2015-01-26T17:47:40Z",
+    "id": 948174,
+    "issues": [
+      {
+        "id": 55490891,
+        "labels": ["bug"],
+        "number": 19,
+        "title": "Fix directory handler regressions in 2.1.1",
+        "url": "https://github.com/hapijs/inert/pull/19"
+      }
+    ],
+    "number": 6,
+    "url": "https://github.com/hapijs/inert/milestone/6",
+    "version": "2.1.2"
+  },
+  {
+    "date": "2015-01-23T09:26:15Z",
+    "id": 931226,
+    "issues": [
+      {
+        "id": 54593264,
+        "labels": ["bug"],
+        "number": 18,
+        "title": "Replace 404 response with 403 and 500 when appropriate",
+        "url": "https://github.com/hapijs/inert/pull/18"
+      }
+    ],
+    "number": 5,
+    "url": "https://github.com/hapijs/inert/milestone/5",
+    "version": "2.1.1"
+  },
+  {
+    "date": "2015-01-12T09:53:24Z",
+    "id": 898099,
+    "issues": [
+      {
+        "id": 53159719,
+        "labels": ["feature"],
+        "number": 17,
+        "title": "Handle Range requests explicitly",
+        "url": "https://github.com/hapijs/inert/pull/17"
+      },
+      {
+        "id": 50788070,
+        "labels": ["feature"],
+        "number": 10,
+        "title": "more flexible 'index' option for directory handler",
+        "url": "https://github.com/hapijs/inert/pull/10"
+      }
+    ],
+    "number": 4,
+    "url": "https://github.com/hapijs/inert/milestone/4",
+    "version": "2.1.0"
+  },
+  {
+    "date": "2014-12-09T22:53:07Z",
+    "id": 835607,
+    "issues": [
+      {
+        "id": 51085768,
+        "labels": ["bug"],
+        "number": 16,
+        "title": "Fix option parsing to match hapi documentation",
+        "url": "https://github.com/hapijs/inert/pull/16"
+      },
+      {
+        "id": 50951728,
+        "labels": ["feature", "bug"],
+        "number": 14,
+        "title": "Use .single() option for directory settings schema",
+        "url": "https://github.com/hapijs/inert/pull/14"
+      },
+      {
+        "id": 50949048,
+        "labels": ["bug", "security"],
+        "number": 12,
+        "title": "Don't allow files in hidden directories to be served",
+        "url": "https://github.com/hapijs/inert/pull/12"
+      },
+      {
+        "id": 50193119,
+        "labels": ["test"],
+        "number": 9,
+        "title": "Fix tests on windows",
+        "url": "https://github.com/hapijs/inert/pull/9"
+      },
+      {
+        "id": 46922293,
+        "labels": ["feature", "bug"],
+        "number": 8,
+        "title": "Use open file descriptors to retain file between prepare and marshal phases",
+        "url": "https://github.com/hapijs/inert/pull/8"
+      },
+      {
+        "id": 46608627,
+        "labels": ["bug"],
+        "number": 7,
+        "title": "Invalid ETag for lookupCompressed responses",
+        "url": "https://github.com/hapijs/inert/issues/7"
+      },
+      {
+        "id": 46604455,
+        "labels": ["bug"],
+        "number": 4,
+        "title": "Potentially incorrect file responses when file is changed",
+        "url": "https://github.com/hapijs/inert/issues/4"
+      }
+    ],
+    "number": 2,
+    "url": "https://github.com/hapijs/inert/milestone/2",
+    "version": "2.0.0"
+  },
+  {
+    "date": "2014-12-10T13:41:55Z",
+    "id": 891852,
+    "issues": [
+      {
+        "id": 51029523,
+        "labels": ["bug", "security"],
+        "number": 15,
+        "title": "Don't allow files in hidden directories to be served",
+        "url": "https://github.com/hapijs/inert/pull/15"
+      },
+      {
+        "id": 50949999,
+        "labels": ["bug", "security"],
+        "number": 13,
+        "title": "Don't allow files in hidden directories to be served (backported)",
+        "url": "https://github.com/hapijs/inert/pull/13"
+      }
+    ],
+    "number": 3,
+    "url": "https://github.com/hapijs/inert/milestone/3",
+    "version": "1.1.1"
+  },
+  {
+    "date": "2014-10-22T08:08:12Z",
+    "id": 820541,
+    "issues": [
+      {
+        "id": 46482842,
+        "labels": ["dependency"],
+        "number": 3,
+        "title": "Move lru-cache over from hapi",
+        "url": "https://github.com/hapijs/inert/issues/3"
+      }
+    ],
+    "number": 1,
+    "url": "https://github.com/hapijs/inert/milestone/1",
+    "version": "1.1.0"
+  }
+]

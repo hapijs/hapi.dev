@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/subtext</id>
+    <title>@hapi/subtext changelog</title>
+    <updated>2026-04-02T08:19:32.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/subtext"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v8.1.2]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/58</id>
+        <link href="https://hapi.dev/module/subtext/changelog#8.1.2"/>
+        <updated>2026-04-02T08:19:32.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v8.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/pull/105">[#105]</a> chore: bump deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v8.1.1]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/57</id>
+        <link href="https://hapi.dev/module/subtext/changelog#8.1.1"/>
+        <updated>2025-08-06T10:02:02.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v8.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/pull/104">[#104]</a> Fix cleanup test on windows</li><li><a href="https://github.com/hapijs/subtext/pull/102">[#102]</a> Fix late write error on aborted streams</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v8.1.0]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/55</id>
+        <link href="https://hapi.dev/module/subtext/changelog#8.1.0"/>
+        <updated>2023-02-14T15:18:38.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v8.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/99">[#99]</a> Support multipart payload maxParts, clean-up files on error</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v8.0.1]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/54</id>
+        <link href="https://hapi.dev/module/subtext/changelog#8.0.1"/>
+        <updated>2023-02-14T15:13:34.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v8.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/pull/98">[#98]</a> chore: bump hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v8.0.0]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/53</id>
+        <link href="https://hapi.dev/module/subtext/changelog#8.0.0"/>
+        <updated>2022-06-20T20:14:00.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v8.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/pull/97">[#97]</a> Support node v18 and drop node v12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v7.1.0]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/56</id>
+        <link href="https://hapi.dev/module/subtext/changelog#7.1.0"/>
+        <updated>2023-02-14T15:18:39.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v7.1.0]]></summary>
+        <content type="html"><![CDATA[<ul></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v7.0.4]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/52</id>
+        <link href="https://hapi.dev/module/subtext/changelog#7.0.4"/>
+        <updated>2022-06-20T20:13:59.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v7.0.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/pull/96">[#96]</a> Fix stream error propagation for node v16+</li><li><a href="https://github.com/hapijs/subtext/pull/94">[#94]</a> add dispatcher and use shared config</li><li><a href="https://github.com/hapijs/subtext/pull/87">[#87]</a> upgrade lab to v24</li><li><a href="https://github.com/hapijs/subtext/pull/84">[#84]</a> Test on node 14</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v7.0.3]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/49</id>
+        <link href="https://hapi.dev/module/subtext/changelog#7.0.3"/>
+        <updated>2020-02-13T19:12:44.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v7.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/83">[#83]</a> Allow options.multipart to be true</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v7.0.2]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/48</id>
+        <link href="https://hapi.dev/module/subtext/changelog#7.0.2"/>
+        <updated>2020-02-13T18:20:46.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v7.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/80">[#80]</a> Add tests for deps changes</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v7.0.1]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/47</id>
+        <link href="https://hapi.dev/module/subtext/changelog#7.0.1"/>
+        <updated>2020-01-16T10:13:43.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v7.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/pull/79">[#79]</a> Update hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v7.0.0]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/46</id>
+        <link href="https://hapi.dev/module/subtext/changelog#7.0.0"/>
+        <updated>2020-01-09T00:26:33.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v7.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/78">[#78]</a> Only node 12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v6.1.3]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/44</id>
+        <link href="https://hapi.dev/module/subtext/changelog#6.1.3"/>
+        <updated>2020-02-13T18:20:43.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v6.1.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/82">[#82]</a> Add tests</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v6.1.2]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/43</id>
+        <link href="https://hapi.dev/module/subtext/changelog#6.1.2"/>
+        <updated>2019-09-13T19:24:35.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v6.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/72">[#72]</a> Fix maxBytes in file output</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v6.1.1]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/42</id>
+        <link href="https://hapi.dev/module/subtext/changelog#6.1.1"/>
+        <updated>2019-06-26T06:18:38.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v6.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/70">[#70]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v6.1.0]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/39</id>
+        <link href="https://hapi.dev/module/subtext/changelog#6.1.0"/>
+        <updated>2019-04-02T18:18:02.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v6.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/69">[#69]</a> Change module namespace</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v6.0.12]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/37</id>
+        <link href="https://hapi.dev/module/subtext/changelog#6.0.12"/>
+        <updated>2019-01-31T19:38:22.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v6.0.12]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/66">[#66]</a> Protect against JSON.parse() prototype poisoning</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v6.0.11]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/36</id>
+        <link href="https://hapi.dev/module/subtext/changelog#6.0.11"/>
+        <updated>2018-11-03T00:38:56.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v6.0.11]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/63">[#63]</a> Remove engines</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v6.0.10]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/35</id>
+        <link href="https://hapi.dev/module/subtext/changelog#6.0.10"/>
+        <updated>2018-11-02T17:51:11.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v6.0.10]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/62">[#62]</a> Only include file headers on multipart</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v6.0.9]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/34</id>
+        <link href="https://hapi.dev/module/subtext/changelog#6.0.9"/>
+        <updated>2018-11-01T19:24:28.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v6.0.9]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/61">[#61]</a> Update hoek v6</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v6.0.8]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/33</id>
+        <link href="https://hapi.dev/module/subtext/changelog#6.0.8"/>
+        <updated>2018-10-31T21:00:02.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v6.0.8]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/60">[#60]</a> Handle PromiseRejectionHandledWarning</li><li><a href="https://github.com/hapijs/subtext/issues/58">[#58]</a> Cleanup</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v6.0.7]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/32</id>
+        <link href="https://hapi.dev/module/subtext/changelog#6.0.7"/>
+        <updated>2017-11-03T20:19:27.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v6.0.7]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/56">[#56]</a> Cleaner throw</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v6.0.6]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/31</id>
+        <link href="https://hapi.dev/module/subtext/changelog#6.0.6"/>
+        <updated>2017-11-03T08:46:14.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v6.0.6]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/55">[#55]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v6.0.5]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/30</id>
+        <link href="https://hapi.dev/module/subtext/changelog#6.0.5"/>
+        <updated>2017-10-22T08:46:03.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v6.0.5]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/54">[#54]</a> Update wreck</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v6.0.4]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/29</id>
+        <link href="https://hapi.dev/module/subtext/changelog#6.0.4"/>
+        <updated>2017-10-19T17:52:32.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v6.0.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/53">[#53]</a> Update pez dependency</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v6.0.3]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/28</id>
+        <link href="https://hapi.dev/module/subtext/changelog#6.0.3"/>
+        <updated>2017-09-28T06:29:17.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v6.0.3]]></summary>
+        <content type="html"><![CDATA[<ul></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v6.0.2]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/27</id>
+        <link href="https://hapi.dev/module/subtext/changelog#6.0.2"/>
+        <updated>2017-09-28T06:21:32.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v6.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/52">[#52]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v6.0.1]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/26</id>
+        <link href="https://hapi.dev/module/subtext/changelog#6.0.1"/>
+        <updated>2017-09-26T00:28:54.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v6.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/51">[#51]</a> Update content</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v6.0.0]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/25</id>
+        <link href="https://hapi.dev/module/subtext/changelog#6.0.0"/>
+        <updated>2017-09-18T22:40:20.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v6.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/pull/50">[#50]</a> Async interface</li><li><a href="https://github.com/hapijs/subtext/issues/49">[#49]</a> Migrate to async interface</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v5.1.2]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/45</id>
+        <link href="https://hapi.dev/module/subtext/changelog#5.1.2"/>
+        <updated>2020-02-13T18:20:45.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v5.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/81">[#81]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v5.1.1]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/41</id>
+        <link href="https://hapi.dev/module/subtext/changelog#5.1.1"/>
+        <updated>2019-09-13T19:42:13.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v5.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/73">[#73]</a> maxBytes file output</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v5.1.0]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/40</id>
+        <link href="https://hapi.dev/module/subtext/changelog#5.1.0"/>
+        <updated>2019-03-25T18:53:49.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v5.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/68">[#68]</a> Commercial version of v5 branch</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v5.0.1]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/38</id>
+        <link href="https://hapi.dev/module/subtext/changelog#5.0.1"/>
+        <updated>2019-01-31T19:38:18.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v5.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/67">[#67]</a> Protect against JSON.parse() prototype poisoning</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v5.0.0]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/24</id>
+        <link href="https://hapi.dev/module/subtext/changelog#5.0.0"/>
+        <updated>2017-07-02T18:35:21.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v5.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/pull/48">[#48]</a> Return 413 when payload too large.</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v4.4.1]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/22</id>
+        <link href="https://hapi.dev/module/subtext/changelog#4.4.1"/>
+        <updated>2017-05-28T06:55:07.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v4.4.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/47">[#47]</a> Update deps.</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v4.4.0]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/21</id>
+        <link href="https://hapi.dev/module/subtext/changelog#4.4.0"/>
+        <updated>2017-03-21T06:49:19.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v4.4.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/45">[#45]</a> Allow specifying custom query string parser</li><li><a href="https://github.com/hapijs/subtext/issues/44">[#44]</a> Retain raw payload when parsing fails</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v4.3.0]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/19</id>
+        <link href="https://hapi.dev/module/subtext/changelog#4.3.0"/>
+        <updated>2016-10-19T08:50:16.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v4.3.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/pull/41">[#41]</a> Support multipart override</li><li><a href="https://github.com/hapijs/subtext/issues/40">[#40]</a> Support multipart override output</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v4.2.2]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/20</id>
+        <link href="https://hapi.dev/module/subtext/changelog#4.2.2"/>
+        <updated>2016-10-19T06:30:37.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v4.2.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/pull/37">[#37]</a> Update dependencies</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v4.2.1]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/18</id>
+        <link href="https://hapi.dev/module/subtext/changelog#4.2.1"/>
+        <updated>2016-08-26T02:26:10.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v4.2.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/36">[#36]</a> Pass options to built-in compressions</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v4.2.0]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/17</id>
+        <link href="https://hapi.dev/module/subtext/changelog#4.2.0"/>
+        <updated>2016-08-26T02:22:13.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v4.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/35">[#35]</a> Support compression options</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v4.1.0]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/16</id>
+        <link href="https://hapi.dev/module/subtext/changelog#4.1.0"/>
+        <updated>2016-08-22T06:58:06.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v4.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/34">[#34]</a> Support external decoders</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v4.0.5]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/15</id>
+        <link href="https://hapi.dev/module/subtext/changelog#4.0.5"/>
+        <updated>2016-07-28T19:25:13.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v4.0.5]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/33">[#33]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v4.0.4]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/14</id>
+        <link href="https://hapi.dev/module/subtext/changelog#4.0.4"/>
+        <updated>2016-07-28T19:23:28.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v4.0.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/pull/29">[#29]</a> update to code v3</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v4.0.3]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/13</id>
+        <link href="https://hapi.dev/module/subtext/changelog#4.0.3"/>
+        <updated>2016-05-11T15:05:46.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v4.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/28">[#28]</a> update form-data dependency to 0.2.x</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v4.0.2]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/12</id>
+        <link href="https://hapi.dev/module/subtext/changelog#4.0.2"/>
+        <updated>2016-05-08T20:15:49.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v4.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/pull/27">[#27]</a> testing-node-6</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v4.0.1]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/11</id>
+        <link href="https://hapi.dev/module/subtext/changelog#4.0.1"/>
+        <updated>2016-04-06T15:12:01.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v4.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/pull/26">[#26]</a> Return error for multipart file exceeding maxBytes</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v4.0.0]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/10</id>
+        <link href="https://hapi.dev/module/subtext/changelog#4.0.0"/>
+        <updated>2015-12-22T21:14:23.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v4.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/pull/25">[#25]</a> Remove qs support. Closes #24</li><li><a href="https://github.com/hapijs/subtext/issues/24">[#24]</a> Remove qs dependency</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v3.0.1]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/9</id>
+        <link href="https://hapi.dev/module/subtext/changelog#3.0.1"/>
+        <updated>2015-11-14T14:01:42.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v3.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/pull/23">[#23]</a> Fix timeouts for multipart payloads</li><li><a href="https://github.com/hapijs/subtext/issues/19">[#19]</a> timeout for payload not working.</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v3.0.0]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/8</id>
+        <link href="https://hapi.dev/module/subtext/changelog#3.0.0"/>
+        <updated>2015-11-03T06:12:07.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/22">[#22]</a> ES6 style changes and node v4</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v2.0.2]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/7</id>
+        <link href="https://hapi.dev/module/subtext/changelog#2.0.2"/>
+        <updated>2015-10-30T10:37:25.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v2.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/21">[#21]</a> Missing dependency qs@4.x.x?</li><li><a href="https://github.com/hapijs/subtext/issues/20">[#20]</a> 2.0.2 tag</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v2.0.1]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/6</id>
+        <link href="https://hapi.dev/module/subtext/changelog#2.0.1"/>
+        <updated>2015-10-30T10:35:00.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v2.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/pull/18">[#18]</a> upgrade to lab 6 and cleanup</li><li><a href="https://github.com/hapijs/subtext/pull/17">[#17]</a> testing different file sizes to get full code coverage</li><li><a href="https://github.com/hapijs/subtext/issues/16">[#16]</a> Test coverage timing issue</li><li><a href="https://github.com/hapijs/subtext/pull/15">[#15]</a> Move API docs to its own page</li><li><a href="https://github.com/hapijs/subtext/issues/14">[#14]</a> Move API docs to their own page</li><li><a href="https://github.com/hapijs/subtext/pull/13">[#13]</a> Update README with example and docs</li></ul>]]></content>
+    </entry>
+</feed>

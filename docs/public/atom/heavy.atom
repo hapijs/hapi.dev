@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/heavy</id>
+    <title>@hapi/heavy changelog</title>
+    <updated>2023-02-11T19:36:41.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/heavy"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/heavy v8.0.1]]></title>
+        <id>https://github.com/hapijs/heavy/milestone/26</id>
+        <link href="https://hapi.dev/module/heavy/changelog#8.0.1"/>
+        <updated>2023-02-11T19:36:41.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/heavy v8.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/heavy/pull/51">[#51]</a> chore: bump hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/heavy v8.0.0]]></title>
+        <id>https://github.com/hapijs/heavy/milestone/25</id>
+        <link href="https://hapi.dev/module/heavy/changelog#8.0.0"/>
+        <updated>2023-02-11T19:36:39.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/heavy v8.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/heavy/pull/50">[#50]</a> Support node v18 and drop node v12</li><li><a href="https://github.com/hapijs/heavy/pull/48">[#48]</a> Add event loop utilization support</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/heavy v7.0.1]]></title>
+        <id>https://github.com/hapijs/heavy/milestone/23</id>
+        <link href="https://hapi.dev/module/heavy/changelog#7.0.1"/>
+        <updated>2021-09-24T13:10:43.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/heavy v7.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/heavy/pull/44">[#44]</a> upgrade lab to v24</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/heavy v7.0.0]]></title>
+        <id>https://github.com/hapijs/heavy/milestone/22</id>
+        <link href="https://hapi.dev/module/heavy/changelog#7.0.0"/>
+        <updated>2020-01-05T04:47:21.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/heavy v7.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/heavy/issues/36">[#36]</a> Only node 12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/heavy v6.2.2]]></title>
+        <id>https://github.com/hapijs/heavy/milestone/20</id>
+        <link href="https://hapi.dev/module/heavy/changelog#6.2.2"/>
+        <updated>2019-09-12T20:46:24.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/heavy v6.2.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/heavy/issues/32">[#32]</a> Update joi</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/heavy v6.2.1]]></title>
+        <id>https://github.com/hapijs/heavy/milestone/19</id>
+        <link href="https://hapi.dev/module/heavy/changelog#6.2.1"/>
+        <updated>2019-08-15T06:53:01.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/heavy v6.2.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/heavy/issues/31">[#31]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/heavy v6.2.0]]></title>
+        <id>https://github.com/hapijs/heavy/milestone/16</id>
+        <link href="https://hapi.dev/module/heavy/changelog#6.2.0"/>
+        <updated>2019-04-02T05:31:29.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/heavy v6.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/heavy/issues/29">[#29]</a> Change module namespace</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/heavy v6.1.2]]></title>
+        <id>https://github.com/hapijs/heavy/milestone/15</id>
+        <link href="https://hapi.dev/module/heavy/changelog#6.1.2"/>
+        <updated>2018-11-03T00:27:19.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/heavy v6.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/heavy/issues/26">[#26]</a> Remove engines</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/heavy v6.1.1]]></title>
+        <id>https://github.com/hapijs/heavy/milestone/14</id>
+        <link href="https://hapi.dev/module/heavy/changelog#6.1.1"/>
+        <updated>2018-11-01T07:59:30.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/heavy v6.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/heavy/issues/25">[#25]</a> Update hoek v6</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/heavy v6.1.0]]></title>
+        <id>https://github.com/hapijs/heavy/milestone/13</id>
+        <link href="https://hapi.dev/module/heavy/changelog#6.1.0"/>
+        <updated>2017-12-19T23:59:29.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/heavy v6.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/heavy/issues/23">[#23]</a> Allow unknown config keys</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/heavy v6.0.0]]></title>
+        <id>https://github.com/hapijs/heavy/milestone/12</id>
+        <link href="https://hapi.dev/module/heavy/changelog#6.0.0"/>
+        <updated>2017-11-03T07:43:26.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/heavy v6.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/heavy/issues/22">[#22]</a> Throw in check()</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/heavy v5.0.2]]></title>
+        <id>https://github.com/hapijs/heavy/milestone/11</id>
+        <link href="https://hapi.dev/module/heavy/changelog#5.0.2"/>
+        <updated>2017-10-22T08:27:20.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/heavy v5.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/heavy/issues/21">[#21]</a> Update joi</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/heavy v5.0.1]]></title>
+        <id>https://github.com/hapijs/heavy/milestone/10</id>
+        <link href="https://hapi.dev/module/heavy/changelog#5.0.1"/>
+        <updated>2017-09-26T17:51:39.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/heavy v5.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/heavy/issues/20">[#20]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/heavy v5.0.0]]></title>
+        <id>https://github.com/hapijs/heavy/milestone/9</id>
+        <link href="https://hapi.dev/module/heavy/changelog#5.0.0"/>
+        <updated>2017-09-26T17:50:38.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/heavy v5.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/heavy/issues/18">[#18]</a> Refactor for single connection</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/heavy v4.1.0]]></title>
+        <id>https://github.com/hapijs/heavy/milestone/17</id>
+        <link href="https://hapi.dev/module/heavy/changelog#4.1.0"/>
+        <updated>2019-03-25T00:06:30.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/heavy v4.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/heavy/issues/28">[#28]</a> Commercial version of v4 branch</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/heavy v4.0.4]]></title>
+        <id>https://github.com/hapijs/heavy/milestone/8</id>
+        <link href="https://hapi.dev/module/heavy/changelog#4.0.4"/>
+        <updated>2017-09-14T22:40:58.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/heavy v4.0.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/heavy/issues/16">[#16]</a> Update deps.</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/heavy v4.0.3]]></title>
+        <id>https://github.com/hapijs/heavy/milestone/7</id>
+        <link href="https://hapi.dev/module/heavy/changelog#4.0.3"/>
+        <updated>2016-11-29T02:01:25.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/heavy v4.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/heavy/issues/15">[#15]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/heavy v4.0.2]]></title>
+        <id>https://github.com/hapijs/heavy/milestone/6</id>
+        <link href="https://hapi.dev/module/heavy/changelog#4.0.2"/>
+        <updated>2016-07-27T19:53:58.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/heavy v4.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/heavy/issues/13">[#13]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/heavy v4.0.1]]></title>
+        <id>https://github.com/hapijs/heavy/milestone/5</id>
+        <link href="https://hapi.dev/module/heavy/changelog#4.0.1"/>
+        <updated>2016-05-05T17:04:54.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/heavy v4.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/heavy/pull/11">[#11]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/heavy v4.0.0]]></title>
+        <id>https://github.com/hapijs/heavy/milestone/4</id>
+        <link href="https://hapi.dev/module/heavy/changelog#4.0.0"/>
+        <updated>2015-11-02T04:02:09.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/heavy v4.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/heavy/issues/10">[#10]</a> ES6 style changes and node v4</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/heavy v3.0.1]]></title>
+        <id>https://github.com/hapijs/heavy/milestone/3</id>
+        <link href="https://hapi.dev/module/heavy/changelog#3.0.1"/>
+        <updated>2015-11-02T03:55:36.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/heavy v3.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/heavy/pull/8">[#8]</a> Closes #6, Closes #7</li><li><a href="https://github.com/hapijs/heavy/issues/7">[#7]</a> bring heavy up to date with standards</li><li><a href="https://github.com/hapijs/heavy/issues/6">[#6]</a> upgrade joi</li><li><a href="https://github.com/hapijs/heavy/pull/4">[#4]</a> Update .travis.yml</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/heavy v3.0.0]]></title>
+        <id>https://github.com/hapijs/heavy/milestone/1</id>
+        <link href="https://hapi.dev/module/heavy/changelog#3.0.0"/>
+        <updated>2014-12-09T22:49:22.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/heavy v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/heavy/issues/2">[#2]</a> Update check() to return reason why</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/heavy v2.0.0]]></title>
+        <id>https://github.com/hapijs/heavy/milestone/2</id>
+        <link href="https://hapi.dev/module/heavy/changelog#2.0.0"/>
+        <updated>2014-10-31T02:18:38.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/heavy v2.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/heavy/issues/1">[#1]</a> Split sampling from policy</li></ul>]]></content>
+    </entry>
+</feed>

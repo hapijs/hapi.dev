@@ -1,0 +1,1033 @@
+[
+  {
+    "date": "2023-02-11T18:01:54Z",
+    "id": 8701291,
+    "issues": [
+      {
+        "id": 1551746332,
+        "labels": [],
+        "number": 179,
+        "title": "chore: bump hoek",
+        "url": "https://github.com/hapijs/code/pull/179"
+      }
+    ],
+    "number": 41,
+    "url": "https://github.com/hapijs/code/milestone/41",
+    "version": "9.0.3"
+  },
+  {
+    "date": "2022-11-29T08:49:48Z",
+    "id": 8080669,
+    "issues": [
+      {
+        "id": 1458813434,
+        "labels": ["bug", "types"],
+        "number": 178,
+        "title": "Fix typo and add missing type",
+        "url": "https://github.com/hapijs/code/pull/178"
+      }
+    ],
+    "number": 40,
+    "url": "https://github.com/hapijs/code/milestone/40",
+    "version": "9.0.2"
+  },
+  {
+    "date": "2022-06-14T15:40:06Z",
+    "id": 7932293,
+    "issues": [
+      {
+        "id": 1248750441,
+        "labels": ["dependency", "types"],
+        "number": 177,
+        "title": "Fix `reject()` types",
+        "url": "https://github.com/hapijs/code/pull/177"
+      }
+    ],
+    "number": 39,
+    "url": "https://github.com/hapijs/code/milestone/39",
+    "version": "9.0.1"
+  },
+  {
+    "date": "2022-06-14T15:39:02Z",
+    "id": 7910880,
+    "issues": [
+      {
+        "id": 1213761276,
+        "labels": ["breaking changes", "dependency"],
+        "number": 175,
+        "title": "Drop node v12, support node v18",
+        "url": "https://github.com/hapijs/code/pull/175"
+      }
+    ],
+    "number": 38,
+    "url": "https://github.com/hapijs/code/milestone/38",
+    "version": "9.0.0"
+  },
+  {
+    "date": "2022-04-25T13:55:13Z",
+    "id": 7652853,
+    "issues": [],
+    "number": 37,
+    "url": "https://github.com/hapijs/code/milestone/37",
+    "version": "8.0.8"
+  },
+  {
+    "date": "2022-02-08T07:04:40Z",
+    "id": 7604614,
+    "issues": [
+      {
+        "id": 1126504744,
+        "labels": ["bug", "types"],
+        "number": 174,
+        "title": "Fix equal() type",
+        "url": "https://github.com/hapijs/code/pull/174"
+      }
+    ],
+    "number": 36,
+    "url": "https://github.com/hapijs/code/milestone/36",
+    "version": "8.0.7"
+  },
+  {
+    "date": "2022-01-24T14:51:35Z",
+    "id": 7413852,
+    "issues": [
+      {
+        "id": 1112271871,
+        "labels": ["bug", "types"],
+        "number": 173,
+        "title": "Fix equal() types",
+        "url": "https://github.com/hapijs/code/pull/173"
+      },
+      {
+        "id": 1112268077,
+        "labels": ["bug", "types"],
+        "number": 172,
+        "title": "equal(value: T) type should be Loosely<T> when options ignore symbols or properties",
+        "url": "https://github.com/hapijs/code/issues/172"
+      },
+      {
+        "id": 1111853212,
+        "labels": ["bug", "types"],
+        "number": 171,
+        "title": "Fix typings for throw() and reject()",
+        "url": "https://github.com/hapijs/code/pull/171"
+      }
+    ],
+    "number": 35,
+    "url": "https://github.com/hapijs/code/milestone/35",
+    "version": "8.0.6"
+  },
+  {
+    "date": "2021-11-20T04:14:28Z",
+    "id": 7330956,
+    "issues": [
+      {
+        "id": 1055987479,
+        "labels": ["types"],
+        "number": 168,
+        "title": "Don't narrow generic on type specific assertions",
+        "url": "https://github.com/hapijs/code/pull/168"
+      },
+      {
+        "id": 1055372280,
+        "labels": ["types"],
+        "number": 167,
+        "title": "compilation errors for primitive type assertions",
+        "url": "https://github.com/hapijs/code/issues/167"
+      }
+    ],
+    "number": 34,
+    "url": "https://github.com/hapijs/code/milestone/34",
+    "version": "8.0.5"
+  },
+  {
+    "date": "2021-11-05T14:23:06Z",
+    "id": 6548811,
+    "issues": [
+      {
+        "id": 1045829273,
+        "labels": ["documentation"],
+        "number": 165,
+        "title": "Fix aliases for reject()",
+        "url": "https://github.com/hapijs/code/pull/165"
+      },
+      {
+        "id": 853268953,
+        "labels": ["bug", "types"],
+        "number": 163,
+        "title": "Improve typings",
+        "url": "https://github.com/hapijs/code/pull/163"
+      }
+    ],
+    "number": 33,
+    "url": "https://github.com/hapijs/code/milestone/33",
+    "version": "8.0.4"
+  },
+  {
+    "date": "2021-03-15T18:59:37Z",
+    "id": 6548801,
+    "issues": [
+      {
+        "id": 830110474,
+        "labels": ["types"],
+        "number": 161,
+        "title": "Fix reject(s) return type",
+        "url": "https://github.com/hapijs/code/pull/161"
+      },
+      {
+        "id": 829957775,
+        "labels": ["types"],
+        "number": 160,
+        "title": "The type `.rejects` returns  should return a Promise",
+        "url": "https://github.com/hapijs/code/issues/160"
+      }
+    ],
+    "number": 32,
+    "url": "https://github.com/hapijs/code/milestone/32",
+    "version": "8.0.3"
+  },
+  {
+    "date": "2021-03-15T18:56:29Z",
+    "id": 4972049,
+    "issues": [
+      {
+        "id": 709589174,
+        "labels": [],
+        "number": 158,
+        "title": "upgrade lab to v24 and devDependency of typescript",
+        "url": "https://github.com/hapijs/code/pull/158"
+      }
+    ],
+    "number": 31,
+    "url": "https://github.com/hapijs/code/milestone/31",
+    "version": "8.0.2"
+  },
+  {
+    "date": "2020-01-03T23:26:48Z",
+    "id": 4972036,
+    "issues": [
+      {
+        "id": 545203593,
+        "labels": ["dependency"],
+        "number": 155,
+        "title": "Fix function string in node 13",
+        "url": "https://github.com/hapijs/code/issues/155"
+      },
+      {
+        "id": 545198217,
+        "labels": ["dependency"],
+        "number": 154,
+        "title": "Update hoek",
+        "url": "https://github.com/hapijs/code/issues/154"
+      }
+    ],
+    "number": 30,
+    "url": "https://github.com/hapijs/code/milestone/30",
+    "version": "8.0.1"
+  },
+  {
+    "date": "2020-01-03T23:00:17Z",
+    "id": 4972035,
+    "issues": [
+      {
+        "id": 545196741,
+        "labels": ["breaking changes", "dependency"],
+        "number": 153,
+        "title": "Support only node 12",
+        "url": "https://github.com/hapijs/code/issues/153"
+      }
+    ],
+    "number": 29,
+    "url": "https://github.com/hapijs/code/milestone/29",
+    "version": "8.0.0"
+  },
+  {
+    "date": "2019-10-13T01:12:53Z",
+    "id": 4519370,
+    "issues": [
+      {
+        "id": 506238475,
+        "labels": ["breaking changes", "types"],
+        "number": 151,
+        "title": "Add types",
+        "url": "https://github.com/hapijs/code/issues/151"
+      },
+      {
+        "id": 506238448,
+        "labels": ["breaking changes", "dependency"],
+        "number": 150,
+        "title": "Drop node 8",
+        "url": "https://github.com/hapijs/code/issues/150"
+      }
+    ],
+    "number": 27,
+    "url": "https://github.com/hapijs/code/milestone/27",
+    "version": "7.0.0"
+  },
+  {
+    "date": "2019-07-24T18:08:54Z",
+    "id": 4184536,
+    "issues": [
+      {
+        "id": 472425331,
+        "labels": ["breaking changes"],
+        "number": 142,
+        "title": "Deep comparison includes symbols",
+        "url": "https://github.com/hapijs/code/issues/142"
+      },
+      {
+        "id": 472414176,
+        "labels": ["feature"],
+        "number": 141,
+        "title": "Support deep comparison key skipping",
+        "url": "https://github.com/hapijs/code/issues/141"
+      },
+      {
+        "id": 472413755,
+        "labels": ["breaking changes", "feature"],
+        "number": 140,
+        "title": "Use deepFunction flag for deep comparison",
+        "url": "https://github.com/hapijs/code/issues/140"
+      }
+    ],
+    "number": 26,
+    "url": "https://github.com/hapijs/code/milestone/26",
+    "version": "6.0.0"
+  },
+  {
+    "date": "2019-03-29T23:11:53Z",
+    "id": 4184180,
+    "issues": [
+      {
+        "id": 427209781,
+        "labels": ["bug"],
+        "number": 136,
+        "title": "Better handling of thrown stack parsing",
+        "url": "https://github.com/hapijs/code/issues/136"
+      }
+    ],
+    "number": 25,
+    "url": "https://github.com/hapijs/code/milestone/25",
+    "version": "5.3.1"
+  },
+  {
+    "date": "2019-03-29T22:05:13Z",
+    "id": 3792164,
+    "issues": [
+      {
+        "id": 427146439,
+        "labels": ["non issue"],
+        "number": 135,
+        "title": "Change module namespace",
+        "url": "https://github.com/hapijs/code/issues/135"
+      }
+    ],
+    "number": 24,
+    "url": "https://github.com/hapijs/code/milestone/24",
+    "version": "5.3.0"
+  },
+  {
+    "date": "2018-11-02T23:38:42Z",
+    "id": 3787411,
+    "issues": [
+      {
+        "id": 376999137,
+        "labels": ["non issue"],
+        "number": 130,
+        "title": "Remove engines",
+        "url": "https://github.com/hapijs/code/issues/130"
+      }
+    ],
+    "number": 23,
+    "url": "https://github.com/hapijs/code/milestone/23",
+    "version": "5.2.3"
+  },
+  {
+    "date": "2018-11-01T07:16:43Z",
+    "id": 3104171,
+    "issues": [
+      {
+        "id": 376280297,
+        "labels": ["dependency"],
+        "number": 129,
+        "title": "Update hoek v6",
+        "url": "https://github.com/hapijs/code/issues/129"
+      }
+    ],
+    "number": 22,
+    "url": "https://github.com/hapijs/code/milestone/22",
+    "version": "5.2.2"
+  },
+  {
+    "date": "2018-02-09T23:15:42Z",
+    "id": 2885256,
+    "issues": [
+      {
+        "id": 295356208,
+        "labels": ["feature"],
+        "number": 124,
+        "title": "Return error when asserting for thrown. Closes #123",
+        "url": "https://github.com/hapijs/code/pull/124"
+      },
+      {
+        "id": 292751326,
+        "labels": ["feature"],
+        "number": 123,
+        "title": "Assertions on error properties",
+        "url": "https://github.com/hapijs/code/issues/123"
+      },
+      {
+        "id": 281221190,
+        "labels": [],
+        "number": 121,
+        "title": "Invalidates rejection with wrong type or message arguments",
+        "url": "https://github.com/hapijs/code/pull/121"
+      },
+      {
+        "id": 276451633,
+        "labels": ["bug"],
+        "number": 119,
+        "title": " reject does not fail if argument is of the wrong type",
+        "url": "https://github.com/hapijs/code/issues/119"
+      }
+    ],
+    "number": 21,
+    "url": "https://github.com/hapijs/code/milestone/21",
+    "version": "5.2.0"
+  },
+  {
+    "date": "2017-11-03T07:01:44Z",
+    "id": 2885255,
+    "issues": [
+      {
+        "id": 270891986,
+        "labels": ["dependency"],
+        "number": 117,
+        "title": "Update dependencies",
+        "url": "https://github.com/hapijs/code/issues/117"
+      }
+    ],
+    "number": 20,
+    "url": "https://github.com/hapijs/code/milestone/20",
+    "version": "5.1.2"
+  },
+  {
+    "date": "2017-11-03T07:01:00Z",
+    "id": 2772250,
+    "issues": [
+      {
+        "id": 268568378,
+        "labels": ["documentation"],
+        "number": 116,
+        "title": "Fix broken API.md anchor",
+        "url": "https://github.com/hapijs/code/pull/116"
+      },
+      {
+        "id": 263809706,
+        "labels": ["bug"],
+        "number": 111,
+        "title": "fix(length): throw decent error on length check of `null`",
+        "url": "https://github.com/hapijs/code/pull/111"
+      },
+      {
+        "id": 263194236,
+        "labels": ["bug"],
+        "number": 110,
+        "title": "Cannot read property 'length' of null",
+        "url": "https://github.com/hapijs/code/issues/110"
+      }
+    ],
+    "number": 19,
+    "url": "https://github.com/hapijs/code/milestone/19",
+    "version": "5.1.1"
+  },
+  {
+    "date": "2017-09-17T20:23:14Z",
+    "id": 2770640,
+    "issues": [
+      {
+        "id": 258305485,
+        "labels": ["feature"],
+        "number": 106,
+        "title": "Allow custom validation function for reject ",
+        "url": "https://github.com/hapijs/code/issues/106"
+      }
+    ],
+    "number": 18,
+    "url": "https://github.com/hapijs/code/milestone/18",
+    "version": "5.1.0"
+  },
+  {
+    "date": "2017-09-17T17:44:30Z",
+    "id": 2154322,
+    "issues": [
+      {
+        "id": 258206365,
+        "labels": ["breaking changes", "feature"],
+        "number": 105,
+        "title": "Add promises rejection support",
+        "url": "https://github.com/hapijs/code/pull/105"
+      },
+      {
+        "id": 242996344,
+        "labels": ["test"],
+        "number": 104,
+        "title": "Add test for async functions",
+        "url": "https://github.com/hapijs/code/issues/104"
+      },
+      {
+        "id": 242931205,
+        "labels": ["bug"],
+        "number": 103,
+        "title": "Expected async function to be a function",
+        "url": "https://github.com/hapijs/code/issues/103"
+      }
+    ],
+    "number": 17,
+    "url": "https://github.com/hapijs/code/milestone/17",
+    "version": "5.0.0"
+  },
+  {
+    "date": "2017-06-08T16:27:08Z",
+    "id": 2020660,
+    "issues": [
+      {
+        "id": 234581841,
+        "labels": ["feature"],
+        "number": 102,
+        "title": "please publish new version",
+        "url": "https://github.com/hapijs/code/pull/102"
+      },
+      {
+        "id": 232672467,
+        "labels": ["feature"],
+        "number": 101,
+        "title": "print expected value on equals assertion",
+        "url": "https://github.com/hapijs/code/pull/101"
+      },
+      {
+        "id": 190300300,
+        "labels": ["feature"],
+        "number": 94,
+        "title": "Reference value NaN assertion.",
+        "url": "https://github.com/hapijs/code/pull/94"
+      }
+    ],
+    "number": 16,
+    "url": "https://github.com/hapijs/code/milestone/16",
+    "version": "4.1.0"
+  },
+  {
+    "date": "2016-09-21T23:41:19Z",
+    "id": 1813415,
+    "issues": [
+      {
+        "id": 177740192,
+        "labels": ["non issue", "support"],
+        "number": 91,
+        "title": "New release?",
+        "url": "https://github.com/hapijs/code/issues/91"
+      },
+      {
+        "id": 176196539,
+        "labels": ["documentation"],
+        "number": 89,
+        "title": "Docs: Modified match API documentation",
+        "url": "https://github.com/hapijs/code/pull/89"
+      },
+      {
+        "id": 174562062,
+        "labels": ["test"],
+        "number": 87,
+        "title": "fix tests for Node v6.5.0",
+        "url": "https://github.com/hapijs/code/pull/87"
+      },
+      {
+        "id": 174060638,
+        "labels": ["test"],
+        "number": 86,
+        "title": "Tests failing on node 6.5.0",
+        "url": "https://github.com/hapijs/code/issues/86"
+      },
+      {
+        "id": 172622658,
+        "labels": ["feature"],
+        "number": 84,
+        "title": "Enhancement: Added validation to `include`",
+        "url": "https://github.com/hapijs/code/pull/84"
+      },
+      {
+        "id": 172621809,
+        "labels": ["feature"],
+        "number": 83,
+        "title": "Include should validate number of arguments",
+        "url": "https://github.com/hapijs/code/issues/83"
+      },
+      {
+        "id": 171472936,
+        "labels": ["test"],
+        "number": 82,
+        "title": "fix broken test from Node v6.4.0 update",
+        "url": "https://github.com/hapijs/code/pull/82"
+      },
+      {
+        "id": 171472622,
+        "labels": ["test"],
+        "number": 81,
+        "title": "Fix broken test",
+        "url": "https://github.com/hapijs/code/issues/81"
+      },
+      {
+        "id": 161157858,
+        "labels": ["bug", "breaking changes"],
+        "number": 77,
+        "title": "Invalidate array of objects with only a partial object value",
+        "url": "https://github.com/hapijs/code/pull/77"
+      }
+    ],
+    "number": 15,
+    "url": "https://github.com/hapijs/code/milestone/15",
+    "version": "4.0.0"
+  },
+  {
+    "date": "2016-06-07T13:16:52Z",
+    "id": 1779944,
+    "issues": [
+      {
+        "id": 158920216,
+        "labels": ["feature"],
+        "number": 75,
+        "title": "Add .npmignore file",
+        "url": "https://github.com/hapijs/code/issues/75"
+      }
+    ],
+    "number": 14,
+    "url": "https://github.com/hapijs/code/milestone/14",
+    "version": "3.0.1"
+  },
+  {
+    "date": "2016-05-21T01:35:27Z",
+    "id": 1752290,
+    "issues": [
+      {
+        "id": 155860523,
+        "labels": ["breaking changes"],
+        "number": 73,
+        "title": "change default comparison behavior",
+        "url": "https://github.com/hapijs/code/pull/73"
+      },
+      {
+        "id": 155842494,
+        "labels": ["documentation"],
+        "number": 72,
+        "title": "Fix link to hoek documentation",
+        "url": "https://github.com/hapijs/code/pull/72"
+      },
+      {
+        "id": 151996071,
+        "labels": ["breaking changes", "feature"],
+        "number": 68,
+        "title": "Default to deep copy",
+        "url": "https://github.com/hapijs/code/issues/68"
+      }
+    ],
+    "number": 13,
+    "url": "https://github.com/hapijs/code/milestone/13",
+    "version": "3.0.0"
+  },
+  {
+    "date": "2016-05-06T19:25:15Z",
+    "id": 1687236,
+    "issues": [
+      {
+        "id": 153516094,
+        "labels": ["bug"],
+        "number": 71,
+        "title": "Fix at location information. Closes #70",
+        "url": "https://github.com/hapijs/code/pull/71"
+      },
+      {
+        "id": 153516021,
+        "labels": ["bug"],
+        "number": 70,
+        "title": "expect(err).to.not.exist() reports wrong 'at' information",
+        "url": "https://github.com/hapijs/code/issues/70"
+      }
+    ],
+    "number": 12,
+    "url": "https://github.com/hapijs/code/milestone/12",
+    "version": "2.3.0"
+  },
+  {
+    "date": "2016-04-06T13:55:11Z",
+    "id": 1687235,
+    "issues": [
+      {
+        "id": 146319291,
+        "labels": ["documentation"],
+        "number": 64,
+        "title": "Add documentation to error() (fixes #63)",
+        "url": "https://github.com/hapijs/code/pull/64"
+      },
+      {
+        "id": 146313145,
+        "labels": ["documentation"],
+        "number": 63,
+        "title": "Document new error() method",
+        "url": "https://github.com/hapijs/code/issues/63"
+      },
+      {
+        "id": 146033514,
+        "labels": ["feature"],
+        "number": 62,
+        "title": "Add error type (fixes #61)",
+        "url": "https://github.com/hapijs/code/pull/62"
+      },
+      {
+        "id": 145984653,
+        "labels": ["feature"],
+        "number": 61,
+        "title": "Proposal: error type",
+        "url": "https://github.com/hapijs/code/issues/61"
+      }
+    ],
+    "number": 11,
+    "url": "https://github.com/hapijs/code/milestone/11",
+    "version": "2.2.0"
+  },
+  {
+    "date": "2016-04-06T13:19:32Z",
+    "id": 1478231,
+    "issues": [
+      {
+        "id": 140221813,
+        "labels": ["bug"],
+        "number": 58,
+        "title": "handle errors without proper stacks",
+        "url": "https://github.com/hapijs/code/pull/58"
+      },
+      {
+        "id": 139856359,
+        "labels": ["bug"],
+        "number": 57,
+        "title": "Problem with internals.at",
+        "url": "https://github.com/hapijs/code/issues/57"
+      },
+      {
+        "id": 135490969,
+        "labels": ["documentation"],
+        "number": 56,
+        "title": "minor typo fix",
+        "url": "https://github.com/hapijs/code/pull/56"
+      },
+      {
+        "id": 124793347,
+        "labels": ["dependency"],
+        "number": 55,
+        "title": "Update dep format for markdown-toc",
+        "url": "https://github.com/hapijs/code/pull/55"
+      },
+      {
+        "id": 124587191,
+        "labels": ["documentation"],
+        "number": 54,
+        "title": "Readme tweaks",
+        "url": "https://github.com/hapijs/code/pull/54"
+      }
+    ],
+    "number": 10,
+    "url": "https://github.com/hapijs/code/milestone/10",
+    "version": "2.1.1"
+  },
+  {
+    "date": "2015-12-30T15:50:42Z",
+    "id": 1386059,
+    "issues": [
+      {
+        "id": 124356320,
+        "labels": ["feature"],
+        "number": 51,
+        "title": "add fail method",
+        "url": "https://github.com/hapijs/code/pull/51"
+      },
+      {
+        "id": 119232498,
+        "labels": ["bug"],
+        "number": 48,
+        "title": "customize error message for once flag",
+        "url": "https://github.com/hapijs/code/pull/48"
+      },
+      {
+        "id": 118779502,
+        "labels": ["bug"],
+        "number": 47,
+        "title": "once flag should change error message",
+        "url": "https://github.com/hapijs/code/issues/47"
+      }
+    ],
+    "number": 9,
+    "url": "https://github.com/hapijs/code/milestone/9",
+    "version": "2.1.0"
+  },
+  {
+    "date": "2015-10-30T19:43:24Z",
+    "id": 1385958,
+    "issues": [
+      {
+        "id": 114329544,
+        "labels": ["dependency"],
+        "number": 45,
+        "title": "Update hapijs/hoek to 3.0.0 from 2.16.3",
+        "url": "https://github.com/hapijs/code/issues/45"
+      }
+    ],
+    "number": 8,
+    "url": "https://github.com/hapijs/code/milestone/8",
+    "version": "2.0.1"
+  },
+  {
+    "date": "2015-10-30T19:43:21Z",
+    "id": 1232572,
+    "issues": [
+      {
+        "id": 114329094,
+        "labels": ["dependency", "feature"],
+        "number": 44,
+        "title": "es6 style. Closes #43",
+        "url": "https://github.com/hapijs/code/pull/44"
+      },
+      {
+        "id": 114328758,
+        "labels": ["dependency", "feature"],
+        "number": 43,
+        "title": "node v4, es6",
+        "url": "https://github.com/hapijs/code/issues/43"
+      },
+      {
+        "id": 103763104,
+        "labels": ["documentation"],
+        "number": 38,
+        "title": "markdown fixes",
+        "url": "https://github.com/hapijs/code/pull/38"
+      },
+      {
+        "id": 103366175,
+        "labels": ["documentation"],
+        "number": 37,
+        "title": "fixed markdown link for equal",
+        "url": "https://github.com/hapijs/code/pull/37"
+      }
+    ],
+    "number": 7,
+    "url": "https://github.com/hapijs/code/milestone/7",
+    "version": "2.0.0"
+  },
+  {
+    "date": "2015-07-29T23:49:49Z",
+    "id": 1167322,
+    "issues": [
+      {
+        "id": 98046772,
+        "labels": ["feature"],
+        "number": 36,
+        "title": "Display error when should not exist. Closes #35",
+        "url": "https://github.com/hapijs/code/pull/36"
+      },
+      {
+        "id": 98046270,
+        "labels": ["feature"],
+        "number": 35,
+        "title": "Throw original error when not.exist(err) is asserted",
+        "url": "https://github.com/hapijs/code/issues/35"
+      },
+      {
+        "id": 90964416,
+        "labels": ["feature"],
+        "number": 32,
+        "title": "Added new global setting to ignore prototypes.",
+        "url": "https://github.com/hapijs/code/pull/32"
+      }
+    ],
+    "number": 6,
+    "url": "https://github.com/hapijs/code/milestone/6",
+    "version": "1.5.0"
+  },
+  {
+    "date": "2015-06-16T19:02:31Z",
+    "id": 1040842,
+    "issues": [
+      {
+        "id": 88804789,
+        "labels": ["bug"],
+        "number": 31,
+        "title": "Handle multi-line errors",
+        "url": "https://github.com/hapijs/code/pull/31"
+      },
+      {
+        "id": 88566890,
+        "labels": ["bug"],
+        "number": 30,
+        "title": "`settings.truncateMessages = false` causes issues with deep object comparisons",
+        "url": "https://github.com/hapijs/code/issues/30"
+      },
+      {
+        "id": 78345232,
+        "labels": ["documentation"],
+        "number": 29,
+        "title": "Fixed the description for the empty() assertion in README.md",
+        "url": "https://github.com/hapijs/code/pull/29"
+      }
+    ],
+    "number": 5,
+    "url": "https://github.com/hapijs/code/milestone/5",
+    "version": "1.4.1"
+  },
+  {
+    "date": "2015-03-27T08:20:56Z",
+    "id": 945734,
+    "issues": [
+      {
+        "id": 64643563,
+        "labels": ["feature"],
+        "number": 28,
+        "title": "Release code 1.4.0",
+        "url": "https://github.com/hapijs/code/pull/28"
+      },
+      {
+        "id": 64641770,
+        "labels": ["documentation"],
+        "number": 27,
+        "title": "Add documentation for global settings",
+        "url": "https://github.com/hapijs/code/pull/27"
+      },
+      {
+        "id": 64631299,
+        "labels": ["feature"],
+        "number": 26,
+        "title": "Add configuration settings, including disabling message truncating",
+        "url": "https://github.com/hapijs/code/pull/26"
+      },
+      {
+        "id": 64080742,
+        "labels": ["feature"],
+        "number": 25,
+        "title": "Allow prototypes to be ignored in deep.equal()",
+        "url": "https://github.com/hapijs/code/pull/25"
+      },
+      {
+        "id": 64079830,
+        "labels": ["feature"],
+        "number": 24,
+        "title": "Allow prototypes to be ignored in deep comparisons",
+        "url": "https://github.com/hapijs/code/issues/24"
+      },
+      {
+        "id": 63805223,
+        "labels": ["bug", "documentation"],
+        "number": 23,
+        "title": "readme typo and better message",
+        "url": "https://github.com/hapijs/code/pull/23"
+      },
+      {
+        "id": 59495622,
+        "labels": ["test"],
+        "number": 18,
+        "title": "Remove Makefile in favor of npm scripts",
+        "url": "https://github.com/hapijs/code/pull/18"
+      },
+      {
+        "id": 59493472,
+        "labels": ["bug"],
+        "number": 17,
+        "title": "Verify deep.equal() functionality after changes to Hoek.deepEqual()",
+        "url": "https://github.com/hapijs/code/pull/17"
+      },
+      {
+        "id": 58510458,
+        "labels": ["bug"],
+        "number": 15,
+        "title": ".to.deep.equal() performs unexpectedly with empty object",
+        "url": "https://github.com/hapijs/code/issues/15"
+      },
+      {
+        "id": 55786623,
+        "labels": ["feature"],
+        "number": 14,
+        "title": "do not truncate values in assertions",
+        "url": "https://github.com/hapijs/code/issues/14"
+      }
+    ],
+    "number": 4,
+    "url": "https://github.com/hapijs/code/milestone/4",
+    "version": "1.4.0"
+  },
+  {
+    "date": "2015-01-21T19:05:41Z",
+    "id": 850240,
+    "issues": [
+      {
+        "id": 55060047,
+        "labels": ["feature"],
+        "number": 13,
+        "title": "code 1.3.0",
+        "url": "https://github.com/hapijs/code/pull/13"
+      },
+      {
+        "id": 54112514,
+        "labels": ["bug"],
+        "number": 11,
+        "title": "Object [object Object] has no method 'startWith'",
+        "url": "https://github.com/hapijs/code/issues/11"
+      },
+      {
+        "id": 50473060,
+        "labels": ["bug"],
+        "number": 10,
+        "title": "Reset flags after each assertion",
+        "url": "https://github.com/hapijs/code/pull/10"
+      },
+      {
+        "id": 47699585,
+        "labels": ["feature"],
+        "number": 6,
+        "title": "Add startsWith and endsWith for URLs.",
+        "url": "https://github.com/hapijs/code/pull/6"
+      }
+    ],
+    "number": 3,
+    "url": "https://github.com/hapijs/code/milestone/3",
+    "version": "1.3.0"
+  },
+  {
+    "date": "2014-11-02T18:59:41Z",
+    "id": 835500,
+    "issues": [
+      {
+        "id": 47544946,
+        "labels": ["bug"],
+        "number": 5,
+        "title": "throw('') matches any message",
+        "url": "https://github.com/hapijs/code/issues/5"
+      }
+    ],
+    "number": 2,
+    "url": "https://github.com/hapijs/code/milestone/2",
+    "version": "1.2.1"
+  },
+  {
+    "date": "2014-10-22T06:14:51Z",
+    "id": 835499,
+    "issues": [
+      {
+        "id": 46476183,
+        "labels": ["feature"],
+        "number": 2,
+        "title": "between()",
+        "url": "https://github.com/hapijs/code/issues/2"
+      }
+    ],
+    "number": 1,
+    "url": "https://github.com/hapijs/code/milestone/1",
+    "version": "1.2.0"
+  }
+]

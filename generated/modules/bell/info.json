@@ -1,0 +1,22 @@
+{
+  "api": true,
+  "forks": 210,
+  "isPlugin": true,
+  "link": "https://github.com/hapijs/bell",
+  "name": "bell",
+  "package": "@hapi/bell",
+  "slogan": "Third-party login plugin for hapi.js.",
+  "sloganHtml": "Third-party login plugin for hapi.js.",
+  "stars": 620,
+  "updated": "2025-03-12T12:09:23Z",
+  "versions": [
+    {
+      "branch": "v13.1.0",
+      "license": "BSD",
+      "name": "13.1.0",
+      "node": ">= 16"
+    }
+  ],
+  "versionsArray": ["13.1.0"],
+  "latestVersion": "13.x.x"
+}

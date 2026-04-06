@@ -1,0 +1,22 @@
+{
+  "api": true,
+  "forks": 26,
+  "isPlugin": false,
+  "link": "https://github.com/hapijs/subtext",
+  "name": "subtext",
+  "package": "@hapi/subtext",
+  "slogan": "HTTP payload parser.",
+  "sloganHtml": "HTTP payload parser.",
+  "stars": 24,
+  "updated": "2026-04-02T08:19:58Z",
+  "versions": [
+    {
+      "branch": "v8.1.2",
+      "license": "BSD",
+      "name": "8.1.2",
+      "node": ">= 16"
+    }
+  ],
+  "versionsArray": ["8.1.2"],
+  "latestVersion": "8.x.x"
+}

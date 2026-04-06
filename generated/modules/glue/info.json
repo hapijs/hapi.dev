@@ -1,0 +1,22 @@
+{
+  "api": true,
+  "forks": 60,
+  "isPlugin": false,
+  "link": "https://github.com/hapijs/glue",
+  "name": "glue",
+  "package": "@hapi/glue",
+  "slogan": "Server composer for hapi.js.",
+  "sloganHtml": "Server composer for hapi.js.",
+  "stars": 244,
+  "updated": "2024-10-23T15:39:45Z",
+  "versions": [
+    {
+      "branch": "v9.0.1",
+      "license": "BSD",
+      "name": "9.0.1",
+      "node": ">= 16"
+    }
+  ],
+  "versionsArray": ["9.0.1"],
+  "latestVersion": "9.x.x"
+}

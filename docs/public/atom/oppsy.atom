@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/oppsy</id>
+    <title>@hapi/oppsy changelog</title>
+    <updated>2020-01-12T04:57:36.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/oppsy"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/oppsy v3.0.0]]></title>
+        <id>https://github.com/hapijs/oppsy/milestone/10</id>
+        <link href="https://hapi.dev/module/oppsy/changelog#3.0.0"/>
+        <updated>2020-01-12T04:57:36.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/oppsy v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/oppsy/issues/27">[#27]</a> Only node 12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/oppsy v2.1.2]]></title>
+        <id>https://github.com/hapijs/oppsy/milestone/9</id>
+        <link href="https://hapi.dev/module/oppsy/changelog#2.1.2"/>
+        <updated>2019-08-15T01:17:58.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/oppsy v2.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/oppsy/issues/23">[#23]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/oppsy v2.1.1]]></title>
+        <id>https://github.com/hapijs/oppsy/milestone/8</id>
+        <link href="https://hapi.dev/module/oppsy/changelog#2.1.1"/>
+        <updated>2019-04-25T16:17:47.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/oppsy v2.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/oppsy/pull/21">[#21]</a> Add missing namespace to hoek dependency</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/oppsy v2.1.0]]></title>
+        <id>https://github.com/hapijs/oppsy/milestone/7</id>
+        <link href="https://hapi.dev/module/oppsy/changelog#2.1.0"/>
+        <updated>2019-04-22T00:18:44.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/oppsy v2.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/oppsy/issues/20">[#20]</a> Change module namespace</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/oppsy v2.0.1]]></title>
+        <id>https://github.com/hapijs/oppsy/milestone/6</id>
+        <link href="https://hapi.dev/module/oppsy/changelog#2.0.1"/>
+        <updated>2019-04-22T00:17:12.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/oppsy v2.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/oppsy/pull/19">[#19]</a> Update Hoek and dev dependencies</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/oppsy v2.0.0]]></title>
+        <id>https://github.com/hapijs/oppsy/milestone/5</id>
+        <link href="https://hapi.dev/module/oppsy/changelog#2.0.0"/>
+        <updated>2017-12-06T13:07:39.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/oppsy v2.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/oppsy/pull/13">[#13]</a> Add cpu process information. Closes #7</li><li><a href="https://github.com/hapijs/oppsy/pull/12">[#12]</a> Migrate to node 8 and async/await</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/oppsy v1.0.3]]></title>
+        <id>https://github.com/hapijs/oppsy/milestone/4</id>
+        <link href="https://hapi.dev/module/oppsy/changelog#1.0.3"/>
+        <updated>2017-12-05T17:48:51.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/oppsy v1.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/oppsy/pull/6">[#6]</a> Fix httpAgent reference assignment</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/oppsy v1.0.2]]></title>
+        <id>https://github.com/hapijs/oppsy/milestone/3</id>
+        <link href="https://hapi.dev/module/oppsy/changelog#1.0.2"/>
+        <updated>2016-08-09T18:07:47.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/oppsy v1.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/oppsy/pull/5">[#5]</a> Test on node v6, update dependencies</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/oppsy v1.0.1]]></title>
+        <id>https://github.com/hapijs/oppsy/milestone/2</id>
+        <link href="https://hapi.dev/module/oppsy/changelog#1.0.1"/>
+        <updated>2015-11-18T16:51:02.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/oppsy v1.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/oppsy/pull/4">[#4]</a> Fixes #2.</li><li><a href="https://github.com/hapijs/oppsy/pull/3">[#3]</a> Bind networkMonitor to _tasks.</li><li><a href="https://github.com/hapijs/oppsy/issues/2">[#2]</a> TypeError: Cannot read property 'connections' of undefined</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/oppsy v1.0.0]]></title>
+        <id>https://github.com/hapijs/oppsy/milestone/1</id>
+        <link href="https://hapi.dev/module/oppsy/changelog#1.0.0"/>
+        <updated>2015-11-18T02:04:13.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/oppsy v1.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/oppsy/pull/1">[#1]</a> Implementation</li></ul>]]></content>
+    </entry>
+</feed>

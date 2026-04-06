@@ -1,0 +1,22 @@
+{
+  "api": true,
+  "forks": 17,
+  "isPlugin": false,
+  "link": "https://github.com/hapijs/catbox-memcached",
+  "name": "catbox-memcached",
+  "package": "@hapi/catbox-memcached",
+  "slogan": "Memcached adaptor for [catbox](https://github.com/hapijs/catbox).",
+  "sloganHtml": "Memcached adaptor for <a href=\"https://github.com/hapijs/catbox\" target=\"_blank\" rel=\"noreferrer\">catbox</a>.",
+  "stars": 11,
+  "updated": "2022-11-06T04:05:12Z",
+  "versions": [
+    {
+      "branch": "v4.0.0",
+      "license": "BSD",
+      "name": "4.0.0",
+      "node": ">= 16"
+    }
+  ],
+  "versionsArray": ["4.0.0"],
+  "latestVersion": "4.x.x"
+}

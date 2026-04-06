@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/catbox-memory</id>
+    <title>@hapi/catbox-memory changelog</title>
+    <updated>2024-06-12T07:47:17.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/catbox-memory"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memory v6.0.2]]></title>
+        <id>https://github.com/hapijs/catbox-memory/milestone/31</id>
+        <link href="https://hapi.dev/module/catbox-memory/changelog#6.0.2"/>
+        <updated>2024-06-12T07:47:17.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memory v6.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memory/pull/90">[#90]</a> feat: 🎸 bring in typings from DT</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memory v6.0.1]]></title>
+        <id>https://github.com/hapijs/catbox-memory/milestone/30</id>
+        <link href="https://hapi.dev/module/catbox-memory/changelog#6.0.1"/>
+        <updated>2023-02-11T20:53:06.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memory v6.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memory/pull/87">[#87]</a> chore: bump hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memory v6.0.0]]></title>
+        <id>https://github.com/hapijs/catbox-memory/milestone/29</id>
+        <link href="https://hapi.dev/module/catbox-memory/changelog#6.0.0"/>
+        <updated>2023-02-11T20:53:04.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memory v6.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memory/pull/86">[#86]</a> Support node v18 and drop node v12, make exports ESM-friendly</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memory v5.0.1]]></title>
+        <id>https://github.com/hapijs/catbox-memory/milestone/27</id>
+        <link href="https://hapi.dev/module/catbox-memory/changelog#5.0.1"/>
+        <updated>2021-04-09T14:32:33.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memory v5.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memory/pull/83">[#83]</a> fix: make class extendable</li><li><a href="https://github.com/hapijs/catbox-memory/pull/81">[#81]</a> upgrade lab to v24</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memory v5.0.0]]></title>
+        <id>https://github.com/hapijs/catbox-memory/milestone/26</id>
+        <link href="https://hapi.dev/module/catbox-memory/changelog#5.0.0"/>
+        <updated>2020-01-04T23:51:40.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memory v5.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memory/issues/77">[#77]</a> Only node 12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memory v4.1.1]]></title>
+        <id>https://github.com/hapijs/catbox-memory/milestone/22</id>
+        <link href="https://hapi.dev/module/catbox-memory/changelog#4.1.1"/>
+        <updated>2019-08-14T05:16:56.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memory v4.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memory/issues/69">[#69]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memory v4.1.0]]></title>
+        <id>https://github.com/hapijs/catbox-memory/milestone/19</id>
+        <link href="https://hapi.dev/module/catbox-memory/changelog#4.1.0"/>
+        <updated>2019-04-02T04:16:28.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memory v4.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memory/issues/66">[#66]</a> Remove allowMixedContent option</li><li><a href="https://github.com/hapijs/catbox-memory/issues/65">[#65]</a> Change module namespace</li><li><a href="https://github.com/hapijs/catbox-memory/issues/64">[#64]</a> Typo _timeDue vs _timerDue</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memory v4.0.1]]></title>
+        <id>https://github.com/hapijs/catbox-memory/milestone/16</id>
+        <link href="https://hapi.dev/module/catbox-memory/changelog#4.0.1"/>
+        <updated>2018-11-03T00:22:37.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memory v4.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memory/issues/61">[#61]</a> Remove engines</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memory v4.0.0]]></title>
+        <id>https://github.com/hapijs/catbox-memory/milestone/15</id>
+        <link href="https://hapi.dev/module/catbox-memory/changelog#4.0.0"/>
+        <updated>2018-11-01T07:55:29.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memory v4.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memory/issues/57">[#57]</a> Update hoek v6</li><li><a href="https://github.com/hapijs/catbox-memory/issues/55">[#55]</a> Buffers can change while in cache</li><li><a href="https://github.com/hapijs/catbox-memory/issues/8">[#8]</a> Large overhead from expires times when highly populated</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memory v3.2.2]]></title>
+        <id>https://github.com/hapijs/catbox-memory/milestone/24</id>
+        <link href="https://hapi.dev/module/catbox-memory/changelog#3.2.2"/>
+        <updated>2020-07-04T19:49:13.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memory v3.2.2]]></summary>
+        <content type="html"><![CDATA[<ul></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memory v3.2.0]]></title>
+        <id>https://github.com/hapijs/catbox-memory/milestone/23</id>
+        <link href="https://hapi.dev/module/catbox-memory/changelog#3.2.0"/>
+        <updated>2019-04-10T20:02:31.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memory v3.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memory/issues/67">[#67]</a> Change module namespace v3</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memory v3.1.4]]></title>
+        <id>https://github.com/hapijs/catbox-memory/milestone/18</id>
+        <link href="https://hapi.dev/module/catbox-memory/changelog#3.1.4"/>
+        <updated>2018-11-03T00:22:38.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memory v3.1.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memory/issues/60">[#60]</a> Remove engines</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memory v3.1.3]]></title>
+        <id>https://github.com/hapijs/catbox-memory/milestone/17</id>
+        <link href="https://hapi.dev/module/catbox-memory/changelog#3.1.3"/>
+        <updated>2018-11-02T23:51:52.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memory v3.1.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memory/issues/58">[#58]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memory v3.1.2]]></title>
+        <id>https://github.com/hapijs/catbox-memory/milestone/14</id>
+        <link href="https://hapi.dev/module/catbox-memory/changelog#3.1.2"/>
+        <updated>2018-03-31T00:21:48.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memory v3.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memory/pull/56">[#56]</a> Remove new Buffer usage</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memory v3.1.1]]></title>
+        <id>https://github.com/hapijs/catbox-memory/milestone/13</id>
+        <link href="https://hapi.dev/module/catbox-memory/changelog#3.1.1"/>
+        <updated>2017-11-03T18:21:08.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memory v3.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memory/issues/54">[#54]</a> Fix new Boom</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memory v3.1.0]]></title>
+        <id>https://github.com/hapijs/catbox-memory/milestone/12</id>
+        <link href="https://hapi.dev/module/catbox-memory/changelog#3.1.0"/>
+        <updated>2017-11-03T06:30:54.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memory v3.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memory/issues/53">[#53]</a> Replace hash with Map</li><li><a href="https://github.com/hapijs/catbox-memory/issues/52">[#52]</a> Sync client for catbox 10</li><li><a href="https://github.com/hapijs/catbox-memory/pull/48">[#48]</a> Use big-time for long timeout support</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memory v3.0.0]]></title>
+        <id>https://github.com/hapijs/catbox-memory/milestone/11</id>
+        <link href="https://hapi.dev/module/catbox-memory/changelog#3.0.0"/>
+        <updated>2017-09-26T08:32:25.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memory v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memory/issues/47">[#47]</a> Node 8</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memory v2.1.0]]></title>
+        <id>https://github.com/hapijs/catbox-memory/milestone/20</id>
+        <link href="https://hapi.dev/module/catbox-memory/changelog#2.1.0"/>
+        <updated>2019-03-24T23:41:01.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memory v2.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memory/issues/63">[#63]</a> Commercial version of v2 branch</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memory v2.0.4]]></title>
+        <id>https://github.com/hapijs/catbox-memory/milestone/10</id>
+        <link href="https://hapi.dev/module/catbox-memory/changelog#2.0.4"/>
+        <updated>2016-10-26T00:31:03.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memory v2.0.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memory/pull/43">[#43]</a> Update deps</li><li><a href="https://github.com/hapijs/catbox-memory/pull/42">[#42]</a> fix: cancel timeouts on drop</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memory v2.0.3]]></title>
+        <id>https://github.com/hapijs/catbox-memory/milestone/9</id>
+        <link href="https://hapi.dev/module/catbox-memory/changelog#2.0.3"/>
+        <updated>2016-06-07T13:53:12.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memory v2.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memory/issues/38">[#38]</a> Add .npmignore</li><li><a href="https://github.com/hapijs/catbox-memory/pull/37">[#37]</a> add note to readme about the limitation of ttl</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memory v2.0.1]]></title>
+        <id>https://github.com/hapijs/catbox-memory/milestone/8</id>
+        <link href="https://hapi.dev/module/catbox-memory/changelog#2.0.1"/>
+        <updated>2015-11-02T14:04:07.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memory v2.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memory/issues/33">[#33]</a> Update hapijs/catbox to 7.0.0</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memory v1.1.2]]></title>
+        <id>https://github.com/hapijs/catbox-memory/milestone/7</id>
+        <link href="https://hapi.dev/module/catbox-memory/changelog#1.1.2"/>
+        <updated>2015-08-18T19:31:47.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memory v1.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memory/pull/32">[#32]</a> v1.1.2</li><li><a href="https://github.com/hapijs/catbox-memory/pull/27">[#27]</a> Clean up timers when the cache is stopped.</li><li><a href="https://github.com/hapijs/catbox-memory/pull/26">[#26]</a> Remove Makefile in favor of npm scripts and enable linting</li><li><a href="https://github.com/hapijs/catbox-memory/pull/24">[#24]</a> add node 0.11 to travis file</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memory v1.1.1]]></title>
+        <id>https://github.com/hapijs/catbox-memory/milestone/6</id>
+        <link href="https://hapi.dev/module/catbox-memory/changelog#1.1.1"/>
+        <updated>2014-10-30T14:33:24.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memory v1.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memory/pull/23">[#23]</a> version 1.1.1. update to catbox 4 and lab 5 (replace chai with code)</li><li><a href="https://github.com/hapijs/catbox-memory/issues/22">[#22]</a> Update to Lab 5</li><li><a href="https://github.com/hapijs/catbox-memory/issues/21">[#21]</a> Update to catbox 4</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memory v1.1.0]]></title>
+        <id>https://github.com/hapijs/catbox-memory/milestone/5</id>
+        <link href="https://hapi.dev/module/catbox-memory/changelog#1.1.0"/>
+        <updated>2014-09-11T17:31:19.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memory v1.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memory/pull/17">[#17]</a> Bump version to 1.1.0</li><li><a href="https://github.com/hapijs/catbox-memory/issues/16">[#16]</a> Release 1.1.0</li><li><a href="https://github.com/hapijs/catbox-memory/pull/15">[#15]</a> Add support for Buffers</li><li><a href="https://github.com/hapijs/catbox-memory/pull/14">[#14]</a> Add build status to README</li><li><a href="https://github.com/hapijs/catbox-memory/issues/13">[#13]</a> Add build status to readme</li><li><a href="https://github.com/hapijs/catbox-memory/pull/12">[#12]</a> Update owner</li><li><a href="https://github.com/hapijs/catbox-memory/pull/5">[#5]</a> Option to store buffer data </li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memory v1.0.5]]></title>
+        <id>https://github.com/hapijs/catbox-memory/milestone/4</id>
+        <link href="https://hapi.dev/module/catbox-memory/changelog#1.0.5"/>
+        <updated>2014-08-15T17:30:16.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memory v1.0.5]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memory/pull/11">[#11]</a> Up version and use lab 4</li><li><a href="https://github.com/hapijs/catbox-memory/pull/10">[#10]</a> Fix total byteSize tracking in connection</li><li><a href="https://github.com/hapijs/catbox-memory/pull/9">[#9]</a> Create named classes for cache objects</li><li><a href="https://github.com/hapijs/catbox-memory/issues/7">[#7]</a> Memory limit does not restrict data size properly</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memory v1.0.4]]></title>
+        <id>https://github.com/hapijs/catbox-memory/milestone/3</id>
+        <link href="https://hapi.dev/module/catbox-memory/changelog#1.0.4"/>
+        <updated>2014-08-03T05:31:39.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memory v1.0.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memory/issues/6">[#6]</a> Rename spumko to hapijs</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memory v1.0.3]]></title>
+        <id>https://github.com/hapijs/catbox-memory/milestone/2</id>
+        <link href="https://hapi.dev/module/catbox-memory/changelog#1.0.3"/>
+        <updated>2014-06-11T05:49:27.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memory v1.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memory/issues/4">[#4]</a> Move large ttl (over 32bit) check from catbox</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memory v1.0.2]]></title>
+        <id>https://github.com/hapijs/catbox-memory/milestone/1</id>
+        <link href="https://hapi.dev/module/catbox-memory/changelog#1.0.2"/>
+        <updated>2014-05-20T21:31:46.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memory v1.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memory/issues/2">[#2]</a> Bring coverage back to 100%</li><li><a href="https://github.com/hapijs/catbox-memory/issues/1">[#1]</a> why peer depend instead of verify in parent</li></ul>]]></content>
+    </entry>
+</feed>

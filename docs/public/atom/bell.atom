@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/bell</id>
+    <title>@hapi/bell changelog</title>
+    <updated>2025-03-12T12:11:47.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/bell"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v13.1.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/91</id>
+        <link href="https://hapi.dev/module/bell/changelog#13.1.0"/>
+        <updated>2025-03-12T12:11:47.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v13.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/497">[#497]</a> Add tokenParams option</li><li><a href="https://github.com/hapijs/bell/pull/496">[#496]</a> chore: remove mixer provider</li><li><a href="https://github.com/hapijs/bell/pull/485">[#485]</a> remove the bit about google plus</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v13.0.2]]></title>
+        <id>https://github.com/hapijs/bell/milestone/90</id>
+        <link href="https://hapi.dev/module/bell/changelog#13.0.2"/>
+        <updated>2024-03-19T15:01:00.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v13.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/493">[#493]</a> feat: 🎸 add types</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v13.0.1]]></title>
+        <id>https://github.com/hapijs/bell/milestone/89</id>
+        <link href="https://hapi.dev/module/bell/changelog#13.0.1"/>
+        <updated>2023-02-11T19:53:36.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v13.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/490">[#490]</a> chore: bump hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v13.0.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/88</id>
+        <link href="https://hapi.dev/module/bell/changelog#13.0.0"/>
+        <updated>2022-10-10T12:22:30.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v13.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/488">[#488]</a> Support hapi v21 and node v18, drop hapi v19 and node v12, test ESM support</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v12.3.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/86</id>
+        <link href="https://hapi.dev/module/bell/changelog#12.3.0"/>
+        <updated>2021-08-26T05:07:21.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v12.3.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/481">[#481]</a> Support OAuth1 client wreck options</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v12.2.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/85</id>
+        <link href="https://hapi.dev/module/bell/changelog#12.2.0"/>
+        <updated>2021-03-15T08:08:24.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v12.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/476">[#476]</a> Add support for providing clientSecret as a function</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v12.1.1]]></title>
+        <id>https://github.com/hapijs/bell/milestone/84</id>
+        <link href="https://hapi.dev/module/bell/changelog#12.1.1"/>
+        <updated>2020-09-27T00:04:14.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v12.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/473">[#473]</a> upgrade lab to v24</li><li><a href="https://github.com/hapijs/bell/pull/470">[#470]</a> migrate to new travis format</li><li><a href="https://github.com/hapijs/bell/pull/469">[#469]</a> [Bugfix] Okta example code</li><li><a href="https://github.com/hapijs/bell/pull/467">[#467]</a> update to hapi 20</li><li><a href="https://github.com/hapijs/bell/pull/466">[#466]</a> upgrade bell to use just regular joi package and update teamwork as well</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v12.1.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/83</id>
+        <link href="https://hapi.dev/module/bell/changelog#12.1.0"/>
+        <updated>2020-08-20T20:22:45.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v12.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/450">[#450]</a> Support Okta custom authorization server</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v12.0.1]]></title>
+        <id>https://github.com/hapijs/bell/milestone/82</id>
+        <link href="https://hapi.dev/module/bell/changelog#12.0.1"/>
+        <updated>2020-05-15T20:29:49.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v12.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/issues/458">[#458]</a> Issue with the meetup provider</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v12.0.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/81</id>
+        <link href="https://hapi.dev/module/bell/changelog#12.0.0"/>
+        <updated>2020-01-10T05:54:33.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v12.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/issues/449">[#449]</a> Change plugin name to @hapi/bell</li><li><a href="https://github.com/hapijs/bell/issues/448">[#448]</a> Require hapi 19</li><li><a href="https://github.com/hapijs/bell/issues/447">[#447]</a> Only node 12</li><li><a href="https://github.com/hapijs/bell/pull/445">[#445]</a> Use actual package name for plugin name</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v11.1.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/80</id>
+        <link href="https://hapi.dev/module/bell/changelog#11.1.0"/>
+        <updated>2019-09-20T05:16:48.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v11.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/issues/432">[#432]</a> Return azureAD provider</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v11.0.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/79</id>
+        <link href="https://hapi.dev/module/bell/changelog#11.0.0"/>
+        <updated>2019-09-13T07:05:49.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v11.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/issues/428">[#428]</a> Make dropbox-v2 the only provider</li><li><a href="https://github.com/hapijs/bell/issues/427">[#427]</a> Replace office365, azuread with updated azure provider</li><li><a href="https://github.com/hapijs/bell/issues/426">[#426]</a> Update joi</li><li><a href="https://github.com/hapijs/bell/issues/420">[#420]</a> Add support for PKCE</li><li><a href="https://github.com/hapijs/bell/pull/418">[#418]</a> New Twitch API oAuth & profile</li><li><a href="https://github.com/hapijs/bell/pull/416">[#416]</a> Update github login example</li><li><a href="https://github.com/hapijs/bell/pull/411">[#411]</a> [Bell-410] Add AWS Cognito provider</li><li><a href="https://github.com/hapijs/bell/issues/410">[#410]</a> Add provider for AWS Cognito</li><li><a href="https://github.com/hapijs/bell/pull/409">[#409]</a> RFC 7636: Proof Key for Code Exchange</li><li><a href="https://github.com/hapijs/bell/pull/404">[#404]</a> Add Azure Oauth2 v2 provider</li><li><a href="https://github.com/hapijs/bell/issues/403">[#403]</a> Correctly utilize JWT tokens instead of normal accessTokens for AzureAD</li><li><a href="https://github.com/hapijs/bell/issues/376">[#376]</a> Update Office365 / Microsoft provider</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v10.1.1]]></title>
+        <id>https://github.com/hapijs/bell/milestone/77</id>
+        <link href="https://hapi.dev/module/bell/changelog#10.1.1"/>
+        <updated>2019-08-14T04:48:02.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v10.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/issues/421">[#421]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v10.1.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/76</id>
+        <link href="https://hapi.dev/module/bell/changelog#10.1.0"/>
+        <updated>2019-04-20T19:54:13.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v10.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/issues/405">[#405]</a> Change module namespace</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v10.0.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/75</id>
+        <link href="https://hapi.dev/module/bell/changelog#10.0.0"/>
+        <updated>2019-03-05T20:39:59.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v10.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/issues/400">[#400]</a> 10.0.0 Release Notes</li><li><a href="https://github.com/hapijs/bell/pull/397">[#397]</a> Add support for hapi 18</li><li><a href="https://github.com/hapijs/bell/issues/394">[#394]</a> Google auth redirect loop with hapi v18</li><li><a href="https://github.com/hapijs/bell/pull/391">[#391]</a> Update LinkedIn to use new lite profile</li><li><a href="https://github.com/hapijs/bell/issues/390">[#390]</a> Upgrade LinkedIn to support new 'Lite Profile'</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v9.6.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/78</id>
+        <link href="https://hapi.dev/module/bell/changelog#9.6.0"/>
+        <updated>2019-04-20T22:20:42.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v9.6.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/issues/406">[#406]</a> Change module namespace for v9 branch</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v9.5.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/74</id>
+        <link href="https://hapi.dev/module/bell/changelog#9.5.0"/>
+        <updated>2019-02-27T18:28:00.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v9.5.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/396">[#396]</a> Allow isSameSite customization</li><li><a href="https://github.com/hapijs/bell/issues/395">[#395]</a> Safari isSameSite</li><li><a href="https://github.com/hapijs/bell/pull/389">[#389]</a> Add changelog.md</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v9.4.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/73</id>
+        <link href="https://hapi.dev/module/bell/changelog#9.4.0"/>
+        <updated>2018-11-10T22:28:07.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v9.4.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/issues/386">[#386]</a> Cleanup</li><li><a href="https://github.com/hapijs/bell/pull/381">[#381]</a> FB custom scope + upgrade api version</li><li><a href="https://github.com/hapijs/bell/pull/374">[#374]</a> Ensure Auth0 profile is availabe in all cases</li><li><a href="https://github.com/hapijs/bell/pull/373">[#373]</a> Use Stripe Express</li><li><a href="https://github.com/hapijs/bell/pull/372">[#372]</a> Add config 'fields' to vk provider</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v9.3.1]]></title>
+        <id>https://github.com/hapijs/bell/milestone/71</id>
+        <link href="https://hapi.dev/module/bell/changelog#9.3.1"/>
+        <updated>2018-05-29T19:00:33.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v9.3.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/358">[#358]</a> Use OIDC compliant profile from Auth0</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v9.3.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/70</id>
+        <link href="https://hapi.dev/module/bell/changelog#9.3.0"/>
+        <updated>2018-04-03T08:01:17.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v9.3.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/356">[#356]</a> fix(package): update Boom and fix trying to create an instance of .internal</li><li><a href="https://github.com/hapijs/bell/pull/355">[#355]</a> Set SameSite=Strict for improved security</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v9.2.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/68</id>
+        <link href="https://hapi.dev/module/bell/changelog#9.2.0"/>
+        <updated>2018-04-02T19:10:36.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v9.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/354">[#354]</a> Remove new Buffer usage</li><li><a href="https://github.com/hapijs/bell/pull/350">[#350]</a> Picture object included in the profile object for facebook oauth</li><li><a href="https://github.com/hapijs/bell/pull/349">[#349]</a> Fix problem with not exist required param 'v' last versitons today 5.…</li><li><a href="https://github.com/hapijs/bell/issues/348">[#348]</a> VK auth dev error: 'v' is required </li><li><a href="https://github.com/hapijs/bell/pull/347">[#347]</a> facebook picture field added to get profile picture</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v9.1.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/67</id>
+        <link href="https://hapi.dev/module/bell/changelog#9.1.0"/>
+        <updated>2018-02-26T06:51:41.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v9.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/issues/295">[#295]</a> Expose query in spite of errors</li><li><a href="https://github.com/hapijs/bell/issues/288">[#288]</a> Remove or more comprehensively document provider.version</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v9.0.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/63</id>
+        <link href="https://hapi.dev/module/bell/changelog#9.0.0"/>
+        <updated>2018-02-26T04:20:11.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v9.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/issues/345">[#345]</a> 9.0.0 Release Notes</li><li><a href="https://github.com/hapijs/bell/pull/332">[#332]</a> [WIP] Hapi 17 Support</li><li><a href="https://github.com/hapijs/bell/issues/330">[#330]</a> hapi v17 support</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v8.9.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/66</id>
+        <link href="https://hapi.dev/module/bell/changelog#8.9.0"/>
+        <updated>2017-11-19T16:41:43.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v8.9.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/325">[#325]</a> Changed the discord providers image url prefix</li><li><a href="https://github.com/hapijs/bell/pull/321">[#321]</a> Add trakt.tv provider</li><li><a href="https://github.com/hapijs/bell/pull/286">[#286]</a> Added custom OAuth2 client authentication</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v8.8.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/65</id>
+        <link href="https://hapi.dev/module/bell/changelog#8.8.0"/>
+        <updated>2017-09-24T21:05:07.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v8.8.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/319">[#319]</a> Allowing the location option to be a function</li><li><a href="https://github.com/hapijs/bell/pull/318">[#318]</a> Add Mixer as a new provider</li><li><a href="https://github.com/hapijs/bell/pull/316">[#316]</a> Add Stripe as a new provider</li><li><a href="https://github.com/hapijs/bell/pull/315">[#315]</a> Add `fields` option to Facebook provider</li><li><a href="https://github.com/hapijs/bell/pull/244">[#244]</a> New dropbox-v2 provider which uses Dropbox V2 API</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v8.7.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/64</id>
+        <link href="https://hapi.dev/module/bell/changelog#8.7.0"/>
+        <updated>2017-05-09T03:28:13.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v8.7.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/312">[#312]</a> add DigitalOcean provider</li><li><a href="https://github.com/hapijs/bell/pull/311">[#311]</a> Updates Facebook API to v2.9</li><li><a href="https://github.com/hapijs/bell/pull/308">[#308]</a> Add `'profile'` to list of default scopes for Okta</li><li><a href="https://github.com/hapijs/bell/pull/303">[#303]</a> Facebook</li><li><a href="https://github.com/hapijs/bell/pull/252">[#252]</a> [Update] Updates Facebook provider to v2.7</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v8.6.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/62</id>
+        <link href="https://hapi.dev/module/bell/changelog#8.6.0"/>
+        <updated>2017-03-24T20:22:14.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v8.6.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/299">[#299]</a> Add support for authentication with Okta</li><li><a href="https://github.com/hapijs/bell/pull/298">[#298]</a> added spotify</li><li><a href="https://github.com/hapijs/bell/pull/273">[#273]</a> Fixes #261 expose OAUTH2 token response as request.auth.artifacts</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v8.5.1]]></title>
+        <id>https://github.com/hapijs/bell/milestone/61</id>
+        <link href="https://hapi.dev/module/bell/changelog#8.5.1"/>
+        <updated>2017-03-24T20:22:22.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v8.5.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/289">[#289]</a> AzureAD: Support email, when userPrincipalName (upn) is not available</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v8.5.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/54</id>
+        <link href="https://hapi.dev/module/bell/changelog#8.5.0"/>
+        <updated>2017-01-24T02:39:32.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v8.5.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/issues/291">[#291]</a> Medium provider</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v8.4.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/60</id>
+        <link href="https://hapi.dev/module/bell/changelog#8.4.0"/>
+        <updated>2016-12-01T03:29:08.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v8.4.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/issues/280">[#280]</a> hapi 16</li><li><a href="https://github.com/hapijs/bell/issues/266">[#266]</a> Implement Azure Active Directory authentication for enterprise AD logins</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v8.3.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/59</id>
+        <link href="https://hapi.dev/module/bell/changelog#8.3.0"/>
+        <updated>2016-10-04T14:36:45.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v8.3.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/267">[#267]</a> Fixes #266 Implements azure active directory as bell azuread module</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v8.2.1]]></title>
+        <id>https://github.com/hapijs/bell/milestone/58</id>
+        <link href="https://hapi.dev/module/bell/changelog#8.2.1"/>
+        <updated>2016-09-21T14:49:02.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v8.2.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/265">[#265]</a> Set isSameSite to false and add code to support Hapi 13.5+</li><li><a href="https://github.com/hapijs/bell/issues/264">[#264]</a> Bell is not compatible with Hapi 15 due to same-site: strict for cookie</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v8.2.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/57</id>
+        <link href="https://hapi.dev/module/bell/changelog#8.2.0"/>
+        <updated>2016-09-07T14:41:01.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v8.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/issues/259">[#259]</a> Support Hapi 15 & upgrade boom + wreck dependencies</li><li><a href="https://github.com/hapijs/bell/pull/256">[#256]</a> allow for leading whitespace in JSON</li><li><a href="https://github.com/hapijs/bell/pull/248">[#248]</a> Add discord as a new provider</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v8.1.1]]></title>
+        <id>https://github.com/hapijs/bell/milestone/56</id>
+        <link href="https://hapi.dev/module/bell/changelog#8.1.1"/>
+        <updated>2016-09-07T14:32:01.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v8.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/254">[#254]</a> fix mapping of google profile fixes #251</li><li><a href="https://github.com/hapijs/bell/issues/251">[#251]</a> Google user info</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v8.1.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/55</id>
+        <link href="https://hapi.dev/module/bell/changelog#8.1.0"/>
+        <updated>2016-08-20T21:39:28.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v8.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/249">[#249]</a> Twitter additional GET parameters on extended profile request</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v8.0.1]]></title>
+        <id>https://github.com/hapijs/bell/milestone/52</id>
+        <link href="https://hapi.dev/module/bell/changelog#8.0.1"/>
+        <updated>2016-07-29T20:27:10.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v8.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/issues/247">[#247]</a> Allow hapi 14</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v8.0.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/34</id>
+        <link href="https://hapi.dev/module/bell/changelog#8.0.0"/>
+        <updated>2016-07-17T20:22:49.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v8.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/issues/243">[#243]</a> Bell 8.0.0 Release Notes</li><li><a href="https://github.com/hapijs/bell/issues/242">[#242]</a> Upgrade Joi dependence to 9.x.x</li><li><a href="https://github.com/hapijs/bell/pull/240">[#240]</a> Fitbit provider</li><li><a href="https://github.com/hapijs/bell/pull/235">[#235]</a> Separate Google into two providers. #228</li><li><a href="https://github.com/hapijs/bell/pull/233">[#233]</a> Allow providerParams to be a method invoked with the request</li><li><a href="https://github.com/hapijs/bell/issues/228">[#228]</a> Remove dependency on Google Plus APIs</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v7.9.3]]></title>
+        <id>https://github.com/hapijs/bell/milestone/51</id>
+        <link href="https://hapi.dev/module/bell/changelog#7.9.3"/>
+        <updated>2016-07-16T10:31:18.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v7.9.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/239">[#239]</a> [Fix] Fixes email address field in LinkedIn</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v7.9.1]]></title>
+        <id>https://github.com/hapijs/bell/milestone/50</id>
+        <link href="https://hapi.dev/module/bell/changelog#7.9.1"/>
+        <updated>2016-06-22T23:36:12.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v7.9.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/issues/237">[#237]</a> Profiles are broken when used directly</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v7.9.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/49</id>
+        <link href="https://hapi.dev/module/bell/changelog#7.9.0"/>
+        <updated>2016-06-19T20:04:09.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v7.9.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/236">[#236]</a> Aphuang2013 patch 1</li><li><a href="https://github.com/hapijs/bell/issues/232">[#232]</a> Update dependencies</li><li><a href="https://github.com/hapijs/bell/pull/231">[#231]</a> Only publish root and lib directory in npm. #230</li><li><a href="https://github.com/hapijs/bell/issues/230">[#230]</a> Only publish root and lib directory in npm</li><li><a href="https://github.com/hapijs/bell/pull/227">[#227]</a> Implemented RSA-SHA1 signatures for OAuth v1</li><li><a href="https://github.com/hapijs/bell/issues/226">[#226]</a> OAuth v1: How to handle RSA-SHA1 signing?</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v7.8.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/47</id>
+        <link href="https://hapi.dev/module/bell/changelog#7.8.0"/>
+        <updated>2016-06-02T05:44:27.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v7.8.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/221">[#221]</a> getMethod option</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v7.7.3]]></title>
+        <id>https://github.com/hapijs/bell/milestone/48</id>
+        <link href="https://hapi.dev/module/bell/changelog#7.7.3"/>
+        <updated>2016-06-02T05:43:01.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v7.7.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/225">[#225]</a> Fix markup to quote URL correctly to avoid infinite redirect</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v7.7.2]]></title>
+        <id>https://github.com/hapijs/bell/milestone/45</id>
+        <link href="https://hapi.dev/module/bell/changelog#7.7.2"/>
+        <updated>2016-06-02T05:37:53.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v7.7.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/224">[#224]</a> Apply the same html redirection logic to oauth v1. Closes #223</li><li><a href="https://github.com/hapijs/bell/issues/223">[#223]</a> OAuth 1.0 missing HTML redirection workaround</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v7.7.1]]></title>
+        <id>https://github.com/hapijs/bell/milestone/46</id>
+        <link href="https://hapi.dev/module/bell/changelog#7.7.1"/>
+        <updated>2016-05-23T22:48:19.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v7.7.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/222">[#222]</a> Upgrade to code 3.x.x</li><li><a href="https://github.com/hapijs/bell/pull/210">[#210]</a> Test with Node 6</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v7.7.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/44</id>
+        <link href="https://hapi.dev/module/bell/changelog#7.7.0"/>
+        <updated>2016-05-23T22:39:29.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v7.7.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/216">[#216]</a> Consistently return node req object in oauth v1 client. Closes #215</li><li><a href="https://github.com/hapijs/bell/issues/215">[#215]</a> Fails to always return the node req object from wreck</li><li><a href="https://github.com/hapijs/bell/pull/213">[#213]</a> Add Pinterest provider</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v7.6.1]]></title>
+        <id>https://github.com/hapijs/bell/milestone/42</id>
+        <link href="https://hapi.dev/module/bell/changelog#7.6.1"/>
+        <updated>2016-04-30T23:30:36.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v7.6.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/208">[#208]</a> Fix Safari CORS with Facebook & potentially other providers</li><li><a href="https://github.com/hapijs/bell/pull/206">[#206]</a> Fix weird error happening when logging in through Facebook on safari …</li><li><a href="https://github.com/hapijs/bell/issues/191">[#191]</a> Can not login with Facebook on Safari</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v7.6.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/43</id>
+        <link href="https://hapi.dev/module/bell/changelog#7.6.0"/>
+        <updated>2016-04-23T15:13:15.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v7.6.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/207">[#207]</a> Add GitLab provider</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v7.5.1]]></title>
+        <id>https://github.com/hapijs/bell/milestone/38</id>
+        <link href="https://hapi.dev/module/bell/changelog#7.5.1"/>
+        <updated>2016-04-17T21:38:46.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v7.5.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/205">[#205]</a> Added appsecret_proof to wordpress provider</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v7.5.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/41</id>
+        <link href="https://hapi.dev/module/bell/changelog#7.5.0"/>
+        <updated>2016-04-16T15:22:07.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v7.5.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/204">[#204]</a> WordPress Provider</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v7.4.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/40</id>
+        <link href="https://hapi.dev/module/bell/changelog#7.4.0"/>
+        <updated>2016-04-10T03:33:48.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v7.4.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/202">[#202]</a> Office365 provider</li></ul>]]></content>
+    </entry>
+</feed>

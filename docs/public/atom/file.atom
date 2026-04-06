@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/file</id>
+    <title>@hapi/file changelog</title>
+    <updated>2022-05-30T23:07:31.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/file"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/file v3.0.0]]></title>
+        <id>https://github.com/hapijs/file/milestone/3</id>
+        <link href="https://hapi.dev/module/file/changelog#3.0.0"/>
+        <updated>2022-05-30T23:07:31.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/file v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/file/pull/14">[#14]</a> Support node v18 and drop node v12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/file v2.0.0]]></title>
+        <id>https://github.com/hapijs/file/milestone/1</id>
+        <link href="https://hapi.dev/module/file/changelog#2.0.0"/>
+        <updated>2020-01-05T05:01:42.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/file v2.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/file/issues/4">[#4]</a> Only node 12</li></ul>]]></content>
+    </entry>
+</feed>

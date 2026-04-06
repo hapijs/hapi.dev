@@ -1,0 +1,795 @@
+[
+  {
+    "date": "2023-08-04T13:48:45Z",
+    "id": 9742713,
+    "issues": [
+      {
+        "id": 1836739907,
+        "labels": ["types"],
+        "number": 217,
+        "title": "fix: correct exported types",
+        "url": "https://github.com/hapijs/vision/pull/217"
+      },
+      {
+        "id": 1752347701,
+        "labels": ["support"],
+        "number": 216,
+        "title": "7.0.2 typing inaccuracies ",
+        "url": "https://github.com/hapijs/vision/issues/216"
+      },
+      {
+        "id": 1729050161,
+        "labels": ["types"],
+        "number": 214,
+        "title": "feat: 🎸 add types from DT",
+        "url": "https://github.com/hapijs/vision/pull/214"
+      }
+    ],
+    "number": 39,
+    "url": "https://github.com/hapijs/vision/milestone/39",
+    "version": "7.0.3"
+  },
+  {
+    "date": "2023-06-09T15:34:48Z",
+    "id": 9519879,
+    "issues": [
+      {
+        "id": 1750083788,
+        "labels": ["types"],
+        "number": 215,
+        "title": "chore: add typings from DT",
+        "url": "https://github.com/hapijs/vision/pull/215"
+      }
+    ],
+    "number": 38,
+    "url": "https://github.com/hapijs/vision/milestone/38",
+    "version": "7.0.2"
+  },
+  {
+    "date": "2023-02-11T19:23:19Z",
+    "id": 8189851,
+    "issues": [
+      {
+        "id": 1551774549,
+        "labels": [],
+        "number": 213,
+        "title": "chore: bump hoek",
+        "url": "https://github.com/hapijs/vision/pull/213"
+      }
+    ],
+    "number": 37,
+    "url": "https://github.com/hapijs/vision/milestone/37",
+    "version": "7.0.1"
+  },
+  {
+    "date": "2022-07-17T21:09:16Z",
+    "id": 8189850,
+    "issues": [
+      {
+        "id": 1302867647,
+        "labels": ["breaking changes", "dependency"],
+        "number": 211,
+        "title": "Support node v18 and hapi v21, drop node v12 and hapi v18/19",
+        "url": "https://github.com/hapijs/vision/pull/211"
+      }
+    ],
+    "number": 36,
+    "url": "https://github.com/hapijs/vision/milestone/36",
+    "version": "7.0.0"
+  },
+  {
+    "date": "2021-05-25T08:09:16Z",
+    "id": 5864356,
+    "issues": [
+      {
+        "id": 772627354,
+        "labels": ["feature"],
+        "number": 205,
+        "title": "Bring back old async support PR",
+        "url": "https://github.com/hapijs/vision/pull/205"
+      },
+      {
+        "id": 709598525,
+        "labels": [],
+        "number": 202,
+        "title": "upgrade lab to v24",
+        "url": "https://github.com/hapijs/vision/pull/202"
+      },
+      {
+        "id": 698110586,
+        "labels": [],
+        "number": 201,
+        "title": "update handlebars dependency",
+        "url": "https://github.com/hapijs/vision/pull/201"
+      },
+      {
+        "id": 406130373,
+        "labels": ["feature"],
+        "number": 177,
+        "title": "Async support",
+        "url": "https://github.com/hapijs/vision/issues/177"
+      }
+    ],
+    "number": 34,
+    "url": "https://github.com/hapijs/vision/milestone/34",
+    "version": "6.1.0"
+  },
+  {
+    "date": "2020-09-10T15:47:49Z",
+    "id": 4987904,
+    "issues": [],
+    "number": 33,
+    "url": "https://github.com/hapijs/vision/milestone/33",
+    "version": "6.0.1"
+  },
+  {
+    "date": "2020-01-10T07:29:42Z",
+    "id": 4987903,
+    "issues": [
+      {
+        "id": 547912161,
+        "labels": ["breaking changes"],
+        "number": 192,
+        "title": "Change plugin name to @hapi/vision",
+        "url": "https://github.com/hapijs/vision/issues/192"
+      },
+      {
+        "id": 547911967,
+        "labels": ["breaking changes"],
+        "number": 191,
+        "title": "Drop hapi 17",
+        "url": "https://github.com/hapijs/vision/issues/191"
+      },
+      {
+        "id": 547179583,
+        "labels": ["breaking changes", "dependency"],
+        "number": 190,
+        "title": "Only node 12",
+        "url": "https://github.com/hapijs/vision/issues/190"
+      }
+    ],
+    "number": 32,
+    "url": "https://github.com/hapijs/vision/milestone/32",
+    "version": "6.0.0"
+  },
+  {
+    "date": "2019-09-12T23:40:47Z",
+    "id": 4574307,
+    "issues": [
+      {
+        "id": 493075029,
+        "labels": ["dependency"],
+        "number": 186,
+        "title": "Update joi",
+        "url": "https://github.com/hapijs/vision/issues/186"
+      }
+    ],
+    "number": 30,
+    "url": "https://github.com/hapijs/vision/milestone/30",
+    "version": "5.5.4"
+  },
+  {
+    "date": "2019-08-15T00:50:30Z",
+    "id": 4219013,
+    "issues": [
+      {
+        "id": 480895562,
+        "labels": ["dependency"],
+        "number": 185,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/vision/issues/185"
+      }
+    ],
+    "number": 29,
+    "url": "https://github.com/hapijs/vision/milestone/29",
+    "version": "5.5.3"
+  },
+  {
+    "date": "2019-04-10T22:17:29Z",
+    "id": 4212652,
+    "issues": [
+      {
+        "id": 431740594,
+        "labels": ["bug"],
+        "number": 182,
+        "title": "Override package name",
+        "url": "https://github.com/hapijs/vision/issues/182"
+      }
+    ],
+    "number": 28,
+    "url": "https://github.com/hapijs/vision/milestone/28",
+    "version": "5.5.2"
+  },
+  {
+    "date": "2019-04-09T06:48:46Z",
+    "id": 4212381,
+    "issues": [
+      {
+        "id": 430795225,
+        "labels": ["test"],
+        "number": 181,
+        "title": "Windows tests",
+        "url": "https://github.com/hapijs/vision/issues/181"
+      }
+    ],
+    "number": 27,
+    "url": "https://github.com/hapijs/vision/milestone/27",
+    "version": "5.5.1"
+  },
+  {
+    "date": "2019-04-09T04:19:48Z",
+    "id": 3903716,
+    "issues": [
+      {
+        "id": 430757958,
+        "labels": ["dependency"],
+        "number": 180,
+        "title": "Change module namespace",
+        "url": "https://github.com/hapijs/vision/issues/180"
+      },
+      {
+        "id": 356717970,
+        "labels": ["bug", "breaking changes"],
+        "number": 165,
+        "title": "Log errors instead of console.warn()",
+        "url": "https://github.com/hapijs/vision/issues/165"
+      }
+    ],
+    "number": 26,
+    "url": "https://github.com/hapijs/vision/milestone/26",
+    "version": "5.5.0"
+  },
+  {
+    "date": "2018-12-15T18:00:05Z",
+    "id": 3802324,
+    "issues": [],
+    "number": 25,
+    "url": "https://github.com/hapijs/vision/milestone/25",
+    "version": "5.4.4"
+  },
+  {
+    "date": "2018-11-07T07:39:19Z",
+    "id": 3788953,
+    "issues": [
+      {
+        "id": 378172366,
+        "labels": ["dependency"],
+        "number": 169,
+        "title": "Use new requirements config",
+        "url": "https://github.com/hapijs/vision/issues/169"
+      }
+    ],
+    "number": 24,
+    "url": "https://github.com/hapijs/vision/milestone/24",
+    "version": "5.4.3"
+  },
+  {
+    "date": "2018-11-01T19:33:18Z",
+    "id": 3787288,
+    "issues": [
+      {
+        "id": 376537509,
+        "labels": ["dependency"],
+        "number": 168,
+        "title": "Update hoek v6",
+        "url": "https://github.com/hapijs/vision/issues/168"
+      }
+    ],
+    "number": 23,
+    "url": "https://github.com/hapijs/vision/milestone/23",
+    "version": "5.4.2"
+  },
+  {
+    "date": "2018-11-01T05:56:08Z",
+    "id": 3604358,
+    "issues": [
+      {
+        "id": 376203939,
+        "labels": ["non issue"],
+        "number": 167,
+        "title": "Cleanup",
+        "url": "https://github.com/hapijs/vision/issues/167"
+      }
+    ],
+    "number": 22,
+    "url": "https://github.com/hapijs/vision/milestone/22",
+    "version": "5.4.1"
+  },
+  {
+    "date": "2018-08-28T15:42:49Z",
+    "id": 3410926,
+    "issues": [],
+    "number": 21,
+    "url": "https://github.com/hapijs/vision/milestone/21",
+    "version": "5.3.4"
+  },
+  {
+    "date": "2018-06-08T13:34:58Z",
+    "id": 3410898,
+    "issues": [],
+    "number": 20,
+    "url": "https://github.com/hapijs/vision/milestone/20",
+    "version": "5.3.3"
+  },
+  {
+    "date": "2018-06-08T13:19:25Z",
+    "id": 3003147,
+    "issues": [
+      {
+        "id": 219607322,
+        "labels": [],
+        "number": 115,
+        "title": "`request.render` does not pass the request to the context function",
+        "url": "https://github.com/hapijs/vision/issues/115"
+      }
+    ],
+    "number": 19,
+    "url": "https://github.com/hapijs/vision/milestone/19",
+    "version": "5.3.1"
+  },
+  {
+    "date": "2017-12-29T01:34:34Z",
+    "id": 2996438,
+    "issues": [
+      {
+        "id": 275180145,
+        "labels": [],
+        "number": 135,
+        "title": "Pass manager options at registration time",
+        "url": "https://github.com/hapijs/vision/pull/135"
+      }
+    ],
+    "number": 18,
+    "url": "https://github.com/hapijs/vision/milestone/18",
+    "version": "5.3.0"
+  },
+  {
+    "date": "2017-12-24T19:31:23Z",
+    "id": 2891916,
+    "issues": [
+      {
+        "id": 273269322,
+        "labels": [],
+        "number": 133,
+        "title": "Update API to hapi v17",
+        "url": "https://github.com/hapijs/vision/issues/133"
+      },
+      {
+        "id": 273158440,
+        "labels": [],
+        "number": 132,
+        "title": "Load partials and helpers before compile if isCached is false",
+        "url": "https://github.com/hapijs/vision/pull/132"
+      },
+      {
+        "id": 271568140,
+        "labels": ["test", "documentation"],
+        "number": 130,
+        "title": "Update docs, tests, and examples to hapi v17",
+        "url": "https://github.com/hapijs/vision/issues/130"
+      },
+      {
+        "id": 208997388,
+        "labels": ["feature"],
+        "number": 110,
+        "title": "Vision never reloads/recompiles partials",
+        "url": "https://github.com/hapijs/vision/issues/110"
+      }
+    ],
+    "number": 17,
+    "url": "https://github.com/hapijs/vision/milestone/17",
+    "version": "5.2.0"
+  },
+  {
+    "date": "2017-11-06T18:06:30Z",
+    "id": 2886816,
+    "issues": [],
+    "number": 16,
+    "url": "https://github.com/hapijs/vision/milestone/16",
+    "version": "5.0.1"
+  },
+  {
+    "date": "2017-11-03T19:48:37Z",
+    "id": 2162618,
+    "issues": [
+      {
+        "id": 271099411,
+        "labels": ["dependency"],
+        "number": 128,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/vision/issues/128"
+      },
+      {
+        "id": 259058689,
+        "labels": ["breaking changes", "feature", "dependency"],
+        "number": 124,
+        "title": "hapi v17",
+        "url": "https://github.com/hapijs/vision/pull/124"
+      }
+    ],
+    "number": 15,
+    "url": "https://github.com/hapijs/vision/milestone/15",
+    "version": "5.0.0"
+  },
+  {
+    "date": "2016-11-29T01:36:33Z",
+    "id": 2162589,
+    "issues": [
+      {
+        "id": 192162108,
+        "labels": ["dependency"],
+        "number": 105,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/vision/issues/105"
+      }
+    ],
+    "number": 14,
+    "url": "https://github.com/hapijs/vision/milestone/14",
+    "version": "4.1.1"
+  },
+  {
+    "date": "2016-11-29T01:14:27Z",
+    "id": 1677130,
+    "issues": [
+      {
+        "id": 145211361,
+        "labels": ["feature"],
+        "number": 82,
+        "title": "Promises",
+        "url": "https://github.com/hapijs/vision/pull/82"
+      },
+      {
+        "id": 145175082,
+        "labels": ["feature"],
+        "number": 81,
+        "title": "Pass request to global context function when available",
+        "url": "https://github.com/hapijs/vision/pull/81"
+      },
+      {
+        "id": 145059890,
+        "labels": ["feature"],
+        "number": 80,
+        "title": "Register rendering helpers programmatically",
+        "url": "https://github.com/hapijs/vision/pull/80"
+      },
+      {
+        "id": 145038587,
+        "labels": ["feature"],
+        "number": 79,
+        "title": "Report errors when loading helpers",
+        "url": "https://github.com/hapijs/vision/pull/79"
+      },
+      {
+        "id": 125349933,
+        "labels": ["feature"],
+        "number": 73,
+        "title": "Send helper parsing error to user",
+        "url": "https://github.com/hapijs/vision/issues/73"
+      },
+      {
+        "id": 121348673,
+        "labels": ["feature"],
+        "number": 68,
+        "title": "Register Helpers programmatically",
+        "url": "https://github.com/hapijs/vision/issues/68"
+      },
+      {
+        "id": 108587280,
+        "labels": ["feature"],
+        "number": 59,
+        "title": "Global context with request argument",
+        "url": "https://github.com/hapijs/vision/issues/59"
+      }
+    ],
+    "number": 13,
+    "url": "https://github.com/hapijs/vision/milestone/13",
+    "version": "4.1.0"
+  },
+  {
+    "date": "2015-11-09T16:30:25Z",
+    "id": 1402486,
+    "issues": [
+      {
+        "id": 115312441,
+        "labels": ["bug"],
+        "number": 67,
+        "title": "Issue with underscore partials and vision",
+        "url": "https://github.com/hapijs/vision/issues/67"
+      }
+    ],
+    "number": 12,
+    "url": "https://github.com/hapijs/vision/milestone/12",
+    "version": "4.0.1"
+  },
+  {
+    "date": "2015-11-09T16:26:02Z",
+    "id": 1387567,
+    "issues": [
+      {
+        "id": 114490028,
+        "labels": ["breaking changes", "dependency"],
+        "number": 66,
+        "title": "ES6 style changes and node v4.",
+        "url": "https://github.com/hapijs/vision/pull/66"
+      },
+      {
+        "id": 113950960,
+        "labels": ["feature"],
+        "number": 65,
+        "title": "Update plugin attributes.",
+        "url": "https://github.com/hapijs/vision/pull/65"
+      },
+      {
+        "id": 109581295,
+        "labels": ["feature"],
+        "number": 63,
+        "title": "Add new attributes: connections: false, once: true",
+        "url": "https://github.com/hapijs/vision/issues/63"
+      }
+    ],
+    "number": 11,
+    "url": "https://github.com/hapijs/vision/milestone/11",
+    "version": "4.0.0"
+  },
+  {
+    "date": "2015-08-16T02:26:19Z",
+    "id": 1215858,
+    "issues": [
+      {
+        "id": 100129229,
+        "labels": ["feature"],
+        "number": 40,
+        "title": "request.render(). Closes #39",
+        "url": "https://github.com/hapijs/vision/pull/40"
+      },
+      {
+        "id": 100128697,
+        "labels": ["feature"],
+        "number": 39,
+        "title": "Add request.render() support",
+        "url": "https://github.com/hapijs/vision/issues/39"
+      },
+      {
+        "id": 98180041,
+        "labels": ["feature"],
+        "number": 37,
+        "title": "Engine initialization.",
+        "url": "https://github.com/hapijs/vision/pull/37"
+      },
+      {
+        "id": 94508236,
+        "labels": ["bug", "breaking changes"],
+        "number": 33,
+        "title": "Make compilation errors available to extensions.",
+        "url": "https://github.com/hapijs/vision/pull/33"
+      },
+      {
+        "id": 93659980,
+        "labels": ["documentation"],
+        "number": 30,
+        "title": "Style cleanup.",
+        "url": "https://github.com/hapijs/vision/pull/30"
+      },
+      {
+        "id": 93412638,
+        "labels": ["dependency"],
+        "number": 28,
+        "title": "Fix lint errors.",
+        "url": "https://github.com/hapijs/vision/pull/28"
+      },
+      {
+        "id": 47936137,
+        "labels": ["bug"],
+        "number": 10,
+        "title": "Verify template and layout files exist in handler",
+        "url": "https://github.com/hapijs/vision/issues/10"
+      }
+    ],
+    "number": 9,
+    "url": "https://github.com/hapijs/vision/milestone/9",
+    "version": "3.0.0"
+  },
+  {
+    "date": "2015-06-21T22:50:47Z",
+    "id": 898090,
+    "issues": [
+      {
+        "id": 78974234,
+        "labels": ["dependency"],
+        "number": 25,
+        "title": "Update dependencies.",
+        "url": "https://github.com/hapijs/vision/pull/25"
+      },
+      {
+        "id": 67964894,
+        "labels": ["bug"],
+        "number": 24,
+        "title": "Ensure _loaderHelpers registers actual filenames",
+        "url": "https://github.com/hapijs/vision/pull/24"
+      },
+      {
+        "id": 58935972,
+        "labels": ["feature"],
+        "number": 22,
+        "title": "Helpful path location checked",
+        "url": "https://github.com/hapijs/vision/pull/22"
+      }
+    ],
+    "number": 7,
+    "url": "https://github.com/hapijs/vision/milestone/7",
+    "version": "2.0.1"
+  },
+  {
+    "date": "2014-12-09T22:48:53Z",
+    "id": 852429,
+    "issues": [
+      {
+        "id": 50442771,
+        "labels": ["feature"],
+        "number": 19,
+        "title": "Jagoda feat multiple paths",
+        "url": "https://github.com/hapijs/vision/pull/19"
+      },
+      {
+        "id": 49288515,
+        "labels": ["breaking changes", "dependency"],
+        "number": 18,
+        "title": "Hapi8",
+        "url": "https://github.com/hapijs/vision/pull/18"
+      },
+      {
+        "id": 48332734,
+        "labels": ["feature"],
+        "number": 15,
+        "title": "Support multiple paths.",
+        "url": "https://github.com/hapijs/vision/pull/15"
+      },
+      {
+        "id": 47811790,
+        "labels": ["feature"],
+        "number": 9,
+        "title": "Multiple paths for views",
+        "url": "https://github.com/hapijs/vision/issues/9"
+      },
+      {
+        "id": 47687213,
+        "labels": ["breaking changes"],
+        "number": 8,
+        "title": "Rename config basePath to relativeTo",
+        "url": "https://github.com/hapijs/vision/issues/8"
+      },
+      {
+        "id": 46843419,
+        "labels": ["bug"],
+        "number": 5,
+        "title": "Replace all of the backslashes in partial names to correctly name deeply nested partials.",
+        "url": "https://github.com/hapijs/vision/pull/5"
+      }
+    ],
+    "number": 5,
+    "url": "https://github.com/hapijs/vision/milestone/5",
+    "version": "2.0.0"
+  },
+  {
+    "date": "2014-11-18T20:21:27Z",
+    "id": 860632,
+    "issues": [
+      {
+        "id": 48640837,
+        "labels": ["bug"],
+        "number": 17,
+        "title": "Fix crash when no global context is supplied, no handler context is supplied, and a layout template is being used",
+        "url": "https://github.com/hapijs/vision/pull/17"
+      },
+      {
+        "id": 48604457,
+        "labels": ["bug"],
+        "number": 16,
+        "title": "404 gives error ",
+        "url": "https://github.com/hapijs/vision/issues/16"
+      }
+    ],
+    "number": 6,
+    "url": "https://github.com/hapijs/vision/milestone/6",
+    "version": "1.2.2"
+  },
+  {
+    "date": "2014-11-10T20:00:27Z",
+    "id": 852428,
+    "issues": [
+      {
+        "id": 48242088,
+        "labels": ["bug", "breaking changes"],
+        "number": 14,
+        "title": "Global context performs deep merge which can produce unexpected results",
+        "url": "https://github.com/hapijs/vision/issues/14"
+      },
+      {
+        "id": 48238948,
+        "labels": ["bug"],
+        "number": 13,
+        "title": "Context is cloned every render() even when there is no global context",
+        "url": "https://github.com/hapijs/vision/issues/13"
+      },
+      {
+        "id": 48238619,
+        "labels": ["bug"],
+        "number": 12,
+        "title": "Schema allows setting global context per engine but not used",
+        "url": "https://github.com/hapijs/vision/issues/12"
+      },
+      {
+        "id": 48237600,
+        "labels": ["bug"],
+        "number": 11,
+        "title": "context should always be cloned shallowly",
+        "url": "https://github.com/hapijs/vision/issues/11"
+      }
+    ],
+    "number": 4,
+    "url": "https://github.com/hapijs/vision/milestone/4",
+    "version": "1.2.1"
+  },
+  {
+    "date": "2014-11-04T08:04:56Z",
+    "id": 819123,
+    "issues": [
+      {
+        "id": 47510923,
+        "labels": ["feature"],
+        "number": 7,
+        "title": "Clean up code styling.",
+        "url": "https://github.com/hapijs/vision/pull/7"
+      },
+      {
+        "id": 47224567,
+        "labels": ["feature"],
+        "number": 6,
+        "title": "Support for global view context",
+        "url": "https://github.com/hapijs/vision/pull/6"
+      },
+      {
+        "id": 46543222,
+        "labels": ["feature"],
+        "number": 4,
+        "title": "Global View Context",
+        "url": "https://github.com/hapijs/vision/issues/4"
+      }
+    ],
+    "number": 3,
+    "url": "https://github.com/hapijs/vision/milestone/3",
+    "version": "1.2.0"
+  },
+  {
+    "date": "2014-10-08T22:20:12Z",
+    "id": 819082,
+    "issues": [
+      {
+        "id": 45304732,
+        "labels": ["feature"],
+        "number": 3,
+        "title": "Allow appending default handler context",
+        "url": "https://github.com/hapijs/vision/issues/3"
+      }
+    ],
+    "number": 2,
+    "url": "https://github.com/hapijs/vision/milestone/2",
+    "version": "1.1.0"
+  },
+  {
+    "date": "2014-10-08T22:01:56Z",
+    "id": 804965,
+    "issues": [
+      {
+        "id": 44306834,
+        "labels": ["test"],
+        "number": 2,
+        "title": "Update Tests",
+        "url": "https://github.com/hapijs/vision/issues/2"
+      }
+    ],
+    "number": 1,
+    "url": "https://github.com/hapijs/vision/milestone/1",
+    "version": "1.0.3"
+  }
+]

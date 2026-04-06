@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/vise</id>
+    <title>@hapi/vise changelog</title>
+    <updated>2023-02-11T17:58:10.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/vise"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/vise v5.0.1]]></title>
+        <id>https://github.com/hapijs/vise/milestone/15</id>
+        <link href="https://hapi.dev/module/vise/changelog#5.0.1"/>
+        <updated>2023-02-11T17:58:10.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/vise v5.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/vise/pull/30">[#30]</a> chore: bump hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/vise v5.0.0]]></title>
+        <id>https://github.com/hapijs/vise/milestone/14</id>
+        <link href="https://hapi.dev/module/vise/changelog#5.0.0"/>
+        <updated>2022-05-23T03:59:44.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/vise v5.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/vise/pull/29">[#29]</a> Support node v18 and drop node v12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/vise v4.0.0]]></title>
+        <id>https://github.com/hapijs/vise/milestone/12</id>
+        <link href="https://hapi.dev/module/vise/changelog#4.0.0"/>
+        <updated>2020-01-05T06:33:19.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/vise v4.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/vise/issues/20">[#20]</a> Only node 12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/vise v3.1.1]]></title>
+        <id>https://github.com/hapijs/vise/milestone/10</id>
+        <link href="https://hapi.dev/module/vise/changelog#3.1.1"/>
+        <updated>2019-08-15T00:57:28.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/vise v3.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/vise/issues/18">[#18]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/vise v3.1.0]]></title>
+        <id>https://github.com/hapijs/vise/milestone/7</id>
+        <link href="https://hapi.dev/module/vise/changelog#3.1.0"/>
+        <updated>2019-04-02T17:43:33.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/vise v3.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/vise/issues/16">[#16]</a> Change module namespace</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/vise v3.0.2]]></title>
+        <id>https://github.com/hapijs/vise/milestone/6</id>
+        <link href="https://hapi.dev/module/vise/changelog#3.0.2"/>
+        <updated>2018-11-03T00:40:42.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/vise v3.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/vise/issues/13">[#13]</a> Remove engines</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/vise v3.0.1]]></title>
+        <id>https://github.com/hapijs/vise/milestone/5</id>
+        <link href="https://hapi.dev/module/vise/changelog#3.0.1"/>
+        <updated>2018-11-01T19:31:13.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/vise v3.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/vise/issues/12">[#12]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/vise v3.0.0]]></title>
+        <id>https://github.com/hapijs/vise/milestone/4</id>
+        <link href="https://hapi.dev/module/vise/changelog#3.0.0"/>
+        <updated>2018-11-01T19:30:44.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/vise v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/vise/issues/10">[#10]</a> Node 8</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/vise v2.1.0]]></title>
+        <id>https://github.com/hapijs/vise/milestone/8</id>
+        <link href="https://hapi.dev/module/vise/changelog#2.1.0"/>
+        <updated>2019-03-25T18:35:09.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/vise v2.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/vise/issues/15">[#15]</a> Commercial version of v2 branch</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/vise v2.0.2]]></title>
+        <id>https://github.com/hapijs/vise/milestone/3</id>
+        <link href="https://hapi.dev/module/vise/changelog#2.0.2"/>
+        <updated>2016-07-28T19:46:31.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/vise v2.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/vise/issues/9">[#9]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/vise v2.0.1]]></title>
+        <id>https://github.com/hapijs/vise/milestone/2</id>
+        <link href="https://hapi.dev/module/vise/changelog#2.0.1"/>
+        <updated>2016-05-05T17:02:07.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/vise v2.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/vise/pull/7">[#7]</a> Fix linting and update node/lab versions</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/vise v2.0.0]]></title>
+        <id>https://github.com/hapijs/vise/milestone/1</id>
+        <link href="https://hapi.dev/module/vise/changelog#2.0.0"/>
+        <updated>2015-11-03T04:12:25.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/vise v2.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/vise/issues/5">[#5]</a> ES6 style changes and node v4</li><li><a href="https://github.com/hapijs/vise/pull/4">[#4]</a> Update to Lab 5.x.x and Code 1.x.x</li><li><a href="https://github.com/hapijs/vise/pull/3">[#3]</a> Update .travis.yml</li></ul>]]></content>
+    </entry>
+</feed>

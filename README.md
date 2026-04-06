@@ -4,44 +4,99 @@
 
 The home of the [hapi.dev](http://hapi.dev) developer portal.
 
-## Running/developing
+Built with [VitePress](https://vitepress.dev), Vue 3, and TypeScript.
 
-* First, clone or download the repo and run ```npm install```.
+## Prerequisites
 
-* Next, you need to make an .env file in the root directory.
+- [Node.js](https://nodejs.org/) v22+
+- [pnpm](https://pnpm.io/)
 
-* Obtain a token from GitHub [here](https://github.com/settings/tokens/new) and select checked scopes only (only two)
+## Setup
 
-  - [ ] **repo**              :   *Full control of private repositories*
-    - [x] **repo status**     :   *Access commit status*
-    - [ ] **repo_deployment** :   *Access deployment status*
-    - [x] **public_repo**     :   *Access public repositories*
-    - [ ] **repo:invite**     :   *Access repository invitations*
+Clone the repo and install dependencies:
 
-* Copy your GitHub token and place it in your .env file by entering:
-```GITHUB_TOKEN = "YOUR TOKEN"```
+```bash
+pnpm install
+```
 
-* Run ```npm run dev``` and go to ```http://localhost:3000``` to view the site. The dev server hot loads, which will automatically show your changes without having to restart the server.
-* Run ```npm run static``` and go to ```http://localhost:3000``` to view the site with the actual resulting /dist folder.
+Create a `.env` file in the root directory with a GitHub token:
 
-* After you make your changes, simply open a pull request.
+```
+GITHUB_TOKEN="YOUR_TOKEN"
+```
 
-## Add a translation for the tutorials
-In the directory `static/lib/tutorials` we have some directories with the name of the languages translated, to add a new translation, simply add a new folder in the `static/lib/tutorials` with your translation.
-An Example, if you translate the tutorials, to Brazilian Portuguese, you must use the `pt_BR` as the name of the directory.
-Inside the directory `pt_BR`, you need to follow the same struture we use in `en_US`, with all tutorials separated in markdown files and an `index.js` file that's export the tutorials and the titles.
-After finish the translations, you also need add your translation in the `index.js` file inside `static/lib/tutorials`.
+You can obtain a token from [GitHub Settings](https://github.com/settings/tokens/new). The token needs these scopes:
+
+- [x] **repo:status** — Access commit status
+- [x] **public_repo** — Access public repositories
+
+## Development
+
+Fetch module data from GitHub and npm:
+
+```bash
+pnpm fetch-data
+```
+
+Start the dev server:
+
+```bash
+pnpm dev
+```
+
+The site will be available at `http://localhost:5173` with hot reload.
+
+## Building
+
+Build the full site (fetch data + static generation):
+
+```bash
+pnpm generate
+```
+
+Preview the built site:
+
+```bash
+pnpm preview
+```
+
+## Project structure
+
+```
+cli/                  # TypeScript CLI for fetching module data from GitHub/npm
+components/           # Vue 3 components
+docs/                 # VitePress markdown pages and static assets
+  ├── api/            # hapi core API docs (dynamic routes)
+  ├── module/         # Module pages (install, API, changelog)
+  ├── tutorials/      # Tutorials in 5 languages (en_US, ko_KR, pt_BR, tr_TR, zh_CN)
+  ├── policies/       # Policy pages
+  ├── resources/      # Resources (changelog, status, books, etc.)
+  └── public/         # Static assets (images, plugins.json)
+generated/            # Auto-generated data (from pnpm fetch-data)
+  ├── metadata/       # modules.json central registry
+  ├── modules/        # Per-module info and changelog JSON
+  └── markdown/       # Raw API docs, changelogs, policies
+.vitepress/           # VitePress config and theme
+```
+
+## Tutorials
+
+Tutorials live in `docs/tutorials/{locale}/` with one markdown file per tutorial. Available locales: `en_US`, `ko_KR`, `pt_BR`, `tr_TR`, `zh_CN`.
+
+To add a new translation, create a directory under `docs/tutorials/` with the locale code (e.g. `fr_FR`) and add markdown files matching the English tutorial filenames.
 
 ## Plugins
-hapijs.com maintains a list of community-created plugins [here](http://hapi.dev/plugins). If there are any plugins you have created or one you use often that isn't listed please send a [pull request](https://github.com/hapijs/hapi.dev/blob/master/static/lib/plugins.json). Please note the existing categories, but if your plugin does not fit one feel free to create your own. Please keep the plugins in alphabetical order to be fair to all contributors.
 
-## Building the docker image
-  - npm install (installs dependencies in order to run the generate)
-  - npm run generate (builds the static dist folder)
-  - npm run docker-build (creates hapi.dev image with just static content)
+hapi.dev maintains a list of community-created plugins at [hapi.dev/plugins](http://hapi.dev/plugins). The plugin data lives in `docs/public/lib/plugins.json`. To add a plugin, send a [pull request](https://github.com/hapijs/hapi.dev/blob/master/docs/public/lib/plugins.json) with your addition. Please keep plugins in alphabetical order within their category.
 
-This builds a static docker image without any secrets. It relies on the dist folder being created from the npm run generate step.
+## Linting and formatting
 
-## Deployment process
+```bash
+pnpm lint          # Run oxlint
+pnpm fmt           # Check formatting with oxfmt
+pnpm test          # Run lint + fmt + TypeScript check
+```
 
-See [DEPLOY.md](DEPLOY.md)
+## Deployment
+
+The site is deployed to [Netlify](https://www.netlify.com). See `netlify.toml` for the build configuration. The build command is `pnpm generate` which fetches data and builds the static site to `dist/`.

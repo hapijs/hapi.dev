@@ -1,0 +1,1357 @@
+[
+  {
+    "date": "2023-02-11T17:44:33Z",
+    "id": 7933499,
+    "issues": [
+      {
+        "id": 1551745414,
+        "labels": ["dependency"],
+        "number": 299,
+        "title": "chore: bump hoek and lab",
+        "url": "https://github.com/hapijs/boom/pull/299"
+      },
+      {
+        "id": 1267469467,
+        "labels": ["bug", "types"],
+        "number": 297,
+        "title": "Document 1st arg can be an Error",
+        "url": "https://github.com/hapijs/boom/pull/297"
+      }
+    ],
+    "number": 69,
+    "url": "https://github.com/hapijs/boom/milestone/69",
+    "version": "10.0.1"
+  },
+  {
+    "date": "2022-05-02T02:47:27Z",
+    "id": 7932377,
+    "issues": [
+      {
+        "id": 1222277974,
+        "labels": ["breaking changes", "dependency"],
+        "number": 295,
+        "title": "Support node v18, drop node v12",
+        "url": "https://github.com/hapijs/boom/pull/295"
+      }
+    ],
+    "number": 68,
+    "url": "https://github.com/hapijs/boom/milestone/68",
+    "version": "10.0.0"
+  },
+  {
+    "date": "2021-08-23T22:23:19Z",
+    "id": 6910115,
+    "issues": [
+      {
+        "id": 974604408,
+        "labels": ["bug"],
+        "number": 289,
+        "title": "fix: make reformat configurable in initialize",
+        "url": "https://github.com/hapijs/boom/pull/289"
+      }
+    ],
+    "number": 66,
+    "url": "https://github.com/hapijs/boom/milestone/66",
+    "version": "9.1.4"
+  },
+  {
+    "date": "2021-07-02T03:23:36Z",
+    "id": 6549940,
+    "issues": [
+      {
+        "id": 933563226,
+        "labels": ["bug"],
+        "number": 286,
+        "title": "Don't mess with instanceof checks called on subclasses",
+        "url": "https://github.com/hapijs/boom/pull/286"
+      },
+      {
+        "id": 933007509,
+        "labels": [],
+        "number": 285,
+        "title": "Extending Boom and unexpected instanceof behavior",
+        "url": "https://github.com/hapijs/boom/issues/285"
+      }
+    ],
+    "number": 64,
+    "url": "https://github.com/hapijs/boom/milestone/64",
+    "version": "9.1.3"
+  },
+  {
+    "date": "2021-03-16T02:10:26Z",
+    "id": 6219480,
+    "issues": [
+      {
+        "id": 830564201,
+        "labels": ["types"],
+        "number": 281,
+        "title": "Add proper index type to headers property",
+        "url": "https://github.com/hapijs/boom/pull/281"
+      }
+    ],
+    "number": 63,
+    "url": "https://github.com/hapijs/boom/milestone/63",
+    "version": "9.1.2"
+  },
+  {
+    "date": "2020-12-16T15:48:27Z",
+    "id": 5193441,
+    "issues": [
+      {
+        "id": 767781175,
+        "labels": ["bug", "types"],
+        "number": 279,
+        "title": "TypeScript: Allow custom properties on output.payload",
+        "url": "https://github.com/hapijs/boom/pull/279"
+      },
+      {
+        "id": 767698884,
+        "labels": ["documentation", "types"],
+        "number": 278,
+        "title": "Clean up d.ts comments",
+        "url": "https://github.com/hapijs/boom/pull/278"
+      },
+      {
+        "id": 760193136,
+        "labels": ["bug", "types"],
+        "number": 277,
+        "title": "output.payload.attributes is not exposed in the .d.ts file",
+        "url": "https://github.com/hapijs/boom/issues/277"
+      },
+      {
+        "id": 752101575,
+        "labels": ["types"],
+        "number": 275,
+        "title": "Make isBoom type definition laxer",
+        "url": "https://github.com/hapijs/boom/pull/275"
+      },
+      {
+        "id": 709585860,
+        "labels": ["dependency"],
+        "number": 273,
+        "title": "upgrade lab to v24 and devDependency of typescript",
+        "url": "https://github.com/hapijs/boom/pull/273"
+      }
+    ],
+    "number": 62,
+    "url": "https://github.com/hapijs/boom/milestone/62",
+    "version": "9.1.1"
+  },
+  {
+    "date": "2020-03-12T03:12:39Z",
+    "id": 4972083,
+    "issues": [
+      {
+        "id": 571681503,
+        "labels": ["feature"],
+        "number": 266,
+        "title": "Add optional statusCode parameter to Boom.isBoom",
+        "url": "https://github.com/hapijs/boom/pull/266"
+      },
+      {
+        "id": 561724306,
+        "labels": ["feature"],
+        "number": 265,
+        "title": "Optional second param for Boom.isBoom() to verify status code",
+        "url": "https://github.com/hapijs/boom/issues/265"
+      }
+    ],
+    "number": 61,
+    "url": "https://github.com/hapijs/boom/milestone/61",
+    "version": "9.1.0"
+  },
+  {
+    "date": "2020-01-04T00:06:35Z",
+    "id": 4972082,
+    "issues": [
+      {
+        "id": 545207986,
+        "labels": ["breaking changes", "dependency"],
+        "number": 262,
+        "title": "Support only node 12",
+        "url": "https://github.com/hapijs/boom/issues/262"
+      },
+      {
+        "id": 544085781,
+        "labels": ["feature"],
+        "number": 261,
+        "title": "Add HTTP code 425 Too Early",
+        "url": "https://github.com/hapijs/boom/pull/261"
+      },
+      {
+        "id": 539758313,
+        "labels": ["bug"],
+        "number": 260,
+        "title": "boom.unathorized adds extra space to string value scheme in WWW-Authenticate header",
+        "url": "https://github.com/hapijs/boom/issues/260"
+      }
+    ],
+    "number": 60,
+    "url": "https://github.com/hapijs/boom/milestone/60",
+    "version": "9.0.0"
+  },
+  {
+    "date": "2019-09-28T05:13:21Z",
+    "id": 4699261,
+    "issues": [
+      {
+        "id": 499724482,
+        "labels": ["breaking changes"],
+        "number": 253,
+        "title": "change new Boom() to new Boom.Boom()",
+        "url": "https://github.com/hapijs/boom/issues/253"
+      },
+      {
+        "id": 499599367,
+        "labels": ["breaking changes", "dependency"],
+        "number": 252,
+        "title": "Drop support for node 8",
+        "url": "https://github.com/hapijs/boom/issues/252"
+      },
+      {
+        "id": 499599110,
+        "labels": ["breaking changes", "types"],
+        "number": 251,
+        "title": "Add types",
+        "url": "https://github.com/hapijs/boom/issues/251"
+      },
+      {
+        "id": 497769486,
+        "labels": ["bug"],
+        "number": 246,
+        "title": "boom doesn't consider message not set directly on error object when deciding whether it is a compatible error",
+        "url": "https://github.com/hapijs/boom/issues/246"
+      }
+    ],
+    "number": 58,
+    "url": "https://github.com/hapijs/boom/milestone/58",
+    "version": "8.0.1"
+  },
+  {
+    "date": "2021-04-21T23:09:44Z",
+    "id": 6685829,
+    "issues": [
+      {
+        "id": 862946328,
+        "labels": ["lts", "commercial"],
+        "number": 282,
+        "title": "Latest v7-commercial release (v7.4.11) is broken",
+        "url": "https://github.com/hapijs/boom/issues/282"
+      }
+    ],
+    "number": 65,
+    "url": "https://github.com/hapijs/boom/milestone/65",
+    "version": "7.4.12"
+  },
+  {
+    "date": "2019-09-27T18:55:27Z",
+    "id": 4684621,
+    "issues": [
+      {
+        "id": 498081326,
+        "labels": ["bug", "types"],
+        "number": 248,
+        "title": "Error TS2709: Cannot use namespace 'Boom' as a type.",
+        "url": "https://github.com/hapijs/boom/issues/248"
+      }
+    ],
+    "number": 56,
+    "url": "https://github.com/hapijs/boom/milestone/56",
+    "version": "7.4.11"
+  },
+  {
+    "date": "2019-09-23T20:34:29Z",
+    "id": 4678666,
+    "issues": [
+      {
+        "id": 497308625,
+        "labels": ["bug", "types"],
+        "number": 245,
+        "title": "Fix default export. Fixes #244.",
+        "url": "https://github.com/hapijs/boom/pull/245"
+      },
+      {
+        "id": 496775580,
+        "labels": ["bug", "types"],
+        "number": 244,
+        "title": "Typescript - can't extend Boom",
+        "url": "https://github.com/hapijs/boom/issues/244"
+      }
+    ],
+    "number": 55,
+    "url": "https://github.com/hapijs/boom/milestone/55",
+    "version": "7.4.10"
+  },
+  {
+    "date": "2019-09-21T00:10:43Z",
+    "id": 4678637,
+    "issues": [
+      {
+        "id": 496589230,
+        "labels": ["bug", "types"],
+        "number": 243,
+        "title": "Improve types",
+        "url": "https://github.com/hapijs/boom/issues/243"
+      }
+    ],
+    "number": 54,
+    "url": "https://github.com/hapijs/boom/milestone/54",
+    "version": "7.4.9"
+  },
+  {
+    "date": "2019-09-20T23:24:43Z",
+    "id": 4676178,
+    "issues": [
+      {
+        "id": 496514428,
+        "labels": ["bug", "types"],
+        "number": 242,
+        "title": "Typescript definitions missing internal()",
+        "url": "https://github.com/hapijs/boom/issues/242"
+      },
+      {
+        "id": 496371436,
+        "labels": ["types"],
+        "number": 241,
+        "title": "Ts fix",
+        "url": "https://github.com/hapijs/boom/pull/241"
+      },
+      {
+        "id": 496323207,
+        "labels": ["types"],
+        "number": 240,
+        "title": "Fix types: Update static isBoom to be a type guard.",
+        "url": "https://github.com/hapijs/boom/pull/240"
+      }
+    ],
+    "number": 53,
+    "url": "https://github.com/hapijs/boom/milestone/53",
+    "version": "7.4.8"
+  },
+  {
+    "date": "2019-09-20T04:15:14Z",
+    "id": 4675831,
+    "issues": [
+      {
+        "id": 496133370,
+        "labels": ["types"],
+        "number": 239,
+        "title": "Missing error properties",
+        "url": "https://github.com/hapijs/boom/issues/239"
+      }
+    ],
+    "number": 52,
+    "url": "https://github.com/hapijs/boom/milestone/52",
+    "version": "7.4.7"
+  },
+  {
+    "date": "2019-09-20T00:24:55Z",
+    "id": 4675380,
+    "issues": [
+      {
+        "id": 496069367,
+        "labels": ["bug", "types"],
+        "number": 238,
+        "title": "Fix types: serviceUnavailable -> serverUnavailable.",
+        "url": "https://github.com/hapijs/boom/pull/238"
+      },
+      {
+        "id": 496066851,
+        "labels": ["bug", "types"],
+        "number": 237,
+        "title": "Types have typo: serverUnavailable -> serviceUnavailable",
+        "url": "https://github.com/hapijs/boom/issues/237"
+      }
+    ],
+    "number": 51,
+    "url": "https://github.com/hapijs/boom/milestone/51",
+    "version": "7.4.6"
+  },
+  {
+    "date": "2019-09-19T21:24:20Z",
+    "id": 4675379,
+    "issues": [
+      {
+        "id": 416336224,
+        "labels": ["bug"],
+        "number": 216,
+        "title": "Handle case of message property with getter-only",
+        "url": "https://github.com/hapijs/boom/issues/216"
+      },
+      {
+        "id": 413019030,
+        "labels": ["bug", "breaking changes"],
+        "number": 215,
+        "title": "`typeof` and `reformat` should not be enumerable",
+        "url": "https://github.com/hapijs/boom/issues/215"
+      }
+    ],
+    "number": 50,
+    "url": "https://github.com/hapijs/boom/milestone/50",
+    "version": "7.4.5"
+  },
+  {
+    "date": "2019-09-19T20:06:00Z",
+    "id": 4571373,
+    "issues": [
+      {
+        "id": 490208139,
+        "labels": ["types"],
+        "number": 233,
+        "title": "Added TS declarations",
+        "url": "https://github.com/hapijs/boom/pull/233"
+      }
+    ],
+    "number": 49,
+    "url": "https://github.com/hapijs/boom/milestone/49",
+    "version": "7.4.4"
+  },
+  {
+    "date": "2019-08-14T04:54:27Z",
+    "id": 4184483,
+    "issues": [
+      {
+        "id": 480479839,
+        "labels": ["dependency"],
+        "number": 229,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/boom/issues/229"
+      }
+    ],
+    "number": 48,
+    "url": "https://github.com/hapijs/boom/milestone/48",
+    "version": "7.4.3"
+  },
+  {
+    "date": "2019-03-29T22:31:08Z",
+    "id": 4184451,
+    "issues": [
+      {
+        "id": 427200874,
+        "labels": ["dependency"],
+        "number": 221,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/boom/issues/221"
+      }
+    ],
+    "number": 47,
+    "url": "https://github.com/hapijs/boom/milestone/47",
+    "version": "7.4.2"
+  },
+  {
+    "date": "2019-03-29T21:48:57Z",
+    "id": 4175361,
+    "issues": [
+      {
+        "id": 427189825,
+        "labels": ["bug"],
+        "number": 220,
+        "title": "Fix dependency",
+        "url": "https://github.com/hapijs/boom/issues/220"
+      }
+    ],
+    "number": 46,
+    "url": "https://github.com/hapijs/boom/milestone/46",
+    "version": "7.4.1"
+  },
+  {
+    "date": "2019-03-27T00:50:55Z",
+    "id": 3856156,
+    "issues": [
+      {
+        "id": 425703084,
+        "labels": ["non issue"],
+        "number": 219,
+        "title": "Change module namespace",
+        "url": "https://github.com/hapijs/boom/issues/219"
+      }
+    ],
+    "number": 42,
+    "url": "https://github.com/hapijs/boom/milestone/42",
+    "version": "7.4.0"
+  },
+  {
+    "date": "2018-11-28T20:33:01Z",
+    "id": 3792170,
+    "issues": [
+      {
+        "id": 385438649,
+        "labels": ["feature"],
+        "number": 211,
+        "title": "add debug mode to reformat()",
+        "url": "https://github.com/hapijs/boom/pull/211"
+      }
+    ],
+    "number": 41,
+    "url": "https://github.com/hapijs/boom/milestone/41",
+    "version": "7.3.0"
+  },
+  {
+    "date": "2018-11-03T00:16:50Z",
+    "id": 3787424,
+    "issues": [
+      {
+        "id": 377000683,
+        "labels": ["non issue"],
+        "number": 208,
+        "title": "Remove engines",
+        "url": "https://github.com/hapijs/boom/issues/208"
+      }
+    ],
+    "number": 40,
+    "url": "https://github.com/hapijs/boom/milestone/40",
+    "version": "7.2.2"
+  },
+  {
+    "date": "2018-11-01T07:28:14Z",
+    "id": 3151282,
+    "issues": [
+      {
+        "id": 376282983,
+        "labels": ["dependency"],
+        "number": 206,
+        "title": "Update hoek v6",
+        "url": "https://github.com/hapijs/boom/issues/206"
+      }
+    ],
+    "number": 39,
+    "url": "https://github.com/hapijs/boom/milestone/39",
+    "version": "7.2.1"
+  },
+  {
+    "date": "2018-02-28T17:43:37Z",
+    "id": 2886640,
+    "issues": [
+      {
+        "id": 300553030,
+        "labels": ["feature"],
+        "number": 188,
+        "title": "424 Failed dependency implementation",
+        "url": "https://github.com/hapijs/boom/pull/188"
+      }
+    ],
+    "number": 38,
+    "url": "https://github.com/hapijs/boom/milestone/38",
+    "version": "7.2.0"
+  },
+  {
+    "date": "2017-11-03T18:05:01Z",
+    "id": 2885272,
+    "issues": [
+      {
+        "id": 271067763,
+        "labels": ["feature", "breaking changes"],
+        "number": 173,
+        "title": "Support instanceof",
+        "url": "https://github.com/hapijs/boom/issues/173"
+      }
+    ],
+    "number": 37,
+    "url": "https://github.com/hapijs/boom/milestone/37",
+    "version": "7.1.1"
+  },
+  {
+    "date": "2017-11-03T07:24:07Z",
+    "id": 2884972,
+    "issues": [
+      {
+        "id": 270895719,
+        "labels": ["feature"],
+        "number": 172,
+        "title": "Add decorate option",
+        "url": "https://github.com/hapijs/boom/issues/172"
+      }
+    ],
+    "number": 36,
+    "url": "https://github.com/hapijs/boom/milestone/36",
+    "version": "7.1.0"
+  },
+  {
+    "date": "2017-11-03T07:24:09Z",
+    "id": 2793807,
+    "issues": [
+      {
+        "id": 270846386,
+        "labels": ["feature", "breaking changes"],
+        "number": 171,
+        "title": "Remove wrap() and create()",
+        "url": "https://github.com/hapijs/boom/issues/171"
+      }
+    ],
+    "number": 35,
+    "url": "https://github.com/hapijs/boom/milestone/35",
+    "version": "7.0.0"
+  },
+  {
+    "date": "2017-09-26T05:23:53Z",
+    "id": 2648780,
+    "issues": [
+      {
+        "id": 260494213,
+        "labels": ["breaking changes"],
+        "number": 165,
+        "title": "Node v8",
+        "url": "https://github.com/hapijs/boom/issues/165"
+      }
+    ],
+    "number": 34,
+    "url": "https://github.com/hapijs/boom/milestone/34",
+    "version": "6.0.0"
+  },
+  {
+    "date": "2019-03-21T23:55:56Z",
+    "id": 4162375,
+    "issues": [
+      {
+        "id": 423988827,
+        "labels": ["bug", "lts"],
+        "number": 218,
+        "title": "Load the commercial version of hoek",
+        "url": "https://github.com/hapijs/boom/issues/218"
+      }
+    ],
+    "number": 44,
+    "url": "https://github.com/hapijs/boom/milestone/44",
+    "version": "5.3.1"
+  },
+  {
+    "date": "2019-03-21T23:30:56Z",
+    "id": 4162374,
+    "issues": [
+      {
+        "id": 423982247,
+        "labels": ["lts"],
+        "number": 217,
+        "title": "Commercial version of v5 branch",
+        "url": "https://github.com/hapijs/boom/issues/217"
+      }
+    ],
+    "number": 43,
+    "url": "https://github.com/hapijs/boom/milestone/43",
+    "version": "5.3.0"
+  },
+  {
+    "date": "2017-07-18T23:45:09Z",
+    "id": 2547227,
+    "issues": [
+      {
+        "id": 239997942,
+        "labels": ["feature"],
+        "number": 160,
+        "title": "Allow decorating a boom error",
+        "url": "https://github.com/hapijs/boom/issues/160"
+      }
+    ],
+    "number": 33,
+    "url": "https://github.com/hapijs/boom/milestone/33",
+    "version": "5.2.0"
+  },
+  {
+    "date": "2017-05-28T21:50:42Z",
+    "id": 2542326,
+    "issues": [
+      {
+        "id": 231896546,
+        "labels": ["bug"],
+        "number": 157,
+        "title": "Hide message on 500 when error is provided as data",
+        "url": "https://github.com/hapijs/boom/issues/157"
+      },
+      {
+        "id": 231751423,
+        "labels": ["feature"],
+        "number": 156,
+        "title": "Added typeOf functionality",
+        "url": "https://github.com/hapijs/boom/pull/156"
+      }
+    ],
+    "number": 32,
+    "url": "https://github.com/hapijs/boom/milestone/32",
+    "version": "5.1.0"
+  },
+  {
+    "date": "2017-05-25T07:53:06Z",
+    "id": 2542280,
+    "issues": [
+      {
+        "id": 230740729,
+        "labels": ["bug", "breaking changes"],
+        "number": 154,
+        "title": "Boom.wrap with a provided message doesn't format the payload",
+        "url": "https://github.com/hapijs/boom/issues/154"
+      },
+      {
+        "id": 222485996,
+        "labels": ["bug"],
+        "number": 152,
+        "title": "Boom.badGateway( string, Boom.anything() )",
+        "url": "https://github.com/hapijs/boom/issues/152"
+      }
+    ],
+    "number": 31,
+    "url": "https://github.com/hapijs/boom/milestone/31",
+    "version": "5.0.0"
+  },
+  {
+    "date": "2017-05-25T07:25:15Z",
+    "id": 2399872,
+    "issues": [
+      {
+        "id": 217548812,
+        "labels": ["bug"],
+        "number": 149,
+        "title": "fix #148 when Boom supplied to wrapper",
+        "url": "https://github.com/hapijs/boom/pull/149"
+      },
+      {
+        "id": 217102706,
+        "labels": ["bug"],
+        "number": 148,
+        "title": "Remove line from wrap function",
+        "url": "https://github.com/hapijs/boom/issues/148"
+      }
+    ],
+    "number": 30,
+    "url": "https://github.com/hapijs/boom/milestone/30",
+    "version": "4.3.1"
+  },
+  {
+    "date": "2017-03-21T07:17:29Z",
+    "id": 2068360,
+    "issues": [
+      {
+        "id": 215549601,
+        "labels": ["feature"],
+        "number": 147,
+        "title": "Unauthorized extension for #146",
+        "url": "https://github.com/hapijs/boom/pull/147"
+      },
+      {
+        "id": 214967535,
+        "labels": ["feature"],
+        "number": 146,
+        "title": "Unauthorized ",
+        "url": "https://github.com/hapijs/boom/issues/146"
+      },
+      {
+        "id": 204346617,
+        "labels": ["bug"],
+        "number": 142,
+        "title": "Boom.wrap never sends custom message to client",
+        "url": "https://github.com/hapijs/boom/issues/142"
+      },
+      {
+        "id": 185506129,
+        "labels": ["feature"],
+        "number": 139,
+        "title": "Adds support for `Boom.someMethod(err)`, closes #138",
+        "url": "https://github.com/hapijs/boom/pull/139"
+      },
+      {
+        "id": 185470520,
+        "labels": ["feature"],
+        "number": 138,
+        "title": "Preservation of `err.name` via `Boom.create` or `Boom[someMethod]`",
+        "url": "https://github.com/hapijs/boom/issues/138"
+      },
+      {
+        "id": 114049946,
+        "labels": ["feature"],
+        "number": 78,
+        "title": "Add Boom.teapot() method with documentation and tests",
+        "url": "https://github.com/hapijs/boom/pull/78"
+      }
+    ],
+    "number": 29,
+    "url": "https://github.com/hapijs/boom/milestone/29",
+    "version": "4.3.0"
+  },
+  {
+    "date": "2016-10-13T16:46:10Z",
+    "id": 2031757,
+    "issues": [
+      {
+        "id": 182656592,
+        "labels": ["feature"],
+        "number": 133,
+        "title": "Add 'allow' parameter to methodNotAllowed for setting 'Allow' header",
+        "url": "https://github.com/hapijs/boom/pull/133"
+      },
+      {
+        "id": 182651855,
+        "labels": [],
+        "number": 132,
+        "title": "405 Method Not Allowed should provide an argument for specifying \"Allow\" header",
+        "url": "https://github.com/hapijs/boom/issues/132"
+      }
+    ],
+    "number": 28,
+    "url": "https://github.com/hapijs/boom/milestone/28",
+    "version": "4.2.0"
+  },
+  {
+    "date": "2016-09-27T13:12:32Z",
+    "id": 1965164,
+    "issues": [
+      {
+        "id": 179486484,
+        "labels": ["feature"],
+        "number": 130,
+        "title": "Add 402 payment required",
+        "url": "https://github.com/hapijs/boom/pull/130"
+      },
+      {
+        "id": 179008177,
+        "labels": ["documentation"],
+        "number": 129,
+        "title": "Add Boom.internal() to API docs fixes #127",
+        "url": "https://github.com/hapijs/boom/pull/129"
+      }
+    ],
+    "number": 27,
+    "url": "https://github.com/hapijs/boom/milestone/27",
+    "version": "4.1.0"
+  },
+  {
+    "date": "2016-08-26T13:43:49Z",
+    "id": 1840726,
+    "issues": [
+      {
+        "id": 173449005,
+        "labels": ["breaking changes"],
+        "number": 125,
+        "title": "Remove deprecated serverTimeout",
+        "url": "https://github.com/hapijs/boom/pull/125"
+      },
+      {
+        "id": 160316238,
+        "labels": ["breaking changes"],
+        "number": 118,
+        "title": "Remove serverTimeout()",
+        "url": "https://github.com/hapijs/boom/issues/118"
+      }
+    ],
+    "number": 26,
+    "url": "https://github.com/hapijs/boom/milestone/26",
+    "version": "4.0.0"
+  },
+  {
+    "date": "2016-06-21T14:29:48Z",
+    "id": 1827906,
+    "issues": [
+      {
+        "id": 161449921,
+        "labels": ["documentation"],
+        "number": 121,
+        "title": "Added .npmignore file.",
+        "url": "https://github.com/hapijs/boom/pull/121"
+      },
+      {
+        "id": 160721752,
+        "labels": [],
+        "number": 119,
+        "title": "Rename serverTimeout to serverUnavailable",
+        "url": "https://github.com/hapijs/boom/pull/119"
+      },
+      {
+        "id": 160315297,
+        "labels": ["bug"],
+        "number": 117,
+        "title": "serverTimeout() should be aliased to serverUnavailable()",
+        "url": "https://github.com/hapijs/boom/issues/117"
+      },
+      {
+        "id": 152302430,
+        "labels": ["documentation"],
+        "number": 108,
+        "title": "Create .npmignore",
+        "url": "https://github.com/hapijs/boom/pull/108"
+      }
+    ],
+    "number": 25,
+    "url": "https://github.com/hapijs/boom/milestone/25",
+    "version": "3.2.2"
+  },
+  {
+    "date": "2016-05-22T19:58:32Z",
+    "id": 1779449,
+    "issues": [
+      {
+        "id": 156160309,
+        "labels": ["test", "dependency"],
+        "number": 113,
+        "title": "Updated to code 3.",
+        "url": "https://github.com/hapijs/boom/pull/113"
+      }
+    ],
+    "number": 24,
+    "url": "https://github.com/hapijs/boom/milestone/24",
+    "version": "3.2.1"
+  },
+  {
+    "date": "2016-05-20T18:05:04Z",
+    "id": 1751616,
+    "issues": [
+      {
+        "id": 155818816,
+        "labels": ["feature"],
+        "number": 112,
+        "title": "Added HTTP code 423 Locked",
+        "url": "https://github.com/hapijs/boom/pull/112"
+      },
+      {
+        "id": 155631685,
+        "labels": ["feature"],
+        "number": 111,
+        "title": "HTTP Error 423 (Locked)",
+        "url": "https://github.com/hapijs/boom/issues/111"
+      }
+    ],
+    "number": 23,
+    "url": "https://github.com/hapijs/boom/milestone/23",
+    "version": "3.2.0"
+  },
+  {
+    "date": "2016-05-06T14:51:15Z",
+    "id": 1534679,
+    "issues": [
+      {
+        "id": 153455676,
+        "labels": ["test", "dependency"],
+        "number": 110,
+        "title": "Added node 6.",
+        "url": "https://github.com/hapijs/boom/pull/110"
+      }
+    ],
+    "number": 22,
+    "url": "https://github.com/hapijs/boom/milestone/22",
+    "version": "3.1.3"
+  },
+  {
+    "date": "2016-01-22T15:06:12Z",
+    "id": 1472820,
+    "issues": [
+      {
+        "id": 124157806,
+        "labels": ["feature"],
+        "number": 97,
+        "title": "Use quotes instead of backticks",
+        "url": "https://github.com/hapijs/boom/pull/97"
+      }
+    ],
+    "number": 21,
+    "url": "https://github.com/hapijs/boom/milestone/21",
+    "version": "3.1.2"
+  },
+  {
+    "date": "2015-12-23T16:54:26Z",
+    "id": 1472790,
+    "issues": [
+      {
+        "id": 123687574,
+        "labels": ["bug"],
+        "number": 95,
+        "title": "Changed prototype logic.",
+        "url": "https://github.com/hapijs/boom/pull/95"
+      }
+    ],
+    "number": 20,
+    "url": "https://github.com/hapijs/boom/milestone/20",
+    "version": "3.1.1"
+  },
+  {
+    "date": "2015-12-23T16:33:16Z",
+    "id": 1386807,
+    "issues": [
+      {
+        "id": 123521339,
+        "labels": ["feature", "documentation"],
+        "number": 94,
+        "title": "Cleanup for 254593fd1d09e79049692675a4f9b7b5108b36d8",
+        "url": "https://github.com/hapijs/boom/pull/94"
+      },
+      {
+        "id": 123498857,
+        "labels": ["documentation"],
+        "number": 93,
+        "title": "Document Illegal",
+        "url": "https://github.com/hapijs/boom/issues/93"
+      },
+      {
+        "id": 123498821,
+        "labels": ["feature"],
+        "number": 92,
+        "title": "Status Code Hash",
+        "url": "https://github.com/hapijs/boom/issues/92"
+      },
+      {
+        "id": 123443152,
+        "labels": ["feature"],
+        "number": 91,
+        "title": "Add new 451 Unavailable For Legal Reasons",
+        "url": "https://github.com/hapijs/boom/pull/91"
+      }
+    ],
+    "number": 19,
+    "url": "https://github.com/hapijs/boom/milestone/19",
+    "version": "3.1.0"
+  },
+  {
+    "date": "2015-10-31T17:24:27Z",
+    "id": 1386022,
+    "issues": [
+      {
+        "id": 114422503,
+        "labels": ["breaking changes"],
+        "number": 83,
+        "title": "es6 style. Closes #77",
+        "url": "https://github.com/hapijs/boom/pull/83"
+      },
+      {
+        "id": 113354828,
+        "labels": ["breaking changes"],
+        "number": 77,
+        "title": "Node 4 Updates",
+        "url": "https://github.com/hapijs/boom/issues/77"
+      }
+    ],
+    "number": 18,
+    "url": "https://github.com/hapijs/boom/milestone/18",
+    "version": "3.0.0"
+  },
+  {
+    "date": "2015-10-30T19:16:41Z",
+    "id": 1377116,
+    "issues": [
+      {
+        "id": 114176578,
+        "labels": ["dependency"],
+        "number": 81,
+        "title": "Upgrade to lab 7.x.x",
+        "url": "https://github.com/hapijs/boom/pull/81"
+      },
+      {
+        "id": 114136243,
+        "labels": ["bug"],
+        "number": 80,
+        "title": "Fix ctor passing in serverError helper",
+        "url": "https://github.com/hapijs/boom/pull/80"
+      },
+      {
+        "id": 114131875,
+        "labels": ["bug"],
+        "number": 79,
+        "title": "Stack trace filtering not working for serverError constructors",
+        "url": "https://github.com/hapijs/boom/issues/79"
+      }
+    ],
+    "number": 17,
+    "url": "https://github.com/hapijs/boom/milestone/17",
+    "version": "2.10.1"
+  },
+  {
+    "date": "2015-10-26T13:28:25Z",
+    "id": 1366912,
+    "issues": [
+      {
+        "id": 112442861,
+        "labels": ["feature"],
+        "number": 75,
+        "title": "Support Precondition Required",
+        "url": "https://github.com/hapijs/boom/pull/75"
+      },
+      {
+        "id": 112426136,
+        "labels": ["feature"],
+        "number": 74,
+        "title": "Precondition required is not supported",
+        "url": "https://github.com/hapijs/boom/issues/74"
+      }
+    ],
+    "number": 16,
+    "url": "https://github.com/hapijs/boom/milestone/16",
+    "version": "2.10.0"
+  },
+  {
+    "date": "2015-10-20T19:08:15Z",
+    "id": 1163434,
+    "issues": [
+      {
+        "id": 106473501,
+        "labels": ["feature"],
+        "number": 68,
+        "title": "Call captureStackTrace to filter boom from traces",
+        "url": "https://github.com/hapijs/boom/pull/68"
+      },
+      {
+        "id": 105686777,
+        "labels": ["feature"],
+        "number": 67,
+        "title": "Use captureStackTrace to remove boom artifacts from stack traces",
+        "url": "https://github.com/hapijs/boom/issues/67"
+      }
+    ],
+    "number": 15,
+    "url": "https://github.com/hapijs/boom/milestone/15",
+    "version": "2.9.0"
+  },
+  {
+    "date": "2015-06-14T01:16:28Z",
+    "id": 1123645,
+    "issues": [
+      {
+        "id": 88066342,
+        "labels": ["feature"],
+        "number": 63,
+        "title": "Unauthorized",
+        "url": "https://github.com/hapijs/boom/pull/63"
+      },
+      {
+        "id": 88063452,
+        "labels": ["feature"],
+        "number": 62,
+        "title": "Expose unauthorized attributes in payload",
+        "url": "https://github.com/hapijs/boom/issues/62"
+      },
+      {
+        "id": 79147216,
+        "labels": [],
+        "number": 60,
+        "title": "Style Cleanup",
+        "url": "https://github.com/hapijs/boom/issues/60"
+      }
+    ],
+    "number": 14,
+    "url": "https://github.com/hapijs/boom/milestone/14",
+    "version": "2.8.0"
+  },
+  {
+    "date": "2015-05-21T16:30:25Z",
+    "id": 1070680,
+    "issues": [
+      {
+        "id": 79054987,
+        "labels": ["documentation"],
+        "number": 59,
+        "title": "Update license attribute",
+        "url": "https://github.com/hapijs/boom/pull/59"
+      }
+    ],
+    "number": 13,
+    "url": "https://github.com/hapijs/boom/milestone/13",
+    "version": "2.7.2"
+  },
+  {
+    "date": "2015-04-16T13:36:47Z",
+    "id": 1048927,
+    "issues": [
+      {
+        "id": 68196669,
+        "labels": ["bug"],
+        "number": 52,
+        "title": "Coerse statusCode to an Integer",
+        "url": "https://github.com/hapijs/boom/pull/52"
+      },
+      {
+        "id": 68192912,
+        "labels": ["bug"],
+        "number": 51,
+        "title": "Make sure Boom initialize method auto cast string statusCode to Integer if possible",
+        "url": "https://github.com/hapijs/boom/issues/51"
+      }
+    ],
+    "number": 12,
+    "url": "https://github.com/hapijs/boom/milestone/12",
+    "version": "2.7.1"
+  },
+  {
+    "date": "2015-04-01T15:13:59Z",
+    "id": 880559,
+    "issues": [
+      {
+        "id": 53408174,
+        "labels": ["feature"],
+        "number": 45,
+        "title": "Added isServer",
+        "url": "https://github.com/hapijs/boom/pull/45"
+      },
+      {
+        "id": 51861738,
+        "labels": ["feature"],
+        "number": 41,
+        "title": "Easy way to determine if the client or server is at fault",
+        "url": "https://github.com/hapijs/boom/issues/41"
+      }
+    ],
+    "number": 11,
+    "url": "https://github.com/hapijs/boom/milestone/11",
+    "version": "2.7.0"
+  },
+  {
+    "date": "2014-11-25T22:40:50Z",
+    "id": 872335,
+    "issues": [
+      {
+        "id": 50094279,
+        "labels": ["dependency"],
+        "number": 40,
+        "title": "Lab 5.0, code 1.0",
+        "url": "https://github.com/hapijs/boom/issues/40"
+      }
+    ],
+    "number": 10,
+    "url": "https://github.com/hapijs/boom/milestone/10",
+    "version": "2.6.1"
+  },
+  {
+    "date": "2014-11-19T05:19:58Z",
+    "id": 829611,
+    "issues": [
+      {
+        "id": 46033418,
+        "labels": ["feature"],
+        "number": 33,
+        "title": "Added status code 429 Too Many Requests.",
+        "url": "https://github.com/hapijs/boom/pull/33"
+      }
+    ],
+    "number": 9,
+    "url": "https://github.com/hapijs/boom/milestone/9",
+    "version": "2.6.0"
+  },
+  {
+    "date": "2014-10-16T23:13:11Z",
+    "id": 740452,
+    "issues": [
+      {
+        "id": 39825884,
+        "labels": ["dependency"],
+        "number": 27,
+        "title": "Update to lab 4.x.x. Bumped version.",
+        "url": "https://github.com/hapijs/boom/pull/27"
+      }
+    ],
+    "number": 8,
+    "url": "https://github.com/hapijs/boom/milestone/8",
+    "version": "2.5.1"
+  },
+  {
+    "date": "2014-08-02T07:11:41Z",
+    "id": 684352,
+    "issues": [
+      {
+        "id": 39344065,
+        "labels": ["documentation"],
+        "number": 26,
+        "title": "Rename spumko to hapijs",
+        "url": "https://github.com/hapijs/boom/issues/26"
+      },
+      {
+        "id": 38568536,
+        "labels": ["feature"],
+        "number": 25,
+        "title": "Add a 422 badData method",
+        "url": "https://github.com/hapijs/boom/pull/25"
+      }
+    ],
+    "number": 7,
+    "url": "https://github.com/hapijs/boom/milestone/7",
+    "version": "2.5.0"
+  },
+  {
+    "date": "2014-06-08T04:50:25Z",
+    "id": 613839,
+    "issues": [
+      {
+        "id": 35228158,
+        "labels": ["bug"],
+        "number": 23,
+        "title": "Default message to http status",
+        "url": "https://github.com/hapijs/boom/issues/23"
+      }
+    ],
+    "number": 5,
+    "url": "https://github.com/hapijs/boom/milestone/5",
+    "version": "2.4.2"
+  },
+  {
+    "date": "2014-04-08T07:33:16Z",
+    "id": 623569,
+    "issues": [
+      {
+        "id": 31048905,
+        "labels": ["feature"],
+        "number": 22,
+        "title": "Upgrade dependencies",
+        "url": "https://github.com/hapijs/boom/issues/22"
+      }
+    ],
+    "number": 6,
+    "url": "https://github.com/hapijs/boom/milestone/6",
+    "version": "2.4.1"
+  },
+  {
+    "date": "2014-03-29T07:12:45Z",
+    "id": 613838,
+    "issues": [
+      {
+        "id": 30438883,
+        "labels": ["feature"],
+        "number": 21,
+        "title": "Allow every helper to set data property",
+        "url": "https://github.com/hapijs/boom/issues/21"
+      }
+    ],
+    "number": 4,
+    "url": "https://github.com/hapijs/boom/milestone/4",
+    "version": "2.4.0"
+  },
+  {
+    "date": "2014-03-29T07:06:21Z",
+    "id": 584489,
+    "issues": [
+      {
+        "id": 30410593,
+        "labels": ["bug"],
+        "number": 20,
+        "title": "Internal errors (500) should never expose err.message",
+        "url": "https://github.com/hapijs/boom/issues/20"
+      }
+    ],
+    "number": 2,
+    "url": "https://github.com/hapijs/boom/milestone/2",
+    "version": "2.3.0"
+  },
+  {
+    "date": "2014-03-06T21:14:18Z",
+    "id": 589824,
+    "issues": [
+      {
+        "id": 28915135,
+        "labels": ["test"],
+        "number": 19,
+        "title": "Bring coverage back to 100% after lab fix",
+        "url": "https://github.com/hapijs/boom/issues/19"
+      }
+    ],
+    "number": 3,
+    "url": "https://github.com/hapijs/boom/milestone/3",
+    "version": "2.2.2"
+  },
+  {
+    "date": "2014-03-01T19:22:33Z",
+    "id": 580325,
+    "issues": [
+      {
+        "id": 28416878,
+        "labels": ["bug"],
+        "number": 17,
+        "title": "Don't override data if user error already have a data attribute",
+        "url": "https://github.com/hapijs/boom/pull/17"
+      }
+    ],
+    "number": 1,
+    "url": "https://github.com/hapijs/boom/milestone/1",
+    "version": "2.2.1"
+  }
+]

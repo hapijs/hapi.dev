@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/wreck</id>
+    <title>@hapi/wreck changelog</title>
+    <updated>2024-04-10T17:38:08.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/wreck"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v18.1.0]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/78</id>
+        <link href="https://hapi.dev/module/wreck/changelog#18.1.0"/>
+        <updated>2024-04-10T17:38:08.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v18.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/issues/309">[#309]</a> support custom lookup function in request() </li><li><a href="https://github.com/hapijs/wreck/pull/308">[#308]</a> support custom lookup function in request()</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v18.0.2]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/77</id>
+        <link href="https://hapi.dev/module/wreck/changelog#18.0.2"/>
+        <updated>2024-04-10T17:30:20.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v18.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/pull/310">[#310]</a> Optimize header toLowerCasing</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v18.0.1]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/76</id>
+        <link href="https://hapi.dev/module/wreck/changelog#18.0.1"/>
+        <updated>2023-02-11T19:15:45.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v18.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/pull/299">[#299]</a> chore: bump hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v18.0.0]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/75</id>
+        <link href="https://hapi.dev/module/wreck/changelog#18.0.0"/>
+        <updated>2022-05-07T22:42:04.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v18.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/pull/296">[#296]</a> Support node v18 and drop node v12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v17.2.0]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/73</id>
+        <link href="https://hapi.dev/module/wreck/changelog#17.2.0"/>
+        <updated>2022-05-07T01:40:01.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v17.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/pull/295">[#295]</a> [CI] Cancel redirect request</li><li><a href="https://github.com/hapijs/wreck/pull/292">[#292]</a> strip authorization and cookie headers when redirecting to a new hostname</li><li><a href="https://github.com/hapijs/wreck/pull/287">[#287]</a> Cancel redirect request</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v17.1.0]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/71</id>
+        <link href="https://hapi.dev/module/wreck/changelog#17.1.0"/>
+        <updated>2020-11-23T23:11:10.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v17.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/pull/283">[#283]</a> Create ci-module.yml</li><li><a href="https://github.com/hapijs/wreck/pull/281">[#281]</a> added IPv6 support</li><li><a href="https://github.com/hapijs/wreck/pull/280">[#280]</a> upgrade lab to v24 and devDependency of typescript</li><li><a href="https://github.com/hapijs/wreck/issues/276">[#276]</a> Unable to GET a server that listens to IPv6 address. ETIMEDOUT</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v17.0.0]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/70</id>
+        <link href="https://hapi.dev/module/wreck/changelog#17.0.0"/>
+        <updated>2020-01-04T21:06:07.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v17.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/issues/270">[#270]</a> Only node 12</li><li><a href="https://github.com/hapijs/wreck/pull/267">[#267]</a> Refactor early abort detection to use the 'abort' event</li><li><a href="https://github.com/hapijs/wreck/pull/266">[#266]</a> Don't set redirected host header</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v16.0.1]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/68</id>
+        <link href="https://hapi.dev/module/wreck/changelog#16.0.1"/>
+        <updated>2019-10-15T00:16:13.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v16.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/issues/264">[#264]</a> Allow any readable stream in read()</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v16.0.0]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/67</id>
+        <link href="https://hapi.dev/module/wreck/changelog#16.0.0"/>
+        <updated>2019-10-15T00:02:12.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v16.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/issues/263">[#263]</a> Add types</li><li><a href="https://github.com/hapijs/wreck/issues/262">[#262]</a> Drop node 8</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v15.1.0]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/64</id>
+        <link href="https://hapi.dev/module/wreck/changelog#15.1.0"/>
+        <updated>2019-09-18T19:00:00.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v15.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/issues/254">[#254]</a> 'abort' event</li><li><a href="https://github.com/hapijs/wreck/pull/252">[#252]</a> Respect uri parameter when using socketPath</li><li><a href="https://github.com/hapijs/wreck/pull/250">[#250]</a> memory leak issue</li><li><a href="https://github.com/hapijs/wreck/issues/248">[#248]</a> Change redirect method in `beforeRedirect`</li><li><a href="https://github.com/hapijs/wreck/pull/247">[#247]</a> Return an empty buffer payload on text content-type rather than `null`</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v15.0.2]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/63</id>
+        <link href="https://hapi.dev/module/wreck/changelog#15.0.2"/>
+        <updated>2019-08-15T00:45:46.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v15.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/issues/256">[#256]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v15.0.1]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/62</id>
+        <link href="https://hapi.dev/module/wreck/changelog#15.0.1"/>
+        <updated>2019-04-16T07:02:25.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v15.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/pull/246">[#246]</a> Explicit host header trumps host implied in url</li><li><a href="https://github.com/hapijs/wreck/issues/245">[#245]</a> An explicit host header is ignored if the request url has no implicit host</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v15.0.0]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/59</id>
+        <link href="https://hapi.dev/module/wreck/changelog#15.0.0"/>
+        <updated>2019-04-01T15:35:32.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v15.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/issues/244">[#244]</a> 15.0.0 Release Notes</li><li><a href="https://github.com/hapijs/wreck/issues/243">[#243]</a> Change module namespace</li><li><a href="https://github.com/hapijs/wreck/pull/242">[#242]</a> Remove usage of deprecated url.Parse</li><li><a href="https://github.com/hapijs/wreck/pull/235">[#235]</a> Introduce new preRequest event and emit request on request event</li><li><a href="https://github.com/hapijs/wreck/issues/209">[#209]</a> Shouldn't request event emit request object?</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v14.2.0]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/58</id>
+        <link href="https://hapi.dev/module/wreck/changelog#14.2.0"/>
+        <updated>2019-03-05T22:32:13.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v14.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/pull/240">[#240]</a> Update eslint md dev dep</li><li><a href="https://github.com/hapijs/wreck/pull/239">[#239]</a> Whatwg url</li><li><a href="https://github.com/hapijs/wreck/issues/238">[#238]</a> Can Wreck parse urls with the WHATWG Url?</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v14.1.4]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/57</id>
+        <link href="https://hapi.dev/module/wreck/changelog#14.1.4"/>
+        <updated>2019-02-08T20:20:41.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v14.1.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/issues/236">[#236]</a> Protect against prototype poisoning</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v14.1.3]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/56</id>
+        <link href="https://hapi.dev/module/wreck/changelog#14.1.3"/>
+        <updated>2018-11-03T00:41:45.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v14.1.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/issues/231">[#231]</a> Remove engines</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v14.1.2]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/55</id>
+        <link href="https://hapi.dev/module/wreck/changelog#14.1.2"/>
+        <updated>2018-11-01T19:38:31.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v14.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/issues/230">[#230]</a> Update hoek v6</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v14.1.1]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/54</id>
+        <link href="https://hapi.dev/module/wreck/changelog#14.1.1"/>
+        <updated>2018-10-31T05:49:04.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v14.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/issues/229">[#229]</a> Cleanup</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v14.1.0]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/53</id>
+        <link href="https://hapi.dev/module/wreck/changelog#14.1.0"/>
+        <updated>2018-08-21T18:24:32.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v14.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/pull/226">[#226]</a> Handle edge cases introduced with deferred payload piping</li><li><a href="https://github.com/hapijs/wreck/pull/225">[#225]</a> Handle stream payload errors before socket connection</li><li><a href="https://github.com/hapijs/wreck/pull/224">[#224]</a> Workaround node 10 regression</li><li><a href="https://github.com/hapijs/wreck/pull/223">[#223]</a>  Defer piping of options.payload until socket connection</li><li><a href="https://github.com/hapijs/wreck/issues/222">[#222]</a> Investigate only piping the payload after a connection is established</li><li><a href="https://github.com/hapijs/wreck/pull/218">[#218]</a> Remove new Buffer usage</li><li><a href="https://github.com/hapijs/wreck/pull/215">[#215]</a> test(request) correct tests to check errors for boom instance</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v14.0.2]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/52</id>
+        <link href="https://hapi.dev/module/wreck/changelog#14.0.2"/>
+        <updated>2017-11-03T18:41:17.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v14.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/issues/208">[#208]</a> Fix new Boom</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v14.0.1]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/51</id>
+        <link href="https://hapi.dev/module/wreck/changelog#14.0.1"/>
+        <updated>2017-11-03T18:40:55.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v14.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/issues/207">[#207]</a> Update deps</li><li><a href="https://github.com/hapijs/wreck/pull/206">[#206]</a> Upgrade to lab 15</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v14.0.0]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/50</id>
+        <link href="https://hapi.dev/module/wreck/changelog#14.0.0"/>
+        <updated>2017-10-21T16:25:23.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v14.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/pull/205">[#205]</a> Change maxBytes error to 413</li><li><a href="https://github.com/hapijs/wreck/pull/204">[#204]</a> Cleanup and lint readme</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v13.0.3]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/48</id>
+        <link href="https://hapi.dev/module/wreck/changelog#13.0.3"/>
+        <updated>2017-09-26T09:16:22.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v13.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/issues/202">[#202]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v13.0.2]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/47</id>
+        <link href="https://hapi.dev/module/wreck/changelog#13.0.2"/>
+        <updated>2017-09-25T14:52:30.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v13.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/pull/199">[#199]</a> Return errors for partial payload transfers</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v13.0.1]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/46</id>
+        <link href="https://hapi.dev/module/wreck/changelog#13.0.1"/>
+        <updated>2017-09-18T22:02:39.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v13.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/issues/198">[#198]</a> Retain boom errors from response stream on read()</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v13.0.0]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/45</id>
+        <link href="https://hapi.dev/module/wreck/changelog#13.0.0"/>
+        <updated>2017-09-18T00:17:55.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v13.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/pull/197">[#197]</a> Move to use async functions</li><li><a href="https://github.com/hapijs/wreck/issues/196">[#196]</a> Migrate to async/await</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v12.6.1]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/61</id>
+        <link href="https://hapi.dev/module/wreck/changelog#12.6.1"/>
+        <updated>2019-09-18T19:05:07.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v12.6.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/issues/258">[#258]</a> Backport #250 </li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v12.6.0]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/60</id>
+        <link href="https://hapi.dev/module/wreck/changelog#12.6.0"/>
+        <updated>2019-03-22T01:16:26.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v12.6.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/issues/241">[#241]</a> Commercial version of v12 branch</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v12.5.1]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/49</id>
+        <link href="https://hapi.dev/module/wreck/changelog#12.5.1"/>
+        <updated>2017-09-25T15:38:09.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v12.5.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/issues/201">[#201]</a> Return errors for partial payload transfers</li><li><a href="https://github.com/hapijs/wreck/pull/200">[#200]</a> version 12.5.1</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v12.5.0]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/44</id>
+        <link href="https://hapi.dev/module/wreck/changelog#12.5.0"/>
+        <updated>2017-09-07T16:27:31.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v12.5.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/pull/195">[#195]</a> closes #194 - support for a list of TLS ciphers</li><li><a href="https://github.com/hapijs/wreck/issues/194">[#194]</a> Add support for specifying the TLS ciphers list</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v12.4.0]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/43</id>
+        <link href="https://hapi.dev/module/wreck/changelog#12.4.0"/>
+        <updated>2017-09-01T15:01:21.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v12.4.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/pull/193">[#193]</a> Add onRequest to request options</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v12.3.0]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/42</id>
+        <link href="https://hapi.dev/module/wreck/changelog#12.3.0"/>
+        <updated>2017-09-01T02:56:08.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v12.3.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/pull/192">[#192]</a> Add a gunzipping option</li><li><a href="https://github.com/hapijs/wreck/pull/190">[#190]</a> Add "strict" json option</li><li><a href="https://github.com/hapijs/wreck/issues/186">[#186]</a> Add "strict" json option</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v12.2.3]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/41</id>
+        <link href="https://hapi.dev/module/wreck/changelog#12.2.3"/>
+        <updated>2017-08-10T17:14:15.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v12.2.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/pull/189">[#189]</a> Fix possible content-type header duplication</li><li><a href="https://github.com/hapijs/wreck/issues/188">[#188]</a> Possible `content-type` header duplication</li><li><a href="https://github.com/hapijs/wreck/pull/184">[#184]</a> Upgrade lab</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v12.2.2]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/40</id>
+        <link href="https://hapi.dev/module/wreck/changelog#12.2.2"/>
+        <updated>2017-05-28T09:05:06.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v12.2.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/issues/183">[#183]</a> Fix tests for node 7.10.0</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v12.2.1]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/39</id>
+        <link href="https://hapi.dev/module/wreck/changelog#12.2.1"/>
+        <updated>2017-05-28T07:02:09.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v12.2.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/issues/182">[#182]</a> Update deps.</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v12.2.0]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/38</id>
+        <link href="https://hapi.dev/module/wreck/changelog#12.2.0"/>
+        <updated>2017-05-08T14:47:54.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v12.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/pull/177">[#177]</a> fix(json): allow numbers in mime fixes #176</li><li><a href="https://github.com/hapijs/wreck/pull/175">[#175]</a> Include full response with the HTTP error</li><li><a href="https://github.com/hapijs/wreck/issues/173">[#173]</a> Return full response with the Boom HTTP error</li><li><a href="https://github.com/hapijs/wreck/issues/170">[#170]</a> 4XX is now an error</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v12.1.0]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/37</id>
+        <link href="https://hapi.dev/module/wreck/changelog#12.1.0"/>
+        <updated>2017-04-19T18:22:23.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v12.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/pull/174">[#174]</a> Tidy code around default agents</li><li><a href="https://github.com/hapijs/wreck/pull/172">[#172]</a> Update README.md</li><li><a href="https://github.com/hapijs/wreck/pull/169">[#169]</a> Pass an Error object to Boom.create for #168</li><li><a href="https://github.com/hapijs/wreck/pull/156">[#156]</a> Preserve `agents` across .defaults({...})</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v12.0.0]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/36</id>
+        <link href="https://hapi.dev/module/wreck/changelog#12.0.0"/>
+        <updated>2017-03-24T16:43:32.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v12.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/issues/165">[#165]</a> 12.0.0 Release Notes</li><li><a href="https://github.com/hapijs/wreck/pull/164">[#164]</a> Fix boom response error handling</li><li><a href="https://github.com/hapijs/wreck/pull/163">[#163]</a> Keep request on error status</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v11.0.0]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/35</id>
+        <link href="https://hapi.dev/module/wreck/changelog#11.0.0"/>
+        <updated>2017-03-21T23:44:53.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v11.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/issues/162">[#162]</a> 11.0.0 Release Notes</li><li><a href="https://github.com/hapijs/wreck/pull/161">[#161]</a> Fix redirection method for 301, 302</li><li><a href="https://github.com/hapijs/wreck/pull/160">[#160]</a> Update lab dep</li><li><a href="https://github.com/hapijs/wreck/pull/159">[#159]</a> Add example https agent setting</li><li><a href="https://github.com/hapijs/wreck/pull/158">[#158]</a> Wrap error response with Boom</li><li><a href="https://github.com/hapijs/wreck/pull/157">[#157]</a> Change response event signature</li><li><a href="https://github.com/hapijs/wreck/pull/155">[#155]</a> Update code dep</li><li><a href="https://github.com/hapijs/wreck/pull/154">[#154]</a> Clarify state of response in shortcuts</li><li><a href="https://github.com/hapijs/wreck/issues/153">[#153]</a> Question about responses as readable streams</li><li><a href="https://github.com/hapijs/wreck/issues/138">[#138]</a> Redirect 302 changes method from POST to GET</li><li><a href="https://github.com/hapijs/wreck/issues/83">[#83]</a> Change "response" Payload</li><li><a href="https://github.com/hapijs/wreck/issues/82">[#82]</a> Option to convert 4xx and 5xx to errors</li><li><a href="https://github.com/hapijs/wreck/issues/66">[#66]</a> Add certificate options for requests</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v10.0.0]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/34</id>
+        <link href="https://hapi.dev/module/wreck/changelog#10.0.0"/>
+        <updated>2016-09-08T17:33:49.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v10.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/issues/150">[#150]</a> 10.0.0 Release Notes</li><li><a href="https://github.com/hapijs/wreck/pull/149">[#149]</a> Update boom and lab deps</li><li><a href="https://github.com/hapijs/wreck/pull/148">[#148]</a> Refactor event propagation</li><li><a href="https://github.com/hapijs/wreck/pull/147">[#147]</a> Fix tests to timeout quicker</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v9.0.0]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/33</id>
+        <link href="https://hapi.dev/module/wreck/changelog#9.0.0"/>
+        <updated>2016-08-03T16:51:17.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v9.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/issues/144">[#144]</a> 9.0.0 Release Notes</li><li><a href="https://github.com/hapijs/wreck/pull/143">[#143]</a> Stringify payload objects</li><li><a href="https://github.com/hapijs/wreck/pull/142">[#142]</a> Fix redirect with different host on default options</li><li><a href="https://github.com/hapijs/wreck/issues/131">[#131]</a> Fail to redirect to different host</li><li><a href="https://github.com/hapijs/wreck/issues/113">[#113]</a> Suggestion: Allow json objects as payload </li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v8.0.1]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/32</id>
+        <link href="https://hapi.dev/module/wreck/changelog#8.0.1"/>
+        <updated>2016-07-28T19:50:10.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v8.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/issues/141">[#141]</a> npmignore</li><li><a href="https://github.com/hapijs/wreck/pull/137">[#137]</a> add node version badge</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v8.0.0]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/31</id>
+        <link href="https://hapi.dev/module/wreck/changelog#8.0.0"/>
+        <updated>2016-06-02T15:24:05.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v8.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/pull/136">[#136]</a> Upgrade to code v3</li><li><a href="https://github.com/hapijs/wreck/issues/135">[#135]</a> 8.0.0 Release Notes</li><li><a href="https://github.com/hapijs/wreck/issues/134">[#134]</a> Expose response headers on redirect</li><li><a href="https://github.com/hapijs/wreck/pull/133">[#133]</a> Redirect 303 and expose headers</li><li><a href="https://github.com/hapijs/wreck/issues/132">[#132]</a> Support 303 Redirection</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v7.2.1]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/30</id>
+        <link href="https://hapi.dev/module/wreck/changelog#7.2.1"/>
+        <updated>2016-05-12T21:06:01.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v7.2.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/pull/130">[#130]</a> A missing callback on request still allows client requests to work</li><li><a href="https://github.com/hapijs/wreck/pull/129">[#129]</a> Use node 6 on travis</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v7.2.0]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/29</id>
+        <link href="https://hapi.dev/module/wreck/changelog#7.2.0"/>
+        <updated>2016-04-15T19:31:41.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v7.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/pull/127">[#127]</a> Add global request event</li><li><a href="https://github.com/hapijs/wreck/issues/126">[#126]</a> Add `request` emit</li><li><a href="https://github.com/hapijs/wreck/pull/125">[#125]</a> Use a global event emitter for wreck events</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v7.1.0]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/28</id>
+        <link href="https://hapi.dev/module/wreck/changelog#7.1.0"/>
+        <updated>2016-03-24T18:22:14.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v7.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/pull/123">[#123]</a> Add support for Unix sockets</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v7.0.2]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/27</id>
+        <link href="https://hapi.dev/module/wreck/changelog#7.0.2"/>
+        <updated>2016-03-05T20:01:09.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v7.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/pull/121">[#121]</a> Content-Length header check is now case insensitive</li><li><a href="https://github.com/hapijs/wreck/pull/120">[#120]</a> lowercase the content-length header</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v7.0.1]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/26</id>
+        <link href="https://hapi.dev/module/wreck/changelog#7.0.1"/>
+        <updated>2016-03-02T17:52:08.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v7.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/pull/119">[#119]</a> Update deps and fix tests</li><li><a href="https://github.com/hapijs/wreck/pull/118">[#118]</a> Add tests for defaults</li><li><a href="https://github.com/hapijs/wreck/issues/117">[#117]</a> Wreck#request's options are overridden by Defaults</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v7.0.0]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/25</id>
+        <link href="https://hapi.dev/module/wreck/changelog#7.0.0"/>
+        <updated>2015-10-31T19:41:15.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v7.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/issues/109">[#109]</a> ES6 style and node v4</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/wreck v6.3.0]]></title>
+        <id>https://github.com/hapijs/wreck/milestone/24</id>
+        <link href="https://hapi.dev/module/wreck/changelog#6.3.0"/>
+        <updated>2015-09-25T17:43:36.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/wreck v6.3.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/wreck/pull/108">[#108]</a> Add a beforeRedirect callback option</li><li><a href="https://github.com/hapijs/wreck/pull/106">[#106]</a> Fix code coverage</li><li><a href="https://github.com/hapijs/wreck/pull/105">[#105]</a> Workaround node issue in test</li><li><a href="https://github.com/hapijs/wreck/issues/104">[#104]</a> Fails on node v4</li></ul>]]></content>
+    </entry>
+</feed>

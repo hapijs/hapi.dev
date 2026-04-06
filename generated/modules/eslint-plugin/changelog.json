@@ -1,0 +1,257 @@
+[
+  {
+    "date": "2024-10-22T13:42:11Z",
+    "id": 11773540,
+    "issues": [
+      {
+        "id": 2433661542,
+        "labels": ["breaking changes"],
+        "number": 33,
+        "title": "feat: target ESLint v9",
+        "url": "https://github.com/hapijs/eslint-plugin/pull/33"
+      }
+    ],
+    "number": 14,
+    "url": "https://github.com/hapijs/eslint-plugin/milestone/14",
+    "version": "7.0.0"
+  },
+  {
+    "date": "2024-10-22T13:42:03Z",
+    "id": 7948982,
+    "issues": [
+      {
+        "id": 1227388957,
+        "labels": ["dependency", "breaking changes"],
+        "number": 31,
+        "title": "Drop support for node v12, support node v18, upgrade eslint",
+        "url": "https://github.com/hapijs/eslint-plugin/pull/31"
+      }
+    ],
+    "number": 12,
+    "url": "https://github.com/hapijs/eslint-plugin/milestone/12",
+    "version": "6.0.0"
+  },
+  {
+    "date": "2021-05-21T17:30:07Z",
+    "id": 5877327,
+    "issues": [
+      {
+        "id": 854765946,
+        "labels": ["feature"],
+        "number": 27,
+        "title": "Migrate lab internal eslint config",
+        "url": "https://github.com/hapijs/eslint-plugin/pull/27"
+      },
+      {
+        "id": 854757204,
+        "labels": ["dependency"],
+        "number": 26,
+        "title": "Update to @babel/eslint-parser",
+        "url": "https://github.com/hapijs/eslint-plugin/issues/26"
+      },
+      {
+        "id": 709600547,
+        "labels": [],
+        "number": 24,
+        "title": "upgrade lab to v24",
+        "url": "https://github.com/hapijs/eslint-plugin/pull/24"
+      }
+    ],
+    "number": 10,
+    "url": "https://github.com/hapijs/eslint-plugin/milestone/10",
+    "version": "5.1.0"
+  },
+  {
+    "date": "2020-09-15T00:06:00Z",
+    "id": 5871699,
+    "issues": [
+      {
+        "id": 691106119,
+        "labels": [],
+        "number": 23,
+        "title": "Rename to eslint-plugin",
+        "url": "https://github.com/hapijs/eslint-plugin/pull/23"
+      },
+      {
+        "id": 671888227,
+        "labels": ["feature", "breaking changes"],
+        "number": 21,
+        "title": "Change package name to @hapi/eslint-plugin",
+        "url": "https://github.com/hapijs/eslint-plugin/issues/21"
+      }
+    ],
+    "number": 9,
+    "url": "https://github.com/hapijs/eslint-plugin/milestone/9",
+    "version": "5.0.0"
+  },
+  {
+    "date": "2020-09-13T14:51:39Z",
+    "id": 4973281,
+    "issues": [
+      {
+        "id": 682756105,
+        "labels": ["feature"],
+        "number": 22,
+        "title": "Update rules for modern eslint",
+        "url": "https://github.com/hapijs/eslint-plugin/pull/22"
+      },
+      {
+        "id": 668201273,
+        "labels": ["feature"],
+        "number": 20,
+        "title": "Merge eslint-config-hapi and rules",
+        "url": "https://github.com/hapijs/eslint-plugin/pull/20"
+      },
+      {
+        "id": 664135479,
+        "labels": [],
+        "number": 19,
+        "title": "update to travis templates and test on node 14",
+        "url": "https://github.com/hapijs/eslint-plugin/pull/19"
+      },
+      {
+        "id": 600173238,
+        "labels": ["documentation"],
+        "number": 17,
+        "title": "Create API.md",
+        "url": "https://github.com/hapijs/eslint-plugin/pull/17"
+      },
+      {
+        "id": 600095950,
+        "labels": ["documentation"],
+        "number": 16,
+        "title": "Update README.md",
+        "url": "https://github.com/hapijs/eslint-plugin/pull/16"
+      },
+      {
+        "id": 568615186,
+        "labels": ["documentation"],
+        "number": 15,
+        "title": "fix(package.json): repository url",
+        "url": "https://github.com/hapijs/eslint-plugin/pull/15"
+      }
+    ],
+    "number": 8,
+    "url": "https://github.com/hapijs/eslint-plugin/milestone/8",
+    "version": "4.3.6"
+  },
+  {
+    "date": "2020-01-05T01:14:59Z",
+    "id": 4556488,
+    "issues": [
+      {
+        "id": 545352963,
+        "labels": ["non issue"],
+        "number": 14,
+        "title": "Cleanup",
+        "url": "https://github.com/hapijs/eslint-plugin/issues/14"
+      }
+    ],
+    "number": 7,
+    "url": "https://github.com/hapijs/eslint-plugin/milestone/7",
+    "version": "4.3.5"
+  },
+  {
+    "date": "2019-08-07T20:19:01Z",
+    "id": 4252548,
+    "issues": [
+      {
+        "id": 461411598,
+        "labels": ["dependency"],
+        "number": 11,
+        "title": "eslint 6 support",
+        "url": "https://github.com/hapijs/eslint-plugin/issues/11"
+      }
+    ],
+    "number": 6,
+    "url": "https://github.com/hapijs/eslint-plugin/milestone/6",
+    "version": "4.3.4"
+  },
+  {
+    "date": "2019-04-23T16:20:53Z",
+    "id": 4250616,
+    "issues": [
+      {
+        "id": 436277387,
+        "labels": ["bug"],
+        "number": 10,
+        "title": "Fix names",
+        "url": "https://github.com/hapijs/eslint-plugin/issues/10"
+      }
+    ],
+    "number": 5,
+    "url": "https://github.com/hapijs/eslint-plugin/milestone/5",
+    "version": "4.3.3"
+  },
+  {
+    "date": "2019-04-23T07:02:53Z",
+    "id": 4250614,
+    "issues": [
+      {
+        "id": 436026095,
+        "labels": ["dependency"],
+        "number": 9,
+        "title": "Change module namespace",
+        "url": "https://github.com/hapijs/eslint-plugin/issues/9"
+      }
+    ],
+    "number": 4,
+    "url": "https://github.com/hapijs/eslint-plugin/milestone/4",
+    "version": "4.2.0"
+  },
+  {
+    "date": "2015-11-04T18:29:10Z",
+    "id": 1394118,
+    "issues": [
+      {
+        "id": 114968819,
+        "labels": ["feature"],
+        "number": 6,
+        "title": "Remove no-shadow-relaxed",
+        "url": "https://github.com/hapijs/eslint-plugin/issues/6"
+      }
+    ],
+    "number": 3,
+    "url": "https://github.com/hapijs/eslint-plugin/milestone/3",
+    "version": "3.0.0"
+  },
+  {
+    "date": "2015-10-30T20:35:59Z",
+    "id": 1374682,
+    "issues": [
+      {
+        "id": 114350803,
+        "labels": ["feature"],
+        "number": 5,
+        "title": "Add rule no-arrowception",
+        "url": "https://github.com/hapijs/eslint-plugin/issues/5"
+      },
+      {
+        "id": 113204822,
+        "labels": ["feature"],
+        "number": 4,
+        "title": "Update to hapi-scope-start@2.0.0",
+        "url": "https://github.com/hapijs/eslint-plugin/issues/4"
+      }
+    ],
+    "number": 2,
+    "url": "https://github.com/hapijs/eslint-plugin/milestone/2",
+    "version": "v2.0.0"
+  },
+  {
+    "date": "2015-06-25T14:52:50Z",
+    "id": 1181152,
+    "issues": [
+      {
+        "id": 90983200,
+        "labels": ["feature"],
+        "number": 3,
+        "title": "Add no-shadow-relaxed rule to plugin",
+        "url": "https://github.com/hapijs/eslint-plugin/pull/3"
+      }
+    ],
+    "number": 1,
+    "url": "https://github.com/hapijs/eslint-plugin/milestone/1",
+    "version": "v1.2.0"
+  }
+]

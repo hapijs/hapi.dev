@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/inert</id>
+    <title>@hapi/inert changelog</title>
+    <updated>2023-03-13T15:42:42.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/inert"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v7.1.0]]></title>
+        <id>https://github.com/hapijs/inert/milestone/43</id>
+        <link href="https://hapi.dev/module/inert/changelog#7.1.0"/>
+        <updated>2023-03-13T15:42:42.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v7.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/pull/169">[#169]</a> feat: import DT types</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v7.0.1]]></title>
+        <id>https://github.com/hapijs/inert/milestone/42</id>
+        <link href="https://hapi.dev/module/inert/changelog#7.0.1"/>
+        <updated>2023-02-11T20:54:07.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v7.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/pull/167">[#167]</a> chore: bump hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v7.0.0]]></title>
+        <id>https://github.com/hapijs/inert/milestone/41</id>
+        <link href="https://hapi.dev/module/inert/changelog#7.0.0"/>
+        <updated>2022-07-17T21:08:06.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v7.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/pull/164">[#164]</a> Support node v18 and hapi v21, drop node v12 and hapi v19</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v6.0.5]]></title>
+        <id>https://github.com/hapijs/inert/milestone/39</id>
+        <link href="https://hapi.dev/module/inert/changelog#6.0.5"/>
+        <updated>2022-01-16T20:12:16.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v6.0.5]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/pull/162">[#162]</a> fix: return 404 for ENOTDIR</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v6.0.4]]></title>
+        <id>https://github.com/hapijs/inert/milestone/38</id>
+        <link href="https://hapi.dev/module/inert/changelog#6.0.4"/>
+        <updated>2021-08-30T20:44:28.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v6.0.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/pull/160">[#160]</a> Disallow serving absolute paths from directory handler</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v6.0.3]]></title>
+        <id>https://github.com/hapijs/inert/milestone/37</id>
+        <link href="https://hapi.dev/module/inert/changelog#6.0.3"/>
+        <updated>2020-09-26T18:03:51.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v6.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/pull/152">[#152]</a> migrate to new travis format</li><li><a href="https://github.com/hapijs/inert/pull/151">[#151]</a> Cleanup & update lru-cache</li><li><a href="https://github.com/hapijs/inert/pull/150">[#150]</a> Fix travis to test hapi v20 and on node v14</li><li><a href="https://github.com/hapijs/inert/pull/149">[#149]</a> upgrade to hapi 20</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v6.0.2]]></title>
+        <id>https://github.com/hapijs/inert/milestone/36</id>
+        <link href="https://hapi.dev/module/inert/changelog#6.0.2"/>
+        <updated>2020-09-26T18:03:47.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v6.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/pull/148">[#148]</a> update lab and switch joi to validate</li><li><a href="https://github.com/hapijs/inert/pull/144">[#144]</a> Update LICENSE.md</li><li><a href="https://github.com/hapijs/inert/pull/142">[#142]</a> Correct default value for etagsCacheMaxSize</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v6.0.1]]></title>
+        <id>https://github.com/hapijs/inert/milestone/35</id>
+        <link href="https://hapi.dev/module/inert/changelog#6.0.1"/>
+        <updated>2020-09-26T18:03:43.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v6.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/issues/140">[#140]</a> Change plugin name to @hapi/inert</li><li><a href="https://github.com/hapijs/inert/issues/139">[#139]</a> Require hapi 19</li><li><a href="https://github.com/hapijs/inert/pull/138">[#138]</a> Update deps for hapi v19</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v6.0.0]]></title>
+        <id>https://github.com/hapijs/inert/milestone/34</id>
+        <link href="https://hapi.dev/module/inert/changelog#6.0.0"/>
+        <updated>2020-01-05T05:07:35.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v6.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/issues/137">[#137]</a> Only node 12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v5.2.3]]></title>
+        <id>https://github.com/hapijs/inert/milestone/33</id>
+        <link href="https://hapi.dev/module/inert/changelog#5.2.3"/>
+        <updated>2020-09-26T17:44:22.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v5.2.3]]></summary>
+        <content type="html"><![CDATA[<ul></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v5.2.2]]></title>
+        <id>https://github.com/hapijs/inert/milestone/32</id>
+        <link href="https://hapi.dev/module/inert/changelog#5.2.2"/>
+        <updated>2019-09-12T23:10:52.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v5.2.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/issues/130">[#130]</a> Update joi</li><li><a href="https://github.com/hapijs/inert/pull/124">[#124]</a> Directory listing has broken links</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v5.2.1]]></title>
+        <id>https://github.com/hapijs/inert/milestone/31</id>
+        <link href="https://hapi.dev/module/inert/changelog#5.2.1"/>
+        <updated>2019-06-26T05:59:26.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v5.2.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/issues/127">[#127]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v5.2.0]]></title>
+        <id>https://github.com/hapijs/inert/milestone/30</id>
+        <link href="https://hapi.dev/module/inert/changelog#5.2.0"/>
+        <updated>2019-04-10T22:08:53.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v5.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/issues/126">[#126]</a> Change module namespace</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v5.1.3]]></title>
+        <id>https://github.com/hapijs/inert/milestone/29</id>
+        <link href="https://hapi.dev/module/inert/changelog#5.1.3"/>
+        <updated>2019-04-02T21:42:23.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v5.1.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/issues/125">[#125]</a> Directory routes doesn't work with relative files.relativeTo</li><li><a href="https://github.com/hapijs/inert/issues/119">[#119]</a> Directory listing has broken links, missing a slash between file and directory</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v5.1.2]]></title>
+        <id>https://github.com/hapijs/inert/milestone/28</id>
+        <link href="https://hapi.dev/module/inert/changelog#5.1.2"/>
+        <updated>2018-11-07T07:34:05.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v5.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/issues/122">[#122]</a> Use new requirements config</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v5.1.1]]></title>
+        <id>https://github.com/hapijs/inert/milestone/27</id>
+        <link href="https://hapi.dev/module/inert/changelog#5.1.1"/>
+        <updated>2018-11-01T08:07:59.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v5.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/issues/121">[#121]</a> Update deps.</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v5.1.0]]></title>
+        <id>https://github.com/hapijs/inert/milestone/26</id>
+        <link href="https://hapi.dev/module/inert/changelog#5.1.0"/>
+        <updated>2018-11-01T08:07:58.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v5.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/issues/111">[#111]</a> Add failing path to errors</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v5.0.1]]></title>
+        <id>https://github.com/hapijs/inert/milestone/25</id>
+        <link href="https://hapi.dev/module/inert/changelog#5.0.1"/>
+        <updated>2017-11-04T00:00:19.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v5.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/issues/103">[#103]</a> Rethrow developer errors</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v5.0.0]]></title>
+        <id>https://github.com/hapijs/inert/milestone/24</id>
+        <link href="https://hapi.dev/module/inert/changelog#5.0.0"/>
+        <updated>2017-11-03T23:59:33.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v5.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/issues/102">[#102]</a> Update deps</li><li><a href="https://github.com/hapijs/inert/issues/100">[#100]</a> 5.0.0 Release Notes</li><li><a href="https://github.com/hapijs/inert/issues/99">[#99]</a> Move etagsCacheMaxSize to server option</li><li><a href="https://github.com/hapijs/inert/pull/97">[#97]</a> Internal rewrite to async / await</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v4.2.1]]></title>
+        <id>https://github.com/hapijs/inert/milestone/23</id>
+        <link href="https://hapi.dev/module/inert/changelog#4.2.1"/>
+        <updated>2017-09-19T22:28:14.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v4.2.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/pull/93">[#93]</a> Limit "node" tests to only try configured hapi release</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v4.2.0]]></title>
+        <id>https://github.com/hapijs/inert/milestone/22</id>
+        <link href="https://hapi.dev/module/inert/changelog#4.2.0"/>
+        <updated>2017-04-03T11:37:14.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v4.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/pull/87">[#87]</a> Add start end option to file handler</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v4.1.0]]></title>
+        <id>https://github.com/hapijs/inert/milestone/21</id>
+        <link href="https://hapi.dev/module/inert/changelog#4.1.0"/>
+        <updated>2016-12-27T20:34:04.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v4.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/pull/71">[#71]</a> Add lookupMap option</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v4.0.4]]></title>
+        <id>https://github.com/hapijs/inert/milestone/20</id>
+        <link href="https://hapi.dev/module/inert/changelog#4.0.4"/>
+        <updated>2016-12-22T00:00:45.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v4.0.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/pull/79">[#79]</a> Manually extract last param name from path</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v4.0.3]]></title>
+        <id>https://github.com/hapijs/inert/milestone/19</id>
+        <link href="https://hapi.dev/module/inert/changelog#4.0.3"/>
+        <updated>2016-11-29T02:54:57.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v4.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/issues/76">[#76]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v4.0.2]]></title>
+        <id>https://github.com/hapijs/inert/milestone/18</id>
+        <link href="https://hapi.dev/module/inert/changelog#4.0.2"/>
+        <updated>2016-08-23T11:43:18.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v4.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/issues/70">[#70]</a> Errors on old hapi releases</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v4.0.1]]></title>
+        <id>https://github.com/hapijs/inert/milestone/17</id>
+        <link href="https://hapi.dev/module/inert/changelog#4.0.1"/>
+        <updated>2016-08-23T11:40:12.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v4.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/issues/68">[#68]</a> Update code to v3</li><li><a href="https://github.com/hapijs/inert/issues/67">[#67]</a> The hapi response.ranges option is not respected</li><li><a href="https://github.com/hapijs/inert/pull/63">[#63]</a> Test on node v6</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v4.0.0]]></title>
+        <id>https://github.com/hapijs/inert/milestone/16</id>
+        <link href="https://hapi.dev/module/inert/changelog#4.0.0"/>
+        <updated>2016-05-09T10:44:30.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v4.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/issues/62">[#62]</a> 4.0.0 Release Notes</li><li><a href="https://github.com/hapijs/inert/issues/60">[#60]</a> Hapijs directory route not being scrapped by facebook behind cloudfront</li><li><a href="https://github.com/hapijs/inert/pull/59">[#59]</a> remove hoek.isAbsolutePath for path.isAbsolute</li><li><a href="https://github.com/hapijs/inert/pull/56">[#56]</a> Clarify bad path for directory handler message</li><li><a href="https://github.com/hapijs/inert/issues/53">[#53]</a> Update lru-cache</li><li><a href="https://github.com/hapijs/inert/pull/51">[#51]</a> Update dependencies. Update codebase to ES6/Node4</li><li><a href="https://github.com/hapijs/inert/issues/49">[#49]</a> ES6 style changes and node v4</li><li><a href="https://github.com/hapijs/inert/pull/47">[#47]</a> Add confine option that confines file responses</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v3.2.0]]></title>
+        <id>https://github.com/hapijs/inert/milestone/12</id>
+        <link href="https://hapi.dev/module/inert/changelog#3.2.0"/>
+        <updated>2015-10-24T12:09:28.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v3.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/pull/30">[#30]</a> Add new etaging options</li><li><a href="https://github.com/hapijs/inert/issues/29">[#29]</a> New ETag generation method</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v3.1.0]]></title>
+        <id>https://github.com/hapijs/inert/milestone/15</id>
+        <link href="https://hapi.dev/module/inert/changelog#3.1.0"/>
+        <updated>2015-10-06T10:46:06.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v3.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/issues/44">[#44]</a> Test using hapi@10.x</li><li><a href="https://github.com/hapijs/inert/issues/43">[#43]</a> Add new attributes: connections: false, once: true</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v3.0.2]]></title>
+        <id>https://github.com/hapijs/inert/milestone/14</id>
+        <link href="https://hapi.dev/module/inert/changelog#3.0.2"/>
+        <updated>2015-10-04T10:30:12.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v3.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/pull/42">[#42]</a> Avoid re-opening files when serving from a directory</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v3.0.1]]></title>
+        <id>https://github.com/hapijs/inert/milestone/13</id>
+        <link href="https://hapi.dev/module/inert/changelog#3.0.1"/>
+        <updated>2015-08-12T12:52:03.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v3.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/issues/36">[#36]</a> Respect the new connection compression option</li><li><a href="https://github.com/hapijs/inert/issues/32">[#32]</a> Move hapi security tests here</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v3.0.0]]></title>
+        <id>https://github.com/hapijs/inert/milestone/11</id>
+        <link href="https://hapi.dev/module/inert/changelog#3.0.0"/>
+        <updated>2015-08-08T00:42:44.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/pull/35">[#35]</a> Move config to plugin options from hapi server. Closes #34</li><li><a href="https://github.com/hapijs/inert/issues/34">[#34]</a> Move etags caching config to plugin options</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v2.1.6]]></title>
+        <id>https://github.com/hapijs/inert/milestone/10</id>
+        <link href="https://hapi.dev/module/inert/changelog#2.1.6"/>
+        <updated>2015-07-06T11:48:06.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v2.1.6]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/pull/28">[#28]</a> Never store ETags computed on partial data</li><li><a href="https://github.com/hapijs/inert/issues/27">[#27]</a> ETag generation can miss data</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v2.1.5]]></title>
+        <id>https://github.com/hapijs/inert/milestone/9</id>
+        <link href="https://hapi.dev/module/inert/changelog#2.1.5"/>
+        <updated>2015-05-21T17:07:33.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v2.1.5]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/pull/26">[#26]</a> Misc. Closes #25</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v2.1.4]]></title>
+        <id>https://github.com/hapijs/inert/milestone/8</id>
+        <link href="https://hapi.dev/module/inert/changelog#2.1.4"/>
+        <updated>2015-03-10T07:21:09.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v2.1.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/pull/23">[#23]</a> Upgrade to joi 6.0</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v2.1.3]]></title>
+        <id>https://github.com/hapijs/inert/milestone/7</id>
+        <link href="https://hapi.dev/module/inert/changelog#2.1.3"/>
+        <updated>2015-03-10T06:48:30.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v2.1.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/pull/22">[#22]</a> Add io.js support</li><li><a href="https://github.com/hapijs/inert/pull/21">[#21]</a> Return 404 for path string with a null byte</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v2.1.2]]></title>
+        <id>https://github.com/hapijs/inert/milestone/6</id>
+        <link href="https://hapi.dev/module/inert/changelog#2.1.2"/>
+        <updated>2015-01-26T17:47:40.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v2.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/pull/19">[#19]</a> Fix directory handler regressions in 2.1.1</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v2.1.1]]></title>
+        <id>https://github.com/hapijs/inert/milestone/5</id>
+        <link href="https://hapi.dev/module/inert/changelog#2.1.1"/>
+        <updated>2015-01-23T09:26:15.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v2.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/pull/18">[#18]</a> Replace 404 response with 403 and 500 when appropriate</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v2.1.0]]></title>
+        <id>https://github.com/hapijs/inert/milestone/4</id>
+        <link href="https://hapi.dev/module/inert/changelog#2.1.0"/>
+        <updated>2015-01-12T09:53:24.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v2.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/pull/17">[#17]</a> Handle Range requests explicitly</li><li><a href="https://github.com/hapijs/inert/pull/10">[#10]</a> more flexible 'index' option for directory handler</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v2.0.0]]></title>
+        <id>https://github.com/hapijs/inert/milestone/2</id>
+        <link href="https://hapi.dev/module/inert/changelog#2.0.0"/>
+        <updated>2014-12-09T22:53:07.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v2.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/pull/16">[#16]</a> Fix option parsing to match hapi documentation</li><li><a href="https://github.com/hapijs/inert/pull/14">[#14]</a> Use .single() option for directory settings schema</li><li><a href="https://github.com/hapijs/inert/pull/12">[#12]</a> Don't allow files in hidden directories to be served</li><li><a href="https://github.com/hapijs/inert/pull/9">[#9]</a> Fix tests on windows</li><li><a href="https://github.com/hapijs/inert/pull/8">[#8]</a> Use open file descriptors to retain file between prepare and marshal phases</li><li><a href="https://github.com/hapijs/inert/issues/7">[#7]</a> Invalid ETag for lookupCompressed responses</li><li><a href="https://github.com/hapijs/inert/issues/4">[#4]</a> Potentially incorrect file responses when file is changed</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v1.1.1]]></title>
+        <id>https://github.com/hapijs/inert/milestone/3</id>
+        <link href="https://hapi.dev/module/inert/changelog#1.1.1"/>
+        <updated>2014-12-10T13:41:55.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v1.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/pull/15">[#15]</a> Don't allow files in hidden directories to be served</li><li><a href="https://github.com/hapijs/inert/pull/13">[#13]</a> Don't allow files in hidden directories to be served (backported)</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/inert v1.1.0]]></title>
+        <id>https://github.com/hapijs/inert/milestone/1</id>
+        <link href="https://hapi.dev/module/inert/changelog#1.1.0"/>
+        <updated>2014-10-22T08:08:12.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/inert v1.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/inert/issues/3">[#3]</a> Move lru-cache over from hapi</li></ul>]]></content>
+    </entry>
+</feed>

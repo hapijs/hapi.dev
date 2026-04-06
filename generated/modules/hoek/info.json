@@ -1,0 +1,22 @@
+{
+  "api": true,
+  "forks": 179,
+  "isPlugin": false,
+  "link": "https://github.com/hapijs/hoek",
+  "name": "hoek",
+  "package": "@hapi/hoek",
+  "slogan": "Utility methods for the hapi ecosystem.",
+  "sloganHtml": "Utility methods for the hapi ecosystem.",
+  "stars": 484,
+  "updated": "2026-02-25T07:24:45Z",
+  "versions": [
+    {
+      "branch": "v11.0.7",
+      "license": "BSD",
+      "name": "11.0.7",
+      "node": ">= 16"
+    }
+  ],
+  "versionsArray": ["11.0.7"],
+  "latestVersion": "11.x.x"
+}

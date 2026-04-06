@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/topo</id>
+    <title>@hapi/topo changelog</title>
+    <updated>2023-02-11T18:39:18.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/topo"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/topo v6.0.1]]></title>
+        <id>https://github.com/hapijs/topo/milestone/32</id>
+        <link href="https://hapi.dev/module/topo/changelog#6.0.1"/>
+        <updated>2023-02-11T18:39:18.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/topo v6.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/topo/pull/70">[#70]</a> chore: bump hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/topo v6.0.0]]></title>
+        <id>https://github.com/hapijs/topo/milestone/31</id>
+        <link href="https://hapi.dev/module/topo/changelog#6.0.0"/>
+        <updated>2023-02-11T18:38:17.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/topo v6.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/topo/pull/69">[#69]</a> Support node v18 and drop node v12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/topo v5.1.0]]></title>
+        <id>https://github.com/hapijs/topo/milestone/29</id>
+        <link href="https://hapi.dev/module/topo/changelog#5.1.0"/>
+        <updated>2021-06-28T21:54:35.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/topo v5.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/topo/pull/66">[#66]</a> Support manual sorting (performance)</li><li><a href="https://github.com/hapijs/topo/pull/64">[#64]</a> upgrade lab to v24 and devDependency of typescript</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/topo v5.0.0]]></title>
+        <id>https://github.com/hapijs/topo/milestone/27</id>
+        <link href="https://hapi.dev/module/topo/changelog#5.0.0"/>
+        <updated>2020-01-04T09:03:46.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/topo v5.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/topo/issues/61">[#61]</a> Only node 12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/topo v4.0.1]]></title>
+        <id>https://github.com/hapijs/topo/milestone/23</id>
+        <link href="https://hapi.dev/module/topo/changelog#4.0.1"/>
+        <updated>2019-10-11T21:01:33.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/topo v4.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/topo/pull/57">[#57]</a> Adjust hoek to `^8.3.x`</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/topo v4.0.0]]></title>
+        <id>https://github.com/hapijs/topo/milestone/22</id>
+        <link href="https://hapi.dev/module/topo/changelog#4.0.0"/>
+        <updated>2019-10-06T04:14:54.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/topo v4.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/topo/issues/55">[#55]</a> Move default export to Sorter</li><li><a href="https://github.com/hapijs/topo/issues/54">[#54]</a> Drop node 8</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/topo v3.1.6]]></title>
+        <id>https://github.com/hapijs/topo/milestone/24</id>
+        <link href="https://hapi.dev/module/topo/changelog#3.1.6"/>
+        <updated>2019-10-11T21:01:31.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/topo v3.1.6]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/topo/issues/58">[#58]</a> Update hoek dep</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/topo v3.1.5]]></title>
+        <id>https://github.com/hapijs/topo/milestone/21</id>
+        <link href="https://hapi.dev/module/topo/changelog#3.1.5"/>
+        <updated>2019-10-06T04:13:19.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/topo v3.1.5]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/topo/issues/56">[#56]</a> Remove types</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/topo v3.1.4]]></title>
+        <id>https://github.com/hapijs/topo/milestone/20</id>
+        <link href="https://hapi.dev/module/topo/changelog#3.1.4"/>
+        <updated>2019-09-19T22:17:36.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/topo v3.1.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/topo/pull/46">[#46]</a> Added TS declarations</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/topo v3.1.3]]></title>
+        <id>https://github.com/hapijs/topo/milestone/19</id>
+        <link href="https://hapi.dev/module/topo/changelog#3.1.3"/>
+        <updated>2019-08-07T21:54:45.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/topo v3.1.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/topo/issues/43">[#43]</a> Direct hoek method require</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/topo v3.1.2]]></title>
+        <id>https://github.com/hapijs/topo/milestone/18</id>
+        <link href="https://hapi.dev/module/topo/changelog#3.1.2"/>
+        <updated>2019-06-26T18:51:16.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/topo v3.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/topo/issues/42">[#42]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/topo v3.1.1]]></title>
+        <id>https://github.com/hapijs/topo/milestone/17</id>
+        <link href="https://hapi.dev/module/topo/changelog#3.1.1"/>
+        <updated>2019-03-29T22:38:28.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/topo v3.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/topo/issues/41">[#41]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/topo v3.1.0]]></title>
+        <id>https://github.com/hapijs/topo/milestone/14</id>
+        <link href="https://hapi.dev/module/topo/changelog#3.1.0"/>
+        <updated>2019-03-29T20:02:17.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/topo v3.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/topo/issues/40">[#40]</a> Change module namespace</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/topo v3.0.3]]></title>
+        <id>https://github.com/hapijs/topo/milestone/13</id>
+        <link href="https://hapi.dev/module/topo/changelog#3.0.3"/>
+        <updated>2018-11-03T00:39:46.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/topo v3.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/topo/issues/35">[#35]</a> Remove engines</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/topo v3.0.2]]></title>
+        <id>https://github.com/hapijs/topo/milestone/12</id>
+        <link href="https://hapi.dev/module/topo/changelog#3.0.2"/>
+        <updated>2018-11-01T19:26:29.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/topo v3.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/topo/issues/33">[#33]</a> Update hoek v6</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/topo v3.0.1]]></title>
+        <id>https://github.com/hapijs/topo/milestone/11</id>
+        <link href="https://hapi.dev/module/topo/changelog#3.0.1"/>
+        <updated>2018-10-31T23:52:08.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/topo v3.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/topo/issues/31">[#31]</a> Cleanup</li><li><a href="https://github.com/hapijs/topo/pull/30">[#30]</a> Update implementation to use classes. Update license and travis.</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/topo v3.0.0]]></title>
+        <id>https://github.com/hapijs/topo/milestone/10</id>
+        <link href="https://hapi.dev/module/topo/changelog#3.0.0"/>
+        <updated>2017-09-26T09:01:28.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/topo v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/topo/issues/28">[#28]</a> Node 8</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/topo v2.1.0]]></title>
+        <id>https://github.com/hapijs/topo/milestone/15</id>
+        <link href="https://hapi.dev/module/topo/changelog#2.1.0"/>
+        <updated>2019-03-22T06:44:53.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/topo v2.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/topo/issues/39">[#39]</a> Commercial version of v2 branch</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/topo v2.0.3]]></title>
+        <id>https://github.com/hapijs/topo/milestone/9</id>
+        <link href="https://hapi.dev/module/topo/changelog#2.0.3"/>
+        <updated>2017-09-26T09:00:44.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/topo v2.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/topo/pull/26">[#26]</a> Cleanup sort routine, clarify usage of seq vs index</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/topo v2.0.2]]></title>
+        <id>https://github.com/hapijs/topo/milestone/8</id>
+        <link href="https://hapi.dev/module/topo/changelog#2.0.2"/>
+        <updated>2016-07-17T18:46:24.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/topo v2.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/topo/pull/25">[#25]</a> Ensure groups can be named after props of Object.prototype</li><li><a href="https://github.com/hapijs/topo/issues/23">[#23]</a> A problem with group names that are also property names of Object.prototype</li><li><a href="https://github.com/hapijs/topo/issues/22">[#22]</a> Add .npmignore, update code to v3</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/topo v2.0.1]]></title>
+        <id>https://github.com/hapijs/topo/milestone/7</id>
+        <link href="https://hapi.dev/module/topo/changelog#2.0.1"/>
+        <updated>2016-05-19T20:13:32.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/topo v2.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/topo/pull/21">[#21]</a> Test on node v6, update dependencies</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/topo v2.0.0]]></title>
+        <id>https://github.com/hapijs/topo/milestone/6</id>
+        <link href="https://hapi.dev/module/topo/changelog#2.0.0"/>
+        <updated>2015-11-01T20:11:30.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/topo v2.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/topo/pull/19">[#19]</a> es6. Closes #18</li><li><a href="https://github.com/hapijs/topo/issues/18">[#18]</a> ES6 style changes and node v4</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/topo v1.1.0]]></title>
+        <id>https://github.com/hapijs/topo/milestone/5</id>
+        <link href="https://hapi.dev/module/topo/changelog#1.1.0"/>
+        <updated>2015-10-05T03:51:40.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/topo v1.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/topo/pull/17">[#17]</a> Lab v6 and travis node versions</li><li><a href="https://github.com/hapijs/topo/issues/16">[#16]</a> Update to lab v6</li><li><a href="https://github.com/hapijs/topo/pull/15">[#15]</a> merge() support. Closes #14</li><li><a href="https://github.com/hapijs/topo/issues/14">[#14]</a> Add merge() support</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/topo v1.0.3]]></title>
+        <id>https://github.com/hapijs/topo/milestone/3</id>
+        <link href="https://hapi.dev/module/topo/changelog#1.0.3"/>
+        <updated>2015-07-29T17:49:24.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/topo v1.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/topo/pull/10">[#10]</a> Linting and repo style updates.</li><li><a href="https://github.com/hapijs/topo/issues/9">[#9]</a> `before` option as array misbehaves</li><li><a href="https://github.com/hapijs/topo/pull/7">[#7]</a> Fix bug with usage of `before` as array.</li><li><a href="https://github.com/hapijs/topo/pull/6">[#6]</a> Update to Lab 5.x.x and Code 1.x.x</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/topo v1.0.2]]></title>
+        <id>https://github.com/hapijs/topo/milestone/2</id>
+        <link href="https://hapi.dev/module/topo/changelog#1.0.2"/>
+        <updated>2014-10-06T06:13:43.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/topo v1.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/topo/issues/4">[#4]</a> lab 4.0</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/topo v1.0.1]]></title>
+        <id>https://github.com/hapijs/topo/milestone/1</id>
+        <link href="https://hapi.dev/module/topo/changelog#1.0.1"/>
+        <updated>2014-08-03T06:54:38.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/topo v1.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/topo/pull/1">[#1]</a> Don't die when user adds enumerable properties to Array.prototype</li></ul>]]></content>
+    </entry>
+</feed>

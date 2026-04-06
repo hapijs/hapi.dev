@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/code</id>
+    <title>@hapi/code changelog</title>
+    <updated>2023-02-11T18:01:54.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/code"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v9.0.3]]></title>
+        <id>https://github.com/hapijs/code/milestone/41</id>
+        <link href="https://hapi.dev/module/code/changelog#9.0.3"/>
+        <updated>2023-02-11T18:01:54.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v9.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/pull/179">[#179]</a> chore: bump hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v9.0.2]]></title>
+        <id>https://github.com/hapijs/code/milestone/40</id>
+        <link href="https://hapi.dev/module/code/changelog#9.0.2"/>
+        <updated>2022-11-29T08:49:48.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v9.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/pull/178">[#178]</a> Fix typo and add missing type</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v9.0.1]]></title>
+        <id>https://github.com/hapijs/code/milestone/39</id>
+        <link href="https://hapi.dev/module/code/changelog#9.0.1"/>
+        <updated>2022-06-14T15:40:06.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v9.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/pull/177">[#177]</a> Fix `reject()` types</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v9.0.0]]></title>
+        <id>https://github.com/hapijs/code/milestone/38</id>
+        <link href="https://hapi.dev/module/code/changelog#9.0.0"/>
+        <updated>2022-06-14T15:39:02.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v9.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/pull/175">[#175]</a> Drop node v12, support node v18</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v8.0.8]]></title>
+        <id>https://github.com/hapijs/code/milestone/37</id>
+        <link href="https://hapi.dev/module/code/changelog#8.0.8"/>
+        <updated>2022-04-25T13:55:13.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v8.0.8]]></summary>
+        <content type="html"><![CDATA[<ul></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v8.0.7]]></title>
+        <id>https://github.com/hapijs/code/milestone/36</id>
+        <link href="https://hapi.dev/module/code/changelog#8.0.7"/>
+        <updated>2022-02-08T07:04:40.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v8.0.7]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/pull/174">[#174]</a> Fix equal() type</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v8.0.6]]></title>
+        <id>https://github.com/hapijs/code/milestone/35</id>
+        <link href="https://hapi.dev/module/code/changelog#8.0.6"/>
+        <updated>2022-01-24T14:51:35.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v8.0.6]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/pull/173">[#173]</a> Fix equal() types</li><li><a href="https://github.com/hapijs/code/issues/172">[#172]</a> equal(value: T) type should be Loosely&lt;T&gt; when options ignore symbols or properties</li><li><a href="https://github.com/hapijs/code/pull/171">[#171]</a> Fix typings for throw() and reject()</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v8.0.5]]></title>
+        <id>https://github.com/hapijs/code/milestone/34</id>
+        <link href="https://hapi.dev/module/code/changelog#8.0.5"/>
+        <updated>2021-11-20T04:14:28.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v8.0.5]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/pull/168">[#168]</a> Don't narrow generic on type specific assertions</li><li><a href="https://github.com/hapijs/code/issues/167">[#167]</a> compilation errors for primitive type assertions</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v8.0.4]]></title>
+        <id>https://github.com/hapijs/code/milestone/33</id>
+        <link href="https://hapi.dev/module/code/changelog#8.0.4"/>
+        <updated>2021-11-05T14:23:06.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v8.0.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/pull/165">[#165]</a> Fix aliases for reject()</li><li><a href="https://github.com/hapijs/code/pull/163">[#163]</a> Improve typings</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v8.0.3]]></title>
+        <id>https://github.com/hapijs/code/milestone/32</id>
+        <link href="https://hapi.dev/module/code/changelog#8.0.3"/>
+        <updated>2021-03-15T18:59:37.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v8.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/pull/161">[#161]</a> Fix reject(s) return type</li><li><a href="https://github.com/hapijs/code/issues/160">[#160]</a> The type `.rejects` returns  should return a Promise</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v8.0.2]]></title>
+        <id>https://github.com/hapijs/code/milestone/31</id>
+        <link href="https://hapi.dev/module/code/changelog#8.0.2"/>
+        <updated>2021-03-15T18:56:29.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v8.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/pull/158">[#158]</a> upgrade lab to v24 and devDependency of typescript</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v8.0.1]]></title>
+        <id>https://github.com/hapijs/code/milestone/30</id>
+        <link href="https://hapi.dev/module/code/changelog#8.0.1"/>
+        <updated>2020-01-03T23:26:48.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v8.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/issues/155">[#155]</a> Fix function string in node 13</li><li><a href="https://github.com/hapijs/code/issues/154">[#154]</a> Update hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v8.0.0]]></title>
+        <id>https://github.com/hapijs/code/milestone/29</id>
+        <link href="https://hapi.dev/module/code/changelog#8.0.0"/>
+        <updated>2020-01-03T23:00:17.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v8.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/issues/153">[#153]</a> Support only node 12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v7.0.0]]></title>
+        <id>https://github.com/hapijs/code/milestone/27</id>
+        <link href="https://hapi.dev/module/code/changelog#7.0.0"/>
+        <updated>2019-10-13T01:12:53.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v7.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/issues/151">[#151]</a> Add types</li><li><a href="https://github.com/hapijs/code/issues/150">[#150]</a> Drop node 8</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v6.0.0]]></title>
+        <id>https://github.com/hapijs/code/milestone/26</id>
+        <link href="https://hapi.dev/module/code/changelog#6.0.0"/>
+        <updated>2019-07-24T18:08:54.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v6.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/issues/142">[#142]</a> Deep comparison includes symbols</li><li><a href="https://github.com/hapijs/code/issues/141">[#141]</a> Support deep comparison key skipping</li><li><a href="https://github.com/hapijs/code/issues/140">[#140]</a> Use deepFunction flag for deep comparison</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v5.3.1]]></title>
+        <id>https://github.com/hapijs/code/milestone/25</id>
+        <link href="https://hapi.dev/module/code/changelog#5.3.1"/>
+        <updated>2019-03-29T23:11:53.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v5.3.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/issues/136">[#136]</a> Better handling of thrown stack parsing</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v5.3.0]]></title>
+        <id>https://github.com/hapijs/code/milestone/24</id>
+        <link href="https://hapi.dev/module/code/changelog#5.3.0"/>
+        <updated>2019-03-29T22:05:13.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v5.3.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/issues/135">[#135]</a> Change module namespace</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v5.2.3]]></title>
+        <id>https://github.com/hapijs/code/milestone/23</id>
+        <link href="https://hapi.dev/module/code/changelog#5.2.3"/>
+        <updated>2018-11-02T23:38:42.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v5.2.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/issues/130">[#130]</a> Remove engines</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v5.2.2]]></title>
+        <id>https://github.com/hapijs/code/milestone/22</id>
+        <link href="https://hapi.dev/module/code/changelog#5.2.2"/>
+        <updated>2018-11-01T07:16:43.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v5.2.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/issues/129">[#129]</a> Update hoek v6</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v5.2.0]]></title>
+        <id>https://github.com/hapijs/code/milestone/21</id>
+        <link href="https://hapi.dev/module/code/changelog#5.2.0"/>
+        <updated>2018-02-09T23:15:42.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v5.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/pull/124">[#124]</a> Return error when asserting for thrown. Closes #123</li><li><a href="https://github.com/hapijs/code/issues/123">[#123]</a> Assertions on error properties</li><li><a href="https://github.com/hapijs/code/pull/121">[#121]</a> Invalidates rejection with wrong type or message arguments</li><li><a href="https://github.com/hapijs/code/issues/119">[#119]</a>  reject does not fail if argument is of the wrong type</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v5.1.2]]></title>
+        <id>https://github.com/hapijs/code/milestone/20</id>
+        <link href="https://hapi.dev/module/code/changelog#5.1.2"/>
+        <updated>2017-11-03T07:01:44.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v5.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/issues/117">[#117]</a> Update dependencies</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v5.1.1]]></title>
+        <id>https://github.com/hapijs/code/milestone/19</id>
+        <link href="https://hapi.dev/module/code/changelog#5.1.1"/>
+        <updated>2017-11-03T07:01:00.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v5.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/pull/116">[#116]</a> Fix broken API.md anchor</li><li><a href="https://github.com/hapijs/code/pull/111">[#111]</a> fix(length): throw decent error on length check of `null`</li><li><a href="https://github.com/hapijs/code/issues/110">[#110]</a> Cannot read property 'length' of null</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v5.1.0]]></title>
+        <id>https://github.com/hapijs/code/milestone/18</id>
+        <link href="https://hapi.dev/module/code/changelog#5.1.0"/>
+        <updated>2017-09-17T20:23:14.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v5.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/issues/106">[#106]</a> Allow custom validation function for reject </li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v5.0.0]]></title>
+        <id>https://github.com/hapijs/code/milestone/17</id>
+        <link href="https://hapi.dev/module/code/changelog#5.0.0"/>
+        <updated>2017-09-17T17:44:30.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v5.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/pull/105">[#105]</a> Add promises rejection support</li><li><a href="https://github.com/hapijs/code/issues/104">[#104]</a> Add test for async functions</li><li><a href="https://github.com/hapijs/code/issues/103">[#103]</a> Expected async function to be a function</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v4.1.0]]></title>
+        <id>https://github.com/hapijs/code/milestone/16</id>
+        <link href="https://hapi.dev/module/code/changelog#4.1.0"/>
+        <updated>2017-06-08T16:27:08.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v4.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/pull/102">[#102]</a> please publish new version</li><li><a href="https://github.com/hapijs/code/pull/101">[#101]</a> print expected value on equals assertion</li><li><a href="https://github.com/hapijs/code/pull/94">[#94]</a> Reference value NaN assertion.</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v4.0.0]]></title>
+        <id>https://github.com/hapijs/code/milestone/15</id>
+        <link href="https://hapi.dev/module/code/changelog#4.0.0"/>
+        <updated>2016-09-21T23:41:19.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v4.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/issues/91">[#91]</a> New release?</li><li><a href="https://github.com/hapijs/code/pull/89">[#89]</a> Docs: Modified match API documentation</li><li><a href="https://github.com/hapijs/code/pull/87">[#87]</a> fix tests for Node v6.5.0</li><li><a href="https://github.com/hapijs/code/issues/86">[#86]</a> Tests failing on node 6.5.0</li><li><a href="https://github.com/hapijs/code/pull/84">[#84]</a> Enhancement: Added validation to `include`</li><li><a href="https://github.com/hapijs/code/issues/83">[#83]</a> Include should validate number of arguments</li><li><a href="https://github.com/hapijs/code/pull/82">[#82]</a> fix broken test from Node v6.4.0 update</li><li><a href="https://github.com/hapijs/code/issues/81">[#81]</a> Fix broken test</li><li><a href="https://github.com/hapijs/code/pull/77">[#77]</a> Invalidate array of objects with only a partial object value</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v3.0.1]]></title>
+        <id>https://github.com/hapijs/code/milestone/14</id>
+        <link href="https://hapi.dev/module/code/changelog#3.0.1"/>
+        <updated>2016-06-07T13:16:52.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v3.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/issues/75">[#75]</a> Add .npmignore file</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v3.0.0]]></title>
+        <id>https://github.com/hapijs/code/milestone/13</id>
+        <link href="https://hapi.dev/module/code/changelog#3.0.0"/>
+        <updated>2016-05-21T01:35:27.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/pull/73">[#73]</a> change default comparison behavior</li><li><a href="https://github.com/hapijs/code/pull/72">[#72]</a> Fix link to hoek documentation</li><li><a href="https://github.com/hapijs/code/issues/68">[#68]</a> Default to deep copy</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v2.3.0]]></title>
+        <id>https://github.com/hapijs/code/milestone/12</id>
+        <link href="https://hapi.dev/module/code/changelog#2.3.0"/>
+        <updated>2016-05-06T19:25:15.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v2.3.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/pull/71">[#71]</a> Fix at location information. Closes #70</li><li><a href="https://github.com/hapijs/code/issues/70">[#70]</a> expect(err).to.not.exist() reports wrong 'at' information</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v2.2.0]]></title>
+        <id>https://github.com/hapijs/code/milestone/11</id>
+        <link href="https://hapi.dev/module/code/changelog#2.2.0"/>
+        <updated>2016-04-06T13:55:11.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v2.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/pull/64">[#64]</a> Add documentation to error() (fixes #63)</li><li><a href="https://github.com/hapijs/code/issues/63">[#63]</a> Document new error() method</li><li><a href="https://github.com/hapijs/code/pull/62">[#62]</a> Add error type (fixes #61)</li><li><a href="https://github.com/hapijs/code/issues/61">[#61]</a> Proposal: error type</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v2.1.1]]></title>
+        <id>https://github.com/hapijs/code/milestone/10</id>
+        <link href="https://hapi.dev/module/code/changelog#2.1.1"/>
+        <updated>2016-04-06T13:19:32.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v2.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/pull/58">[#58]</a> handle errors without proper stacks</li><li><a href="https://github.com/hapijs/code/issues/57">[#57]</a> Problem with internals.at</li><li><a href="https://github.com/hapijs/code/pull/56">[#56]</a> minor typo fix</li><li><a href="https://github.com/hapijs/code/pull/55">[#55]</a> Update dep format for markdown-toc</li><li><a href="https://github.com/hapijs/code/pull/54">[#54]</a> Readme tweaks</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v2.1.0]]></title>
+        <id>https://github.com/hapijs/code/milestone/9</id>
+        <link href="https://hapi.dev/module/code/changelog#2.1.0"/>
+        <updated>2015-12-30T15:50:42.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v2.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/pull/51">[#51]</a> add fail method</li><li><a href="https://github.com/hapijs/code/pull/48">[#48]</a> customize error message for once flag</li><li><a href="https://github.com/hapijs/code/issues/47">[#47]</a> once flag should change error message</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v2.0.1]]></title>
+        <id>https://github.com/hapijs/code/milestone/8</id>
+        <link href="https://hapi.dev/module/code/changelog#2.0.1"/>
+        <updated>2015-10-30T19:43:24.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v2.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/issues/45">[#45]</a> Update hapijs/hoek to 3.0.0 from 2.16.3</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v2.0.0]]></title>
+        <id>https://github.com/hapijs/code/milestone/7</id>
+        <link href="https://hapi.dev/module/code/changelog#2.0.0"/>
+        <updated>2015-10-30T19:43:21.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v2.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/pull/44">[#44]</a> es6 style. Closes #43</li><li><a href="https://github.com/hapijs/code/issues/43">[#43]</a> node v4, es6</li><li><a href="https://github.com/hapijs/code/pull/38">[#38]</a> markdown fixes</li><li><a href="https://github.com/hapijs/code/pull/37">[#37]</a> fixed markdown link for equal</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v1.5.0]]></title>
+        <id>https://github.com/hapijs/code/milestone/6</id>
+        <link href="https://hapi.dev/module/code/changelog#1.5.0"/>
+        <updated>2015-07-29T23:49:49.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v1.5.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/pull/36">[#36]</a> Display error when should not exist. Closes #35</li><li><a href="https://github.com/hapijs/code/issues/35">[#35]</a> Throw original error when not.exist(err) is asserted</li><li><a href="https://github.com/hapijs/code/pull/32">[#32]</a> Added new global setting to ignore prototypes.</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v1.4.1]]></title>
+        <id>https://github.com/hapijs/code/milestone/5</id>
+        <link href="https://hapi.dev/module/code/changelog#1.4.1"/>
+        <updated>2015-06-16T19:02:31.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v1.4.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/pull/31">[#31]</a> Handle multi-line errors</li><li><a href="https://github.com/hapijs/code/issues/30">[#30]</a> `settings.truncateMessages = false` causes issues with deep object comparisons</li><li><a href="https://github.com/hapijs/code/pull/29">[#29]</a> Fixed the description for the empty() assertion in README.md</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v1.4.0]]></title>
+        <id>https://github.com/hapijs/code/milestone/4</id>
+        <link href="https://hapi.dev/module/code/changelog#1.4.0"/>
+        <updated>2015-03-27T08:20:56.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v1.4.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/pull/28">[#28]</a> Release code 1.4.0</li><li><a href="https://github.com/hapijs/code/pull/27">[#27]</a> Add documentation for global settings</li><li><a href="https://github.com/hapijs/code/pull/26">[#26]</a> Add configuration settings, including disabling message truncating</li><li><a href="https://github.com/hapijs/code/pull/25">[#25]</a> Allow prototypes to be ignored in deep.equal()</li><li><a href="https://github.com/hapijs/code/issues/24">[#24]</a> Allow prototypes to be ignored in deep comparisons</li><li><a href="https://github.com/hapijs/code/pull/23">[#23]</a> readme typo and better message</li><li><a href="https://github.com/hapijs/code/pull/18">[#18]</a> Remove Makefile in favor of npm scripts</li><li><a href="https://github.com/hapijs/code/pull/17">[#17]</a> Verify deep.equal() functionality after changes to Hoek.deepEqual()</li><li><a href="https://github.com/hapijs/code/issues/15">[#15]</a> .to.deep.equal() performs unexpectedly with empty object</li><li><a href="https://github.com/hapijs/code/issues/14">[#14]</a> do not truncate values in assertions</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v1.3.0]]></title>
+        <id>https://github.com/hapijs/code/milestone/3</id>
+        <link href="https://hapi.dev/module/code/changelog#1.3.0"/>
+        <updated>2015-01-21T19:05:41.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v1.3.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/pull/13">[#13]</a> code 1.3.0</li><li><a href="https://github.com/hapijs/code/issues/11">[#11]</a> Object [object Object] has no method 'startWith'</li><li><a href="https://github.com/hapijs/code/pull/10">[#10]</a> Reset flags after each assertion</li><li><a href="https://github.com/hapijs/code/pull/6">[#6]</a> Add startsWith and endsWith for URLs.</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v1.2.1]]></title>
+        <id>https://github.com/hapijs/code/milestone/2</id>
+        <link href="https://hapi.dev/module/code/changelog#1.2.1"/>
+        <updated>2014-11-02T18:59:41.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v1.2.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/issues/5">[#5]</a> throw('') matches any message</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/code v1.2.0]]></title>
+        <id>https://github.com/hapijs/code/milestone/1</id>
+        <link href="https://hapi.dev/module/code/changelog#1.2.0"/>
+        <updated>2014-10-22T06:14:51.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/code v1.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/code/issues/2">[#2]</a> between()</li></ul>]]></content>
+    </entry>
+</feed>

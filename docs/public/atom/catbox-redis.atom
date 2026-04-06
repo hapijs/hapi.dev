@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/catbox-redis</id>
+    <title>@hapi/catbox-redis changelog</title>
+    <updated>2023-08-04T14:08:43.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/catbox-redis"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis v7.0.2]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/33</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#7.0.2"/>
+        <updated>2023-08-04T14:08:43.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis v7.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/pull/128">[#128]</a> chore: enable lab type tests</li><li><a href="https://github.com/hapijs/catbox-redis/pull/126">[#126]</a> feat: 🎸 add and improve typings from DT</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis v7.0.1]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/32</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#7.0.1"/>
+        <updated>2023-02-11T20:47:35.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis v7.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/pull/125">[#125]</a> chore: bump hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis v7.0.0]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/31</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#7.0.0"/>
+        <updated>2022-10-29T20:22:54.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis v7.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/pull/123">[#123]</a> Support for node v18, ESM tests, upgrade ioredis</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis v6.0.2]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/29</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#6.0.2"/>
+        <updated>2020-09-26T17:17:28.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis v6.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/pull/117">[#117]</a> update deps and use travis templates</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis v6.0.1]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/28</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#6.0.1"/>
+        <updated>2020-07-10T03:45:28.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis v6.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/issues/115">[#115]</a> Redis Configuration Options</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis v6.0.0]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/27</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#6.0.0"/>
+        <updated>2020-01-05T00:09:14.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis v6.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/issues/112">[#112]</a> Only node 12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis v5.0.5]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/26</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#5.0.5"/>
+        <updated>2019-10-05T16:44:57.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis v5.0.5]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/pull/109">[#109]</a> Use PSETEX instead of SET and PEXP</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis v5.0.4]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/25</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#5.0.4"/>
+        <updated>2019-09-12T23:28:30.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis v5.0.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/issues/107">[#107]</a> Update joi</li><li><a href="https://github.com/hapijs/catbox-redis/issues/103">[#103]</a> Example "db" parameter error</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis v5.0.3]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/24</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#5.0.3"/>
+        <updated>2019-09-12T23:19:33.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis v5.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/issues/106">[#106]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis v5.0.2]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/23</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#5.0.2"/>
+        <updated>2019-05-19T17:35:25.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis v5.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/issues/102">[#102]</a> Allowing empty password</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis v5.0.1]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/22</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#5.0.1"/>
+        <updated>2019-04-25T17:09:05.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis v5.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/pull/100">[#100]</a> hotfix: redis tls opt is an object, not boolean</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis v5.0.0]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/21</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#5.0.0"/>
+        <updated>2019-04-21T21:08:14.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis v5.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/issues/98">[#98]</a> Switch to use Redis pexpire</li><li><a href="https://github.com/hapijs/catbox-redis/issues/97">[#97]</a> Refactor options</li><li><a href="https://github.com/hapijs/catbox-redis/issues/96">[#96]</a> Change module namespace</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis vv4.1.0]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/20</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#v4.1.0"/>
+        <updated>2019-04-20T22:53:16.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis vv4.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/pull/79">[#79]</a> Don't mess with provided clients</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis vv4.0.1]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/18</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#v4.0.1"/>
+        <updated>2019-04-20T22:53:17.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis vv4.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/pull/69">[#69]</a> added support for dropSegment</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis vv4.0.0]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/15</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#v4.0.0"/>
+        <updated>2017-11-23T13:08:20.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis vv4.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/pull/77">[#77]</a> Update to work with Catbox 10 (Hapi 17)</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis vv3.2.0]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/16</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#v3.2.0"/>
+        <updated>2017-11-23T13:08:13.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis vv3.2.0]]></summary>
+        <content type="html"><![CDATA[<ul></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis vv3.1.1]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/17</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#v3.1.1"/>
+        <updated>2017-11-23T13:08:10.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis vv3.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/pull/74">[#74]</a> Ensure the client really is ready</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis vv3.1.0]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/14</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#v3.1.0"/>
+        <updated>2017-09-18T10:32:27.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis vv3.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/pull/72">[#72]</a> Upgrade `ioredis` to `3.x.x`</li><li><a href="https://github.com/hapijs/catbox-redis/pull/71">[#71]</a> chore(package): update ioredis to v3</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis vv3.0.3]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/13</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#v3.0.3"/>
+        <updated>2017-09-18T10:32:22.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis vv3.0.3]]></summary>
+        <content type="html"><![CDATA[<ul></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis vv3.0.0]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/12</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#v3.0.0"/>
+        <updated>2017-03-28T15:36:28.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis vv3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/pull/62">[#62]</a> update dependencies</li><li><a href="https://github.com/hapijs/catbox-redis/pull/53">[#53]</a> Move to `ioredis`</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis vv2.0.3]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/11</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#v2.0.3"/>
+        <updated>2017-03-28T15:36:26.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis vv2.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/pull/52">[#52]</a> upgrade code@3 and lab@11</li><li><a href="https://github.com/hapijs/catbox-redis/pull/51">[#51]</a> Add option to ignore startup failures</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis vv2.0.2]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/10</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#v2.0.2"/>
+        <updated>2017-03-28T15:36:30.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis vv2.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/pull/49">[#49]</a> Use `false` parameter to `client.end` in order to fail silently</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis vv2.0.1]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/9</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#v2.0.1"/>
+        <updated>2016-06-14T09:23:43.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis vv2.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/pull/47">[#47]</a> Adding flush parameter when calling client.end</li><li><a href="https://github.com/hapijs/catbox-redis/pull/45">[#45]</a> Test on node v6, update dependencies</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis vv1.1.0]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/7</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#v1.1.0"/>
+        <updated>2016-06-14T09:16:49.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis vv1.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/pull/36">[#36]</a> Ignore partition if not defined</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis vv1.0.9]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/8</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#v1.0.9"/>
+        <updated>2016-06-14T09:16:51.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis vv1.0.9]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/pull/40">[#40]</a> Allow passing a ready Redis client</li><li><a href="https://github.com/hapijs/catbox-redis/pull/39">[#39]</a> Drop node 0.10 support</li><li><a href="https://github.com/hapijs/catbox-redis/pull/30">[#30]</a> Add unix socket support</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis vv1.0.8]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/6</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#v1.0.8"/>
+        <updated>2016-03-15T11:05:10.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis vv1.0.8]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/pull/38">[#38]</a> Cleanup tests</li><li><a href="https://github.com/hapijs/catbox-redis/pull/37">[#37]</a> Wait redis client to be ready in order to make sure that authentication has been done</li><li><a href="https://github.com/hapijs/catbox-redis/pull/31">[#31]</a> Loosen dependency to redis 2.x.x to allow 2.3.0 to match</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis vv1.0.6]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/5</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#v1.0.6"/>
+        <updated>2016-01-15T10:13:54.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis vv1.0.6]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/pull/27">[#27]</a> Upgrade outdated node-redis dependency</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis v1.0.4]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/4</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#1.0.4"/>
+        <updated>2014-08-03T05:36:05.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis v1.0.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/issues/8">[#8]</a> Rename spumko to hapijs</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis v1.0.3]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/3</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#1.0.3"/>
+        <updated>2014-06-12T06:23:22.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis v1.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/issues/7">[#7]</a> Remove large ttl test</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis v1.0.2]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/2</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#1.0.2"/>
+        <updated>2014-05-20T21:41:20.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis v1.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/issues/5">[#5]</a> Bring coverage back to 100%</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis v1.0.1]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/1</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#1.0.1"/>
+        <updated>2014-03-08T23:18:40.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis v1.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/issues/3">[#3]</a> Add example</li></ul>]]></content>
+    </entry>
+</feed>

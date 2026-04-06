@@ -1,0 +1,22 @@
+{
+  "api": true,
+  "forks": 98,
+  "isPlugin": true,
+  "link": "https://github.com/hapijs/cookie",
+  "name": "cookie",
+  "package": "@hapi/cookie",
+  "slogan": "Cookie authentication plugin.",
+  "sloganHtml": "Cookie authentication plugin.",
+  "stars": 229,
+  "updated": "2024-10-23T15:43:20Z",
+  "versions": [
+    {
+      "branch": "v12.0.1",
+      "license": "BSD",
+      "name": "12.0.1",
+      "node": ">= 16"
+    }
+  ],
+  "versionsArray": ["12.0.1"],
+  "latestVersion": "12.x.x"
+}

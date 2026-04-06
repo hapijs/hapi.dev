@@ -1,0 +1,22 @@
+{
+  "api": true,
+  "forks": 19,
+  "isPlugin": false,
+  "link": "https://github.com/hapijs/oppsy",
+  "name": "oppsy",
+  "package": "@hapi/oppsy",
+  "slogan": "An EventEmitter useful for collecting hapi server ops information.",
+  "sloganHtml": "An EventEmitter useful for collecting hapi server ops information.",
+  "stars": 25,
+  "updated": "2024-10-23T14:52:58Z",
+  "versions": [
+    {
+      "branch": "v3.0.0",
+      "license": "BSD",
+      "name": "3.0.0",
+      "node": ">= 16"
+    }
+  ],
+  "versionsArray": ["3.0.0"],
+  "latestVersion": "3.x.x"
+}

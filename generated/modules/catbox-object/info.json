@@ -1,0 +1,22 @@
+{
+  "api": true,
+  "forks": 6,
+  "isPlugin": false,
+  "link": "https://github.com/hapijs/catbox-object",
+  "name": "catbox-object",
+  "package": "@hapi/catbox-object",
+  "slogan": "Object cache adaptor for [catbox](https://github.com/hapijs/catbox).",
+  "sloganHtml": "Object cache adaptor for <a href=\"https://github.com/hapijs/catbox\" target=\"_blank\" rel=\"noreferrer\">catbox</a>.",
+  "stars": 2,
+  "updated": "2024-10-23T15:26:43Z",
+  "versions": [
+    {
+      "branch": "v3.0.1",
+      "license": "BSD",
+      "name": "3.0.1",
+      "node": ">= 16"
+    }
+  ],
+  "versionsArray": ["3.0.1"],
+  "latestVersion": "3.x.x"
+}

@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev</id>
+    <title>@hapi/hapi changelog</title>
+    <updated>2026-04-02T08:29:10.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v21.4.8]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/329</id>
+        <link href="https://hapi.dev/resources/changelog#21.4.8"/>
+        <updated>2026-04-02T08:29:10.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v21.4.8]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4568">[#4568]</a> chore: bump deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v21.4.7]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/328</id>
+        <link href="https://hapi.dev/resources/changelog#21.4.7"/>
+        <updated>2026-03-06T15:06:47.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v21.4.7]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4559">[#4559]</a> fix: 🐛 request.url getter fails when using IPv6 and HTTP2 [#4560]</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v21.4.6]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/327</id>
+        <link href="https://hapi.dev/resources/changelog#21.4.6"/>
+        <updated>2026-02-19T15:27:38.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v21.4.6]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4564">[#4564]</a> Fix invalid hostname parsing for ipv6 formatted host header</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v21.4.5]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/326</id>
+        <link href="https://hapi.dev/resources/changelog#21.4.5"/>
+        <updated>2026-02-18T09:16:35.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v21.4.5]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4562">[#4562]</a> fix: auth typings and reduced type ambiguity</li><li><a href="https://github.com/hapijs/hapi/issues/4561">[#4561]</a> Possible typing regression between v21.3.12 and v21.4.4</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v21.4.4]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/325</id>
+        <link href="https://hapi.dev/resources/changelog#21.4.4"/>
+        <updated>2025-11-06T09:44:01.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v21.4.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4557">[#4557]</a> chore: update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v21.4.3]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/324</id>
+        <link href="https://hapi.dev/resources/changelog#21.4.3"/>
+        <updated>2025-08-13T22:38:47.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v21.4.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4553">[#4553]</a> chore: bump dependencies</li><li><a href="https://github.com/hapijs/hapi/pull/4552">[#4552]</a> Handle stream.destroy() called before stream end</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v21.4.2]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/323</id>
+        <link href="https://hapi.dev/resources/changelog#21.4.2"/>
+        <updated>2025-08-04T21:03:50.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v21.4.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4550">[#4550]</a> Correct type for state object</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v21.4.1]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/322</id>
+        <link href="https://hapi.dev/resources/changelog#21.4.1"/>
+        <updated>2025-08-04T21:03:47.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v21.4.1]]></summary>
+        <content type="html"><![CDATA[<ul></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v21.4.0]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/321</id>
+        <link href="https://hapi.dev/resources/changelog#21.4.0"/>
+        <updated>2025-03-01T09:19:22.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v21.4.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4545">[#4545]</a> feat: add support for cookie partition</li><li><a href="https://github.com/hapijs/hapi/pull/4543">[#4543]</a> Update event tags in documentation</li><li><a href="https://github.com/hapijs/hapi/issues/4542">[#4542]</a> `request` `closed` `error` tags</li><li><a href="https://github.com/hapijs/hapi/pull/4540">[#4540]</a> fix: 🐛 less ambigious plugin types</li><li><a href="https://github.com/hapijs/hapi/pull/4538">[#4538]</a> fix: 🐛 typings around server.decorate</li><li><a href="https://github.com/hapijs/hapi/pull/4523">[#4523]</a> fix: 🐛 accurate auth typings</li><li><a href="https://github.com/hapijs/hapi/pull/4515">[#4515]</a> fix: 🐛 allow typed server methods access cache methods</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v21.3.12]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/320</id>
+        <link href="https://hapi.dev/resources/changelog#21.3.12"/>
+        <updated>2024-10-24T22:12:20.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v21.3.12]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4533">[#4533]</a> chore: bump hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v21.3.11]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/319</id>
+        <link href="https://hapi.dev/resources/changelog#21.3.11"/>
+        <updated>2024-10-24T10:20:18.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v21.3.11]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4532">[#4532]</a> chore: bump all modules to their latest compatible version</li><li><a href="https://github.com/hapijs/hapi/issues/4531">[#4531]</a> Asserts (and probably other Bounce.isSystem) loose stack trace</li><li><a href="https://github.com/hapijs/hapi/pull/4530">[#4530]</a> Don't destroy incoming requests during the stopping phase</li><li><a href="https://github.com/hapijs/hapi/pull/4488">[#4488]</a> Improve expect 100-continue handling</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v21.3.10]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/318</id>
+        <link href="https://hapi.dev/resources/changelog#21.3.10"/>
+        <updated>2024-10-24T10:00:52.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v21.3.10]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4507">[#4507]</a> fix: 🐛 route payload options missing types</li><li><a href="https://github.com/hapijs/hapi/issues/4501">[#4501]</a> Missing maxParts type in route.d.ts</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v21.3.9]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/317</id>
+        <link href="https://hapi.dev/resources/changelog#21.3.9"/>
+        <updated>2024-04-09T14:38:28.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v21.3.9]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4496">[#4496]</a> types: allow server.match to receive lowercased methods</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v21.3.8]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/316</id>
+        <link href="https://hapi.dev/resources/changelog#21.3.8"/>
+        <updated>2024-04-03T20:56:12.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v21.3.8]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4493">[#4493]</a> Cleanup http methods typings</li><li><a href="https://github.com/hapijs/hapi/issues/4492">[#4492]</a> HTTP_METHODS_PARTIAL_LOWERCASE is missing `head`</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v21.3.7]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/315</id>
+        <link href="https://hapi.dev/resources/changelog#21.3.7"/>
+        <updated>2024-03-19T21:21:08.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v21.3.7]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4490">[#4490]</a> Make content encoder and options explicitly typed and extensible</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v21.3.6]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/314</id>
+        <link href="https://hapi.dev/resources/changelog#21.3.6"/>
+        <updated>2024-03-13T19:06:46.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v21.3.6]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4486">[#4486]</a> Revert "fix(types): enhance reusability of pres"</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v21.3.5]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/313</id>
+        <link href="https://hapi.dev/resources/changelog#21.3.5"/>
+        <updated>2024-03-13T14:43:47.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v21.3.5]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4471">[#4471]</a> Don't return error response when clientError is a pipelined HPE_INVALID_METHOD</li><li><a href="https://github.com/hapijs/hapi/issues/4363">[#4363]</a> Server crash: Error: Unknown error</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v21.3.4]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/312</id>
+        <link href="https://hapi.dev/resources/changelog#21.3.4"/>
+        <updated>2024-03-13T14:12:21.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v21.3.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4470">[#4470]</a> fix(types): enhance reusability of pres</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v21.3.3]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/311</id>
+        <link href="https://hapi.dev/resources/changelog#21.3.3"/>
+        <updated>2024-01-29T15:50:24.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v21.3.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4473">[#4473]</a> Node 20 fixes</li><li><a href="https://github.com/hapijs/hapi/pull/4460">[#4460]</a> FIX add compressed to ResponseObject type</li><li><a href="https://github.com/hapijs/hapi/pull/4446">[#4446]</a> failAction loses stacktrace context</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v21.3.2]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/310</id>
+        <link href="https://hapi.dev/resources/changelog#21.3.2"/>
+        <updated>2023-04-24T22:12:03.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v21.3.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4449">[#4449]</a> chore: use new statehood types</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v21.3.1]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/309</id>
+        <link href="https://hapi.dev/resources/changelog#21.3.1"/>
+        <updated>2023-04-24T22:12:01.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v21.3.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4413">[#4413]</a> Pass ServerApplicationState to server extensions</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v21.3.0]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/308</id>
+        <link href="https://hapi.dev/resources/changelog#21.3.0"/>
+        <updated>2023-02-14T15:13:19.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v21.3.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/issues/4425">[#4425]</a> Add option to limit maxParts in multipart payloads</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v21.2.2]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/306</id>
+        <link href="https://hapi.dev/resources/changelog#21.2.2"/>
+        <updated>2023-02-11T21:16:25.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v21.2.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4417">[#4417]</a> chore: bump hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v21.2.1]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/304</id>
+        <link href="https://hapi.dev/resources/changelog#21.2.1"/>
+        <updated>2023-01-30T03:18:04.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v21.2.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4422">[#4422]</a> Update README.md</li><li><a href="https://github.com/hapijs/hapi/pull/4421">[#4421]</a> adding colin to tsc members</li><li><a href="https://github.com/hapijs/hapi/pull/4415">[#4415]</a> Correct the ResponseObject type</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v21.2.0]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/303</id>
+        <link href="https://hapi.dev/resources/changelog#21.2.0"/>
+        <updated>2023-01-30T03:17:24.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v21.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4407">[#4407]</a> Add type for preflight status code in cors options</li><li><a href="https://github.com/hapijs/hapi/pull/4402">[#4402]</a> Updates to TypeScript definitions</li><li><a href="https://github.com/hapijs/hapi/pull/4401">[#4401]</a> update types for xss</li><li><a href="https://github.com/hapijs/hapi/pull/4400">[#4400]</a> Enhance plugin types</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v21.1.0]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/302</id>
+        <link href="https://hapi.dev/resources/changelog#21.1.0"/>
+        <updated>2022-12-01T03:25:20.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v21.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4398">[#4398]</a> Move TypeScript definition from DT (as-is)</li><li><a href="https://github.com/hapijs/hapi/pull/4396">[#4396]</a> Fix handling of no remoteAddress available</li><li><a href="https://github.com/hapijs/hapi/pull/4391">[#4391]</a> Fix node version requirement</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v21.0.0]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/300</id>
+        <link href="https://hapi.dev/resources/changelog#21.0.0"/>
+        <updated>2022-11-07T15:13:45.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v21.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/issues/4386">[#4386]</a> 21.0.0 Release Notes</li><li><a href="https://github.com/hapijs/hapi/pull/4366">[#4366]</a> Allow matching prereleases when validating plugin version requirements</li><li><a href="https://github.com/hapijs/hapi/pull/4361">[#4361]</a> Upgrade production deps for hapi v21 and node v18</li><li><a href="https://github.com/hapijs/hapi/pull/4357">[#4357]</a> Change default host to be IPv6-friendly</li><li><a href="https://github.com/hapijs/hapi/pull/4352">[#4352]</a> Change XSS header default to '0'</li><li><a href="https://github.com/hapijs/hapi/pull/4351">[#4351]</a> Change default CORS preflight status code w/ configuration</li><li><a href="https://github.com/hapijs/hapi/pull/4350">[#4350]</a> Make default error available in validation failAction</li><li><a href="https://github.com/hapijs/hapi/pull/4349">[#4349]</a> Enforce that response streams are always Stream.Readable</li><li><a href="https://github.com/hapijs/hapi/pull/4348">[#4348]</a> Ignore return value from generateResponse() prepare method</li><li><a href="https://github.com/hapijs/hapi/pull/4346">[#4346]</a> Drop node v12 support</li><li><a href="https://github.com/hapijs/hapi/issues/4288">[#4288]</a> Add support for event loop utilization based load limit</li><li><a href="https://github.com/hapijs/hapi/pull/4271">[#4271]</a> Remove JSONP support</li><li><a href="https://github.com/hapijs/hapi/issues/4229">[#4229]</a> failAction: detailedError to log, defaultError to response</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v20.3.0]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/307</id>
+        <link href="https://hapi.dev/resources/changelog#20.3.0"/>
+        <updated>2023-02-14T15:13:24.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v20.3.0]]></summary>
+        <content type="html"><![CDATA[<ul></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v20.2.2]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/299</id>
+        <link href="https://hapi.dev/resources/changelog#20.2.2"/>
+        <updated>2022-04-20T02:52:44.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v20.2.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/issues/4347">[#4347]</a> Update hapijs/statehood to 7.0.4 from 7.0.3 </li><li><a href="https://github.com/hapijs/hapi/pull/4345">[#4345]</a> Fix memory leaks from teamwork long standing notes</li><li><a href="https://github.com/hapijs/hapi/pull/4314">[#4314]</a> Fix tests for node v17</li><li><a href="https://github.com/hapijs/hapi/pull/4302">[#4302]</a> Soft deprecate returning a new object from generateResponse()</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v20.2.1]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/298</id>
+        <link href="https://hapi.dev/resources/changelog#20.2.1"/>
+        <updated>2021-10-09T01:03:48.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v20.2.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4295">[#4295]</a> Revised request / inject abort handling</li><li><a href="https://github.com/hapijs/hapi/issues/4294">[#4294]</a> Server crashes if a requested aborted during sending a response. </li><li><a href="https://github.com/hapijs/hapi/pull/4289">[#4289]</a> Update server load default options on documentation</li><li><a href="https://github.com/hapijs/hapi/pull/4286">[#4286]</a> Initialize server settings defaults</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v20.2.0]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/297</id>
+        <link href="https://hapi.dev/resources/changelog#20.2.0"/>
+        <updated>2021-09-21T07:06:30.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v20.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4283">[#4283]</a> Fix tests for node@16 error format change</li><li><a href="https://github.com/hapijs/hapi/pull/4281">[#4281]</a> Fix handling of auth scheme/strategy realms</li><li><a href="https://github.com/hapijs/hapi/pull/4274">[#4274]</a> Add optional payload authentication skip on credentials injection</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v20.1.5]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/296</id>
+        <link href="https://hapi.dev/resources/changelog#20.1.5"/>
+        <updated>2021-06-28T22:01:30.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v20.1.5]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4264">[#4264]</a> Fix req end during response transmission</li><li><a href="https://github.com/hapijs/hapi/issues/4262">[#4262]</a> Streaming uploads cause truncated responses in node 16</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v20.1.4]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/295</id>
+        <link href="https://hapi.dev/resources/changelog#20.1.4"/>
+        <updated>2021-06-10T13:17:41.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v20.1.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4257">[#4257]</a> Add response lifecycle tracking and checks</li><li><a href="https://github.com/hapijs/hapi/issues/4256">[#4256]</a> inert + hapi may be leaking file descriptors</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v20.1.3]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/294</id>
+        <link href="https://hapi.dev/resources/changelog#20.1.3"/>
+        <updated>2021-05-10T14:52:40.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v20.1.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4250">[#4250]</a> Update to mimos v6</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v20.1.2]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/293</id>
+        <link href="https://hapi.dev/resources/changelog#20.1.2"/>
+        <updated>2021-03-20T22:46:32.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v20.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4239">[#4239]</a> Fix abort test timing to be consistent from node v12 through v16</li><li><a href="https://github.com/hapijs/hapi/pull/4231">[#4231]</a> Update dependencies version range</li><li><a href="https://github.com/hapijs/hapi/pull/4225">[#4225]</a> Future-proof hapi for node v16, rely on res close rather than req</li><li><a href="https://github.com/hapijs/hapi/pull/4095">[#4095]</a> Rely on stream.destroy() whenever available</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v20.1.1]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/291</id>
+        <link href="https://hapi.dev/resources/changelog#20.1.1"/>
+        <updated>2021-03-16T02:11:37.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v20.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4234">[#4234]</a> Allow for res to have already closed during transmission</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v20.1.0]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/290</id>
+        <link href="https://hapi.dev/resources/changelog#20.1.0"/>
+        <updated>2021-01-25T23:56:24.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v20.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4221">[#4221]</a> Fix tests for citgm</li><li><a href="https://github.com/hapijs/hapi/pull/4219">[#4219]</a> Add policy event</li><li><a href="https://github.com/hapijs/hapi/pull/4203">[#4203]</a> Add closing event</li><li><a href="https://github.com/hapijs/hapi/issues/4194">[#4194]</a> Add a 'closing' event</li><li><a href="https://github.com/hapijs/hapi/issues/4104">[#4104]</a> Track cache policies</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v20.0.3]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/289</id>
+        <link href="https://hapi.dev/resources/changelog#20.0.3"/>
+        <updated>2020-11-23T20:58:34.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v20.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4191">[#4191]</a> Preserve original response status on error after write, fix status message</li><li><a href="https://github.com/hapijs/hapi/issues/4182">[#4182]</a> server.inject does not reflect actual HTTP response in case of stream error</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v20.0.2]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/288</id>
+        <link href="https://hapi.dev/resources/changelog#20.0.2"/>
+        <updated>2020-11-11T03:44:29.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v20.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4167">[#4167]</a> upgrade to labv24</li><li><a href="https://github.com/hapijs/hapi/pull/4089">[#4089]</a> [default-scope] Accept default scope as a valid route scope</li><li><a href="https://github.com/hapijs/hapi/issues/4083">[#4083]</a> Default auth scope not compatible with route auth scope</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v20.0.1]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/287</id>
+        <link href="https://hapi.dev/resources/changelog#20.0.1"/>
+        <updated>2020-09-24T02:24:20.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v20.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4162">[#4162]</a> Use response instead of request when marshalling</li><li><a href="https://github.com/hapijs/hapi/pull/4161">[#4161]</a> fix: check if _isPayloadSupported is set</li><li><a href="https://github.com/hapijs/hapi/pull/4156">[#4156]</a> update handlebars dependency version</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v20.0.0]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/286</id>
+        <link href="https://hapi.dev/resources/changelog#20.0.0"/>
+        <updated>2020-08-11T19:57:02.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v20.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4140">[#4140]</a> update to travis templates</li><li><a href="https://github.com/hapijs/hapi/pull/4139">[#4139]</a> update most out of date dependencies</li><li><a href="https://github.com/hapijs/hapi/issues/4138">[#4138]</a> 20.0.0 Release Notes</li><li><a href="https://github.com/hapijs/hapi/pull/4134">[#4134]</a> headers: avoid sending null content-type</li><li><a href="https://github.com/hapijs/hapi/issues/4133">[#4133]</a> Content-type header is null when empty response is returned</li><li><a href="https://github.com/hapijs/hapi/pull/4132">[#4132]</a> README needs this change to parse the slogan for site</li><li><a href="https://github.com/hapijs/hapi/pull/4130">[#4130]</a> fixed teamwork version</li><li><a href="https://github.com/hapijs/hapi/pull/4123">[#4123]</a> Removing the route timeout validation</li><li><a href="https://github.com/hapijs/hapi/issues/4122">[#4122]</a> Payload timeout must be shorter than socket timeout</li><li><a href="https://github.com/hapijs/hapi/pull/4117">[#4117]</a> Implement `isInjected` read-only request property to indicate request…</li><li><a href="https://github.com/hapijs/hapi/issues/4116">[#4116]</a> Improved injected request detection</li><li><a href="https://github.com/hapijs/hapi/pull/4115">[#4115]</a> Replace joi with validate</li><li><a href="https://github.com/hapijs/hapi/issues/4113">[#4113]</a> The future of the hapi project</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v19.2.0]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/278</id>
+        <link href="https://hapi.dev/resources/changelog#19.2.0"/>
+        <updated>2020-07-17T19:34:46.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v19.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/issues/4077">[#4077]</a> Decorate response object</li><li><a href="https://github.com/hapijs/hapi/pull/4073">[#4073]</a> Add new ext onPostResponse</li><li><a href="https://github.com/hapijs/hapi/issues/4072">[#4072]</a> Response Event For Aborted Requests Has Status Code Of 200</li><li><a href="https://github.com/hapijs/hapi/issues/4051">[#4051]</a> Expose (likely?) Content-Type on response object</li><li><a href="https://github.com/hapijs/hapi/issues/4041">[#4041]</a> How to access catbox client instances through the framework?</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v19.1.1]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/277</id>
+        <link href="https://hapi.dev/resources/changelog#19.1.1"/>
+        <updated>2020-02-13T19:15:37.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v19.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/issues/4043">[#4043]</a> Update deps</li><li><a href="https://github.com/hapijs/hapi/issues/4027">[#4027]</a> Problem with settings global request.payload.multipart to true in Hapi v19</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v19.1.0]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/276</id>
+        <link href="https://hapi.dev/resources/changelog#19.1.0"/>
+        <updated>2020-02-03T21:33:54.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v19.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/issues/4034">[#4034]</a> request.info.remoteAddress / request.info.remotePort undefined after connection closed (request aborted)</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v19.0.5]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/275</id>
+        <link href="https://hapi.dev/resources/changelog#19.0.5"/>
+        <updated>2020-01-16T10:18:43.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v19.0.5]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/issues/4026">[#4026]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v19.0.4]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/274</id>
+        <link href="https://hapi.dev/resources/changelog#19.0.4"/>
+        <updated>2020-01-13T11:42:05.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v19.0.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/issues/4022">[#4022]</a> Revert #4021</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v19.0.3]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/273</id>
+        <link href="https://hapi.dev/resources/changelog#19.0.3"/>
+        <updated>2020-01-13T02:32:28.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v19.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/issues/4021">[#4021]</a> Retain '' result in inject in 204 response</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v19.0.2]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/272</id>
+        <link href="https://hapi.dev/resources/changelog#19.0.2"/>
+        <updated>2020-01-10T17:57:52.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v19.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/pull/4020">[#4020]</a> support JSON.stringify() of request.info</li><li><a href="https://github.com/hapijs/hapi/issues/4019">[#4019]</a> Feature request: custom toJSON() method for request.info</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v19.0.1]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/271</id>
+        <link href="https://hapi.dev/resources/changelog#19.0.1"/>
+        <updated>2020-01-10T07:18:36.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v19.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/issues/4018">[#4018]</a> Override request.url in setUrl()</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/hapi v19.0.0]]></title>
+        <id>https://github.com/hapijs/hapi/milestone/254</id>
+        <link href="https://hapi.dev/resources/changelog#19.0.0"/>
+        <updated>2020-01-10T04:22:19.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/hapi v19.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/hapi/issues/4017">[#4017]</a> 19.0.0 Release Notes</li><li><a href="https://github.com/hapijs/hapi/issues/4015">[#4015]</a> Do not override request.payload if set manually in onRequest</li><li><a href="https://github.com/hapijs/hapi/issues/4013">[#4013]</a> Use private class fields</li><li><a href="https://github.com/hapijs/hapi/issues/4012">[#4012]</a> Drop node 10</li><li><a href="https://github.com/hapijs/hapi/issues/4011">[#4011]</a> Change scoped plugins name handling</li><li><a href="https://github.com/hapijs/hapi/issues/4006">[#4006]</a> server.validator()</li><li><a href="https://github.com/hapijs/hapi/pull/4002">[#4002]</a> fix(auth): properly populate request.auth on failed auth</li><li><a href="https://github.com/hapijs/hapi/issues/4000">[#4000]</a> auth scheme artifacts are dropped when mode is not 'try'</li><li><a href="https://github.com/hapijs/hapi/pull/3996">[#3996]</a> Decorate requests with symbols with apply=true</li><li><a href="https://github.com/hapijs/hapi/issues/3995">[#3995]</a> Fix ? in fragment part</li><li><a href="https://github.com/hapijs/hapi/issues/3987">[#3987]</a> Support SameSite=None for cookies</li><li><a href="https://github.com/hapijs/hapi/issues/3977">[#3977]</a> Remove request queue (options.load.concurrent)</li><li><a href="https://github.com/hapijs/hapi/issues/3976">[#3976]</a> Update hapijs/joi to 16.0.1 from 15.1.1</li><li><a href="https://github.com/hapijs/hapi/issues/3920">[#3920]</a> Change routes.payload.multipart to false by default</li><li><a href="https://github.com/hapijs/hapi/issues/3919">[#3919]</a> Change emptyStatusCode to 204 by default</li><li><a href="https://github.com/hapijs/hapi/issues/3910">[#3910]</a> Drop support for node v8</li></ul>]]></content>
+    </entry>
+</feed>

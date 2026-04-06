@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/statehood</id>
+    <title>@hapi/statehood changelog</title>
+    <updated>2025-11-06T09:39:52.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/statehood"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v8.2.1]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/45</id>
+        <link href="https://hapi.dev/module/statehood/changelog#8.2.1"/>
+        <updated>2025-11-06T09:39:52.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v8.2.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/pull/89">[#89]</a> chore: optimize regexps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v8.2.0]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/44</id>
+        <link href="https://hapi.dev/module/statehood/changelog#8.2.0"/>
+        <updated>2025-02-28T23:50:15.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v8.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/pull/88">[#88]</a> Add support to cookie partition</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v8.1.1]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/43</id>
+        <link href="https://hapi.dev/module/statehood/changelog#8.1.1"/>
+        <updated>2023-04-24T21:49:37.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v8.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/pull/86">[#86]</a> fix: missing types on exclude</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v8.1.0]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/42</id>
+        <link href="https://hapi.dev/module/statehood/changelog#8.1.0"/>
+        <updated>2023-04-24T21:49:35.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v8.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/pull/85">[#85]</a> feat: add typescript types</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v8.0.1]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/41</id>
+        <link href="https://hapi.dev/module/statehood/changelog#8.0.1"/>
+        <updated>2023-02-11T19:06:55.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v8.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/pull/84">[#84]</a> chore: bump hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v8.0.0]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/40</id>
+        <link href="https://hapi.dev/module/statehood/changelog#8.0.0"/>
+        <updated>2022-05-23T04:21:52.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v8.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/pull/82">[#82]</a> Support node v18, drop node v12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v7.0.4]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/38</id>
+        <link href="https://hapi.dev/module/statehood/changelog#7.0.4"/>
+        <updated>2022-04-20T02:52:24.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v7.0.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/pull/81">[#81]</a> Parse cookie pairs without a regex</li><li><a href="https://github.com/hapijs/statehood/pull/77">[#77]</a> upgrade lab to v24</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v7.0.3]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/37</id>
+        <link href="https://hapi.dev/module/statehood/changelog#7.0.3"/>
+        <updated>2020-09-26T19:29:40.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v7.0.3]]></summary>
+        <content type="html"><![CDATA[<ul></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v7.0.2]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/36</id>
+        <link href="https://hapi.dev/module/statehood/changelog#7.0.2"/>
+        <updated>2020-02-13T08:43:03.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v7.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/issues/71">[#71]</a> Explicitly block __proto__ cookie name</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v7.0.1]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/35</id>
+        <link href="https://hapi.dev/module/statehood/changelog#7.0.1"/>
+        <updated>2020-01-09T00:23:17.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v7.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/issues/69">[#69]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v7.0.0]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/33</id>
+        <link href="https://hapi.dev/module/statehood/changelog#7.0.0"/>
+        <updated>2019-12-28T05:08:28.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v7.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/issues/67">[#67]</a> Drop node 10</li><li><a href="https://github.com/hapijs/statehood/issues/66">[#66]</a> Drop node 8</li><li><a href="https://github.com/hapijs/statehood/issues/65">[#65]</a> Support custom properties via function</li><li><a href="https://github.com/hapijs/statehood/issues/64">[#64]</a> Support SameSite=None</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v6.1.2]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/32</id>
+        <link href="https://hapi.dev/module/statehood/changelog#6.1.2"/>
+        <updated>2019-09-12T22:31:29.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v6.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/issues/62">[#62]</a> Update joi</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v6.1.1]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/31</id>
+        <link href="https://hapi.dev/module/statehood/changelog#6.1.1"/>
+        <updated>2019-08-15T01:02:09.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v6.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/issues/61">[#61]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v6.1.0]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/28</id>
+        <link href="https://hapi.dev/module/statehood/changelog#6.1.0"/>
+        <updated>2019-04-02T06:42:28.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v6.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/issues/59">[#59]</a> Change module namespace</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v6.0.9]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/26</id>
+        <link href="https://hapi.dev/module/statehood/changelog#6.0.9"/>
+        <updated>2019-01-31T19:46:46.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v6.0.9]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/issues/55">[#55]</a> Protect against JSON.parse() prototype poisoning</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v6.0.8]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/25</id>
+        <link href="https://hapi.dev/module/statehood/changelog#6.0.8"/>
+        <updated>2018-11-03T00:38:01.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v6.0.8]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/issues/47">[#47]</a> Remove engines</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v6.0.7]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/23</id>
+        <link href="https://hapi.dev/module/statehood/changelog#6.0.7"/>
+        <updated>2018-11-01T19:21:36.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v6.0.7]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/issues/46">[#46]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v6.0.6]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/22</id>
+        <link href="https://hapi.dev/module/statehood/changelog#6.0.6"/>
+        <updated>2018-03-31T00:10:43.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v6.0.6]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/pull/41">[#41]</a> Fix a typo</li><li><a href="https://github.com/hapijs/statehood/pull/40">[#40]</a> Remove new Buffer usage</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v6.0.5]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/24</id>
+        <link href="https://hapi.dev/module/statehood/changelog#6.0.5"/>
+        <updated>2018-03-31T00:12:06.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v6.0.5]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/issues/38">[#38]</a> Use Cryptiles.fixedTimeComparison()</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v6.0.4]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/21</id>
+        <link href="https://hapi.dev/module/statehood/changelog#6.0.4"/>
+        <updated>2017-11-03T20:25:01.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v6.0.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/issues/37">[#37]</a> Add bounce</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v6.0.3]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/20</id>
+        <link href="https://hapi.dev/module/statehood/changelog#6.0.3"/>
+        <updated>2017-11-03T08:42:25.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v6.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/issues/36">[#36]</a> Update dep</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v6.0.2]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/19</id>
+        <link href="https://hapi.dev/module/statehood/changelog#6.0.2"/>
+        <updated>2017-10-22T08:39:17.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v6.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/issues/35">[#35]</a> Update joi</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v6.0.1]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/18</id>
+        <link href="https://hapi.dev/module/statehood/changelog#6.0.1"/>
+        <updated>2017-09-28T06:18:50.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v6.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/issues/34">[#34]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v6.0.0]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/17</id>
+        <link href="https://hapi.dev/module/statehood/changelog#6.0.0"/>
+        <updated>2017-09-25T05:54:06.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v6.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/issues/33">[#33]</a> Migrate to async interface</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v5.1.0]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/29</id>
+        <link href="https://hapi.dev/module/statehood/changelog#5.1.0"/>
+        <updated>2019-03-25T17:44:33.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v5.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/issues/58">[#58]</a> Commercial version of v5 branch</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v5.0.4]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/27</id>
+        <link href="https://hapi.dev/module/statehood/changelog#5.0.4"/>
+        <updated>2019-01-31T19:45:49.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v5.0.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/issues/56">[#56]</a> Protect against JSON.parse() prototype poisoning</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v5.0.3]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/16</id>
+        <link href="https://hapi.dev/module/statehood/changelog#5.0.3"/>
+        <updated>2017-07-20T08:32:47.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v5.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/issues/32">[#32]</a> Ignore partial header structure errors when ignoreErrors</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v5.0.2]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/15</id>
+        <link href="https://hapi.dev/module/statehood/changelog#5.0.2"/>
+        <updated>2017-05-27T22:27:43.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v5.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/issues/31">[#31]</a> Update deps.</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v5.0.1]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/14</id>
+        <link href="https://hapi.dev/module/statehood/changelog#5.0.1"/>
+        <updated>2016-11-29T00:19:07.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v5.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/pull/29">[#29]</a> Fix parse when iron is used with invalid and valid values</li><li><a href="https://github.com/hapijs/statehood/issues/28">[#28]</a> Cookies with the same name are ignored if only one is invalid</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v5.0.0]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/13</id>
+        <link href="https://hapi.dev/module/statehood/changelog#5.0.0"/>
+        <updated>2016-08-26T20:39:23.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v5.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/issues/26">[#26]</a> Change Secure, HttpOnly, and SameSite to true by default</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v4.1.0]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/12</id>
+        <link href="https://hapi.dev/module/statehood/changelog#4.1.0"/>
+        <updated>2016-08-26T08:22:20.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v4.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/pull/23">[#23]</a> Assert when input is not a string</li><li><a href="https://github.com/hapijs/statehood/issues/21">[#21]</a> Support SameSite attribute</li><li><a href="https://github.com/hapijs/statehood/issues/17">[#17]</a> Assert when input is not a string</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v4.0.3]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/11</id>
+        <link href="https://hapi.dev/module/statehood/changelog#4.0.3"/>
+        <updated>2016-07-28T20:14:07.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v4.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/issues/25">[#25]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v4.0.2]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/10</id>
+        <link href="https://hapi.dev/module/statehood/changelog#4.0.2"/>
+        <updated>2016-07-28T19:20:14.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v4.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/issues/24">[#24]</a> npmignore</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v4.0.1]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/9</id>
+        <link href="https://hapi.dev/module/statehood/changelog#4.0.1"/>
+        <updated>2016-05-21T03:48:29.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v4.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/pull/19">[#19]</a> Test on node v6, update dependencies</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v4.0.0]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/8</id>
+        <link href="https://hapi.dev/module/statehood/changelog#4.0.0"/>
+        <updated>2016-02-01T08:08:03.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v4.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/issues/16">[#16]</a> Update hueniverse/iron from 3.x.x to 4.x.x</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v3.1.0]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/7</id>
+        <link href="https://hapi.dev/module/statehood/changelog#3.1.0"/>
+        <updated>2016-01-02T18:19:47.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v3.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/issues/15">[#15]</a> Allow empty names in loose mode</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v3.0.0]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/6</id>
+        <link href="https://hapi.dev/module/statehood/changelog#3.0.0"/>
+        <updated>2015-11-03T03:29:42.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/issues/14">[#14]</a> ES6 style changes and node v4</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v2.1.1]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/5</id>
+        <link href="https://hapi.dev/module/statehood/changelog#2.1.1"/>
+        <updated>2015-06-04T14:15:26.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v2.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/issues/13">[#13]</a> Update hapijs/joi to 6.4.3 from 4.9.0</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v2.1.0]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/4</id>
+        <link href="https://hapi.dev/module/statehood/changelog#2.1.0"/>
+        <updated>2015-06-04T14:09:36.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v2.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/pull/12">[#12]</a> Support isNullOverride in applyToDefaults</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v2.0.0]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/3</id>
+        <link href="https://hapi.dev/module/statehood/changelog#2.0.0"/>
+        <updated>2014-12-09T22:42:09.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v2.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/issues/9">[#9]</a> Move passThrough exclude logic from h2o2</li><li><a href="https://github.com/hapijs/statehood/issues/8">[#8]</a> Change parse and format to prototype</li><li><a href="https://github.com/hapijs/statehood/issues/7">[#7]</a> Replace globals with per cookie defaults</li><li><a href="https://github.com/hapijs/statehood/issues/6">[#6]</a> Ignored errors do not stop processing current cookie</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v1.2.0]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/2</id>
+        <link href="https://hapi.dev/module/statehood/changelog#1.2.0"/>
+        <updated>2014-09-08T03:00:10.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v1.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/issues/3">[#3]</a> exclude()</li><li><a href="https://github.com/hapijs/statehood/issues/2">[#2]</a> Remove support for comma separator</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/statehood v1.1.0]]></title>
+        <id>https://github.com/hapijs/statehood/milestone/1</id>
+        <link href="https://hapi.dev/module/statehood/changelog#1.1.0"/>
+        <updated>2014-09-07T22:33:45.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/statehood v1.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/statehood/issues/1">[#1]</a> Add list of cookie names</li></ul>]]></content>
+    </entry>
+</feed>

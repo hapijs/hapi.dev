@@ -1,0 +1,28 @@
+{
+  "api": true,
+  "forks": 24,
+  "isPlugin": true,
+  "link": "https://github.com/hapijs/scooter",
+  "name": "scooter",
+  "package": "@hapi/scooter",
+  "slogan": "User-agent information plugin.",
+  "sloganHtml": "User-agent information plugin.",
+  "stars": 46,
+  "updated": "2026-03-23T08:49:02Z",
+  "versions": [
+    {
+      "branch": "v7.0.0",
+      "license": "BSD",
+      "name": "7.0.0",
+      "node": ">= 16"
+    },
+    {
+      "branch": "v8.0.0",
+      "license": "BSD",
+      "name": "8.0.0",
+      "node": ">= 16"
+    }
+  ],
+  "versionsArray": ["8.0.0", "7.0.0"],
+  "latestVersion": "8.x.x"
+}

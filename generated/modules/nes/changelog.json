@@ -1,0 +1,1889 @@
+[
+  {
+    "date": "2025-01-08T21:42:26Z",
+    "id": 12139848,
+    "issues": [
+      {
+        "id": 2770959378,
+        "labels": ["types"],
+        "number": 338,
+        "title": "Declare correct `ws` options type",
+        "url": "https://github.com/hapijs/nes/pull/338"
+      }
+    ],
+    "number": 86,
+    "url": "https://github.com/hapijs/nes/milestone/86",
+    "version": "14.0.1"
+  },
+  {
+    "date": "2024-08-28T09:24:27Z",
+    "id": 11355094,
+    "issues": [
+      {
+        "id": 2491364173,
+        "labels": ["breaking changes", "release notes"],
+        "number": 335,
+        "title": "v14.0.0 Release Notes",
+        "url": "https://github.com/hapijs/nes/issues/335"
+      },
+      {
+        "id": 2491258234,
+        "labels": ["breaking changes"],
+        "number": 334,
+        "title": "Release next version as 14.0.0",
+        "url": "https://github.com/hapijs/nes/pull/334"
+      },
+      {
+        "id": 2428211449,
+        "labels": ["breaking changes"],
+        "number": 333,
+        "title": "chore: set min node version",
+        "url": "https://github.com/hapijs/nes/pull/333"
+      },
+      {
+        "id": 2367495218,
+        "labels": [],
+        "number": 330,
+        "title": "chore: 🤖 import and improve outdate typings from DT",
+        "url": "https://github.com/hapijs/nes/pull/330"
+      },
+      {
+        "id": 2366002333,
+        "labels": ["feature"],
+        "number": 329,
+        "title": "Upgrade to ws@8.x",
+        "url": "https://github.com/hapijs/nes/issues/329"
+      },
+      {
+        "id": 1983406228,
+        "labels": ["test"],
+        "number": 327,
+        "title": "chore: change CI target for next",
+        "url": "https://github.com/hapijs/nes/pull/327"
+      }
+    ],
+    "number": 85,
+    "url": "https://github.com/hapijs/nes/milestone/85",
+    "version": "14.0.0"
+  },
+  {
+    "date": "2024-07-24T18:06:52Z",
+    "id": 8276919,
+    "issues": [
+      {
+        "id": 1551798696,
+        "labels": ["dependency"],
+        "number": 325,
+        "title": "chore: bump hoek",
+        "url": "https://github.com/hapijs/nes/pull/325"
+      }
+    ],
+    "number": 84,
+    "url": "https://github.com/hapijs/nes/milestone/84",
+    "version": "13.0.1"
+  },
+  {
+    "date": "2022-08-08T02:36:32Z",
+    "id": 5920977,
+    "issues": [
+      {
+        "id": 1307285269,
+        "labels": ["feature", "test", "breaking changes", "dependency"],
+        "number": 322,
+        "title": "Support node v18 and hapi v21, drop node v12 and hapi v18/19",
+        "url": "https://github.com/hapijs/nes/pull/322"
+      }
+    ],
+    "number": 82,
+    "url": "https://github.com/hapijs/nes/milestone/82",
+    "version": "13.0.0"
+  },
+  {
+    "date": "2022-08-08T02:36:34Z",
+    "id": 8276614,
+    "issues": [
+      {
+        "id": 1331152287,
+        "labels": ["bug"],
+        "number": 323,
+        "title": "Fix client reconnect retry attempts",
+        "url": "https://github.com/hapijs/nes/pull/323"
+      },
+      {
+        "id": 892758677,
+        "labels": ["bug"],
+        "number": 318,
+        "title": "client - _reconnect update, single reconnection timer",
+        "url": "https://github.com/hapijs/nes/pull/318"
+      }
+    ],
+    "number": 83,
+    "url": "https://github.com/hapijs/nes/milestone/83",
+    "version": "12.0.5"
+  },
+  {
+    "date": "2020-09-26T16:25:03Z",
+    "id": 5639214,
+    "issues": [
+      {
+        "id": 684031767,
+        "labels": [],
+        "number": 313,
+        "title": "migrate to new travis format",
+        "url": "https://github.com/hapijs/nes/pull/313"
+      },
+      {
+        "id": 677275186,
+        "labels": [],
+        "number": 312,
+        "title": "upgrade to hapi 20",
+        "url": "https://github.com/hapijs/nes/pull/312"
+      },
+      {
+        "id": 672300811,
+        "labels": [],
+        "number": 311,
+        "title": "switch to validate and other package updates",
+        "url": "https://github.com/hapijs/nes/pull/311"
+      }
+    ],
+    "number": 81,
+    "url": "https://github.com/hapijs/nes/milestone/81",
+    "version": "12.0.4"
+  },
+  {
+    "date": "2020-07-10T03:31:35Z",
+    "id": 5208328,
+    "issues": [
+      {
+        "id": 602819662,
+        "labels": ["dependency"],
+        "number": 307,
+        "title": "Upgrade deprecated `@hapi/call@6.x.x`",
+        "url": "https://github.com/hapijs/nes/pull/307"
+      },
+      {
+        "id": 594923873,
+        "labels": ["bug"],
+        "number": 306,
+        "title": "fix: pass remoteAddress when injecting request",
+        "url": "https://github.com/hapijs/nes/pull/306"
+      },
+      {
+        "id": 592659050,
+        "labels": ["bug"],
+        "number": 305,
+        "title": "request.info.remoteAddress is always 127.0.0.1 in request handler",
+        "url": "https://github.com/hapijs/nes/issues/305"
+      }
+    ],
+    "number": 80,
+    "url": "https://github.com/hapijs/nes/milestone/80",
+    "version": "12.0.3"
+  },
+  {
+    "date": "2020-03-17T03:17:04Z",
+    "id": 5208327,
+    "issues": [
+      {
+        "id": 582353362,
+        "labels": ["bug"],
+        "number": 304,
+        "title": "Prevent beat timeout from disconnecting newly connecting sockets",
+        "url": "https://github.com/hapijs/nes/pull/304"
+      }
+    ],
+    "number": 79,
+    "url": "https://github.com/hapijs/nes/milestone/79",
+    "version": "12.0.2"
+  },
+  {
+    "date": "2020-03-17T03:14:41Z",
+    "id": 4999080,
+    "issues": [
+      {
+        "id": 579775341,
+        "labels": ["dependency"],
+        "number": 303,
+        "title": "Remove unused dep",
+        "url": "https://github.com/hapijs/nes/pull/303"
+      }
+    ],
+    "number": 78,
+    "url": "https://github.com/hapijs/nes/milestone/78",
+    "version": "12.0.1"
+  },
+  {
+    "date": "2020-01-13T12:13:27Z",
+    "id": 4655394,
+    "issues": [
+      {
+        "id": 548884746,
+        "labels": ["breaking changes"],
+        "number": 301,
+        "title": "Change plugin name to @hapi/nes",
+        "url": "https://github.com/hapijs/nes/issues/301"
+      },
+      {
+        "id": 548883795,
+        "labels": ["breaking changes", "dependency"],
+        "number": 300,
+        "title": "Require hapi 19",
+        "url": "https://github.com/hapijs/nes/issues/300"
+      },
+      {
+        "id": 548882669,
+        "labels": ["breaking changes", "dependency"],
+        "number": 299,
+        "title": "Only node 12",
+        "url": "https://github.com/hapijs/nes/issues/299"
+      }
+    ],
+    "number": 77,
+    "url": "https://github.com/hapijs/nes/milestone/77",
+    "version": "12.0.0"
+  },
+  {
+    "date": "2019-09-12T20:30:28Z",
+    "id": 4574339,
+    "issues": [
+      {
+        "id": 472682532,
+        "labels": ["bug"],
+        "number": 285,
+        "title": "Unknown authentication strategy",
+        "url": "https://github.com/hapijs/nes/issues/285"
+      }
+    ],
+    "number": 76,
+    "url": "https://github.com/hapijs/nes/milestone/76",
+    "version": "11.2.2"
+  },
+  {
+    "date": "2019-08-15T01:20:56Z",
+    "id": 4363181,
+    "issues": [
+      {
+        "id": 480901274,
+        "labels": ["dependency"],
+        "number": 289,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/nes/issues/289"
+      }
+    ],
+    "number": 75,
+    "url": "https://github.com/hapijs/nes/milestone/75",
+    "version": "11.2.1"
+  },
+  {
+    "date": "2019-05-30T22:29:29Z",
+    "id": 4260066,
+    "issues": [
+      {
+        "id": 448862649,
+        "labels": ["bug", "feature"],
+        "number": 284,
+        "title": "Add ability to revoke a socket ignoring if it is already closed",
+        "url": "https://github.com/hapijs/nes/pull/284"
+      },
+      {
+        "id": 448824552,
+        "labels": ["bug"],
+        "number": 283,
+        "title": "cleanup called twice if there is an onUnsubscribe handler",
+        "url": "https://github.com/hapijs/nes/issues/283"
+      }
+    ],
+    "number": 74,
+    "url": "https://github.com/hapijs/nes/milestone/74",
+    "version": "11.2.0"
+  },
+  {
+    "date": "2019-04-25T16:40:58Z",
+    "id": 4257601,
+    "issues": [
+      {
+        "id": 435484101,
+        "labels": ["feature"],
+        "number": 278,
+        "title": "Passing remoteAddress and x-forwarded-for is in whitelist when connect",
+        "url": "https://github.com/hapijs/nes/pull/278"
+      }
+    ],
+    "number": 73,
+    "url": "https://github.com/hapijs/nes/milestone/73",
+    "version": "11.1.0"
+  },
+  {
+    "date": "2019-04-24T23:56:20Z",
+    "id": 4242060,
+    "issues": [
+      {
+        "id": 436953739,
+        "labels": ["bug"],
+        "number": 279,
+        "title": "Fix name",
+        "url": "https://github.com/hapijs/nes/issues/279"
+      }
+    ],
+    "number": 72,
+    "url": "https://github.com/hapijs/nes/milestone/72",
+    "version": "11.0.1"
+  },
+  {
+    "date": "2019-04-18T17:06:25Z",
+    "id": 4240215,
+    "issues": [
+      {
+        "id": 434869175,
+        "labels": ["breaking changes"],
+        "number": 276,
+        "title": "Remove client dist",
+        "url": "https://github.com/hapijs/nes/issues/276"
+      },
+      {
+        "id": 336680175,
+        "labels": ["bug", "breaking changes"],
+        "number": 248,
+        "title": "eachSocket behaves as synchronous without filter, but async with filter",
+        "url": "https://github.com/hapijs/nes/issues/248"
+      }
+    ],
+    "number": 71,
+    "url": "https://github.com/hapijs/nes/milestone/71",
+    "version": "11.0.0"
+  },
+  {
+    "date": "2019-04-18T04:32:31Z",
+    "id": 4112776,
+    "issues": [
+      {
+        "id": 434585489,
+        "labels": ["dependency"],
+        "number": 275,
+        "title": "Change module namespace",
+        "url": "https://github.com/hapijs/nes/issues/275"
+      }
+    ],
+    "number": 70,
+    "url": "https://github.com/hapijs/nes/milestone/70",
+    "version": "10.1.0"
+  },
+  {
+    "date": "2019-03-05T17:10:57Z",
+    "id": 4109750,
+    "issues": [
+      {
+        "id": 417269178,
+        "labels": ["bug"],
+        "number": 270,
+        "title": "Error in the browser with 10.0.1",
+        "url": "https://github.com/hapijs/nes/issues/270"
+      }
+    ],
+    "number": 69,
+    "url": "https://github.com/hapijs/nes/milestone/69",
+    "version": "10.0.2"
+  },
+  {
+    "date": "2019-03-04T19:10:51Z",
+    "id": 3985605,
+    "issues": [
+      {
+        "id": 416949630,
+        "labels": ["dependency"],
+        "number": 269,
+        "title": "Update dependencies",
+        "url": "https://github.com/hapijs/nes/issues/269"
+      }
+    ],
+    "number": 68,
+    "url": "https://github.com/hapijs/nes/milestone/68",
+    "version": "10.0.1"
+  },
+  {
+    "date": "2019-01-18T23:38:51Z",
+    "id": 3844691,
+    "issues": [
+      {
+        "id": 400908568,
+        "labels": ["breaking changes"],
+        "number": 265,
+        "title": "hapi v18",
+        "url": "https://github.com/hapijs/nes/issues/265"
+      }
+    ],
+    "number": 67,
+    "url": "https://github.com/hapijs/nes/milestone/67",
+    "version": "10.0.0"
+  },
+  {
+    "date": "2018-11-24T03:54:05Z",
+    "id": 3811566,
+    "issues": [
+      {
+        "id": 383845265,
+        "labels": ["feature"],
+        "number": 263,
+        "title": "Document minAuthVerifyInterval and make it less restrictive",
+        "url": "https://github.com/hapijs/nes/pull/263"
+      },
+      {
+        "id": 383596224,
+        "labels": ["feature"],
+        "number": 262,
+        "title": "Close the socket when authentication verification fails",
+        "url": "https://github.com/hapijs/nes/pull/262"
+      },
+      {
+        "id": 382630741,
+        "labels": ["feature"],
+        "number": 260,
+        "title": "Close the socket when authentication expires",
+        "url": "https://github.com/hapijs/nes/issues/260"
+      }
+    ],
+    "number": 66,
+    "url": "https://github.com/hapijs/nes/milestone/66",
+    "version": "9.1.0"
+  },
+  {
+    "date": "2018-11-11T08:10:42Z",
+    "id": 3811565,
+    "issues": [
+      {
+        "id": 379500091,
+        "labels": ["non issue", "dependency"],
+        "number": 256,
+        "title": "Cleanup",
+        "url": "https://github.com/hapijs/nes/issues/256"
+      }
+    ],
+    "number": 65,
+    "url": "https://github.com/hapijs/nes/milestone/65",
+    "version": "9.0.2"
+  },
+  {
+    "date": "2018-11-11T08:06:30Z",
+    "id": 3466648,
+    "issues": [
+      {
+        "id": 335336250,
+        "labels": ["bug"],
+        "number": 247,
+        "title": "Reconnect on error",
+        "url": "https://github.com/hapijs/nes/pull/247"
+      }
+    ],
+    "number": 64,
+    "url": "https://github.com/hapijs/nes/milestone/64",
+    "version": "9.0.1"
+  },
+  {
+    "date": "2018-11-11T08:06:31Z",
+    "id": 3316853,
+    "issues": [
+      {
+        "id": 319524696,
+        "labels": ["feature"],
+        "number": 243,
+        "title": "Add client.onHeartbeatTimeout hook",
+        "url": "https://github.com/hapijs/nes/pull/243"
+      }
+    ],
+    "number": 63,
+    "url": "https://github.com/hapijs/nes/milestone/63",
+    "version": "8.1.0"
+  },
+  {
+    "date": "2018-11-11T08:06:32Z",
+    "id": 3202345,
+    "issues": [
+      {
+        "id": 306734970,
+        "labels": ["breaking changes", "dependency"],
+        "number": 229,
+        "title": "Update ws to 5.x.x",
+        "url": "https://github.com/hapijs/nes/pull/229"
+      }
+    ],
+    "number": 62,
+    "url": "https://github.com/hapijs/nes/milestone/62",
+    "version": "8.0.0"
+  },
+  {
+    "date": "2018-11-11T08:06:33Z",
+    "id": 3189537,
+    "issues": [
+      {
+        "id": 305061522,
+        "labels": ["feature"],
+        "number": 228,
+        "title": "Mark NesErrors as coming from nes",
+        "url": "https://github.com/hapijs/nes/pull/228"
+      }
+    ],
+    "number": 61,
+    "url": "https://github.com/hapijs/nes/milestone/61",
+    "version": "7.2.0"
+  },
+  {
+    "date": "2018-11-11T08:06:34Z",
+    "id": 3176667,
+    "issues": [
+      {
+        "id": 303740584,
+        "labels": ["feature"],
+        "number": 224,
+        "title": "Add socket.info object",
+        "url": "https://github.com/hapijs/nes/pull/224"
+      },
+      {
+        "id": 303339979,
+        "labels": ["bug"],
+        "number": 223,
+        "title": "Delay heartbeats until server is started",
+        "url": "https://github.com/hapijs/nes/pull/223"
+      },
+      {
+        "id": 303338214,
+        "labels": ["feature"],
+        "number": 222,
+        "title": "Allow isSameSite cookie option to be passed",
+        "url": "https://github.com/hapijs/nes/pull/222"
+      }
+    ],
+    "number": 60,
+    "url": "https://github.com/hapijs/nes/milestone/60",
+    "version": "7.1.0"
+  },
+  {
+    "date": "2018-03-11T09:37:21Z",
+    "id": 3167676,
+    "issues": [
+      {
+        "id": 302992282,
+        "labels": ["dependency"],
+        "number": 221,
+        "title": "Update hapijs/call to 5.x.x",
+        "url": "https://github.com/hapijs/nes/pull/221"
+      },
+      {
+        "id": 302560395,
+        "labels": ["bug"],
+        "number": 220,
+        "title": "Ignore node network errors after opening client socket",
+        "url": "https://github.com/hapijs/nes/pull/220"
+      }
+    ],
+    "number": 59,
+    "url": "https://github.com/hapijs/nes/milestone/59",
+    "version": "7.0.4"
+  },
+  {
+    "date": "2018-03-07T02:32:25Z",
+    "id": 2987489,
+    "issues": [
+      {
+        "id": 294191491,
+        "labels": ["bug"],
+        "number": 214,
+        "title": "Do not replace message for all sockets with override from filter",
+        "url": "https://github.com/hapijs/nes/pull/214"
+      }
+    ],
+    "number": 58,
+    "url": "https://github.com/hapijs/nes/milestone/58",
+    "version": "7.0.3"
+  },
+  {
+    "date": "2017-12-18T21:57:19Z",
+    "id": 2887225,
+    "issues": [
+      {
+        "id": 283033975,
+        "labels": ["bug"],
+        "number": 206,
+        "title": "Handle ws socket error events",
+        "url": "https://github.com/hapijs/nes/issues/206"
+      }
+    ],
+    "number": 55,
+    "url": "https://github.com/hapijs/nes/milestone/55",
+    "version": "7.0.2"
+  },
+  {
+    "date": "2017-11-03T23:51:47Z",
+    "id": 2873894,
+    "issues": [
+      {
+        "id": 271147636,
+        "labels": ["bug"],
+        "number": 198,
+        "title": "Better error handling",
+        "url": "https://github.com/hapijs/nes/issues/198"
+      }
+    ],
+    "number": 54,
+    "url": "https://github.com/hapijs/nes/milestone/54",
+    "version": "7.0.1"
+  },
+  {
+    "date": "2017-10-31T09:39:57Z",
+    "id": 2648349,
+    "issues": [
+      {
+        "id": 269892866,
+        "labels": ["breaking changes", "dependency"],
+        "number": 196,
+        "title": "hapi v17",
+        "url": "https://github.com/hapijs/nes/issues/196"
+      },
+      {
+        "id": 269520818,
+        "labels": ["dependency"],
+        "number": 195,
+        "title": "Update ws",
+        "url": "https://github.com/hapijs/nes/issues/195"
+      },
+      {
+        "id": 269520767,
+        "labels": ["dependency"],
+        "number": 194,
+        "title": "Update babel script",
+        "url": "https://github.com/hapijs/nes/issues/194"
+      }
+    ],
+    "number": 53,
+    "url": "https://github.com/hapijs/nes/milestone/53",
+    "version": "7.0.0"
+  },
+  {
+    "date": "2017-11-13T20:51:44Z",
+    "id": 2910113,
+    "issues": [
+      {
+        "id": 273572817,
+        "labels": ["test"],
+        "number": 202,
+        "title": "Fix test",
+        "url": "https://github.com/hapijs/nes/issues/202"
+      }
+    ],
+    "number": 57,
+    "url": "https://github.com/hapijs/nes/milestone/57",
+    "version": "6.5.1"
+  },
+  {
+    "date": "2017-11-13T20:49:18Z",
+    "id": 2910087,
+    "issues": [
+      {
+        "id": 273566880,
+        "labels": ["dependency"],
+        "number": 201,
+        "title": "Update ws",
+        "url": "https://github.com/hapijs/nes/issues/201"
+      }
+    ],
+    "number": 56,
+    "url": "https://github.com/hapijs/nes/milestone/56",
+    "version": "6.5.0"
+  },
+  {
+    "date": "2017-07-18T19:40:26Z",
+    "id": 2398996,
+    "issues": [
+      {
+        "id": 236127539,
+        "labels": ["bug"],
+        "number": 179,
+        "title": "`maximum call stack exceeded` if web socket gets disconnected while nes is sending packets",
+        "url": "https://github.com/hapijs/nes/issues/179"
+      }
+    ],
+    "number": 52,
+    "url": "https://github.com/hapijs/nes/milestone/52",
+    "version": "6.4.3"
+  },
+  {
+    "date": "2017-03-20T19:55:03Z",
+    "id": 2398988,
+    "issues": [
+      {
+        "id": 177619150,
+        "labels": ["bug"],
+        "number": 156,
+        "title": "Handle undefined payloads from server in client",
+        "url": "https://github.com/hapijs/nes/issues/156"
+      }
+    ],
+    "number": 51,
+    "url": "https://github.com/hapijs/nes/milestone/51",
+    "version": "6.4.2"
+  },
+  {
+    "date": "2017-03-20T19:50:47Z",
+    "id": 2190192,
+    "issues": [
+      {
+        "id": 203613881,
+        "labels": ["bug", "security"],
+        "number": 171,
+        "title": "server falls with bad cookie header",
+        "url": "https://github.com/hapijs/nes/issues/171"
+      }
+    ],
+    "number": 50,
+    "url": "https://github.com/hapijs/nes/milestone/50",
+    "version": "6.4.1"
+  },
+  {
+    "date": "2016-12-12T08:24:42Z",
+    "id": 2167982,
+    "issues": [
+      {
+        "id": 194914275,
+        "labels": ["feature"],
+        "number": 169,
+        "title": "Expose server and connection on socket",
+        "url": "https://github.com/hapijs/nes/issues/169"
+      }
+    ],
+    "number": 49,
+    "url": "https://github.com/hapijs/nes/milestone/49",
+    "version": "6.4.0"
+  },
+  {
+    "date": "2016-12-01T06:20:16Z",
+    "id": 1966833,
+    "issues": [
+      {
+        "id": 192763227,
+        "labels": ["dependency"],
+        "number": 168,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/nes/issues/168"
+      }
+    ],
+    "number": 48,
+    "url": "https://github.com/hapijs/nes/milestone/48",
+    "version": "6.3.2"
+  },
+  {
+    "date": "2016-08-27T01:10:07Z",
+    "id": 1964037,
+    "issues": [
+      {
+        "id": 173569836,
+        "labels": ["feature"],
+        "number": 145,
+        "title": "Disable inject() validate",
+        "url": "https://github.com/hapijs/nes/issues/145"
+      }
+    ],
+    "number": 47,
+    "url": "https://github.com/hapijs/nes/milestone/47",
+    "version": "6.3.1"
+  },
+  {
+    "date": "2016-08-25T22:44:32Z",
+    "id": 1919031,
+    "issues": [
+      {
+        "id": 173013558,
+        "labels": ["feature"],
+        "number": 144,
+        "title": "Verify request Origin",
+        "url": "https://github.com/hapijs/nes/pull/144"
+      }
+    ],
+    "number": 46,
+    "url": "https://github.com/hapijs/nes/milestone/46",
+    "version": "6.3.0"
+  },
+  {
+    "date": "2016-08-02T18:36:56Z",
+    "id": 1912298,
+    "issues": [
+      {
+        "id": 168956618,
+        "labels": ["bug"],
+        "number": 142,
+        "title": "Reconnection timeout conflicts",
+        "url": "https://github.com/hapijs/nes/issues/142"
+      }
+    ],
+    "number": 45,
+    "url": "https://github.com/hapijs/nes/milestone/45",
+    "version": "6.2.5"
+  },
+  {
+    "date": "2016-07-29T17:47:00Z",
+    "id": 1910723,
+    "issues": [
+      {
+        "id": 168275124,
+        "labels": ["documentation"],
+        "number": 141,
+        "title": "Add client.js and dist/ to npm tarball -Closes #140",
+        "url": "https://github.com/hapijs/nes/pull/141"
+      },
+      {
+        "id": 168273915,
+        "labels": ["bug"],
+        "number": 140,
+        "title": "Missing root client.js and dist",
+        "url": "https://github.com/hapijs/nes/issues/140"
+      }
+    ],
+    "number": 44,
+    "url": "https://github.com/hapijs/nes/milestone/44",
+    "version": "6.2.4"
+  },
+  {
+    "date": "2016-07-28T23:36:27Z",
+    "id": 1893141,
+    "issues": [
+      {
+        "id": 168220600,
+        "labels": ["dependency"],
+        "number": 139,
+        "title": "Update deps",
+        "url": "https://github.com/hapijs/nes/issues/139"
+      }
+    ],
+    "number": 43,
+    "url": "https://github.com/hapijs/nes/milestone/43",
+    "version": "6.2.3"
+  },
+  {
+    "date": "2016-07-19T22:47:16Z",
+    "id": 1833433,
+    "issues": [
+      {
+        "id": 166455220,
+        "labels": ["bug"],
+        "number": 138,
+        "title": "Always call onConnection before onSubscribe",
+        "url": "https://github.com/hapijs/nes/issues/138"
+      }
+    ],
+    "number": 42,
+    "url": "https://github.com/hapijs/nes/milestone/42",
+    "version": "6.2.2"
+  },
+  {
+    "date": "2016-06-16T22:31:28Z",
+    "id": 1827872,
+    "issues": [
+      {
+        "id": 160775791,
+        "labels": ["bug"],
+        "number": 136,
+        "title": "Reuse pre-stringified hapi response",
+        "url": "https://github.com/hapijs/nes/issues/136"
+      }
+    ],
+    "number": 41,
+    "url": "https://github.com/hapijs/nes/milestone/41",
+    "version": "6.2.1"
+  },
+  {
+    "date": "2016-06-15T02:35:26Z",
+    "id": 1793117,
+    "issues": [
+      {
+        "id": 160314808,
+        "labels": ["bug"],
+        "number": 135,
+        "title": "Cookie auth fails to register socket",
+        "url": "https://github.com/hapijs/nes/issues/135"
+      },
+      {
+        "id": 160112500,
+        "labels": ["feature", "security"],
+        "number": 134,
+        "title": "Per user connection limit",
+        "url": "https://github.com/hapijs/nes/issues/134"
+      },
+      {
+        "id": 160112256,
+        "labels": ["bug", "security"],
+        "number": 133,
+        "title": "Timeout sockets if hello takes too long",
+        "url": "https://github.com/hapijs/nes/issues/133"
+      }
+    ],
+    "number": 40,
+    "url": "https://github.com/hapijs/nes/milestone/40",
+    "version": "6.2.0"
+  },
+  {
+    "date": "2016-05-28T01:01:18Z",
+    "id": 1788349,
+    "issues": [
+      {
+        "id": 157312152,
+        "labels": ["bug"],
+        "number": 132,
+        "title": "Client indicates wasRequested when calling disconnect() on dead socket",
+        "url": "https://github.com/hapijs/nes/issues/132"
+      }
+    ],
+    "number": 39,
+    "url": "https://github.com/hapijs/nes/milestone/39",
+    "version": "6.1.2"
+  },
+  {
+    "date": "2016-05-25T19:57:18Z",
+    "id": 1779912,
+    "issues": [
+      {
+        "id": 156835687,
+        "labels": ["bug"],
+        "number": 131,
+        "title": "Incorrectly reports wasRequested when internally disconnects",
+        "url": "https://github.com/hapijs/nes/issues/131"
+      }
+    ],
+    "number": 38,
+    "url": "https://github.com/hapijs/nes/milestone/38",
+    "version": "6.1.1"
+  },
+  {
+    "date": "2016-05-21T00:14:49Z",
+    "id": 1777536,
+    "issues": [
+      {
+        "id": 156072625,
+        "labels": ["feature"],
+        "number": 129,
+        "title": "Include reason disconnected in log object",
+        "url": "https://github.com/hapijs/nes/issues/129"
+      }
+    ],
+    "number": 37,
+    "url": "https://github.com/hapijs/nes/milestone/37",
+    "version": "6.1.0"
+  },
+  {
+    "date": "2016-05-19T20:08:55Z",
+    "id": 1770659,
+    "issues": [
+      {
+        "id": 155817566,
+        "labels": ["test", "documentation", "dependency"],
+        "number": 127,
+        "title": "Test on node v6",
+        "url": "https://github.com/hapijs/nes/pull/127"
+      }
+    ],
+    "number": 36,
+    "url": "https://github.com/hapijs/nes/milestone/36",
+    "version": "6.0.2"
+  },
+  {
+    "date": "2016-05-17T08:03:44Z",
+    "id": 1763706,
+    "issues": [
+      {
+        "id": 155198879,
+        "labels": ["bug"],
+        "number": 126,
+        "title": "Handle cases when client._ws is null",
+        "url": "https://github.com/hapijs/nes/issues/126"
+      }
+    ],
+    "number": 35,
+    "url": "https://github.com/hapijs/nes/milestone/35",
+    "version": "6.0.1"
+  },
+  {
+    "date": "2016-05-13T02:28:44Z",
+    "id": 1751994,
+    "issues": [
+      {
+        "id": 154574472,
+        "labels": ["bug", "breaking changes"],
+        "number": 125,
+        "title": "Connect fails to check for previous internal socket when connecting.",
+        "url": "https://github.com/hapijs/nes/issues/125"
+      }
+    ],
+    "number": 34,
+    "url": "https://github.com/hapijs/nes/milestone/34",
+    "version": "6.0.0"
+  },
+  {
+    "date": "2016-05-06T16:54:49Z",
+    "id": 1750982,
+    "issues": [
+      {
+        "id": 153493279,
+        "labels": ["bug"],
+        "number": 124,
+        "title": "Adjust unsub processing timing on server",
+        "url": "https://github.com/hapijs/nes/issues/124"
+      }
+    ],
+    "number": 33,
+    "url": "https://github.com/hapijs/nes/milestone/33",
+    "version": "5.0.3"
+  },
+  {
+    "date": "2016-05-06T06:26:45Z",
+    "id": 1750955,
+    "issues": [
+      {
+        "id": 153386245,
+        "labels": ["bug"],
+        "number": 123,
+        "title": "Check is socket is still around while disconnecting",
+        "url": "https://github.com/hapijs/nes/issues/123"
+      }
+    ],
+    "number": 32,
+    "url": "https://github.com/hapijs/nes/milestone/32",
+    "version": "5.0.2"
+  },
+  {
+    "date": "2016-05-06T05:46:28Z",
+    "id": 1750888,
+    "issues": [
+      {
+        "id": 153382423,
+        "labels": ["bug"],
+        "number": 122,
+        "title": "Prevent server from sending data when stopping",
+        "url": "https://github.com/hapijs/nes/issues/122"
+      }
+    ],
+    "number": 31,
+    "url": "https://github.com/hapijs/nes/milestone/31",
+    "version": "5.0.1"
+  },
+  {
+    "date": "2016-05-06T04:12:23Z",
+    "id": 1744150,
+    "issues": [
+      {
+        "id": 153328026,
+        "labels": ["bug", "breaking changes"],
+        "number": 121,
+        "title": "Properly clean up sockets and subscriptions on server stop",
+        "url": "https://github.com/hapijs/nes/issues/121"
+      }
+    ],
+    "number": 30,
+    "url": "https://github.com/hapijs/nes/milestone/30",
+    "version": "5.0.0"
+  },
+  {
+    "date": "2016-05-03T07:52:57Z",
+    "id": 1744116,
+    "issues": [
+      {
+        "id": 152718518,
+        "labels": ["feature"],
+        "number": 120,
+        "title": "Support user filter in eachSocket()",
+        "url": "https://github.com/hapijs/nes/issues/120"
+      }
+    ],
+    "number": 29,
+    "url": "https://github.com/hapijs/nes/milestone/29",
+    "version": "4.6.0"
+  },
+  {
+    "date": "2016-05-03T07:20:43Z",
+    "id": 1737072,
+    "issues": [
+      {
+        "id": 152714524,
+        "labels": ["feature"],
+        "number": 119,
+        "title": "Subscription revoke()",
+        "url": "https://github.com/hapijs/nes/issues/119"
+      },
+      {
+        "id": 152702180,
+        "labels": ["bug"],
+        "number": 118,
+        "title": "Keep separate subscription per connection",
+        "url": "https://github.com/hapijs/nes/issues/118"
+      }
+    ],
+    "number": 28,
+    "url": "https://github.com/hapijs/nes/milestone/28",
+    "version": "4.5.0"
+  },
+  {
+    "date": "2016-04-28T17:40:59Z",
+    "id": 1732599,
+    "issues": [
+      {
+        "id": 151701444,
+        "labels": ["bug"],
+        "number": 117,
+        "title": "Race condition between unsubscribe and disconnect when using auth index on sub",
+        "url": "https://github.com/hapijs/nes/issues/117"
+      }
+    ],
+    "number": 27,
+    "url": "https://github.com/hapijs/nes/milestone/27",
+    "version": "4.4.1"
+  },
+  {
+    "date": "2016-04-26T19:28:29Z",
+    "id": 1707836,
+    "issues": [
+      {
+        "id": 151199192,
+        "labels": ["feature"],
+        "number": 116,
+        "title": "User-specific broadcast",
+        "url": "https://github.com/hapijs/nes/issues/116"
+      },
+      {
+        "id": 151038794,
+        "labels": ["feature"],
+        "number": 115,
+        "title": "User-specific publish",
+        "url": "https://github.com/hapijs/nes/issues/115"
+      }
+    ],
+    "number": 26,
+    "url": "https://github.com/hapijs/nes/milestone/26",
+    "version": "4.4.0"
+  },
+  {
+    "date": "2016-04-14T22:31:48Z",
+    "id": 1674677,
+    "issues": [
+      {
+        "id": 148501554,
+        "labels": ["feature"],
+        "number": 112,
+        "title": "Expose socket and support publish override",
+        "url": "https://github.com/hapijs/nes/issues/112"
+      },
+      {
+        "id": 146488724,
+        "labels": ["non issue"],
+        "number": 109,
+        "title": "Typo: listners -> listeners",
+        "url": "https://github.com/hapijs/nes/pull/109"
+      }
+    ],
+    "number": 25,
+    "url": "https://github.com/hapijs/nes/milestone/25",
+    "version": "4.3.0"
+  },
+  {
+    "date": "2016-03-30T18:43:44Z",
+    "id": 1673382,
+    "issues": [
+      {
+        "id": 144642711,
+        "labels": ["bug"],
+        "number": 108,
+        "title": "Fix UMD global handling",
+        "url": "https://github.com/hapijs/nes/pull/108"
+      },
+      {
+        "id": 143950380,
+        "labels": ["bug"],
+        "number": 105,
+        "title": "Client.js getting root as undefined",
+        "url": "https://github.com/hapijs/nes/issues/105"
+      }
+    ],
+    "number": 24,
+    "url": "https://github.com/hapijs/nes/milestone/24",
+    "version": "4.2.1"
+  },
+  {
+    "date": "2016-03-30T06:40:53Z",
+    "id": 1667922,
+    "issues": [
+      {
+        "id": 144479140,
+        "labels": ["feature"],
+        "number": 107,
+        "title": "Expose params on unsubscribe callback",
+        "url": "https://github.com/hapijs/nes/issues/107"
+      }
+    ],
+    "number": 23,
+    "url": "https://github.com/hapijs/nes/milestone/23",
+    "version": "4.2.0"
+  },
+  {
+    "date": "2016-03-27T23:47:38Z",
+    "id": 1619034,
+    "issues": [
+      {
+        "id": 143746308,
+        "labels": ["feature"],
+        "number": 104,
+        "title": "Provide a way to replace auth credentials before an automatic reconnect",
+        "url": "https://github.com/hapijs/nes/issues/104"
+      }
+    ],
+    "number": 22,
+    "url": "https://github.com/hapijs/nes/milestone/22",
+    "version": "4.1.0"
+  },
+  {
+    "date": "2016-03-02T23:19:36Z",
+    "id": 1608660,
+    "issues": [
+      {
+        "id": 138023954,
+        "labels": ["feature", "breaking changes"],
+        "number": 100,
+        "title": "Add required callback to subscription onSubscribe option",
+        "url": "https://github.com/hapijs/nes/issues/100"
+      }
+    ],
+    "number": 21,
+    "url": "https://github.com/hapijs/nes/milestone/21",
+    "version": "4.0.0"
+  },
+  {
+    "date": "2016-02-26T19:27:45Z",
+    "id": 1605916,
+    "issues": [
+      {
+        "id": 136790137,
+        "labels": ["bug"],
+        "number": 99,
+        "title": "Pause heartbeat disconnect while sending",
+        "url": "https://github.com/hapijs/nes/issues/99"
+      }
+    ],
+    "number": 20,
+    "url": "https://github.com/hapijs/nes/milestone/20",
+    "version": "3.1.2"
+  },
+  {
+    "date": "2016-02-25T19:24:51Z",
+    "id": 1596457,
+    "issues": [
+      {
+        "id": 136484949,
+        "labels": ["bug"],
+        "number": 98,
+        "title": "Server disconnects client after a long message transmission",
+        "url": "https://github.com/hapijs/nes/issues/98"
+      }
+    ],
+    "number": 19,
+    "url": "https://github.com/hapijs/nes/milestone/19",
+    "version": "3.1.1"
+  },
+  {
+    "date": "2016-02-22T08:28:19Z",
+    "id": 1554938,
+    "issues": [
+      {
+        "id": 135179049,
+        "labels": ["feature", "breaking changes"],
+        "number": 97,
+        "title": "Break large messages into smaller chunks",
+        "url": "https://github.com/hapijs/nes/issues/97"
+      },
+      {
+        "id": 127817286,
+        "labels": ["feature"],
+        "number": 94,
+        "title": "Support sending initial subscription update",
+        "url": "https://github.com/hapijs/nes/issues/94"
+      }
+    ],
+    "number": 18,
+    "url": "https://github.com/hapijs/nes/milestone/18",
+    "version": "3.1.0"
+  },
+  {
+    "date": "2016-02-01T08:59:41Z",
+    "id": 1533804,
+    "issues": [
+      {
+        "id": 130300841,
+        "labels": ["security", "breaking changes", "dependency"],
+        "number": 96,
+        "title": "Update Iron and increase auto-generated password to 32 characters",
+        "url": "https://github.com/hapijs/nes/issues/96"
+      }
+    ],
+    "number": 17,
+    "url": "https://github.com/hapijs/nes/milestone/17",
+    "version": "3.0.0"
+  },
+  {
+    "date": "2016-01-22T06:53:38Z",
+    "id": 1530592,
+    "issues": [
+      {
+        "id": 128096551,
+        "labels": ["bug"],
+        "number": 95,
+        "title": "Emit error when disconnecting due to missing server heartbeat",
+        "url": "https://github.com/hapijs/nes/issues/95"
+      }
+    ],
+    "number": 16,
+    "url": "https://github.com/hapijs/nes/milestone/16",
+    "version": "2.3.1"
+  },
+  {
+    "date": "2016-01-21T08:50:27Z",
+    "id": 1520932,
+    "issues": [
+      {
+        "id": 127801249,
+        "labels": ["bug"],
+        "number": 93,
+        "title": "Client requests fail if the request response takes longer than heartbeat timeout",
+        "url": "https://github.com/hapijs/nes/issues/93"
+      }
+    ],
+    "number": 15,
+    "url": "https://github.com/hapijs/nes/milestone/15",
+    "version": "2.3.0"
+  },
+  {
+    "date": "2016-01-20T00:36:55Z",
+    "id": 1509673,
+    "issues": [
+      {
+        "id": 127573847,
+        "labels": ["feature"],
+        "number": 92,
+        "title": "Return close event reason in onDisconnect",
+        "url": "https://github.com/hapijs/nes/issues/92"
+      },
+      {
+        "id": 127337752,
+        "labels": ["bug"],
+        "number": 90,
+        "title": "NesError breaks if passed an error event from onerror.",
+        "url": "https://github.com/hapijs/nes/issues/90"
+      },
+      {
+        "id": 116071552,
+        "labels": ["feature"],
+        "number": 76,
+        "title": "Pass the onclose information to onDisconnect",
+        "url": "https://github.com/hapijs/nes/issues/76"
+      }
+    ],
+    "number": 14,
+    "url": "https://github.com/hapijs/nes/milestone/14",
+    "version": "2.2.0"
+  },
+  {
+    "date": "2016-01-15T21:02:18Z",
+    "id": 1488266,
+    "issues": [
+      {
+        "id": 126956435,
+        "labels": ["feature"],
+        "number": 89,
+        "title": "Decorate errors with source type",
+        "url": "https://github.com/hapijs/nes/issues/89"
+      },
+      {
+        "id": 126933305,
+        "labels": ["bug"],
+        "number": 88,
+        "title": "onDisconnect() reports reconnect state incorrectly",
+        "url": "https://github.com/hapijs/nes/issues/88"
+      }
+    ],
+    "number": 13,
+    "url": "https://github.com/hapijs/nes/milestone/13",
+    "version": "2.1.0"
+  },
+  {
+    "date": "2016-01-06T20:23:32Z",
+    "id": 1483412,
+    "issues": [
+      {
+        "id": 125001426,
+        "labels": ["bug"],
+        "number": 87,
+        "title": "The update to ws 1.0.x introduces breaking changes",
+        "url": "https://github.com/hapijs/nes/issues/87"
+      }
+    ],
+    "number": 12,
+    "url": "https://github.com/hapijs/nes/milestone/12",
+    "version": "2.0.2"
+  },
+  {
+    "date": "2016-01-04T20:39:50Z",
+    "id": 1441486,
+    "issues": [
+      {
+        "id": 124828639,
+        "labels": ["security", "dependency"],
+        "number": 86,
+        "title": "update ws to 1.0.x",
+        "url": "https://github.com/hapijs/nes/pull/86"
+      }
+    ],
+    "number": 11,
+    "url": "https://github.com/hapijs/nes/milestone/11",
+    "version": "2.0.1"
+  },
+  {
+    "date": "2015-12-03T08:38:30Z",
+    "id": 1438067,
+    "issues": [
+      {
+        "id": 120001127,
+        "labels": ["feature", "breaking changes"],
+        "number": 84,
+        "title": "Change client.subscribe() to require a callback",
+        "url": "https://github.com/hapijs/nes/issues/84"
+      },
+      {
+        "id": 120001032,
+        "labels": ["feature", "breaking changes"],
+        "number": 83,
+        "title": "Add version check in hello",
+        "url": "https://github.com/hapijs/nes/issues/83"
+      }
+    ],
+    "number": 10,
+    "url": "https://github.com/hapijs/nes/milestone/10",
+    "version": "2.0.0"
+  },
+  {
+    "date": "2015-12-01T18:21:00Z",
+    "id": 1409927,
+    "issues": [
+      {
+        "id": 119658520,
+        "labels": ["bug"],
+        "number": 81,
+        "title": "Fix illegal invocation error when using default onError handler.",
+        "url": "https://github.com/hapijs/nes/pull/81"
+      }
+    ],
+    "number": 9,
+    "url": "https://github.com/hapijs/nes/milestone/9",
+    "version": "1.2.2"
+  },
+  {
+    "date": "2015-11-13T07:43:53Z",
+    "id": 1396358,
+    "issues": [
+      {
+        "id": 116443477,
+        "labels": ["bug"],
+        "number": 79,
+        "title": "Possible to subscribe, unsubscribe, and resubscribe? v1.2.0",
+        "url": "https://github.com/hapijs/nes/issues/79"
+      }
+    ],
+    "number": 8,
+    "url": "https://github.com/hapijs/nes/milestone/8",
+    "version": "1.2.1"
+  },
+  {
+    "date": "2015-11-05T20:22:41Z",
+    "id": 1383976,
+    "issues": [
+      {
+        "id": 115351236,
+        "labels": ["feature"],
+        "number": 72,
+        "title": "Update to create a es5 client artifact",
+        "url": "https://github.com/hapijs/nes/pull/72"
+      },
+      {
+        "id": 115248506,
+        "labels": ["feature"],
+        "number": 71,
+        "title": "Add socket.app",
+        "url": "https://github.com/hapijs/nes/issues/71"
+      },
+      {
+        "id": 115237510,
+        "labels": ["feature"],
+        "number": 70,
+        "title": "Decorate request with socket",
+        "url": "https://github.com/hapijs/nes/issues/70"
+      },
+      {
+        "id": 115149883,
+        "labels": ["feature", "breaking changes"],
+        "number": 69,
+        "title": "ES6 style changes",
+        "url": "https://github.com/hapijs/nes/issues/69"
+      }
+    ],
+    "number": 7,
+    "url": "https://github.com/hapijs/nes/milestone/7",
+    "version": "1.2.0"
+  },
+  {
+    "date": "2015-10-29T18:04:22Z",
+    "id": 1369059,
+    "issues": [
+      {
+        "id": 114107063,
+        "labels": ["bug"],
+        "number": 67,
+        "title": "Use internal auth endpoint id for lookup",
+        "url": "https://github.com/hapijs/nes/pull/67"
+      },
+      {
+        "id": 114100358,
+        "labels": ["bug"],
+        "number": 66,
+        "title": "Plugin route prefix cause mismatch with default internal auth endpoint",
+        "url": "https://github.com/hapijs/nes/issues/66"
+      }
+    ],
+    "number": 6,
+    "url": "https://github.com/hapijs/nes/milestone/6",
+    "version": "1.1.2"
+  },
+  {
+    "date": "2015-10-21T20:48:26Z",
+    "id": 1368890,
+    "issues": [
+      {
+        "id": 112675703,
+        "labels": ["feature"],
+        "number": 65,
+        "title": "Return auth error message in response",
+        "url": "https://github.com/hapijs/nes/issues/65"
+      }
+    ],
+    "number": 5,
+    "url": "https://github.com/hapijs/nes/milestone/5",
+    "version": "1.1.1"
+  },
+  {
+    "date": "2015-10-21T18:55:21Z",
+    "id": 1364410,
+    "issues": [
+      {
+        "id": 112654243,
+        "labels": ["feature"],
+        "number": 64,
+        "title": "Implement internal data for filtering messages",
+        "url": "https://github.com/hapijs/nes/pull/64"
+      },
+      {
+        "id": 112375515,
+        "labels": ["feature"],
+        "number": 63,
+        "title": "Add message metadata for publish",
+        "url": "https://github.com/hapijs/nes/issues/63"
+      },
+      {
+        "id": 112072452,
+        "labels": ["feature"],
+        "number": 62,
+        "title": "Implement eachSocket iterator",
+        "url": "https://github.com/hapijs/nes/pull/62"
+      },
+      {
+        "id": 112069547,
+        "labels": ["feature"],
+        "number": 61,
+        "title": "Implement per-subscription lifecycle",
+        "url": "https://github.com/hapijs/nes/pull/61"
+      },
+      {
+        "id": 112056783,
+        "labels": ["feature"],
+        "number": 60,
+        "title": "Add onDisconnection callback",
+        "url": "https://github.com/hapijs/nes/pull/60"
+      },
+      {
+        "id": 111849410,
+        "labels": ["feature"],
+        "number": 56,
+        "title": "Add disconnection callback",
+        "url": "https://github.com/hapijs/nes/issues/56"
+      }
+    ],
+    "number": 4,
+    "url": "https://github.com/hapijs/nes/milestone/4",
+    "version": "1.1.0"
+  },
+  {
+    "date": "2015-10-19T17:03:59Z",
+    "id": 1302167,
+    "issues": [
+      {
+        "id": 106407779,
+        "labels": ["feature"],
+        "number": 46,
+        "title": "socket.send()",
+        "url": "https://github.com/hapijs/nes/issues/46"
+      },
+      {
+        "id": 106407672,
+        "labels": ["breaking changes"],
+        "number": 45,
+        "title": "Rename onBroadcast to onUpdate",
+        "url": "https://github.com/hapijs/nes/issues/45"
+      },
+      {
+        "id": 106201264,
+        "labels": ["feature"],
+        "number": 44,
+        "title": "Max reconnect retries",
+        "url": "https://github.com/hapijs/nes/issues/44"
+      },
+      {
+        "id": 106201253,
+        "labels": ["feature"],
+        "number": 43,
+        "title": "Connection timeout",
+        "url": "https://github.com/hapijs/nes/issues/43"
+      },
+      {
+        "id": 105246358,
+        "labels": ["feature"],
+        "number": 22,
+        "title": "Add heartbeat",
+        "url": "https://github.com/hapijs/nes/issues/22"
+      },
+      {
+        "id": 105049065,
+        "labels": ["feature"],
+        "number": 19,
+        "title": "Allow for custom callback data to Client.connect()",
+        "url": "https://github.com/hapijs/nes/issues/19"
+      },
+      {
+        "id": 104838100,
+        "labels": ["feature"],
+        "number": 8,
+        "title": "Request timeout",
+        "url": "https://github.com/hapijs/nes/issues/8"
+      }
+    ],
+    "number": 3,
+    "url": "https://github.com/hapijs/nes/milestone/3",
+    "version": "1.0.0"
+  },
+  {
+    "date": "2015-09-12T05:53:56Z",
+    "id": 1294211,
+    "issues": [
+      {
+        "id": 106111412,
+        "labels": ["bug"],
+        "number": 42,
+        "title": "Remove duplicated statusCode in errors",
+        "url": "https://github.com/hapijs/nes/issues/42"
+      },
+      {
+        "id": 106081497,
+        "labels": ["feature"],
+        "number": 41,
+        "title": "Filter headers in responses",
+        "url": "https://github.com/hapijs/nes/issues/41"
+      },
+      {
+        "id": 106081409,
+        "labels": ["bug", "breaking changes"],
+        "number": 40,
+        "title": "Consistent error transmission",
+        "url": "https://github.com/hapijs/nes/issues/40"
+      },
+      {
+        "id": 106049691,
+        "labels": ["bug", "security"],
+        "number": 38,
+        "title": "Prevent client from including a request authorization header",
+        "url": "https://github.com/hapijs/nes/issues/38"
+      },
+      {
+        "id": 105920027,
+        "labels": ["bug"],
+        "number": 34,
+        "title": "Prevent client from subscribing multiple times to same path",
+        "url": "https://github.com/hapijs/nes/issues/34"
+      },
+      {
+        "id": 105637442,
+        "labels": ["feature", "breaking changes"],
+        "number": 32,
+        "title": "Change server onConnect to onConnection and delay until after auth when required",
+        "url": "https://github.com/hapijs/nes/issues/32"
+      },
+      {
+        "id": 105465701,
+        "labels": ["bug", "security"],
+        "number": 30,
+        "title": "Block all client requests when channel requires auth",
+        "url": "https://github.com/hapijs/nes/issues/30"
+      },
+      {
+        "id": 105464784,
+        "labels": ["bug"],
+        "number": 29,
+        "title": "Fix typo",
+        "url": "https://github.com/hapijs/nes/pull/29"
+      },
+      {
+        "id": 105463421,
+        "labels": ["bug"],
+        "number": 28,
+        "title": "Implement unsubscribe on the server",
+        "url": "https://github.com/hapijs/nes/issues/28"
+      },
+      {
+        "id": 105458344,
+        "labels": ["feature"],
+        "number": 27,
+        "title": "Expose socket authentication state",
+        "url": "https://github.com/hapijs/nes/issues/27"
+      },
+      {
+        "id": 105414679,
+        "labels": ["feature"],
+        "number": 26,
+        "title": "Ability to force disconnect for specific clients",
+        "url": "https://github.com/hapijs/nes/issues/26"
+      },
+      {
+        "id": 105309771,
+        "labels": ["feature", "breaking changes"],
+        "number": 25,
+        "title": "'data' vs 'message' for incoming data",
+        "url": "https://github.com/hapijs/nes/issues/25"
+      },
+      {
+        "id": 105288915,
+        "labels": ["bug"],
+        "number": 24,
+        "title": "Subscriptions are not cleaned on client disconnect",
+        "url": "https://github.com/hapijs/nes/issues/24"
+      }
+    ],
+    "number": 2,
+    "url": "https://github.com/hapijs/nes/milestone/2",
+    "version": "0.4.0"
+  },
+  {
+    "date": "2015-09-07T18:10:08Z",
+    "id": 1289644,
+    "issues": [
+      {
+        "id": 105115325,
+        "labels": ["feature"],
+        "number": 21,
+        "title": "Drop support for non-protocol messages",
+        "url": "https://github.com/hapijs/nes/issues/21"
+      },
+      {
+        "id": 105076096,
+        "labels": ["feature"],
+        "number": 20,
+        "title": "Change default auth method to direct",
+        "url": "https://github.com/hapijs/nes/issues/20"
+      },
+      {
+        "id": 105048671,
+        "labels": ["bug"],
+        "number": 18,
+        "title": "Race condition exists in client reconnect logic",
+        "url": "https://github.com/hapijs/nes/issues/18"
+      },
+      {
+        "id": 105047616,
+        "labels": ["feature"],
+        "number": 17,
+        "title": "Allow for custom messages",
+        "url": "https://github.com/hapijs/nes/pull/17"
+      },
+      {
+        "id": 105035033,
+        "labels": ["feature"],
+        "number": 16,
+        "title": "Turn auth on by default",
+        "url": "https://github.com/hapijs/nes/issues/16"
+      },
+      {
+        "id": 105004952,
+        "labels": ["feature"],
+        "number": 15,
+        "title": "Add onConnect callback option",
+        "url": "https://github.com/hapijs/nes/pull/15"
+      },
+      {
+        "id": 105004232,
+        "labels": ["feature"],
+        "number": 14,
+        "title": "Add event callback for client connection",
+        "url": "https://github.com/hapijs/nes/issues/14"
+      },
+      {
+        "id": 104993913,
+        "labels": ["feature"],
+        "number": 12,
+        "title": "Add browser packaging entry points",
+        "url": "https://github.com/hapijs/nes/pull/12"
+      },
+      {
+        "id": 104841021,
+        "labels": ["feature"],
+        "number": 11,
+        "title": "Initial publish/subscribe interface",
+        "url": "https://github.com/hapijs/nes/issues/11"
+      },
+      {
+        "id": 104838136,
+        "labels": ["feature"],
+        "number": 9,
+        "title": "Use console.error() when no onError handler",
+        "url": "https://github.com/hapijs/nes/issues/9"
+      },
+      {
+        "id": 104830125,
+        "labels": ["bug"],
+        "number": 6,
+        "title": "Re-auth on reconnect",
+        "url": "https://github.com/hapijs/nes/issues/6"
+      },
+      {
+        "id": 104819805,
+        "labels": ["feature"],
+        "number": 5,
+        "title": "Allow any authentication method when using token auth",
+        "url": "https://github.com/hapijs/nes/issues/5"
+      },
+      {
+        "id": 104814526,
+        "labels": ["feature"],
+        "number": 4,
+        "title": "Allow handler to handle unknown message types",
+        "url": "https://github.com/hapijs/nes/issues/4"
+      },
+      {
+        "id": 104749207,
+        "labels": ["support"],
+        "number": 3,
+        "title": "How will adding additional functionality work?",
+        "url": "https://github.com/hapijs/nes/issues/3"
+      }
+    ],
+    "number": 1,
+    "url": "https://github.com/hapijs/nes/milestone/1",
+    "version": "0.3.0"
+  }
+]

@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/lab</id>
+    <title>@hapi/lab changelog</title>
+    <updated>2026-03-26T19:26:11.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/lab"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v26.0.1]]></title>
+        <id>https://github.com/hapijs/lab/milestone/202</id>
+        <link href="https://hapi.dev/module/lab/changelog#26.0.1"/>
+        <updated>2026-03-26T19:26:11.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v26.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/1087">[#1087]</a> fix: guard parent access in `addTsEsmHook` for ESM-to-CJS sub-dependency resolution</li><li><a href="https://github.com/hapijs/lab/issues/1086">[#1086]</a> `@hapi/lab` crashes when TypeScript tests depend on ESM packages</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v26.0.0]]></title>
+        <id>https://github.com/hapijs/lab/milestone/201</id>
+        <link href="https://hapi.dev/module/lab/changelog#26.0.0"/>
+        <updated>2024-10-24T08:05:55.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v26.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/1081">[#1081]</a> chore: report node 18+ support</li><li><a href="https://github.com/hapijs/lab/issues/1080">[#1080]</a> 26.0.0 Release Notes</li><li><a href="https://github.com/hapijs/lab/pull/1079">[#1079]</a> chore: next version</li><li><a href="https://github.com/hapijs/lab/pull/1076">[#1076]</a> feat: target ESLint v9</li><li><a href="https://github.com/hapijs/lab/pull/1071">[#1071]</a> Tighten type checking config</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v25.3.2]]></title>
+        <id>https://github.com/hapijs/lab/milestone/200</id>
+        <link href="https://hapi.dev/module/lab/changelog#25.3.2"/>
+        <updated>2024-10-22T13:15:46.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v25.3.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/1078">[#1078]</a> Ignore new TypeScript global leak</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v25.3.1]]></title>
+        <id>https://github.com/hapijs/lab/milestone/199</id>
+        <link href="https://hapi.dev/module/lab/changelog#25.3.1"/>
+        <updated>2024-10-17T13:15:31.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v25.3.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/1075">[#1075]</a> fix: coverage for arrow functions returning literals</li><li><a href="https://github.com/hapijs/lab/pull/1074">[#1074]</a> fix: lint typescript files</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v25.3.0]]></title>
+        <id>https://github.com/hapijs/lab/milestone/198</id>
+        <link href="https://hapi.dev/module/lab/changelog#25.3.0"/>
+        <updated>2024-07-26T06:32:57.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v25.3.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/1073">[#1073]</a> feat: add explicit extension support when using Typescript and ESM</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v25.2.0]]></title>
+        <id>https://github.com/hapijs/lab/milestone/197</id>
+        <link href="https://hapi.dev/module/lab/changelog#25.2.0"/>
+        <updated>2024-01-15T13:14:31.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v25.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/1069">[#1069]</a> Always lint .ts</li><li><a href="https://github.com/hapijs/lab/issues/1065">[#1065]</a> Add `.ts` to the default `extensions` for `--lint`</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v25.1.4]]></title>
+        <id>https://github.com/hapijs/lab/milestone/196</id>
+        <link href="https://hapi.dev/module/lab/changelog#25.1.4"/>
+        <updated>2024-01-15T13:10:57.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v25.1.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/1070">[#1070]</a> Make report an allow list</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v25.1.2]]></title>
+        <id>https://github.com/hapijs/lab/milestone/195</id>
+        <link href="https://hapi.dev/module/lab/changelog#25.1.2"/>
+        <updated>2023-02-11T18:20:06.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v25.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/1061">[#1061]</a> Fix: add more typescript leaks</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v25.1.1]]></title>
+        <id>https://github.com/hapijs/lab/milestone/194</id>
+        <link href="https://hapi.dev/module/lab/changelog#25.1.1"/>
+        <updated>2023-02-11T18:18:28.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v25.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/1060">[#1060]</a> chore: bump hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v25.1.0]]></title>
+        <id>https://github.com/hapijs/lab/milestone/193</id>
+        <link href="https://hapi.dev/module/lab/changelog#25.1.0"/>
+        <updated>2023-02-11T18:18:30.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v25.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/1059">[#1059]</a> Bump @types/node</li><li><a href="https://github.com/hapijs/lab/pull/1058">[#1058]</a> Deal with `Symbol(undici.globalDispatcher.1)` in Node.js 18+</li><li><a href="https://github.com/hapijs/lab/pull/1057">[#1057]</a> Enable linting of *.cjs and *.mjs files</li><li><a href="https://github.com/hapijs/lab/pull/1052">[#1052]</a> Add missing space after colon</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v25.0.1]]></title>
+        <id>https://github.com/hapijs/lab/milestone/192</id>
+        <link href="https://hapi.dev/module/lab/changelog#25.0.1"/>
+        <updated>2022-05-08T00:32:23.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v25.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/1051">[#1051]</a> Add check for TS error 2820</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v25.0.0]]></title>
+        <id>https://github.com/hapijs/lab/milestone/190</id>
+        <link href="https://hapi.dev/module/lab/changelog#25.0.0"/>
+        <updated>2022-05-07T22:58:25.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v25.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/1050">[#1050]</a> Upgrade dependences</li><li><a href="https://github.com/hapijs/lab/pull/1048">[#1048]</a> Update target to ES2020 to match node 14+</li><li><a href="https://github.com/hapijs/lab/pull/1045">[#1045]</a> Support node v18</li><li><a href="https://github.com/hapijs/lab/pull/1037">[#1037]</a> Remove undocumented --coverage-module option</li><li><a href="https://github.com/hapijs/lab/pull/1035">[#1035]</a> Upgrade to eslint v8</li><li><a href="https://github.com/hapijs/lab/pull/1034">[#1034]</a> Drop support for node v12</li><li><a href="https://github.com/hapijs/lab/issues/1021">[#1021]</a> Update linter to work with ESLint 8</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v24.7.0]]></title>
+        <id>https://github.com/hapijs/lab/milestone/189</id>
+        <link href="https://hapi.dev/module/lab/changelog#24.7.0"/>
+        <updated>2022-04-30T23:33:18.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v24.7.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/1044">[#1044]</a> Revise leak detection to use fresh node globals</li><li><a href="https://github.com/hapijs/lab/pull/1043">[#1043]</a> New --coverage-predicates option</li><li><a href="https://github.com/hapijs/lab/pull/1042">[#1042]</a> Remove node 8 compat fix</li><li><a href="https://github.com/hapijs/lab/pull/1041">[#1041]</a> feat: 🎸 depedencies cli option</li><li><a href="https://github.com/hapijs/lab/pull/1038">[#1038]</a> Update sindresorhus deps to pre ESM versions</li><li><a href="https://github.com/hapijs/lab/pull/1036">[#1036]</a> Coverage for nullish coalescing operator</li><li><a href="https://github.com/hapijs/lab/issues/1033">[#1033]</a> tsconfig paths alias</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v24.6.0]]></title>
+        <id>https://github.com/hapijs/lab/milestone/188</id>
+        <link href="https://hapi.dev/module/lab/changelog#24.6.0"/>
+        <updated>2022-04-02T22:20:53.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v24.6.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/1032">[#1032]</a> add Node.js 18 globals</li><li><a href="https://github.com/hapijs/lab/pull/1031">[#1031]</a> Support for ES modules</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v24.5.1]]></title>
+        <id>https://github.com/hapijs/lab/milestone/187</id>
+        <link href="https://hapi.dev/module/lab/changelog#24.5.1"/>
+        <updated>2022-01-19T18:48:34.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v24.5.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/1029">[#1029]</a> Add inline typescript sources to transformed output</li><li><a href="https://github.com/hapijs/lab/pull/1028">[#1028]</a> Skip coverage on non-mapped transpiled code</li><li><a href="https://github.com/hapijs/lab/pull/1018">[#1018]</a> Add @hapi/eslint-plugin as peer dependency</li><li><a href="https://github.com/hapijs/lab/issues/1017">[#1017]</a> Using the coverage reporter requires "@hapi/eslint-plugin" to be installed, even if it’s not used.</li><li><a href="https://github.com/hapijs/lab/issues/1002">[#1002]</a> Code coverage reports on transpiled JavaScript, instead of TypeScript source</li><li><a href="https://github.com/hapijs/lab/issues/972">[#972]</a> Original files in HTML reporter</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v24.5.0]]></title>
+        <id>https://github.com/hapijs/lab/milestone/186</id>
+        <link href="https://hapi.dev/module/lab/changelog#24.5.0"/>
+        <updated>2021-12-31T07:46:14.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v24.5.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/1026">[#1026]</a> Add TypeScript support. Closes #1025</li><li><a href="https://github.com/hapijs/lab/pull/1001">[#1001]</a> Introduce an upper limit to how much actual vs. expected is diffed</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab vv24.4.0]]></title>
+        <id>https://github.com/hapijs/lab/milestone/185</id>
+        <link href="https://hapi.dev/module/lab/changelog#v24.4.0"/>
+        <updated>2021-11-09T05:10:49.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab vv24.4.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/1023">[#1023]</a> Cleanup flaky tests, lint CLI scripts</li><li><a href="https://github.com/hapijs/lab/pull/1020">[#1020]</a> Add DOMException and structuredClone globals to leaks module</li><li><a href="https://github.com/hapijs/lab/issues/1019">[#1019]</a> DOMException will be a global in Node.js 17+</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab vv24.3.2]]></title>
+        <id>https://github.com/hapijs/lab/milestone/184</id>
+        <link href="https://hapi.dev/module/lab/changelog#v24.3.2"/>
+        <updated>2021-07-16T12:59:22.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab vv24.3.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/1016">[#1016]</a> fix: never instrument eslint configs for coverage</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab vv24.3.1]]></title>
+        <id>https://github.com/hapijs/lab/milestone/183</id>
+        <link href="https://hapi.dev/module/lab/changelog#v24.3.1"/>
+        <updated>2021-07-16T12:58:49.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab vv24.3.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/1015">[#1015]</a> fix: correct semver range for @hapi/eslint-plugin</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab vv24.3.0]]></title>
+        <id>https://github.com/hapijs/lab/milestone/182</id>
+        <link href="https://hapi.dev/module/lab/changelog#v24.3.0"/>
+        <updated>2021-07-09T07:45:45.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab vv24.3.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/1014">[#1014]</a> Add eslint configuration</li><li><a href="https://github.com/hapijs/lab/pull/1013">[#1013]</a> Add eslint-plugin module config to lint/coverage feature</li><li><a href="https://github.com/hapijs/lab/issues/1012">[#1012]</a> Use the new module ESLint configuration</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v24.2.1]]></title>
+        <id>https://github.com/hapijs/lab/milestone/181</id>
+        <link href="https://hapi.dev/module/lab/changelog#24.2.1"/>
+        <updated>2021-06-29T17:25:40.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v24.2.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/1007">[#1007]</a> Report on private/protected class type errors</li><li><a href="https://github.com/hapijs/lab/issues/1006">[#1006]</a> Incorrect type error detection</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v24.2.0]]></title>
+        <id>https://github.com/hapijs/lab/milestone/180</id>
+        <link href="https://hapi.dev/module/lab/changelog#24.2.0"/>
+        <updated>2021-04-23T03:31:51.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v24.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/1004">[#1004]</a> Add new globals for node v16</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v24.1.1]]></title>
+        <id>https://github.com/hapijs/lab/milestone/178</id>
+        <link href="https://hapi.dev/module/lab/changelog#24.1.1"/>
+        <updated>2021-02-21T16:24:55.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v24.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/1000">[#1000]</a> Fix retrying of passing tests</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v24.1.0]]></title>
+        <id>https://github.com/hapijs/lab/milestone/177</id>
+        <link href="https://hapi.dev/module/lab/changelog#24.1.0"/>
+        <updated>2020-10-22T15:59:02.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v24.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/997">[#997]</a> lib: add new globals from Node.js 15.x</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v24.0.0]]></title>
+        <id>https://github.com/hapijs/lab/milestone/176</id>
+        <link href="https://hapi.dev/module/lab/changelog#24.0.0"/>
+        <updated>2020-09-23T02:29:34.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v24.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/issues/996">[#996]</a> 24.0.0 Release Notes</li><li><a href="https://github.com/hapijs/lab/pull/995">[#995]</a> Wait for pending ticks started by test</li><li><a href="https://github.com/hapijs/lab/pull/993">[#993]</a> Shallow clone context</li><li><a href="https://github.com/hapijs/lab/pull/992">[#992]</a> Allow typescript to be updated by clients</li><li><a href="https://github.com/hapijs/lab/pull/990">[#990]</a> Use eslint-plugin-hapi embedded config</li><li><a href="https://github.com/hapijs/lab/pull/987">[#987]</a> throw error if an async experiment function is provided</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v22.0.4]]></title>
+        <id>https://github.com/hapijs/lab/milestone/175</id>
+        <link href="https://hapi.dev/module/lab/changelog#22.0.4"/>
+        <updated>2020-03-12T17:10:15.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v22.0.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/975">[#975]</a> Replace mkdirp with Fs.mkdirSync with recursive: true</li><li><a href="https://github.com/hapijs/lab/issues/974">[#974]</a> Vulnerability in a dep of mkdirp</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v22.0.3]]></title>
+        <id>https://github.com/hapijs/lab/milestone/174</id>
+        <link href="https://hapi.dev/module/lab/changelog#22.0.3"/>
+        <updated>2020-01-04T09:24:50.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v22.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/issues/968">[#968]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v22.0.2]]></title>
+        <id>https://github.com/hapijs/lab/milestone/173</id>
+        <link href="https://hapi.dev/module/lab/changelog#22.0.2"/>
+        <updated>2019-12-28T17:25:00.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v22.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/issues/963">[#963]</a> Record retries</li><li><a href="https://github.com/hapijs/lab/issues/962">[#962]</a> Replace Espree with babel-eslint</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v22.0.1]]></title>
+        <id>https://github.com/hapijs/lab/milestone/172</id>
+        <link href="https://hapi.dev/module/lab/changelog#22.0.1"/>
+        <updated>2019-12-28T07:27:49.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v22.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/issues/961">[#961]</a> Update es lint version</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v22.0.0]]></title>
+        <id>https://github.com/hapijs/lab/milestone/171</id>
+        <link href="https://hapi.dev/module/lab/changelog#22.0.0"/>
+        <updated>2019-12-28T07:09:49.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v22.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/issues/960">[#960]</a> Drop node 10</li><li><a href="https://github.com/hapijs/lab/issues/959">[#959]</a> Update lint rules</li><li><a href="https://github.com/hapijs/lab/pull/957">[#957]</a> update test assertion for node core changes</li><li><a href="https://github.com/hapijs/lab/pull/955">[#955]</a> TS: String object type -&gt; string literal type</li><li><a href="https://github.com/hapijs/lab/pull/954">[#954]</a> TS: Uses an inferred generic on flags.mustCall</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v21.0.0]]></title>
+        <id>https://github.com/hapijs/lab/milestone/170</id>
+        <link href="https://hapi.dev/module/lab/changelog#21.0.0"/>
+        <updated>2019-10-14T07:47:36.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v21.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/issues/950">[#950]</a> Update types</li><li><a href="https://github.com/hapijs/lab/issues/949">[#949]</a> Drop node 8</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v20.4.0]]></title>
+        <id>https://github.com/hapijs/lab/milestone/169</id>
+        <link href="https://hapi.dev/module/lab/changelog#20.4.0"/>
+        <updated>2019-10-05T02:51:10.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v20.4.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/issues/948">[#948]</a> Tags to skip types test line execution</li><li><a href="https://github.com/hapijs/lab/issues/945">[#945]</a> coverage-all option triggers TypeError: Cannot set property 'source' of undefined</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v20.3.2]]></title>
+        <id>https://github.com/hapijs/lab/milestone/168</id>
+        <link href="https://hapi.dev/module/lab/changelog#20.3.2"/>
+        <updated>2019-09-23T19:23:35.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v20.3.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/issues/943">[#943]</a> Fails to load npm modules in ts tests</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v20.3.1]]></title>
+        <id>https://github.com/hapijs/lab/milestone/167</id>
+        <link href="https://hapi.dev/module/lab/changelog#20.3.1"/>
+        <updated>2019-09-23T07:09:07.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v20.3.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/issues/942">[#942]</a> Support types test execution on windows</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v20.3.0]]></title>
+        <id>https://github.com/hapijs/lab/milestone/166</id>
+        <link href="https://hapi.dev/module/lab/changelog#20.3.0"/>
+        <updated>2019-09-23T04:52:06.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v20.3.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/issues/941">[#941]</a> External modules coverage fails on windows due to path</li><li><a href="https://github.com/hapijs/lab/issues/940">[#940]</a> Run TS tests, not just validate them</li><li><a href="https://github.com/hapijs/lab/issues/924">[#924]</a> New diff is broken</li><li><a href="https://github.com/hapijs/lab/issues/856">[#856]</a> coverage analysis modifies a function return</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v20.2.2]]></title>
+        <id>https://github.com/hapijs/lab/milestone/165</id>
+        <link href="https://hapi.dev/module/lab/changelog#20.2.2"/>
+        <updated>2019-09-01T07:31:52.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v20.2.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/issues/938">[#938]</a> Stupid typescript</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v20.2.1]]></title>
+        <id>https://github.com/hapijs/lab/milestone/164</id>
+        <link href="https://hapi.dev/module/lab/changelog#20.2.1"/>
+        <updated>2019-08-24T00:55:35.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v20.2.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/issues/937">[#937]</a> Support coverage of external modules with own coverage reports</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v20.1.0]]></title>
+        <id>https://github.com/hapijs/lab/milestone/162</id>
+        <link href="https://hapi.dev/module/lab/changelog#20.1.0"/>
+        <updated>2019-08-15T23:22:50.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v20.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/issues/936">[#936]</a> Ignore symbol leaks</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v20.0.0]]></title>
+        <id>https://github.com/hapijs/lab/milestone/163</id>
+        <link href="https://hapi.dev/module/lab/changelog#20.0.0"/>
+        <updated>2019-08-07T20:02:18.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v20.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/issues/933">[#933]</a> Update to eslint 6</li><li><a href="https://github.com/hapijs/lab/issues/932">[#932]</a> Single line coverage ignore</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v19.1.0]]></title>
+        <id>https://github.com/hapijs/lab/milestone/161</id>
+        <link href="https://hapi.dev/module/lab/changelog#19.1.0"/>
+        <updated>2019-06-14T20:35:58.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v19.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/926">[#926]</a> Implement coverage bypass stack</li><li><a href="https://github.com/hapijs/lab/pull/923">[#923]</a> Support multiple "only" flags</li><li><a href="https://github.com/hapijs/lab/issues/922">[#922]</a> Support for multiple "only"</li><li><a href="https://github.com/hapijs/lab/issues/904">[#904]</a> Add affordance for coverage flag stack</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v19.0.1]]></title>
+        <id>https://github.com/hapijs/lab/milestone/160</id>
+        <link href="https://hapi.dev/module/lab/changelog#19.0.1"/>
+        <updated>2019-05-17T18:16:26.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v19.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/issues/921">[#921]</a> Handle ts "Cannot find name" error when expected</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v19.0.0]]></title>
+        <id>https://github.com/hapijs/lab/milestone/159</id>
+        <link href="https://hapi.dev/module/lab/changelog#19.0.0"/>
+        <updated>2019-05-16T07:43:32.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v19.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/issues/920">[#920]</a> 19.0.0 Release Notes</li><li><a href="https://github.com/hapijs/lab/issues/919">[#919]</a> Change console reporter labels</li><li><a href="https://github.com/hapijs/lab/issues/918">[#918]</a> Typescript test support</li><li><a href="https://github.com/hapijs/lab/issues/917">[#917]</a> Remove debug-brk</li><li><a href="https://github.com/hapijs/lab/issues/916">[#916]</a> Global leak detector skips Symbol() properties</li><li><a href="https://github.com/hapijs/lab/pull/915">[#915]</a> Use util.inspect() for console reporter</li><li><a href="https://github.com/hapijs/lab/issues/914">[#914]</a> "console" reporter crashes if object contains a BigInt</li><li><a href="https://github.com/hapijs/lab/issues/572">[#572]</a> No mismatch highlighted on -0 !== 0 deep equality mismatch</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v18.1.2]]></title>
+        <id>https://github.com/hapijs/lab/milestone/158</id>
+        <link href="https://hapi.dev/module/lab/changelog#18.1.2"/>
+        <updated>2019-04-23T16:54:23.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v18.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/issues/913">[#913]</a> Update lint rules modules</li><li><a href="https://github.com/hapijs/lab/issues/912">[#912]</a> Add globalThis to symbols</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v18.1.1]]></title>
+        <id>https://github.com/hapijs/lab/milestone/157</id>
+        <link href="https://hapi.dev/module/lab/changelog#18.1.1"/>
+        <updated>2019-04-23T16:45:14.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v18.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/issues/911">[#911]</a> Update code</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v18.1.0]]></title>
+        <id>https://github.com/hapijs/lab/milestone/156</id>
+        <link href="https://hapi.dev/module/lab/changelog#18.1.0"/>
+        <updated>2019-03-29T21:40:22.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v18.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/issues/910">[#910]</a> Change module namespace</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v18.0.2]]></title>
+        <id>https://github.com/hapijs/lab/milestone/155</id>
+        <link href="https://hapi.dev/module/lab/changelog#18.0.2"/>
+        <updated>2019-02-12T01:05:36.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v18.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/issues/905">[#905]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v18.0.1]]></title>
+        <id>https://github.com/hapijs/lab/milestone/154</id>
+        <link href="https://hapi.dev/module/lab/changelog#18.0.1"/>
+        <updated>2018-12-17T23:01:47.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v18.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/898">[#898]</a> Switch back to Hoek.clone from lodash.deepClone.</li><li><a href="https://github.com/hapijs/lab/pull/895">[#895]</a> Fix coverage with sourcemaps inlined via Transform API.</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v18.0.0]]></title>
+        <id>https://github.com/hapijs/lab/milestone/152</id>
+        <link href="https://hapi.dev/module/lab/changelog#18.0.0"/>
+        <updated>2018-11-13T22:46:35.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v18.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/894">[#894]</a> Have correct exit code with multiple reporters</li><li><a href="https://github.com/hapijs/lab/pull/893">[#893]</a> Properly propagate term sig to child lab process</li><li><a href="https://github.com/hapijs/lab/pull/892">[#892]</a> Add note about how to get a tests ID</li><li><a href="https://github.com/hapijs/lab/pull/891">[#891]</a> Update eslint version</li><li><a href="https://github.com/hapijs/lab/pull/890">[#890]</a> Remove deprecated espree option</li><li><a href="https://github.com/hapijs/lab/pull/889">[#889]</a> Remove docs about custom linter option</li><li><a href="https://github.com/hapijs/lab/pull/888">[#888]</a> Compare coverage pattern to canonical path</li><li><a href="https://github.com/hapijs/lab/pull/885">[#885]</a> Centralize espree options</li><li><a href="https://github.com/hapijs/lab/pull/884">[#884]</a> Remove old parallel flag from test</li><li><a href="https://github.com/hapijs/lab/pull/883">[#883]</a>  Use correct gray color code</li><li><a href="https://github.com/hapijs/lab/pull/882">[#882]</a> Add missing coverage and remove unnecessary checks</li><li><a href="https://github.com/hapijs/lab/pull/878">[#878]</a> Fix false-positive coverage of if statements (REDUCES REPORTED COVERAGE!)</li><li><a href="https://github.com/hapijs/lab/issues/855">[#855]</a> Update linter configuration?</li><li><a href="https://github.com/hapijs/lab/issues/852">[#852]</a> Console reporter: "gray" is actually light green</li><li><a href="https://github.com/hapijs/lab/issues/842">[#842]</a> Coverage fails for multiple conditionals on same line (logical operators)</li><li><a href="https://github.com/hapijs/lab/issues/788">[#788]</a> Documentation on using --id</li><li><a href="https://github.com/hapijs/lab/issues/762">[#762]</a> Request to consolidate parsers</li><li><a href="https://github.com/hapijs/lab/issues/758">[#758]</a> CLI failure test doesn't appear to test what it claims</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v17.3.0]]></title>
+        <id>https://github.com/hapijs/lab/milestone/153</id>
+        <link href="https://hapi.dev/module/lab/changelog#17.3.0"/>
+        <updated>2018-11-05T15:17:31.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v17.3.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/881">[#881]</a> Add coverage-pattern option</li><li><a href="https://github.com/hapijs/lab/issues/880">[#880]</a> Remove engines</li><li><a href="https://github.com/hapijs/lab/issues/853">[#853]</a> Coverage being analized on the test file</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/lab v17.2.0]]></title>
+        <id>https://github.com/hapijs/lab/milestone/151</id>
+        <link href="https://hapi.dev/module/lab/changelog#17.2.0"/>
+        <updated>2018-11-02T21:30:05.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/lab v17.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/lab/pull/879">[#879]</a> Check file pattern on coverage traversal</li><li><a href="https://github.com/hapijs/lab/pull/877">[#877]</a> Add --coverage-all option</li><li><a href="https://github.com/hapijs/lab/issues/710">[#710]</a> setting coverage-path doesn't include all code in path</li></ul>]]></content>
+    </entry>
+</feed>

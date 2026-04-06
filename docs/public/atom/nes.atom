@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/nes</id>
+    <title>@hapi/nes changelog</title>
+    <updated>2025-01-08T21:42:26.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/nes"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v14.0.1]]></title>
+        <id>https://github.com/hapijs/nes/milestone/86</id>
+        <link href="https://hapi.dev/module/nes/changelog#14.0.1"/>
+        <updated>2025-01-08T21:42:26.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v14.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/pull/338">[#338]</a> Declare correct `ws` options type</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v14.0.0]]></title>
+        <id>https://github.com/hapijs/nes/milestone/85</id>
+        <link href="https://hapi.dev/module/nes/changelog#14.0.0"/>
+        <updated>2024-08-28T09:24:27.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v14.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/335">[#335]</a> v14.0.0 Release Notes</li><li><a href="https://github.com/hapijs/nes/pull/334">[#334]</a> Release next version as 14.0.0</li><li><a href="https://github.com/hapijs/nes/pull/333">[#333]</a> chore: set min node version</li><li><a href="https://github.com/hapijs/nes/pull/330">[#330]</a> chore: 🤖 import and improve outdate typings from DT</li><li><a href="https://github.com/hapijs/nes/issues/329">[#329]</a> Upgrade to ws@8.x</li><li><a href="https://github.com/hapijs/nes/pull/327">[#327]</a> chore: change CI target for next</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v13.0.1]]></title>
+        <id>https://github.com/hapijs/nes/milestone/84</id>
+        <link href="https://hapi.dev/module/nes/changelog#13.0.1"/>
+        <updated>2024-07-24T18:06:52.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v13.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/pull/325">[#325]</a> chore: bump hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v13.0.0]]></title>
+        <id>https://github.com/hapijs/nes/milestone/82</id>
+        <link href="https://hapi.dev/module/nes/changelog#13.0.0"/>
+        <updated>2022-08-08T02:36:32.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v13.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/pull/322">[#322]</a> Support node v18 and hapi v21, drop node v12 and hapi v18/19</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v12.0.5]]></title>
+        <id>https://github.com/hapijs/nes/milestone/83</id>
+        <link href="https://hapi.dev/module/nes/changelog#12.0.5"/>
+        <updated>2022-08-08T02:36:34.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v12.0.5]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/pull/323">[#323]</a> Fix client reconnect retry attempts</li><li><a href="https://github.com/hapijs/nes/pull/318">[#318]</a> client - _reconnect update, single reconnection timer</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v12.0.4]]></title>
+        <id>https://github.com/hapijs/nes/milestone/81</id>
+        <link href="https://hapi.dev/module/nes/changelog#12.0.4"/>
+        <updated>2020-09-26T16:25:03.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v12.0.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/pull/313">[#313]</a> migrate to new travis format</li><li><a href="https://github.com/hapijs/nes/pull/312">[#312]</a> upgrade to hapi 20</li><li><a href="https://github.com/hapijs/nes/pull/311">[#311]</a> switch to validate and other package updates</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v12.0.3]]></title>
+        <id>https://github.com/hapijs/nes/milestone/80</id>
+        <link href="https://hapi.dev/module/nes/changelog#12.0.3"/>
+        <updated>2020-07-10T03:31:35.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v12.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/pull/307">[#307]</a> Upgrade deprecated `@hapi/call@6.x.x`</li><li><a href="https://github.com/hapijs/nes/pull/306">[#306]</a> fix: pass remoteAddress when injecting request</li><li><a href="https://github.com/hapijs/nes/issues/305">[#305]</a> request.info.remoteAddress is always 127.0.0.1 in request handler</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v12.0.2]]></title>
+        <id>https://github.com/hapijs/nes/milestone/79</id>
+        <link href="https://hapi.dev/module/nes/changelog#12.0.2"/>
+        <updated>2020-03-17T03:17:04.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v12.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/pull/304">[#304]</a> Prevent beat timeout from disconnecting newly connecting sockets</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v12.0.1]]></title>
+        <id>https://github.com/hapijs/nes/milestone/78</id>
+        <link href="https://hapi.dev/module/nes/changelog#12.0.1"/>
+        <updated>2020-03-17T03:14:41.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v12.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/pull/303">[#303]</a> Remove unused dep</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v12.0.0]]></title>
+        <id>https://github.com/hapijs/nes/milestone/77</id>
+        <link href="https://hapi.dev/module/nes/changelog#12.0.0"/>
+        <updated>2020-01-13T12:13:27.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v12.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/301">[#301]</a> Change plugin name to @hapi/nes</li><li><a href="https://github.com/hapijs/nes/issues/300">[#300]</a> Require hapi 19</li><li><a href="https://github.com/hapijs/nes/issues/299">[#299]</a> Only node 12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v11.2.2]]></title>
+        <id>https://github.com/hapijs/nes/milestone/76</id>
+        <link href="https://hapi.dev/module/nes/changelog#11.2.2"/>
+        <updated>2019-09-12T20:30:28.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v11.2.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/285">[#285]</a> Unknown authentication strategy</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v11.2.1]]></title>
+        <id>https://github.com/hapijs/nes/milestone/75</id>
+        <link href="https://hapi.dev/module/nes/changelog#11.2.1"/>
+        <updated>2019-08-15T01:20:56.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v11.2.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/289">[#289]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v11.2.0]]></title>
+        <id>https://github.com/hapijs/nes/milestone/74</id>
+        <link href="https://hapi.dev/module/nes/changelog#11.2.0"/>
+        <updated>2019-05-30T22:29:29.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v11.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/pull/284">[#284]</a> Add ability to revoke a socket ignoring if it is already closed</li><li><a href="https://github.com/hapijs/nes/issues/283">[#283]</a> cleanup called twice if there is an onUnsubscribe handler</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v11.1.0]]></title>
+        <id>https://github.com/hapijs/nes/milestone/73</id>
+        <link href="https://hapi.dev/module/nes/changelog#11.1.0"/>
+        <updated>2019-04-25T16:40:58.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v11.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/pull/278">[#278]</a> Passing remoteAddress and x-forwarded-for is in whitelist when connect</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v11.0.1]]></title>
+        <id>https://github.com/hapijs/nes/milestone/72</id>
+        <link href="https://hapi.dev/module/nes/changelog#11.0.1"/>
+        <updated>2019-04-24T23:56:20.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v11.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/279">[#279]</a> Fix name</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v11.0.0]]></title>
+        <id>https://github.com/hapijs/nes/milestone/71</id>
+        <link href="https://hapi.dev/module/nes/changelog#11.0.0"/>
+        <updated>2019-04-18T17:06:25.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v11.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/276">[#276]</a> Remove client dist</li><li><a href="https://github.com/hapijs/nes/issues/248">[#248]</a> eachSocket behaves as synchronous without filter, but async with filter</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v10.1.0]]></title>
+        <id>https://github.com/hapijs/nes/milestone/70</id>
+        <link href="https://hapi.dev/module/nes/changelog#10.1.0"/>
+        <updated>2019-04-18T04:32:31.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v10.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/275">[#275]</a> Change module namespace</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v10.0.2]]></title>
+        <id>https://github.com/hapijs/nes/milestone/69</id>
+        <link href="https://hapi.dev/module/nes/changelog#10.0.2"/>
+        <updated>2019-03-05T17:10:57.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v10.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/270">[#270]</a> Error in the browser with 10.0.1</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v10.0.1]]></title>
+        <id>https://github.com/hapijs/nes/milestone/68</id>
+        <link href="https://hapi.dev/module/nes/changelog#10.0.1"/>
+        <updated>2019-03-04T19:10:51.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v10.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/269">[#269]</a> Update dependencies</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v10.0.0]]></title>
+        <id>https://github.com/hapijs/nes/milestone/67</id>
+        <link href="https://hapi.dev/module/nes/changelog#10.0.0"/>
+        <updated>2019-01-18T23:38:51.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v10.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/265">[#265]</a> hapi v18</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v9.1.0]]></title>
+        <id>https://github.com/hapijs/nes/milestone/66</id>
+        <link href="https://hapi.dev/module/nes/changelog#9.1.0"/>
+        <updated>2018-11-24T03:54:05.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v9.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/pull/263">[#263]</a> Document minAuthVerifyInterval and make it less restrictive</li><li><a href="https://github.com/hapijs/nes/pull/262">[#262]</a> Close the socket when authentication verification fails</li><li><a href="https://github.com/hapijs/nes/issues/260">[#260]</a> Close the socket when authentication expires</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v9.0.2]]></title>
+        <id>https://github.com/hapijs/nes/milestone/65</id>
+        <link href="https://hapi.dev/module/nes/changelog#9.0.2"/>
+        <updated>2018-11-11T08:10:42.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v9.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/256">[#256]</a> Cleanup</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v9.0.1]]></title>
+        <id>https://github.com/hapijs/nes/milestone/64</id>
+        <link href="https://hapi.dev/module/nes/changelog#9.0.1"/>
+        <updated>2018-11-11T08:06:30.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v9.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/pull/247">[#247]</a> Reconnect on error</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v8.1.0]]></title>
+        <id>https://github.com/hapijs/nes/milestone/63</id>
+        <link href="https://hapi.dev/module/nes/changelog#8.1.0"/>
+        <updated>2018-11-11T08:06:31.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v8.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/pull/243">[#243]</a> Add client.onHeartbeatTimeout hook</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v8.0.0]]></title>
+        <id>https://github.com/hapijs/nes/milestone/62</id>
+        <link href="https://hapi.dev/module/nes/changelog#8.0.0"/>
+        <updated>2018-11-11T08:06:32.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v8.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/pull/229">[#229]</a> Update ws to 5.x.x</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v7.2.0]]></title>
+        <id>https://github.com/hapijs/nes/milestone/61</id>
+        <link href="https://hapi.dev/module/nes/changelog#7.2.0"/>
+        <updated>2018-11-11T08:06:33.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v7.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/pull/228">[#228]</a> Mark NesErrors as coming from nes</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v7.1.0]]></title>
+        <id>https://github.com/hapijs/nes/milestone/60</id>
+        <link href="https://hapi.dev/module/nes/changelog#7.1.0"/>
+        <updated>2018-11-11T08:06:34.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v7.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/pull/224">[#224]</a> Add socket.info object</li><li><a href="https://github.com/hapijs/nes/pull/223">[#223]</a> Delay heartbeats until server is started</li><li><a href="https://github.com/hapijs/nes/pull/222">[#222]</a> Allow isSameSite cookie option to be passed</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v7.0.4]]></title>
+        <id>https://github.com/hapijs/nes/milestone/59</id>
+        <link href="https://hapi.dev/module/nes/changelog#7.0.4"/>
+        <updated>2018-03-11T09:37:21.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v7.0.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/pull/221">[#221]</a> Update hapijs/call to 5.x.x</li><li><a href="https://github.com/hapijs/nes/pull/220">[#220]</a> Ignore node network errors after opening client socket</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v7.0.3]]></title>
+        <id>https://github.com/hapijs/nes/milestone/58</id>
+        <link href="https://hapi.dev/module/nes/changelog#7.0.3"/>
+        <updated>2018-03-07T02:32:25.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v7.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/pull/214">[#214]</a> Do not replace message for all sockets with override from filter</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v7.0.2]]></title>
+        <id>https://github.com/hapijs/nes/milestone/55</id>
+        <link href="https://hapi.dev/module/nes/changelog#7.0.2"/>
+        <updated>2017-12-18T21:57:19.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v7.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/206">[#206]</a> Handle ws socket error events</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v7.0.1]]></title>
+        <id>https://github.com/hapijs/nes/milestone/54</id>
+        <link href="https://hapi.dev/module/nes/changelog#7.0.1"/>
+        <updated>2017-11-03T23:51:47.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v7.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/198">[#198]</a> Better error handling</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v7.0.0]]></title>
+        <id>https://github.com/hapijs/nes/milestone/53</id>
+        <link href="https://hapi.dev/module/nes/changelog#7.0.0"/>
+        <updated>2017-10-31T09:39:57.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v7.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/196">[#196]</a> hapi v17</li><li><a href="https://github.com/hapijs/nes/issues/195">[#195]</a> Update ws</li><li><a href="https://github.com/hapijs/nes/issues/194">[#194]</a> Update babel script</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v6.5.1]]></title>
+        <id>https://github.com/hapijs/nes/milestone/57</id>
+        <link href="https://hapi.dev/module/nes/changelog#6.5.1"/>
+        <updated>2017-11-13T20:51:44.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v6.5.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/202">[#202]</a> Fix test</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v6.5.0]]></title>
+        <id>https://github.com/hapijs/nes/milestone/56</id>
+        <link href="https://hapi.dev/module/nes/changelog#6.5.0"/>
+        <updated>2017-11-13T20:49:18.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v6.5.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/201">[#201]</a> Update ws</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v6.4.3]]></title>
+        <id>https://github.com/hapijs/nes/milestone/52</id>
+        <link href="https://hapi.dev/module/nes/changelog#6.4.3"/>
+        <updated>2017-07-18T19:40:26.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v6.4.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/179">[#179]</a> `maximum call stack exceeded` if web socket gets disconnected while nes is sending packets</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v6.4.2]]></title>
+        <id>https://github.com/hapijs/nes/milestone/51</id>
+        <link href="https://hapi.dev/module/nes/changelog#6.4.2"/>
+        <updated>2017-03-20T19:55:03.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v6.4.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/156">[#156]</a> Handle undefined payloads from server in client</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v6.4.1]]></title>
+        <id>https://github.com/hapijs/nes/milestone/50</id>
+        <link href="https://hapi.dev/module/nes/changelog#6.4.1"/>
+        <updated>2017-03-20T19:50:47.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v6.4.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/171">[#171]</a> server falls with bad cookie header</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v6.4.0]]></title>
+        <id>https://github.com/hapijs/nes/milestone/49</id>
+        <link href="https://hapi.dev/module/nes/changelog#6.4.0"/>
+        <updated>2016-12-12T08:24:42.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v6.4.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/169">[#169]</a> Expose server and connection on socket</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v6.3.2]]></title>
+        <id>https://github.com/hapijs/nes/milestone/48</id>
+        <link href="https://hapi.dev/module/nes/changelog#6.3.2"/>
+        <updated>2016-12-01T06:20:16.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v6.3.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/168">[#168]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v6.3.1]]></title>
+        <id>https://github.com/hapijs/nes/milestone/47</id>
+        <link href="https://hapi.dev/module/nes/changelog#6.3.1"/>
+        <updated>2016-08-27T01:10:07.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v6.3.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/145">[#145]</a> Disable inject() validate</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v6.3.0]]></title>
+        <id>https://github.com/hapijs/nes/milestone/46</id>
+        <link href="https://hapi.dev/module/nes/changelog#6.3.0"/>
+        <updated>2016-08-25T22:44:32.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v6.3.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/pull/144">[#144]</a> Verify request Origin</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v6.2.5]]></title>
+        <id>https://github.com/hapijs/nes/milestone/45</id>
+        <link href="https://hapi.dev/module/nes/changelog#6.2.5"/>
+        <updated>2016-08-02T18:36:56.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v6.2.5]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/142">[#142]</a> Reconnection timeout conflicts</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v6.2.4]]></title>
+        <id>https://github.com/hapijs/nes/milestone/44</id>
+        <link href="https://hapi.dev/module/nes/changelog#6.2.4"/>
+        <updated>2016-07-29T17:47:00.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v6.2.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/pull/141">[#141]</a> Add client.js and dist/ to npm tarball -Closes #140</li><li><a href="https://github.com/hapijs/nes/issues/140">[#140]</a> Missing root client.js and dist</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v6.2.3]]></title>
+        <id>https://github.com/hapijs/nes/milestone/43</id>
+        <link href="https://hapi.dev/module/nes/changelog#6.2.3"/>
+        <updated>2016-07-28T23:36:27.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v6.2.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/139">[#139]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v6.2.2]]></title>
+        <id>https://github.com/hapijs/nes/milestone/42</id>
+        <link href="https://hapi.dev/module/nes/changelog#6.2.2"/>
+        <updated>2016-07-19T22:47:16.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v6.2.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/138">[#138]</a> Always call onConnection before onSubscribe</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v6.2.1]]></title>
+        <id>https://github.com/hapijs/nes/milestone/41</id>
+        <link href="https://hapi.dev/module/nes/changelog#6.2.1"/>
+        <updated>2016-06-16T22:31:28.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v6.2.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/136">[#136]</a> Reuse pre-stringified hapi response</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v6.2.0]]></title>
+        <id>https://github.com/hapijs/nes/milestone/40</id>
+        <link href="https://hapi.dev/module/nes/changelog#6.2.0"/>
+        <updated>2016-06-15T02:35:26.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v6.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/135">[#135]</a> Cookie auth fails to register socket</li><li><a href="https://github.com/hapijs/nes/issues/134">[#134]</a> Per user connection limit</li><li><a href="https://github.com/hapijs/nes/issues/133">[#133]</a> Timeout sockets if hello takes too long</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v6.1.2]]></title>
+        <id>https://github.com/hapijs/nes/milestone/39</id>
+        <link href="https://hapi.dev/module/nes/changelog#6.1.2"/>
+        <updated>2016-05-28T01:01:18.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v6.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/132">[#132]</a> Client indicates wasRequested when calling disconnect() on dead socket</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v6.1.1]]></title>
+        <id>https://github.com/hapijs/nes/milestone/38</id>
+        <link href="https://hapi.dev/module/nes/changelog#6.1.1"/>
+        <updated>2016-05-25T19:57:18.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v6.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/131">[#131]</a> Incorrectly reports wasRequested when internally disconnects</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v6.1.0]]></title>
+        <id>https://github.com/hapijs/nes/milestone/37</id>
+        <link href="https://hapi.dev/module/nes/changelog#6.1.0"/>
+        <updated>2016-05-21T00:14:49.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v6.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/129">[#129]</a> Include reason disconnected in log object</li></ul>]]></content>
+    </entry>
+</feed>

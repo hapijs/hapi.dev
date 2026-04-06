@@ -1,0 +1,242 @@
+[
+  {
+    "date": "2024-10-23T15:48:17Z",
+    "id": 11785180,
+    "issues": [
+      {
+        "id": 2608793051,
+        "labels": ["bug"],
+        "number": 38,
+        "title": "Fix background() missing return option support",
+        "url": "https://github.com/hapijs/bounce/pull/38"
+      }
+    ],
+    "number": 17,
+    "url": "https://github.com/hapijs/bounce/milestone/17",
+    "version": "3.0.2"
+  },
+  {
+    "date": "2023-02-11T17:54:18Z",
+    "id": 7933511,
+    "issues": [
+      {
+        "id": 1551765352,
+        "labels": ["dependency"],
+        "number": 35,
+        "title": "chore: bump hoek",
+        "url": "https://github.com/hapijs/bounce/pull/35"
+      }
+    ],
+    "number": 16,
+    "url": "https://github.com/hapijs/bounce/milestone/16",
+    "version": "3.0.1"
+  },
+  {
+    "date": "2023-02-11T17:47:09Z",
+    "id": 7933510,
+    "issues": [
+      {
+        "id": 1222419541,
+        "labels": ["dependency", "breaking changes"],
+        "number": 33,
+        "title": "Support node v18 and drop node v12",
+        "url": "https://github.com/hapijs/bounce/pull/33"
+      }
+    ],
+    "number": 15,
+    "url": "https://github.com/hapijs/bounce/milestone/15",
+    "version": "3.0.0"
+  },
+  {
+    "date": "2020-01-04T22:28:38Z",
+    "id": 4973165,
+    "issues": [
+      {
+        "id": 545340004,
+        "labels": ["dependency", "breaking changes"],
+        "number": 23,
+        "title": "Only node 12",
+        "url": "https://github.com/hapijs/bounce/issues/23"
+      }
+    ],
+    "number": 13,
+    "url": "https://github.com/hapijs/bounce/milestone/13",
+    "version": "2.0.0"
+  },
+  {
+    "date": "2019-10-15T06:45:47Z",
+    "id": 4443962,
+    "issues": [
+      {
+        "id": 507040279,
+        "labels": ["bug", "dependency"],
+        "number": 21,
+        "title": "Fix hoek contain bug",
+        "url": "https://github.com/hapijs/bounce/issues/21"
+      }
+    ],
+    "number": 11,
+    "url": "https://github.com/hapijs/bounce/milestone/11",
+    "version": "1.3.2"
+  },
+  {
+    "date": "2019-06-26T17:24:58Z",
+    "id": 4185508,
+    "issues": [
+      {
+        "id": 461090363,
+        "labels": ["bug", "dependency"],
+        "number": 16,
+        "title": "Treat hoek assertion as system",
+        "url": "https://github.com/hapijs/bounce/issues/16"
+      }
+    ],
+    "number": 10,
+    "url": "https://github.com/hapijs/bounce/milestone/10",
+    "version": "1.3.1"
+  },
+  {
+    "date": "2019-03-30T20:27:28Z",
+    "id": 3811309,
+    "issues": [
+      {
+        "id": 427322680,
+        "labels": ["dependency"],
+        "number": 15,
+        "title": "Change module namespace",
+        "url": "https://github.com/hapijs/bounce/issues/15"
+      }
+    ],
+    "number": 9,
+    "url": "https://github.com/hapijs/bounce/milestone/9",
+    "version": "1.3.0"
+  },
+  {
+    "date": "2018-11-11T02:10:06Z",
+    "id": 3792172,
+    "issues": [
+      {
+        "id": 378513258,
+        "labels": ["dependency"],
+        "number": 13,
+        "title": "Fix contain() options",
+        "url": "https://github.com/hapijs/bounce/pull/13"
+      }
+    ],
+    "number": 8,
+    "url": "https://github.com/hapijs/bounce/milestone/8",
+    "version": "1.2.3"
+  },
+  {
+    "date": "2018-11-03T00:17:57Z",
+    "id": 3787503,
+    "issues": [
+      {
+        "id": 377000725,
+        "labels": ["non issue"],
+        "number": 12,
+        "title": "Remove engines",
+        "url": "https://github.com/hapijs/bounce/issues/12"
+      }
+    ],
+    "number": 7,
+    "url": "https://github.com/hapijs/bounce/milestone/7",
+    "version": "1.2.2"
+  },
+  {
+    "date": "2018-11-01T07:32:37Z",
+    "id": 2889933,
+    "issues": [
+      {
+        "id": 376284416,
+        "labels": ["dependency"],
+        "number": 10,
+        "title": "Update hoek v6",
+        "url": "https://github.com/hapijs/bounce/issues/10"
+      }
+    ],
+    "number": 6,
+    "url": "https://github.com/hapijs/bounce/milestone/6",
+    "version": "1.2.1"
+  },
+  {
+    "date": "2017-11-06T09:36:32Z",
+    "id": 2889597,
+    "issues": [
+      {
+        "id": 271410347,
+        "labels": ["feature"],
+        "number": 6,
+        "title": "Support background functions",
+        "url": "https://github.com/hapijs/bounce/issues/6"
+      }
+    ],
+    "number": 5,
+    "url": "https://github.com/hapijs/bounce/milestone/5",
+    "version": "1.2.0"
+  },
+  {
+    "date": "2017-11-06T07:23:16Z",
+    "id": 2885490,
+    "issues": [
+      {
+        "id": 271380424,
+        "labels": ["feature"],
+        "number": 5,
+        "title": "Background processing with error protection",
+        "url": "https://github.com/hapijs/bounce/issues/5"
+      }
+    ],
+    "number": 4,
+    "url": "https://github.com/hapijs/bounce/milestone/4",
+    "version": "1.1.0"
+  },
+  {
+    "date": "2017-11-03T09:41:02Z",
+    "id": 2885246,
+    "issues": [
+      {
+        "id": 270920928,
+        "labels": ["bug"],
+        "number": 4,
+        "title": "Ignore boomified system errors",
+        "url": "https://github.com/hapijs/bounce/issues/4"
+      }
+    ],
+    "number": 3,
+    "url": "https://github.com/hapijs/bounce/milestone/3",
+    "version": "1.0.3"
+  },
+  {
+    "date": "2017-11-03T06:49:25Z",
+    "id": 2884309,
+    "issues": [
+      {
+        "id": 270890774,
+        "labels": ["dependency"],
+        "number": 3,
+        "title": "Update boom",
+        "url": "https://github.com/hapijs/bounce/issues/3"
+      }
+    ],
+    "number": 2,
+    "url": "https://github.com/hapijs/bounce/milestone/2",
+    "version": "1.0.2"
+  },
+  {
+    "date": "2017-11-02T17:57:26Z",
+    "id": 2884308,
+    "issues": [
+      {
+        "id": 270722048,
+        "labels": ["dependency"],
+        "number": 2,
+        "title": "Hoek missing from dependencies",
+        "url": "https://github.com/hapijs/bounce/issues/2"
+      }
+    ],
+    "number": 1,
+    "url": "https://github.com/hapijs/bounce/milestone/1",
+    "version": "1.0.1"
+  }
+]

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/cookie</id>
+    <title>@hapi/cookie changelog</title>
+    <updated>2023-02-11T19:30:47.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/cookie"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v12.0.1]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/37</id>
+        <link href="https://hapi.dev/module/cookie/changelog#12.0.1"/>
+        <updated>2023-02-11T19:30:47.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v12.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/pull/248">[#248]</a> chore: bump hoek</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v12.0.0]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/36</id>
+        <link href="https://hapi.dev/module/cookie/changelog#12.0.0"/>
+        <updated>2022-10-17T19:51:45.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v12.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/pull/246">[#246]</a> Support for hapi v21, node v18, ESM tests</li><li><a href="https://github.com/hapijs/cookie/pull/244">[#244]</a> Drop support for node v12 and hapi v18</li><li><a href="https://github.com/hapijs/cookie/pull/236">[#236]</a> Rename plugin options to be consistent across the hapi ecosystem</li><li><a href="https://github.com/hapijs/cookie/pull/235">[#235]</a> Remove old repository name</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v11.0.2]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/34</id>
+        <link href="https://hapi.dev/module/cookie/changelog#11.0.2"/>
+        <updated>2020-09-26T16:59:56.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v11.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/pull/232">[#232]</a> update to hapi v20</li><li><a href="https://github.com/hapijs/cookie/pull/231">[#231]</a> migrate to new travis format</li><li><a href="https://github.com/hapijs/cookie/pull/229">[#229]</a> change joi to validate and update lab</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v11.0.1]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/33</id>
+        <link href="https://hapi.dev/module/cookie/changelog#11.0.1"/>
+        <updated>2020-03-13T19:26:59.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v11.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/issues/228">[#228]</a> Non system error in validateFunc will be swallowed</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v11.0.0]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/32</id>
+        <link href="https://hapi.dev/module/cookie/changelog#11.0.0"/>
+        <updated>2020-01-10T07:21:58.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v11.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/issues/227">[#227]</a> Only node 12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v10.1.2]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/31</id>
+        <link href="https://hapi.dev/module/cookie/changelog#10.1.2"/>
+        <updated>2019-09-12T17:45:35.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v10.1.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/issues/222">[#222]</a> Update joi</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v10.1.1]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/30</id>
+        <link href="https://hapi.dev/module/cookie/changelog#10.1.1"/>
+        <updated>2019-08-14T22:39:58.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v10.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/issues/221">[#221]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v10.1.0]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/29</id>
+        <link href="https://hapi.dev/module/cookie/changelog#10.1.0"/>
+        <updated>2019-04-19T21:19:30.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v10.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/issues/213">[#213]</a> Change module namespace</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v10.0.0]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/28</id>
+        <link href="https://hapi.dev/module/cookie/changelog#10.0.0"/>
+        <updated>2019-04-19T21:10:37.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v10.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/issues/210">[#210]</a> Move all cookie settings to `cookie`</li><li><a href="https://github.com/hapijs/cookie/issues/209">[#209]</a> 10.0.0 Release notes</li><li><a href="https://github.com/hapijs/cookie/issues/208">[#208]</a> Remove ignoreIfDecorated</li><li><a href="https://github.com/hapijs/cookie/issues/207">[#207]</a> No override of default cookie settings</li><li><a href="https://github.com/hapijs/cookie/pull/205">[#205]</a> Upgrade to hapi 18</li><li><a href="https://github.com/hapijs/cookie/issues/204">[#204]</a> Update for hapi 18</li><li><a href="https://github.com/hapijs/cookie/issues/193">[#193]</a> Support password rotation</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v9.1.0]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/27</id>
+        <link href="https://hapi.dev/module/cookie/changelog#9.1.0"/>
+        <updated>2018-11-24T05:12:17.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v9.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/pull/196">[#196]</a> referenced the raw request when setting next</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v9.0.0]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/24</id>
+        <link href="https://hapi.dev/module/cookie/changelog#9.0.0"/>
+        <updated>2018-05-27T23:39:04.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v9.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/pull/186">[#186]</a> Respect auth mode for redirects</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v8.1.0]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/23</id>
+        <link href="https://hapi.dev/module/cookie/changelog#8.1.0"/>
+        <updated>2018-02-08T21:14:21.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v8.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/pull/176">[#176]</a> Use options key for route configuration</li><li><a href="https://github.com/hapijs/cookie/pull/164">[#164]</a> Issue 163</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v8.0.1]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/25</id>
+        <link href="https://hapi.dev/module/cookie/changelog#8.0.1"/>
+        <updated>2018-02-08T09:43:49.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v8.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/pull/183">[#183]</a> Fix redirectTo function w/ blank to behave like blank redirectTo (fix)</li><li><a href="https://github.com/hapijs/cookie/pull/170">[#170]</a> Drop session from cache in examples</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v8.0.0]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/22</id>
+        <link href="https://hapi.dev/module/cookie/changelog#8.0.0"/>
+        <updated>2017-12-10T20:05:55.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v8.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/issues/179">[#179]</a> Update lead maintainer</li><li><a href="https://github.com/hapijs/cookie/pull/174">[#174]</a> Upgraded module to hapi v17</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v7.1.0]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/26</id>
+        <link href="https://hapi.dev/module/cookie/changelog#7.1.0"/>
+        <updated>2018-05-27T23:38:05.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v7.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/pull/151">[#151]</a> referenced the raw request when setting next</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v7.0.0]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/21</id>
+        <link href="https://hapi.dev/module/cookie/changelog#7.0.0"/>
+        <updated>2017-03-28T16:53:54.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v7.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/pull/152">[#152]</a> Do not redecorate the request object if already decorated</li><li><a href="https://github.com/hapijs/cookie/pull/148">[#148]</a> Allow redirectTo to be a function </li><li><a href="https://github.com/hapijs/cookie/pull/142">[#142]</a> Add isSameSite to schema</li><li><a href="https://github.com/hapijs/cookie/pull/138">[#138]</a> Options aren't required</li><li><a href="https://github.com/hapijs/cookie/pull/134">[#134]</a> add note to readme about the 'ttl' option</li><li><a href="https://github.com/hapijs/cookie/pull/130">[#130]</a> Test on node v6, update dependencies</li><li><a href="https://github.com/hapijs/cookie/pull/127">[#127]</a> fix typo in readme</li><li><a href="https://github.com/hapijs/cookie/pull/124">[#124]</a> Allow null to be passed for the ttl</li><li><a href="https://github.com/hapijs/cookie/pull/115">[#115]</a> update readme with information/warning about cookie length</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v6.1.1]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/20</id>
+        <link href="https://hapi.dev/module/cookie/changelog#6.1.1"/>
+        <updated>2017-03-28T16:47:45.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v6.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/pull/118">[#118]</a> decorator fix</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v6.1.0]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/19</id>
+        <link href="https://hapi.dev/module/cookie/changelog#6.1.0"/>
+        <updated>2016-02-22T13:43:36.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v6.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/pull/114">[#114]</a> support many strategies</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v6.0.0]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/18</id>
+        <link href="https://hapi.dev/module/cookie/changelog#6.0.0"/>
+        <updated>2016-01-29T13:31:05.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v6.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/pull/107">[#107]</a> Use server.decorate</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v5.0]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/17</id>
+        <link href="https://hapi.dev/module/cookie/changelog#5.0"/>
+        <updated>2016-01-05T17:37:49.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v5.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/pull/103">[#103]</a> move away from request.auth.session</li><li><a href="https://github.com/hapijs/cookie/issues/101">[#101]</a> Switch to use a request decoration instead of request.auth.session</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v4.0.0]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/16</id>
+        <link href="https://hapi.dev/module/cookie/changelog#4.0.0"/>
+        <updated>2016-01-05T16:26:41.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v4.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/pull/102">[#102]</a> node 4 update</li><li><a href="https://github.com/hapijs/cookie/issues/93">[#93]</a> Node &gt;= 4 / es6 updates</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v3.1.0]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/15</id>
+        <link href="https://hapi.dev/module/cookie/changelog#3.1.0"/>
+        <updated>2015-08-17T12:33:41.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v3.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/pull/83">[#83]</a> allow buffer as password</li><li><a href="https://github.com/hapijs/cookie/issues/80">[#80]</a> Buffer type should be allowed for "password" option</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v3.0.0]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/14</id>
+        <link href="https://hapi.dev/module/cookie/changelog#3.0.0"/>
+        <updated>2015-06-13T13:23:09.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/pull/75">[#75]</a> validateFunc according to signature function</li><li><a href="https://github.com/hapijs/cookie/pull/74">[#74]</a> Updated docs</li><li><a href="https://github.com/hapijs/cookie/pull/72">[#72]</a> Pass request object to validation function</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v2.2.0]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/13</id>
+        <link href="https://hapi.dev/module/cookie/changelog#2.2.0"/>
+        <updated>2015-05-04T19:53:09.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v2.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/pull/69">[#69]</a> 2.2.0 update</li><li><a href="https://github.com/hapijs/cookie/pull/68">[#68]</a> Fix support for custom appendNext param</li><li><a href="https://github.com/hapijs/cookie/issues/67">[#67]</a> `appendNext` no longer accepts a string</li><li><a href="https://github.com/hapijs/cookie/pull/65">[#65]</a> allow null setting for domain</li><li><a href="https://github.com/hapijs/cookie/issues/64">[#64]</a> domain is now required as a string, and null does not pass validation</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v2.1.0]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/12</id>
+        <link href="https://hapi.dev/module/cookie/changelog#2.1.0"/>
+        <updated>2015-04-22T17:02:08.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v2.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/pull/63">[#63]</a> Version 2.1.0</li><li><a href="https://github.com/hapijs/cookie/pull/62">[#62]</a> Allow environment variables to configure cookie scheme</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v2.0.0]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/10</id>
+        <link href="https://hapi.dev/module/cookie/changelog#2.0.0"/>
+        <updated>2014-12-11T06:59:31.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v2.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/pull/45">[#45]</a> Version 2.0.0</li><li><a href="https://github.com/hapijs/cookie/pull/43">[#43]</a> Use request.route.settings.plugin</li><li><a href="https://github.com/hapijs/cookie/issues/40">[#40]</a> Invalid cookie should still return 401</li><li><a href="https://github.com/hapijs/cookie/issues/39">[#39]</a> hapi 8.0 API</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v1.4.2]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/11</id>
+        <link href="https://hapi.dev/module/cookie/changelog#1.4.2"/>
+        <updated>2014-12-04T17:36:52.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v1.4.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/issues/42">[#42]</a> Invalid cookie blocks scheme from redirecting</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v1.4.1]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/9</id>
+        <link href="https://hapi.dev/module/cookie/changelog#1.4.1"/>
+        <updated>2014-11-20T05:02:27.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v1.4.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/pull/37">[#37]</a> Fix clearInvalid (for issue #34)</li><li><a href="https://github.com/hapijs/cookie/issues/34">[#34]</a> Bad cookie value even with clearInvalid true</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v1.4.0]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/8</id>
+        <link href="https://hapi.dev/module/cookie/changelog#1.4.0"/>
+        <updated>2014-11-12T22:55:45.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v1.4.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/issues/35">[#35]</a> Session keepAlive and ttl override</li><li><a href="https://github.com/hapijs/cookie/pull/30">[#30]</a> add set/clear key for cookie</li><li><a href="https://github.com/hapijs/cookie/pull/29">[#29]</a> Fix for handling multiple strategies</li><li><a href="https://github.com/hapijs/cookie/issues/26">[#26]</a> Update key in auth.credentials</li><li><a href="https://github.com/hapijs/cookie/pull/22">[#22]</a> Exposed path option for session cookie</li><li><a href="https://github.com/hapijs/cookie/issues/21">[#21]</a> Expose 'path' in cookieOptions</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v1.3.2]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/7</id>
+        <link href="https://hapi.dev/module/cookie/changelog#1.3.2"/>
+        <updated>2014-08-04T08:50:12.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v1.3.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/pull/20">[#20]</a> Update LICENSE</li><li><a href="https://github.com/hapijs/cookie/issues/19">[#19]</a> Update License</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v1.3.1]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/6</id>
+        <link href="https://hapi.dev/module/cookie/changelog#1.3.1"/>
+        <updated>2014-07-17T12:35:49.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v1.3.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/issues/16">[#16]</a> Fix hapi dev dep</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v1.3.0]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/5</id>
+        <link href="https://hapi.dev/module/cookie/changelog#1.3.0"/>
+        <updated>2014-07-17T12:29:47.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v1.3.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/issues/15">[#15]</a> Skip redirection on try</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v1.2.0]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/4</id>
+        <link href="https://hapi.dev/module/cookie/changelog#1.2.0"/>
+        <updated>2014-06-13T19:16:21.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v1.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/issues/11">[#11]</a> No way to use with 'try' mode if 'redirectTo' is set</li><li><a href="https://github.com/hapijs/cookie/issues/10">[#10]</a> validateFunc credentials override session</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v1.1.0]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/3</id>
+        <link href="https://hapi.dev/module/cookie/changelog#1.1.0"/>
+        <updated>2014-06-12T19:47:21.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v1.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/pull/9">[#9]</a> hapi 6.0</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v1.0.3]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/2</id>
+        <link href="https://hapi.dev/module/cookie/changelog#1.0.3"/>
+        <updated>2014-05-21T02:18:17.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v1.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/issues/6">[#6]</a> Bring coverage back to 100%</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/cookie v1.0.2]]></title>
+        <id>https://github.com/hapijs/cookie/milestone/1</id>
+        <link href="https://hapi.dev/module/cookie/changelog#1.0.2"/>
+        <updated>2014-03-21T20:29:24.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/cookie v1.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/cookie/issues/5">[#5]</a> Bring coverage back to 100% after lab fix</li><li><a href="https://github.com/hapijs/cookie/issues/4">[#4]</a> fix peerDependencies for hapi</li></ul>]]></content>
+    </entry>
+</feed>

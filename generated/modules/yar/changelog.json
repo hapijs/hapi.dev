@@ -1,0 +1,530 @@
+[
+  {
+    "date": "2025-03-22T11:37:41Z",
+    "id": 12594782,
+    "issues": [
+      {
+        "id": 2195741736,
+        "labels": ["types"],
+        "number": 169,
+        "title": "feat: 🎸 improve yar values and flash typings",
+        "url": "https://github.com/hapijs/yar/pull/169"
+      }
+    ],
+    "number": 25,
+    "url": "https://github.com/hapijs/yar/milestone/25",
+    "version": "11.0.3"
+  },
+  {
+    "date": "2024-03-19T21:21:49Z",
+    "id": 10706042,
+    "issues": [
+      {
+        "id": 2195644602,
+        "labels": ["types"],
+        "number": 168,
+        "title": "feat: 🎸 add types from DT",
+        "url": "https://github.com/hapijs/yar/pull/168"
+      }
+    ],
+    "number": 24,
+    "url": "https://github.com/hapijs/yar/milestone/24",
+    "version": "11.0.2"
+  },
+  {
+    "date": "2023-02-11T20:19:24Z",
+    "id": 8358659,
+    "issues": [
+      {
+        "id": 1551796985,
+        "labels": ["dependency"],
+        "number": 164,
+        "title": "chore: bump hoek",
+        "url": "https://github.com/hapijs/yar/pull/164"
+      }
+    ],
+    "number": 23,
+    "url": "https://github.com/hapijs/yar/milestone/23",
+    "version": "11.0.1"
+  },
+  {
+    "date": "2022-08-29T03:34:50Z",
+    "id": 7813385,
+    "issues": [
+      {
+        "id": 1307213524,
+        "labels": ["feature", "test", "breaking changes", "dependency"],
+        "number": 162,
+        "title": "Support hapi v21, drop hapi v19, test ESM support",
+        "url": "https://github.com/hapijs/yar/pull/162"
+      },
+      {
+        "id": 1253213188,
+        "labels": [],
+        "number": 161,
+        "title": "Update deps, use null operator",
+        "url": "https://github.com/hapijs/yar/pull/161"
+      },
+      {
+        "id": 1184179323,
+        "labels": ["breaking changes"],
+        "number": 159,
+        "title": "Drop support for node v12",
+        "url": "https://github.com/hapijs/yar/issues/159"
+      },
+      {
+        "id": 1034546233,
+        "labels": ["breaking changes", "dependency"],
+        "number": 157,
+        "title": "Use crypto.randomUUID as default session id",
+        "url": "https://github.com/hapijs/yar/pull/157"
+      },
+      {
+        "id": 1013820769,
+        "labels": ["feature", "breaking changes"],
+        "number": 156,
+        "title": "Use built-in crypto.randomUUID",
+        "url": "https://github.com/hapijs/yar/issues/156"
+      }
+    ],
+    "number": 22,
+    "url": "https://github.com/hapijs/yar/milestone/22",
+    "version": "11.0.0"
+  },
+  {
+    "date": "2020-09-10T15:39:58Z",
+    "id": 5216416,
+    "issues": [
+      {
+        "id": 684036049,
+        "labels": [],
+        "number": 148,
+        "title": "update to hapi v20",
+        "url": "https://github.com/hapijs/yar/pull/148"
+      },
+      {
+        "id": 684034709,
+        "labels": [],
+        "number": 147,
+        "title": "migrate to new travis format",
+        "url": "https://github.com/hapijs/yar/pull/147"
+      },
+      {
+        "id": 672203891,
+        "labels": [],
+        "number": 146,
+        "title": "upgrade lab and uuid dep",
+        "url": "https://github.com/hapijs/yar/pull/146"
+      },
+      {
+        "id": 652167098,
+        "labels": ["documentation"],
+        "number": 145,
+        "title": "Update API.md",
+        "url": "https://github.com/hapijs/yar/pull/145"
+      }
+    ],
+    "number": 20,
+    "url": "https://github.com/hapijs/yar/milestone/20",
+    "version": "10.1.1"
+  },
+  {
+    "date": "2020-03-19T06:44:43Z",
+    "id": 4999159,
+    "issues": [
+      {
+        "id": 583977580,
+        "labels": ["feature"],
+        "number": 144,
+        "title": "Assign data in onPreResponse lifecycle extension with takeover",
+        "url": "https://github.com/hapijs/yar/issues/144"
+      }
+    ],
+    "number": 19,
+    "url": "https://github.com/hapijs/yar/milestone/19",
+    "version": "10.1.0"
+  },
+  {
+    "date": "2020-01-13T12:37:58Z",
+    "id": 4574300,
+    "issues": [
+      {
+        "id": 548902222,
+        "labels": ["breaking changes"],
+        "number": 141,
+        "title": "Change plugin name to @hapi/yar",
+        "url": "https://github.com/hapijs/yar/issues/141"
+      },
+      {
+        "id": 548901498,
+        "labels": ["breaking changes", "dependency"],
+        "number": 140,
+        "title": "Require hapi 19",
+        "url": "https://github.com/hapijs/yar/issues/140"
+      },
+      {
+        "id": 548900850,
+        "labels": ["breaking changes", "dependency"],
+        "number": 139,
+        "title": "Only node 12",
+        "url": "https://github.com/hapijs/yar/issues/139"
+      }
+    ],
+    "number": 18,
+    "url": "https://github.com/hapijs/yar/milestone/18",
+    "version": "10.0.0"
+  },
+  {
+    "date": "2019-08-15T00:33:03Z",
+    "id": 4245120,
+    "issues": [
+      {
+        "id": 480894704,
+        "labels": ["dependency"],
+        "number": 134,
+        "title": "Update dep",
+        "url": "https://github.com/hapijs/yar/issues/134"
+      }
+    ],
+    "number": 17,
+    "url": "https://github.com/hapijs/yar/milestone/17",
+    "version": "9.2.1"
+  },
+  {
+    "date": "2019-04-20T04:02:28Z",
+    "id": 3793116,
+    "issues": [
+      {
+        "id": 435353934,
+        "labels": ["dependency"],
+        "number": 131,
+        "title": "Change module namespace",
+        "url": "https://github.com/hapijs/yar/issues/131"
+      }
+    ],
+    "number": 16,
+    "url": "https://github.com/hapijs/yar/milestone/16",
+    "version": "9.2.0"
+  },
+  {
+    "date": "2018-11-03T21:58:12Z",
+    "id": 3680852,
+    "issues": [
+      {
+        "id": 377003662,
+        "labels": ["dependency"],
+        "number": 127,
+        "title": "chore: update dependencies",
+        "url": "https://github.com/hapijs/yar/pull/127"
+      },
+      {
+        "id": 363596265,
+        "labels": ["feature"],
+        "number": 126,
+        "title": "Add possibility to revoke specific session on the server side",
+        "url": "https://github.com/hapijs/yar/pull/126"
+      },
+      {
+        "id": 362993248,
+        "labels": ["non issue"],
+        "number": 125,
+        "title": "Minor: Deprecated use of uuid",
+        "url": "https://github.com/hapijs/yar/issues/125"
+      },
+      {
+        "id": 361695991,
+        "labels": ["feature"],
+        "number": 123,
+        "title": "Delete a specific user's session ",
+        "url": "https://github.com/hapijs/yar/issues/123"
+      }
+    ],
+    "number": 15,
+    "url": "https://github.com/hapijs/yar/milestone/15",
+    "version": "9.1.0"
+  },
+  {
+    "date": "2018-09-24T00:21:36Z",
+    "id": 3680851,
+    "issues": [
+      {
+        "id": 362982579,
+        "labels": ["bug"],
+        "number": 124,
+        "title": "Yar doesn't handle the session cookie multiple times correctly.",
+        "url": "https://github.com/hapijs/yar/issues/124"
+      },
+      {
+        "id": 358382909,
+        "labels": ["bug"],
+        "number": 122,
+        "title": "Do not cast all falsy values to null",
+        "url": "https://github.com/hapijs/yar/pull/122"
+      },
+      {
+        "id": 356949652,
+        "labels": ["bug"],
+        "number": 121,
+        "title": "Falsy values are converted to null",
+        "url": "https://github.com/hapijs/yar/issues/121"
+      }
+    ],
+    "number": 14,
+    "url": "https://github.com/hapijs/yar/milestone/14",
+    "version": "9.0.2"
+  },
+  {
+    "date": "2016-12-19T08:24:37Z",
+    "id": 2203972,
+    "issues": [
+      {
+        "id": 196311545,
+        "labels": ["bug"],
+        "number": 110,
+        "title": "Fix `main` in package.json",
+        "url": "https://github.com/hapijs/yar/pull/110"
+      }
+    ],
+    "number": 13,
+    "url": "https://github.com/hapijs/yar/milestone/13",
+    "version": "8.1.2"
+  },
+  {
+    "date": "2016-12-19T08:24:41Z",
+    "id": 1484079,
+    "issues": [
+      {
+        "id": 124896919,
+        "labels": ["feature"],
+        "number": 90,
+        "title": "add a route level config option to skip yar processing",
+        "url": "https://github.com/hapijs/yar/pull/90"
+      }
+    ],
+    "number": 12,
+    "url": "https://github.com/hapijs/yar/milestone/12",
+    "version": "6.1.0"
+  },
+  {
+    "date": "2016-12-19T08:24:39Z",
+    "id": 1480771,
+    "issues": [
+      {
+        "id": 124894943,
+        "labels": ["feature", "breaking changes"],
+        "number": 89,
+        "title": "update yar to use request.yar instead of request.session",
+        "url": "https://github.com/hapijs/yar/pull/89"
+      },
+      {
+        "id": 124604461,
+        "labels": ["dependency"],
+        "number": 88,
+        "title": "Decorate request with session key",
+        "url": "https://github.com/hapijs/yar/issues/88"
+      }
+    ],
+    "number": 11,
+    "url": "https://github.com/hapijs/yar/milestone/11",
+    "version": "6.0.0"
+  },
+  {
+    "date": "2016-12-19T08:24:44Z",
+    "id": 1320739,
+    "issues": [
+      {
+        "id": 107796213,
+        "labels": ["feature"],
+        "number": 83,
+        "title": "Option to skip exception on cache error",
+        "url": "https://github.com/hapijs/yar/pull/83"
+      }
+    ],
+    "number": 10,
+    "url": "https://github.com/hapijs/yar/milestone/10",
+    "version": "4.3.0"
+  },
+  {
+    "date": "2016-12-19T08:24:45Z",
+    "id": 1298195,
+    "issues": [
+      {
+        "id": 85389708,
+        "labels": ["feature"],
+        "number": 75,
+        "title": "Allow specification of whether to store blank sessions",
+        "url": "https://github.com/hapijs/yar/pull/75"
+      }
+    ],
+    "number": 9,
+    "url": "https://github.com/hapijs/yar/milestone/9",
+    "version": "4.2.0"
+  },
+  {
+    "date": "2016-12-19T08:24:43Z",
+    "id": 1298174,
+    "issues": [
+      {
+        "id": 105629123,
+        "labels": ["bug", "breaking changes"],
+        "number": 80,
+        "title": "ignore invalid cookies so we don't get 400 errors on servers, which i…",
+        "url": "https://github.com/hapijs/yar/pull/80"
+      },
+      {
+        "id": 52550070,
+        "labels": ["bug", "breaking changes"],
+        "number": 65,
+        "title": "\"Invalid cookie value\" after password change, but OK after refresh!",
+        "url": "https://github.com/hapijs/yar/issues/65"
+      }
+    ],
+    "number": 8,
+    "url": "https://github.com/hapijs/yar/milestone/8",
+    "version": "4.0.0"
+  },
+  {
+    "date": "2016-12-19T08:24:47Z",
+    "id": 1297794,
+    "issues": [
+      {
+        "id": 105607496,
+        "labels": ["bug", "test"],
+        "number": 79,
+        "title": "Tests are failing",
+        "url": "https://github.com/hapijs/yar/issues/79"
+      }
+    ],
+    "number": 6,
+    "url": "https://github.com/hapijs/yar/milestone/6",
+    "version": "3.0.4"
+  },
+  {
+    "date": "2016-12-19T08:29:46Z",
+    "id": 899759,
+    "issues": [],
+    "number": 5,
+    "url": "https://github.com/hapijs/yar/milestone/5",
+    "version": "3.0.2"
+  },
+  {
+    "date": "2014-12-10T22:39:44Z",
+    "id": 883276,
+    "issues": [
+      {
+        "id": 51606903,
+        "labels": ["dependency"],
+        "number": 61,
+        "title": "Can't install yar from npm",
+        "url": "https://github.com/hapijs/yar/issues/61"
+      },
+      {
+        "id": 50352390,
+        "labels": ["breaking changes", "dependency"],
+        "number": 57,
+        "title": "hapi 8.0. Closes #56",
+        "url": "https://github.com/hapijs/yar/pull/57"
+      },
+      {
+        "id": 50352288,
+        "labels": ["breaking changes", "dependency"],
+        "number": 56,
+        "title": "hapi 8.0 API",
+        "url": "https://github.com/hapijs/yar/issues/56"
+      }
+    ],
+    "number": 4,
+    "url": "https://github.com/hapijs/yar/milestone/4",
+    "version": "3.0.0"
+  },
+  {
+    "date": "2014-11-28T08:42:16Z",
+    "id": 624731,
+    "issues": [
+      {
+        "id": 44718189,
+        "labels": ["bug"],
+        "number": 52,
+        "title": "properly drop session during session.reset",
+        "url": "https://github.com/hapijs/yar/pull/52"
+      },
+      {
+        "id": 37971682,
+        "labels": ["feature"],
+        "number": 46,
+        "title": "Hapi6",
+        "url": "https://github.com/hapijs/yar/pull/46"
+      },
+      {
+        "id": 37488321,
+        "labels": ["documentation"],
+        "number": 45,
+        "title": "Update examples, examples/package.json to use Hapi 6.x",
+        "url": "https://github.com/hapijs/yar/pull/45"
+      },
+      {
+        "id": 37481122,
+        "labels": ["documentation"],
+        "number": 44,
+        "title": "Updated readme to match hapi 6.x API",
+        "url": "https://github.com/hapijs/yar/pull/44"
+      },
+      {
+        "id": 37480344,
+        "labels": ["feature"],
+        "number": 43,
+        "title": "Update tests / package.json to use Hapi 6.x",
+        "url": "https://github.com/hapijs/yar/pull/43"
+      },
+      {
+        "id": 37078683,
+        "labels": ["bug"],
+        "number": 41,
+        "title": "errorhandling after cookie password changes",
+        "url": "https://github.com/hapijs/yar/issues/41"
+      }
+    ],
+    "number": 3,
+    "url": "https://github.com/hapijs/yar/milestone/3",
+    "version": "2.4.0"
+  },
+  {
+    "date": "2014-04-09T05:24:56Z",
+    "id": 603531,
+    "issues": [
+      {
+        "id": 31087190,
+        "labels": ["feature"],
+        "number": 32,
+        "title": "Upgrade to Hapi 4.x",
+        "url": "https://github.com/hapijs/yar/pull/32"
+      }
+    ],
+    "number": 2,
+    "url": "https://github.com/hapijs/yar/milestone/2",
+    "version": "2.1.0"
+  },
+  {
+    "date": "2014-03-20T08:49:53Z",
+    "id": 603530,
+    "issues": [
+      {
+        "id": 29801576,
+        "labels": ["breaking changes"],
+        "number": 29,
+        "title": "Replace ttl and store with cache options",
+        "url": "https://github.com/hapijs/yar/issues/29"
+      },
+      {
+        "id": 29688039,
+        "labels": ["feature"],
+        "number": 28,
+        "title": "Update to hapi 3.x",
+        "url": "https://github.com/hapijs/yar/pull/28"
+      }
+    ],
+    "number": 1,
+    "url": "https://github.com/hapijs/yar/milestone/1",
+    "version": "2.0.0"
+  }
+]

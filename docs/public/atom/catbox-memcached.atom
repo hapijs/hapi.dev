@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/catbox-memcached</id>
+    <title>@hapi/catbox-memcached changelog</title>
+    <updated>2020-01-04T23:47:47.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/catbox-memcached"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memcached v3.0.0]]></title>
+        <id>https://github.com/hapijs/catbox-memcached/milestone/8</id>
+        <link href="https://hapi.dev/module/catbox-memcached/changelog#3.0.0"/>
+        <updated>2020-01-04T23:47:47.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memcached v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memcached/issues/44">[#44]</a> Only node 12</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memcached v2.1.1]]></title>
+        <id>https://github.com/hapijs/catbox-memcached/milestone/6</id>
+        <link href="https://hapi.dev/module/catbox-memcached/changelog#2.1.1"/>
+        <updated>2019-08-14T05:13:21.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memcached v2.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memcached/issues/38">[#38]</a> Update deps</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memcached v2.1.0]]></title>
+        <id>https://github.com/hapijs/catbox-memcached/milestone/5</id>
+        <link href="https://hapi.dev/module/catbox-memcached/changelog#2.1.0"/>
+        <updated>2019-04-22T05:34:34.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memcached v2.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memcached/issues/35">[#35]</a> Change module namespace</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memcached v2.0.5]]></title>
+        <id>https://github.com/hapijs/catbox-memcached/milestone/4</id>
+        <link href="https://hapi.dev/module/catbox-memcached/changelog#2.0.5"/>
+        <updated>2018-11-11T01:57:52.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memcached v2.0.5]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memcached/issues/21">[#21]</a> Remove test connections</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memcached v1.1.1]]></title>
+        <id>https://github.com/hapijs/catbox-memcached/milestone/3</id>
+        <link href="https://hapi.dev/module/catbox-memcached/changelog#1.1.1"/>
+        <updated>2018-11-11T01:50:38.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memcached v1.1.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memcached/pull/17">[#17]</a> upgrade to lab 6 minor fixes license fix</li><li><a href="https://github.com/hapijs/catbox-memcached/issues/9">[#9]</a> Using catbox-memcache with yar, response body is replaced with `true`</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memcached v1.0.3]]></title>
+        <id>https://github.com/hapijs/catbox-memcached/milestone/2</id>
+        <link href="https://hapi.dev/module/catbox-memcached/changelog#1.0.3"/>
+        <updated>2014-11-20T10:53:48.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memcached v1.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memcached/issues/5">[#5]</a> Hapi hangs if the memcached server is down</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-memcached v1.0.2]]></title>
+        <id>https://github.com/hapijs/catbox-memcached/milestone/1</id>
+        <link href="https://hapi.dev/module/catbox-memcached/changelog#1.0.2"/>
+        <updated>2014-08-03T06:32:01.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-memcached v1.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-memcached/issues/4">[#4]</a> Rename spumko to hapijs</li></ul>]]></content>
+    </entry>
+</feed>
