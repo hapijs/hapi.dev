@@ -365,6 +365,11 @@
         "description": "CSRF crumb generation and validation for hapi"
       },
       {
+        "name": "hapi-aegis",
+        "link": "https://github.com/mrosenlund/hapi-aegis",
+        "description": "Sets security-related HTTP response headers (CSP, HSTS, Frameguard, and more)"
+      },
+      {
         "name": "ralphi",
         "link": "https://github.com/yonjah/ralphi",
         "description": "Simple and minimal rate limiting and bruteforce protection"
