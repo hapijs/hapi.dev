@@ -43,6 +43,11 @@ await server.register({
         headers: { 'X-Custom': 'value' },        // extra headers on every SSE response
         backpressure: { maxBytes: 65536, strategy: 'drop' },  // optional
         hooks: { ... },                          // optional, see Hooks section
+        completion: {                            // optional, see Stream completion section
+            cache: 'my-redis-cache',             //   named cache engine (default: hapi default)
+            segment: 'completed-sessions',       //   segment name
+            expiresIn: 5 * 60 * 1000,            //   TTL for completion tokens (default: 5 min)
+        },
     },
 });
 ```
@@ -58,6 +63,7 @@ server.sse.subscription('/chat/{room}', {
   auth: 'jwt',
   retry: 5000,
   keepAlive: { interval: 10_000 },
+  refuse: (request) => server.app.shuttingDown || circuitBreaker.isOpen(),
   filter: async (path, message, { credentials, params, internal }) => {
     if (params.room !== internal.targetRoom) {
       return false; // don't deliver
@@ -78,6 +84,7 @@ server.sse.subscription('/chat/{room}', {
 | `auth`          | `RouteOptions['auth']`                                             | hapi auth config for the route                                                                                                                                                                |
 | `retry`         | `number \| null`                                                   | Override plugin-level retry                                                                                                                                                                   |
 | `keepAlive`     | `{ interval: number } \| false`                                    | Override plugin-level keep-alive                                                                                                                                                              |
+| `refuse`        | `(request) => boolean \| Promise<boolean>`                         | Server-state predicate. Runs before the session is created. Returning `true` responds with `204 No Content`, telling the EventSource not to reconnect.                                        |
 | `filter`        | `(path, message, opts) => boolean \| { override } \| Promise<...>` | Per-session delivery filter                                                                                                                                                                   |
 | `onSubscribe`   | `(session, path, params) => void \| Promise<void>`                 | Fires before SSE headers are sent. Throwing a Boom error returns that HTTP error to the client.                                                                                               |
 | `onUnsubscribe` | `(session, path, params) => void`                                  | Fires on client disconnect                                                                                                                                                                    |
@@ -193,11 +200,64 @@ The `Session` object represents a single SSE connection.
 ```typescript
 session.push(data, event?, id?)   // Send an event. Returns boolean (false if dropped/closed).
 session.comment(text?)            // Send a comment (invisible to EventSource)
-session.close()                   // End the connection
+session.close()                   // End the connection (client will reconnect)
+session.complete()                // Mark the stream as done; next reconnect gets HTTP 204
+session.id                        // UUID generated at construction; used as the completion token
 session.isOpen                    // true if connection is still active
 session.connectedAt               // Unix timestamp (ms) when the session was created
 session.lastEventId               // Value of Last-Event-ID header (empty string if absent)
 session.request                   // The original hapi Request object
+```
+
+**Stream completion** — when the stream has done its work and the client should not reconnect, call `session.complete()` instead of `session.close()`:
+
+```typescript
+server.route({
+  method: 'GET',
+  path: '/jobs/{id}/progress',
+  handler: {
+    sse: {
+      stream: async (request, session) => {
+        for await (const update of jobProgress(request.params.id)) {
+          session.push(update, 'progress', update.eventId);
+        }
+        await session.complete(); // emits a final event with a token id, closes the stream
+      },
+    },
+  },
+});
+```
+
+`complete()` writes a final SSE event of type `complete` with `session.id` as its `id` field. The browser saves that UUID as its `Last-Event-ID`. If the EventSource reconnects, the plugin sees the token in the `Last-Event-ID` header and responds `204 No Content`. Per the [WHATWG SSE spec](https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events-intro), a 204 response makes the EventSource stop reconnecting.
+
+Clients can react to completion via `eventSource.addEventListener('complete', handler)`.
+
+**Completion cache** — tokens live in a hapi server cache (default: in-process catbox-memory, 5 minute TTL). Each token is consumed on first redemption. Use the `completion` plugin option to customize:
+
+```typescript
+const server = Hapi.server({
+  port: 3000,
+  cache: [
+    {
+      name: 'redis-cache',
+      provider: {
+        constructor: require('@hapi/catbox-redis'),
+        options: { host: '127.0.0.1' },
+      },
+    },
+  ],
+});
+
+await server.register({
+  plugin: SsePlugin,
+  options: {
+    completion: {
+      cache: 'redis-cache', // share completion state across processes
+      segment: 'sse-completions',
+      expiresIn: 10 * 60 * 1000, // 10 minutes
+    },
+  },
+});
 ```
 
 **Metadata** — attach arbitrary key-value data to a session:

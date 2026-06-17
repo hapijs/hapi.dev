@@ -2,6 +2,7 @@
   "api": true,
   "forks": 6,
   "isPlugin": false,
+  "latestVersion": "3.x.x",
   "link": "https://github.com/hapijs/catbox-object",
   "name": "catbox-object",
   "package": "@hapi/catbox-object",
@@ -17,6 +18,5 @@
       "node": ">= 16"
     }
   ],
-  "versionsArray": ["3.0.1"],
-  "latestVersion": "3.x.x"
+  "versionsArray": ["3.0.1"]
 }

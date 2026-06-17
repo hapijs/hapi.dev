@@ -2,6 +2,7 @@
   "api": false,
   "forks": 26,
   "isPlugin": false,
+  "latestVersion": "8.x.x",
   "link": "https://github.com/hapijs/statehood",
   "name": "statehood",
   "package": "@hapi/statehood",
@@ -17,6 +18,5 @@
       "node": ">= 16"
     }
   ],
-  "versionsArray": ["8.2.1"],
-  "latestVersion": "8.x.x"
+  "versionsArray": ["8.2.1"]
 }

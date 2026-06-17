@@ -2,6 +2,7 @@
   "api": true,
   "forks": 60,
   "isPlugin": false,
+  "latestVersion": "9.x.x",
   "link": "https://github.com/hapijs/glue",
   "name": "glue",
   "package": "@hapi/glue",
@@ -17,6 +18,5 @@
       "node": ">= 16"
     }
   ],
-  "versionsArray": ["9.0.1"],
-  "latestVersion": "9.x.x"
+  "versionsArray": ["9.0.1"]
 }

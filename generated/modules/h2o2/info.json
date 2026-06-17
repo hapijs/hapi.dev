@@ -1,7 +1,8 @@
 {
   "api": true,
-  "forks": 61,
+  "forks": 60,
   "isPlugin": true,
+  "latestVersion": "10.x.x",
   "link": "https://github.com/hapijs/h2o2",
   "name": "h2o2",
   "package": "@hapi/h2o2",
@@ -17,6 +18,5 @@
       "node": ">= 16"
     }
   ],
-  "versionsArray": ["10.0.4"],
-  "latestVersion": "10.x.x"
+  "versionsArray": ["10.0.4"]
 }

@@ -2,6 +2,7 @@
   "api": true,
   "forks": 30,
   "isPlugin": false,
+  "latestVersion": "6.x.x",
   "link": "https://github.com/hapijs/bossy",
   "name": "bossy",
   "package": "@hapi/bossy",
@@ -23,6 +24,5 @@
       "node": ">= 16"
     }
   ],
-  "versionsArray": ["6.0.1", "5.1.1"],
-  "latestVersion": "6.x.x"
+  "versionsArray": ["6.0.1", "5.1.1"]
 }

@@ -2,11 +2,27 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hapi.dev/module/content</id>
     <title>@hapi/content changelog</title>
-    <updated>2022-05-24T01:54:39.000Z</updated>
+    <updated>2026-05-06T08:40:35.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hapi.dev/module/content"/>
     <logo>https://hapi.dev/img/logo.png</logo>
     <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/content v6.0.2]]></title>
+        <id>https://github.com/hapijs/content/milestone/18</id>
+        <link href="https://hapi.dev/module/content/changelog#6.0.2"/>
+        <updated>2026-05-06T08:40:35.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/content v6.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/content/pull/39">[#39]</a> fix: error on duplicate parameters</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/content v6.0.1]]></title>
+        <id>https://github.com/hapijs/content/milestone/17</id>
+        <link href="https://hapi.dev/module/content/changelog#6.0.1"/>
+        <updated>2026-05-06T08:40:33.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/content v6.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/content/pull/38">[#38]</a> fix: protect regex from redos</li></ul>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[@hapi/content v6.0.0]]></title>
         <id>https://github.com/hapijs/content/milestone/16</id>

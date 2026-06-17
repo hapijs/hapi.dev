@@ -2,6 +2,7 @@
   "api": true,
   "forks": 98,
   "isPlugin": true,
+  "latestVersion": "12.x.x",
   "link": "https://github.com/hapijs/cookie",
   "name": "cookie",
   "package": "@hapi/cookie",
@@ -17,6 +18,5 @@
       "node": ">= 16"
     }
   ],
-  "versionsArray": ["12.0.1"],
-  "latestVersion": "12.x.x"
+  "versionsArray": ["12.0.1"]
 }

@@ -1,13 +1,14 @@
 {
   "api": true,
-  "forks": 11,
+  "forks": 12,
   "isPlugin": false,
+  "latestVersion": "3.x.x",
   "link": "https://github.com/hapijs/bourne",
   "name": "bourne",
   "package": "@hapi/bourne",
   "slogan": "JSON.parse() drop-in replacement with prototype poisoning protection.",
   "sloganHtml": "JSON.parse() drop-in replacement with prototype poisoning protection.",
-  "stars": 179,
+  "stars": 180,
   "updated": "2024-10-23T15:09:24Z",
   "versions": [
     {
@@ -17,6 +18,5 @@
       "node": ">= 16"
     }
   ],
-  "versionsArray": ["3.0.0"],
-  "latestVersion": "3.x.x"
+  "versionsArray": ["3.0.0"]
 }

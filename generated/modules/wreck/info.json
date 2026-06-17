@@ -1,22 +1,22 @@
 {
   "api": true,
-  "forks": 103,
+  "forks": 102,
   "isPlugin": false,
+  "latestVersion": "18.x.x",
   "link": "https://github.com/hapijs/wreck",
   "name": "wreck",
   "package": "@hapi/wreck",
   "slogan": "HTTP client utilities.",
   "sloganHtml": "HTTP client utilities.",
   "stars": 378,
-  "updated": "2024-04-10T17:35:00Z",
+  "updated": "2026-05-20T10:27:17Z",
   "versions": [
     {
-      "branch": "v18.1.0",
+      "branch": "v18.1.2",
       "license": "BSD",
-      "name": "18.1.0",
+      "name": "18.1.2",
       "node": ">= 16"
     }
   ],
-  "versionsArray": ["18.1.0"],
-  "latestVersion": "18.x.x"
+  "versionsArray": ["18.1.2"]
 }

@@ -1,5 +1,13 @@
 ## Version 18 {#v18}
 
+### [18.1.2](https://github.com/hapijs/wreck/milestone/80) {#18.1.2}
+
+- [#313](https://github.com/hapijs/wreck/pull/313) fix: cross-origin redirect should also remove sensitive headers
+
+### [18.1.1](https://github.com/hapijs/wreck/milestone/79) {#18.1.1}
+
+- [#312](https://github.com/hapijs/wreck/pull/312) fix: strip proxy-authorization header on redirect
+
 ### [18.1.0](https://github.com/hapijs/wreck/milestone/78) {#18.1.0}
 
 - [#309](https://github.com/hapijs/wreck/issues/309) support custom lookup function in request()

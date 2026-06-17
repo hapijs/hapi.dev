@@ -2,6 +2,7 @@
   "api": true,
   "forks": 24,
   "isPlugin": true,
+  "latestVersion": "8.x.x",
   "link": "https://github.com/hapijs/scooter",
   "name": "scooter",
   "package": "@hapi/scooter",
@@ -23,6 +24,5 @@
       "node": ">= 16"
     }
   ],
-  "versionsArray": ["8.0.0", "7.0.0"],
-  "latestVersion": "8.x.x"
+  "versionsArray": ["8.0.0", "7.0.0"]
 }

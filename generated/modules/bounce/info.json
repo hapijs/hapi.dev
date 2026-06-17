@@ -2,6 +2,7 @@
   "api": true,
   "forks": 13,
   "isPlugin": false,
+  "latestVersion": "3.x.x",
   "link": "https://github.com/hapijs/bounce",
   "name": "bounce",
   "package": "@hapi/bounce",
@@ -17,6 +18,5 @@
       "node": ">= 16"
     }
   ],
-  "versionsArray": ["3.0.2"],
-  "latestVersion": "3.x.x"
+  "versionsArray": ["3.0.2"]
 }

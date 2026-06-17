@@ -2,6 +2,7 @@
   "api": true,
   "forks": 73,
   "isPlugin": false,
+  "latestVersion": "9.x.x",
   "link": "https://github.com/hapijs/code",
   "name": "code",
   "package": "@hapi/code",
@@ -17,6 +18,5 @@
       "node": ">= 16"
     }
   ],
-  "versionsArray": ["9.0.3"],
-  "latestVersion": "9.x.x"
+  "versionsArray": ["9.0.3"]
 }

@@ -2,6 +2,7 @@
   "api": true,
   "forks": 5,
   "isPlugin": true,
+  "latestVersion": "2.x.x",
   "link": "https://github.com/hapijs/log",
   "name": "log",
   "package": "@hapi/log",
@@ -17,6 +18,5 @@
       "node": ">= 16"
     }
   ],
-  "versionsArray": ["2.0.1"],
-  "latestVersion": "2.x.x"
+  "versionsArray": ["2.0.1"]
 }

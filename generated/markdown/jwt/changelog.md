@@ -1,5 +1,9 @@
 ## Version 3 {#v3}
 
+### [3.2.4](https://github.com/hapijs/jwt/milestone/19) {#3.2.4}
+
+- [#61](https://github.com/hapijs/jwt/pull/61) chore: bump dependencies
+
 ### [3.2.2](https://github.com/hapijs/jwt/milestone/18) {#3.2.2}
 
 - [#60](https://github.com/hapijs/jwt/pull/60) Fix: jwt constant time fixed time

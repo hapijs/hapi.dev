@@ -2,6 +2,7 @@
   "api": true,
   "forks": 58,
   "isPlugin": true,
+  "latestVersion": "11.x.x",
   "link": "https://github.com/hapijs/yar",
   "name": "yar",
   "package": "@hapi/yar",
@@ -17,6 +18,5 @@
       "node": ">= 16"
     }
   ],
-  "versionsArray": ["11.0.3"],
-  "latestVersion": "11.x.x"
+  "versionsArray": ["11.0.3"]
 }

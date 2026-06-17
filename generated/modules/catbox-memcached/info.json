@@ -2,6 +2,7 @@
   "api": true,
   "forks": 17,
   "isPlugin": false,
+  "latestVersion": "4.x.x",
   "link": "https://github.com/hapijs/catbox-memcached",
   "name": "catbox-memcached",
   "package": "@hapi/catbox-memcached",
@@ -17,6 +18,5 @@
       "node": ">= 16"
     }
   ],
-  "versionsArray": ["4.0.0"],
-  "latestVersion": "4.x.x"
+  "versionsArray": ["4.0.0"]
 }

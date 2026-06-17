@@ -1,5 +1,37 @@
 [
   {
+    "date": "2026-05-06T08:40:35Z",
+    "id": 15813735,
+    "issues": [
+      {
+        "id": 4389936338,
+        "labels": ["bug", "security"],
+        "number": 39,
+        "title": "fix: error on duplicate parameters",
+        "url": "https://github.com/hapijs/content/pull/39"
+      }
+    ],
+    "number": 18,
+    "url": "https://github.com/hapijs/content/milestone/18",
+    "version": "6.0.2"
+  },
+  {
+    "date": "2026-05-06T08:40:33Z",
+    "id": 8008357,
+    "issues": [
+      {
+        "id": 4192635071,
+        "labels": ["bug", "security"],
+        "number": 38,
+        "title": "fix: protect regex from redos",
+        "url": "https://github.com/hapijs/content/pull/38"
+      }
+    ],
+    "number": 17,
+    "url": "https://github.com/hapijs/content/milestone/17",
+    "version": "6.0.1"
+  },
+  {
     "date": "2022-05-24T01:54:39Z",
     "id": 8008356,
     "issues": [

@@ -2,6 +2,7 @@
   "api": true,
   "forks": 64,
   "isPlugin": true,
+  "latestVersion": "7.x.x",
   "link": "https://github.com/hapijs/basic",
   "name": "basic",
   "package": "@hapi/basic",
@@ -17,6 +18,5 @@
       "node": ">= 16"
     }
   ],
-  "versionsArray": ["7.0.2"],
-  "latestVersion": "7.x.x"
+  "versionsArray": ["7.0.2"]
 }

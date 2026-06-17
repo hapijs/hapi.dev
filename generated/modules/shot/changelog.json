@@ -1,5 +1,28 @@
 [
   {
+    "date": "2026-05-27T07:19:05Z",
+    "id": 16011639,
+    "issues": [
+      {
+        "id": 4429821274,
+        "labels": ["bug"],
+        "number": 153,
+        "title": "Fix stream payload error handling",
+        "url": "https://github.com/hapijs/shot/pull/153"
+      },
+      {
+        "id": 4429757896,
+        "labels": ["bug"],
+        "number": 152,
+        "title": "Fix missing close emits",
+        "url": "https://github.com/hapijs/shot/pull/152"
+      }
+    ],
+    "number": 56,
+    "url": "https://github.com/hapijs/shot/milestone/56",
+    "version": "6.0.3"
+  },
+  {
     "date": "2025-08-13T22:35:10Z",
     "id": 13483179,
     "issues": [

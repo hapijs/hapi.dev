@@ -1,13 +1,14 @@
 {
   "api": true,
-  "forks": 25,
+  "forks": 27,
   "isPlugin": false,
+  "latestVersion": "6.x.x",
   "link": "https://github.com/hapijs/cryptiles",
   "name": "cryptiles",
   "package": "@hapi/cryptiles",
   "slogan": "General purpose crypto utilities.",
   "sloganHtml": "General purpose crypto utilities.",
-  "stars": 183,
+  "stars": 184,
   "updated": "2025-12-11T11:38:33Z",
   "versions": [
     {
@@ -17,6 +18,5 @@
       "node": ">= 16"
     }
   ],
-  "versionsArray": ["6.0.3"],
-  "latestVersion": "6.x.x"
+  "versionsArray": ["6.0.3"]
 }

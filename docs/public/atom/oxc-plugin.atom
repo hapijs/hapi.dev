@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hapi.dev/module/oxc-plugin</id>
+    <title>@hapi/oxc-plugin changelog</title>
+    <updated>2026-06-10T16:59:41.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hapi.dev/module/oxc-plugin"/>
+    <logo>https://hapi.dev/img/logo.png</logo>
+    <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/oxc-plugin v1.0.1]]></title>
+        <id>https://github.com/hapijs/oxc-plugin/milestone/2</id>
+        <link href="https://hapi.dev/module/oxc-plugin/changelog#1.0.1"/>
+        <updated>2026-06-10T16:59:41.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/oxc-plugin v1.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/oxc-plugin/pull/4">[#4]</a> fix: vitest's oxc plugin default exclude</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/oxc-plugin v1.0.0]]></title>
+        <id>https://github.com/hapijs/oxc-plugin/milestone/1</id>
+        <link href="https://hapi.dev/module/oxc-plugin/changelog#1.0.0"/>
+        <updated>2026-06-10T16:59:39.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/oxc-plugin v1.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/oxc-plugin/pull/3">[#3]</a> feat: initial implementation of oxc rules</li></ul>]]></content>
+    </entry>
+</feed>
