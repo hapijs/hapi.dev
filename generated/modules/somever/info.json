@@ -2,6 +2,7 @@
   "api": false,
   "forks": 10,
   "isPlugin": false,
+  "latestVersion": "4.x.x",
   "link": "https://github.com/hapijs/somever",
   "name": "somever",
   "package": "@hapi/somever",
@@ -17,6 +18,5 @@
       "node": ">= 16"
     }
   ],
-  "versionsArray": ["4.1.1"],
-  "latestVersion": "4.x.x"
+  "versionsArray": ["4.1.1"]
 }

@@ -2,6 +2,7 @@
   "api": true,
   "forks": 21,
   "isPlugin": false,
+  "latestVersion": "5.x.x",
   "link": "https://github.com/hapijs/podium",
   "name": "podium",
   "package": "@hapi/podium",
@@ -17,6 +18,5 @@
       "node": ">= 16"
     }
   ],
-  "versionsArray": ["5.0.2"],
-  "latestVersion": "5.x.x"
+  "versionsArray": ["5.0.2"]
 }

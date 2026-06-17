@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-06-12T08:53:52Z",
+    "id": 16327962,
+    "issues": [
+      {
+        "id": 4647782096,
+        "labels": ["dependency"],
+        "number": 61,
+        "title": "chore: bump dependencies",
+        "url": "https://github.com/hapijs/jwt/pull/61"
+      }
+    ],
+    "number": 19,
+    "url": "https://github.com/hapijs/jwt/milestone/19",
+    "version": "3.2.4"
+  },
+  {
     "date": "2025-12-09T17:13:05Z",
     "id": 14313465,
     "issues": [

@@ -190,6 +190,11 @@ export const modules: Record<string, ModuleSpec> = {
     hasApi: true,
     package: '@hapi/oppsy',
   },
+  'oxc-plugin': {
+    compatibility: { 1: '>= 22' },
+    hasApi: true,
+    package: '@hapi/oxc-plugin',
+  },
   pez: {
     compatibility: { 6: '>= 16' },
     package: '@hapi/pez',

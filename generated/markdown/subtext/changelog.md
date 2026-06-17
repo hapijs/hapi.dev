@@ -1,5 +1,9 @@
 ## Version 8 {#v8}
 
+### [8.1.3](https://github.com/hapijs/subtext/milestone/59) {#8.1.3}
+
+- [#106](https://github.com/hapijs/subtext/pull/106) chore: bump dependencies
+
 ### [8.1.2](https://github.com/hapijs/subtext/milestone/58) {#8.1.2}
 
 - [#105](https://github.com/hapijs/subtext/pull/105) chore: bump deps

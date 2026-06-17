@@ -1,5 +1,37 @@
 [
   {
+    "date": "2026-05-20T10:27:25Z",
+    "id": 16006393,
+    "issues": [
+      {
+        "id": 4485472888,
+        "labels": ["bug", "security"],
+        "number": 313,
+        "title": "fix: cross-origin redirect should also remove sensitive headers",
+        "url": "https://github.com/hapijs/wreck/pull/313"
+      }
+    ],
+    "number": 80,
+    "url": "https://github.com/hapijs/wreck/milestone/80",
+    "version": "18.1.2"
+  },
+  {
+    "date": "2026-05-06T09:49:00Z",
+    "id": 15814221,
+    "issues": [
+      {
+        "id": 4390163679,
+        "labels": ["bug", "security"],
+        "number": 312,
+        "title": "fix: strip proxy-authorization header on redirect",
+        "url": "https://github.com/hapijs/wreck/pull/312"
+      }
+    ],
+    "number": 79,
+    "url": "https://github.com/hapijs/wreck/milestone/79",
+    "version": "18.1.1"
+  },
+  {
     "date": "2024-04-10T17:38:08Z",
     "id": 10802761,
     "issues": [

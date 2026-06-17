@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-05-20T15:45:22Z",
+    "id": 16011977,
+    "issues": [
+      {
+        "id": 4329144012,
+        "labels": ["feature"],
+        "number": 5,
+        "title": "feat: add refuse() calculator and session.complete()",
+        "url": "https://github.com/hapijs/sse/pull/5"
+      }
+    ],
+    "number": 2,
+    "url": "https://github.com/hapijs/sse/milestone/2",
+    "version": "1.1.0"
+  },
+  {
     "date": "2026-04-07T22:13:58Z",
     "id": 15452440,
     "issues": [

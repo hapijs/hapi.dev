@@ -2,12 +2,13 @@
   "api": true,
   "forks": 177,
   "isPlugin": false,
+  "latestVersion": "26.x.x",
   "link": "https://github.com/hapijs/lab",
   "name": "lab",
   "package": "@hapi/lab",
   "slogan": "Node test utility.",
   "sloganHtml": "Node test utility.",
-  "stars": 738,
+  "stars": 739,
   "updated": "2026-03-26T19:23:31Z",
   "versions": [
     {
@@ -23,6 +24,5 @@
       "node": ">= 16"
     }
   ],
-  "versionsArray": ["26.0.1", "25.3.2"],
-  "latestVersion": "26.x.x"
+  "versionsArray": ["26.0.1", "25.3.2"]
 }

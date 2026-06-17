@@ -1,7 +1,8 @@
 {
   "api": true,
-  "forks": 30,
+  "forks": 29,
   "isPlugin": false,
+  "latestVersion": "6.x.x",
   "link": "https://github.com/hapijs/accept",
   "name": "accept",
   "package": "@hapi/accept",
@@ -17,6 +18,5 @@
       "node": ">= 16"
     }
   ],
-  "versionsArray": ["6.0.3"],
-  "latestVersion": "6.x.x"
+  "versionsArray": ["6.0.3"]
 }

@@ -2,6 +2,7 @@
   "api": false,
   "forks": 10,
   "isPlugin": false,
+  "latestVersion": "5.x.x",
   "link": "https://github.com/hapijs/nigel",
   "name": "nigel",
   "package": "@hapi/nigel",
@@ -17,6 +18,5 @@
       "node": ">= 16"
     }
   ],
-  "versionsArray": ["5.0.1"],
-  "latestVersion": "5.x.x"
+  "versionsArray": ["5.0.1"]
 }

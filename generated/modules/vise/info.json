@@ -2,6 +2,7 @@
   "api": false,
   "forks": 12,
   "isPlugin": false,
+  "latestVersion": "5.x.x",
   "link": "https://github.com/hapijs/vise",
   "name": "vise",
   "package": "@hapi/vise",
@@ -17,6 +18,5 @@
       "node": ">= 16"
     }
   ],
-  "versionsArray": ["5.0.1"],
-  "latestVersion": "5.x.x"
+  "versionsArray": ["5.0.1"]
 }

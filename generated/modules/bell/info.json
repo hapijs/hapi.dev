@@ -1,7 +1,8 @@
 {
   "api": true,
-  "forks": 210,
+  "forks": 209,
   "isPlugin": true,
+  "latestVersion": "13.x.x",
   "link": "https://github.com/hapijs/bell",
   "name": "bell",
   "package": "@hapi/bell",
@@ -17,6 +18,5 @@
       "node": ">= 16"
     }
   ],
-  "versionsArray": ["13.1.0"],
-  "latestVersion": "13.x.x"
+  "versionsArray": ["13.1.0"]
 }

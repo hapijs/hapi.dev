@@ -1,5 +1,10 @@
 ## Version 6 {#v6}
 
+### [6.0.3](https://github.com/hapijs/shot/milestone/56) {#6.0.3}
+
+- [#153](https://github.com/hapijs/shot/pull/153) Fix stream payload error handling
+- [#152](https://github.com/hapijs/shot/pull/152) Fix missing close emits
+
 ### [6.0.2](https://github.com/hapijs/shot/milestone/55) {#6.0.2}
 
 - [#151](https://github.com/hapijs/shot/pull/151) Improve argument validation and messaging

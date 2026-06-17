@@ -2,12 +2,13 @@
   "api": true,
   "forks": 26,
   "isPlugin": false,
+  "latestVersion": "6.x.x",
   "link": "https://github.com/hapijs/topo",
   "name": "topo",
   "package": "@hapi/topo",
   "slogan": "Topological sorting with grouping support.",
   "sloganHtml": "Topological sorting with grouping support.",
-  "stars": 108,
+  "stars": 109,
   "updated": "2024-10-23T15:22:31Z",
   "versions": [
     {
@@ -17,6 +18,5 @@
       "node": ">= 16"
     }
   ],
-  "versionsArray": ["6.0.2"],
-  "latestVersion": "6.x.x"
+  "versionsArray": ["6.0.2"]
 }

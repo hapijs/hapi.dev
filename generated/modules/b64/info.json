@@ -2,6 +2,7 @@
   "api": true,
   "forks": 12,
   "isPlugin": false,
+  "latestVersion": "6.x.x",
   "link": "https://github.com/hapijs/b64",
   "name": "b64",
   "package": "@hapi/b64",
@@ -17,6 +18,5 @@
       "node": ">= 16"
     }
   ],
-  "versionsArray": ["6.0.1"],
-  "latestVersion": "6.x.x"
+  "versionsArray": ["6.0.1"]
 }

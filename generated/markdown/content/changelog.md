@@ -1,5 +1,13 @@
 ## Version 6 {#v6}
 
+### [6.0.2](https://github.com/hapijs/content/milestone/18) {#6.0.2}
+
+- [#39](https://github.com/hapijs/content/pull/39) fix: error on duplicate parameters
+
+### [6.0.1](https://github.com/hapijs/content/milestone/17) {#6.0.1}
+
+- [#38](https://github.com/hapijs/content/pull/38) fix: protect regex from redos
+
 ### [6.0.0](https://github.com/hapijs/content/milestone/16) <span class="breaking-badge"></span> {#6.0.0}
 
 - [#35](https://github.com/hapijs/content/pull/35) Support node v18 and drop node v12

@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-05-06T10:28:10Z",
+    "id": 15814787,
+    "issues": [
+      {
+        "id": 4390568761,
+        "labels": ["dependency"],
+        "number": 106,
+        "title": "chore: bump dependencies",
+        "url": "https://github.com/hapijs/subtext/pull/106"
+      }
+    ],
+    "number": 59,
+    "url": "https://github.com/hapijs/subtext/milestone/59",
+    "version": "8.1.3"
+  },
+  {
     "date": "2026-04-02T08:19:32Z",
     "id": 15394847,
     "issues": [

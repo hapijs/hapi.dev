@@ -2,6 +2,7 @@
   "api": true,
   "forks": 9,
   "isPlugin": false,
+  "latestVersion": "6.x.x",
   "link": "https://github.com/hapijs/ammo",
   "name": "ammo",
   "package": "@hapi/ammo",
@@ -17,6 +18,5 @@
       "node": ">= 16"
     }
   ],
-  "versionsArray": ["6.0.1"],
-  "latestVersion": "6.x.x"
+  "versionsArray": ["6.0.1"]
 }

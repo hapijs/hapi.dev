@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-05-06T10:37:52Z",
+    "id": 15814860,
+    "issues": [
+      {
+        "id": 4390656018,
+        "labels": ["dependency"],
+        "number": 4577,
+        "title": "chore: bump dependencies",
+        "url": "https://github.com/hapijs/hapi/pull/4577"
+      }
+    ],
+    "number": 330,
+    "url": "https://github.com/hapijs/hapi/milestone/330",
+    "version": "21.4.9"
+  },
+  {
     "date": "2026-04-02T08:29:10Z",
     "id": 15394908,
     "issues": [

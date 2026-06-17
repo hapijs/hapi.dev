@@ -1,5 +1,9 @@
 ## Version 21 {#v21}
 
+### [21.4.9](https://github.com/hapijs/hapi/milestone/330) {#21.4.9}
+
+- [#4577](https://github.com/hapijs/hapi/pull/4577) chore: bump dependencies
+
 ### [21.4.8](https://github.com/hapijs/hapi/milestone/329) {#21.4.8}
 
 - [#4568](https://github.com/hapijs/hapi/pull/4568) chore: bump deps
