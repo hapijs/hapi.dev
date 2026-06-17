@@ -1,22 +1,22 @@
 {
-  "api": true,
-  "forks": 12,
-  "isPlugin": false,
-  "latestVersion": "6.x.x",
-  "link": "https://github.com/hapijs/b64",
-  "name": "b64",
-  "package": "@hapi/b64",
-  "slogan": "Base64 streaming encoder and decoder.",
-  "sloganHtml": "Base64 streaming encoder and decoder.",
-  "stars": 42,
-  "updated": "2024-10-23T15:42:49Z",
-  "versions": [
-    {
-      "branch": "v6.0.1",
-      "license": "BSD",
-      "name": "6.0.1",
-      "node": ">= 16"
-    }
-  ],
-  "versionsArray": ["6.0.1"]
+    "api": true,
+    "forks": 12,
+    "isPlugin": false,
+    "latestVersion": "6.x.x",
+    "link": "https://github.com/hapijs/b64",
+    "name": "b64",
+    "package": "@hapi/b64",
+    "slogan": "Base64 streaming encoder and decoder.",
+    "sloganHtml": "Base64 streaming encoder and decoder.",
+    "stars": 42,
+    "updated": "2024-10-23T15:42:49Z",
+    "versions": [
+        {
+            "branch": "v6.0.1",
+            "license": "BSD",
+            "name": "6.0.1",
+            "node": ">= 16"
+        }
+    ],
+    "versionsArray": ["6.0.1"]
 }

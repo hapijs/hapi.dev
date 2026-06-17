@@ -9,12 +9,12 @@ const Hapi = require('@hapi/hapi');
 const H2o2 = require('@hapi/h2o2');
 
 const start = async function () {
-  const server = Hapi.server();
+    const server = Hapi.server();
 
-  await server.register(H2o2);
-  await server.start();
+    await server.register(H2o2);
+    await server.start();
 
-  console.log(`Server started at:  ${server.info.uri}`);
+    console.log(`Server started at:  ${server.info.uri}`);
 };
 
 start();
@@ -29,8 +29,8 @@ The proxy handler object has the following properties:
 - `host` - upstream service host to proxy requests to. It will have the same path as the client request.
 - `port` - upstream service port.
 - `protocol` - protocol to use when making the request to the proxied host:
-  - 'http'
-  - 'https'
+    - 'http'
+    - 'https'
 - `uri` - absolute URI used instead of host, port, protocol, path, and query. Cannot be used with `host`, `port`, `protocol`, or `mapUri`.
 - `httpClient` - an http client that abides by the Wreck interface. Defaults to [`wreck`](https://github.com/hapijs/wreck).
 - `passThrough` - if set to `true`, it forwards the headers from the client to the upstream service, headers sent from the upstream service will also be forwarded to the client. Defaults to `false`.
@@ -41,18 +41,18 @@ The proxy handler object has the following properties:
 - `redirects` - the maximum number of HTTP redirections allowed to be followed automatically by the handler. Set to `false` or `0` to disable all redirections (the response will contain the redirection received from the upstream service). If redirections are enabled, no redirections (301, 302, 307, 308) will be passed along to the client, and reaching the maximum allowed redirections will return an error response. Defaults to `false`.
 - `timeout` - number of milliseconds before aborting the upstream request. Defaults to `180000` (3 minutes).
 - `mapUri` - a function used to map the request URI to the proxied URI. Cannot be used together with `host`, `port`, `protocol`, or `uri`. The function signature is `function (request)` where:
-  - `request` - is the incoming [request object](http://hapijs.com/api#request-object). The response from this function should be an object with the following properties:
-    - `uri` - the absolute proxy URI.
-    - `headers` - optional object where each key is an HTTP request header and the value is the header content.
+    - `request` - is the incoming [request object](http://hapijs.com/api#request-object). The response from this function should be an object with the following properties:
+        - `uri` - the absolute proxy URI.
+        - `headers` - optional object where each key is an HTTP request header and the value is the header content.
 - `onRequest` - a custom function which is passed the upstream request. Function signature is `function (req)` where:
-  - `req` - the [wreck] (https://github.com/hapijs/wreck) request to the upstream server.
+    - `req` - the [wreck] (https://github.com/hapijs/wreck) request to the upstream server.
 - `onResponse` - a custom function for processing the response from the upstream service before sending to the client. Useful for custom error handling of responses from the proxied endpoint or other payload manipulation. Function signature is `function (err, res, request, h, settings, ttl)` where:
-  - `err` - internal or upstream error returned from attempting to contact the upstream proxy.
-  - `res` - the node response object received from the upstream service. `res` is a readable stream (use the [wreck](https://github.com/hapijs/wreck) module `read` method to easily convert it to a Buffer or string). Note that it is your responsibility to close the `res` stream.
-  - `request` - is the incoming [request object](http://hapijs.com/api#request-object).
-  - `h` - the [response toolkit](https://hapijs.com/api#response-toolkit).
-  - `settings` - the proxy handler configuration.
-  - `ttl` - the upstream TTL in milliseconds if `proxy.ttl` it set to `'upstream'` and the upstream response included a valid 'Cache-Control' header with 'max-age'.
+    - `err` - internal or upstream error returned from attempting to contact the upstream proxy.
+    - `res` - the node response object received from the upstream service. `res` is a readable stream (use the [wreck](https://github.com/hapijs/wreck) module `read` method to easily convert it to a Buffer or string). Note that it is your responsibility to close the `res` stream.
+    - `request` - is the incoming [request object](http://hapijs.com/api#request-object).
+    - `h` - the [response toolkit](https://hapijs.com/api#response-toolkit).
+    - `settings` - the proxy handler configuration.
+    - `ttl` - the upstream TTL in milliseconds if `proxy.ttl` it set to `'upstream'` and the upstream response included a valid 'Cache-Control' header with 'max-age'.
 - `ttl` - if set to `'upstream'`, applies the upstream response caching policy to the response using the `response.ttl()` method (or passed as an argument to the `onResponse` method if provided).
 - `agent` - a node [http(s) agent](http://nodejs.org/api/http.html#http_class_http_agent) to be used for connections to upstream server.
 - `maxSockets` - sets the maximum number of sockets available per outgoing proxy host connection. `false` means use the **wreck** module default value (`Infinity`). Does not affect non-proxy outgoing client connections. Defaults to `Infinity`.
@@ -79,7 +79,7 @@ The [response flow control rules](http://hapijs.com/api#flow-control) **do not**
 
 ```js
 const handler = function (request, h) {
-  return h.proxy({ host: 'example.com', port: 80, protocol: 'http' });
+    return h.proxy({ host: 'example.com', port: 80, protocol: 'http' });
 };
 ```
 
@@ -89,15 +89,15 @@ Setting these options will send the request to certain route to a specific upstr
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: {
-    proxy: {
-      host: '10.33.33.1',
-      port: '443',
-      protocol: 'https',
+    method: 'GET',
+    path: '/',
+    handler: {
+        proxy: {
+            host: '10.33.33.1',
+            port: '443',
+            protocol: 'https',
+        },
     },
-  },
 });
 ```
 
@@ -107,13 +107,13 @@ Setting this option will send the request to an absolute URI instead of the inco
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: {
-    proxy: {
-      uri: 'https://some.upstream.service.com/that/has?what=you&want=todo',
+    method: 'GET',
+    path: '/',
+    handler: {
+        proxy: {
+            uri: 'https://some.upstream.service.com/that/has?what=you&want=todo',
+        },
     },
-  },
 });
 ```
 
@@ -129,13 +129,13 @@ When using the `uri` option, there are optional **default** template values that
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/foo',
-  handler: {
-    proxy: {
-      uri: '{protocol}://{host}:{port}/go/to/{path}',
+    method: 'GET',
+    path: '/foo',
+    handler: {
+        proxy: {
+            uri: '{protocol}://{host}:{port}/go/to/{path}',
+        },
     },
-  },
 });
 ```
 
@@ -145,13 +145,13 @@ Additionally, you can capture request.params and query values and inject them in
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/foo/{bar}',
-  handler: {
-    proxy: {
-      uri: 'https://some.upstream.service.com/some/path/to/{bar}{query}',
+    method: 'GET',
+    path: '/foo/{bar}',
+    handler: {
+        proxy: {
+            uri: 'https://some.upstream.service.com/some/path/to/{bar}{query}',
+        },
     },
-  },
 });
 ```
 
@@ -163,27 +163,27 @@ Setting both options with custom functions will allow you to map the original re
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: {
-    proxy: {
-      mapUri: function (request) {
-        console.log('doing some additional stuff before redirecting');
-        return {
-          uri: 'https://some.upstream.service.com/',
-        };
-      },
-      onResponse: async function (err, res, request, h, settings, ttl) {
-        console.log('receiving the response from the upstream.');
-        const payload = await Wreck.read(res, { json: true });
+    method: 'GET',
+    path: '/',
+    handler: {
+        proxy: {
+            mapUri: function (request) {
+                console.log('doing some additional stuff before redirecting');
+                return {
+                    uri: 'https://some.upstream.service.com/',
+                };
+            },
+            onResponse: async function (err, res, request, h, settings, ttl) {
+                console.log('receiving the response from the upstream.');
+                const payload = await Wreck.read(res, { json: true });
 
-        console.log('some payload manipulation if you want to.');
-        const response = h.response(payload);
-        response.headers = res.headers;
-        return response;
-      },
+                console.log('some payload manipulation if you want to.');
+                const response = h.response(payload);
+                response.headers = res.headers;
+                return response;
+            },
+        },
     },
-  },
 });
 ```
 
@@ -193,19 +193,19 @@ By default, `h2o2` uses Wreck to perform requests. A custom http client can be p
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: {
-    proxy: {
-      httpClient: {
-        request(method, uri, options) {
-          return axios({
-            method,
-            url: 'https://some.upstream.service.com/',
-          });
+    method: 'GET',
+    path: '/',
+    handler: {
+        proxy: {
+            httpClient: {
+                request(method, uri, options) {
+                    return axios({
+                        method,
+                        url: 'https://some.upstream.service.com/',
+                    });
+                },
+            },
         },
-      },
     },
-  },
 });
 ```

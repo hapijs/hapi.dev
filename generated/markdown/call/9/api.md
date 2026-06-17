@@ -18,7 +18,7 @@ router.add({ method: 'post', path: '/users' }, 'route specific data');
 
 // Add another route with dynamic path
 router.add({ method: 'put', path: '/users/{userId}' }, () => {
-  /* ...handler... */
+    /* ...handler... */
 });
 
 // Match route
@@ -79,8 +79,8 @@ When determining what handler to use for a particular request, router searches p
 Constructor to create a new router instance where:
 
 - `options` - an optional configuration object with the following fields:
-  - `isCaseSensitive` - specifies if the paths should case sensitive. If set to `true`,
-    `/users` and `/USERS` are considered as two different paths. Defaults to `true`.
+    - `isCaseSensitive` - specifies if the paths should case sensitive. If set to `true`,
+      `/users` and `/USERS` are considered as two different paths. Defaults to `true`.
 
 ```js
 const router = new Call.Router();
@@ -91,10 +91,10 @@ const router = new Call.Router();
 Adds a new route to the router where:
 
 - `options` - a configuration object with the following fields:
-  - `method` - the HTTP method (`'get'`, `'put'`, `'post'`, `'delete'`, etc.) or the wildcard
-    character (`'*'`) to match any methods. The method must be lowercase.
-  - `path` - the URL path to be used for route matching. The path segment can be static like
-    `'/users/1234'` or it can be a [dynamic path](#path-matching).
+    - `method` - the HTTP method (`'get'`, `'put'`, `'post'`, `'delete'`, etc.) or the wildcard
+      character (`'*'`) to match any methods. The method must be lowercase.
+    - `path` - the URL path to be used for route matching. The path segment can be static like
+      `'/users/1234'` or it can be a [dynamic path](#path-matching).
 - `data` - the application data to retrieve when a route match is found during lookup. This is
   typically the route handler or other metadata about what to do when a route is matched.
 

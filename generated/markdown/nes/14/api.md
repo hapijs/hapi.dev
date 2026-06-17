@@ -24,19 +24,19 @@ const Nes = require('@hapi/nes');
 const server = new Hapi.Server();
 
 const start = async () => {
-  await server.register(Nes);
-  server.route({
-    method: 'GET',
-    path: '/h',
-    config: {
-      id: 'hello',
-      handler: (request, h) => {
-        return 'world!';
-      },
-    },
-  });
+    await server.register(Nes);
+    server.route({
+        method: 'GET',
+        path: '/h',
+        config: {
+            id: 'hello',
+            handler: (request, h) => {
+                return 'world!';
+            },
+        },
+    });
 
-  await server.start();
+    await server.start();
 };
 
 start();
@@ -50,9 +50,9 @@ const Nes = require('@hapi/nes');
 var client = new Nes.Client('ws://localhost');
 
 const start = async () => {
-  await client.connect();
-  const payload = await client.request('hello'); // Can also request '/h'
-  // payload -> 'world!'
+    await client.connect();
+    const payload = await client.request('hello'); // Can also request '/h'
+    // payload -> 'world!'
 };
 
 start();
@@ -69,11 +69,11 @@ const Nes = require('@hapi/nes');
 const server = new Hapi.Server();
 
 const start = async () => {
-  await server.register(Nes);
-  server.subscription('/item/{id}');
-  await server.start();
-  server.publish('/item/5', { id: 5, status: 'complete' });
-  server.publish('/item/6', { id: 6, status: 'initial' });
+    await server.register(Nes);
+    server.subscription('/item/{id}');
+    await server.start();
+    server.publish('/item/5', { id: 5, status: 'complete' });
+    server.publish('/item/6', { id: 6, status: 'initial' });
 };
 
 start();
@@ -86,13 +86,13 @@ const Nes = require('@hapi/nes');
 
 const client = new Nes.Client('ws://localhost');
 const start = async () => {
-  await client.connect();
-  const handler = (update, flags) => {
-    // update -> { id: 5, status: 'complete' }
-    // Second publish is not received (doesn't match)
-  };
+    await client.connect();
+    const handler = (update, flags) => {
+        // update -> { id: 5, status: 'complete' }
+        // Second publish is not received (doesn't match)
+    };
 
-  client.subscribe('/item/5', handler);
+    client.subscribe('/item/5', handler);
 };
 
 start();
@@ -109,9 +109,9 @@ const Nes = require('@hapi/nes');
 const server = new Hapi.Server();
 
 const start = async () => {
-  await server.register(Nes);
-  await server.start();
-  server.broadcast('welcome!');
+    await server.register(Nes);
+    await server.start();
+    server.broadcast('welcome!');
 };
 
 start();
@@ -124,10 +124,10 @@ const Nes = require('@hapi/nes');
 
 const client = new Nes.Client('ws://localhost');
 const start = async () => {
-  await client.connect();
-  client.onUpdate = (update) => {
-    // update -> 'welcome!'
-  };
+    await client.connect();
+    client.onUpdate = (update) => {
+        // update -> 'welcome!'
+    };
 };
 
 start();
@@ -146,46 +146,47 @@ const Nes = require('@hapi/nes');
 const server = new Hapi.Server();
 
 const start = async () => {
-  await server.register([Basic, Nes]);
+    await server.register([Basic, Nes]);
 
-  // Set up HTTP Basic authentication
+    // Set up HTTP Basic authentication
 
-  const users = {
-    john: {
-      username: 'john',
-      password: '$2a$10$iqJSHD.BGr0E2IxQwYgJmeP3NvhPrXAeLSaGCj6IR/XU5QtjVu5Tm', // 'secret'
-      name: 'John Doe',
-      id: '2133d32a',
-    },
-  };
+    const users = {
+        john: {
+            username: 'john',
+            password:
+                '$2a$10$iqJSHD.BGr0E2IxQwYgJmeP3NvhPrXAeLSaGCj6IR/XU5QtjVu5Tm', // 'secret'
+            name: 'John Doe',
+            id: '2133d32a',
+        },
+    };
 
-  const validate = async (request, username, password) => {
-    const user = users[username];
-    if (!user) {
-      return { isValid: false };
-    }
+    const validate = async (request, username, password) => {
+        const user = users[username];
+        if (!user) {
+            return { isValid: false };
+        }
 
-    const isValid = await Bcrypt.compare(password, user.password);
-    const credentials = { id: user.id, name: user.name };
-    return { isValid, credentials };
-  };
+        const isValid = await Bcrypt.compare(password, user.password);
+        const credentials = { id: user.id, name: user.name };
+        return { isValid, credentials };
+    };
 
-  server.auth.strategy('simple', 'basic', { validate });
+    server.auth.strategy('simple', 'basic', { validate });
 
-  // Configure route with authentication
+    // Configure route with authentication
 
-  server.route({
-    method: 'GET',
-    path: '/h',
-    config: {
-      id: 'hello',
-      handler: (request, h) => {
-        return `Hello ${request.auth.credentials.name}`;
-      },
-    },
-  });
+    server.route({
+        method: 'GET',
+        path: '/h',
+        config: {
+            id: 'hello',
+            handler: (request, h) => {
+                return `Hello ${request.auth.credentials.name}`;
+            },
+        },
+    });
 
-  await server.start();
+    await server.start();
 };
 
 start();
@@ -198,11 +199,11 @@ const Nes = require('@hapi/nes');
 
 const client = new Nes.Client('ws://localhost');
 const start = async () => {
-  await client.connect({
-    auth: { headers: { authorization: 'Basic am9objpzZWNyZXQ=' } },
-  });
-  const payload = await client.request('hello'); // Can also request '/h'
-  // payload -> 'Hello John Doe'
+    await client.connect({
+        auth: { headers: { authorization: 'Basic am9objpzZWNyZXQ=' } },
+    });
+    const payload = await client.request('hello'); // Can also request '/h'
+    // payload -> 'Hello John Doe'
 };
 
 start();
@@ -221,43 +222,44 @@ const Nes = require('@hapi/nes');
 const server = new Hapi.Server();
 
 const start = async () => {
-  await server.register([Basic, Nes]);
+    await server.register([Basic, Nes]);
 
-  // Set up HTTP Basic authentication
+    // Set up HTTP Basic authentication
 
-  const users = {
-    john: {
-      username: 'john',
-      password: '$2a$10$iqJSHD.BGr0E2IxQwYgJmeP3NvhPrXAeLSaGCj6IR/XU5QtjVu5Tm', // 'secret'
-      name: 'John Doe',
-      id: '2133d32a',
-    },
-  };
+    const users = {
+        john: {
+            username: 'john',
+            password:
+                '$2a$10$iqJSHD.BGr0E2IxQwYgJmeP3NvhPrXAeLSaGCj6IR/XU5QtjVu5Tm', // 'secret'
+            name: 'John Doe',
+            id: '2133d32a',
+        },
+    };
 
-  const validate = async (request, username, password) => {
-    const user = users[username];
-    if (!user) {
-      return { isValid: false };
-    }
+    const validate = async (request, username, password) => {
+        const user = users[username];
+        if (!user) {
+            return { isValid: false };
+        }
 
-    const isValid = await Bcrypt.compare(password, user.password);
-    const credentials = { id: user.id, name: user.name };
-    return { isValid, credentials };
-  };
+        const isValid = await Bcrypt.compare(password, user.password);
+        const credentials = { id: user.id, name: user.name };
+        return { isValid, credentials };
+    };
 
-  server.auth.strategy('simple', 'basic', 'required', { validate });
+    server.auth.strategy('simple', 'basic', 'required', { validate });
 
-  // Set up subscription
+    // Set up subscription
 
-  server.subscription('/items', {
-    filter: (path, message, options) => {
-      return message.updater !== options.credentials.username;
-    },
-  });
+    server.subscription('/items', {
+        filter: (path, message, options) => {
+            return message.updater !== options.credentials.username;
+        },
+    });
 
-  await server.start();
-  server.publish('/items', { id: 5, status: 'complete', updater: 'john' });
-  server.publish('/items', { id: 6, status: 'initial', updater: 'steve' });
+    await server.start();
+    server.publish('/items', { id: 5, status: 'complete', updater: 'john' });
+    server.publish('/items', { id: 6, status: 'initial', updater: 'steve' });
 };
 
 start();
@@ -273,15 +275,15 @@ const client = new Nes.Client('ws://localhost');
 // Authenticate as 'john'
 
 const start = async () => {
-  await client.connect({
-    auth: { headers: { authorization: 'Basic am9objpzZWNyZXQ=' } },
-  });
-  const handler = (update, flags) => {
-    // First publish is not received (filtered due to updater key)
-    // update -> { id: 6, status: 'initial', updater: 'steve' }
-  };
+    await client.connect({
+        auth: { headers: { authorization: 'Basic am9objpzZWNyZXQ=' } },
+    });
+    const handler = (update, flags) => {
+        // First publish is not received (filtered due to updater key)
+        // update -> { id: 6, status: 'initial', updater: 'steve' }
+    };
 
-  client.subscribe('/items', handler);
+    client.subscribe('/items', handler);
 };
 
 start();
@@ -300,93 +302,93 @@ method. The plugin accepts the following optional registration options:
 
 - `onConnection` - a function with the signature `function(socket)` invoked for each incoming client
   connection where:
-  - `socket` - the [`Socket`](#socket) object of the incoming connection.
+    - `socket` - the [`Socket`](#socket) object of the incoming connection.
 - `onDisconnection` - a function with the signature `function(socket)` invoked for each incoming client
   connection on disconnect where:
-  - `socket` - the [`Socket`](#socket) object of the connection.
+    - `socket` - the [`Socket`](#socket) object of the connection.
 - `onMessage` - a function with the signature `async function(socket, message)` used to receive custom
   client messages (when the client calls [`client.message()`](#clientmessagedata)) where:
-  - `socket` - the [`Socket`](#socket) object of the message source.
-  - `message` - the message sent by the client.
-  - the function may return a response to the client.
+    - `socket` - the [`Socket`](#socket) object of the message source.
+    - `message` - the message sent by the client.
+    - the function may return a response to the client.
 - `auth` - optional plugin authentication options with the following supported values:
-  - `false` - no client authentication supported.
-  - an object with the following optional keys:
-    - `type` - the type of authentication flow supported by the server. Each type has a very different
-      security profile. The following types are supported:
-      - `'direct'` - the plugin configures an internal authentication endpoint which is only called
-        internally by the plugin when the client provides its authentication credentials (or by
-        passing an `auth` option to [`client.connect()`](#await-clientconnectoptions)). The
-        endpoint returns a copy of the credentials object (along with any artifacts) to the plugin
-        which is then used for all subsequent client requests and subscriptions. This type requires
-        exposing the underlying credentials to the application. Note that if the authentication scheme
-        uses the HTTP request method (e.g. [hawk](https://github.com/hueniverse/hawk) or
-        [oz](https://github.com/hueniverse/oz)) you need to use `'auth'` as the value (and
-        not `'GET'`). This is the default value.
-      - `'cookie'` - the plugin configures a public authentication endpoint which must be called
-        by the client application manually before it calls [`client.connect()`](#await-clientconnectoptions).
-        When the endpoint is called with valid credentials, it sets a cookie with the provided
-        `name` which the browser then transmits back to the server when the WebSocket connection
-        is made. This type removes the need to expose the authentication credentials to the
-        JavaScript layer but requires an additional round trip before establishing a client
-        connection.
-      - `'token'` - the plugin configures a public authentication endpoint which must be called
-        by the client application manually before it calls [`client.connect()`](#await-clientconnectoptions).
-        When the endpoint is called with valid credentials, it returns an encrypted authentication
-        token which the client can use to authenticate the connection by passing an `auth` option
-        to [`client.connect()`](#await-clientconnectoptions) with the token. This type is useful
-        when the client-side application needs to manage its credentials differently than relying
-        on cookies (e.g. non-browser clients).
-    - `endpoint` - the HTTP path of the authentication endpoint. Note that even though the `'direct'`
-      type does not exposes the endpoint, it is still created internally and registered using the
-      provided path. Change it only if the default path creates a conflict. Defaults to `'/nes/auth'`.
-    - `id` - the authentication endpoint identifier. Change it only if the default id creates a conflict.
-      Defaults to `nes.auth`.
-    - `route` - the **hapi** route `config.auth` settings. The authentication endpoint must be
-      configured with at least one authentication strategy which the client is going to use to
-      authenticate. The `route` value must be set to a valid value supported by the **hapi** route
-      `auth` configuration. Defaults to the default authentication strategy if one is present,
-      otherwise no authentication will be possible (clients will fail to authenticate).
-    - `password` - the password used by the [**iron**](https://github.com/hueniverse/iron) module
-      to encrypt the cookie or token values. If no password is provided, one is automatically
-      generated. However, the password will change every time the process is restarted (as well
-      as generate different results on a distributed system). It is recommended that a password
-      is manually set and managed by the application.
-    - `iron` - the settings used by the [**iron**](https://github.com/hueniverse/iron) module.
-      Defaults to the **iron** defaults.
-    - `cookie` - the cookie name when using type `'cookie'`. Defaults to `'nes'`.
-    - `isSecure` - the cookie secure flag when using type `'cookie'`. Defaults to `true`.
-    - `isHttpOnly` - the cookie HTTP only flag when using type `'cookie'`. Defaults to `true`.
-    - `path` - the cookie path when using type `'cookie'`. Defaults to `'/'`.
-    - `domain` - the cookie domain when using type `'cookie'`. Defaults to no domain.
-    - `ttl` - the cookie expiration milliseconds when using type `'cookie'`. Defaults to current
-      session only.
-    - `index` - if `true`, authenticated socket with `user` property in `credentials` are mapped
-      for usage in [`server.broadcast()`](#serverbroadcastmessage-options) calls. Defaults to `false`.
-    - `timeout` - number of milliseconds after which a new connection is disconnected if authentication
-      is required but the connection has not yet sent a hello message. No timeout if set to `false`.
-      Defaults to `5000` (5 seconds).
-    - `maxConnectionsPerUser` - if specified, limits authenticated users to a maximum number of
-      client connections. Requires the `index` option enabled. Defaults to `false`.
-    - `minAuthVerifyInterval` - if specified, waits at least the specificed number of milliseconds
-      between calls to [`await server.auth.verify()`](https://hapijs.com/api#-await-serverauthverifyrequest)
-      to check if credentials are still valid. Cannot be shorter than `heartbeat.interval`.
-      Defaults to `heartbeat.interval` or `15000` if `heartbeat` is disabled.
+    - `false` - no client authentication supported.
+    - an object with the following optional keys:
+        - `type` - the type of authentication flow supported by the server. Each type has a very different
+          security profile. The following types are supported:
+            - `'direct'` - the plugin configures an internal authentication endpoint which is only called
+              internally by the plugin when the client provides its authentication credentials (or by
+              passing an `auth` option to [`client.connect()`](#await-clientconnectoptions)). The
+              endpoint returns a copy of the credentials object (along with any artifacts) to the plugin
+              which is then used for all subsequent client requests and subscriptions. This type requires
+              exposing the underlying credentials to the application. Note that if the authentication scheme
+              uses the HTTP request method (e.g. [hawk](https://github.com/hueniverse/hawk) or
+              [oz](https://github.com/hueniverse/oz)) you need to use `'auth'` as the value (and
+              not `'GET'`). This is the default value.
+            - `'cookie'` - the plugin configures a public authentication endpoint which must be called
+              by the client application manually before it calls [`client.connect()`](#await-clientconnectoptions).
+              When the endpoint is called with valid credentials, it sets a cookie with the provided
+              `name` which the browser then transmits back to the server when the WebSocket connection
+              is made. This type removes the need to expose the authentication credentials to the
+              JavaScript layer but requires an additional round trip before establishing a client
+              connection.
+            - `'token'` - the plugin configures a public authentication endpoint which must be called
+              by the client application manually before it calls [`client.connect()`](#await-clientconnectoptions).
+              When the endpoint is called with valid credentials, it returns an encrypted authentication
+              token which the client can use to authenticate the connection by passing an `auth` option
+              to [`client.connect()`](#await-clientconnectoptions) with the token. This type is useful
+              when the client-side application needs to manage its credentials differently than relying
+              on cookies (e.g. non-browser clients).
+        - `endpoint` - the HTTP path of the authentication endpoint. Note that even though the `'direct'`
+          type does not exposes the endpoint, it is still created internally and registered using the
+          provided path. Change it only if the default path creates a conflict. Defaults to `'/nes/auth'`.
+        - `id` - the authentication endpoint identifier. Change it only if the default id creates a conflict.
+          Defaults to `nes.auth`.
+        - `route` - the **hapi** route `config.auth` settings. The authentication endpoint must be
+          configured with at least one authentication strategy which the client is going to use to
+          authenticate. The `route` value must be set to a valid value supported by the **hapi** route
+          `auth` configuration. Defaults to the default authentication strategy if one is present,
+          otherwise no authentication will be possible (clients will fail to authenticate).
+        - `password` - the password used by the [**iron**](https://github.com/hueniverse/iron) module
+          to encrypt the cookie or token values. If no password is provided, one is automatically
+          generated. However, the password will change every time the process is restarted (as well
+          as generate different results on a distributed system). It is recommended that a password
+          is manually set and managed by the application.
+        - `iron` - the settings used by the [**iron**](https://github.com/hueniverse/iron) module.
+          Defaults to the **iron** defaults.
+        - `cookie` - the cookie name when using type `'cookie'`. Defaults to `'nes'`.
+        - `isSecure` - the cookie secure flag when using type `'cookie'`. Defaults to `true`.
+        - `isHttpOnly` - the cookie HTTP only flag when using type `'cookie'`. Defaults to `true`.
+        - `path` - the cookie path when using type `'cookie'`. Defaults to `'/'`.
+        - `domain` - the cookie domain when using type `'cookie'`. Defaults to no domain.
+        - `ttl` - the cookie expiration milliseconds when using type `'cookie'`. Defaults to current
+          session only.
+        - `index` - if `true`, authenticated socket with `user` property in `credentials` are mapped
+          for usage in [`server.broadcast()`](#serverbroadcastmessage-options) calls. Defaults to `false`.
+        - `timeout` - number of milliseconds after which a new connection is disconnected if authentication
+          is required but the connection has not yet sent a hello message. No timeout if set to `false`.
+          Defaults to `5000` (5 seconds).
+        - `maxConnectionsPerUser` - if specified, limits authenticated users to a maximum number of
+          client connections. Requires the `index` option enabled. Defaults to `false`.
+        - `minAuthVerifyInterval` - if specified, waits at least the specificed number of milliseconds
+          between calls to [`await server.auth.verify()`](https://hapijs.com/api#-await-serverauthverifyrequest)
+          to check if credentials are still valid. Cannot be shorter than `heartbeat.interval`.
+          Defaults to `heartbeat.interval` or `15000` if `heartbeat` is disabled.
 - `headers` - an optional array of header field names to include in server responses to the client.
   If set to `'*'` (without an array), allows all headers. Defaults to `null` (no headers).
 - `payload` - optional message payload settings where:
-  - `maxChunkChars` - the maximum number of characters (after the full protocol object is converted
-    to a string using `JSON.stringify()`) allowed in a single WebSocket message. This is important
-    when using the protocol over a slow network (e.g. mobile) with large updates as the transmission
-    time can exceed the timeout or heartbeat limits which will cause the client to disconnect.
-    Defaults to `false` (no limit).
+    - `maxChunkChars` - the maximum number of characters (after the full protocol object is converted
+      to a string using `JSON.stringify()`) allowed in a single WebSocket message. This is important
+      when using the protocol over a slow network (e.g. mobile) with large updates as the transmission
+      time can exceed the timeout or heartbeat limits which will cause the client to disconnect.
+      Defaults to `false` (no limit).
 - `heartbeat` - configures connection keep-alive settings where value can be:
-  - `false` - no heartbeats.
-  - an object with:
-    - `interval` - time interval between heartbeat messages in milliseconds. Defaults to `15000`
-      (15 seconds).
-    - `timeout` - timeout in milliseconds after a heartbeat is sent to the client and before the
-      client is considered disconnected by the server. Defaults to `5000` (5 seconds).
+    - `false` - no heartbeats.
+    - an object with:
+        - `interval` - time interval between heartbeat messages in milliseconds. Defaults to `15000`
+          (15 seconds).
+        - `timeout` - timeout in milliseconds after a heartbeat is sent to the client and before the
+          client is considered disconnected by the server. Defaults to `5000` (5 seconds).
 - `maxConnections` - if specified, limits the number of simultaneous client connections. Defaults to
   `false`.
 - `origin` - an origin string or an array of origin strings incoming client requests must match for
@@ -404,9 +406,9 @@ Sends a message to all connected clients where:
 - `message` - the message sent to the clients. Can be any type which can be safely converted to
   string using `JSON.stringify()`.
 - `options` - optional object with the following:
-  - `user` - optional user filter. When provided, the message will be sent only to authenticated
-    sockets with `credentials.user` equal to `user`. Requires the `auth.index` options to be
-    configured to `true`.
+    - `user` - optional user filter. When provided, the message will be sent only to authenticated
+      sockets with `credentials.user` equal to `user`. Requires the `auth.index` options to be
+      configured to `true`.
 
 Note that in a multi server deployment, only the client connected to the current server will receive
 the message.
@@ -418,52 +420,52 @@ Declares a subscription path client can subscribe to where:
 - `path` - an HTTP-like path. The path must begin with the `'/'` character. The path may contain
   path parameters as supported by the **hapi** route path parser.
 - `options` - an optional object where:
-  - `filter` - a publishing filter function for making per-client connection decisions about which
-    matching publication update should be sent to which client. The function uses the signature
-    `async function(path, message, options)` where:
-    - `path` - the path of the published update. The path is provided in case the subscription
-      contains path parameters.
-    - `message` - the message being published.
-    - `options` - additional information about the subscription and client:
-      - `socket` - the current socket being published to.
-      - `credentials` - the client credentials if authenticated.
-      - `params` - the parameters parsed from the publish message path if the subscription
-        path contains parameters.
-      - `internal` - the `internal` options data passed to the publish call, if defined.
-    - the function must return a value of (or a promise that resolves into):
-      - `true` - to proceed sending the message.
-      - `false` - to skip sending the message.
-      - `{ override }` - an override `message` to send to this `socket` instead of the
-        published one. Note that if you want to modify `message`, you must clone it first or
-        the changes will apply to all other sockets.
-  - `auth` - the subscription authentication options with the following supported values:
-    - `false` - no authentication required to subscribe.
-    - a configuration object with the following optional keys:
-      - `mode` - same as the **hapi** route auth modes:
-        - `'required'` - authentication is required. This is the default value.
-        - `'optional'` - authentication is optional.
-      - `scope` - a string or array of string of authentication scope as supported by the
-        **hapi** route authenticate configuration.
-      - `entity` - the required credentials type as supported by the **hapi** route
-        authentication configuration:
-        - `'user'`
-        - `'app'`
-        - `'any'`
-      - `index` - if `true`, authenticated socket with `user` property in `credentials` are
-        mapped for usage in [`server.publish()`](#await-socketpublishpath-message) calls.
-        Defaults to `false`.
-  - `onSubscribe` - a method called when a client subscribes to this subscription endpoint using
-    the signature `async function(socket, path, params)` where:
-    - `socket` - the [`Socket`](#socket) object of the incoming connection.
-    - `path` - the path the client subscribed to
-    - `params` - the parameters parsed from the subscription request path if the subscription
-      path definition contains parameters.
-  - `onUnsubscribe` - a method called when a client unsubscribes from this subscription endpoint
-    using the signature `async function(socket, path, params)` where:
-    - `socket` - the [`Socket`](#socket) object of the incoming connection.
-    - `path` - Path of the unsubscribed route.
-    - `params` - the parameters parsed from the subscription request path if the subscription
-      path definition contains parameters.
+    - `filter` - a publishing filter function for making per-client connection decisions about which
+      matching publication update should be sent to which client. The function uses the signature
+      `async function(path, message, options)` where:
+        - `path` - the path of the published update. The path is provided in case the subscription
+          contains path parameters.
+        - `message` - the message being published.
+        - `options` - additional information about the subscription and client:
+            - `socket` - the current socket being published to.
+            - `credentials` - the client credentials if authenticated.
+            - `params` - the parameters parsed from the publish message path if the subscription
+              path contains parameters.
+            - `internal` - the `internal` options data passed to the publish call, if defined.
+        - the function must return a value of (or a promise that resolves into):
+            - `true` - to proceed sending the message.
+            - `false` - to skip sending the message.
+            - `{ override }` - an override `message` to send to this `socket` instead of the
+              published one. Note that if you want to modify `message`, you must clone it first or
+              the changes will apply to all other sockets.
+    - `auth` - the subscription authentication options with the following supported values:
+        - `false` - no authentication required to subscribe.
+        - a configuration object with the following optional keys:
+            - `mode` - same as the **hapi** route auth modes:
+                - `'required'` - authentication is required. This is the default value.
+                - `'optional'` - authentication is optional.
+            - `scope` - a string or array of string of authentication scope as supported by the
+              **hapi** route authenticate configuration.
+            - `entity` - the required credentials type as supported by the **hapi** route
+              authentication configuration:
+                - `'user'`
+                - `'app'`
+                - `'any'`
+            - `index` - if `true`, authenticated socket with `user` property in `credentials` are
+              mapped for usage in [`server.publish()`](#await-socketpublishpath-message) calls.
+              Defaults to `false`.
+    - `onSubscribe` - a method called when a client subscribes to this subscription endpoint using
+      the signature `async function(socket, path, params)` where:
+        - `socket` - the [`Socket`](#socket) object of the incoming connection.
+        - `path` - the path the client subscribed to
+        - `params` - the parameters parsed from the subscription request path if the subscription
+          path definition contains parameters.
+    - `onUnsubscribe` - a method called when a client unsubscribes from this subscription endpoint
+      using the signature `async function(socket, path, params)` where:
+        - `socket` - the [`Socket`](#socket) object of the incoming connection.
+        - `path` - Path of the unsubscribed route.
+        - `params` - the parameters parsed from the subscription request path if the subscription
+          path definition contains parameters.
 
 ### `await server.publish(path, message, [options])`
 
@@ -477,11 +479,11 @@ Sends a message to all the subscribed clients where:
 - `message` - the message sent to the clients. Can be any type which can be safely converted to
   string using `JSON.stringify()`.
 - `options` - optional object that may include
-  - `internal` - Internal data that is passed to `filter` and may be used to filter messages
-    on data that is not sent to the client.
-  - `user` - optional user filter. When provided, the message will be sent only to authenticated
-    sockets with `credentials.user` equal to `user`. Requires the subscription `auth.index`
-    options to be configured to `true`.
+    - `internal` - Internal data that is passed to `filter` and may be used to filter messages
+      on data that is not sent to the client.
+    - `user` - optional user filter. When provided, the message will be sent only to authenticated
+      sockets with `credentials.user` equal to `user`. Requires the subscription `auth.index`
+      options to be configured to `true`.
 
 ### `await server.eachSocket(each, [options])`
 
@@ -490,11 +492,11 @@ a given subscription. This operation is synchronous.
 
 - `each` - Iteration method in the form `async function(socket)`.
 - `options` - Optional options object
-  - `subscription` - When set to a string path, limits the results to sockets that are
-    subscribed to that path.
-  - `user` - optional user filter. When provided, the `each` method will be invoked with
-    authenticated sockets with `credentials.user` equal to `user`. Requires the subscription
-    `auth.index` options to be configured to `true`.
+    - `subscription` - When set to a string path, limits the results to sockets that are
+      subscribed to that path.
+    - `user` - optional user filter. When provided, the `each` method will be invoked with
+      authenticated sockets with `credentials.user` equal to `user`. Requires the subscription
+      `auth.index` options to be configured to `true`.
 
 ## Socket
 
@@ -559,7 +561,7 @@ Revokes a subscription and optionally includes a last update where:
   safely converted to string using `JSON.stringify()`. Pass `null` to revoke the subscription without
   sending a last update.
 - `options` - optional settings:
-  - `ignoreClosed` - ignore errors if the underlying websocket has been closed. Defaults to `false`.
+    - `ignoreClosed` - ignore errors if the underlying websocket has been closed. Defaults to `false`.
 
 ## Request
 
@@ -580,9 +582,9 @@ Creates a new client object where:
 
 - `url` - the WebSocket address to connect to (e.g. `'wss://localhost:8000'`).
 - `option` - optional configuration object where:
-  - `ws` - available only when the client is used in node.js and passed as-is to the
-    [**ws** module](https://www.npmjs.com/package/ws).
-  - `timeout` - server response timeout in milliseconds. Defaults to `false` (no timeout).
+    - `ws` - available only when the client is used in node.js and passed as-is to the
+      [**ws** module](https://www.npmjs.com/package/ws).
+    - `timeout` - server response timeout in milliseconds. Defaults to `false` (no timeout).
 
 ### `client.onError`
 
@@ -601,11 +603,11 @@ where:
 
 - `willReconnect` - a boolean indicating if the client will automatically attempt to reconnect.
 - `log` - an object with the following optional keys:
-  - `code` - the [RFC6455](https://tools.ietf.org/html/rfc6455#section-7.4.1) status code.
-  - `explanation` - the [RFC6455](https://tools.ietf.org/html/rfc6455#section-7.4.1) explanation for the
-    `code`.
-  - `reason` - a human-readable text explaining the reason for closing.
-  - `wasClean` - if `false`, the socket was closed abnormally.
+    - `code` - the [RFC6455](https://tools.ietf.org/html/rfc6455#section-7.4.1) status code.
+    - `explanation` - the [RFC6455](https://tools.ietf.org/html/rfc6455#section-7.4.1) explanation for the
+      `code`.
+    - `reason` - a human-readable text explaining the reason for closing.
+    - `wasClean` - if `false`, the socket was closed abnormally.
 
 ### `client.onHeartbeatTimeout`
 
@@ -626,21 +628,21 @@ the server calls `server.broadcast()` or `socket.send()`.
 Connects the client to the server where:
 
 - `options` - an optional configuration object with the following options:
-  - `auth` - sets the credentials used to authenticate. when the server is configured for
-    `'token'` type authentication, the value is the token response received from the
-    authentication endpoint (called manually by the application). When the server is
-    configured for `'direct'` type authentication, the value is the credentials expected
-    by the server for the specified authentication strategy used which typically means an
-    object with headers (e.g. `{ headers: { authorization: 'Basic am9objpzZWNyZXQ=' } }`).
-  - `reconnect` - a boolean that indicates whether the client should try to reconnect. Defaults to `true`.
-  - `delay` - time in milliseconds to wait between each reconnection attempt. The delay time
-    is cumulative, meaning that if the value is set to `1000` (1 second), the first wait will
-    be 1 seconds, then 2 seconds, 3 seconds, until the `maxDelay` value is reached and then
-    `maxDelay` is used.
-  - `maxDelay` - the maximum delay time in milliseconds between reconnections.
-  - `retries` - number of reconnection attempts. Defaults to `Infinity` (unlimited).
-  - `timeout` - socket connection timeout in milliseconds. Defaults to the WebSocket
-    implementation timeout default.
+    - `auth` - sets the credentials used to authenticate. when the server is configured for
+      `'token'` type authentication, the value is the token response received from the
+      authentication endpoint (called manually by the application). When the server is
+      configured for `'direct'` type authentication, the value is the credentials expected
+      by the server for the specified authentication strategy used which typically means an
+      object with headers (e.g. `{ headers: { authorization: 'Basic am9objpzZWNyZXQ=' } }`).
+    - `reconnect` - a boolean that indicates whether the client should try to reconnect. Defaults to `true`.
+    - `delay` - time in milliseconds to wait between each reconnection attempt. The delay time
+      is cumulative, meaning that if the value is set to `1000` (1 second), the first wait will
+      be 1 seconds, then 2 seconds, 3 seconds, until the `maxDelay` value is reached and then
+      `maxDelay` is used.
+    - `maxDelay` - the maximum delay time in milliseconds between reconnections.
+    - `retries` - number of reconnection attempts. Defaults to `Infinity` (unlimited).
+    - `timeout` - socket connection timeout in milliseconds. Defaults to the WebSocket
+      implementation timeout default.
 
 ### `await client.disconnect()`
 
@@ -656,14 +658,14 @@ established.
 Sends an endpoint request to the server where:
 
 - `options` - value can be one of:
-  - a string with the requested endpoint path or route id (defaults to a GET method).
-  - an object with the following keys:
-    - `path` - the requested endpoint path or route id.
-    - `method` - the requested HTTP method (can also be any method string supported by the
-      server). Defaults to `'GET'`.
-    - `headers` - an object where each key is a request header and the value the header
-      content. Cannot include an Authorization header. Defaults to no headers.
-    - `payload` - the request payload sent to the server.
+    - a string with the requested endpoint path or route id (defaults to a GET method).
+    - an object with the following keys:
+        - `path` - the requested endpoint path or route id.
+        - `method` - the requested HTTP method (can also be any method string supported by the
+          server). Defaults to `'GET'`.
+        - `headers` - an object where each key is a request header and the value the header
+          content. Cannot include an Authorization header. Defaults to no headers.
+        - `payload` - the request payload sent to the server.
 
 Rejects with `Error` if the request failed.
 
@@ -689,10 +691,10 @@ Subscribes to a server subscription where:
   `'/item/5'` or `'/updates'` based on the paths supported by the server).
 - `handler` - the function used to receive subscription updates using the
   signature `function(message, flags)` where:
-  - `message` - the subscription update sent by the server.
-  - `flags` - an object with the following optional flags:
-    - `revoked` - set to `true` when the message is the last update from the server due to
-      a subscription revocation.
+    - `message` - the subscription update sent by the server.
+    - `flags` - an object with the following optional flags:
+        - `revoked` - set to `true` when the message is the last update from the server due to
+          a subscription revocation.
 
 Note that when `subscribe()` is called before the client connects, any server errors will be
 throw by `connect()`.
@@ -740,9 +742,9 @@ the server dropping the connection.
 When a client method returns or throws an error, the error is decorated with:
 
 - `type` - a string indicating the source of the error where:
-  - `'disconnect'` - the socket disconnected before the request completed.
-  - `'protocol'` - the client received an invalid message from the server violating the protocol.
-  - `'server'` - an error response sent from the server.
-  - `'timeout'` - a timeout event.
-  - `'user'` - user error (e.g. incorrect use of the API).
-  - `'ws'` - a socket error.
+    - `'disconnect'` - the socket disconnected before the request completed.
+    - `'protocol'` - the client received an invalid message from the server violating the protocol.
+    - `'server'` - an error response sent from the server.
+    - `'timeout'` - a timeout event.
+    - `'user'` - user error (e.g. incorrect use of the API).
+    - `'ws'` - a socket error.

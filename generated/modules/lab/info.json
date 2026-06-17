@@ -1,28 +1,28 @@
 {
-  "api": true,
-  "forks": 177,
-  "isPlugin": false,
-  "latestVersion": "26.x.x",
-  "link": "https://github.com/hapijs/lab",
-  "name": "lab",
-  "package": "@hapi/lab",
-  "slogan": "Node test utility.",
-  "sloganHtml": "Node test utility.",
-  "stars": 739,
-  "updated": "2026-03-26T19:23:31Z",
-  "versions": [
-    {
-      "branch": "v25.3.2",
-      "license": "BSD",
-      "name": "25.3.2",
-      "node": ">= 16"
-    },
-    {
-      "branch": "v26.0.1",
-      "license": "BSD",
-      "name": "26.0.1",
-      "node": ">= 16"
-    }
-  ],
-  "versionsArray": ["26.0.1", "25.3.2"]
+    "api": true,
+    "forks": 177,
+    "isPlugin": false,
+    "latestVersion": "26.x.x",
+    "link": "https://github.com/hapijs/lab",
+    "name": "lab",
+    "package": "@hapi/lab",
+    "slogan": "Node test utility.",
+    "sloganHtml": "Node test utility.",
+    "stars": 739,
+    "updated": "2026-03-26T19:23:31Z",
+    "versions": [
+        {
+            "branch": "v25.3.2",
+            "license": "BSD",
+            "name": "25.3.2",
+            "node": ">= 16"
+        },
+        {
+            "branch": "v26.0.1",
+            "license": "BSD",
+            "name": "26.0.1",
+            "node": ">= 16"
+        }
+    ],
+    "versionsArray": ["26.0.1", "25.3.2"]
 }

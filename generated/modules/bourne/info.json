@@ -1,22 +1,22 @@
 {
-  "api": true,
-  "forks": 12,
-  "isPlugin": false,
-  "latestVersion": "3.x.x",
-  "link": "https://github.com/hapijs/bourne",
-  "name": "bourne",
-  "package": "@hapi/bourne",
-  "slogan": "JSON.parse() drop-in replacement with prototype poisoning protection.",
-  "sloganHtml": "JSON.parse() drop-in replacement with prototype poisoning protection.",
-  "stars": 180,
-  "updated": "2024-10-23T15:09:24Z",
-  "versions": [
-    {
-      "branch": "v3.0.0",
-      "license": "BSD",
-      "name": "3.0.0",
-      "node": ">= 16"
-    }
-  ],
-  "versionsArray": ["3.0.0"]
+    "api": true,
+    "forks": 12,
+    "isPlugin": false,
+    "latestVersion": "3.x.x",
+    "link": "https://github.com/hapijs/bourne",
+    "name": "bourne",
+    "package": "@hapi/bourne",
+    "slogan": "JSON.parse() drop-in replacement with prototype poisoning protection.",
+    "sloganHtml": "JSON.parse() drop-in replacement with prototype poisoning protection.",
+    "stars": 180,
+    "updated": "2024-10-23T15:09:24Z",
+    "versions": [
+        {
+            "branch": "v3.0.0",
+            "license": "BSD",
+            "name": "3.0.0",
+            "node": ">= 16"
+        }
+    ],
+    "versionsArray": ["3.0.0"]
 }

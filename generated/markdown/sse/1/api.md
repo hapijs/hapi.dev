@@ -26,9 +26,9 @@ await server.start();
 
 // Publish from anywhere
 await server.sse.publish(
-  '/chat/general',
-  { text: 'hello', user: 'alice' },
-  { event: 'message' },
+    '/chat/general',
+    { text: 'hello', user: 'alice' },
+    { event: 'message' },
 );
 ```
 
@@ -60,20 +60,20 @@ Registers a subscription route. Clients connect via `GET <path>`.
 
 ```typescript
 server.sse.subscription('/chat/{room}', {
-  auth: 'jwt',
-  retry: 5000,
-  keepAlive: { interval: 10_000 },
-  refuse: (request) => server.app.shuttingDown || circuitBreaker.isOpen(),
-  filter: async (path, message, { credentials, params, internal }) => {
-    if (params.room !== internal.targetRoom) {
-      return false; // don't deliver
-    }
-    return { override: { ...message, filtered: true } }; // or transform
-  },
-  onSubscribe: async (session, path, params) => {},
-  onUnsubscribe: (session, path, params) => {},
-  onReconnect: async (session, path, params) => {},
-  replay: new FiniteReplayer({ size: 100 }), // optional, see Replay section
+    auth: 'jwt',
+    retry: 5000,
+    keepAlive: { interval: 10_000 },
+    refuse: (request) => server.app.shuttingDown || circuitBreaker.isOpen(),
+    filter: async (path, message, { credentials, params, internal }) => {
+        if (params.room !== internal.targetRoom) {
+            return false; // don't deliver
+        }
+        return { override: { ...message, filtered: true } }; // or transform
+    },
+    onSubscribe: async (session, path, params) => {},
+    onUnsubscribe: (session, path, params) => {},
+    onReconnect: async (session, path, params) => {},
+    replay: new FiniteReplayer({ size: 100 }), // optional, see Replay section
 });
 ```
 
@@ -99,14 +99,14 @@ Publishes an event to all matching subscribers. Returns the number of sessions t
 
 ```typescript
 const delivered = await server.sse.publish(
-  '/chat/general',
-  { text: 'hello everyone', user: 'alice' },
-  {
-    event: 'message',
-    id: 'msg-42',
-    internal: { targetRoom: 'general' }, // passed to filter
-    matchMode: 'literal', // 'pattern' (default) or 'literal'
-  },
+    '/chat/general',
+    { text: 'hello everyone', user: 'alice' },
+    {
+        event: 'message',
+        id: 'msg-42',
+        internal: { targetRoom: 'general' }, // passed to filter
+        matchMode: 'literal', // 'pattern' (default) or 'literal'
+    },
 );
 
 console.log(`Delivered to ${delivered} sessions`);
@@ -125,8 +125,8 @@ Sends an event to every connected session across all subscriptions. Returns the 
 
 ```typescript
 const count = await server.sse.broadcast(
-  { text: 'Server restarting in 5 minutes', user: 'system' },
-  { event: 'system' },
+    { text: 'Server restarting in 5 minutes', user: 'system' },
+    { event: 'system' },
 );
 ```
 
@@ -136,10 +136,10 @@ Iterates over connected sessions. Optionally filter by subscription pattern.
 
 ```typescript
 await server.sse.eachSession(
-  async (session) => {
-    session.push({ text: 'ping', user: 'system' });
-  },
-  { subscription: '/chat/{room}' },
+    async (session) => {
+        session.push({ text: 'ping', user: 'system' });
+    },
+    { subscription: '/chat/{room}' },
 );
 ```
 
@@ -213,18 +213,18 @@ session.request                   // The original hapi Request object
 
 ```typescript
 server.route({
-  method: 'GET',
-  path: '/jobs/{id}/progress',
-  handler: {
-    sse: {
-      stream: async (request, session) => {
-        for await (const update of jobProgress(request.params.id)) {
-          session.push(update, 'progress', update.eventId);
-        }
-        await session.complete(); // emits a final event with a token id, closes the stream
-      },
+    method: 'GET',
+    path: '/jobs/{id}/progress',
+    handler: {
+        sse: {
+            stream: async (request, session) => {
+                for await (const update of jobProgress(request.params.id)) {
+                    session.push(update, 'progress', update.eventId);
+                }
+                await session.complete(); // emits a final event with a token id, closes the stream
+            },
+        },
     },
-  },
 });
 ```
 
@@ -236,27 +236,27 @@ Clients can react to completion via `eventSource.addEventListener('complete', ha
 
 ```typescript
 const server = Hapi.server({
-  port: 3000,
-  cache: [
-    {
-      name: 'redis-cache',
-      provider: {
-        constructor: require('@hapi/catbox-redis'),
-        options: { host: '127.0.0.1' },
-      },
-    },
-  ],
+    port: 3000,
+    cache: [
+        {
+            name: 'redis-cache',
+            provider: {
+                constructor: require('@hapi/catbox-redis'),
+                options: { host: '127.0.0.1' },
+            },
+        },
+    ],
 });
 
 await server.register({
-  plugin: SsePlugin,
-  options: {
-    completion: {
-      cache: 'redis-cache', // share completion state across processes
-      segment: 'sse-completions',
-      expiresIn: 10 * 60 * 1000, // 10 minutes
+    plugin: SsePlugin,
+    options: {
+        completion: {
+            cache: 'redis-cache', // share completion state across processes
+            segment: 'sse-completions',
+            expiresIn: 10 * 60 * 1000, // 10 minutes
+        },
     },
-  },
 });
 ```
 
@@ -277,22 +277,22 @@ For full control over the stream (e.g. AI-assisted chat responses), use the hand
 
 ```typescript
 server.route({
-  method: 'GET',
-  path: '/chat/{room}/ai',
-  handler: {
-    sse: {
-      stream: async (request, session) => {
-        for (const token of tokens) {
-          session.push({ token, user: 'assistant' }, 'token');
-        }
-        session.close();
-      },
-      retry: 3000, // override plugin-level retry
-      keepAlive: { interval: 10_000 }, // override plugin-level keep-alive
-      headers: { 'X-Chat-Bot': 'true' }, // override plugin-level headers
-      backpressure: { maxBytes: 32768, strategy: 'close' },
+    method: 'GET',
+    path: '/chat/{room}/ai',
+    handler: {
+        sse: {
+            stream: async (request, session) => {
+                for (const token of tokens) {
+                    session.push({ token, user: 'assistant' }, 'token');
+                }
+                session.close();
+            },
+            retry: 3000, // override plugin-level retry
+            keepAlive: { interval: 10_000 }, // override plugin-level keep-alive
+            headers: { 'X-Chat-Bot': 'true' }, // override plugin-level headers
+            backpressure: { maxBytes: 32768, strategy: 'close' },
+        },
     },
-  },
 });
 ```
 
@@ -355,15 +355,15 @@ Call `replayer.stop()` to clear the cleanup timer (handled automatically on serv
 import type { Replayer, ReplayEntry } from '@hapi/sse';
 
 class RedisReplayer implements Replayer {
-  record(entry: ReplayEntry): void {
-    /* store to Redis stream */
-  }
-  replay(lastEventId: string): ReplayEntry[] {
-    /* read from Redis */
-  }
-  stop?(): void {
-    /* cleanup */
-  }
+    record(entry: ReplayEntry): void {
+        /* store to Redis stream */
+    }
+    replay(lastEventId: string): ReplayEntry[] {
+        /* read from Redis */
+    }
+    stop?(): void {
+        /* cleanup */
+    }
 }
 ```
 
@@ -408,20 +408,20 @@ Optional lifecycle hooks for side effects (logging, external telemetry). All hoo
 
 ```typescript
 await server.register({
-  plugin: SsePlugin,
-  options: {
-    hooks: {
-      onSession: (session, path, params) => {
-        console.log(`Joined: ${path}`);
-      },
-      onSessionClose: (session, path, params) => {
-        console.log(`Left: ${path}`);
-      },
-      onPublish: (path, data, deliveryCount) => {
-        console.log(`Message in ${path}: ${deliveryCount} recipients`);
-      },
+    plugin: SsePlugin,
+    options: {
+        hooks: {
+            onSession: (session, path, params) => {
+                console.log(`Joined: ${path}`);
+            },
+            onSessionClose: (session, path, params) => {
+                console.log(`Left: ${path}`);
+            },
+            onPublish: (path, data, deliveryCount) => {
+                console.log(`Message in ${path}: ${deliveryCount} recipients`);
+            },
+        },
     },
-  },
 });
 ```
 
@@ -433,20 +433,20 @@ Subscription config and publish are generic for type-safe event payloads:
 
 ```typescript
 interface ChatMessage {
-  text: string;
-  user: string;
+    text: string;
+    user: string;
 }
 
 server.sse.subscription<ChatMessage>('/chat/{room}', {
-  filter: (path, message) => {
-    // message is typed as ChatMessage
-    return message.user !== 'blocked';
-  },
+    filter: (path, message) => {
+        // message is typed as ChatMessage
+        return message.user !== 'blocked';
+    },
 });
 
 await server.sse.publish<ChatMessage>('/chat/general', {
-  text: 'hello',
-  user: 'alice',
+    text: 'hello',
+    user: 'alice',
 });
 ```
 
@@ -476,16 +476,16 @@ export { EventBuffer, Session, SsePlugin, FiniteReplayer, ValidReplayer };
 
 // Types
 export type {
-  SsePluginOptions,
-  SseApi,
-  SseHandlerOptions,
-  SseHooks,
-  SseStats,
-  SubscriptionConfig,
-  SubscriptionInfo,
-  FilterOptions,
-  BackpressureOptions,
-  Replayer,
-  ReplayEntry,
+    SsePluginOptions,
+    SseApi,
+    SseHandlerOptions,
+    SseHooks,
+    SseStats,
+    SubscriptionConfig,
+    SubscriptionInfo,
+    FilterOptions,
+    BackpressureOptions,
+    Replayer,
+    ReplayEntry,
 };
 ```

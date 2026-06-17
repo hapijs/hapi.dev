@@ -1,438 +1,454 @@
 [
-  {
-    "date": "2023-08-10T16:31:37Z",
-    "id": 9772615,
-    "issues": [
-      {
-        "id": 1845343284,
-        "labels": ["types"],
-        "number": 137,
-        "title": "Fix mapUri type definition",
-        "url": "https://github.com/hapijs/h2o2/pull/137"
-      }
-    ],
-    "number": 23,
-    "url": "https://github.com/hapijs/h2o2/milestone/23",
-    "version": "10.0.3"
-  },
-  {
-    "date": "2023-06-09T14:37:02Z",
-    "id": 9519632,
-    "issues": [
-      {
-        "id": 1749976254,
-        "labels": ["types"],
-        "number": 136,
-        "title": "chore: add typings from DT",
-        "url": "https://github.com/hapijs/h2o2/pull/136"
-      }
-    ],
-    "number": 22,
-    "url": "https://github.com/hapijs/h2o2/milestone/22",
-    "version": "10.0.2"
-  },
-  {
-    "date": "2023-02-11T20:03:42Z",
-    "id": 8415237,
-    "issues": [
-      {
-        "id": 1551796616,
-        "labels": ["dependency"],
-        "number": 135,
-        "title": "chore: bump hoek",
-        "url": "https://github.com/hapijs/h2o2/pull/135"
-      },
-      {
-        "id": 1402401533,
-        "labels": ["bug"],
-        "number": 133,
-        "title": "Support delete payload forwarding",
-        "url": "https://github.com/hapijs/h2o2/pull/133"
-      }
-    ],
-    "number": 21,
-    "url": "https://github.com/hapijs/h2o2/milestone/21",
-    "version": "10.0.1"
-  },
-  {
-    "date": "2022-09-26T19:58:27Z",
-    "id": 8415236,
-    "issues": [
-      {
-        "id": 1370478654,
-        "labels": ["dependency", "breaking changes", "test"],
-        "number": 132,
-        "title": "Support for hapi v21, node v18, ESM tests",
-        "url": "https://github.com/hapijs/h2o2/pull/132"
-      },
-      {
-        "id": 1077915311,
-        "labels": ["test"],
-        "number": 131,
-        "title": "add dispatcher and use shared config",
-        "url": "https://github.com/hapijs/h2o2/pull/131"
-      },
-      {
-        "id": 1044852838,
-        "labels": ["feature", "breaking changes"],
-        "number": 128,
-        "title": "Add querystring support for uri mapping",
-        "url": "https://github.com/hapijs/h2o2/pull/128"
-      }
-    ],
-    "number": 20,
-    "url": "https://github.com/hapijs/h2o2/milestone/20",
-    "version": "10.0.0"
-  },
-  {
-    "date": "2022-09-12T20:29:37Z",
-    "id": 6825407,
-    "issues": [
-      {
-        "id": 870243890,
-        "labels": ["feature"],
-        "number": 125,
-        "title": "propagate request abortion to upstream server",
-        "url": "https://github.com/hapijs/h2o2/pull/125"
-      }
-    ],
-    "number": 18,
-    "url": "https://github.com/hapijs/h2o2/milestone/18",
-    "version": "9.1.0"
-  },
-  {
-    "date": "2020-09-26T16:42:17Z",
-    "id": 4997100,
-    "issues": [
-      {
-        "id": 684030454,
-        "labels": [],
-        "number": 121,
-        "title": "migrate to new travis format",
-        "url": "https://github.com/hapijs/h2o2/pull/121"
-      },
-      {
-        "id": 677274332,
-        "labels": [],
-        "number": 120,
-        "title": "upgrade to hapi 20",
-        "url": "https://github.com/hapijs/h2o2/pull/120"
-      },
-      {
-        "id": 672184050,
-        "labels": [],
-        "number": 119,
-        "title": "update lab and switch joi to validate",
-        "url": "https://github.com/hapijs/h2o2/pull/119"
-      },
-      {
-        "id": 590944705,
-        "labels": ["documentation"],
-        "number": 117,
-        "title": "Update onResponse for Wreck's async/await syntax",
-        "url": "https://github.com/hapijs/h2o2/pull/117"
-      }
-    ],
-    "number": 17,
-    "url": "https://github.com/hapijs/h2o2/milestone/17",
-    "version": "9.0.2"
-  },
-  {
-    "date": "2020-01-12T08:18:44Z",
-    "id": 4997038,
-    "issues": [
-      {
-        "id": 548537438,
-        "labels": ["dependency", "breaking changes"],
-        "number": 113,
-        "title": "Require hapi 19",
-        "url": "https://github.com/hapijs/h2o2/issues/113"
-      }
-    ],
-    "number": 16,
-    "url": "https://github.com/hapijs/h2o2/milestone/16",
-    "version": "9.0.1"
-  },
-  {
-    "date": "2020-01-12T06:20:03Z",
-    "id": 4656010,
-    "issues": [
-      {
-        "id": 548527898,
-        "labels": ["breaking changes"],
-        "number": 112,
-        "title": "Change plugin name to @hapi/h2o2",
-        "url": "https://github.com/hapijs/h2o2/issues/112"
-      },
-      {
-        "id": 548527760,
-        "labels": ["breaking changes"],
-        "number": 111,
-        "title": "Drop hapi v17",
-        "url": "https://github.com/hapijs/h2o2/issues/111"
-      },
-      {
-        "id": 548527726,
-        "labels": ["dependency", "breaking changes"],
-        "number": 110,
-        "title": "Only node 12",
-        "url": "https://github.com/hapijs/h2o2/issues/110"
-      }
-    ],
-    "number": 15,
-    "url": "https://github.com/hapijs/h2o2/milestone/15",
-    "version": "9.0.0"
-  },
-  {
-    "date": "2019-09-13T06:06:35Z",
-    "id": 4574375,
-    "issues": [
-      {
-        "id": 493078304,
-        "labels": ["dependency"],
-        "number": 102,
-        "title": "Update joi",
-        "url": "https://github.com/hapijs/h2o2/issues/102"
-      }
-    ],
-    "number": 14,
-    "url": "https://github.com/hapijs/h2o2/milestone/14",
-    "version": "8.3.2"
-  },
-  {
-    "date": "2019-08-14T22:25:47Z",
-    "id": 4227411,
-    "issues": [
-      {
-        "id": 480915290,
-        "labels": ["dependency"],
-        "number": 101,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/h2o2/issues/101"
-      }
-    ],
-    "number": 13,
-    "url": "https://github.com/hapijs/h2o2/milestone/13",
-    "version": "8.3.1"
-  },
-  {
-    "date": "2019-04-13T22:24:28Z",
-    "id": 3818807,
-    "issues": [
-      {
-        "id": 432907175,
-        "labels": ["bug"],
-        "number": 95,
-        "title": "Move agents from internals to server",
-        "url": "https://github.com/hapijs/h2o2/issues/95"
-      },
-      {
-        "id": 432907140,
-        "labels": ["dependency"],
-        "number": 94,
-        "title": "Change module namespace",
-        "url": "https://github.com/hapijs/h2o2/issues/94"
-      }
-    ],
-    "number": 12,
-    "url": "https://github.com/hapijs/h2o2/milestone/12",
-    "version": "8.3.0"
-  },
-  {
-    "date": "2018-11-13T18:43:54Z",
-    "id": 2055921,
-    "issues": [
-      {
-        "id": 182012109,
-        "labels": ["feature", "bug", "test"],
-        "number": 45,
-        "title": "Fix the `uri` vs. `address` variable usage for multiple replacements",
-        "url": "https://github.com/hapijs/h2o2/pull/45"
-      },
-      {
-        "id": 181481071,
-        "labels": ["feature", "non issue"],
-        "number": 44,
-        "title": "Allow request.params variable replacement in the uri template",
-        "url": "https://github.com/hapijs/h2o2/pull/44"
-      }
-    ],
-    "number": 11,
-    "url": "https://github.com/hapijs/h2o2/milestone/11",
-    "version": "5.3.0"
-  },
-  {
-    "date": "2018-11-13T18:43:58Z",
-    "id": 1975361,
-    "issues": [
-      {
-        "id": 179272618,
-        "labels": ["feature", "bug"],
-        "number": 42,
-        "title": "Added X-Forwarded-Host to forward headers",
-        "url": "https://github.com/hapijs/h2o2/pull/42"
-      },
-      {
-        "id": 174265638,
-        "labels": ["bug"],
-        "number": 41,
-        "title": "X-Forwarded-Proto being set to upstream protocol",
-        "url": "https://github.com/hapijs/h2o2/pull/41"
-      }
-    ],
-    "number": 10,
-    "url": "https://github.com/hapijs/h2o2/milestone/10",
-    "version": "5.2.0"
-  },
-  {
-    "date": "2018-11-13T18:43:59Z",
-    "id": 1605604,
-    "issues": [
-      {
-        "id": 136078912,
-        "labels": ["feature", "dependency"],
+    {
+        "date": "2026-06-17T08:22:08Z",
+        "id": 9942780,
+        "issues": [
+            {
+                "id": 1902656081,
+                "labels": ["bug"],
+                "number": 138,
+                "title": "fix: forward 405 Allow header",
+                "url": "https://github.com/hapijs/h2o2/pull/138"
+            }
+        ],
         "number": 24,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/h2o2/pull/24"
-      }
-    ],
-    "number": 9,
-    "url": "https://github.com/hapijs/h2o2/milestone/9",
-    "version": "5.1"
-  },
-  {
-    "date": "2018-11-13T18:44:01Z",
-    "id": 1453093,
-    "issues": [
-      {
-        "id": 121388303,
-        "labels": ["feature", "breaking changes"],
+        "url": "https://github.com/hapijs/h2o2/milestone/24",
+        "version": "10.0.4"
+    },
+    {
+        "date": "2023-08-10T16:31:37Z",
+        "id": 9772615,
+        "issues": [
+            {
+                "id": 1845343284,
+                "labels": ["types"],
+                "number": 137,
+                "title": "Fix mapUri type definition",
+                "url": "https://github.com/hapijs/h2o2/pull/137"
+            }
+        ],
+        "number": 23,
+        "url": "https://github.com/hapijs/h2o2/milestone/23",
+        "version": "10.0.3"
+    },
+    {
+        "date": "2023-06-09T14:37:02Z",
+        "id": 9519632,
+        "issues": [
+            {
+                "id": 1749976254,
+                "labels": ["types"],
+                "number": 136,
+                "title": "chore: add typings from DT",
+                "url": "https://github.com/hapijs/h2o2/pull/136"
+            }
+        ],
+        "number": 22,
+        "url": "https://github.com/hapijs/h2o2/milestone/22",
+        "version": "10.0.2"
+    },
+    {
+        "date": "2023-02-11T20:03:42Z",
+        "id": 8415237,
+        "issues": [
+            {
+                "id": 1551796616,
+                "labels": ["dependency"],
+                "number": 135,
+                "title": "chore: bump hoek",
+                "url": "https://github.com/hapijs/h2o2/pull/135"
+            },
+            {
+                "id": 1402401533,
+                "labels": ["bug"],
+                "number": 133,
+                "title": "Support delete payload forwarding",
+                "url": "https://github.com/hapijs/h2o2/pull/133"
+            }
+        ],
+        "number": 21,
+        "url": "https://github.com/hapijs/h2o2/milestone/21",
+        "version": "10.0.1"
+    },
+    {
+        "date": "2022-09-26T19:58:27Z",
+        "id": 8415236,
+        "issues": [
+            {
+                "id": 1370478654,
+                "labels": ["dependency", "breaking changes", "test"],
+                "number": 132,
+                "title": "Support for hapi v21, node v18, ESM tests",
+                "url": "https://github.com/hapijs/h2o2/pull/132"
+            },
+            {
+                "id": 1077915311,
+                "labels": ["test"],
+                "number": 131,
+                "title": "add dispatcher and use shared config",
+                "url": "https://github.com/hapijs/h2o2/pull/131"
+            },
+            {
+                "id": 1044852838,
+                "labels": ["feature", "breaking changes"],
+                "number": 128,
+                "title": "Add querystring support for uri mapping",
+                "url": "https://github.com/hapijs/h2o2/pull/128"
+            }
+        ],
         "number": 20,
-        "title": "Migrate to new versions of modules and ES6.",
-        "url": "https://github.com/hapijs/h2o2/pull/20"
-      }
-    ],
-    "number": 8,
-    "url": "https://github.com/hapijs/h2o2/milestone/8",
-    "version": "5.0.0"
-  },
-  {
-    "date": "2018-11-13T18:44:03Z",
-    "id": 1139239,
-    "issues": [
-      {
-        "id": 112737652,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/h2o2/milestone/20",
+        "version": "10.0.0"
+    },
+    {
+        "date": "2022-09-12T20:29:37Z",
+        "id": 6825407,
+        "issues": [
+            {
+                "id": 870243890,
+                "labels": ["feature"],
+                "number": 125,
+                "title": "propagate request abortion to upstream server",
+                "url": "https://github.com/hapijs/h2o2/pull/125"
+            }
+        ],
         "number": 18,
-        "title": "Update Wreck dependency",
-        "url": "https://github.com/hapijs/h2o2/pull/18"
-      }
-    ],
-    "number": 7,
-    "url": "https://github.com/hapijs/h2o2/milestone/7",
-    "version": "4.0.2"
-  },
-  {
-    "date": "2015-05-29T05:51:41Z",
-    "id": 898080,
-    "issues": [
-      {
-        "id": 78463797,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/h2o2/milestone/18",
+        "version": "9.1.0"
+    },
+    {
+        "date": "2020-09-26T16:42:17Z",
+        "id": 4997100,
+        "issues": [
+            {
+                "id": 684030454,
+                "labels": [],
+                "number": 121,
+                "title": "migrate to new travis format",
+                "url": "https://github.com/hapijs/h2o2/pull/121"
+            },
+            {
+                "id": 677274332,
+                "labels": [],
+                "number": 120,
+                "title": "upgrade to hapi 20",
+                "url": "https://github.com/hapijs/h2o2/pull/120"
+            },
+            {
+                "id": 672184050,
+                "labels": [],
+                "number": 119,
+                "title": "update lab and switch joi to validate",
+                "url": "https://github.com/hapijs/h2o2/pull/119"
+            },
+            {
+                "id": 590944705,
+                "labels": ["documentation"],
+                "number": 117,
+                "title": "Update onResponse for Wreck's async/await syntax",
+                "url": "https://github.com/hapijs/h2o2/pull/117"
+            }
+        ],
+        "number": 17,
+        "url": "https://github.com/hapijs/h2o2/milestone/17",
+        "version": "9.0.2"
+    },
+    {
+        "date": "2020-01-12T08:18:44Z",
+        "id": 4997038,
+        "issues": [
+            {
+                "id": 548537438,
+                "labels": ["dependency", "breaking changes"],
+                "number": 113,
+                "title": "Require hapi 19",
+                "url": "https://github.com/hapijs/h2o2/issues/113"
+            }
+        ],
+        "number": 16,
+        "url": "https://github.com/hapijs/h2o2/milestone/16",
+        "version": "9.0.1"
+    },
+    {
+        "date": "2020-01-12T06:20:03Z",
+        "id": 4656010,
+        "issues": [
+            {
+                "id": 548527898,
+                "labels": ["breaking changes"],
+                "number": 112,
+                "title": "Change plugin name to @hapi/h2o2",
+                "url": "https://github.com/hapijs/h2o2/issues/112"
+            },
+            {
+                "id": 548527760,
+                "labels": ["breaking changes"],
+                "number": 111,
+                "title": "Drop hapi v17",
+                "url": "https://github.com/hapijs/h2o2/issues/111"
+            },
+            {
+                "id": 548527726,
+                "labels": ["dependency", "breaking changes"],
+                "number": 110,
+                "title": "Only node 12",
+                "url": "https://github.com/hapijs/h2o2/issues/110"
+            }
+        ],
+        "number": 15,
+        "url": "https://github.com/hapijs/h2o2/milestone/15",
+        "version": "9.0.0"
+    },
+    {
+        "date": "2019-09-13T06:06:35Z",
+        "id": 4574375,
+        "issues": [
+            {
+                "id": 493078304,
+                "labels": ["dependency"],
+                "number": 102,
+                "title": "Update joi",
+                "url": "https://github.com/hapijs/h2o2/issues/102"
+            }
+        ],
+        "number": 14,
+        "url": "https://github.com/hapijs/h2o2/milestone/14",
+        "version": "8.3.2"
+    },
+    {
+        "date": "2019-08-14T22:25:47Z",
+        "id": 4227411,
+        "issues": [
+            {
+                "id": 480915290,
+                "labels": ["dependency"],
+                "number": 101,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/h2o2/issues/101"
+            }
+        ],
+        "number": 13,
+        "url": "https://github.com/hapijs/h2o2/milestone/13",
+        "version": "8.3.1"
+    },
+    {
+        "date": "2019-04-13T22:24:28Z",
+        "id": 3818807,
+        "issues": [
+            {
+                "id": 432907175,
+                "labels": ["bug"],
+                "number": 95,
+                "title": "Move agents from internals to server",
+                "url": "https://github.com/hapijs/h2o2/issues/95"
+            },
+            {
+                "id": 432907140,
+                "labels": ["dependency"],
+                "number": 94,
+                "title": "Change module namespace",
+                "url": "https://github.com/hapijs/h2o2/issues/94"
+            }
+        ],
+        "number": 12,
+        "url": "https://github.com/hapijs/h2o2/milestone/12",
+        "version": "8.3.0"
+    },
+    {
+        "date": "2018-11-13T18:43:54Z",
+        "id": 2055921,
+        "issues": [
+            {
+                "id": 182012109,
+                "labels": ["feature", "bug", "test"],
+                "number": 45,
+                "title": "Fix the `uri` vs. `address` variable usage for multiple replacements",
+                "url": "https://github.com/hapijs/h2o2/pull/45"
+            },
+            {
+                "id": 181481071,
+                "labels": ["feature", "non issue"],
+                "number": 44,
+                "title": "Allow request.params variable replacement in the uri template",
+                "url": "https://github.com/hapijs/h2o2/pull/44"
+            }
+        ],
         "number": 11,
-        "title": "Bump Joi to v6.x.x",
-        "url": "https://github.com/hapijs/h2o2/pull/11"
-      }
-    ],
-    "number": 6,
-    "url": "https://github.com/hapijs/h2o2/milestone/6",
-    "version": "4.0.1"
-  },
-  {
-    "date": "2014-12-09T22:42:28Z",
-    "id": 847490,
-    "issues": [
-      {
-        "id": 49866152,
-        "labels": ["dependency", "breaking changes"],
+        "url": "https://github.com/hapijs/h2o2/milestone/11",
+        "version": "5.3.0"
+    },
+    {
+        "date": "2018-11-13T18:43:58Z",
+        "id": 1975361,
+        "issues": [
+            {
+                "id": 179272618,
+                "labels": ["feature", "bug"],
+                "number": 42,
+                "title": "Added X-Forwarded-Host to forward headers",
+                "url": "https://github.com/hapijs/h2o2/pull/42"
+            },
+            {
+                "id": 174265638,
+                "labels": ["bug"],
+                "number": 41,
+                "title": "X-Forwarded-Proto being set to upstream protocol",
+                "url": "https://github.com/hapijs/h2o2/pull/41"
+            }
+        ],
+        "number": 10,
+        "url": "https://github.com/hapijs/h2o2/milestone/10",
+        "version": "5.2.0"
+    },
+    {
+        "date": "2018-11-13T18:43:59Z",
+        "id": 1605604,
+        "issues": [
+            {
+                "id": 136078912,
+                "labels": ["feature", "dependency"],
+                "number": 24,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/h2o2/pull/24"
+            }
+        ],
+        "number": 9,
+        "url": "https://github.com/hapijs/h2o2/milestone/9",
+        "version": "5.1"
+    },
+    {
+        "date": "2018-11-13T18:44:01Z",
+        "id": 1453093,
+        "issues": [
+            {
+                "id": 121388303,
+                "labels": ["feature", "breaking changes"],
+                "number": 20,
+                "title": "Migrate to new versions of modules and ES6.",
+                "url": "https://github.com/hapijs/h2o2/pull/20"
+            }
+        ],
         "number": 8,
-        "title": "passThrough changes",
-        "url": "https://github.com/hapijs/h2o2/pull/8"
-      }
-    ],
-    "number": 5,
-    "url": "https://github.com/hapijs/h2o2/milestone/5",
-    "version": "4.0.0"
-  },
-  {
-    "date": "2014-10-31T00:33:45Z",
-    "id": 820358,
-    "issues": [
-      {
-        "id": 47348204,
-        "labels": ["feature", "breaking changes"],
+        "url": "https://github.com/hapijs/h2o2/milestone/8",
+        "version": "5.0.0"
+    },
+    {
+        "date": "2018-11-13T18:44:03Z",
+        "id": 1139239,
+        "issues": [
+            {
+                "id": 112737652,
+                "labels": ["dependency"],
+                "number": 18,
+                "title": "Update Wreck dependency",
+                "url": "https://github.com/hapijs/h2o2/pull/18"
+            }
+        ],
         "number": 7,
-        "title": "Move maxSockets to a handler config instead of server",
-        "url": "https://github.com/hapijs/h2o2/pull/7"
-      },
-      {
-        "id": 47348186,
-        "labels": ["breaking changes"],
+        "url": "https://github.com/hapijs/h2o2/milestone/7",
+        "version": "4.0.2"
+    },
+    {
+        "date": "2015-05-29T05:51:41Z",
+        "id": 898080,
+        "issues": [
+            {
+                "id": 78463797,
+                "labels": ["dependency"],
+                "number": 11,
+                "title": "Bump Joi to v6.x.x",
+                "url": "https://github.com/hapijs/h2o2/pull/11"
+            }
+        ],
         "number": 6,
-        "title": "Replace server maxSockets settings with per handler configuration",
-        "url": "https://github.com/hapijs/h2o2/issues/6"
-      }
-    ],
-    "number": 4,
-    "url": "https://github.com/hapijs/h2o2/milestone/4",
-    "version": "3.0.0"
-  },
-  {
-    "date": "2014-10-09T20:53:16Z",
-    "id": 820202,
-    "issues": [
-      {
-        "id": 45416090,
-        "labels": ["breaking changes"],
+        "url": "https://github.com/hapijs/h2o2/milestone/6",
+        "version": "4.0.1"
+    },
+    {
+        "date": "2014-12-09T22:42:28Z",
+        "id": 847490,
+        "issues": [
+            {
+                "id": 49866152,
+                "labels": ["dependency", "breaking changes"],
+                "number": 8,
+                "title": "passThrough changes",
+                "url": "https://github.com/hapijs/h2o2/pull/8"
+            }
+        ],
+        "number": 5,
+        "url": "https://github.com/hapijs/h2o2/milestone/5",
+        "version": "4.0.0"
+    },
+    {
+        "date": "2014-10-31T00:33:45Z",
+        "id": 820358,
+        "issues": [
+            {
+                "id": 47348204,
+                "labels": ["feature", "breaking changes"],
+                "number": 7,
+                "title": "Move maxSockets to a handler config instead of server",
+                "url": "https://github.com/hapijs/h2o2/pull/7"
+            },
+            {
+                "id": 47348186,
+                "labels": ["breaking changes"],
+                "number": 6,
+                "title": "Replace server maxSockets settings with per handler configuration",
+                "url": "https://github.com/hapijs/h2o2/issues/6"
+            }
+        ],
         "number": 4,
-        "title": "Change localStatePassThrough default to true",
-        "url": "https://github.com/hapijs/h2o2/issues/4"
-      }
-    ],
-    "number": 3,
-    "url": "https://github.com/hapijs/h2o2/milestone/3",
-    "version": "2.0.1"
-  },
-  {
-    "date": "2014-10-09T18:17:15Z",
-    "id": 796572,
-    "issues": [
-      {
-        "id": 45399232,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/h2o2/milestone/4",
+        "version": "3.0.0"
+    },
+    {
+        "date": "2014-10-09T20:53:16Z",
+        "id": 820202,
+        "issues": [
+            {
+                "id": 45416090,
+                "labels": ["breaking changes"],
+                "number": 4,
+                "title": "Change localStatePassThrough default to true",
+                "url": "https://github.com/hapijs/h2o2/issues/4"
+            }
+        ],
         "number": 3,
-        "title": "Change handler function to hapi 7.0 API",
-        "url": "https://github.com/hapijs/h2o2/issues/3"
-      }
-    ],
-    "number": 2,
-    "url": "https://github.com/hapijs/h2o2/milestone/2",
-    "version": "2.0.0"
-  },
-  {
-    "date": "2014-09-20T07:57:45Z",
-    "id": 796571,
-    "issues": [
-      {
-        "id": 43303873,
-        "labels": ["feature", "dependency"],
+        "url": "https://github.com/hapijs/h2o2/milestone/3",
+        "version": "2.0.1"
+    },
+    {
+        "date": "2014-10-09T18:17:15Z",
+        "id": 796572,
+        "issues": [
+            {
+                "id": 45399232,
+                "labels": ["dependency"],
+                "number": 3,
+                "title": "Change handler function to hapi 7.0 API",
+                "url": "https://github.com/hapijs/h2o2/issues/3"
+            }
+        ],
+        "number": 2,
+        "url": "https://github.com/hapijs/h2o2/milestone/2",
+        "version": "2.0.0"
+    },
+    {
+        "date": "2014-09-20T07:57:45Z",
+        "id": 796571,
+        "issues": [
+            {
+                "id": 43303873,
+                "labels": ["feature", "dependency"],
+                "number": 1,
+                "title": "Use joi.assert()",
+                "url": "https://github.com/hapijs/h2o2/issues/1"
+            }
+        ],
         "number": 1,
-        "title": "Use joi.assert()",
-        "url": "https://github.com/hapijs/h2o2/issues/1"
-      }
-    ],
-    "number": 1,
-    "url": "https://github.com/hapijs/h2o2/milestone/1",
-    "version": "1.0.1"
-  }
+        "url": "https://github.com/hapijs/h2o2/milestone/1",
+        "version": "1.0.1"
+    }
 ]

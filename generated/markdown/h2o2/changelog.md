@@ -1,5 +1,9 @@
 ## Version 10 {#v10}
 
+### [10.0.4](https://github.com/hapijs/h2o2/milestone/24) {#10.0.4}
+
+- [#138](https://github.com/hapijs/h2o2/pull/138) fix: forward 405 Allow header
+
 ### [10.0.3](https://github.com/hapijs/h2o2/milestone/23) {#10.0.3}
 
 - [#137](https://github.com/hapijs/h2o2/pull/137) Fix mapUri type definition

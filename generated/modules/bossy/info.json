@@ -1,28 +1,28 @@
 {
-  "api": true,
-  "forks": 30,
-  "isPlugin": false,
-  "latestVersion": "6.x.x",
-  "link": "https://github.com/hapijs/bossy",
-  "name": "bossy",
-  "package": "@hapi/bossy",
-  "slogan": "Command line options parser.",
-  "sloganHtml": "Command line options parser.",
-  "stars": 46,
-  "updated": "2024-10-23T15:40:09Z",
-  "versions": [
-    {
-      "branch": "v5.1.1",
-      "license": "BSD",
-      "name": "5.1.1",
-      "node": ">= 16"
-    },
-    {
-      "branch": "v6.0.1",
-      "license": "BSD",
-      "name": "6.0.1",
-      "node": ">= 16"
-    }
-  ],
-  "versionsArray": ["6.0.1", "5.1.1"]
+    "api": true,
+    "forks": 30,
+    "isPlugin": false,
+    "latestVersion": "6.x.x",
+    "link": "https://github.com/hapijs/bossy",
+    "name": "bossy",
+    "package": "@hapi/bossy",
+    "slogan": "Command line options parser.",
+    "sloganHtml": "Command line options parser.",
+    "stars": 46,
+    "updated": "2024-10-23T15:40:09Z",
+    "versions": [
+        {
+            "branch": "v5.1.1",
+            "license": "BSD",
+            "name": "5.1.1",
+            "node": ">= 16"
+        },
+        {
+            "branch": "v6.0.1",
+            "license": "BSD",
+            "name": "6.0.1",
+            "node": ">= 16"
+        }
+    ],
+    "versionsArray": ["6.0.1", "5.1.1"]
 }

@@ -1,22 +1,22 @@
 {
-  "api": true,
-  "forks": 13,
-  "isPlugin": false,
-  "latestVersion": "3.x.x",
-  "link": "https://github.com/hapijs/bounce",
-  "name": "bounce",
-  "package": "@hapi/bounce",
-  "slogan": "Selective error catching and rewrite rules.",
-  "sloganHtml": "Selective error catching and rewrite rules.",
-  "stars": 176,
-  "updated": "2024-10-23T15:47:48Z",
-  "versions": [
-    {
-      "branch": "v3.0.2",
-      "license": "BSD",
-      "name": "3.0.2",
-      "node": ">= 16"
-    }
-  ],
-  "versionsArray": ["3.0.2"]
+    "api": true,
+    "forks": 13,
+    "isPlugin": false,
+    "latestVersion": "3.x.x",
+    "link": "https://github.com/hapijs/bounce",
+    "name": "bounce",
+    "package": "@hapi/bounce",
+    "slogan": "Selective error catching and rewrite rules.",
+    "sloganHtml": "Selective error catching and rewrite rules.",
+    "stars": 176,
+    "updated": "2024-10-23T15:47:48Z",
+    "versions": [
+        {
+            "branch": "v3.0.2",
+            "license": "BSD",
+            "name": "3.0.2",
+            "node": ">= 16"
+        }
+    ],
+    "versionsArray": ["3.0.2"]
 }

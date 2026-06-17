@@ -1,281 +1,281 @@
 [
-  {
-    "date": "2026-05-06T08:40:35Z",
-    "id": 15813735,
-    "issues": [
-      {
-        "id": 4389936338,
-        "labels": ["bug", "security"],
-        "number": 39,
-        "title": "fix: error on duplicate parameters",
-        "url": "https://github.com/hapijs/content/pull/39"
-      }
-    ],
-    "number": 18,
-    "url": "https://github.com/hapijs/content/milestone/18",
-    "version": "6.0.2"
-  },
-  {
-    "date": "2026-05-06T08:40:33Z",
-    "id": 8008357,
-    "issues": [
-      {
-        "id": 4192635071,
-        "labels": ["bug", "security"],
-        "number": 38,
-        "title": "fix: protect regex from redos",
-        "url": "https://github.com/hapijs/content/pull/38"
-      }
-    ],
-    "number": 17,
-    "url": "https://github.com/hapijs/content/milestone/17",
-    "version": "6.0.1"
-  },
-  {
-    "date": "2022-05-24T01:54:39Z",
-    "id": 8008356,
-    "issues": [
-      {
-        "id": 1244574978,
-        "labels": ["dependency", "breaking changes"],
-        "number": 35,
-        "title": "Support node v18 and drop node v12",
-        "url": "https://github.com/hapijs/content/pull/35"
-      },
-      {
-        "id": 1202798827,
-        "labels": ["feature"],
-        "number": 34,
-        "title": "support parsing charset",
-        "url": "https://github.com/hapijs/content/pull/34"
-      }
-    ],
-    "number": 16,
-    "url": "https://github.com/hapijs/content/milestone/16",
-    "version": "6.0.0"
-  },
-  {
-    "date": "2020-02-13T08:07:57Z",
-    "id": 5100807,
-    "issues": [
-      {
-        "id": 564507692,
-        "labels": ["bug", "security"],
-        "number": 22,
-        "title": "Block __proto__ name",
-        "url": "https://github.com/hapijs/content/issues/22"
-      }
-    ],
-    "number": 14,
-    "url": "https://github.com/hapijs/content/milestone/14",
-    "version": "5.0.2"
-  },
-  {
-    "date": "2020-02-13T07:23:14Z",
-    "id": 4973272,
-    "issues": [
-      {
-        "id": 564489030,
-        "labels": ["bug", "security"],
-        "number": 21,
-        "title": "Explicitly handle __proto__",
-        "url": "https://github.com/hapijs/content/issues/21"
-      }
-    ],
-    "number": 13,
-    "url": "https://github.com/hapijs/content/milestone/13",
-    "version": "5.0.1"
-  },
-  {
-    "date": "2020-01-05T01:02:33Z",
-    "id": 4973271,
-    "issues": [
-      {
-        "id": 545351974,
-        "labels": ["dependency", "breaking changes"],
-        "number": 20,
-        "title": "Only node 12",
-        "url": "https://github.com/hapijs/content/issues/20"
-      }
-    ],
-    "number": 12,
-    "url": "https://github.com/hapijs/content/milestone/12",
-    "version": "5.0.0"
-  },
-  {
-    "date": "2020-02-13T08:22:05Z",
-    "id": 4194622,
-    "issues": [
-      {
-        "id": 564509321,
-        "labels": ["bug", "security", "lts"],
-        "number": 24,
-        "title": "Backport #21, #22",
-        "url": "https://github.com/hapijs/content/issues/24"
-      }
-    ],
-    "number": 11,
-    "url": "https://github.com/hapijs/content/milestone/11",
-    "version": "4.1.1"
-  },
-  {
-    "date": "2019-04-02T17:54:24Z",
-    "id": 3792181,
-    "issues": [
-      {
-        "id": 428362063,
-        "labels": ["dependency"],
+    {
+        "date": "2026-05-06T08:40:35Z",
+        "id": 15813735,
+        "issues": [
+            {
+                "id": 4389936338,
+                "labels": ["bug", "security"],
+                "number": 39,
+                "title": "fix: error on duplicate parameters",
+                "url": "https://github.com/hapijs/content/pull/39"
+            }
+        ],
+        "number": 18,
+        "url": "https://github.com/hapijs/content/milestone/18",
+        "version": "6.0.2"
+    },
+    {
+        "date": "2026-05-06T08:40:33Z",
+        "id": 8008357,
+        "issues": [
+            {
+                "id": 4192635071,
+                "labels": ["bug", "security"],
+                "number": 38,
+                "title": "fix: protect regex from redos",
+                "url": "https://github.com/hapijs/content/pull/38"
+            }
+        ],
+        "number": 17,
+        "url": "https://github.com/hapijs/content/milestone/17",
+        "version": "6.0.1"
+    },
+    {
+        "date": "2022-05-24T01:54:39Z",
+        "id": 8008356,
+        "issues": [
+            {
+                "id": 1244574978,
+                "labels": ["dependency", "breaking changes"],
+                "number": 35,
+                "title": "Support node v18 and drop node v12",
+                "url": "https://github.com/hapijs/content/pull/35"
+            },
+            {
+                "id": 1202798827,
+                "labels": ["feature"],
+                "number": 34,
+                "title": "support parsing charset",
+                "url": "https://github.com/hapijs/content/pull/34"
+            }
+        ],
+        "number": 16,
+        "url": "https://github.com/hapijs/content/milestone/16",
+        "version": "6.0.0"
+    },
+    {
+        "date": "2020-02-13T08:07:57Z",
+        "id": 5100807,
+        "issues": [
+            {
+                "id": 564507692,
+                "labels": ["bug", "security"],
+                "number": 22,
+                "title": "Block __proto__ name",
+                "url": "https://github.com/hapijs/content/issues/22"
+            }
+        ],
+        "number": 14,
+        "url": "https://github.com/hapijs/content/milestone/14",
+        "version": "5.0.2"
+    },
+    {
+        "date": "2020-02-13T07:23:14Z",
+        "id": 4973272,
+        "issues": [
+            {
+                "id": 564489030,
+                "labels": ["bug", "security"],
+                "number": 21,
+                "title": "Explicitly handle __proto__",
+                "url": "https://github.com/hapijs/content/issues/21"
+            }
+        ],
         "number": 13,
-        "title": "Change module namespace",
-        "url": "https://github.com/hapijs/content/issues/13"
-      }
-    ],
-    "number": 8,
-    "url": "https://github.com/hapijs/content/milestone/8",
-    "version": "4.1.0"
-  },
-  {
-    "date": "2018-11-03T00:24:12Z",
-    "id": 3232145,
-    "issues": [
-      {
-        "id": 377001121,
-        "labels": ["non issue"],
-        "number": 9,
-        "title": "Remove engines",
-        "url": "https://github.com/hapijs/content/issues/9"
-      }
-    ],
-    "number": 7,
-    "url": "https://github.com/hapijs/content/milestone/7",
-    "version": "4.0.6"
-  },
-  {
-    "date": "2018-03-31T00:02:31Z",
-    "id": 3153033,
-    "issues": [
-      {
-        "id": 308112275,
-        "labels": ["bug"],
-        "number": 7,
-        "title": "Throw on .type() if header is completely missing",
-        "url": "https://github.com/hapijs/content/pull/7"
-      }
-    ],
-    "number": 6,
-    "url": "https://github.com/hapijs/content/milestone/6",
-    "version": "4.0.5"
-  },
-  {
-    "date": "2018-03-01T09:19:33Z",
-    "id": 2886841,
-    "issues": [
-      {
-        "id": 301155318,
-        "labels": ["feature"],
-        "number": 5,
-        "title": "Skip processing parameters when content type is not multipart",
-        "url": "https://github.com/hapijs/content/issues/5"
-      }
-    ],
-    "number": 5,
-    "url": "https://github.com/hapijs/content/milestone/5",
-    "version": "4.0.4"
-  },
-  {
-    "date": "2017-11-03T20:02:55Z",
-    "id": 2886840,
-    "issues": [
-      {
-        "id": 271102816,
-        "labels": ["feature"],
-        "number": 4,
-        "title": "Throw directly from header processing",
-        "url": "https://github.com/hapijs/content/issues/4"
-      }
-    ],
-    "number": 4,
-    "url": "https://github.com/hapijs/content/milestone/4",
-    "version": "4.0.3"
-  },
-  {
-    "date": "2017-11-03T20:02:21Z",
-    "id": 2794193,
-    "issues": [
-      {
-        "id": 270892801,
-        "labels": ["dependency"],
-        "number": 3,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/content/issues/3"
-      }
-    ],
-    "number": 3,
-    "url": "https://github.com/hapijs/content/milestone/3",
-    "version": "4.0.2"
-  },
-  {
-    "date": "2017-09-26T09:07:07Z",
-    "id": 2793390,
-    "issues": [
-      {
-        "id": 260547043,
-        "labels": ["dependency"],
-        "number": 2,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/content/issues/2"
-      }
-    ],
-    "number": 2,
-    "url": "https://github.com/hapijs/content/milestone/2",
-    "version": "4.0.1"
-  },
-  {
-    "date": "2017-09-26T00:11:17Z",
-    "id": 2793389,
-    "issues": [
-      {
-        "id": 260451990,
-        "labels": ["breaking changes"],
-        "number": 1,
-        "title": "Throw errors",
-        "url": "https://github.com/hapijs/content/issues/1"
-      }
-    ],
-    "number": 1,
-    "url": "https://github.com/hapijs/content/milestone/1",
-    "version": "4.0.0"
-  },
-  {
-    "date": "2020-02-13T08:16:30Z",
-    "id": 4170911,
-    "issues": [
-      {
-        "id": 564509042,
-        "labels": ["bug", "security", "lts", "commercial"],
-        "number": 23,
-        "title": "Backport #21, #22",
-        "url": "https://github.com/hapijs/content/issues/23"
-      }
-    ],
-    "number": 10,
-    "url": "https://github.com/hapijs/content/milestone/10",
-    "version": "3.1.1"
-  },
-  {
-    "date": "2019-03-25T18:02:27Z",
-    "id": 4170910,
-    "issues": [
-      {
-        "id": 425039253,
-        "labels": ["lts"],
+        "url": "https://github.com/hapijs/content/milestone/13",
+        "version": "5.0.1"
+    },
+    {
+        "date": "2020-01-05T01:02:33Z",
+        "id": 4973271,
+        "issues": [
+            {
+                "id": 545351974,
+                "labels": ["dependency", "breaking changes"],
+                "number": 20,
+                "title": "Only node 12",
+                "url": "https://github.com/hapijs/content/issues/20"
+            }
+        ],
         "number": 12,
-        "title": "Commercial version of v3 branch",
-        "url": "https://github.com/hapijs/content/issues/12"
-      }
-    ],
-    "number": 9,
-    "url": "https://github.com/hapijs/content/milestone/9",
-    "version": "3.1.0"
-  }
+        "url": "https://github.com/hapijs/content/milestone/12",
+        "version": "5.0.0"
+    },
+    {
+        "date": "2020-02-13T08:22:05Z",
+        "id": 4194622,
+        "issues": [
+            {
+                "id": 564509321,
+                "labels": ["bug", "security", "lts"],
+                "number": 24,
+                "title": "Backport #21, #22",
+                "url": "https://github.com/hapijs/content/issues/24"
+            }
+        ],
+        "number": 11,
+        "url": "https://github.com/hapijs/content/milestone/11",
+        "version": "4.1.1"
+    },
+    {
+        "date": "2019-04-02T17:54:24Z",
+        "id": 3792181,
+        "issues": [
+            {
+                "id": 428362063,
+                "labels": ["dependency"],
+                "number": 13,
+                "title": "Change module namespace",
+                "url": "https://github.com/hapijs/content/issues/13"
+            }
+        ],
+        "number": 8,
+        "url": "https://github.com/hapijs/content/milestone/8",
+        "version": "4.1.0"
+    },
+    {
+        "date": "2018-11-03T00:24:12Z",
+        "id": 3232145,
+        "issues": [
+            {
+                "id": 377001121,
+                "labels": ["non issue"],
+                "number": 9,
+                "title": "Remove engines",
+                "url": "https://github.com/hapijs/content/issues/9"
+            }
+        ],
+        "number": 7,
+        "url": "https://github.com/hapijs/content/milestone/7",
+        "version": "4.0.6"
+    },
+    {
+        "date": "2018-03-31T00:02:31Z",
+        "id": 3153033,
+        "issues": [
+            {
+                "id": 308112275,
+                "labels": ["bug"],
+                "number": 7,
+                "title": "Throw on .type() if header is completely missing",
+                "url": "https://github.com/hapijs/content/pull/7"
+            }
+        ],
+        "number": 6,
+        "url": "https://github.com/hapijs/content/milestone/6",
+        "version": "4.0.5"
+    },
+    {
+        "date": "2018-03-01T09:19:33Z",
+        "id": 2886841,
+        "issues": [
+            {
+                "id": 301155318,
+                "labels": ["feature"],
+                "number": 5,
+                "title": "Skip processing parameters when content type is not multipart",
+                "url": "https://github.com/hapijs/content/issues/5"
+            }
+        ],
+        "number": 5,
+        "url": "https://github.com/hapijs/content/milestone/5",
+        "version": "4.0.4"
+    },
+    {
+        "date": "2017-11-03T20:02:55Z",
+        "id": 2886840,
+        "issues": [
+            {
+                "id": 271102816,
+                "labels": ["feature"],
+                "number": 4,
+                "title": "Throw directly from header processing",
+                "url": "https://github.com/hapijs/content/issues/4"
+            }
+        ],
+        "number": 4,
+        "url": "https://github.com/hapijs/content/milestone/4",
+        "version": "4.0.3"
+    },
+    {
+        "date": "2017-11-03T20:02:21Z",
+        "id": 2794193,
+        "issues": [
+            {
+                "id": 270892801,
+                "labels": ["dependency"],
+                "number": 3,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/content/issues/3"
+            }
+        ],
+        "number": 3,
+        "url": "https://github.com/hapijs/content/milestone/3",
+        "version": "4.0.2"
+    },
+    {
+        "date": "2017-09-26T09:07:07Z",
+        "id": 2793390,
+        "issues": [
+            {
+                "id": 260547043,
+                "labels": ["dependency"],
+                "number": 2,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/content/issues/2"
+            }
+        ],
+        "number": 2,
+        "url": "https://github.com/hapijs/content/milestone/2",
+        "version": "4.0.1"
+    },
+    {
+        "date": "2017-09-26T00:11:17Z",
+        "id": 2793389,
+        "issues": [
+            {
+                "id": 260451990,
+                "labels": ["breaking changes"],
+                "number": 1,
+                "title": "Throw errors",
+                "url": "https://github.com/hapijs/content/issues/1"
+            }
+        ],
+        "number": 1,
+        "url": "https://github.com/hapijs/content/milestone/1",
+        "version": "4.0.0"
+    },
+    {
+        "date": "2020-02-13T08:16:30Z",
+        "id": 4170911,
+        "issues": [
+            {
+                "id": 564509042,
+                "labels": ["bug", "security", "lts", "commercial"],
+                "number": 23,
+                "title": "Backport #21, #22",
+                "url": "https://github.com/hapijs/content/issues/23"
+            }
+        ],
+        "number": 10,
+        "url": "https://github.com/hapijs/content/milestone/10",
+        "version": "3.1.1"
+    },
+    {
+        "date": "2019-03-25T18:02:27Z",
+        "id": 4170910,
+        "issues": [
+            {
+                "id": 425039253,
+                "labels": ["lts"],
+                "number": 12,
+                "title": "Commercial version of v3 branch",
+                "url": "https://github.com/hapijs/content/issues/12"
+            }
+        ],
+        "number": 9,
+        "url": "https://github.com/hapijs/content/milestone/9",
+        "version": "3.1.0"
+    }
 ]

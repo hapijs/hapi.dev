@@ -1,22 +1,22 @@
 {
-  "api": true,
-  "forks": 9,
-  "isPlugin": false,
-  "latestVersion": "6.x.x",
-  "link": "https://github.com/hapijs/ammo",
-  "name": "ammo",
-  "package": "@hapi/ammo",
-  "slogan": "HTTP Range processing utilities.",
-  "sloganHtml": "HTTP Range processing utilities.",
-  "stars": 1,
-  "updated": "2024-10-23T15:38:18Z",
-  "versions": [
-    {
-      "branch": "v6.0.1",
-      "license": "BSD",
-      "name": "6.0.1",
-      "node": ">= 16"
-    }
-  ],
-  "versionsArray": ["6.0.1"]
+    "api": true,
+    "forks": 9,
+    "isPlugin": false,
+    "latestVersion": "6.x.x",
+    "link": "https://github.com/hapijs/ammo",
+    "name": "ammo",
+    "package": "@hapi/ammo",
+    "slogan": "HTTP Range processing utilities.",
+    "sloganHtml": "HTTP Range processing utilities.",
+    "stars": 1,
+    "updated": "2024-10-23T15:38:18Z",
+    "versions": [
+        {
+            "branch": "v6.0.1",
+            "license": "BSD",
+            "name": "6.0.1",
+            "node": ">= 16"
+        }
+    ],
+    "versionsArray": ["6.0.1"]
 }

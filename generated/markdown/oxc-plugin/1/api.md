@@ -10,10 +10,10 @@ import { defineConfig } from 'oxlint';
 import DefaultOxlintConfig from '@hapi/oxc-plugin/oxlint';
 
 export default defineConfig({
-  extends: [DefaultOxlintConfig],
-  env: {
-    ...DefaultOxlintConfig.env,
-  },
+    extends: [DefaultOxlintConfig],
+    env: {
+        ...DefaultOxlintConfig.env,
+    },
 });
 ```
 
@@ -27,7 +27,7 @@ import { defineConfig } from 'oxfmt';
 import DefaultOxfmtConfig from '@hapi/oxc-plugin/oxfmt';
 
 export default defineConfig({
-  ...DefaultOxfmtConfig,
+    ...DefaultOxfmtConfig,
 });
 ```
 
@@ -98,7 +98,7 @@ import { defineConfig } from 'vitest/config';
 import oxc from '@hapi/oxc-plugin/vitest';
 
 export default defineConfig({
-  plugins: [oxc()],
+    plugins: [oxc()],
 });
 ```
 

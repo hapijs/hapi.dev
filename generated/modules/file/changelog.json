@@ -1,34 +1,34 @@
 [
-  {
-    "date": "2022-05-30T23:07:31Z",
-    "id": 8031809,
-    "issues": [
-      {
-        "id": 1253158712,
-        "labels": ["dependency", "breaking changes"],
-        "number": 14,
-        "title": "Support node v18 and drop node v12",
-        "url": "https://github.com/hapijs/file/pull/14"
-      }
-    ],
-    "number": 3,
-    "url": "https://github.com/hapijs/file/milestone/3",
-    "version": "3.0.0"
-  },
-  {
-    "date": "2020-01-05T05:01:42Z",
-    "id": 4973380,
-    "issues": [
-      {
-        "id": 545370374,
-        "labels": ["dependency", "breaking changes"],
-        "number": 4,
-        "title": "Only node 12",
-        "url": "https://github.com/hapijs/file/issues/4"
-      }
-    ],
-    "number": 1,
-    "url": "https://github.com/hapijs/file/milestone/1",
-    "version": "2.0.0"
-  }
+    {
+        "date": "2022-05-30T23:07:31Z",
+        "id": 8031809,
+        "issues": [
+            {
+                "id": 1253158712,
+                "labels": ["dependency", "breaking changes"],
+                "number": 14,
+                "title": "Support node v18 and drop node v12",
+                "url": "https://github.com/hapijs/file/pull/14"
+            }
+        ],
+        "number": 3,
+        "url": "https://github.com/hapijs/file/milestone/3",
+        "version": "3.0.0"
+    },
+    {
+        "date": "2020-01-05T05:01:42Z",
+        "id": 4973380,
+        "issues": [
+            {
+                "id": 545370374,
+                "labels": ["dependency", "breaking changes"],
+                "number": 4,
+                "title": "Only node 12",
+                "url": "https://github.com/hapijs/file/issues/4"
+            }
+        ],
+        "number": 1,
+        "url": "https://github.com/hapijs/file/milestone/1",
+        "version": "2.0.0"
+    }
 ]

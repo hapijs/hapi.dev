@@ -1,28 +1,28 @@
 {
-  "api": true,
-  "forks": 10,
-  "isPlugin": false,
-  "latestVersion": "7.x.x",
-  "link": "https://github.com/hapijs/eslint-plugin",
-  "name": "eslint-plugin",
-  "package": "@hapi/eslint-plugin",
-  "slogan": "ESLint plugin containing hapi style guide rules and config.",
-  "sloganHtml": "ESLint plugin containing hapi style guide rules and config.",
-  "stars": 22,
-  "updated": "2026-04-01T09:41:45Z",
-  "versions": [
-    {
-      "branch": "v6.0.0",
-      "license": "BSD",
-      "name": "6.0.0",
-      "node": ">= 16"
-    },
-    {
-      "branch": "v7.0.0",
-      "license": "BSD",
-      "name": "7.0.0",
-      "node": ">= 16"
-    }
-  ],
-  "versionsArray": ["7.0.0", "6.0.0"]
+    "api": true,
+    "forks": 10,
+    "isPlugin": false,
+    "latestVersion": "7.x.x",
+    "link": "https://github.com/hapijs/eslint-plugin",
+    "name": "eslint-plugin",
+    "package": "@hapi/eslint-plugin",
+    "slogan": "ESLint plugin containing hapi style guide rules and config.",
+    "sloganHtml": "ESLint plugin containing hapi style guide rules and config.",
+    "stars": 22,
+    "updated": "2026-04-01T09:41:45Z",
+    "versions": [
+        {
+            "branch": "v6.0.0",
+            "license": "BSD",
+            "name": "6.0.0",
+            "node": ">= 16"
+        },
+        {
+            "branch": "v7.0.0",
+            "license": "BSD",
+            "name": "7.0.0",
+            "node": ">= 16"
+        }
+    ],
+    "versionsArray": ["7.0.0", "6.0.0"]
 }

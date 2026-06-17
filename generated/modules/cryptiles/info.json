@@ -1,22 +1,22 @@
 {
-  "api": true,
-  "forks": 27,
-  "isPlugin": false,
-  "latestVersion": "6.x.x",
-  "link": "https://github.com/hapijs/cryptiles",
-  "name": "cryptiles",
-  "package": "@hapi/cryptiles",
-  "slogan": "General purpose crypto utilities.",
-  "sloganHtml": "General purpose crypto utilities.",
-  "stars": 184,
-  "updated": "2025-12-11T11:38:33Z",
-  "versions": [
-    {
-      "branch": "v6.0.3",
-      "license": "BSD",
-      "name": "6.0.3",
-      "node": ">= 16"
-    }
-  ],
-  "versionsArray": ["6.0.3"]
+    "api": true,
+    "forks": 27,
+    "isPlugin": false,
+    "latestVersion": "6.x.x",
+    "link": "https://github.com/hapijs/cryptiles",
+    "name": "cryptiles",
+    "package": "@hapi/cryptiles",
+    "slogan": "General purpose crypto utilities.",
+    "sloganHtml": "General purpose crypto utilities.",
+    "stars": 184,
+    "updated": "2025-12-11T11:38:33Z",
+    "versions": [
+        {
+            "branch": "v6.0.3",
+            "license": "BSD",
+            "name": "6.0.3",
+            "node": ">= 16"
+        }
+    ],
+    "versionsArray": ["6.0.3"]
 }

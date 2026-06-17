@@ -35,20 +35,20 @@ To seal an object:
 
 ```javascript
 const obj = {
-  a: 1,
-  b: 2,
-  c: [3, 4, 5],
-  d: {
-    e: 'f',
-  },
+    a: 1,
+    b: 2,
+    c: [3, 4, 5],
+    d: {
+        e: 'f',
+    },
 };
 
 const password = 'some_not_random_password_that_is_at_least_32_characters';
 
 try {
-  const sealed = await Iron.seal(obj, password, Iron.defaults);
+    const sealed = await Iron.seal(obj, password, Iron.defaults);
 } catch (err) {
-  console.log(err.message);
+    console.log(err.message);
 }
 ```
 
@@ -57,9 +57,9 @@ HTTP header attribute. To unseal the string:
 
 ```javascript
 try {
-  const unsealed = await Iron.unseal(sealed, password, Iron.defaults);
+    const unsealed = await Iron.unseal(sealed, password, Iron.defaults);
 } catch (err) {
-  console.log(err.message);
+    console.log(err.message);
 }
 ```
 
@@ -113,17 +113,17 @@ Seriealizes, encrypts, and signs objects into an **iron** protocol string where:
   `JSON.stringify()`. **Note**: `JSON.stringify` will not keep object properties which values are `undefined`. So if you pass an object like `{id: undefined}` then it will be serialized as `{}`.
 
 - `password` - one of:
-  - a password string used to generate a key using the pbkdf2 algorithm.
+    - a password string used to generate a key using the pbkdf2 algorithm.
 
-  - a key buffer used as-is (after validating sufficient length based on the algorithm used).
+    - a key buffer used as-is (after validating sufficient length based on the algorithm used).
 
-  - an object with:
-    - `id` - a password identifier (must consist of only letters, numbers, and `_`).
-    - `secret` - a password string or key buffer used for both encryption and integrity.
-  - an object with:
-    - `id` - a password identifier (must consist of only letters, numbers, and `_`).
-    - `encryption` - a password string or key buffer used for encryption.
-    - `integrity` - a password string or key buffer used for integrity.
+    - an object with:
+        - `id` - a password identifier (must consist of only letters, numbers, and `_`).
+        - `secret` - a password string or key buffer used for both encryption and integrity.
+    - an object with:
+        - `id` - a password identifier (must consist of only letters, numbers, and `_`).
+        - `encryption` - a password string or key buffer used for encryption.
+        - `integrity` - a password string or key buffer used for integrity.
 
 - `options` - see [Options](#options).
 
@@ -146,15 +146,15 @@ Verifies, decrypts, and reconstruct an **iron** protocol string into an object w
 
 - `password` - must match the `password` value passed to [`seal()`](#await-sealobject-password-options)
   and be one of:
-  - a password string used to generate a key using the pbkdf2 algorithm.
+    - a password string used to generate a key using the pbkdf2 algorithm.
 
-  - a key buffer used as-is (after validating sufficient length based on the algorithm used).
+    - a key buffer used as-is (after validating sufficient length based on the algorithm used).
 
-  - an object with `id` as the key and value is one of:
-    - a password string or key buffer used for both encryption and integrity.
-    - an object with:
-      - `encryption` - a password string or key buffer used for encryption.
-      - `integrity` - a password string or key buffer used for integrity.
+    - an object with `id` as the key and value is one of:
+        - a password string or key buffer used for both encryption and integrity.
+        - an object with:
+            - `encryption` - a password string or key buffer used for encryption.
+            - `integrity` - a password string or key buffer used for integrity.
 
 - `options` - see [Options](#options). Must match the `options` value passed to
   [`seal()`](#await-sealobject-password-options)
@@ -190,9 +190,9 @@ Return value: an object with the following keys:
 
 - `encrypted`
 - `key`:
-  - `key`
-  - `salt`
-  - `iv`
+    - `key`
+    - `salt`
+    - `iv`
 
 ### `await decrypt(password, options, data)`
 
@@ -261,18 +261,18 @@ example. The default settings are:
 
 ```javascript
 var options = {
-  encryption: {
-    saltBits: 256,
-    algorithm: 'aes-256-cbc',
-    iterations: 1,
-  },
-  integrity: {
-    saltBits: 256,
-    algorithm: 'sha256',
-    iterations: 1,
-  },
-  ttl: 0,
-  timestampSkewSec: 60,
-  localtimeOffsetMsec: 0,
+    encryption: {
+        saltBits: 256,
+        algorithm: 'aes-256-cbc',
+        iterations: 1,
+    },
+    integrity: {
+        saltBits: 256,
+        algorithm: 'sha256',
+        iterations: 1,
+    },
+    ttl: 0,
+    timestampSkewSec: 60,
+    localtimeOffsetMsec: 0,
 };
 ```

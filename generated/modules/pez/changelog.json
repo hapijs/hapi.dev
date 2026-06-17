@@ -1,494 +1,494 @@
 [
-  {
-    "date": "2026-04-02T08:16:07Z",
-    "id": 15394807,
-    "issues": [
-      {
-        "id": 4192696882,
-        "labels": ["dependency"],
-        "number": 54,
-        "title": "chore: bump dependencies",
-        "url": "https://github.com/hapijs/pez/pull/54"
-      }
-    ],
-    "number": 32,
-    "url": "https://github.com/hapijs/pez/milestone/32",
-    "version": "6.1.1"
-  },
-  {
-    "date": "2026-04-02T08:11:20Z",
-    "id": 9043409,
-    "issues": [
-      {
-        "id": 1584351984,
-        "labels": ["feature"],
-        "number": 50,
-        "title": "Support maxParts to limit multipart payloads",
-        "url": "https://github.com/hapijs/pez/issues/50"
-      }
-    ],
-    "number": 31,
-    "url": "https://github.com/hapijs/pez/milestone/31",
-    "version": "6.1.0"
-  },
-  {
-    "date": "2023-02-14T15:17:22Z",
-    "id": 8012501,
-    "issues": [
-      {
-        "id": 1551768903,
-        "labels": [],
-        "number": 49,
-        "title": "chore: bump hoek",
-        "url": "https://github.com/hapijs/pez/pull/49"
-      }
-    ],
-    "number": 29,
-    "url": "https://github.com/hapijs/pez/milestone/29",
-    "version": "6.0.1"
-  },
-  {
-    "date": "2023-02-14T15:17:21Z",
-    "id": 8012500,
-    "issues": [
-      {
-        "id": 1245906884,
-        "labels": ["breaking changes", "dependency"],
-        "number": 48,
-        "title": "Support node v18 and drop node v12",
-        "url": "https://github.com/hapijs/pez/pull/48"
-      }
-    ],
-    "number": 28,
-    "url": "https://github.com/hapijs/pez/milestone/28",
-    "version": "6.0.0"
-  },
-  {
-    "date": "2026-04-02T08:11:59Z",
-    "id": 9043408,
-    "issues": [],
-    "number": 30,
-    "url": "https://github.com/hapijs/pez/milestone/30",
-    "version": "5.1.0"
-  },
-  {
-    "date": "2020-07-17T18:54:10Z",
-    "id": 5103351,
-    "issues": [
-      {
-        "id": 659514085,
-        "labels": ["bug", "dependency"],
-        "number": 39,
-        "title": "node 14. Closes #38",
-        "url": "https://github.com/hapijs/pez/pull/39"
-      },
-      {
-        "id": 659513527,
-        "labels": ["bug", "dependency"],
-        "number": 38,
-        "title": "Support node 14",
-        "url": "https://github.com/hapijs/pez/issues/38"
-      }
-    ],
-    "number": 24,
-    "url": "https://github.com/hapijs/pez/milestone/24",
-    "version": "5.0.3"
-  },
-  {
-    "date": "2020-02-13T17:46:26Z",
-    "id": 5100815,
-    "issues": [
-      {
-        "id": 564848929,
-        "labels": ["dependency"],
-        "number": 35,
-        "title": "Update dep",
-        "url": "https://github.com/hapijs/pez/issues/35"
-      }
-    ],
-    "number": 23,
-    "url": "https://github.com/hapijs/pez/milestone/23",
-    "version": "5.0.2"
-  },
-  {
-    "date": "2020-02-13T07:57:00Z",
-    "id": 4973415,
-    "issues": [
-      {
-        "id": 564492584,
-        "labels": ["bug", "security"],
-        "number": 34,
-        "title": "Explicitly handle __proto__ header",
-        "url": "https://github.com/hapijs/pez/issues/34"
-      }
-    ],
-    "number": 22,
-    "url": "https://github.com/hapijs/pez/milestone/22",
-    "version": "5.0.1"
-  },
-  {
-    "date": "2020-01-05T06:47:51Z",
-    "id": 4973414,
-    "issues": [
-      {
-        "id": 545379749,
-        "labels": ["breaking changes", "dependency"],
+    {
+        "date": "2026-04-02T08:16:07Z",
+        "id": 15394807,
+        "issues": [
+            {
+                "id": 4192696882,
+                "labels": ["dependency"],
+                "number": 54,
+                "title": "chore: bump dependencies",
+                "url": "https://github.com/hapijs/pez/pull/54"
+            }
+        ],
         "number": 32,
-        "title": "Only node 12",
-        "url": "https://github.com/hapijs/pez/issues/32"
-      }
-    ],
-    "number": 21,
-    "url": "https://github.com/hapijs/pez/milestone/21",
-    "version": "5.0.0"
-  },
-  {
-    "date": "2020-07-17T07:28:08Z",
-    "id": 5103405,
-    "issues": [],
-    "number": 25,
-    "url": "https://github.com/hapijs/pez/milestone/25",
-    "version": "4.1.3"
-  },
-  {
-    "date": "2020-02-13T17:51:38Z",
-    "id": 4574332,
-    "issues": [
-      {
-        "id": 564851471,
-        "labels": ["bug", "security", "lts"],
-        "number": 36,
-        "title": "Backport #34",
-        "url": "https://github.com/hapijs/pez/issues/36"
-      }
-    ],
-    "number": 20,
-    "url": "https://github.com/hapijs/pez/milestone/20",
-    "version": "4.1.2"
-  },
-  {
-    "date": "2019-08-15T01:16:24Z",
-    "id": 4194633,
-    "issues": [
-      {
-        "id": 480900332,
-        "labels": ["dependency"],
-        "number": 30,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/pez/issues/30"
-      }
-    ],
-    "number": 19,
-    "url": "https://github.com/hapijs/pez/milestone/19",
-    "version": "4.1.1"
-  },
-  {
-    "date": "2019-04-02T18:02:23Z",
-    "id": 3792288,
-    "issues": [
-      {
-        "id": 428363101,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/pez/milestone/32",
+        "version": "6.1.1"
+    },
+    {
+        "date": "2026-04-02T08:11:20Z",
+        "id": 9043409,
+        "issues": [
+            {
+                "id": 1584351984,
+                "labels": ["feature"],
+                "number": 50,
+                "title": "Support maxParts to limit multipart payloads",
+                "url": "https://github.com/hapijs/pez/issues/50"
+            }
+        ],
+        "number": 31,
+        "url": "https://github.com/hapijs/pez/milestone/31",
+        "version": "6.1.0"
+    },
+    {
+        "date": "2023-02-14T15:17:22Z",
+        "id": 8012501,
+        "issues": [
+            {
+                "id": 1551768903,
+                "labels": [],
+                "number": 49,
+                "title": "chore: bump hoek",
+                "url": "https://github.com/hapijs/pez/pull/49"
+            }
+        ],
+        "number": 29,
+        "url": "https://github.com/hapijs/pez/milestone/29",
+        "version": "6.0.1"
+    },
+    {
+        "date": "2023-02-14T15:17:21Z",
+        "id": 8012500,
+        "issues": [
+            {
+                "id": 1245906884,
+                "labels": ["breaking changes", "dependency"],
+                "number": 48,
+                "title": "Support node v18 and drop node v12",
+                "url": "https://github.com/hapijs/pez/pull/48"
+            }
+        ],
         "number": 28,
-        "title": "Change module namespace",
-        "url": "https://github.com/hapijs/pez/issues/28"
-      }
-    ],
-    "number": 16,
-    "url": "https://github.com/hapijs/pez/milestone/16",
-    "version": "4.1.0"
-  },
-  {
-    "date": "2018-11-03T00:34:40Z",
-    "id": 3788808,
-    "issues": [
-      {
-        "id": 377002942,
-        "labels": ["non issue"],
+        "url": "https://github.com/hapijs/pez/milestone/28",
+        "version": "6.0.0"
+    },
+    {
+        "date": "2026-04-02T08:11:59Z",
+        "id": 9043408,
+        "issues": [],
+        "number": 30,
+        "url": "https://github.com/hapijs/pez/milestone/30",
+        "version": "5.1.0"
+    },
+    {
+        "date": "2020-07-17T18:54:10Z",
+        "id": 5103351,
+        "issues": [
+            {
+                "id": 659514085,
+                "labels": ["bug", "dependency"],
+                "number": 39,
+                "title": "node 14. Closes #38",
+                "url": "https://github.com/hapijs/pez/pull/39"
+            },
+            {
+                "id": 659513527,
+                "labels": ["bug", "dependency"],
+                "number": 38,
+                "title": "Support node 14",
+                "url": "https://github.com/hapijs/pez/issues/38"
+            }
+        ],
         "number": 24,
-        "title": "Remove engines",
-        "url": "https://github.com/hapijs/pez/issues/24"
-      }
-    ],
-    "number": 15,
-    "url": "https://github.com/hapijs/pez/milestone/15",
-    "version": "4.0.5"
-  },
-  {
-    "date": "2018-11-01T18:42:55Z",
-    "id": 3784065,
-    "issues": [
-      {
-        "id": 376517679,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/pez/milestone/24",
+        "version": "5.0.3"
+    },
+    {
+        "date": "2020-02-13T17:46:26Z",
+        "id": 5100815,
+        "issues": [
+            {
+                "id": 564848929,
+                "labels": ["dependency"],
+                "number": 35,
+                "title": "Update dep",
+                "url": "https://github.com/hapijs/pez/issues/35"
+            }
+        ],
         "number": 23,
-        "title": "Update hoek v6",
-        "url": "https://github.com/hapijs/pez/issues/23"
-      }
-    ],
-    "number": 14,
-    "url": "https://github.com/hapijs/pez/milestone/14",
-    "version": "4.0.4"
-  },
-  {
-    "date": "2018-10-31T04:21:53Z",
-    "id": 3206357,
-    "issues": [
-      {
-        "id": 375792742,
-        "labels": ["non issue"],
+        "url": "https://github.com/hapijs/pez/milestone/23",
+        "version": "5.0.2"
+    },
+    {
+        "date": "2020-02-13T07:57:00Z",
+        "id": 4973415,
+        "issues": [
+            {
+                "id": 564492584,
+                "labels": ["bug", "security"],
+                "number": 34,
+                "title": "Explicitly handle __proto__ header",
+                "url": "https://github.com/hapijs/pez/issues/34"
+            }
+        ],
+        "number": 22,
+        "url": "https://github.com/hapijs/pez/milestone/22",
+        "version": "5.0.1"
+    },
+    {
+        "date": "2020-01-05T06:47:51Z",
+        "id": 4973414,
+        "issues": [
+            {
+                "id": 545379749,
+                "labels": ["breaking changes", "dependency"],
+                "number": 32,
+                "title": "Only node 12",
+                "url": "https://github.com/hapijs/pez/issues/32"
+            }
+        ],
         "number": 21,
-        "title": "Convert to class",
-        "url": "https://github.com/hapijs/pez/issues/21"
-      }
-    ],
-    "number": 13,
-    "url": "https://github.com/hapijs/pez/milestone/13",
-    "version": "4.0.3"
-  },
-  {
-    "date": "2018-03-21T14:09:49Z",
-    "id": 2885347,
-    "issues": [
-      {
-        "id": 307173829,
-        "labels": ["security"],
+        "url": "https://github.com/hapijs/pez/milestone/21",
+        "version": "5.0.0"
+    },
+    {
+        "date": "2020-07-17T07:28:08Z",
+        "id": 5103405,
+        "issues": [],
+        "number": 25,
+        "url": "https://github.com/hapijs/pez/milestone/25",
+        "version": "4.1.3"
+    },
+    {
+        "date": "2020-02-13T17:51:38Z",
+        "id": 4574332,
+        "issues": [
+            {
+                "id": 564851471,
+                "labels": ["bug", "security", "lts"],
+                "number": 36,
+                "title": "Backport #34",
+                "url": "https://github.com/hapijs/pez/issues/36"
+            }
+        ],
         "number": 20,
-        "title": "Remove new Buffer usage",
-        "url": "https://github.com/hapijs/pez/pull/20"
-      }
-    ],
-    "number": 12,
-    "url": "https://github.com/hapijs/pez/milestone/12",
-    "version": "4.0.2"
-  },
-  {
-    "date": "2017-11-03T08:24:18Z",
-    "id": 2885346,
-    "issues": [
-      {
-        "id": 270904596,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/pez/milestone/20",
+        "version": "4.1.2"
+    },
+    {
+        "date": "2019-08-15T01:16:24Z",
+        "id": 4194633,
+        "issues": [
+            {
+                "id": 480900332,
+                "labels": ["dependency"],
+                "number": 30,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/pez/issues/30"
+            }
+        ],
         "number": 19,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/pez/issues/19"
-      }
-    ],
-    "number": 11,
-    "url": "https://github.com/hapijs/pez/milestone/11",
-    "version": "4.0.1"
-  },
-  {
-    "date": "2017-11-03T08:21:19Z",
-    "id": 2799361,
-    "issues": [
-      {
-        "id": 266927980,
-        "labels": ["bug", "breaking changes"],
-        "number": 18,
-        "title": "Return 413 on maxBytes error",
-        "url": "https://github.com/hapijs/pez/pull/18"
-      }
-    ],
-    "number": 10,
-    "url": "https://github.com/hapijs/pez/milestone/10",
-    "version": "4.0.0"
-  },
-  {
-    "date": "2017-09-28T05:43:53Z",
-    "id": 2546755,
-    "issues": [
-      {
-        "id": 261199246,
-        "labels": ["dependency"],
-        "number": 17,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/pez/issues/17"
-      }
-    ],
-    "number": 9,
-    "url": "https://github.com/hapijs/pez/milestone/9",
-    "version": "3.0.1"
-  },
-  {
-    "date": "2020-07-17T07:28:06Z",
-    "id": 5103423,
-    "issues": [],
-    "number": 26,
-    "url": "https://github.com/hapijs/pez/milestone/26",
-    "version": "2.2.2"
-  },
-  {
-    "date": "2020-02-13T18:02:24Z",
-    "id": 4170961,
-    "issues": [
-      {
-        "id": 564853363,
-        "labels": ["bug", "security", "commercial"],
-        "number": 37,
-        "title": "Backport #34",
-        "url": "https://github.com/hapijs/pez/issues/37"
-      }
-    ],
-    "number": 18,
-    "url": "https://github.com/hapijs/pez/milestone/18",
-    "version": "2.2.1"
-  },
-  {
-    "date": "2019-03-25T18:46:10Z",
-    "id": 4170960,
-    "issues": [
-      {
-        "id": 425044011,
-        "labels": ["lts"],
-        "number": 27,
-        "title": "Commercial version of v2 branch",
-        "url": "https://github.com/hapijs/pez/issues/27"
-      }
-    ],
-    "number": 17,
-    "url": "https://github.com/hapijs/pez/milestone/17",
-    "version": "2.2.0"
-  },
-  {
-    "date": "2017-05-28T06:49:47Z",
-    "id": 2162577,
-    "issues": [
-      {
-        "id": 231850651,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/pez/milestone/19",
+        "version": "4.1.1"
+    },
+    {
+        "date": "2019-04-02T18:02:23Z",
+        "id": 3792288,
+        "issues": [
+            {
+                "id": 428363101,
+                "labels": ["dependency"],
+                "number": 28,
+                "title": "Change module namespace",
+                "url": "https://github.com/hapijs/pez/issues/28"
+            }
+        ],
         "number": 16,
-        "title": "Update deps.",
-        "url": "https://github.com/hapijs/pez/issues/16"
-      }
-    ],
-    "number": 8,
-    "url": "https://github.com/hapijs/pez/milestone/8",
-    "version": "2.1.5"
-  },
-  {
-    "date": "2016-11-29T01:02:52Z",
-    "id": 2049702,
-    "issues": [],
-    "number": 7,
-    "url": "https://github.com/hapijs/pez/milestone/7",
-    "version": "2.1.4"
-  },
-  {
-    "date": "2016-10-05T13:57:51Z",
-    "id": 1813529,
-    "issues": [
-      {
-        "id": 181141436,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/pez/milestone/16",
+        "version": "4.1.0"
+    },
+    {
+        "date": "2018-11-03T00:34:40Z",
+        "id": 3788808,
+        "issues": [
+            {
+                "id": 377002942,
+                "labels": ["non issue"],
+                "number": 24,
+                "title": "Remove engines",
+                "url": "https://github.com/hapijs/pez/issues/24"
+            }
+        ],
+        "number": 15,
+        "url": "https://github.com/hapijs/pez/milestone/15",
+        "version": "4.0.5"
+    },
+    {
+        "date": "2018-11-01T18:42:55Z",
+        "id": 3784065,
+        "issues": [
+            {
+                "id": 376517679,
+                "labels": ["dependency"],
+                "number": 23,
+                "title": "Update hoek v6",
+                "url": "https://github.com/hapijs/pez/issues/23"
+            }
+        ],
         "number": 14,
-        "title": "update dependencies + lint updates",
-        "url": "https://github.com/hapijs/pez/pull/14"
-      }
-    ],
-    "number": 6,
-    "url": "https://github.com/hapijs/pez/milestone/6",
-    "version": "2.1.3"
-  },
-  {
-    "date": "2016-06-07T14:03:19Z",
-    "id": 1774022,
-    "issues": [
-      {
-        "id": 158931231,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/pez/milestone/14",
+        "version": "4.0.4"
+    },
+    {
+        "date": "2018-10-31T04:21:53Z",
+        "id": 3206357,
+        "issues": [
+            {
+                "id": 375792742,
+                "labels": ["non issue"],
+                "number": 21,
+                "title": "Convert to class",
+                "url": "https://github.com/hapijs/pez/issues/21"
+            }
+        ],
+        "number": 13,
+        "url": "https://github.com/hapijs/pez/milestone/13",
+        "version": "4.0.3"
+    },
+    {
+        "date": "2018-03-21T14:09:49Z",
+        "id": 2885347,
+        "issues": [
+            {
+                "id": 307173829,
+                "labels": ["security"],
+                "number": 20,
+                "title": "Remove new Buffer usage",
+                "url": "https://github.com/hapijs/pez/pull/20"
+            }
+        ],
         "number": 12,
-        "title": "Update dependencies for v2.1.2 release",
-        "url": "https://github.com/hapijs/pez/issues/12"
-      },
-      {
-        "id": 158931016,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/pez/milestone/12",
+        "version": "4.0.2"
+    },
+    {
+        "date": "2017-11-03T08:24:18Z",
+        "id": 2885346,
+        "issues": [
+            {
+                "id": 270904596,
+                "labels": ["dependency"],
+                "number": 19,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/pez/issues/19"
+            }
+        ],
         "number": 11,
-        "title": "Add .npmignore file",
-        "url": "https://github.com/hapijs/pez/issues/11"
-      }
-    ],
-    "number": 5,
-    "url": "https://github.com/hapijs/pez/milestone/5",
-    "version": "2.1.2"
-  },
-  {
-    "date": "2016-05-18T13:26:10Z",
-    "id": 1687130,
-    "issues": [
-      {
-        "id": 155489687,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/pez/milestone/11",
+        "version": "4.0.1"
+    },
+    {
+        "date": "2017-11-03T08:21:19Z",
+        "id": 2799361,
+        "issues": [
+            {
+                "id": 266927980,
+                "labels": ["bug", "breaking changes"],
+                "number": 18,
+                "title": "Return 413 on maxBytes error",
+                "url": "https://github.com/hapijs/pez/pull/18"
+            }
+        ],
         "number": 10,
-        "title": "Github / npm hoek version mismatch",
-        "url": "https://github.com/hapijs/pez/issues/10"
-      }
-    ],
-    "number": 4,
-    "url": "https://github.com/hapijs/pez/milestone/4",
-    "version": "2.1.1"
-  },
-  {
-    "date": "2016-04-06T12:40:00Z",
-    "id": 1390464,
-    "issues": [
-      {
-        "id": 145772962,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/pez/milestone/10",
+        "version": "4.0.0"
+    },
+    {
+        "date": "2017-09-28T05:43:53Z",
+        "id": 2546755,
+        "issues": [
+            {
+                "id": 261199246,
+                "labels": ["dependency"],
+                "number": 17,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/pez/issues/17"
+            }
+        ],
         "number": 9,
-        "title": "add maxBytes setting to detect oversized payloads",
-        "url": "https://github.com/hapijs/pez/pull/9"
-      }
-    ],
-    "number": 3,
-    "url": "https://github.com/hapijs/pez/milestone/3",
-    "version": "2.1.0"
-  },
-  {
-    "date": "2015-11-03T05:42:09Z",
-    "id": 1386483,
-    "issues": [
-      {
-        "id": 114740564,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/pez/milestone/9",
+        "version": "3.0.1"
+    },
+    {
+        "date": "2020-07-17T07:28:06Z",
+        "id": 5103423,
+        "issues": [],
+        "number": 26,
+        "url": "https://github.com/hapijs/pez/milestone/26",
+        "version": "2.2.2"
+    },
+    {
+        "date": "2020-02-13T18:02:24Z",
+        "id": 4170961,
+        "issues": [
+            {
+                "id": 564853363,
+                "labels": ["bug", "security", "commercial"],
+                "number": 37,
+                "title": "Backport #34",
+                "url": "https://github.com/hapijs/pez/issues/37"
+            }
+        ],
+        "number": 18,
+        "url": "https://github.com/hapijs/pez/milestone/18",
+        "version": "2.2.1"
+    },
+    {
+        "date": "2019-03-25T18:46:10Z",
+        "id": 4170960,
+        "issues": [
+            {
+                "id": 425044011,
+                "labels": ["lts"],
+                "number": 27,
+                "title": "Commercial version of v2 branch",
+                "url": "https://github.com/hapijs/pez/issues/27"
+            }
+        ],
+        "number": 17,
+        "url": "https://github.com/hapijs/pez/milestone/17",
+        "version": "2.2.0"
+    },
+    {
+        "date": "2017-05-28T06:49:47Z",
+        "id": 2162577,
+        "issues": [
+            {
+                "id": 231850651,
+                "labels": ["dependency"],
+                "number": 16,
+                "title": "Update deps.",
+                "url": "https://github.com/hapijs/pez/issues/16"
+            }
+        ],
         "number": 8,
-        "title": "ES6 deps",
-        "url": "https://github.com/hapijs/pez/issues/8"
-      }
-    ],
-    "number": 2,
-    "url": "https://github.com/hapijs/pez/milestone/2",
-    "version": "2.0.1"
-  },
-  {
-    "date": "2015-10-31T03:43:58Z",
-    "id": 807363,
-    "issues": [
-      {
-        "id": 84055106,
-        "labels": ["test", "documentation"],
+        "url": "https://github.com/hapijs/pez/milestone/8",
+        "version": "2.1.5"
+    },
+    {
+        "date": "2016-11-29T01:02:52Z",
+        "id": 2049702,
+        "issues": [],
+        "number": 7,
+        "url": "https://github.com/hapijs/pez/milestone/7",
+        "version": "2.1.4"
+    },
+    {
+        "date": "2016-10-05T13:57:51Z",
+        "id": 1813529,
+        "issues": [
+            {
+                "id": 181141436,
+                "labels": ["dependency"],
+                "number": 14,
+                "title": "update dependencies + lint updates",
+                "url": "https://github.com/hapijs/pez/pull/14"
+            }
+        ],
         "number": 6,
-        "title": "Repo cleanup",
-        "url": "https://github.com/hapijs/pez/pull/6"
-      },
-      {
-        "id": 59534549,
-        "labels": ["test", "dependency"],
+        "url": "https://github.com/hapijs/pez/milestone/6",
+        "version": "2.1.3"
+    },
+    {
+        "date": "2016-06-07T14:03:19Z",
+        "id": 1774022,
+        "issues": [
+            {
+                "id": 158931231,
+                "labels": ["dependency"],
+                "number": 12,
+                "title": "Update dependencies for v2.1.2 release",
+                "url": "https://github.com/hapijs/pez/issues/12"
+            },
+            {
+                "id": 158931016,
+                "labels": ["feature"],
+                "number": 11,
+                "title": "Add .npmignore file",
+                "url": "https://github.com/hapijs/pez/issues/11"
+            }
+        ],
         "number": 5,
-        "title": "Update to Lab 5.x.x and Code 1.x.x",
-        "url": "https://github.com/hapijs/pez/pull/5"
-      },
-      {
-        "id": 58941942,
-        "labels": ["test"],
+        "url": "https://github.com/hapijs/pez/milestone/5",
+        "version": "2.1.2"
+    },
+    {
+        "date": "2016-05-18T13:26:10Z",
+        "id": 1687130,
+        "issues": [
+            {
+                "id": 155489687,
+                "labels": ["dependency"],
+                "number": 10,
+                "title": "Github / npm hoek version mismatch",
+                "url": "https://github.com/hapijs/pez/issues/10"
+            }
+        ],
         "number": 4,
-        "title": "Update .travis.yml",
-        "url": "https://github.com/hapijs/pez/pull/4"
-      }
-    ],
-    "number": 1,
-    "url": "https://github.com/hapijs/pez/milestone/1",
-    "version": "2.0.0"
-  }
+        "url": "https://github.com/hapijs/pez/milestone/4",
+        "version": "2.1.1"
+    },
+    {
+        "date": "2016-04-06T12:40:00Z",
+        "id": 1390464,
+        "issues": [
+            {
+                "id": 145772962,
+                "labels": ["feature"],
+                "number": 9,
+                "title": "add maxBytes setting to detect oversized payloads",
+                "url": "https://github.com/hapijs/pez/pull/9"
+            }
+        ],
+        "number": 3,
+        "url": "https://github.com/hapijs/pez/milestone/3",
+        "version": "2.1.0"
+    },
+    {
+        "date": "2015-11-03T05:42:09Z",
+        "id": 1386483,
+        "issues": [
+            {
+                "id": 114740564,
+                "labels": ["dependency"],
+                "number": 8,
+                "title": "ES6 deps",
+                "url": "https://github.com/hapijs/pez/issues/8"
+            }
+        ],
+        "number": 2,
+        "url": "https://github.com/hapijs/pez/milestone/2",
+        "version": "2.0.1"
+    },
+    {
+        "date": "2015-10-31T03:43:58Z",
+        "id": 807363,
+        "issues": [
+            {
+                "id": 84055106,
+                "labels": ["test", "documentation"],
+                "number": 6,
+                "title": "Repo cleanup",
+                "url": "https://github.com/hapijs/pez/pull/6"
+            },
+            {
+                "id": 59534549,
+                "labels": ["test", "dependency"],
+                "number": 5,
+                "title": "Update to Lab 5.x.x and Code 1.x.x",
+                "url": "https://github.com/hapijs/pez/pull/5"
+            },
+            {
+                "id": 58941942,
+                "labels": ["test"],
+                "number": 4,
+                "title": "Update .travis.yml",
+                "url": "https://github.com/hapijs/pez/pull/4"
+            }
+        ],
+        "number": 1,
+        "url": "https://github.com/hapijs/pez/milestone/1",
+        "version": "2.0.0"
+    }
 ]

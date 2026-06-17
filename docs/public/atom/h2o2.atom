@@ -2,11 +2,19 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hapi.dev/module/h2o2</id>
     <title>@hapi/h2o2 changelog</title>
-    <updated>2023-08-10T16:31:37.000Z</updated>
+    <updated>2026-06-17T08:22:08.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hapi.dev/module/h2o2"/>
     <logo>https://hapi.dev/img/logo.png</logo>
     <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/h2o2 v10.0.4]]></title>
+        <id>https://github.com/hapijs/h2o2/milestone/24</id>
+        <link href="https://hapi.dev/module/h2o2/changelog#10.0.4"/>
+        <updated>2026-06-17T08:22:08.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/h2o2 v10.0.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/h2o2/pull/138">[#138]</a> fix: forward 405 Allow header</li></ul>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[@hapi/h2o2 v10.0.3]]></title>
         <id>https://github.com/hapijs/h2o2/milestone/23</id>

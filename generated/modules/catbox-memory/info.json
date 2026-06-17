@@ -1,22 +1,22 @@
 {
-  "api": true,
-  "forks": 29,
-  "isPlugin": false,
-  "latestVersion": "6.x.x",
-  "link": "https://github.com/hapijs/catbox-memory",
-  "name": "catbox-memory",
-  "package": "@hapi/catbox-memory",
-  "slogan": "Memory adaptor for [catbox](https://github.com/hapijs/catbox).",
-  "sloganHtml": "Memory adaptor for <a href=\"https://github.com/hapijs/catbox\" target=\"_blank\" rel=\"noreferrer\">catbox</a>.",
-  "stars": 33,
-  "updated": "2024-10-23T15:27:21Z",
-  "versions": [
-    {
-      "branch": "v6.0.2",
-      "license": "BSD",
-      "name": "6.0.2",
-      "node": ">= 16"
-    }
-  ],
-  "versionsArray": ["6.0.2"]
+    "api": true,
+    "forks": 29,
+    "isPlugin": false,
+    "latestVersion": "6.x.x",
+    "link": "https://github.com/hapijs/catbox-memory",
+    "name": "catbox-memory",
+    "package": "@hapi/catbox-memory",
+    "slogan": "Memory adaptor for [catbox](https://github.com/hapijs/catbox).",
+    "sloganHtml": "Memory adaptor for <a href=\"https://github.com/hapijs/catbox\" target=\"_blank\" rel=\"noreferrer\">catbox</a>.",
+    "stars": 33,
+    "updated": "2024-10-23T15:27:21Z",
+    "versions": [
+        {
+            "branch": "v6.0.2",
+            "license": "BSD",
+            "name": "6.0.2",
+            "node": ">= 16"
+        }
+    ],
+    "versionsArray": ["6.0.2"]
 }

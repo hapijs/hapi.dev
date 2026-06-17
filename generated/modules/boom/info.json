@@ -1,22 +1,22 @@
 {
-  "api": true,
-  "forks": 188,
-  "isPlugin": false,
-  "latestVersion": "10.x.x",
-  "link": "https://github.com/hapijs/boom",
-  "name": "boom",
-  "package": "@hapi/boom",
-  "slogan": "HTTP-friendly error objects.",
-  "sloganHtml": "HTTP-friendly error objects.",
-  "stars": 2923,
-  "updated": "2024-10-23T14:38:54Z",
-  "versions": [
-    {
-      "branch": "v10.0.1",
-      "license": "BSD",
-      "name": "10.0.1",
-      "node": ">= 16"
-    }
-  ],
-  "versionsArray": ["10.0.1"]
+    "api": true,
+    "forks": 188,
+    "isPlugin": false,
+    "latestVersion": "10.x.x",
+    "link": "https://github.com/hapijs/boom",
+    "name": "boom",
+    "package": "@hapi/boom",
+    "slogan": "HTTP-friendly error objects.",
+    "sloganHtml": "HTTP-friendly error objects.",
+    "stars": 2923,
+    "updated": "2024-10-23T14:38:54Z",
+    "versions": [
+        {
+            "branch": "v10.0.1",
+            "license": "BSD",
+            "name": "10.0.1",
+            "node": ">= 16"
+        }
+    ],
+    "versionsArray": ["10.0.1"]
 }

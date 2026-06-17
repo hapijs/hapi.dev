@@ -5,11 +5,11 @@
 Creates a new heavy instance where:
 
 - `options`
-  - `sampleInterval` - frequency of load sampling in milliseconds. Defaults to `0` (no sampling).
-  - `maxHeapUsedBytes` - maximum V8 heap size bytes. Defaults to `0` (no limit).
-  - `maxRssBytes` - maximum process RSS size bytes. Defaults to `0` (no limit).
-  - `maxEventLoopDelay` - maximum event loop delay duration in milliseconds. Defaults to `0` (no limit).
-  - `maxEventLoopUtilization` - maximum event loop utilization value. Defaults to `0` (no limit).
+    - `sampleInterval` - frequency of load sampling in milliseconds. Defaults to `0` (no sampling).
+    - `maxHeapUsedBytes` - maximum V8 heap size bytes. Defaults to `0` (no limit).
+    - `maxRssBytes` - maximum process RSS size bytes. Defaults to `0` (no limit).
+    - `maxEventLoopDelay` - maximum event loop delay duration in milliseconds. Defaults to `0` (no limit).
+    - `maxEventLoopUtilization` - maximum event loop utilization value. Defaults to `0` (no limit).
 
 Returns a new `Heavy` object.
 

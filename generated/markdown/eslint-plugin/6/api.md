@@ -12,7 +12,7 @@ An ESLint configuration containing hapi style guide rules and config. To use in 
 
 ```json
 {
-  "extends": "plugin:@hapi/recommended"
+    "extends": "plugin:@hapi/recommended"
 }
 ```
 
@@ -30,7 +30,7 @@ Then in your ESLint configuration add:
 
 ```json
 {
-  "extends": "plugin:@hapi/module"
+    "extends": "plugin:@hapi/module"
 }
 ```
 

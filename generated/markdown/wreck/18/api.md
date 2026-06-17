@@ -4,14 +4,14 @@
 const Wreck = require('@hapi/wreck');
 
 const example = async function () {
-  const { res, payload } = await Wreck.get('http://example.com');
-  console.log(payload.toString());
+    const { res, payload } = await Wreck.get('http://example.com');
+    console.log(payload.toString());
 };
 
 try {
-  example();
+    example();
 } catch (ex) {
-  console.error(ex);
+    console.error(ex);
 }
 ```
 
@@ -25,57 +25,57 @@ const uri = '/';
 const readableStream = Wreck.toReadableStream('foo=bar');
 
 const wreck = Wreck.defaults({
-  headers: { 'x-foo-bar': 123 },
-  agents: {
-    https: new Https.Agent({ maxSockets: 100 }),
-    http: new Http.Agent({ maxSockets: 1000 }),
-    httpsAllowUnauthorized: new Https.Agent({
-      maxSockets: 100,
-      rejectUnauthorized: false,
-    }),
-  },
+    headers: { 'x-foo-bar': 123 },
+    agents: {
+        https: new Https.Agent({ maxSockets: 100 }),
+        http: new Http.Agent({ maxSockets: 1000 }),
+        httpsAllowUnauthorized: new Https.Agent({
+            maxSockets: 100,
+            rejectUnauthorized: false,
+        }),
+    },
 });
 
 // cascading example -- does not alter `wreck`
 // inherits `headers` and `agents` specified above
 const wreckWithTimeout = wreck.defaults({
-  timeout: 5,
+    timeout: 5,
 });
 
 // all attributes are optional
 const options = {
-  baseUrl: 'https://www.example.com',
-  payload: readableStream || 'foo=bar' || Buffer.from('foo=bar'),
-  headers: {
-    /* http headers */
-  },
-  redirects: 3,
-  beforeRedirect: (
-    redirectMethod,
-    statusCode,
-    location,
-    resHeaders,
-    redirectOptions,
-    next,
-  ) => next(),
-  redirected: function (statusCode, location, req) {},
-  timeout: 1000, // 1 second, default: unlimited
-  maxBytes: 1048576, // 1 MB, default: unlimited
-  rejectUnauthorized: true || false,
-  agent: null, // Node Core http.Agent
-  secureProtocol: 'SSLv3_method', // The SSL method to use
-  ciphers: 'DES-CBC3-SHA', // The TLS ciphers to support
+    baseUrl: 'https://www.example.com',
+    payload: readableStream || 'foo=bar' || Buffer.from('foo=bar'),
+    headers: {
+        /* http headers */
+    },
+    redirects: 3,
+    beforeRedirect: (
+        redirectMethod,
+        statusCode,
+        location,
+        resHeaders,
+        redirectOptions,
+        next,
+    ) => next(),
+    redirected: function (statusCode, location, req) {},
+    timeout: 1000, // 1 second, default: unlimited
+    maxBytes: 1048576, // 1 MB, default: unlimited
+    rejectUnauthorized: true || false,
+    agent: null, // Node Core http.Agent
+    secureProtocol: 'SSLv3_method', // The SSL method to use
+    ciphers: 'DES-CBC3-SHA', // The TLS ciphers to support
 };
 
 const example = async function () {
-  const promise = wreck.request(method, uri, options);
-  try {
-    const res = await promise;
-    const body = await Wreck.read(res, options);
-    console.log(body.toString());
-  } catch (err) {
-    // Handle errors
-  }
+    const promise = wreck.request(method, uri, options);
+    try {
+        const res = await promise;
+        const body = await Wreck.read(res, options);
+        console.log(body.toString());
+    } catch (err) {
+        // Handle errors
+    }
 };
 ```
 
@@ -87,11 +87,11 @@ If the request was already redirected, aborting the original request will not ab
 Returns a _new_ instance of Wreck which merges the provided `options` with those provided on a per-request basis. You can call defaults repeatedly to build up multiple clients.
 
 - `options` - Config object containing settings for both `request` and `read` operations as well as:
-  - `agents` - an object that contains the agents for pooling connections with the following required keys:
-    - `http` - an [HTTP Agent](http://nodejs.org/api/http.html#http_class_http_agent) instance.
-    - `https` - an [HTTPS Agent](https://nodejs.org/api/https.html#https_class_https_agent) instance.
-    - `httpsAllowUnauthorized` - an [HTTPS Agent](https://nodejs.org/api/https.html#https_class_https_agent) instance.
-  - `events` - if `true`, enables events. Events are available via the `events` emitter property.
+    - `agents` - an object that contains the agents for pooling connections with the following required keys:
+        - `http` - an [HTTP Agent](http://nodejs.org/api/http.html#http_class_http_agent) instance.
+        - `https` - an [HTTPS Agent](https://nodejs.org/api/https.html#https_class_https_agent) instance.
+        - `httpsAllowUnauthorized` - an [HTTPS Agent](https://nodejs.org/api/https.html#https_class_https_agent) instance.
+    - `events` - if `true`, enables events. Events are available via the `events` emitter property.
 
 ### `request(method, uri, [options])`
 
@@ -101,47 +101,47 @@ Initiate an HTTP request.
 - `uri` - the URI of the requested resource.
 
 - `options` - optional configuration object with the following keys:
-  - `agent` - Node Core [http.Agent](http://nodejs.org/api/http.html#http_class_http_agent). Defaults to either `wreck.agents.http` or `wreck.agents.https`. Setting to `false` disables agent pooling.
+    - `agent` - Node Core [http.Agent](http://nodejs.org/api/http.html#http_class_http_agent). Defaults to either `wreck.agents.http` or `wreck.agents.https`. Setting to `false` disables agent pooling.
 
-  - `baseUrl` - fully qualified URL string used as the base URL. Most useful with `Wreck.defaults()` when making multiple requests to the same domain. For example, if `baseUrl` is `https://example.com/api/`, then requesting `/end/point?test=true` will fetch `https://example.com/end/point?test=true`. Any query string in the `baseUrl` will be overwritten with the query string in the `uri` When `baseUrl` is given, `uri` must also be a string. In order to retain the `/api/` portion of the `baseUrl` in the example, the `path` must not start with a leading `/` and the `baseUrl` must end with a trailing `/`.
+    - `baseUrl` - fully qualified URL string used as the base URL. Most useful with `Wreck.defaults()` when making multiple requests to the same domain. For example, if `baseUrl` is `https://example.com/api/`, then requesting `/end/point?test=true` will fetch `https://example.com/end/point?test=true`. Any query string in the `baseUrl` will be overwritten with the query string in the `uri` When `baseUrl` is given, `uri` must also be a string. In order to retain the `/api/` portion of the `baseUrl` in the example, the `path` must not start with a leading `/` and the `baseUrl` must end with a trailing `/`.
 
-  - `beforeRedirect` - a function to call before a redirect is triggered, using the signature `async function(redirectMethod, statusCode, location, resHeaders, redirectOptions, next)` where:
-    - `redirectMethod` - A string specifying the redirect method.
-    - `statusCode` - HTTP status code of the response that triggered the redirect.
-    - `location` - The redirect location string.
-    - `resHeaders` - An object with the headers received as part of the redirection response.
-    - `redirectOptions` - Options that will be applied to the redirect request. Changes to this object are applied to the redirection request.
-    - `next` - the callback function called to perform the redirection using signature `function(err)`. Passing an error into callback will stop the redirect request.
-  - `ciphers` - [TLS](https://nodejs.org/api/tls.html#tls_modifying_the_default_tls_cipher_suite) list of TLS ciphers to override node's default. The possible values depend on your installation of OpenSSL. Read the official OpenSSL docs for possible [TLS_CIPHERS](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html#CIPHER-LIST-FORMAT).
+    - `beforeRedirect` - a function to call before a redirect is triggered, using the signature `async function(redirectMethod, statusCode, location, resHeaders, redirectOptions, next)` where:
+        - `redirectMethod` - A string specifying the redirect method.
+        - `statusCode` - HTTP status code of the response that triggered the redirect.
+        - `location` - The redirect location string.
+        - `resHeaders` - An object with the headers received as part of the redirection response.
+        - `redirectOptions` - Options that will be applied to the redirect request. Changes to this object are applied to the redirection request.
+        - `next` - the callback function called to perform the redirection using signature `function(err)`. Passing an error into callback will stop the redirect request.
+    - `ciphers` - [TLS](https://nodejs.org/api/tls.html#tls_modifying_the_default_tls_cipher_suite) list of TLS ciphers to override node's default. The possible values depend on your installation of OpenSSL. Read the official OpenSSL docs for possible [TLS_CIPHERS](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html#CIPHER-LIST-FORMAT).
 
-  - `headers` - an object containing the request headers.
+    - `headers` - an object containing the request headers.
 
-  - `payload` - the request body as a string, Buffer, readable stream, or an object that can be serialized using `JSON.stringify()`.
+    - `payload` - the request body as a string, Buffer, readable stream, or an object that can be serialized using `JSON.stringify()`.
 
-  - `redirect303` - if `true`, a HTTP 303 status code will redirect using a GET method. Defaults to `false` (no redirection on 303).
+    - `redirect303` - if `true`, a HTTP 303 status code will redirect using a GET method. Defaults to `false` (no redirection on 303).
 
-  - `redirected` - a function to call when a redirect was triggered, using the signature `function(statusCode, location, req)` where:
-    - `statusCode` - HTTP status code of the response that triggered the redirect.
-    - `location` - The redirected location string.
-    - `req` - The new [ClientRequest](http://nodejs.org/api/http.html#http_class_http_clientrequest) object which replaces the one initially returned.
+    - `redirected` - a function to call when a redirect was triggered, using the signature `function(statusCode, location, req)` where:
+        - `statusCode` - HTTP status code of the response that triggered the redirect.
+        - `location` - The redirected location string.
+        - `req` - The new [ClientRequest](http://nodejs.org/api/http.html#http_class_http_clientrequest) object which replaces the one initially returned.
 
-  - `redirectMethod` - override the HTTP method used when following 301 and 302 redirections. Defaults to the original method.
+    - `redirectMethod` - override the HTTP method used when following 301 and 302 redirections. Defaults to the original method.
 
-  - `redirects` - the maximum number of redirects to follow. Default to `false` (no redirects).
+    - `redirects` - the maximum number of redirects to follow. Default to `false` (no redirects).
 
-  - `rejectUnauthorized` - [TLS](http://nodejs.org/api/tls.html) flag indicating whether the client should reject a response from a server with invalid certificates. This cannot be set at the same time as the `agent` option is set.
+    - `rejectUnauthorized` - [TLS](http://nodejs.org/api/tls.html) flag indicating whether the client should reject a response from a server with invalid certificates. This cannot be set at the same time as the `agent` option is set.
 
-  - `secureProtocol` - [TLS](http://nodejs.org/api/tls.html) flag indicating the SSL method to use, e.g. `SSLv3_method` to force SSL version 3. The possible values depend on your installation of OpenSSL. Read the official OpenSSL docs for possible [SSL_METHODS](http://www.openssl.org/docs/ssl/ssl.html#DEALING_WITH_PROTOCOL_METHODS).
+    - `secureProtocol` - [TLS](http://nodejs.org/api/tls.html) flag indicating the SSL method to use, e.g. `SSLv3_method` to force SSL version 3. The possible values depend on your installation of OpenSSL. Read the official OpenSSL docs for possible [SSL_METHODS](http://www.openssl.org/docs/ssl/ssl.html#DEALING_WITH_PROTOCOL_METHODS).
 
-  - `socketPath` - a UNIX socket path string for direct server connection.
+    - `socketPath` - a UNIX socket path string for direct server connection.
 
-  - `timeout` - number of milliseconds to wait without receiving a response before aborting the request. Defaults to `0` (no limit).
+    - `timeout` - number of milliseconds to wait without receiving a response before aborting the request. Defaults to `0` (no limit).
 
-  - `lookup` - DNS lookup function. see [http.request(url[,options][,callback])](https://nodejs.org/api/http.html#httprequestoptions-callback). Defaults to [dns.lookup()](https://nodejs.org/api/dns.html#dnslookuphostname-options-callback).
+    - `lookup` - DNS lookup function. see [http.request(url[,options][,callback])](https://nodejs.org/api/http.html#httprequestoptions-callback). Defaults to [dns.lookup()](https://nodejs.org/api/dns.html#dnslookuphostname-options-callback).
 
-  - `family` - IP address family to use when resolving `host` or `hostname`. Valid values are `4` or `6`. When unspecified, both IP v4 and v6 will be used.
+    - `family` - IP address family to use when resolving `host` or `hostname`. Valid values are `4` or `6`. When unspecified, both IP v4 and v6 will be used.
 
-  - `hints` - Optional `dns.lookup()` hints.
+    - `hints` - Optional `dns.lookup()` hints.
 
 Returns a promise that resolves into a node response object. The promise has a `req` property which is the instance of the node.js [ClientRequest](http://nodejs.org/api/http.html#http_class_http_clientrequest) object.
 
@@ -149,20 +149,20 @@ Returns a promise that resolves into a node response object. The promise has a `
 
 - `response` - An HTTP Incoming Message object.
 - `options` - `null` or a configuration object with the following optional keys:
-  - `gunzip` - determines how to handle gzipped payloads. Defaults to `false`.
-    - `true` - only try to gunzip if the response indicates a gzip content-encoding.
-    - `false` - explicitly disable gunzipping.
-    - `force` - try to gunzip regardless of the content-encoding header.
+    - `gunzip` - determines how to handle gzipped payloads. Defaults to `false`.
+        - `true` - only try to gunzip if the response indicates a gzip content-encoding.
+        - `false` - explicitly disable gunzipping.
+        - `force` - try to gunzip regardless of the content-encoding header.
 
-  - `json` - determines how to parse the payload as JSON:
-    - `false` - leaves payload raw. This is the default value.
-    - `true` - only try `JSON.parse` if the response indicates a JSON content-type.
-    - `'strict'` - as `true`, except returns an error for non-JSON content-type.
-    - `'force'` - try `JSON.parse` regardless of the content-type header.
+    - `json` - determines how to parse the payload as JSON:
+        - `false` - leaves payload raw. This is the default value.
+        - `true` - only try `JSON.parse` if the response indicates a JSON content-type.
+        - `'strict'` - as `true`, except returns an error for non-JSON content-type.
+        - `'force'` - try `JSON.parse` regardless of the content-type header.
 
-  - `maxBytes` - the maximum allowed response payload size. Defaults to `0` (no limit).
+    - `maxBytes` - the maximum allowed response payload size. Defaults to `0` (no limit).
 
-  - `timeout` - the number of milliseconds to wait while reading data before aborting handling of the response. Defaults to `0`.
+    - `timeout` - the number of milliseconds to wait while reading data before aborting handling of the response. Defaults to `0`.
 
 Returns a promise that resolves into the payload in the form of a Buffer or (optionally) parsed JavaScript object (JSON).
 
@@ -339,9 +339,9 @@ const HTTPS = require('https');
 const Wreck = require('@hapi/wreck');
 
 Wreck.agents.https = new HTTPS.Agent({
-  cert,
-  key,
-  ca,
+    cert,
+    key,
+    ca,
 });
 ```
 
@@ -378,11 +378,11 @@ handler should accept the following arguments `(err, details)` where:
 
 - `err` - a Boom error
 - `details` - object with the following properties
-  - `req` - the raw `ClientHttp` request object
-  - `res` - the raw `IncomingMessage` response object
-  - `start` - the time that the request was initiated
-  - `uri` - the result of `new URL(uri)`. This will provide information about
-    the resource requested. Also includes the headers and method.
+    - `req` - the raw `ClientHttp` request object
+    - `res` - the raw `IncomingMessage` response object
+    - `start` - the time that the request was initiated
+    - `uri` - the result of `new URL(uri)`. This will provide information about
+      the resource requested. Also includes the headers and method.
 
 This event is useful for logging all requests that go through _wreck_. The `err`
 and `res` arguments can be undefined depending on if an error occurs. Please

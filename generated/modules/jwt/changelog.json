@@ -1,342 +1,342 @@
 [
-  {
-    "date": "2026-06-12T08:53:52Z",
-    "id": 16327962,
-    "issues": [
-      {
-        "id": 4647782096,
-        "labels": ["dependency"],
-        "number": 61,
-        "title": "chore: bump dependencies",
-        "url": "https://github.com/hapijs/jwt/pull/61"
-      }
-    ],
-    "number": 19,
-    "url": "https://github.com/hapijs/jwt/milestone/19",
-    "version": "3.2.4"
-  },
-  {
-    "date": "2025-12-09T17:13:05Z",
-    "id": 14313465,
-    "issues": [
-      {
-        "id": 3711691432,
-        "labels": ["bug"],
-        "number": 60,
-        "title": "Fix: jwt constant time fixed time",
-        "url": "https://github.com/hapijs/jwt/pull/60"
-      }
-    ],
-    "number": 18,
-    "url": "https://github.com/hapijs/jwt/milestone/18",
-    "version": "3.2.2"
-  },
-  {
-    "date": "2025-12-09T17:13:04Z",
-    "id": 13604654,
-    "issues": [
-      {
-        "id": 3376005672,
-        "labels": ["types"],
-        "number": 59,
-        "title": "chore: improve keys typings",
-        "url": "https://github.com/hapijs/jwt/pull/59"
-      }
-    ],
-    "number": 17,
-    "url": "https://github.com/hapijs/jwt/milestone/17",
-    "version": "3.2.1"
-  },
-  {
-    "date": "2025-09-02T13:15:25Z",
-    "id": 9153711,
-    "issues": [
-      {
-        "id": 1532992161,
-        "labels": ["types", "feature"],
-        "number": 54,
-        "title": "feat: add local typings",
-        "url": "https://github.com/hapijs/jwt/pull/54"
-      }
-    ],
-    "number": 16,
-    "url": "https://github.com/hapijs/jwt/milestone/16",
-    "version": "3.2.0"
-  },
-  {
-    "date": "2023-02-04T10:17:46Z",
-    "id": 9004911,
-    "issues": [
-      {
-        "id": 1423293255,
-        "labels": [],
-        "number": 53,
-        "title": "feat: EdDSA",
-        "url": "https://github.com/hapijs/jwt/pull/53"
-      },
-      {
-        "id": 1344566733,
-        "labels": ["feature"],
-        "number": 48,
-        "title": "EdDSA (ed25519, ed448) support",
-        "url": "https://github.com/hapijs/jwt/issues/48"
-      }
-    ],
-    "number": 15,
-    "url": "https://github.com/hapijs/jwt/milestone/15",
-    "version": "3.1.0"
-  },
-  {
-    "date": "2022-08-29T20:07:09Z",
-    "id": 8207040,
-    "issues": [
-      {
-        "id": 1307363839,
-        "labels": ["dependency", "breaking changes", "feature", "test"],
-        "number": 47,
-        "title": "Support hapi v21, drop hapi v19, test ESM support",
-        "url": "https://github.com/hapijs/jwt/pull/47"
-      },
-      {
-        "id": 782438699,
-        "labels": ["feature"],
-        "number": 39,
-        "title": "use utf-8 encoding, closes #21",
-        "url": "https://github.com/hapijs/jwt/pull/39"
-      },
-      {
-        "id": 705408683,
-        "labels": ["bug"],
-        "number": 21,
-        "title": "Utils.b64stringify() is called wrong",
-        "url": "https://github.com/hapijs/jwt/issues/21"
-      }
-    ],
-    "number": 11,
-    "url": "https://github.com/hapijs/jwt/milestone/11",
-    "version": "3.0.0"
-  },
-  {
-    "date": "2022-08-29T19:33:07Z",
-    "id": 8362152,
-    "issues": [
-      {
-        "id": 1052995908,
-        "labels": ["feature"],
-        "number": 43,
-        "title": "add support for reading token from cookie",
-        "url": "https://github.com/hapijs/jwt/pull/43"
-      },
-      {
-        "id": 748272290,
-        "labels": ["feature"],
-        "number": 28,
-        "title": "Load the JWT from an arbitrary location in the request",
-        "url": "https://github.com/hapijs/jwt/issues/28"
-      }
-    ],
-    "number": 14,
-    "url": "https://github.com/hapijs/jwt/milestone/14",
-    "version": "2.2.0"
-  },
-  {
-    "date": "2022-03-24T23:48:31Z",
-    "id": 7064631,
-    "issues": [
-      {
-        "id": 1159635829,
-        "labels": ["bug"],
-        "number": 46,
-        "title": "fix: make compliant with jwt spec",
-        "url": "https://github.com/hapijs/jwt/pull/46"
-      }
-    ],
-    "number": 9,
-    "url": "https://github.com/hapijs/jwt/milestone/9",
-    "version": "2.1.1"
-  },
-  {
-    "date": "2021-08-17T02:41:27Z",
-    "id": 5921607,
-    "issues": [
-      {
-        "id": 775451665,
-        "labels": [],
-        "number": 37,
-        "title": "headless support.",
-        "url": "https://github.com/hapijs/jwt/pull/37"
-      },
-      {
-        "id": 765749921,
-        "labels": [],
-        "number": 34,
-        "title": "Fix serialNumber and remove workarounds",
-        "url": "https://github.com/hapijs/jwt/pull/34"
-      },
-      {
-        "id": 748302384,
-        "labels": [],
-        "number": 29,
-        "title": "allow typ in header to be optional. ",
-        "url": "https://github.com/hapijs/jwt/pull/29"
-      },
-      {
-        "id": 710610375,
-        "labels": ["documentation"],
-        "number": 23,
-        "title": "Improvements to the API.md",
-        "url": "https://github.com/hapijs/jwt/pull/23"
-      }
-    ],
-    "number": 8,
-    "url": "https://github.com/hapijs/jwt/milestone/8",
-    "version": "2.1.0"
-  },
-  {
-    "date": "2020-12-01T22:01:25Z",
-    "id": 5031195,
-    "issues": [
-      {
-        "id": 705132606,
-        "labels": [],
-        "number": 20,
-        "title": "Changes to README.md to align with other modules in the family",
-        "url": "https://github.com/hapijs/jwt/pull/20"
-      },
-      {
-        "id": 702353531,
-        "labels": ["dependency"],
+    {
+        "date": "2026-06-12T08:53:52Z",
+        "id": 16327962,
+        "issues": [
+            {
+                "id": 4647782096,
+                "labels": ["dependency"],
+                "number": 61,
+                "title": "chore: bump dependencies",
+                "url": "https://github.com/hapijs/jwt/pull/61"
+            }
+        ],
+        "number": 19,
+        "url": "https://github.com/hapijs/jwt/milestone/19",
+        "version": "3.2.4"
+    },
+    {
+        "date": "2025-12-09T17:13:05Z",
+        "id": 14313465,
+        "issues": [
+            {
+                "id": 3711691432,
+                "labels": ["bug"],
+                "number": 60,
+                "title": "Fix: jwt constant time fixed time",
+                "url": "https://github.com/hapijs/jwt/pull/60"
+            }
+        ],
         "number": 18,
-        "title": "Bump node-forge from 0.9.2 to 0.10.0",
-        "url": "https://github.com/hapijs/jwt/pull/18"
-      },
-      {
-        "id": 684061128,
-        "labels": [],
-        "number": 14,
-        "title": "Update dependencies and travis",
-        "url": "https://github.com/hapijs/jwt/pull/14"
-      },
-      {
-        "id": 659948541,
-        "labels": [],
-        "number": 12,
-        "title": "Add API.md",
-        "url": "https://github.com/hapijs/jwt/pull/12"
-      }
-    ],
-    "number": 7,
-    "url": "https://github.com/hapijs/jwt/milestone/7",
-    "version": "2.0.1"
-  },
-  {
-    "date": "2020-01-22T08:29:33Z",
-    "id": 4655587,
-    "issues": [
-      {
-        "id": 553353284,
-        "labels": ["dependency", "breaking changes"],
+        "url": "https://github.com/hapijs/jwt/milestone/18",
+        "version": "3.2.2"
+    },
+    {
+        "date": "2025-12-09T17:13:04Z",
+        "id": 13604654,
+        "issues": [
+            {
+                "id": 3376005672,
+                "labels": ["types"],
+                "number": 59,
+                "title": "chore: improve keys typings",
+                "url": "https://github.com/hapijs/jwt/pull/59"
+            }
+        ],
+        "number": 17,
+        "url": "https://github.com/hapijs/jwt/milestone/17",
+        "version": "3.2.1"
+    },
+    {
+        "date": "2025-09-02T13:15:25Z",
+        "id": 9153711,
+        "issues": [
+            {
+                "id": 1532992161,
+                "labels": ["types", "feature"],
+                "number": 54,
+                "title": "feat: add local typings",
+                "url": "https://github.com/hapijs/jwt/pull/54"
+            }
+        ],
+        "number": 16,
+        "url": "https://github.com/hapijs/jwt/milestone/16",
+        "version": "3.2.0"
+    },
+    {
+        "date": "2023-02-04T10:17:46Z",
+        "id": 9004911,
+        "issues": [
+            {
+                "id": 1423293255,
+                "labels": [],
+                "number": 53,
+                "title": "feat: EdDSA",
+                "url": "https://github.com/hapijs/jwt/pull/53"
+            },
+            {
+                "id": 1344566733,
+                "labels": ["feature"],
+                "number": 48,
+                "title": "EdDSA (ed25519, ed448) support",
+                "url": "https://github.com/hapijs/jwt/issues/48"
+            }
+        ],
+        "number": 15,
+        "url": "https://github.com/hapijs/jwt/milestone/15",
+        "version": "3.1.0"
+    },
+    {
+        "date": "2022-08-29T20:07:09Z",
+        "id": 8207040,
+        "issues": [
+            {
+                "id": 1307363839,
+                "labels": ["dependency", "breaking changes", "feature", "test"],
+                "number": 47,
+                "title": "Support hapi v21, drop hapi v19, test ESM support",
+                "url": "https://github.com/hapijs/jwt/pull/47"
+            },
+            {
+                "id": 782438699,
+                "labels": ["feature"],
+                "number": 39,
+                "title": "use utf-8 encoding, closes #21",
+                "url": "https://github.com/hapijs/jwt/pull/39"
+            },
+            {
+                "id": 705408683,
+                "labels": ["bug"],
+                "number": 21,
+                "title": "Utils.b64stringify() is called wrong",
+                "url": "https://github.com/hapijs/jwt/issues/21"
+            }
+        ],
         "number": 11,
-        "title": "Require hapi 19 or newer",
-        "url": "https://github.com/hapijs/jwt/issues/11"
-      },
-      {
-        "id": 553353115,
-        "labels": ["breaking changes"],
-        "number": 10,
-        "title": "Change plugin name to @commercial/jwt",
-        "url": "https://github.com/hapijs/jwt/issues/10"
-      },
-      {
-        "id": 553352479,
-        "labels": ["dependency", "breaking changes"],
+        "url": "https://github.com/hapijs/jwt/milestone/11",
+        "version": "3.0.0"
+    },
+    {
+        "date": "2022-08-29T19:33:07Z",
+        "id": 8362152,
+        "issues": [
+            {
+                "id": 1052995908,
+                "labels": ["feature"],
+                "number": 43,
+                "title": "add support for reading token from cookie",
+                "url": "https://github.com/hapijs/jwt/pull/43"
+            },
+            {
+                "id": 748272290,
+                "labels": ["feature"],
+                "number": 28,
+                "title": "Load the JWT from an arbitrary location in the request",
+                "url": "https://github.com/hapijs/jwt/issues/28"
+            }
+        ],
+        "number": 14,
+        "url": "https://github.com/hapijs/jwt/milestone/14",
+        "version": "2.2.0"
+    },
+    {
+        "date": "2022-03-24T23:48:31Z",
+        "id": 7064631,
+        "issues": [
+            {
+                "id": 1159635829,
+                "labels": ["bug"],
+                "number": 46,
+                "title": "fix: make compliant with jwt spec",
+                "url": "https://github.com/hapijs/jwt/pull/46"
+            }
+        ],
         "number": 9,
-        "title": "Only node 12",
-        "url": "https://github.com/hapijs/jwt/issues/9"
-      }
-    ],
-    "number": 6,
-    "url": "https://github.com/hapijs/jwt/milestone/6",
-    "version": "2.0.0"
-  },
-  {
-    "date": "2019-09-12T22:41:01Z",
-    "id": 4574346,
-    "issues": [
-      {
-        "id": 493061596,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/jwt/milestone/9",
+        "version": "2.1.1"
+    },
+    {
+        "date": "2021-08-17T02:41:27Z",
+        "id": 5921607,
+        "issues": [
+            {
+                "id": 775451665,
+                "labels": [],
+                "number": 37,
+                "title": "headless support.",
+                "url": "https://github.com/hapijs/jwt/pull/37"
+            },
+            {
+                "id": 765749921,
+                "labels": [],
+                "number": 34,
+                "title": "Fix serialNumber and remove workarounds",
+                "url": "https://github.com/hapijs/jwt/pull/34"
+            },
+            {
+                "id": 748302384,
+                "labels": [],
+                "number": 29,
+                "title": "allow typ in header to be optional. ",
+                "url": "https://github.com/hapijs/jwt/pull/29"
+            },
+            {
+                "id": 710610375,
+                "labels": ["documentation"],
+                "number": 23,
+                "title": "Improvements to the API.md",
+                "url": "https://github.com/hapijs/jwt/pull/23"
+            }
+        ],
+        "number": 8,
+        "url": "https://github.com/hapijs/jwt/milestone/8",
+        "version": "2.1.0"
+    },
+    {
+        "date": "2020-12-01T22:01:25Z",
+        "id": 5031195,
+        "issues": [
+            {
+                "id": 705132606,
+                "labels": [],
+                "number": 20,
+                "title": "Changes to README.md to align with other modules in the family",
+                "url": "https://github.com/hapijs/jwt/pull/20"
+            },
+            {
+                "id": 702353531,
+                "labels": ["dependency"],
+                "number": 18,
+                "title": "Bump node-forge from 0.9.2 to 0.10.0",
+                "url": "https://github.com/hapijs/jwt/pull/18"
+            },
+            {
+                "id": 684061128,
+                "labels": [],
+                "number": 14,
+                "title": "Update dependencies and travis",
+                "url": "https://github.com/hapijs/jwt/pull/14"
+            },
+            {
+                "id": 659948541,
+                "labels": [],
+                "number": 12,
+                "title": "Add API.md",
+                "url": "https://github.com/hapijs/jwt/pull/12"
+            }
+        ],
+        "number": 7,
+        "url": "https://github.com/hapijs/jwt/milestone/7",
+        "version": "2.0.1"
+    },
+    {
+        "date": "2020-01-22T08:29:33Z",
+        "id": 4655587,
+        "issues": [
+            {
+                "id": 553353284,
+                "labels": ["dependency", "breaking changes"],
+                "number": 11,
+                "title": "Require hapi 19 or newer",
+                "url": "https://github.com/hapijs/jwt/issues/11"
+            },
+            {
+                "id": 553353115,
+                "labels": ["breaking changes"],
+                "number": 10,
+                "title": "Change plugin name to @commercial/jwt",
+                "url": "https://github.com/hapijs/jwt/issues/10"
+            },
+            {
+                "id": 553352479,
+                "labels": ["dependency", "breaking changes"],
+                "number": 9,
+                "title": "Only node 12",
+                "url": "https://github.com/hapijs/jwt/issues/9"
+            }
+        ],
         "number": 6,
-        "title": "Update joi",
-        "url": "https://github.com/hapijs/jwt/issues/6"
-      }
-    ],
-    "number": 5,
-    "url": "https://github.com/hapijs/jwt/milestone/5",
-    "version": "1.1.2"
-  },
-  {
-    "date": "2019-08-15T06:35:17Z",
-    "id": 4276129,
-    "issues": [
-      {
-        "id": 480903991,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/jwt/milestone/6",
+        "version": "2.0.0"
+    },
+    {
+        "date": "2019-09-12T22:41:01Z",
+        "id": 4574346,
+        "issues": [
+            {
+                "id": 493061596,
+                "labels": ["dependency"],
+                "number": 6,
+                "title": "Update joi",
+                "url": "https://github.com/hapijs/jwt/issues/6"
+            }
+        ],
         "number": 5,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/jwt/issues/5"
-      }
-    ],
-    "number": 4,
-    "url": "https://github.com/hapijs/jwt/milestone/4",
-    "version": "1.1.1"
-  },
-  {
-    "date": "2019-05-01T05:47:12Z",
-    "id": 4275995,
-    "issues": [
-      {
-        "id": 439046343,
-        "labels": ["faq"],
+        "url": "https://github.com/hapijs/jwt/milestone/5",
+        "version": "1.1.2"
+    },
+    {
+        "date": "2019-08-15T06:35:17Z",
+        "id": 4276129,
+        "issues": [
+            {
+                "id": 480903991,
+                "labels": ["dependency"],
+                "number": 5,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/jwt/issues/5"
+            }
+        ],
+        "number": 4,
+        "url": "https://github.com/hapijs/jwt/milestone/4",
+        "version": "1.1.1"
+    },
+    {
+        "date": "2019-05-01T05:47:12Z",
+        "id": 4275995,
+        "issues": [
+            {
+                "id": 439046343,
+                "labels": ["faq"],
+                "number": 3,
+                "title": "Support ttlSec on generate()",
+                "url": "https://github.com/hapijs/jwt/issues/3"
+            }
+        ],
         "number": 3,
-        "title": "Support ttlSec on generate()",
-        "url": "https://github.com/hapijs/jwt/issues/3"
-      }
-    ],
-    "number": 3,
-    "url": "https://github.com/hapijs/jwt/milestone/3",
-    "version": "1.1.0"
-  },
-  {
-    "date": "2019-05-01T00:43:01Z",
-    "id": 4275926,
-    "issues": [
-      {
-        "id": 439033728,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/jwt/milestone/3",
+        "version": "1.1.0"
+    },
+    {
+        "date": "2019-05-01T00:43:01Z",
+        "id": 4275926,
+        "issues": [
+            {
+                "id": 439033728,
+                "labels": ["bug"],
+                "number": 2,
+                "title": "Expire token on exp, not just after",
+                "url": "https://github.com/hapijs/jwt/issues/2"
+            }
+        ],
         "number": 2,
-        "title": "Expire token on exp, not just after",
-        "url": "https://github.com/hapijs/jwt/issues/2"
-      }
-    ],
-    "number": 2,
-    "url": "https://github.com/hapijs/jwt/milestone/2",
-    "version": "1.0.2"
-  },
-  {
-    "date": "2019-04-30T23:41:11Z",
-    "id": 4275925,
-    "issues": [
-      {
-        "id": 439021108,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/jwt/milestone/2",
+        "version": "1.0.2"
+    },
+    {
+        "date": "2019-04-30T23:41:11Z",
+        "id": 4275925,
+        "issues": [
+            {
+                "id": 439021108,
+                "labels": ["bug"],
+                "number": 1,
+                "title": "Verify payload once, not per key",
+                "url": "https://github.com/hapijs/jwt/issues/1"
+            }
+        ],
         "number": 1,
-        "title": "Verify payload once, not per key",
-        "url": "https://github.com/hapijs/jwt/issues/1"
-      }
-    ],
-    "number": 1,
-    "url": "https://github.com/hapijs/jwt/milestone/1",
-    "version": "1.0.1"
-  }
+        "url": "https://github.com/hapijs/jwt/milestone/1",
+        "version": "1.0.1"
+    }
 ]

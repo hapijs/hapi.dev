@@ -1,302 +1,302 @@
 [
-  {
-    "date": "2023-02-11T18:06:10Z",
-    "id": 8012496,
-    "issues": [
-      {
-        "id": 1551767341,
-        "labels": [],
-        "number": 33,
-        "title": "chore: bump hoek",
-        "url": "https://github.com/hapijs/nigel/pull/33"
-      }
-    ],
-    "number": 20,
-    "url": "https://github.com/hapijs/nigel/milestone/20",
-    "version": "5.0.1"
-  },
-  {
-    "date": "2022-05-24T02:49:20Z",
-    "id": 8012495,
-    "issues": [
-      {
-        "id": 1245887608,
-        "labels": ["breaking changes", "dependency"],
-        "number": 32,
-        "title": "Support node v18 and drop node v12",
-        "url": "https://github.com/hapijs/nigel/pull/32"
-      }
-    ],
-    "number": 19,
-    "url": "https://github.com/hapijs/nigel/milestone/19",
-    "version": "5.0.0"
-  },
-  {
-    "date": "2020-07-05T05:26:03Z",
-    "id": 5593016,
-    "issues": [
-      {
-        "id": 648651417,
-        "labels": ["bug"],
-        "number": 26,
-        "title": "fix duplicate 'close' events",
-        "url": "https://github.com/hapijs/nigel/pull/26"
-      }
-    ],
-    "number": 17,
-    "url": "https://github.com/hapijs/nigel/milestone/17",
-    "version": "4.0.2"
-  },
-  {
-    "date": "2020-06-29T06:16:25Z",
-    "id": 4973406,
-    "issues": [
-      {
-        "id": 647130584,
-        "labels": ["bug"],
-        "number": 25,
-        "title": "close event emitted twice",
-        "url": "https://github.com/hapijs/nigel/issues/25"
-      }
-    ],
-    "number": 16,
-    "url": "https://github.com/hapijs/nigel/milestone/16",
-    "version": "4.0.1"
-  },
-  {
-    "date": "2020-01-05T06:36:12Z",
-    "id": 4973405,
-    "issues": [
-      {
-        "id": 545378097,
-        "labels": ["breaking changes", "dependency"],
-        "number": 23,
-        "title": "Only node 12",
-        "url": "https://github.com/hapijs/nigel/issues/23"
-      }
-    ],
-    "number": 15,
-    "url": "https://github.com/hapijs/nigel/milestone/15",
-    "version": "4.0.0"
-  },
-  {
-    "date": "2019-08-15T01:19:30Z",
-    "id": 4194606,
-    "issues": [
-      {
-        "id": 480900845,
-        "labels": ["dependency"],
-        "number": 21,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/nigel/issues/21"
-      }
-    ],
-    "number": 13,
-    "url": "https://github.com/hapijs/nigel/milestone/13",
-    "version": "3.1.1"
-  },
-  {
-    "date": "2019-04-02T17:45:18Z",
-    "id": 3792287,
-    "issues": [
-      {
-        "id": 428358553,
-        "labels": ["dependency"],
+    {
+        "date": "2023-02-11T18:06:10Z",
+        "id": 8012496,
+        "issues": [
+            {
+                "id": 1551767341,
+                "labels": [],
+                "number": 33,
+                "title": "chore: bump hoek",
+                "url": "https://github.com/hapijs/nigel/pull/33"
+            }
+        ],
+        "number": 20,
+        "url": "https://github.com/hapijs/nigel/milestone/20",
+        "version": "5.0.1"
+    },
+    {
+        "date": "2022-05-24T02:49:20Z",
+        "id": 8012495,
+        "issues": [
+            {
+                "id": 1245887608,
+                "labels": ["breaking changes", "dependency"],
+                "number": 32,
+                "title": "Support node v18 and drop node v12",
+                "url": "https://github.com/hapijs/nigel/pull/32"
+            }
+        ],
         "number": 19,
-        "title": "Change module namespace",
-        "url": "https://github.com/hapijs/nigel/issues/19"
-      }
-    ],
-    "number": 10,
-    "url": "https://github.com/hapijs/nigel/milestone/10",
-    "version": "3.1.0"
-  },
-  {
-    "date": "2018-11-03T00:33:51Z",
-    "id": 3788796,
-    "issues": [
-      {
-        "id": 377002893,
-        "labels": ["non issue"],
+        "url": "https://github.com/hapijs/nigel/milestone/19",
+        "version": "5.0.0"
+    },
+    {
+        "date": "2020-07-05T05:26:03Z",
+        "id": 5593016,
+        "issues": [
+            {
+                "id": 648651417,
+                "labels": ["bug"],
+                "number": 26,
+                "title": "fix duplicate 'close' events",
+                "url": "https://github.com/hapijs/nigel/pull/26"
+            }
+        ],
+        "number": 17,
+        "url": "https://github.com/hapijs/nigel/milestone/17",
+        "version": "4.0.2"
+    },
+    {
+        "date": "2020-06-29T06:16:25Z",
+        "id": 4973406,
+        "issues": [
+            {
+                "id": 647130584,
+                "labels": ["bug"],
+                "number": 25,
+                "title": "close event emitted twice",
+                "url": "https://github.com/hapijs/nigel/issues/25"
+            }
+        ],
         "number": 16,
-        "title": "Remove engines",
-        "url": "https://github.com/hapijs/nigel/issues/16"
-      }
-    ],
-    "number": 9,
-    "url": "https://github.com/hapijs/nigel/milestone/9",
-    "version": "3.0.4"
-  },
-  {
-    "date": "2018-11-01T18:37:34Z",
-    "id": 3784167,
-    "issues": [
-      {
-        "id": 376516844,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/nigel/milestone/16",
+        "version": "4.0.1"
+    },
+    {
+        "date": "2020-01-05T06:36:12Z",
+        "id": 4973405,
+        "issues": [
+            {
+                "id": 545378097,
+                "labels": ["breaking changes", "dependency"],
+                "number": 23,
+                "title": "Only node 12",
+                "url": "https://github.com/hapijs/nigel/issues/23"
+            }
+        ],
         "number": 15,
-        "title": "Update hoek v6",
-        "url": "https://github.com/hapijs/nigel/issues/15"
-      }
-    ],
-    "number": 8,
-    "url": "https://github.com/hapijs/nigel/milestone/8",
-    "version": "3.0.3"
-  },
-  {
-    "date": "2018-10-31T05:49:54Z",
-    "id": 3232155,
-    "issues": [
-      {
-        "id": 375802535,
-        "labels": ["non issue"],
-        "number": 14,
-        "title": "Cleanup",
-        "url": "https://github.com/hapijs/nigel/issues/14"
-      }
-    ],
-    "number": 7,
-    "url": "https://github.com/hapijs/nigel/milestone/7",
-    "version": "3.0.2"
-  },
-  {
-    "date": "2018-03-31T00:18:14Z",
-    "id": 2794164,
-    "issues": [
-      {
-        "id": 307175392,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/nigel/milestone/15",
+        "version": "4.0.0"
+    },
+    {
+        "date": "2019-08-15T01:19:30Z",
+        "id": 4194606,
+        "issues": [
+            {
+                "id": 480900845,
+                "labels": ["dependency"],
+                "number": 21,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/nigel/issues/21"
+            }
+        ],
         "number": 13,
-        "title": "Remove new Buffer usage",
-        "url": "https://github.com/hapijs/nigel/pull/13"
-      },
-      {
-        "id": 304102761,
-        "labels": ["non issue"],
-        "number": 12,
-        "title": "Remove `noAssert` argument from buffer functions",
-        "url": "https://github.com/hapijs/nigel/pull/12"
-      }
-    ],
-    "number": 6,
-    "url": "https://github.com/hapijs/nigel/milestone/6",
-    "version": "3.0.1"
-  },
-  {
-    "date": "2017-09-26T08:56:40Z",
-    "id": 1910376,
-    "issues": [
-      {
-        "id": 260544004,
-        "labels": ["breaking changes"],
-        "number": 11,
-        "title": "Node 8",
-        "url": "https://github.com/hapijs/nigel/issues/11"
-      }
-    ],
-    "number": 5,
-    "url": "https://github.com/hapijs/nigel/milestone/5",
-    "version": "3.0.0"
-  },
-  {
-    "date": "2019-03-25T18:40:22Z",
-    "id": 4170984,
-    "issues": [
-      {
-        "id": 425047281,
-        "labels": ["lts"],
-        "number": 18,
-        "title": "Commercial version of v2 branch",
-        "url": "https://github.com/hapijs/nigel/issues/18"
-      }
-    ],
-    "number": 11,
-    "url": "https://github.com/hapijs/nigel/milestone/11",
-    "version": "2.1.0"
-  },
-  {
-    "date": "2016-07-28T19:43:23Z",
-    "id": 1777302,
-    "issues": [
-      {
-        "id": 168179635,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/nigel/milestone/13",
+        "version": "3.1.1"
+    },
+    {
+        "date": "2019-04-02T17:45:18Z",
+        "id": 3792287,
+        "issues": [
+            {
+                "id": 428358553,
+                "labels": ["dependency"],
+                "number": 19,
+                "title": "Change module namespace",
+                "url": "https://github.com/hapijs/nigel/issues/19"
+            }
+        ],
         "number": 10,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/nigel/issues/10"
-      }
-    ],
-    "number": 4,
-    "url": "https://github.com/hapijs/nigel/milestone/4",
-    "version": "2.0.2"
-  },
-  {
-    "date": "2016-05-19T18:11:22Z",
-    "id": 1390426,
-    "issues": [
-      {
-        "id": 155488985,
-        "labels": ["test", "documentation", "dependency"],
+        "url": "https://github.com/hapijs/nigel/milestone/10",
+        "version": "3.1.0"
+    },
+    {
+        "date": "2018-11-03T00:33:51Z",
+        "id": 3788796,
+        "issues": [
+            {
+                "id": 377002893,
+                "labels": ["non issue"],
+                "number": 16,
+                "title": "Remove engines",
+                "url": "https://github.com/hapijs/nigel/issues/16"
+            }
+        ],
         "number": 9,
-        "title": "Update hoek & lab",
-        "url": "https://github.com/hapijs/nigel/pull/9"
-      }
-    ],
-    "number": 3,
-    "url": "https://github.com/hapijs/nigel/milestone/3",
-    "version": "2.0.1"
-  },
-  {
-    "date": "2015-11-03T04:29:49Z",
-    "id": 811748,
-    "issues": [
-      {
-        "id": 114738690,
-        "labels": ["breaking changes"],
+        "url": "https://github.com/hapijs/nigel/milestone/9",
+        "version": "3.0.4"
+    },
+    {
+        "date": "2018-11-01T18:37:34Z",
+        "id": 3784167,
+        "issues": [
+            {
+                "id": 376516844,
+                "labels": ["dependency"],
+                "number": 15,
+                "title": "Update hoek v6",
+                "url": "https://github.com/hapijs/nigel/issues/15"
+            }
+        ],
+        "number": 8,
+        "url": "https://github.com/hapijs/nigel/milestone/8",
+        "version": "3.0.3"
+    },
+    {
+        "date": "2018-10-31T05:49:54Z",
+        "id": 3232155,
+        "issues": [
+            {
+                "id": 375802535,
+                "labels": ["non issue"],
+                "number": 14,
+                "title": "Cleanup",
+                "url": "https://github.com/hapijs/nigel/issues/14"
+            }
+        ],
+        "number": 7,
+        "url": "https://github.com/hapijs/nigel/milestone/7",
+        "version": "3.0.2"
+    },
+    {
+        "date": "2018-03-31T00:18:14Z",
+        "id": 2794164,
+        "issues": [
+            {
+                "id": 307175392,
+                "labels": ["bug"],
+                "number": 13,
+                "title": "Remove new Buffer usage",
+                "url": "https://github.com/hapijs/nigel/pull/13"
+            },
+            {
+                "id": 304102761,
+                "labels": ["non issue"],
+                "number": 12,
+                "title": "Remove `noAssert` argument from buffer functions",
+                "url": "https://github.com/hapijs/nigel/pull/12"
+            }
+        ],
+        "number": 6,
+        "url": "https://github.com/hapijs/nigel/milestone/6",
+        "version": "3.0.1"
+    },
+    {
+        "date": "2017-09-26T08:56:40Z",
+        "id": 1910376,
+        "issues": [
+            {
+                "id": 260544004,
+                "labels": ["breaking changes"],
+                "number": 11,
+                "title": "Node 8",
+                "url": "https://github.com/hapijs/nigel/issues/11"
+            }
+        ],
         "number": 5,
-        "title": "ES6 style changes and node v4",
-        "url": "https://github.com/hapijs/nigel/issues/5"
-      },
-      {
-        "id": 112796891,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/nigel/milestone/5",
+        "version": "3.0.0"
+    },
+    {
+        "date": "2019-03-25T18:40:22Z",
+        "id": 4170984,
+        "issues": [
+            {
+                "id": 425047281,
+                "labels": ["lts"],
+                "number": 18,
+                "title": "Commercial version of v2 branch",
+                "url": "https://github.com/hapijs/nigel/issues/18"
+            }
+        ],
+        "number": 11,
+        "url": "https://github.com/hapijs/nigel/milestone/11",
+        "version": "2.1.0"
+    },
+    {
+        "date": "2016-07-28T19:43:23Z",
+        "id": 1777302,
+        "issues": [
+            {
+                "id": 168179635,
+                "labels": ["dependency"],
+                "number": 10,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/nigel/issues/10"
+            }
+        ],
         "number": 4,
-        "title": "Adjust whitespace after semicolons to fix tests",
-        "url": "https://github.com/hapijs/nigel/pull/4"
-      },
-      {
-        "id": 59536204,
-        "labels": ["test", "dependency"],
+        "url": "https://github.com/hapijs/nigel/milestone/4",
+        "version": "2.0.2"
+    },
+    {
+        "date": "2016-05-19T18:11:22Z",
+        "id": 1390426,
+        "issues": [
+            {
+                "id": 155488985,
+                "labels": ["test", "documentation", "dependency"],
+                "number": 9,
+                "title": "Update hoek & lab",
+                "url": "https://github.com/hapijs/nigel/pull/9"
+            }
+        ],
         "number": 3,
-        "title": "Update to Lab 5.x.x and Code 1.x.x",
-        "url": "https://github.com/hapijs/nigel/pull/3"
-      },
-      {
-        "id": 58941629,
-        "labels": ["test"],
+        "url": "https://github.com/hapijs/nigel/milestone/3",
+        "version": "2.0.1"
+    },
+    {
+        "date": "2015-11-03T04:29:49Z",
+        "id": 811748,
+        "issues": [
+            {
+                "id": 114738690,
+                "labels": ["breaking changes"],
+                "number": 5,
+                "title": "ES6 style changes and node v4",
+                "url": "https://github.com/hapijs/nigel/issues/5"
+            },
+            {
+                "id": 112796891,
+                "labels": ["feature"],
+                "number": 4,
+                "title": "Adjust whitespace after semicolons to fix tests",
+                "url": "https://github.com/hapijs/nigel/pull/4"
+            },
+            {
+                "id": 59536204,
+                "labels": ["test", "dependency"],
+                "number": 3,
+                "title": "Update to Lab 5.x.x and Code 1.x.x",
+                "url": "https://github.com/hapijs/nigel/pull/3"
+            },
+            {
+                "id": 58941629,
+                "labels": ["test"],
+                "number": 2,
+                "title": "Update .travis.yml",
+                "url": "https://github.com/hapijs/nigel/pull/2"
+            }
+        ],
         "number": 2,
-        "title": "Update .travis.yml",
-        "url": "https://github.com/hapijs/nigel/pull/2"
-      }
-    ],
-    "number": 2,
-    "url": "https://github.com/hapijs/nigel/milestone/2",
-    "version": "2.0.0"
-  },
-  {
-    "date": "2014-10-02T18:18:49Z",
-    "id": 805550,
-    "issues": [
-      {
-        "id": 44221440,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/nigel/milestone/2",
+        "version": "2.0.0"
+    },
+    {
+        "date": "2014-10-02T18:18:49Z",
+        "id": 805550,
+        "issues": [
+            {
+                "id": 44221440,
+                "labels": ["feature"],
+                "number": 1,
+                "title": "Performance tweaks",
+                "url": "https://github.com/hapijs/nigel/issues/1"
+            }
+        ],
         "number": 1,
-        "title": "Performance tweaks",
-        "url": "https://github.com/hapijs/nigel/issues/1"
-      }
-    ],
-    "number": 1,
-    "url": "https://github.com/hapijs/nigel/milestone/1",
-    "version": "1.0.1"
-  }
+        "url": "https://github.com/hapijs/nigel/milestone/1",
+        "version": "1.0.1"
+    }
 ]

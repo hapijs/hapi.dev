@@ -1,1007 +1,1007 @@
 [
-  {
-    "date": "2026-05-06T10:28:10Z",
-    "id": 15814787,
-    "issues": [
-      {
-        "id": 4390568761,
-        "labels": ["dependency"],
-        "number": 106,
-        "title": "chore: bump dependencies",
-        "url": "https://github.com/hapijs/subtext/pull/106"
-      }
-    ],
-    "number": 59,
-    "url": "https://github.com/hapijs/subtext/milestone/59",
-    "version": "8.1.3"
-  },
-  {
-    "date": "2026-04-02T08:19:32Z",
-    "id": 15394847,
-    "issues": [
-      {
-        "id": 4192742670,
-        "labels": ["dependency"],
-        "number": 105,
-        "title": "chore: bump deps",
-        "url": "https://github.com/hapijs/subtext/pull/105"
-      }
-    ],
-    "number": 58,
-    "url": "https://github.com/hapijs/subtext/milestone/58",
-    "version": "8.1.2"
-  },
-  {
-    "date": "2025-08-06T10:02:02Z",
-    "id": 13436611,
-    "issues": [
-      {
-        "id": 3293529945,
-        "labels": ["test"],
-        "number": 104,
-        "title": "Fix cleanup test on windows",
-        "url": "https://github.com/hapijs/subtext/pull/104"
-      },
-      {
-        "id": 3289219536,
-        "labels": ["bug"],
-        "number": 102,
-        "title": "Fix late write error on aborted streams",
-        "url": "https://github.com/hapijs/subtext/pull/102"
-      }
-    ],
-    "number": 57,
-    "url": "https://github.com/hapijs/subtext/milestone/57",
-    "version": "8.1.1"
-  },
-  {
-    "date": "2023-02-14T15:18:38Z",
-    "id": 9043389,
-    "issues": [
-      {
-        "id": 1584346337,
-        "labels": ["security", "bug", "feature"],
-        "number": 99,
-        "title": "Support multipart payload maxParts, clean-up files on error",
-        "url": "https://github.com/hapijs/subtext/issues/99"
-      }
-    ],
-    "number": 55,
-    "url": "https://github.com/hapijs/subtext/milestone/55",
-    "version": "8.1.0"
-  },
-  {
-    "date": "2023-02-14T15:13:34Z",
-    "id": 8031750,
-    "issues": [
-      {
-        "id": 1551773819,
-        "labels": [],
-        "number": 98,
-        "title": "chore: bump hoek",
-        "url": "https://github.com/hapijs/subtext/pull/98"
-      }
-    ],
-    "number": 54,
-    "url": "https://github.com/hapijs/subtext/milestone/54",
-    "version": "8.0.1"
-  },
-  {
-    "date": "2022-06-20T20:14:00Z",
-    "id": 8031748,
-    "issues": [
-      {
-        "id": 1253159893,
-        "labels": ["breaking changes", "dependency"],
-        "number": 97,
-        "title": "Support node v18 and drop node v12",
-        "url": "https://github.com/hapijs/subtext/pull/97"
-      }
-    ],
-    "number": 53,
-    "url": "https://github.com/hapijs/subtext/milestone/53",
-    "version": "8.0.0"
-  },
-  {
-    "date": "2023-02-14T15:18:39Z",
-    "id": 9043390,
-    "issues": [],
-    "number": 56,
-    "url": "https://github.com/hapijs/subtext/milestone/56",
-    "version": "7.1.0"
-  },
-  {
-    "date": "2022-06-20T20:13:59Z",
-    "id": 5103590,
-    "issues": [
-      {
-        "id": 1253040923,
-        "labels": ["bug"],
-        "number": 96,
-        "title": "Fix stream error propagation for node v16+",
-        "url": "https://github.com/hapijs/subtext/pull/96"
-      },
-      {
-        "id": 1084177193,
-        "labels": [],
-        "number": 94,
-        "title": "add dispatcher and use shared config",
-        "url": "https://github.com/hapijs/subtext/pull/94"
-      },
-      {
-        "id": 709596891,
-        "labels": [],
-        "number": 87,
-        "title": "upgrade lab to v24",
-        "url": "https://github.com/hapijs/subtext/pull/87"
-      },
-      {
-        "id": 660358865,
-        "labels": ["test"],
-        "number": 84,
-        "title": "Test on node 14",
-        "url": "https://github.com/hapijs/subtext/pull/84"
-      }
-    ],
-    "number": 52,
-    "url": "https://github.com/hapijs/subtext/milestone/52",
-    "version": "7.0.4"
-  },
-  {
-    "date": "2020-02-13T19:12:44Z",
-    "id": 5103483,
-    "issues": [
-      {
-        "id": 564888549,
-        "labels": ["bug"],
-        "number": 83,
-        "title": "Allow options.multipart to be true",
-        "url": "https://github.com/hapijs/subtext/issues/83"
-      }
-    ],
-    "number": 49,
-    "url": "https://github.com/hapijs/subtext/milestone/49",
-    "version": "7.0.3"
-  },
-  {
-    "date": "2020-02-13T18:20:46Z",
-    "id": 5010081,
-    "issues": [
-      {
-        "id": 564816827,
-        "labels": ["test", "dependency"],
-        "number": 80,
-        "title": "Add tests for deps changes",
-        "url": "https://github.com/hapijs/subtext/issues/80"
-      }
-    ],
-    "number": 48,
-    "url": "https://github.com/hapijs/subtext/milestone/48",
-    "version": "7.0.2"
-  },
-  {
-    "date": "2020-01-16T10:13:43Z",
-    "id": 4987901,
-    "issues": [
-      {
-        "id": 550239874,
-        "labels": ["dependency"],
-        "number": 79,
-        "title": "Update hoek",
-        "url": "https://github.com/hapijs/subtext/pull/79"
-      }
-    ],
-    "number": 47,
-    "url": "https://github.com/hapijs/subtext/milestone/47",
-    "version": "7.0.1"
-  },
-  {
-    "date": "2020-01-09T00:26:33Z",
-    "id": 4987900,
-    "issues": [
-      {
-        "id": 547178567,
-        "labels": ["breaking changes", "dependency"],
-        "number": 78,
-        "title": "Only node 12",
-        "url": "https://github.com/hapijs/subtext/issues/78"
-      }
-    ],
-    "number": 46,
-    "url": "https://github.com/hapijs/subtext/milestone/46",
-    "version": "7.0.0"
-  },
-  {
-    "date": "2020-02-13T18:20:43Z",
-    "id": 4658142,
-    "issues": [
-      {
-        "id": 564830758,
-        "labels": ["test", "dependency", "lts"],
-        "number": 82,
-        "title": "Add tests",
-        "url": "https://github.com/hapijs/subtext/issues/82"
-      }
-    ],
-    "number": 44,
-    "url": "https://github.com/hapijs/subtext/milestone/44",
-    "version": "6.1.3"
-  },
-  {
-    "date": "2019-09-13T19:24:35Z",
-    "id": 4442015,
-    "issues": [
-      {
-        "id": 493480795,
-        "labels": ["bug"],
-        "number": 72,
-        "title": "Fix maxBytes in file output",
-        "url": "https://github.com/hapijs/subtext/issues/72"
-      }
-    ],
-    "number": 43,
-    "url": "https://github.com/hapijs/subtext/milestone/43",
-    "version": "6.1.2"
-  },
-  {
-    "date": "2019-06-26T06:18:38Z",
-    "id": 4194609,
-    "issues": [
-      {
-        "id": 460780432,
-        "labels": ["dependency"],
-        "number": 70,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/subtext/issues/70"
-      }
-    ],
-    "number": 42,
-    "url": "https://github.com/hapijs/subtext/milestone/42",
-    "version": "6.1.1"
-  },
-  {
-    "date": "2019-04-02T18:18:02Z",
-    "id": 4019147,
-    "issues": [
-      {
-        "id": 428359265,
-        "labels": ["dependency"],
-        "number": 69,
-        "title": "Change module namespace",
-        "url": "https://github.com/hapijs/subtext/issues/69"
-      }
-    ],
-    "number": 39,
-    "url": "https://github.com/hapijs/subtext/milestone/39",
-    "version": "6.1.0"
-  },
-  {
-    "date": "2019-01-31T19:38:22Z",
-    "id": 3792292,
-    "issues": [
-      {
-        "id": 405113623,
-        "labels": ["security", "bug"],
-        "number": 66,
-        "title": "Protect against JSON.parse() prototype poisoning",
-        "url": "https://github.com/hapijs/subtext/issues/66"
-      }
-    ],
-    "number": 37,
-    "url": "https://github.com/hapijs/subtext/milestone/37",
-    "version": "6.0.12"
-  },
-  {
-    "date": "2018-11-03T00:38:56Z",
-    "id": 3791362,
-    "issues": [
-      {
-        "id": 377003348,
-        "labels": ["non issue"],
-        "number": 63,
-        "title": "Remove engines",
-        "url": "https://github.com/hapijs/subtext/issues/63"
-      }
-    ],
-    "number": 36,
-    "url": "https://github.com/hapijs/subtext/milestone/36",
-    "version": "6.0.11"
-  },
-  {
-    "date": "2018-11-02T17:51:11Z",
-    "id": 3788929,
-    "issues": [
-      {
-        "id": 376908625,
-        "labels": ["bug"],
-        "number": 62,
-        "title": "Only include file headers on multipart",
-        "url": "https://github.com/hapijs/subtext/issues/62"
-      }
-    ],
-    "number": 35,
-    "url": "https://github.com/hapijs/subtext/milestone/35",
-    "version": "6.0.10"
-  },
-  {
-    "date": "2018-11-01T19:24:28Z",
-    "id": 3786531,
-    "issues": [
-      {
-        "id": 376534623,
-        "labels": ["dependency"],
-        "number": 61,
-        "title": "Update hoek v6",
-        "url": "https://github.com/hapijs/subtext/issues/61"
-      }
-    ],
-    "number": 34,
-    "url": "https://github.com/hapijs/subtext/milestone/34",
-    "version": "6.0.9"
-  },
-  {
-    "date": "2018-10-31T21:00:02Z",
-    "id": 2886902,
-    "issues": [
-      {
-        "id": 376157618,
-        "labels": ["bug"],
-        "number": 60,
-        "title": "Handle PromiseRejectionHandledWarning",
-        "url": "https://github.com/hapijs/subtext/issues/60"
-      },
-      {
-        "id": 375809360,
-        "labels": ["non issue"],
+    {
+        "date": "2026-05-06T10:28:10Z",
+        "id": 15814787,
+        "issues": [
+            {
+                "id": 4390568761,
+                "labels": ["dependency"],
+                "number": 106,
+                "title": "chore: bump dependencies",
+                "url": "https://github.com/hapijs/subtext/pull/106"
+            }
+        ],
+        "number": 59,
+        "url": "https://github.com/hapijs/subtext/milestone/59",
+        "version": "8.1.3"
+    },
+    {
+        "date": "2026-04-02T08:19:32Z",
+        "id": 15394847,
+        "issues": [
+            {
+                "id": 4192742670,
+                "labels": ["dependency"],
+                "number": 105,
+                "title": "chore: bump deps",
+                "url": "https://github.com/hapijs/subtext/pull/105"
+            }
+        ],
         "number": 58,
-        "title": "Cleanup",
-        "url": "https://github.com/hapijs/subtext/issues/58"
-      }
-    ],
-    "number": 33,
-    "url": "https://github.com/hapijs/subtext/milestone/33",
-    "version": "6.0.8"
-  },
-  {
-    "date": "2017-11-03T20:19:27Z",
-    "id": 2885384,
-    "issues": [
-      {
-        "id": 271107029,
-        "labels": ["feature"],
-        "number": 56,
-        "title": "Cleaner throw",
-        "url": "https://github.com/hapijs/subtext/issues/56"
-      }
-    ],
-    "number": 32,
-    "url": "https://github.com/hapijs/subtext/milestone/32",
-    "version": "6.0.7"
-  },
-  {
-    "date": "2017-11-03T08:46:14Z",
-    "id": 2856592,
-    "issues": [
-      {
-        "id": 270909004,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/subtext/milestone/58",
+        "version": "8.1.2"
+    },
+    {
+        "date": "2025-08-06T10:02:02Z",
+        "id": 13436611,
+        "issues": [
+            {
+                "id": 3293529945,
+                "labels": ["test"],
+                "number": 104,
+                "title": "Fix cleanup test on windows",
+                "url": "https://github.com/hapijs/subtext/pull/104"
+            },
+            {
+                "id": 3289219536,
+                "labels": ["bug"],
+                "number": 102,
+                "title": "Fix late write error on aborted streams",
+                "url": "https://github.com/hapijs/subtext/pull/102"
+            }
+        ],
+        "number": 57,
+        "url": "https://github.com/hapijs/subtext/milestone/57",
+        "version": "8.1.1"
+    },
+    {
+        "date": "2023-02-14T15:18:38Z",
+        "id": 9043389,
+        "issues": [
+            {
+                "id": 1584346337,
+                "labels": ["security", "bug", "feature"],
+                "number": 99,
+                "title": "Support multipart payload maxParts, clean-up files on error",
+                "url": "https://github.com/hapijs/subtext/issues/99"
+            }
+        ],
         "number": 55,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/subtext/issues/55"
-      }
-    ],
-    "number": 31,
-    "url": "https://github.com/hapijs/subtext/milestone/31",
-    "version": "6.0.6"
-  },
-  {
-    "date": "2017-10-22T08:46:03Z",
-    "id": 2852004,
-    "issues": [
-      {
-        "id": 267447257,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/subtext/milestone/55",
+        "version": "8.1.0"
+    },
+    {
+        "date": "2023-02-14T15:13:34Z",
+        "id": 8031750,
+        "issues": [
+            {
+                "id": 1551773819,
+                "labels": [],
+                "number": 98,
+                "title": "chore: bump hoek",
+                "url": "https://github.com/hapijs/subtext/pull/98"
+            }
+        ],
         "number": 54,
-        "title": "Update wreck",
-        "url": "https://github.com/hapijs/subtext/issues/54"
-      }
-    ],
-    "number": 30,
-    "url": "https://github.com/hapijs/subtext/milestone/30",
-    "version": "6.0.5"
-  },
-  {
-    "date": "2017-10-19T17:52:32Z",
-    "id": 2799427,
-    "issues": [
-      {
-        "id": 266930854,
-        "labels": ["bug", "dependency"],
+        "url": "https://github.com/hapijs/subtext/milestone/54",
+        "version": "8.0.1"
+    },
+    {
+        "date": "2022-06-20T20:14:00Z",
+        "id": 8031748,
+        "issues": [
+            {
+                "id": 1253159893,
+                "labels": ["breaking changes", "dependency"],
+                "number": 97,
+                "title": "Support node v18 and drop node v12",
+                "url": "https://github.com/hapijs/subtext/pull/97"
+            }
+        ],
         "number": 53,
-        "title": "Update pez dependency",
-        "url": "https://github.com/hapijs/subtext/issues/53"
-      }
-    ],
-    "number": 29,
-    "url": "https://github.com/hapijs/subtext/milestone/29",
-    "version": "6.0.4"
-  },
-  {
-    "date": "2017-09-28T06:29:17Z",
-    "id": 2799417,
-    "issues": [],
-    "number": 28,
-    "url": "https://github.com/hapijs/subtext/milestone/28",
-    "version": "6.0.3"
-  },
-  {
-    "date": "2017-09-28T06:21:32Z",
-    "id": 2793406,
-    "issues": [
-      {
-        "id": 261205093,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/subtext/milestone/53",
+        "version": "8.0.0"
+    },
+    {
+        "date": "2023-02-14T15:18:39Z",
+        "id": 9043390,
+        "issues": [],
+        "number": 56,
+        "url": "https://github.com/hapijs/subtext/milestone/56",
+        "version": "7.1.0"
+    },
+    {
+        "date": "2022-06-20T20:13:59Z",
+        "id": 5103590,
+        "issues": [
+            {
+                "id": 1253040923,
+                "labels": ["bug"],
+                "number": 96,
+                "title": "Fix stream error propagation for node v16+",
+                "url": "https://github.com/hapijs/subtext/pull/96"
+            },
+            {
+                "id": 1084177193,
+                "labels": [],
+                "number": 94,
+                "title": "add dispatcher and use shared config",
+                "url": "https://github.com/hapijs/subtext/pull/94"
+            },
+            {
+                "id": 709596891,
+                "labels": [],
+                "number": 87,
+                "title": "upgrade lab to v24",
+                "url": "https://github.com/hapijs/subtext/pull/87"
+            },
+            {
+                "id": 660358865,
+                "labels": ["test"],
+                "number": 84,
+                "title": "Test on node 14",
+                "url": "https://github.com/hapijs/subtext/pull/84"
+            }
+        ],
         "number": 52,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/subtext/issues/52"
-      }
-    ],
-    "number": 27,
-    "url": "https://github.com/hapijs/subtext/milestone/27",
-    "version": "6.0.2"
-  },
-  {
-    "date": "2017-09-26T00:28:54Z",
-    "id": 2775882,
-    "issues": [
-      {
-        "id": 260454428,
-        "labels": ["dependency"],
-        "number": 51,
-        "title": "Update content",
-        "url": "https://github.com/hapijs/subtext/issues/51"
-      }
-    ],
-    "number": 26,
-    "url": "https://github.com/hapijs/subtext/milestone/26",
-    "version": "6.0.1"
-  },
-  {
-    "date": "2017-09-18T22:40:20Z",
-    "id": 2617042,
-    "issues": [
-      {
-        "id": 258642539,
-        "labels": ["breaking changes", "dependency"],
-        "number": 50,
-        "title": "Async interface",
-        "url": "https://github.com/hapijs/subtext/pull/50"
-      },
-      {
-        "id": 258642231,
-        "labels": ["breaking changes", "feature"],
+        "url": "https://github.com/hapijs/subtext/milestone/52",
+        "version": "7.0.4"
+    },
+    {
+        "date": "2020-02-13T19:12:44Z",
+        "id": 5103483,
+        "issues": [
+            {
+                "id": 564888549,
+                "labels": ["bug"],
+                "number": 83,
+                "title": "Allow options.multipart to be true",
+                "url": "https://github.com/hapijs/subtext/issues/83"
+            }
+        ],
         "number": 49,
-        "title": "Migrate to async interface",
-        "url": "https://github.com/hapijs/subtext/issues/49"
-      }
-    ],
-    "number": 25,
-    "url": "https://github.com/hapijs/subtext/milestone/25",
-    "version": "6.0.0"
-  },
-  {
-    "date": "2020-02-13T18:20:45Z",
-    "id": 4658177,
-    "issues": [
-      {
-        "id": 564818758,
-        "labels": ["test", "dependency", "lts", "commercial"],
-        "number": 81,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/subtext/issues/81"
-      }
-    ],
-    "number": 45,
-    "url": "https://github.com/hapijs/subtext/milestone/45",
-    "version": "5.1.2"
-  },
-  {
-    "date": "2019-09-13T19:42:13Z",
-    "id": 4170886,
-    "issues": [
-      {
-        "id": 493487490,
-        "labels": ["bug", "commercial"],
-        "number": 73,
-        "title": "maxBytes file output",
-        "url": "https://github.com/hapijs/subtext/issues/73"
-      }
-    ],
-    "number": 41,
-    "url": "https://github.com/hapijs/subtext/milestone/41",
-    "version": "5.1.1"
-  },
-  {
-    "date": "2019-03-25T18:53:49Z",
-    "id": 4170885,
-    "issues": [
-      {
-        "id": 425036417,
-        "labels": ["lts"],
-        "number": 68,
-        "title": "Commercial version of v5 branch",
-        "url": "https://github.com/hapijs/subtext/issues/68"
-      }
-    ],
-    "number": 40,
-    "url": "https://github.com/hapijs/subtext/milestone/40",
-    "version": "5.1.0"
-  },
-  {
-    "date": "2019-01-31T19:38:18Z",
-    "id": 4017345,
-    "issues": [
-      {
-        "id": 405119135,
-        "labels": ["security", "bug", "lts"],
-        "number": 67,
-        "title": "Protect against JSON.parse() prototype poisoning",
-        "url": "https://github.com/hapijs/subtext/issues/67"
-      }
-    ],
-    "number": 38,
-    "url": "https://github.com/hapijs/subtext/milestone/38",
-    "version": "5.0.1"
-  },
-  {
-    "date": "2017-07-02T18:35:21Z",
-    "id": 2617041,
-    "issues": [
-      {
-        "id": 239230994,
-        "labels": ["bug", "breaking changes"],
+        "url": "https://github.com/hapijs/subtext/milestone/49",
+        "version": "7.0.3"
+    },
+    {
+        "date": "2020-02-13T18:20:46Z",
+        "id": 5010081,
+        "issues": [
+            {
+                "id": 564816827,
+                "labels": ["test", "dependency"],
+                "number": 80,
+                "title": "Add tests for deps changes",
+                "url": "https://github.com/hapijs/subtext/issues/80"
+            }
+        ],
         "number": 48,
-        "title": "Return 413 when payload too large.",
-        "url": "https://github.com/hapijs/subtext/pull/48"
-      }
-    ],
-    "number": 24,
-    "url": "https://github.com/hapijs/subtext/milestone/24",
-    "version": "5.0.0"
-  },
-  {
-    "date": "2017-05-28T06:55:07Z",
-    "id": 2399858,
-    "issues": [
-      {
-        "id": 231850837,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/subtext/milestone/48",
+        "version": "7.0.2"
+    },
+    {
+        "date": "2020-01-16T10:13:43Z",
+        "id": 4987901,
+        "issues": [
+            {
+                "id": 550239874,
+                "labels": ["dependency"],
+                "number": 79,
+                "title": "Update hoek",
+                "url": "https://github.com/hapijs/subtext/pull/79"
+            }
+        ],
         "number": 47,
-        "title": "Update deps.",
-        "url": "https://github.com/hapijs/subtext/issues/47"
-      }
-    ],
-    "number": 22,
-    "url": "https://github.com/hapijs/subtext/milestone/22",
-    "version": "4.4.1"
-  },
-  {
-    "date": "2017-03-21T06:49:19Z",
-    "id": 2079331,
-    "issues": [
-      {
-        "id": 215643027,
-        "labels": ["feature"],
-        "number": 45,
-        "title": "Allow specifying custom query string parser",
-        "url": "https://github.com/hapijs/subtext/issues/45"
-      },
-      {
-        "id": 215641704,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/subtext/milestone/47",
+        "version": "7.0.1"
+    },
+    {
+        "date": "2020-01-09T00:26:33Z",
+        "id": 4987900,
+        "issues": [
+            {
+                "id": 547178567,
+                "labels": ["breaking changes", "dependency"],
+                "number": 78,
+                "title": "Only node 12",
+                "url": "https://github.com/hapijs/subtext/issues/78"
+            }
+        ],
+        "number": 46,
+        "url": "https://github.com/hapijs/subtext/milestone/46",
+        "version": "7.0.0"
+    },
+    {
+        "date": "2020-02-13T18:20:43Z",
+        "id": 4658142,
+        "issues": [
+            {
+                "id": 564830758,
+                "labels": ["test", "dependency", "lts"],
+                "number": 82,
+                "title": "Add tests",
+                "url": "https://github.com/hapijs/subtext/issues/82"
+            }
+        ],
         "number": 44,
-        "title": "Retain raw payload when parsing fails",
-        "url": "https://github.com/hapijs/subtext/issues/44"
-      }
-    ],
-    "number": 21,
-    "url": "https://github.com/hapijs/subtext/milestone/21",
-    "version": "4.4.0"
-  },
-  {
-    "date": "2016-10-19T08:50:16Z",
-    "id": 1964237,
-    "issues": [
-      {
-        "id": 183875943,
-        "labels": ["feature"],
-        "number": 41,
-        "title": "Support multipart override",
-        "url": "https://github.com/hapijs/subtext/pull/41"
-      },
-      {
-        "id": 183875891,
-        "labels": ["feature"],
-        "number": 40,
-        "title": "Support multipart override output",
-        "url": "https://github.com/hapijs/subtext/issues/40"
-      }
-    ],
-    "number": 19,
-    "url": "https://github.com/hapijs/subtext/milestone/19",
-    "version": "4.3.0"
-  },
-  {
-    "date": "2016-10-19T06:30:37Z",
-    "id": 2079043,
-    "issues": [
-      {
-        "id": 179428066,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/subtext/milestone/44",
+        "version": "6.1.3"
+    },
+    {
+        "date": "2019-09-13T19:24:35Z",
+        "id": 4442015,
+        "issues": [
+            {
+                "id": 493480795,
+                "labels": ["bug"],
+                "number": 72,
+                "title": "Fix maxBytes in file output",
+                "url": "https://github.com/hapijs/subtext/issues/72"
+            }
+        ],
+        "number": 43,
+        "url": "https://github.com/hapijs/subtext/milestone/43",
+        "version": "6.1.2"
+    },
+    {
+        "date": "2019-06-26T06:18:38Z",
+        "id": 4194609,
+        "issues": [
+            {
+                "id": 460780432,
+                "labels": ["dependency"],
+                "number": 70,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/subtext/issues/70"
+            }
+        ],
+        "number": 42,
+        "url": "https://github.com/hapijs/subtext/milestone/42",
+        "version": "6.1.1"
+    },
+    {
+        "date": "2019-04-02T18:18:02Z",
+        "id": 4019147,
+        "issues": [
+            {
+                "id": 428359265,
+                "labels": ["dependency"],
+                "number": 69,
+                "title": "Change module namespace",
+                "url": "https://github.com/hapijs/subtext/issues/69"
+            }
+        ],
+        "number": 39,
+        "url": "https://github.com/hapijs/subtext/milestone/39",
+        "version": "6.1.0"
+    },
+    {
+        "date": "2019-01-31T19:38:22Z",
+        "id": 3792292,
+        "issues": [
+            {
+                "id": 405113623,
+                "labels": ["security", "bug"],
+                "number": 66,
+                "title": "Protect against JSON.parse() prototype poisoning",
+                "url": "https://github.com/hapijs/subtext/issues/66"
+            }
+        ],
         "number": 37,
-        "title": "Update dependencies",
-        "url": "https://github.com/hapijs/subtext/pull/37"
-      }
-    ],
-    "number": 20,
-    "url": "https://github.com/hapijs/subtext/milestone/20",
-    "version": "4.2.2"
-  },
-  {
-    "date": "2016-08-26T02:26:10Z",
-    "id": 1964231,
-    "issues": [
-      {
-        "id": 173355122,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/subtext/milestone/37",
+        "version": "6.0.12"
+    },
+    {
+        "date": "2018-11-03T00:38:56Z",
+        "id": 3791362,
+        "issues": [
+            {
+                "id": 377003348,
+                "labels": ["non issue"],
+                "number": 63,
+                "title": "Remove engines",
+                "url": "https://github.com/hapijs/subtext/issues/63"
+            }
+        ],
         "number": 36,
-        "title": "Pass options to built-in compressions",
-        "url": "https://github.com/hapijs/subtext/issues/36"
-      }
-    ],
-    "number": 18,
-    "url": "https://github.com/hapijs/subtext/milestone/18",
-    "version": "4.2.1"
-  },
-  {
-    "date": "2016-08-26T02:22:13Z",
-    "id": 1954405,
-    "issues": [
-      {
-        "id": 173354633,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/subtext/milestone/36",
+        "version": "6.0.11"
+    },
+    {
+        "date": "2018-11-02T17:51:11Z",
+        "id": 3788929,
+        "issues": [
+            {
+                "id": 376908625,
+                "labels": ["bug"],
+                "number": 62,
+                "title": "Only include file headers on multipart",
+                "url": "https://github.com/hapijs/subtext/issues/62"
+            }
+        ],
         "number": 35,
-        "title": "Support compression options",
-        "url": "https://github.com/hapijs/subtext/issues/35"
-      }
-    ],
-    "number": 17,
-    "url": "https://github.com/hapijs/subtext/milestone/17",
-    "version": "4.2.0"
-  },
-  {
-    "date": "2016-08-22T06:58:06Z",
-    "id": 1910303,
-    "issues": [
-      {
-        "id": 172381275,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/subtext/milestone/35",
+        "version": "6.0.10"
+    },
+    {
+        "date": "2018-11-01T19:24:28Z",
+        "id": 3786531,
+        "issues": [
+            {
+                "id": 376534623,
+                "labels": ["dependency"],
+                "number": 61,
+                "title": "Update hoek v6",
+                "url": "https://github.com/hapijs/subtext/issues/61"
+            }
+        ],
         "number": 34,
-        "title": "Support external decoders",
-        "url": "https://github.com/hapijs/subtext/issues/34"
-      }
-    ],
-    "number": 16,
-    "url": "https://github.com/hapijs/subtext/milestone/16",
-    "version": "4.1.0"
-  },
-  {
-    "date": "2016-07-28T19:25:13Z",
-    "id": 1910302,
-    "issues": [
-      {
-        "id": 168175766,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/subtext/milestone/34",
+        "version": "6.0.9"
+    },
+    {
+        "date": "2018-10-31T21:00:02Z",
+        "id": 2886902,
+        "issues": [
+            {
+                "id": 376157618,
+                "labels": ["bug"],
+                "number": 60,
+                "title": "Handle PromiseRejectionHandledWarning",
+                "url": "https://github.com/hapijs/subtext/issues/60"
+            },
+            {
+                "id": 375809360,
+                "labels": ["non issue"],
+                "number": 58,
+                "title": "Cleanup",
+                "url": "https://github.com/hapijs/subtext/issues/58"
+            }
+        ],
         "number": 33,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/subtext/issues/33"
-      }
-    ],
-    "number": 15,
-    "url": "https://github.com/hapijs/subtext/milestone/15",
-    "version": "4.0.5"
-  },
-  {
-    "date": "2016-07-28T19:23:28Z",
-    "id": 1760313,
-    "issues": [
-      {
-        "id": 156101024,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/subtext/milestone/33",
+        "version": "6.0.8"
+    },
+    {
+        "date": "2017-11-03T20:19:27Z",
+        "id": 2885384,
+        "issues": [
+            {
+                "id": 271107029,
+                "labels": ["feature"],
+                "number": 56,
+                "title": "Cleaner throw",
+                "url": "https://github.com/hapijs/subtext/issues/56"
+            }
+        ],
+        "number": 32,
+        "url": "https://github.com/hapijs/subtext/milestone/32",
+        "version": "6.0.7"
+    },
+    {
+        "date": "2017-11-03T08:46:14Z",
+        "id": 2856592,
+        "issues": [
+            {
+                "id": 270909004,
+                "labels": ["dependency"],
+                "number": 55,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/subtext/issues/55"
+            }
+        ],
+        "number": 31,
+        "url": "https://github.com/hapijs/subtext/milestone/31",
+        "version": "6.0.6"
+    },
+    {
+        "date": "2017-10-22T08:46:03Z",
+        "id": 2852004,
+        "issues": [
+            {
+                "id": 267447257,
+                "labels": ["dependency"],
+                "number": 54,
+                "title": "Update wreck",
+                "url": "https://github.com/hapijs/subtext/issues/54"
+            }
+        ],
+        "number": 30,
+        "url": "https://github.com/hapijs/subtext/milestone/30",
+        "version": "6.0.5"
+    },
+    {
+        "date": "2017-10-19T17:52:32Z",
+        "id": 2799427,
+        "issues": [
+            {
+                "id": 266930854,
+                "labels": ["bug", "dependency"],
+                "number": 53,
+                "title": "Update pez dependency",
+                "url": "https://github.com/hapijs/subtext/issues/53"
+            }
+        ],
         "number": 29,
-        "title": "update to code v3",
-        "url": "https://github.com/hapijs/subtext/pull/29"
-      }
-    ],
-    "number": 14,
-    "url": "https://github.com/hapijs/subtext/milestone/14",
-    "version": "4.0.4"
-  },
-  {
-    "date": "2016-05-11T15:05:46Z",
-    "id": 1753861,
-    "issues": [
-      {
-        "id": 154266737,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/subtext/milestone/29",
+        "version": "6.0.4"
+    },
+    {
+        "date": "2017-09-28T06:29:17Z",
+        "id": 2799417,
+        "issues": [],
         "number": 28,
-        "title": "update form-data dependency to 0.2.x",
-        "url": "https://github.com/hapijs/subtext/issues/28"
-      }
-    ],
-    "number": 13,
-    "url": "https://github.com/hapijs/subtext/milestone/13",
-    "version": "4.0.3"
-  },
-  {
-    "date": "2016-05-08T20:15:49Z",
-    "id": 1687571,
-    "issues": [
-      {
-        "id": 151346105,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/subtext/milestone/28",
+        "version": "6.0.3"
+    },
+    {
+        "date": "2017-09-28T06:21:32Z",
+        "id": 2793406,
+        "issues": [
+            {
+                "id": 261205093,
+                "labels": ["dependency"],
+                "number": 52,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/subtext/issues/52"
+            }
+        ],
         "number": 27,
-        "title": "testing-node-6",
-        "url": "https://github.com/hapijs/subtext/pull/27"
-      }
-    ],
-    "number": 12,
-    "url": "https://github.com/hapijs/subtext/milestone/12",
-    "version": "4.0.2"
-  },
-  {
-    "date": "2016-04-06T15:12:01Z",
-    "id": 1471887,
-    "issues": [
-      {
-        "id": 145376831,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/subtext/milestone/27",
+        "version": "6.0.2"
+    },
+    {
+        "date": "2017-09-26T00:28:54Z",
+        "id": 2775882,
+        "issues": [
+            {
+                "id": 260454428,
+                "labels": ["dependency"],
+                "number": 51,
+                "title": "Update content",
+                "url": "https://github.com/hapijs/subtext/issues/51"
+            }
+        ],
         "number": 26,
-        "title": "Return error for multipart file exceeding maxBytes",
-        "url": "https://github.com/hapijs/subtext/pull/26"
-      }
-    ],
-    "number": 11,
-    "url": "https://github.com/hapijs/subtext/milestone/11",
-    "version": "4.0.1"
-  },
-  {
-    "date": "2015-12-22T21:14:23Z",
-    "id": 1411659,
-    "issues": [
-      {
-        "id": 123548049,
-        "labels": ["breaking changes", "dependency"],
+        "url": "https://github.com/hapijs/subtext/milestone/26",
+        "version": "6.0.1"
+    },
+    {
+        "date": "2017-09-18T22:40:20Z",
+        "id": 2617042,
+        "issues": [
+            {
+                "id": 258642539,
+                "labels": ["breaking changes", "dependency"],
+                "number": 50,
+                "title": "Async interface",
+                "url": "https://github.com/hapijs/subtext/pull/50"
+            },
+            {
+                "id": 258642231,
+                "labels": ["breaking changes", "feature"],
+                "number": 49,
+                "title": "Migrate to async interface",
+                "url": "https://github.com/hapijs/subtext/issues/49"
+            }
+        ],
         "number": 25,
-        "title": "Remove qs support. Closes #24",
-        "url": "https://github.com/hapijs/subtext/pull/25"
-      },
-      {
-        "id": 123540060,
-        "labels": ["breaking changes", "dependency"],
+        "url": "https://github.com/hapijs/subtext/milestone/25",
+        "version": "6.0.0"
+    },
+    {
+        "date": "2020-02-13T18:20:45Z",
+        "id": 4658177,
+        "issues": [
+            {
+                "id": 564818758,
+                "labels": ["test", "dependency", "lts", "commercial"],
+                "number": 81,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/subtext/issues/81"
+            }
+        ],
+        "number": 45,
+        "url": "https://github.com/hapijs/subtext/milestone/45",
+        "version": "5.1.2"
+    },
+    {
+        "date": "2019-09-13T19:42:13Z",
+        "id": 4170886,
+        "issues": [
+            {
+                "id": 493487490,
+                "labels": ["bug", "commercial"],
+                "number": 73,
+                "title": "maxBytes file output",
+                "url": "https://github.com/hapijs/subtext/issues/73"
+            }
+        ],
+        "number": 41,
+        "url": "https://github.com/hapijs/subtext/milestone/41",
+        "version": "5.1.1"
+    },
+    {
+        "date": "2019-03-25T18:53:49Z",
+        "id": 4170885,
+        "issues": [
+            {
+                "id": 425036417,
+                "labels": ["lts"],
+                "number": 68,
+                "title": "Commercial version of v5 branch",
+                "url": "https://github.com/hapijs/subtext/issues/68"
+            }
+        ],
+        "number": 40,
+        "url": "https://github.com/hapijs/subtext/milestone/40",
+        "version": "5.1.0"
+    },
+    {
+        "date": "2019-01-31T19:38:18Z",
+        "id": 4017345,
+        "issues": [
+            {
+                "id": 405119135,
+                "labels": ["security", "bug", "lts"],
+                "number": 67,
+                "title": "Protect against JSON.parse() prototype poisoning",
+                "url": "https://github.com/hapijs/subtext/issues/67"
+            }
+        ],
+        "number": 38,
+        "url": "https://github.com/hapijs/subtext/milestone/38",
+        "version": "5.0.1"
+    },
+    {
+        "date": "2017-07-02T18:35:21Z",
+        "id": 2617041,
+        "issues": [
+            {
+                "id": 239230994,
+                "labels": ["bug", "breaking changes"],
+                "number": 48,
+                "title": "Return 413 when payload too large.",
+                "url": "https://github.com/hapijs/subtext/pull/48"
+            }
+        ],
         "number": 24,
-        "title": "Remove qs dependency",
-        "url": "https://github.com/hapijs/subtext/issues/24"
-      }
-    ],
-    "number": 10,
-    "url": "https://github.com/hapijs/subtext/milestone/10",
-    "version": "4.0.0"
-  },
-  {
-    "date": "2015-11-14T14:01:42Z",
-    "id": 1390399,
-    "issues": [
-      {
-        "id": 116925209,
-        "labels": ["bug"],
-        "number": 23,
-        "title": "Fix timeouts for multipart payloads",
-        "url": "https://github.com/hapijs/subtext/pull/23"
-      },
-      {
-        "id": 109715540,
-        "labels": ["bug"],
-        "number": 19,
-        "title": "timeout for payload not working.",
-        "url": "https://github.com/hapijs/subtext/issues/19"
-      }
-    ],
-    "number": 9,
-    "url": "https://github.com/hapijs/subtext/milestone/9",
-    "version": "3.0.1"
-  },
-  {
-    "date": "2015-11-03T06:12:07Z",
-    "id": 1385020,
-    "issues": [
-      {
-        "id": 114736075,
-        "labels": ["breaking changes"],
+        "url": "https://github.com/hapijs/subtext/milestone/24",
+        "version": "5.0.0"
+    },
+    {
+        "date": "2017-05-28T06:55:07Z",
+        "id": 2399858,
+        "issues": [
+            {
+                "id": 231850837,
+                "labels": ["dependency"],
+                "number": 47,
+                "title": "Update deps.",
+                "url": "https://github.com/hapijs/subtext/issues/47"
+            }
+        ],
         "number": 22,
-        "title": "ES6 style changes and node v4",
-        "url": "https://github.com/hapijs/subtext/issues/22"
-      }
-    ],
-    "number": 8,
-    "url": "https://github.com/hapijs/subtext/milestone/8",
-    "version": "3.0.0"
-  },
-  {
-    "date": "2015-10-30T10:37:25Z",
-    "id": 1385016,
-    "issues": [
-      {
-        "id": 113969883,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/subtext/milestone/22",
+        "version": "4.4.1"
+    },
+    {
+        "date": "2017-03-21T06:49:19Z",
+        "id": 2079331,
+        "issues": [
+            {
+                "id": 215643027,
+                "labels": ["feature"],
+                "number": 45,
+                "title": "Allow specifying custom query string parser",
+                "url": "https://github.com/hapijs/subtext/issues/45"
+            },
+            {
+                "id": 215641704,
+                "labels": ["feature"],
+                "number": 44,
+                "title": "Retain raw payload when parsing fails",
+                "url": "https://github.com/hapijs/subtext/issues/44"
+            }
+        ],
         "number": 21,
-        "title": "Missing dependency qs@4.x.x?",
-        "url": "https://github.com/hapijs/subtext/issues/21"
-      },
-      {
-        "id": 113947692,
-        "labels": ["release notes"],
+        "url": "https://github.com/hapijs/subtext/milestone/21",
+        "version": "4.4.0"
+    },
+    {
+        "date": "2016-10-19T08:50:16Z",
+        "id": 1964237,
+        "issues": [
+            {
+                "id": 183875943,
+                "labels": ["feature"],
+                "number": 41,
+                "title": "Support multipart override",
+                "url": "https://github.com/hapijs/subtext/pull/41"
+            },
+            {
+                "id": 183875891,
+                "labels": ["feature"],
+                "number": 40,
+                "title": "Support multipart override output",
+                "url": "https://github.com/hapijs/subtext/issues/40"
+            }
+        ],
+        "number": 19,
+        "url": "https://github.com/hapijs/subtext/milestone/19",
+        "version": "4.3.0"
+    },
+    {
+        "date": "2016-10-19T06:30:37Z",
+        "id": 2079043,
+        "issues": [
+            {
+                "id": 179428066,
+                "labels": ["dependency"],
+                "number": 37,
+                "title": "Update dependencies",
+                "url": "https://github.com/hapijs/subtext/pull/37"
+            }
+        ],
         "number": 20,
-        "title": "2.0.2 tag",
-        "url": "https://github.com/hapijs/subtext/issues/20"
-      }
-    ],
-    "number": 7,
-    "url": "https://github.com/hapijs/subtext/milestone/7",
-    "version": "2.0.2"
-  },
-  {
-    "date": "2015-10-30T10:35:00Z",
-    "id": 1250749,
-    "issues": [
-      {
-        "id": 109098069,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/subtext/milestone/20",
+        "version": "4.2.2"
+    },
+    {
+        "date": "2016-08-26T02:26:10Z",
+        "id": 1964231,
+        "issues": [
+            {
+                "id": 173355122,
+                "labels": ["bug"],
+                "number": 36,
+                "title": "Pass options to built-in compressions",
+                "url": "https://github.com/hapijs/subtext/issues/36"
+            }
+        ],
         "number": 18,
-        "title": "upgrade to lab 6 and cleanup",
-        "url": "https://github.com/hapijs/subtext/pull/18"
-      },
-      {
-        "id": 106863853,
-        "labels": ["test"],
+        "url": "https://github.com/hapijs/subtext/milestone/18",
+        "version": "4.2.1"
+    },
+    {
+        "date": "2016-08-26T02:22:13Z",
+        "id": 1954405,
+        "issues": [
+            {
+                "id": 173354633,
+                "labels": ["feature"],
+                "number": 35,
+                "title": "Support compression options",
+                "url": "https://github.com/hapijs/subtext/issues/35"
+            }
+        ],
         "number": 17,
-        "title": "testing different file sizes to get full code coverage",
-        "url": "https://github.com/hapijs/subtext/pull/17"
-      },
-      {
-        "id": 105531905,
-        "labels": ["test"],
+        "url": "https://github.com/hapijs/subtext/milestone/17",
+        "version": "4.2.0"
+    },
+    {
+        "date": "2016-08-22T06:58:06Z",
+        "id": 1910303,
+        "issues": [
+            {
+                "id": 172381275,
+                "labels": ["feature"],
+                "number": 34,
+                "title": "Support external decoders",
+                "url": "https://github.com/hapijs/subtext/issues/34"
+            }
+        ],
         "number": 16,
-        "title": "Test coverage timing issue",
-        "url": "https://github.com/hapijs/subtext/issues/16"
-      },
-      {
-        "id": 104399846,
-        "labels": ["documentation"],
+        "url": "https://github.com/hapijs/subtext/milestone/16",
+        "version": "4.1.0"
+    },
+    {
+        "date": "2016-07-28T19:25:13Z",
+        "id": 1910302,
+        "issues": [
+            {
+                "id": 168175766,
+                "labels": ["dependency"],
+                "number": 33,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/subtext/issues/33"
+            }
+        ],
         "number": 15,
-        "title": "Move API docs to its own page",
-        "url": "https://github.com/hapijs/subtext/pull/15"
-      },
-      {
-        "id": 104399735,
-        "labels": ["documentation"],
+        "url": "https://github.com/hapijs/subtext/milestone/15",
+        "version": "4.0.5"
+    },
+    {
+        "date": "2016-07-28T19:23:28Z",
+        "id": 1760313,
+        "issues": [
+            {
+                "id": 156101024,
+                "labels": ["dependency"],
+                "number": 29,
+                "title": "update to code v3",
+                "url": "https://github.com/hapijs/subtext/pull/29"
+            }
+        ],
         "number": 14,
-        "title": "Move API docs to their own page",
-        "url": "https://github.com/hapijs/subtext/issues/14"
-      },
-      {
-        "id": 103015024,
-        "labels": ["documentation"],
+        "url": "https://github.com/hapijs/subtext/milestone/14",
+        "version": "4.0.4"
+    },
+    {
+        "date": "2016-05-11T15:05:46Z",
+        "id": 1753861,
+        "issues": [
+            {
+                "id": 154266737,
+                "labels": ["dependency"],
+                "number": 28,
+                "title": "update form-data dependency to 0.2.x",
+                "url": "https://github.com/hapijs/subtext/issues/28"
+            }
+        ],
         "number": 13,
-        "title": "Update README with example and docs",
-        "url": "https://github.com/hapijs/subtext/pull/13"
-      }
-    ],
-    "number": 6,
-    "url": "https://github.com/hapijs/subtext/milestone/6",
-    "version": "2.0.1"
-  },
-  {
-    "date": "2015-08-11T21:40:48Z",
-    "id": 1192821,
-    "issues": [
-      {
-        "id": 100417815,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/subtext/milestone/13",
+        "version": "4.0.3"
+    },
+    {
+        "date": "2016-05-08T20:15:49Z",
+        "id": 1687571,
+        "issues": [
+            {
+                "id": 151346105,
+                "labels": ["dependency"],
+                "number": 27,
+                "title": "testing-node-6",
+                "url": "https://github.com/hapijs/subtext/pull/27"
+            }
+        ],
         "number": 12,
-        "title": "Default mime type option",
-        "url": "https://github.com/hapijs/subtext/issues/12"
-      },
-      {
-        "id": 100414961,
-        "labels": ["breaking changes"],
+        "url": "https://github.com/hapijs/subtext/milestone/12",
+        "version": "4.0.2"
+    },
+    {
+        "date": "2016-04-06T15:12:01Z",
+        "id": 1471887,
+        "issues": [
+            {
+                "id": 145376831,
+                "labels": ["bug"],
+                "number": 26,
+                "title": "Return error for multipart file exceeding maxBytes",
+                "url": "https://github.com/hapijs/subtext/pull/26"
+            }
+        ],
         "number": 11,
-        "title": "Change empty representations",
-        "url": "https://github.com/hapijs/subtext/issues/11"
-      },
-      {
-        "id": 100414547,
-        "labels": ["breaking changes"],
+        "url": "https://github.com/hapijs/subtext/milestone/11",
+        "version": "4.0.1"
+    },
+    {
+        "date": "2015-12-22T21:14:23Z",
+        "id": 1411659,
+        "issues": [
+            {
+                "id": 123548049,
+                "labels": ["breaking changes", "dependency"],
+                "number": 25,
+                "title": "Remove qs support. Closes #24",
+                "url": "https://github.com/hapijs/subtext/pull/25"
+            },
+            {
+                "id": 123540060,
+                "labels": ["breaking changes", "dependency"],
+                "number": 24,
+                "title": "Remove qs dependency",
+                "url": "https://github.com/hapijs/subtext/issues/24"
+            }
+        ],
         "number": 10,
-        "title": "Change default mime type to application/octet-stream",
-        "url": "https://github.com/hapijs/subtext/issues/10"
-      }
-    ],
-    "number": 5,
-    "url": "https://github.com/hapijs/subtext/milestone/5",
-    "version": "2.0.0"
-  },
-  {
-    "date": "2015-07-03T22:40:29Z",
-    "id": 1188303,
-    "issues": [
-      {
-        "id": 56414570,
-        "labels": ["bug", "dependency"],
-        "number": 5,
-        "title": "Error for payloads with content-encoding that fail maxBytes test",
-        "url": "https://github.com/hapijs/subtext/issues/5"
-      }
-    ],
-    "number": 4,
-    "url": "https://github.com/hapijs/subtext/milestone/4",
-    "version": "1.1.1"
-  },
-  {
-    "date": "2015-07-01T04:06:22Z",
-    "id": 857048,
-    "issues": [
-      {
-        "id": 88056557,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/subtext/milestone/10",
+        "version": "4.0.0"
+    },
+    {
+        "date": "2015-11-14T14:01:42Z",
+        "id": 1390399,
+        "issues": [
+            {
+                "id": 116925209,
+                "labels": ["bug"],
+                "number": 23,
+                "title": "Fix timeouts for multipart payloads",
+                "url": "https://github.com/hapijs/subtext/pull/23"
+            },
+            {
+                "id": 109715540,
+                "labels": ["bug"],
+                "number": 19,
+                "title": "timeout for payload not working.",
+                "url": "https://github.com/hapijs/subtext/issues/19"
+            }
+        ],
         "number": 9,
-        "title": "Don't catch synchronous handler errors",
-        "url": "https://github.com/hapijs/subtext/pull/9"
-      },
-      {
-        "id": 64018925,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/subtext/milestone/9",
+        "version": "3.0.1"
+    },
+    {
+        "date": "2015-11-03T06:12:07Z",
+        "id": 1385020,
+        "issues": [
+            {
+                "id": 114736075,
+                "labels": ["breaking changes"],
+                "number": 22,
+                "title": "ES6 style changes and node v4",
+                "url": "https://github.com/hapijs/subtext/issues/22"
+            }
+        ],
+        "number": 8,
+        "url": "https://github.com/hapijs/subtext/milestone/8",
+        "version": "3.0.0"
+    },
+    {
+        "date": "2015-10-30T10:37:25Z",
+        "id": 1385016,
+        "issues": [
+            {
+                "id": 113969883,
+                "labels": ["dependency"],
+                "number": 21,
+                "title": "Missing dependency qs@4.x.x?",
+                "url": "https://github.com/hapijs/subtext/issues/21"
+            },
+            {
+                "id": 113947692,
+                "labels": ["release notes"],
+                "number": 20,
+                "title": "2.0.2 tag",
+                "url": "https://github.com/hapijs/subtext/issues/20"
+            }
+        ],
         "number": 7,
-        "title": "adding the ability to pass qs options like arrayLimit",
-        "url": "https://github.com/hapijs/subtext/pull/7"
-      }
-    ],
-    "number": 3,
-    "url": "https://github.com/hapijs/subtext/milestone/3",
-    "version": "1.1.0"
-  },
-  {
-    "date": "2014-11-07T08:20:06Z",
-    "id": 812000,
-    "issues": [
-      {
-        "id": 48058530,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/subtext/milestone/7",
+        "version": "2.0.2"
+    },
+    {
+        "date": "2015-10-30T10:35:00Z",
+        "id": 1250749,
+        "issues": [
+            {
+                "id": 109098069,
+                "labels": ["dependency"],
+                "number": 18,
+                "title": "upgrade to lab 6 and cleanup",
+                "url": "https://github.com/hapijs/subtext/pull/18"
+            },
+            {
+                "id": 106863853,
+                "labels": ["test"],
+                "number": 17,
+                "title": "testing different file sizes to get full code coverage",
+                "url": "https://github.com/hapijs/subtext/pull/17"
+            },
+            {
+                "id": 105531905,
+                "labels": ["test"],
+                "number": 16,
+                "title": "Test coverage timing issue",
+                "url": "https://github.com/hapijs/subtext/issues/16"
+            },
+            {
+                "id": 104399846,
+                "labels": ["documentation"],
+                "number": 15,
+                "title": "Move API docs to its own page",
+                "url": "https://github.com/hapijs/subtext/pull/15"
+            },
+            {
+                "id": 104399735,
+                "labels": ["documentation"],
+                "number": 14,
+                "title": "Move API docs to their own page",
+                "url": "https://github.com/hapijs/subtext/issues/14"
+            },
+            {
+                "id": 103015024,
+                "labels": ["documentation"],
+                "number": 13,
+                "title": "Update README with example and docs",
+                "url": "https://github.com/hapijs/subtext/pull/13"
+            }
+        ],
+        "number": 6,
+        "url": "https://github.com/hapijs/subtext/milestone/6",
+        "version": "2.0.1"
+    },
+    {
+        "date": "2015-08-11T21:40:48Z",
+        "id": 1192821,
+        "issues": [
+            {
+                "id": 100417815,
+                "labels": ["feature"],
+                "number": 12,
+                "title": "Default mime type option",
+                "url": "https://github.com/hapijs/subtext/issues/12"
+            },
+            {
+                "id": 100414961,
+                "labels": ["breaking changes"],
+                "number": 11,
+                "title": "Change empty representations",
+                "url": "https://github.com/hapijs/subtext/issues/11"
+            },
+            {
+                "id": 100414547,
+                "labels": ["breaking changes"],
+                "number": 10,
+                "title": "Change default mime type to application/octet-stream",
+                "url": "https://github.com/hapijs/subtext/issues/10"
+            }
+        ],
+        "number": 5,
+        "url": "https://github.com/hapijs/subtext/milestone/5",
+        "version": "2.0.0"
+    },
+    {
+        "date": "2015-07-03T22:40:29Z",
+        "id": 1188303,
+        "issues": [
+            {
+                "id": 56414570,
+                "labels": ["bug", "dependency"],
+                "number": 5,
+                "title": "Error for payloads with content-encoding that fail maxBytes test",
+                "url": "https://github.com/hapijs/subtext/issues/5"
+            }
+        ],
+        "number": 4,
+        "url": "https://github.com/hapijs/subtext/milestone/4",
+        "version": "1.1.1"
+    },
+    {
+        "date": "2015-07-01T04:06:22Z",
+        "id": 857048,
+        "issues": [
+            {
+                "id": 88056557,
+                "labels": ["bug"],
+                "number": 9,
+                "title": "Don't catch synchronous handler errors",
+                "url": "https://github.com/hapijs/subtext/pull/9"
+            },
+            {
+                "id": 64018925,
+                "labels": ["feature"],
+                "number": 7,
+                "title": "adding the ability to pass qs options like arrayLimit",
+                "url": "https://github.com/hapijs/subtext/pull/7"
+            }
+        ],
+        "number": 3,
+        "url": "https://github.com/hapijs/subtext/milestone/3",
+        "version": "1.1.0"
+    },
+    {
+        "date": "2014-11-07T08:20:06Z",
+        "id": 812000,
+        "issues": [
+            {
+                "id": 48058530,
+                "labels": ["bug"],
+                "number": 1,
+                "title": "Files left behind when request aborts",
+                "url": "https://github.com/hapijs/subtext/issues/1"
+            }
+        ],
+        "number": 2,
+        "url": "https://github.com/hapijs/subtext/milestone/2",
+        "version": "1.0.2"
+    },
+    {
+        "date": "2014-10-02T21:44:05Z",
+        "id": 811766,
+        "issues": [],
         "number": 1,
-        "title": "Files left behind when request aborts",
-        "url": "https://github.com/hapijs/subtext/issues/1"
-      }
-    ],
-    "number": 2,
-    "url": "https://github.com/hapijs/subtext/milestone/2",
-    "version": "1.0.2"
-  },
-  {
-    "date": "2014-10-02T21:44:05Z",
-    "id": 811766,
-    "issues": [],
-    "number": 1,
-    "url": "https://github.com/hapijs/subtext/milestone/1",
-    "version": "1.0.1"
-  }
+        "url": "https://github.com/hapijs/subtext/milestone/1",
+        "version": "1.0.1"
+    }
 ]

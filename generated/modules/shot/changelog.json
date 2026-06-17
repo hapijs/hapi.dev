@@ -1,1013 +1,1013 @@
 [
-  {
-    "date": "2026-05-27T07:19:05Z",
-    "id": 16011639,
-    "issues": [
-      {
-        "id": 4429821274,
-        "labels": ["bug"],
-        "number": 153,
-        "title": "Fix stream payload error handling",
-        "url": "https://github.com/hapijs/shot/pull/153"
-      },
-      {
-        "id": 4429757896,
-        "labels": ["bug"],
-        "number": 152,
-        "title": "Fix missing close emits",
-        "url": "https://github.com/hapijs/shot/pull/152"
-      }
-    ],
-    "number": 56,
-    "url": "https://github.com/hapijs/shot/milestone/56",
-    "version": "6.0.3"
-  },
-  {
-    "date": "2025-08-13T22:35:10Z",
-    "id": 13483179,
-    "issues": [
-      {
-        "id": 3316031449,
-        "labels": ["bug"],
-        "number": 151,
-        "title": "Improve argument validation and messaging",
-        "url": "https://github.com/hapijs/shot/pull/151"
-      },
-      {
-        "id": 3316003489,
-        "labels": ["bug"],
-        "number": 150,
-        "title": "Support handlers calling res.destroy() to abort sending a response",
-        "url": "https://github.com/hapijs/shot/pull/150"
-      }
-    ],
-    "number": 55,
-    "url": "https://github.com/hapijs/shot/milestone/55",
-    "version": "6.0.2"
-  },
-  {
-    "date": "2023-02-11T20:29:00Z",
-    "id": 7956645,
-    "issues": [
-      {
-        "id": 1551778395,
-        "labels": ["dependency"],
-        "number": 147,
-        "title": "chore: bump hoek",
-        "url": "https://github.com/hapijs/shot/pull/147"
-      }
-    ],
-    "number": 54,
-    "url": "https://github.com/hapijs/shot/milestone/54",
-    "version": "6.0.1"
-  },
-  {
-    "date": "2022-05-09T04:05:08Z",
-    "id": 7908563,
-    "issues": [
-      {
-        "id": 1213890005,
-        "labels": ["feature"],
-        "number": 145,
-        "title": "More realistic request socket interface",
-        "url": "https://github.com/hapijs/shot/pull/145"
-      },
-      {
-        "id": 1206653283,
-        "labels": ["breaking changes"],
-        "number": 144,
-        "title": "Drop node v12 support",
-        "url": "https://github.com/hapijs/shot/pull/144"
-      },
-      {
-        "id": 856809287,
-        "labels": ["types"],
-        "number": 140,
-        "title": "Add initial typescript support",
-        "url": "https://github.com/hapijs/shot/pull/140"
-      }
-    ],
-    "number": 53,
-    "url": "https://github.com/hapijs/shot/milestone/53",
-    "version": "6.0.0"
-  },
-  {
-    "date": "2021-01-23T07:04:19Z",
-    "id": 5921232,
-    "issues": [
-      {
-        "id": 791725840,
-        "labels": ["bug"],
-        "number": 139,
-        "title": "When simulating close, ensure res emits close.",
-        "url": "https://github.com/hapijs/shot/pull/139"
-      },
-      {
-        "id": 782917479,
-        "labels": ["non issue"],
-        "number": 137,
-        "title": "remove unused lib/schema.js",
-        "url": "https://github.com/hapijs/shot/pull/137"
-      },
-      {
-        "id": 709596284,
-        "labels": [],
-        "number": 134,
-        "title": "upgrade lab to v24",
-        "url": "https://github.com/hapijs/shot/pull/134"
-      }
-    ],
-    "number": 51,
-    "url": "https://github.com/hapijs/shot/milestone/51",
-    "version": "5.0.5"
-  },
-  {
-    "date": "2020-09-26T19:26:01Z",
-    "id": 5834448,
-    "issues": [
-      {
-        "id": 686187417,
-        "labels": ["bug"],
-        "number": 133,
-        "title": "Another attempt at #129",
-        "url": "https://github.com/hapijs/shot/pull/133"
-      },
-      {
-        "id": 686054774,
-        "labels": ["test"],
-        "number": 132,
-        "title": "fix: do not auto destroy request stream",
-        "url": "https://github.com/hapijs/shot/pull/132"
-      }
-    ],
-    "number": 50,
-    "url": "https://github.com/hapijs/shot/milestone/50",
-    "version": "5.0.4"
-  },
-  {
-    "date": "2020-08-25T22:53:38Z",
-    "id": 5809683,
-    "issues": [
-      {
-        "id": 685816286,
-        "labels": [],
-        "number": 130,
-        "title": "Revert \"Fix cleanup to be consistent across node releases\"",
-        "url": "https://github.com/hapijs/shot/pull/130"
-      }
-    ],
-    "number": 49,
-    "url": "https://github.com/hapijs/shot/milestone/49",
-    "version": "5.0.3"
-  },
-  {
-    "date": "2020-08-25T15:26:23Z",
-    "id": 5808357,
-    "issues": [
-      {
-        "id": 685529058,
-        "labels": ["bug"],
-        "number": 129,
-        "title": "Fix cleanup to be consistent across node releases",
-        "url": "https://github.com/hapijs/shot/pull/129"
-      }
-    ],
-    "number": 48,
-    "url": "https://github.com/hapijs/shot/milestone/48",
-    "version": "5.0.2"
-  },
-  {
-    "date": "2020-08-25T15:25:45Z",
-    "id": 4973448,
-    "issues": [
-      {
-        "id": 660914620,
-        "labels": ["test"],
-        "number": 127,
-        "title": "test on node 14",
-        "url": "https://github.com/hapijs/shot/pull/127"
-      },
-      {
-        "id": 660360033,
-        "labels": ["dependency"],
-        "number": 124,
-        "title": "Replace joi with validate",
-        "url": "https://github.com/hapijs/shot/pull/124"
-      }
-    ],
-    "number": 47,
-    "url": "https://github.com/hapijs/shot/milestone/47",
-    "version": "5.0.1"
-  },
-  {
-    "date": "2020-01-08T21:17:23Z",
-    "id": 4973447,
-    "issues": [
-      {
-        "id": 547105740,
-        "labels": ["breaking changes", "dependency"],
-        "number": 120,
-        "title": "Only node 12",
-        "url": "https://github.com/hapijs/shot/issues/120"
-      }
-    ],
-    "number": 46,
-    "url": "https://github.com/hapijs/shot/milestone/46",
-    "version": "5.0.0"
-  },
-  {
-    "date": "2019-09-12T23:17:38Z",
-    "id": 4655616,
-    "issues": [
-      {
-        "id": 493070681,
-        "labels": ["dependency"],
-        "number": 112,
-        "title": "Update joi",
-        "url": "https://github.com/hapijs/shot/issues/112"
-      }
-    ],
-    "number": 44,
-    "url": "https://github.com/hapijs/shot/milestone/44",
-    "version": "4.1.2"
-  },
-  {
-    "date": "2019-09-12T23:17:21Z",
-    "id": 4192164,
-    "issues": [
-      {
-        "id": 470518921,
-        "labels": ["bug", "dependency"],
-        "number": 109,
-        "title": "work around Node's DEP0066",
-        "url": "https://github.com/hapijs/shot/pull/109"
-      }
-    ],
-    "number": 43,
-    "url": "https://github.com/hapijs/shot/milestone/43",
-    "version": "4.1.1"
-  },
-  {
-    "date": "2019-04-02T05:57:58Z",
-    "id": 3792290,
-    "issues": [
-      {
-        "id": 441059893,
-        "labels": ["bug", "dependency"],
-        "number": 108,
-        "title": "Node V12 deprecation warning [DEP0066] OutgoingMessage.prototype._headers is deprecated",
-        "url": "https://github.com/hapijs/shot/issues/108"
-      },
-      {
-        "id": 428037492,
-        "labels": ["dependency"],
-        "number": 106,
-        "title": "Change module name",
-        "url": "https://github.com/hapijs/shot/issues/106"
-      }
-    ],
-    "number": 40,
-    "url": "https://github.com/hapijs/shot/milestone/40",
-    "version": "4.1.0"
-  },
-  {
-    "date": "2018-11-03T00:36:49Z",
-    "id": 3788862,
-    "issues": [
-      {
-        "id": 377003034,
-        "labels": ["non issue"],
-        "number": 101,
-        "title": "Remove engines",
-        "url": "https://github.com/hapijs/shot/issues/101"
-      }
-    ],
-    "number": 39,
-    "url": "https://github.com/hapijs/shot/milestone/39",
-    "version": "4.0.7"
-  },
-  {
-    "date": "2018-11-01T19:01:21Z",
-    "id": 3788861,
-    "issues": [
-      {
-        "id": 376525162,
-        "labels": ["dependency"],
-        "number": 100,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/shot/issues/100"
-      }
-    ],
-    "number": 38,
-    "url": "https://github.com/hapijs/shot/milestone/38",
-    "version": "4.0.6"
-  },
-  {
-    "date": "2018-11-01T19:00:52Z",
-    "id": 2912994,
-    "issues": [
-      {
-        "id": 375848105,
-        "labels": [],
-        "number": 99,
-        "title": "Updated lab to v17 to pass on Node v11",
-        "url": "https://github.com/hapijs/shot/pull/99"
-      },
-      {
-        "id": 295941213,
-        "labels": ["test"],
-        "number": 92,
-        "title": "skip not covered lines on node master",
-        "url": "https://github.com/hapijs/shot/pull/92"
-      }
-    ],
-    "number": 37,
-    "url": "https://github.com/hapijs/shot/milestone/37",
-    "version": "4.0.5"
-  },
-  {
-    "date": "2017-11-14T22:30:34Z",
-    "id": 2856585,
-    "issues": [],
-    "number": 36,
-    "url": "https://github.com/hapijs/shot/milestone/36",
-    "version": "4.0.4"
-  },
-  {
-    "date": "2017-10-22T08:34:58Z",
-    "id": 2813707,
-    "issues": [
-      {
-        "id": 267446685,
-        "labels": ["dependency"],
-        "number": 90,
-        "title": "Update joi",
-        "url": "https://github.com/hapijs/shot/issues/90"
-      }
-    ],
-    "number": 35,
-    "url": "https://github.com/hapijs/shot/milestone/35",
-    "version": "4.0.3"
-  },
-  {
-    "date": "2017-10-04T07:47:43Z",
-    "id": 2799412,
-    "issues": [
-      {
-        "id": 262695339,
-        "labels": ["feature"],
-        "number": 89,
-        "title": "Replace instanceof with symbol",
-        "url": "https://github.com/hapijs/shot/issues/89"
-      }
-    ],
-    "number": 34,
-    "url": "https://github.com/hapijs/shot/milestone/34",
-    "version": "4.0.2"
-  },
-  {
-    "date": "2017-09-28T06:15:19Z",
-    "id": 2786758,
-    "issues": [
-      {
-        "id": 261204136,
-        "labels": ["dependency"],
-        "number": 88,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/shot/issues/88"
-      }
-    ],
-    "number": 33,
-    "url": "https://github.com/hapijs/shot/milestone/33",
-    "version": "4.0.1"
-  },
-  {
-    "date": "2017-09-28T06:15:21Z",
-    "id": 2786757,
-    "issues": [],
-    "number": 32,
-    "url": "https://github.com/hapijs/shot/milestone/32",
-    "version": "4.0.0"
-  },
-  {
-    "date": "2020-06-29T20:53:35Z",
-    "id": 4168310,
-    "issues": [
-      {
-        "id": 647657335,
-        "labels": ["bug", "lts", "commercial"],
-        "number": 122,
-        "title": "Support node 12",
-        "url": "https://github.com/hapijs/shot/issues/122"
-      }
-    ],
-    "number": 42,
-    "url": "https://github.com/hapijs/shot/milestone/42",
-    "version": "3.5.1"
-  },
-  {
-    "date": "2019-03-25T16:19:48Z",
-    "id": 4168309,
-    "issues": [
-      {
-        "id": 424752997,
-        "labels": ["lts"],
-        "number": 105,
-        "title": "Commercial version of v3 branch",
-        "url": "https://github.com/hapijs/shot/issues/105"
-      }
-    ],
-    "number": 41,
-    "url": "https://github.com/hapijs/shot/milestone/41",
-    "version": "3.5.0"
-  },
-  {
-    "date": "2017-09-23T10:00:11Z",
-    "id": 2555724,
-    "issues": [
-      {
-        "id": 232469523,
-        "labels": ["bug"],
-        "number": 85,
-        "title": "Fix for node 8",
-        "url": "https://github.com/hapijs/shot/pull/85"
-      }
-    ],
-    "number": 31,
-    "url": "https://github.com/hapijs/shot/milestone/31",
-    "version": "3.4.2"
-  },
-  {
-    "date": "2017-09-23T10:00:12Z",
-    "id": 2162623,
-    "issues": [
-      {
-        "id": 232023062,
-        "labels": ["bug"],
-        "number": 84,
-        "title": "Fix node 8 issues",
-        "url": "https://github.com/hapijs/shot/pull/84"
-      }
-    ],
-    "number": 30,
-    "url": "https://github.com/hapijs/shot/milestone/30",
-    "version": "3.4.1"
-  },
-  {
-    "date": "2016-11-29T01:41:05Z",
-    "id": 1966679,
-    "issues": [
-      {
-        "id": 192165492,
-        "labels": ["dependency"],
-        "number": 83,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/shot/issues/83"
-      },
-      {
-        "id": 176047183,
-        "labels": ["feature", "breaking changes"],
-        "number": 81,
-        "title": "Handle streams of utf8 encoded strings",
-        "url": "https://github.com/hapijs/shot/pull/81"
-      },
-      {
-        "id": 175988308,
-        "labels": ["feature"],
-        "number": 79,
-        "title": "Remove custom output parsing and buffer payload chunks via write()",
-        "url": "https://github.com/hapijs/shot/pull/79"
-      },
-      {
-        "id": 173839758,
-        "labels": ["documentation"],
-        "number": 76,
-        "title": "Updated API docs to reflect new validate flag",
-        "url": "https://github.com/hapijs/shot/pull/76"
-      }
-    ],
-    "number": 29,
-    "url": "https://github.com/hapijs/shot/milestone/29",
-    "version": "3.4.0"
-  },
-  {
-    "date": "2016-08-26T21:46:09Z",
-    "id": 1966675,
-    "issues": [],
-    "number": 28,
-    "url": "https://github.com/hapijs/shot/milestone/28",
-    "version": "3.3.1"
-  },
-  {
-    "date": "2016-08-26T21:37:05Z",
-    "id": 1964660,
-    "issues": [
-      {
-        "id": 173548451,
-        "labels": ["feature"],
-        "number": 75,
-        "title": "Cleanup validation and make it optional",
-        "url": "https://github.com/hapijs/shot/issues/75"
-      }
-    ],
-    "number": 27,
-    "url": "https://github.com/hapijs/shot/milestone/27",
-    "version": "3.3.0"
-  },
-  {
-    "date": "2016-08-26T08:42:55Z",
-    "id": 1957165,
-    "issues": [
-      {
-        "id": 172192496,
-        "labels": ["bug"],
-        "number": 73,
-        "title": "Add status message to response object",
-        "url": "https://github.com/hapijs/shot/pull/73"
-      },
-      {
-        "id": 167660630,
-        "labels": ["feature"],
-        "number": 71,
-        "title": "add validation schema to shot",
-        "url": "https://github.com/hapijs/shot/pull/71"
-      }
-    ],
-    "number": 26,
-    "url": "https://github.com/hapijs/shot/milestone/26",
-    "version": "3.2.1"
-  },
-  {
-    "date": "2016-08-23T05:19:50Z",
-    "id": 1954621,
-    "issues": [
-      {
-        "id": 172614128,
-        "labels": ["feature"],
-        "number": 74,
-        "title": "Include statusMessage",
-        "url": "https://github.com/hapijs/shot/issues/74"
-      }
-    ],
-    "number": 25,
-    "url": "https://github.com/hapijs/shot/milestone/25",
-    "version": "3.2.0"
-  },
-  {
-    "date": "2016-08-22T08:58:35Z",
-    "id": 1910276,
-    "issues": [
-      {
-        "id": 168173402,
-        "labels": ["documentation"],
-        "number": 72,
-        "title": "npmignore",
-        "url": "https://github.com/hapijs/shot/issues/72"
-      }
-    ],
-    "number": 24,
-    "url": "https://github.com/hapijs/shot/milestone/24",
-    "version": "3.1.1"
-  },
-  {
-    "date": "2016-07-28T19:11:47Z",
-    "id": 1572979,
-    "issues": [
-      {
-        "id": 156607428,
-        "labels": ["test", "dependency"],
-        "number": 69,
-        "title": "Update code to 3.x.x",
-        "url": "https://github.com/hapijs/shot/pull/69"
-      },
-      {
-        "id": 155801096,
-        "labels": ["test", "dependency"],
-        "number": 68,
-        "title": "Test on node 6, update lab and fix tests",
-        "url": "https://github.com/hapijs/shot/pull/68"
-      },
-      {
-        "id": 148002092,
-        "labels": ["feature"],
-        "number": 67,
-        "title": "Support stream payloads",
-        "url": "https://github.com/hapijs/shot/pull/67"
-      },
-      {
-        "id": 132475208,
-        "labels": ["feature"],
-        "number": 65,
-        "title": "Adds quotes around node versions in travis file",
-        "url": "https://github.com/hapijs/shot/pull/65"
-      }
-    ],
-    "number": 23,
-    "url": "https://github.com/hapijs/shot/milestone/23",
-    "version": "3.1.0"
-  },
-  {
-    "date": "2016-02-09T17:13:27Z",
-    "id": 1479361,
-    "issues": [
-      {
-        "id": 125964703,
-        "labels": ["bug"],
-        "number": 63,
-        "title": "Add default port to host header when no port specified. Fixes #62",
-        "url": "https://github.com/hapijs/shot/pull/63"
-      },
-      {
-        "id": 124636692,
-        "labels": ["feature"],
-        "number": 61,
-        "title": "Reduce function generation",
-        "url": "https://github.com/hapijs/shot/pull/61"
-      },
-      {
-        "id": 124321774,
-        "labels": ["feature", "non issue"],
-        "number": 60,
-        "title": "Refactor index.js into separate files",
-        "url": "https://github.com/hapijs/shot/pull/60"
-      }
-    ],
-    "number": 22,
-    "url": "https://github.com/hapijs/shot/milestone/22",
-    "version": "3.0.1"
-  },
-  {
-    "date": "2015-12-30T08:55:07Z",
-    "id": 1389543,
-    "issues": [
-      {
-        "id": 124319716,
-        "labels": ["documentation"],
-        "number": 59,
-        "title": "Update README with ES6 styles",
-        "url": "https://github.com/hapijs/shot/issues/59"
-      },
-      {
-        "id": 124319683,
-        "labels": ["documentation"],
-        "number": 58,
-        "title": "Updated README for ES6 styles closes #59",
-        "url": "https://github.com/hapijs/shot/pull/58"
-      },
-      {
-        "id": 124224969,
-        "labels": ["bug", "breaking changes"],
-        "number": 57,
-        "title": "Set trailers in res.trailers rather than res.headers. Fixes #56",
-        "url": "https://github.com/hapijs/shot/pull/57"
-      },
-      {
-        "id": 124125017,
-        "labels": ["bug", "breaking changes"],
+    {
+        "date": "2026-05-27T07:19:05Z",
+        "id": 16011639,
+        "issues": [
+            {
+                "id": 4429821274,
+                "labels": ["bug"],
+                "number": 153,
+                "title": "Fix stream payload error handling",
+                "url": "https://github.com/hapijs/shot/pull/153"
+            },
+            {
+                "id": 4429757896,
+                "labels": ["bug"],
+                "number": 152,
+                "title": "Fix missing close emits",
+                "url": "https://github.com/hapijs/shot/pull/152"
+            }
+        ],
         "number": 56,
-        "title": "Trailers should be added to res.trailers, not res.headers",
-        "url": "https://github.com/hapijs/shot/issues/56"
-      }
-    ],
-    "number": 21,
-    "url": "https://github.com/hapijs/shot/milestone/21",
-    "version": "3.0.0"
-  },
-  {
-    "date": "2015-11-02T18:15:08Z",
-    "id": 1389534,
-    "issues": [
-      {
-        "id": 114652150,
-        "labels": ["test"],
+        "url": "https://github.com/hapijs/shot/milestone/56",
+        "version": "6.0.3"
+    },
+    {
+        "date": "2025-08-13T22:35:10Z",
+        "id": 13483179,
+        "issues": [
+            {
+                "id": 3316031449,
+                "labels": ["bug"],
+                "number": 151,
+                "title": "Improve argument validation and messaging",
+                "url": "https://github.com/hapijs/shot/pull/151"
+            },
+            {
+                "id": 3316003489,
+                "labels": ["bug"],
+                "number": 150,
+                "title": "Support handlers calling res.destroy() to abort sending a response",
+                "url": "https://github.com/hapijs/shot/pull/150"
+            }
+        ],
         "number": 55,
-        "title": "Fix broken tests",
-        "url": "https://github.com/hapijs/shot/issues/55"
-      }
-    ],
-    "number": 20,
-    "url": "https://github.com/hapijs/shot/milestone/20",
-    "version": "2.0.1"
-  },
-  {
-    "date": "2015-11-02T18:10:02Z",
-    "id": 1384338,
-    "issues": [
-      {
-        "id": 114156707,
-        "labels": ["breaking changes"],
-        "number": 52,
-        "title": "Node >= 4 / es2015 updates",
-        "url": "https://github.com/hapijs/shot/issues/52"
-      },
-      {
-        "id": 114156546,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/shot/milestone/55",
+        "version": "6.0.2"
+    },
+    {
+        "date": "2023-02-11T20:29:00Z",
+        "id": 7956645,
+        "issues": [
+            {
+                "id": 1551778395,
+                "labels": ["dependency"],
+                "number": 147,
+                "title": "chore: bump hoek",
+                "url": "https://github.com/hapijs/shot/pull/147"
+            }
+        ],
+        "number": 54,
+        "url": "https://github.com/hapijs/shot/milestone/54",
+        "version": "6.0.1"
+    },
+    {
+        "date": "2022-05-09T04:05:08Z",
+        "id": 7908563,
+        "issues": [
+            {
+                "id": 1213890005,
+                "labels": ["feature"],
+                "number": 145,
+                "title": "More realistic request socket interface",
+                "url": "https://github.com/hapijs/shot/pull/145"
+            },
+            {
+                "id": 1206653283,
+                "labels": ["breaking changes"],
+                "number": 144,
+                "title": "Drop node v12 support",
+                "url": "https://github.com/hapijs/shot/pull/144"
+            },
+            {
+                "id": 856809287,
+                "labels": ["types"],
+                "number": 140,
+                "title": "Add initial typescript support",
+                "url": "https://github.com/hapijs/shot/pull/140"
+            }
+        ],
+        "number": 53,
+        "url": "https://github.com/hapijs/shot/milestone/53",
+        "version": "6.0.0"
+    },
+    {
+        "date": "2021-01-23T07:04:19Z",
+        "id": 5921232,
+        "issues": [
+            {
+                "id": 791725840,
+                "labels": ["bug"],
+                "number": 139,
+                "title": "When simulating close, ensure res emits close.",
+                "url": "https://github.com/hapijs/shot/pull/139"
+            },
+            {
+                "id": 782917479,
+                "labels": ["non issue"],
+                "number": 137,
+                "title": "remove unused lib/schema.js",
+                "url": "https://github.com/hapijs/shot/pull/137"
+            },
+            {
+                "id": 709596284,
+                "labels": [],
+                "number": 134,
+                "title": "upgrade lab to v24",
+                "url": "https://github.com/hapijs/shot/pull/134"
+            }
+        ],
         "number": 51,
-        "title": "Upgrade lab to 7.x.x. Closes #50",
-        "url": "https://github.com/hapijs/shot/pull/51"
-      }
-    ],
-    "number": 19,
-    "url": "https://github.com/hapijs/shot/milestone/19",
-    "version": "2.0.0"
-  },
-  {
-    "date": "2015-10-05T22:31:29Z",
-    "id": 1339204,
-    "issues": [
-      {
-        "id": 109899525,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/shot/milestone/51",
+        "version": "5.0.5"
+    },
+    {
+        "date": "2020-09-26T19:26:01Z",
+        "id": 5834448,
+        "issues": [
+            {
+                "id": 686187417,
+                "labels": ["bug"],
+                "number": 133,
+                "title": "Another attempt at #129",
+                "url": "https://github.com/hapijs/shot/pull/133"
+            },
+            {
+                "id": 686054774,
+                "labels": ["test"],
+                "number": 132,
+                "title": "fix: do not auto destroy request stream",
+                "url": "https://github.com/hapijs/shot/pull/132"
+            }
+        ],
+        "number": 50,
+        "url": "https://github.com/hapijs/shot/milestone/50",
+        "version": "5.0.4"
+    },
+    {
+        "date": "2020-08-25T22:53:38Z",
+        "id": 5809683,
+        "issues": [
+            {
+                "id": 685816286,
+                "labels": [],
+                "number": 130,
+                "title": "Revert \"Fix cleanup to be consistent across node releases\"",
+                "url": "https://github.com/hapijs/shot/pull/130"
+            }
+        ],
+        "number": 49,
+        "url": "https://github.com/hapijs/shot/milestone/49",
+        "version": "5.0.3"
+    },
+    {
+        "date": "2020-08-25T15:26:23Z",
+        "id": 5808357,
+        "issues": [
+            {
+                "id": 685529058,
+                "labels": ["bug"],
+                "number": 129,
+                "title": "Fix cleanup to be consistent across node releases",
+                "url": "https://github.com/hapijs/shot/pull/129"
+            }
+        ],
+        "number": 48,
+        "url": "https://github.com/hapijs/shot/milestone/48",
+        "version": "5.0.2"
+    },
+    {
+        "date": "2020-08-25T15:25:45Z",
+        "id": 4973448,
+        "issues": [
+            {
+                "id": 660914620,
+                "labels": ["test"],
+                "number": 127,
+                "title": "test on node 14",
+                "url": "https://github.com/hapijs/shot/pull/127"
+            },
+            {
+                "id": 660360033,
+                "labels": ["dependency"],
+                "number": 124,
+                "title": "Replace joi with validate",
+                "url": "https://github.com/hapijs/shot/pull/124"
+            }
+        ],
         "number": 47,
-        "title": "Add authority option. Closes #46",
-        "url": "https://github.com/hapijs/shot/pull/47"
-      },
-      {
-        "id": 109899388,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/shot/milestone/47",
+        "version": "5.0.1"
+    },
+    {
+        "date": "2020-01-08T21:17:23Z",
+        "id": 4973447,
+        "issues": [
+            {
+                "id": 547105740,
+                "labels": ["breaking changes", "dependency"],
+                "number": 120,
+                "title": "Only node 12",
+                "url": "https://github.com/hapijs/shot/issues/120"
+            }
+        ],
         "number": 46,
-        "title": "Add authority option for overriding default host header",
-        "url": "https://github.com/hapijs/shot/issues/46"
-      }
-    ],
-    "number": 17,
-    "url": "https://github.com/hapijs/shot/milestone/17",
-    "version": "1.7.0"
-  },
-  {
-    "date": "2015-09-24T22:04:22Z",
-    "id": 1303307,
-    "issues": [
-      {
-        "id": 108184479,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/shot/milestone/46",
+        "version": "5.0.0"
+    },
+    {
+        "date": "2019-09-12T23:17:38Z",
+        "id": 4655616,
+        "issues": [
+            {
+                "id": 493070681,
+                "labels": ["dependency"],
+                "number": 112,
+                "title": "Update joi",
+                "url": "https://github.com/hapijs/shot/issues/112"
+            }
+        ],
         "number": 44,
-        "title": "Always include a host header. Closes #43",
-        "url": "https://github.com/hapijs/shot/pull/44"
-      },
-      {
-        "id": 108184343,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/shot/milestone/44",
+        "version": "4.1.2"
+    },
+    {
+        "date": "2019-09-12T23:17:21Z",
+        "id": 4192164,
+        "issues": [
+            {
+                "id": 470518921,
+                "labels": ["bug", "dependency"],
+                "number": 109,
+                "title": "work around Node's DEP0066",
+                "url": "https://github.com/hapijs/shot/pull/109"
+            }
+        ],
         "number": 43,
-        "title": "host header is not always set",
-        "url": "https://github.com/hapijs/shot/issues/43"
-      }
-    ],
-    "number": 16,
-    "url": "https://github.com/hapijs/shot/milestone/16",
-    "version": "1.6.1"
-  },
-  {
-    "date": "2015-08-04T07:33:25Z",
-    "id": 1239704,
-    "issues": [
-      {
-        "id": 90889609,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/shot/milestone/43",
+        "version": "4.1.1"
+    },
+    {
+        "date": "2019-04-02T05:57:58Z",
+        "id": 3792290,
+        "issues": [
+            {
+                "id": 441059893,
+                "labels": ["bug", "dependency"],
+                "number": 108,
+                "title": "Node V12 deprecation warning [DEP0066] OutgoingMessage.prototype._headers is deprecated",
+                "url": "https://github.com/hapijs/shot/issues/108"
+            },
+            {
+                "id": 428037492,
+                "labels": ["dependency"],
+                "number": 106,
+                "title": "Change module name",
+                "url": "https://github.com/hapijs/shot/issues/106"
+            }
+        ],
+        "number": 40,
+        "url": "https://github.com/hapijs/shot/milestone/40",
+        "version": "4.1.0"
+    },
+    {
+        "date": "2018-11-03T00:36:49Z",
+        "id": 3788862,
+        "issues": [
+            {
+                "id": 377003034,
+                "labels": ["non issue"],
+                "number": 101,
+                "title": "Remove engines",
+                "url": "https://github.com/hapijs/shot/issues/101"
+            }
+        ],
+        "number": 39,
+        "url": "https://github.com/hapijs/shot/milestone/39",
+        "version": "4.0.7"
+    },
+    {
+        "date": "2018-11-01T19:01:21Z",
+        "id": 3788861,
+        "issues": [
+            {
+                "id": 376525162,
+                "labels": ["dependency"],
+                "number": 100,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/shot/issues/100"
+            }
+        ],
+        "number": 38,
+        "url": "https://github.com/hapijs/shot/milestone/38",
+        "version": "4.0.6"
+    },
+    {
+        "date": "2018-11-01T19:00:52Z",
+        "id": 2912994,
+        "issues": [
+            {
+                "id": 375848105,
+                "labels": [],
+                "number": 99,
+                "title": "Updated lab to v17 to pass on Node v11",
+                "url": "https://github.com/hapijs/shot/pull/99"
+            },
+            {
+                "id": 295941213,
+                "labels": ["test"],
+                "number": 92,
+                "title": "skip not covered lines on node master",
+                "url": "https://github.com/hapijs/shot/pull/92"
+            }
+        ],
+        "number": 37,
+        "url": "https://github.com/hapijs/shot/milestone/37",
+        "version": "4.0.5"
+    },
+    {
+        "date": "2017-11-14T22:30:34Z",
+        "id": 2856585,
+        "issues": [],
         "number": 36,
-        "title": "Inject request with specified the remote client IP address",
-        "url": "https://github.com/hapijs/shot/pull/36"
-      },
-      {
-        "id": 90121398,
-        "labels": ["feature", "support"],
+        "url": "https://github.com/hapijs/shot/milestone/36",
+        "version": "4.0.4"
+    },
+    {
+        "date": "2017-10-22T08:34:58Z",
+        "id": 2813707,
+        "issues": [
+            {
+                "id": 267446685,
+                "labels": ["dependency"],
+                "number": 90,
+                "title": "Update joi",
+                "url": "https://github.com/hapijs/shot/issues/90"
+            }
+        ],
         "number": 35,
-        "title": "Client IP address",
-        "url": "https://github.com/hapijs/shot/issues/35"
-      }
-    ],
-    "number": 15,
-    "url": "https://github.com/hapijs/shot/milestone/15",
-    "version": "1.6.0"
-  },
-  {
-    "date": "2015-08-04T07:33:46Z",
-    "id": 1151019,
-    "issues": [],
-    "number": 14,
-    "url": "https://github.com/hapijs/shot/milestone/14",
-    "version": "1.5.4"
-  },
-  {
-    "date": "2015-06-05T11:39:29Z",
-    "id": 1150992,
-    "issues": [
-      {
-        "id": 85512529,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/shot/milestone/35",
+        "version": "4.0.3"
+    },
+    {
+        "date": "2017-10-04T07:47:43Z",
+        "id": 2799412,
+        "issues": [
+            {
+                "id": 262695339,
+                "labels": ["feature"],
+                "number": 89,
+                "title": "Replace instanceof with symbol",
+                "url": "https://github.com/hapijs/shot/issues/89"
+            }
+        ],
+        "number": 34,
+        "url": "https://github.com/hapijs/shot/milestone/34",
+        "version": "4.0.2"
+    },
+    {
+        "date": "2017-09-28T06:15:19Z",
+        "id": 2786758,
+        "issues": [
+            {
+                "id": 261204136,
+                "labels": ["dependency"],
+                "number": 88,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/shot/issues/88"
+            }
+        ],
         "number": 33,
-        "title": "Inconsistent assignment of rawPayload",
-        "url": "https://github.com/hapijs/shot/issues/33"
-      }
-    ],
-    "number": 13,
-    "url": "https://github.com/hapijs/shot/milestone/13",
-    "version": "1.5.3"
-  },
-  {
-    "date": "2015-06-05T11:13:13Z",
-    "id": 1149698,
-    "issues": [
-      {
-        "id": 85185994,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/shot/milestone/33",
+        "version": "4.0.1"
+    },
+    {
+        "date": "2017-09-28T06:15:21Z",
+        "id": 2786757,
+        "issues": [],
         "number": 32,
-        "title": "use rawPayload, convert to UTF8 after the whole buffer is available",
-        "url": "https://github.com/hapijs/shot/pull/32"
-      }
-    ],
-    "number": 12,
-    "url": "https://github.com/hapijs/shot/milestone/12",
-    "version": "1.5.2"
-  },
-  {
-    "date": "2015-06-04T15:41:11Z",
-    "id": 1067652,
-    "issues": [
-      {
-        "id": 79384563,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/shot/milestone/32",
+        "version": "4.0.0"
+    },
+    {
+        "date": "2020-06-29T20:53:35Z",
+        "id": 4168310,
+        "issues": [
+            {
+                "id": 647657335,
+                "labels": ["bug", "lts", "commercial"],
+                "number": 122,
+                "title": "Support node 12",
+                "url": "https://github.com/hapijs/shot/issues/122"
+            }
+        ],
+        "number": 42,
+        "url": "https://github.com/hapijs/shot/milestone/42",
+        "version": "3.5.1"
+    },
+    {
+        "date": "2019-03-25T16:19:48Z",
+        "id": 4168309,
+        "issues": [
+            {
+                "id": 424752997,
+                "labels": ["lts"],
+                "number": 105,
+                "title": "Commercial version of v3 branch",
+                "url": "https://github.com/hapijs/shot/issues/105"
+            }
+        ],
+        "number": 41,
+        "url": "https://github.com/hapijs/shot/milestone/41",
+        "version": "3.5.0"
+    },
+    {
+        "date": "2017-09-23T10:00:11Z",
+        "id": 2555724,
+        "issues": [
+            {
+                "id": 232469523,
+                "labels": ["bug"],
+                "number": 85,
+                "title": "Fix for node 8",
+                "url": "https://github.com/hapijs/shot/pull/85"
+            }
+        ],
+        "number": 31,
+        "url": "https://github.com/hapijs/shot/milestone/31",
+        "version": "3.4.2"
+    },
+    {
+        "date": "2017-09-23T10:00:12Z",
+        "id": 2162623,
+        "issues": [
+            {
+                "id": 232023062,
+                "labels": ["bug"],
+                "number": 84,
+                "title": "Fix node 8 issues",
+                "url": "https://github.com/hapijs/shot/pull/84"
+            }
+        ],
         "number": 30,
-        "title": "fix #7",
-        "url": "https://github.com/hapijs/shot/pull/30"
-      },
-      {
-        "id": 16331603,
-        "labels": ["bug"],
-        "number": 7,
-        "title": "deprecated encoding 'binary' is used",
-        "url": "https://github.com/hapijs/shot/issues/7"
-      }
-    ],
-    "number": 11,
-    "url": "https://github.com/hapijs/shot/milestone/11",
-    "version": "1.5.1"
-  },
-  {
-    "date": "2015-04-14T20:32:04Z",
-    "id": 1067638,
-    "issues": [
-      {
-        "id": 63228901,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/shot/milestone/30",
+        "version": "3.4.1"
+    },
+    {
+        "date": "2016-11-29T01:41:05Z",
+        "id": 1966679,
+        "issues": [
+            {
+                "id": 192165492,
+                "labels": ["dependency"],
+                "number": 83,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/shot/issues/83"
+            },
+            {
+                "id": 176047183,
+                "labels": ["feature", "breaking changes"],
+                "number": 81,
+                "title": "Handle streams of utf8 encoded strings",
+                "url": "https://github.com/hapijs/shot/pull/81"
+            },
+            {
+                "id": 175988308,
+                "labels": ["feature"],
+                "number": 79,
+                "title": "Remove custom output parsing and buffer payload chunks via write()",
+                "url": "https://github.com/hapijs/shot/pull/79"
+            },
+            {
+                "id": 173839758,
+                "labels": ["documentation"],
+                "number": 76,
+                "title": "Updated API docs to reflect new validate flag",
+                "url": "https://github.com/hapijs/shot/pull/76"
+            }
+        ],
+        "number": 29,
+        "url": "https://github.com/hapijs/shot/milestone/29",
+        "version": "3.4.0"
+    },
+    {
+        "date": "2016-08-26T21:46:09Z",
+        "id": 1966675,
+        "issues": [],
         "number": 28,
-        "title": "Add 'content-length' header matching payload length if none set",
-        "url": "https://github.com/hapijs/shot/pull/28"
-      }
-    ],
-    "number": 10,
-    "url": "https://github.com/hapijs/shot/milestone/10",
-    "version": "1.5.0"
-  },
-  {
-    "date": "2015-04-14T20:25:17Z",
-    "id": 987627,
-    "issues": [
-      {
-        "id": 59641924,
-        "labels": ["test"],
+        "url": "https://github.com/hapijs/shot/milestone/28",
+        "version": "3.3.1"
+    },
+    {
+        "date": "2016-08-26T21:37:05Z",
+        "id": 1964660,
+        "issues": [
+            {
+                "id": 173548451,
+                "labels": ["feature"],
+                "number": 75,
+                "title": "Cleanup validation and make it optional",
+                "url": "https://github.com/hapijs/shot/issues/75"
+            }
+        ],
         "number": 27,
-        "title": "add -L to test and test-cov",
-        "url": "https://github.com/hapijs/shot/pull/27"
-      }
-    ],
-    "number": 9,
-    "url": "https://github.com/hapijs/shot/milestone/9",
-    "version": "1.4.2"
-  },
-  {
-    "date": "2015-02-19T23:40:14Z",
-    "id": 987608,
-    "issues": [
-      {
-        "id": 53795024,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/shot/milestone/27",
+        "version": "3.3.0"
+    },
+    {
+        "date": "2016-08-26T08:42:55Z",
+        "id": 1957165,
+        "issues": [
+            {
+                "id": 172192496,
+                "labels": ["bug"],
+                "number": 73,
+                "title": "Add status message to response object",
+                "url": "https://github.com/hapijs/shot/pull/73"
+            },
+            {
+                "id": 167660630,
+                "labels": ["feature"],
+                "number": 71,
+                "title": "add validation schema to shot",
+                "url": "https://github.com/hapijs/shot/pull/71"
+            }
+        ],
+        "number": 26,
+        "url": "https://github.com/hapijs/shot/milestone/26",
+        "version": "3.2.1"
+    },
+    {
+        "date": "2016-08-23T05:19:50Z",
+        "id": 1954621,
+        "issues": [
+            {
+                "id": 172614128,
+                "labels": ["feature"],
+                "number": 74,
+                "title": "Include statusMessage",
+                "url": "https://github.com/hapijs/shot/issues/74"
+            }
+        ],
+        "number": 25,
+        "url": "https://github.com/hapijs/shot/milestone/25",
+        "version": "3.2.0"
+    },
+    {
+        "date": "2016-08-22T08:58:35Z",
+        "id": 1910276,
+        "issues": [
+            {
+                "id": 168173402,
+                "labels": ["documentation"],
+                "number": 72,
+                "title": "npmignore",
+                "url": "https://github.com/hapijs/shot/issues/72"
+            }
+        ],
         "number": 24,
-        "title": "Added Hoek.applyToDefaults.",
-        "url": "https://github.com/hapijs/shot/pull/24"
-      },
-      {
-        "id": 51710101,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/shot/milestone/24",
+        "version": "3.1.1"
+    },
+    {
+        "date": "2016-07-28T19:11:47Z",
+        "id": 1572979,
+        "issues": [
+            {
+                "id": 156607428,
+                "labels": ["test", "dependency"],
+                "number": 69,
+                "title": "Update code to 3.x.x",
+                "url": "https://github.com/hapijs/shot/pull/69"
+            },
+            {
+                "id": 155801096,
+                "labels": ["test", "dependency"],
+                "number": 68,
+                "title": "Test on node 6, update lab and fix tests",
+                "url": "https://github.com/hapijs/shot/pull/68"
+            },
+            {
+                "id": 148002092,
+                "labels": ["feature"],
+                "number": 67,
+                "title": "Support stream payloads",
+                "url": "https://github.com/hapijs/shot/pull/67"
+            },
+            {
+                "id": 132475208,
+                "labels": ["feature"],
+                "number": 65,
+                "title": "Adds quotes around node versions in travis file",
+                "url": "https://github.com/hapijs/shot/pull/65"
+            }
+        ],
         "number": 23,
-        "title": "Use Hoek to assign defaults to options passed to inject. Fixes #22",
-        "url": "https://github.com/hapijs/shot/pull/23"
-      },
-      {
-        "id": 51634785,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/shot/milestone/23",
+        "version": "3.1.0"
+    },
+    {
+        "date": "2016-02-09T17:13:27Z",
+        "id": 1479361,
+        "issues": [
+            {
+                "id": 125964703,
+                "labels": ["bug"],
+                "number": 63,
+                "title": "Add default port to host header when no port specified. Fixes #62",
+                "url": "https://github.com/hapijs/shot/pull/63"
+            },
+            {
+                "id": 124636692,
+                "labels": ["feature"],
+                "number": 61,
+                "title": "Reduce function generation",
+                "url": "https://github.com/hapijs/shot/pull/61"
+            },
+            {
+                "id": 124321774,
+                "labels": ["feature", "non issue"],
+                "number": 60,
+                "title": "Refactor index.js into separate files",
+                "url": "https://github.com/hapijs/shot/pull/60"
+            }
+        ],
         "number": 22,
-        "title": "Use hoek to assign defaults to options passed to inject",
-        "url": "https://github.com/hapijs/shot/issues/22"
-      }
-    ],
-    "number": 8,
-    "url": "https://github.com/hapijs/shot/milestone/8",
-    "version": "1.4.1"
-  },
-  {
-    "date": "2015-02-19T23:40:13Z",
-    "id": 780349,
-    "issues": [
-      {
-        "id": 49597142,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/shot/milestone/22",
+        "version": "3.0.1"
+    },
+    {
+        "date": "2015-12-30T08:55:07Z",
+        "id": 1389543,
+        "issues": [
+            {
+                "id": 124319716,
+                "labels": ["documentation"],
+                "number": 59,
+                "title": "Update README with ES6 styles",
+                "url": "https://github.com/hapijs/shot/issues/59"
+            },
+            {
+                "id": 124319683,
+                "labels": ["documentation"],
+                "number": 58,
+                "title": "Updated README for ES6 styles closes #59",
+                "url": "https://github.com/hapijs/shot/pull/58"
+            },
+            {
+                "id": 124224969,
+                "labels": ["bug", "breaking changes"],
+                "number": 57,
+                "title": "Set trailers in res.trailers rather than res.headers. Fixes #56",
+                "url": "https://github.com/hapijs/shot/pull/57"
+            },
+            {
+                "id": 124125017,
+                "labels": ["bug", "breaking changes"],
+                "number": 56,
+                "title": "Trailers should be added to res.trailers, not res.headers",
+                "url": "https://github.com/hapijs/shot/issues/56"
+            }
+        ],
+        "number": 21,
+        "url": "https://github.com/hapijs/shot/milestone/21",
+        "version": "3.0.0"
+    },
+    {
+        "date": "2015-11-02T18:15:08Z",
+        "id": 1389534,
+        "issues": [
+            {
+                "id": 114652150,
+                "labels": ["test"],
+                "number": 55,
+                "title": "Fix broken tests",
+                "url": "https://github.com/hapijs/shot/issues/55"
+            }
+        ],
+        "number": 20,
+        "url": "https://github.com/hapijs/shot/milestone/20",
+        "version": "2.0.1"
+    },
+    {
+        "date": "2015-11-02T18:10:02Z",
+        "id": 1384338,
+        "issues": [
+            {
+                "id": 114156707,
+                "labels": ["breaking changes"],
+                "number": 52,
+                "title": "Node >= 4 / es2015 updates",
+                "url": "https://github.com/hapijs/shot/issues/52"
+            },
+            {
+                "id": 114156546,
+                "labels": ["dependency"],
+                "number": 51,
+                "title": "Upgrade lab to 7.x.x. Closes #50",
+                "url": "https://github.com/hapijs/shot/pull/51"
+            }
+        ],
         "number": 19,
-        "title": "optionally accept an object as the `url`",
-        "url": "https://github.com/hapijs/shot/pull/19"
-      }
-    ],
-    "number": 7,
-    "url": "https://github.com/hapijs/shot/milestone/7",
-    "version": "1.4.0"
-  },
-  {
-    "date": "2014-09-05T21:22:55Z",
-    "id": 740466,
-    "issues": [
-      {
-        "id": 42091545,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/shot/milestone/19",
+        "version": "2.0.0"
+    },
+    {
+        "date": "2015-10-05T22:31:29Z",
+        "id": 1339204,
+        "issues": [
+            {
+                "id": 109899525,
+                "labels": ["feature"],
+                "number": 47,
+                "title": "Add authority option. Closes #46",
+                "url": "https://github.com/hapijs/shot/pull/47"
+            },
+            {
+                "id": 109899388,
+                "labels": ["feature"],
+                "number": 46,
+                "title": "Add authority option for overriding default host header",
+                "url": "https://github.com/hapijs/shot/issues/46"
+            }
+        ],
+        "number": 17,
+        "url": "https://github.com/hapijs/shot/milestone/17",
+        "version": "1.7.0"
+    },
+    {
+        "date": "2015-09-24T22:04:22Z",
+        "id": 1303307,
+        "issues": [
+            {
+                "id": 108184479,
+                "labels": ["bug"],
+                "number": 44,
+                "title": "Always include a host header. Closes #43",
+                "url": "https://github.com/hapijs/shot/pull/44"
+            },
+            {
+                "id": 108184343,
+                "labels": ["bug"],
+                "number": 43,
+                "title": "host header is not always set",
+                "url": "https://github.com/hapijs/shot/issues/43"
+            }
+        ],
+        "number": 16,
+        "url": "https://github.com/hapijs/shot/milestone/16",
+        "version": "1.6.1"
+    },
+    {
+        "date": "2015-08-04T07:33:25Z",
+        "id": 1239704,
+        "issues": [
+            {
+                "id": 90889609,
+                "labels": ["feature"],
+                "number": 36,
+                "title": "Inject request with specified the remote client IP address",
+                "url": "https://github.com/hapijs/shot/pull/36"
+            },
+            {
+                "id": 90121398,
+                "labels": ["feature", "support"],
+                "number": 35,
+                "title": "Client IP address",
+                "url": "https://github.com/hapijs/shot/issues/35"
+            }
+        ],
+        "number": 15,
+        "url": "https://github.com/hapijs/shot/milestone/15",
+        "version": "1.6.0"
+    },
+    {
+        "date": "2015-08-04T07:33:46Z",
+        "id": 1151019,
+        "issues": [],
         "number": 14,
-        "title": "lab 4.0",
-        "url": "https://github.com/hapijs/shot/issues/14"
-      }
-    ],
-    "number": 6,
-    "url": "https://github.com/hapijs/shot/milestone/6",
-    "version": "1.3.5"
-  },
-  {
-    "date": "2014-08-02T07:42:34Z",
-    "id": 591490,
-    "issues": [
-      {
-        "id": 34695425,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/shot/milestone/14",
+        "version": "1.5.4"
+    },
+    {
+        "date": "2015-06-05T11:39:29Z",
+        "id": 1150992,
+        "issues": [
+            {
+                "id": 85512529,
+                "labels": ["bug"],
+                "number": 33,
+                "title": "Inconsistent assignment of rawPayload",
+                "url": "https://github.com/hapijs/shot/issues/33"
+            }
+        ],
+        "number": 13,
+        "url": "https://github.com/hapijs/shot/milestone/13",
+        "version": "1.5.3"
+    },
+    {
+        "date": "2015-06-05T11:13:13Z",
+        "id": 1149698,
+        "issues": [
+            {
+                "id": 85185994,
+                "labels": ["bug"],
+                "number": 32,
+                "title": "use rawPayload, convert to UTF8 after the whole buffer is available",
+                "url": "https://github.com/hapijs/shot/pull/32"
+            }
+        ],
         "number": 12,
-        "title": "Remove repeated assignment",
-        "url": "https://github.com/hapijs/shot/pull/12"
-      }
-    ],
-    "number": 4,
-    "url": "https://github.com/hapijs/shot/milestone/4",
-    "version": "1.3.4"
-  },
-  {
-    "date": "2014-05-01T21:10:24Z",
-    "id": 641454,
-    "issues": [
-      {
-        "id": 32305515,
-        "labels": ["test"],
+        "url": "https://github.com/hapijs/shot/milestone/12",
+        "version": "1.5.2"
+    },
+    {
+        "date": "2015-06-04T15:41:11Z",
+        "id": 1067652,
+        "issues": [
+            {
+                "id": 79384563,
+                "labels": ["bug"],
+                "number": 30,
+                "title": "fix #7",
+                "url": "https://github.com/hapijs/shot/pull/30"
+            },
+            {
+                "id": 16331603,
+                "labels": ["bug"],
+                "number": 7,
+                "title": "deprecated encoding 'binary' is used",
+                "url": "https://github.com/hapijs/shot/issues/7"
+            }
+        ],
         "number": 11,
-        "title": "Bring coverage back to 100%",
-        "url": "https://github.com/hapijs/shot/issues/11"
-      }
-    ],
-    "number": 5,
-    "url": "https://github.com/hapijs/shot/milestone/5",
-    "version": "1.3.3"
-  },
-  {
-    "date": "2014-03-08T19:47:41Z",
-    "id": 580362,
-    "issues": [
-      {
-        "id": 29028483,
-        "labels": ["test"],
+        "url": "https://github.com/hapijs/shot/milestone/11",
+        "version": "1.5.1"
+    },
+    {
+        "date": "2015-04-14T20:32:04Z",
+        "id": 1067638,
+        "issues": [
+            {
+                "id": 63228901,
+                "labels": ["feature"],
+                "number": 28,
+                "title": "Add 'content-length' header matching payload length if none set",
+                "url": "https://github.com/hapijs/shot/pull/28"
+            }
+        ],
         "number": 10,
-        "title": "Bring coverage back to 100% after lab fix",
-        "url": "https://github.com/hapijs/shot/issues/10"
-      }
-    ],
-    "number": 3,
-    "url": "https://github.com/hapijs/shot/milestone/3",
-    "version": "1.3.2"
-  },
-  {
-    "date": "2014-02-25T21:33:36Z",
-    "id": 580359,
-    "issues": [
-      {
-        "id": 28286450,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/shot/milestone/10",
+        "version": "1.5.0"
+    },
+    {
+        "date": "2015-04-14T20:25:17Z",
+        "id": 987627,
+        "issues": [
+            {
+                "id": 59641924,
+                "labels": ["test"],
+                "number": 27,
+                "title": "add -L to test and test-cov",
+                "url": "https://github.com/hapijs/shot/pull/27"
+            }
+        ],
         "number": 9,
-        "title": "Support node 0.11",
-        "url": "https://github.com/hapijs/shot/issues/9"
-      }
-    ],
-    "number": 2,
-    "url": "https://github.com/hapijs/shot/milestone/2",
-    "version": "1.3.1"
-  },
-  {
-    "date": "2013-08-28T20:16:14Z",
-    "id": 413973,
-    "issues": [],
-    "number": 1,
-    "url": "https://github.com/hapijs/shot/milestone/1",
-    "version": "1.0.0"
-  }
+        "url": "https://github.com/hapijs/shot/milestone/9",
+        "version": "1.4.2"
+    },
+    {
+        "date": "2015-02-19T23:40:14Z",
+        "id": 987608,
+        "issues": [
+            {
+                "id": 53795024,
+                "labels": ["bug"],
+                "number": 24,
+                "title": "Added Hoek.applyToDefaults.",
+                "url": "https://github.com/hapijs/shot/pull/24"
+            },
+            {
+                "id": 51710101,
+                "labels": ["bug"],
+                "number": 23,
+                "title": "Use Hoek to assign defaults to options passed to inject. Fixes #22",
+                "url": "https://github.com/hapijs/shot/pull/23"
+            },
+            {
+                "id": 51634785,
+                "labels": ["bug"],
+                "number": 22,
+                "title": "Use hoek to assign defaults to options passed to inject",
+                "url": "https://github.com/hapijs/shot/issues/22"
+            }
+        ],
+        "number": 8,
+        "url": "https://github.com/hapijs/shot/milestone/8",
+        "version": "1.4.1"
+    },
+    {
+        "date": "2015-02-19T23:40:13Z",
+        "id": 780349,
+        "issues": [
+            {
+                "id": 49597142,
+                "labels": ["feature"],
+                "number": 19,
+                "title": "optionally accept an object as the `url`",
+                "url": "https://github.com/hapijs/shot/pull/19"
+            }
+        ],
+        "number": 7,
+        "url": "https://github.com/hapijs/shot/milestone/7",
+        "version": "1.4.0"
+    },
+    {
+        "date": "2014-09-05T21:22:55Z",
+        "id": 740466,
+        "issues": [
+            {
+                "id": 42091545,
+                "labels": ["dependency"],
+                "number": 14,
+                "title": "lab 4.0",
+                "url": "https://github.com/hapijs/shot/issues/14"
+            }
+        ],
+        "number": 6,
+        "url": "https://github.com/hapijs/shot/milestone/6",
+        "version": "1.3.5"
+    },
+    {
+        "date": "2014-08-02T07:42:34Z",
+        "id": 591490,
+        "issues": [
+            {
+                "id": 34695425,
+                "labels": ["bug"],
+                "number": 12,
+                "title": "Remove repeated assignment",
+                "url": "https://github.com/hapijs/shot/pull/12"
+            }
+        ],
+        "number": 4,
+        "url": "https://github.com/hapijs/shot/milestone/4",
+        "version": "1.3.4"
+    },
+    {
+        "date": "2014-05-01T21:10:24Z",
+        "id": 641454,
+        "issues": [
+            {
+                "id": 32305515,
+                "labels": ["test"],
+                "number": 11,
+                "title": "Bring coverage back to 100%",
+                "url": "https://github.com/hapijs/shot/issues/11"
+            }
+        ],
+        "number": 5,
+        "url": "https://github.com/hapijs/shot/milestone/5",
+        "version": "1.3.3"
+    },
+    {
+        "date": "2014-03-08T19:47:41Z",
+        "id": 580362,
+        "issues": [
+            {
+                "id": 29028483,
+                "labels": ["test"],
+                "number": 10,
+                "title": "Bring coverage back to 100% after lab fix",
+                "url": "https://github.com/hapijs/shot/issues/10"
+            }
+        ],
+        "number": 3,
+        "url": "https://github.com/hapijs/shot/milestone/3",
+        "version": "1.3.2"
+    },
+    {
+        "date": "2014-02-25T21:33:36Z",
+        "id": 580359,
+        "issues": [
+            {
+                "id": 28286450,
+                "labels": ["feature"],
+                "number": 9,
+                "title": "Support node 0.11",
+                "url": "https://github.com/hapijs/shot/issues/9"
+            }
+        ],
+        "number": 2,
+        "url": "https://github.com/hapijs/shot/milestone/2",
+        "version": "1.3.1"
+    },
+    {
+        "date": "2013-08-28T20:16:14Z",
+        "id": 413973,
+        "issues": [],
+        "number": 1,
+        "url": "https://github.com/hapijs/shot/milestone/1",
+        "version": "1.0.0"
+    }
 ]

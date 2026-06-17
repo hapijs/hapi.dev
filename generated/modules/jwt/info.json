@@ -1,22 +1,22 @@
 {
-  "api": true,
-  "forks": 25,
-  "isPlugin": true,
-  "latestVersion": "3.x.x",
-  "link": "https://github.com/hapijs/jwt",
-  "name": "jwt",
-  "package": "@hapi/jwt",
-  "slogan": "JWT (JSON Web Token) Authentication.",
-  "sloganHtml": "JWT (JSON Web Token) Authentication.",
-  "stars": 35,
-  "updated": "2026-06-12T08:54:01Z",
-  "versions": [
-    {
-      "branch": "v3.2.4",
-      "license": "BSD",
-      "name": "3.2.4",
-      "node": ">= 16"
-    }
-  ],
-  "versionsArray": ["3.2.4"]
+    "api": true,
+    "forks": 25,
+    "isPlugin": true,
+    "latestVersion": "3.x.x",
+    "link": "https://github.com/hapijs/jwt",
+    "name": "jwt",
+    "package": "@hapi/jwt",
+    "slogan": "JWT (JSON Web Token) Authentication.",
+    "sloganHtml": "JWT (JSON Web Token) Authentication.",
+    "stars": 35,
+    "updated": "2026-06-12T08:54:01Z",
+    "versions": [
+        {
+            "branch": "v3.2.4",
+            "license": "BSD",
+            "name": "3.2.4",
+            "node": ">= 16"
+        }
+    ],
+    "versionsArray": ["3.2.4"]
 }

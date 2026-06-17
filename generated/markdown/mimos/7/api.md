@@ -7,11 +7,11 @@ Mimos is a convenience class for retrieving mime information objects.
 Creates a new Mimos object where:
 
 - `[options]` - an option object the following keys
-  - `[override]` - an object hash that is merged into the built in mime information specified [here](https://github.com/jshttp/mime-db). Each key value pair represents a single mime object. Each override value should follow this schema:
-    - `key` - the key is the lower-cased correct mime-type. (Ex. "application/javascript").
-    - `value` - the value should be an object following the specifications outlined [here](https://github.com/jshttp/mime-db#data-structure). Additional values include:
-      - `type` - specify the `type` value of result objects, defaults to `key`. See the example below for more clarification.
-      - `predicate` - method with signature `function(mime)` when this mime type is found in the database, this function will run. This allows you make customizations to `mime` based on developer criteria.
+    - `[override]` - an object hash that is merged into the built in mime information specified [here](https://github.com/jshttp/mime-db). Each key value pair represents a single mime object. Each override value should follow this schema:
+        - `key` - the key is the lower-cased correct mime-type. (Ex. "application/javascript").
+        - `value` - the value should be an object following the specifications outlined [here](https://github.com/jshttp/mime-db#data-structure). Additional values include:
+            - `type` - specify the `type` value of result objects, defaults to `key`. See the example below for more clarification.
+            - `predicate` - method with signature `function(mime)` when this mime type is found in the database, this function will run. This allows you make customizations to `mime` based on developer criteria.
 
 ### `mimos.path(path)`
 
@@ -60,31 +60,31 @@ In certain situations, it can be helpful to override the built in mime type info
 
 ```js
 const options = {
-  override: {
-    'node/module': {
-      source: 'iana',
-      compressible: true,
-      extensions: ['node', 'module', 'npm'],
-      type: 'node/module',
+    override: {
+        'node/module': {
+            source: 'iana',
+            compressible: true,
+            extensions: ['node', 'module', 'npm'],
+            type: 'node/module',
+        },
+        'application/javascript': {
+            source: 'iana',
+            charset: 'UTF-8',
+            compressible: true,
+            extensions: ['js', 'javascript'],
+            type: 'text/javascript',
+        },
+        'text/html': {
+            predicate: function (mime) {
+                if (someCondition) {
+                    mime.foo = 'test';
+                } else {
+                    mime.foo = 'bar';
+                }
+                return mime;
+            },
+        },
     },
-    'application/javascript': {
-      source: 'iana',
-      charset: 'UTF-8',
-      compressible: true,
-      extensions: ['js', 'javascript'],
-      type: 'text/javascript',
-    },
-    'text/html': {
-      predicate: function (mime) {
-        if (someCondition) {
-          mime.foo = 'test';
-        } else {
-          mime.foo = 'bar';
-        }
-        return mime;
-      },
-    },
-  },
 };
 
 const mimos = new Mimos.Mimos(options);

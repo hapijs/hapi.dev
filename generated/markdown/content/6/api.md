@@ -28,7 +28,7 @@ Content.disposition('form-data; name="file"; filename=file.jpg');
 // { name: 'file', filename: 'file.jpg' }
 
 Content.disposition(
-  'form-data; name="file"; filename*=utf-8\'en\'with%20space',
+    'form-data; name="file"; filename*=utf-8\'en\'with%20space',
 );
 // { name: 'file', filename: 'with space' }
 ```

@@ -1,28 +1,28 @@
 {
-  "api": true,
-  "forks": 1358,
-  "isPlugin": false,
-  "latestVersion": "21.x.x",
-  "link": "https://github.com/hapijs/hapi",
-  "name": "hapi",
-  "package": "@hapi/hapi",
-  "slogan": "The Simple, Secure Framework Developers Trust",
-  "sloganHtml": "The Simple, Secure Framework Developers Trust",
-  "stars": 14789,
-  "updated": "2026-05-06T10:38:07Z",
-  "versions": [
-    {
-      "branch": "v20.3.0",
-      "license": "BSD",
-      "name": "20.3.0",
-      "node": ">= 16"
-    },
-    {
-      "branch": "v21.4.9",
-      "license": "BSD",
-      "name": "21.4.9",
-      "node": ">= 16"
-    }
-  ],
-  "versionsArray": ["21.4.9", "20.3.0"]
+    "api": true,
+    "forks": 1358,
+    "isPlugin": false,
+    "latestVersion": "21.x.x",
+    "link": "https://github.com/hapijs/hapi",
+    "name": "hapi",
+    "package": "@hapi/hapi",
+    "slogan": "The Simple, Secure Framework Developers Trust",
+    "sloganHtml": "The Simple, Secure Framework Developers Trust",
+    "stars": 14789,
+    "updated": "2026-05-06T10:38:07Z",
+    "versions": [
+        {
+            "branch": "v20.3.0",
+            "license": "BSD",
+            "name": "20.3.0",
+            "node": ">= 16"
+        },
+        {
+            "branch": "v21.4.9",
+            "license": "BSD",
+            "name": "21.4.9",
+            "node": ">= 16"
+        }
+    ],
+    "versionsArray": ["21.4.9", "20.3.0"]
 }

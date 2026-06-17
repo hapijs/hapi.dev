@@ -9,14 +9,14 @@ error response object which includes the following properties:
 - `typeof` - the constructor used to create the error (e.g. `Boom.badRequest`).
 - `output` - the formatted response. Can be directly manipulated after object construction to return a custom
   error response. Allowed root keys:
-  - `statusCode` - the HTTP status code (typically 4xx or 5xx).
-  - `headers` - an object containing any HTTP headers where each key is a header name and value is the header content.
-  - `payload` - the formatted object used as the response payload (stringified). Can be directly manipulated but any
-    changes will be lost
-    if `reformat()` is called. Any content allowed and by default includes the following content:
-    - `statusCode` - the HTTP status code, derived from `error.output.statusCode`.
-    - `error` - the HTTP status message (e.g. 'Bad Request', 'Internal Server Error') derived from `statusCode`.
-    - `message` - the error message derived from `error.message`.
+    - `statusCode` - the HTTP status code (typically 4xx or 5xx).
+    - `headers` - an object containing any HTTP headers where each key is a header name and value is the header content.
+    - `payload` - the formatted object used as the response payload (stringified). Can be directly manipulated but any
+      changes will be lost
+      if `reformat()` is called. Any content allowed and by default includes the following content:
+        - `statusCode` - the HTTP status code, derived from `error.output.statusCode`.
+        - `error` - the HTTP status message (e.g. 'Bad Request', 'Internal Server Error') derived from `statusCode`.
+        - `message` - the error message derived from `error.message`.
 - inherited `Error` properties.
 
 The `Boom` object also supports the following method:
@@ -43,12 +43,12 @@ Creates a new `Boom` object using the provided `message` and then calling
 - `message` - the error message. If `message` is an error, it is the same as calling
   [`boomify()`](#boomifyerr-options) directly.
 - `options` - and optional object where:
-  - `statusCode` - the HTTP status code. Defaults to `500` if no status code is already set.
-    - `data` - additional error information (assigned to `error.data`).
-    - `decorate` - an option with extra properties to set on the error object.
-    - `ctor` - constructor reference used to crop the exception call stack output.
-    - if `message` is an error object, also supports the other [`boomify()`](#boomifyerr-options)
-      options.
+    - `statusCode` - the HTTP status code. Defaults to `500` if no status code is already set.
+        - `data` - additional error information (assigned to `error.data`).
+        - `decorate` - an option with extra properties to set on the error object.
+        - `ctor` - constructor reference used to crop the exception call stack output.
+        - if `message` is an error object, also supports the other [`boomify()`](#boomifyerr-options)
+          options.
 
 ##### `boomify(err, [options])`
 
@@ -56,13 +56,13 @@ Decorates an error with the `Boom` properties where:
 
 - `err` - the `Error` object to decorate.
 - `options` - optional object with the following optional settings:
-  - `statusCode` - the HTTP status code. Defaults to `500` if no status code is already set and `err` is not a `Boom` object.
-  - `message` - error message string. If the error already has a message, the provided `message` is added as a prefix.
-    Defaults to no message.
-    - `decorate` - an option with extra properties to set on the error object.
-  - `override` - if `false`, the `err` provided is a `Boom` object, and a `statusCode` or `message` are provided,
-    the values are ignored. Defaults to `true` (apply the provided `statusCode` and `message` options to the error
-    regardless of its type, `Error` or `Boom` object).
+    - `statusCode` - the HTTP status code. Defaults to `500` if no status code is already set and `err` is not a `Boom` object.
+    - `message` - error message string. If the error already has a message, the provided `message` is added as a prefix.
+      Defaults to no message.
+        - `decorate` - an option with extra properties to set on the error object.
+    - `override` - if `false`, the `err` provided is a `Boom` object, and a `statusCode` or `message` are provided,
+      the values are ignored. Defaults to `true` (apply the provided `statusCode` and `message` options to the error
+      regardless of its type, `Error` or `Boom` object).
 
 ```js
 var error = new Error('Unexpected input');
@@ -98,9 +98,9 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 400,
-  "error": "Bad Request",
-  "message": "invalid query"
+    "statusCode": 400,
+    "error": "Bad Request",
+    "message": "invalid query"
 }
 ```
 
@@ -110,8 +110,8 @@ Returns a 401 Unauthorized error where:
 
 - `message` - optional message.
 - `scheme` can be one of the following:
-  - an authentication scheme name
-  - an array of string values. These values will be separated by ', ' and set to the 'WWW-Authenticate' header.
+    - an authentication scheme name
+    - an array of string values. These values will be separated by ', ' and set to the 'WWW-Authenticate' header.
 - `attributes` - an object of values to use while setting the 'WWW-Authenticate' header. This value is only used
   when `scheme` is a string, otherwise it is ignored. Every key/value pair will be included in the
   'WWW-Authenticate' in the format of 'key="value"' as well as in the response payload under the `attributes` key. Alternatively value can be a string which is use to set the value of the scheme, for example setting the token value for negotiate header. If string is used message parameter must be null.
@@ -176,9 +176,9 @@ Generates the following response:
 
 ```js
 Boom.unauthorized('invalid password', 'sample', {
-  ttl: 0,
-  cache: null,
-  foo: 'bar',
+    ttl: 0,
+    cache: null,
+    foo: 'bar',
 });
 ```
 
@@ -216,9 +216,9 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 402,
-  "error": "Payment Required",
-  "message": "bandwidth used"
+    "statusCode": 402,
+    "error": "Payment Required",
+    "message": "bandwidth used"
 }
 ```
 
@@ -237,9 +237,9 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 403,
-  "error": "Forbidden",
-  "message": "try again some time"
+    "statusCode": 403,
+    "error": "Forbidden",
+    "message": "try again some time"
 }
 ```
 
@@ -258,9 +258,9 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 404,
-  "error": "Not Found",
-  "message": "missing"
+    "statusCode": 404,
+    "error": "Not Found",
+    "message": "missing"
 }
 ```
 
@@ -280,9 +280,9 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 405,
-  "error": "Method Not Allowed",
-  "message": "that method is not allowed"
+    "statusCode": 405,
+    "error": "Method Not Allowed",
+    "message": "that method is not allowed"
 }
 ```
 
@@ -301,9 +301,9 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 406,
-  "error": "Not Acceptable",
-  "message": "unacceptable"
+    "statusCode": 406,
+    "error": "Not Acceptable",
+    "message": "unacceptable"
 }
 ```
 
@@ -322,9 +322,9 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 407,
-  "error": "Proxy Authentication Required",
-  "message": "auth missing"
+    "statusCode": 407,
+    "error": "Proxy Authentication Required",
+    "message": "auth missing"
 }
 ```
 
@@ -343,9 +343,9 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 408,
-  "error": "Request Time-out",
-  "message": "timed out"
+    "statusCode": 408,
+    "error": "Request Time-out",
+    "message": "timed out"
 }
 ```
 
@@ -364,9 +364,9 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 409,
-  "error": "Conflict",
-  "message": "there was a conflict"
+    "statusCode": 409,
+    "error": "Conflict",
+    "message": "there was a conflict"
 }
 ```
 
@@ -385,9 +385,9 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 410,
-  "error": "Gone",
-  "message": "it is gone"
+    "statusCode": 410,
+    "error": "Gone",
+    "message": "it is gone"
 }
 ```
 
@@ -406,9 +406,9 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 411,
-  "error": "Length Required",
-  "message": "length needed"
+    "statusCode": 411,
+    "error": "Length Required",
+    "message": "length needed"
 }
 ```
 
@@ -427,8 +427,8 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 412,
-  "error": "Precondition Failed"
+    "statusCode": 412,
+    "error": "Precondition Failed"
 }
 ```
 
@@ -447,9 +447,9 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 413,
-  "error": "Request Entity Too Large",
-  "message": "too big"
+    "statusCode": 413,
+    "error": "Request Entity Too Large",
+    "message": "too big"
 }
 ```
 
@@ -468,9 +468,9 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 414,
-  "error": "Request-URI Too Large",
-  "message": "uri is too long"
+    "statusCode": 414,
+    "error": "Request-URI Too Large",
+    "message": "uri is too long"
 }
 ```
 
@@ -489,9 +489,9 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 415,
-  "error": "Unsupported Media Type",
-  "message": "that media is not supported"
+    "statusCode": 415,
+    "error": "Unsupported Media Type",
+    "message": "that media is not supported"
 }
 ```
 
@@ -510,8 +510,8 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 416,
-  "error": "Requested Range Not Satisfiable"
+    "statusCode": 416,
+    "error": "Requested Range Not Satisfiable"
 }
 ```
 
@@ -530,9 +530,9 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 417,
-  "error": "Expectation Failed",
-  "message": "expected this to work"
+    "statusCode": 417,
+    "error": "Expectation Failed",
+    "message": "expected this to work"
 }
 ```
 
@@ -551,9 +551,9 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 418,
-  "error": "I'm a Teapot",
-  "message": "Sorry, no coffee..."
+    "statusCode": 418,
+    "error": "I'm a Teapot",
+    "message": "Sorry, no coffee..."
 }
 ```
 
@@ -572,9 +572,9 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 422,
-  "error": "Unprocessable Entity",
-  "message": "your data is bad and you should feel bad"
+    "statusCode": 422,
+    "error": "Unprocessable Entity",
+    "message": "your data is bad and you should feel bad"
 }
 ```
 
@@ -593,9 +593,9 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 423,
-  "error": "Locked",
-  "message": "this resource has been locked"
+    "statusCode": 423,
+    "error": "Locked",
+    "message": "this resource has been locked"
 }
 ```
 
@@ -614,9 +614,9 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 424,
-  "error": "Failed Dependency",
-  "message": "an external resource failed"
+    "statusCode": 424,
+    "error": "Failed Dependency",
+    "message": "an external resource failed"
 }
 ```
 
@@ -635,9 +635,9 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 425,
-  "error": "Too Early",
-  "message": "the server is unwilling to risk processing the request"
+    "statusCode": 425,
+    "error": "Too Early",
+    "message": "the server is unwilling to risk processing the request"
 }
 ```
 
@@ -656,9 +656,9 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 428,
-  "error": "Precondition Required",
-  "message": "you must supply an If-Match header"
+    "statusCode": 428,
+    "error": "Precondition Required",
+    "message": "you must supply an If-Match header"
 }
 ```
 
@@ -677,9 +677,9 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 429,
-  "error": "Too Many Requests",
-  "message": "you have exceeded your request limit"
+    "statusCode": 429,
+    "error": "Too Many Requests",
+    "message": "you have exceeded your request limit"
 }
 ```
 
@@ -698,9 +698,9 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 451,
-  "error": "Unavailable For Legal Reasons",
-  "message": "you are not permitted to view this resource for legal reasons"
+    "statusCode": 451,
+    "error": "Unavailable For Legal Reasons",
+    "message": "you are not permitted to view this resource for legal reasons"
 }
 ```
 
@@ -723,9 +723,9 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 500,
-  "error": "Internal Server Error",
-  "message": "An internal server error occurred"
+    "statusCode": 500,
+    "error": "Internal Server Error",
+    "message": "An internal server error occurred"
 }
 ```
 
@@ -744,9 +744,9 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 501,
-  "error": "Not Implemented",
-  "message": "method not implemented"
+    "statusCode": 501,
+    "error": "Not Implemented",
+    "message": "method not implemented"
 }
 ```
 
@@ -765,9 +765,9 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 502,
-  "error": "Bad Gateway",
-  "message": "that is a bad gateway"
+    "statusCode": 502,
+    "error": "Bad Gateway",
+    "message": "that is a bad gateway"
 }
 ```
 
@@ -786,9 +786,9 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 503,
-  "error": "Service Unavailable",
-  "message": "unavailable"
+    "statusCode": 503,
+    "error": "Service Unavailable",
+    "message": "unavailable"
 }
 ```
 
@@ -807,8 +807,8 @@ Generates the following response payload:
 
 ```json
 {
-  "statusCode": 504,
-  "error": "Gateway Time-out"
+    "statusCode": 504,
+    "error": "Gateway Time-out"
 }
 ```
 

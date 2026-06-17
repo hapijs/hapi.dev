@@ -3,9 +3,9 @@
 The connection can be specified with one (and only one) of:
 
 - `client` - a custom Redis client instance where `client` must:
-  - be manually started and stopped,
-  - be compatible with the **ioredis** module API, and
-  - expose the `status` property that must be set to `'ready'` when connected.
+    - be manually started and stopped,
+    - be compatible with the **ioredis** module API, and
+    - expose the `status` property that must be set to `'ready'` when connected.
 
 - `url` - a Redis server URL.
 
@@ -41,11 +41,11 @@ const Catbox = require('@hapi/catbox');
 const { Engine: CatboxRedis } = require('@hapi/catbox-redis');
 
 const cache = new Catbox.Client(CatboxRedis, {
-  partition: 'my_cached_data',
-  host: 'redis-cluster.domain.com',
-  port: 6379,
-  db: 0,
-  tls: {},
+    partition: 'my_cached_data',
+    host: 'redis-cluster.domain.com',
+    port: 6379,
+    db: 0,
+    tls: {},
 });
 ```
 
@@ -56,21 +56,21 @@ const Hapi = require('hapi');
 const { Engine: CatboxRedis } = require('@hapi/catbox-redis');
 
 const server = new Hapi.Server({
-  cache: [
-    {
-      name: 'my_cache',
-      provider: {
-        constructor: CatboxRedis,
-        options: {
-          partition: 'my_cached_data',
-          host: 'redis-cluster.domain.com',
-          port: 6379,
-          db: 0,
-          tls: {},
+    cache: [
+        {
+            name: 'my_cache',
+            provider: {
+                constructor: CatboxRedis,
+                options: {
+                    partition: 'my_cached_data',
+                    host: 'redis-cluster.domain.com',
+                    port: 6379,
+                    db: 0,
+                    tls: {},
+                },
+            },
         },
-      },
-    },
-  ],
+    ],
 });
 ```
 

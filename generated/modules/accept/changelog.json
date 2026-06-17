@@ -1,522 +1,522 @@
 [
-  {
-    "date": "2023-10-10T08:20:42Z",
-    "id": 10023146,
-    "issues": [
-      {
-        "id": 1928161896,
-        "labels": ["bug", "types"],
-        "number": 73,
-        "title": "allow readonly arrays to be used as preferences",
-        "url": "https://github.com/hapijs/accept/pull/73"
-      }
-    ],
-    "number": 33,
-    "url": "https://github.com/hapijs/accept/milestone/33",
-    "version": "6.0.3"
-  },
-  {
-    "date": "2023-07-18T13:38:21Z",
-    "id": 9668553,
-    "issues": [
-      {
-        "id": 1667900934,
-        "labels": ["types"],
-        "number": 72,
-        "title": "update typing of mediaTypes to match actual implementation",
-        "url": "https://github.com/hapijs/accept/pull/72"
-      }
-    ],
-    "number": 32,
-    "url": "https://github.com/hapijs/accept/milestone/32",
-    "version": "6.0.2"
-  },
-  {
-    "date": "2023-02-11T19:46:22Z",
-    "id": 7955827,
-    "issues": [
-      {
-        "id": 1551777213,
-        "labels": ["dependency"],
-        "number": 71,
-        "title": "chore: bump hoek",
-        "url": "https://github.com/hapijs/accept/pull/71"
-      }
-    ],
-    "number": 31,
-    "url": "https://github.com/hapijs/accept/milestone/31",
-    "version": "6.0.1"
-  },
-  {
-    "date": "2023-02-11T19:46:21Z",
-    "id": 7955825,
-    "issues": [
-      {
-        "id": 1228977288,
-        "labels": ["breaking changes", "dependency"],
-        "number": 70,
-        "title": "Support node v18 and drop node v12",
-        "url": "https://github.com/hapijs/accept/pull/70"
-      }
-    ],
-    "number": 30,
-    "url": "https://github.com/hapijs/accept/milestone/30",
-    "version": "6.0.0"
-  },
-  {
-    "date": "2021-02-05T05:40:23Z",
-    "id": 5100689,
-    "issues": [
-      {
-        "id": 799438683,
-        "labels": ["bug"],
-        "number": 65,
-        "title": "Enable prefix matching for language tags",
-        "url": "https://github.com/hapijs/accept/pull/65"
-      },
-      {
-        "id": 798428254,
-        "labels": ["bug"],
-        "number": 63,
-        "title": "Accept.language does not match more specific language tag",
-        "url": "https://github.com/hapijs/accept/issues/63"
-      },
-      {
-        "id": 709583424,
-        "labels": [],
-        "number": 59,
-        "title": "update lab and typescript now needs to be added as a devdependency",
-        "url": "https://github.com/hapijs/accept/pull/59"
-      }
-    ],
-    "number": 28,
-    "url": "https://github.com/hapijs/accept/milestone/28",
-    "version": "5.0.2"
-  },
-  {
-    "date": "2020-02-13T06:32:55Z",
-    "id": 4973127,
-    "issues": [
-      {
-        "id": 564461564,
-        "labels": ["bug"],
-        "number": 53,
-        "title": "Use maps",
-        "url": "https://github.com/hapijs/accept/issues/53"
-      }
-    ],
-    "number": 26,
-    "url": "https://github.com/hapijs/accept/milestone/26",
-    "version": "5.0.1"
-  },
-  {
-    "date": "2020-01-04T20:55:47Z",
-    "id": 4973126,
-    "issues": [
-      {
-        "id": 545331369,
-        "labels": ["breaking changes", "dependency"],
-        "number": 51,
-        "title": "Only node 12",
-        "url": "https://github.com/hapijs/accept/issues/51"
-      }
-    ],
-    "number": 25,
-    "url": "https://github.com/hapijs/accept/milestone/25",
-    "version": "5.0.0"
-  },
-  {
-    "date": "2020-02-13T06:32:33Z",
-    "id": 4724446,
-    "issues": [
-      {
-        "id": 564463483,
-        "labels": ["bug", "lts"],
-        "number": 54,
-        "title": "Backport #53",
-        "url": "https://github.com/hapijs/accept/issues/54"
-      }
-    ],
-    "number": 24,
-    "url": "https://github.com/hapijs/accept/milestone/24",
-    "version": "4.0.1"
-  },
-  {
-    "date": "2019-10-05T22:08:55Z",
-    "id": 4724445,
-    "issues": [
-      {
-        "id": 503022453,
-        "labels": ["breaking changes", "dependency"],
-        "number": 48,
-        "title": "Drop node 8",
-        "url": "https://github.com/hapijs/accept/issues/48"
-      },
-      {
-        "id": 503022367,
-        "labels": ["breaking changes", "types"],
-        "number": 47,
-        "title": "Add types",
-        "url": "https://github.com/hapijs/accept/issues/47"
-      }
-    ],
-    "number": 23,
-    "url": "https://github.com/hapijs/accept/milestone/23",
-    "version": "4.0.0"
-  },
-  {
-    "date": "2020-02-13T06:32:53Z",
-    "id": 4570604,
-    "issues": [
-      {
-        "id": 564466832,
-        "labels": ["bug", "lts"],
-        "number": 55,
-        "title": "Backport #53",
-        "url": "https://github.com/hapijs/accept/issues/55"
-      }
-    ],
-    "number": 22,
-    "url": "https://github.com/hapijs/accept/milestone/22",
-    "version": "3.2.4"
-  },
-  {
-    "date": "2019-08-13T20:43:13Z",
-    "id": 4195575,
-    "issues": [
-      {
-        "id": 480357016,
-        "labels": ["dependency"],
-        "number": 42,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/accept/issues/42"
-      }
-    ],
-    "number": 21,
-    "url": "https://github.com/hapijs/accept/milestone/21",
-    "version": "3.2.3"
-  },
-  {
-    "date": "2019-04-02T22:53:28Z",
-    "id": 4184574,
-    "issues": [
-      {
-        "id": 428481246,
-        "labels": ["bug"],
-        "number": 41,
-        "title": "Missing bias for server preferences among equal q values",
-        "url": "https://github.com/hapijs/accept/issues/41"
-      }
-    ],
-    "number": 20,
-    "url": "https://github.com/hapijs/accept/milestone/20",
-    "version": "3.2.2"
-  },
-  {
-    "date": "2019-03-30T00:05:54Z",
-    "id": 4175349,
-    "issues": [
-      {
-        "id": 427218464,
-        "labels": ["dependency"],
-        "number": 40,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/accept/issues/40"
-      }
-    ],
-    "number": 19,
-    "url": "https://github.com/hapijs/accept/milestone/19",
-    "version": "3.2.1"
-  },
-  {
-    "date": "2019-03-29T17:17:57Z",
-    "id": 3792166,
-    "issues": [
-      {
-        "id": 425701410,
-        "labels": ["non issue"],
-        "number": 39,
-        "title": "Change module namespace",
-        "url": "https://github.com/hapijs/accept/issues/39"
-      },
-      {
-        "id": 393251806,
-        "labels": ["bug", "breaking changes"],
-        "number": 34,
-        "title": "headerType() '*' logic is incorrect.",
-        "url": "https://github.com/hapijs/accept/issues/34"
-      }
-    ],
-    "number": 14,
-    "url": "https://github.com/hapijs/accept/milestone/14",
-    "version": "3.2.0"
-  },
-  {
-    "date": "2018-11-03T00:14:00Z",
-    "id": 3787414,
-    "issues": [
-      {
-        "id": 377000378,
-        "labels": ["non issue"],
+    {
+        "date": "2023-10-10T08:20:42Z",
+        "id": 10023146,
+        "issues": [
+            {
+                "id": 1928161896,
+                "labels": ["bug", "types"],
+                "number": 73,
+                "title": "allow readonly arrays to be used as preferences",
+                "url": "https://github.com/hapijs/accept/pull/73"
+            }
+        ],
+        "number": 33,
+        "url": "https://github.com/hapijs/accept/milestone/33",
+        "version": "6.0.3"
+    },
+    {
+        "date": "2023-07-18T13:38:21Z",
+        "id": 9668553,
+        "issues": [
+            {
+                "id": 1667900934,
+                "labels": ["types"],
+                "number": 72,
+                "title": "update typing of mediaTypes to match actual implementation",
+                "url": "https://github.com/hapijs/accept/pull/72"
+            }
+        ],
         "number": 32,
-        "title": "Remove engines",
-        "url": "https://github.com/hapijs/accept/issues/32"
-      }
-    ],
-    "number": 13,
-    "url": "https://github.com/hapijs/accept/milestone/13",
-    "version": "3.1.3"
-  },
-  {
-    "date": "2018-11-01T07:20:19Z",
-    "id": 3780616,
-    "issues": [
-      {
-        "id": 376281239,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/accept/milestone/32",
+        "version": "6.0.2"
+    },
+    {
+        "date": "2023-02-11T19:46:22Z",
+        "id": 7955827,
+        "issues": [
+            {
+                "id": 1551777213,
+                "labels": ["dependency"],
+                "number": 71,
+                "title": "chore: bump hoek",
+                "url": "https://github.com/hapijs/accept/pull/71"
+            }
+        ],
         "number": 31,
-        "title": "Update hoek v6",
-        "url": "https://github.com/hapijs/accept/issues/31"
-      }
-    ],
-    "number": 12,
-    "url": "https://github.com/hapijs/accept/milestone/12",
-    "version": "3.1.2"
-  },
-  {
-    "date": "2018-10-30T08:12:03Z",
-    "id": 3780084,
-    "issues": [
-      {
-        "id": 375366415,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/accept/milestone/31",
+        "version": "6.0.1"
+    },
+    {
+        "date": "2023-02-11T19:46:21Z",
+        "id": 7955825,
+        "issues": [
+            {
+                "id": 1228977288,
+                "labels": ["breaking changes", "dependency"],
+                "number": 70,
+                "title": "Support node v18 and drop node v12",
+                "url": "https://github.com/hapijs/accept/pull/70"
+            }
+        ],
         "number": 30,
-        "title": "Fix node 11 sort",
-        "url": "https://github.com/hapijs/accept/issues/30"
-      }
-    ],
-    "number": 11,
-    "url": "https://github.com/hapijs/accept/milestone/11",
-    "version": "3.1.1"
-  },
-  {
-    "date": "2018-10-30T04:00:21Z",
-    "id": 2885238,
-    "issues": [
-      {
-        "id": 345347873,
-        "labels": [],
+        "url": "https://github.com/hapijs/accept/milestone/30",
+        "version": "6.0.0"
+    },
+    {
+        "date": "2021-02-05T05:40:23Z",
+        "id": 5100689,
+        "issues": [
+            {
+                "id": 799438683,
+                "labels": ["bug"],
+                "number": 65,
+                "title": "Enable prefix matching for language tags",
+                "url": "https://github.com/hapijs/accept/pull/65"
+            },
+            {
+                "id": 798428254,
+                "labels": ["bug"],
+                "number": 63,
+                "title": "Accept.language does not match more specific language tag",
+                "url": "https://github.com/hapijs/accept/issues/63"
+            },
+            {
+                "id": 709583424,
+                "labels": [],
+                "number": 59,
+                "title": "update lab and typescript now needs to be added as a devdependency",
+                "url": "https://github.com/hapijs/accept/pull/59"
+            }
+        ],
         "number": 28,
-        "title": "add mediaType method",
-        "url": "https://github.com/hapijs/accept/pull/28"
-      }
-    ],
-    "number": 10,
-    "url": "https://github.com/hapijs/accept/milestone/10",
-    "version": "3.1.0"
-  },
-  {
-    "date": "2017-11-03T06:41:46Z",
-    "id": 2794190,
-    "issues": [
-      {
-        "id": 270889780,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/accept/milestone/28",
+        "version": "5.0.2"
+    },
+    {
+        "date": "2020-02-13T06:32:55Z",
+        "id": 4973127,
+        "issues": [
+            {
+                "id": 564461564,
+                "labels": ["bug"],
+                "number": 53,
+                "title": "Use maps",
+                "url": "https://github.com/hapijs/accept/issues/53"
+            }
+        ],
+        "number": 26,
+        "url": "https://github.com/hapijs/accept/milestone/26",
+        "version": "5.0.1"
+    },
+    {
+        "date": "2020-01-04T20:55:47Z",
+        "id": 4973126,
+        "issues": [
+            {
+                "id": 545331369,
+                "labels": ["breaking changes", "dependency"],
+                "number": 51,
+                "title": "Only node 12",
+                "url": "https://github.com/hapijs/accept/issues/51"
+            }
+        ],
+        "number": 25,
+        "url": "https://github.com/hapijs/accept/milestone/25",
+        "version": "5.0.0"
+    },
+    {
+        "date": "2020-02-13T06:32:33Z",
+        "id": 4724446,
+        "issues": [
+            {
+                "id": 564463483,
+                "labels": ["bug", "lts"],
+                "number": 54,
+                "title": "Backport #53",
+                "url": "https://github.com/hapijs/accept/issues/54"
+            }
+        ],
+        "number": 24,
+        "url": "https://github.com/hapijs/accept/milestone/24",
+        "version": "4.0.1"
+    },
+    {
+        "date": "2019-10-05T22:08:55Z",
+        "id": 4724445,
+        "issues": [
+            {
+                "id": 503022453,
+                "labels": ["breaking changes", "dependency"],
+                "number": 48,
+                "title": "Drop node 8",
+                "url": "https://github.com/hapijs/accept/issues/48"
+            },
+            {
+                "id": 503022367,
+                "labels": ["breaking changes", "types"],
+                "number": 47,
+                "title": "Add types",
+                "url": "https://github.com/hapijs/accept/issues/47"
+            }
+        ],
+        "number": 23,
+        "url": "https://github.com/hapijs/accept/milestone/23",
+        "version": "4.0.0"
+    },
+    {
+        "date": "2020-02-13T06:32:53Z",
+        "id": 4570604,
+        "issues": [
+            {
+                "id": 564466832,
+                "labels": ["bug", "lts"],
+                "number": 55,
+                "title": "Backport #53",
+                "url": "https://github.com/hapijs/accept/issues/55"
+            }
+        ],
         "number": 22,
-        "title": "Update boom",
-        "url": "https://github.com/hapijs/accept/issues/22"
-      }
-    ],
-    "number": 9,
-    "url": "https://github.com/hapijs/accept/milestone/9",
-    "version": "3.0.2"
-  },
-  {
-    "date": "2017-09-26T09:04:11Z",
-    "id": 2793379,
-    "issues": [
-      {
-        "id": 260546183,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/accept/milestone/22",
+        "version": "3.2.4"
+    },
+    {
+        "date": "2019-08-13T20:43:13Z",
+        "id": 4195575,
+        "issues": [
+            {
+                "id": 480357016,
+                "labels": ["dependency"],
+                "number": 42,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/accept/issues/42"
+            }
+        ],
         "number": 21,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/accept/issues/21"
-      }
-    ],
-    "number": 8,
-    "url": "https://github.com/hapijs/accept/milestone/8",
-    "version": "3.0.1"
-  },
-  {
-    "date": "2017-09-25T23:59:24Z",
-    "id": 2546736,
-    "issues": [
-      {
-        "id": 260450201,
-        "labels": ["breaking changes"],
+        "url": "https://github.com/hapijs/accept/milestone/21",
+        "version": "3.2.3"
+    },
+    {
+        "date": "2019-04-02T22:53:28Z",
+        "id": 4184574,
+        "issues": [
+            {
+                "id": 428481246,
+                "labels": ["bug"],
+                "number": 41,
+                "title": "Missing bias for server preferences among equal q values",
+                "url": "https://github.com/hapijs/accept/issues/41"
+            }
+        ],
         "number": 20,
-        "title": "Throw all errors",
-        "url": "https://github.com/hapijs/accept/issues/20"
-      }
-    ],
-    "number": 7,
-    "url": "https://github.com/hapijs/accept/milestone/7",
-    "version": "3.0.0"
-  },
-  {
-    "date": "2019-03-22T00:14:24Z",
-    "id": 4162460,
-    "issues": [
-      {
-        "id": 423994691,
-        "labels": ["bug", "lts"],
-        "number": 38,
-        "title": "Node 11 (language)",
-        "url": "https://github.com/hapijs/accept/issues/38"
-      }
-    ],
-    "number": 17,
-    "url": "https://github.com/hapijs/accept/milestone/17",
-    "version": "2.2.2"
-  },
-  {
-    "date": "2019-03-22T00:08:43Z",
-    "id": 4162421,
-    "issues": [
-      {
-        "id": 423993359,
-        "labels": ["lts"],
-        "number": 37,
-        "title": "Fix node 11",
-        "url": "https://github.com/hapijs/accept/issues/37"
-      }
-    ],
-    "number": 16,
-    "url": "https://github.com/hapijs/accept/milestone/16",
-    "version": "2.2.1"
-  },
-  {
-    "date": "2019-03-21T23:58:24Z",
-    "id": 4162420,
-    "issues": [
-      {
-        "id": 423990891,
-        "labels": ["lts"],
-        "number": 36,
-        "title": "Commercial version of v2 branch",
-        "url": "https://github.com/hapijs/accept/issues/36"
-      }
-    ],
-    "number": 15,
-    "url": "https://github.com/hapijs/accept/milestone/15",
-    "version": "2.2.0"
-  },
-  {
-    "date": "2017-05-28T05:52:16Z",
-    "id": 1907854,
-    "issues": [
-      {
-        "id": 231848352,
-        "labels": ["dependency"],
-        "number": 18,
-        "title": "Update deps.",
-        "url": "https://github.com/hapijs/accept/issues/18"
-      }
-    ],
-    "number": 6,
-    "url": "https://github.com/hapijs/accept/milestone/6",
-    "version": "2.1.4"
-  },
-  {
-    "date": "2016-07-27T18:28:57Z",
-    "id": 1907853,
-    "issues": [
-      {
-        "id": 167923120,
-        "labels": ["dependency"],
-        "number": 17,
-        "title": "Update lab",
-        "url": "https://github.com/hapijs/accept/issues/17"
-      }
-    ],
-    "number": 5,
-    "url": "https://github.com/hapijs/accept/milestone/5",
-    "version": "2.1.2"
-  },
-  {
-    "date": "2016-07-27T18:28:21Z",
-    "id": 1471151,
-    "issues": [
-      {
-        "id": 103146134,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/accept/milestone/20",
+        "version": "3.2.2"
+    },
+    {
+        "date": "2019-03-30T00:05:54Z",
+        "id": 4175349,
+        "issues": [
+            {
+                "id": 427218464,
+                "labels": ["dependency"],
+                "number": 40,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/accept/issues/40"
+            }
+        ],
+        "number": 19,
+        "url": "https://github.com/hapijs/accept/milestone/19",
+        "version": "3.2.1"
+    },
+    {
+        "date": "2019-03-29T17:17:57Z",
+        "id": 3792166,
+        "issues": [
+            {
+                "id": 425701410,
+                "labels": ["non issue"],
+                "number": 39,
+                "title": "Change module namespace",
+                "url": "https://github.com/hapijs/accept/issues/39"
+            },
+            {
+                "id": 393251806,
+                "labels": ["bug", "breaking changes"],
+                "number": 34,
+                "title": "headerType() '*' logic is incorrect.",
+                "url": "https://github.com/hapijs/accept/issues/34"
+            }
+        ],
         "number": 14,
-        "title": "Mediatypes",
-        "url": "https://github.com/hapijs/accept/pull/14"
-      }
-    ],
-    "number": 4,
-    "url": "https://github.com/hapijs/accept/milestone/4",
-    "version": "2.1.0"
-  },
-  {
-    "date": "2015-11-01T18:52:39Z",
-    "id": 1203229,
-    "issues": [
-      {
-        "id": 114484689,
-        "labels": ["breaking changes"],
-        "number": 15,
-        "title": "ES6 style changes and node v4",
-        "url": "https://github.com/hapijs/accept/issues/15"
-      },
-      {
-        "id": 100566463,
-        "labels": ["documentation"],
+        "url": "https://github.com/hapijs/accept/milestone/14",
+        "version": "3.2.0"
+    },
+    {
+        "date": "2018-11-03T00:14:00Z",
+        "id": 3787414,
+        "issues": [
+            {
+                "id": 377000378,
+                "labels": ["non issue"],
+                "number": 32,
+                "title": "Remove engines",
+                "url": "https://github.com/hapijs/accept/issues/32"
+            }
+        ],
         "number": 13,
-        "title": "Update docs to use API.md",
-        "url": "https://github.com/hapijs/accept/issues/13"
-      },
-      {
-        "id": 94430304,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/accept/milestone/13",
+        "version": "3.1.3"
+    },
+    {
+        "date": "2018-11-01T07:20:19Z",
+        "id": 3780616,
+        "issues": [
+            {
+                "id": 376281239,
+                "labels": ["dependency"],
+                "number": 31,
+                "title": "Update hoek v6",
+                "url": "https://github.com/hapijs/accept/issues/31"
+            }
+        ],
+        "number": 12,
+        "url": "https://github.com/hapijs/accept/milestone/12",
+        "version": "3.1.2"
+    },
+    {
+        "date": "2018-10-30T08:12:03Z",
+        "id": 3780084,
+        "issues": [
+            {
+                "id": 375366415,
+                "labels": ["bug"],
+                "number": 30,
+                "title": "Fix node 11 sort",
+                "url": "https://github.com/hapijs/accept/issues/30"
+            }
+        ],
         "number": 11,
-        "title": "add language() and languages()",
-        "url": "https://github.com/hapijs/accept/pull/11"
-      }
-    ],
-    "number": 2,
-    "url": "https://github.com/hapijs/accept/milestone/2",
-    "version": "2.0.0"
-  },
-  {
-    "date": "2015-07-13T16:56:12Z",
-    "id": 813254,
-    "issues": [
-      {
-        "id": 91676502,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/accept/milestone/11",
+        "version": "3.1.1"
+    },
+    {
+        "date": "2018-10-30T04:00:21Z",
+        "id": 2885238,
+        "issues": [
+            {
+                "id": 345347873,
+                "labels": [],
+                "number": 28,
+                "title": "add mediaType method",
+                "url": "https://github.com/hapijs/accept/pull/28"
+            }
+        ],
+        "number": 10,
+        "url": "https://github.com/hapijs/accept/milestone/10",
+        "version": "3.1.0"
+    },
+    {
+        "date": "2017-11-03T06:41:46Z",
+        "id": 2794190,
+        "issues": [
+            {
+                "id": 270889780,
+                "labels": ["dependency"],
+                "number": 22,
+                "title": "Update boom",
+                "url": "https://github.com/hapijs/accept/issues/22"
+            }
+        ],
         "number": 9,
-        "title": "Charset",
-        "url": "https://github.com/hapijs/accept/pull/9"
-      },
-      {
-        "id": 59532964,
-        "labels": ["test", "dependency"],
+        "url": "https://github.com/hapijs/accept/milestone/9",
+        "version": "3.0.2"
+    },
+    {
+        "date": "2017-09-26T09:04:11Z",
+        "id": 2793379,
+        "issues": [
+            {
+                "id": 260546183,
+                "labels": ["dependency"],
+                "number": 21,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/accept/issues/21"
+            }
+        ],
+        "number": 8,
+        "url": "https://github.com/hapijs/accept/milestone/8",
+        "version": "3.0.1"
+    },
+    {
+        "date": "2017-09-25T23:59:24Z",
+        "id": 2546736,
+        "issues": [
+            {
+                "id": 260450201,
+                "labels": ["breaking changes"],
+                "number": 20,
+                "title": "Throw all errors",
+                "url": "https://github.com/hapijs/accept/issues/20"
+            }
+        ],
+        "number": 7,
+        "url": "https://github.com/hapijs/accept/milestone/7",
+        "version": "3.0.0"
+    },
+    {
+        "date": "2019-03-22T00:14:24Z",
+        "id": 4162460,
+        "issues": [
+            {
+                "id": 423994691,
+                "labels": ["bug", "lts"],
+                "number": 38,
+                "title": "Node 11 (language)",
+                "url": "https://github.com/hapijs/accept/issues/38"
+            }
+        ],
+        "number": 17,
+        "url": "https://github.com/hapijs/accept/milestone/17",
+        "version": "2.2.2"
+    },
+    {
+        "date": "2019-03-22T00:08:43Z",
+        "id": 4162421,
+        "issues": [
+            {
+                "id": 423993359,
+                "labels": ["lts"],
+                "number": 37,
+                "title": "Fix node 11",
+                "url": "https://github.com/hapijs/accept/issues/37"
+            }
+        ],
+        "number": 16,
+        "url": "https://github.com/hapijs/accept/milestone/16",
+        "version": "2.2.1"
+    },
+    {
+        "date": "2019-03-21T23:58:24Z",
+        "id": 4162420,
+        "issues": [
+            {
+                "id": 423990891,
+                "labels": ["lts"],
+                "number": 36,
+                "title": "Commercial version of v2 branch",
+                "url": "https://github.com/hapijs/accept/issues/36"
+            }
+        ],
+        "number": 15,
+        "url": "https://github.com/hapijs/accept/milestone/15",
+        "version": "2.2.0"
+    },
+    {
+        "date": "2017-05-28T05:52:16Z",
+        "id": 1907854,
+        "issues": [
+            {
+                "id": 231848352,
+                "labels": ["dependency"],
+                "number": 18,
+                "title": "Update deps.",
+                "url": "https://github.com/hapijs/accept/issues/18"
+            }
+        ],
+        "number": 6,
+        "url": "https://github.com/hapijs/accept/milestone/6",
+        "version": "2.1.4"
+    },
+    {
+        "date": "2016-07-27T18:28:57Z",
+        "id": 1907853,
+        "issues": [
+            {
+                "id": 167923120,
+                "labels": ["dependency"],
+                "number": 17,
+                "title": "Update lab",
+                "url": "https://github.com/hapijs/accept/issues/17"
+            }
+        ],
+        "number": 5,
+        "url": "https://github.com/hapijs/accept/milestone/5",
+        "version": "2.1.2"
+    },
+    {
+        "date": "2016-07-27T18:28:21Z",
+        "id": 1471151,
+        "issues": [
+            {
+                "id": 103146134,
+                "labels": ["feature"],
+                "number": 14,
+                "title": "Mediatypes",
+                "url": "https://github.com/hapijs/accept/pull/14"
+            }
+        ],
+        "number": 4,
+        "url": "https://github.com/hapijs/accept/milestone/4",
+        "version": "2.1.0"
+    },
+    {
+        "date": "2015-11-01T18:52:39Z",
+        "id": 1203229,
+        "issues": [
+            {
+                "id": 114484689,
+                "labels": ["breaking changes"],
+                "number": 15,
+                "title": "ES6 style changes and node v4",
+                "url": "https://github.com/hapijs/accept/issues/15"
+            },
+            {
+                "id": 100566463,
+                "labels": ["documentation"],
+                "number": 13,
+                "title": "Update docs to use API.md",
+                "url": "https://github.com/hapijs/accept/issues/13"
+            },
+            {
+                "id": 94430304,
+                "labels": ["feature"],
+                "number": 11,
+                "title": "add language() and languages()",
+                "url": "https://github.com/hapijs/accept/pull/11"
+            }
+        ],
         "number": 2,
-        "title": "Update to Lab 5.x.x and Code 1.x.x",
-        "url": "https://github.com/hapijs/accept/pull/2"
-      },
-      {
-        "id": 58942089,
-        "labels": ["test"],
+        "url": "https://github.com/hapijs/accept/milestone/2",
+        "version": "2.0.0"
+    },
+    {
+        "date": "2015-07-13T16:56:12Z",
+        "id": 813254,
+        "issues": [
+            {
+                "id": 91676502,
+                "labels": ["feature"],
+                "number": 9,
+                "title": "Charset",
+                "url": "https://github.com/hapijs/accept/pull/9"
+            },
+            {
+                "id": 59532964,
+                "labels": ["test", "dependency"],
+                "number": 2,
+                "title": "Update to Lab 5.x.x and Code 1.x.x",
+                "url": "https://github.com/hapijs/accept/pull/2"
+            },
+            {
+                "id": 58942089,
+                "labels": ["test"],
+                "number": 1,
+                "title": "Update .travis.yml",
+                "url": "https://github.com/hapijs/accept/pull/1"
+            }
+        ],
         "number": 1,
-        "title": "Update .travis.yml",
-        "url": "https://github.com/hapijs/accept/pull/1"
-      }
-    ],
-    "number": 1,
-    "url": "https://github.com/hapijs/accept/milestone/1",
-    "version": "1.1.0"
-  }
+        "url": "https://github.com/hapijs/accept/milestone/1",
+        "version": "1.1.0"
+    }
 ]

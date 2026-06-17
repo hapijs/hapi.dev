@@ -1,591 +1,591 @@
 [
-  {
-    "date": "2023-02-11T20:18:12Z",
-    "id": 8594992,
-    "issues": [
-      {
-        "id": 1551795006,
-        "labels": ["dependency"],
-        "number": 149,
-        "title": "chore: bump hoek",
-        "url": "https://github.com/hapijs/glue/pull/149"
-      }
-    ],
-    "number": 29,
-    "url": "https://github.com/hapijs/glue/milestone/29",
-    "version": "9.0.1"
-  },
-  {
-    "date": "2022-10-29T20:20:06Z",
-    "id": 8572514,
-    "issues": [
-      {
-        "id": 1420172569,
-        "labels": ["feature", "breaking changes", "test", "dependency"],
-        "number": 148,
-        "title": "Support for node v18 and hapi v21, ESM support",
-        "url": "https://github.com/hapijs/glue/pull/148"
-      }
-    ],
-    "number": 28,
-    "url": "https://github.com/hapijs/glue/milestone/28",
-    "version": "9.0.0"
-  },
-  {
-    "date": "2020-08-13T22:48:26Z",
-    "id": 5771137,
-    "issues": [
-      {
-        "id": 678545802,
-        "labels": ["breaking changes", "dependency"],
-        "number": 142,
-        "title": "fix: 🐛 bump hapi 20 dependency",
-        "url": "https://github.com/hapijs/glue/pull/142"
-      }
-    ],
-    "number": 26,
-    "url": "https://github.com/hapijs/glue/milestone/26",
-    "version": "8.0.0"
-  },
-  {
-    "date": "2020-01-12T04:47:15Z",
-    "id": 4996991,
-    "issues": [
-      {
-        "id": 548520298,
-        "labels": ["breaking changes", "dependency"],
-        "number": 138,
-        "title": "Only node 12",
-        "url": "https://github.com/hapijs/glue/issues/138"
-      }
-    ],
-    "number": 25,
-    "url": "https://github.com/hapijs/glue/milestone/25",
-    "version": "7.0.0"
-  },
-  {
-    "date": "2019-09-12T22:29:28Z",
-    "id": 4574281,
-    "issues": [
-      {
-        "id": 493021659,
-        "labels": ["dependency"],
-        "number": 133,
-        "title": "Update joi",
-        "url": "https://github.com/hapijs/glue/issues/133"
-      },
-      {
-        "id": 445878608,
-        "labels": ["bug"],
-        "number": 129,
-        "title": "#128 Add support for constructor property and additional options in server cache configuration",
-        "url": "https://github.com/hapijs/glue/pull/129"
-      },
-      {
-        "id": 444370966,
-        "labels": ["bug"],
-        "number": 128,
-        "title": "Server cache options in hapi 18 cannot be passed",
-        "url": "https://github.com/hapijs/glue/issues/128"
-      }
-    ],
-    "number": 23,
-    "url": "https://github.com/hapijs/glue/milestone/23",
-    "version": "6.2.0"
-  },
-  {
-    "date": "2019-08-14T22:32:56Z",
-    "id": 4227478,
-    "issues": [
-      {
-        "id": 480888926,
-        "labels": ["dependency"],
-        "number": 132,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/glue/issues/132"
-      }
-    ],
-    "number": 20,
-    "url": "https://github.com/hapijs/glue/milestone/20",
-    "version": "6.1.1"
-  },
-  {
-    "date": "2019-04-14T00:17:39Z",
-    "id": 3992812,
-    "issues": [
-      {
-        "id": 432915838,
-        "labels": ["dependency"],
-        "number": 126,
-        "title": "Change module namespace",
-        "url": "https://github.com/hapijs/glue/issues/126"
-      }
-    ],
-    "number": 19,
-    "url": "https://github.com/hapijs/glue/milestone/19",
-    "version": "6.1.0"
-  },
-  {
-    "date": "2019-01-22T14:06:45Z",
-    "id": 2889010,
-    "issues": [
-      {
-        "id": 401038489,
-        "labels": ["breaking changes"],
-        "number": 124,
-        "title": "Updates to hapi 18; refactors cache.engine to cache.provider",
-        "url": "https://github.com/hapijs/glue/pull/124"
-      },
-      {
-        "id": 389885653,
-        "labels": [],
-        "number": 121,
-        "title": "Updating package dependencies.",
-        "url": "https://github.com/hapijs/glue/pull/121"
-      }
-    ],
-    "number": 18,
-    "url": "https://github.com/hapijs/glue/milestone/18",
-    "version": "6.0.0"
-  },
-  {
-    "date": "2019-04-16T05:03:21Z",
-    "id": 4233278,
-    "issues": [
-      {
-        "id": 433573424,
-        "labels": ["dependency", "lts"],
-        "number": 127,
-        "title": "Change module namespace for v5 branch",
-        "url": "https://github.com/hapijs/glue/issues/127"
-      }
-    ],
-    "number": 21,
-    "url": "https://github.com/hapijs/glue/milestone/21",
-    "version": "5.1.0"
-  },
-  {
-    "date": "2017-11-06T00:14:32Z",
-    "id": 2856196,
-    "issues": [
-      {
-        "id": 267394265,
-        "labels": ["breaking changes"],
-        "number": 104,
-        "title": "Update to hapi v17.",
-        "url": "https://github.com/hapijs/glue/pull/104"
-      },
-      {
-        "id": 267269084,
-        "labels": ["breaking changes", "dependency"],
-        "number": 102,
-        "title": "Hapi 17",
-        "url": "https://github.com/hapijs/glue/issues/102"
-      }
-    ],
-    "number": 17,
-    "url": "https://github.com/hapijs/glue/milestone/17",
-    "version": "5.0.0"
-  },
-  {
-    "date": "2017-10-28T22:57:30Z",
-    "id": 2666802,
-    "issues": [
-      {
-        "id": 246030073,
-        "labels": ["bug"],
-        "number": 98,
-        "title": "Promises aren't quite right",
-        "url": "https://github.com/hapijs/glue/issues/98"
-      }
-    ],
-    "number": 16,
-    "url": "https://github.com/hapijs/glue/milestone/16",
-    "version": "4.2.1"
-  },
-  {
-    "date": "2017-07-28T05:56:49Z",
-    "id": 2213076,
-    "issues": [
-      {
-        "id": 219925924,
-        "labels": [],
-        "number": 95,
-        "title": "This is for issue #89",
-        "url": "https://github.com/hapijs/glue/pull/95"
-      },
-      {
-        "id": 202240519,
-        "labels": ["feature"],
-        "number": 89,
-        "title": "Plugin as function",
-        "url": "https://github.com/hapijs/glue/issues/89"
-      }
-    ],
-    "number": 15,
-    "url": "https://github.com/hapijs/glue/milestone/15",
-    "version": "4.2.0"
-  },
-  {
-    "date": "2016-12-23T05:23:13Z",
-    "id": 1967440,
-    "issues": [
-      {
-        "id": 193795323,
-        "labels": ["dependency"],
-        "number": 85,
-        "title": "Hapi v16",
-        "url": "https://github.com/hapijs/glue/pull/85"
-      },
-      {
-        "id": 193604967,
-        "labels": ["bug"],
-        "number": 84,
-        "title": "Refactors Joi.array() to utilize .items()",
-        "url": "https://github.com/hapijs/glue/pull/84"
-      },
-      {
-        "id": 193604271,
-        "labels": ["bug", "dependency"],
-        "number": 83,
-        "title": "Joi.array() does not accept arguments",
-        "url": "https://github.com/hapijs/glue/issues/83"
-      },
-      {
-        "id": 193311479,
-        "labels": ["dependency"],
-        "number": 82,
-        "title": "Add Hapi 16 support",
-        "url": "https://github.com/hapijs/glue/issues/82"
-      }
-    ],
-    "number": 14,
-    "url": "https://github.com/hapijs/glue/milestone/14",
-    "version": "4.1.0"
-  },
-  {
-    "date": "2016-08-27T20:24:40Z",
-    "id": 1947831,
-    "issues": [
-      {
-        "id": 173613823,
-        "labels": ["dependency"],
-        "number": 74,
-        "title": "Support hapi 15",
-        "url": "https://github.com/hapijs/glue/issues/74"
-      },
-      {
-        "id": 169558759,
-        "labels": ["bug", "breaking changes"],
-        "number": 72,
-        "title": "Make compose callback always execute async",
-        "url": "https://github.com/hapijs/glue/issues/72"
-      }
-    ],
-    "number": 13,
-    "url": "https://github.com/hapijs/glue/milestone/13",
-    "version": "4.0.0"
-  },
-  {
-    "date": "2016-08-17T16:38:35Z",
-    "id": 1808492,
-    "issues": [
-      {
-        "id": 170868931,
-        "labels": ["dependency"],
-        "number": 73,
-        "title": "Add Hapi 14.x.x to dependencies",
-        "url": "https://github.com/hapijs/glue/issues/73"
-      },
-      {
-        "id": 166959246,
-        "labels": ["bug"],
-        "number": 71,
-        "title": "using Hoek.clone makes some plugins stop working",
-        "url": "https://github.com/hapijs/glue/issues/71"
-      }
-    ],
-    "number": 12,
-    "url": "https://github.com/hapijs/glue/milestone/12",
-    "version": "3.4.0"
-  },
-  {
-    "date": "2016-06-04T15:48:15Z",
-    "id": 1779016,
-    "issues": [
-      {
-        "id": 139138185,
-        "labels": ["feature"],
-        "number": 64,
-        "title": "add plugin-specific registration options to schema",
-        "url": "https://github.com/hapijs/glue/pull/64"
-      }
-    ],
-    "number": 11,
-    "url": "https://github.com/hapijs/glue/milestone/11",
-    "version": "3.3.0"
-  },
-  {
-    "date": "2016-05-20T15:08:17Z",
-    "id": 1779012,
-    "issues": [
-      {
-        "id": 155619323,
-        "labels": ["dependency"],
-        "number": 68,
-        "title": "Test on node v6, update dependencies",
-        "url": "https://github.com/hapijs/glue/pull/68"
-      }
-    ],
-    "number": 10,
-    "url": "https://github.com/hapijs/glue/milestone/10",
-    "version": "3.2.1"
-  },
-  {
-    "date": "2016-05-20T15:07:13Z",
-    "id": 1508333,
-    "issues": [
-      {
-        "id": 131194333,
-        "labels": ["dependency"],
-        "number": 62,
-        "title": "Support hapi 13",
-        "url": "https://github.com/hapijs/glue/pull/62"
-      }
-    ],
-    "number": 9,
-    "url": "https://github.com/hapijs/glue/milestone/9",
-    "version": "3.2.0"
-  },
-  {
-    "date": "2016-01-15T06:05:54Z",
-    "id": 1476050,
-    "issues": [
-      {
-        "id": 126328403,
-        "labels": ["dependency"],
-        "number": 57,
-        "title": "Remove boom dependency",
-        "url": "https://github.com/hapijs/glue/pull/57"
-      },
-      {
-        "id": 125527429,
-        "labels": ["feature"],
-        "number": 54,
-        "title": "compose() returns a Promise if no callback is provided",
-        "url": "https://github.com/hapijs/glue/pull/54"
-      },
-      {
-        "id": 125383711,
-        "labels": ["dependency"],
-        "number": 53,
-        "title": "Support hapi v12",
-        "url": "https://github.com/hapijs/glue/pull/53"
-      },
-      {
-        "id": 124937357,
-        "labels": ["feature"],
-        "number": 52,
-        "title": "Support promises",
-        "url": "https://github.com/hapijs/glue/issues/52"
-      }
-    ],
-    "number": 8,
-    "url": "https://github.com/hapijs/glue/milestone/8",
-    "version": "3.1.0"
-  },
-  {
-    "date": "2015-12-28T16:30:17Z",
-    "id": 1312106,
-    "issues": [
-      {
-        "id": 123035280,
-        "labels": ["support"],
-        "number": 47,
-        "title": "when is glue 3.x going to be completed?",
-        "url": "https://github.com/hapijs/glue/issues/47"
-      },
-      {
-        "id": 120985934,
-        "labels": ["bug"],
-        "number": 44,
-        "title": "Don't force object for plugin options",
-        "url": "https://github.com/hapijs/glue/pull/44"
-      },
-      {
-        "id": 115938263,
-        "labels": ["breaking changes"],
-        "number": 42,
-        "title": "update to es6 based hapi style guide and lab 7 + Dependencies update",
-        "url": "https://github.com/hapijs/glue/pull/42"
-      },
-      {
-        "id": 115781082,
-        "labels": ["breaking changes"],
-        "number": 41,
-        "title": "update to es6 based hapi style guide and lab 7",
-        "url": "https://github.com/hapijs/glue/issues/41"
-      },
-      {
-        "id": 115548888,
-        "labels": ["documentation"],
-        "number": 40,
-        "title": "Breaking changes on 2.3.0 and 2.4.0",
-        "url": "https://github.com/hapijs/glue/issues/40"
-      },
-      {
-        "id": 105589262,
-        "labels": ["feature", "breaking changes"],
-        "number": 31,
-        "title": "Prefix is passed only when plugin in manifest is an array",
-        "url": "https://github.com/hapijs/glue/issues/31"
-      }
-    ],
-    "number": 7,
-    "url": "https://github.com/hapijs/glue/milestone/7",
-    "version": "3.0.0"
-  },
-  {
-    "date": "2015-09-14T15:29:23Z",
-    "id": 1261348,
-    "issues": [
-      {
-        "id": 106178743,
-        "labels": ["dependency"],
-        "number": 32,
-        "title": "Support Hapi 10",
-        "url": "https://github.com/hapijs/glue/pull/32"
-      }
-    ],
-    "number": 5,
-    "url": "https://github.com/hapijs/glue/milestone/5",
-    "version": "2.3.0"
-  },
-  {
-    "date": "2015-08-18T20:08:36Z",
-    "id": 1224918,
-    "issues": [
-      {
-        "id": 99787239,
-        "labels": ["documentation"],
+    {
+        "date": "2023-02-11T20:18:12Z",
+        "id": 8594992,
+        "issues": [
+            {
+                "id": 1551795006,
+                "labels": ["dependency"],
+                "number": 149,
+                "title": "chore: bump hoek",
+                "url": "https://github.com/hapijs/glue/pull/149"
+            }
+        ],
+        "number": 29,
+        "url": "https://github.com/hapijs/glue/milestone/29",
+        "version": "9.0.1"
+    },
+    {
+        "date": "2022-10-29T20:20:06Z",
+        "id": 8572514,
+        "issues": [
+            {
+                "id": 1420172569,
+                "labels": ["feature", "breaking changes", "test", "dependency"],
+                "number": 148,
+                "title": "Support for node v18 and hapi v21, ESM support",
+                "url": "https://github.com/hapijs/glue/pull/148"
+            }
+        ],
         "number": 28,
-        "title": "README: Use the svg Travis image",
-        "url": "https://github.com/hapijs/glue/pull/28"
-      },
-      {
-        "id": 96382322,
-        "labels": ["documentation"],
+        "url": "https://github.com/hapijs/glue/milestone/28",
+        "version": "9.0.0"
+    },
+    {
+        "date": "2020-08-13T22:48:26Z",
+        "id": 5771137,
+        "issues": [
+            {
+                "id": 678545802,
+                "labels": ["breaking changes", "dependency"],
+                "number": 142,
+                "title": "fix: 🐛 bump hapi 20 dependency",
+                "url": "https://github.com/hapijs/glue/pull/142"
+            }
+        ],
         "number": 26,
-        "title": "Fix typos in docs",
-        "url": "https://github.com/hapijs/glue/pull/26"
-      }
-    ],
-    "number": 4,
-    "url": "https://github.com/hapijs/glue/milestone/4",
-    "version": "2.2.0"
-  },
-  {
-    "date": "2015-07-24T21:55:42Z",
-    "id": 1169461,
-    "issues": [
-      {
-        "id": 94192802,
-        "labels": ["test"],
+        "url": "https://github.com/hapijs/glue/milestone/26",
+        "version": "8.0.0"
+    },
+    {
+        "date": "2020-01-12T04:47:15Z",
+        "id": 4996991,
+        "issues": [
+            {
+                "id": 548520298,
+                "labels": ["breaking changes", "dependency"],
+                "number": 138,
+                "title": "Only node 12",
+                "url": "https://github.com/hapijs/glue/issues/138"
+            }
+        ],
         "number": 25,
-        "title": "Linting update",
-        "url": "https://github.com/hapijs/glue/pull/25"
-      }
-    ],
-    "number": 3,
-    "url": "https://github.com/hapijs/glue/milestone/3",
-    "version": "2.1.1"
-  },
-  {
-    "date": "2015-06-17T23:14:07Z",
-    "id": 1002610,
-    "issues": [
-      {
-        "id": 88855576,
-        "labels": ["documentation"],
-        "number": 22,
-        "title": "Add usage section to README file.",
-        "url": "https://github.com/hapijs/glue/pull/22"
-      },
-      {
-        "id": 82811395,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/glue/milestone/25",
+        "version": "7.0.0"
+    },
+    {
+        "date": "2019-09-12T22:29:28Z",
+        "id": 4574281,
+        "issues": [
+            {
+                "id": 493021659,
+                "labels": ["dependency"],
+                "number": 133,
+                "title": "Update joi",
+                "url": "https://github.com/hapijs/glue/issues/133"
+            },
+            {
+                "id": 445878608,
+                "labels": ["bug"],
+                "number": 129,
+                "title": "#128 Add support for constructor property and additional options in server cache configuration",
+                "url": "https://github.com/hapijs/glue/pull/129"
+            },
+            {
+                "id": 444370966,
+                "labels": ["bug"],
+                "number": 128,
+                "title": "Server cache options in hapi 18 cannot be passed",
+                "url": "https://github.com/hapijs/glue/issues/128"
+            }
+        ],
+        "number": 23,
+        "url": "https://github.com/hapijs/glue/milestone/23",
+        "version": "6.2.0"
+    },
+    {
+        "date": "2019-08-14T22:32:56Z",
+        "id": 4227478,
+        "issues": [
+            {
+                "id": 480888926,
+                "labels": ["dependency"],
+                "number": 132,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/glue/issues/132"
+            }
+        ],
         "number": 20,
-        "title": "Added ability to pass array of plugins",
-        "url": "https://github.com/hapijs/glue/pull/20"
-      }
-    ],
-    "number": 2,
-    "url": "https://github.com/hapijs/glue/milestone/2",
-    "version": "2.1.0"
-  },
-  {
-    "date": "2015-03-02T19:47:30Z",
-    "id": 871879,
-    "issues": [
-      {
-        "id": 51511826,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/glue/milestone/20",
+        "version": "6.1.1"
+    },
+    {
+        "date": "2019-04-14T00:17:39Z",
+        "id": 3992812,
+        "issues": [
+            {
+                "id": 432915838,
+                "labels": ["dependency"],
+                "number": 126,
+                "title": "Change module namespace",
+                "url": "https://github.com/hapijs/glue/issues/126"
+            }
+        ],
+        "number": 19,
+        "url": "https://github.com/hapijs/glue/milestone/19",
+        "version": "6.1.0"
+    },
+    {
+        "date": "2019-01-22T14:06:45Z",
+        "id": 2889010,
+        "issues": [
+            {
+                "id": 401038489,
+                "labels": ["breaking changes"],
+                "number": 124,
+                "title": "Updates to hapi 18; refactors cache.engine to cache.provider",
+                "url": "https://github.com/hapijs/glue/pull/124"
+            },
+            {
+                "id": 389885653,
+                "labels": [],
+                "number": 121,
+                "title": "Updating package dependencies.",
+                "url": "https://github.com/hapijs/glue/pull/121"
+            }
+        ],
+        "number": 18,
+        "url": "https://github.com/hapijs/glue/milestone/18",
+        "version": "6.0.0"
+    },
+    {
+        "date": "2019-04-16T05:03:21Z",
+        "id": 4233278,
+        "issues": [
+            {
+                "id": 433573424,
+                "labels": ["dependency", "lts"],
+                "number": 127,
+                "title": "Change module namespace for v5 branch",
+                "url": "https://github.com/hapijs/glue/issues/127"
+            }
+        ],
+        "number": 21,
+        "url": "https://github.com/hapijs/glue/milestone/21",
+        "version": "5.1.0"
+    },
+    {
+        "date": "2017-11-06T00:14:32Z",
+        "id": 2856196,
+        "issues": [
+            {
+                "id": 267394265,
+                "labels": ["breaking changes"],
+                "number": 104,
+                "title": "Update to hapi v17.",
+                "url": "https://github.com/hapijs/glue/pull/104"
+            },
+            {
+                "id": 267269084,
+                "labels": ["breaking changes", "dependency"],
+                "number": 102,
+                "title": "Hapi 17",
+                "url": "https://github.com/hapijs/glue/issues/102"
+            }
+        ],
+        "number": 17,
+        "url": "https://github.com/hapijs/glue/milestone/17",
+        "version": "5.0.0"
+    },
+    {
+        "date": "2017-10-28T22:57:30Z",
+        "id": 2666802,
+        "issues": [
+            {
+                "id": 246030073,
+                "labels": ["bug"],
+                "number": 98,
+                "title": "Promises aren't quite right",
+                "url": "https://github.com/hapijs/glue/issues/98"
+            }
+        ],
+        "number": 16,
+        "url": "https://github.com/hapijs/glue/milestone/16",
+        "version": "4.2.1"
+    },
+    {
+        "date": "2017-07-28T05:56:49Z",
+        "id": 2213076,
+        "issues": [
+            {
+                "id": 219925924,
+                "labels": [],
+                "number": 95,
+                "title": "This is for issue #89",
+                "url": "https://github.com/hapijs/glue/pull/95"
+            },
+            {
+                "id": 202240519,
+                "labels": ["feature"],
+                "number": 89,
+                "title": "Plugin as function",
+                "url": "https://github.com/hapijs/glue/issues/89"
+            }
+        ],
+        "number": 15,
+        "url": "https://github.com/hapijs/glue/milestone/15",
+        "version": "4.2.0"
+    },
+    {
+        "date": "2016-12-23T05:23:13Z",
+        "id": 1967440,
+        "issues": [
+            {
+                "id": 193795323,
+                "labels": ["dependency"],
+                "number": 85,
+                "title": "Hapi v16",
+                "url": "https://github.com/hapijs/glue/pull/85"
+            },
+            {
+                "id": 193604967,
+                "labels": ["bug"],
+                "number": 84,
+                "title": "Refactors Joi.array() to utilize .items()",
+                "url": "https://github.com/hapijs/glue/pull/84"
+            },
+            {
+                "id": 193604271,
+                "labels": ["bug", "dependency"],
+                "number": 83,
+                "title": "Joi.array() does not accept arguments",
+                "url": "https://github.com/hapijs/glue/issues/83"
+            },
+            {
+                "id": 193311479,
+                "labels": ["dependency"],
+                "number": 82,
+                "title": "Add Hapi 16 support",
+                "url": "https://github.com/hapijs/glue/issues/82"
+            }
+        ],
+        "number": 14,
+        "url": "https://github.com/hapijs/glue/milestone/14",
+        "version": "4.1.0"
+    },
+    {
+        "date": "2016-08-27T20:24:40Z",
+        "id": 1947831,
+        "issues": [
+            {
+                "id": 173613823,
+                "labels": ["dependency"],
+                "number": 74,
+                "title": "Support hapi 15",
+                "url": "https://github.com/hapijs/glue/issues/74"
+            },
+            {
+                "id": 169558759,
+                "labels": ["bug", "breaking changes"],
+                "number": 72,
+                "title": "Make compose callback always execute async",
+                "url": "https://github.com/hapijs/glue/issues/72"
+            }
+        ],
+        "number": 13,
+        "url": "https://github.com/hapijs/glue/milestone/13",
+        "version": "4.0.0"
+    },
+    {
+        "date": "2016-08-17T16:38:35Z",
+        "id": 1808492,
+        "issues": [
+            {
+                "id": 170868931,
+                "labels": ["dependency"],
+                "number": 73,
+                "title": "Add Hapi 14.x.x to dependencies",
+                "url": "https://github.com/hapijs/glue/issues/73"
+            },
+            {
+                "id": 166959246,
+                "labels": ["bug"],
+                "number": 71,
+                "title": "using Hoek.clone makes some plugins stop working",
+                "url": "https://github.com/hapijs/glue/issues/71"
+            }
+        ],
+        "number": 12,
+        "url": "https://github.com/hapijs/glue/milestone/12",
+        "version": "3.4.0"
+    },
+    {
+        "date": "2016-06-04T15:48:15Z",
+        "id": 1779016,
+        "issues": [
+            {
+                "id": 139138185,
+                "labels": ["feature"],
+                "number": 64,
+                "title": "add plugin-specific registration options to schema",
+                "url": "https://github.com/hapijs/glue/pull/64"
+            }
+        ],
+        "number": 11,
+        "url": "https://github.com/hapijs/glue/milestone/11",
+        "version": "3.3.0"
+    },
+    {
+        "date": "2016-05-20T15:08:17Z",
+        "id": 1779012,
+        "issues": [
+            {
+                "id": 155619323,
+                "labels": ["dependency"],
+                "number": 68,
+                "title": "Test on node v6, update dependencies",
+                "url": "https://github.com/hapijs/glue/pull/68"
+            }
+        ],
+        "number": 10,
+        "url": "https://github.com/hapijs/glue/milestone/10",
+        "version": "3.2.1"
+    },
+    {
+        "date": "2016-05-20T15:07:13Z",
+        "id": 1508333,
+        "issues": [
+            {
+                "id": 131194333,
+                "labels": ["dependency"],
+                "number": 62,
+                "title": "Support hapi 13",
+                "url": "https://github.com/hapijs/glue/pull/62"
+            }
+        ],
+        "number": 9,
+        "url": "https://github.com/hapijs/glue/milestone/9",
+        "version": "3.2.0"
+    },
+    {
+        "date": "2016-01-15T06:05:54Z",
+        "id": 1476050,
+        "issues": [
+            {
+                "id": 126328403,
+                "labels": ["dependency"],
+                "number": 57,
+                "title": "Remove boom dependency",
+                "url": "https://github.com/hapijs/glue/pull/57"
+            },
+            {
+                "id": 125527429,
+                "labels": ["feature"],
+                "number": 54,
+                "title": "compose() returns a Promise if no callback is provided",
+                "url": "https://github.com/hapijs/glue/pull/54"
+            },
+            {
+                "id": 125383711,
+                "labels": ["dependency"],
+                "number": 53,
+                "title": "Support hapi v12",
+                "url": "https://github.com/hapijs/glue/pull/53"
+            },
+            {
+                "id": 124937357,
+                "labels": ["feature"],
+                "number": 52,
+                "title": "Support promises",
+                "url": "https://github.com/hapijs/glue/issues/52"
+            }
+        ],
         "number": 8,
-        "title": "Update Hapi dependency",
-        "url": "https://github.com/hapijs/glue/pull/8"
-      },
-      {
-        "id": 51494532,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/glue/milestone/8",
+        "version": "3.1.0"
+    },
+    {
+        "date": "2015-12-28T16:30:17Z",
+        "id": 1312106,
+        "issues": [
+            {
+                "id": 123035280,
+                "labels": ["support"],
+                "number": 47,
+                "title": "when is glue 3.x going to be completed?",
+                "url": "https://github.com/hapijs/glue/issues/47"
+            },
+            {
+                "id": 120985934,
+                "labels": ["bug"],
+                "number": 44,
+                "title": "Don't force object for plugin options",
+                "url": "https://github.com/hapijs/glue/pull/44"
+            },
+            {
+                "id": 115938263,
+                "labels": ["breaking changes"],
+                "number": 42,
+                "title": "update to es6 based hapi style guide and lab 7 + Dependencies update",
+                "url": "https://github.com/hapijs/glue/pull/42"
+            },
+            {
+                "id": 115781082,
+                "labels": ["breaking changes"],
+                "number": 41,
+                "title": "update to es6 based hapi style guide and lab 7",
+                "url": "https://github.com/hapijs/glue/issues/41"
+            },
+            {
+                "id": 115548888,
+                "labels": ["documentation"],
+                "number": 40,
+                "title": "Breaking changes on 2.3.0 and 2.4.0",
+                "url": "https://github.com/hapijs/glue/issues/40"
+            },
+            {
+                "id": 105589262,
+                "labels": ["feature", "breaking changes"],
+                "number": 31,
+                "title": "Prefix is passed only when plugin in manifest is an array",
+                "url": "https://github.com/hapijs/glue/issues/31"
+            }
+        ],
         "number": 7,
-        "title": "Publish 2.0.0",
-        "url": "https://github.com/hapijs/glue/issues/7"
-      },
-      {
-        "id": 50865211,
-        "labels": ["test"],
-        "number": 6,
-        "title": "revamp test code to only test functionality relevant to glue",
-        "url": "https://github.com/hapijs/glue/issues/6"
-      },
-      {
-        "id": 50864989,
-        "labels": ["feature", "documentation"],
+        "url": "https://github.com/hapijs/glue/milestone/7",
+        "version": "3.0.0"
+    },
+    {
+        "date": "2015-09-14T15:29:23Z",
+        "id": 1261348,
+        "issues": [
+            {
+                "id": 106178743,
+                "labels": ["dependency"],
+                "number": 32,
+                "title": "Support Hapi 10",
+                "url": "https://github.com/hapijs/glue/pull/32"
+            }
+        ],
         "number": 5,
-        "title": "Improve validation and documentation of manifest plugins entry",
-        "url": "https://github.com/hapijs/glue/issues/5"
-      },
-      {
-        "id": 50772012,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/glue/milestone/5",
+        "version": "2.3.0"
+    },
+    {
+        "date": "2015-08-18T20:08:36Z",
+        "id": 1224918,
+        "issues": [
+            {
+                "id": 99787239,
+                "labels": ["documentation"],
+                "number": 28,
+                "title": "README: Use the svg Travis image",
+                "url": "https://github.com/hapijs/glue/pull/28"
+            },
+            {
+                "id": 96382322,
+                "labels": ["documentation"],
+                "number": 26,
+                "title": "Fix typos in docs",
+                "url": "https://github.com/hapijs/glue/pull/26"
+            }
+        ],
         "number": 4,
-        "title": "Update to hapi@8.0.0-rc7",
-        "url": "https://github.com/hapijs/glue/pull/4"
-      },
-      {
-        "id": 50218952,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/glue/milestone/4",
+        "version": "2.2.0"
+    },
+    {
+        "date": "2015-07-24T21:55:42Z",
+        "id": 1169461,
+        "issues": [
+            {
+                "id": 94192802,
+                "labels": ["test"],
+                "number": 25,
+                "title": "Linting update",
+                "url": "https://github.com/hapijs/glue/pull/25"
+            }
+        ],
         "number": 3,
-        "title": "add support for preConnection and preRegister options handlers",
-        "url": "https://github.com/hapijs/glue/issues/3"
-      },
-      {
-        "id": 50112720,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/glue/milestone/3",
+        "version": "2.1.1"
+    },
+    {
+        "date": "2015-06-17T23:14:07Z",
+        "id": 1002610,
+        "issues": [
+            {
+                "id": 88855576,
+                "labels": ["documentation"],
+                "number": 22,
+                "title": "Add usage section to README file.",
+                "url": "https://github.com/hapijs/glue/pull/22"
+            },
+            {
+                "id": 82811395,
+                "labels": ["feature"],
+                "number": 20,
+                "title": "Added ability to pass array of plugins",
+                "url": "https://github.com/hapijs/glue/pull/20"
+            }
+        ],
         "number": 2,
-        "title": "manifest limitation on server options",
-        "url": "https://github.com/hapijs/glue/issues/2"
-      },
-      {
-        "id": 49292613,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/glue/milestone/2",
+        "version": "2.1.0"
+    },
+    {
+        "date": "2015-03-02T19:47:30Z",
+        "id": 871879,
+        "issues": [
+            {
+                "id": 51511826,
+                "labels": ["dependency"],
+                "number": 8,
+                "title": "Update Hapi dependency",
+                "url": "https://github.com/hapijs/glue/pull/8"
+            },
+            {
+                "id": 51494532,
+                "labels": ["dependency"],
+                "number": 7,
+                "title": "Publish 2.0.0",
+                "url": "https://github.com/hapijs/glue/issues/7"
+            },
+            {
+                "id": 50865211,
+                "labels": ["test"],
+                "number": 6,
+                "title": "revamp test code to only test functionality relevant to glue",
+                "url": "https://github.com/hapijs/glue/issues/6"
+            },
+            {
+                "id": 50864989,
+                "labels": ["feature", "documentation"],
+                "number": 5,
+                "title": "Improve validation and documentation of manifest plugins entry",
+                "url": "https://github.com/hapijs/glue/issues/5"
+            },
+            {
+                "id": 50772012,
+                "labels": ["dependency"],
+                "number": 4,
+                "title": "Update to hapi@8.0.0-rc7",
+                "url": "https://github.com/hapijs/glue/pull/4"
+            },
+            {
+                "id": 50218952,
+                "labels": ["feature"],
+                "number": 3,
+                "title": "add support for preConnection and preRegister options handlers",
+                "url": "https://github.com/hapijs/glue/issues/3"
+            },
+            {
+                "id": 50112720,
+                "labels": ["feature"],
+                "number": 2,
+                "title": "manifest limitation on server options",
+                "url": "https://github.com/hapijs/glue/issues/2"
+            },
+            {
+                "id": 49292613,
+                "labels": ["feature"],
+                "number": 1,
+                "title": "hapi 8.0 API",
+                "url": "https://github.com/hapijs/glue/issues/1"
+            }
+        ],
         "number": 1,
-        "title": "hapi 8.0 API",
-        "url": "https://github.com/hapijs/glue/issues/1"
-      }
-    ],
-    "number": 1,
-    "url": "https://github.com/hapijs/glue/milestone/1",
-    "version": "2.0.0"
-  }
+        "url": "https://github.com/hapijs/glue/milestone/1",
+        "version": "2.0.0"
+    }
 ]

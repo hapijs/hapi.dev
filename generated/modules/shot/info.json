@@ -1,22 +1,22 @@
 {
-  "api": true,
-  "forks": 40,
-  "isPlugin": false,
-  "latestVersion": "6.x.x",
-  "link": "https://github.com/hapijs/shot",
-  "name": "shot",
-  "package": "@hapi/shot",
-  "slogan": "Injects a fake HTTP request/response into your node server logic.",
-  "sloganHtml": "Injects a fake HTTP request/response into your node server logic.",
-  "stars": 196,
-  "updated": "2026-05-27T14:43:06Z",
-  "versions": [
-    {
-      "branch": "v6.0.3",
-      "license": "BSD",
-      "name": "6.0.3",
-      "node": ">= 16"
-    }
-  ],
-  "versionsArray": ["6.0.3"]
+    "api": true,
+    "forks": 40,
+    "isPlugin": false,
+    "latestVersion": "6.x.x",
+    "link": "https://github.com/hapijs/shot",
+    "name": "shot",
+    "package": "@hapi/shot",
+    "slogan": "Injects a fake HTTP request/response into your node server logic.",
+    "sloganHtml": "Injects a fake HTTP request/response into your node server logic.",
+    "stars": 196,
+    "updated": "2026-05-27T14:43:06Z",
+    "versions": [
+        {
+            "branch": "v6.0.3",
+            "license": "BSD",
+            "name": "6.0.3",
+            "node": ">= 16"
+        }
+    ],
+    "versionsArray": ["6.0.3"]
 }

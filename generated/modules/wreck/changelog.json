@@ -1,2005 +1,2010 @@
 [
-  {
-    "date": "2026-05-20T10:27:25Z",
-    "id": 16006393,
-    "issues": [
-      {
-        "id": 4485472888,
-        "labels": ["bug", "security"],
-        "number": 313,
-        "title": "fix: cross-origin redirect should also remove sensitive headers",
-        "url": "https://github.com/hapijs/wreck/pull/313"
-      }
-    ],
-    "number": 80,
-    "url": "https://github.com/hapijs/wreck/milestone/80",
-    "version": "18.1.2"
-  },
-  {
-    "date": "2026-05-06T09:49:00Z",
-    "id": 15814221,
-    "issues": [
-      {
-        "id": 4390163679,
-        "labels": ["bug", "security"],
-        "number": 312,
-        "title": "fix: strip proxy-authorization header on redirect",
-        "url": "https://github.com/hapijs/wreck/pull/312"
-      }
-    ],
-    "number": 79,
-    "url": "https://github.com/hapijs/wreck/milestone/79",
-    "version": "18.1.1"
-  },
-  {
-    "date": "2024-04-10T17:38:08Z",
-    "id": 10802761,
-    "issues": [
-      {
-        "id": 2194361723,
-        "labels": ["feature"],
-        "number": 309,
-        "title": "support custom lookup function in request() ",
-        "url": "https://github.com/hapijs/wreck/issues/309"
-      },
-      {
-        "id": 2160979394,
-        "labels": ["feature"],
-        "number": 308,
-        "title": "support custom lookup function in request()",
-        "url": "https://github.com/hapijs/wreck/pull/308"
-      }
-    ],
-    "number": 78,
-    "url": "https://github.com/hapijs/wreck/milestone/78",
-    "version": "18.1.0"
-  },
-  {
-    "date": "2024-04-10T17:30:20Z",
-    "id": 10802747,
-    "issues": [
-      {
-        "id": 2202487820,
-        "labels": ["feature"],
-        "number": 310,
-        "title": "Optimize header toLowerCasing",
-        "url": "https://github.com/hapijs/wreck/pull/310"
-      }
-    ],
-    "number": 77,
-    "url": "https://github.com/hapijs/wreck/milestone/77",
-    "version": "18.0.2"
-  },
-  {
-    "date": "2023-02-11T19:15:45Z",
-    "id": 7953253,
-    "issues": [
-      {
-        "id": 1551773090,
-        "labels": [],
-        "number": 299,
-        "title": "chore: bump hoek",
-        "url": "https://github.com/hapijs/wreck/pull/299"
-      }
-    ],
-    "number": 76,
-    "url": "https://github.com/hapijs/wreck/milestone/76",
-    "version": "18.0.1"
-  },
-  {
-    "date": "2022-05-07T22:42:04Z",
-    "id": 7953252,
-    "issues": [
-      {
-        "id": 1228488666,
-        "labels": ["breaking changes", "dependency"],
-        "number": 296,
-        "title": "Support node v18 and drop node v12",
-        "url": "https://github.com/hapijs/wreck/pull/296"
-      }
-    ],
-    "number": 75,
-    "url": "https://github.com/hapijs/wreck/milestone/75",
-    "version": "18.0.0"
-  },
-  {
-    "date": "2022-05-07T01:40:01Z",
-    "id": 7801658,
-    "issues": [
-      {
-        "id": 1176214349,
-        "labels": ["feature"],
-        "number": 295,
-        "title": "[CI] Cancel redirect request",
-        "url": "https://github.com/hapijs/wreck/pull/295"
-      },
-      {
-        "id": 1161784814,
-        "labels": ["bug", "breaking changes", "security", "semver: patch"],
-        "number": 292,
-        "title": "strip authorization and cookie headers when redirecting to a new hostname",
-        "url": "https://github.com/hapijs/wreck/pull/292"
-      },
-      {
-        "id": 893566566,
-        "labels": ["feature"],
-        "number": 287,
-        "title": "Cancel redirect request",
-        "url": "https://github.com/hapijs/wreck/pull/287"
-      }
-    ],
-    "number": 73,
-    "url": "https://github.com/hapijs/wreck/milestone/73",
-    "version": "17.2.0"
-  },
-  {
-    "date": "2020-11-23T23:11:10Z",
-    "id": 4973134,
-    "issues": [
-      {
-        "id": 743255795,
-        "labels": [],
-        "number": 283,
-        "title": "Create ci-module.yml",
-        "url": "https://github.com/hapijs/wreck/pull/283"
-      },
-      {
-        "id": 732865346,
-        "labels": ["feature"],
-        "number": 281,
-        "title": "added IPv6 support",
-        "url": "https://github.com/hapijs/wreck/pull/281"
-      },
-      {
-        "id": 709598869,
-        "labels": [],
-        "number": 280,
-        "title": "upgrade lab to v24 and devDependency of typescript",
-        "url": "https://github.com/hapijs/wreck/pull/280"
-      },
-      {
-        "id": 615682855,
-        "labels": ["bug"],
-        "number": 276,
-        "title": "Unable to GET a server that listens to IPv6 address. ETIMEDOUT",
-        "url": "https://github.com/hapijs/wreck/issues/276"
-      }
-    ],
-    "number": 71,
-    "url": "https://github.com/hapijs/wreck/milestone/71",
-    "version": "17.1.0"
-  },
-  {
-    "date": "2020-01-04T21:06:07Z",
-    "id": 4973133,
-    "issues": [
-      {
-        "id": 545332332,
-        "labels": ["breaking changes", "dependency"],
-        "number": 270,
-        "title": "Only node 12",
-        "url": "https://github.com/hapijs/wreck/issues/270"
-      },
-      {
-        "id": 512516871,
-        "labels": ["feature"],
-        "number": 267,
-        "title": "Refactor early abort detection to use the 'abort' event",
-        "url": "https://github.com/hapijs/wreck/pull/267"
-      },
-      {
-        "id": 512476621,
-        "labels": ["bug"],
-        "number": 266,
-        "title": "Don't set redirected host header",
-        "url": "https://github.com/hapijs/wreck/pull/266"
-      }
-    ],
-    "number": 70,
-    "url": "https://github.com/hapijs/wreck/milestone/70",
-    "version": "17.0.0"
-  },
-  {
-    "date": "2019-10-15T00:16:13Z",
-    "id": 4748502,
-    "issues": [
-      {
-        "id": 506931588,
-        "labels": ["bug", "types"],
-        "number": 264,
-        "title": "Allow any readable stream in read()",
-        "url": "https://github.com/hapijs/wreck/issues/264"
-      }
-    ],
-    "number": 68,
-    "url": "https://github.com/hapijs/wreck/milestone/68",
-    "version": "16.0.1"
-  },
-  {
-    "date": "2019-10-15T00:02:12Z",
-    "id": 4748501,
-    "issues": [
-      {
-        "id": 506497591,
-        "labels": ["breaking changes", "types"],
-        "number": 263,
-        "title": "Add types",
-        "url": "https://github.com/hapijs/wreck/issues/263"
-      },
-      {
-        "id": 506497075,
-        "labels": ["breaking changes", "dependency"],
-        "number": 262,
-        "title": "Drop node 8",
-        "url": "https://github.com/hapijs/wreck/issues/262"
-      }
-    ],
-    "number": 67,
-    "url": "https://github.com/hapijs/wreck/milestone/67",
-    "version": "16.0.0"
-  },
-  {
-    "date": "2019-09-18T19:00:00Z",
-    "id": 4574306,
-    "issues": [
-      {
-        "id": 459855076,
-        "labels": ["bug"],
-        "number": 254,
-        "title": "'abort' event",
-        "url": "https://github.com/hapijs/wreck/issues/254"
-      },
-      {
-        "id": 454749237,
-        "labels": ["feature"],
-        "number": 252,
-        "title": "Respect uri parameter when using socketPath",
-        "url": "https://github.com/hapijs/wreck/pull/252"
-      },
-      {
-        "id": 454052435,
-        "labels": ["bug"],
-        "number": 250,
-        "title": "memory leak issue",
-        "url": "https://github.com/hapijs/wreck/pull/250"
-      },
-      {
-        "id": 437208904,
-        "labels": ["feature"],
-        "number": 248,
-        "title": "Change redirect method in `beforeRedirect`",
-        "url": "https://github.com/hapijs/wreck/issues/248"
-      },
-      {
-        "id": 429894617,
-        "labels": ["bug", "breaking changes"],
-        "number": 247,
-        "title": "Return an empty buffer payload on text content-type rather than `null`",
-        "url": "https://github.com/hapijs/wreck/pull/247"
-      }
-    ],
-    "number": 64,
-    "url": "https://github.com/hapijs/wreck/milestone/64",
-    "version": "15.1.0"
-  },
-  {
-    "date": "2019-08-15T00:45:46Z",
-    "id": 4233511,
-    "issues": [
-      {
-        "id": 480895268,
-        "labels": ["dependency"],
-        "number": 256,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/wreck/issues/256"
-      }
-    ],
-    "number": 63,
-    "url": "https://github.com/hapijs/wreck/milestone/63",
-    "version": "15.0.2"
-  },
-  {
-    "date": "2019-04-16T07:02:25Z",
-    "id": 4190276,
-    "issues": [
-      {
-        "id": 428950532,
-        "labels": ["bug"],
-        "number": 246,
-        "title": "Explicit host header trumps host implied in url",
-        "url": "https://github.com/hapijs/wreck/pull/246"
-      },
-      {
-        "id": 428949354,
-        "labels": ["bug"],
-        "number": 245,
-        "title": "An explicit host header is ignored if the request url has no implicit host",
-        "url": "https://github.com/hapijs/wreck/issues/245"
-      }
-    ],
-    "number": 62,
-    "url": "https://github.com/hapijs/wreck/milestone/62",
-    "version": "15.0.1"
-  },
-  {
-    "date": "2019-04-01T15:35:32Z",
-    "id": 4113654,
-    "issues": [
-      {
-        "id": 427774890,
-        "labels": ["release notes"],
-        "number": 244,
-        "title": "15.0.0 Release Notes",
-        "url": "https://github.com/hapijs/wreck/issues/244"
-      },
-      {
-        "id": 427223915,
-        "labels": ["dependency"],
-        "number": 243,
-        "title": "Change module namespace",
-        "url": "https://github.com/hapijs/wreck/issues/243"
-      },
-      {
-        "id": 426112940,
-        "labels": ["breaking changes"],
-        "number": 242,
-        "title": "Remove usage of deprecated url.Parse",
-        "url": "https://github.com/hapijs/wreck/pull/242"
-      },
-      {
-        "id": 407979960,
-        "labels": ["feature", "breaking changes"],
-        "number": 235,
-        "title": "Introduce new preRequest event and emit request on request event",
-        "url": "https://github.com/hapijs/wreck/pull/235"
-      },
-      {
-        "id": 274970027,
-        "labels": ["breaking changes"],
-        "number": 209,
-        "title": "Shouldn't request event emit request object?",
-        "url": "https://github.com/hapijs/wreck/issues/209"
-      }
-    ],
-    "number": 59,
-    "url": "https://github.com/hapijs/wreck/milestone/59",
-    "version": "15.0.0"
-  },
-  {
-    "date": "2019-03-05T22:32:13Z",
-    "id": 4042742,
-    "issues": [
-      {
-        "id": 417530907,
-        "labels": ["dependency"],
-        "number": 240,
-        "title": "Update eslint md dev dep",
-        "url": "https://github.com/hapijs/wreck/pull/240"
-      },
-      {
-        "id": 415809367,
-        "labels": ["feature"],
-        "number": 239,
-        "title": "Whatwg url",
-        "url": "https://github.com/hapijs/wreck/pull/239"
-      },
-      {
-        "id": 415286532,
-        "labels": ["feature"],
-        "number": 238,
-        "title": "Can Wreck parse urls with the WHATWG Url?",
-        "url": "https://github.com/hapijs/wreck/issues/238"
-      }
-    ],
-    "number": 58,
-    "url": "https://github.com/hapijs/wreck/milestone/58",
-    "version": "14.2.0"
-  },
-  {
-    "date": "2019-02-08T20:20:41Z",
-    "id": 3792295,
-    "issues": [
-      {
-        "id": 408309023,
-        "labels": ["bug", "security"],
-        "number": 236,
-        "title": "Protect against prototype poisoning",
-        "url": "https://github.com/hapijs/wreck/issues/236"
-      }
-    ],
-    "number": 57,
-    "url": "https://github.com/hapijs/wreck/milestone/57",
-    "version": "14.1.4"
-  },
-  {
-    "date": "2018-11-03T00:41:45Z",
-    "id": 3788956,
-    "issues": [
-      {
-        "id": 377003505,
-        "labels": ["non issue"],
-        "number": 231,
-        "title": "Remove engines",
-        "url": "https://github.com/hapijs/wreck/issues/231"
-      }
-    ],
-    "number": 56,
-    "url": "https://github.com/hapijs/wreck/milestone/56",
-    "version": "14.1.3"
-  },
-  {
-    "date": "2018-11-01T19:38:31Z",
-    "id": 3784166,
-    "issues": [
-      {
-        "id": 376538359,
-        "labels": ["dependency"],
-        "number": 230,
-        "title": "Update hoek v6",
-        "url": "https://github.com/hapijs/wreck/issues/230"
-      }
-    ],
-    "number": 55,
-    "url": "https://github.com/hapijs/wreck/milestone/55",
-    "version": "14.1.2"
-  },
-  {
-    "date": "2018-10-31T05:49:04Z",
-    "id": 3587709,
-    "issues": [
-      {
-        "id": 375808018,
-        "labels": ["non issue"],
-        "number": 229,
-        "title": "Cleanup",
-        "url": "https://github.com/hapijs/wreck/issues/229"
-      }
-    ],
-    "number": 54,
-    "url": "https://github.com/hapijs/wreck/milestone/54",
-    "version": "14.1.1"
-  },
-  {
-    "date": "2018-08-21T18:24:32Z",
-    "id": 2886696,
-    "issues": [
-      {
-        "id": 349567986,
-        "labels": ["bug"],
-        "number": 226,
-        "title": "Handle edge cases introduced with deferred payload piping",
-        "url": "https://github.com/hapijs/wreck/pull/226"
-      },
-      {
-        "id": 344094439,
-        "labels": ["bug"],
-        "number": 225,
-        "title": "Handle stream payload errors before socket connection",
-        "url": "https://github.com/hapijs/wreck/pull/225"
-      },
-      {
-        "id": 343955699,
-        "labels": ["bug"],
-        "number": 224,
-        "title": "Workaround node 10 regression",
-        "url": "https://github.com/hapijs/wreck/pull/224"
-      },
-      {
-        "id": 343699877,
-        "labels": ["bug"],
-        "number": 223,
-        "title": " Defer piping of options.payload until socket connection",
-        "url": "https://github.com/hapijs/wreck/pull/223"
-      },
-      {
-        "id": 339038173,
-        "labels": ["bug"],
-        "number": 222,
-        "title": "Investigate only piping the payload after a connection is established",
-        "url": "https://github.com/hapijs/wreck/issues/222"
-      },
-      {
-        "id": 307170822,
-        "labels": ["bug"],
-        "number": 218,
-        "title": "Remove new Buffer usage",
-        "url": "https://github.com/hapijs/wreck/pull/218"
-      },
-      {
-        "id": 302846364,
-        "labels": ["test"],
-        "number": 215,
-        "title": "test(request) correct tests to check errors for boom instance",
-        "url": "https://github.com/hapijs/wreck/pull/215"
-      }
-    ],
-    "number": 53,
-    "url": "https://github.com/hapijs/wreck/milestone/53",
-    "version": "14.1.0"
-  },
-  {
-    "date": "2017-11-03T18:41:17Z",
-    "id": 2886695,
-    "issues": [
-      {
-        "id": 271077847,
-        "labels": ["bug", "dependency"],
-        "number": 208,
-        "title": "Fix new Boom",
-        "url": "https://github.com/hapijs/wreck/issues/208"
-      }
-    ],
-    "number": 52,
-    "url": "https://github.com/hapijs/wreck/milestone/52",
-    "version": "14.0.2"
-  },
-  {
-    "date": "2017-11-03T18:40:55Z",
-    "id": 2855911,
-    "issues": [
-      {
-        "id": 270911717,
-        "labels": ["dependency"],
-        "number": 207,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/wreck/issues/207"
-      },
-      {
-        "id": 267826222,
-        "labels": ["dependency"],
-        "number": 206,
-        "title": "Upgrade to lab 15",
-        "url": "https://github.com/hapijs/wreck/pull/206"
-      }
-    ],
-    "number": 51,
-    "url": "https://github.com/hapijs/wreck/milestone/51",
-    "version": "14.0.1"
-  },
-  {
-    "date": "2017-10-21T16:25:23Z",
-    "id": 2794221,
-    "issues": [
-      {
-        "id": 266925841,
-        "labels": ["bug", "breaking changes"],
-        "number": 205,
-        "title": "Change maxBytes error to 413",
-        "url": "https://github.com/hapijs/wreck/pull/205"
-      },
-      {
-        "id": 261705697,
-        "labels": ["documentation", "dependency", "lts"],
-        "number": 204,
-        "title": "Cleanup and lint readme",
-        "url": "https://github.com/hapijs/wreck/pull/204"
-      }
-    ],
-    "number": 50,
-    "url": "https://github.com/hapijs/wreck/milestone/50",
-    "version": "14.0.0"
-  },
-  {
-    "date": "2017-09-26T09:16:22Z",
-    "id": 2789786,
-    "issues": [
-      {
-        "id": 260549752,
-        "labels": ["dependency"],
-        "number": 202,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/wreck/issues/202"
-      }
-    ],
-    "number": 48,
-    "url": "https://github.com/hapijs/wreck/milestone/48",
-    "version": "13.0.3"
-  },
-  {
-    "date": "2017-09-25T14:52:30Z",
-    "id": 2775830,
-    "issues": [
-      {
-        "id": 260017287,
-        "labels": ["bug"],
-        "number": 199,
-        "title": "Return errors for partial payload transfers",
-        "url": "https://github.com/hapijs/wreck/pull/199"
-      }
-    ],
-    "number": 47,
-    "url": "https://github.com/hapijs/wreck/milestone/47",
-    "version": "13.0.2"
-  },
-  {
-    "date": "2017-09-18T22:02:39Z",
-    "id": 2772462,
-    "issues": [
-      {
-        "id": 258635042,
-        "labels": ["bug"],
-        "number": 198,
-        "title": "Retain boom errors from response stream on read()",
-        "url": "https://github.com/hapijs/wreck/issues/198"
-      }
-    ],
-    "number": 46,
-    "url": "https://github.com/hapijs/wreck/milestone/46",
-    "version": "13.0.1"
-  },
-  {
-    "date": "2017-09-18T00:17:55Z",
-    "id": 2751040,
-    "issues": [
-      {
-        "id": 258283122,
-        "labels": ["feature", "breaking changes"],
-        "number": 197,
-        "title": "Move to use async functions",
-        "url": "https://github.com/hapijs/wreck/pull/197"
-      },
-      {
-        "id": 258283038,
-        "labels": ["feature", "breaking changes"],
-        "number": 196,
-        "title": "Migrate to async/await",
-        "url": "https://github.com/hapijs/wreck/issues/196"
-      }
-    ],
-    "number": 45,
-    "url": "https://github.com/hapijs/wreck/milestone/45",
-    "version": "13.0.0"
-  },
-  {
-    "date": "2019-09-18T19:05:07Z",
-    "id": 4162541,
-    "issues": [
-      {
-        "id": 495402144,
-        "labels": ["bug", "commercial"],
-        "number": 258,
-        "title": "Backport #250 ",
-        "url": "https://github.com/hapijs/wreck/issues/258"
-      }
-    ],
-    "number": 61,
-    "url": "https://github.com/hapijs/wreck/milestone/61",
-    "version": "12.6.1"
-  },
-  {
-    "date": "2019-03-22T01:16:26Z",
-    "id": 4162540,
-    "issues": [
-      {
-        "id": 424006398,
-        "labels": ["lts"],
-        "number": 241,
-        "title": "Commercial version of v12 branch",
-        "url": "https://github.com/hapijs/wreck/issues/241"
-      }
-    ],
-    "number": 60,
-    "url": "https://github.com/hapijs/wreck/milestone/60",
-    "version": "12.6.0"
-  },
-  {
-    "date": "2017-09-25T15:38:09Z",
-    "id": 2789903,
-    "issues": [
-      {
-        "id": 260321611,
-        "labels": ["bug"],
-        "number": 201,
-        "title": "Return errors for partial payload transfers",
-        "url": "https://github.com/hapijs/wreck/issues/201"
-      },
-      {
-        "id": 260319255,
-        "labels": ["lts"],
-        "number": 200,
-        "title": "version 12.5.1",
-        "url": "https://github.com/hapijs/wreck/pull/200"
-      }
-    ],
-    "number": 49,
-    "url": "https://github.com/hapijs/wreck/milestone/49",
-    "version": "12.5.1"
-  },
-  {
-    "date": "2017-09-07T16:27:31Z",
-    "id": 2738747,
-    "issues": [
-      {
-        "id": 255992932,
-        "labels": ["feature"],
-        "number": 195,
-        "title": "closes #194 - support for a list of TLS ciphers",
-        "url": "https://github.com/hapijs/wreck/pull/195"
-      },
-      {
-        "id": 255992626,
-        "labels": ["feature"],
-        "number": 194,
-        "title": "Add support for specifying the TLS ciphers list",
-        "url": "https://github.com/hapijs/wreck/issues/194"
-      }
-    ],
-    "number": 44,
-    "url": "https://github.com/hapijs/wreck/milestone/44",
-    "version": "12.5.0"
-  },
-  {
-    "date": "2017-09-01T15:01:21Z",
-    "id": 2737532,
-    "issues": [
-      {
-        "id": 254525160,
-        "labels": ["feature"],
-        "number": 193,
-        "title": "Add onRequest to request options",
-        "url": "https://github.com/hapijs/wreck/pull/193"
-      }
-    ],
-    "number": 43,
-    "url": "https://github.com/hapijs/wreck/milestone/43",
-    "version": "12.4.0"
-  },
-  {
-    "date": "2017-09-01T02:56:08Z",
-    "id": 2694861,
-    "issues": [
-      {
-        "id": 254041386,
-        "labels": ["feature"],
-        "number": 192,
-        "title": "Add a gunzipping option",
-        "url": "https://github.com/hapijs/wreck/pull/192"
-      },
-      {
-        "id": 250448892,
-        "labels": ["feature"],
-        "number": 190,
-        "title": "Add \"strict\" json option",
-        "url": "https://github.com/hapijs/wreck/pull/190"
-      },
-      {
-        "id": 240119805,
-        "labels": ["bug"],
-        "number": 186,
-        "title": "Add \"strict\" json option",
-        "url": "https://github.com/hapijs/wreck/issues/186"
-      }
-    ],
-    "number": 42,
-    "url": "https://github.com/hapijs/wreck/milestone/42",
-    "version": "12.3.0"
-  },
-  {
-    "date": "2017-08-10T17:14:15Z",
-    "id": 2546822,
-    "issues": [
-      {
-        "id": 249104370,
-        "labels": ["bug"],
-        "number": 189,
-        "title": "Fix possible content-type header duplication",
-        "url": "https://github.com/hapijs/wreck/pull/189"
-      },
-      {
-        "id": 249101695,
-        "labels": ["bug"],
-        "number": 188,
-        "title": "Possible `content-type` header duplication",
-        "url": "https://github.com/hapijs/wreck/issues/188"
-      },
-      {
-        "id": 235711877,
-        "labels": ["dependency", "lts"],
-        "number": 184,
-        "title": "Upgrade lab",
-        "url": "https://github.com/hapijs/wreck/pull/184"
-      }
-    ],
-    "number": 41,
-    "url": "https://github.com/hapijs/wreck/milestone/41",
-    "version": "12.2.3"
-  },
-  {
-    "date": "2017-05-28T09:05:06Z",
-    "id": 2546765,
-    "issues": [
-      {
-        "id": 231856083,
-        "labels": ["test"],
-        "number": 183,
-        "title": "Fix tests for node 7.10.0",
-        "url": "https://github.com/hapijs/wreck/issues/183"
-      }
-    ],
-    "number": 40,
-    "url": "https://github.com/hapijs/wreck/milestone/40",
-    "version": "12.2.2"
-  },
-  {
-    "date": "2017-05-28T07:02:09Z",
-    "id": 2507315,
-    "issues": [
-      {
-        "id": 231851138,
-        "labels": ["dependency"],
-        "number": 182,
-        "title": "Update deps.",
-        "url": "https://github.com/hapijs/wreck/issues/182"
-      }
-    ],
-    "number": 39,
-    "url": "https://github.com/hapijs/wreck/milestone/39",
-    "version": "12.2.1"
-  },
-  {
-    "date": "2017-05-08T14:47:54Z",
-    "id": 2467382,
-    "issues": [
-      {
-        "id": 224033953,
-        "labels": ["feature"],
-        "number": 177,
-        "title": "fix(json): allow numbers in mime fixes #176",
-        "url": "https://github.com/hapijs/wreck/pull/177"
-      },
-      {
-        "id": 223379884,
-        "labels": ["feature"],
-        "number": 175,
-        "title": "Include full response with the HTTP error",
-        "url": "https://github.com/hapijs/wreck/pull/175"
-      },
-      {
-        "id": 222727124,
-        "labels": ["feature"],
-        "number": 173,
-        "title": "Return full response with the Boom HTTP error",
-        "url": "https://github.com/hapijs/wreck/issues/173"
-      },
-      {
-        "id": 219359040,
-        "labels": ["documentation"],
-        "number": 170,
-        "title": "4XX is now an error",
-        "url": "https://github.com/hapijs/wreck/issues/170"
-      }
-    ],
-    "number": 38,
-    "url": "https://github.com/hapijs/wreck/milestone/38",
-    "version": "12.2.0"
-  },
-  {
-    "date": "2017-04-19T18:22:23Z",
-    "id": 2409626,
-    "issues": [
-      {
-        "id": 222817315,
-        "labels": ["test", "lts"],
-        "number": 174,
-        "title": "Tidy code around default agents",
-        "url": "https://github.com/hapijs/wreck/pull/174"
-      },
-      {
-        "id": 221871544,
-        "labels": ["documentation"],
-        "number": 172,
-        "title": "Update README.md",
-        "url": "https://github.com/hapijs/wreck/pull/172"
-      },
-      {
-        "id": 218710834,
-        "labels": ["lts"],
-        "number": 169,
-        "title": "Pass an Error object to Boom.create for #168",
-        "url": "https://github.com/hapijs/wreck/pull/169"
-      },
-      {
-        "id": 202216312,
-        "labels": ["feature"],
-        "number": 156,
-        "title": "Preserve `agents` across .defaults({...})",
-        "url": "https://github.com/hapijs/wreck/pull/156"
-      }
-    ],
-    "number": 37,
-    "url": "https://github.com/hapijs/wreck/milestone/37",
-    "version": "12.1.0"
-  },
-  {
-    "date": "2017-03-24T16:43:32Z",
-    "id": 2402263,
-    "issues": [
-      {
-        "id": 216838433,
-        "labels": ["breaking changes", "release notes"],
-        "number": 165,
-        "title": "12.0.0 Release Notes",
-        "url": "https://github.com/hapijs/wreck/issues/165"
-      },
-      {
-        "id": 216478516,
-        "labels": ["feature", "breaking changes"],
-        "number": 164,
-        "title": "Fix boom response error handling",
-        "url": "https://github.com/hapijs/wreck/pull/164"
-      },
-      {
-        "id": 216086750,
-        "labels": ["bug"],
-        "number": 163,
-        "title": "Keep request on error status",
-        "url": "https://github.com/hapijs/wreck/pull/163"
-      }
-    ],
-    "number": 36,
-    "url": "https://github.com/hapijs/wreck/milestone/36",
-    "version": "12.0.0"
-  },
-  {
-    "date": "2017-03-21T23:44:53Z",
-    "id": 1991669,
-    "issues": [
-      {
-        "id": 215906221,
-        "labels": ["breaking changes", "release notes"],
-        "number": 162,
-        "title": "11.0.0 Release Notes",
-        "url": "https://github.com/hapijs/wreck/issues/162"
-      },
-      {
-        "id": 215903433,
-        "labels": ["bug", "breaking changes"],
-        "number": 161,
-        "title": "Fix redirection method for 301, 302",
-        "url": "https://github.com/hapijs/wreck/pull/161"
-      },
-      {
-        "id": 215899389,
-        "labels": ["dependency"],
-        "number": 160,
-        "title": "Update lab dep",
-        "url": "https://github.com/hapijs/wreck/pull/160"
-      },
-      {
-        "id": 215898710,
-        "labels": ["documentation"],
-        "number": 159,
-        "title": "Add example https agent setting",
-        "url": "https://github.com/hapijs/wreck/pull/159"
-      },
-      {
-        "id": 215896989,
-        "labels": ["feature", "breaking changes"],
-        "number": 158,
-        "title": "Wrap error response with Boom",
-        "url": "https://github.com/hapijs/wreck/pull/158"
-      },
-      {
-        "id": 215891679,
-        "labels": ["feature", "breaking changes"],
-        "number": 157,
-        "title": "Change response event signature",
-        "url": "https://github.com/hapijs/wreck/pull/157"
-      },
-      {
-        "id": 197784158,
-        "labels": ["dependency"],
-        "number": 155,
-        "title": "Update code dep",
-        "url": "https://github.com/hapijs/wreck/pull/155"
-      },
-      {
-        "id": 197782504,
-        "labels": ["documentation", "test"],
-        "number": 154,
-        "title": "Clarify state of response in shortcuts",
-        "url": "https://github.com/hapijs/wreck/pull/154"
-      },
-      {
-        "id": 197027538,
-        "labels": ["documentation"],
-        "number": 153,
-        "title": "Question about responses as readable streams",
-        "url": "https://github.com/hapijs/wreck/issues/153"
-      },
-      {
-        "id": 163527093,
-        "labels": ["bug"],
-        "number": 138,
-        "title": "Redirect 302 changes method from POST to GET",
-        "url": "https://github.com/hapijs/wreck/issues/138"
-      },
-      {
-        "id": 70724842,
-        "labels": ["feature", "breaking changes"],
-        "number": 83,
-        "title": "Change \"response\" Payload",
-        "url": "https://github.com/hapijs/wreck/issues/83"
-      },
-      {
-        "id": 70273952,
-        "labels": ["feature", "breaking changes"],
-        "number": 82,
-        "title": "Option to convert 4xx and 5xx to errors",
-        "url": "https://github.com/hapijs/wreck/issues/82"
-      },
-      {
-        "id": 47420553,
-        "labels": ["documentation"],
-        "number": 66,
-        "title": "Add certificate options for requests",
-        "url": "https://github.com/hapijs/wreck/issues/66"
-      }
-    ],
-    "number": 35,
-    "url": "https://github.com/hapijs/wreck/milestone/35",
-    "version": "11.0.0"
-  },
-  {
-    "date": "2016-09-08T17:33:49Z",
-    "id": 1921420,
-    "issues": [
-      {
-        "id": 175814117,
-        "labels": ["breaking changes", "release notes"],
-        "number": 150,
-        "title": "10.0.0 Release Notes",
-        "url": "https://github.com/hapijs/wreck/issues/150"
-      },
-      {
-        "id": 175811359,
-        "labels": ["dependency"],
-        "number": 149,
-        "title": "Update boom and lab deps",
-        "url": "https://github.com/hapijs/wreck/pull/149"
-      },
-      {
-        "id": 175787420,
-        "labels": ["bug", "breaking changes"],
-        "number": 148,
-        "title": "Refactor event propagation",
-        "url": "https://github.com/hapijs/wreck/pull/148"
-      },
-      {
-        "id": 175787150,
-        "labels": ["test"],
-        "number": 147,
-        "title": "Fix tests to timeout quicker",
-        "url": "https://github.com/hapijs/wreck/pull/147"
-      }
-    ],
-    "number": 34,
-    "url": "https://github.com/hapijs/wreck/milestone/34",
-    "version": "10.0.0"
-  },
-  {
-    "date": "2016-08-03T16:51:17Z",
-    "id": 1910394,
-    "issues": [
-      {
-        "id": 169179499,
-        "labels": ["breaking changes", "release notes"],
-        "number": 144,
-        "title": "9.0.0 Release Notes",
-        "url": "https://github.com/hapijs/wreck/issues/144"
-      },
-      {
-        "id": 169163414,
-        "labels": ["feature"],
-        "number": 143,
-        "title": "Stringify payload objects",
-        "url": "https://github.com/hapijs/wreck/pull/143"
-      },
-      {
-        "id": 168944839,
-        "labels": ["bug", "breaking changes"],
-        "number": 142,
-        "title": "Fix redirect with different host on default options",
-        "url": "https://github.com/hapijs/wreck/pull/142"
-      },
-      {
-        "id": 157064856,
-        "labels": ["bug"],
-        "number": 131,
-        "title": "Fail to redirect to different host",
-        "url": "https://github.com/hapijs/wreck/issues/131"
-      },
-      {
-        "id": 124975404,
-        "labels": ["feature"],
-        "number": 113,
-        "title": "Suggestion: Allow json objects as payload ",
-        "url": "https://github.com/hapijs/wreck/issues/113"
-      }
-    ],
-    "number": 33,
-    "url": "https://github.com/hapijs/wreck/milestone/33",
-    "version": "9.0.0"
-  },
-  {
-    "date": "2016-07-28T19:50:10Z",
-    "id": 1805238,
-    "issues": [
-      {
-        "id": 168180765,
-        "labels": ["documentation"],
-        "number": 141,
-        "title": "npmignore",
-        "url": "https://github.com/hapijs/wreck/issues/141"
-      },
-      {
-        "id": 158920782,
-        "labels": ["documentation"],
-        "number": 137,
-        "title": "add node version badge",
-        "url": "https://github.com/hapijs/wreck/pull/137"
-      }
-    ],
-    "number": 32,
-    "url": "https://github.com/hapijs/wreck/milestone/32",
-    "version": "8.0.1"
-  },
-  {
-    "date": "2016-06-02T15:24:05Z",
-    "id": 1763299,
-    "issues": [
-      {
-        "id": 158167476,
-        "labels": ["dependency"],
-        "number": 136,
-        "title": "Upgrade to code v3",
-        "url": "https://github.com/hapijs/wreck/pull/136"
-      },
-      {
-        "id": 158085876,
-        "labels": ["breaking changes", "release notes"],
-        "number": 135,
-        "title": "8.0.0 Release Notes",
-        "url": "https://github.com/hapijs/wreck/issues/135"
-      },
-      {
-        "id": 158079438,
-        "labels": ["feature", "breaking changes"],
-        "number": 134,
-        "title": "Expose response headers on redirect",
-        "url": "https://github.com/hapijs/wreck/issues/134"
-      },
-      {
-        "id": 158077835,
-        "labels": ["feature", "breaking changes"],
-        "number": 133,
-        "title": "Redirect 303 and expose headers",
-        "url": "https://github.com/hapijs/wreck/pull/133"
-      },
-      {
-        "id": 158076142,
-        "labels": ["feature"],
-        "number": 132,
-        "title": "Support 303 Redirection",
-        "url": "https://github.com/hapijs/wreck/issues/132"
-      }
-    ],
-    "number": 31,
-    "url": "https://github.com/hapijs/wreck/milestone/31",
-    "version": "8.0.0"
-  },
-  {
-    "date": "2016-05-12T21:06:01Z",
-    "id": 1710542,
-    "issues": [
-      {
-        "id": 154576494,
-        "labels": ["bug"],
-        "number": 130,
-        "title": "A missing callback on request still allows client requests to work",
-        "url": "https://github.com/hapijs/wreck/pull/130"
-      },
-      {
-        "id": 153343629,
-        "labels": ["lts"],
-        "number": 129,
-        "title": "Use node 6 on travis",
-        "url": "https://github.com/hapijs/wreck/pull/129"
-      }
-    ],
-    "number": 30,
-    "url": "https://github.com/hapijs/wreck/milestone/30",
-    "version": "7.2.1"
-  },
-  {
-    "date": "2016-04-15T19:31:41Z",
-    "id": 1664461,
-    "issues": [
-      {
-        "id": 148747232,
-        "labels": ["feature"],
-        "number": 127,
-        "title": "Add global request event",
-        "url": "https://github.com/hapijs/wreck/pull/127"
-      },
-      {
-        "id": 148746960,
-        "labels": ["feature"],
-        "number": 126,
-        "title": "Add `request` emit",
-        "url": "https://github.com/hapijs/wreck/issues/126"
-      },
-      {
-        "id": 148690196,
-        "labels": ["feature"],
-        "number": 125,
-        "title": "Use a global event emitter for wreck events",
-        "url": "https://github.com/hapijs/wreck/pull/125"
-      }
-    ],
-    "number": 29,
-    "url": "https://github.com/hapijs/wreck/milestone/29",
-    "version": "7.2.0"
-  },
-  {
-    "date": "2016-03-24T18:22:14Z",
-    "id": 1623939,
-    "issues": [
-      {
-        "id": 142920918,
-        "labels": ["feature"],
-        "number": 123,
-        "title": "Add support for Unix sockets",
-        "url": "https://github.com/hapijs/wreck/pull/123"
-      }
-    ],
-    "number": 28,
-    "url": "https://github.com/hapijs/wreck/milestone/28",
-    "version": "7.1.0"
-  },
-  {
-    "date": "2016-03-05T20:01:09Z",
-    "id": 1618395,
-    "issues": [
-      {
-        "id": 138712304,
-        "labels": ["bug"],
-        "number": 121,
-        "title": "Content-Length header check is now case insensitive",
-        "url": "https://github.com/hapijs/wreck/pull/121"
-      },
-      {
-        "id": 138344017,
-        "labels": ["bug"],
-        "number": 120,
-        "title": "lowercase the content-length header",
-        "url": "https://github.com/hapijs/wreck/pull/120"
-      }
-    ],
-    "number": 27,
-    "url": "https://github.com/hapijs/wreck/milestone/27",
-    "version": "7.0.2"
-  },
-  {
-    "date": "2016-03-02T17:52:08Z",
-    "id": 1386877,
-    "issues": [
-      {
-        "id": 137944061,
-        "labels": ["test", "dependency"],
-        "number": 119,
-        "title": "Update deps and fix tests",
-        "url": "https://github.com/hapijs/wreck/pull/119"
-      },
-      {
-        "id": 137761865,
-        "labels": ["bug"],
-        "number": 118,
-        "title": "Add tests for defaults",
-        "url": "https://github.com/hapijs/wreck/pull/118"
-      },
-      {
-        "id": 137759020,
-        "labels": ["bug"],
-        "number": 117,
-        "title": "Wreck#request's options are overridden by Defaults",
-        "url": "https://github.com/hapijs/wreck/issues/117"
-      }
-    ],
-    "number": 26,
-    "url": "https://github.com/hapijs/wreck/milestone/26",
-    "version": "7.0.1"
-  },
-  {
-    "date": "2015-10-31T19:41:15Z",
-    "id": 1324268,
-    "issues": [
-      {
-        "id": 114422836,
-        "labels": ["breaking changes"],
-        "number": 109,
-        "title": "ES6 style and node v4",
-        "url": "https://github.com/hapijs/wreck/issues/109"
-      }
-    ],
-    "number": 25,
-    "url": "https://github.com/hapijs/wreck/milestone/25",
-    "version": "7.0.0"
-  },
-  {
-    "date": "2015-09-25T17:43:36Z",
-    "id": 1274847,
-    "issues": [
-      {
-        "id": 107897891,
-        "labels": ["feature"],
-        "number": 108,
-        "title": "Add a beforeRedirect callback option",
-        "url": "https://github.com/hapijs/wreck/pull/108"
-      },
-      {
-        "id": 106093245,
-        "labels": ["test"],
-        "number": 106,
-        "title": "Fix code coverage",
-        "url": "https://github.com/hapijs/wreck/pull/106"
-      },
-      {
-        "id": 106052668,
-        "labels": ["test"],
-        "number": 105,
-        "title": "Workaround node issue in test",
-        "url": "https://github.com/hapijs/wreck/pull/105"
-      },
-      {
-        "id": 105522828,
-        "labels": ["test"],
-        "number": 104,
-        "title": "Fails on node v4",
-        "url": "https://github.com/hapijs/wreck/issues/104"
-      }
-    ],
-    "number": 24,
-    "url": "https://github.com/hapijs/wreck/milestone/24",
-    "version": "6.3.0"
-  },
-  {
-    "date": "2015-08-26T22:02:12Z",
-    "id": 1232381,
-    "issues": [
-      {
-        "id": 103369536,
-        "labels": ["feature"],
-        "number": 102,
-        "title": "add 'PATCH' convenience method.",
-        "url": "https://github.com/hapijs/wreck/pull/102"
-      }
-    ],
-    "number": 23,
-    "url": "https://github.com/hapijs/wreck/milestone/23",
-    "version": "6.2.0"
-  },
-  {
-    "date": "2015-07-30T02:57:44Z",
-    "id": 1189757,
-    "issues": [
-      {
-        "id": 92833027,
-        "labels": ["feature"],
-        "number": 97,
-        "title": "Add a redirected callback request option",
-        "url": "https://github.com/hapijs/wreck/pull/97"
-      },
-      {
-        "id": 88446437,
-        "labels": ["feature"],
-        "number": 91,
-        "title": "Can't read redirected URI",
-        "url": "https://github.com/hapijs/wreck/issues/91"
-      }
-    ],
-    "number": 22,
-    "url": "https://github.com/hapijs/wreck/milestone/22",
-    "version": "6.1.0"
-  },
-  {
-    "date": "2015-07-01T21:34:41Z",
-    "id": 1189459,
-    "issues": [
-      {
-        "id": 92489338,
-        "labels": ["breaking changes", "release notes"],
-        "number": 96,
-        "title": "6.0.0 Release notes",
-        "url": "https://github.com/hapijs/wreck/issues/96"
-      },
-      {
-        "id": 92483342,
-        "labels": ["bug", "breaking changes"],
-        "number": 95,
-        "title": "Payload returns as a buffer. Fixes Issue #75",
-        "url": "https://github.com/hapijs/wreck/pull/95"
-      },
-      {
-        "id": 59901071,
-        "labels": ["bug", "breaking changes"],
-        "number": 75,
-        "title": "Read automatically converts payload from Buffer to UTF-8 String",
-        "url": "https://github.com/hapijs/wreck/issues/75"
-      }
-    ],
-    "number": 21,
-    "url": "https://github.com/hapijs/wreck/milestone/21",
-    "version": "6.0.0"
-  },
-  {
-    "date": "2015-07-01T17:44:21Z",
-    "id": 1172768,
-    "issues": [
-      {
-        "id": 92262401,
-        "labels": ["bug"],
-        "number": 94,
-        "title": "Skip res.destroy() when not present. Closes #71",
-        "url": "https://github.com/hapijs/wreck/pull/94"
-      },
-      {
-        "id": 90130466,
-        "labels": ["bug", "security"],
-        "number": 93,
-        "title": "Fix missing options when redirecting",
-        "url": "https://github.com/hapijs/wreck/pull/93"
-      },
-      {
-        "id": 56383617,
-        "labels": ["bug"],
-        "number": 71,
-        "title": "Attempt to call `destroy()` on `Gunzip` object",
-        "url": "https://github.com/hapijs/wreck/issues/71"
-      }
-    ],
-    "number": 20,
-    "url": "https://github.com/hapijs/wreck/milestone/20",
-    "version": "5.6.1"
-  },
-  {
-    "date": "2015-06-19T17:22:13Z",
-    "id": 1081114,
-    "issues": [
-      {
-        "id": 89600746,
-        "labels": ["feature"],
-        "number": 92,
-        "title": "More robust baseUrl and uri merging",
-        "url": "https://github.com/hapijs/wreck/pull/92"
-      },
-      {
-        "id": 81919895,
-        "labels": ["feature"],
-        "number": 89,
-        "title": "support for detecting/parsing +json suffix types i.e. application/*+json",
-        "url": "https://github.com/hapijs/wreck/pull/89"
-      },
-      {
-        "id": 80997270,
-        "labels": ["non issue"],
-        "number": 88,
-        "title": "Maintenance",
-        "url": "https://github.com/hapijs/wreck/pull/88"
-      },
-      {
-        "id": 80206515,
-        "labels": ["non issue"],
-        "number": 87,
-        "title": "Update license attribute",
-        "url": "https://github.com/hapijs/wreck/pull/87"
-      },
-      {
-        "id": 79159172,
-        "labels": ["feature"],
-        "number": 86,
-        "title": "Add support for the `baseUrl` option",
-        "url": "https://github.com/hapijs/wreck/pull/86"
-      },
-      {
-        "id": 78730820,
-        "labels": ["feature"],
-        "number": 85,
-        "title": "add support for defaults",
-        "url": "https://github.com/hapijs/wreck/pull/85"
-      }
-    ],
-    "number": 19,
-    "url": "https://github.com/hapijs/wreck/milestone/19",
-    "version": "5.6.0"
-  },
-  {
-    "date": "2015-04-23T19:11:46Z",
-    "id": 1047707,
-    "issues": [
-      {
-        "id": 69892701,
-        "labels": ["feature"],
-        "number": 81,
-        "title": "Added uri to event payloads.",
-        "url": "https://github.com/hapijs/wreck/pull/81"
-      }
-    ],
-    "number": 17,
-    "url": "https://github.com/hapijs/wreck/milestone/17",
-    "version": "5.5.0"
-  },
-  {
-    "date": "2015-03-31T20:49:52Z",
-    "id": 1034497,
-    "issues": [
-      {
-        "id": 65536802,
-        "labels": ["feature"],
+    {
+        "date": "2026-05-20T10:27:25Z",
+        "id": 16006393,
+        "issues": [
+            {
+                "id": 4485472888,
+                "labels": ["bug", "security"],
+                "number": 313,
+                "title": "fix: cross-origin redirect should also remove sensitive headers",
+                "url": "https://github.com/hapijs/wreck/pull/313"
+            }
+        ],
+        "number": 80,
+        "url": "https://github.com/hapijs/wreck/milestone/80",
+        "version": "18.1.2"
+    },
+    {
+        "date": "2026-05-06T09:49:00Z",
+        "id": 15814221,
+        "issues": [
+            {
+                "id": 4390163679,
+                "labels": ["bug", "security"],
+                "number": 312,
+                "title": "fix: strip proxy-authorization header on redirect",
+                "url": "https://github.com/hapijs/wreck/pull/312"
+            }
+        ],
         "number": 79,
-        "title": "Add start time to response event",
-        "url": "https://github.com/hapijs/wreck/pull/79"
-      },
-      {
-        "id": 65536519,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/wreck/milestone/79",
+        "version": "18.1.1"
+    },
+    {
+        "date": "2024-04-10T17:38:08Z",
+        "id": 10802761,
+        "issues": [
+            {
+                "id": 2194361723,
+                "labels": ["feature"],
+                "number": 309,
+                "title": "support custom lookup function in request() ",
+                "url": "https://github.com/hapijs/wreck/issues/309"
+            },
+            {
+                "id": 2160979394,
+                "labels": ["feature"],
+                "number": 308,
+                "title": "support custom lookup function in request()",
+                "url": "https://github.com/hapijs/wreck/pull/308"
+            }
+        ],
         "number": 78,
-        "title": "Add start time to response event",
-        "url": "https://github.com/hapijs/wreck/issues/78"
-      }
-    ],
-    "number": 16,
-    "url": "https://github.com/hapijs/wreck/milestone/16",
-    "version": "5.4.0"
-  },
-  {
-    "date": "2015-03-23T17:03:12Z",
-    "id": 979061,
-    "issues": [
-      {
-        "id": 61117631,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/wreck/milestone/78",
+        "version": "18.1.0"
+    },
+    {
+        "date": "2024-04-10T17:30:20Z",
+        "id": 10802747,
+        "issues": [
+            {
+                "id": 2202487820,
+                "labels": ["feature"],
+                "number": 310,
+                "title": "Optimize header toLowerCasing",
+                "url": "https://github.com/hapijs/wreck/pull/310"
+            }
+        ],
         "number": 77,
-        "title": "Add event for response and logging",
-        "url": "https://github.com/hapijs/wreck/pull/77"
-      },
-      {
-        "id": 60586038,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/wreck/milestone/77",
+        "version": "18.0.2"
+    },
+    {
+        "date": "2023-02-11T19:15:45Z",
+        "id": 7953253,
+        "issues": [
+            {
+                "id": 1551773090,
+                "labels": [],
+                "number": 299,
+                "title": "chore: bump hoek",
+                "url": "https://github.com/hapijs/wreck/pull/299"
+            }
+        ],
         "number": 76,
-        "title": "Adding log support",
-        "url": "https://github.com/hapijs/wreck/pull/76"
-      },
-      {
-        "id": 59692485,
-        "labels": ["feature"],
-        "number": 74,
-        "title": "implement debugging to file and console. Fixes #72",
-        "url": "https://github.com/hapijs/wreck/pull/74"
-      },
-      {
-        "id": 58610133,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/wreck/milestone/76",
+        "version": "18.0.1"
+    },
+    {
+        "date": "2022-05-07T22:42:04Z",
+        "id": 7953252,
+        "issues": [
+            {
+                "id": 1228488666,
+                "labels": ["breaking changes", "dependency"],
+                "number": 296,
+                "title": "Support node v18 and drop node v12",
+                "url": "https://github.com/hapijs/wreck/pull/296"
+            }
+        ],
+        "number": 75,
+        "url": "https://github.com/hapijs/wreck/milestone/75",
+        "version": "18.0.0"
+    },
+    {
+        "date": "2022-05-07T01:40:01Z",
+        "id": 7801658,
+        "issues": [
+            {
+                "id": 1176214349,
+                "labels": ["feature"],
+                "number": 295,
+                "title": "[CI] Cancel redirect request",
+                "url": "https://github.com/hapijs/wreck/pull/295"
+            },
+            {
+                "id": 1161784814,
+                "labels": [
+                    "bug",
+                    "breaking changes",
+                    "security",
+                    "semver: patch"
+                ],
+                "number": 292,
+                "title": "strip authorization and cookie headers when redirecting to a new hostname",
+                "url": "https://github.com/hapijs/wreck/pull/292"
+            },
+            {
+                "id": 893566566,
+                "labels": ["feature"],
+                "number": 287,
+                "title": "Cancel redirect request",
+                "url": "https://github.com/hapijs/wreck/pull/287"
+            }
+        ],
         "number": 73,
-        "title": "Fix issues with node 0.12",
-        "url": "https://github.com/hapijs/wreck/pull/73"
-      },
-      {
-        "id": 57957954,
-        "labels": ["feature"],
-        "number": 72,
-        "title": "Add logging to req/res details for debug mode",
-        "url": "https://github.com/hapijs/wreck/issues/72"
-      }
-    ],
-    "number": 15,
-    "url": "https://github.com/hapijs/wreck/milestone/15",
-    "version": "5.3.0"
-  },
-  {
-    "date": "2015-02-13T22:17:58Z",
-    "id": 905130,
-    "issues": [
-      {
-        "id": 53810503,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/wreck/milestone/73",
+        "version": "17.2.0"
+    },
+    {
+        "date": "2020-11-23T23:11:10Z",
+        "id": 4973134,
+        "issues": [
+            {
+                "id": 743255795,
+                "labels": [],
+                "number": 283,
+                "title": "Create ci-module.yml",
+                "url": "https://github.com/hapijs/wreck/pull/283"
+            },
+            {
+                "id": 732865346,
+                "labels": ["feature"],
+                "number": 281,
+                "title": "added IPv6 support",
+                "url": "https://github.com/hapijs/wreck/pull/281"
+            },
+            {
+                "id": 709598869,
+                "labels": [],
+                "number": 280,
+                "title": "upgrade lab to v24 and devDependency of typescript",
+                "url": "https://github.com/hapijs/wreck/pull/280"
+            },
+            {
+                "id": 615682855,
+                "labels": ["bug"],
+                "number": 276,
+                "title": "Unable to GET a server that listens to IPv6 address. ETIMEDOUT",
+                "url": "https://github.com/hapijs/wreck/issues/276"
+            }
+        ],
+        "number": 71,
+        "url": "https://github.com/hapijs/wreck/milestone/71",
+        "version": "17.1.0"
+    },
+    {
+        "date": "2020-01-04T21:06:07Z",
+        "id": 4973133,
+        "issues": [
+            {
+                "id": 545332332,
+                "labels": ["breaking changes", "dependency"],
+                "number": 270,
+                "title": "Only node 12",
+                "url": "https://github.com/hapijs/wreck/issues/270"
+            },
+            {
+                "id": 512516871,
+                "labels": ["feature"],
+                "number": 267,
+                "title": "Refactor early abort detection to use the 'abort' event",
+                "url": "https://github.com/hapijs/wreck/pull/267"
+            },
+            {
+                "id": 512476621,
+                "labels": ["bug"],
+                "number": 266,
+                "title": "Don't set redirected host header",
+                "url": "https://github.com/hapijs/wreck/pull/266"
+            }
+        ],
         "number": 70,
-        "title": "Added 'smart' and 'force' modes to json option.",
-        "url": "https://github.com/hapijs/wreck/pull/70"
-      }
-    ],
-    "number": 14,
-    "url": "https://github.com/hapijs/wreck/milestone/14",
-    "version": "5.2.0"
-  },
-  {
-    "date": "2014-12-16T03:12:58Z",
-    "id": 779005,
-    "issues": [
-      {
-        "id": 51807754,
-        "labels": ["bug"],
-        "number": 69,
-        "title": "Dont try to parse JSON if the statusCode is 204 (No Content)",
-        "url": "https://github.com/hapijs/wreck/pull/69"
-      },
-      {
-        "id": 42782678,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/wreck/milestone/70",
+        "version": "17.0.0"
+    },
+    {
+        "date": "2019-10-15T00:16:13Z",
+        "id": 4748502,
+        "issues": [
+            {
+                "id": 506931588,
+                "labels": ["bug", "types"],
+                "number": 264,
+                "title": "Allow any readable stream in read()",
+                "url": "https://github.com/hapijs/wreck/issues/264"
+            }
+        ],
+        "number": 68,
+        "url": "https://github.com/hapijs/wreck/milestone/68",
+        "version": "16.0.1"
+    },
+    {
+        "date": "2019-10-15T00:02:12Z",
+        "id": 4748501,
+        "issues": [
+            {
+                "id": 506497591,
+                "labels": ["breaking changes", "types"],
+                "number": 263,
+                "title": "Add types",
+                "url": "https://github.com/hapijs/wreck/issues/263"
+            },
+            {
+                "id": 506497075,
+                "labels": ["breaking changes", "dependency"],
+                "number": 262,
+                "title": "Drop node 8",
+                "url": "https://github.com/hapijs/wreck/issues/262"
+            }
+        ],
+        "number": 67,
+        "url": "https://github.com/hapijs/wreck/milestone/67",
+        "version": "16.0.0"
+    },
+    {
+        "date": "2019-09-18T19:00:00Z",
+        "id": 4574306,
+        "issues": [
+            {
+                "id": 459855076,
+                "labels": ["bug"],
+                "number": 254,
+                "title": "'abort' event",
+                "url": "https://github.com/hapijs/wreck/issues/254"
+            },
+            {
+                "id": 454749237,
+                "labels": ["feature"],
+                "number": 252,
+                "title": "Respect uri parameter when using socketPath",
+                "url": "https://github.com/hapijs/wreck/pull/252"
+            },
+            {
+                "id": 454052435,
+                "labels": ["bug"],
+                "number": 250,
+                "title": "memory leak issue",
+                "url": "https://github.com/hapijs/wreck/pull/250"
+            },
+            {
+                "id": 437208904,
+                "labels": ["feature"],
+                "number": 248,
+                "title": "Change redirect method in `beforeRedirect`",
+                "url": "https://github.com/hapijs/wreck/issues/248"
+            },
+            {
+                "id": 429894617,
+                "labels": ["bug", "breaking changes"],
+                "number": 247,
+                "title": "Return an empty buffer payload on text content-type rather than `null`",
+                "url": "https://github.com/hapijs/wreck/pull/247"
+            }
+        ],
+        "number": 64,
+        "url": "https://github.com/hapijs/wreck/milestone/64",
+        "version": "15.1.0"
+    },
+    {
+        "date": "2019-08-15T00:45:46Z",
+        "id": 4233511,
+        "issues": [
+            {
+                "id": 480895268,
+                "labels": ["dependency"],
+                "number": 256,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/wreck/issues/256"
+            }
+        ],
+        "number": 63,
+        "url": "https://github.com/hapijs/wreck/milestone/63",
+        "version": "15.0.2"
+    },
+    {
+        "date": "2019-04-16T07:02:25Z",
+        "id": 4190276,
+        "issues": [
+            {
+                "id": 428950532,
+                "labels": ["bug"],
+                "number": 246,
+                "title": "Explicit host header trumps host implied in url",
+                "url": "https://github.com/hapijs/wreck/pull/246"
+            },
+            {
+                "id": 428949354,
+                "labels": ["bug"],
+                "number": 245,
+                "title": "An explicit host header is ignored if the request url has no implicit host",
+                "url": "https://github.com/hapijs/wreck/issues/245"
+            }
+        ],
+        "number": 62,
+        "url": "https://github.com/hapijs/wreck/milestone/62",
+        "version": "15.0.1"
+    },
+    {
+        "date": "2019-04-01T15:35:32Z",
+        "id": 4113654,
+        "issues": [
+            {
+                "id": 427774890,
+                "labels": ["release notes"],
+                "number": 244,
+                "title": "15.0.0 Release Notes",
+                "url": "https://github.com/hapijs/wreck/issues/244"
+            },
+            {
+                "id": 427223915,
+                "labels": ["dependency"],
+                "number": 243,
+                "title": "Change module namespace",
+                "url": "https://github.com/hapijs/wreck/issues/243"
+            },
+            {
+                "id": 426112940,
+                "labels": ["breaking changes"],
+                "number": 242,
+                "title": "Remove usage of deprecated url.Parse",
+                "url": "https://github.com/hapijs/wreck/pull/242"
+            },
+            {
+                "id": 407979960,
+                "labels": ["feature", "breaking changes"],
+                "number": 235,
+                "title": "Introduce new preRequest event and emit request on request event",
+                "url": "https://github.com/hapijs/wreck/pull/235"
+            },
+            {
+                "id": 274970027,
+                "labels": ["breaking changes"],
+                "number": 209,
+                "title": "Shouldn't request event emit request object?",
+                "url": "https://github.com/hapijs/wreck/issues/209"
+            }
+        ],
+        "number": 59,
+        "url": "https://github.com/hapijs/wreck/milestone/59",
+        "version": "15.0.0"
+    },
+    {
+        "date": "2019-03-05T22:32:13Z",
+        "id": 4042742,
+        "issues": [
+            {
+                "id": 417530907,
+                "labels": ["dependency"],
+                "number": 240,
+                "title": "Update eslint md dev dep",
+                "url": "https://github.com/hapijs/wreck/pull/240"
+            },
+            {
+                "id": 415809367,
+                "labels": ["feature"],
+                "number": 239,
+                "title": "Whatwg url",
+                "url": "https://github.com/hapijs/wreck/pull/239"
+            },
+            {
+                "id": 415286532,
+                "labels": ["feature"],
+                "number": 238,
+                "title": "Can Wreck parse urls with the WHATWG Url?",
+                "url": "https://github.com/hapijs/wreck/issues/238"
+            }
+        ],
+        "number": 58,
+        "url": "https://github.com/hapijs/wreck/milestone/58",
+        "version": "14.2.0"
+    },
+    {
+        "date": "2019-02-08T20:20:41Z",
+        "id": 3792295,
+        "issues": [
+            {
+                "id": 408309023,
+                "labels": ["bug", "security"],
+                "number": 236,
+                "title": "Protect against prototype poisoning",
+                "url": "https://github.com/hapijs/wreck/issues/236"
+            }
+        ],
+        "number": 57,
+        "url": "https://github.com/hapijs/wreck/milestone/57",
+        "version": "14.1.4"
+    },
+    {
+        "date": "2018-11-03T00:41:45Z",
+        "id": 3788956,
+        "issues": [
+            {
+                "id": 377003505,
+                "labels": ["non issue"],
+                "number": 231,
+                "title": "Remove engines",
+                "url": "https://github.com/hapijs/wreck/issues/231"
+            }
+        ],
         "number": 56,
-        "title": "Add secureProtocol for setting SSL method version",
-        "url": "https://github.com/hapijs/wreck/issues/56"
-      },
-      {
-        "id": 42507203,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/wreck/milestone/56",
+        "version": "14.1.3"
+    },
+    {
+        "date": "2018-11-01T19:38:31Z",
+        "id": 3784166,
+        "issues": [
+            {
+                "id": 376538359,
+                "labels": ["dependency"],
+                "number": 230,
+                "title": "Update hoek v6",
+                "url": "https://github.com/hapijs/wreck/issues/230"
+            }
+        ],
         "number": 55,
-        "title": "Added ability to set secureProtocol to a value.",
-        "url": "https://github.com/hapijs/wreck/pull/55"
-      }
-    ],
-    "number": 13,
-    "url": "https://github.com/hapijs/wreck/milestone/13",
-    "version": "5.1.0"
-  },
-  {
-    "date": "2014-09-04T20:35:19Z",
-    "id": 777425,
-    "issues": [
-      {
-        "id": 41980399,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/wreck/milestone/55",
+        "version": "14.1.2"
+    },
+    {
+        "date": "2018-10-31T05:49:04Z",
+        "id": 3587709,
+        "issues": [
+            {
+                "id": 375808018,
+                "labels": ["non issue"],
+                "number": 229,
+                "title": "Cleanup",
+                "url": "https://github.com/hapijs/wreck/issues/229"
+            }
+        ],
+        "number": 54,
+        "url": "https://github.com/hapijs/wreck/milestone/54",
+        "version": "14.1.1"
+    },
+    {
+        "date": "2018-08-21T18:24:32Z",
+        "id": 2886696,
+        "issues": [
+            {
+                "id": 349567986,
+                "labels": ["bug"],
+                "number": 226,
+                "title": "Handle edge cases introduced with deferred payload piping",
+                "url": "https://github.com/hapijs/wreck/pull/226"
+            },
+            {
+                "id": 344094439,
+                "labels": ["bug"],
+                "number": 225,
+                "title": "Handle stream payload errors before socket connection",
+                "url": "https://github.com/hapijs/wreck/pull/225"
+            },
+            {
+                "id": 343955699,
+                "labels": ["bug"],
+                "number": 224,
+                "title": "Workaround node 10 regression",
+                "url": "https://github.com/hapijs/wreck/pull/224"
+            },
+            {
+                "id": 343699877,
+                "labels": ["bug"],
+                "number": 223,
+                "title": " Defer piping of options.payload until socket connection",
+                "url": "https://github.com/hapijs/wreck/pull/223"
+            },
+            {
+                "id": 339038173,
+                "labels": ["bug"],
+                "number": 222,
+                "title": "Investigate only piping the payload after a connection is established",
+                "url": "https://github.com/hapijs/wreck/issues/222"
+            },
+            {
+                "id": 307170822,
+                "labels": ["bug"],
+                "number": 218,
+                "title": "Remove new Buffer usage",
+                "url": "https://github.com/hapijs/wreck/pull/218"
+            },
+            {
+                "id": 302846364,
+                "labels": ["test"],
+                "number": 215,
+                "title": "test(request) correct tests to check errors for boom instance",
+                "url": "https://github.com/hapijs/wreck/pull/215"
+            }
+        ],
+        "number": 53,
+        "url": "https://github.com/hapijs/wreck/milestone/53",
+        "version": "14.1.0"
+    },
+    {
+        "date": "2017-11-03T18:41:17Z",
+        "id": 2886695,
+        "issues": [
+            {
+                "id": 271077847,
+                "labels": ["bug", "dependency"],
+                "number": 208,
+                "title": "Fix new Boom",
+                "url": "https://github.com/hapijs/wreck/issues/208"
+            }
+        ],
         "number": 52,
-        "title": "Fixing leak in options.agent",
-        "url": "https://github.com/hapijs/wreck/pull/52"
-      },
-      {
-        "id": 41979804,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/wreck/milestone/52",
+        "version": "14.0.2"
+    },
+    {
+        "date": "2017-11-03T18:40:55Z",
+        "id": 2855911,
+        "issues": [
+            {
+                "id": 270911717,
+                "labels": ["dependency"],
+                "number": 207,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/wreck/issues/207"
+            },
+            {
+                "id": 267826222,
+                "labels": ["dependency"],
+                "number": 206,
+                "title": "Upgrade to lab 15",
+                "url": "https://github.com/hapijs/wreck/pull/206"
+            }
+        ],
         "number": 51,
-        "title": "Shouldn't assign agent back to options.agent, it can leak",
-        "url": "https://github.com/hapijs/wreck/issues/51"
-      }
-    ],
-    "number": 12,
-    "url": "https://github.com/hapijs/wreck/milestone/12",
-    "version": "5.0.1"
-  },
-  {
-    "date": "2014-09-03T20:07:38Z",
-    "id": 775519,
-    "issues": [
-      {
-        "id": 41859776,
-        "labels": ["breaking changes", "release notes"],
+        "url": "https://github.com/hapijs/wreck/milestone/51",
+        "version": "14.0.1"
+    },
+    {
+        "date": "2017-10-21T16:25:23Z",
+        "id": 2794221,
+        "issues": [
+            {
+                "id": 266925841,
+                "labels": ["bug", "breaking changes"],
+                "number": 205,
+                "title": "Change maxBytes error to 413",
+                "url": "https://github.com/hapijs/wreck/pull/205"
+            },
+            {
+                "id": 261705697,
+                "labels": ["documentation", "dependency", "lts"],
+                "number": 204,
+                "title": "Cleanup and lint readme",
+                "url": "https://github.com/hapijs/wreck/pull/204"
+            }
+        ],
         "number": 50,
-        "title": "5.0.0 Release Notes",
-        "url": "https://github.com/hapijs/wreck/issues/50"
-      },
-      {
-        "id": 41838596,
-        "labels": ["feature"],
-        "number": 49,
-        "title": "Requests can be aborted",
-        "url": "https://github.com/hapijs/wreck/pull/49"
-      },
-      {
-        "id": 41729429,
-        "labels": ["bug", "breaking changes"],
+        "url": "https://github.com/hapijs/wreck/milestone/50",
+        "version": "14.0.0"
+    },
+    {
+        "date": "2017-09-26T09:16:22Z",
+        "id": 2789786,
+        "issues": [
+            {
+                "id": 260549752,
+                "labels": ["dependency"],
+                "number": 202,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/wreck/issues/202"
+            }
+        ],
+        "number": 48,
+        "url": "https://github.com/hapijs/wreck/milestone/48",
+        "version": "13.0.3"
+    },
+    {
+        "date": "2017-09-25T14:52:30Z",
+        "id": 2775830,
+        "issues": [
+            {
+                "id": 260017287,
+                "labels": ["bug"],
+                "number": 199,
+                "title": "Return errors for partial payload transfers",
+                "url": "https://github.com/hapijs/wreck/pull/199"
+            }
+        ],
         "number": 47,
-        "title": "rejectUnauthorized works in node 0.10",
-        "url": "https://github.com/hapijs/wreck/pull/47"
-      },
-      {
-        "id": 41729297,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/wreck/milestone/47",
+        "version": "13.0.2"
+    },
+    {
+        "date": "2017-09-18T22:02:39Z",
+        "id": 2772462,
+        "issues": [
+            {
+                "id": 258635042,
+                "labels": ["bug"],
+                "number": 198,
+                "title": "Retain boom errors from response stream on read()",
+                "url": "https://github.com/hapijs/wreck/issues/198"
+            }
+        ],
         "number": 46,
-        "title": "rejectUnauthorized isn't honored on node 0.10",
-        "url": "https://github.com/hapijs/wreck/issues/46"
-      },
-      {
-        "id": 41418240,
-        "labels": ["feature"],
-        "number": 40,
-        "title": "Allow requests to be aborted",
-        "url": "https://github.com/hapijs/wreck/issues/40"
-      }
-    ],
-    "number": 11,
-    "url": "https://github.com/hapijs/wreck/milestone/11",
-    "version": "5.0.0"
-  },
-  {
-    "date": "2014-09-02T16:39:26Z",
-    "id": 757683,
-    "issues": [
-      {
-        "id": 41536501,
-        "labels": ["breaking changes", "release notes"],
+        "url": "https://github.com/hapijs/wreck/milestone/46",
+        "version": "13.0.1"
+    },
+    {
+        "date": "2017-09-18T00:17:55Z",
+        "id": 2751040,
+        "issues": [
+            {
+                "id": 258283122,
+                "labels": ["feature", "breaking changes"],
+                "number": 197,
+                "title": "Move to use async functions",
+                "url": "https://github.com/hapijs/wreck/pull/197"
+            },
+            {
+                "id": 258283038,
+                "labels": ["feature", "breaking changes"],
+                "number": 196,
+                "title": "Migrate to async/await",
+                "url": "https://github.com/hapijs/wreck/issues/196"
+            }
+        ],
         "number": 45,
-        "title": "4.0.0 Release Notes",
-        "url": "https://github.com/hapijs/wreck/issues/45"
-      },
-      {
-        "id": 41535687,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/wreck/milestone/45",
+        "version": "13.0.0"
+    },
+    {
+        "date": "2019-09-18T19:05:07Z",
+        "id": 4162541,
+        "issues": [
+            {
+                "id": 495402144,
+                "labels": ["bug", "commercial"],
+                "number": 258,
+                "title": "Backport #250 ",
+                "url": "https://github.com/hapijs/wreck/issues/258"
+            }
+        ],
+        "number": 61,
+        "url": "https://github.com/hapijs/wreck/milestone/61",
+        "version": "12.6.1"
+    },
+    {
+        "date": "2019-03-22T01:16:26Z",
+        "id": 4162540,
+        "issues": [
+            {
+                "id": 424006398,
+                "labels": ["lts"],
+                "number": 241,
+                "title": "Commercial version of v12 branch",
+                "url": "https://github.com/hapijs/wreck/issues/241"
+            }
+        ],
+        "number": 60,
+        "url": "https://github.com/hapijs/wreck/milestone/60",
+        "version": "12.6.0"
+    },
+    {
+        "date": "2017-09-25T15:38:09Z",
+        "id": 2789903,
+        "issues": [
+            {
+                "id": 260321611,
+                "labels": ["bug"],
+                "number": 201,
+                "title": "Return errors for partial payload transfers",
+                "url": "https://github.com/hapijs/wreck/issues/201"
+            },
+            {
+                "id": 260319255,
+                "labels": ["lts"],
+                "number": 200,
+                "title": "version 12.5.1",
+                "url": "https://github.com/hapijs/wreck/pull/200"
+            }
+        ],
+        "number": 49,
+        "url": "https://github.com/hapijs/wreck/milestone/49",
+        "version": "12.5.1"
+    },
+    {
+        "date": "2017-09-07T16:27:31Z",
+        "id": 2738747,
+        "issues": [
+            {
+                "id": 255992932,
+                "labels": ["feature"],
+                "number": 195,
+                "title": "closes #194 - support for a list of TLS ciphers",
+                "url": "https://github.com/hapijs/wreck/pull/195"
+            },
+            {
+                "id": 255992626,
+                "labels": ["feature"],
+                "number": 194,
+                "title": "Add support for specifying the TLS ciphers list",
+                "url": "https://github.com/hapijs/wreck/issues/194"
+            }
+        ],
         "number": 44,
-        "title": "Support disabling agent pooling",
-        "url": "https://github.com/hapijs/wreck/pull/44"
-      },
-      {
-        "id": 41452282,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/wreck/milestone/44",
+        "version": "12.5.0"
+    },
+    {
+        "date": "2017-09-01T15:01:21Z",
+        "id": 2737532,
+        "issues": [
+            {
+                "id": 254525160,
+                "labels": ["feature"],
+                "number": 193,
+                "title": "Add onRequest to request options",
+                "url": "https://github.com/hapijs/wreck/pull/193"
+            }
+        ],
         "number": 43,
-        "title": "Support agent = false for disabled pooling",
-        "url": "https://github.com/hapijs/wreck/issues/43"
-      },
-      {
-        "id": 41442809,
-        "labels": ["feature", "breaking changes"],
+        "url": "https://github.com/hapijs/wreck/milestone/43",
+        "version": "12.4.0"
+    },
+    {
+        "date": "2017-09-01T02:56:08Z",
+        "id": 2694861,
+        "issues": [
+            {
+                "id": 254041386,
+                "labels": ["feature"],
+                "number": 192,
+                "title": "Add a gunzipping option",
+                "url": "https://github.com/hapijs/wreck/pull/192"
+            },
+            {
+                "id": 250448892,
+                "labels": ["feature"],
+                "number": 190,
+                "title": "Add \"strict\" json option",
+                "url": "https://github.com/hapijs/wreck/pull/190"
+            },
+            {
+                "id": 240119805,
+                "labels": ["bug"],
+                "number": 186,
+                "title": "Add \"strict\" json option",
+                "url": "https://github.com/hapijs/wreck/issues/186"
+            }
+        ],
         "number": 42,
-        "title": "Override default maxSockets to Infinity",
-        "url": "https://github.com/hapijs/wreck/pull/42"
-      },
-      {
-        "id": 41426975,
-        "labels": ["feature", "breaking changes"],
+        "url": "https://github.com/hapijs/wreck/milestone/42",
+        "version": "12.3.0"
+    },
+    {
+        "date": "2017-08-10T17:14:15Z",
+        "id": 2546822,
+        "issues": [
+            {
+                "id": 249104370,
+                "labels": ["bug"],
+                "number": 189,
+                "title": "Fix possible content-type header duplication",
+                "url": "https://github.com/hapijs/wreck/pull/189"
+            },
+            {
+                "id": 249101695,
+                "labels": ["bug"],
+                "number": 188,
+                "title": "Possible `content-type` header duplication",
+                "url": "https://github.com/hapijs/wreck/issues/188"
+            },
+            {
+                "id": 235711877,
+                "labels": ["dependency", "lts"],
+                "number": 184,
+                "title": "Upgrade lab",
+                "url": "https://github.com/hapijs/wreck/pull/184"
+            }
+        ],
         "number": 41,
-        "title": "Default maxSockets to Infinity",
-        "url": "https://github.com/hapijs/wreck/issues/41"
-      },
-      {
-        "id": 40514434,
-        "labels": ["non issue"],
+        "url": "https://github.com/hapijs/wreck/milestone/41",
+        "version": "12.2.3"
+    },
+    {
+        "date": "2017-05-28T09:05:06Z",
+        "id": 2546765,
+        "issues": [
+            {
+                "id": 231856083,
+                "labels": ["test"],
+                "number": 183,
+                "title": "Fix tests for node 7.10.0",
+                "url": "https://github.com/hapijs/wreck/issues/183"
+            }
+        ],
+        "number": 40,
+        "url": "https://github.com/hapijs/wreck/milestone/40",
+        "version": "12.2.2"
+    },
+    {
+        "date": "2017-05-28T07:02:09Z",
+        "id": 2507315,
+        "issues": [
+            {
+                "id": 231851138,
+                "labels": ["dependency"],
+                "number": 182,
+                "title": "Update deps.",
+                "url": "https://github.com/hapijs/wreck/issues/182"
+            }
+        ],
         "number": 39,
-        "title": "Now working on v3.0.2",
-        "url": "https://github.com/hapijs/wreck/pull/39"
-      }
-    ],
-    "number": 10,
-    "url": "https://github.com/hapijs/wreck/milestone/10",
-    "version": "4.0.0"
-  },
-  {
-    "date": "2014-08-18T17:58:59Z",
-    "id": 748946,
-    "issues": [
-      {
-        "id": 40506938,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/wreck/milestone/39",
+        "version": "12.2.1"
+    },
+    {
+        "date": "2017-05-08T14:47:54Z",
+        "id": 2467382,
+        "issues": [
+            {
+                "id": 224033953,
+                "labels": ["feature"],
+                "number": 177,
+                "title": "fix(json): allow numbers in mime fixes #176",
+                "url": "https://github.com/hapijs/wreck/pull/177"
+            },
+            {
+                "id": 223379884,
+                "labels": ["feature"],
+                "number": 175,
+                "title": "Include full response with the HTTP error",
+                "url": "https://github.com/hapijs/wreck/pull/175"
+            },
+            {
+                "id": 222727124,
+                "labels": ["feature"],
+                "number": 173,
+                "title": "Return full response with the Boom HTTP error",
+                "url": "https://github.com/hapijs/wreck/issues/173"
+            },
+            {
+                "id": 219359040,
+                "labels": ["documentation"],
+                "number": 170,
+                "title": "4XX is now an error",
+                "url": "https://github.com/hapijs/wreck/issues/170"
+            }
+        ],
+        "number": 38,
+        "url": "https://github.com/hapijs/wreck/milestone/38",
+        "version": "12.2.0"
+    },
+    {
+        "date": "2017-04-19T18:22:23Z",
+        "id": 2409626,
+        "issues": [
+            {
+                "id": 222817315,
+                "labels": ["test", "lts"],
+                "number": 174,
+                "title": "Tidy code around default agents",
+                "url": "https://github.com/hapijs/wreck/pull/174"
+            },
+            {
+                "id": 221871544,
+                "labels": ["documentation"],
+                "number": 172,
+                "title": "Update README.md",
+                "url": "https://github.com/hapijs/wreck/pull/172"
+            },
+            {
+                "id": 218710834,
+                "labels": ["lts"],
+                "number": 169,
+                "title": "Pass an Error object to Boom.create for #168",
+                "url": "https://github.com/hapijs/wreck/pull/169"
+            },
+            {
+                "id": 202216312,
+                "labels": ["feature"],
+                "number": 156,
+                "title": "Preserve `agents` across .defaults({...})",
+                "url": "https://github.com/hapijs/wreck/pull/156"
+            }
+        ],
         "number": 37,
-        "title": "Adding shortcut wrapper for helping with optimization",
-        "url": "https://github.com/hapijs/wreck/pull/37"
-      },
-      {
-        "id": 40280597,
-        "labels": ["breaking changes"],
+        "url": "https://github.com/hapijs/wreck/milestone/37",
+        "version": "12.1.0"
+    },
+    {
+        "date": "2017-03-24T16:43:32Z",
+        "id": 2402263,
+        "issues": [
+            {
+                "id": 216838433,
+                "labels": ["breaking changes", "release notes"],
+                "number": 165,
+                "title": "12.0.0 Release Notes",
+                "url": "https://github.com/hapijs/wreck/issues/165"
+            },
+            {
+                "id": 216478516,
+                "labels": ["feature", "breaking changes"],
+                "number": 164,
+                "title": "Fix boom response error handling",
+                "url": "https://github.com/hapijs/wreck/pull/164"
+            },
+            {
+                "id": 216086750,
+                "labels": ["bug"],
+                "number": 163,
+                "title": "Keep request on error status",
+                "url": "https://github.com/hapijs/wreck/pull/163"
+            }
+        ],
+        "number": 36,
+        "url": "https://github.com/hapijs/wreck/milestone/36",
+        "version": "12.0.0"
+    },
+    {
+        "date": "2017-03-21T23:44:53Z",
+        "id": 1991669,
+        "issues": [
+            {
+                "id": 215906221,
+                "labels": ["breaking changes", "release notes"],
+                "number": 162,
+                "title": "11.0.0 Release Notes",
+                "url": "https://github.com/hapijs/wreck/issues/162"
+            },
+            {
+                "id": 215903433,
+                "labels": ["bug", "breaking changes"],
+                "number": 161,
+                "title": "Fix redirection method for 301, 302",
+                "url": "https://github.com/hapijs/wreck/pull/161"
+            },
+            {
+                "id": 215899389,
+                "labels": ["dependency"],
+                "number": 160,
+                "title": "Update lab dep",
+                "url": "https://github.com/hapijs/wreck/pull/160"
+            },
+            {
+                "id": 215898710,
+                "labels": ["documentation"],
+                "number": 159,
+                "title": "Add example https agent setting",
+                "url": "https://github.com/hapijs/wreck/pull/159"
+            },
+            {
+                "id": 215896989,
+                "labels": ["feature", "breaking changes"],
+                "number": 158,
+                "title": "Wrap error response with Boom",
+                "url": "https://github.com/hapijs/wreck/pull/158"
+            },
+            {
+                "id": 215891679,
+                "labels": ["feature", "breaking changes"],
+                "number": 157,
+                "title": "Change response event signature",
+                "url": "https://github.com/hapijs/wreck/pull/157"
+            },
+            {
+                "id": 197784158,
+                "labels": ["dependency"],
+                "number": 155,
+                "title": "Update code dep",
+                "url": "https://github.com/hapijs/wreck/pull/155"
+            },
+            {
+                "id": 197782504,
+                "labels": ["documentation", "test"],
+                "number": 154,
+                "title": "Clarify state of response in shortcuts",
+                "url": "https://github.com/hapijs/wreck/pull/154"
+            },
+            {
+                "id": 197027538,
+                "labels": ["documentation"],
+                "number": 153,
+                "title": "Question about responses as readable streams",
+                "url": "https://github.com/hapijs/wreck/issues/153"
+            },
+            {
+                "id": 163527093,
+                "labels": ["bug"],
+                "number": 138,
+                "title": "Redirect 302 changes method from POST to GET",
+                "url": "https://github.com/hapijs/wreck/issues/138"
+            },
+            {
+                "id": 70724842,
+                "labels": ["feature", "breaking changes"],
+                "number": 83,
+                "title": "Change \"response\" Payload",
+                "url": "https://github.com/hapijs/wreck/issues/83"
+            },
+            {
+                "id": 70273952,
+                "labels": ["feature", "breaking changes"],
+                "number": 82,
+                "title": "Option to convert 4xx and 5xx to errors",
+                "url": "https://github.com/hapijs/wreck/issues/82"
+            },
+            {
+                "id": 47420553,
+                "labels": ["documentation"],
+                "number": 66,
+                "title": "Add certificate options for requests",
+                "url": "https://github.com/hapijs/wreck/issues/66"
+            }
+        ],
+        "number": 35,
+        "url": "https://github.com/hapijs/wreck/milestone/35",
+        "version": "11.0.0"
+    },
+    {
+        "date": "2016-09-08T17:33:49Z",
+        "id": 1921420,
+        "issues": [
+            {
+                "id": 175814117,
+                "labels": ["breaking changes", "release notes"],
+                "number": 150,
+                "title": "10.0.0 Release Notes",
+                "url": "https://github.com/hapijs/wreck/issues/150"
+            },
+            {
+                "id": 175811359,
+                "labels": ["dependency"],
+                "number": 149,
+                "title": "Update boom and lab deps",
+                "url": "https://github.com/hapijs/wreck/pull/149"
+            },
+            {
+                "id": 175787420,
+                "labels": ["bug", "breaking changes"],
+                "number": 148,
+                "title": "Refactor event propagation",
+                "url": "https://github.com/hapijs/wreck/pull/148"
+            },
+            {
+                "id": 175787150,
+                "labels": ["test"],
+                "number": 147,
+                "title": "Fix tests to timeout quicker",
+                "url": "https://github.com/hapijs/wreck/pull/147"
+            }
+        ],
+        "number": 34,
+        "url": "https://github.com/hapijs/wreck/milestone/34",
+        "version": "10.0.0"
+    },
+    {
+        "date": "2016-08-03T16:51:17Z",
+        "id": 1910394,
+        "issues": [
+            {
+                "id": 169179499,
+                "labels": ["breaking changes", "release notes"],
+                "number": 144,
+                "title": "9.0.0 Release Notes",
+                "url": "https://github.com/hapijs/wreck/issues/144"
+            },
+            {
+                "id": 169163414,
+                "labels": ["feature"],
+                "number": 143,
+                "title": "Stringify payload objects",
+                "url": "https://github.com/hapijs/wreck/pull/143"
+            },
+            {
+                "id": 168944839,
+                "labels": ["bug", "breaking changes"],
+                "number": 142,
+                "title": "Fix redirect with different host on default options",
+                "url": "https://github.com/hapijs/wreck/pull/142"
+            },
+            {
+                "id": 157064856,
+                "labels": ["bug"],
+                "number": 131,
+                "title": "Fail to redirect to different host",
+                "url": "https://github.com/hapijs/wreck/issues/131"
+            },
+            {
+                "id": 124975404,
+                "labels": ["feature"],
+                "number": 113,
+                "title": "Suggestion: Allow json objects as payload ",
+                "url": "https://github.com/hapijs/wreck/issues/113"
+            }
+        ],
         "number": 33,
-        "title": "Read now requires 3 arguments",
-        "url": "https://github.com/hapijs/wreck/pull/33"
-      },
-      {
-        "id": 40266000,
-        "labels": ["breaking changes"],
+        "url": "https://github.com/hapijs/wreck/milestone/33",
+        "version": "9.0.0"
+    },
+    {
+        "date": "2016-07-28T19:50:10Z",
+        "id": 1805238,
+        "issues": [
+            {
+                "id": 168180765,
+                "labels": ["documentation"],
+                "number": 141,
+                "title": "npmignore",
+                "url": "https://github.com/hapijs/wreck/issues/141"
+            },
+            {
+                "id": 158920782,
+                "labels": ["documentation"],
+                "number": 137,
+                "title": "add node version badge",
+                "url": "https://github.com/hapijs/wreck/pull/137"
+            }
+        ],
         "number": 32,
-        "title": "Refactor `internals.shortcut` to have a fixed signature.",
-        "url": "https://github.com/hapijs/wreck/issues/32"
-      },
-      {
-        "id": 40265957,
-        "labels": ["breaking changes"],
+        "url": "https://github.com/hapijs/wreck/milestone/32",
+        "version": "8.0.1"
+    },
+    {
+        "date": "2016-06-02T15:24:05Z",
+        "id": 1763299,
+        "issues": [
+            {
+                "id": 158167476,
+                "labels": ["dependency"],
+                "number": 136,
+                "title": "Upgrade to code v3",
+                "url": "https://github.com/hapijs/wreck/pull/136"
+            },
+            {
+                "id": 158085876,
+                "labels": ["breaking changes", "release notes"],
+                "number": 135,
+                "title": "8.0.0 Release Notes",
+                "url": "https://github.com/hapijs/wreck/issues/135"
+            },
+            {
+                "id": 158079438,
+                "labels": ["feature", "breaking changes"],
+                "number": 134,
+                "title": "Expose response headers on redirect",
+                "url": "https://github.com/hapijs/wreck/issues/134"
+            },
+            {
+                "id": 158077835,
+                "labels": ["feature", "breaking changes"],
+                "number": 133,
+                "title": "Redirect 303 and expose headers",
+                "url": "https://github.com/hapijs/wreck/pull/133"
+            },
+            {
+                "id": 158076142,
+                "labels": ["feature"],
+                "number": 132,
+                "title": "Support 303 Redirection",
+                "url": "https://github.com/hapijs/wreck/issues/132"
+            }
+        ],
         "number": 31,
-        "title": "Refactor `read` API to have a fixed signature.",
-        "url": "https://github.com/hapijs/wreck/issues/31"
-      },
-      {
-        "id": 40194077,
-        "labels": ["documentation"],
+        "url": "https://github.com/hapijs/wreck/milestone/31",
+        "version": "8.0.0"
+    },
+    {
+        "date": "2016-05-12T21:06:01Z",
+        "id": 1710542,
+        "issues": [
+            {
+                "id": 154576494,
+                "labels": ["bug"],
+                "number": 130,
+                "title": "A missing callback on request still allows client requests to work",
+                "url": "https://github.com/hapijs/wreck/pull/130"
+            },
+            {
+                "id": 153343629,
+                "labels": ["lts"],
+                "number": 129,
+                "title": "Use node 6 on travis",
+                "url": "https://github.com/hapijs/wreck/pull/129"
+            }
+        ],
         "number": 30,
-        "title": "Clarify optional options argument.",
-        "url": "https://github.com/hapijs/wreck/pull/30"
-      },
-      {
-        "id": 39980074,
-        "labels": ["documentation"],
+        "url": "https://github.com/hapijs/wreck/milestone/30",
+        "version": "7.2.1"
+    },
+    {
+        "date": "2016-04-15T19:31:41Z",
+        "id": 1664461,
+        "issues": [
+            {
+                "id": 148747232,
+                "labels": ["feature"],
+                "number": 127,
+                "title": "Add global request event",
+                "url": "https://github.com/hapijs/wreck/pull/127"
+            },
+            {
+                "id": 148746960,
+                "labels": ["feature"],
+                "number": 126,
+                "title": "Add `request` emit",
+                "url": "https://github.com/hapijs/wreck/issues/126"
+            },
+            {
+                "id": 148690196,
+                "labels": ["feature"],
+                "number": 125,
+                "title": "Use a global event emitter for wreck events",
+                "url": "https://github.com/hapijs/wreck/pull/125"
+            }
+        ],
+        "number": 29,
+        "url": "https://github.com/hapijs/wreck/milestone/29",
+        "version": "7.2.0"
+    },
+    {
+        "date": "2016-03-24T18:22:14Z",
+        "id": 1623939,
+        "issues": [
+            {
+                "id": 142920918,
+                "labels": ["feature"],
+                "number": 123,
+                "title": "Add support for Unix sockets",
+                "url": "https://github.com/hapijs/wreck/pull/123"
+            }
+        ],
         "number": 28,
-        "title": "Nipple.request `options` are only optional if callback is omitted as well.",
-        "url": "https://github.com/hapijs/wreck/issues/28"
-      }
-    ],
-    "number": 9,
-    "url": "https://github.com/hapijs/wreck/milestone/9",
-    "version": "3.0.0"
-  },
-  {
-    "date": "2014-08-10T20:38:44Z",
-    "id": 740877,
-    "issues": [
-      {
-        "id": 39909417,
-        "labels": ["documentation"],
+        "url": "https://github.com/hapijs/wreck/milestone/28",
+        "version": "7.1.0"
+    },
+    {
+        "date": "2016-03-05T20:01:09Z",
+        "id": 1618395,
+        "issues": [
+            {
+                "id": 138712304,
+                "labels": ["bug"],
+                "number": 121,
+                "title": "Content-Length header check is now case insensitive",
+                "url": "https://github.com/hapijs/wreck/pull/121"
+            },
+            {
+                "id": 138344017,
+                "labels": ["bug"],
+                "number": 120,
+                "title": "lowercase the content-length header",
+                "url": "https://github.com/hapijs/wreck/pull/120"
+            }
+        ],
         "number": 27,
-        "title": "Correct copypasta errors in convenience method docs.",
-        "url": "https://github.com/hapijs/wreck/pull/27"
-      },
-      {
-        "id": 39877432,
-        "labels": ["documentation"],
+        "url": "https://github.com/hapijs/wreck/milestone/27",
+        "version": "7.0.2"
+    },
+    {
+        "date": "2016-03-02T17:52:08Z",
+        "id": 1386877,
+        "issues": [
+            {
+                "id": 137944061,
+                "labels": ["test", "dependency"],
+                "number": 119,
+                "title": "Update deps and fix tests",
+                "url": "https://github.com/hapijs/wreck/pull/119"
+            },
+            {
+                "id": 137761865,
+                "labels": ["bug"],
+                "number": 118,
+                "title": "Add tests for defaults",
+                "url": "https://github.com/hapijs/wreck/pull/118"
+            },
+            {
+                "id": 137759020,
+                "labels": ["bug"],
+                "number": 117,
+                "title": "Wreck#request's options are overridden by Defaults",
+                "url": "https://github.com/hapijs/wreck/issues/117"
+            }
+        ],
         "number": 26,
-        "title": "Document API, parameters, and helper methods.",
-        "url": "https://github.com/hapijs/wreck/pull/26"
-      },
-      {
-        "id": 39768676,
-        "labels": ["test"],
+        "url": "https://github.com/hapijs/wreck/milestone/26",
+        "version": "7.0.1"
+    },
+    {
+        "date": "2015-10-31T19:41:15Z",
+        "id": 1324268,
+        "issues": [
+            {
+                "id": 114422836,
+                "labels": ["breaking changes"],
+                "number": 109,
+                "title": "ES6 style and node v4",
+                "url": "https://github.com/hapijs/wreck/issues/109"
+            }
+        ],
         "number": 25,
-        "title": "Update to use lab v4",
-        "url": "https://github.com/hapijs/wreck/pull/25"
-      },
-      {
-        "id": 39668689,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/wreck/milestone/25",
+        "version": "7.0.0"
+    },
+    {
+        "date": "2015-09-25T17:43:36Z",
+        "id": 1274847,
+        "issues": [
+            {
+                "id": 107897891,
+                "labels": ["feature"],
+                "number": 108,
+                "title": "Add a beforeRedirect callback option",
+                "url": "https://github.com/hapijs/wreck/pull/108"
+            },
+            {
+                "id": 106093245,
+                "labels": ["test"],
+                "number": 106,
+                "title": "Fix code coverage",
+                "url": "https://github.com/hapijs/wreck/pull/106"
+            },
+            {
+                "id": 106052668,
+                "labels": ["test"],
+                "number": 105,
+                "title": "Workaround node issue in test",
+                "url": "https://github.com/hapijs/wreck/pull/105"
+            },
+            {
+                "id": 105522828,
+                "labels": ["test"],
+                "number": 104,
+                "title": "Fails on node v4",
+                "url": "https://github.com/hapijs/wreck/issues/104"
+            }
+        ],
         "number": 24,
-        "title": "Breaking out code into separate modules",
-        "url": "https://github.com/hapijs/wreck/pull/24"
-      }
-    ],
-    "number": 8,
-    "url": "https://github.com/hapijs/wreck/milestone/8",
-    "version": "2.5.5"
-  },
-  {
-    "date": "2014-08-03T07:12:37Z",
-    "id": 679815,
-    "issues": [
-      {
-        "id": 39355773,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/wreck/milestone/24",
+        "version": "6.3.0"
+    },
+    {
+        "date": "2015-08-26T22:02:12Z",
+        "id": 1232381,
+        "issues": [
+            {
+                "id": 103369536,
+                "labels": ["feature"],
+                "number": 102,
+                "title": "add 'PATCH' convenience method.",
+                "url": "https://github.com/hapijs/wreck/pull/102"
+            }
+        ],
         "number": 23,
-        "title": "allow for unicode characters in string payloads, closes #20",
-        "url": "https://github.com/hapijs/wreck/pull/23"
-      },
-      {
-        "id": 36055544,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/wreck/milestone/23",
+        "version": "6.2.0"
+    },
+    {
+        "date": "2015-07-30T02:57:44Z",
+        "id": 1189757,
+        "issues": [
+            {
+                "id": 92833027,
+                "labels": ["feature"],
+                "number": 97,
+                "title": "Add a redirected callback request option",
+                "url": "https://github.com/hapijs/wreck/pull/97"
+            },
+            {
+                "id": 88446437,
+                "labels": ["feature"],
+                "number": 91,
+                "title": "Can't read redirected URI",
+                "url": "https://github.com/hapijs/wreck/issues/91"
+            }
+        ],
+        "number": 22,
+        "url": "https://github.com/hapijs/wreck/milestone/22",
+        "version": "6.1.0"
+    },
+    {
+        "date": "2015-07-01T21:34:41Z",
+        "id": 1189459,
+        "issues": [
+            {
+                "id": 92489338,
+                "labels": ["breaking changes", "release notes"],
+                "number": 96,
+                "title": "6.0.0 Release notes",
+                "url": "https://github.com/hapijs/wreck/issues/96"
+            },
+            {
+                "id": 92483342,
+                "labels": ["bug", "breaking changes"],
+                "number": 95,
+                "title": "Payload returns as a buffer. Fixes Issue #75",
+                "url": "https://github.com/hapijs/wreck/pull/95"
+            },
+            {
+                "id": 59901071,
+                "labels": ["bug", "breaking changes"],
+                "number": 75,
+                "title": "Read automatically converts payload from Buffer to UTF-8 String",
+                "url": "https://github.com/hapijs/wreck/issues/75"
+            }
+        ],
+        "number": 21,
+        "url": "https://github.com/hapijs/wreck/milestone/21",
+        "version": "6.0.0"
+    },
+    {
+        "date": "2015-07-01T17:44:21Z",
+        "id": 1172768,
+        "issues": [
+            {
+                "id": 92262401,
+                "labels": ["bug"],
+                "number": 94,
+                "title": "Skip res.destroy() when not present. Closes #71",
+                "url": "https://github.com/hapijs/wreck/pull/94"
+            },
+            {
+                "id": 90130466,
+                "labels": ["bug", "security"],
+                "number": 93,
+                "title": "Fix missing options when redirecting",
+                "url": "https://github.com/hapijs/wreck/pull/93"
+            },
+            {
+                "id": 56383617,
+                "labels": ["bug"],
+                "number": 71,
+                "title": "Attempt to call `destroy()` on `Gunzip` object",
+                "url": "https://github.com/hapijs/wreck/issues/71"
+            }
+        ],
         "number": 20,
-        "title": "Usage of post",
-        "url": "https://github.com/hapijs/wreck/issues/20"
-      }
-    ],
-    "number": 7,
-    "url": "https://github.com/hapijs/wreck/milestone/7",
-    "version": "2.5.4"
-  },
-  {
-    "date": "2014-06-03T22:16:22Z",
-    "id": 665072,
-    "issues": [
-      {
-        "id": 34909752,
-        "labels": ["bug"],
-        "number": 18,
-        "title": "Set content-length on string or buffer payload",
-        "url": "https://github.com/hapijs/wreck/issues/18"
-      }
-    ],
-    "number": 6,
-    "url": "https://github.com/hapijs/wreck/milestone/6",
-    "version": "2.5.3"
-  },
-  {
-    "date": "2014-05-20T22:24:54Z",
-    "id": 642996,
-    "issues": [
-      {
-        "id": 32105940,
-        "labels": ["bug"],
-        "number": 13,
-        "title": "respect size in _read for toReadableStream",
-        "url": "https://github.com/hapijs/wreck/pull/13"
-      }
-    ],
-    "number": 5,
-    "url": "https://github.com/hapijs/wreck/milestone/5",
-    "version": "2.5.2"
-  },
-  {
-    "date": "2014-04-28T20:35:46Z",
-    "id": 626913,
-    "issues": [
-      {
-        "id": 32385186,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/wreck/milestone/20",
+        "version": "5.6.1"
+    },
+    {
+        "date": "2015-06-19T17:22:13Z",
+        "id": 1081114,
+        "issues": [
+            {
+                "id": 89600746,
+                "labels": ["feature"],
+                "number": 92,
+                "title": "More robust baseUrl and uri merging",
+                "url": "https://github.com/hapijs/wreck/pull/92"
+            },
+            {
+                "id": 81919895,
+                "labels": ["feature"],
+                "number": 89,
+                "title": "support for detecting/parsing +json suffix types i.e. application/*+json",
+                "url": "https://github.com/hapijs/wreck/pull/89"
+            },
+            {
+                "id": 80997270,
+                "labels": ["non issue"],
+                "number": 88,
+                "title": "Maintenance",
+                "url": "https://github.com/hapijs/wreck/pull/88"
+            },
+            {
+                "id": 80206515,
+                "labels": ["non issue"],
+                "number": 87,
+                "title": "Update license attribute",
+                "url": "https://github.com/hapijs/wreck/pull/87"
+            },
+            {
+                "id": 79159172,
+                "labels": ["feature"],
+                "number": 86,
+                "title": "Add support for the `baseUrl` option",
+                "url": "https://github.com/hapijs/wreck/pull/86"
+            },
+            {
+                "id": 78730820,
+                "labels": ["feature"],
+                "number": 85,
+                "title": "add support for defaults",
+                "url": "https://github.com/hapijs/wreck/pull/85"
+            }
+        ],
+        "number": 19,
+        "url": "https://github.com/hapijs/wreck/milestone/19",
+        "version": "5.6.0"
+    },
+    {
+        "date": "2015-04-23T19:11:46Z",
+        "id": 1047707,
+        "issues": [
+            {
+                "id": 69892701,
+                "labels": ["feature"],
+                "number": 81,
+                "title": "Added uri to event payloads.",
+                "url": "https://github.com/hapijs/wreck/pull/81"
+            }
+        ],
+        "number": 17,
+        "url": "https://github.com/hapijs/wreck/milestone/17",
+        "version": "5.5.0"
+    },
+    {
+        "date": "2015-03-31T20:49:52Z",
+        "id": 1034497,
+        "issues": [
+            {
+                "id": 65536802,
+                "labels": ["feature"],
+                "number": 79,
+                "title": "Add start time to response event",
+                "url": "https://github.com/hapijs/wreck/pull/79"
+            },
+            {
+                "id": 65536519,
+                "labels": ["feature"],
+                "number": 78,
+                "title": "Add start time to response event",
+                "url": "https://github.com/hapijs/wreck/issues/78"
+            }
+        ],
         "number": 16,
-        "title": "Prevent starvation due to timeout requests",
-        "url": "https://github.com/hapijs/wreck/pull/16"
-      }
-    ],
-    "number": 4,
-    "url": "https://github.com/hapijs/wreck/milestone/4",
-    "version": "2.5.1"
-  },
-  {
-    "date": "2014-04-11T04:28:17Z",
-    "id": 595523,
-    "issues": [
-      {
-        "id": 31248447,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/wreck/milestone/16",
+        "version": "5.4.0"
+    },
+    {
+        "date": "2015-03-23T17:03:12Z",
+        "id": 979061,
+        "issues": [
+            {
+                "id": 61117631,
+                "labels": ["feature"],
+                "number": 77,
+                "title": "Add event for response and logging",
+                "url": "https://github.com/hapijs/wreck/pull/77"
+            },
+            {
+                "id": 60586038,
+                "labels": ["feature"],
+                "number": 76,
+                "title": "Adding log support",
+                "url": "https://github.com/hapijs/wreck/pull/76"
+            },
+            {
+                "id": 59692485,
+                "labels": ["feature"],
+                "number": 74,
+                "title": "implement debugging to file and console. Fixes #72",
+                "url": "https://github.com/hapijs/wreck/pull/74"
+            },
+            {
+                "id": 58610133,
+                "labels": ["bug"],
+                "number": 73,
+                "title": "Fix issues with node 0.12",
+                "url": "https://github.com/hapijs/wreck/pull/73"
+            },
+            {
+                "id": 57957954,
+                "labels": ["feature"],
+                "number": 72,
+                "title": "Add logging to req/res details for debug mode",
+                "url": "https://github.com/hapijs/wreck/issues/72"
+            }
+        ],
+        "number": 15,
+        "url": "https://github.com/hapijs/wreck/milestone/15",
+        "version": "5.3.0"
+    },
+    {
+        "date": "2015-02-13T22:17:58Z",
+        "id": 905130,
+        "issues": [
+            {
+                "id": 53810503,
+                "labels": ["feature"],
+                "number": 70,
+                "title": "Added 'smart' and 'force' modes to json option.",
+                "url": "https://github.com/hapijs/wreck/pull/70"
+            }
+        ],
+        "number": 14,
+        "url": "https://github.com/hapijs/wreck/milestone/14",
+        "version": "5.2.0"
+    },
+    {
+        "date": "2014-12-16T03:12:58Z",
+        "id": 779005,
+        "issues": [
+            {
+                "id": 51807754,
+                "labels": ["bug"],
+                "number": 69,
+                "title": "Dont try to parse JSON if the statusCode is 204 (No Content)",
+                "url": "https://github.com/hapijs/wreck/pull/69"
+            },
+            {
+                "id": 42782678,
+                "labels": ["feature"],
+                "number": 56,
+                "title": "Add secureProtocol for setting SSL method version",
+                "url": "https://github.com/hapijs/wreck/issues/56"
+            },
+            {
+                "id": 42507203,
+                "labels": ["feature"],
+                "number": 55,
+                "title": "Added ability to set secureProtocol to a value.",
+                "url": "https://github.com/hapijs/wreck/pull/55"
+            }
+        ],
+        "number": 13,
+        "url": "https://github.com/hapijs/wreck/milestone/13",
+        "version": "5.1.0"
+    },
+    {
+        "date": "2014-09-04T20:35:19Z",
+        "id": 777425,
+        "issues": [
+            {
+                "id": 41980399,
+                "labels": ["bug"],
+                "number": 52,
+                "title": "Fixing leak in options.agent",
+                "url": "https://github.com/hapijs/wreck/pull/52"
+            },
+            {
+                "id": 41979804,
+                "labels": ["bug"],
+                "number": 51,
+                "title": "Shouldn't assign agent back to options.agent, it can leak",
+                "url": "https://github.com/hapijs/wreck/issues/51"
+            }
+        ],
+        "number": 12,
+        "url": "https://github.com/hapijs/wreck/milestone/12",
+        "version": "5.0.1"
+    },
+    {
+        "date": "2014-09-03T20:07:38Z",
+        "id": 775519,
+        "issues": [
+            {
+                "id": 41859776,
+                "labels": ["breaking changes", "release notes"],
+                "number": 50,
+                "title": "5.0.0 Release Notes",
+                "url": "https://github.com/hapijs/wreck/issues/50"
+            },
+            {
+                "id": 41838596,
+                "labels": ["feature"],
+                "number": 49,
+                "title": "Requests can be aborted",
+                "url": "https://github.com/hapijs/wreck/pull/49"
+            },
+            {
+                "id": 41729429,
+                "labels": ["bug", "breaking changes"],
+                "number": 47,
+                "title": "rejectUnauthorized works in node 0.10",
+                "url": "https://github.com/hapijs/wreck/pull/47"
+            },
+            {
+                "id": 41729297,
+                "labels": ["bug"],
+                "number": 46,
+                "title": "rejectUnauthorized isn't honored on node 0.10",
+                "url": "https://github.com/hapijs/wreck/issues/46"
+            },
+            {
+                "id": 41418240,
+                "labels": ["feature"],
+                "number": 40,
+                "title": "Allow requests to be aborted",
+                "url": "https://github.com/hapijs/wreck/issues/40"
+            }
+        ],
         "number": 11,
-        "title": "Hoek version bump to 2.x.x",
-        "url": "https://github.com/hapijs/wreck/pull/11"
-      },
-      {
-        "id": 31244381,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/wreck/milestone/11",
+        "version": "5.0.0"
+    },
+    {
+        "date": "2014-09-02T16:39:26Z",
+        "id": 757683,
+        "issues": [
+            {
+                "id": 41536501,
+                "labels": ["breaking changes", "release notes"],
+                "number": 45,
+                "title": "4.0.0 Release Notes",
+                "url": "https://github.com/hapijs/wreck/issues/45"
+            },
+            {
+                "id": 41535687,
+                "labels": ["feature"],
+                "number": 44,
+                "title": "Support disabling agent pooling",
+                "url": "https://github.com/hapijs/wreck/pull/44"
+            },
+            {
+                "id": 41452282,
+                "labels": ["feature"],
+                "number": 43,
+                "title": "Support agent = false for disabled pooling",
+                "url": "https://github.com/hapijs/wreck/issues/43"
+            },
+            {
+                "id": 41442809,
+                "labels": ["feature", "breaking changes"],
+                "number": 42,
+                "title": "Override default maxSockets to Infinity",
+                "url": "https://github.com/hapijs/wreck/pull/42"
+            },
+            {
+                "id": 41426975,
+                "labels": ["feature", "breaking changes"],
+                "number": 41,
+                "title": "Default maxSockets to Infinity",
+                "url": "https://github.com/hapijs/wreck/issues/41"
+            },
+            {
+                "id": 40514434,
+                "labels": ["non issue"],
+                "number": 39,
+                "title": "Now working on v3.0.2",
+                "url": "https://github.com/hapijs/wreck/pull/39"
+            }
+        ],
         "number": 10,
-        "title": "match() -> test()",
-        "url": "https://github.com/hapijs/wreck/pull/10"
-      },
-      {
-        "id": 30903429,
-        "labels": ["test"],
+        "url": "https://github.com/hapijs/wreck/milestone/10",
+        "version": "4.0.0"
+    },
+    {
+        "date": "2014-08-18T17:58:59Z",
+        "id": 748946,
+        "issues": [
+            {
+                "id": 40506938,
+                "labels": ["feature"],
+                "number": 37,
+                "title": "Adding shortcut wrapper for helping with optimization",
+                "url": "https://github.com/hapijs/wreck/pull/37"
+            },
+            {
+                "id": 40280597,
+                "labels": ["breaking changes"],
+                "number": 33,
+                "title": "Read now requires 3 arguments",
+                "url": "https://github.com/hapijs/wreck/pull/33"
+            },
+            {
+                "id": 40266000,
+                "labels": ["breaking changes"],
+                "number": 32,
+                "title": "Refactor `internals.shortcut` to have a fixed signature.",
+                "url": "https://github.com/hapijs/wreck/issues/32"
+            },
+            {
+                "id": 40265957,
+                "labels": ["breaking changes"],
+                "number": 31,
+                "title": "Refactor `read` API to have a fixed signature.",
+                "url": "https://github.com/hapijs/wreck/issues/31"
+            },
+            {
+                "id": 40194077,
+                "labels": ["documentation"],
+                "number": 30,
+                "title": "Clarify optional options argument.",
+                "url": "https://github.com/hapijs/wreck/pull/30"
+            },
+            {
+                "id": 39980074,
+                "labels": ["documentation"],
+                "number": 28,
+                "title": "Nipple.request `options` are only optional if callback is omitted as well.",
+                "url": "https://github.com/hapijs/wreck/issues/28"
+            }
+        ],
         "number": 9,
-        "title": "coverage to 100% with Lab v3.0",
-        "url": "https://github.com/hapijs/wreck/pull/9"
-      },
-      {
-        "id": 30620574,
-        "labels": ["test"],
+        "url": "https://github.com/hapijs/wreck/milestone/9",
+        "version": "3.0.0"
+    },
+    {
+        "date": "2014-08-10T20:38:44Z",
+        "id": 740877,
+        "issues": [
+            {
+                "id": 39909417,
+                "labels": ["documentation"],
+                "number": 27,
+                "title": "Correct copypasta errors in convenience method docs.",
+                "url": "https://github.com/hapijs/wreck/pull/27"
+            },
+            {
+                "id": 39877432,
+                "labels": ["documentation"],
+                "number": 26,
+                "title": "Document API, parameters, and helper methods.",
+                "url": "https://github.com/hapijs/wreck/pull/26"
+            },
+            {
+                "id": 39768676,
+                "labels": ["test"],
+                "number": 25,
+                "title": "Update to use lab v4",
+                "url": "https://github.com/hapijs/wreck/pull/25"
+            },
+            {
+                "id": 39668689,
+                "labels": ["feature"],
+                "number": 24,
+                "title": "Breaking out code into separate modules",
+                "url": "https://github.com/hapijs/wreck/pull/24"
+            }
+        ],
         "number": 8,
-        "title": "get code coverage to 100% under Lab v3.0",
-        "url": "https://github.com/hapijs/wreck/issues/8"
-      },
-      {
-        "id": 29407685,
-        "labels": ["test"],
+        "url": "https://github.com/hapijs/wreck/milestone/8",
+        "version": "2.5.5"
+    },
+    {
+        "date": "2014-08-03T07:12:37Z",
+        "id": 679815,
+        "issues": [
+            {
+                "id": 39355773,
+                "labels": ["bug"],
+                "number": 23,
+                "title": "allow for unicode characters in string payloads, closes #20",
+                "url": "https://github.com/hapijs/wreck/pull/23"
+            },
+            {
+                "id": 36055544,
+                "labels": ["bug"],
+                "number": 20,
+                "title": "Usage of post",
+                "url": "https://github.com/hapijs/wreck/issues/20"
+            }
+        ],
         "number": 7,
-        "title": "Fixed Shortcut test grouping",
-        "url": "https://github.com/hapijs/wreck/pull/7"
-      }
-    ],
-    "number": 3,
-    "url": "https://github.com/hapijs/wreck/milestone/3",
-    "version": "2.5.0"
-  },
-  {
-    "date": "2014-03-12T22:07:49Z",
-    "id": 594631,
-    "issues": [
-      {
-        "id": 29268517,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/wreck/milestone/7",
+        "version": "2.5.4"
+    },
+    {
+        "date": "2014-06-03T22:16:22Z",
+        "id": 665072,
+        "issues": [
+            {
+                "id": 34909752,
+                "labels": ["bug"],
+                "number": 18,
+                "title": "Set content-length on string or buffer payload",
+                "url": "https://github.com/hapijs/wreck/issues/18"
+            }
+        ],
         "number": 6,
-        "title": "Added support for automatic JSON response parsing.",
-        "url": "https://github.com/hapijs/wreck/pull/6"
-      }
-    ],
-    "number": 2,
-    "url": "https://github.com/hapijs/wreck/milestone/2",
-    "version": "2.4.0"
-  },
-  {
-    "date": "2014-03-12T16:17:11Z",
-    "id": 594629,
-    "issues": [
-      {
-        "id": 29241944,
-        "labels": ["test"],
+        "url": "https://github.com/hapijs/wreck/milestone/6",
+        "version": "2.5.3"
+    },
+    {
+        "date": "2014-05-20T22:24:54Z",
+        "id": 642996,
+        "issues": [
+            {
+                "id": 32105940,
+                "labels": ["bug"],
+                "number": 13,
+                "title": "respect size in _read for toReadableStream",
+                "url": "https://github.com/hapijs/wreck/pull/13"
+            }
+        ],
         "number": 5,
-        "title": "Bring coverage back to 100% after lab fix",
-        "url": "https://github.com/hapijs/wreck/issues/5"
-      },
-      {
-        "id": 28269054,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/wreck/milestone/5",
+        "version": "2.5.2"
+    },
+    {
+        "date": "2014-04-28T20:35:46Z",
+        "id": 626913,
+        "issues": [
+            {
+                "id": 32385186,
+                "labels": ["bug"],
+                "number": 16,
+                "title": "Prevent starvation due to timeout requests",
+                "url": "https://github.com/hapijs/wreck/pull/16"
+            }
+        ],
         "number": 4,
-        "title": "maxSockets Support",
-        "url": "https://github.com/hapijs/wreck/pull/4"
-      }
-    ],
-    "number": 1,
-    "url": "https://github.com/hapijs/wreck/milestone/1",
-    "version": "2.3.0"
-  }
+        "url": "https://github.com/hapijs/wreck/milestone/4",
+        "version": "2.5.1"
+    },
+    {
+        "date": "2014-04-11T04:28:17Z",
+        "id": 595523,
+        "issues": [
+            {
+                "id": 31248447,
+                "labels": ["feature"],
+                "number": 11,
+                "title": "Hoek version bump to 2.x.x",
+                "url": "https://github.com/hapijs/wreck/pull/11"
+            },
+            {
+                "id": 31244381,
+                "labels": ["feature"],
+                "number": 10,
+                "title": "match() -> test()",
+                "url": "https://github.com/hapijs/wreck/pull/10"
+            },
+            {
+                "id": 30903429,
+                "labels": ["test"],
+                "number": 9,
+                "title": "coverage to 100% with Lab v3.0",
+                "url": "https://github.com/hapijs/wreck/pull/9"
+            },
+            {
+                "id": 30620574,
+                "labels": ["test"],
+                "number": 8,
+                "title": "get code coverage to 100% under Lab v3.0",
+                "url": "https://github.com/hapijs/wreck/issues/8"
+            },
+            {
+                "id": 29407685,
+                "labels": ["test"],
+                "number": 7,
+                "title": "Fixed Shortcut test grouping",
+                "url": "https://github.com/hapijs/wreck/pull/7"
+            }
+        ],
+        "number": 3,
+        "url": "https://github.com/hapijs/wreck/milestone/3",
+        "version": "2.5.0"
+    },
+    {
+        "date": "2014-03-12T22:07:49Z",
+        "id": 594631,
+        "issues": [
+            {
+                "id": 29268517,
+                "labels": ["feature"],
+                "number": 6,
+                "title": "Added support for automatic JSON response parsing.",
+                "url": "https://github.com/hapijs/wreck/pull/6"
+            }
+        ],
+        "number": 2,
+        "url": "https://github.com/hapijs/wreck/milestone/2",
+        "version": "2.4.0"
+    },
+    {
+        "date": "2014-03-12T16:17:11Z",
+        "id": 594629,
+        "issues": [
+            {
+                "id": 29241944,
+                "labels": ["test"],
+                "number": 5,
+                "title": "Bring coverage back to 100% after lab fix",
+                "url": "https://github.com/hapijs/wreck/issues/5"
+            },
+            {
+                "id": 28269054,
+                "labels": ["feature"],
+                "number": 4,
+                "title": "maxSockets Support",
+                "url": "https://github.com/hapijs/wreck/pull/4"
+            }
+        ],
+        "number": 1,
+        "url": "https://github.com/hapijs/wreck/milestone/1",
+        "version": "2.3.0"
+    }
 ]

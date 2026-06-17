@@ -111,7 +111,7 @@ Asserts that the reference value is an `arguments` object.
 const Code = require('code');
 const expect = Code.expect;
 const func = function () {
-  return arguments;
+    return arguments;
 };
 expect(func()).to.be.arguments();
 ```
@@ -600,7 +600,7 @@ const Code = require('code');
 const expect = Code.expect;
 
 expect('x').to.satisfy(function (value) {
-  return value === 'x';
+    return value === 'x';
 });
 ```
 
@@ -622,13 +622,13 @@ const Code = require('code');
 const expect = Code.expect;
 
 const CustomError = function (message) {
-  Error.call(this, message);
+    Error.call(this, message);
 };
 
 NodeUtil.inherit(CustomError, Error);
 
 const throws = function () {
-  throw new CustomError('Oh no!');
+    throw new CustomError('Oh no!');
 };
 
 expect(throws).to.throw(CustomError, 'Oh no!');
@@ -654,16 +654,16 @@ const Code = require('code');
 const expect = Code.expect;
 
 const CustomError = function (message, code) {
-  this.message = message;
-  this.code = code;
+    this.message = message;
+    this.code = code;
 };
 
 NodeUtil.inherits(CustomError, Error);
 
 const rejects = function () {
-  return new Promise((resolve, reject) =>
-    reject(new CustomError('Oh no!', 123)),
-  );
+    return new Promise((resolve, reject) =>
+        reject(new CustomError('Oh no!', 123)),
+    );
 };
 
 const err = await expect(rejects()).to.reject(CustomError, 'Oh no!');

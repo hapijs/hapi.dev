@@ -7,7 +7,7 @@ const Oppsy = require('@hapi/oppsy');
 const server = new Hapi.Server();
 const oppsy = new Oppsy(server);
 oppsy.on('ops', (data) => {
-  console.log(data);
+    console.log(data);
 });
 
 await server.start();
@@ -23,8 +23,8 @@ Creates a new Oppsy object.
 
 - `server` - the hapi server to collect information about.
 - `[config]` - optional configuration object
-  - `httpAgents` - the list of httpAgents to report socket information about. Can be a single http.Agent or an array of agents objects. Defaults to Http.globalAgent.
-  - `httpsAgents` - the list of httpsAgents to report socket information about. Can be a single https.Agent or an array of agents. Defaults to Https.globalAgent.
+    - `httpAgents` - the list of httpAgents to report socket information about. Can be a single http.Agent or an array of agents objects. Defaults to Http.globalAgent.
+    - `httpsAgents` - the list of httpsAgents to report socket information about. Can be a single https.Agent or an array of agents. Defaults to Https.globalAgent.
 
 The oppsy object is an EventEmitter so it exposes the same API(`.on` and `.emit`) as the Node EventEmitter object. After it is started, it emits an "ops" event after a set interval with the collected ops information as the event payload.
 

@@ -1,398 +1,398 @@
 [
-  {
-    "date": "2023-02-11T19:36:41Z",
-    "id": 7955940,
-    "issues": [
-      {
-        "id": 1551775535,
-        "labels": [],
-        "number": 51,
-        "title": "chore: bump hoek",
-        "url": "https://github.com/hapijs/heavy/pull/51"
-      }
-    ],
-    "number": 26,
-    "url": "https://github.com/hapijs/heavy/milestone/26",
-    "version": "8.0.1"
-  },
-  {
-    "date": "2023-02-11T19:36:39Z",
-    "id": 7955939,
-    "issues": [
-      {
-        "id": 1228995560,
-        "labels": ["breaking changes", "dependency"],
-        "number": 50,
-        "title": "Support node v18 and drop node v12",
-        "url": "https://github.com/hapijs/heavy/pull/50"
-      },
-      {
-        "id": 1011706759,
-        "labels": ["feature"],
-        "number": 48,
-        "title": "Add event loop utilization support",
-        "url": "https://github.com/hapijs/heavy/pull/48"
-      }
-    ],
-    "number": 25,
-    "url": "https://github.com/hapijs/heavy/milestone/25",
-    "version": "8.0.0"
-  },
-  {
-    "date": "2021-09-24T13:10:43Z",
-    "id": 4973367,
-    "issues": [
-      {
-        "id": 709592334,
-        "labels": [],
-        "number": 44,
-        "title": "upgrade lab to v24",
-        "url": "https://github.com/hapijs/heavy/pull/44"
-      }
-    ],
-    "number": 23,
-    "url": "https://github.com/hapijs/heavy/milestone/23",
-    "version": "7.0.1"
-  },
-  {
-    "date": "2020-01-05T04:47:21Z",
-    "id": 4973366,
-    "issues": [
-      {
-        "id": 545368968,
-        "labels": ["breaking changes", "dependency"],
-        "number": 36,
-        "title": "Only node 12",
-        "url": "https://github.com/hapijs/heavy/issues/36"
-      }
-    ],
-    "number": 22,
-    "url": "https://github.com/hapijs/heavy/milestone/22",
-    "version": "7.0.0"
-  },
-  {
-    "date": "2019-09-12T20:46:24Z",
-    "id": 4574357,
-    "issues": [
-      {
-        "id": 493018502,
-        "labels": ["dependency"],
-        "number": 32,
-        "title": "Update joi",
-        "url": "https://github.com/hapijs/heavy/issues/32"
-      }
-    ],
-    "number": 20,
-    "url": "https://github.com/hapijs/heavy/milestone/20",
-    "version": "6.2.2"
-  },
-  {
-    "date": "2019-08-15T06:53:01Z",
-    "id": 4192132,
-    "issues": [
-      {
-        "id": 480906154,
-        "labels": ["dependency"],
-        "number": 31,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/heavy/issues/31"
-      }
-    ],
-    "number": 19,
-    "url": "https://github.com/hapijs/heavy/milestone/19",
-    "version": "6.2.1"
-  },
-  {
-    "date": "2019-04-02T05:31:29Z",
-    "id": 3792282,
-    "issues": [
-      {
-        "id": 428030473,
-        "labels": ["dependency"],
-        "number": 29,
-        "title": "Change module namespace",
-        "url": "https://github.com/hapijs/heavy/issues/29"
-      }
-    ],
-    "number": 16,
-    "url": "https://github.com/hapijs/heavy/milestone/16",
-    "version": "6.2.0"
-  },
-  {
-    "date": "2018-11-03T00:27:19Z",
-    "id": 3787572,
-    "issues": [
-      {
-        "id": 377001844,
-        "labels": ["non issue"],
+    {
+        "date": "2023-02-11T19:36:41Z",
+        "id": 7955940,
+        "issues": [
+            {
+                "id": 1551775535,
+                "labels": [],
+                "number": 51,
+                "title": "chore: bump hoek",
+                "url": "https://github.com/hapijs/heavy/pull/51"
+            }
+        ],
         "number": 26,
-        "title": "Remove engines",
-        "url": "https://github.com/hapijs/heavy/issues/26"
-      }
-    ],
-    "number": 15,
-    "url": "https://github.com/hapijs/heavy/milestone/15",
-    "version": "6.1.2"
-  },
-  {
-    "date": "2018-11-01T07:59:30Z",
-    "id": 2990027,
-    "issues": [
-      {
-        "id": 376291056,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/heavy/milestone/26",
+        "version": "8.0.1"
+    },
+    {
+        "date": "2023-02-11T19:36:39Z",
+        "id": 7955939,
+        "issues": [
+            {
+                "id": 1228995560,
+                "labels": ["breaking changes", "dependency"],
+                "number": 50,
+                "title": "Support node v18 and drop node v12",
+                "url": "https://github.com/hapijs/heavy/pull/50"
+            },
+            {
+                "id": 1011706759,
+                "labels": ["feature"],
+                "number": 48,
+                "title": "Add event loop utilization support",
+                "url": "https://github.com/hapijs/heavy/pull/48"
+            }
+        ],
         "number": 25,
-        "title": "Update hoek v6",
-        "url": "https://github.com/hapijs/heavy/issues/25"
-      }
-    ],
-    "number": 14,
-    "url": "https://github.com/hapijs/heavy/milestone/14",
-    "version": "6.1.1"
-  },
-  {
-    "date": "2017-12-19T23:59:29Z",
-    "id": 2885291,
-    "issues": [
-      {
-        "id": 283407725,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/heavy/milestone/25",
+        "version": "8.0.0"
+    },
+    {
+        "date": "2021-09-24T13:10:43Z",
+        "id": 4973367,
+        "issues": [
+            {
+                "id": 709592334,
+                "labels": [],
+                "number": 44,
+                "title": "upgrade lab to v24",
+                "url": "https://github.com/hapijs/heavy/pull/44"
+            }
+        ],
         "number": 23,
-        "title": "Allow unknown config keys",
-        "url": "https://github.com/hapijs/heavy/issues/23"
-      }
-    ],
-    "number": 13,
-    "url": "https://github.com/hapijs/heavy/milestone/13",
-    "version": "6.1.0"
-  },
-  {
-    "date": "2017-11-03T07:43:26Z",
-    "id": 2856579,
-    "issues": [
-      {
-        "id": 270898550,
-        "labels": ["breaking changes"],
+        "url": "https://github.com/hapijs/heavy/milestone/23",
+        "version": "7.0.1"
+    },
+    {
+        "date": "2020-01-05T04:47:21Z",
+        "id": 4973366,
+        "issues": [
+            {
+                "id": 545368968,
+                "labels": ["breaking changes", "dependency"],
+                "number": 36,
+                "title": "Only node 12",
+                "url": "https://github.com/hapijs/heavy/issues/36"
+            }
+        ],
         "number": 22,
-        "title": "Throw in check()",
-        "url": "https://github.com/hapijs/heavy/issues/22"
-      }
-    ],
-    "number": 12,
-    "url": "https://github.com/hapijs/heavy/milestone/12",
-    "version": "6.0.0"
-  },
-  {
-    "date": "2017-10-22T08:27:20Z",
-    "id": 2795458,
-    "issues": [
-      {
-        "id": 267446305,
-        "labels": ["dependency"],
-        "number": 21,
-        "title": "Update joi",
-        "url": "https://github.com/hapijs/heavy/issues/21"
-      }
-    ],
-    "number": 11,
-    "url": "https://github.com/hapijs/heavy/milestone/11",
-    "version": "5.0.2"
-  },
-  {
-    "date": "2017-09-26T17:51:39Z",
-    "id": 2795457,
-    "issues": [
-      {
-        "id": 260712779,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/heavy/milestone/22",
+        "version": "7.0.0"
+    },
+    {
+        "date": "2019-09-12T20:46:24Z",
+        "id": 4574357,
+        "issues": [
+            {
+                "id": 493018502,
+                "labels": ["dependency"],
+                "number": 32,
+                "title": "Update joi",
+                "url": "https://github.com/hapijs/heavy/issues/32"
+            }
+        ],
         "number": 20,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/heavy/issues/20"
-      }
-    ],
-    "number": 10,
-    "url": "https://github.com/hapijs/heavy/milestone/10",
-    "version": "5.0.1"
-  },
-  {
-    "date": "2017-09-26T17:50:38Z",
-    "id": 2766916,
-    "issues": [
-      {
-        "id": 257877158,
-        "labels": ["breaking changes"],
-        "number": 18,
-        "title": "Refactor for single connection",
-        "url": "https://github.com/hapijs/heavy/issues/18"
-      }
-    ],
-    "number": 9,
-    "url": "https://github.com/hapijs/heavy/milestone/9",
-    "version": "5.0.0"
-  },
-  {
-    "date": "2019-03-25T00:06:30Z",
-    "id": 4167594,
-    "issues": [
-      {
-        "id": 424676853,
-        "labels": ["lts"],
-        "number": 28,
-        "title": "Commercial version of v4 branch",
-        "url": "https://github.com/hapijs/heavy/issues/28"
-      }
-    ],
-    "number": 17,
-    "url": "https://github.com/hapijs/heavy/milestone/17",
-    "version": "4.1.0"
-  },
-  {
-    "date": "2017-09-14T22:40:58Z",
-    "id": 2162645,
-    "issues": [
-      {
-        "id": 231850040,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/heavy/milestone/20",
+        "version": "6.2.2"
+    },
+    {
+        "date": "2019-08-15T06:53:01Z",
+        "id": 4192132,
+        "issues": [
+            {
+                "id": 480906154,
+                "labels": ["dependency"],
+                "number": 31,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/heavy/issues/31"
+            }
+        ],
+        "number": 19,
+        "url": "https://github.com/hapijs/heavy/milestone/19",
+        "version": "6.2.1"
+    },
+    {
+        "date": "2019-04-02T05:31:29Z",
+        "id": 3792282,
+        "issues": [
+            {
+                "id": 428030473,
+                "labels": ["dependency"],
+                "number": 29,
+                "title": "Change module namespace",
+                "url": "https://github.com/hapijs/heavy/issues/29"
+            }
+        ],
         "number": 16,
-        "title": "Update deps.",
-        "url": "https://github.com/hapijs/heavy/issues/16"
-      }
-    ],
-    "number": 8,
-    "url": "https://github.com/hapijs/heavy/milestone/8",
-    "version": "4.0.4"
-  },
-  {
-    "date": "2016-11-29T02:01:25Z",
-    "id": 1908035,
-    "issues": [
-      {
-        "id": 192168269,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/heavy/milestone/16",
+        "version": "6.2.0"
+    },
+    {
+        "date": "2018-11-03T00:27:19Z",
+        "id": 3787572,
+        "issues": [
+            {
+                "id": 377001844,
+                "labels": ["non issue"],
+                "number": 26,
+                "title": "Remove engines",
+                "url": "https://github.com/hapijs/heavy/issues/26"
+            }
+        ],
         "number": 15,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/heavy/issues/15"
-      }
-    ],
-    "number": 7,
-    "url": "https://github.com/hapijs/heavy/milestone/7",
-    "version": "4.0.3"
-  },
-  {
-    "date": "2016-07-27T19:53:58Z",
-    "id": 1750067,
-    "issues": [
-      {
-        "id": 167941250,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/heavy/milestone/15",
+        "version": "6.1.2"
+    },
+    {
+        "date": "2018-11-01T07:59:30Z",
+        "id": 2990027,
+        "issues": [
+            {
+                "id": 376291056,
+                "labels": ["dependency"],
+                "number": 25,
+                "title": "Update hoek v6",
+                "url": "https://github.com/hapijs/heavy/issues/25"
+            }
+        ],
+        "number": 14,
+        "url": "https://github.com/hapijs/heavy/milestone/14",
+        "version": "6.1.1"
+    },
+    {
+        "date": "2017-12-19T23:59:29Z",
+        "id": 2885291,
+        "issues": [
+            {
+                "id": 283407725,
+                "labels": ["feature"],
+                "number": 23,
+                "title": "Allow unknown config keys",
+                "url": "https://github.com/hapijs/heavy/issues/23"
+            }
+        ],
         "number": 13,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/heavy/issues/13"
-      }
-    ],
-    "number": 6,
-    "url": "https://github.com/hapijs/heavy/milestone/6",
-    "version": "4.0.2"
-  },
-  {
-    "date": "2016-05-05T17:04:54Z",
-    "id": 1387902,
-    "issues": [
-      {
-        "id": 152697089,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/heavy/milestone/13",
+        "version": "6.1.0"
+    },
+    {
+        "date": "2017-11-03T07:43:26Z",
+        "id": 2856579,
+        "issues": [
+            {
+                "id": 270898550,
+                "labels": ["breaking changes"],
+                "number": 22,
+                "title": "Throw in check()",
+                "url": "https://github.com/hapijs/heavy/issues/22"
+            }
+        ],
+        "number": 12,
+        "url": "https://github.com/hapijs/heavy/milestone/12",
+        "version": "6.0.0"
+    },
+    {
+        "date": "2017-10-22T08:27:20Z",
+        "id": 2795458,
+        "issues": [
+            {
+                "id": 267446305,
+                "labels": ["dependency"],
+                "number": 21,
+                "title": "Update joi",
+                "url": "https://github.com/hapijs/heavy/issues/21"
+            }
+        ],
         "number": 11,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/heavy/pull/11"
-      }
-    ],
-    "number": 5,
-    "url": "https://github.com/hapijs/heavy/milestone/5",
-    "version": "4.0.1"
-  },
-  {
-    "date": "2015-11-02T04:02:09Z",
-    "id": 1387901,
-    "issues": [
-      {
-        "id": 114519942,
-        "labels": ["breaking changes"],
+        "url": "https://github.com/hapijs/heavy/milestone/11",
+        "version": "5.0.2"
+    },
+    {
+        "date": "2017-09-26T17:51:39Z",
+        "id": 2795457,
+        "issues": [
+            {
+                "id": 260712779,
+                "labels": ["dependency"],
+                "number": 20,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/heavy/issues/20"
+            }
+        ],
         "number": 10,
-        "title": "ES6 style changes and node v4",
-        "url": "https://github.com/hapijs/heavy/issues/10"
-      }
-    ],
-    "number": 4,
-    "url": "https://github.com/hapijs/heavy/milestone/4",
-    "version": "4.0.0"
-  },
-  {
-    "date": "2015-11-02T03:55:36Z",
-    "id": 898091,
-    "issues": [
-      {
-        "id": 102354170,
-        "labels": ["documentation", "dependency"],
+        "url": "https://github.com/hapijs/heavy/milestone/10",
+        "version": "5.0.1"
+    },
+    {
+        "date": "2017-09-26T17:50:38Z",
+        "id": 2766916,
+        "issues": [
+            {
+                "id": 257877158,
+                "labels": ["breaking changes"],
+                "number": 18,
+                "title": "Refactor for single connection",
+                "url": "https://github.com/hapijs/heavy/issues/18"
+            }
+        ],
+        "number": 9,
+        "url": "https://github.com/hapijs/heavy/milestone/9",
+        "version": "5.0.0"
+    },
+    {
+        "date": "2019-03-25T00:06:30Z",
+        "id": 4167594,
+        "issues": [
+            {
+                "id": 424676853,
+                "labels": ["lts"],
+                "number": 28,
+                "title": "Commercial version of v4 branch",
+                "url": "https://github.com/hapijs/heavy/issues/28"
+            }
+        ],
+        "number": 17,
+        "url": "https://github.com/hapijs/heavy/milestone/17",
+        "version": "4.1.0"
+    },
+    {
+        "date": "2017-09-14T22:40:58Z",
+        "id": 2162645,
+        "issues": [
+            {
+                "id": 231850040,
+                "labels": ["dependency"],
+                "number": 16,
+                "title": "Update deps.",
+                "url": "https://github.com/hapijs/heavy/issues/16"
+            }
+        ],
         "number": 8,
-        "title": "Closes #6, Closes #7",
-        "url": "https://github.com/hapijs/heavy/pull/8"
-      },
-      {
-        "id": 102353979,
-        "labels": ["documentation"],
+        "url": "https://github.com/hapijs/heavy/milestone/8",
+        "version": "4.0.4"
+    },
+    {
+        "date": "2016-11-29T02:01:25Z",
+        "id": 1908035,
+        "issues": [
+            {
+                "id": 192168269,
+                "labels": ["dependency"],
+                "number": 15,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/heavy/issues/15"
+            }
+        ],
         "number": 7,
-        "title": "bring heavy up to date with standards",
-        "url": "https://github.com/hapijs/heavy/issues/7"
-      },
-      {
-        "id": 102353903,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/heavy/milestone/7",
+        "version": "4.0.3"
+    },
+    {
+        "date": "2016-07-27T19:53:58Z",
+        "id": 1750067,
+        "issues": [
+            {
+                "id": 167941250,
+                "labels": ["dependency"],
+                "number": 13,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/heavy/issues/13"
+            }
+        ],
         "number": 6,
-        "title": "upgrade joi",
-        "url": "https://github.com/hapijs/heavy/issues/6"
-      },
-      {
-        "id": 58947523,
-        "labels": ["test"],
+        "url": "https://github.com/hapijs/heavy/milestone/6",
+        "version": "4.0.2"
+    },
+    {
+        "date": "2016-05-05T17:04:54Z",
+        "id": 1387902,
+        "issues": [
+            {
+                "id": 152697089,
+                "labels": ["dependency"],
+                "number": 11,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/heavy/pull/11"
+            }
+        ],
+        "number": 5,
+        "url": "https://github.com/hapijs/heavy/milestone/5",
+        "version": "4.0.1"
+    },
+    {
+        "date": "2015-11-02T04:02:09Z",
+        "id": 1387901,
+        "issues": [
+            {
+                "id": 114519942,
+                "labels": ["breaking changes"],
+                "number": 10,
+                "title": "ES6 style changes and node v4",
+                "url": "https://github.com/hapijs/heavy/issues/10"
+            }
+        ],
         "number": 4,
-        "title": "Update .travis.yml",
-        "url": "https://github.com/hapijs/heavy/pull/4"
-      }
-    ],
-    "number": 3,
-    "url": "https://github.com/hapijs/heavy/milestone/3",
-    "version": "3.0.1"
-  },
-  {
-    "date": "2014-12-09T22:49:22Z",
-    "id": 814651,
-    "issues": [
-      {
-        "id": 49594864,
-        "labels": ["feature"],
-        "number": 2,
-        "title": "Update check() to return reason why",
-        "url": "https://github.com/hapijs/heavy/issues/2"
-      }
-    ],
-    "number": 1,
-    "url": "https://github.com/hapijs/heavy/milestone/1",
-    "version": "3.0.0"
-  },
-  {
-    "date": "2014-10-31T02:18:38Z",
-    "id": 847539,
-    "issues": [
-      {
-        "id": 47352621,
-        "labels": ["breaking changes"],
+        "url": "https://github.com/hapijs/heavy/milestone/4",
+        "version": "4.0.0"
+    },
+    {
+        "date": "2015-11-02T03:55:36Z",
+        "id": 898091,
+        "issues": [
+            {
+                "id": 102354170,
+                "labels": ["documentation", "dependency"],
+                "number": 8,
+                "title": "Closes #6, Closes #7",
+                "url": "https://github.com/hapijs/heavy/pull/8"
+            },
+            {
+                "id": 102353979,
+                "labels": ["documentation"],
+                "number": 7,
+                "title": "bring heavy up to date with standards",
+                "url": "https://github.com/hapijs/heavy/issues/7"
+            },
+            {
+                "id": 102353903,
+                "labels": ["dependency"],
+                "number": 6,
+                "title": "upgrade joi",
+                "url": "https://github.com/hapijs/heavy/issues/6"
+            },
+            {
+                "id": 58947523,
+                "labels": ["test"],
+                "number": 4,
+                "title": "Update .travis.yml",
+                "url": "https://github.com/hapijs/heavy/pull/4"
+            }
+        ],
+        "number": 3,
+        "url": "https://github.com/hapijs/heavy/milestone/3",
+        "version": "3.0.1"
+    },
+    {
+        "date": "2014-12-09T22:49:22Z",
+        "id": 814651,
+        "issues": [
+            {
+                "id": 49594864,
+                "labels": ["feature"],
+                "number": 2,
+                "title": "Update check() to return reason why",
+                "url": "https://github.com/hapijs/heavy/issues/2"
+            }
+        ],
         "number": 1,
-        "title": "Split sampling from policy",
-        "url": "https://github.com/hapijs/heavy/issues/1"
-      }
-    ],
-    "number": 2,
-    "url": "https://github.com/hapijs/heavy/milestone/2",
-    "version": "2.0.0"
-  }
+        "url": "https://github.com/hapijs/heavy/milestone/1",
+        "version": "3.0.0"
+    },
+    {
+        "date": "2014-10-31T02:18:38Z",
+        "id": 847539,
+        "issues": [
+            {
+                "id": 47352621,
+                "labels": ["breaking changes"],
+                "number": 1,
+                "title": "Split sampling from policy",
+                "url": "https://github.com/hapijs/heavy/issues/1"
+            }
+        ],
+        "number": 2,
+        "url": "https://github.com/hapijs/heavy/milestone/2",
+        "version": "2.0.0"
+    }
 ]

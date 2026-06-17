@@ -1,464 +1,464 @@
 [
-  {
-    "date": "2025-12-09T17:04:51Z",
-    "id": 14313399,
-    "issues": [
-      {
-        "id": 3711785066,
-        "labels": ["bug", "documentation"],
-        "number": 63,
-        "title": "fix: 🐛 Add timing-safe comparison tests and update API docs",
-        "url": "https://github.com/hapijs/cryptiles/pull/63"
-      }
-    ],
-    "number": 31,
-    "url": "https://github.com/hapijs/cryptiles/milestone/31",
-    "version": "6.0.2"
-  },
-  {
-    "date": "2023-02-11T18:56:26Z",
-    "id": 7953238,
-    "issues": [
-      {
-        "id": 1580971904,
-        "labels": [],
-        "number": 60,
-        "title": "chore: bump packages",
-        "url": "https://github.com/hapijs/cryptiles/pull/60"
-      }
-    ],
-    "number": 30,
-    "url": "https://github.com/hapijs/cryptiles/milestone/30",
-    "version": "6.0.1"
-  },
-  {
-    "date": "2022-05-07T22:43:55Z",
-    "id": 7953237,
-    "issues": [
-      {
-        "id": 1228485070,
-        "labels": ["breaking changes", "dependency"],
-        "number": 58,
-        "title": "Support node v18 and drop node v12",
-        "url": "https://github.com/hapijs/cryptiles/pull/58"
-      }
-    ],
-    "number": 29,
-    "url": "https://github.com/hapijs/cryptiles/milestone/29",
-    "version": "6.0.0"
-  },
-  {
-    "date": "2020-05-15T20:25:04Z",
-    "id": 4973277,
-    "issues": [
-      {
-        "id": 619225572,
-        "labels": ["feature"],
-        "number": 51,
-        "title": "Add randomAlphanumString()",
-        "url": "https://github.com/hapijs/cryptiles/issues/51"
-      }
-    ],
-    "number": 27,
-    "url": "https://github.com/hapijs/cryptiles/milestone/27",
-    "version": "5.1.0"
-  },
-  {
-    "date": "2020-01-05T01:06:58Z",
-    "id": 4973276,
-    "issues": [
-      {
-        "id": 545352270,
-        "labels": ["breaking changes", "dependency"],
-        "number": 50,
-        "title": "Only node 12",
-        "url": "https://github.com/hapijs/cryptiles/issues/50"
-      }
-    ],
-    "number": 26,
-    "url": "https://github.com/hapijs/cryptiles/milestone/26",
-    "version": "5.0.0"
-  },
-  {
-    "date": "2019-09-19T18:16:57Z",
-    "id": 4192199,
-    "issues": [
-      {
-        "id": 481120957,
-        "labels": ["types"],
-        "number": 45,
-        "title": "Added TS declarations",
-        "url": "https://github.com/hapijs/cryptiles/pull/45"
-      }
-    ],
-    "number": 24,
-    "url": "https://github.com/hapijs/cryptiles/milestone/24",
-    "version": "4.2.1"
-  },
-  {
-    "date": "2019-04-02T06:15:55Z",
-    "id": 3792281,
-    "issues": [
-      {
-        "id": 428041448,
-        "labels": ["dependency"],
-        "number": 40,
-        "title": "Change module namespace",
-        "url": "https://github.com/hapijs/cryptiles/issues/40"
-      }
-    ],
-    "number": 20,
-    "url": "https://github.com/hapijs/cryptiles/milestone/20",
-    "version": "4.2.0"
-  },
-  {
-    "date": "2018-11-03T00:26:25Z",
-    "id": 3446717,
-    "issues": [
-      {
-        "id": 377001781,
-        "labels": ["non issue"],
-        "number": 36,
-        "title": "Remove engines",
-        "url": "https://github.com/hapijs/cryptiles/issues/36"
-      }
-    ],
-    "number": 18,
-    "url": "https://github.com/hapijs/cryptiles/milestone/18",
-    "version": "4.1.3"
-  },
-  {
-    "date": "2018-06-24T04:07:49Z",
-    "id": 2904486,
-    "issues": [
-      {
-        "id": 335149107,
-        "labels": ["bug", "security"],
-        "number": 34,
-        "title": "randomDigits() generates biased random digits",
-        "url": "https://github.com/hapijs/cryptiles/issues/34"
-      }
-    ],
-    "number": 17,
-    "url": "https://github.com/hapijs/cryptiles/milestone/17",
-    "version": "4.1.2"
-  },
-  {
-    "date": "2017-11-10T20:15:19Z",
-    "id": 2886953,
-    "issues": [
-      {
-        "id": 272885440,
-        "labels": ["bug"],
-        "number": 33,
-        "title": "fix(fixedTimeComparison): use Buffer.from",
-        "url": "https://github.com/hapijs/cryptiles/pull/33"
-      }
-    ],
-    "number": 16,
-    "url": "https://github.com/hapijs/cryptiles/milestone/16",
-    "version": "4.1.1"
-  },
-  {
-    "date": "2017-11-03T20:46:13Z",
-    "id": 2886952,
-    "issues": [
-      {
-        "id": 271113883,
-        "labels": ["feature"],
-        "number": 32,
-        "title": "Add fixedTimeComparison()",
-        "url": "https://github.com/hapijs/cryptiles/issues/32"
-      }
-    ],
-    "number": 15,
-    "url": "https://github.com/hapijs/cryptiles/milestone/15",
-    "version": "4.1.0"
-  },
-  {
-    "date": "2017-11-03T20:45:19Z",
-    "id": 2794201,
-    "issues": [
-      {
-        "id": 270893394,
-        "labels": ["dependency"],
+    {
+        "date": "2025-12-09T17:04:51Z",
+        "id": 14313399,
+        "issues": [
+            {
+                "id": 3711785066,
+                "labels": ["bug", "documentation"],
+                "number": 63,
+                "title": "fix: 🐛 Add timing-safe comparison tests and update API docs",
+                "url": "https://github.com/hapijs/cryptiles/pull/63"
+            }
+        ],
         "number": 31,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/cryptiles/issues/31"
-      }
-    ],
-    "number": 14,
-    "url": "https://github.com/hapijs/cryptiles/milestone/14",
-    "version": "4.0.2"
-  },
-  {
-    "date": "2017-09-26T09:08:43Z",
-    "id": 2787939,
-    "issues": [
-      {
-        "id": 260547757,
-        "labels": ["dependency"],
-        "number": 28,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/cryptiles/issues/28"
-      }
-    ],
-    "number": 13,
-    "url": "https://github.com/hapijs/cryptiles/milestone/13",
-    "version": "4.0.1"
-  },
-  {
-    "date": "2017-09-24T21:26:52Z",
-    "id": 2546750,
-    "issues": [
-      {
-        "id": 260117167,
-        "labels": ["breaking changes"],
+        "url": "https://github.com/hapijs/cryptiles/milestone/31",
+        "version": "6.0.2"
+    },
+    {
+        "date": "2023-02-11T18:56:26Z",
+        "id": 7953238,
+        "issues": [
+            {
+                "id": 1580971904,
+                "labels": [],
+                "number": 60,
+                "title": "chore: bump packages",
+                "url": "https://github.com/hapijs/cryptiles/pull/60"
+            }
+        ],
+        "number": 30,
+        "url": "https://github.com/hapijs/cryptiles/milestone/30",
+        "version": "6.0.1"
+    },
+    {
+        "date": "2022-05-07T22:43:55Z",
+        "id": 7953237,
+        "issues": [
+            {
+                "id": 1228485070,
+                "labels": ["breaking changes", "dependency"],
+                "number": 58,
+                "title": "Support node v18 and drop node v12",
+                "url": "https://github.com/hapijs/cryptiles/pull/58"
+            }
+        ],
+        "number": 29,
+        "url": "https://github.com/hapijs/cryptiles/milestone/29",
+        "version": "6.0.0"
+    },
+    {
+        "date": "2020-05-15T20:25:04Z",
+        "id": 4973277,
+        "issues": [
+            {
+                "id": 619225572,
+                "labels": ["feature"],
+                "number": 51,
+                "title": "Add randomAlphanumString()",
+                "url": "https://github.com/hapijs/cryptiles/issues/51"
+            }
+        ],
         "number": 27,
-        "title": "Throw errors",
-        "url": "https://github.com/hapijs/cryptiles/issues/27"
-      },
-      {
-        "id": 177288767,
-        "labels": ["breaking changes"],
-        "number": 24,
-        "title": "Use crypto.timingSafeEqual for fixedTimeComparison",
-        "url": "https://github.com/hapijs/cryptiles/issues/24"
-      }
-    ],
-    "number": 12,
-    "url": "https://github.com/hapijs/cryptiles/milestone/12",
-    "version": "4.0.0"
-  },
-  {
-    "date": "2019-04-02T06:12:23Z",
-    "id": 4167581,
-    "issues": [
-      {
-        "id": 424675671,
-        "labels": ["lts"],
-        "number": 39,
-        "title": "Commercial version of v3 branch",
-        "url": "https://github.com/hapijs/cryptiles/issues/39"
-      }
-    ],
-    "number": 22,
-    "url": "https://github.com/hapijs/cryptiles/milestone/22",
-    "version": "3.2.0"
-  },
-  {
-    "date": "2018-11-05T22:45:49Z",
-    "id": 3798334,
-    "issues": [
-      {
-        "id": 377615014,
-        "labels": ["non issue", "lts"],
-        "number": 37,
-        "title": "Remove engines",
-        "url": "https://github.com/hapijs/cryptiles/issues/37"
-      }
-    ],
-    "number": 21,
-    "url": "https://github.com/hapijs/cryptiles/milestone/21",
-    "version": "3.1.4"
-  },
-  {
-    "date": "2018-11-02T21:48:07Z",
-    "id": 3792011,
-    "issues": [
-      {
-        "id": 376973840,
-        "labels": ["bug", "lts"],
-        "number": 35,
-        "title": "randomDigits() generates biased random digits",
-        "url": "https://github.com/hapijs/cryptiles/issues/35"
-      }
-    ],
-    "number": 19,
-    "url": "https://github.com/hapijs/cryptiles/milestone/19",
-    "version": "3.1.3"
-  },
-  {
-    "date": "2017-05-28T06:24:36Z",
-    "id": 1984963,
-    "issues": [
-      {
-        "id": 231849594,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/cryptiles/milestone/27",
+        "version": "5.1.0"
+    },
+    {
+        "date": "2020-01-05T01:06:58Z",
+        "id": 4973276,
+        "issues": [
+            {
+                "id": 545352270,
+                "labels": ["breaking changes", "dependency"],
+                "number": 50,
+                "title": "Only node 12",
+                "url": "https://github.com/hapijs/cryptiles/issues/50"
+            }
+        ],
         "number": 26,
-        "title": "Update deps.",
-        "url": "https://github.com/hapijs/cryptiles/issues/26"
-      }
-    ],
-    "number": 11,
-    "url": "https://github.com/hapijs/cryptiles/milestone/11",
-    "version": "3.1.2"
-  },
-  {
-    "date": "2016-09-05T22:10:42Z",
-    "id": 1984959,
-    "issues": [
-      {
-        "id": 175131602,
-        "labels": ["bug"],
-        "number": 23,
-        "title": "Support node 4",
-        "url": "https://github.com/hapijs/cryptiles/issues/23"
-      }
-    ],
-    "number": 10,
-    "url": "https://github.com/hapijs/cryptiles/milestone/10",
-    "version": "3.1.1"
-  },
-  {
-    "date": "2016-09-05T22:01:59Z",
-    "id": 1908029,
-    "issues": [
-      {
-        "id": 175131040,
-        "labels": ["feature"],
-        "number": 22,
-        "title": "Generate random digits",
-        "url": "https://github.com/hapijs/cryptiles/issues/22"
-      }
-    ],
-    "number": 9,
-    "url": "https://github.com/hapijs/cryptiles/milestone/9",
-    "version": "3.1.0"
-  },
-  {
-    "date": "2016-07-27T19:50:53Z",
-    "id": 1777268,
-    "issues": [
-      {
-        "id": 167940345,
-        "labels": ["dependency"],
-        "number": 21,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/cryptiles/issues/21"
-      }
-    ],
-    "number": 8,
-    "url": "https://github.com/hapijs/cryptiles/milestone/8",
-    "version": "3.0.2"
-  },
-  {
-    "date": "2016-05-19T18:00:07Z",
-    "id": 1387893,
-    "issues": [
-      {
-        "id": 155618825,
-        "labels": ["documentation", "test"],
-        "number": 19,
-        "title": "Test on node v6, update dependencies",
-        "url": "https://github.com/hapijs/cryptiles/pull/19"
-      }
-    ],
-    "number": 7,
-    "url": "https://github.com/hapijs/cryptiles/milestone/7",
-    "version": "3.0.1"
-  },
-  {
-    "date": "2015-11-02T03:43:40Z",
-    "id": 1297126,
-    "issues": [
-      {
-        "id": 114518101,
-        "labels": ["breaking changes"],
+        "url": "https://github.com/hapijs/cryptiles/milestone/26",
+        "version": "5.0.0"
+    },
+    {
+        "date": "2019-09-19T18:16:57Z",
+        "id": 4192199,
+        "issues": [
+            {
+                "id": 481120957,
+                "labels": ["types"],
+                "number": 45,
+                "title": "Added TS declarations",
+                "url": "https://github.com/hapijs/cryptiles/pull/45"
+            }
+        ],
+        "number": 24,
+        "url": "https://github.com/hapijs/cryptiles/milestone/24",
+        "version": "4.2.1"
+    },
+    {
+        "date": "2019-04-02T06:15:55Z",
+        "id": 3792281,
+        "issues": [
+            {
+                "id": 428041448,
+                "labels": ["dependency"],
+                "number": 40,
+                "title": "Change module namespace",
+                "url": "https://github.com/hapijs/cryptiles/issues/40"
+            }
+        ],
+        "number": 20,
+        "url": "https://github.com/hapijs/cryptiles/milestone/20",
+        "version": "4.2.0"
+    },
+    {
+        "date": "2018-11-03T00:26:25Z",
+        "id": 3446717,
+        "issues": [
+            {
+                "id": 377001781,
+                "labels": ["non issue"],
+                "number": 36,
+                "title": "Remove engines",
+                "url": "https://github.com/hapijs/cryptiles/issues/36"
+            }
+        ],
         "number": 18,
-        "title": "es6. Closes #17",
-        "url": "https://github.com/hapijs/cryptiles/pull/18"
-      },
-      {
-        "id": 114517936,
-        "labels": ["breaking changes"],
+        "url": "https://github.com/hapijs/cryptiles/milestone/18",
+        "version": "4.1.3"
+    },
+    {
+        "date": "2018-06-24T04:07:49Z",
+        "id": 2904486,
+        "issues": [
+            {
+                "id": 335149107,
+                "labels": ["bug", "security"],
+                "number": 34,
+                "title": "randomDigits() generates biased random digits",
+                "url": "https://github.com/hapijs/cryptiles/issues/34"
+            }
+        ],
         "number": 17,
-        "title": "ES6 style changes and node v4",
-        "url": "https://github.com/hapijs/cryptiles/issues/17"
-      }
-    ],
-    "number": 6,
-    "url": "https://github.com/hapijs/cryptiles/milestone/6",
-    "version": "3.0.0"
-  },
-  {
-    "date": "2015-09-09T06:09:59Z",
-    "id": 790765,
-    "issues": [
-      {
-        "id": 105526465,
-        "labels": ["documentation", "test"],
+        "url": "https://github.com/hapijs/cryptiles/milestone/17",
+        "version": "4.1.2"
+    },
+    {
+        "date": "2017-11-10T20:15:19Z",
+        "id": 2886953,
+        "issues": [
+            {
+                "id": 272885440,
+                "labels": ["bug"],
+                "number": 33,
+                "title": "fix(fixedTimeComparison): use Buffer.from",
+                "url": "https://github.com/hapijs/cryptiles/pull/33"
+            }
+        ],
         "number": 16,
-        "title": "Update hapi style",
-        "url": "https://github.com/hapijs/cryptiles/issues/16"
-      }
-    ],
-    "number": 5,
-    "url": "https://github.com/hapijs/cryptiles/milestone/5",
-    "version": "2.0.5"
-  },
-  {
-    "date": "2014-09-15T22:11:54Z",
-    "id": 780206,
-    "issues": [
-      {
-        "id": 42824734,
-        "labels": ["non issue"],
+        "url": "https://github.com/hapijs/cryptiles/milestone/16",
+        "version": "4.1.1"
+    },
+    {
+        "date": "2017-11-03T20:46:13Z",
+        "id": 2886952,
+        "issues": [
+            {
+                "id": 271113883,
+                "labels": ["feature"],
+                "number": 32,
+                "title": "Add fixedTimeComparison()",
+                "url": "https://github.com/hapijs/cryptiles/issues/32"
+            }
+        ],
+        "number": 15,
+        "url": "https://github.com/hapijs/cryptiles/milestone/15",
+        "version": "4.1.0"
+    },
+    {
+        "date": "2017-11-03T20:45:19Z",
+        "id": 2794201,
+        "issues": [
+            {
+                "id": 270893394,
+                "labels": ["dependency"],
+                "number": 31,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/cryptiles/issues/31"
+            }
+        ],
+        "number": 14,
+        "url": "https://github.com/hapijs/cryptiles/milestone/14",
+        "version": "4.0.2"
+    },
+    {
+        "date": "2017-09-26T09:08:43Z",
+        "id": 2787939,
+        "issues": [
+            {
+                "id": 260547757,
+                "labels": ["dependency"],
+                "number": 28,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/cryptiles/issues/28"
+            }
+        ],
+        "number": 13,
+        "url": "https://github.com/hapijs/cryptiles/milestone/13",
+        "version": "4.0.1"
+    },
+    {
+        "date": "2017-09-24T21:26:52Z",
+        "id": 2546750,
+        "issues": [
+            {
+                "id": 260117167,
+                "labels": ["breaking changes"],
+                "number": 27,
+                "title": "Throw errors",
+                "url": "https://github.com/hapijs/cryptiles/issues/27"
+            },
+            {
+                "id": 177288767,
+                "labels": ["breaking changes"],
+                "number": 24,
+                "title": "Use crypto.timingSafeEqual for fixedTimeComparison",
+                "url": "https://github.com/hapijs/cryptiles/issues/24"
+            }
+        ],
+        "number": 12,
+        "url": "https://github.com/hapijs/cryptiles/milestone/12",
+        "version": "4.0.0"
+    },
+    {
+        "date": "2019-04-02T06:12:23Z",
+        "id": 4167581,
+        "issues": [
+            {
+                "id": 424675671,
+                "labels": ["lts"],
+                "number": 39,
+                "title": "Commercial version of v3 branch",
+                "url": "https://github.com/hapijs/cryptiles/issues/39"
+            }
+        ],
+        "number": 22,
+        "url": "https://github.com/hapijs/cryptiles/milestone/22",
+        "version": "3.2.0"
+    },
+    {
+        "date": "2018-11-05T22:45:49Z",
+        "id": 3798334,
+        "issues": [
+            {
+                "id": 377615014,
+                "labels": ["non issue", "lts"],
+                "number": 37,
+                "title": "Remove engines",
+                "url": "https://github.com/hapijs/cryptiles/issues/37"
+            }
+        ],
+        "number": 21,
+        "url": "https://github.com/hapijs/cryptiles/milestone/21",
+        "version": "3.1.4"
+    },
+    {
+        "date": "2018-11-02T21:48:07Z",
+        "id": 3792011,
+        "issues": [
+            {
+                "id": 376973840,
+                "labels": ["bug", "lts"],
+                "number": 35,
+                "title": "randomDigits() generates biased random digits",
+                "url": "https://github.com/hapijs/cryptiles/issues/35"
+            }
+        ],
+        "number": 19,
+        "url": "https://github.com/hapijs/cryptiles/milestone/19",
+        "version": "3.1.3"
+    },
+    {
+        "date": "2017-05-28T06:24:36Z",
+        "id": 1984963,
+        "issues": [
+            {
+                "id": 231849594,
+                "labels": ["dependency"],
+                "number": 26,
+                "title": "Update deps.",
+                "url": "https://github.com/hapijs/cryptiles/issues/26"
+            }
+        ],
+        "number": 11,
+        "url": "https://github.com/hapijs/cryptiles/milestone/11",
+        "version": "3.1.2"
+    },
+    {
+        "date": "2016-09-05T22:10:42Z",
+        "id": 1984959,
+        "issues": [
+            {
+                "id": 175131602,
+                "labels": ["bug"],
+                "number": 23,
+                "title": "Support node 4",
+                "url": "https://github.com/hapijs/cryptiles/issues/23"
+            }
+        ],
         "number": 10,
-        "title": "Move to hapijs",
-        "url": "https://github.com/hapijs/cryptiles/issues/10"
-      }
-    ],
-    "number": 4,
-    "url": "https://github.com/hapijs/cryptiles/milestone/4",
-    "version": "2.0.4"
-  },
-  {
-    "date": "2014-09-05T19:43:02Z",
-    "id": 740453,
-    "issues": [
-      {
-        "id": 42081933,
-        "labels": ["test"],
+        "url": "https://github.com/hapijs/cryptiles/milestone/10",
+        "version": "3.1.1"
+    },
+    {
+        "date": "2016-09-05T22:01:59Z",
+        "id": 1908029,
+        "issues": [
+            {
+                "id": 175131040,
+                "labels": ["feature"],
+                "number": 22,
+                "title": "Generate random digits",
+                "url": "https://github.com/hapijs/cryptiles/issues/22"
+            }
+        ],
         "number": 9,
-        "title": "lab 4.0",
-        "url": "https://github.com/hapijs/cryptiles/issues/9"
-      }
-    ],
-    "number": 3,
-    "url": "https://github.com/hapijs/cryptiles/milestone/3",
-    "version": "2.0.3"
-  },
-  {
-    "date": "2014-08-02T07:22:12Z",
-    "id": 623577,
-    "issues": [
-      {
-        "id": 39344209,
-        "labels": [],
+        "url": "https://github.com/hapijs/cryptiles/milestone/9",
+        "version": "3.1.0"
+    },
+    {
+        "date": "2016-07-27T19:50:53Z",
+        "id": 1777268,
+        "issues": [
+            {
+                "id": 167940345,
+                "labels": ["dependency"],
+                "number": 21,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/cryptiles/issues/21"
+            }
+        ],
         "number": 8,
-        "title": "Update contact",
-        "url": "https://github.com/hapijs/cryptiles/issues/8"
-      }
-    ],
-    "number": 2,
-    "url": "https://github.com/hapijs/cryptiles/milestone/2",
-    "version": "2.0.2"
-  },
-  {
-    "date": "2014-04-08T07:41:09Z",
-    "id": 623576,
-    "issues": [
-      {
-        "id": 31049215,
-        "labels": ["test"],
+        "url": "https://github.com/hapijs/cryptiles/milestone/8",
+        "version": "3.0.2"
+    },
+    {
+        "date": "2016-05-19T18:00:07Z",
+        "id": 1387893,
+        "issues": [
+            {
+                "id": 155618825,
+                "labels": ["documentation", "test"],
+                "number": 19,
+                "title": "Test on node v6, update dependencies",
+                "url": "https://github.com/hapijs/cryptiles/pull/19"
+            }
+        ],
+        "number": 7,
+        "url": "https://github.com/hapijs/cryptiles/milestone/7",
+        "version": "3.0.1"
+    },
+    {
+        "date": "2015-11-02T03:43:40Z",
+        "id": 1297126,
+        "issues": [
+            {
+                "id": 114518101,
+                "labels": ["breaking changes"],
+                "number": 18,
+                "title": "es6. Closes #17",
+                "url": "https://github.com/hapijs/cryptiles/pull/18"
+            },
+            {
+                "id": 114517936,
+                "labels": ["breaking changes"],
+                "number": 17,
+                "title": "ES6 style changes and node v4",
+                "url": "https://github.com/hapijs/cryptiles/issues/17"
+            }
+        ],
+        "number": 6,
+        "url": "https://github.com/hapijs/cryptiles/milestone/6",
+        "version": "3.0.0"
+    },
+    {
+        "date": "2015-09-09T06:09:59Z",
+        "id": 790765,
+        "issues": [
+            {
+                "id": 105526465,
+                "labels": ["documentation", "test"],
+                "number": 16,
+                "title": "Update hapi style",
+                "url": "https://github.com/hapijs/cryptiles/issues/16"
+            }
+        ],
         "number": 5,
-        "title": "Bring coverage back to 100% after lab partial condition result coverage",
-        "url": "https://github.com/hapijs/cryptiles/issues/5"
-      }
-    ],
-    "number": 1,
-    "url": "https://github.com/hapijs/cryptiles/milestone/1",
-    "version": "2.0.1"
-  }
+        "url": "https://github.com/hapijs/cryptiles/milestone/5",
+        "version": "2.0.5"
+    },
+    {
+        "date": "2014-09-15T22:11:54Z",
+        "id": 780206,
+        "issues": [
+            {
+                "id": 42824734,
+                "labels": ["non issue"],
+                "number": 10,
+                "title": "Move to hapijs",
+                "url": "https://github.com/hapijs/cryptiles/issues/10"
+            }
+        ],
+        "number": 4,
+        "url": "https://github.com/hapijs/cryptiles/milestone/4",
+        "version": "2.0.4"
+    },
+    {
+        "date": "2014-09-05T19:43:02Z",
+        "id": 740453,
+        "issues": [
+            {
+                "id": 42081933,
+                "labels": ["test"],
+                "number": 9,
+                "title": "lab 4.0",
+                "url": "https://github.com/hapijs/cryptiles/issues/9"
+            }
+        ],
+        "number": 3,
+        "url": "https://github.com/hapijs/cryptiles/milestone/3",
+        "version": "2.0.3"
+    },
+    {
+        "date": "2014-08-02T07:22:12Z",
+        "id": 623577,
+        "issues": [
+            {
+                "id": 39344209,
+                "labels": [],
+                "number": 8,
+                "title": "Update contact",
+                "url": "https://github.com/hapijs/cryptiles/issues/8"
+            }
+        ],
+        "number": 2,
+        "url": "https://github.com/hapijs/cryptiles/milestone/2",
+        "version": "2.0.2"
+    },
+    {
+        "date": "2014-04-08T07:41:09Z",
+        "id": 623576,
+        "issues": [
+            {
+                "id": 31049215,
+                "labels": ["test"],
+                "number": 5,
+                "title": "Bring coverage back to 100% after lab partial condition result coverage",
+                "url": "https://github.com/hapijs/cryptiles/issues/5"
+            }
+        ],
+        "number": 1,
+        "url": "https://github.com/hapijs/cryptiles/milestone/1",
+        "version": "2.0.1"
+    }
 ]
