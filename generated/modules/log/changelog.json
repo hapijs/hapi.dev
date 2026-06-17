@@ -1,73 +1,73 @@
 [
-  {
-    "date": "2023-02-11T20:20:25Z",
-    "id": 8358648,
-    "issues": [
-      {
-        "id": 1551797950,
-        "labels": ["dependency"],
-        "number": 28,
-        "title": "chore: bump hoek",
-        "url": "https://github.com/hapijs/log/pull/28"
-      }
-    ],
-    "number": 5,
-    "url": "https://github.com/hapijs/log/milestone/5",
-    "version": "2.0.1"
-  },
-  {
-    "date": "2022-08-29T03:28:55Z",
-    "id": 8206733,
-    "issues": [
-      {
-        "id": 1307216549,
-        "labels": ["breaking changes", "dependency", "feature", "test"],
-        "number": 26,
-        "title": "Support hapi v21, drop hapi v19, test ESM support",
-        "url": "https://github.com/hapijs/log/pull/26"
-      },
-      {
-        "id": 1253216154,
-        "labels": ["breaking changes", "dependency"],
-        "number": 25,
-        "title": "Drop node v12 support",
-        "url": "https://github.com/hapijs/log/pull/25"
-      }
-    ],
-    "number": 4,
-    "url": "https://github.com/hapijs/log/milestone/4",
-    "version": "2.0.0"
-  },
-  {
-    "date": "2021-05-24T00:23:44Z",
-    "id": 6745674,
-    "issues": [
-      {
-        "id": 883246873,
-        "labels": ["bug", "feature"],
-        "number": 20,
-        "title": "Add pino logger and minor fixes",
-        "url": "https://github.com/hapijs/log/pull/20"
-      }
-    ],
-    "number": 1,
-    "url": "https://github.com/hapijs/log/milestone/1",
-    "version": "1.0.0-beta"
-  },
-  {
-    "date": "2021-07-19T02:54:59Z",
-    "id": 6785094,
-    "issues": [
-      {
-        "id": 941498128,
-        "labels": ["feature"],
-        "number": 21,
-        "title": "Support changing log level after server start",
-        "url": "https://github.com/hapijs/log/pull/21"
-      }
-    ],
-    "number": 2,
-    "url": "https://github.com/hapijs/log/milestone/2",
-    "version": "1.0.0"
-  }
+    {
+        "date": "2023-02-11T20:20:25Z",
+        "id": 8358648,
+        "issues": [
+            {
+                "id": 1551797950,
+                "labels": ["dependency"],
+                "number": 28,
+                "title": "chore: bump hoek",
+                "url": "https://github.com/hapijs/log/pull/28"
+            }
+        ],
+        "number": 5,
+        "url": "https://github.com/hapijs/log/milestone/5",
+        "version": "2.0.1"
+    },
+    {
+        "date": "2022-08-29T03:28:55Z",
+        "id": 8206733,
+        "issues": [
+            {
+                "id": 1307216549,
+                "labels": ["breaking changes", "dependency", "feature", "test"],
+                "number": 26,
+                "title": "Support hapi v21, drop hapi v19, test ESM support",
+                "url": "https://github.com/hapijs/log/pull/26"
+            },
+            {
+                "id": 1253216154,
+                "labels": ["breaking changes", "dependency"],
+                "number": 25,
+                "title": "Drop node v12 support",
+                "url": "https://github.com/hapijs/log/pull/25"
+            }
+        ],
+        "number": 4,
+        "url": "https://github.com/hapijs/log/milestone/4",
+        "version": "2.0.0"
+    },
+    {
+        "date": "2021-05-24T00:23:44Z",
+        "id": 6745674,
+        "issues": [
+            {
+                "id": 883246873,
+                "labels": ["bug", "feature"],
+                "number": 20,
+                "title": "Add pino logger and minor fixes",
+                "url": "https://github.com/hapijs/log/pull/20"
+            }
+        ],
+        "number": 1,
+        "url": "https://github.com/hapijs/log/milestone/1",
+        "version": "1.0.0-beta"
+    },
+    {
+        "date": "2021-07-19T02:54:59Z",
+        "id": 6785094,
+        "issues": [
+            {
+                "id": 941498128,
+                "labels": ["feature"],
+                "number": 21,
+                "title": "Support changing log level after server start",
+                "url": "https://github.com/hapijs/log/pull/21"
+            }
+        ],
+        "number": 2,
+        "url": "https://github.com/hapijs/log/milestone/2",
+        "version": "1.0.0"
+    }
 ]

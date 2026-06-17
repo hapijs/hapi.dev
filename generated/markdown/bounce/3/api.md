@@ -17,28 +17,28 @@ For example:
 
 ```js
 async function email(user) {
-  if (!user.address) {
-    throw new Error('User has no email address');
-  }
+    if (!user.address) {
+        throw new Error('User has no email address');
+    }
 
-  const message = 'Welcome!';
-  if (user.name) {
-    message = `Welcome ${user.name}!`;
-  }
+    const message = 'Welcome!';
+    if (user.name) {
+        message = `Welcome ${user.name}!`;
+    }
 
-  await mailer.send(user.address, message);
+    await mailer.send(user.address, message);
 }
 
 async function register(address, name) {
-  const user = { address, name };
-  const id = await db.user.insert(user);
-  user.id = id;
+    const user = { address, name };
+    const id = await db.user.insert(user);
+    user.id = id;
 
-  try {
-    await email(user);
-  } catch (err) {} // Ignore errors
+    try {
+        await email(user);
+    } catch (err) {} // Ignore errors
 
-  return user;
+    return user;
 }
 ```
 
@@ -53,17 +53,17 @@ This can be solved by adding a `rethrow()` statement:
 const Bounce = require('@hapi/bounce');
 
 async function register(address, name) {
-  const user = { address, name };
-  const id = await db.user.insert(user);
-  user.id = id;
+    const user = { address, name };
+    const id = await db.user.insert(user);
+    user.id = id;
 
-  try {
-    await email(user);
-  } catch (err) {
-    Bounce.rethrow(err, 'system'); // Rethrows system errors and ignores application errors
-  }
+    try {
+        await email(user);
+    } catch (err) {
+        Bounce.rethrow(err, 'system'); // Rethrows system errors and ignores application errors
+    }
 
-  return user;
+    return user;
 }
 ```
 
@@ -75,17 +75,17 @@ Throws the error passed if it matches any of the specified rules where:
 
 - `err` - the error.
 - `type` - a single item or an array of items of:
-  - An error constructor (e.g. `SyntaxError`).
-  - `'system'` - matches any languange native error or node assertions.
-  - `'boom'` - matches [**boom**](https://github.com/hapijs/boom) errors.
-  - an object where each property is compared with the error and must match the error property
-    value. All the properties in the object must match the error but do not need to include all
-    the error properties.
+    - An error constructor (e.g. `SyntaxError`).
+    - `'system'` - matches any languange native error or node assertions.
+    - `'boom'` - matches [**boom**](https://github.com/hapijs/boom) errors.
+    - an object where each property is compared with the error and must match the error property
+      value. All the properties in the object must match the error but do not need to include all
+      the error properties.
 - `options` - optional object where:
-  - `decorate` - an object which is assigned to the `err`, copying the properties onto the error.
-  - `override` - an error used to override `err` when `err` matches. If used with `decorate`,
-    the `override` object is modified.
-  - `return` - if `true`, the error is returned instead of thrown. Defaults to `false`.
+    - `decorate` - an object which is assigned to the `err`, copying the properties onto the error.
+    - `override` - an error used to override `err` when `err` matches. If used with `decorate`,
+      the `override` object is modified.
+    - `return` - if `true`, the error is returned instead of thrown. Defaults to `false`.
 
 ### `ignore(err, types, [options])`
 

@@ -1,22 +1,22 @@
 {
-  "api": false,
-  "forks": 26,
-  "isPlugin": false,
-  "latestVersion": "8.x.x",
-  "link": "https://github.com/hapijs/statehood",
-  "name": "statehood",
-  "package": "@hapi/statehood",
-  "slogan": "HTTP State Management Utilities.",
-  "sloganHtml": "HTTP State Management Utilities.",
-  "stars": 21,
-  "updated": "2025-11-06T09:32:35Z",
-  "versions": [
-    {
-      "branch": "v8.2.1",
-      "license": "BSD",
-      "name": "8.2.1",
-      "node": ">= 16"
-    }
-  ],
-  "versionsArray": ["8.2.1"]
+    "api": false,
+    "forks": 26,
+    "isPlugin": false,
+    "latestVersion": "8.x.x",
+    "link": "https://github.com/hapijs/statehood",
+    "name": "statehood",
+    "package": "@hapi/statehood",
+    "slogan": "HTTP State Management Utilities.",
+    "sloganHtml": "HTTP State Management Utilities.",
+    "stars": 21,
+    "updated": "2025-11-06T09:32:35Z",
+    "versions": [
+        {
+            "branch": "v8.2.1",
+            "license": "BSD",
+            "name": "8.2.1",
+            "node": ">= 16"
+        }
+    ],
+    "versionsArray": ["8.2.1"]
 }

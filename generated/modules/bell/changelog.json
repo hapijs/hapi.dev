@@ -1,2291 +1,2291 @@
 [
-  {
-    "date": "2025-03-12T12:11:47Z",
-    "id": 12500794,
-    "issues": [
-      {
-        "id": 2911326516,
-        "labels": ["feature"],
-        "number": 497,
-        "title": "Add tokenParams option",
-        "url": "https://github.com/hapijs/bell/pull/497"
-      },
-      {
-        "id": 2844302064,
-        "labels": ["breaking changes"],
-        "number": 496,
-        "title": "chore: remove mixer provider",
-        "url": "https://github.com/hapijs/bell/pull/496"
-      },
-      {
-        "id": 1109523947,
-        "labels": ["documentation"],
-        "number": 485,
-        "title": "remove the bit about google plus",
-        "url": "https://github.com/hapijs/bell/pull/485"
-      }
-    ],
-    "number": 91,
-    "url": "https://github.com/hapijs/bell/milestone/91",
-    "version": "13.1.0"
-  },
-  {
-    "date": "2024-03-19T15:01:00Z",
-    "id": 10705042,
-    "issues": [
-      {
-        "id": 2195000907,
-        "labels": ["types"],
-        "number": 493,
-        "title": "feat: 🎸 add types",
-        "url": "https://github.com/hapijs/bell/pull/493"
-      }
-    ],
-    "number": 90,
-    "url": "https://github.com/hapijs/bell/milestone/90",
-    "version": "13.0.2"
-  },
-  {
-    "date": "2023-02-11T19:53:36Z",
-    "id": 8521840,
-    "issues": [
-      {
-        "id": 1551797532,
-        "labels": ["dependency"],
-        "number": 490,
-        "title": "chore: bump hoek",
-        "url": "https://github.com/hapijs/bell/pull/490"
-      }
-    ],
-    "number": 89,
-    "url": "https://github.com/hapijs/bell/milestone/89",
-    "version": "13.0.1"
-  },
-  {
-    "date": "2022-10-10T12:22:30Z",
-    "id": 8521839,
-    "issues": [
-      {
-        "id": 1402605047,
-        "labels": ["breaking changes", "test", "dependency"],
-        "number": 488,
-        "title": "Support hapi v21 and node v18, drop hapi v19 and node v12, test ESM support",
-        "url": "https://github.com/hapijs/bell/pull/488"
-      }
-    ],
-    "number": 88,
-    "url": "https://github.com/hapijs/bell/milestone/88",
-    "version": "13.0.0"
-  },
-  {
-    "date": "2021-08-26T05:07:21Z",
-    "id": 7091454,
-    "issues": [
-      {
-        "id": 975319875,
-        "labels": ["feature"],
-        "number": 481,
-        "title": "Support OAuth1 client wreck options",
-        "url": "https://github.com/hapijs/bell/pull/481"
-      }
-    ],
-    "number": 86,
-    "url": "https://github.com/hapijs/bell/milestone/86",
-    "version": "12.3.0"
-  },
-  {
-    "date": "2021-03-15T08:08:24Z",
-    "id": 5921588,
-    "issues": [
-      {
-        "id": 791651301,
-        "labels": [],
-        "number": 476,
-        "title": "Add support for providing clientSecret as a function",
-        "url": "https://github.com/hapijs/bell/pull/476"
-      }
-    ],
-    "number": 85,
-    "url": "https://github.com/hapijs/bell/milestone/85",
-    "version": "12.2.0"
-  },
-  {
-    "date": "2020-09-27T00:04:14Z",
-    "id": 5618252,
-    "issues": [
-      {
-        "id": 709585465,
-        "labels": [],
-        "number": 473,
-        "title": "upgrade lab to v24",
-        "url": "https://github.com/hapijs/bell/pull/473"
-      },
-      {
-        "id": 684021959,
-        "labels": [],
-        "number": 470,
-        "title": "migrate to new travis format",
-        "url": "https://github.com/hapijs/bell/pull/470"
-      },
-      {
-        "id": 682270517,
-        "labels": ["documentation"],
-        "number": 469,
-        "title": "[Bugfix] Okta example code",
-        "url": "https://github.com/hapijs/bell/pull/469"
-      },
-      {
-        "id": 677270512,
-        "labels": [],
-        "number": 467,
-        "title": "update to hapi 20",
-        "url": "https://github.com/hapijs/bell/pull/467"
-      },
-      {
-        "id": 672169679,
-        "labels": [],
-        "number": 466,
-        "title": "upgrade bell to use just regular joi package and update teamwork as well",
-        "url": "https://github.com/hapijs/bell/pull/466"
-      }
-    ],
-    "number": 84,
-    "url": "https://github.com/hapijs/bell/milestone/84",
-    "version": "12.1.1"
-  },
-  {
-    "date": "2020-08-20T20:22:45Z",
-    "id": 5428750,
-    "issues": [
-      {
-        "id": 549219644,
-        "labels": ["feature"],
-        "number": 450,
-        "title": "Support Okta custom authorization server",
-        "url": "https://github.com/hapijs/bell/pull/450"
-      }
-    ],
-    "number": 83,
-    "url": "https://github.com/hapijs/bell/milestone/83",
-    "version": "12.1.0"
-  },
-  {
-    "date": "2020-05-15T20:29:49Z",
-    "id": 4993492,
-    "issues": [
-      {
-        "id": 586945013,
-        "labels": ["bug"],
-        "number": 458,
-        "title": "Issue with the meetup provider",
-        "url": "https://github.com/hapijs/bell/issues/458"
-      }
-    ],
-    "number": 82,
-    "url": "https://github.com/hapijs/bell/milestone/82",
-    "version": "12.0.1"
-  },
-  {
-    "date": "2020-01-10T05:54:33Z",
-    "id": 4676226,
-    "issues": [
-      {
-        "id": 547880645,
-        "labels": ["breaking changes"],
-        "number": 449,
-        "title": "Change plugin name to @hapi/bell",
-        "url": "https://github.com/hapijs/bell/issues/449"
-      },
-      {
-        "id": 547878754,
-        "labels": ["breaking changes", "dependency"],
-        "number": 448,
-        "title": "Require hapi 19",
-        "url": "https://github.com/hapijs/bell/issues/448"
-      },
-      {
-        "id": 547878234,
-        "labels": ["breaking changes", "dependency"],
-        "number": 447,
-        "title": "Only node 12",
-        "url": "https://github.com/hapijs/bell/issues/447"
-      },
-      {
-        "id": 536654753,
-        "labels": [],
-        "number": 445,
-        "title": "Use actual package name for plugin name",
-        "url": "https://github.com/hapijs/bell/pull/445"
-      }
-    ],
-    "number": 81,
-    "url": "https://github.com/hapijs/bell/milestone/81",
-    "version": "12.0.0"
-  },
-  {
-    "date": "2019-09-20T05:16:48Z",
-    "id": 4655991,
-    "issues": [
-      {
-        "id": 494478938,
-        "labels": ["feature"],
-        "number": 432,
-        "title": "Return azureAD provider",
-        "url": "https://github.com/hapijs/bell/issues/432"
-      }
-    ],
-    "number": 80,
-    "url": "https://github.com/hapijs/bell/milestone/80",
-    "version": "11.1.0"
-  },
-  {
-    "date": "2019-09-13T07:05:49Z",
-    "id": 4570742,
-    "issues": [
-      {
-        "id": 493159204,
-        "labels": ["breaking changes"],
-        "number": 428,
-        "title": "Make dropbox-v2 the only provider",
-        "url": "https://github.com/hapijs/bell/issues/428"
-      },
-      {
-        "id": 493148182,
-        "labels": ["breaking changes"],
-        "number": 427,
-        "title": "Replace office365, azuread with updated azure provider",
-        "url": "https://github.com/hapijs/bell/issues/427"
-      },
-      {
-        "id": 493143645,
-        "labels": ["dependency"],
-        "number": 426,
-        "title": "Update joi",
-        "url": "https://github.com/hapijs/bell/issues/426"
-      },
-      {
-        "id": 479714612,
-        "labels": ["feature"],
-        "number": 420,
-        "title": "Add support for PKCE",
-        "url": "https://github.com/hapijs/bell/issues/420"
-      },
-      {
-        "id": 473948387,
-        "labels": ["breaking changes"],
-        "number": 418,
-        "title": "New Twitch API oAuth & profile",
-        "url": "https://github.com/hapijs/bell/pull/418"
-      },
-      {
-        "id": 472871148,
-        "labels": ["documentation"],
-        "number": 416,
-        "title": "Update github login example",
-        "url": "https://github.com/hapijs/bell/pull/416"
-      },
-      {
-        "id": 447239056,
-        "labels": ["feature"],
-        "number": 411,
-        "title": "[Bell-410] Add AWS Cognito provider",
-        "url": "https://github.com/hapijs/bell/pull/411"
-      },
-      {
-        "id": 446217428,
-        "labels": ["feature"],
-        "number": 410,
-        "title": "Add provider for AWS Cognito",
-        "url": "https://github.com/hapijs/bell/issues/410"
-      },
-      {
-        "id": 439772064,
-        "labels": ["feature"],
-        "number": 409,
-        "title": "RFC 7636: Proof Key for Code Exchange",
-        "url": "https://github.com/hapijs/bell/pull/409"
-      },
-      {
-        "id": 427414723,
-        "labels": ["bug", "breaking changes"],
-        "number": 404,
-        "title": "Add Azure Oauth2 v2 provider",
-        "url": "https://github.com/hapijs/bell/pull/404"
-      },
-      {
-        "id": 424632655,
-        "labels": ["bug"],
-        "number": 403,
-        "title": "Correctly utilize JWT tokens instead of normal accessTokens for AzureAD",
-        "url": "https://github.com/hapijs/bell/issues/403"
-      },
-      {
-        "id": 343982499,
-        "labels": ["bug"],
-        "number": 376,
-        "title": "Update Office365 / Microsoft provider",
-        "url": "https://github.com/hapijs/bell/issues/376"
-      }
-    ],
-    "number": 79,
-    "url": "https://github.com/hapijs/bell/milestone/79",
-    "version": "11.0.0"
-  },
-  {
-    "date": "2019-08-14T04:48:02Z",
-    "id": 4245748,
-    "issues": [
-      {
-        "id": 480478223,
-        "labels": ["dependency"],
-        "number": 421,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/bell/issues/421"
-      }
-    ],
-    "number": 77,
-    "url": "https://github.com/hapijs/bell/milestone/77",
-    "version": "10.1.1"
-  },
-  {
-    "date": "2019-04-20T19:54:13Z",
-    "id": 4113366,
-    "issues": [
-      {
-        "id": 435431046,
-        "labels": ["dependency"],
-        "number": 405,
-        "title": "Change module namespace",
-        "url": "https://github.com/hapijs/bell/issues/405"
-      }
-    ],
-    "number": 76,
-    "url": "https://github.com/hapijs/bell/milestone/76",
-    "version": "10.1.0"
-  },
-  {
-    "date": "2019-03-05T20:39:59Z",
-    "id": 4093876,
-    "issues": [
-      {
-        "id": 417513441,
-        "labels": ["breaking changes", "release notes"],
-        "number": 400,
-        "title": "10.0.0 Release Notes",
-        "url": "https://github.com/hapijs/bell/issues/400"
-      },
-      {
-        "id": 415004859,
-        "labels": ["feature", "breaking changes"],
-        "number": 397,
-        "title": "Add support for hapi 18",
-        "url": "https://github.com/hapijs/bell/pull/397"
-      },
-      {
-        "id": 403645501,
-        "labels": ["bug"],
-        "number": 394,
-        "title": "Google auth redirect loop with hapi v18",
-        "url": "https://github.com/hapijs/bell/issues/394"
-      },
-      {
-        "id": 399247375,
-        "labels": ["feature", "breaking changes"],
-        "number": 391,
-        "title": "Update LinkedIn to use new lite profile",
-        "url": "https://github.com/hapijs/bell/pull/391"
-      },
-      {
-        "id": 397131758,
-        "labels": ["feature"],
-        "number": 390,
-        "title": "Upgrade LinkedIn to support new 'Lite Profile'",
-        "url": "https://github.com/hapijs/bell/issues/390"
-      }
-    ],
-    "number": 75,
-    "url": "https://github.com/hapijs/bell/milestone/75",
-    "version": "10.0.0"
-  },
-  {
-    "date": "2019-04-20T22:20:42Z",
-    "id": 4245765,
-    "issues": [
-      {
-        "id": 435434270,
-        "labels": ["dependency", "lts"],
-        "number": 406,
-        "title": "Change module namespace for v9 branch",
-        "url": "https://github.com/hapijs/bell/issues/406"
-      }
-    ],
-    "number": 78,
-    "url": "https://github.com/hapijs/bell/milestone/78",
-    "version": "9.6.0"
-  },
-  {
-    "date": "2019-02-27T18:28:00Z",
-    "id": 3811130,
-    "issues": [
-      {
-        "id": 408872079,
-        "labels": ["feature"],
-        "number": 396,
-        "title": "Allow isSameSite customization",
-        "url": "https://github.com/hapijs/bell/pull/396"
-      },
-      {
-        "id": 408847542,
-        "labels": ["feature"],
-        "number": 395,
-        "title": "Safari isSameSite",
-        "url": "https://github.com/hapijs/bell/issues/395"
-      },
-      {
-        "id": 387924079,
-        "labels": ["documentation"],
-        "number": 389,
-        "title": "Add changelog.md",
-        "url": "https://github.com/hapijs/bell/pull/389"
-      }
-    ],
-    "number": 74,
-    "url": "https://github.com/hapijs/bell/milestone/74",
-    "version": "9.5.0"
-  },
-  {
-    "date": "2018-11-10T22:28:07Z",
-    "id": 3811122,
-    "issues": [
-      {
-        "id": 379456755,
-        "labels": ["test", "non issue"],
-        "number": 386,
-        "title": "Cleanup",
-        "url": "https://github.com/hapijs/bell/issues/386"
-      },
-      {
-        "id": 366165691,
-        "labels": ["feature"],
-        "number": 381,
-        "title": "FB custom scope + upgrade api version",
-        "url": "https://github.com/hapijs/bell/pull/381"
-      },
-      {
-        "id": 341666043,
-        "labels": ["bug", "dependency"],
-        "number": 374,
-        "title": "Ensure Auth0 profile is availabe in all cases",
-        "url": "https://github.com/hapijs/bell/pull/374"
-      },
-      {
-        "id": 339269483,
-        "labels": ["feature", "dependency"],
-        "number": 373,
-        "title": "Use Stripe Express",
-        "url": "https://github.com/hapijs/bell/pull/373"
-      },
-      {
-        "id": 338382792,
-        "labels": ["feature"],
-        "number": 372,
-        "title": "Add config 'fields' to vk provider",
-        "url": "https://github.com/hapijs/bell/pull/372"
-      }
-    ],
-    "number": 73,
-    "url": "https://github.com/hapijs/bell/milestone/73",
-    "version": "9.4.0"
-  },
-  {
-    "date": "2018-05-29T19:00:33Z",
-    "id": 3237720,
-    "issues": [
-      {
-        "id": 313209143,
-        "labels": ["feature"],
-        "number": 358,
-        "title": "Use OIDC compliant profile from Auth0",
-        "url": "https://github.com/hapijs/bell/pull/358"
-      }
-    ],
-    "number": 71,
-    "url": "https://github.com/hapijs/bell/milestone/71",
-    "version": "9.3.1"
-  },
-  {
-    "date": "2018-04-03T08:01:17Z",
-    "id": 3237571,
-    "issues": [
-      {
-        "id": 310722160,
-        "labels": [],
-        "number": 356,
-        "title": "fix(package): update Boom and fix trying to create an instance of .internal",
-        "url": "https://github.com/hapijs/bell/pull/356"
-      },
-      {
-        "id": 308249093,
-        "labels": ["bug", "security"],
-        "number": 355,
-        "title": "Set SameSite=Strict for improved security",
-        "url": "https://github.com/hapijs/bell/pull/355"
-      }
-    ],
-    "number": 70,
-    "url": "https://github.com/hapijs/bell/milestone/70",
-    "version": "9.3.0"
-  },
-  {
-    "date": "2018-04-02T19:10:36Z",
-    "id": 3142521,
-    "issues": [
-      {
-        "id": 307176741,
-        "labels": ["bug"],
-        "number": 354,
-        "title": "Remove new Buffer usage",
-        "url": "https://github.com/hapijs/bell/pull/354"
-      },
-      {
-        "id": 302854966,
-        "labels": ["feature"],
-        "number": 350,
-        "title": "Picture object included in the profile object for facebook oauth",
-        "url": "https://github.com/hapijs/bell/pull/350"
-      },
-      {
-        "id": 301989327,
-        "labels": ["bug"],
-        "number": 349,
-        "title": "Fix problem with not exist required param 'v' last versitons today 5.…",
-        "url": "https://github.com/hapijs/bell/pull/349"
-      },
-      {
-        "id": 301988276,
-        "labels": ["bug"],
-        "number": 348,
-        "title": "VK auth dev error: 'v' is required ",
-        "url": "https://github.com/hapijs/bell/issues/348"
-      },
-      {
-        "id": 301670554,
-        "labels": ["feature"],
-        "number": 347,
-        "title": "facebook picture field added to get profile picture",
-        "url": "https://github.com/hapijs/bell/pull/347"
-      }
-    ],
-    "number": 68,
-    "url": "https://github.com/hapijs/bell/milestone/68",
-    "version": "9.2.0"
-  },
-  {
-    "date": "2018-02-26T06:51:41Z",
-    "id": 3142375,
-    "issues": [
-      {
-        "id": 207295360,
-        "labels": ["feature"],
-        "number": 295,
-        "title": "Expose query in spite of errors",
-        "url": "https://github.com/hapijs/bell/issues/295"
-      },
-      {
-        "id": 199957498,
-        "labels": ["feature", "breaking changes"],
-        "number": 288,
-        "title": "Remove or more comprehensively document provider.version",
-        "url": "https://github.com/hapijs/bell/issues/288"
-      }
-    ],
-    "number": 67,
-    "url": "https://github.com/hapijs/bell/milestone/67",
-    "version": "9.1.0"
-  },
-  {
-    "date": "2018-02-26T04:20:11Z",
-    "id": 2410070,
-    "issues": [
-      {
-        "id": 300104867,
-        "labels": ["breaking changes", "release notes"],
-        "number": 345,
-        "title": "9.0.0 Release Notes",
-        "url": "https://github.com/hapijs/bell/issues/345"
-      },
-      {
-        "id": 272808715,
-        "labels": ["feature", "breaking changes", "dependency"],
-        "number": 332,
-        "title": "[WIP] Hapi 17 Support",
-        "url": "https://github.com/hapijs/bell/pull/332"
-      },
-      {
-        "id": 271150791,
-        "labels": ["breaking changes", "dependency"],
-        "number": 330,
-        "title": "hapi v17 support",
-        "url": "https://github.com/hapijs/bell/issues/330"
-      }
-    ],
-    "number": 63,
-    "url": "https://github.com/hapijs/bell/milestone/63",
-    "version": "9.0.0"
-  },
-  {
-    "date": "2017-11-19T16:41:43Z",
-    "id": 2922695,
-    "issues": [
-      {
-        "id": 267737145,
-        "labels": ["feature"],
-        "number": 325,
-        "title": "Changed the discord providers image url prefix",
-        "url": "https://github.com/hapijs/bell/pull/325"
-      },
-      {
-        "id": 256815119,
-        "labels": ["feature"],
-        "number": 321,
-        "title": "Add trakt.tv provider",
-        "url": "https://github.com/hapijs/bell/pull/321"
-      },
-      {
-        "id": 197150550,
-        "labels": ["feature"],
-        "number": 286,
-        "title": "Added custom OAuth2 client authentication",
-        "url": "https://github.com/hapijs/bell/pull/286"
-      }
-    ],
-    "number": 66,
-    "url": "https://github.com/hapijs/bell/milestone/66",
-    "version": "8.9.0"
-  },
-  {
-    "date": "2017-09-24T21:05:07Z",
-    "id": 2787762,
-    "issues": [
-      {
-        "id": 245907995,
-        "labels": ["feature"],
-        "number": 319,
-        "title": "Allowing the location option to be a function",
-        "url": "https://github.com/hapijs/bell/pull/319"
-      },
-      {
-        "id": 243935086,
-        "labels": ["feature"],
-        "number": 318,
-        "title": "Add Mixer as a new provider",
-        "url": "https://github.com/hapijs/bell/pull/318"
-      },
-      {
-        "id": 238642668,
-        "labels": ["feature"],
-        "number": 316,
-        "title": "Add Stripe as a new provider",
-        "url": "https://github.com/hapijs/bell/pull/316"
-      },
-      {
-        "id": 234995785,
-        "labels": ["feature"],
-        "number": 315,
-        "title": "Add `fields` option to Facebook provider",
-        "url": "https://github.com/hapijs/bell/pull/315"
-      },
-      {
-        "id": 166080952,
-        "labels": ["feature"],
-        "number": 244,
-        "title": "New dropbox-v2 provider which uses Dropbox V2 API",
-        "url": "https://github.com/hapijs/bell/pull/244"
-      }
-    ],
-    "number": 65,
-    "url": "https://github.com/hapijs/bell/milestone/65",
-    "version": "8.8.0"
-  },
-  {
-    "date": "2017-05-09T03:28:13Z",
-    "id": 2508991,
-    "issues": [
-      {
-        "id": 226975823,
-        "labels": ["feature"],
-        "number": 312,
-        "title": "add DigitalOcean provider",
-        "url": "https://github.com/hapijs/bell/pull/312"
-      },
-      {
-        "id": 224568867,
-        "labels": ["feature"],
-        "number": 311,
-        "title": "Updates Facebook API to v2.9",
-        "url": "https://github.com/hapijs/bell/pull/311"
-      },
-      {
-        "id": 219098039,
-        "labels": ["feature"],
-        "number": 308,
-        "title": "Add `'profile'` to list of default scopes for Okta",
-        "url": "https://github.com/hapijs/bell/pull/308"
-      },
-      {
-        "id": 215638763,
-        "labels": [],
-        "number": 303,
-        "title": "Facebook",
-        "url": "https://github.com/hapijs/bell/pull/303"
-      },
-      {
-        "id": 171285612,
-        "labels": ["feature", "breaking changes"],
-        "number": 252,
-        "title": "[Update] Updates Facebook provider to v2.7",
-        "url": "https://github.com/hapijs/bell/pull/252"
-      }
-    ],
-    "number": 64,
-    "url": "https://github.com/hapijs/bell/milestone/64",
-    "version": "8.7.0"
-  },
-  {
-    "date": "2017-03-24T20:22:14Z",
-    "id": 2381785,
-    "issues": [
-      {
-        "id": 210634907,
-        "labels": ["feature"],
-        "number": 299,
-        "title": "Add support for authentication with Okta",
-        "url": "https://github.com/hapijs/bell/pull/299"
-      },
-      {
-        "id": 208807117,
-        "labels": ["feature"],
-        "number": 298,
-        "title": "added spotify",
-        "url": "https://github.com/hapijs/bell/pull/298"
-      },
-      {
-        "id": 182682268,
-        "labels": ["feature"],
-        "number": 273,
-        "title": "Fixes #261 expose OAUTH2 token response as request.auth.artifacts",
-        "url": "https://github.com/hapijs/bell/pull/273"
-      }
-    ],
-    "number": 62,
-    "url": "https://github.com/hapijs/bell/milestone/62",
-    "version": "8.6.0"
-  },
-  {
-    "date": "2017-03-24T20:22:22Z",
-    "id": 2272937,
-    "issues": [
-      {
-        "id": 200068706,
-        "labels": ["feature"],
-        "number": 289,
-        "title": "AzureAD: Support email, when userPrincipalName (upn) is not available",
-        "url": "https://github.com/hapijs/bell/pull/289"
-      }
-    ],
-    "number": 61,
-    "url": "https://github.com/hapijs/bell/milestone/61",
-    "version": "8.5.1"
-  },
-  {
-    "date": "2017-01-24T02:39:32Z",
-    "id": 1953216,
-    "issues": [
-      {
-        "id": 202679436,
-        "labels": ["feature"],
-        "number": 291,
-        "title": "Medium provider",
-        "url": "https://github.com/hapijs/bell/issues/291"
-      }
-    ],
-    "number": 54,
-    "url": "https://github.com/hapijs/bell/milestone/54",
-    "version": "8.5.0"
-  },
-  {
-    "date": "2016-12-01T03:29:08Z",
-    "id": 2074721,
-    "issues": [
-      {
-        "id": 192744406,
-        "labels": ["dependency"],
-        "number": 280,
-        "title": "hapi 16",
-        "url": "https://github.com/hapijs/bell/issues/280"
-      },
-      {
-        "id": 178545052,
-        "labels": ["feature"],
-        "number": 266,
-        "title": "Implement Azure Active Directory authentication for enterprise AD logins",
-        "url": "https://github.com/hapijs/bell/issues/266"
-      }
-    ],
-    "number": 60,
-    "url": "https://github.com/hapijs/bell/milestone/60",
-    "version": "8.4.0"
-  },
-  {
-    "date": "2016-10-04T14:36:45Z",
-    "id": 2046990,
-    "issues": [
-      {
-        "id": 178830165,
-        "labels": ["feature"],
-        "number": 267,
-        "title": "Fixes #266 Implements azure active directory as bell azuread module",
-        "url": "https://github.com/hapijs/bell/pull/267"
-      }
-    ],
-    "number": 59,
-    "url": "https://github.com/hapijs/bell/milestone/59",
-    "version": "8.3.0"
-  },
-  {
-    "date": "2016-09-21T14:49:02Z",
-    "id": 2016833,
-    "issues": [
-      {
-        "id": 178101952,
-        "labels": ["bug"],
-        "number": 265,
-        "title": "Set isSameSite to false and add code to support Hapi 13.5+",
-        "url": "https://github.com/hapijs/bell/pull/265"
-      },
-      {
-        "id": 177214049,
-        "labels": ["bug"],
-        "number": 264,
-        "title": "Bell is not compatible with Hapi 15 due to same-site: strict for cookie",
-        "url": "https://github.com/hapijs/bell/issues/264"
-      }
-    ],
-    "number": 58,
-    "url": "https://github.com/hapijs/bell/milestone/58",
-    "version": "8.2.1"
-  },
-  {
-    "date": "2016-09-07T14:41:01Z",
-    "id": 1989012,
-    "issues": [
-      {
-        "id": 175519020,
-        "labels": ["feature", "test", "dependency"],
-        "number": 259,
-        "title": "Support Hapi 15 & upgrade boom + wreck dependencies",
-        "url": "https://github.com/hapijs/bell/issues/259"
-      },
-      {
-        "id": 173508017,
-        "labels": ["bug", "feature"],
-        "number": 256,
-        "title": "allow for leading whitespace in JSON",
-        "url": "https://github.com/hapijs/bell/pull/256"
-      },
-      {
-        "id": 169316259,
-        "labels": ["feature"],
-        "number": 248,
-        "title": "Add discord as a new provider",
-        "url": "https://github.com/hapijs/bell/pull/248"
-      }
-    ],
-    "number": 57,
-    "url": "https://github.com/hapijs/bell/milestone/57",
-    "version": "8.2.0"
-  },
-  {
-    "date": "2016-09-07T14:32:01Z",
-    "id": 1953230,
-    "issues": [
-      {
-        "id": 172314388,
-        "labels": ["bug"],
-        "number": 254,
-        "title": "fix mapping of google profile fixes #251",
-        "url": "https://github.com/hapijs/bell/pull/254"
-      },
-      {
-        "id": 170634385,
-        "labels": ["bug"],
-        "number": 251,
-        "title": "Google user info",
-        "url": "https://github.com/hapijs/bell/issues/251"
-      }
-    ],
-    "number": 56,
-    "url": "https://github.com/hapijs/bell/milestone/56",
-    "version": "8.1.1"
-  },
-  {
-    "date": "2016-08-20T21:39:28Z",
-    "id": 1953219,
-    "issues": [
-      {
-        "id": 169709882,
-        "labels": ["feature"],
-        "number": 249,
-        "title": "Twitter additional GET parameters on extended profile request",
-        "url": "https://github.com/hapijs/bell/pull/249"
-      }
-    ],
-    "number": 55,
-    "url": "https://github.com/hapijs/bell/milestone/55",
-    "version": "8.1.0"
-  },
-  {
-    "date": "2016-07-29T20:27:10Z",
-    "id": 1912593,
-    "issues": [
-      {
-        "id": 168406817,
-        "labels": ["dependency"],
-        "number": 247,
-        "title": "Allow hapi 14",
-        "url": "https://github.com/hapijs/bell/issues/247"
-      }
-    ],
-    "number": 52,
-    "url": "https://github.com/hapijs/bell/milestone/52",
-    "version": "8.0.1"
-  },
-  {
-    "date": "2016-07-17T20:22:49Z",
-    "id": 1609606,
-    "issues": [
-      {
-        "id": 165993769,
-        "labels": ["release notes"],
-        "number": 243,
-        "title": "Bell 8.0.0 Release Notes",
-        "url": "https://github.com/hapijs/bell/issues/243"
-      },
-      {
-        "id": 165923409,
-        "labels": ["dependency"],
-        "number": 242,
-        "title": "Upgrade Joi dependence to 9.x.x",
-        "url": "https://github.com/hapijs/bell/issues/242"
-      },
-      {
-        "id": 165436074,
-        "labels": ["feature"],
-        "number": 240,
-        "title": "Fitbit provider",
-        "url": "https://github.com/hapijs/bell/pull/240"
-      },
-      {
-        "id": 160553457,
-        "labels": ["feature", "breaking changes"],
-        "number": 235,
-        "title": "Separate Google into two providers. #228",
-        "url": "https://github.com/hapijs/bell/pull/235"
-      },
-      {
-        "id": 160315321,
-        "labels": ["feature"],
-        "number": 233,
-        "title": "Allow providerParams to be a method invoked with the request",
-        "url": "https://github.com/hapijs/bell/pull/233"
-      },
-      {
-        "id": 158480686,
-        "labels": ["feature"],
-        "number": 228,
-        "title": "Remove dependency on Google Plus APIs",
-        "url": "https://github.com/hapijs/bell/issues/228"
-      }
-    ],
-    "number": 34,
-    "url": "https://github.com/hapijs/bell/milestone/34",
-    "version": "8.0.0"
-  },
-  {
-    "date": "2016-07-16T10:31:18Z",
-    "id": 1887345,
-    "issues": [
-      {
-        "id": 165000176,
-        "labels": ["bug"],
-        "number": 239,
-        "title": "[Fix] Fixes email address field in LinkedIn",
-        "url": "https://github.com/hapijs/bell/pull/239"
-      }
-    ],
-    "number": 51,
-    "url": "https://github.com/hapijs/bell/milestone/51",
-    "version": "7.9.3"
-  },
-  {
-    "date": "2016-06-22T23:36:12Z",
-    "id": 1844351,
-    "issues": [
-      {
-        "id": 161810205,
-        "labels": ["bug"],
-        "number": 237,
-        "title": "Profiles are broken when used directly",
-        "url": "https://github.com/hapijs/bell/issues/237"
-      }
-    ],
-    "number": 50,
-    "url": "https://github.com/hapijs/bell/milestone/50",
-    "version": "7.9.1"
-  },
-  {
-    "date": "2016-06-19T20:04:09Z",
-    "id": 1803800,
-    "issues": [
-      {
-        "id": 160642160,
-        "labels": ["feature"],
-        "number": 236,
-        "title": "Aphuang2013 patch 1",
-        "url": "https://github.com/hapijs/bell/pull/236"
-      },
-      {
-        "id": 159983152,
-        "labels": ["dependency"],
-        "number": 232,
-        "title": "Update dependencies",
-        "url": "https://github.com/hapijs/bell/issues/232"
-      },
-      {
-        "id": 159737870,
-        "labels": ["feature"],
-        "number": 231,
-        "title": "Only publish root and lib directory in npm. #230",
-        "url": "https://github.com/hapijs/bell/pull/231"
-      },
-      {
-        "id": 159670354,
-        "labels": ["feature"],
-        "number": 230,
-        "title": "Only publish root and lib directory in npm",
-        "url": "https://github.com/hapijs/bell/issues/230"
-      },
-      {
-        "id": 158374549,
-        "labels": ["feature"],
-        "number": 227,
-        "title": "Implemented RSA-SHA1 signatures for OAuth v1",
-        "url": "https://github.com/hapijs/bell/pull/227"
-      },
-      {
-        "id": 158092815,
-        "labels": ["feature"],
-        "number": 226,
-        "title": "OAuth v1: How to handle RSA-SHA1 signing?",
-        "url": "https://github.com/hapijs/bell/issues/226"
-      }
-    ],
-    "number": 49,
-    "url": "https://github.com/hapijs/bell/milestone/49",
-    "version": "7.9.0"
-  },
-  {
-    "date": "2016-06-02T05:44:27Z",
-    "id": 1788756,
-    "issues": [
-      {
-        "id": 156000505,
-        "labels": ["feature", "test"],
-        "number": 221,
-        "title": "getMethod option",
-        "url": "https://github.com/hapijs/bell/pull/221"
-      }
-    ],
-    "number": 47,
-    "url": "https://github.com/hapijs/bell/milestone/47",
-    "version": "7.8.0"
-  },
-  {
-    "date": "2016-06-02T05:43:01Z",
-    "id": 1803794,
-    "issues": [
-      {
-        "id": 157998924,
-        "labels": ["bug"],
-        "number": 225,
-        "title": "Fix markup to quote URL correctly to avoid infinite redirect",
-        "url": "https://github.com/hapijs/bell/pull/225"
-      }
-    ],
-    "number": 48,
-    "url": "https://github.com/hapijs/bell/milestone/48",
-    "version": "7.7.3"
-  },
-  {
-    "date": "2016-06-02T05:37:53Z",
-    "id": 1767487,
-    "issues": [
-      {
-        "id": 156863036,
-        "labels": ["bug"],
-        "number": 224,
-        "title": "Apply the same html redirection logic to oauth v1. Closes #223",
-        "url": "https://github.com/hapijs/bell/pull/224"
-      },
-      {
-        "id": 156862814,
-        "labels": ["bug"],
-        "number": 223,
-        "title": "OAuth 1.0 missing HTML redirection workaround",
-        "url": "https://github.com/hapijs/bell/issues/223"
-      }
-    ],
-    "number": 45,
-    "url": "https://github.com/hapijs/bell/milestone/45",
-    "version": "7.7.2"
-  },
-  {
-    "date": "2016-05-23T22:48:19Z",
-    "id": 1783780,
-    "issues": [
-      {
-        "id": 156383301,
-        "labels": ["test", "dependency"],
-        "number": 222,
-        "title": "Upgrade to code 3.x.x",
-        "url": "https://github.com/hapijs/bell/pull/222"
-      },
-      {
-        "id": 152059606,
-        "labels": ["test", "dependency"],
-        "number": 210,
-        "title": "Test with Node 6",
-        "url": "https://github.com/hapijs/bell/pull/210"
-      }
-    ],
-    "number": 46,
-    "url": "https://github.com/hapijs/bell/milestone/46",
-    "version": "7.7.1"
-  },
-  {
-    "date": "2016-05-23T22:39:29Z",
-    "id": 1767461,
-    "issues": [
-      {
-        "id": 154897720,
-        "labels": ["bug"],
-        "number": 216,
-        "title": "Consistently return node req object in oauth v1 client. Closes #215",
-        "url": "https://github.com/hapijs/bell/pull/216"
-      },
-      {
-        "id": 154897644,
-        "labels": ["bug"],
-        "number": 215,
-        "title": "Fails to always return the node req object from wreck",
-        "url": "https://github.com/hapijs/bell/issues/215"
-      },
-      {
-        "id": 153732404,
-        "labels": ["feature"],
-        "number": 213,
-        "title": "Add Pinterest provider",
-        "url": "https://github.com/hapijs/bell/pull/213"
-      }
-    ],
-    "number": 44,
-    "url": "https://github.com/hapijs/bell/milestone/44",
-    "version": "7.7.0"
-  },
-  {
-    "date": "2016-04-30T23:30:36Z",
-    "id": 1712485,
-    "issues": [
-      {
-        "id": 150571302,
-        "labels": ["bug"],
-        "number": 208,
-        "title": "Fix Safari CORS with Facebook & potentially other providers",
-        "url": "https://github.com/hapijs/bell/pull/208"
-      },
-      {
-        "id": 149541441,
-        "labels": ["bug", "feature"],
-        "number": 206,
-        "title": "Fix weird error happening when logging in through Facebook on safari …",
-        "url": "https://github.com/hapijs/bell/pull/206"
-      },
-      {
-        "id": 138252861,
-        "labels": ["bug"],
-        "number": 191,
-        "title": "Can not login with Facebook on Safari",
-        "url": "https://github.com/hapijs/bell/issues/191"
-      }
-    ],
-    "number": 42,
-    "url": "https://github.com/hapijs/bell/milestone/42",
-    "version": "7.6.1"
-  },
-  {
-    "date": "2016-04-23T15:13:15Z",
-    "id": 1720417,
-    "issues": [
-      {
-        "id": 149740765,
-        "labels": ["feature"],
-        "number": 207,
-        "title": "Add GitLab provider",
-        "url": "https://github.com/hapijs/bell/pull/207"
-      }
-    ],
-    "number": 43,
-    "url": "https://github.com/hapijs/bell/milestone/43",
-    "version": "7.6.0"
-  },
-  {
-    "date": "2016-04-17T21:38:46Z",
-    "id": 1640494,
-    "issues": [
-      {
-        "id": 148986379,
-        "labels": ["bug"],
-        "number": 205,
-        "title": "Added appsecret_proof to wordpress provider",
-        "url": "https://github.com/hapijs/bell/pull/205"
-      }
-    ],
-    "number": 38,
-    "url": "https://github.com/hapijs/bell/milestone/38",
-    "version": "7.5.1"
-  },
-  {
-    "date": "2016-04-16T15:22:07Z",
-    "id": 1711429,
-    "issues": [
-      {
-        "id": 147569845,
-        "labels": ["feature"],
-        "number": 204,
-        "title": "WordPress Provider",
-        "url": "https://github.com/hapijs/bell/pull/204"
-      }
-    ],
-    "number": 41,
-    "url": "https://github.com/hapijs/bell/milestone/41",
-    "version": "7.5.0"
-  },
-  {
-    "date": "2016-04-10T03:33:48Z",
-    "id": 1695708,
-    "issues": [
-      {
-        "id": 145860858,
-        "labels": ["feature"],
-        "number": 202,
-        "title": "Office365 provider",
-        "url": "https://github.com/hapijs/bell/pull/202"
-      }
-    ],
-    "number": 40,
-    "url": "https://github.com/hapijs/bell/milestone/40",
-    "version": "7.4.0"
-  },
-  {
-    "date": "2016-03-22T22:43:55Z",
-    "id": 1660950,
-    "issues": [
-      {
-        "id": 142141533,
-        "labels": ["feature"],
-        "number": 199,
-        "title": "Salesforce provider",
-        "url": "https://github.com/hapijs/bell/pull/199"
-      }
-    ],
-    "number": 39,
-    "url": "https://github.com/hapijs/bell/milestone/39",
-    "version": "7.3.0"
-  },
-  {
-    "date": "2016-03-22T22:40:48Z",
-    "id": 1640493,
-    "issues": [
-      {
-        "id": 139834814,
-        "labels": ["feature"],
-        "number": 198,
-        "title": "Add Slack provider",
-        "url": "https://github.com/hapijs/bell/pull/198"
-      },
-      {
-        "id": 138906275,
-        "labels": ["bug"],
-        "number": 196,
-        "title": "Bitbucket incorrect id and styling inconsistency.",
-        "url": "https://github.com/hapijs/bell/pull/196"
-      }
-    ],
-    "number": 37,
-    "url": "https://github.com/hapijs/bell/milestone/37",
-    "version": "7.2.0"
-  },
-  {
-    "date": "2016-03-04T01:16:34Z",
-    "id": 1621365,
-    "issues": [
-      {
-        "id": 138345482,
-        "labels": ["feature"],
-        "number": 194,
-        "title": "Support returning raw resource payload. Closes #193",
-        "url": "https://github.com/hapijs/bell/pull/194"
-      },
-      {
-        "id": 138345320,
-        "labels": ["feature"],
-        "number": 193,
-        "title": "client.resource() raw payload",
-        "url": "https://github.com/hapijs/bell/issues/193"
-      }
-    ],
-    "number": 35,
-    "url": "https://github.com/hapijs/bell/milestone/35",
-    "version": "7.1.0"
-  },
-  {
-    "date": "2016-03-04T01:13:02Z",
-    "id": 1582058,
-    "issues": [
-      {
-        "id": 136954038,
-        "labels": ["breaking changes", "release notes"],
-        "number": 189,
-        "title": "Bell 7 release notes",
-        "url": "https://github.com/hapijs/bell/issues/189"
-      },
-      {
-        "id": 136310635,
-        "labels": ["feature", "documentation"],
-        "number": 188,
-        "title": "Add Auth0 provider",
-        "url": "https://github.com/hapijs/bell/pull/188"
-      },
-      {
-        "id": 133559033,
-        "labels": ["breaking changes", "dependency"],
-        "number": 187,
-        "title": "peerDependency on Hapi 13",
-        "url": "https://github.com/hapijs/bell/issues/187"
-      },
-      {
-        "id": 131891125,
-        "labels": ["feature", "documentation"],
-        "number": 182,
-        "title": "Allow passing additional state",
-        "url": "https://github.com/hapijs/bell/pull/182"
-      }
-    ],
-    "number": 33,
-    "url": "https://github.com/hapijs/bell/milestone/33",
-    "version": "7.0.0"
-  },
-  {
-    "date": "2016-02-14T18:00:47Z",
-    "id": 1582054,
-    "issues": [
-      {
-        "id": 131922738,
-        "labels": ["feature"],
-        "number": 183,
-        "title": "skipProfile option",
-        "url": "https://github.com/hapijs/bell/pull/183"
-      },
-      {
-        "id": 116964394,
-        "labels": ["feature"],
-        "number": 163,
-        "title": "Auth fails silently",
-        "url": "https://github.com/hapijs/bell/issues/163"
-      }
-    ],
-    "number": 32,
-    "url": "https://github.com/hapijs/bell/milestone/32",
-    "version": "6.3.0"
-  },
-  {
-    "date": "2016-02-14T17:26:20Z",
-    "id": 1488306,
-    "issues": [
-      {
-        "id": 130360107,
-        "labels": ["feature", "documentation"],
-        "number": 179,
-        "title": "Added Twitch provider",
-        "url": "https://github.com/hapijs/bell/pull/179"
-      },
-      {
-        "id": 130185205,
-        "labels": ["documentation", "test"],
-        "number": 178,
-        "title": "Upgrade devDependencies, test Hapi 12, lint update with tests/examples",
-        "url": "https://github.com/hapijs/bell/pull/178"
-      }
-    ],
-    "number": 31,
-    "url": "https://github.com/hapijs/bell/milestone/31",
-    "version": "6.2.0"
-  },
-  {
-    "date": "2016-01-12T17:26:29Z",
-    "id": 1412443,
-    "issues": [
-      {
-        "id": 124298995,
-        "labels": ["feature"],
-        "number": 174,
-        "title": "Update bitbucket to use the oAuth2 endpoint",
-        "url": "https://github.com/hapijs/bell/pull/174"
-      },
-      {
-        "id": 117937157,
-        "labels": ["feature"],
-        "number": 168,
-        "title": "Add simulated mode. Closes #167",
-        "url": "https://github.com/hapijs/bell/pull/168"
-      },
-      {
-        "id": 117937091,
-        "labels": ["feature"],
-        "number": 167,
-        "title": "Simulated mode",
-        "url": "https://github.com/hapijs/bell/issues/167"
-      }
-    ],
-    "number": 30,
-    "url": "https://github.com/hapijs/bell/milestone/30",
-    "version": "6.1.0"
-  },
-  {
-    "date": "2015-11-15T19:54:44Z",
-    "id": 1267613,
-    "issues": [
-      {
-        "id": 114815063,
-        "labels": ["feature"],
-        "number": 162,
-        "title": "Add error if using non-https server when isSecure is set to true",
-        "url": "https://github.com/hapijs/bell/pull/162"
-      },
-      {
-        "id": 114503526,
-        "labels": ["breaking changes", "dependency"],
-        "number": 160,
-        "title": "Upgrade to Node 4+, Hapi 10+, ES6 styling, Update dependencies",
-        "url": "https://github.com/hapijs/bell/pull/160"
-      },
-      {
-        "id": 114379837,
-        "labels": ["feature", "breaking changes", "release notes"],
-        "number": 159,
-        "title": "Bell 6 Release Notes",
-        "url": "https://github.com/hapijs/bell/issues/159"
-      }
-    ],
-    "number": 26,
-    "url": "https://github.com/hapijs/bell/milestone/26",
-    "version": "6.0.0"
-  },
-  {
-    "date": "2015-11-15T19:55:02Z",
-    "id": 1353444,
-    "issues": [
-      {
-        "id": 111161294,
-        "labels": ["feature"],
-        "number": 155,
-        "title": "Added Tumblr provider",
-        "url": "https://github.com/hapijs/bell/pull/155"
-      },
-      {
-        "id": 110628822,
-        "labels": ["documentation"],
-        "number": 154,
-        "title": "Fixed no-comma-dangle in README",
-        "url": "https://github.com/hapijs/bell/pull/154"
-      },
-      {
-        "id": 110142267,
-        "labels": ["test"],
-        "number": 153,
-        "title": "Test Hapi 9 and 10",
-        "url": "https://github.com/hapijs/bell/pull/153"
-      },
-      {
-        "id": 109608554,
-        "labels": ["documentation"],
-        "number": 150,
-        "title": "Add documentation about Linkedin custom profile fields",
-        "url": "https://github.com/hapijs/bell/pull/150"
-      },
-      {
-        "id": 109086142,
-        "labels": ["test"],
-        "number": 148,
-        "title": "upgrade to lab 6 and cleanup",
-        "url": "https://github.com/hapijs/bell/pull/148"
-      }
-    ],
-    "number": 29,
-    "url": "https://github.com/hapijs/bell/milestone/29",
-    "version": "5.4.0"
-  },
-  {
-    "date": "2015-10-04T02:59:15Z",
-    "id": 1322964,
-    "issues": [
-      {
-        "id": 108222836,
-        "labels": ["dependency"],
-        "number": 147,
-        "title": "Update Wreck to 6.x.x and some devDependencies",
-        "url": "https://github.com/hapijs/bell/pull/147"
-      },
-      {
-        "id": 102565394,
-        "labels": ["dependency"],
-        "number": 133,
-        "title": "Update Wreck to 6.1.0 or latest version",
-        "url": "https://github.com/hapijs/bell/issues/133"
-      }
-    ],
-    "number": 28,
-    "url": "https://github.com/hapijs/bell/milestone/28",
-    "version": "5.3.0"
-  },
-  {
-    "date": "2015-09-24T22:07:07Z",
-    "id": 1322464,
-    "issues": [
-      {
-        "id": 108085214,
-        "labels": ["feature"],
-        "number": 146,
-        "title": "Meetup.com Provider",
-        "url": "https://github.com/hapijs/bell/pull/146"
-      },
-      {
-        "id": 106601184,
-        "labels": [],
-        "number": 142,
-        "title": "Update Providers.md",
-        "url": "https://github.com/hapijs/bell/pull/142"
-      },
-      {
-        "id": 106487637,
-        "labels": ["documentation"],
-        "number": 141,
-        "title": "500 error on google auth",
-        "url": "https://github.com/hapijs/bell/issues/141"
-      },
-      {
-        "id": 106076382,
-        "labels": ["test"],
-        "number": 140,
-        "title": "Fix tests",
-        "url": "https://github.com/hapijs/bell/pull/140"
-      },
-      {
-        "id": 105957609,
-        "labels": ["documentation"],
-        "number": 139,
-        "title": "Split up the documentation and add provider specific information plus…",
-        "url": "https://github.com/hapijs/bell/pull/139"
-      },
-      {
-        "id": 105655602,
-        "labels": ["test"],
-        "number": 137,
-        "title": "Node v4",
-        "url": "https://github.com/hapijs/bell/pull/137"
-      },
-      {
-        "id": 102205360,
-        "labels": ["test"],
-        "number": 132,
-        "title": "Fix lasting linting issues",
-        "url": "https://github.com/hapijs/bell/issues/132"
-      },
-      {
-        "id": 101534552,
-        "labels": ["documentation"],
-        "number": 127,
-        "title": "Document Bell Core API and Providers API",
-        "url": "https://github.com/hapijs/bell/issues/127"
-      },
-      {
-        "id": 90126689,
-        "labels": ["feature", "documentation"],
-        "number": 109,
-        "title": "Provider wiki",
-        "url": "https://github.com/hapijs/bell/issues/109"
-      },
-      {
-        "id": 43538912,
-        "labels": ["test"],
-        "number": 25,
-        "title": "Test Cleanup",
-        "url": "https://github.com/hapijs/bell/issues/25"
-      }
-    ],
-    "number": 27,
-    "url": "https://github.com/hapijs/bell/milestone/27",
-    "version": "5.2.0"
-  },
-  {
-    "date": "2015-09-09T21:41:16Z",
-    "id": 1230852,
-    "issues": [
-      {
-        "id": 102202544,
-        "labels": ["bug", "test"],
-        "number": 131,
-        "title": "Fix wrong tests. OAuth1 does not include expiresIn for yahoo/bitbucke…",
-        "url": "https://github.com/hapijs/bell/pull/131"
-      },
-      {
-        "id": 102151605,
-        "labels": ["bug"],
-        "number": 130,
-        "title": "fixed linting issues // now extends lab linting",
-        "url": "https://github.com/hapijs/bell/pull/130"
-      },
-      {
-        "id": 102134344,
-        "labels": ["feature"],
-        "number": 129,
-        "title": "added allowRuntimeProviderParams to allow runtime query params ",
-        "url": "https://github.com/hapijs/bell/pull/129"
-      },
-      {
-        "id": 101499025,
-        "labels": ["feature", "support"],
-        "number": 125,
-        "title": "Provide variable providerParams",
-        "url": "https://github.com/hapijs/bell/issues/125"
-      }
-    ],
-    "number": 23,
-    "url": "https://github.com/hapijs/bell/milestone/23",
-    "version": "5.1.0"
-  },
-  {
-    "date": "2015-07-29T03:35:23Z",
-    "id": 1216429,
-    "issues": [
-      {
-        "id": 97842969,
-        "labels": ["bug", "documentation"],
-        "number": 120,
-        "title": "Facebook Provider: Fix expiresIn, add example, backwards compatibility",
-        "url": "https://github.com/hapijs/bell/pull/120"
-      },
-      {
-        "id": 96207795,
-        "labels": [],
-        "number": 119,
-        "title": "Update google.js",
-        "url": "https://github.com/hapijs/bell/pull/119"
-      },
-      {
-        "id": 96118994,
-        "labels": ["non issue"],
-        "number": 117,
-        "title": "Lois Desplat is the new maintainer",
-        "url": "https://github.com/hapijs/bell/issues/117"
-      },
-      {
-        "id": 95862418,
-        "labels": [],
-        "number": 115,
-        "title": "Add fields to the query",
-        "url": "https://github.com/hapijs/bell/pull/115"
-      },
-      {
-        "id": 80110903,
-        "labels": ["bug"],
-        "number": 89,
-        "title": "facebook expiration won't be mapped properly",
-        "url": "https://github.com/hapijs/bell/issues/89"
-      }
-    ],
-    "number": 22,
-    "url": "https://github.com/hapijs/bell/milestone/22",
-    "version": "5.0.1"
-  },
-  {
-    "date": "2015-07-20T17:35:30Z",
-    "id": 1206158,
-    "issues": [
-      {
-        "id": 96116127,
-        "labels": ["breaking changes", "release notes"],
-        "number": 116,
-        "title": "5.0.0 Release Notes",
-        "url": "https://github.com/hapijs/bell/issues/116"
-      },
-      {
-        "id": 94105164,
-        "labels": ["bug", "breaking changes"],
-        "number": 114,
-        "title": "Updated LinkedIn's default scope",
-        "url": "https://github.com/hapijs/bell/pull/114"
-      },
-      {
-        "id": 91788420,
-        "labels": ["documentation"],
-        "number": 110,
-        "title": "Fix google example",
-        "url": "https://github.com/hapijs/bell/pull/110"
-      },
-      {
-        "id": 89478824,
-        "labels": ["bug", "breaking changes"],
-        "number": 108,
-        "title": "Updated Google provider so that login uses the recommended Google+ People endpoint",
-        "url": "https://github.com/hapijs/bell/pull/108"
-      },
-      {
-        "id": 65967906,
-        "labels": ["bug"],
-        "number": 66,
-        "title": "Deprecated Google and Facebook APIs",
-        "url": "https://github.com/hapijs/bell/issues/66"
-      }
-    ],
-    "number": 21,
-    "url": "https://github.com/hapijs/bell/milestone/21",
-    "version": "5.0.0"
-  },
-  {
-    "date": "2015-07-14T00:28:07Z",
-    "id": 1160658,
-    "issues": [
-      {
-        "id": 89478155,
-        "labels": ["bug"],
-        "number": 107,
-        "title": " Fix clientSecret usage and adds test case",
-        "url": "https://github.com/hapijs/bell/pull/107"
-      },
-      {
-        "id": 88744536,
-        "labels": ["bug"],
-        "number": 103,
-        "title": "remove property username as it is not part of the google profile",
-        "url": "https://github.com/hapijs/bell/pull/103"
-      },
-      {
-        "id": 88316531,
-        "labels": ["bug"],
-        "number": 101,
-        "title": "Fix clientSecret usage",
-        "url": "https://github.com/hapijs/bell/pull/101"
-      }
-    ],
-    "number": 20,
-    "url": "https://github.com/hapijs/bell/milestone/20",
-    "version": "4.0.1"
-  },
-  {
-    "date": "2015-06-11T16:29:39Z",
-    "id": 1138689,
-    "issues": [
-      {
-        "id": 87413807,
-        "labels": ["release notes"],
-        "number": 100,
-        "title": "4.0.0 Release Notes",
-        "url": "https://github.com/hapijs/bell/issues/100"
-      },
-      {
-        "id": 85653474,
-        "labels": ["feature", "breaking changes"],
-        "number": 99,
-        "title": "Ensure only 1 authentication method is used during /token access in o…",
-        "url": "https://github.com/hapijs/bell/pull/99"
-      },
-      {
-        "id": 85344661,
-        "labels": ["breaking changes"],
-        "number": 98,
-        "title": "Don't send client credentials as parameters and basic auth while retrieving token",
-        "url": "https://github.com/hapijs/bell/issues/98"
-      },
-      {
-        "id": 84212813,
-        "labels": ["bug"],
-        "number": 96,
-        "title": "Allow null for domain",
-        "url": "https://github.com/hapijs/bell/pull/96"
-      }
-    ],
-    "number": 19,
-    "url": "https://github.com/hapijs/bell/milestone/19",
-    "version": "4.0.0"
-  },
-  {
-    "date": "2015-05-28T19:49:09Z",
-    "id": 1136837,
-    "issues": [
-      {
-        "id": 81658797,
-        "labels": ["bug", "breaking changes"],
-        "number": 94,
-        "title": "Rewrite OAuth 1.0 client interface",
-        "url": "https://github.com/hapijs/bell/pull/94"
-      },
-      {
-        "id": 81657787,
-        "labels": ["bug", "breaking changes"],
-        "number": 92,
-        "title": "Fix POST payload format and location",
-        "url": "https://github.com/hapijs/bell/issues/92"
-      }
-    ],
-    "number": 18,
-    "url": "https://github.com/hapijs/bell/milestone/18",
-    "version": "3.0.0"
-  },
-  {
-    "date": "2015-05-27T20:48:34Z",
-    "id": 1113507,
-    "issues": [
-      {
-        "id": 81118385,
-        "labels": ["feature"],
+    {
+        "date": "2025-03-12T12:11:47Z",
+        "id": 12500794,
+        "issues": [
+            {
+                "id": 2911326516,
+                "labels": ["feature"],
+                "number": 497,
+                "title": "Add tokenParams option",
+                "url": "https://github.com/hapijs/bell/pull/497"
+            },
+            {
+                "id": 2844302064,
+                "labels": ["breaking changes"],
+                "number": 496,
+                "title": "chore: remove mixer provider",
+                "url": "https://github.com/hapijs/bell/pull/496"
+            },
+            {
+                "id": 1109523947,
+                "labels": ["documentation"],
+                "number": 485,
+                "title": "remove the bit about google plus",
+                "url": "https://github.com/hapijs/bell/pull/485"
+            }
+        ],
         "number": 91,
-        "title": "OAuth client resource() endpoint",
-        "url": "https://github.com/hapijs/bell/pull/91"
-      },
-      {
-        "id": 81117580,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/bell/milestone/91",
+        "version": "13.1.0"
+    },
+    {
+        "date": "2024-03-19T15:01:00Z",
+        "id": 10705042,
+        "issues": [
+            {
+                "id": 2195000907,
+                "labels": ["types"],
+                "number": 493,
+                "title": "feat: 🎸 add types",
+                "url": "https://github.com/hapijs/bell/pull/493"
+            }
+        ],
         "number": 90,
-        "title": "Expose OAuth 1.0 client protected resource endpoing",
-        "url": "https://github.com/hapijs/bell/issues/90"
-      }
-    ],
-    "number": 17,
-    "url": "https://github.com/hapijs/bell/milestone/17",
-    "version": "2.9.0"
-  },
-  {
-    "date": "2015-05-16T19:21:36Z",
-    "id": 1107238,
-    "issues": [
-      {
-        "id": 77107231,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/bell/milestone/90",
+        "version": "13.0.2"
+    },
+    {
+        "date": "2023-02-11T19:53:36Z",
+        "id": 8521840,
+        "issues": [
+            {
+                "id": 1551797532,
+                "labels": ["dependency"],
+                "number": 490,
+                "title": "chore: bump hoek",
+                "url": "https://github.com/hapijs/bell/pull/490"
+            }
+        ],
+        "number": 89,
+        "url": "https://github.com/hapijs/bell/milestone/89",
+        "version": "13.0.1"
+    },
+    {
+        "date": "2022-10-10T12:22:30Z",
+        "id": 8521839,
+        "issues": [
+            {
+                "id": 1402605047,
+                "labels": ["breaking changes", "test", "dependency"],
+                "number": 488,
+                "title": "Support hapi v21 and node v18, drop hapi v19 and node v12, test ESM support",
+                "url": "https://github.com/hapijs/bell/pull/488"
+            }
+        ],
         "number": 88,
-        "title": "Expose OAuth interface. Closes #48",
-        "url": "https://github.com/hapijs/bell/pull/88"
-      },
-      {
-        "id": 52404897,
-        "labels": ["feature"],
-        "number": 48,
-        "title": "Expose Client as a plugin method",
-        "url": "https://github.com/hapijs/bell/issues/48"
-      }
-    ],
-    "number": 16,
-    "url": "https://github.com/hapijs/bell/milestone/16",
-    "version": "2.8.0"
-  },
-  {
-    "date": "2015-05-12T17:42:06Z",
-    "id": 1095843,
-    "issues": [
-      {
-        "id": 74862512,
-        "labels": ["bug"],
-        "number": 87,
-        "title": "Pass `forceHttps` and `location` to v1 client",
-        "url": "https://github.com/hapijs/bell/pull/87"
-      }
-    ],
-    "number": 15,
-    "url": "https://github.com/hapijs/bell/milestone/15",
-    "version": "2.7.1"
-  },
-  {
-    "date": "2015-05-04T21:07:52Z",
-    "id": 1095583,
-    "issues": [
-      {
-        "id": 73036999,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/bell/milestone/88",
+        "version": "13.0.0"
+    },
+    {
+        "date": "2021-08-26T05:07:21Z",
+        "id": 7091454,
+        "issues": [
+            {
+                "id": 975319875,
+                "labels": ["feature"],
+                "number": 481,
+                "title": "Support OAuth1 client wreck options",
+                "url": "https://github.com/hapijs/bell/pull/481"
+            }
+        ],
+        "number": 86,
+        "url": "https://github.com/hapijs/bell/milestone/86",
+        "version": "12.3.0"
+    },
+    {
+        "date": "2021-03-15T08:08:24Z",
+        "id": 5921588,
+        "issues": [
+            {
+                "id": 791651301,
+                "labels": [],
+                "number": 476,
+                "title": "Add support for providing clientSecret as a function",
+                "url": "https://github.com/hapijs/bell/pull/476"
+            }
+        ],
         "number": 85,
-        "title": "add location setting similar to old hapi server location",
-        "url": "https://github.com/hapijs/bell/pull/85"
-      }
-    ],
-    "number": 14,
-    "url": "https://github.com/hapijs/bell/milestone/14",
-    "version": "2.7.0"
-  },
-  {
-    "date": "2015-05-04T18:43:37Z",
-    "id": 1092703,
-    "issues": [
-      {
-        "id": 72917686,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/bell/milestone/85",
+        "version": "12.2.0"
+    },
+    {
+        "date": "2020-09-27T00:04:14Z",
+        "id": 5618252,
+        "issues": [
+            {
+                "id": 709585465,
+                "labels": [],
+                "number": 473,
+                "title": "upgrade lab to v24",
+                "url": "https://github.com/hapijs/bell/pull/473"
+            },
+            {
+                "id": 684021959,
+                "labels": [],
+                "number": 470,
+                "title": "migrate to new travis format",
+                "url": "https://github.com/hapijs/bell/pull/470"
+            },
+            {
+                "id": 682270517,
+                "labels": ["documentation"],
+                "number": 469,
+                "title": "[Bugfix] Okta example code",
+                "url": "https://github.com/hapijs/bell/pull/469"
+            },
+            {
+                "id": 677270512,
+                "labels": [],
+                "number": 467,
+                "title": "update to hapi 20",
+                "url": "https://github.com/hapijs/bell/pull/467"
+            },
+            {
+                "id": 672169679,
+                "labels": [],
+                "number": 466,
+                "title": "upgrade bell to use just regular joi package and update teamwork as well",
+                "url": "https://github.com/hapijs/bell/pull/466"
+            }
+        ],
         "number": 84,
-        "title": "Add nest authentication",
-        "url": "https://github.com/hapijs/bell/pull/84"
-      }
-    ],
-    "number": 13,
-    "url": "https://github.com/hapijs/bell/milestone/13",
-    "version": "2.6.0"
-  },
-  {
-    "date": "2015-05-01T16:31:25Z",
-    "id": 1080808,
-    "issues": [
-      {
-        "id": 72001801,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/bell/milestone/84",
+        "version": "12.1.1"
+    },
+    {
+        "date": "2020-08-20T20:22:45Z",
+        "id": 5428750,
+        "issues": [
+            {
+                "id": 549219644,
+                "labels": ["feature"],
+                "number": 450,
+                "title": "Support Okta custom authorization server",
+                "url": "https://github.com/hapijs/bell/pull/450"
+            }
+        ],
+        "number": 83,
+        "url": "https://github.com/hapijs/bell/milestone/83",
+        "version": "12.1.0"
+    },
+    {
+        "date": "2020-05-15T20:29:49Z",
+        "id": 4993492,
+        "issues": [
+            {
+                "id": 586945013,
+                "labels": ["bug"],
+                "number": 458,
+                "title": "Issue with the meetup provider",
+                "url": "https://github.com/hapijs/bell/issues/458"
+            }
+        ],
+        "number": 82,
+        "url": "https://github.com/hapijs/bell/milestone/82",
+        "version": "12.0.1"
+    },
+    {
+        "date": "2020-01-10T05:54:33Z",
+        "id": 4676226,
+        "issues": [
+            {
+                "id": 547880645,
+                "labels": ["breaking changes"],
+                "number": 449,
+                "title": "Change plugin name to @hapi/bell",
+                "url": "https://github.com/hapijs/bell/issues/449"
+            },
+            {
+                "id": 547878754,
+                "labels": ["breaking changes", "dependency"],
+                "number": 448,
+                "title": "Require hapi 19",
+                "url": "https://github.com/hapijs/bell/issues/448"
+            },
+            {
+                "id": 547878234,
+                "labels": ["breaking changes", "dependency"],
+                "number": 447,
+                "title": "Only node 12",
+                "url": "https://github.com/hapijs/bell/issues/447"
+            },
+            {
+                "id": 536654753,
+                "labels": [],
+                "number": 445,
+                "title": "Use actual package name for plugin name",
+                "url": "https://github.com/hapijs/bell/pull/445"
+            }
+        ],
         "number": 81,
-        "title": "Added option to specify the LinkedIn profile fields",
-        "url": "https://github.com/hapijs/bell/pull/81"
-      },
-      {
-        "id": 71988242,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/bell/milestone/81",
+        "version": "12.0.0"
+    },
+    {
+        "date": "2019-09-20T05:16:48Z",
+        "id": 4655991,
+        "issues": [
+            {
+                "id": 494478938,
+                "labels": ["feature"],
+                "number": 432,
+                "title": "Return azureAD provider",
+                "url": "https://github.com/hapijs/bell/issues/432"
+            }
+        ],
         "number": 80,
-        "title": "Support Reddit as an OAuth provider",
-        "url": "https://github.com/hapijs/bell/pull/80"
-      },
-      {
-        "id": 70779579,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/bell/milestone/80",
+        "version": "11.1.0"
+    },
+    {
+        "date": "2019-09-13T07:05:49Z",
+        "id": 4570742,
+        "issues": [
+            {
+                "id": 493159204,
+                "labels": ["breaking changes"],
+                "number": 428,
+                "title": "Make dropbox-v2 the only provider",
+                "url": "https://github.com/hapijs/bell/issues/428"
+            },
+            {
+                "id": 493148182,
+                "labels": ["breaking changes"],
+                "number": 427,
+                "title": "Replace office365, azuread with updated azure provider",
+                "url": "https://github.com/hapijs/bell/issues/427"
+            },
+            {
+                "id": 493143645,
+                "labels": ["dependency"],
+                "number": 426,
+                "title": "Update joi",
+                "url": "https://github.com/hapijs/bell/issues/426"
+            },
+            {
+                "id": 479714612,
+                "labels": ["feature"],
+                "number": 420,
+                "title": "Add support for PKCE",
+                "url": "https://github.com/hapijs/bell/issues/420"
+            },
+            {
+                "id": 473948387,
+                "labels": ["breaking changes"],
+                "number": 418,
+                "title": "New Twitch API oAuth & profile",
+                "url": "https://github.com/hapijs/bell/pull/418"
+            },
+            {
+                "id": 472871148,
+                "labels": ["documentation"],
+                "number": 416,
+                "title": "Update github login example",
+                "url": "https://github.com/hapijs/bell/pull/416"
+            },
+            {
+                "id": 447239056,
+                "labels": ["feature"],
+                "number": 411,
+                "title": "[Bell-410] Add AWS Cognito provider",
+                "url": "https://github.com/hapijs/bell/pull/411"
+            },
+            {
+                "id": 446217428,
+                "labels": ["feature"],
+                "number": 410,
+                "title": "Add provider for AWS Cognito",
+                "url": "https://github.com/hapijs/bell/issues/410"
+            },
+            {
+                "id": 439772064,
+                "labels": ["feature"],
+                "number": 409,
+                "title": "RFC 7636: Proof Key for Code Exchange",
+                "url": "https://github.com/hapijs/bell/pull/409"
+            },
+            {
+                "id": 427414723,
+                "labels": ["bug", "breaking changes"],
+                "number": 404,
+                "title": "Add Azure Oauth2 v2 provider",
+                "url": "https://github.com/hapijs/bell/pull/404"
+            },
+            {
+                "id": 424632655,
+                "labels": ["bug"],
+                "number": 403,
+                "title": "Correctly utilize JWT tokens instead of normal accessTokens for AzureAD",
+                "url": "https://github.com/hapijs/bell/issues/403"
+            },
+            {
+                "id": 343982499,
+                "labels": ["bug"],
+                "number": 376,
+                "title": "Update Office365 / Microsoft provider",
+                "url": "https://github.com/hapijs/bell/issues/376"
+            }
+        ],
         "number": 79,
-        "title": "LinkedIn profile fields",
-        "url": "https://github.com/hapijs/bell/issues/79"
-      }
-    ],
-    "number": 12,
-    "url": "https://github.com/hapijs/bell/milestone/12",
-    "version": "2.5.0"
-  },
-  {
-    "date": "2015-04-23T15:48:49Z",
-    "id": 1056408,
-    "issues": [
-      {
-        "id": 69931217,
-        "labels": ["feature"],
-        "number": 78,
-        "title": "update facebook URLs to use facebook Graph v2.3",
-        "url": "https://github.com/hapijs/bell/pull/78"
-      },
-      {
-        "id": 69033187,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/bell/milestone/79",
+        "version": "11.0.0"
+    },
+    {
+        "date": "2019-08-14T04:48:02Z",
+        "id": 4245748,
+        "issues": [
+            {
+                "id": 480478223,
+                "labels": ["dependency"],
+                "number": 421,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/bell/issues/421"
+            }
+        ],
         "number": 77,
-        "title": "Support for Phabricator",
-        "url": "https://github.com/hapijs/bell/pull/77"
-      },
-      {
-        "id": 68527118,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/bell/milestone/77",
+        "version": "10.1.1"
+    },
+    {
+        "date": "2019-04-20T19:54:13Z",
+        "id": 4113366,
+        "issues": [
+            {
+                "id": 435431046,
+                "labels": ["dependency"],
+                "number": 405,
+                "title": "Change module namespace",
+                "url": "https://github.com/hapijs/bell/issues/405"
+            }
+        ],
+        "number": 76,
+        "url": "https://github.com/hapijs/bell/milestone/76",
+        "version": "10.1.0"
+    },
+    {
+        "date": "2019-03-05T20:39:59Z",
+        "id": 4093876,
+        "issues": [
+            {
+                "id": 417513441,
+                "labels": ["breaking changes", "release notes"],
+                "number": 400,
+                "title": "10.0.0 Release Notes",
+                "url": "https://github.com/hapijs/bell/issues/400"
+            },
+            {
+                "id": 415004859,
+                "labels": ["feature", "breaking changes"],
+                "number": 397,
+                "title": "Add support for hapi 18",
+                "url": "https://github.com/hapijs/bell/pull/397"
+            },
+            {
+                "id": 403645501,
+                "labels": ["bug"],
+                "number": 394,
+                "title": "Google auth redirect loop with hapi v18",
+                "url": "https://github.com/hapijs/bell/issues/394"
+            },
+            {
+                "id": 399247375,
+                "labels": ["feature", "breaking changes"],
+                "number": 391,
+                "title": "Update LinkedIn to use new lite profile",
+                "url": "https://github.com/hapijs/bell/pull/391"
+            },
+            {
+                "id": 397131758,
+                "labels": ["feature"],
+                "number": 390,
+                "title": "Upgrade LinkedIn to support new 'Lite Profile'",
+                "url": "https://github.com/hapijs/bell/issues/390"
+            }
+        ],
+        "number": 75,
+        "url": "https://github.com/hapijs/bell/milestone/75",
+        "version": "10.0.0"
+    },
+    {
+        "date": "2019-04-20T22:20:42Z",
+        "id": 4245765,
+        "issues": [
+            {
+                "id": 435434270,
+                "labels": ["dependency", "lts"],
+                "number": 406,
+                "title": "Change module namespace for v9 branch",
+                "url": "https://github.com/hapijs/bell/issues/406"
+            }
+        ],
+        "number": 78,
+        "url": "https://github.com/hapijs/bell/milestone/78",
+        "version": "9.6.0"
+    },
+    {
+        "date": "2019-02-27T18:28:00Z",
+        "id": 3811130,
+        "issues": [
+            {
+                "id": 408872079,
+                "labels": ["feature"],
+                "number": 396,
+                "title": "Allow isSameSite customization",
+                "url": "https://github.com/hapijs/bell/pull/396"
+            },
+            {
+                "id": 408847542,
+                "labels": ["feature"],
+                "number": 395,
+                "title": "Safari isSameSite",
+                "url": "https://github.com/hapijs/bell/issues/395"
+            },
+            {
+                "id": 387924079,
+                "labels": ["documentation"],
+                "number": 389,
+                "title": "Add changelog.md",
+                "url": "https://github.com/hapijs/bell/pull/389"
+            }
+        ],
+        "number": 74,
+        "url": "https://github.com/hapijs/bell/milestone/74",
+        "version": "9.5.0"
+    },
+    {
+        "date": "2018-11-10T22:28:07Z",
+        "id": 3811122,
+        "issues": [
+            {
+                "id": 379456755,
+                "labels": ["test", "non issue"],
+                "number": 386,
+                "title": "Cleanup",
+                "url": "https://github.com/hapijs/bell/issues/386"
+            },
+            {
+                "id": 366165691,
+                "labels": ["feature"],
+                "number": 381,
+                "title": "FB custom scope + upgrade api version",
+                "url": "https://github.com/hapijs/bell/pull/381"
+            },
+            {
+                "id": 341666043,
+                "labels": ["bug", "dependency"],
+                "number": 374,
+                "title": "Ensure Auth0 profile is availabe in all cases",
+                "url": "https://github.com/hapijs/bell/pull/374"
+            },
+            {
+                "id": 339269483,
+                "labels": ["feature", "dependency"],
+                "number": 373,
+                "title": "Use Stripe Express",
+                "url": "https://github.com/hapijs/bell/pull/373"
+            },
+            {
+                "id": 338382792,
+                "labels": ["feature"],
+                "number": 372,
+                "title": "Add config 'fields' to vk provider",
+                "url": "https://github.com/hapijs/bell/pull/372"
+            }
+        ],
         "number": 73,
-        "title": "Allow environment variables to configure options",
-        "url": "https://github.com/hapijs/bell/pull/73"
-      }
-    ],
-    "number": 11,
-    "url": "https://github.com/hapijs/bell/milestone/11",
-    "version": "2.4.0"
-  },
-  {
-    "date": "2015-04-07T15:15:23Z",
-    "id": 995473,
-    "issues": [
-      {
-        "id": 66910931,
-        "labels": ["non issue"],
+        "url": "https://github.com/hapijs/bell/milestone/73",
+        "version": "9.4.0"
+    },
+    {
+        "date": "2018-05-29T19:00:33Z",
+        "id": 3237720,
+        "issues": [
+            {
+                "id": 313209143,
+                "labels": ["feature"],
+                "number": 358,
+                "title": "Use OIDC compliant profile from Auth0",
+                "url": "https://github.com/hapijs/bell/pull/358"
+            }
+        ],
         "number": 71,
-        "title": "Fix linting issues",
-        "url": "https://github.com/hapijs/bell/pull/71"
-      },
-      {
-        "id": 66341064,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/bell/milestone/71",
+        "version": "9.3.1"
+    },
+    {
+        "date": "2018-04-03T08:01:17Z",
+        "id": 3237571,
+        "issues": [
+            {
+                "id": 310722160,
+                "labels": [],
+                "number": 356,
+                "title": "fix(package): update Boom and fix trying to create an instance of .internal",
+                "url": "https://github.com/hapijs/bell/pull/356"
+            },
+            {
+                "id": 308249093,
+                "labels": ["bug", "security"],
+                "number": 355,
+                "title": "Set SameSite=Strict for improved security",
+                "url": "https://github.com/hapijs/bell/pull/355"
+            }
+        ],
         "number": 70,
-        "title": "Update Joi to 6.x",
-        "url": "https://github.com/hapijs/bell/pull/70"
-      },
-      {
-        "id": 66016190,
-        "labels": ["feature"],
-        "number": 69,
-        "title": "Add LinkedIn provider",
-        "url": "https://github.com/hapijs/bell/pull/69"
-      },
-      {
-        "id": 65996349,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/bell/milestone/70",
+        "version": "9.3.0"
+    },
+    {
+        "date": "2018-04-02T19:10:36Z",
+        "id": 3142521,
+        "issues": [
+            {
+                "id": 307176741,
+                "labels": ["bug"],
+                "number": 354,
+                "title": "Remove new Buffer usage",
+                "url": "https://github.com/hapijs/bell/pull/354"
+            },
+            {
+                "id": 302854966,
+                "labels": ["feature"],
+                "number": 350,
+                "title": "Picture object included in the profile object for facebook oauth",
+                "url": "https://github.com/hapijs/bell/pull/350"
+            },
+            {
+                "id": 301989327,
+                "labels": ["bug"],
+                "number": 349,
+                "title": "Fix problem with not exist required param 'v' last versitons today 5.…",
+                "url": "https://github.com/hapijs/bell/pull/349"
+            },
+            {
+                "id": 301988276,
+                "labels": ["bug"],
+                "number": 348,
+                "title": "VK auth dev error: 'v' is required ",
+                "url": "https://github.com/hapijs/bell/issues/348"
+            },
+            {
+                "id": 301670554,
+                "labels": ["feature"],
+                "number": 347,
+                "title": "facebook picture field added to get profile picture",
+                "url": "https://github.com/hapijs/bell/pull/347"
+            }
+        ],
         "number": 68,
-        "title": "Add ArcGIS Online provider",
-        "url": "https://github.com/hapijs/bell/pull/68"
-      },
-      {
-        "id": 65976092,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/bell/milestone/68",
+        "version": "9.2.0"
+    },
+    {
+        "date": "2018-02-26T06:51:41Z",
+        "id": 3142375,
+        "issues": [
+            {
+                "id": 207295360,
+                "labels": ["feature"],
+                "number": 295,
+                "title": "Expose query in spite of errors",
+                "url": "https://github.com/hapijs/bell/issues/295"
+            },
+            {
+                "id": 199957498,
+                "labels": ["feature", "breaking changes"],
+                "number": 288,
+                "title": "Remove or more comprehensively document provider.version",
+                "url": "https://github.com/hapijs/bell/issues/288"
+            }
+        ],
         "number": 67,
-        "title": "Support new wreck in mocks",
-        "url": "https://github.com/hapijs/bell/pull/67"
-      },
-      {
-        "id": 58931909,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/bell/milestone/67",
+        "version": "9.1.0"
+    },
+    {
+        "date": "2018-02-26T04:20:11Z",
+        "id": 2410070,
+        "issues": [
+            {
+                "id": 300104867,
+                "labels": ["breaking changes", "release notes"],
+                "number": 345,
+                "title": "9.0.0 Release Notes",
+                "url": "https://github.com/hapijs/bell/issues/345"
+            },
+            {
+                "id": 272808715,
+                "labels": ["feature", "breaking changes", "dependency"],
+                "number": 332,
+                "title": "[WIP] Hapi 17 Support",
+                "url": "https://github.com/hapijs/bell/pull/332"
+            },
+            {
+                "id": 271150791,
+                "labels": ["breaking changes", "dependency"],
+                "number": 330,
+                "title": "hapi v17 support",
+                "url": "https://github.com/hapijs/bell/issues/330"
+            }
+        ],
+        "number": 63,
+        "url": "https://github.com/hapijs/bell/milestone/63",
+        "version": "9.0.0"
+    },
+    {
+        "date": "2017-11-19T16:41:43Z",
+        "id": 2922695,
+        "issues": [
+            {
+                "id": 267737145,
+                "labels": ["feature"],
+                "number": 325,
+                "title": "Changed the discord providers image url prefix",
+                "url": "https://github.com/hapijs/bell/pull/325"
+            },
+            {
+                "id": 256815119,
+                "labels": ["feature"],
+                "number": 321,
+                "title": "Add trakt.tv provider",
+                "url": "https://github.com/hapijs/bell/pull/321"
+            },
+            {
+                "id": 197150550,
+                "labels": ["feature"],
+                "number": 286,
+                "title": "Added custom OAuth2 client authentication",
+                "url": "https://github.com/hapijs/bell/pull/286"
+            }
+        ],
+        "number": 66,
+        "url": "https://github.com/hapijs/bell/milestone/66",
+        "version": "8.9.0"
+    },
+    {
+        "date": "2017-09-24T21:05:07Z",
+        "id": 2787762,
+        "issues": [
+            {
+                "id": 245907995,
+                "labels": ["feature"],
+                "number": 319,
+                "title": "Allowing the location option to be a function",
+                "url": "https://github.com/hapijs/bell/pull/319"
+            },
+            {
+                "id": 243935086,
+                "labels": ["feature"],
+                "number": 318,
+                "title": "Add Mixer as a new provider",
+                "url": "https://github.com/hapijs/bell/pull/318"
+            },
+            {
+                "id": 238642668,
+                "labels": ["feature"],
+                "number": 316,
+                "title": "Add Stripe as a new provider",
+                "url": "https://github.com/hapijs/bell/pull/316"
+            },
+            {
+                "id": 234995785,
+                "labels": ["feature"],
+                "number": 315,
+                "title": "Add `fields` option to Facebook provider",
+                "url": "https://github.com/hapijs/bell/pull/315"
+            },
+            {
+                "id": 166080952,
+                "labels": ["feature"],
+                "number": 244,
+                "title": "New dropbox-v2 provider which uses Dropbox V2 API",
+                "url": "https://github.com/hapijs/bell/pull/244"
+            }
+        ],
+        "number": 65,
+        "url": "https://github.com/hapijs/bell/milestone/65",
+        "version": "8.8.0"
+    },
+    {
+        "date": "2017-05-09T03:28:13Z",
+        "id": 2508991,
+        "issues": [
+            {
+                "id": 226975823,
+                "labels": ["feature"],
+                "number": 312,
+                "title": "add DigitalOcean provider",
+                "url": "https://github.com/hapijs/bell/pull/312"
+            },
+            {
+                "id": 224568867,
+                "labels": ["feature"],
+                "number": 311,
+                "title": "Updates Facebook API to v2.9",
+                "url": "https://github.com/hapijs/bell/pull/311"
+            },
+            {
+                "id": 219098039,
+                "labels": ["feature"],
+                "number": 308,
+                "title": "Add `'profile'` to list of default scopes for Okta",
+                "url": "https://github.com/hapijs/bell/pull/308"
+            },
+            {
+                "id": 215638763,
+                "labels": [],
+                "number": 303,
+                "title": "Facebook",
+                "url": "https://github.com/hapijs/bell/pull/303"
+            },
+            {
+                "id": 171285612,
+                "labels": ["feature", "breaking changes"],
+                "number": 252,
+                "title": "[Update] Updates Facebook provider to v2.7",
+                "url": "https://github.com/hapijs/bell/pull/252"
+            }
+        ],
+        "number": 64,
+        "url": "https://github.com/hapijs/bell/milestone/64",
+        "version": "8.7.0"
+    },
+    {
+        "date": "2017-03-24T20:22:14Z",
+        "id": 2381785,
+        "issues": [
+            {
+                "id": 210634907,
+                "labels": ["feature"],
+                "number": 299,
+                "title": "Add support for authentication with Okta",
+                "url": "https://github.com/hapijs/bell/pull/299"
+            },
+            {
+                "id": 208807117,
+                "labels": ["feature"],
+                "number": 298,
+                "title": "added spotify",
+                "url": "https://github.com/hapijs/bell/pull/298"
+            },
+            {
+                "id": 182682268,
+                "labels": ["feature"],
+                "number": 273,
+                "title": "Fixes #261 expose OAUTH2 token response as request.auth.artifacts",
+                "url": "https://github.com/hapijs/bell/pull/273"
+            }
+        ],
         "number": 62,
-        "title": "Update .travis.yml",
-        "url": "https://github.com/hapijs/bell/pull/62"
-      }
-    ],
-    "number": 10,
-    "url": "https://github.com/hapijs/bell/milestone/10",
-    "version": "2.3.0"
-  },
-  {
-    "date": "2015-02-25T16:52:57Z",
-    "id": 962575,
-    "issues": [
-      {
-        "id": 58449684,
-        "labels": ["bug"],
-        "number": 60,
-        "title": "Make forceHttps complete ",
-        "url": "https://github.com/hapijs/bell/pull/60"
-      },
-      {
-        "id": 58129227,
-        "labels": ["feature"],
-        "number": 58,
-        "title": "passing back expires_in for oauth 2.0 refresh token request",
-        "url": "https://github.com/hapijs/bell/pull/58"
-      },
-      {
-        "id": 55708643,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/bell/milestone/62",
+        "version": "8.6.0"
+    },
+    {
+        "date": "2017-03-24T20:22:22Z",
+        "id": 2272937,
+        "issues": [
+            {
+                "id": 200068706,
+                "labels": ["feature"],
+                "number": 289,
+                "title": "AzureAD: Support email, when userPrincipalName (upn) is not available",
+                "url": "https://github.com/hapijs/bell/pull/289"
+            }
+        ],
+        "number": 61,
+        "url": "https://github.com/hapijs/bell/milestone/61",
+        "version": "8.5.1"
+    },
+    {
+        "date": "2017-01-24T02:39:32Z",
+        "id": 1953216,
+        "issues": [
+            {
+                "id": 202679436,
+                "labels": ["feature"],
+                "number": 291,
+                "title": "Medium provider",
+                "url": "https://github.com/hapijs/bell/issues/291"
+            }
+        ],
         "number": 54,
-        "title": "Added Dropbox.",
-        "url": "https://github.com/hapijs/bell/pull/54"
-      },
-      {
-        "id": 52871863,
-        "labels": ["feature"],
-        "number": 49,
-        "title": "pass back expires_in",
-        "url": "https://github.com/hapijs/bell/issues/49"
-      }
-    ],
-    "number": 9,
-    "url": "https://github.com/hapijs/bell/milestone/9",
-    "version": "2.2.0"
-  },
-  {
-    "date": "2015-02-02T22:56:46Z",
-    "id": 904772,
-    "issues": [
-      {
-        "id": 54653608,
-        "labels": ["feature"],
-        "number": 53,
-        "title": "Add option for forcing https.",
-        "url": "https://github.com/hapijs/bell/pull/53"
-      }
-    ],
-    "number": 8,
-    "url": "https://github.com/hapijs/bell/milestone/8",
-    "version": "2.1.0"
-  },
-  {
-    "date": "2014-12-15T19:28:03Z",
-    "id": 881012,
-    "issues": [
-      {
-        "id": 50345983,
-        "labels": ["breaking changes", "dependency"],
-        "number": 43,
-        "title": "Hapi8",
-        "url": "https://github.com/hapijs/bell/pull/43"
-      },
-      {
-        "id": 50127806,
-        "labels": ["breaking changes", "dependency"],
-        "number": 42,
-        "title": "hapi 8.0 API",
-        "url": "https://github.com/hapijs/bell/issues/42"
-      }
-    ],
-    "number": 7,
-    "url": "https://github.com/hapijs/bell/milestone/7",
-    "version": "2.0.0"
-  },
-  {
-    "date": "2014-12-15T19:28:15Z",
-    "id": 843882,
-    "issues": [
-      {
-        "id": 48107444,
-        "labels": ["bug"],
-        "number": 39,
-        "title": "handle oauth user rejection for v2 as well",
-        "url": "https://github.com/hapijs/bell/pull/39"
-      }
-    ],
-    "number": 6,
-    "url": "https://github.com/hapijs/bell/milestone/6",
-    "version": "1.3.1"
-  },
-  {
-    "date": "2014-10-28T16:15:10Z",
-    "id": 829502,
-    "issues": [
-      {
-        "id": 46380572,
-        "labels": ["feature"],
-        "number": 35,
-        "title": "Add VK provider.",
-        "url": "https://github.com/hapijs/bell/pull/35"
-      }
-    ],
-    "number": 5,
-    "url": "https://github.com/hapijs/bell/milestone/5",
-    "version": "1.3.0"
-  },
-  {
-    "date": "2014-10-16T21:03:40Z",
-    "id": 752849,
-    "issues": [
-      {
-        "id": 46009950,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/bell/milestone/54",
+        "version": "8.5.0"
+    },
+    {
+        "date": "2016-12-01T03:29:08Z",
+        "id": 2074721,
+        "issues": [
+            {
+                "id": 192744406,
+                "labels": ["dependency"],
+                "number": 280,
+                "title": "hapi 16",
+                "url": "https://github.com/hapijs/bell/issues/280"
+            },
+            {
+                "id": 178545052,
+                "labels": ["feature"],
+                "number": 266,
+                "title": "Implement Azure Active Directory authentication for enterprise AD logins",
+                "url": "https://github.com/hapijs/bell/issues/266"
+            }
+        ],
+        "number": 60,
+        "url": "https://github.com/hapijs/bell/milestone/60",
+        "version": "8.4.0"
+    },
+    {
+        "date": "2016-10-04T14:36:45Z",
+        "id": 2046990,
+        "issues": [
+            {
+                "id": 178830165,
+                "labels": ["feature"],
+                "number": 267,
+                "title": "Fixes #266 Implements azure active directory as bell azuread module",
+                "url": "https://github.com/hapijs/bell/pull/267"
+            }
+        ],
+        "number": 59,
+        "url": "https://github.com/hapijs/bell/milestone/59",
+        "version": "8.3.0"
+    },
+    {
+        "date": "2016-09-21T14:49:02Z",
+        "id": 2016833,
+        "issues": [
+            {
+                "id": 178101952,
+                "labels": ["bug"],
+                "number": 265,
+                "title": "Set isSameSite to false and add code to support Hapi 13.5+",
+                "url": "https://github.com/hapijs/bell/pull/265"
+            },
+            {
+                "id": 177214049,
+                "labels": ["bug"],
+                "number": 264,
+                "title": "Bell is not compatible with Hapi 15 due to same-site: strict for cookie",
+                "url": "https://github.com/hapijs/bell/issues/264"
+            }
+        ],
+        "number": 58,
+        "url": "https://github.com/hapijs/bell/milestone/58",
+        "version": "8.2.1"
+    },
+    {
+        "date": "2016-09-07T14:41:01Z",
+        "id": 1989012,
+        "issues": [
+            {
+                "id": 175519020,
+                "labels": ["feature", "test", "dependency"],
+                "number": 259,
+                "title": "Support Hapi 15 & upgrade boom + wreck dependencies",
+                "url": "https://github.com/hapijs/bell/issues/259"
+            },
+            {
+                "id": 173508017,
+                "labels": ["bug", "feature"],
+                "number": 256,
+                "title": "allow for leading whitespace in JSON",
+                "url": "https://github.com/hapijs/bell/pull/256"
+            },
+            {
+                "id": 169316259,
+                "labels": ["feature"],
+                "number": 248,
+                "title": "Add discord as a new provider",
+                "url": "https://github.com/hapijs/bell/pull/248"
+            }
+        ],
+        "number": 57,
+        "url": "https://github.com/hapijs/bell/milestone/57",
+        "version": "8.2.0"
+    },
+    {
+        "date": "2016-09-07T14:32:01Z",
+        "id": 1953230,
+        "issues": [
+            {
+                "id": 172314388,
+                "labels": ["bug"],
+                "number": 254,
+                "title": "fix mapping of google profile fixes #251",
+                "url": "https://github.com/hapijs/bell/pull/254"
+            },
+            {
+                "id": 170634385,
+                "labels": ["bug"],
+                "number": 251,
+                "title": "Google user info",
+                "url": "https://github.com/hapijs/bell/issues/251"
+            }
+        ],
+        "number": 56,
+        "url": "https://github.com/hapijs/bell/milestone/56",
+        "version": "8.1.1"
+    },
+    {
+        "date": "2016-08-20T21:39:28Z",
+        "id": 1953219,
+        "issues": [
+            {
+                "id": 169709882,
+                "labels": ["feature"],
+                "number": 249,
+                "title": "Twitter additional GET parameters on extended profile request",
+                "url": "https://github.com/hapijs/bell/pull/249"
+            }
+        ],
+        "number": 55,
+        "url": "https://github.com/hapijs/bell/milestone/55",
+        "version": "8.1.0"
+    },
+    {
+        "date": "2016-07-29T20:27:10Z",
+        "id": 1912593,
+        "issues": [
+            {
+                "id": 168406817,
+                "labels": ["dependency"],
+                "number": 247,
+                "title": "Allow hapi 14",
+                "url": "https://github.com/hapijs/bell/issues/247"
+            }
+        ],
+        "number": 52,
+        "url": "https://github.com/hapijs/bell/milestone/52",
+        "version": "8.0.1"
+    },
+    {
+        "date": "2016-07-17T20:22:49Z",
+        "id": 1609606,
+        "issues": [
+            {
+                "id": 165993769,
+                "labels": ["release notes"],
+                "number": 243,
+                "title": "Bell 8.0.0 Release Notes",
+                "url": "https://github.com/hapijs/bell/issues/243"
+            },
+            {
+                "id": 165923409,
+                "labels": ["dependency"],
+                "number": 242,
+                "title": "Upgrade Joi dependence to 9.x.x",
+                "url": "https://github.com/hapijs/bell/issues/242"
+            },
+            {
+                "id": 165436074,
+                "labels": ["feature"],
+                "number": 240,
+                "title": "Fitbit provider",
+                "url": "https://github.com/hapijs/bell/pull/240"
+            },
+            {
+                "id": 160553457,
+                "labels": ["feature", "breaking changes"],
+                "number": 235,
+                "title": "Separate Google into two providers. #228",
+                "url": "https://github.com/hapijs/bell/pull/235"
+            },
+            {
+                "id": 160315321,
+                "labels": ["feature"],
+                "number": 233,
+                "title": "Allow providerParams to be a method invoked with the request",
+                "url": "https://github.com/hapijs/bell/pull/233"
+            },
+            {
+                "id": 158480686,
+                "labels": ["feature"],
+                "number": 228,
+                "title": "Remove dependency on Google Plus APIs",
+                "url": "https://github.com/hapijs/bell/issues/228"
+            }
+        ],
         "number": 34,
-        "title": "handle oauth login user rejection",
-        "url": "https://github.com/hapijs/bell/pull/34"
-      },
-      {
-        "id": 44911704,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/bell/milestone/34",
+        "version": "8.0.0"
+    },
+    {
+        "date": "2016-07-16T10:31:18Z",
+        "id": 1887345,
+        "issues": [
+            {
+                "id": 165000176,
+                "labels": ["bug"],
+                "number": 239,
+                "title": "[Fix] Fixes email address field in LinkedIn",
+                "url": "https://github.com/hapijs/bell/pull/239"
+            }
+        ],
+        "number": 51,
+        "url": "https://github.com/hapijs/bell/milestone/51",
+        "version": "7.9.3"
+    },
+    {
+        "date": "2016-06-22T23:36:12Z",
+        "id": 1844351,
+        "issues": [
+            {
+                "id": 161810205,
+                "labels": ["bug"],
+                "number": 237,
+                "title": "Profiles are broken when used directly",
+                "url": "https://github.com/hapijs/bell/issues/237"
+            }
+        ],
+        "number": 50,
+        "url": "https://github.com/hapijs/bell/milestone/50",
+        "version": "7.9.1"
+    },
+    {
+        "date": "2016-06-19T20:04:09Z",
+        "id": 1803800,
+        "issues": [
+            {
+                "id": 160642160,
+                "labels": ["feature"],
+                "number": 236,
+                "title": "Aphuang2013 patch 1",
+                "url": "https://github.com/hapijs/bell/pull/236"
+            },
+            {
+                "id": 159983152,
+                "labels": ["dependency"],
+                "number": 232,
+                "title": "Update dependencies",
+                "url": "https://github.com/hapijs/bell/issues/232"
+            },
+            {
+                "id": 159737870,
+                "labels": ["feature"],
+                "number": 231,
+                "title": "Only publish root and lib directory in npm. #230",
+                "url": "https://github.com/hapijs/bell/pull/231"
+            },
+            {
+                "id": 159670354,
+                "labels": ["feature"],
+                "number": 230,
+                "title": "Only publish root and lib directory in npm",
+                "url": "https://github.com/hapijs/bell/issues/230"
+            },
+            {
+                "id": 158374549,
+                "labels": ["feature"],
+                "number": 227,
+                "title": "Implemented RSA-SHA1 signatures for OAuth v1",
+                "url": "https://github.com/hapijs/bell/pull/227"
+            },
+            {
+                "id": 158092815,
+                "labels": ["feature"],
+                "number": 226,
+                "title": "OAuth v1: How to handle RSA-SHA1 signing?",
+                "url": "https://github.com/hapijs/bell/issues/226"
+            }
+        ],
+        "number": 49,
+        "url": "https://github.com/hapijs/bell/milestone/49",
+        "version": "7.9.0"
+    },
+    {
+        "date": "2016-06-02T05:44:27Z",
+        "id": 1788756,
+        "issues": [
+            {
+                "id": 156000505,
+                "labels": ["feature", "test"],
+                "number": 221,
+                "title": "getMethod option",
+                "url": "https://github.com/hapijs/bell/pull/221"
+            }
+        ],
+        "number": 47,
+        "url": "https://github.com/hapijs/bell/milestone/47",
+        "version": "7.8.0"
+    },
+    {
+        "date": "2016-06-02T05:43:01Z",
+        "id": 1803794,
+        "issues": [
+            {
+                "id": 157998924,
+                "labels": ["bug"],
+                "number": 225,
+                "title": "Fix markup to quote URL correctly to avoid infinite redirect",
+                "url": "https://github.com/hapijs/bell/pull/225"
+            }
+        ],
+        "number": 48,
+        "url": "https://github.com/hapijs/bell/milestone/48",
+        "version": "7.7.3"
+    },
+    {
+        "date": "2016-06-02T05:37:53Z",
+        "id": 1767487,
+        "issues": [
+            {
+                "id": 156863036,
+                "labels": ["bug"],
+                "number": 224,
+                "title": "Apply the same html redirection logic to oauth v1. Closes #223",
+                "url": "https://github.com/hapijs/bell/pull/224"
+            },
+            {
+                "id": 156862814,
+                "labels": ["bug"],
+                "number": 223,
+                "title": "OAuth 1.0 missing HTML redirection workaround",
+                "url": "https://github.com/hapijs/bell/issues/223"
+            }
+        ],
+        "number": 45,
+        "url": "https://github.com/hapijs/bell/milestone/45",
+        "version": "7.7.2"
+    },
+    {
+        "date": "2016-05-23T22:48:19Z",
+        "id": 1783780,
+        "issues": [
+            {
+                "id": 156383301,
+                "labels": ["test", "dependency"],
+                "number": 222,
+                "title": "Upgrade to code 3.x.x",
+                "url": "https://github.com/hapijs/bell/pull/222"
+            },
+            {
+                "id": 152059606,
+                "labels": ["test", "dependency"],
+                "number": 210,
+                "title": "Test with Node 6",
+                "url": "https://github.com/hapijs/bell/pull/210"
+            }
+        ],
+        "number": 46,
+        "url": "https://github.com/hapijs/bell/milestone/46",
+        "version": "7.7.1"
+    },
+    {
+        "date": "2016-05-23T22:39:29Z",
+        "id": 1767461,
+        "issues": [
+            {
+                "id": 154897720,
+                "labels": ["bug"],
+                "number": 216,
+                "title": "Consistently return node req object in oauth v1 client. Closes #215",
+                "url": "https://github.com/hapijs/bell/pull/216"
+            },
+            {
+                "id": 154897644,
+                "labels": ["bug"],
+                "number": 215,
+                "title": "Fails to always return the node req object from wreck",
+                "url": "https://github.com/hapijs/bell/issues/215"
+            },
+            {
+                "id": 153732404,
+                "labels": ["feature"],
+                "number": 213,
+                "title": "Add Pinterest provider",
+                "url": "https://github.com/hapijs/bell/pull/213"
+            }
+        ],
+        "number": 44,
+        "url": "https://github.com/hapijs/bell/milestone/44",
+        "version": "7.7.0"
+    },
+    {
+        "date": "2016-04-30T23:30:36Z",
+        "id": 1712485,
+        "issues": [
+            {
+                "id": 150571302,
+                "labels": ["bug"],
+                "number": 208,
+                "title": "Fix Safari CORS with Facebook & potentially other providers",
+                "url": "https://github.com/hapijs/bell/pull/208"
+            },
+            {
+                "id": 149541441,
+                "labels": ["bug", "feature"],
+                "number": 206,
+                "title": "Fix weird error happening when logging in through Facebook on safari …",
+                "url": "https://github.com/hapijs/bell/pull/206"
+            },
+            {
+                "id": 138252861,
+                "labels": ["bug"],
+                "number": 191,
+                "title": "Can not login with Facebook on Safari",
+                "url": "https://github.com/hapijs/bell/issues/191"
+            }
+        ],
+        "number": 42,
+        "url": "https://github.com/hapijs/bell/milestone/42",
+        "version": "7.6.1"
+    },
+    {
+        "date": "2016-04-23T15:13:15Z",
+        "id": 1720417,
+        "issues": [
+            {
+                "id": 149740765,
+                "labels": ["feature"],
+                "number": 207,
+                "title": "Add GitLab provider",
+                "url": "https://github.com/hapijs/bell/pull/207"
+            }
+        ],
+        "number": 43,
+        "url": "https://github.com/hapijs/bell/milestone/43",
+        "version": "7.6.0"
+    },
+    {
+        "date": "2016-04-17T21:38:46Z",
+        "id": 1640494,
+        "issues": [
+            {
+                "id": 148986379,
+                "labels": ["bug"],
+                "number": 205,
+                "title": "Added appsecret_proof to wordpress provider",
+                "url": "https://github.com/hapijs/bell/pull/205"
+            }
+        ],
+        "number": 38,
+        "url": "https://github.com/hapijs/bell/milestone/38",
+        "version": "7.5.1"
+    },
+    {
+        "date": "2016-04-16T15:22:07Z",
+        "id": 1711429,
+        "issues": [
+            {
+                "id": 147569845,
+                "labels": ["feature"],
+                "number": 204,
+                "title": "WordPress Provider",
+                "url": "https://github.com/hapijs/bell/pull/204"
+            }
+        ],
+        "number": 41,
+        "url": "https://github.com/hapijs/bell/milestone/41",
+        "version": "7.5.0"
+    },
+    {
+        "date": "2016-04-10T03:33:48Z",
+        "id": 1695708,
+        "issues": [
+            {
+                "id": 145860858,
+                "labels": ["feature"],
+                "number": 202,
+                "title": "Office365 provider",
+                "url": "https://github.com/hapijs/bell/pull/202"
+            }
+        ],
+        "number": 40,
+        "url": "https://github.com/hapijs/bell/milestone/40",
+        "version": "7.4.0"
+    },
+    {
+        "date": "2016-03-22T22:43:55Z",
+        "id": 1660950,
+        "issues": [
+            {
+                "id": 142141533,
+                "labels": ["feature"],
+                "number": 199,
+                "title": "Salesforce provider",
+                "url": "https://github.com/hapijs/bell/pull/199"
+            }
+        ],
+        "number": 39,
+        "url": "https://github.com/hapijs/bell/milestone/39",
+        "version": "7.3.0"
+    },
+    {
+        "date": "2016-03-22T22:40:48Z",
+        "id": 1640493,
+        "issues": [
+            {
+                "id": 139834814,
+                "labels": ["feature"],
+                "number": 198,
+                "title": "Add Slack provider",
+                "url": "https://github.com/hapijs/bell/pull/198"
+            },
+            {
+                "id": 138906275,
+                "labels": ["bug"],
+                "number": 196,
+                "title": "Bitbucket incorrect id and styling inconsistency.",
+                "url": "https://github.com/hapijs/bell/pull/196"
+            }
+        ],
+        "number": 37,
+        "url": "https://github.com/hapijs/bell/milestone/37",
+        "version": "7.2.0"
+    },
+    {
+        "date": "2016-03-04T01:16:34Z",
+        "id": 1621365,
+        "issues": [
+            {
+                "id": 138345482,
+                "labels": ["feature"],
+                "number": 194,
+                "title": "Support returning raw resource payload. Closes #193",
+                "url": "https://github.com/hapijs/bell/pull/194"
+            },
+            {
+                "id": 138345320,
+                "labels": ["feature"],
+                "number": 193,
+                "title": "client.resource() raw payload",
+                "url": "https://github.com/hapijs/bell/issues/193"
+            }
+        ],
+        "number": 35,
+        "url": "https://github.com/hapijs/bell/milestone/35",
+        "version": "7.1.0"
+    },
+    {
+        "date": "2016-03-04T01:13:02Z",
+        "id": 1582058,
+        "issues": [
+            {
+                "id": 136954038,
+                "labels": ["breaking changes", "release notes"],
+                "number": 189,
+                "title": "Bell 7 release notes",
+                "url": "https://github.com/hapijs/bell/issues/189"
+            },
+            {
+                "id": 136310635,
+                "labels": ["feature", "documentation"],
+                "number": 188,
+                "title": "Add Auth0 provider",
+                "url": "https://github.com/hapijs/bell/pull/188"
+            },
+            {
+                "id": 133559033,
+                "labels": ["breaking changes", "dependency"],
+                "number": 187,
+                "title": "peerDependency on Hapi 13",
+                "url": "https://github.com/hapijs/bell/issues/187"
+            },
+            {
+                "id": 131891125,
+                "labels": ["feature", "documentation"],
+                "number": 182,
+                "title": "Allow passing additional state",
+                "url": "https://github.com/hapijs/bell/pull/182"
+            }
+        ],
+        "number": 33,
+        "url": "https://github.com/hapijs/bell/milestone/33",
+        "version": "7.0.0"
+    },
+    {
+        "date": "2016-02-14T18:00:47Z",
+        "id": 1582054,
+        "issues": [
+            {
+                "id": 131922738,
+                "labels": ["feature"],
+                "number": 183,
+                "title": "skipProfile option",
+                "url": "https://github.com/hapijs/bell/pull/183"
+            },
+            {
+                "id": 116964394,
+                "labels": ["feature"],
+                "number": 163,
+                "title": "Auth fails silently",
+                "url": "https://github.com/hapijs/bell/issues/163"
+            }
+        ],
+        "number": 32,
+        "url": "https://github.com/hapijs/bell/milestone/32",
+        "version": "6.3.0"
+    },
+    {
+        "date": "2016-02-14T17:26:20Z",
+        "id": 1488306,
+        "issues": [
+            {
+                "id": 130360107,
+                "labels": ["feature", "documentation"],
+                "number": 179,
+                "title": "Added Twitch provider",
+                "url": "https://github.com/hapijs/bell/pull/179"
+            },
+            {
+                "id": 130185205,
+                "labels": ["documentation", "test"],
+                "number": 178,
+                "title": "Upgrade devDependencies, test Hapi 12, lint update with tests/examples",
+                "url": "https://github.com/hapijs/bell/pull/178"
+            }
+        ],
         "number": 31,
-        "title": "Add bitbucket provider",
-        "url": "https://github.com/hapijs/bell/pull/31"
-      },
-      {
-        "id": 43539869,
-        "labels": ["dependency"],
-        "number": 27,
-        "title": "Replaced nipple with wreck.",
-        "url": "https://github.com/hapijs/bell/pull/27"
-      },
-      {
-        "id": 43538976,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/bell/milestone/31",
+        "version": "6.2.0"
+    },
+    {
+        "date": "2016-01-12T17:26:29Z",
+        "id": 1412443,
+        "issues": [
+            {
+                "id": 124298995,
+                "labels": ["feature"],
+                "number": 174,
+                "title": "Update bitbucket to use the oAuth2 endpoint",
+                "url": "https://github.com/hapijs/bell/pull/174"
+            },
+            {
+                "id": 117937157,
+                "labels": ["feature"],
+                "number": 168,
+                "title": "Add simulated mode. Closes #167",
+                "url": "https://github.com/hapijs/bell/pull/168"
+            },
+            {
+                "id": 117937091,
+                "labels": ["feature"],
+                "number": 167,
+                "title": "Simulated mode",
+                "url": "https://github.com/hapijs/bell/issues/167"
+            }
+        ],
+        "number": 30,
+        "url": "https://github.com/hapijs/bell/milestone/30",
+        "version": "6.1.0"
+    },
+    {
+        "date": "2015-11-15T19:54:44Z",
+        "id": 1267613,
+        "issues": [
+            {
+                "id": 114815063,
+                "labels": ["feature"],
+                "number": 162,
+                "title": "Add error if using non-https server when isSecure is set to true",
+                "url": "https://github.com/hapijs/bell/pull/162"
+            },
+            {
+                "id": 114503526,
+                "labels": ["breaking changes", "dependency"],
+                "number": 160,
+                "title": "Upgrade to Node 4+, Hapi 10+, ES6 styling, Update dependencies",
+                "url": "https://github.com/hapijs/bell/pull/160"
+            },
+            {
+                "id": 114379837,
+                "labels": ["feature", "breaking changes", "release notes"],
+                "number": 159,
+                "title": "Bell 6 Release Notes",
+                "url": "https://github.com/hapijs/bell/issues/159"
+            }
+        ],
         "number": 26,
-        "title": "Wreck",
-        "url": "https://github.com/hapijs/bell/issues/26"
-      }
-    ],
-    "number": 4,
-    "url": "https://github.com/hapijs/bell/milestone/4",
-    "version": "1.2.0"
-  },
-  {
-    "date": "2014-08-13T21:01:24Z",
-    "id": 690078,
-    "issues": [
-      {
-        "id": 39393189,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/bell/milestone/26",
+        "version": "6.0.0"
+    },
+    {
+        "date": "2015-11-15T19:55:02Z",
+        "id": 1353444,
+        "issues": [
+            {
+                "id": 111161294,
+                "labels": ["feature"],
+                "number": 155,
+                "title": "Added Tumblr provider",
+                "url": "https://github.com/hapijs/bell/pull/155"
+            },
+            {
+                "id": 110628822,
+                "labels": ["documentation"],
+                "number": 154,
+                "title": "Fixed no-comma-dangle in README",
+                "url": "https://github.com/hapijs/bell/pull/154"
+            },
+            {
+                "id": 110142267,
+                "labels": ["test"],
+                "number": 153,
+                "title": "Test Hapi 9 and 10",
+                "url": "https://github.com/hapijs/bell/pull/153"
+            },
+            {
+                "id": 109608554,
+                "labels": ["documentation"],
+                "number": 150,
+                "title": "Add documentation about Linkedin custom profile fields",
+                "url": "https://github.com/hapijs/bell/pull/150"
+            },
+            {
+                "id": 109086142,
+                "labels": ["test"],
+                "number": 148,
+                "title": "upgrade to lab 6 and cleanup",
+                "url": "https://github.com/hapijs/bell/pull/148"
+            }
+        ],
+        "number": 29,
+        "url": "https://github.com/hapijs/bell/milestone/29",
+        "version": "5.4.0"
+    },
+    {
+        "date": "2015-10-04T02:59:15Z",
+        "id": 1322964,
+        "issues": [
+            {
+                "id": 108222836,
+                "labels": ["dependency"],
+                "number": 147,
+                "title": "Update Wreck to 6.x.x and some devDependencies",
+                "url": "https://github.com/hapijs/bell/pull/147"
+            },
+            {
+                "id": 102565394,
+                "labels": ["dependency"],
+                "number": 133,
+                "title": "Update Wreck to 6.1.0 or latest version",
+                "url": "https://github.com/hapijs/bell/issues/133"
+            }
+        ],
+        "number": 28,
+        "url": "https://github.com/hapijs/bell/milestone/28",
+        "version": "5.3.0"
+    },
+    {
+        "date": "2015-09-24T22:07:07Z",
+        "id": 1322464,
+        "issues": [
+            {
+                "id": 108085214,
+                "labels": ["feature"],
+                "number": 146,
+                "title": "Meetup.com Provider",
+                "url": "https://github.com/hapijs/bell/pull/146"
+            },
+            {
+                "id": 106601184,
+                "labels": [],
+                "number": 142,
+                "title": "Update Providers.md",
+                "url": "https://github.com/hapijs/bell/pull/142"
+            },
+            {
+                "id": 106487637,
+                "labels": ["documentation"],
+                "number": 141,
+                "title": "500 error on google auth",
+                "url": "https://github.com/hapijs/bell/issues/141"
+            },
+            {
+                "id": 106076382,
+                "labels": ["test"],
+                "number": 140,
+                "title": "Fix tests",
+                "url": "https://github.com/hapijs/bell/pull/140"
+            },
+            {
+                "id": 105957609,
+                "labels": ["documentation"],
+                "number": 139,
+                "title": "Split up the documentation and add provider specific information plus…",
+                "url": "https://github.com/hapijs/bell/pull/139"
+            },
+            {
+                "id": 105655602,
+                "labels": ["test"],
+                "number": 137,
+                "title": "Node v4",
+                "url": "https://github.com/hapijs/bell/pull/137"
+            },
+            {
+                "id": 102205360,
+                "labels": ["test"],
+                "number": 132,
+                "title": "Fix lasting linting issues",
+                "url": "https://github.com/hapijs/bell/issues/132"
+            },
+            {
+                "id": 101534552,
+                "labels": ["documentation"],
+                "number": 127,
+                "title": "Document Bell Core API and Providers API",
+                "url": "https://github.com/hapijs/bell/issues/127"
+            },
+            {
+                "id": 90126689,
+                "labels": ["feature", "documentation"],
+                "number": 109,
+                "title": "Provider wiki",
+                "url": "https://github.com/hapijs/bell/issues/109"
+            },
+            {
+                "id": 43538912,
+                "labels": ["test"],
+                "number": 25,
+                "title": "Test Cleanup",
+                "url": "https://github.com/hapijs/bell/issues/25"
+            }
+        ],
+        "number": 27,
+        "url": "https://github.com/hapijs/bell/milestone/27",
+        "version": "5.2.0"
+    },
+    {
+        "date": "2015-09-09T21:41:16Z",
+        "id": 1230852,
+        "issues": [
+            {
+                "id": 102202544,
+                "labels": ["bug", "test"],
+                "number": 131,
+                "title": "Fix wrong tests. OAuth1 does not include expiresIn for yahoo/bitbucke…",
+                "url": "https://github.com/hapijs/bell/pull/131"
+            },
+            {
+                "id": 102151605,
+                "labels": ["bug"],
+                "number": 130,
+                "title": "fixed linting issues // now extends lab linting",
+                "url": "https://github.com/hapijs/bell/pull/130"
+            },
+            {
+                "id": 102134344,
+                "labels": ["feature"],
+                "number": 129,
+                "title": "added allowRuntimeProviderParams to allow runtime query params ",
+                "url": "https://github.com/hapijs/bell/pull/129"
+            },
+            {
+                "id": 101499025,
+                "labels": ["feature", "support"],
+                "number": 125,
+                "title": "Provide variable providerParams",
+                "url": "https://github.com/hapijs/bell/issues/125"
+            }
+        ],
+        "number": 23,
+        "url": "https://github.com/hapijs/bell/milestone/23",
+        "version": "5.1.0"
+    },
+    {
+        "date": "2015-07-29T03:35:23Z",
+        "id": 1216429,
+        "issues": [
+            {
+                "id": 97842969,
+                "labels": ["bug", "documentation"],
+                "number": 120,
+                "title": "Facebook Provider: Fix expiresIn, add example, backwards compatibility",
+                "url": "https://github.com/hapijs/bell/pull/120"
+            },
+            {
+                "id": 96207795,
+                "labels": [],
+                "number": 119,
+                "title": "Update google.js",
+                "url": "https://github.com/hapijs/bell/pull/119"
+            },
+            {
+                "id": 96118994,
+                "labels": ["non issue"],
+                "number": 117,
+                "title": "Lois Desplat is the new maintainer",
+                "url": "https://github.com/hapijs/bell/issues/117"
+            },
+            {
+                "id": 95862418,
+                "labels": [],
+                "number": 115,
+                "title": "Add fields to the query",
+                "url": "https://github.com/hapijs/bell/pull/115"
+            },
+            {
+                "id": 80110903,
+                "labels": ["bug"],
+                "number": 89,
+                "title": "facebook expiration won't be mapped properly",
+                "url": "https://github.com/hapijs/bell/issues/89"
+            }
+        ],
+        "number": 22,
+        "url": "https://github.com/hapijs/bell/milestone/22",
+        "version": "5.0.1"
+    },
+    {
+        "date": "2015-07-20T17:35:30Z",
+        "id": 1206158,
+        "issues": [
+            {
+                "id": 96116127,
+                "labels": ["breaking changes", "release notes"],
+                "number": 116,
+                "title": "5.0.0 Release Notes",
+                "url": "https://github.com/hapijs/bell/issues/116"
+            },
+            {
+                "id": 94105164,
+                "labels": ["bug", "breaking changes"],
+                "number": 114,
+                "title": "Updated LinkedIn's default scope",
+                "url": "https://github.com/hapijs/bell/pull/114"
+            },
+            {
+                "id": 91788420,
+                "labels": ["documentation"],
+                "number": 110,
+                "title": "Fix google example",
+                "url": "https://github.com/hapijs/bell/pull/110"
+            },
+            {
+                "id": 89478824,
+                "labels": ["bug", "breaking changes"],
+                "number": 108,
+                "title": "Updated Google provider so that login uses the recommended Google+ People endpoint",
+                "url": "https://github.com/hapijs/bell/pull/108"
+            },
+            {
+                "id": 65967906,
+                "labels": ["bug"],
+                "number": 66,
+                "title": "Deprecated Google and Facebook APIs",
+                "url": "https://github.com/hapijs/bell/issues/66"
+            }
+        ],
+        "number": 21,
+        "url": "https://github.com/hapijs/bell/milestone/21",
+        "version": "5.0.0"
+    },
+    {
+        "date": "2015-07-14T00:28:07Z",
+        "id": 1160658,
+        "issues": [
+            {
+                "id": 89478155,
+                "labels": ["bug"],
+                "number": 107,
+                "title": " Fix clientSecret usage and adds test case",
+                "url": "https://github.com/hapijs/bell/pull/107"
+            },
+            {
+                "id": 88744536,
+                "labels": ["bug"],
+                "number": 103,
+                "title": "remove property username as it is not part of the google profile",
+                "url": "https://github.com/hapijs/bell/pull/103"
+            },
+            {
+                "id": 88316531,
+                "labels": ["bug"],
+                "number": 101,
+                "title": "Fix clientSecret usage",
+                "url": "https://github.com/hapijs/bell/pull/101"
+            }
+        ],
+        "number": 20,
+        "url": "https://github.com/hapijs/bell/milestone/20",
+        "version": "4.0.1"
+    },
+    {
+        "date": "2015-06-11T16:29:39Z",
+        "id": 1138689,
+        "issues": [
+            {
+                "id": 87413807,
+                "labels": ["release notes"],
+                "number": 100,
+                "title": "4.0.0 Release Notes",
+                "url": "https://github.com/hapijs/bell/issues/100"
+            },
+            {
+                "id": 85653474,
+                "labels": ["feature", "breaking changes"],
+                "number": 99,
+                "title": "Ensure only 1 authentication method is used during /token access in o…",
+                "url": "https://github.com/hapijs/bell/pull/99"
+            },
+            {
+                "id": 85344661,
+                "labels": ["breaking changes"],
+                "number": 98,
+                "title": "Don't send client credentials as parameters and basic auth while retrieving token",
+                "url": "https://github.com/hapijs/bell/issues/98"
+            },
+            {
+                "id": 84212813,
+                "labels": ["bug"],
+                "number": 96,
+                "title": "Allow null for domain",
+                "url": "https://github.com/hapijs/bell/pull/96"
+            }
+        ],
+        "number": 19,
+        "url": "https://github.com/hapijs/bell/milestone/19",
+        "version": "4.0.0"
+    },
+    {
+        "date": "2015-05-28T19:49:09Z",
+        "id": 1136837,
+        "issues": [
+            {
+                "id": 81658797,
+                "labels": ["bug", "breaking changes"],
+                "number": 94,
+                "title": "Rewrite OAuth 1.0 client interface",
+                "url": "https://github.com/hapijs/bell/pull/94"
+            },
+            {
+                "id": 81657787,
+                "labels": ["bug", "breaking changes"],
+                "number": 92,
+                "title": "Fix POST payload format and location",
+                "url": "https://github.com/hapijs/bell/issues/92"
+            }
+        ],
+        "number": 18,
+        "url": "https://github.com/hapijs/bell/milestone/18",
+        "version": "3.0.0"
+    },
+    {
+        "date": "2015-05-27T20:48:34Z",
+        "id": 1113507,
+        "issues": [
+            {
+                "id": 81118385,
+                "labels": ["feature"],
+                "number": 91,
+                "title": "OAuth client resource() endpoint",
+                "url": "https://github.com/hapijs/bell/pull/91"
+            },
+            {
+                "id": 81117580,
+                "labels": ["feature"],
+                "number": 90,
+                "title": "Expose OAuth 1.0 client protected resource endpoing",
+                "url": "https://github.com/hapijs/bell/issues/90"
+            }
+        ],
         "number": 17,
-        "title": "Add Instagram provider.",
-        "url": "https://github.com/hapijs/bell/pull/17"
-      },
-      {
-        "id": 37713995,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/bell/milestone/17",
+        "version": "2.9.0"
+    },
+    {
+        "date": "2015-05-16T19:21:36Z",
+        "id": 1107238,
+        "issues": [
+            {
+                "id": 77107231,
+                "labels": ["feature"],
+                "number": 88,
+                "title": "Expose OAuth interface. Closes #48",
+                "url": "https://github.com/hapijs/bell/pull/88"
+            },
+            {
+                "id": 52404897,
+                "labels": ["feature"],
+                "number": 48,
+                "title": "Expose Client as a plugin method",
+                "url": "https://github.com/hapijs/bell/issues/48"
+            }
+        ],
+        "number": 16,
+        "url": "https://github.com/hapijs/bell/milestone/16",
+        "version": "2.8.0"
+    },
+    {
+        "date": "2015-05-12T17:42:06Z",
+        "id": 1095843,
+        "issues": [
+            {
+                "id": 74862512,
+                "labels": ["bug"],
+                "number": 87,
+                "title": "Pass `forceHttps` and `location` to v1 client",
+                "url": "https://github.com/hapijs/bell/pull/87"
+            }
+        ],
+        "number": 15,
+        "url": "https://github.com/hapijs/bell/milestone/15",
+        "version": "2.7.1"
+    },
+    {
+        "date": "2015-05-04T21:07:52Z",
+        "id": 1095583,
+        "issues": [
+            {
+                "id": 73036999,
+                "labels": ["feature"],
+                "number": 85,
+                "title": "add location setting similar to old hapi server location",
+                "url": "https://github.com/hapijs/bell/pull/85"
+            }
+        ],
         "number": 14,
-        "title": "Add Foursquare as built-in provider",
-        "url": "https://github.com/hapijs/bell/pull/14"
-      },
-      {
-        "id": 37133724,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/bell/milestone/14",
+        "version": "2.7.0"
+    },
+    {
+        "date": "2015-05-04T18:43:37Z",
+        "id": 1092703,
+        "issues": [
+            {
+                "id": 72917686,
+                "labels": ["feature"],
+                "number": 84,
+                "title": "Add nest authentication",
+                "url": "https://github.com/hapijs/bell/pull/84"
+            }
+        ],
         "number": 13,
-        "title": "Added ability to specify additional query params for the profile request...",
-        "url": "https://github.com/hapijs/bell/pull/13"
-      },
-      {
-        "id": 36009472,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/bell/milestone/13",
+        "version": "2.6.0"
+    },
+    {
+        "date": "2015-05-01T16:31:25Z",
+        "id": 1080808,
+        "issues": [
+            {
+                "id": 72001801,
+                "labels": ["feature"],
+                "number": 81,
+                "title": "Added option to specify the LinkedIn profile fields",
+                "url": "https://github.com/hapijs/bell/pull/81"
+            },
+            {
+                "id": 71988242,
+                "labels": ["feature"],
+                "number": 80,
+                "title": "Support Reddit as an OAuth provider",
+                "url": "https://github.com/hapijs/bell/pull/80"
+            },
+            {
+                "id": 70779579,
+                "labels": ["feature"],
+                "number": 79,
+                "title": "LinkedIn profile fields",
+                "url": "https://github.com/hapijs/bell/issues/79"
+            }
+        ],
+        "number": 12,
+        "url": "https://github.com/hapijs/bell/milestone/12",
+        "version": "2.5.0"
+    },
+    {
+        "date": "2015-04-23T15:48:49Z",
+        "id": 1056408,
+        "issues": [
+            {
+                "id": 69931217,
+                "labels": ["feature"],
+                "number": 78,
+                "title": "update facebook URLs to use facebook Graph v2.3",
+                "url": "https://github.com/hapijs/bell/pull/78"
+            },
+            {
+                "id": 69033187,
+                "labels": ["feature"],
+                "number": 77,
+                "title": "Support for Phabricator",
+                "url": "https://github.com/hapijs/bell/pull/77"
+            },
+            {
+                "id": 68527118,
+                "labels": ["feature"],
+                "number": 73,
+                "title": "Allow environment variables to configure options",
+                "url": "https://github.com/hapijs/bell/pull/73"
+            }
+        ],
         "number": 11,
-        "title": "Allow specifying provider name in custom schema",
-        "url": "https://github.com/hapijs/bell/pull/11"
-      }
-    ],
-    "number": 3,
-    "url": "https://github.com/hapijs/bell/milestone/3",
-    "version": "1.1.0"
-  },
-  {
-    "date": "2014-06-13T07:09:29Z",
-    "id": 689583,
-    "issues": [
-      {
-        "id": 35636518,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/bell/milestone/11",
+        "version": "2.4.0"
+    },
+    {
+        "date": "2015-04-07T15:15:23Z",
+        "id": 995473,
+        "issues": [
+            {
+                "id": 66910931,
+                "labels": ["non issue"],
+                "number": 71,
+                "title": "Fix linting issues",
+                "url": "https://github.com/hapijs/bell/pull/71"
+            },
+            {
+                "id": 66341064,
+                "labels": ["dependency"],
+                "number": 70,
+                "title": "Update Joi to 6.x",
+                "url": "https://github.com/hapijs/bell/pull/70"
+            },
+            {
+                "id": 66016190,
+                "labels": ["feature"],
+                "number": 69,
+                "title": "Add LinkedIn provider",
+                "url": "https://github.com/hapijs/bell/pull/69"
+            },
+            {
+                "id": 65996349,
+                "labels": ["feature"],
+                "number": 68,
+                "title": "Add ArcGIS Online provider",
+                "url": "https://github.com/hapijs/bell/pull/68"
+            },
+            {
+                "id": 65976092,
+                "labels": ["bug"],
+                "number": 67,
+                "title": "Support new wreck in mocks",
+                "url": "https://github.com/hapijs/bell/pull/67"
+            },
+            {
+                "id": 58931909,
+                "labels": ["dependency"],
+                "number": 62,
+                "title": "Update .travis.yml",
+                "url": "https://github.com/hapijs/bell/pull/62"
+            }
+        ],
+        "number": 10,
+        "url": "https://github.com/hapijs/bell/milestone/10",
+        "version": "2.3.0"
+    },
+    {
+        "date": "2015-02-25T16:52:57Z",
+        "id": 962575,
+        "issues": [
+            {
+                "id": 58449684,
+                "labels": ["bug"],
+                "number": 60,
+                "title": "Make forceHttps complete ",
+                "url": "https://github.com/hapijs/bell/pull/60"
+            },
+            {
+                "id": 58129227,
+                "labels": ["feature"],
+                "number": 58,
+                "title": "passing back expires_in for oauth 2.0 refresh token request",
+                "url": "https://github.com/hapijs/bell/pull/58"
+            },
+            {
+                "id": 55708643,
+                "labels": ["feature"],
+                "number": 54,
+                "title": "Added Dropbox.",
+                "url": "https://github.com/hapijs/bell/pull/54"
+            },
+            {
+                "id": 52871863,
+                "labels": ["feature"],
+                "number": 49,
+                "title": "pass back expires_in",
+                "url": "https://github.com/hapijs/bell/issues/49"
+            }
+        ],
+        "number": 9,
+        "url": "https://github.com/hapijs/bell/milestone/9",
+        "version": "2.2.0"
+    },
+    {
+        "date": "2015-02-02T22:56:46Z",
+        "id": 904772,
+        "issues": [
+            {
+                "id": 54653608,
+                "labels": ["feature"],
+                "number": 53,
+                "title": "Add option for forcing https.",
+                "url": "https://github.com/hapijs/bell/pull/53"
+            }
+        ],
+        "number": 8,
+        "url": "https://github.com/hapijs/bell/milestone/8",
+        "version": "2.1.0"
+    },
+    {
+        "date": "2014-12-15T19:28:03Z",
+        "id": 881012,
+        "issues": [
+            {
+                "id": 50345983,
+                "labels": ["breaking changes", "dependency"],
+                "number": 43,
+                "title": "Hapi8",
+                "url": "https://github.com/hapijs/bell/pull/43"
+            },
+            {
+                "id": 50127806,
+                "labels": ["breaking changes", "dependency"],
+                "number": 42,
+                "title": "hapi 8.0 API",
+                "url": "https://github.com/hapijs/bell/issues/42"
+            }
+        ],
         "number": 7,
-        "title": "Use correct API path for GitHub Enterprise, fix #6",
-        "url": "https://github.com/hapijs/bell/pull/7"
-      },
-      {
-        "id": 35636125,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/bell/milestone/7",
+        "version": "2.0.0"
+    },
+    {
+        "date": "2014-12-15T19:28:15Z",
+        "id": 843882,
+        "issues": [
+            {
+                "id": 48107444,
+                "labels": ["bug"],
+                "number": 39,
+                "title": "handle oauth user rejection for v2 as well",
+                "url": "https://github.com/hapijs/bell/pull/39"
+            }
+        ],
         "number": 6,
-        "title": "Unable to get GitHub Enterprise profile data",
-        "url": "https://github.com/hapijs/bell/issues/6"
-      }
-    ],
-    "number": 2,
-    "url": "https://github.com/hapijs/bell/milestone/2",
-    "version": "1.0.2"
-  },
-  {
-    "date": "2014-06-12T17:35:38Z",
-    "id": 684357,
-    "issues": [
-      {
-        "id": 35586560,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/bell/milestone/6",
+        "version": "1.3.1"
+    },
+    {
+        "date": "2014-10-28T16:15:10Z",
+        "id": 829502,
+        "issues": [
+            {
+                "id": 46380572,
+                "labels": ["feature"],
+                "number": 35,
+                "title": "Add VK provider.",
+                "url": "https://github.com/hapijs/bell/pull/35"
+            }
+        ],
         "number": 5,
-        "title": "Bump peer dependency to Hapi >= 6",
-        "url": "https://github.com/hapijs/bell/pull/5"
-      }
-    ],
-    "number": 1,
-    "url": "https://github.com/hapijs/bell/milestone/1",
-    "version": "1.0.1"
-  }
+        "url": "https://github.com/hapijs/bell/milestone/5",
+        "version": "1.3.0"
+    },
+    {
+        "date": "2014-10-16T21:03:40Z",
+        "id": 752849,
+        "issues": [
+            {
+                "id": 46009950,
+                "labels": ["bug"],
+                "number": 34,
+                "title": "handle oauth login user rejection",
+                "url": "https://github.com/hapijs/bell/pull/34"
+            },
+            {
+                "id": 44911704,
+                "labels": ["feature"],
+                "number": 31,
+                "title": "Add bitbucket provider",
+                "url": "https://github.com/hapijs/bell/pull/31"
+            },
+            {
+                "id": 43539869,
+                "labels": ["dependency"],
+                "number": 27,
+                "title": "Replaced nipple with wreck.",
+                "url": "https://github.com/hapijs/bell/pull/27"
+            },
+            {
+                "id": 43538976,
+                "labels": ["dependency"],
+                "number": 26,
+                "title": "Wreck",
+                "url": "https://github.com/hapijs/bell/issues/26"
+            }
+        ],
+        "number": 4,
+        "url": "https://github.com/hapijs/bell/milestone/4",
+        "version": "1.2.0"
+    },
+    {
+        "date": "2014-08-13T21:01:24Z",
+        "id": 690078,
+        "issues": [
+            {
+                "id": 39393189,
+                "labels": ["feature"],
+                "number": 17,
+                "title": "Add Instagram provider.",
+                "url": "https://github.com/hapijs/bell/pull/17"
+            },
+            {
+                "id": 37713995,
+                "labels": ["feature"],
+                "number": 14,
+                "title": "Add Foursquare as built-in provider",
+                "url": "https://github.com/hapijs/bell/pull/14"
+            },
+            {
+                "id": 37133724,
+                "labels": ["feature"],
+                "number": 13,
+                "title": "Added ability to specify additional query params for the profile request...",
+                "url": "https://github.com/hapijs/bell/pull/13"
+            },
+            {
+                "id": 36009472,
+                "labels": ["feature"],
+                "number": 11,
+                "title": "Allow specifying provider name in custom schema",
+                "url": "https://github.com/hapijs/bell/pull/11"
+            }
+        ],
+        "number": 3,
+        "url": "https://github.com/hapijs/bell/milestone/3",
+        "version": "1.1.0"
+    },
+    {
+        "date": "2014-06-13T07:09:29Z",
+        "id": 689583,
+        "issues": [
+            {
+                "id": 35636518,
+                "labels": ["bug"],
+                "number": 7,
+                "title": "Use correct API path for GitHub Enterprise, fix #6",
+                "url": "https://github.com/hapijs/bell/pull/7"
+            },
+            {
+                "id": 35636125,
+                "labels": ["bug"],
+                "number": 6,
+                "title": "Unable to get GitHub Enterprise profile data",
+                "url": "https://github.com/hapijs/bell/issues/6"
+            }
+        ],
+        "number": 2,
+        "url": "https://github.com/hapijs/bell/milestone/2",
+        "version": "1.0.2"
+    },
+    {
+        "date": "2014-06-12T17:35:38Z",
+        "id": 684357,
+        "issues": [
+            {
+                "id": 35586560,
+                "labels": ["bug"],
+                "number": 5,
+                "title": "Bump peer dependency to Hapi >= 6",
+                "url": "https://github.com/hapijs/bell/pull/5"
+            }
+        ],
+        "number": 1,
+        "url": "https://github.com/hapijs/bell/milestone/1",
+        "version": "1.0.1"
+    }
 ]

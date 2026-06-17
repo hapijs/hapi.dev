@@ -1,478 +1,478 @@
 [
-  {
-    "date": "2023-02-11T19:03:10Z",
-    "id": 8008327,
-    "issues": [
-      {
-        "id": 1551779671,
-        "labels": ["dependency"],
-        "number": 104,
-        "title": "chore: bump hoek",
-        "url": "https://github.com/hapijs/iron/pull/104"
-      }
-    ],
-    "number": 33,
-    "url": "https://github.com/hapijs/iron/milestone/33",
-    "version": "7.0.1"
-  },
-  {
-    "date": "2022-05-23T03:59:38Z",
-    "id": 8008326,
-    "issues": [
-      {
-        "id": 1229159337,
-        "labels": ["breaking changes", "dependency"],
-        "number": 103,
-        "title": "Support node v18 and drop node v12",
-        "url": "https://github.com/hapijs/iron/pull/103"
-      }
-    ],
-    "number": 32,
-    "url": "https://github.com/hapijs/iron/milestone/32",
-    "version": "7.0.0"
-  },
-  {
-    "date": "2020-01-05T06:00:59Z",
-    "id": 4973387,
-    "issues": [
-      {
-        "id": 545375784,
-        "labels": ["bug", "types"],
-        "number": 90,
-        "title": "Fix iv type definition",
-        "url": "https://github.com/hapijs/iron/issues/90"
-      },
-      {
-        "id": 545372754,
-        "labels": ["breaking changes", "dependency"],
-        "number": 89,
-        "title": "Only node 12",
-        "url": "https://github.com/hapijs/iron/issues/89"
-      }
-    ],
-    "number": 30,
-    "url": "https://github.com/hapijs/iron/milestone/30",
-    "version": "6.0.0"
-  },
-  {
-    "date": "2019-09-20T23:05:48Z",
-    "id": 4675829,
-    "issues": [
-      {
-        "id": 496578179,
-        "labels": ["bug", "types"],
-        "number": 84,
-        "title": "Fix types and sync with previous TS until hapi is updated",
-        "url": "https://github.com/hapijs/iron/issues/84"
-      },
-      {
-        "id": 496271444,
-        "labels": ["non issue", "types"],
-        "number": 83,
-        "title": "Fixes #81: Replace defaults with SealOptions",
-        "url": "https://github.com/hapijs/iron/pull/83"
-      }
-    ],
-    "number": 28,
-    "url": "https://github.com/hapijs/iron/milestone/28",
-    "version": "5.1.3"
-  },
-  {
-    "date": "2019-09-20T00:20:45Z",
-    "id": 4574397,
-    "issues": [
-      {
-        "id": 483889061,
-        "labels": ["types"],
-        "number": 78,
-        "title": "Added TS declarations",
-        "url": "https://github.com/hapijs/iron/pull/78"
-      }
-    ],
-    "number": 27,
-    "url": "https://github.com/hapijs/iron/milestone/27",
-    "version": "5.1.2"
-  },
-  {
-    "date": "2019-08-14T22:18:12Z",
-    "id": 4192213,
-    "issues": [
-      {
-        "id": 480911521,
-        "labels": ["dependency"],
-        "number": 77,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/iron/issues/77"
-      }
-    ],
-    "number": 26,
-    "url": "https://github.com/hapijs/iron/milestone/26",
-    "version": "5.1.1"
-  },
-  {
-    "date": "2019-04-02T06:38:05Z",
-    "id": 3792297,
-    "issues": [
-      {
-        "id": 428043566,
-        "labels": ["dependency"],
-        "number": 74,
-        "title": "Change module namespace",
-        "url": "https://github.com/hapijs/iron/issues/74"
-      }
-    ],
-    "number": 23,
-    "url": "https://github.com/hapijs/iron/milestone/23",
-    "version": "5.1.0"
-  },
-  {
-    "date": "2018-11-03T00:43:10Z",
-    "id": 3788906,
-    "issues": [
-      {
-        "id": 377002785,
-        "labels": ["non issue"],
-        "number": 72,
-        "title": "Remove engines",
-        "url": "https://github.com/hapijs/iron/issues/72"
-      }
-    ],
-    "number": 22,
-    "url": "https://github.com/hapijs/iron/milestone/22",
-    "version": "5.0.6"
-  },
-  {
-    "date": "2018-11-01T19:11:49Z",
-    "id": 2886965,
-    "issues": [
-      {
-        "id": 376528282,
-        "labels": ["dependency"],
-        "number": 71,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/iron/issues/71"
-      },
-      {
-        "id": 365944339,
-        "labels": ["bug"],
-        "number": 70,
-        "title": "seal() options is not guarded against mutation",
-        "url": "https://github.com/hapijs/iron/issues/70"
-      }
-    ],
-    "number": 21,
-    "url": "https://github.com/hapijs/iron/milestone/21",
-    "version": "5.0.5"
-  },
-  {
-    "date": "2017-11-03T20:54:01Z",
-    "id": 2886676,
-    "issues": [
-      {
-        "id": 271115786,
-        "labels": ["bug"],
-        "number": 63,
-        "title": "Use Cryptiles.fixedTimeComparison()",
-        "url": "https://github.com/hapijs/iron/issues/63"
-      }
-    ],
-    "number": 20,
-    "url": "https://github.com/hapijs/iron/milestone/20",
-    "version": "5.0.4"
-  },
-  {
-    "date": "2017-11-03T18:28:45Z",
-    "id": 2885310,
-    "issues": [
-      {
-        "id": 271073858,
-        "labels": ["bug", "dependency"],
-        "number": 62,
-        "title": "Fix new Boom",
-        "url": "https://github.com/hapijs/iron/issues/62"
-      }
-    ],
-    "number": 19,
-    "url": "https://github.com/hapijs/iron/milestone/19",
-    "version": "5.0.3"
-  },
-  {
-    "date": "2017-11-03T18:26:40Z",
-    "id": 2794210,
-    "issues": [
-      {
-        "id": 270901431,
-        "labels": ["dependency"],
-        "number": 61,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/iron/issues/61"
-      }
-    ],
-    "number": 18,
-    "url": "https://github.com/hapijs/iron/milestone/18",
-    "version": "5.0.2"
-  },
-  {
-    "date": "2017-09-26T09:11:53Z",
-    "id": 2787807,
-    "issues": [
-      {
-        "id": 260548584,
-        "labels": ["dependency"],
-        "number": 59,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/iron/issues/59"
-      }
-    ],
-    "number": 17,
-    "url": "https://github.com/hapijs/iron/milestone/17",
-    "version": "5.0.1"
-  },
-  {
-    "date": "2017-09-25T00:40:39Z",
-    "id": 2546754,
-    "issues": [
-      {
-        "id": 260106244,
-        "labels": ["feature", "breaking changes"],
-        "number": 58,
-        "title": "Migrate to async interface",
-        "url": "https://github.com/hapijs/iron/issues/58"
-      }
-    ],
-    "number": 16,
-    "url": "https://github.com/hapijs/iron/milestone/16",
-    "version": "5.0.0"
-  },
-  {
-    "date": "2019-03-25T06:16:57Z",
-    "id": 4168159,
-    "issues": [
-      {
-        "id": 424736169,
-        "labels": ["lts"],
-        "number": 73,
-        "title": "Commercial version of v4 branch",
-        "url": "https://github.com/hapijs/iron/issues/73"
-      }
-    ],
-    "number": 24,
-    "url": "https://github.com/hapijs/iron/milestone/24",
-    "version": "4.1.0"
-  },
-  {
-    "date": "2017-05-28T06:40:56Z",
-    "id": 1992126,
-    "issues": [
-      {
-        "id": 231850139,
-        "labels": ["dependency"],
-        "number": 53,
-        "title": "Update deps.",
-        "url": "https://github.com/hapijs/iron/issues/53"
-      }
-    ],
-    "number": 15,
-    "url": "https://github.com/hapijs/iron/milestone/15",
-    "version": "4.0.5"
-  },
-  {
-    "date": "2016-09-08T21:27:32Z",
-    "id": 1964510,
-    "issues": [
-      {
-        "id": 175866680,
-        "labels": ["bug"],
-        "number": 50,
-        "title": "Always return boom errors",
-        "url": "https://github.com/hapijs/iron/issues/50"
-      }
-    ],
-    "number": 14,
-    "url": "https://github.com/hapijs/iron/milestone/14",
-    "version": "4.0.4"
-  },
-  {
-    "date": "2016-08-26T07:33:15Z",
-    "id": 1964509,
-    "issues": [
-      {
-        "id": 159579340,
-        "labels": ["bug"],
-        "number": 45,
-        "title": "Catch and report possible `JSON.stringify` errors in `Iron.seal`",
-        "url": "https://github.com/hapijs/iron/pull/45"
-      }
-    ],
-    "number": 13,
-    "url": "https://github.com/hapijs/iron/milestone/13",
-    "version": "4.0.3"
-  },
-  {
-    "date": "2016-08-26T07:27:24Z",
-    "id": 1756032,
-    "issues": [
-      {
-        "id": 167941605,
-        "labels": ["dependency"],
-        "number": 46,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/iron/issues/46"
-      }
-    ],
-    "number": 12,
-    "url": "https://github.com/hapijs/iron/milestone/12",
-    "version": "4.0.2"
-  },
-  {
-    "date": "2016-05-09T17:14:45Z",
-    "id": 1554797,
-    "issues": [
-      {
-        "id": 151842145,
-        "labels": ["test", "dependency"],
-        "number": 44,
-        "title": "made exception message assertion less strict to account for different node 6 error message",
-        "url": "https://github.com/hapijs/iron/pull/44"
-      },
-      {
-        "id": 151841961,
-        "labels": ["bug", "dependency"],
-        "number": 43,
-        "title": "added digest argument to crypto.pbkdf2",
-        "url": "https://github.com/hapijs/iron/pull/43"
-      }
-    ],
-    "number": 11,
-    "url": "https://github.com/hapijs/iron/milestone/11",
-    "version": "4.0.1"
-  },
-  {
-    "date": "2016-02-01T07:27:09Z",
-    "id": 1387920,
-    "issues": [
-      {
-        "id": 125226729,
-        "labels": ["breaking changes", "security"],
-        "number": 39,
-        "title": "Require min of n characters for passwords",
-        "url": "https://github.com/hapijs/iron/issues/39"
-      }
-    ],
-    "number": 10,
-    "url": "https://github.com/hapijs/iron/milestone/10",
-    "version": "4.0.0"
-  },
-  {
-    "date": "2015-11-02T04:38:07Z",
-    "id": 1251087,
-    "issues": [
-      {
-        "id": 114521797,
-        "labels": ["breaking changes"],
-        "number": 36,
-        "title": "ES6 style changes and node v4",
-        "url": "https://github.com/hapijs/iron/issues/36"
-      }
-    ],
-    "number": 9,
-    "url": "https://github.com/hapijs/iron/milestone/9",
-    "version": "3.0.1"
-  },
-  {
-    "date": "2014-08-18T20:24:59Z",
-    "id": 740464,
-    "issues": [],
-    "number": 5,
-    "url": "https://github.com/hapijs/iron/milestone/5",
-    "version": "3.0.0"
-  },
-  {
-    "date": "2015-08-12T04:51:03Z",
-    "id": 780344,
-    "issues": [],
-    "number": 8,
-    "url": "https://github.com/hapijs/iron/milestone/8",
-    "version": "2.1.3"
-  },
-  {
-    "date": "2015-08-12T04:51:01Z",
-    "id": 780343,
-    "issues": [
-      {
-        "id": 42091033,
-        "labels": ["bug", "test"],
-        "number": 24,
-        "title": "Revert 3.0 changes. Back to 2.x",
-        "url": "https://github.com/hapijs/iron/issues/24"
-      }
-    ],
-    "number": 7,
-    "url": "https://github.com/hapijs/iron/milestone/7",
-    "version": "2.1.2"
-  },
-  {
-    "date": "2014-08-02T07:34:52Z",
-    "id": 665015,
-    "issues": [
-      {
-        "id": 39344389,
-        "labels": ["documentation"],
+    {
+        "date": "2023-02-11T19:03:10Z",
+        "id": 8008327,
+        "issues": [
+            {
+                "id": 1551779671,
+                "labels": ["dependency"],
+                "number": 104,
+                "title": "chore: bump hoek",
+                "url": "https://github.com/hapijs/iron/pull/104"
+            }
+        ],
+        "number": 33,
+        "url": "https://github.com/hapijs/iron/milestone/33",
+        "version": "7.0.1"
+    },
+    {
+        "date": "2022-05-23T03:59:38Z",
+        "id": 8008326,
+        "issues": [
+            {
+                "id": 1229159337,
+                "labels": ["breaking changes", "dependency"],
+                "number": 103,
+                "title": "Support node v18 and drop node v12",
+                "url": "https://github.com/hapijs/iron/pull/103"
+            }
+        ],
+        "number": 32,
+        "url": "https://github.com/hapijs/iron/milestone/32",
+        "version": "7.0.0"
+    },
+    {
+        "date": "2020-01-05T06:00:59Z",
+        "id": 4973387,
+        "issues": [
+            {
+                "id": 545375784,
+                "labels": ["bug", "types"],
+                "number": 90,
+                "title": "Fix iv type definition",
+                "url": "https://github.com/hapijs/iron/issues/90"
+            },
+            {
+                "id": 545372754,
+                "labels": ["breaking changes", "dependency"],
+                "number": 89,
+                "title": "Only node 12",
+                "url": "https://github.com/hapijs/iron/issues/89"
+            }
+        ],
+        "number": 30,
+        "url": "https://github.com/hapijs/iron/milestone/30",
+        "version": "6.0.0"
+    },
+    {
+        "date": "2019-09-20T23:05:48Z",
+        "id": 4675829,
+        "issues": [
+            {
+                "id": 496578179,
+                "labels": ["bug", "types"],
+                "number": 84,
+                "title": "Fix types and sync with previous TS until hapi is updated",
+                "url": "https://github.com/hapijs/iron/issues/84"
+            },
+            {
+                "id": 496271444,
+                "labels": ["non issue", "types"],
+                "number": 83,
+                "title": "Fixes #81: Replace defaults with SealOptions",
+                "url": "https://github.com/hapijs/iron/pull/83"
+            }
+        ],
+        "number": 28,
+        "url": "https://github.com/hapijs/iron/milestone/28",
+        "version": "5.1.3"
+    },
+    {
+        "date": "2019-09-20T00:20:45Z",
+        "id": 4574397,
+        "issues": [
+            {
+                "id": 483889061,
+                "labels": ["types"],
+                "number": 78,
+                "title": "Added TS declarations",
+                "url": "https://github.com/hapijs/iron/pull/78"
+            }
+        ],
+        "number": 27,
+        "url": "https://github.com/hapijs/iron/milestone/27",
+        "version": "5.1.2"
+    },
+    {
+        "date": "2019-08-14T22:18:12Z",
+        "id": 4192213,
+        "issues": [
+            {
+                "id": 480911521,
+                "labels": ["dependency"],
+                "number": 77,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/iron/issues/77"
+            }
+        ],
+        "number": 26,
+        "url": "https://github.com/hapijs/iron/milestone/26",
+        "version": "5.1.1"
+    },
+    {
+        "date": "2019-04-02T06:38:05Z",
+        "id": 3792297,
+        "issues": [
+            {
+                "id": 428043566,
+                "labels": ["dependency"],
+                "number": 74,
+                "title": "Change module namespace",
+                "url": "https://github.com/hapijs/iron/issues/74"
+            }
+        ],
+        "number": 23,
+        "url": "https://github.com/hapijs/iron/milestone/23",
+        "version": "5.1.0"
+    },
+    {
+        "date": "2018-11-03T00:43:10Z",
+        "id": 3788906,
+        "issues": [
+            {
+                "id": 377002785,
+                "labels": ["non issue"],
+                "number": 72,
+                "title": "Remove engines",
+                "url": "https://github.com/hapijs/iron/issues/72"
+            }
+        ],
+        "number": 22,
+        "url": "https://github.com/hapijs/iron/milestone/22",
+        "version": "5.0.6"
+    },
+    {
+        "date": "2018-11-01T19:11:49Z",
+        "id": 2886965,
+        "issues": [
+            {
+                "id": 376528282,
+                "labels": ["dependency"],
+                "number": 71,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/iron/issues/71"
+            },
+            {
+                "id": 365944339,
+                "labels": ["bug"],
+                "number": 70,
+                "title": "seal() options is not guarded against mutation",
+                "url": "https://github.com/hapijs/iron/issues/70"
+            }
+        ],
+        "number": 21,
+        "url": "https://github.com/hapijs/iron/milestone/21",
+        "version": "5.0.5"
+    },
+    {
+        "date": "2017-11-03T20:54:01Z",
+        "id": 2886676,
+        "issues": [
+            {
+                "id": 271115786,
+                "labels": ["bug"],
+                "number": 63,
+                "title": "Use Cryptiles.fixedTimeComparison()",
+                "url": "https://github.com/hapijs/iron/issues/63"
+            }
+        ],
+        "number": 20,
+        "url": "https://github.com/hapijs/iron/milestone/20",
+        "version": "5.0.4"
+    },
+    {
+        "date": "2017-11-03T18:28:45Z",
+        "id": 2885310,
+        "issues": [
+            {
+                "id": 271073858,
+                "labels": ["bug", "dependency"],
+                "number": 62,
+                "title": "Fix new Boom",
+                "url": "https://github.com/hapijs/iron/issues/62"
+            }
+        ],
         "number": 19,
-        "title": "Update contact",
-        "url": "https://github.com/hapijs/iron/issues/19"
-      }
-    ],
-    "number": 4,
-    "url": "https://github.com/hapijs/iron/milestone/4",
-    "version": "2.1.1"
-  },
-  {
-    "date": "2014-05-20T21:00:48Z",
-    "id": 580355,
-    "issues": [
-      {
-        "id": 33295598,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/iron/milestone/19",
+        "version": "5.0.3"
+    },
+    {
+        "date": "2017-11-03T18:26:40Z",
+        "id": 2794210,
+        "issues": [
+            {
+                "id": 270901431,
+                "labels": ["dependency"],
+                "number": 61,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/iron/issues/61"
+            }
+        ],
+        "number": 18,
+        "url": "https://github.com/hapijs/iron/milestone/18",
+        "version": "5.0.2"
+    },
+    {
+        "date": "2017-09-26T09:11:53Z",
+        "id": 2787807,
+        "issues": [
+            {
+                "id": 260548584,
+                "labels": ["dependency"],
+                "number": 59,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/iron/issues/59"
+            }
+        ],
         "number": 17,
-        "title": "Expanding on the password object format so that it becomes possible to s...",
-        "url": "https://github.com/hapijs/iron/pull/17"
-      }
-    ],
-    "number": 2,
-    "url": "https://github.com/hapijs/iron/milestone/2",
-    "version": "2.1.0"
-  },
-  {
-    "date": "2014-04-27T05:01:46Z",
-    "id": 641344,
-    "issues": [
-      {
-        "id": 32304595,
-        "labels": ["test"],
+        "url": "https://github.com/hapijs/iron/milestone/17",
+        "version": "5.0.1"
+    },
+    {
+        "date": "2017-09-25T00:40:39Z",
+        "id": 2546754,
+        "issues": [
+            {
+                "id": 260106244,
+                "labels": ["feature", "breaking changes"],
+                "number": 58,
+                "title": "Migrate to async interface",
+                "url": "https://github.com/hapijs/iron/issues/58"
+            }
+        ],
+        "number": 16,
+        "url": "https://github.com/hapijs/iron/milestone/16",
+        "version": "5.0.0"
+    },
+    {
+        "date": "2019-03-25T06:16:57Z",
+        "id": 4168159,
+        "issues": [
+            {
+                "id": 424736169,
+                "labels": ["lts"],
+                "number": 73,
+                "title": "Commercial version of v4 branch",
+                "url": "https://github.com/hapijs/iron/issues/73"
+            }
+        ],
+        "number": 24,
+        "url": "https://github.com/hapijs/iron/milestone/24",
+        "version": "4.1.0"
+    },
+    {
+        "date": "2017-05-28T06:40:56Z",
+        "id": 1992126,
+        "issues": [
+            {
+                "id": 231850139,
+                "labels": ["dependency"],
+                "number": 53,
+                "title": "Update deps.",
+                "url": "https://github.com/hapijs/iron/issues/53"
+            }
+        ],
         "number": 15,
-        "title": "Bring coverage back to 100%",
-        "url": "https://github.com/hapijs/iron/issues/15"
-      }
-    ],
-    "number": 3,
-    "url": "https://github.com/hapijs/iron/milestone/3",
-    "version": "2.0.2"
-  },
-  {
-    "date": "2014-02-25T21:29:07Z",
-    "id": 580354,
-    "issues": [
-      {
-        "id": 28286097,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/iron/milestone/15",
+        "version": "4.0.5"
+    },
+    {
+        "date": "2016-09-08T21:27:32Z",
+        "id": 1964510,
+        "issues": [
+            {
+                "id": 175866680,
+                "labels": ["bug"],
+                "number": 50,
+                "title": "Always return boom errors",
+                "url": "https://github.com/hapijs/iron/issues/50"
+            }
+        ],
         "number": 14,
-        "title": "Support node 0.11",
-        "url": "https://github.com/hapijs/iron/issues/14"
-      }
-    ],
-    "number": 1,
-    "url": "https://github.com/hapijs/iron/milestone/1",
-    "version": "2.0.1"
-  }
+        "url": "https://github.com/hapijs/iron/milestone/14",
+        "version": "4.0.4"
+    },
+    {
+        "date": "2016-08-26T07:33:15Z",
+        "id": 1964509,
+        "issues": [
+            {
+                "id": 159579340,
+                "labels": ["bug"],
+                "number": 45,
+                "title": "Catch and report possible `JSON.stringify` errors in `Iron.seal`",
+                "url": "https://github.com/hapijs/iron/pull/45"
+            }
+        ],
+        "number": 13,
+        "url": "https://github.com/hapijs/iron/milestone/13",
+        "version": "4.0.3"
+    },
+    {
+        "date": "2016-08-26T07:27:24Z",
+        "id": 1756032,
+        "issues": [
+            {
+                "id": 167941605,
+                "labels": ["dependency"],
+                "number": 46,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/iron/issues/46"
+            }
+        ],
+        "number": 12,
+        "url": "https://github.com/hapijs/iron/milestone/12",
+        "version": "4.0.2"
+    },
+    {
+        "date": "2016-05-09T17:14:45Z",
+        "id": 1554797,
+        "issues": [
+            {
+                "id": 151842145,
+                "labels": ["test", "dependency"],
+                "number": 44,
+                "title": "made exception message assertion less strict to account for different node 6 error message",
+                "url": "https://github.com/hapijs/iron/pull/44"
+            },
+            {
+                "id": 151841961,
+                "labels": ["bug", "dependency"],
+                "number": 43,
+                "title": "added digest argument to crypto.pbkdf2",
+                "url": "https://github.com/hapijs/iron/pull/43"
+            }
+        ],
+        "number": 11,
+        "url": "https://github.com/hapijs/iron/milestone/11",
+        "version": "4.0.1"
+    },
+    {
+        "date": "2016-02-01T07:27:09Z",
+        "id": 1387920,
+        "issues": [
+            {
+                "id": 125226729,
+                "labels": ["breaking changes", "security"],
+                "number": 39,
+                "title": "Require min of n characters for passwords",
+                "url": "https://github.com/hapijs/iron/issues/39"
+            }
+        ],
+        "number": 10,
+        "url": "https://github.com/hapijs/iron/milestone/10",
+        "version": "4.0.0"
+    },
+    {
+        "date": "2015-11-02T04:38:07Z",
+        "id": 1251087,
+        "issues": [
+            {
+                "id": 114521797,
+                "labels": ["breaking changes"],
+                "number": 36,
+                "title": "ES6 style changes and node v4",
+                "url": "https://github.com/hapijs/iron/issues/36"
+            }
+        ],
+        "number": 9,
+        "url": "https://github.com/hapijs/iron/milestone/9",
+        "version": "3.0.1"
+    },
+    {
+        "date": "2014-08-18T20:24:59Z",
+        "id": 740464,
+        "issues": [],
+        "number": 5,
+        "url": "https://github.com/hapijs/iron/milestone/5",
+        "version": "3.0.0"
+    },
+    {
+        "date": "2015-08-12T04:51:03Z",
+        "id": 780344,
+        "issues": [],
+        "number": 8,
+        "url": "https://github.com/hapijs/iron/milestone/8",
+        "version": "2.1.3"
+    },
+    {
+        "date": "2015-08-12T04:51:01Z",
+        "id": 780343,
+        "issues": [
+            {
+                "id": 42091033,
+                "labels": ["bug", "test"],
+                "number": 24,
+                "title": "Revert 3.0 changes. Back to 2.x",
+                "url": "https://github.com/hapijs/iron/issues/24"
+            }
+        ],
+        "number": 7,
+        "url": "https://github.com/hapijs/iron/milestone/7",
+        "version": "2.1.2"
+    },
+    {
+        "date": "2014-08-02T07:34:52Z",
+        "id": 665015,
+        "issues": [
+            {
+                "id": 39344389,
+                "labels": ["documentation"],
+                "number": 19,
+                "title": "Update contact",
+                "url": "https://github.com/hapijs/iron/issues/19"
+            }
+        ],
+        "number": 4,
+        "url": "https://github.com/hapijs/iron/milestone/4",
+        "version": "2.1.1"
+    },
+    {
+        "date": "2014-05-20T21:00:48Z",
+        "id": 580355,
+        "issues": [
+            {
+                "id": 33295598,
+                "labels": ["feature"],
+                "number": 17,
+                "title": "Expanding on the password object format so that it becomes possible to s...",
+                "url": "https://github.com/hapijs/iron/pull/17"
+            }
+        ],
+        "number": 2,
+        "url": "https://github.com/hapijs/iron/milestone/2",
+        "version": "2.1.0"
+    },
+    {
+        "date": "2014-04-27T05:01:46Z",
+        "id": 641344,
+        "issues": [
+            {
+                "id": 32304595,
+                "labels": ["test"],
+                "number": 15,
+                "title": "Bring coverage back to 100%",
+                "url": "https://github.com/hapijs/iron/issues/15"
+            }
+        ],
+        "number": 3,
+        "url": "https://github.com/hapijs/iron/milestone/3",
+        "version": "2.0.2"
+    },
+    {
+        "date": "2014-02-25T21:29:07Z",
+        "id": 580354,
+        "issues": [
+            {
+                "id": 28286097,
+                "labels": ["feature"],
+                "number": 14,
+                "title": "Support node 0.11",
+                "url": "https://github.com/hapijs/iron/issues/14"
+            }
+        ],
+        "number": 1,
+        "url": "https://github.com/hapijs/iron/milestone/1",
+        "version": "2.0.1"
+    }
 ]

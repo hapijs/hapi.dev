@@ -7,21 +7,21 @@ This API is still a WIP. Feedbacks are welcome.
 This section will serve as a gathering for all ideas we want to implement or that are open to discussion in this module.
 
 - Dual logging system:
-  - A highly performant core integrated with hapi's core:
-    - Super fast text streams (inspired from pino)
-    - Replace the current `server.log()` and `request.log()`, maybe by something like `server.log.critical()`, `request.log.debug()`.
-    - Should we allow for custom log levels?
-    - Allow data to be bind to a logger to create a "child logger" rather than having to do it by hand every time.
-    - Allow for default log level and minimum log level threshold.
-    - A documented log format that would enable logging to `stdout` / `stderr` from hapi and piping them to another process for more in depth handling (reformating, shipping, etc.).
-  - Podium API to subscribe to specific events and a built-in way to pipe everything to stdout.
+    - A highly performant core integrated with hapi's core:
+        - Super fast text streams (inspired from pino)
+        - Replace the current `server.log()` and `request.log()`, maybe by something like `server.log.critical()`, `request.log.debug()`.
+        - Should we allow for custom log levels?
+        - Allow data to be bind to a logger to create a "child logger" rather than having to do it by hand every time.
+        - Allow for default log level and minimum log level threshold.
+        - A documented log format that would enable logging to `stdout` / `stderr` from hapi and piping them to another process for more in depth handling (reformating, shipping, etc.).
+    - Podium API to subscribe to specific events and a built-in way to pipe everything to stdout.
 - Plugins could add support for writing to files with additional features like files rotation, chunking or write to HTTP targets i.e loggly.
 - Rework the current `server.events` and `request.events` channels to make them more intuitive :
-  - Remove the ambiguity with the `request` event where it makes you think that an event will be triggered when a new request is received whereas it can be done with the `onRequest` extension point instead.
-  - Remove the inconsistency between `server.log()` which emits `log` events and `request.log()` which emits `request` events.
+    - Remove the ambiguity with the `request` event where it makes you think that an event will be triggered when a new request is received whereas it can be done with the `onRequest` extension point instead.
+    - Remove the inconsistency between `server.log()` which emits `log` events and `request.log()` which emits `request` events.
 - Keep emitting events when logging (to enable side usage like crash notifications ala Sentry).
 - Provide first class API to serialize problematic Node/hapi objects such as the request object using either first class citizen objects or methods like `toJSON()` :
-  - Allow the user to provide paths to data or a redaction function for sensitive information.
+    - Allow the user to provide paths to data or a redaction function for sensitive information.
 - Built in support for ignoring events based on path or tags i.e `/health`.
 
 ## <a name="log-level" /> Log level
@@ -65,7 +65,7 @@ An array of strings where each value represents the name of an event dispatched 
 - `response` event
 - `start` event
 - `stop` event
-  - The logger will automatically be closed upon `stop` event reception whether it is present in the `events` array or not.
+    - The logger will automatically be closed upon `stop` event reception whether it is present in the `events` array or not.
 
 The automatic logging behavior on `log` and `request` event is handled differently from the others. If the received event object contains tags, they will be tested against the [log levels](#log-levels). If there are matches and a matched log level has a more severe log level than the [default level](#register.defaultLevel) it will be used instead. When multiple tags match, the one with the most severe log level will be used. If there are no matches, the [default level](#register.defaultLevel) will be used.
 
@@ -109,12 +109,12 @@ An object with several methods to setup and log information:
 - `async logger.connect()` (optional): this method is called during the `onPreStart` lifecycle.
 - `logger.close()` (optional): this method is called upon reception of the server `stop` event. It should execute cleanup logic i.e closing files, closing remote communication.
 - `logger.on(eventName, callback)`: this method is used to listen to events on the logger object. It is used to listen to an `error` event when the [`onError`](#register.onError) option is provided. It accepts two arguments:
-  - `eventName`: a string for the event name.
-  - `callback`: a function that should be called when an event matching the event name is dispatched.
+    - `eventName`: a string for the event name.
+    - `callback`: a function that should be called when an event matching the event name is dispatched.
 - `logger[level](label, data, additionalFields)`: methods for every log level in the [`events`](#register.events) option i.e `logger.notice()` or `logger.critical()`. These methods will be called with three arguments:
-  - `message`: the message to log. Can be a string or an object that can be stringified.
-  - `data`: an object containing data about the event, `undefined` when no data are sent.
-  - `additionalFields`: the object passed to the [`additionalFields`](#register.additionalFields) option.
+    - `message`: the message to log. Can be a string or an object that can be stringified.
+    - `data`: an object containing data about the event, `undefined` when no data are sent.
+    - `additionalFields`: the object passed to the [`additionalFields`](#register.additionalFields) option.
 
 ### <a name="register.logLevelMap" /> `logLevelMap`
 
@@ -124,19 +124,19 @@ An object that will be used to create a mapping between different names and the 
 
 ```json
 {
-  "emerg": "emergency",
-  "emergency": "emergency",
-  "alert": "alert",
-  "crit": "critical",
-  "critical": "critical",
-  "err": "error",
-  "error": "error",
-  "warn": "warning",
-  "warning": "warning",
-  "notice": "notice",
-  "info": "info",
-  "log": "info",
-  "debug": "debug"
+    "emerg": "emergency",
+    "emergency": "emergency",
+    "alert": "alert",
+    "crit": "critical",
+    "critical": "critical",
+    "err": "error",
+    "error": "error",
+    "warn": "warning",
+    "warning": "warning",
+    "notice": "notice",
+    "info": "info",
+    "log": "info",
+    "debug": "debug"
 }
 ```
 

@@ -1,610 +1,610 @@
 [
-  {
-    "date": "2024-06-12T07:47:17Z",
-    "id": 11174568,
-    "issues": [
-      {
-        "id": 2326839466,
-        "labels": ["types"],
-        "number": 90,
-        "title": "feat: 🎸 bring in typings from DT",
-        "url": "https://github.com/hapijs/catbox-memory/pull/90"
-      }
-    ],
-    "number": 31,
-    "url": "https://github.com/hapijs/catbox-memory/milestone/31",
-    "version": "6.0.2"
-  },
-  {
-    "date": "2023-02-11T20:53:06Z",
-    "id": 7956512,
-    "issues": [
-      {
-        "id": 1551775886,
-        "labels": ["dependency"],
-        "number": 87,
-        "title": "chore: bump hoek",
-        "url": "https://github.com/hapijs/catbox-memory/pull/87"
-      }
-    ],
-    "number": 30,
-    "url": "https://github.com/hapijs/catbox-memory/milestone/30",
-    "version": "6.0.1"
-  },
-  {
-    "date": "2023-02-11T20:53:04Z",
-    "id": 7956511,
-    "issues": [
-      {
-        "id": 1229112091,
-        "labels": ["breaking changes", "dependency"],
-        "number": 86,
-        "title": "Support node v18 and drop node v12, make exports ESM-friendly",
-        "url": "https://github.com/hapijs/catbox-memory/pull/86"
-      }
-    ],
-    "number": 29,
-    "url": "https://github.com/hapijs/catbox-memory/milestone/29",
-    "version": "6.0.0"
-  },
-  {
-    "date": "2021-04-09T14:32:33Z",
-    "id": 4973210,
-    "issues": [
-      {
-        "id": 854343814,
-        "labels": ["bug"],
-        "number": 83,
-        "title": "fix: make class extendable",
-        "url": "https://github.com/hapijs/catbox-memory/pull/83"
-      },
-      {
-        "id": 709588185,
-        "labels": [],
-        "number": 81,
-        "title": "upgrade lab to v24",
-        "url": "https://github.com/hapijs/catbox-memory/pull/81"
-      }
-    ],
-    "number": 27,
-    "url": "https://github.com/hapijs/catbox-memory/milestone/27",
-    "version": "5.0.1"
-  },
-  {
-    "date": "2020-01-04T23:51:40Z",
-    "id": 4973209,
-    "issues": [
-      {
-        "id": 545346706,
-        "labels": ["breaking changes", "dependency"],
-        "number": 77,
-        "title": "Only node 12",
-        "url": "https://github.com/hapijs/catbox-memory/issues/77"
-      }
-    ],
-    "number": 26,
-    "url": "https://github.com/hapijs/catbox-memory/milestone/26",
-    "version": "5.0.0"
-  },
-  {
-    "date": "2019-08-14T05:16:56Z",
-    "id": 4192032,
-    "issues": [
-      {
-        "id": 480484872,
-        "labels": ["dependency"],
-        "number": 69,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/catbox-memory/issues/69"
-      }
-    ],
-    "number": 22,
-    "url": "https://github.com/hapijs/catbox-memory/milestone/22",
-    "version": "4.1.1"
-  },
-  {
-    "date": "2019-04-02T04:16:28Z",
-    "id": 3792179,
-    "issues": [
-      {
-        "id": 428015540,
-        "labels": ["breaking changes"],
-        "number": 66,
-        "title": "Remove allowMixedContent option",
-        "url": "https://github.com/hapijs/catbox-memory/issues/66"
-      },
-      {
-        "id": 428011636,
-        "labels": ["dependency"],
-        "number": 65,
-        "title": "Change module namespace",
-        "url": "https://github.com/hapijs/catbox-memory/issues/65"
-      },
-      {
-        "id": 427016256,
-        "labels": ["bug"],
-        "number": 64,
-        "title": "Typo _timeDue vs _timerDue",
-        "url": "https://github.com/hapijs/catbox-memory/issues/64"
-      }
-    ],
-    "number": 19,
-    "url": "https://github.com/hapijs/catbox-memory/milestone/19",
-    "version": "4.1.0"
-  },
-  {
-    "date": "2018-11-03T00:22:37Z",
-    "id": 3787568,
-    "issues": [
-      {
-        "id": 377001016,
-        "labels": ["non issue"],
-        "number": 61,
-        "title": "Remove engines",
-        "url": "https://github.com/hapijs/catbox-memory/issues/61"
-      }
-    ],
-    "number": 16,
-    "url": "https://github.com/hapijs/catbox-memory/milestone/16",
-    "version": "4.0.1"
-  },
-  {
-    "date": "2018-11-01T07:55:29Z",
-    "id": 3232157,
-    "issues": [
-      {
-        "id": 376290023,
-        "labels": ["dependency"],
-        "number": 57,
-        "title": "Update hoek v6",
-        "url": "https://github.com/hapijs/catbox-memory/issues/57"
-      },
-      {
-        "id": 291387296,
-        "labels": ["feature"],
-        "number": 55,
-        "title": "Buffers can change while in cache",
-        "url": "https://github.com/hapijs/catbox-memory/issues/55"
-      },
-      {
-        "id": 40329249,
-        "labels": ["feature", "breaking changes"],
-        "number": 8,
-        "title": "Large overhead from expires times when highly populated",
-        "url": "https://github.com/hapijs/catbox-memory/issues/8"
-      }
-    ],
-    "number": 15,
-    "url": "https://github.com/hapijs/catbox-memory/milestone/15",
-    "version": "4.0.0"
-  },
-  {
-    "date": "2020-07-04T19:49:13Z",
-    "id": 4218721,
-    "issues": [],
-    "number": 24,
-    "url": "https://github.com/hapijs/catbox-memory/milestone/24",
-    "version": "3.2.2"
-  },
-  {
-    "date": "2019-04-10T20:02:31Z",
-    "id": 4218718,
-    "issues": [
-      {
-        "id": 431685969,
-        "labels": ["dependency"],
-        "number": 67,
-        "title": "Change module namespace v3",
-        "url": "https://github.com/hapijs/catbox-memory/issues/67"
-      }
-    ],
-    "number": 23,
-    "url": "https://github.com/hapijs/catbox-memory/milestone/23",
-    "version": "3.2.0"
-  },
-  {
-    "date": "2018-11-03T00:22:38Z",
-    "id": 3792175,
-    "issues": [
-      {
-        "id": 377000991,
-        "labels": ["non issue"],
-        "number": 60,
-        "title": "Remove engines",
-        "url": "https://github.com/hapijs/catbox-memory/issues/60"
-      }
-    ],
-    "number": 18,
-    "url": "https://github.com/hapijs/catbox-memory/milestone/18",
-    "version": "3.1.4"
-  },
-  {
-    "date": "2018-11-02T23:51:52Z",
-    "id": 3788968,
-    "issues": [
-      {
-        "id": 376542606,
-        "labels": ["dependency", "lts"],
-        "number": 58,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/catbox-memory/issues/58"
-      }
-    ],
-    "number": 17,
-    "url": "https://github.com/hapijs/catbox-memory/milestone/17",
-    "version": "3.1.3"
-  },
-  {
-    "date": "2018-03-31T00:21:48Z",
-    "id": 2886665,
-    "issues": [
-      {
-        "id": 307174415,
-        "labels": ["bug"],
-        "number": 56,
-        "title": "Remove new Buffer usage",
-        "url": "https://github.com/hapijs/catbox-memory/pull/56"
-      }
-    ],
-    "number": 14,
-    "url": "https://github.com/hapijs/catbox-memory/milestone/14",
-    "version": "3.1.2"
-  },
-  {
-    "date": "2017-11-03T18:21:08Z",
-    "id": 2885231,
-    "issues": [
-      {
-        "id": 271071868,
-        "labels": ["bug", "dependency"],
-        "number": 54,
-        "title": "Fix new Boom",
-        "url": "https://github.com/hapijs/catbox-memory/issues/54"
-      }
-    ],
-    "number": 13,
-    "url": "https://github.com/hapijs/catbox-memory/milestone/13",
-    "version": "3.1.1"
-  },
-  {
-    "date": "2017-11-03T06:30:54Z",
-    "id": 2794088,
-    "issues": [
-      {
-        "id": 270888337,
-        "labels": ["feature"],
-        "number": 53,
-        "title": "Replace hash with Map",
-        "url": "https://github.com/hapijs/catbox-memory/issues/53"
-      },
-      {
-        "id": 270882433,
-        "labels": ["feature"],
-        "number": 52,
-        "title": "Sync client for catbox 10",
-        "url": "https://github.com/hapijs/catbox-memory/issues/52"
-      },
-      {
-        "id": 261769688,
-        "labels": ["feature"],
-        "number": 48,
-        "title": "Use big-time for long timeout support",
-        "url": "https://github.com/hapijs/catbox-memory/pull/48"
-      }
-    ],
-    "number": 12,
-    "url": "https://github.com/hapijs/catbox-memory/milestone/12",
-    "version": "3.1.0"
-  },
-  {
-    "date": "2017-09-26T08:32:25Z",
-    "id": 2093695,
-    "issues": [
-      {
-        "id": 260536176,
-        "labels": ["breaking changes"],
-        "number": 47,
-        "title": "Node 8",
-        "url": "https://github.com/hapijs/catbox-memory/issues/47"
-      }
-    ],
-    "number": 11,
-    "url": "https://github.com/hapijs/catbox-memory/milestone/11",
-    "version": "3.0.0"
-  },
-  {
-    "date": "2019-03-24T23:41:01Z",
-    "id": 4167560,
-    "issues": [
-      {
-        "id": 424673809,
-        "labels": ["lts"],
-        "number": 63,
-        "title": "Commercial version of v2 branch",
-        "url": "https://github.com/hapijs/catbox-memory/issues/63"
-      }
-    ],
-    "number": 20,
-    "url": "https://github.com/hapijs/catbox-memory/milestone/20",
-    "version": "2.1.0"
-  },
-  {
-    "date": "2016-10-26T00:31:03Z",
-    "id": 1813506,
-    "issues": [
-      {
-        "id": 185267905,
-        "labels": ["test", "dependency"],
-        "number": 43,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/catbox-memory/pull/43"
-      },
-      {
-        "id": 182483834,
-        "labels": ["bug"],
-        "number": 42,
-        "title": "fix: cancel timeouts on drop",
-        "url": "https://github.com/hapijs/catbox-memory/pull/42"
-      }
-    ],
-    "number": 10,
-    "url": "https://github.com/hapijs/catbox-memory/milestone/10",
-    "version": "2.0.4"
-  },
-  {
-    "date": "2016-06-07T13:53:12Z",
-    "id": 1388862,
-    "issues": [
-      {
-        "id": 158928573,
-        "labels": ["feature"],
-        "number": 38,
-        "title": "Add .npmignore",
-        "url": "https://github.com/hapijs/catbox-memory/issues/38"
-      },
-      {
-        "id": 157498801,
-        "labels": ["documentation"],
-        "number": 37,
-        "title": "add note to readme about the limitation of ttl",
-        "url": "https://github.com/hapijs/catbox-memory/pull/37"
-      }
-    ],
-    "number": 9,
-    "url": "https://github.com/hapijs/catbox-memory/milestone/9",
-    "version": "2.0.3"
-  },
-  {
-    "date": "2015-11-02T14:04:07Z",
-    "id": 1261292,
-    "issues": [
-      {
-        "id": 114503757,
-        "labels": ["dependency"],
-        "number": 33,
-        "title": "Update hapijs/catbox to 7.0.0",
-        "url": "https://github.com/hapijs/catbox-memory/issues/33"
-      }
-    ],
-    "number": 8,
-    "url": "https://github.com/hapijs/catbox-memory/milestone/8",
-    "version": "2.0.1"
-  },
-  {
-    "date": "2015-08-18T19:31:47Z",
-    "id": 842606,
-    "issues": [
-      {
-        "id": 101731190,
-        "labels": ["dependency"],
-        "number": 32,
-        "title": "v1.1.2",
-        "url": "https://github.com/hapijs/catbox-memory/pull/32"
-      },
-      {
-        "id": 65567972,
-        "labels": ["bug"],
+    {
+        "date": "2024-06-12T07:47:17Z",
+        "id": 11174568,
+        "issues": [
+            {
+                "id": 2326839466,
+                "labels": ["types"],
+                "number": 90,
+                "title": "feat: 🎸 bring in typings from DT",
+                "url": "https://github.com/hapijs/catbox-memory/pull/90"
+            }
+        ],
+        "number": 31,
+        "url": "https://github.com/hapijs/catbox-memory/milestone/31",
+        "version": "6.0.2"
+    },
+    {
+        "date": "2023-02-11T20:53:06Z",
+        "id": 7956512,
+        "issues": [
+            {
+                "id": 1551775886,
+                "labels": ["dependency"],
+                "number": 87,
+                "title": "chore: bump hoek",
+                "url": "https://github.com/hapijs/catbox-memory/pull/87"
+            }
+        ],
+        "number": 30,
+        "url": "https://github.com/hapijs/catbox-memory/milestone/30",
+        "version": "6.0.1"
+    },
+    {
+        "date": "2023-02-11T20:53:04Z",
+        "id": 7956511,
+        "issues": [
+            {
+                "id": 1229112091,
+                "labels": ["breaking changes", "dependency"],
+                "number": 86,
+                "title": "Support node v18 and drop node v12, make exports ESM-friendly",
+                "url": "https://github.com/hapijs/catbox-memory/pull/86"
+            }
+        ],
+        "number": 29,
+        "url": "https://github.com/hapijs/catbox-memory/milestone/29",
+        "version": "6.0.0"
+    },
+    {
+        "date": "2021-04-09T14:32:33Z",
+        "id": 4973210,
+        "issues": [
+            {
+                "id": 854343814,
+                "labels": ["bug"],
+                "number": 83,
+                "title": "fix: make class extendable",
+                "url": "https://github.com/hapijs/catbox-memory/pull/83"
+            },
+            {
+                "id": 709588185,
+                "labels": [],
+                "number": 81,
+                "title": "upgrade lab to v24",
+                "url": "https://github.com/hapijs/catbox-memory/pull/81"
+            }
+        ],
         "number": 27,
-        "title": "Clean up timers when the cache is stopped.",
-        "url": "https://github.com/hapijs/catbox-memory/pull/27"
-      },
-      {
-        "id": 59502343,
-        "labels": ["test"],
+        "url": "https://github.com/hapijs/catbox-memory/milestone/27",
+        "version": "5.0.1"
+    },
+    {
+        "date": "2020-01-04T23:51:40Z",
+        "id": 4973209,
+        "issues": [
+            {
+                "id": 545346706,
+                "labels": ["breaking changes", "dependency"],
+                "number": 77,
+                "title": "Only node 12",
+                "url": "https://github.com/hapijs/catbox-memory/issues/77"
+            }
+        ],
         "number": 26,
-        "title": "Remove Makefile in favor of npm scripts and enable linting",
-        "url": "https://github.com/hapijs/catbox-memory/pull/26"
-      },
-      {
-        "id": 48546116,
-        "labels": ["non issue"],
-        "number": 24,
-        "title": "add node 0.11 to travis file",
-        "url": "https://github.com/hapijs/catbox-memory/pull/24"
-      }
-    ],
-    "number": 7,
-    "url": "https://github.com/hapijs/catbox-memory/milestone/7",
-    "version": "1.1.2"
-  },
-  {
-    "date": "2014-10-30T14:33:24Z",
-    "id": 799815,
-    "issues": [
-      {
-        "id": 46954907,
-        "labels": [],
-        "number": 23,
-        "title": "version 1.1.1. update to catbox 4 and lab 5 (replace chai with code)",
-        "url": "https://github.com/hapijs/catbox-memory/pull/23"
-      },
-      {
-        "id": 46954343,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/catbox-memory/milestone/26",
+        "version": "5.0.0"
+    },
+    {
+        "date": "2019-08-14T05:16:56Z",
+        "id": 4192032,
+        "issues": [
+            {
+                "id": 480484872,
+                "labels": ["dependency"],
+                "number": 69,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/catbox-memory/issues/69"
+            }
+        ],
         "number": 22,
-        "title": "Update to Lab 5",
-        "url": "https://github.com/hapijs/catbox-memory/issues/22"
-      },
-      {
-        "id": 46954293,
-        "labels": ["dependency"],
-        "number": 21,
-        "title": "Update to catbox 4",
-        "url": "https://github.com/hapijs/catbox-memory/issues/21"
-      }
-    ],
-    "number": 6,
-    "url": "https://github.com/hapijs/catbox-memory/milestone/6",
-    "version": "1.1.1"
-  },
-  {
-    "date": "2014-09-11T17:31:19Z",
-    "id": 755318,
-    "issues": [
-      {
-        "id": 42549630,
-        "labels": ["feature"],
-        "number": 17,
-        "title": "Bump version to 1.1.0",
-        "url": "https://github.com/hapijs/catbox-memory/pull/17"
-      },
-      {
-        "id": 42549358,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/catbox-memory/milestone/22",
+        "version": "4.1.1"
+    },
+    {
+        "date": "2019-04-02T04:16:28Z",
+        "id": 3792179,
+        "issues": [
+            {
+                "id": 428015540,
+                "labels": ["breaking changes"],
+                "number": 66,
+                "title": "Remove allowMixedContent option",
+                "url": "https://github.com/hapijs/catbox-memory/issues/66"
+            },
+            {
+                "id": 428011636,
+                "labels": ["dependency"],
+                "number": 65,
+                "title": "Change module namespace",
+                "url": "https://github.com/hapijs/catbox-memory/issues/65"
+            },
+            {
+                "id": 427016256,
+                "labels": ["bug"],
+                "number": 64,
+                "title": "Typo _timeDue vs _timerDue",
+                "url": "https://github.com/hapijs/catbox-memory/issues/64"
+            }
+        ],
+        "number": 19,
+        "url": "https://github.com/hapijs/catbox-memory/milestone/19",
+        "version": "4.1.0"
+    },
+    {
+        "date": "2018-11-03T00:22:37Z",
+        "id": 3787568,
+        "issues": [
+            {
+                "id": 377001016,
+                "labels": ["non issue"],
+                "number": 61,
+                "title": "Remove engines",
+                "url": "https://github.com/hapijs/catbox-memory/issues/61"
+            }
+        ],
         "number": 16,
-        "title": "Release 1.1.0",
-        "url": "https://github.com/hapijs/catbox-memory/issues/16"
-      },
-      {
-        "id": 42319779,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/catbox-memory/milestone/16",
+        "version": "4.0.1"
+    },
+    {
+        "date": "2018-11-01T07:55:29Z",
+        "id": 3232157,
+        "issues": [
+            {
+                "id": 376290023,
+                "labels": ["dependency"],
+                "number": 57,
+                "title": "Update hoek v6",
+                "url": "https://github.com/hapijs/catbox-memory/issues/57"
+            },
+            {
+                "id": 291387296,
+                "labels": ["feature"],
+                "number": 55,
+                "title": "Buffers can change while in cache",
+                "url": "https://github.com/hapijs/catbox-memory/issues/55"
+            },
+            {
+                "id": 40329249,
+                "labels": ["feature", "breaking changes"],
+                "number": 8,
+                "title": "Large overhead from expires times when highly populated",
+                "url": "https://github.com/hapijs/catbox-memory/issues/8"
+            }
+        ],
         "number": 15,
-        "title": "Add support for Buffers",
-        "url": "https://github.com/hapijs/catbox-memory/pull/15"
-      },
-      {
-        "id": 41133545,
-        "labels": ["documentation"],
+        "url": "https://github.com/hapijs/catbox-memory/milestone/15",
+        "version": "4.0.0"
+    },
+    {
+        "date": "2020-07-04T19:49:13Z",
+        "id": 4218721,
+        "issues": [],
+        "number": 24,
+        "url": "https://github.com/hapijs/catbox-memory/milestone/24",
+        "version": "3.2.2"
+    },
+    {
+        "date": "2019-04-10T20:02:31Z",
+        "id": 4218718,
+        "issues": [
+            {
+                "id": 431685969,
+                "labels": ["dependency"],
+                "number": 67,
+                "title": "Change module namespace v3",
+                "url": "https://github.com/hapijs/catbox-memory/issues/67"
+            }
+        ],
+        "number": 23,
+        "url": "https://github.com/hapijs/catbox-memory/milestone/23",
+        "version": "3.2.0"
+    },
+    {
+        "date": "2018-11-03T00:22:38Z",
+        "id": 3792175,
+        "issues": [
+            {
+                "id": 377000991,
+                "labels": ["non issue"],
+                "number": 60,
+                "title": "Remove engines",
+                "url": "https://github.com/hapijs/catbox-memory/issues/60"
+            }
+        ],
+        "number": 18,
+        "url": "https://github.com/hapijs/catbox-memory/milestone/18",
+        "version": "3.1.4"
+    },
+    {
+        "date": "2018-11-02T23:51:52Z",
+        "id": 3788968,
+        "issues": [
+            {
+                "id": 376542606,
+                "labels": ["dependency", "lts"],
+                "number": 58,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/catbox-memory/issues/58"
+            }
+        ],
+        "number": 17,
+        "url": "https://github.com/hapijs/catbox-memory/milestone/17",
+        "version": "3.1.3"
+    },
+    {
+        "date": "2018-03-31T00:21:48Z",
+        "id": 2886665,
+        "issues": [
+            {
+                "id": 307174415,
+                "labels": ["bug"],
+                "number": 56,
+                "title": "Remove new Buffer usage",
+                "url": "https://github.com/hapijs/catbox-memory/pull/56"
+            }
+        ],
         "number": 14,
-        "title": "Add build status to README",
-        "url": "https://github.com/hapijs/catbox-memory/pull/14"
-      },
-      {
-        "id": 41082457,
-        "labels": ["documentation"],
+        "url": "https://github.com/hapijs/catbox-memory/milestone/14",
+        "version": "3.1.2"
+    },
+    {
+        "date": "2017-11-03T18:21:08Z",
+        "id": 2885231,
+        "issues": [
+            {
+                "id": 271071868,
+                "labels": ["bug", "dependency"],
+                "number": 54,
+                "title": "Fix new Boom",
+                "url": "https://github.com/hapijs/catbox-memory/issues/54"
+            }
+        ],
         "number": 13,
-        "title": "Add build status to readme",
-        "url": "https://github.com/hapijs/catbox-memory/issues/13"
-      },
-      {
-        "id": 41080095,
-        "labels": ["documentation"],
+        "url": "https://github.com/hapijs/catbox-memory/milestone/13",
+        "version": "3.1.1"
+    },
+    {
+        "date": "2017-11-03T06:30:54Z",
+        "id": 2794088,
+        "issues": [
+            {
+                "id": 270888337,
+                "labels": ["feature"],
+                "number": 53,
+                "title": "Replace hash with Map",
+                "url": "https://github.com/hapijs/catbox-memory/issues/53"
+            },
+            {
+                "id": 270882433,
+                "labels": ["feature"],
+                "number": 52,
+                "title": "Sync client for catbox 10",
+                "url": "https://github.com/hapijs/catbox-memory/issues/52"
+            },
+            {
+                "id": 261769688,
+                "labels": ["feature"],
+                "number": 48,
+                "title": "Use big-time for long timeout support",
+                "url": "https://github.com/hapijs/catbox-memory/pull/48"
+            }
+        ],
         "number": 12,
-        "title": "Update owner",
-        "url": "https://github.com/hapijs/catbox-memory/pull/12"
-      },
-      {
-        "id": 35935900,
-        "labels": ["feature"],
-        "number": 5,
-        "title": "Option to store buffer data ",
-        "url": "https://github.com/hapijs/catbox-memory/pull/5"
-      }
-    ],
-    "number": 5,
-    "url": "https://github.com/hapijs/catbox-memory/milestone/5",
-    "version": "1.1.0"
-  },
-  {
-    "date": "2014-08-15T17:30:16Z",
-    "id": 740856,
-    "issues": [
-      {
-        "id": 40365124,
-        "labels": ["test"],
+        "url": "https://github.com/hapijs/catbox-memory/milestone/12",
+        "version": "3.1.0"
+    },
+    {
+        "date": "2017-09-26T08:32:25Z",
+        "id": 2093695,
+        "issues": [
+            {
+                "id": 260536176,
+                "labels": ["breaking changes"],
+                "number": 47,
+                "title": "Node 8",
+                "url": "https://github.com/hapijs/catbox-memory/issues/47"
+            }
+        ],
         "number": 11,
-        "title": "Up version and use lab 4",
-        "url": "https://github.com/hapijs/catbox-memory/pull/11"
-      },
-      {
-        "id": 40362397,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/catbox-memory/milestone/11",
+        "version": "3.0.0"
+    },
+    {
+        "date": "2019-03-24T23:41:01Z",
+        "id": 4167560,
+        "issues": [
+            {
+                "id": 424673809,
+                "labels": ["lts"],
+                "number": 63,
+                "title": "Commercial version of v2 branch",
+                "url": "https://github.com/hapijs/catbox-memory/issues/63"
+            }
+        ],
+        "number": 20,
+        "url": "https://github.com/hapijs/catbox-memory/milestone/20",
+        "version": "2.1.0"
+    },
+    {
+        "date": "2016-10-26T00:31:03Z",
+        "id": 1813506,
+        "issues": [
+            {
+                "id": 185267905,
+                "labels": ["test", "dependency"],
+                "number": 43,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/catbox-memory/pull/43"
+            },
+            {
+                "id": 182483834,
+                "labels": ["bug"],
+                "number": 42,
+                "title": "fix: cancel timeouts on drop",
+                "url": "https://github.com/hapijs/catbox-memory/pull/42"
+            }
+        ],
         "number": 10,
-        "title": "Fix total byteSize tracking in connection",
-        "url": "https://github.com/hapijs/catbox-memory/pull/10"
-      },
-      {
-        "id": 40359381,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/catbox-memory/milestone/10",
+        "version": "2.0.4"
+    },
+    {
+        "date": "2016-06-07T13:53:12Z",
+        "id": 1388862,
+        "issues": [
+            {
+                "id": 158928573,
+                "labels": ["feature"],
+                "number": 38,
+                "title": "Add .npmignore",
+                "url": "https://github.com/hapijs/catbox-memory/issues/38"
+            },
+            {
+                "id": 157498801,
+                "labels": ["documentation"],
+                "number": 37,
+                "title": "add note to readme about the limitation of ttl",
+                "url": "https://github.com/hapijs/catbox-memory/pull/37"
+            }
+        ],
         "number": 9,
-        "title": "Create named classes for cache objects",
-        "url": "https://github.com/hapijs/catbox-memory/pull/9"
-      },
-      {
-        "id": 40328780,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/catbox-memory/milestone/9",
+        "version": "2.0.3"
+    },
+    {
+        "date": "2015-11-02T14:04:07Z",
+        "id": 1261292,
+        "issues": [
+            {
+                "id": 114503757,
+                "labels": ["dependency"],
+                "number": 33,
+                "title": "Update hapijs/catbox to 7.0.0",
+                "url": "https://github.com/hapijs/catbox-memory/issues/33"
+            }
+        ],
+        "number": 8,
+        "url": "https://github.com/hapijs/catbox-memory/milestone/8",
+        "version": "2.0.1"
+    },
+    {
+        "date": "2015-08-18T19:31:47Z",
+        "id": 842606,
+        "issues": [
+            {
+                "id": 101731190,
+                "labels": ["dependency"],
+                "number": 32,
+                "title": "v1.1.2",
+                "url": "https://github.com/hapijs/catbox-memory/pull/32"
+            },
+            {
+                "id": 65567972,
+                "labels": ["bug"],
+                "number": 27,
+                "title": "Clean up timers when the cache is stopped.",
+                "url": "https://github.com/hapijs/catbox-memory/pull/27"
+            },
+            {
+                "id": 59502343,
+                "labels": ["test"],
+                "number": 26,
+                "title": "Remove Makefile in favor of npm scripts and enable linting",
+                "url": "https://github.com/hapijs/catbox-memory/pull/26"
+            },
+            {
+                "id": 48546116,
+                "labels": ["non issue"],
+                "number": 24,
+                "title": "add node 0.11 to travis file",
+                "url": "https://github.com/hapijs/catbox-memory/pull/24"
+            }
+        ],
         "number": 7,
-        "title": "Memory limit does not restrict data size properly",
-        "url": "https://github.com/hapijs/catbox-memory/issues/7"
-      }
-    ],
-    "number": 4,
-    "url": "https://github.com/hapijs/catbox-memory/milestone/4",
-    "version": "1.0.5"
-  },
-  {
-    "date": "2014-08-03T05:31:39Z",
-    "id": 687675,
-    "issues": [
-      {
-        "id": 39363794,
-        "labels": ["documentation"],
+        "url": "https://github.com/hapijs/catbox-memory/milestone/7",
+        "version": "1.1.2"
+    },
+    {
+        "date": "2014-10-30T14:33:24Z",
+        "id": 799815,
+        "issues": [
+            {
+                "id": 46954907,
+                "labels": [],
+                "number": 23,
+                "title": "version 1.1.1. update to catbox 4 and lab 5 (replace chai with code)",
+                "url": "https://github.com/hapijs/catbox-memory/pull/23"
+            },
+            {
+                "id": 46954343,
+                "labels": ["dependency"],
+                "number": 22,
+                "title": "Update to Lab 5",
+                "url": "https://github.com/hapijs/catbox-memory/issues/22"
+            },
+            {
+                "id": 46954293,
+                "labels": ["dependency"],
+                "number": 21,
+                "title": "Update to catbox 4",
+                "url": "https://github.com/hapijs/catbox-memory/issues/21"
+            }
+        ],
         "number": 6,
-        "title": "Rename spumko to hapijs",
-        "url": "https://github.com/hapijs/catbox-memory/issues/6"
-      }
-    ],
-    "number": 3,
-    "url": "https://github.com/hapijs/catbox-memory/milestone/3",
-    "version": "1.0.4"
-  },
-  {
-    "date": "2014-06-11T05:49:27Z",
-    "id": 665044,
-    "issues": [
-      {
-        "id": 35453536,
-        "labels": ["non issue"],
+        "url": "https://github.com/hapijs/catbox-memory/milestone/6",
+        "version": "1.1.1"
+    },
+    {
+        "date": "2014-09-11T17:31:19Z",
+        "id": 755318,
+        "issues": [
+            {
+                "id": 42549630,
+                "labels": ["feature"],
+                "number": 17,
+                "title": "Bump version to 1.1.0",
+                "url": "https://github.com/hapijs/catbox-memory/pull/17"
+            },
+            {
+                "id": 42549358,
+                "labels": ["feature"],
+                "number": 16,
+                "title": "Release 1.1.0",
+                "url": "https://github.com/hapijs/catbox-memory/issues/16"
+            },
+            {
+                "id": 42319779,
+                "labels": ["feature"],
+                "number": 15,
+                "title": "Add support for Buffers",
+                "url": "https://github.com/hapijs/catbox-memory/pull/15"
+            },
+            {
+                "id": 41133545,
+                "labels": ["documentation"],
+                "number": 14,
+                "title": "Add build status to README",
+                "url": "https://github.com/hapijs/catbox-memory/pull/14"
+            },
+            {
+                "id": 41082457,
+                "labels": ["documentation"],
+                "number": 13,
+                "title": "Add build status to readme",
+                "url": "https://github.com/hapijs/catbox-memory/issues/13"
+            },
+            {
+                "id": 41080095,
+                "labels": ["documentation"],
+                "number": 12,
+                "title": "Update owner",
+                "url": "https://github.com/hapijs/catbox-memory/pull/12"
+            },
+            {
+                "id": 35935900,
+                "labels": ["feature"],
+                "number": 5,
+                "title": "Option to store buffer data ",
+                "url": "https://github.com/hapijs/catbox-memory/pull/5"
+            }
+        ],
+        "number": 5,
+        "url": "https://github.com/hapijs/catbox-memory/milestone/5",
+        "version": "1.1.0"
+    },
+    {
+        "date": "2014-08-15T17:30:16Z",
+        "id": 740856,
+        "issues": [
+            {
+                "id": 40365124,
+                "labels": ["test"],
+                "number": 11,
+                "title": "Up version and use lab 4",
+                "url": "https://github.com/hapijs/catbox-memory/pull/11"
+            },
+            {
+                "id": 40362397,
+                "labels": ["bug"],
+                "number": 10,
+                "title": "Fix total byteSize tracking in connection",
+                "url": "https://github.com/hapijs/catbox-memory/pull/10"
+            },
+            {
+                "id": 40359381,
+                "labels": ["feature"],
+                "number": 9,
+                "title": "Create named classes for cache objects",
+                "url": "https://github.com/hapijs/catbox-memory/pull/9"
+            },
+            {
+                "id": 40328780,
+                "labels": ["bug"],
+                "number": 7,
+                "title": "Memory limit does not restrict data size properly",
+                "url": "https://github.com/hapijs/catbox-memory/issues/7"
+            }
+        ],
         "number": 4,
-        "title": "Move large ttl (over 32bit) check from catbox",
-        "url": "https://github.com/hapijs/catbox-memory/issues/4"
-      }
-    ],
-    "number": 2,
-    "url": "https://github.com/hapijs/catbox-memory/milestone/2",
-    "version": "1.0.3"
-  },
-  {
-    "date": "2014-05-20T21:31:46Z",
-    "id": 665026,
-    "issues": [
-      {
-        "id": 33929631,
-        "labels": [],
+        "url": "https://github.com/hapijs/catbox-memory/milestone/4",
+        "version": "1.0.5"
+    },
+    {
+        "date": "2014-08-03T05:31:39Z",
+        "id": 687675,
+        "issues": [
+            {
+                "id": 39363794,
+                "labels": ["documentation"],
+                "number": 6,
+                "title": "Rename spumko to hapijs",
+                "url": "https://github.com/hapijs/catbox-memory/issues/6"
+            }
+        ],
+        "number": 3,
+        "url": "https://github.com/hapijs/catbox-memory/milestone/3",
+        "version": "1.0.4"
+    },
+    {
+        "date": "2014-06-11T05:49:27Z",
+        "id": 665044,
+        "issues": [
+            {
+                "id": 35453536,
+                "labels": ["non issue"],
+                "number": 4,
+                "title": "Move large ttl (over 32bit) check from catbox",
+                "url": "https://github.com/hapijs/catbox-memory/issues/4"
+            }
+        ],
         "number": 2,
-        "title": "Bring coverage back to 100%",
-        "url": "https://github.com/hapijs/catbox-memory/issues/2"
-      },
-      {
-        "id": 31613151,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/catbox-memory/milestone/2",
+        "version": "1.0.3"
+    },
+    {
+        "date": "2014-05-20T21:31:46Z",
+        "id": 665026,
+        "issues": [
+            {
+                "id": 33929631,
+                "labels": [],
+                "number": 2,
+                "title": "Bring coverage back to 100%",
+                "url": "https://github.com/hapijs/catbox-memory/issues/2"
+            },
+            {
+                "id": 31613151,
+                "labels": ["bug"],
+                "number": 1,
+                "title": "why peer depend instead of verify in parent",
+                "url": "https://github.com/hapijs/catbox-memory/issues/1"
+            }
+        ],
         "number": 1,
-        "title": "why peer depend instead of verify in parent",
-        "url": "https://github.com/hapijs/catbox-memory/issues/1"
-      }
-    ],
-    "number": 1,
-    "url": "https://github.com/hapijs/catbox-memory/milestone/1",
-    "version": "1.0.2"
-  }
+        "url": "https://github.com/hapijs/catbox-memory/milestone/1",
+        "version": "1.0.2"
+    }
 ]

@@ -1,22 +1,22 @@
 {
-  "api": true,
-  "forks": 27,
-  "isPlugin": false,
-  "latestVersion": "9.x.x",
-  "link": "https://github.com/hapijs/call",
-  "name": "call",
-  "package": "@hapi/call",
-  "slogan": "Simple HTTP Router.",
-  "sloganHtml": "Simple HTTP Router.",
-  "stars": 37,
-  "updated": "2024-10-23T15:38:49Z",
-  "versions": [
-    {
-      "branch": "v9.0.1",
-      "license": "BSD",
-      "name": "9.0.1",
-      "node": ">= 16"
-    }
-  ],
-  "versionsArray": ["9.0.1"]
+    "api": true,
+    "forks": 27,
+    "isPlugin": false,
+    "latestVersion": "9.x.x",
+    "link": "https://github.com/hapijs/call",
+    "name": "call",
+    "package": "@hapi/call",
+    "slogan": "Simple HTTP Router.",
+    "sloganHtml": "Simple HTTP Router.",
+    "stars": 37,
+    "updated": "2024-10-23T15:38:49Z",
+    "versions": [
+        {
+            "branch": "v9.0.1",
+            "license": "BSD",
+            "name": "9.0.1",
+            "node": ">= 16"
+        }
+    ],
+    "versionsArray": ["9.0.1"]
 }

@@ -1,121 +1,121 @@
 [
-  {
-    "date": "2020-01-04T23:47:47Z",
-    "id": 4973204,
-    "issues": [
-      {
-        "id": 545346428,
-        "labels": ["breaking changes", "dependency"],
-        "number": 44,
-        "title": "Only node 12",
-        "url": "https://github.com/hapijs/catbox-memcached/issues/44"
-      }
-    ],
-    "number": 8,
-    "url": "https://github.com/hapijs/catbox-memcached/milestone/8",
-    "version": "3.0.0"
-  },
-  {
-    "date": "2019-08-14T05:13:21Z",
-    "id": 4247472,
-    "issues": [
-      {
-        "id": 480484206,
-        "labels": ["dependency"],
-        "number": 38,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/catbox-memcached/issues/38"
-      }
-    ],
-    "number": 6,
-    "url": "https://github.com/hapijs/catbox-memcached/milestone/6",
-    "version": "2.1.1"
-  },
-  {
-    "date": "2019-04-22T05:34:34Z",
-    "id": 3811305,
-    "issues": [
-      {
-        "id": 435603867,
-        "labels": ["dependency"],
-        "number": 35,
-        "title": "Change module namespace",
-        "url": "https://github.com/hapijs/catbox-memcached/issues/35"
-      }
-    ],
-    "number": 5,
-    "url": "https://github.com/hapijs/catbox-memcached/milestone/5",
-    "version": "2.1.0"
-  },
-  {
-    "date": "2018-11-11T01:57:52Z",
-    "id": 3811304,
-    "issues": [
-      {
-        "id": 173417307,
-        "labels": ["bug"],
-        "number": 21,
-        "title": "Remove test connections",
-        "url": "https://github.com/hapijs/catbox-memcached/issues/21"
-      }
-    ],
-    "number": 4,
-    "url": "https://github.com/hapijs/catbox-memcached/milestone/4",
-    "version": "2.0.5"
-  },
-  {
-    "date": "2018-11-11T01:50:38Z",
-    "id": 874036,
-    "issues": [
-      {
-        "id": 109089751,
-        "labels": ["test", "dependency"],
-        "number": 17,
-        "title": "upgrade to lab 6 minor fixes license fix",
-        "url": "https://github.com/hapijs/catbox-memcached/pull/17"
-      },
-      {
-        "id": 46658630,
-        "labels": ["bug"],
-        "number": 9,
-        "title": "Using catbox-memcache with yar, response body is replaced with `true`",
-        "url": "https://github.com/hapijs/catbox-memcached/issues/9"
-      }
-    ],
-    "number": 3,
-    "url": "https://github.com/hapijs/catbox-memcached/milestone/3",
-    "version": "1.1.1"
-  },
-  {
-    "date": "2014-11-20T10:53:48Z",
-    "id": 740870,
-    "issues": [
-      {
-        "id": 40491890,
-        "labels": ["bug"],
+    {
+        "date": "2020-01-04T23:47:47Z",
+        "id": 4973204,
+        "issues": [
+            {
+                "id": 545346428,
+                "labels": ["breaking changes", "dependency"],
+                "number": 44,
+                "title": "Only node 12",
+                "url": "https://github.com/hapijs/catbox-memcached/issues/44"
+            }
+        ],
+        "number": 8,
+        "url": "https://github.com/hapijs/catbox-memcached/milestone/8",
+        "version": "3.0.0"
+    },
+    {
+        "date": "2019-08-14T05:13:21Z",
+        "id": 4247472,
+        "issues": [
+            {
+                "id": 480484206,
+                "labels": ["dependency"],
+                "number": 38,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/catbox-memcached/issues/38"
+            }
+        ],
+        "number": 6,
+        "url": "https://github.com/hapijs/catbox-memcached/milestone/6",
+        "version": "2.1.1"
+    },
+    {
+        "date": "2019-04-22T05:34:34Z",
+        "id": 3811305,
+        "issues": [
+            {
+                "id": 435603867,
+                "labels": ["dependency"],
+                "number": 35,
+                "title": "Change module namespace",
+                "url": "https://github.com/hapijs/catbox-memcached/issues/35"
+            }
+        ],
         "number": 5,
-        "title": "Hapi hangs if the memcached server is down",
-        "url": "https://github.com/hapijs/catbox-memcached/issues/5"
-      }
-    ],
-    "number": 2,
-    "url": "https://github.com/hapijs/catbox-memcached/milestone/2",
-    "version": "1.0.3"
-  },
-  {
-    "date": "2014-08-03T06:32:01Z",
-    "id": 740869,
-    "issues": [
-      {
-        "id": 39364577,
-        "labels": ["documentation"],
+        "url": "https://github.com/hapijs/catbox-memcached/milestone/5",
+        "version": "2.1.0"
+    },
+    {
+        "date": "2018-11-11T01:57:52Z",
+        "id": 3811304,
+        "issues": [
+            {
+                "id": 173417307,
+                "labels": ["bug"],
+                "number": 21,
+                "title": "Remove test connections",
+                "url": "https://github.com/hapijs/catbox-memcached/issues/21"
+            }
+        ],
         "number": 4,
-        "title": "Rename spumko to hapijs",
-        "url": "https://github.com/hapijs/catbox-memcached/issues/4"
-      }
-    ],
-    "number": 1,
-    "url": "https://github.com/hapijs/catbox-memcached/milestone/1",
-    "version": "1.0.2"
-  }
+        "url": "https://github.com/hapijs/catbox-memcached/milestone/4",
+        "version": "2.0.5"
+    },
+    {
+        "date": "2018-11-11T01:50:38Z",
+        "id": 874036,
+        "issues": [
+            {
+                "id": 109089751,
+                "labels": ["test", "dependency"],
+                "number": 17,
+                "title": "upgrade to lab 6 minor fixes license fix",
+                "url": "https://github.com/hapijs/catbox-memcached/pull/17"
+            },
+            {
+                "id": 46658630,
+                "labels": ["bug"],
+                "number": 9,
+                "title": "Using catbox-memcache with yar, response body is replaced with `true`",
+                "url": "https://github.com/hapijs/catbox-memcached/issues/9"
+            }
+        ],
+        "number": 3,
+        "url": "https://github.com/hapijs/catbox-memcached/milestone/3",
+        "version": "1.1.1"
+    },
+    {
+        "date": "2014-11-20T10:53:48Z",
+        "id": 740870,
+        "issues": [
+            {
+                "id": 40491890,
+                "labels": ["bug"],
+                "number": 5,
+                "title": "Hapi hangs if the memcached server is down",
+                "url": "https://github.com/hapijs/catbox-memcached/issues/5"
+            }
+        ],
+        "number": 2,
+        "url": "https://github.com/hapijs/catbox-memcached/milestone/2",
+        "version": "1.0.3"
+    },
+    {
+        "date": "2014-08-03T06:32:01Z",
+        "id": 740869,
+        "issues": [
+            {
+                "id": 39364577,
+                "labels": ["documentation"],
+                "number": 4,
+                "title": "Rename spumko to hapijs",
+                "url": "https://github.com/hapijs/catbox-memcached/issues/4"
+            }
+        ],
+        "number": 1,
+        "url": "https://github.com/hapijs/catbox-memcached/milestone/1",
+        "version": "1.0.2"
+    }
 ]

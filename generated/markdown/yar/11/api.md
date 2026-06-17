@@ -15,14 +15,14 @@ For example, the first handler sets a session key and the second gets it:
 
 ```js
 let handler1 = (request, reply) => {
-  request.yar.set('example', { key: 'value' });
+    request.yar.set('example', { key: 'value' });
 
-  return null;
+    return null;
 };
 
 let handler2 = (request, reply) => {
-  const example = request.yar.get('example');
-  return example.key; // Will send back 'value'
+    const example = request.yar.get('example');
+    return example.key; // Will send back 'value'
 };
 ```
 
@@ -30,11 +30,11 @@ The plugin requires a password for encryption that must be at least 32 character
 
 ```js
 let options = {
-  storeBlank: false,
-  cookieOptions: {
-    password: 'the-password-must-be-at-least-32-characters-long',
-    isSecure: true,
-  },
+    storeBlank: false,
+    cookieOptions: {
+        password: 'the-password-must-be-at-least-32-characters-long',
+        isSecure: true,
+    },
 };
 /*
 Please note that there are other default cookie options that can impact your security.
@@ -45,12 +45,12 @@ what you expect.
 const server = new Hapi.Server();
 
 try {
-  await server.register({
-    plugin: require('@hapi/yar'),
-    options: options,
-  });
+    await server.register({
+        plugin: require('@hapi/yar'),
+        options: options,
+    });
 } catch (err) {
-  console.error(err);
+    console.error(err);
 }
 
 await server.start();
@@ -99,19 +99,19 @@ You may turn this off, `false`, and try to use the hapi route state config optio
 - `errorOnCacheNotReady` - will cause yar to throw an exception if trying to persist to cache when the cache is unavailable. Setting this to false will allow applications using yar to run uninterrupted if the cache is not ready (however sessions will not be saving). Defaults to _true_.
 - `cache` - **hapi** [cache options](<https://hapi.dev/api#server.cache()>) which includes
   (among other options):
-  - `expiresIn` - server-side storage expiration (defaults to 1 day).
+    - `expiresIn` - server-side storage expiration (defaults to 1 day).
 - `cookieOptions` - the configuration for cookie-specific features:
-  - `password` - (Required) used to encrypt and sign the cookie data.
-  - `path` - determines the cookie path. Defaults to _'/'_.
-  - `isSameSite` - enables the `same-site` cookie parameter. Default to 'Lax'. Can be `'Strict'|'Lax'|'None'|false`.
-  - `isSecure` - determines whether or not to transfer using TLS/SSL. Defaults to _true_.
-  - `isHttpOnly` - determines whether or not to set HttpOnly option in cookie. Defaults to _false_.
-  - `ttl` - sets the time for the cookie to live in the browser, in milliseconds. Defaults to null (session time-life - cookies are deleted when the browser is closed).
-  - `contextualize` - a function using the signature `async function(definition, request)` used to override a request-specific cookie settings where:
-    - `definition` - a copy of the `options` to be used for formatting the cookie that can be manipulated by the function to customize the request cookie header. Note that changing the `definition.contextualize` property will be ignored.
-    - `request` - the current request object.
+    - `password` - (Required) used to encrypt and sign the cookie data.
+    - `path` - determines the cookie path. Defaults to _'/'_.
+    - `isSameSite` - enables the `same-site` cookie parameter. Default to 'Lax'. Can be `'Strict'|'Lax'|'None'|false`.
+    - `isSecure` - determines whether or not to transfer using TLS/SSL. Defaults to _true_.
+    - `isHttpOnly` - determines whether or not to set HttpOnly option in cookie. Defaults to _false_.
+    - `ttl` - sets the time for the cookie to live in the browser, in milliseconds. Defaults to null (session time-life - cookies are deleted when the browser is closed).
+    - `contextualize` - a function using the signature `async function(definition, request)` used to override a request-specific cookie settings where:
+        - `definition` - a copy of the `options` to be used for formatting the cookie that can be manipulated by the function to customize the request cookie header. Note that changing the `definition.contextualize` property will be ignored.
+        - `request` - the current request object.
 - `customSessionIDGenerator` - an optional function to create custom session IDs. Must return a string and have the signature `function (request)` where:
-  - `request` - (optional) is the original **request** received from the client.
+    - `request` - (optional) is the original **request** received from the client.
 
 ### Route Options
 

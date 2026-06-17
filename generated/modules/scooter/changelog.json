@@ -1,197 +1,197 @@
 [
-  {
-    "date": "2022-10-29T20:19:56Z",
-    "id": 8574536,
-    "issues": [
-      {
-        "id": 1420830422,
-        "labels": ["feature", "test", "breaking changes", "dependency"],
-        "number": 63,
-        "title": "Support for hapi v21, node v18, ESM tests, multiple registration",
-        "url": "https://github.com/hapijs/scooter/pull/63"
-      }
-    ],
-    "number": 11,
-    "url": "https://github.com/hapijs/scooter/milestone/11",
-    "version": "7.0.0"
-  },
-  {
-    "date": "2020-09-26T15:49:42Z",
-    "id": 4659681,
-    "issues": [
-      {
-        "id": 684033246,
-        "labels": [],
-        "number": 58,
-        "title": "migrate to new travis format",
-        "url": "https://github.com/hapijs/scooter/pull/58"
-      },
-      {
-        "id": 677273561,
-        "labels": [],
-        "number": 57,
-        "title": "update to hapi 20",
-        "url": "https://github.com/hapijs/scooter/pull/57"
-      },
-      {
-        "id": 672196171,
-        "labels": [],
-        "number": 56,
-        "title": "upgrade semver and lab",
-        "url": "https://github.com/hapijs/scooter/pull/56"
-      }
-    ],
-    "number": 8,
-    "url": "https://github.com/hapijs/scooter/milestone/8",
-    "version": "6.0.1"
-  },
-  {
-    "date": "2020-01-13T12:25:45Z",
-    "id": 4999091,
-    "issues": [
-      {
-        "id": 548896133,
-        "labels": ["breaking changes", "dependency"],
-        "number": 55,
-        "title": "Only node 12",
-        "url": "https://github.com/hapijs/scooter/issues/55"
-      },
-      {
-        "id": 548895500,
-        "labels": ["breaking changes", "dependency"],
-        "number": 54,
-        "title": "Require hapi 18",
-        "url": "https://github.com/hapijs/scooter/issues/54"
-      }
-    ],
-    "number": 9,
-    "url": "https://github.com/hapijs/scooter/milestone/9",
-    "version": "6.0.0"
-  },
-  {
-    "date": "2019-09-15T05:28:07Z",
-    "id": 4246941,
-    "issues": [
-      {
-        "id": 475258927,
-        "labels": ["dependency"],
-        "number": 49,
-        "title": "Re-fix issue #44 which was reverted in changeset da33ea7",
-        "url": "https://github.com/hapijs/scooter/pull/49"
-      }
-    ],
-    "number": 7,
-    "url": "https://github.com/hapijs/scooter/milestone/7",
-    "version": "5.1.1"
-  },
-  {
-    "date": "2019-04-21T22:30:47Z",
-    "id": 3811390,
-    "issues": [
-      {
-        "id": 435553860,
-        "labels": ["dependency"],
-        "number": 48,
-        "title": "Change module namespace",
-        "url": "https://github.com/hapijs/scooter/issues/48"
-      }
-    ],
-    "number": 6,
-    "url": "https://github.com/hapijs/scooter/milestone/6",
-    "version": "4.1.0"
-  },
-  {
-    "date": "2018-11-11T06:54:34Z",
-    "id": 3811389,
-    "issues": [
-      {
-        "id": 379496049,
-        "labels": ["non issue", "dependency"],
-        "number": 39,
-        "title": "Cleanup",
-        "url": "https://github.com/hapijs/scooter/issues/39"
-      }
-    ],
-    "number": 5,
-    "url": "https://github.com/hapijs/scooter/milestone/5",
-    "version": "4.0.1"
-  },
-  {
-    "date": "2018-11-11T06:53:47Z",
-    "id": 1387678,
-    "issues": [
-      {
-        "id": 114498879,
-        "labels": ["breaking changes", "dependency"],
-        "number": 30,
-        "title": "Update to follow node > 4 style standards",
-        "url": "https://github.com/hapijs/scooter/issues/30"
-      }
-    ],
-    "number": 4,
-    "url": "https://github.com/hapijs/scooter/milestone/4",
-    "version": "3.0.0"
-  },
-  {
-    "date": "2016-05-24T03:08:10Z",
-    "id": 757981,
-    "issues": [
-      {
-        "id": 50441581,
-        "labels": ["breaking changes", "dependency"],
-        "number": 22,
-        "title": "hapi8. Closes #21",
-        "url": "https://github.com/hapijs/scooter/pull/22"
-      },
-      {
-        "id": 50441400,
-        "labels": ["breaking changes", "dependency"],
-        "number": 21,
-        "title": "hapi 8.0 API",
-        "url": "https://github.com/hapijs/scooter/issues/21"
-      }
-    ],
-    "number": 3,
-    "url": "https://github.com/hapijs/scooter/milestone/3",
-    "version": "2.0.0"
-  },
-  {
-    "date": "2014-08-18T21:39:19Z",
-    "id": 757980,
-    "issues": [
-      {
-        "id": 40534855,
-        "labels": ["dependency"],
-        "number": 16,
-        "title": "lab 4.0",
-        "url": "https://github.com/hapijs/scooter/issues/16"
-      },
-      {
-        "id": 40534707,
-        "labels": ["documentation"],
-        "number": 15,
-        "title": "Rename spumko to hapijs",
-        "url": "https://github.com/hapijs/scooter/issues/15"
-      }
-    ],
-    "number": 2,
-    "url": "https://github.com/hapijs/scooter/milestone/2",
-    "version": "1.2.1"
-  },
-  {
-    "date": "2014-03-20T08:59:55Z",
-    "id": 603545,
-    "issues": [
-      {
-        "id": 29802472,
-        "labels": ["feature"],
+    {
+        "date": "2022-10-29T20:19:56Z",
+        "id": 8574536,
+        "issues": [
+            {
+                "id": 1420830422,
+                "labels": ["feature", "test", "breaking changes", "dependency"],
+                "number": 63,
+                "title": "Support for hapi v21, node v18, ESM tests, multiple registration",
+                "url": "https://github.com/hapijs/scooter/pull/63"
+            }
+        ],
+        "number": 11,
+        "url": "https://github.com/hapijs/scooter/milestone/11",
+        "version": "7.0.0"
+    },
+    {
+        "date": "2020-09-26T15:49:42Z",
+        "id": 4659681,
+        "issues": [
+            {
+                "id": 684033246,
+                "labels": [],
+                "number": 58,
+                "title": "migrate to new travis format",
+                "url": "https://github.com/hapijs/scooter/pull/58"
+            },
+            {
+                "id": 677273561,
+                "labels": [],
+                "number": 57,
+                "title": "update to hapi 20",
+                "url": "https://github.com/hapijs/scooter/pull/57"
+            },
+            {
+                "id": 672196171,
+                "labels": [],
+                "number": 56,
+                "title": "upgrade semver and lab",
+                "url": "https://github.com/hapijs/scooter/pull/56"
+            }
+        ],
+        "number": 8,
+        "url": "https://github.com/hapijs/scooter/milestone/8",
+        "version": "6.0.1"
+    },
+    {
+        "date": "2020-01-13T12:25:45Z",
+        "id": 4999091,
+        "issues": [
+            {
+                "id": 548896133,
+                "labels": ["breaking changes", "dependency"],
+                "number": 55,
+                "title": "Only node 12",
+                "url": "https://github.com/hapijs/scooter/issues/55"
+            },
+            {
+                "id": 548895500,
+                "labels": ["breaking changes", "dependency"],
+                "number": 54,
+                "title": "Require hapi 18",
+                "url": "https://github.com/hapijs/scooter/issues/54"
+            }
+        ],
+        "number": 9,
+        "url": "https://github.com/hapijs/scooter/milestone/9",
+        "version": "6.0.0"
+    },
+    {
+        "date": "2019-09-15T05:28:07Z",
+        "id": 4246941,
+        "issues": [
+            {
+                "id": 475258927,
+                "labels": ["dependency"],
+                "number": 49,
+                "title": "Re-fix issue #44 which was reverted in changeset da33ea7",
+                "url": "https://github.com/hapijs/scooter/pull/49"
+            }
+        ],
+        "number": 7,
+        "url": "https://github.com/hapijs/scooter/milestone/7",
+        "version": "5.1.1"
+    },
+    {
+        "date": "2019-04-21T22:30:47Z",
+        "id": 3811390,
+        "issues": [
+            {
+                "id": 435553860,
+                "labels": ["dependency"],
+                "number": 48,
+                "title": "Change module namespace",
+                "url": "https://github.com/hapijs/scooter/issues/48"
+            }
+        ],
+        "number": 6,
+        "url": "https://github.com/hapijs/scooter/milestone/6",
+        "version": "4.1.0"
+    },
+    {
+        "date": "2018-11-11T06:54:34Z",
+        "id": 3811389,
+        "issues": [
+            {
+                "id": 379496049,
+                "labels": ["non issue", "dependency"],
+                "number": 39,
+                "title": "Cleanup",
+                "url": "https://github.com/hapijs/scooter/issues/39"
+            }
+        ],
+        "number": 5,
+        "url": "https://github.com/hapijs/scooter/milestone/5",
+        "version": "4.0.1"
+    },
+    {
+        "date": "2018-11-11T06:53:47Z",
+        "id": 1387678,
+        "issues": [
+            {
+                "id": 114498879,
+                "labels": ["breaking changes", "dependency"],
+                "number": 30,
+                "title": "Update to follow node > 4 style standards",
+                "url": "https://github.com/hapijs/scooter/issues/30"
+            }
+        ],
+        "number": 4,
+        "url": "https://github.com/hapijs/scooter/milestone/4",
+        "version": "3.0.0"
+    },
+    {
+        "date": "2016-05-24T03:08:10Z",
+        "id": 757981,
+        "issues": [
+            {
+                "id": 50441581,
+                "labels": ["breaking changes", "dependency"],
+                "number": 22,
+                "title": "hapi8. Closes #21",
+                "url": "https://github.com/hapijs/scooter/pull/22"
+            },
+            {
+                "id": 50441400,
+                "labels": ["breaking changes", "dependency"],
+                "number": 21,
+                "title": "hapi 8.0 API",
+                "url": "https://github.com/hapijs/scooter/issues/21"
+            }
+        ],
+        "number": 3,
+        "url": "https://github.com/hapijs/scooter/milestone/3",
+        "version": "2.0.0"
+    },
+    {
+        "date": "2014-08-18T21:39:19Z",
+        "id": 757980,
+        "issues": [
+            {
+                "id": 40534855,
+                "labels": ["dependency"],
+                "number": 16,
+                "title": "lab 4.0",
+                "url": "https://github.com/hapijs/scooter/issues/16"
+            },
+            {
+                "id": 40534707,
+                "labels": ["documentation"],
+                "number": 15,
+                "title": "Rename spumko to hapijs",
+                "url": "https://github.com/hapijs/scooter/issues/15"
+            }
+        ],
         "number": 2,
-        "title": "hapi 3.0",
-        "url": "https://github.com/hapijs/scooter/issues/2"
-      }
-    ],
-    "number": 1,
-    "url": "https://github.com/hapijs/scooter/milestone/1",
-    "version": "1.0.1"
-  }
+        "url": "https://github.com/hapijs/scooter/milestone/2",
+        "version": "1.2.1"
+    },
+    {
+        "date": "2014-03-20T08:59:55Z",
+        "id": 603545,
+        "issues": [
+            {
+                "id": 29802472,
+                "labels": ["feature"],
+                "number": 2,
+                "title": "hapi 3.0",
+                "url": "https://github.com/hapijs/scooter/issues/2"
+            }
+        ],
+        "number": 1,
+        "url": "https://github.com/hapijs/scooter/milestone/1",
+        "version": "1.0.1"
+    }
 ]

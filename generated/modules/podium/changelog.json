@@ -1,631 +1,631 @@
 [
-  {
-    "date": "2025-01-07T22:49:01Z",
-    "id": 12134207,
-    "issues": [
-      {
-        "id": 2773878427,
-        "labels": [],
-        "number": 84,
-        "title": "fix: typescript exactOptionalPropertyTypes issue",
-        "url": "https://github.com/hapijs/podium/pull/84"
-      }
-    ],
-    "number": 38,
-    "url": "https://github.com/hapijs/podium/milestone/38",
-    "version": "5.0.2"
-  },
-  {
-    "date": "2025-01-07T22:48:24Z",
-    "id": 7955809,
-    "issues": [
-      {
-        "id": 1551772144,
-        "labels": [],
-        "number": 82,
-        "title": "chore: bump hoek",
-        "url": "https://github.com/hapijs/podium/pull/82"
-      }
-    ],
-    "number": 37,
-    "url": "https://github.com/hapijs/podium/milestone/37",
-    "version": "5.0.1"
-  },
-  {
-    "date": "2022-05-08T19:54:56Z",
-    "id": 7809044,
-    "issues": [
-      {
-        "id": 1228483287,
-        "labels": ["dependency", "breaking changes"],
-        "number": 80,
-        "title": "Upgrade deps for node v14+",
-        "url": "https://github.com/hapijs/podium/pull/80"
-      },
-      {
-        "id": 1184028217,
-        "labels": ["feature"],
-        "number": 79,
-        "title": "Support podium.gauge() method",
-        "url": "https://github.com/hapijs/podium/pull/79"
-      },
-      {
-        "id": 1028130967,
-        "labels": ["breaking changes"],
-        "number": 76,
-        "title": "Prepare a breaking build",
-        "url": "https://github.com/hapijs/podium/pull/76"
-      },
-      {
-        "id": 1028122352,
-        "labels": ["feature", "breaking changes"],
-        "number": 75,
-        "title": "Drop node 12 support",
-        "url": "https://github.com/hapijs/podium/issues/75"
-      },
-      {
-        "id": 1028121757,
-        "labels": ["feature", "breaking changes"],
-        "number": 74,
-        "title": "Prepare for ESM",
-        "url": "https://github.com/hapijs/podium/issues/74"
-      },
-      {
-        "id": 1028120848,
-        "labels": ["feature", "breaking changes"],
-        "number": 73,
-        "title": "Don't return promise from emit()",
-        "url": "https://github.com/hapijs/podium/issues/73"
-      },
-      {
-        "id": 727469976,
-        "labels": ["feature", "breaking changes"],
-        "number": 65,
-        "title": "Remove \"podium\" event source",
-        "url": "https://github.com/hapijs/podium/issues/65"
-      },
-      {
-        "id": 726330516,
-        "labels": ["bug"],
-        "number": 64,
-        "title": "A thrown error in a handler can prevent other handlers from being called",
-        "url": "https://github.com/hapijs/podium/issues/64"
-      }
-    ],
-    "number": 36,
-    "url": "https://github.com/hapijs/podium/milestone/36",
-    "version": "5.0.0"
-  },
-  {
-    "date": "2021-04-12T15:37:39Z",
-    "id": 6605770,
-    "issues": [
-      {
-        "id": 848948561,
-        "labels": ["bug", "types"],
-        "number": 70,
-        "title": "Fix typings to accomodate spread flag",
-        "url": "https://github.com/hapijs/podium/pull/70"
-      }
-    ],
-    "number": 34,
-    "url": "https://github.com/hapijs/podium/milestone/34",
-    "version": "4.1.3"
-  },
-  {
-    "date": "2021-03-29T21:15:10Z",
-    "id": 6605658,
-    "issues": [
-      {
-        "id": 843624459,
-        "labels": ["bug"],
-        "number": 67,
-        "title": "Clone the data array before using it as args",
-        "url": "https://github.com/hapijs/podium/pull/67"
-      }
-    ],
-    "number": 33,
-    "url": "https://github.com/hapijs/podium/milestone/33",
-    "version": "4.1.2"
-  },
-  {
-    "date": "2021-03-29T21:15:19Z",
-    "id": 5128586,
-    "issues": [
-      {
-        "id": 709595724,
-        "labels": [],
-        "number": 62,
-        "title": "upgrade lab to v24",
-        "url": "https://github.com/hapijs/podium/pull/62"
-      }
-    ],
-    "number": 32,
-    "url": "https://github.com/hapijs/podium/milestone/32",
-    "version": "4.1.1"
-  },
-  {
-    "date": "2020-02-21T07:29:54Z",
-    "id": 4973184,
-    "issues": [
-      {
-        "id": 568786108,
-        "labels": ["feature"],
-        "number": 58,
-        "title": "few()",
-        "url": "https://github.com/hapijs/podium/issues/58"
-      }
-    ],
-    "number": 31,
-    "url": "https://github.com/hapijs/podium/milestone/31",
-    "version": "4.1.0"
-  },
-  {
-    "date": "2020-01-04T23:23:32Z",
-    "id": 4973183,
-    "issues": [
-      {
-        "id": 545341751,
-        "labels": ["dependency", "breaking changes"],
-        "number": 57,
-        "title": "Only node 12",
-        "url": "https://github.com/hapijs/podium/issues/57"
-      }
-    ],
-    "number": 30,
-    "url": "https://github.com/hapijs/podium/milestone/30",
-    "version": "4.0.0"
-  },
-  {
-    "date": "2019-11-01T22:37:43Z",
-    "id": 4655589,
-    "issues": [
-      {
-        "id": 516381358,
-        "labels": ["non issue"],
-        "number": 55,
-        "title": "Optimize emit()",
-        "url": "https://github.com/hapijs/podium/issues/55"
-      }
-    ],
-    "number": 28,
-    "url": "https://github.com/hapijs/podium/milestone/28",
-    "version": "3.4.3"
-  },
-  {
-    "date": "2019-09-12T22:43:26Z",
-    "id": 4574331,
-    "issues": [
-      {
-        "id": 493062034,
-        "labels": ["dependency"],
-        "number": 49,
-        "title": "Update joi",
-        "url": "https://github.com/hapijs/podium/issues/49"
-      }
-    ],
-    "number": 27,
-    "url": "https://github.com/hapijs/podium/milestone/27",
-    "version": "3.4.2"
-  },
-  {
-    "date": "2019-08-15T01:15:03Z",
-    "id": 4192099,
-    "issues": [
-      {
-        "id": 480900083,
-        "labels": ["dependency"],
-        "number": 48,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/podium/issues/48"
-      }
-    ],
-    "number": 26,
-    "url": "https://github.com/hapijs/podium/milestone/26",
-    "version": "3.4.1"
-  },
-  {
-    "date": "2019-04-02T05:03:10Z",
-    "id": 4191043,
-    "issues": [
-      {
-        "id": 428025313,
-        "labels": ["dependency"],
-        "number": 43,
-        "title": "Update joi dep",
-        "url": "https://github.com/hapijs/podium/issues/43"
-      }
-    ],
-    "number": 25,
-    "url": "https://github.com/hapijs/podium/milestone/25",
-    "version": "3.4.0"
-  },
-  {
-    "date": "2019-04-01T19:59:59Z",
-    "id": 3811349,
-    "issues": [
-      {
-        "id": 427878395,
-        "labels": ["dependency"],
-        "number": 42,
-        "title": "Change module namespace",
-        "url": "https://github.com/hapijs/podium/issues/42"
-      }
-    ],
-    "number": 22,
-    "url": "https://github.com/hapijs/podium/milestone/22",
-    "version": "3.3.0"
-  },
-  {
-    "date": "2018-11-11T05:00:05Z",
-    "id": 3792289,
-    "issues": [],
-    "number": 21,
-    "url": "https://github.com/hapijs/podium/milestone/21",
-    "version": "3.2.0"
-  },
-  {
-    "date": "2018-11-03T00:35:37Z",
-    "id": 3788826,
-    "issues": [
-      {
-        "id": 377002986,
-        "labels": ["non issue"],
-        "number": 39,
-        "title": "Remove engines",
-        "url": "https://github.com/hapijs/podium/issues/39"
-      }
-    ],
-    "number": 20,
-    "url": "https://github.com/hapijs/podium/milestone/20",
-    "version": "3.1.5"
-  },
-  {
-    "date": "2018-11-01T18:49:51Z",
-    "id": 3786666,
-    "issues": [
-      {
-        "id": 376521729,
-        "labels": ["dependency"],
+    {
+        "date": "2025-01-07T22:49:01Z",
+        "id": 12134207,
+        "issues": [
+            {
+                "id": 2773878427,
+                "labels": [],
+                "number": 84,
+                "title": "fix: typescript exactOptionalPropertyTypes issue",
+                "url": "https://github.com/hapijs/podium/pull/84"
+            }
+        ],
         "number": 38,
-        "title": "Update hoek v6",
-        "url": "https://github.com/hapijs/podium/issues/38"
-      }
-    ],
-    "number": 19,
-    "url": "https://github.com/hapijs/podium/milestone/19",
-    "version": "3.1.4"
-  },
-  {
-    "date": "2018-10-31T22:53:27Z",
-    "id": 2855371,
-    "issues": [
-      {
-        "id": 376190374,
-        "labels": ["non issue"],
+        "url": "https://github.com/hapijs/podium/milestone/38",
+        "version": "5.0.2"
+    },
+    {
+        "date": "2025-01-07T22:48:24Z",
+        "id": 7955809,
+        "issues": [
+            {
+                "id": 1551772144,
+                "labels": [],
+                "number": 82,
+                "title": "chore: bump hoek",
+                "url": "https://github.com/hapijs/podium/pull/82"
+            }
+        ],
         "number": 37,
-        "title": "Cleanup and node 11",
-        "url": "https://github.com/hapijs/podium/issues/37"
-      }
-    ],
-    "number": 18,
-    "url": "https://github.com/hapijs/podium/milestone/18",
-    "version": "3.1.3"
-  },
-  {
-    "date": "2017-10-20T22:12:19Z",
-    "id": 2812224,
-    "issues": [
-      {
-        "id": 267317708,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/podium/milestone/37",
+        "version": "5.0.1"
+    },
+    {
+        "date": "2022-05-08T19:54:56Z",
+        "id": 7809044,
+        "issues": [
+            {
+                "id": 1228483287,
+                "labels": ["dependency", "breaking changes"],
+                "number": 80,
+                "title": "Upgrade deps for node v14+",
+                "url": "https://github.com/hapijs/podium/pull/80"
+            },
+            {
+                "id": 1184028217,
+                "labels": ["feature"],
+                "number": 79,
+                "title": "Support podium.gauge() method",
+                "url": "https://github.com/hapijs/podium/pull/79"
+            },
+            {
+                "id": 1028130967,
+                "labels": ["breaking changes"],
+                "number": 76,
+                "title": "Prepare a breaking build",
+                "url": "https://github.com/hapijs/podium/pull/76"
+            },
+            {
+                "id": 1028122352,
+                "labels": ["feature", "breaking changes"],
+                "number": 75,
+                "title": "Drop node 12 support",
+                "url": "https://github.com/hapijs/podium/issues/75"
+            },
+            {
+                "id": 1028121757,
+                "labels": ["feature", "breaking changes"],
+                "number": 74,
+                "title": "Prepare for ESM",
+                "url": "https://github.com/hapijs/podium/issues/74"
+            },
+            {
+                "id": 1028120848,
+                "labels": ["feature", "breaking changes"],
+                "number": 73,
+                "title": "Don't return promise from emit()",
+                "url": "https://github.com/hapijs/podium/issues/73"
+            },
+            {
+                "id": 727469976,
+                "labels": ["feature", "breaking changes"],
+                "number": 65,
+                "title": "Remove \"podium\" event source",
+                "url": "https://github.com/hapijs/podium/issues/65"
+            },
+            {
+                "id": 726330516,
+                "labels": ["bug"],
+                "number": 64,
+                "title": "A thrown error in a handler can prevent other handlers from being called",
+                "url": "https://github.com/hapijs/podium/issues/64"
+            }
+        ],
+        "number": 36,
+        "url": "https://github.com/hapijs/podium/milestone/36",
+        "version": "5.0.0"
+    },
+    {
+        "date": "2021-04-12T15:37:39Z",
+        "id": 6605770,
+        "issues": [
+            {
+                "id": 848948561,
+                "labels": ["bug", "types"],
+                "number": 70,
+                "title": "Fix typings to accomodate spread flag",
+                "url": "https://github.com/hapijs/podium/pull/70"
+            }
+        ],
         "number": 34,
-        "title": "Only remove once handler if actually called",
-        "url": "https://github.com/hapijs/podium/issues/34"
-      },
-      {
-        "id": 267317640,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/podium/milestone/34",
+        "version": "4.1.3"
+    },
+    {
+        "date": "2021-03-29T21:15:10Z",
+        "id": 6605658,
+        "issues": [
+            {
+                "id": 843624459,
+                "labels": ["bug"],
+                "number": 67,
+                "title": "Clone the data array before using it as args",
+                "url": "https://github.com/hapijs/podium/pull/67"
+            }
+        ],
         "number": 33,
-        "title": "Do not modify criteria objects",
-        "url": "https://github.com/hapijs/podium/issues/33"
-      }
-    ],
-    "number": 17,
-    "url": "https://github.com/hapijs/podium/milestone/17",
-    "version": "3.1.2"
-  },
-  {
-    "date": "2017-10-03T20:39:45Z",
-    "id": 2811998,
-    "issues": [
-      {
-        "id": 262577503,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/podium/milestone/33",
+        "version": "4.1.2"
+    },
+    {
+        "date": "2021-03-29T21:15:19Z",
+        "id": 5128586,
+        "issues": [
+            {
+                "id": 709595724,
+                "labels": [],
+                "number": 62,
+                "title": "upgrade lab to v24",
+                "url": "https://github.com/hapijs/podium/pull/62"
+            }
+        ],
         "number": 32,
-        "title": "Remove emit() return values",
-        "url": "https://github.com/hapijs/podium/issues/32"
-      }
-    ],
-    "number": 16,
-    "url": "https://github.com/hapijs/podium/milestone/16",
-    "version": "3.1.1"
-  },
-  {
-    "date": "2017-10-03T20:02:39Z",
-    "id": 2801194,
-    "issues": [
-      {
-        "id": 261444521,
-        "labels": ["bug", "feature"],
+        "url": "https://github.com/hapijs/podium/milestone/32",
+        "version": "4.1.1"
+    },
+    {
+        "date": "2020-02-21T07:29:54Z",
+        "id": 4973184,
+        "issues": [
+            {
+                "id": 568786108,
+                "labels": ["feature"],
+                "number": 58,
+                "title": "few()",
+                "url": "https://github.com/hapijs/podium/issues/58"
+            }
+        ],
         "number": 31,
-        "title": "Return consistent results from the emit function",
-        "url": "https://github.com/hapijs/podium/pull/31"
-      }
-    ],
-    "number": 15,
-    "url": "https://github.com/hapijs/podium/milestone/15",
-    "version": "3.1.0"
-  },
-  {
-    "date": "2017-09-28T19:13:12Z",
-    "id": 2799055,
-    "issues": [
-      {
-        "id": 261429317,
-        "labels": ["breaking changes"],
+        "url": "https://github.com/hapijs/podium/milestone/31",
+        "version": "4.1.0"
+    },
+    {
+        "date": "2020-01-04T23:23:32Z",
+        "id": 4973183,
+        "issues": [
+            {
+                "id": 545341751,
+                "labels": ["dependency", "breaking changes"],
+                "number": 57,
+                "title": "Only node 12",
+                "url": "https://github.com/hapijs/podium/issues/57"
+            }
+        ],
         "number": 30,
-        "title": "Remove block option",
-        "url": "https://github.com/hapijs/podium/issues/30"
-      },
-      {
-        "id": 261429117,
-        "labels": ["breaking changes"],
-        "number": 29,
-        "title": "emit() no longer waits for previous emits to complete",
-        "url": "https://github.com/hapijs/podium/issues/29"
-      },
-      {
-        "id": 261428860,
-        "labels": ["breaking changes"],
+        "url": "https://github.com/hapijs/podium/milestone/30",
+        "version": "4.0.0"
+    },
+    {
+        "date": "2019-11-01T22:37:43Z",
+        "id": 4655589,
+        "issues": [
+            {
+                "id": 516381358,
+                "labels": ["non issue"],
+                "number": 55,
+                "title": "Optimize emit()",
+                "url": "https://github.com/hapijs/podium/issues/55"
+            }
+        ],
         "number": 28,
-        "title": "Remove error handler",
-        "url": "https://github.com/hapijs/podium/issues/28"
-      }
-    ],
-    "number": 14,
-    "url": "https://github.com/hapijs/podium/milestone/14",
-    "version": "3.0.0"
-  },
-  {
-    "date": "2017-09-28T00:58:02Z",
-    "id": 2795677,
-    "issues": [
-      {
-        "id": 261161547,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/podium/milestone/28",
+        "version": "3.4.3"
+    },
+    {
+        "date": "2019-09-12T22:43:26Z",
+        "id": 4574331,
+        "issues": [
+            {
+                "id": 493062034,
+                "labels": ["dependency"],
+                "number": 49,
+                "title": "Update joi",
+                "url": "https://github.com/hapijs/podium/issues/49"
+            }
+        ],
         "number": 27,
-        "title": "Expose events validation method",
-        "url": "https://github.com/hapijs/podium/issues/27"
-      }
-    ],
-    "number": 13,
-    "url": "https://github.com/hapijs/podium/milestone/13",
-    "version": "2.1.0"
-  },
-  {
-    "date": "2017-09-26T19:15:44Z",
-    "id": 2772335,
-    "issues": [
-      {
-        "id": 260737975,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/podium/milestone/27",
+        "version": "3.4.2"
+    },
+    {
+        "date": "2019-08-15T01:15:03Z",
+        "id": 4192099,
+        "issues": [
+            {
+                "id": 480900083,
+                "labels": ["dependency"],
+                "number": 48,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/podium/issues/48"
+            }
+        ],
         "number": 26,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/podium/issues/26"
-      }
-    ],
-    "number": 12,
-    "url": "https://github.com/hapijs/podium/milestone/12",
-    "version": "2.0.3"
-  },
-  {
-    "date": "2017-09-17T22:15:26Z",
-    "id": 2770797,
-    "issues": [
-      {
-        "id": 258339779,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/podium/milestone/26",
+        "version": "3.4.1"
+    },
+    {
+        "date": "2019-04-02T05:03:10Z",
+        "id": 4191043,
+        "issues": [
+            {
+                "id": 428025313,
+                "labels": ["dependency"],
+                "number": 43,
+                "title": "Update joi dep",
+                "url": "https://github.com/hapijs/podium/issues/43"
+            }
+        ],
         "number": 25,
-        "title": "Return consistent result on once()",
-        "url": "https://github.com/hapijs/podium/issues/25"
-      }
-    ],
-    "number": 11,
-    "url": "https://github.com/hapijs/podium/milestone/11",
-    "version": "2.0.2"
-  },
-  {
-    "date": "2017-09-16T08:14:26Z",
-    "id": 2770762,
-    "issues": [
-      {
-        "id": 258216843,
-        "labels": ["bug"],
-        "number": 24,
-        "title": "Cleanup emit()",
-        "url": "https://github.com/hapijs/podium/issues/24"
-      }
-    ],
-    "number": 10,
-    "url": "https://github.com/hapijs/podium/milestone/10",
-    "version": "2.0.1"
-  },
-  {
-    "date": "2017-09-16T07:08:55Z",
-    "id": 2646817,
-    "issues": [
-      {
-        "id": 258214334,
-        "labels": ["feature", "breaking changes"],
-        "number": 23,
-        "title": "Convert emit() to async function",
-        "url": "https://github.com/hapijs/podium/issues/23"
-      }
-    ],
-    "number": 9,
-    "url": "https://github.com/hapijs/podium/milestone/9",
-    "version": "2.0.0"
-  },
-  {
-    "date": "2019-03-25T07:02:20Z",
-    "id": 4168288,
-    "issues": [
-      {
-        "id": 424750189,
-        "labels": ["lts"],
-        "number": 41,
-        "title": "Commercial version of v1 branch",
-        "url": "https://github.com/hapijs/podium/issues/41"
-      }
-    ],
-    "number": 23,
-    "url": "https://github.com/hapijs/podium/milestone/23",
-    "version": "1.4.0"
-  },
-  {
-    "date": "2017-07-18T07:06:24Z",
-    "id": 2164854,
-    "issues": [
-      {
-        "id": 243615493,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/podium/milestone/25",
+        "version": "3.4.0"
+    },
+    {
+        "date": "2019-04-01T19:59:59Z",
+        "id": 3811349,
+        "issues": [
+            {
+                "id": 427878395,
+                "labels": ["dependency"],
+                "number": 42,
+                "title": "Change module namespace",
+                "url": "https://github.com/hapijs/podium/issues/42"
+            }
+        ],
         "number": 22,
-        "title": "Method to create new emitters based on existing configuration",
-        "url": "https://github.com/hapijs/podium/issues/22"
-      },
-      {
-        "id": 216689045,
-        "labels": ["bug", "feature"],
+        "url": "https://github.com/hapijs/podium/milestone/22",
+        "version": "3.3.0"
+    },
+    {
+        "date": "2018-11-11T05:00:05Z",
+        "id": 3792289,
+        "issues": [],
+        "number": 21,
+        "url": "https://github.com/hapijs/podium/milestone/21",
+        "version": "3.2.0"
+    },
+    {
+        "date": "2018-11-03T00:35:37Z",
+        "id": 3788826,
+        "issues": [
+            {
+                "id": 377002986,
+                "labels": ["non issue"],
+                "number": 39,
+                "title": "Remove engines",
+                "url": "https://github.com/hapijs/podium/issues/39"
+            }
+        ],
+        "number": 20,
+        "url": "https://github.com/hapijs/podium/milestone/20",
+        "version": "3.1.5"
+    },
+    {
+        "date": "2018-11-01T18:49:51Z",
+        "id": 3786666,
+        "issues": [
+            {
+                "id": 376521729,
+                "labels": ["dependency"],
+                "number": 38,
+                "title": "Update hoek v6",
+                "url": "https://github.com/hapijs/podium/issues/38"
+            }
+        ],
+        "number": 19,
+        "url": "https://github.com/hapijs/podium/milestone/19",
+        "version": "3.1.4"
+    },
+    {
+        "date": "2018-10-31T22:53:27Z",
+        "id": 2855371,
+        "issues": [
+            {
+                "id": 376190374,
+                "labels": ["non issue"],
+                "number": 37,
+                "title": "Cleanup and node 11",
+                "url": "https://github.com/hapijs/podium/issues/37"
+            }
+        ],
         "number": 18,
-        "title": "throwing inside an event breaks new events from emitting",
-        "url": "https://github.com/hapijs/podium/issues/18"
-      }
-    ],
-    "number": 8,
-    "url": "https://github.com/hapijs/podium/milestone/8",
-    "version": "1.3.0"
-  },
-  {
-    "date": "2016-11-29T21:17:46Z",
-    "id": 2162626,
-    "issues": [
-      {
-        "id": 192300779,
-        "labels": ["bug", "security"],
+        "url": "https://github.com/hapijs/podium/milestone/18",
+        "version": "3.1.3"
+    },
+    {
+        "date": "2017-10-20T22:12:19Z",
+        "id": 2812224,
+        "issues": [
+            {
+                "id": 267317708,
+                "labels": ["bug"],
+                "number": 34,
+                "title": "Only remove once handler if actually called",
+                "url": "https://github.com/hapijs/podium/issues/34"
+            },
+            {
+                "id": 267317640,
+                "labels": ["bug"],
+                "number": 33,
+                "title": "Do not modify criteria objects",
+                "url": "https://github.com/hapijs/podium/issues/33"
+            }
+        ],
         "number": 17,
-        "title": "Defer using process.nextTick",
-        "url": "https://github.com/hapijs/podium/pull/17"
-      }
-    ],
-    "number": 7,
-    "url": "https://github.com/hapijs/podium/milestone/7",
-    "version": "1.2.5"
-  },
-  {
-    "date": "2016-11-29T01:43:27Z",
-    "id": 1976347,
-    "issues": [
-      {
-        "id": 192166052,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/podium/milestone/17",
+        "version": "3.1.2"
+    },
+    {
+        "date": "2017-10-03T20:39:45Z",
+        "id": 2811998,
+        "issues": [
+            {
+                "id": 262577503,
+                "labels": ["bug"],
+                "number": 32,
+                "title": "Remove emit() return values",
+                "url": "https://github.com/hapijs/podium/issues/32"
+            }
+        ],
         "number": 16,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/podium/issues/16"
-      }
-    ],
-    "number": 6,
-    "url": "https://github.com/hapijs/podium/milestone/6",
-    "version": "1.2.4"
-  },
-  {
-    "date": "2016-09-01T00:04:21Z",
-    "id": 1975926,
-    "issues": [
-      {
-        "id": 174407417,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/podium/milestone/16",
+        "version": "3.1.1"
+    },
+    {
+        "date": "2017-10-03T20:02:39Z",
+        "id": 2801194,
+        "issues": [
+            {
+                "id": 261444521,
+                "labels": ["bug", "feature"],
+                "number": 31,
+                "title": "Return consistent results from the emit function",
+                "url": "https://github.com/hapijs/podium/pull/31"
+            }
+        ],
+        "number": 15,
+        "url": "https://github.com/hapijs/podium/milestone/15",
+        "version": "3.1.0"
+    },
+    {
+        "date": "2017-09-28T19:13:12Z",
+        "id": 2799055,
+        "issues": [
+            {
+                "id": 261429317,
+                "labels": ["breaking changes"],
+                "number": 30,
+                "title": "Remove block option",
+                "url": "https://github.com/hapijs/podium/issues/30"
+            },
+            {
+                "id": 261429117,
+                "labels": ["breaking changes"],
+                "number": 29,
+                "title": "emit() no longer waits for previous emits to complete",
+                "url": "https://github.com/hapijs/podium/issues/29"
+            },
+            {
+                "id": 261428860,
+                "labels": ["breaking changes"],
+                "number": 28,
+                "title": "Remove error handler",
+                "url": "https://github.com/hapijs/podium/issues/28"
+            }
+        ],
+        "number": 14,
+        "url": "https://github.com/hapijs/podium/milestone/14",
+        "version": "3.0.0"
+    },
+    {
+        "date": "2017-09-28T00:58:02Z",
+        "id": 2795677,
+        "issues": [
+            {
+                "id": 261161547,
+                "labels": ["feature"],
+                "number": 27,
+                "title": "Expose events validation method",
+                "url": "https://github.com/hapijs/podium/issues/27"
+            }
+        ],
+        "number": 13,
+        "url": "https://github.com/hapijs/podium/milestone/13",
+        "version": "2.1.0"
+    },
+    {
+        "date": "2017-09-26T19:15:44Z",
+        "id": 2772335,
+        "issues": [
+            {
+                "id": 260737975,
+                "labels": ["dependency"],
+                "number": 26,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/podium/issues/26"
+            }
+        ],
+        "number": 12,
+        "url": "https://github.com/hapijs/podium/milestone/12",
+        "version": "2.0.3"
+    },
+    {
+        "date": "2017-09-17T22:15:26Z",
+        "id": 2770797,
+        "issues": [
+            {
+                "id": 258339779,
+                "labels": ["bug"],
+                "number": 25,
+                "title": "Return consistent result on once()",
+                "url": "https://github.com/hapijs/podium/issues/25"
+            }
+        ],
+        "number": 11,
+        "url": "https://github.com/hapijs/podium/milestone/11",
+        "version": "2.0.2"
+    },
+    {
+        "date": "2017-09-16T08:14:26Z",
+        "id": 2770762,
+        "issues": [
+            {
+                "id": 258216843,
+                "labels": ["bug"],
+                "number": 24,
+                "title": "Cleanup emit()",
+                "url": "https://github.com/hapijs/podium/issues/24"
+            }
+        ],
         "number": 10,
-        "title": "Generate data once across podiums",
-        "url": "https://github.com/hapijs/podium/issues/10"
-      }
-    ],
-    "number": 5,
-    "url": "https://github.com/hapijs/podium/milestone/5",
-    "version": "1.2.3"
-  },
-  {
-    "date": "2016-08-31T19:50:50Z",
-    "id": 1957206,
-    "issues": [
-      {
-        "id": 174362408,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/podium/milestone/10",
+        "version": "2.0.1"
+    },
+    {
+        "date": "2017-09-16T07:08:55Z",
+        "id": 2646817,
+        "issues": [
+            {
+                "id": 258214334,
+                "labels": ["feature", "breaking changes"],
+                "number": 23,
+                "title": "Convert emit() to async function",
+                "url": "https://github.com/hapijs/podium/issues/23"
+            }
+        ],
         "number": 9,
-        "title": "emit() callback not called on next tick",
-        "url": "https://github.com/hapijs/podium/issues/9"
-      }
-    ],
-    "number": 4,
-    "url": "https://github.com/hapijs/podium/milestone/4",
-    "version": "1.2.2"
-  },
-  {
-    "date": "2016-08-23T06:02:55Z",
-    "id": 1956701,
-    "issues": [
-      {
-        "id": 172618734,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/podium/milestone/9",
+        "version": "2.0.0"
+    },
+    {
+        "date": "2019-03-25T07:02:20Z",
+        "id": 4168288,
+        "issues": [
+            {
+                "id": 424750189,
+                "labels": ["lts"],
+                "number": 41,
+                "title": "Commercial version of v1 branch",
+                "url": "https://github.com/hapijs/podium/issues/41"
+            }
+        ],
+        "number": 23,
+        "url": "https://github.com/hapijs/podium/milestone/23",
+        "version": "1.4.0"
+    },
+    {
+        "date": "2017-07-18T07:06:24Z",
+        "id": 2164854,
+        "issues": [
+            {
+                "id": 243615493,
+                "labels": ["feature"],
+                "number": 22,
+                "title": "Method to create new emitters based on existing configuration",
+                "url": "https://github.com/hapijs/podium/issues/22"
+            },
+            {
+                "id": 216689045,
+                "labels": ["bug", "feature"],
+                "number": 18,
+                "title": "throwing inside an event breaks new events from emitting",
+                "url": "https://github.com/hapijs/podium/issues/18"
+            }
+        ],
         "number": 8,
-        "title": "Function data not allowed with spread",
-        "url": "https://github.com/hapijs/podium/issues/8"
-      }
-    ],
-    "number": 3,
-    "url": "https://github.com/hapijs/podium/milestone/3",
-    "version": "1.2.1"
-  },
-  {
-    "date": "2016-08-22T23:49:29Z",
-    "id": 1953411,
-    "issues": [
-      {
-        "id": 172581182,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/podium/milestone/8",
+        "version": "1.3.0"
+    },
+    {
+        "date": "2016-11-29T21:17:46Z",
+        "id": 2162626,
+        "issues": [
+            {
+                "id": 192300779,
+                "labels": ["bug", "security"],
+                "number": 17,
+                "title": "Defer using process.nextTick",
+                "url": "https://github.com/hapijs/podium/pull/17"
+            }
+        ],
         "number": 7,
-        "title": "Support function data to generate data once",
-        "url": "https://github.com/hapijs/podium/issues/7"
-      }
-    ],
-    "number": 2,
-    "url": "https://github.com/hapijs/podium/milestone/2",
-    "version": "1.2.0"
-  },
-  {
-    "date": "2016-08-21T07:48:30Z",
-    "id": 1953410,
-    "issues": [
-      {
-        "id": 172309555,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/podium/milestone/7",
+        "version": "1.2.5"
+    },
+    {
+        "date": "2016-11-29T01:43:27Z",
+        "id": 1976347,
+        "issues": [
+            {
+                "id": 192166052,
+                "labels": ["dependency"],
+                "number": 16,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/podium/issues/16"
+            }
+        ],
+        "number": 6,
+        "url": "https://github.com/hapijs/podium/milestone/6",
+        "version": "1.2.4"
+    },
+    {
+        "date": "2016-09-01T00:04:21Z",
+        "id": 1975926,
+        "issues": [
+            {
+                "id": 174407417,
+                "labels": ["bug"],
+                "number": 10,
+                "title": "Generate data once across podiums",
+                "url": "https://github.com/hapijs/podium/issues/10"
+            }
+        ],
         "number": 5,
-        "title": "Allow emit() to be overridden",
-        "url": "https://github.com/hapijs/podium/issues/5"
-      }
-    ],
-    "number": 1,
-    "url": "https://github.com/hapijs/podium/milestone/1",
-    "version": "1.1.0"
-  }
+        "url": "https://github.com/hapijs/podium/milestone/5",
+        "version": "1.2.3"
+    },
+    {
+        "date": "2016-08-31T19:50:50Z",
+        "id": 1957206,
+        "issues": [
+            {
+                "id": 174362408,
+                "labels": ["bug"],
+                "number": 9,
+                "title": "emit() callback not called on next tick",
+                "url": "https://github.com/hapijs/podium/issues/9"
+            }
+        ],
+        "number": 4,
+        "url": "https://github.com/hapijs/podium/milestone/4",
+        "version": "1.2.2"
+    },
+    {
+        "date": "2016-08-23T06:02:55Z",
+        "id": 1956701,
+        "issues": [
+            {
+                "id": 172618734,
+                "labels": ["bug"],
+                "number": 8,
+                "title": "Function data not allowed with spread",
+                "url": "https://github.com/hapijs/podium/issues/8"
+            }
+        ],
+        "number": 3,
+        "url": "https://github.com/hapijs/podium/milestone/3",
+        "version": "1.2.1"
+    },
+    {
+        "date": "2016-08-22T23:49:29Z",
+        "id": 1953411,
+        "issues": [
+            {
+                "id": 172581182,
+                "labels": ["feature"],
+                "number": 7,
+                "title": "Support function data to generate data once",
+                "url": "https://github.com/hapijs/podium/issues/7"
+            }
+        ],
+        "number": 2,
+        "url": "https://github.com/hapijs/podium/milestone/2",
+        "version": "1.2.0"
+    },
+    {
+        "date": "2016-08-21T07:48:30Z",
+        "id": 1953410,
+        "issues": [
+            {
+                "id": 172309555,
+                "labels": ["feature"],
+                "number": 5,
+                "title": "Allow emit() to be overridden",
+                "url": "https://github.com/hapijs/podium/issues/5"
+            }
+        ],
+        "number": 1,
+        "url": "https://github.com/hapijs/podium/milestone/1",
+        "version": "1.1.0"
+    }
 ]

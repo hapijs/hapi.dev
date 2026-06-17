@@ -1,554 +1,554 @@
 [
-  {
-    "date": "2023-02-11T19:29:58Z",
-    "id": 8594993,
-    "issues": [
-      {
-        "id": 1551793104,
-        "labels": ["dependency"],
-        "number": 163,
-        "title": "chore: bump hoek",
-        "url": "https://github.com/hapijs/crumb/pull/163"
-      }
-    ],
-    "number": 22,
-    "url": "https://github.com/hapijs/crumb/milestone/22",
-    "version": "9.0.1"
-  },
-  {
-    "date": "2022-10-29T20:21:00Z",
-    "id": 8570132,
-    "issues": [
-      {
-        "id": 1419470531,
-        "labels": ["feature", "test", "breaking changes", "dependency"],
-        "number": 162,
-        "title": "Support for hapi v21, node v18, ESM tests",
-        "url": "https://github.com/hapijs/crumb/pull/162"
-      }
-    ],
-    "number": 21,
-    "url": "https://github.com/hapijs/crumb/milestone/21",
-    "version": "9.0.0"
-  },
-  {
-    "date": "2020-09-26T23:19:23Z",
-    "id": 4993627,
-    "issues": [
-      {
-        "id": 709590070,
-        "labels": [],
-        "number": 153,
-        "title": "upgrade lab to v24",
-        "url": "https://github.com/hapijs/crumb/pull/153"
-      },
-      {
-        "id": 684053273,
-        "labels": [],
-        "number": 150,
-        "title": "update dependencies",
-        "url": "https://github.com/hapijs/crumb/pull/150"
-      },
-      {
-        "id": 684028939,
-        "labels": [],
-        "number": 149,
-        "title": "migrate to new travis format",
-        "url": "https://github.com/hapijs/crumb/pull/149"
-      },
-      {
-        "id": 672177291,
-        "labels": [],
-        "number": 147,
-        "title": "upgrade to use the latest lab and joi to validate",
-        "url": "https://github.com/hapijs/crumb/pull/147"
-      }
-    ],
-    "number": 19,
-    "url": "https://github.com/hapijs/crumb/milestone/19",
-    "version": "8.0.1"
-  },
-  {
-    "date": "2020-01-10T07:36:50Z",
-    "id": 4655596,
-    "issues": [
-      {
-        "id": 547915832,
-        "labels": ["breaking changes", "dependency"],
-        "number": 144,
-        "title": "Drop hapi v17 and v18",
-        "url": "https://github.com/hapijs/crumb/issues/144"
-      },
-      {
-        "id": 547915667,
-        "labels": ["breaking changes"],
-        "number": 143,
-        "title": "Change plugin name to @hapi/crubm",
-        "url": "https://github.com/hapijs/crumb/issues/143"
-      },
-      {
-        "id": 547915440,
-        "labels": ["breaking changes", "dependency"],
-        "number": 142,
-        "title": "Only node 12",
-        "url": "https://github.com/hapijs/crumb/issues/142"
-      }
-    ],
-    "number": 18,
-    "url": "https://github.com/hapijs/crumb/milestone/18",
-    "version": "8.0.0"
-  },
-  {
-    "date": "2019-09-12T22:53:52Z",
-    "id": 4574290,
-    "issues": [
-      {
-        "id": 493064073,
-        "labels": ["dependency"],
-        "number": 135,
-        "title": "Update joi",
-        "url": "https://github.com/hapijs/crumb/issues/135"
-      },
-      {
-        "id": 439712798,
-        "labels": ["bug"],
-        "number": 131,
-        "title": "validate crumb when autoGenerate is false and crumb not defined on route",
-        "url": "https://github.com/hapijs/crumb/pull/131"
-      }
-    ],
-    "number": 17,
-    "url": "https://github.com/hapijs/crumb/milestone/17",
-    "version": "7.3.2"
-  },
-  {
-    "date": "2019-08-14T22:36:04Z",
-    "id": 4245146,
-    "issues": [
-      {
-        "id": 480890736,
-        "labels": ["dependency"],
-        "number": 134,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/crumb/issues/134"
-      }
-    ],
-    "number": 16,
-    "url": "https://github.com/hapijs/crumb/milestone/16",
-    "version": "7.3.1"
-  },
-  {
-    "date": "2019-08-14T21:10:22Z",
-    "id": 3818806,
-    "issues": [
-      {
-        "id": 435360156,
-        "labels": ["dependency"],
-        "number": 129,
-        "title": "Change module namespace",
-        "url": "https://github.com/hapijs/crumb/issues/129"
-      }
-    ],
-    "number": 15,
-    "url": "https://github.com/hapijs/crumb/milestone/15",
-    "version": "7.3.0"
-  },
-  {
-    "date": "2018-11-13T18:43:24Z",
-    "id": 3290101,
-    "issues": [],
-    "number": 14,
-    "url": "https://github.com/hapijs/crumb/milestone/14",
-    "version": "7.1.1"
-  },
-  {
-    "date": "2018-04-23T15:22:25Z",
-    "id": 2947826,
-    "issues": [
-      {
-        "id": 311804855,
-        "labels": ["feature"],
-        "number": 112,
-        "title": "adds logUnauthorized option - addresses #56",
-        "url": "https://github.com/hapijs/crumb/pull/112"
-      },
-      {
-        "id": 307177389,
-        "labels": ["bug"],
-        "number": 111,
-        "title": "Remove new Buffer usage",
-        "url": "https://github.com/hapijs/crumb/pull/111"
-      },
-      {
-        "id": 259476159,
-        "labels": ["feature"],
-        "number": 103,
-        "title": "Add an option to specify the CSRF header name",
-        "url": "https://github.com/hapijs/crumb/pull/103"
-      },
-      {
-        "id": 106330580,
-        "labels": ["feature"],
-        "number": 56,
-        "title": "Provide more relevant feedback",
-        "url": "https://github.com/hapijs/crumb/issues/56"
-      }
-    ],
-    "number": 13,
-    "url": "https://github.com/hapijs/crumb/milestone/13",
-    "version": "7.1.0"
-  },
-  {
-    "date": "2017-11-29T22:08:48Z",
-    "id": 1942581,
-    "issues": [
-      {
-        "id": 277924810,
-        "labels": ["documentation"],
-        "number": 107,
-        "title": "Update contact details/maintainer",
-        "url": "https://github.com/hapijs/crumb/pull/107"
-      },
-      {
-        "id": 271501752,
-        "labels": ["breaking changes"],
-        "number": 106,
-        "title": "Upgrade Crumb to Hapi 17",
-        "url": "https://github.com/hapijs/crumb/pull/106"
-      },
-      {
-        "id": 271151755,
-        "labels": ["breaking changes", "dependency"],
-        "number": 105,
-        "title": "hapi v17 support",
-        "url": "https://github.com/hapijs/crumb/issues/105"
-      },
-      {
-        "id": 247006357,
-        "labels": ["documentation"],
-        "number": 101,
-        "title": "Enable Crumb for specific routes only",
-        "url": "https://github.com/hapijs/crumb/issues/101"
-      },
-      {
-        "id": 227085417,
-        "labels": ["documentation"],
-        "number": 99,
-        "title": "Add sentence to README about how to disable the plugin for a particular route.",
-        "url": "https://github.com/hapijs/crumb/pull/99"
-      },
-      {
-        "id": 215314021,
-        "labels": ["documentation"],
-        "number": 98,
-        "title": "Make both examples runnable with a package.json and proper dependencies",
-        "url": "https://github.com/hapijs/crumb/pull/98"
-      },
-      {
-        "id": 202617223,
-        "labels": ["documentation"],
-        "number": 97,
-        "title": "Example won't launch: `Server.views is not a function`",
-        "url": "https://github.com/hapijs/crumb/issues/97"
-      },
-      {
-        "id": 182439180,
-        "labels": ["documentation", "dependency"],
-        "number": 93,
-        "title": "Documentation Improvement",
-        "url": "https://github.com/hapijs/crumb/pull/93"
-      }
-    ],
-    "number": 12,
-    "url": "https://github.com/hapijs/crumb/milestone/12",
-    "version": "7.0.0"
-  },
-  {
-    "date": "2016-08-15T14:50:45Z",
-    "id": 1856644,
-    "issues": [
-      {
-        "id": 170913530,
-        "labels": ["bug", "feature"],
-        "number": 91,
-        "title": "Cors origin",
-        "url": "https://github.com/hapijs/crumb/pull/91"
-      },
-      {
-        "id": 170194903,
-        "labels": ["bug", "documentation", "support"],
-        "number": 90,
-        "title": "Generate function never called when Vision route has CORS enabled",
-        "url": "https://github.com/hapijs/crumb/issues/90"
-      },
-      {
-        "id": 169992097,
-        "labels": ["support"],
-        "number": 89,
-        "title": "Generate is running a second time and 500-ing hapi",
-        "url": "https://github.com/hapijs/crumb/issues/89"
-      },
-      {
-        "id": 169122857,
-        "labels": ["bug", "test"],
-        "number": 87,
-        "title": "remove arrow function to fix context",
-        "url": "https://github.com/hapijs/crumb/pull/87"
-      },
-      {
-        "id": 94764476,
-        "labels": ["bug"],
-        "number": 54,
-        "title": "Getting 403 forbidden because token has changed",
-        "url": "https://github.com/hapijs/crumb/issues/54"
-      }
-    ],
-    "number": 11,
-    "url": "https://github.com/hapijs/crumb/milestone/11",
-    "version": "6.0.3"
-  },
-  {
-    "date": "2016-06-30T04:58:45Z",
-    "id": 1763201,
-    "issues": [
-      {
-        "id": 162824433,
-        "labels": ["bug"],
-        "number": 84,
-        "title": "#80: fixes crumb route settings bug",
-        "url": "https://github.com/hapijs/crumb/pull/84"
-      },
-      {
-        "id": 155618425,
-        "labels": [],
-        "number": 82,
-        "title": "Test on node v6, update dependencies",
-        "url": "https://github.com/hapijs/crumb/pull/82"
-      },
-      {
-        "id": 154786786,
-        "labels": ["bug"],
-        "number": 80,
-        "title": "6.0.1 update breaks route-restful option",
-        "url": "https://github.com/hapijs/crumb/issues/80"
-      }
-    ],
-    "number": 10,
-    "url": "https://github.com/hapijs/crumb/milestone/10",
-    "version": "6.0.2"
-  },
-  {
-    "date": "2016-05-12T20:17:54Z",
-    "id": 1763168,
-    "issues": [
-      {
-        "id": 154564385,
-        "labels": ["bug"],
-        "number": 79,
-        "title": "Fixes #74 -- restful configured through routes is not superceded by global config",
-        "url": "https://github.com/hapijs/crumb/pull/79"
-      },
-      {
-        "id": 150412889,
-        "labels": ["documentation"],
-        "number": 78,
-        "title": "Purpose readme contribution",
-        "url": "https://github.com/hapijs/crumb/pull/78"
-      },
-      {
-        "id": 126263490,
-        "labels": ["documentation"],
-        "number": 69,
-        "title": "Update restful example to respond with JSON. Closes #64",
-        "url": "https://github.com/hapijs/crumb/pull/69"
-      }
-    ],
-    "number": 9,
-    "url": "https://github.com/hapijs/crumb/milestone/9",
-    "version": "6.0.1"
-  },
-  {
-    "date": "2016-05-12T20:03:30Z",
-    "id": 1509518,
-    "issues": [
-      {
-        "id": 126486194,
-        "labels": [],
-        "number": 70,
-        "title": "Hapi12",
-        "url": "https://github.com/hapijs/crumb/pull/70"
-      },
-      {
-        "id": 118386357,
-        "labels": [],
-        "number": 68,
-        "title": "Heroku disallows host binding but Crumb requires it",
-        "url": "https://github.com/hapijs/crumb/issues/68"
-      },
-      {
-        "id": 116056765,
-        "labels": ["breaking changes"],
-        "number": 67,
-        "title": "ES6 style changes and node v4",
-        "url": "https://github.com/hapijs/crumb/issues/67"
-      },
-      {
-        "id": 111899625,
-        "labels": ["breaking changes", "security"],
-        "number": 61,
-        "title": "Ignore CORS",
-        "url": "https://github.com/hapijs/crumb/issues/61"
-      }
-    ],
-    "number": 8,
-    "url": "https://github.com/hapijs/crumb/milestone/8",
-    "version": "6.0.0"
-  },
-  {
-    "date": "2016-01-15T19:10:59Z",
-    "id": 1306660,
-    "issues": [
-      {
-        "id": 113432120,
-        "labels": ["bug", "dependency"],
-        "number": 63,
-        "title": "Update 9",
-        "url": "https://github.com/hapijs/crumb/pull/63"
-      },
-      {
-        "id": 106583291,
-        "labels": ["breaking changes"],
-        "number": 58,
-        "title": "update to hapi 9/10",
-        "url": "https://github.com/hapijs/crumb/issues/58"
-      },
-      {
-        "id": 85088274,
-        "labels": ["bug"],
-        "number": 51,
-        "title": "crumb request.plugins.crumb: undefined",
-        "url": "https://github.com/hapijs/crumb/issues/51"
-      }
-    ],
-    "number": 7,
-    "url": "https://github.com/hapijs/crumb/milestone/7",
-    "version": "5.0.0"
-  },
-  {
-    "date": "2016-01-15T19:11:02Z",
-    "id": 1151202,
-    "issues": [
-      {
-        "id": 87838420,
-        "labels": ["feature"],
-        "number": 53,
-        "title": "correct linting issues",
-        "url": "https://github.com/hapijs/crumb/pull/53"
-      },
-      {
-        "id": 86798640,
-        "labels": ["feature"],
-        "number": 52,
-        "title": "Updated joi to 6.x.x",
-        "url": "https://github.com/hapijs/crumb/pull/52"
-      }
-    ],
-    "number": 6,
-    "url": "https://github.com/hapijs/crumb/milestone/6",
-    "version": "4.04"
-  },
-  {
-    "date": "2015-06-05T14:00:44Z",
-    "id": 997035,
-    "issues": [
-      {
-        "id": 59031999,
-        "labels": ["feature"],
-        "number": 49,
-        "title": "Return error during plugin registration for invalid options.",
-        "url": "https://github.com/hapijs/crumb/pull/49"
-      }
-    ],
-    "number": 5,
-    "url": "https://github.com/hapijs/crumb/milestone/5",
-    "version": "4.0.3"
-  },
-  {
-    "date": "2015-02-26T14:24:19Z",
-    "id": 977944,
-    "issues": [
-      {
-        "id": 57526445,
-        "labels": ["bug"],
-        "number": 46,
-        "title": "fix internals.originParser + tests to add protocol in all origin/allowOrigins values",
-        "url": "https://github.com/hapijs/crumb/pull/46"
-      }
-    ],
-    "number": 4,
-    "url": "https://github.com/hapijs/crumb/milestone/4",
-    "version": "4.0.2"
-  },
-  {
-    "date": "2015-02-13T04:56:16Z",
-    "id": 966138,
-    "issues": [
-      {
-        "id": 50437538,
-        "labels": ["bug"],
-        "number": 34,
-        "title": "Host header cannot include URI scheme",
-        "url": "https://github.com/hapijs/crumb/issues/34"
-      }
-    ],
-    "number": 3,
-    "url": "https://github.com/hapijs/crumb/milestone/3",
-    "version": "4.0.1"
-  },
-  {
-    "date": "2015-02-04T21:14:02Z",
-    "id": 604456,
-    "issues": [
-      {
-        "id": 50439213,
-        "labels": ["bug", "breaking changes", "dependency"],
-        "number": 37,
-        "title": "hapi8. Closes #35. internals bug. Closes #33",
-        "url": "https://github.com/hapijs/crumb/pull/37"
-      },
-      {
-        "id": 50438479,
-        "labels": ["breaking changes", "dependency"],
-        "number": 35,
-        "title": "hapi 8.0 API",
-        "url": "https://github.com/hapijs/crumb/issues/35"
-      },
-      {
-        "id": 50437211,
-        "labels": ["bug"],
-        "number": 33,
-        "title": "Don't use internals for plugin state",
-        "url": "https://github.com/hapijs/crumb/issues/33"
-      }
-    ],
-    "number": 2,
-    "url": "https://github.com/hapijs/crumb/milestone/2",
-    "version": "4.0.0"
-  },
-  {
-    "date": "2014-03-21T00:42:56Z",
-    "id": 604455,
-    "issues": [
-      {
-        "id": 29870772,
-        "labels": ["feature"],
+    {
+        "date": "2023-02-11T19:29:58Z",
+        "id": 8594993,
+        "issues": [
+            {
+                "id": 1551793104,
+                "labels": ["dependency"],
+                "number": 163,
+                "title": "chore: bump hoek",
+                "url": "https://github.com/hapijs/crumb/pull/163"
+            }
+        ],
+        "number": 22,
+        "url": "https://github.com/hapijs/crumb/milestone/22",
+        "version": "9.0.1"
+    },
+    {
+        "date": "2022-10-29T20:21:00Z",
+        "id": 8570132,
+        "issues": [
+            {
+                "id": 1419470531,
+                "labels": ["feature", "test", "breaking changes", "dependency"],
+                "number": 162,
+                "title": "Support for hapi v21, node v18, ESM tests",
+                "url": "https://github.com/hapijs/crumb/pull/162"
+            }
+        ],
+        "number": 21,
+        "url": "https://github.com/hapijs/crumb/milestone/21",
+        "version": "9.0.0"
+    },
+    {
+        "date": "2020-09-26T23:19:23Z",
+        "id": 4993627,
+        "issues": [
+            {
+                "id": 709590070,
+                "labels": [],
+                "number": 153,
+                "title": "upgrade lab to v24",
+                "url": "https://github.com/hapijs/crumb/pull/153"
+            },
+            {
+                "id": 684053273,
+                "labels": [],
+                "number": 150,
+                "title": "update dependencies",
+                "url": "https://github.com/hapijs/crumb/pull/150"
+            },
+            {
+                "id": 684028939,
+                "labels": [],
+                "number": 149,
+                "title": "migrate to new travis format",
+                "url": "https://github.com/hapijs/crumb/pull/149"
+            },
+            {
+                "id": 672177291,
+                "labels": [],
+                "number": 147,
+                "title": "upgrade to use the latest lab and joi to validate",
+                "url": "https://github.com/hapijs/crumb/pull/147"
+            }
+        ],
+        "number": 19,
+        "url": "https://github.com/hapijs/crumb/milestone/19",
+        "version": "8.0.1"
+    },
+    {
+        "date": "2020-01-10T07:36:50Z",
+        "id": 4655596,
+        "issues": [
+            {
+                "id": 547915832,
+                "labels": ["breaking changes", "dependency"],
+                "number": 144,
+                "title": "Drop hapi v17 and v18",
+                "url": "https://github.com/hapijs/crumb/issues/144"
+            },
+            {
+                "id": 547915667,
+                "labels": ["breaking changes"],
+                "number": 143,
+                "title": "Change plugin name to @hapi/crubm",
+                "url": "https://github.com/hapijs/crumb/issues/143"
+            },
+            {
+                "id": 547915440,
+                "labels": ["breaking changes", "dependency"],
+                "number": 142,
+                "title": "Only node 12",
+                "url": "https://github.com/hapijs/crumb/issues/142"
+            }
+        ],
+        "number": 18,
+        "url": "https://github.com/hapijs/crumb/milestone/18",
+        "version": "8.0.0"
+    },
+    {
+        "date": "2019-09-12T22:53:52Z",
+        "id": 4574290,
+        "issues": [
+            {
+                "id": 493064073,
+                "labels": ["dependency"],
+                "number": 135,
+                "title": "Update joi",
+                "url": "https://github.com/hapijs/crumb/issues/135"
+            },
+            {
+                "id": 439712798,
+                "labels": ["bug"],
+                "number": 131,
+                "title": "validate crumb when autoGenerate is false and crumb not defined on route",
+                "url": "https://github.com/hapijs/crumb/pull/131"
+            }
+        ],
+        "number": 17,
+        "url": "https://github.com/hapijs/crumb/milestone/17",
+        "version": "7.3.2"
+    },
+    {
+        "date": "2019-08-14T22:36:04Z",
+        "id": 4245146,
+        "issues": [
+            {
+                "id": 480890736,
+                "labels": ["dependency"],
+                "number": 134,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/crumb/issues/134"
+            }
+        ],
+        "number": 16,
+        "url": "https://github.com/hapijs/crumb/milestone/16",
+        "version": "7.3.1"
+    },
+    {
+        "date": "2019-08-14T21:10:22Z",
+        "id": 3818806,
+        "issues": [
+            {
+                "id": 435360156,
+                "labels": ["dependency"],
+                "number": 129,
+                "title": "Change module namespace",
+                "url": "https://github.com/hapijs/crumb/issues/129"
+            }
+        ],
+        "number": 15,
+        "url": "https://github.com/hapijs/crumb/milestone/15",
+        "version": "7.3.0"
+    },
+    {
+        "date": "2018-11-13T18:43:24Z",
+        "id": 3290101,
+        "issues": [],
+        "number": 14,
+        "url": "https://github.com/hapijs/crumb/milestone/14",
+        "version": "7.1.1"
+    },
+    {
+        "date": "2018-04-23T15:22:25Z",
+        "id": 2947826,
+        "issues": [
+            {
+                "id": 311804855,
+                "labels": ["feature"],
+                "number": 112,
+                "title": "adds logUnauthorized option - addresses #56",
+                "url": "https://github.com/hapijs/crumb/pull/112"
+            },
+            {
+                "id": 307177389,
+                "labels": ["bug"],
+                "number": 111,
+                "title": "Remove new Buffer usage",
+                "url": "https://github.com/hapijs/crumb/pull/111"
+            },
+            {
+                "id": 259476159,
+                "labels": ["feature"],
+                "number": 103,
+                "title": "Add an option to specify the CSRF header name",
+                "url": "https://github.com/hapijs/crumb/pull/103"
+            },
+            {
+                "id": 106330580,
+                "labels": ["feature"],
+                "number": 56,
+                "title": "Provide more relevant feedback",
+                "url": "https://github.com/hapijs/crumb/issues/56"
+            }
+        ],
+        "number": 13,
+        "url": "https://github.com/hapijs/crumb/milestone/13",
+        "version": "7.1.0"
+    },
+    {
+        "date": "2017-11-29T22:08:48Z",
+        "id": 1942581,
+        "issues": [
+            {
+                "id": 277924810,
+                "labels": ["documentation"],
+                "number": 107,
+                "title": "Update contact details/maintainer",
+                "url": "https://github.com/hapijs/crumb/pull/107"
+            },
+            {
+                "id": 271501752,
+                "labels": ["breaking changes"],
+                "number": 106,
+                "title": "Upgrade Crumb to Hapi 17",
+                "url": "https://github.com/hapijs/crumb/pull/106"
+            },
+            {
+                "id": 271151755,
+                "labels": ["breaking changes", "dependency"],
+                "number": 105,
+                "title": "hapi v17 support",
+                "url": "https://github.com/hapijs/crumb/issues/105"
+            },
+            {
+                "id": 247006357,
+                "labels": ["documentation"],
+                "number": 101,
+                "title": "Enable Crumb for specific routes only",
+                "url": "https://github.com/hapijs/crumb/issues/101"
+            },
+            {
+                "id": 227085417,
+                "labels": ["documentation"],
+                "number": 99,
+                "title": "Add sentence to README about how to disable the plugin for a particular route.",
+                "url": "https://github.com/hapijs/crumb/pull/99"
+            },
+            {
+                "id": 215314021,
+                "labels": ["documentation"],
+                "number": 98,
+                "title": "Make both examples runnable with a package.json and proper dependencies",
+                "url": "https://github.com/hapijs/crumb/pull/98"
+            },
+            {
+                "id": 202617223,
+                "labels": ["documentation"],
+                "number": 97,
+                "title": "Example won't launch: `Server.views is not a function`",
+                "url": "https://github.com/hapijs/crumb/issues/97"
+            },
+            {
+                "id": 182439180,
+                "labels": ["documentation", "dependency"],
+                "number": 93,
+                "title": "Documentation Improvement",
+                "url": "https://github.com/hapijs/crumb/pull/93"
+            }
+        ],
+        "number": 12,
+        "url": "https://github.com/hapijs/crumb/milestone/12",
+        "version": "7.0.0"
+    },
+    {
+        "date": "2016-08-15T14:50:45Z",
+        "id": 1856644,
+        "issues": [
+            {
+                "id": 170913530,
+                "labels": ["bug", "feature"],
+                "number": 91,
+                "title": "Cors origin",
+                "url": "https://github.com/hapijs/crumb/pull/91"
+            },
+            {
+                "id": 170194903,
+                "labels": ["bug", "documentation", "support"],
+                "number": 90,
+                "title": "Generate function never called when Vision route has CORS enabled",
+                "url": "https://github.com/hapijs/crumb/issues/90"
+            },
+            {
+                "id": 169992097,
+                "labels": ["support"],
+                "number": 89,
+                "title": "Generate is running a second time and 500-ing hapi",
+                "url": "https://github.com/hapijs/crumb/issues/89"
+            },
+            {
+                "id": 169122857,
+                "labels": ["bug", "test"],
+                "number": 87,
+                "title": "remove arrow function to fix context",
+                "url": "https://github.com/hapijs/crumb/pull/87"
+            },
+            {
+                "id": 94764476,
+                "labels": ["bug"],
+                "number": 54,
+                "title": "Getting 403 forbidden because token has changed",
+                "url": "https://github.com/hapijs/crumb/issues/54"
+            }
+        ],
         "number": 11,
-        "title": "Support hapi 3.0",
-        "url": "https://github.com/hapijs/crumb/issues/11"
-      }
-    ],
-    "number": 1,
-    "url": "https://github.com/hapijs/crumb/milestone/1",
-    "version": "1.1.2"
-  }
+        "url": "https://github.com/hapijs/crumb/milestone/11",
+        "version": "6.0.3"
+    },
+    {
+        "date": "2016-06-30T04:58:45Z",
+        "id": 1763201,
+        "issues": [
+            {
+                "id": 162824433,
+                "labels": ["bug"],
+                "number": 84,
+                "title": "#80: fixes crumb route settings bug",
+                "url": "https://github.com/hapijs/crumb/pull/84"
+            },
+            {
+                "id": 155618425,
+                "labels": [],
+                "number": 82,
+                "title": "Test on node v6, update dependencies",
+                "url": "https://github.com/hapijs/crumb/pull/82"
+            },
+            {
+                "id": 154786786,
+                "labels": ["bug"],
+                "number": 80,
+                "title": "6.0.1 update breaks route-restful option",
+                "url": "https://github.com/hapijs/crumb/issues/80"
+            }
+        ],
+        "number": 10,
+        "url": "https://github.com/hapijs/crumb/milestone/10",
+        "version": "6.0.2"
+    },
+    {
+        "date": "2016-05-12T20:17:54Z",
+        "id": 1763168,
+        "issues": [
+            {
+                "id": 154564385,
+                "labels": ["bug"],
+                "number": 79,
+                "title": "Fixes #74 -- restful configured through routes is not superceded by global config",
+                "url": "https://github.com/hapijs/crumb/pull/79"
+            },
+            {
+                "id": 150412889,
+                "labels": ["documentation"],
+                "number": 78,
+                "title": "Purpose readme contribution",
+                "url": "https://github.com/hapijs/crumb/pull/78"
+            },
+            {
+                "id": 126263490,
+                "labels": ["documentation"],
+                "number": 69,
+                "title": "Update restful example to respond with JSON. Closes #64",
+                "url": "https://github.com/hapijs/crumb/pull/69"
+            }
+        ],
+        "number": 9,
+        "url": "https://github.com/hapijs/crumb/milestone/9",
+        "version": "6.0.1"
+    },
+    {
+        "date": "2016-05-12T20:03:30Z",
+        "id": 1509518,
+        "issues": [
+            {
+                "id": 126486194,
+                "labels": [],
+                "number": 70,
+                "title": "Hapi12",
+                "url": "https://github.com/hapijs/crumb/pull/70"
+            },
+            {
+                "id": 118386357,
+                "labels": [],
+                "number": 68,
+                "title": "Heroku disallows host binding but Crumb requires it",
+                "url": "https://github.com/hapijs/crumb/issues/68"
+            },
+            {
+                "id": 116056765,
+                "labels": ["breaking changes"],
+                "number": 67,
+                "title": "ES6 style changes and node v4",
+                "url": "https://github.com/hapijs/crumb/issues/67"
+            },
+            {
+                "id": 111899625,
+                "labels": ["breaking changes", "security"],
+                "number": 61,
+                "title": "Ignore CORS",
+                "url": "https://github.com/hapijs/crumb/issues/61"
+            }
+        ],
+        "number": 8,
+        "url": "https://github.com/hapijs/crumb/milestone/8",
+        "version": "6.0.0"
+    },
+    {
+        "date": "2016-01-15T19:10:59Z",
+        "id": 1306660,
+        "issues": [
+            {
+                "id": 113432120,
+                "labels": ["bug", "dependency"],
+                "number": 63,
+                "title": "Update 9",
+                "url": "https://github.com/hapijs/crumb/pull/63"
+            },
+            {
+                "id": 106583291,
+                "labels": ["breaking changes"],
+                "number": 58,
+                "title": "update to hapi 9/10",
+                "url": "https://github.com/hapijs/crumb/issues/58"
+            },
+            {
+                "id": 85088274,
+                "labels": ["bug"],
+                "number": 51,
+                "title": "crumb request.plugins.crumb: undefined",
+                "url": "https://github.com/hapijs/crumb/issues/51"
+            }
+        ],
+        "number": 7,
+        "url": "https://github.com/hapijs/crumb/milestone/7",
+        "version": "5.0.0"
+    },
+    {
+        "date": "2016-01-15T19:11:02Z",
+        "id": 1151202,
+        "issues": [
+            {
+                "id": 87838420,
+                "labels": ["feature"],
+                "number": 53,
+                "title": "correct linting issues",
+                "url": "https://github.com/hapijs/crumb/pull/53"
+            },
+            {
+                "id": 86798640,
+                "labels": ["feature"],
+                "number": 52,
+                "title": "Updated joi to 6.x.x",
+                "url": "https://github.com/hapijs/crumb/pull/52"
+            }
+        ],
+        "number": 6,
+        "url": "https://github.com/hapijs/crumb/milestone/6",
+        "version": "4.04"
+    },
+    {
+        "date": "2015-06-05T14:00:44Z",
+        "id": 997035,
+        "issues": [
+            {
+                "id": 59031999,
+                "labels": ["feature"],
+                "number": 49,
+                "title": "Return error during plugin registration for invalid options.",
+                "url": "https://github.com/hapijs/crumb/pull/49"
+            }
+        ],
+        "number": 5,
+        "url": "https://github.com/hapijs/crumb/milestone/5",
+        "version": "4.0.3"
+    },
+    {
+        "date": "2015-02-26T14:24:19Z",
+        "id": 977944,
+        "issues": [
+            {
+                "id": 57526445,
+                "labels": ["bug"],
+                "number": 46,
+                "title": "fix internals.originParser + tests to add protocol in all origin/allowOrigins values",
+                "url": "https://github.com/hapijs/crumb/pull/46"
+            }
+        ],
+        "number": 4,
+        "url": "https://github.com/hapijs/crumb/milestone/4",
+        "version": "4.0.2"
+    },
+    {
+        "date": "2015-02-13T04:56:16Z",
+        "id": 966138,
+        "issues": [
+            {
+                "id": 50437538,
+                "labels": ["bug"],
+                "number": 34,
+                "title": "Host header cannot include URI scheme",
+                "url": "https://github.com/hapijs/crumb/issues/34"
+            }
+        ],
+        "number": 3,
+        "url": "https://github.com/hapijs/crumb/milestone/3",
+        "version": "4.0.1"
+    },
+    {
+        "date": "2015-02-04T21:14:02Z",
+        "id": 604456,
+        "issues": [
+            {
+                "id": 50439213,
+                "labels": ["bug", "breaking changes", "dependency"],
+                "number": 37,
+                "title": "hapi8. Closes #35. internals bug. Closes #33",
+                "url": "https://github.com/hapijs/crumb/pull/37"
+            },
+            {
+                "id": 50438479,
+                "labels": ["breaking changes", "dependency"],
+                "number": 35,
+                "title": "hapi 8.0 API",
+                "url": "https://github.com/hapijs/crumb/issues/35"
+            },
+            {
+                "id": 50437211,
+                "labels": ["bug"],
+                "number": 33,
+                "title": "Don't use internals for plugin state",
+                "url": "https://github.com/hapijs/crumb/issues/33"
+            }
+        ],
+        "number": 2,
+        "url": "https://github.com/hapijs/crumb/milestone/2",
+        "version": "4.0.0"
+    },
+    {
+        "date": "2014-03-21T00:42:56Z",
+        "id": 604455,
+        "issues": [
+            {
+                "id": 29870772,
+                "labels": ["feature"],
+                "number": 11,
+                "title": "Support hapi 3.0",
+                "url": "https://github.com/hapijs/crumb/issues/11"
+            }
+        ],
+        "number": 1,
+        "url": "https://github.com/hapijs/crumb/milestone/1",
+        "version": "1.1.2"
+    }
 ]

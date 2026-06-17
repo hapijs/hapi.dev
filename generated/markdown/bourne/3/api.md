@@ -30,10 +30,10 @@ Parses a given JSON-formatted text into an object where:
 - `text` - the JSON text string.
 - `reviver` - the `JSON.parse()` optional `reviver` argument.
 - `options` - optional configuration object where:
-  - `protoAction` - optional string with one of:
-    - `'error'` - throw a `SyntaxError` when a `__proto__` key is found. This is the default value.
-    - `'remove'` - deletes any `__proto__` keys from the result object.
-    - `'ignore'` - skips all validation (same as calling `JSON.parse()` directly).
+    - `protoAction` - optional string with one of:
+        - `'error'` - throw a `SyntaxError` when a `__proto__` key is found. This is the default value.
+        - `'remove'` - deletes any `__proto__` keys from the result object.
+        - `'ignore'` - skips all validation (same as calling `JSON.parse()` directly).
 
 ### `Bourne.scan(obj, [options])`
 
@@ -41,9 +41,9 @@ Scans a given object for prototype properties where:
 
 - `obj` - the object being scanned.
 - `options` - optional configuration object where:
-  - `protoAction` - optional string with one of:
-    - `'error'` - throw a `SyntaxError` when a `__proto__` key is found. This is the default value.
-    - `'remove'` - deletes any `__proto__` keys from the input `obj`.
+    - `protoAction` - optional string with one of:
+        - `'error'` - throw a `SyntaxError` when a `__proto__` key is found. This is the default value.
+        - `'remove'` - deletes any `__proto__` keys from the input `obj`.
 
 ### `Bourne.safeParse(text, [reviver])`
 

@@ -17,46 +17,46 @@ const emitter = new Podium.Podium();
 const context = { count: 0 };
 
 emitter.registerEvent({
-  name: 'event',
-  channels: ['ch1', 'ch2'],
+    name: 'event',
+    channels: ['ch1', 'ch2'],
 });
 
 const handler1 = function () {
-  ++this.count;
-  console.log(this.count);
+    ++this.count;
+    console.log(this.count);
 };
 
 const handler2 = function () {
-  this.count = this.count + 2;
-  console.log(this.count);
+    this.count = this.count + 2;
+    console.log(this.count);
 };
 
 emitter.on(
-  {
-    name: 'event',
-    channels: ['ch1'],
-  },
-  handler1,
-  context,
+    {
+        name: 'event',
+        channels: ['ch1'],
+    },
+    handler1,
+    context,
 );
 
 emitter.on(
-  {
-    name: 'event',
-    channels: ['ch2'],
-  },
-  handler2,
-  context,
+    {
+        name: 'event',
+        channels: ['ch2'],
+    },
+    handler2,
+    context,
 );
 
 emitter.emit({
-  name: 'event',
-  channel: 'ch1',
+    name: 'event',
+    channel: 'ch1',
 });
 
 emitter.emit({
-  name: 'event',
-  channel: 'ch2',
+    name: 'event',
+    channel: 'ch2',
 });
 
 emitter.hasListeners('event'); // true
@@ -93,49 +93,49 @@ const Podium = require('@hapi/podium');
 const podiumObject = new Podium.Podium();
 
 podiumObject.registerEvent([
-  {
-    name: 'event1',
-    channels: ['ch1', 'ch2', 'ch3', 'ch4'],
-  },
-  {
-    name: 'event2',
-    channels: ['ch1', 'ch2'],
-  },
+    {
+        name: 'event1',
+        channels: ['ch1', 'ch2', 'ch3', 'ch4'],
+    },
+    {
+        name: 'event2',
+        channels: ['ch1', 'ch2'],
+    },
 ]);
 const listener1 = (data) => {
-  console.log('listener1 called', data);
+    console.log('listener1 called', data);
 };
 const listener2 = (data) => {
-  console.log('listener2 called', data);
+    console.log('listener2 called', data);
 };
 
 podiumObject.on(
-  {
-    name: 'event1',
-    channels: ['ch1'],
-  },
-  listener1,
+    {
+        name: 'event1',
+        channels: ['ch1'],
+    },
+    listener1,
 );
 
 podiumObject.on(
-  {
-    name: 'event1',
-    channels: ['ch3', 'ch4'],
-  },
-  listener2,
+    {
+        name: 'event1',
+        channels: ['ch3', 'ch4'],
+    },
+    listener2,
 );
 
 podiumObject.on({ name: 'event1', channels: 'ch2' }, (data) => {
-  // autonomous function
+    // autonomous function
 
-  console.log('auto', data);
+    console.log('auto', data);
 });
 
 var arr = [0, 1, 2, 3, 4, 4, 5];
 
 podiumObject.emit({
-  name: 'event1',
-  channel: 'ch3',
+    name: 'event1',
+    channel: 'ch3',
 });
 ```
 
@@ -146,40 +146,40 @@ const Podium = require('@hapi/podium');
 const podiumObject = new Podium.Podium();
 
 podiumObject.registerEvent([
-  {
-    name: 'event1',
-    channels: ['ch1', 'ch2'],
-    clone: true,
-  },
-  {
-    name: 'event2',
-    channels: ['ch1', 'ch2'],
-  },
+    {
+        name: 'event1',
+        channels: ['ch1', 'ch2'],
+        clone: true,
+    },
+    {
+        name: 'event2',
+        channels: ['ch1', 'ch2'],
+    },
 ]);
 
 const listener1 = (data) => {
-  data[0] = 55;
-  console.log('listener1 called', data);
+    data[0] = 55;
+    console.log('listener1 called', data);
 };
 const listener2 = (data) => {
-  data[0] = 100;
-  console.log('listener2 called', data);
+    data[0] = 100;
+    console.log('listener2 called', data);
 };
 
 podiumObject.on(
-  {
-    name: 'event1',
-    channels: ['ch1'],
-  },
-  listener1,
+    {
+        name: 'event1',
+        channels: ['ch1'],
+    },
+    listener1,
 );
 
 podiumObject.on(
-  {
-    name: 'event2',
-    channels: ['ch1'],
-  },
-  listener2,
+    {
+        name: 'event2',
+        channels: ['ch1'],
+    },
+    listener2,
 );
 
 var arr = [0, 1, 2, 3, 4, 4, 5];
@@ -187,15 +187,15 @@ var arr = [0, 1, 2, 3, 4, 4, 5];
 console.log('initially: ', arr);
 
 podiumObject.emit({
-  name: 'event1',
-  channel: 'ch1',
+    name: 'event1',
+    channel: 'ch1',
 });
 
 console.log('after event1, ch1: ', arr);
 
 podiumObject.emit({
-  name: 'event2',
-  channel: 'ch1',
+    name: 'event2',
+    channel: 'ch1',
 });
 
 console.log('after event2, ch1: ', arr);
@@ -208,40 +208,40 @@ const Podium = require('@hapi/podium');
 const podiumObject = new Podium.Podium();
 
 podiumObject.registerEvent([
-  {
-    name: 'event1',
-    channels: ['ch1', 'ch2'],
-    spread: true,
-  },
-  {
-    name: 'event2',
-    channels: ['ch1', 'ch2'],
-  },
+    {
+        name: 'event1',
+        channels: ['ch1', 'ch2'],
+        spread: true,
+    },
+    {
+        name: 'event2',
+        channels: ['ch1', 'ch2'],
+    },
 ]);
 
 const listener1 = (data1, data2, data3, data4) => {
-  console.log('listener1 called', data1, data2, data3, data4);
+    console.log('listener1 called', data1, data2, data3, data4);
 };
 
 const listener2 = (data) => {
-  data[0] = 100;
-  console.log('listener2 called', data);
+    data[0] = 100;
+    console.log('listener2 called', data);
 };
 
 podiumObject.on(
-  {
-    name: 'event1',
-    channels: ['ch1'],
-  },
-  listener1,
+    {
+        name: 'event1',
+        channels: ['ch1'],
+    },
+    listener1,
 );
 
 podiumObject.on(
-  {
-    name: 'event2',
-    channels: ['ch1'],
-  },
-  listener2,
+    {
+        name: 'event2',
+        channels: ['ch1'],
+    },
+    listener2,
 );
 
 var arr = [0, 1, 2, 3, 4, 4, 5];
@@ -249,15 +249,15 @@ var arr = [0, 1, 2, 3, 4, 4, 5];
 console.log('initially: ', arr);
 
 podiumObject.emit({
-  name: 'event1',
-  channel: 'ch1',
+    name: 'event1',
+    channel: 'ch1',
 });
 
 console.log('after event1, ch1: ', arr);
 
 podiumObject.emit({
-  name: 'event2',
-  channel: 'ch1',
+    name: 'event2',
+    channel: 'ch1',
 });
 console.log('after event2, ch1: ', arr);
 ```
@@ -269,35 +269,35 @@ const Podium = require('@hapi/podium');
 const podiumObject = new Podium.Podium();
 
 podiumObject.registerEvent([
-  {
-    name: 'event1',
-    channels: ['ch1', 'ch2'],
-  },
+    {
+        name: 'event1',
+        channels: ['ch1', 'ch2'],
+    },
 ]);
 podiumObject.registerEvent([
-  {
-    name: 'event1',
-    channels: ['ch1', 'ch2'],
-    shared: true,
-  },
+    {
+        name: 'event1',
+        channels: ['ch1', 'ch2'],
+        shared: true,
+    },
 ]);
 const listener2 = (data) => {
-  console.log('listener2 called', data);
+    console.log('listener2 called', data);
 };
 
 podiumObject.on(
-  {
-    name: 'event1',
-    channels: ['ch1'],
-  },
-  listener2,
+    {
+        name: 'event1',
+        channels: ['ch1'],
+    },
+    listener2,
 );
 
 var arr = [0, 1, 2, 3, 4, 4, 5];
 
 podiumObject.emit({
-  name: 'event1',
-  channel: 'ch1',
+    name: 'event1',
+    channel: 'ch1',
 });
 ```
 
@@ -310,16 +310,16 @@ const emitter = new Podium.Podium('test');
 const updates = [];
 emitter.on('test', (data) => updates.push({ id: 1, data }));
 emitter.on({ name: 'test', filter: ['a', 'b'] }, (data) =>
-  updates.push({ id: 2, data }),
+    updates.push({ id: 2, data }),
 );
 emitter.on({ name: 'test', filter: 'b' }, (data) =>
-  updates.push({ id: 3, data }),
+    updates.push({ id: 3, data }),
 );
 emitter.on({ name: 'test', filter: ['c'] }, (data) =>
-  updates.push({ id: 4, data }),
+    updates.push({ id: 4, data }),
 );
 emitter.on({ name: 'test', filter: { tags: ['a', 'b'], all: true } }, (data) =>
-  updates.push({ id: 5, data }),
+    updates.push({ id: 5, data }),
 );
 
 emitter.emit({ name: 'test', tags: 'a' }, 1);
@@ -329,7 +329,7 @@ emitter.emit({ name: 'test', tags: ['a'] }, 4);
 emitter.emit({ name: 'test', tags: ['a', 'b'] }, 5);
 
 emitter.emit('test', 6, () => {
-  console.log(updates);
+    console.log(updates);
 });
 ```
 
@@ -342,15 +342,15 @@ const podiumObject = new Podium();
 podiumObject.registerEvent('event1');
 
 const listener1 = function (data) {
-  console.log('listener1 called', data);
+    console.log('listener1 called', data);
 };
 
 podiumObject.on(
-  {
-    name: 'event1',
-    count: 2,
-  },
-  listener1,
+    {
+        name: 'event1',
+        count: 2,
+    },
+    listener1,
 );
 
 podiumObject.emit('event1', 'emit 1');
@@ -375,25 +375,25 @@ event activities. The `events` argument can be:
 
 - an event **string**.
 - an event options object with the following optional keys (unless noted otherwise):
-  - `name` - the event name **string (required)**.
-  - `channels` - a **string** or **array of strings** specifying the event channels available. **Defaults
-    to no channel restrictions (event updates can specify a channel or not).**
-  - `clone` - if `true`, the `data` object passed to [`podium.emit()`](#podiumemitcriteria-data)
-    is cloned before it is passed to the listeners (unless an override specified by each listener).
-    **Defaults to `false` (`data` is passed as-is).**
-  - `spread` - if `true`, the `data` object passed to [`podium.emit()`](#podiumemitcriteria-data)
-    **must be an array** and the `listener` method is called with each array element passed as a separate
-    argument (unless an override specified by each listener). **This should only be used when the emitted
-    data structure is known and predictable.**
-    **Defaults to `false` (`data` is emitted as a single argument regardless of its type).**
-  - `tags` - if `true` and the `criteria` object passed to [`podium.emit()`](#podiumemitcriteria-data)
-    includes `tags`, the tags are mapped to an object (where each tag string is the key and
-    the value is `true`) which is appended to the arguments list at the end. A configuration override can be set by each
-    listener. **Defaults to `false`.**
-  - `shared` - if `true`, the same event `name` can be registered multiple times where the second
-    registration is ignored. **Note that if the registration config is changed between registrations,
-    only the first configuration is used. Defaults to `false` (a duplicate registration will throw an
-    error).** For detailed examples of event parameters [see here](#parameters)
+    - `name` - the event name **string (required)**.
+    - `channels` - a **string** or **array of strings** specifying the event channels available. **Defaults
+      to no channel restrictions (event updates can specify a channel or not).**
+    - `clone` - if `true`, the `data` object passed to [`podium.emit()`](#podiumemitcriteria-data)
+      is cloned before it is passed to the listeners (unless an override specified by each listener).
+      **Defaults to `false` (`data` is passed as-is).**
+    - `spread` - if `true`, the `data` object passed to [`podium.emit()`](#podiumemitcriteria-data)
+      **must be an array** and the `listener` method is called with each array element passed as a separate
+      argument (unless an override specified by each listener). **This should only be used when the emitted
+      data structure is known and predictable.**
+      **Defaults to `false` (`data` is emitted as a single argument regardless of its type).**
+    - `tags` - if `true` and the `criteria` object passed to [`podium.emit()`](#podiumemitcriteria-data)
+      includes `tags`, the tags are mapped to an object (where each tag string is the key and
+      the value is `true`) which is appended to the arguments list at the end. A configuration override can be set by each
+      listener. **Defaults to `false`.**
+    - `shared` - if `true`, the same event `name` can be registered multiple times where the second
+      registration is ignored. **Note that if the registration config is changed between registrations,
+      only the first configuration is used. Defaults to `false` (a duplicate registration will throw an
+      error).** For detailed examples of event parameters [see here](#parameters)
 - an array containing any of the above.
 
 The `options` argument is an object with the following optional properties:
@@ -406,11 +406,11 @@ The `options` argument is an object with the following optional properties:
 Emits an event update to all the subscribed listeners where:
 
 - `criteria` - the event update criteria which must be one of:
-  - the event name string.
-  - an object with the following optional keys (unless noted otherwise):
-    - `name` - the event name string (required).
-    - `channel` - the channel name string.
-    - `tags` - a tag string or array of tag strings.
+    - the event name string.
+    - an object with the following optional keys (unless noted otherwise):
+        - `name` - the event name string (required).
+        - `channel` - the channel name string.
+        - `tags` - a tag string or array of tag strings.
 - `data` - the value emitted to the subscribers.
 
 ## `await podium.gauge(criteria, data)`
@@ -424,35 +424,35 @@ Please note that system errors such as a `TypeError` are not handled specially, 
 Subscribe a handler to an event where:
 
 - `criteria` - the subscription criteria which must be one of the following:
-  - event name **string**.
-  - a criteria object with the following optional keys (unless noted otherwise):
-    - `name` - the event name **string (required)**.
-    - `channels` - a **string** or **array of strings** specifying the event channels to subscribe to.
-      If the event registration specified a list of allowed channels, the `channels` array must
-      match the allowed channels. If `channels` are specified, event updates without any
-      channel designation will not be included in the subscription. **Defaults to no channels
-      filter.**
-    - `clone` - if `true`, the `data` object passed to [`podium.emit()`](#podiumemitcriteria-data)
-      is cloned before it is passed to the `listener` method. **Defaults to the event
-      registration option (which defaults to `false`).**
-    - `count` - a positive **integer** indicating the number of times the `listener` can be called
-      after which the subscription is automatically removed. A count of `1` is the same as
-      calling `podium.once()`. **Defaults to no limit.**
-    - `filter` - the event tags (if present) to subscribe to which can be one of the following:
-      - a tag **string**.
-      - an **array** of tag **strings**.
-      - an object with the following:
-        - `tags` - a tag **string** or **array** of tag **strings**.
-        - `all` - if `true`, all `tags` must be present for the event update to match the
-          subscription. **Defaults to `false` (at least one matching tag).**
-    - `spread` - if `true`, and the `data` object passed to [`podium.emit()`](#podiumemitcriteria-data)
-      is an **array**, the `listener` method is called with each **array element** passed as a separate
-      argument. **This should only be used when the emitted data structure is known and predictable.
-      Defaults to the event registration option (which defaults to `false`).**
-    - `tags` - if `true` and the `criteria` object passed to [`podium.emit()`](#podiumemitcriteria-data)
-      includes `tags`, the tags are mapped to an object (where each tag string is the key and
-      the value is `true`) which is appended to the arguments list at the end. **Defaults to the event registration option
-      (which defaults to `false`).**
+    - event name **string**.
+    - a criteria object with the following optional keys (unless noted otherwise):
+        - `name` - the event name **string (required)**.
+        - `channels` - a **string** or **array of strings** specifying the event channels to subscribe to.
+          If the event registration specified a list of allowed channels, the `channels` array must
+          match the allowed channels. If `channels` are specified, event updates without any
+          channel designation will not be included in the subscription. **Defaults to no channels
+          filter.**
+        - `clone` - if `true`, the `data` object passed to [`podium.emit()`](#podiumemitcriteria-data)
+          is cloned before it is passed to the `listener` method. **Defaults to the event
+          registration option (which defaults to `false`).**
+        - `count` - a positive **integer** indicating the number of times the `listener` can be called
+          after which the subscription is automatically removed. A count of `1` is the same as
+          calling `podium.once()`. **Defaults to no limit.**
+        - `filter` - the event tags (if present) to subscribe to which can be one of the following:
+            - a tag **string**.
+            - an **array** of tag **strings**.
+            - an object with the following:
+                - `tags` - a tag **string** or **array** of tag **strings**.
+                - `all` - if `true`, all `tags` must be present for the event update to match the
+                  subscription. **Defaults to `false` (at least one matching tag).**
+        - `spread` - if `true`, and the `data` object passed to [`podium.emit()`](#podiumemitcriteria-data)
+          is an **array**, the `listener` method is called with each **array element** passed as a separate
+          argument. **This should only be used when the emitted data structure is known and predictable.
+          Defaults to the event registration option (which defaults to `false`).**
+        - `tags` - if `true` and the `criteria` object passed to [`podium.emit()`](#podiumemitcriteria-data)
+          includes `tags`, the tags are mapped to an object (where each tag string is the key and
+          the value is `true`) which is appended to the arguments list at the end. **Defaults to the event registration option
+          (which defaults to `false`).**
 - `listener` - the handler method set to receive event updates. The function signature depends
   on the `spread`, and `tags` options.
 - `context` - an **object** that binds to the listener handler.

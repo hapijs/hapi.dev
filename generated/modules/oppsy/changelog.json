@@ -1,183 +1,183 @@
 [
-  {
-    "date": "2020-01-12T04:57:36Z",
-    "id": 4574335,
-    "issues": [
-      {
-        "id": 548521400,
-        "labels": ["dependency", "breaking changes"],
-        "number": 27,
-        "title": "Only node 12",
-        "url": "https://github.com/hapijs/oppsy/issues/27"
-      }
-    ],
-    "number": 10,
-    "url": "https://github.com/hapijs/oppsy/milestone/10",
-    "version": "3.0.0"
-  },
-  {
-    "date": "2019-08-15T01:17:58Z",
-    "id": 4260038,
-    "issues": [
-      {
-        "id": 480900592,
-        "labels": ["dependency"],
-        "number": 23,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/oppsy/issues/23"
-      }
-    ],
-    "number": 9,
-    "url": "https://github.com/hapijs/oppsy/milestone/9",
-    "version": "2.1.2"
-  },
-  {
-    "date": "2019-04-25T16:17:47Z",
-    "id": 4247009,
-    "issues": [
-      {
-        "id": 437052543,
-        "labels": ["bug", "dependency"],
-        "number": 21,
-        "title": "Add missing namespace to hoek dependency",
-        "url": "https://github.com/hapijs/oppsy/pull/21"
-      }
-    ],
-    "number": 8,
-    "url": "https://github.com/hapijs/oppsy/milestone/8",
-    "version": "2.1.1"
-  },
-  {
-    "date": "2019-04-22T00:18:44Z",
-    "id": 4247008,
-    "issues": [
-      {
-        "id": 435561671,
-        "labels": ["dependency"],
-        "number": 20,
-        "title": "Change module namespace",
-        "url": "https://github.com/hapijs/oppsy/issues/20"
-      }
-    ],
-    "number": 7,
-    "url": "https://github.com/hapijs/oppsy/milestone/7",
-    "version": "2.1.0"
-  },
-  {
-    "date": "2019-04-22T00:17:12Z",
-    "id": 2961826,
-    "issues": [
-      {
-        "id": 407021602,
-        "labels": [],
-        "number": 19,
-        "title": "Update Hoek and dev dependencies",
-        "url": "https://github.com/hapijs/oppsy/pull/19"
-      }
-    ],
-    "number": 6,
-    "url": "https://github.com/hapijs/oppsy/milestone/6",
-    "version": "2.0.1"
-  },
-  {
-    "date": "2017-12-06T13:07:39Z",
-    "id": 2960081,
-    "issues": [
-      {
-        "id": 279533786,
-        "labels": [],
-        "number": 13,
-        "title": "Add cpu process information. Closes #7",
-        "url": "https://github.com/hapijs/oppsy/pull/13"
-      },
-      {
-        "id": 277272412,
-        "labels": [],
-        "number": 12,
-        "title": "Migrate to node 8 and async/await",
-        "url": "https://github.com/hapijs/oppsy/pull/12"
-      }
-    ],
-    "number": 5,
-    "url": "https://github.com/hapijs/oppsy/milestone/5",
-    "version": "2.0.0"
-  },
-  {
-    "date": "2017-12-05T17:48:51Z",
-    "id": 1933190,
-    "issues": [
-      {
-        "id": 170196654,
-        "labels": ["bug"],
+    {
+        "date": "2020-01-12T04:57:36Z",
+        "id": 4574335,
+        "issues": [
+            {
+                "id": 548521400,
+                "labels": ["dependency", "breaking changes"],
+                "number": 27,
+                "title": "Only node 12",
+                "url": "https://github.com/hapijs/oppsy/issues/27"
+            }
+        ],
+        "number": 10,
+        "url": "https://github.com/hapijs/oppsy/milestone/10",
+        "version": "3.0.0"
+    },
+    {
+        "date": "2019-08-15T01:17:58Z",
+        "id": 4260038,
+        "issues": [
+            {
+                "id": 480900592,
+                "labels": ["dependency"],
+                "number": 23,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/oppsy/issues/23"
+            }
+        ],
+        "number": 9,
+        "url": "https://github.com/hapijs/oppsy/milestone/9",
+        "version": "2.1.2"
+    },
+    {
+        "date": "2019-04-25T16:17:47Z",
+        "id": 4247009,
+        "issues": [
+            {
+                "id": 437052543,
+                "labels": ["bug", "dependency"],
+                "number": 21,
+                "title": "Add missing namespace to hoek dependency",
+                "url": "https://github.com/hapijs/oppsy/pull/21"
+            }
+        ],
+        "number": 8,
+        "url": "https://github.com/hapijs/oppsy/milestone/8",
+        "version": "2.1.1"
+    },
+    {
+        "date": "2019-04-22T00:18:44Z",
+        "id": 4247008,
+        "issues": [
+            {
+                "id": 435561671,
+                "labels": ["dependency"],
+                "number": 20,
+                "title": "Change module namespace",
+                "url": "https://github.com/hapijs/oppsy/issues/20"
+            }
+        ],
+        "number": 7,
+        "url": "https://github.com/hapijs/oppsy/milestone/7",
+        "version": "2.1.0"
+    },
+    {
+        "date": "2019-04-22T00:17:12Z",
+        "id": 2961826,
+        "issues": [
+            {
+                "id": 407021602,
+                "labels": [],
+                "number": 19,
+                "title": "Update Hoek and dev dependencies",
+                "url": "https://github.com/hapijs/oppsy/pull/19"
+            }
+        ],
         "number": 6,
-        "title": "Fix httpAgent reference assignment",
-        "url": "https://github.com/hapijs/oppsy/pull/6"
-      }
-    ],
-    "number": 4,
-    "url": "https://github.com/hapijs/oppsy/milestone/4",
-    "version": "1.0.3"
-  },
-  {
-    "date": "2016-08-09T18:07:47Z",
-    "id": 1418315,
-    "issues": [
-      {
-        "id": 155818388,
-        "labels": ["dependency", "test"],
+        "url": "https://github.com/hapijs/oppsy/milestone/6",
+        "version": "2.0.1"
+    },
+    {
+        "date": "2017-12-06T13:07:39Z",
+        "id": 2960081,
+        "issues": [
+            {
+                "id": 279533786,
+                "labels": [],
+                "number": 13,
+                "title": "Add cpu process information. Closes #7",
+                "url": "https://github.com/hapijs/oppsy/pull/13"
+            },
+            {
+                "id": 277272412,
+                "labels": [],
+                "number": 12,
+                "title": "Migrate to node 8 and async/await",
+                "url": "https://github.com/hapijs/oppsy/pull/12"
+            }
+        ],
         "number": 5,
-        "title": "Test on node v6, update dependencies",
-        "url": "https://github.com/hapijs/oppsy/pull/5"
-      }
-    ],
-    "number": 3,
-    "url": "https://github.com/hapijs/oppsy/milestone/3",
-    "version": "1.0.2"
-  },
-  {
-    "date": "2015-11-18T16:51:02Z",
-    "id": 1417119,
-    "issues": [
-      {
-        "id": 117626367,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/oppsy/milestone/5",
+        "version": "2.0.0"
+    },
+    {
+        "date": "2017-12-05T17:48:51Z",
+        "id": 1933190,
+        "issues": [
+            {
+                "id": 170196654,
+                "labels": ["bug"],
+                "number": 6,
+                "title": "Fix httpAgent reference assignment",
+                "url": "https://github.com/hapijs/oppsy/pull/6"
+            }
+        ],
         "number": 4,
-        "title": "Fixes #2.",
-        "url": "https://github.com/hapijs/oppsy/pull/4"
-      },
-      {
-        "id": 117586217,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/oppsy/milestone/4",
+        "version": "1.0.3"
+    },
+    {
+        "date": "2016-08-09T18:07:47Z",
+        "id": 1418315,
+        "issues": [
+            {
+                "id": 155818388,
+                "labels": ["dependency", "test"],
+                "number": 5,
+                "title": "Test on node v6, update dependencies",
+                "url": "https://github.com/hapijs/oppsy/pull/5"
+            }
+        ],
         "number": 3,
-        "title": "Bind networkMonitor to _tasks.",
-        "url": "https://github.com/hapijs/oppsy/pull/3"
-      },
-      {
-        "id": 117580528,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/oppsy/milestone/3",
+        "version": "1.0.2"
+    },
+    {
+        "date": "2015-11-18T16:51:02Z",
+        "id": 1417119,
+        "issues": [
+            {
+                "id": 117626367,
+                "labels": ["bug"],
+                "number": 4,
+                "title": "Fixes #2.",
+                "url": "https://github.com/hapijs/oppsy/pull/4"
+            },
+            {
+                "id": 117586217,
+                "labels": ["bug"],
+                "number": 3,
+                "title": "Bind networkMonitor to _tasks.",
+                "url": "https://github.com/hapijs/oppsy/pull/3"
+            },
+            {
+                "id": 117580528,
+                "labels": ["bug"],
+                "number": 2,
+                "title": "TypeError: Cannot read property 'connections' of undefined",
+                "url": "https://github.com/hapijs/oppsy/issues/2"
+            }
+        ],
         "number": 2,
-        "title": "TypeError: Cannot read property 'connections' of undefined",
-        "url": "https://github.com/hapijs/oppsy/issues/2"
-      }
-    ],
-    "number": 2,
-    "url": "https://github.com/hapijs/oppsy/milestone/2",
-    "version": "1.0.1"
-  },
-  {
-    "date": "2015-11-18T02:04:13Z",
-    "id": 1416526,
-    "issues": [
-      {
-        "id": 117430278,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/oppsy/milestone/2",
+        "version": "1.0.1"
+    },
+    {
+        "date": "2015-11-18T02:04:13Z",
+        "id": 1416526,
+        "issues": [
+            {
+                "id": 117430278,
+                "labels": ["feature"],
+                "number": 1,
+                "title": "Implementation",
+                "url": "https://github.com/hapijs/oppsy/pull/1"
+            }
+        ],
         "number": 1,
-        "title": "Implementation",
-        "url": "https://github.com/hapijs/oppsy/pull/1"
-      }
-    ],
-    "number": 1,
-    "url": "https://github.com/hapijs/oppsy/milestone/1",
-    "version": "1.0.0"
-  }
+        "url": "https://github.com/hapijs/oppsy/milestone/1",
+        "version": "1.0.0"
+    }
 ]

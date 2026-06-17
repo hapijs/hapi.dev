@@ -1,22 +1,22 @@
 {
-  "api": true,
-  "forks": 13,
-  "isPlugin": false,
-  "latestVersion": "7.x.x",
-  "link": "https://github.com/hapijs/mimos",
-  "name": "mimos",
-  "package": "@hapi/mimos",
-  "slogan": "Mime database interface.",
-  "sloganHtml": "Mime database interface.",
-  "stars": 20,
-  "updated": "2024-10-23T21:34:46Z",
-  "versions": [
-    {
-      "branch": "v7.0.1",
-      "license": "BSD",
-      "name": "7.0.1",
-      "node": ">= 16"
-    }
-  ],
-  "versionsArray": ["7.0.1"]
+    "api": true,
+    "forks": 13,
+    "isPlugin": false,
+    "latestVersion": "7.x.x",
+    "link": "https://github.com/hapijs/mimos",
+    "name": "mimos",
+    "package": "@hapi/mimos",
+    "slogan": "Mime database interface.",
+    "sloganHtml": "Mime database interface.",
+    "stars": 20,
+    "updated": "2024-10-23T21:34:46Z",
+    "versions": [
+        {
+            "branch": "v7.0.1",
+            "license": "BSD",
+            "name": "7.0.1",
+            "node": ">= 16"
+        }
+    ],
+    "versionsArray": ["7.0.1"]
 }

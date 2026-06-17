@@ -1,328 +1,328 @@
 [
-  {
-    "date": "2023-02-11T19:54:09Z",
-    "id": 8230334,
-    "issues": [
-      {
-        "id": 1551799090,
-        "labels": [],
-        "number": 91,
-        "title": "chore: bump hoek",
-        "url": "https://github.com/hapijs/basic/pull/91"
-      }
-    ],
-    "number": 19,
-    "url": "https://github.com/hapijs/basic/milestone/19",
-    "version": "7.0.1"
-  },
-  {
-    "date": "2022-07-23T19:16:19Z",
-    "id": 4993382,
-    "issues": [
-      {
-        "id": 1307296245,
-        "labels": ["feature", "breaking changes", "test", "dependency"],
-        "number": 90,
-        "title": "Support node v18 and hapi v21, drop node v12 and hapi v18/19",
-        "url": "https://github.com/hapijs/basic/pull/90"
-      },
-      {
-        "id": 709584413,
-        "labels": [],
-        "number": 83,
-        "title": "upgrade lab to v24",
-        "url": "https://github.com/hapijs/basic/pull/83"
-      }
-    ],
-    "number": 18,
-    "url": "https://github.com/hapijs/basic/milestone/18",
-    "version": "7.0.0"
-  },
-  {
-    "date": "2020-01-10T04:37:00Z",
-    "id": 4993381,
-    "issues": [
-      {
-        "id": 547860039,
-        "labels": ["breaking changes"],
-        "number": 78,
-        "title": "Change plugin name to @hapi/basic",
-        "url": "https://github.com/hapijs/basic/issues/78"
-      },
-      {
-        "id": 547859912,
-        "labels": ["breaking changes"],
-        "number": 77,
-        "title": "Drop hapi 17",
-        "url": "https://github.com/hapijs/basic/issues/77"
-      },
-      {
-        "id": 547859795,
-        "labels": ["breaking changes", "dependency"],
-        "number": 76,
-        "title": "Only support node 12",
-        "url": "https://github.com/hapijs/basic/issues/76"
-      }
-    ],
-    "number": 17,
-    "url": "https://github.com/hapijs/basic/milestone/17",
-    "version": "6.0.0"
-  },
-  {
-    "date": "2019-08-13T21:57:19Z",
-    "id": 4240218,
-    "issues": [
-      {
-        "id": 480362435,
-        "labels": ["dependency"],
-        "number": 70,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/basic/issues/70"
-      }
-    ],
-    "number": 15,
-    "url": "https://github.com/hapijs/basic/milestone/15",
-    "version": "5.1.1"
-  },
-  {
-    "date": "2019-04-18T05:07:08Z",
-    "id": 4240217,
-    "issues": [
-      {
-        "id": 434586443,
-        "labels": ["dependency"],
-        "number": 69,
-        "title": "Change module namespace",
-        "url": "https://github.com/hapijs/basic/issues/69"
-      }
-    ],
-    "number": 14,
-    "url": "https://github.com/hapijs/basic/milestone/14",
-    "version": "5.1.0"
-  },
-  {
-    "date": "2019-04-18T04:36:08Z",
-    "id": 2937122,
-    "issues": [
-      {
-        "id": 273125034,
-        "labels": ["breaking changes", "dependency"],
-        "number": 61,
-        "title": "Update for hapi 17.x.x",
-        "url": "https://github.com/hapijs/basic/pull/61"
-      }
-    ],
-    "number": 13,
-    "url": "https://github.com/hapijs/basic/milestone/13",
-    "version": "5.0.0"
-  },
-  {
-    "date": "2019-04-18T04:36:07Z",
-    "id": 1777259,
-    "issues": [
-      {
-        "id": 155620437,
-        "labels": ["test", "dependency"],
-        "number": 51,
-        "title": "Test on node v6, update dependencies",
-        "url": "https://github.com/hapijs/basic/pull/51"
-      },
-      {
-        "id": 143257195,
-        "labels": ["documentation"],
-        "number": 48,
-        "title": "Documentation update",
-        "url": "https://github.com/hapijs/basic/pull/48"
-      }
-    ],
-    "number": 12,
-    "url": "https://github.com/hapijs/basic/milestone/12",
-    "version": "4.2.0"
-  },
-  {
-    "date": "2015-11-17T07:08:32Z",
-    "id": 1412104,
-    "issues": [
-      {
-        "id": 116979381,
-        "labels": ["feature"],
-        "number": 46,
-        "title": "add option to pass attributes to unauthorized replies",
-        "url": "https://github.com/hapijs/basic/pull/46"
-      }
-    ],
-    "number": 11,
-    "url": "https://github.com/hapijs/basic/milestone/11",
-    "version": "4.1.0"
-  },
-  {
-    "date": "2015-11-04T12:32:06Z",
-    "id": 1384330,
-    "issues": [
-      {
-        "id": 114994225,
-        "labels": ["breaking changes"],
-        "number": 44,
-        "title": "Node 4+, Hapi 10+, ES6 changes. Closes #42",
-        "url": "https://github.com/hapijs/basic/pull/44"
-      },
-      {
-        "id": 114155172,
-        "labels": ["breaking changes"],
-        "number": 42,
-        "title": "Node >= 4 / es2015 updates",
-        "url": "https://github.com/hapijs/basic/issues/42"
-      },
-      {
-        "id": 114154353,
-        "labels": ["dependency"],
-        "number": 41,
-        "title": "Update devDependencies. Closes #40",
-        "url": "https://github.com/hapijs/basic/pull/41"
-      }
-    ],
-    "number": 10,
-    "url": "https://github.com/hapijs/basic/milestone/10",
-    "version": "4.0.0"
-  },
-  {
-    "date": "2015-07-04T22:04:08Z",
-    "id": 899776,
-    "issues": [
-      {
-        "id": 90340848,
-        "labels": ["feature", "breaking changes"],
-        "number": 34,
-        "title": "Added request object as the first argument in validateFunc",
-        "url": "https://github.com/hapijs/basic/pull/34"
-      }
-    ],
-    "number": 8,
-    "url": "https://github.com/hapijs/basic/milestone/8",
-    "version": "3.0.0"
-  },
-  {
-    "date": "2014-12-10T22:55:16Z",
-    "id": 862958,
-    "issues": [
-      {
-        "id": 50122090,
-        "labels": ["breaking changes", "dependency"],
-        "number": 22,
-        "title": "hapi 8.0 API",
-        "url": "https://github.com/hapijs/basic/issues/22"
-      }
-    ],
-    "number": 7,
-    "url": "https://github.com/hapijs/basic/milestone/7",
-    "version": "2.0.0"
-  },
-  {
-    "date": "2014-11-12T07:34:45Z",
-    "id": 741782,
-    "issues": [
-      {
-        "id": 48481285,
-        "labels": ["dependency"],
-        "number": 21,
-        "title": "Update dev deps. Closes #20",
-        "url": "https://github.com/hapijs/basic/pull/21"
-      },
-      {
-        "id": 48481258,
-        "labels": ["dependency"],
-        "number": 20,
-        "title": "Test deps",
-        "url": "https://github.com/hapijs/basic/issues/20"
-      }
-    ],
-    "number": 6,
-    "url": "https://github.com/hapijs/basic/milestone/6",
-    "version": "1.1.2"
-  },
-  {
-    "date": "2014-08-04T08:44:26Z",
-    "id": 689702,
-    "issues": [
-      {
-        "id": 39254037,
-        "labels": ["bug"],
+    {
+        "date": "2023-02-11T19:54:09Z",
+        "id": 8230334,
+        "issues": [
+            {
+                "id": 1551799090,
+                "labels": [],
+                "number": 91,
+                "title": "chore: bump hoek",
+                "url": "https://github.com/hapijs/basic/pull/91"
+            }
+        ],
+        "number": 19,
+        "url": "https://github.com/hapijs/basic/milestone/19",
+        "version": "7.0.1"
+    },
+    {
+        "date": "2022-07-23T19:16:19Z",
+        "id": 4993382,
+        "issues": [
+            {
+                "id": 1307296245,
+                "labels": ["feature", "breaking changes", "test", "dependency"],
+                "number": 90,
+                "title": "Support node v18 and hapi v21, drop node v12 and hapi v18/19",
+                "url": "https://github.com/hapijs/basic/pull/90"
+            },
+            {
+                "id": 709584413,
+                "labels": [],
+                "number": 83,
+                "title": "upgrade lab to v24",
+                "url": "https://github.com/hapijs/basic/pull/83"
+            }
+        ],
+        "number": 18,
+        "url": "https://github.com/hapijs/basic/milestone/18",
+        "version": "7.0.0"
+    },
+    {
+        "date": "2020-01-10T04:37:00Z",
+        "id": 4993381,
+        "issues": [
+            {
+                "id": 547860039,
+                "labels": ["breaking changes"],
+                "number": 78,
+                "title": "Change plugin name to @hapi/basic",
+                "url": "https://github.com/hapijs/basic/issues/78"
+            },
+            {
+                "id": 547859912,
+                "labels": ["breaking changes"],
+                "number": 77,
+                "title": "Drop hapi 17",
+                "url": "https://github.com/hapijs/basic/issues/77"
+            },
+            {
+                "id": 547859795,
+                "labels": ["breaking changes", "dependency"],
+                "number": 76,
+                "title": "Only support node 12",
+                "url": "https://github.com/hapijs/basic/issues/76"
+            }
+        ],
+        "number": 17,
+        "url": "https://github.com/hapijs/basic/milestone/17",
+        "version": "6.0.0"
+    },
+    {
+        "date": "2019-08-13T21:57:19Z",
+        "id": 4240218,
+        "issues": [
+            {
+                "id": 480362435,
+                "labels": ["dependency"],
+                "number": 70,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/basic/issues/70"
+            }
+        ],
+        "number": 15,
+        "url": "https://github.com/hapijs/basic/milestone/15",
+        "version": "5.1.1"
+    },
+    {
+        "date": "2019-04-18T05:07:08Z",
+        "id": 4240217,
+        "issues": [
+            {
+                "id": 434586443,
+                "labels": ["dependency"],
+                "number": 69,
+                "title": "Change module namespace",
+                "url": "https://github.com/hapijs/basic/issues/69"
+            }
+        ],
+        "number": 14,
+        "url": "https://github.com/hapijs/basic/milestone/14",
+        "version": "5.1.0"
+    },
+    {
+        "date": "2019-04-18T04:36:08Z",
+        "id": 2937122,
+        "issues": [
+            {
+                "id": 273125034,
+                "labels": ["breaking changes", "dependency"],
+                "number": 61,
+                "title": "Update for hapi 17.x.x",
+                "url": "https://github.com/hapijs/basic/pull/61"
+            }
+        ],
+        "number": 13,
+        "url": "https://github.com/hapijs/basic/milestone/13",
+        "version": "5.0.0"
+    },
+    {
+        "date": "2019-04-18T04:36:07Z",
+        "id": 1777259,
+        "issues": [
+            {
+                "id": 155620437,
+                "labels": ["test", "dependency"],
+                "number": 51,
+                "title": "Test on node v6, update dependencies",
+                "url": "https://github.com/hapijs/basic/pull/51"
+            },
+            {
+                "id": 143257195,
+                "labels": ["documentation"],
+                "number": 48,
+                "title": "Documentation update",
+                "url": "https://github.com/hapijs/basic/pull/48"
+            }
+        ],
+        "number": 12,
+        "url": "https://github.com/hapijs/basic/milestone/12",
+        "version": "4.2.0"
+    },
+    {
+        "date": "2015-11-17T07:08:32Z",
+        "id": 1412104,
+        "issues": [
+            {
+                "id": 116979381,
+                "labels": ["feature"],
+                "number": 46,
+                "title": "add option to pass attributes to unauthorized replies",
+                "url": "https://github.com/hapijs/basic/pull/46"
+            }
+        ],
         "number": 11,
-        "title": "Authentication fails when password contains one or more colons",
-        "url": "https://github.com/hapijs/basic/issues/11"
-      },
-      {
-        "id": 39206773,
-        "labels": ["non issue"],
+        "url": "https://github.com/hapijs/basic/milestone/11",
+        "version": "4.1.0"
+    },
+    {
+        "date": "2015-11-04T12:32:06Z",
+        "id": 1384330,
+        "issues": [
+            {
+                "id": 114994225,
+                "labels": ["breaking changes"],
+                "number": 44,
+                "title": "Node 4+, Hapi 10+, ES6 changes. Closes #42",
+                "url": "https://github.com/hapijs/basic/pull/44"
+            },
+            {
+                "id": 114155172,
+                "labels": ["breaking changes"],
+                "number": 42,
+                "title": "Node >= 4 / es2015 updates",
+                "url": "https://github.com/hapijs/basic/issues/42"
+            },
+            {
+                "id": 114154353,
+                "labels": ["dependency"],
+                "number": 41,
+                "title": "Update devDependencies. Closes #40",
+                "url": "https://github.com/hapijs/basic/pull/41"
+            }
+        ],
         "number": 10,
-        "title": "issue passing errors to validateFunc",
-        "url": "https://github.com/hapijs/basic/pull/10"
-      }
-    ],
-    "number": 5,
-    "url": "https://github.com/hapijs/basic/milestone/5",
-    "version": "1.1.1"
-  },
-  {
-    "date": "2014-06-12T20:21:41Z",
-    "id": 689701,
-    "issues": [
-      {
-        "id": 35528158,
-        "labels": [],
+        "url": "https://github.com/hapijs/basic/milestone/10",
+        "version": "4.0.0"
+    },
+    {
+        "date": "2015-07-04T22:04:08Z",
+        "id": 899776,
+        "issues": [
+            {
+                "id": 90340848,
+                "labels": ["feature", "breaking changes"],
+                "number": 34,
+                "title": "Added request object as the first argument in validateFunc",
+                "url": "https://github.com/hapijs/basic/pull/34"
+            }
+        ],
+        "number": 8,
+        "url": "https://github.com/hapijs/basic/milestone/8",
+        "version": "3.0.0"
+    },
+    {
+        "date": "2014-12-10T22:55:16Z",
+        "id": 862958,
+        "issues": [
+            {
+                "id": 50122090,
+                "labels": ["breaking changes", "dependency"],
+                "number": 22,
+                "title": "hapi 8.0 API",
+                "url": "https://github.com/hapijs/basic/issues/22"
+            }
+        ],
         "number": 7,
-        "title": "Updated to Hapi 6.0",
-        "url": "https://github.com/hapijs/basic/pull/7"
-      },
-      {
-        "id": 34346379,
-        "labels": [],
+        "url": "https://github.com/hapijs/basic/milestone/7",
+        "version": "2.0.0"
+    },
+    {
+        "date": "2014-11-12T07:34:45Z",
+        "id": 741782,
+        "issues": [
+            {
+                "id": 48481285,
+                "labels": ["dependency"],
+                "number": 21,
+                "title": "Update dev deps. Closes #20",
+                "url": "https://github.com/hapijs/basic/pull/21"
+            },
+            {
+                "id": 48481258,
+                "labels": ["dependency"],
+                "number": 20,
+                "title": "Test deps",
+                "url": "https://github.com/hapijs/basic/issues/20"
+            }
+        ],
         "number": 6,
-        "title": "Prepare for hapi v6.0",
-        "url": "https://github.com/hapijs/basic/issues/6"
-      }
-    ],
-    "number": 4,
-    "url": "https://github.com/hapijs/basic/milestone/4",
-    "version": "1.1.0"
-  },
-  {
-    "date": "2014-05-20T22:33:26Z",
-    "id": 605458,
-    "issues": [
-      {
-        "id": 33936138,
-        "labels": ["test"],
+        "url": "https://github.com/hapijs/basic/milestone/6",
+        "version": "1.1.2"
+    },
+    {
+        "date": "2014-08-04T08:44:26Z",
+        "id": 689702,
+        "issues": [
+            {
+                "id": 39254037,
+                "labels": ["bug"],
+                "number": 11,
+                "title": "Authentication fails when password contains one or more colons",
+                "url": "https://github.com/hapijs/basic/issues/11"
+            },
+            {
+                "id": 39206773,
+                "labels": ["non issue"],
+                "number": 10,
+                "title": "issue passing errors to validateFunc",
+                "url": "https://github.com/hapijs/basic/pull/10"
+            }
+        ],
         "number": 5,
-        "title": "Bring coverage back to 100%",
-        "url": "https://github.com/hapijs/basic/issues/5"
-      }
-    ],
-    "number": 2,
-    "url": "https://github.com/hapijs/basic/milestone/2",
-    "version": "1.0.2"
-  },
-  {
-    "date": "2014-03-21T20:19:05Z",
-    "id": 605457,
-    "issues": [
-      {
-        "id": 29418207,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/basic/milestone/5",
+        "version": "1.1.1"
+    },
+    {
+        "date": "2014-06-12T20:21:41Z",
+        "id": 689701,
+        "issues": [
+            {
+                "id": 35528158,
+                "labels": [],
+                "number": 7,
+                "title": "Updated to Hapi 6.0",
+                "url": "https://github.com/hapijs/basic/pull/7"
+            },
+            {
+                "id": 34346379,
+                "labels": [],
+                "number": 6,
+                "title": "Prepare for hapi v6.0",
+                "url": "https://github.com/hapijs/basic/issues/6"
+            }
+        ],
+        "number": 4,
+        "url": "https://github.com/hapijs/basic/milestone/4",
+        "version": "1.1.0"
+    },
+    {
+        "date": "2014-05-20T22:33:26Z",
+        "id": 605458,
+        "issues": [
+            {
+                "id": 33936138,
+                "labels": ["test"],
+                "number": 5,
+                "title": "Bring coverage back to 100%",
+                "url": "https://github.com/hapijs/basic/issues/5"
+            }
+        ],
         "number": 2,
-        "title": "update peerDependency",
-        "url": "https://github.com/hapijs/basic/pull/2"
-      },
-      {
-        "id": 29326562,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/basic/milestone/2",
+        "version": "1.0.2"
+    },
+    {
+        "date": "2014-03-21T20:19:05Z",
+        "id": 605457,
+        "issues": [
+            {
+                "id": 29418207,
+                "labels": ["feature"],
+                "number": 2,
+                "title": "update peerDependency",
+                "url": "https://github.com/hapijs/basic/pull/2"
+            },
+            {
+                "id": 29326562,
+                "labels": ["feature"],
+                "number": 1,
+                "title": "change hapi peer dependency to 3.0.0",
+                "url": "https://github.com/hapijs/basic/issues/1"
+            }
+        ],
         "number": 1,
-        "title": "change hapi peer dependency to 3.0.0",
-        "url": "https://github.com/hapijs/basic/issues/1"
-      }
-    ],
-    "number": 1,
-    "url": "https://github.com/hapijs/basic/milestone/1",
-    "version": "1.0.1"
-  }
+        "url": "https://github.com/hapijs/basic/milestone/1",
+        "version": "1.0.1"
+    }
 ]

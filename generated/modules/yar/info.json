@@ -1,22 +1,22 @@
 {
-  "api": true,
-  "forks": 58,
-  "isPlugin": true,
-  "latestVersion": "11.x.x",
-  "link": "https://github.com/hapijs/yar",
-  "name": "yar",
-  "package": "@hapi/yar",
-  "slogan": "A hapi session manager.",
-  "sloganHtml": "A hapi session manager.",
-  "stars": 133,
-  "updated": "2025-03-22T11:36:48Z",
-  "versions": [
-    {
-      "branch": "v11.0.3",
-      "license": "BSD",
-      "name": "11.0.3",
-      "node": ">= 16"
-    }
-  ],
-  "versionsArray": ["11.0.3"]
+    "api": true,
+    "forks": 58,
+    "isPlugin": true,
+    "latestVersion": "11.x.x",
+    "link": "https://github.com/hapijs/yar",
+    "name": "yar",
+    "package": "@hapi/yar",
+    "slogan": "A hapi session manager.",
+    "sloganHtml": "A hapi session manager.",
+    "stars": 133,
+    "updated": "2025-03-22T11:36:48Z",
+    "versions": [
+        {
+            "branch": "v11.0.3",
+            "license": "BSD",
+            "name": "11.0.3",
+            "node": ">= 16"
+        }
+    ],
+    "versionsArray": ["11.0.3"]
 }

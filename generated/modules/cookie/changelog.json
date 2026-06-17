@@ -1,886 +1,886 @@
 [
-  {
-    "date": "2023-02-11T19:30:47Z",
-    "id": 8550561,
-    "issues": [
-      {
-        "id": 1551796104,
-        "labels": [],
-        "number": 248,
-        "title": "chore: bump hoek",
-        "url": "https://github.com/hapijs/cookie/pull/248"
-      }
-    ],
-    "number": 37,
-    "url": "https://github.com/hapijs/cookie/milestone/37",
-    "version": "12.0.1"
-  },
-  {
-    "date": "2022-10-17T19:51:45Z",
-    "id": 7813492,
-    "issues": [
-      {
-        "id": 1307309292,
-        "labels": ["feature", "breaking changes", "test", "dependency"],
-        "number": 246,
-        "title": "Support for hapi v21, node v18, ESM tests",
-        "url": "https://github.com/hapijs/cookie/pull/246"
-      },
-      {
-        "id": 1184202864,
-        "labels": ["breaking changes"],
-        "number": 244,
-        "title": "Drop support for node v12 and hapi v18",
-        "url": "https://github.com/hapijs/cookie/pull/244"
-      },
-      {
-        "id": 806809697,
-        "labels": ["breaking changes"],
-        "number": 236,
-        "title": "Rename plugin options to be consistent across the hapi ecosystem",
-        "url": "https://github.com/hapijs/cookie/pull/236"
-      },
-      {
-        "id": 806803389,
-        "labels": ["breaking changes"],
-        "number": 235,
-        "title": "Remove old repository name",
-        "url": "https://github.com/hapijs/cookie/pull/235"
-      }
-    ],
-    "number": 36,
-    "url": "https://github.com/hapijs/cookie/milestone/36",
-    "version": "12.0.0"
-  },
-  {
-    "date": "2020-09-26T16:59:56Z",
-    "id": 5200162,
-    "issues": [
-      {
-        "id": 684044796,
-        "labels": [],
-        "number": 232,
-        "title": "update to hapi v20",
-        "url": "https://github.com/hapijs/cookie/pull/232"
-      },
-      {
-        "id": 684029866,
-        "labels": [],
-        "number": 231,
-        "title": "migrate to new travis format",
-        "url": "https://github.com/hapijs/cookie/pull/231"
-      },
-      {
-        "id": 672129940,
-        "labels": [],
-        "number": 229,
-        "title": "change joi to validate and update lab",
-        "url": "https://github.com/hapijs/cookie/pull/229"
-      }
-    ],
-    "number": 34,
-    "url": "https://github.com/hapijs/cookie/milestone/34",
-    "version": "11.0.2"
-  },
-  {
-    "date": "2020-03-13T19:26:59Z",
-    "id": 4993609,
-    "issues": [
-      {
-        "id": 550282146,
-        "labels": ["bug"],
-        "number": 228,
-        "title": "Non system error in validateFunc will be swallowed",
-        "url": "https://github.com/hapijs/cookie/issues/228"
-      }
-    ],
-    "number": 33,
-    "url": "https://github.com/hapijs/cookie/milestone/33",
-    "version": "11.0.1"
-  },
-  {
-    "date": "2020-01-10T07:21:58Z",
-    "id": 4654915,
-    "issues": [
-      {
-        "id": 547909554,
-        "labels": ["breaking changes", "dependency"],
-        "number": 227,
-        "title": "Only node 12",
-        "url": "https://github.com/hapijs/cookie/issues/227"
-      }
-    ],
-    "number": 32,
-    "url": "https://github.com/hapijs/cookie/milestone/32",
-    "version": "11.0.0"
-  },
-  {
-    "date": "2019-09-12T17:45:35Z",
-    "id": 4574291,
-    "issues": [
-      {
-        "id": 492937397,
-        "labels": ["dependency"],
-        "number": 222,
-        "title": "Update joi",
-        "url": "https://github.com/hapijs/cookie/issues/222"
-      }
-    ],
-    "number": 31,
-    "url": "https://github.com/hapijs/cookie/milestone/31",
-    "version": "10.1.2"
-  },
-  {
-    "date": "2019-08-14T22:39:58Z",
-    "id": 4244813,
-    "issues": [
-      {
-        "id": 480891027,
-        "labels": ["dependency"],
-        "number": 221,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/cookie/issues/221"
-      }
-    ],
-    "number": 30,
-    "url": "https://github.com/hapijs/cookie/milestone/30",
-    "version": "10.1.1"
-  },
-  {
-    "date": "2019-04-19T21:19:30Z",
-    "id": 4144206,
-    "issues": [
-      {
-        "id": 435307605,
-        "labels": ["dependency"],
-        "number": 213,
-        "title": "Change module namespace",
-        "url": "https://github.com/hapijs/cookie/issues/213"
-      }
-    ],
-    "number": 29,
-    "url": "https://github.com/hapijs/cookie/milestone/29",
-    "version": "10.1.0"
-  },
-  {
-    "date": "2019-04-19T21:10:37Z",
-    "id": 3844723,
-    "issues": [
-      {
-        "id": 421636792,
-        "labels": ["breaking changes"],
-        "number": 210,
-        "title": "Move all cookie settings to `cookie`",
-        "url": "https://github.com/hapijs/cookie/issues/210"
-      },
-      {
-        "id": 421614167,
-        "labels": ["breaking changes", "release notes"],
-        "number": 209,
-        "title": "10.0.0 Release notes",
-        "url": "https://github.com/hapijs/cookie/issues/209"
-      },
-      {
-        "id": 421612582,
-        "labels": ["bug", "breaking changes"],
-        "number": 208,
-        "title": "Remove ignoreIfDecorated",
-        "url": "https://github.com/hapijs/cookie/issues/208"
-      },
-      {
-        "id": 418808258,
-        "labels": ["bug", "breaking changes"],
-        "number": 207,
-        "title": "No override of default cookie settings",
-        "url": "https://github.com/hapijs/cookie/issues/207"
-      },
-      {
-        "id": 411863030,
-        "labels": ["breaking changes"],
-        "number": 205,
-        "title": "Upgrade to hapi 18",
-        "url": "https://github.com/hapijs/cookie/pull/205"
-      },
-      {
-        "id": 401284634,
-        "labels": ["breaking changes", "dependency"],
-        "number": 204,
-        "title": "Update for hapi 18",
-        "url": "https://github.com/hapijs/cookie/issues/204"
-      },
-      {
-        "id": 312299124,
-        "labels": ["feature"],
-        "number": 193,
-        "title": "Support password rotation",
-        "url": "https://github.com/hapijs/cookie/issues/193"
-      }
-    ],
-    "number": 28,
-    "url": "https://github.com/hapijs/cookie/milestone/28",
-    "version": "10.0.0"
-  },
-  {
-    "date": "2018-11-24T05:12:17Z",
-    "id": 3379400,
-    "issues": [
-      {
-        "id": 329532102,
-        "labels": ["feature"],
-        "number": 196,
-        "title": "referenced the raw request when setting next",
-        "url": "https://github.com/hapijs/cookie/pull/196"
-      }
-    ],
-    "number": 27,
-    "url": "https://github.com/hapijs/cookie/milestone/27",
-    "version": "9.1.0"
-  },
-  {
-    "date": "2018-05-27T23:39:04Z",
-    "id": 3050977,
-    "issues": [
-      {
-        "id": 287335768,
-        "labels": ["feature", "breaking changes"],
-        "number": 186,
-        "title": "Respect auth mode for redirects",
-        "url": "https://github.com/hapijs/cookie/pull/186"
-      }
-    ],
-    "number": 24,
-    "url": "https://github.com/hapijs/cookie/milestone/24",
-    "version": "9.0.0"
-  },
-  {
-    "date": "2018-02-08T21:14:21Z",
-    "id": 2969691,
-    "issues": [
-      {
-        "id": 276868074,
-        "labels": ["documentation"],
-        "number": 176,
-        "title": "Use options key for route configuration",
-        "url": "https://github.com/hapijs/cookie/pull/176"
-      },
-      {
-        "id": 245854170,
-        "labels": ["feature"],
-        "number": 164,
-        "title": "Issue 163",
-        "url": "https://github.com/hapijs/cookie/pull/164"
-      }
-    ],
-    "number": 23,
-    "url": "https://github.com/hapijs/cookie/milestone/23",
-    "version": "8.1.0"
-  },
-  {
-    "date": "2018-02-08T09:43:49Z",
-    "id": 3051237,
-    "issues": [
-      {
-        "id": 282892396,
-        "labels": ["bug"],
-        "number": 183,
-        "title": "Fix redirectTo function w/ blank to behave like blank redirectTo (fix)",
-        "url": "https://github.com/hapijs/cookie/pull/183"
-      },
-      {
-        "id": 266975391,
-        "labels": ["documentation"],
-        "number": 170,
-        "title": "Drop session from cache in examples",
-        "url": "https://github.com/hapijs/cookie/pull/170"
-      }
-    ],
-    "number": 25,
-    "url": "https://github.com/hapijs/cookie/milestone/25",
-    "version": "8.0.1"
-  },
-  {
-    "date": "2017-12-10T20:05:55Z",
-    "id": 2417184,
-    "issues": [
-      {
-        "id": 280739407,
-        "labels": ["documentation"],
-        "number": 179,
-        "title": "Update lead maintainer",
-        "url": "https://github.com/hapijs/cookie/issues/179"
-      },
-      {
-        "id": 271814649,
-        "labels": ["breaking changes"],
-        "number": 174,
-        "title": "Upgraded module to hapi v17",
-        "url": "https://github.com/hapijs/cookie/pull/174"
-      }
-    ],
-    "number": 22,
-    "url": "https://github.com/hapijs/cookie/milestone/22",
-    "version": "8.0.0"
-  },
-  {
-    "date": "2018-05-27T23:38:05Z",
-    "id": 3101130,
-    "issues": [
-      {
-        "id": 193862309,
-        "labels": ["feature"],
-        "number": 151,
-        "title": "referenced the raw request when setting next",
-        "url": "https://github.com/hapijs/cookie/pull/151"
-      }
-    ],
-    "number": 26,
-    "url": "https://github.com/hapijs/cookie/milestone/26",
-    "version": "7.1.0"
-  },
-  {
-    "date": "2017-03-28T16:53:54Z",
-    "id": 2417176,
-    "issues": [
-      {
-        "id": 196192894,
-        "labels": ["bug"],
-        "number": 152,
-        "title": "Do not redecorate the request object if already decorated",
-        "url": "https://github.com/hapijs/cookie/pull/152"
-      },
-      {
-        "id": 186610427,
-        "labels": [],
-        "number": 148,
-        "title": "Allow redirectTo to be a function ",
-        "url": "https://github.com/hapijs/cookie/pull/148"
-      },
-      {
-        "id": 176238602,
-        "labels": ["feature"],
-        "number": 142,
-        "title": "Add isSameSite to schema",
-        "url": "https://github.com/hapijs/cookie/pull/142"
-      },
-      {
-        "id": 162323296,
-        "labels": ["documentation"],
-        "number": 138,
-        "title": "Options aren't required",
-        "url": "https://github.com/hapijs/cookie/pull/138"
-      },
-      {
-        "id": 161399038,
-        "labels": ["documentation"],
-        "number": 134,
-        "title": "add note to readme about the 'ttl' option",
-        "url": "https://github.com/hapijs/cookie/pull/134"
-      },
-      {
-        "id": 155620795,
-        "labels": ["dependency"],
-        "number": 130,
-        "title": "Test on node v6, update dependencies",
-        "url": "https://github.com/hapijs/cookie/pull/130"
-      },
-      {
-        "id": 153522433,
-        "labels": ["documentation"],
-        "number": 127,
-        "title": "fix typo in readme",
-        "url": "https://github.com/hapijs/cookie/pull/127"
-      },
-      {
-        "id": 148793222,
-        "labels": ["feature"],
-        "number": 124,
-        "title": "Allow null to be passed for the ttl",
-        "url": "https://github.com/hapijs/cookie/pull/124"
-      },
-      {
-        "id": 135138588,
-        "labels": ["documentation"],
-        "number": 115,
-        "title": "update readme with information/warning about cookie length",
-        "url": "https://github.com/hapijs/cookie/pull/115"
-      }
-    ],
-    "number": 21,
-    "url": "https://github.com/hapijs/cookie/milestone/21",
-    "version": "7.0.0"
-  },
-  {
-    "date": "2017-03-28T16:47:45Z",
-    "id": 1607158,
-    "issues": [
-      {
-        "id": 136583849,
-        "labels": [],
-        "number": 118,
-        "title": "decorator fix",
-        "url": "https://github.com/hapijs/cookie/pull/118"
-      }
-    ],
-    "number": 20,
-    "url": "https://github.com/hapijs/cookie/milestone/20",
-    "version": "6.1.1"
-  },
-  {
-    "date": "2016-02-22T13:43:36Z",
-    "id": 1592245,
-    "issues": [
-      {
-        "id": 134772959,
-        "labels": ["feature"],
-        "number": 114,
-        "title": "support many strategies",
-        "url": "https://github.com/hapijs/cookie/pull/114"
-      }
-    ],
-    "number": 19,
-    "url": "https://github.com/hapijs/cookie/milestone/19",
-    "version": "6.1.0"
-  },
-  {
-    "date": "2016-01-29T13:31:05Z",
-    "id": 1551169,
-    "issues": [
-      {
-        "id": 127454671,
-        "labels": [],
-        "number": 107,
-        "title": "Use server.decorate",
-        "url": "https://github.com/hapijs/cookie/pull/107"
-      }
-    ],
-    "number": 18,
-    "url": "https://github.com/hapijs/cookie/milestone/18",
-    "version": "6.0.0"
-  },
-  {
-    "date": "2016-01-05T17:37:49Z",
-    "id": 1485235,
-    "issues": [
-      {
-        "id": 125004343,
-        "labels": ["breaking changes"],
-        "number": 103,
-        "title": "move away from request.auth.session",
-        "url": "https://github.com/hapijs/cookie/pull/103"
-      },
-      {
-        "id": 124604592,
-        "labels": ["breaking changes", "dependency"],
-        "number": 101,
-        "title": "Switch to use a request decoration instead of request.auth.session",
-        "url": "https://github.com/hapijs/cookie/issues/101"
-      }
-    ],
-    "number": 17,
-    "url": "https://github.com/hapijs/cookie/milestone/17",
-    "version": "5.0"
-  },
-  {
-    "date": "2016-01-05T16:26:41Z",
-    "id": 1399212,
-    "issues": [
-      {
-        "id": 124987803,
-        "labels": ["breaking changes"],
-        "number": 102,
-        "title": "node 4 update",
-        "url": "https://github.com/hapijs/cookie/pull/102"
-      },
-      {
-        "id": 115541788,
-        "labels": ["breaking changes"],
-        "number": 93,
-        "title": "Node >= 4 / es6 updates",
-        "url": "https://github.com/hapijs/cookie/issues/93"
-      }
-    ],
-    "number": 16,
-    "url": "https://github.com/hapijs/cookie/milestone/16",
-    "version": "4.0.0"
-  },
-  {
-    "date": "2015-08-17T12:33:41Z",
-    "id": 1256036,
-    "issues": [
-      {
-        "id": 101408737,
-        "labels": ["feature"],
-        "number": 83,
-        "title": "allow buffer as password",
-        "url": "https://github.com/hapijs/cookie/pull/83"
-      },
-      {
-        "id": 100754815,
-        "labels": ["feature"],
-        "number": 80,
-        "title": "Buffer type should be allowed for \"password\" option",
-        "url": "https://github.com/hapijs/cookie/issues/80"
-      }
-    ],
-    "number": 15,
-    "url": "https://github.com/hapijs/cookie/milestone/15",
-    "version": "3.1.0"
-  },
-  {
-    "date": "2015-06-13T13:23:09Z",
-    "id": 1158124,
-    "issues": [
-      {
-        "id": 93623332,
-        "labels": ["documentation"],
-        "number": 75,
-        "title": "validateFunc according to signature function",
-        "url": "https://github.com/hapijs/cookie/pull/75"
-      },
-      {
-        "id": 87999909,
-        "labels": ["documentation"],
-        "number": 74,
-        "title": "Updated docs",
-        "url": "https://github.com/hapijs/cookie/pull/74"
-      },
-      {
-        "id": 86885449,
-        "labels": ["feature", "breaking changes"],
-        "number": 72,
-        "title": "Pass request object to validation function",
-        "url": "https://github.com/hapijs/cookie/pull/72"
-      }
-    ],
-    "number": 14,
-    "url": "https://github.com/hapijs/cookie/milestone/14",
-    "version": "3.0.0"
-  },
-  {
-    "date": "2015-05-04T19:53:09Z",
-    "id": 1091133,
-    "issues": [
-      {
-        "id": 73111618,
-        "labels": ["non issue"],
-        "number": 69,
-        "title": "2.2.0 update",
-        "url": "https://github.com/hapijs/cookie/pull/69"
-      },
-      {
-        "id": 73109259,
-        "labels": ["bug"],
-        "number": 68,
-        "title": "Fix support for custom appendNext param",
-        "url": "https://github.com/hapijs/cookie/pull/68"
-      },
-      {
-        "id": 72302311,
-        "labels": ["bug", "support"],
-        "number": 67,
-        "title": "`appendNext` no longer accepts a string",
-        "url": "https://github.com/hapijs/cookie/issues/67"
-      },
-      {
-        "id": 69645344,
-        "labels": ["feature"],
-        "number": 65,
-        "title": "allow null setting for domain",
-        "url": "https://github.com/hapijs/cookie/pull/65"
-      },
-      {
-        "id": 69644787,
-        "labels": ["feature"],
-        "number": 64,
-        "title": "domain is now required as a string, and null does not pass validation",
-        "url": "https://github.com/hapijs/cookie/issues/64"
-      }
-    ],
-    "number": 13,
-    "url": "https://github.com/hapijs/cookie/milestone/13",
-    "version": "2.2.0"
-  },
-  {
-    "date": "2015-04-22T17:02:08Z",
-    "id": 900075,
-    "issues": [
-      {
-        "id": 69603418,
-        "labels": [],
-        "number": 63,
-        "title": "Version 2.1.0",
-        "url": "https://github.com/hapijs/cookie/pull/63"
-      },
-      {
-        "id": 68521537,
-        "labels": ["feature"],
-        "number": 62,
-        "title": "Allow environment variables to configure cookie scheme",
-        "url": "https://github.com/hapijs/cookie/pull/62"
-      }
-    ],
-    "number": 12,
-    "url": "https://github.com/hapijs/cookie/milestone/12",
-    "version": "2.1.0"
-  },
-  {
-    "date": "2014-12-11T06:59:31Z",
-    "id": 873786,
-    "issues": [
-      {
-        "id": 51644277,
-        "labels": ["non issue"],
-        "number": 45,
-        "title": "Version 2.0.0",
-        "url": "https://github.com/hapijs/cookie/pull/45"
-      },
-      {
-        "id": 51003906,
-        "labels": ["dependency"],
-        "number": 43,
-        "title": "Use request.route.settings.plugin",
-        "url": "https://github.com/hapijs/cookie/pull/43"
-      },
-      {
-        "id": 50124084,
-        "labels": ["bug"],
-        "number": 40,
-        "title": "Invalid cookie should still return 401",
-        "url": "https://github.com/hapijs/cookie/issues/40"
-      },
-      {
-        "id": 50122456,
-        "labels": ["breaking changes", "dependency"],
-        "number": 39,
-        "title": "hapi 8.0 API",
-        "url": "https://github.com/hapijs/cookie/issues/39"
-      }
-    ],
-    "number": 10,
-    "url": "https://github.com/hapijs/cookie/milestone/10",
-    "version": "2.0.0"
-  },
-  {
-    "date": "2014-12-04T17:36:52Z",
-    "id": 890747,
-    "issues": [
-      {
-        "id": 50910692,
-        "labels": ["bug"],
-        "number": 42,
-        "title": "Invalid cookie blocks scheme from redirecting",
-        "url": "https://github.com/hapijs/cookie/issues/42"
-      }
-    ],
-    "number": 11,
-    "url": "https://github.com/hapijs/cookie/milestone/11",
-    "version": "1.4.2"
-  },
-  {
-    "date": "2014-11-20T05:02:27Z",
-    "id": 863739,
-    "issues": [
-      {
-        "id": 49492896,
-        "labels": ["bug"],
+    {
+        "date": "2023-02-11T19:30:47Z",
+        "id": 8550561,
+        "issues": [
+            {
+                "id": 1551796104,
+                "labels": [],
+                "number": 248,
+                "title": "chore: bump hoek",
+                "url": "https://github.com/hapijs/cookie/pull/248"
+            }
+        ],
         "number": 37,
-        "title": "Fix clearInvalid (for issue #34)",
-        "url": "https://github.com/hapijs/cookie/pull/37"
-      },
-      {
-        "id": 48156100,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/cookie/milestone/37",
+        "version": "12.0.1"
+    },
+    {
+        "date": "2022-10-17T19:51:45Z",
+        "id": 7813492,
+        "issues": [
+            {
+                "id": 1307309292,
+                "labels": ["feature", "breaking changes", "test", "dependency"],
+                "number": 246,
+                "title": "Support for hapi v21, node v18, ESM tests",
+                "url": "https://github.com/hapijs/cookie/pull/246"
+            },
+            {
+                "id": 1184202864,
+                "labels": ["breaking changes"],
+                "number": 244,
+                "title": "Drop support for node v12 and hapi v18",
+                "url": "https://github.com/hapijs/cookie/pull/244"
+            },
+            {
+                "id": 806809697,
+                "labels": ["breaking changes"],
+                "number": 236,
+                "title": "Rename plugin options to be consistent across the hapi ecosystem",
+                "url": "https://github.com/hapijs/cookie/pull/236"
+            },
+            {
+                "id": 806803389,
+                "labels": ["breaking changes"],
+                "number": 235,
+                "title": "Remove old repository name",
+                "url": "https://github.com/hapijs/cookie/pull/235"
+            }
+        ],
+        "number": 36,
+        "url": "https://github.com/hapijs/cookie/milestone/36",
+        "version": "12.0.0"
+    },
+    {
+        "date": "2020-09-26T16:59:56Z",
+        "id": 5200162,
+        "issues": [
+            {
+                "id": 684044796,
+                "labels": [],
+                "number": 232,
+                "title": "update to hapi v20",
+                "url": "https://github.com/hapijs/cookie/pull/232"
+            },
+            {
+                "id": 684029866,
+                "labels": [],
+                "number": 231,
+                "title": "migrate to new travis format",
+                "url": "https://github.com/hapijs/cookie/pull/231"
+            },
+            {
+                "id": 672129940,
+                "labels": [],
+                "number": 229,
+                "title": "change joi to validate and update lab",
+                "url": "https://github.com/hapijs/cookie/pull/229"
+            }
+        ],
         "number": 34,
-        "title": "Bad cookie value even with clearInvalid true",
-        "url": "https://github.com/hapijs/cookie/issues/34"
-      }
-    ],
-    "number": 9,
-    "url": "https://github.com/hapijs/cookie/milestone/9",
-    "version": "1.4.1"
-  },
-  {
-    "date": "2014-11-12T22:55:45Z",
-    "id": 741793,
-    "issues": [
-      {
-        "id": 48554127,
-        "labels": ["feature"],
-        "number": 35,
-        "title": "Session keepAlive and ttl override",
-        "url": "https://github.com/hapijs/cookie/issues/35"
-      },
-      {
-        "id": 42957473,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/cookie/milestone/34",
+        "version": "11.0.2"
+    },
+    {
+        "date": "2020-03-13T19:26:59Z",
+        "id": 4993609,
+        "issues": [
+            {
+                "id": 550282146,
+                "labels": ["bug"],
+                "number": 228,
+                "title": "Non system error in validateFunc will be swallowed",
+                "url": "https://github.com/hapijs/cookie/issues/228"
+            }
+        ],
+        "number": 33,
+        "url": "https://github.com/hapijs/cookie/milestone/33",
+        "version": "11.0.1"
+    },
+    {
+        "date": "2020-01-10T07:21:58Z",
+        "id": 4654915,
+        "issues": [
+            {
+                "id": 547909554,
+                "labels": ["breaking changes", "dependency"],
+                "number": 227,
+                "title": "Only node 12",
+                "url": "https://github.com/hapijs/cookie/issues/227"
+            }
+        ],
+        "number": 32,
+        "url": "https://github.com/hapijs/cookie/milestone/32",
+        "version": "11.0.0"
+    },
+    {
+        "date": "2019-09-12T17:45:35Z",
+        "id": 4574291,
+        "issues": [
+            {
+                "id": 492937397,
+                "labels": ["dependency"],
+                "number": 222,
+                "title": "Update joi",
+                "url": "https://github.com/hapijs/cookie/issues/222"
+            }
+        ],
+        "number": 31,
+        "url": "https://github.com/hapijs/cookie/milestone/31",
+        "version": "10.1.2"
+    },
+    {
+        "date": "2019-08-14T22:39:58Z",
+        "id": 4244813,
+        "issues": [
+            {
+                "id": 480891027,
+                "labels": ["dependency"],
+                "number": 221,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/cookie/issues/221"
+            }
+        ],
         "number": 30,
-        "title": "add set/clear key for cookie",
-        "url": "https://github.com/hapijs/cookie/pull/30"
-      },
-      {
-        "id": 42605968,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/cookie/milestone/30",
+        "version": "10.1.1"
+    },
+    {
+        "date": "2019-04-19T21:19:30Z",
+        "id": 4144206,
+        "issues": [
+            {
+                "id": 435307605,
+                "labels": ["dependency"],
+                "number": 213,
+                "title": "Change module namespace",
+                "url": "https://github.com/hapijs/cookie/issues/213"
+            }
+        ],
         "number": 29,
-        "title": "Fix for handling multiple strategies",
-        "url": "https://github.com/hapijs/cookie/pull/29"
-      },
-      {
-        "id": 40640489,
-        "labels": ["feature"],
-        "number": 26,
-        "title": "Update key in auth.credentials",
-        "url": "https://github.com/hapijs/cookie/issues/26"
-      },
-      {
-        "id": 40326854,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/cookie/milestone/29",
+        "version": "10.1.0"
+    },
+    {
+        "date": "2019-04-19T21:10:37Z",
+        "id": 3844723,
+        "issues": [
+            {
+                "id": 421636792,
+                "labels": ["breaking changes"],
+                "number": 210,
+                "title": "Move all cookie settings to `cookie`",
+                "url": "https://github.com/hapijs/cookie/issues/210"
+            },
+            {
+                "id": 421614167,
+                "labels": ["breaking changes", "release notes"],
+                "number": 209,
+                "title": "10.0.0 Release notes",
+                "url": "https://github.com/hapijs/cookie/issues/209"
+            },
+            {
+                "id": 421612582,
+                "labels": ["bug", "breaking changes"],
+                "number": 208,
+                "title": "Remove ignoreIfDecorated",
+                "url": "https://github.com/hapijs/cookie/issues/208"
+            },
+            {
+                "id": 418808258,
+                "labels": ["bug", "breaking changes"],
+                "number": 207,
+                "title": "No override of default cookie settings",
+                "url": "https://github.com/hapijs/cookie/issues/207"
+            },
+            {
+                "id": 411863030,
+                "labels": ["breaking changes"],
+                "number": 205,
+                "title": "Upgrade to hapi 18",
+                "url": "https://github.com/hapijs/cookie/pull/205"
+            },
+            {
+                "id": 401284634,
+                "labels": ["breaking changes", "dependency"],
+                "number": 204,
+                "title": "Update for hapi 18",
+                "url": "https://github.com/hapijs/cookie/issues/204"
+            },
+            {
+                "id": 312299124,
+                "labels": ["feature"],
+                "number": 193,
+                "title": "Support password rotation",
+                "url": "https://github.com/hapijs/cookie/issues/193"
+            }
+        ],
+        "number": 28,
+        "url": "https://github.com/hapijs/cookie/milestone/28",
+        "version": "10.0.0"
+    },
+    {
+        "date": "2018-11-24T05:12:17Z",
+        "id": 3379400,
+        "issues": [
+            {
+                "id": 329532102,
+                "labels": ["feature"],
+                "number": 196,
+                "title": "referenced the raw request when setting next",
+                "url": "https://github.com/hapijs/cookie/pull/196"
+            }
+        ],
+        "number": 27,
+        "url": "https://github.com/hapijs/cookie/milestone/27",
+        "version": "9.1.0"
+    },
+    {
+        "date": "2018-05-27T23:39:04Z",
+        "id": 3050977,
+        "issues": [
+            {
+                "id": 287335768,
+                "labels": ["feature", "breaking changes"],
+                "number": 186,
+                "title": "Respect auth mode for redirects",
+                "url": "https://github.com/hapijs/cookie/pull/186"
+            }
+        ],
+        "number": 24,
+        "url": "https://github.com/hapijs/cookie/milestone/24",
+        "version": "9.0.0"
+    },
+    {
+        "date": "2018-02-08T21:14:21Z",
+        "id": 2969691,
+        "issues": [
+            {
+                "id": 276868074,
+                "labels": ["documentation"],
+                "number": 176,
+                "title": "Use options key for route configuration",
+                "url": "https://github.com/hapijs/cookie/pull/176"
+            },
+            {
+                "id": 245854170,
+                "labels": ["feature"],
+                "number": 164,
+                "title": "Issue 163",
+                "url": "https://github.com/hapijs/cookie/pull/164"
+            }
+        ],
+        "number": 23,
+        "url": "https://github.com/hapijs/cookie/milestone/23",
+        "version": "8.1.0"
+    },
+    {
+        "date": "2018-02-08T09:43:49Z",
+        "id": 3051237,
+        "issues": [
+            {
+                "id": 282892396,
+                "labels": ["bug"],
+                "number": 183,
+                "title": "Fix redirectTo function w/ blank to behave like blank redirectTo (fix)",
+                "url": "https://github.com/hapijs/cookie/pull/183"
+            },
+            {
+                "id": 266975391,
+                "labels": ["documentation"],
+                "number": 170,
+                "title": "Drop session from cache in examples",
+                "url": "https://github.com/hapijs/cookie/pull/170"
+            }
+        ],
+        "number": 25,
+        "url": "https://github.com/hapijs/cookie/milestone/25",
+        "version": "8.0.1"
+    },
+    {
+        "date": "2017-12-10T20:05:55Z",
+        "id": 2417184,
+        "issues": [
+            {
+                "id": 280739407,
+                "labels": ["documentation"],
+                "number": 179,
+                "title": "Update lead maintainer",
+                "url": "https://github.com/hapijs/cookie/issues/179"
+            },
+            {
+                "id": 271814649,
+                "labels": ["breaking changes"],
+                "number": 174,
+                "title": "Upgraded module to hapi v17",
+                "url": "https://github.com/hapijs/cookie/pull/174"
+            }
+        ],
         "number": 22,
-        "title": "Exposed path option for session cookie",
-        "url": "https://github.com/hapijs/cookie/pull/22"
-      },
-      {
-        "id": 40326785,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/cookie/milestone/22",
+        "version": "8.0.0"
+    },
+    {
+        "date": "2018-05-27T23:38:05Z",
+        "id": 3101130,
+        "issues": [
+            {
+                "id": 193862309,
+                "labels": ["feature"],
+                "number": 151,
+                "title": "referenced the raw request when setting next",
+                "url": "https://github.com/hapijs/cookie/pull/151"
+            }
+        ],
+        "number": 26,
+        "url": "https://github.com/hapijs/cookie/milestone/26",
+        "version": "7.1.0"
+    },
+    {
+        "date": "2017-03-28T16:53:54Z",
+        "id": 2417176,
+        "issues": [
+            {
+                "id": 196192894,
+                "labels": ["bug"],
+                "number": 152,
+                "title": "Do not redecorate the request object if already decorated",
+                "url": "https://github.com/hapijs/cookie/pull/152"
+            },
+            {
+                "id": 186610427,
+                "labels": [],
+                "number": 148,
+                "title": "Allow redirectTo to be a function ",
+                "url": "https://github.com/hapijs/cookie/pull/148"
+            },
+            {
+                "id": 176238602,
+                "labels": ["feature"],
+                "number": 142,
+                "title": "Add isSameSite to schema",
+                "url": "https://github.com/hapijs/cookie/pull/142"
+            },
+            {
+                "id": 162323296,
+                "labels": ["documentation"],
+                "number": 138,
+                "title": "Options aren't required",
+                "url": "https://github.com/hapijs/cookie/pull/138"
+            },
+            {
+                "id": 161399038,
+                "labels": ["documentation"],
+                "number": 134,
+                "title": "add note to readme about the 'ttl' option",
+                "url": "https://github.com/hapijs/cookie/pull/134"
+            },
+            {
+                "id": 155620795,
+                "labels": ["dependency"],
+                "number": 130,
+                "title": "Test on node v6, update dependencies",
+                "url": "https://github.com/hapijs/cookie/pull/130"
+            },
+            {
+                "id": 153522433,
+                "labels": ["documentation"],
+                "number": 127,
+                "title": "fix typo in readme",
+                "url": "https://github.com/hapijs/cookie/pull/127"
+            },
+            {
+                "id": 148793222,
+                "labels": ["feature"],
+                "number": 124,
+                "title": "Allow null to be passed for the ttl",
+                "url": "https://github.com/hapijs/cookie/pull/124"
+            },
+            {
+                "id": 135138588,
+                "labels": ["documentation"],
+                "number": 115,
+                "title": "update readme with information/warning about cookie length",
+                "url": "https://github.com/hapijs/cookie/pull/115"
+            }
+        ],
         "number": 21,
-        "title": "Expose 'path' in cookieOptions",
-        "url": "https://github.com/hapijs/cookie/issues/21"
-      }
-    ],
-    "number": 8,
-    "url": "https://github.com/hapijs/cookie/milestone/8",
-    "version": "1.4.0"
-  },
-  {
-    "date": "2014-08-04T08:50:12Z",
-    "id": 724193,
-    "issues": [
-      {
-        "id": 39371719,
-        "labels": ["documentation"],
+        "url": "https://github.com/hapijs/cookie/milestone/21",
+        "version": "7.0.0"
+    },
+    {
+        "date": "2017-03-28T16:47:45Z",
+        "id": 1607158,
+        "issues": [
+            {
+                "id": 136583849,
+                "labels": [],
+                "number": 118,
+                "title": "decorator fix",
+                "url": "https://github.com/hapijs/cookie/pull/118"
+            }
+        ],
         "number": 20,
-        "title": "Update LICENSE",
-        "url": "https://github.com/hapijs/cookie/pull/20"
-      },
-      {
-        "id": 39371697,
-        "labels": ["documentation"],
+        "url": "https://github.com/hapijs/cookie/milestone/20",
+        "version": "6.1.1"
+    },
+    {
+        "date": "2016-02-22T13:43:36Z",
+        "id": 1592245,
+        "issues": [
+            {
+                "id": 134772959,
+                "labels": ["feature"],
+                "number": 114,
+                "title": "support many strategies",
+                "url": "https://github.com/hapijs/cookie/pull/114"
+            }
+        ],
         "number": 19,
-        "title": "Update License",
-        "url": "https://github.com/hapijs/cookie/issues/19"
-      }
-    ],
-    "number": 7,
-    "url": "https://github.com/hapijs/cookie/milestone/7",
-    "version": "1.3.2"
-  },
-  {
-    "date": "2014-07-17T12:35:49Z",
-    "id": 724187,
-    "issues": [
-      {
-        "id": 38076455,
-        "labels": ["test"],
+        "url": "https://github.com/hapijs/cookie/milestone/19",
+        "version": "6.1.0"
+    },
+    {
+        "date": "2016-01-29T13:31:05Z",
+        "id": 1551169,
+        "issues": [
+            {
+                "id": 127454671,
+                "labels": [],
+                "number": 107,
+                "title": "Use server.decorate",
+                "url": "https://github.com/hapijs/cookie/pull/107"
+            }
+        ],
+        "number": 18,
+        "url": "https://github.com/hapijs/cookie/milestone/18",
+        "version": "6.0.0"
+    },
+    {
+        "date": "2016-01-05T17:37:49Z",
+        "id": 1485235,
+        "issues": [
+            {
+                "id": 125004343,
+                "labels": ["breaking changes"],
+                "number": 103,
+                "title": "move away from request.auth.session",
+                "url": "https://github.com/hapijs/cookie/pull/103"
+            },
+            {
+                "id": 124604592,
+                "labels": ["breaking changes", "dependency"],
+                "number": 101,
+                "title": "Switch to use a request decoration instead of request.auth.session",
+                "url": "https://github.com/hapijs/cookie/issues/101"
+            }
+        ],
+        "number": 17,
+        "url": "https://github.com/hapijs/cookie/milestone/17",
+        "version": "5.0"
+    },
+    {
+        "date": "2016-01-05T16:26:41Z",
+        "id": 1399212,
+        "issues": [
+            {
+                "id": 124987803,
+                "labels": ["breaking changes"],
+                "number": 102,
+                "title": "node 4 update",
+                "url": "https://github.com/hapijs/cookie/pull/102"
+            },
+            {
+                "id": 115541788,
+                "labels": ["breaking changes"],
+                "number": 93,
+                "title": "Node >= 4 / es6 updates",
+                "url": "https://github.com/hapijs/cookie/issues/93"
+            }
+        ],
         "number": 16,
-        "title": "Fix hapi dev dep",
-        "url": "https://github.com/hapijs/cookie/issues/16"
-      }
-    ],
-    "number": 6,
-    "url": "https://github.com/hapijs/cookie/milestone/6",
-    "version": "1.3.1"
-  },
-  {
-    "date": "2014-07-17T12:29:47Z",
-    "id": 690104,
-    "issues": [
-      {
-        "id": 38076115,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/cookie/milestone/16",
+        "version": "4.0.0"
+    },
+    {
+        "date": "2015-08-17T12:33:41Z",
+        "id": 1256036,
+        "issues": [
+            {
+                "id": 101408737,
+                "labels": ["feature"],
+                "number": 83,
+                "title": "allow buffer as password",
+                "url": "https://github.com/hapijs/cookie/pull/83"
+            },
+            {
+                "id": 100754815,
+                "labels": ["feature"],
+                "number": 80,
+                "title": "Buffer type should be allowed for \"password\" option",
+                "url": "https://github.com/hapijs/cookie/issues/80"
+            }
+        ],
         "number": 15,
-        "title": "Skip redirection on try",
-        "url": "https://github.com/hapijs/cookie/issues/15"
-      }
-    ],
-    "number": 5,
-    "url": "https://github.com/hapijs/cookie/milestone/5",
-    "version": "1.3.0"
-  },
-  {
-    "date": "2014-06-13T19:16:21Z",
-    "id": 689695,
-    "issues": [
-      {
-        "id": 35653886,
-        "labels": ["bug"],
-        "number": 11,
-        "title": "No way to use with 'try' mode if 'redirectTo' is set",
-        "url": "https://github.com/hapijs/cookie/issues/11"
-      },
-      {
-        "id": 35653850,
-        "labels": ["bug"],
+        "url": "https://github.com/hapijs/cookie/milestone/15",
+        "version": "3.1.0"
+    },
+    {
+        "date": "2015-06-13T13:23:09Z",
+        "id": 1158124,
+        "issues": [
+            {
+                "id": 93623332,
+                "labels": ["documentation"],
+                "number": 75,
+                "title": "validateFunc according to signature function",
+                "url": "https://github.com/hapijs/cookie/pull/75"
+            },
+            {
+                "id": 87999909,
+                "labels": ["documentation"],
+                "number": 74,
+                "title": "Updated docs",
+                "url": "https://github.com/hapijs/cookie/pull/74"
+            },
+            {
+                "id": 86885449,
+                "labels": ["feature", "breaking changes"],
+                "number": 72,
+                "title": "Pass request object to validation function",
+                "url": "https://github.com/hapijs/cookie/pull/72"
+            }
+        ],
+        "number": 14,
+        "url": "https://github.com/hapijs/cookie/milestone/14",
+        "version": "3.0.0"
+    },
+    {
+        "date": "2015-05-04T19:53:09Z",
+        "id": 1091133,
+        "issues": [
+            {
+                "id": 73111618,
+                "labels": ["non issue"],
+                "number": 69,
+                "title": "2.2.0 update",
+                "url": "https://github.com/hapijs/cookie/pull/69"
+            },
+            {
+                "id": 73109259,
+                "labels": ["bug"],
+                "number": 68,
+                "title": "Fix support for custom appendNext param",
+                "url": "https://github.com/hapijs/cookie/pull/68"
+            },
+            {
+                "id": 72302311,
+                "labels": ["bug", "support"],
+                "number": 67,
+                "title": "`appendNext` no longer accepts a string",
+                "url": "https://github.com/hapijs/cookie/issues/67"
+            },
+            {
+                "id": 69645344,
+                "labels": ["feature"],
+                "number": 65,
+                "title": "allow null setting for domain",
+                "url": "https://github.com/hapijs/cookie/pull/65"
+            },
+            {
+                "id": 69644787,
+                "labels": ["feature"],
+                "number": 64,
+                "title": "domain is now required as a string, and null does not pass validation",
+                "url": "https://github.com/hapijs/cookie/issues/64"
+            }
+        ],
+        "number": 13,
+        "url": "https://github.com/hapijs/cookie/milestone/13",
+        "version": "2.2.0"
+    },
+    {
+        "date": "2015-04-22T17:02:08Z",
+        "id": 900075,
+        "issues": [
+            {
+                "id": 69603418,
+                "labels": [],
+                "number": 63,
+                "title": "Version 2.1.0",
+                "url": "https://github.com/hapijs/cookie/pull/63"
+            },
+            {
+                "id": 68521537,
+                "labels": ["feature"],
+                "number": 62,
+                "title": "Allow environment variables to configure cookie scheme",
+                "url": "https://github.com/hapijs/cookie/pull/62"
+            }
+        ],
+        "number": 12,
+        "url": "https://github.com/hapijs/cookie/milestone/12",
+        "version": "2.1.0"
+    },
+    {
+        "date": "2014-12-11T06:59:31Z",
+        "id": 873786,
+        "issues": [
+            {
+                "id": 51644277,
+                "labels": ["non issue"],
+                "number": 45,
+                "title": "Version 2.0.0",
+                "url": "https://github.com/hapijs/cookie/pull/45"
+            },
+            {
+                "id": 51003906,
+                "labels": ["dependency"],
+                "number": 43,
+                "title": "Use request.route.settings.plugin",
+                "url": "https://github.com/hapijs/cookie/pull/43"
+            },
+            {
+                "id": 50124084,
+                "labels": ["bug"],
+                "number": 40,
+                "title": "Invalid cookie should still return 401",
+                "url": "https://github.com/hapijs/cookie/issues/40"
+            },
+            {
+                "id": 50122456,
+                "labels": ["breaking changes", "dependency"],
+                "number": 39,
+                "title": "hapi 8.0 API",
+                "url": "https://github.com/hapijs/cookie/issues/39"
+            }
+        ],
         "number": 10,
-        "title": "validateFunc credentials override session",
-        "url": "https://github.com/hapijs/cookie/issues/10"
-      }
-    ],
-    "number": 4,
-    "url": "https://github.com/hapijs/cookie/milestone/4",
-    "version": "1.2.0"
-  },
-  {
-    "date": "2014-06-12T19:47:21Z",
-    "id": 665149,
-    "issues": [
-      {
-        "id": 35397852,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/cookie/milestone/10",
+        "version": "2.0.0"
+    },
+    {
+        "date": "2014-12-04T17:36:52Z",
+        "id": 890747,
+        "issues": [
+            {
+                "id": 50910692,
+                "labels": ["bug"],
+                "number": 42,
+                "title": "Invalid cookie blocks scheme from redirecting",
+                "url": "https://github.com/hapijs/cookie/issues/42"
+            }
+        ],
+        "number": 11,
+        "url": "https://github.com/hapijs/cookie/milestone/11",
+        "version": "1.4.2"
+    },
+    {
+        "date": "2014-11-20T05:02:27Z",
+        "id": 863739,
+        "issues": [
+            {
+                "id": 49492896,
+                "labels": ["bug"],
+                "number": 37,
+                "title": "Fix clearInvalid (for issue #34)",
+                "url": "https://github.com/hapijs/cookie/pull/37"
+            },
+            {
+                "id": 48156100,
+                "labels": ["bug"],
+                "number": 34,
+                "title": "Bad cookie value even with clearInvalid true",
+                "url": "https://github.com/hapijs/cookie/issues/34"
+            }
+        ],
         "number": 9,
-        "title": "hapi 6.0",
-        "url": "https://github.com/hapijs/cookie/pull/9"
-      }
-    ],
-    "number": 3,
-    "url": "https://github.com/hapijs/cookie/milestone/3",
-    "version": "1.1.0"
-  },
-  {
-    "date": "2014-05-21T02:18:17Z",
-    "id": 605520,
-    "issues": [
-      {
-        "id": 33939248,
-        "labels": ["test"],
+        "url": "https://github.com/hapijs/cookie/milestone/9",
+        "version": "1.4.1"
+    },
+    {
+        "date": "2014-11-12T22:55:45Z",
+        "id": 741793,
+        "issues": [
+            {
+                "id": 48554127,
+                "labels": ["feature"],
+                "number": 35,
+                "title": "Session keepAlive and ttl override",
+                "url": "https://github.com/hapijs/cookie/issues/35"
+            },
+            {
+                "id": 42957473,
+                "labels": ["feature"],
+                "number": 30,
+                "title": "add set/clear key for cookie",
+                "url": "https://github.com/hapijs/cookie/pull/30"
+            },
+            {
+                "id": 42605968,
+                "labels": ["bug"],
+                "number": 29,
+                "title": "Fix for handling multiple strategies",
+                "url": "https://github.com/hapijs/cookie/pull/29"
+            },
+            {
+                "id": 40640489,
+                "labels": ["feature"],
+                "number": 26,
+                "title": "Update key in auth.credentials",
+                "url": "https://github.com/hapijs/cookie/issues/26"
+            },
+            {
+                "id": 40326854,
+                "labels": ["feature"],
+                "number": 22,
+                "title": "Exposed path option for session cookie",
+                "url": "https://github.com/hapijs/cookie/pull/22"
+            },
+            {
+                "id": 40326785,
+                "labels": ["feature"],
+                "number": 21,
+                "title": "Expose 'path' in cookieOptions",
+                "url": "https://github.com/hapijs/cookie/issues/21"
+            }
+        ],
+        "number": 8,
+        "url": "https://github.com/hapijs/cookie/milestone/8",
+        "version": "1.4.0"
+    },
+    {
+        "date": "2014-08-04T08:50:12Z",
+        "id": 724193,
+        "issues": [
+            {
+                "id": 39371719,
+                "labels": ["documentation"],
+                "number": 20,
+                "title": "Update LICENSE",
+                "url": "https://github.com/hapijs/cookie/pull/20"
+            },
+            {
+                "id": 39371697,
+                "labels": ["documentation"],
+                "number": 19,
+                "title": "Update License",
+                "url": "https://github.com/hapijs/cookie/issues/19"
+            }
+        ],
+        "number": 7,
+        "url": "https://github.com/hapijs/cookie/milestone/7",
+        "version": "1.3.2"
+    },
+    {
+        "date": "2014-07-17T12:35:49Z",
+        "id": 724187,
+        "issues": [
+            {
+                "id": 38076455,
+                "labels": ["test"],
+                "number": 16,
+                "title": "Fix hapi dev dep",
+                "url": "https://github.com/hapijs/cookie/issues/16"
+            }
+        ],
         "number": 6,
-        "title": "Bring coverage back to 100%",
-        "url": "https://github.com/hapijs/cookie/issues/6"
-      }
-    ],
-    "number": 2,
-    "url": "https://github.com/hapijs/cookie/milestone/2",
-    "version": "1.0.3"
-  },
-  {
-    "date": "2014-03-21T20:29:24Z",
-    "id": 605519,
-    "issues": [
-      {
-        "id": 29934621,
-        "labels": ["test"],
+        "url": "https://github.com/hapijs/cookie/milestone/6",
+        "version": "1.3.1"
+    },
+    {
+        "date": "2014-07-17T12:29:47Z",
+        "id": 690104,
+        "issues": [
+            {
+                "id": 38076115,
+                "labels": ["feature"],
+                "number": 15,
+                "title": "Skip redirection on try",
+                "url": "https://github.com/hapijs/cookie/issues/15"
+            }
+        ],
         "number": 5,
-        "title": "Bring coverage back to 100% after lab fix",
-        "url": "https://github.com/hapijs/cookie/issues/5"
-      },
-      {
-        "id": 29482823,
-        "labels": ["feature"],
+        "url": "https://github.com/hapijs/cookie/milestone/5",
+        "version": "1.3.0"
+    },
+    {
+        "date": "2014-06-13T19:16:21Z",
+        "id": 689695,
+        "issues": [
+            {
+                "id": 35653886,
+                "labels": ["bug"],
+                "number": 11,
+                "title": "No way to use with 'try' mode if 'redirectTo' is set",
+                "url": "https://github.com/hapijs/cookie/issues/11"
+            },
+            {
+                "id": 35653850,
+                "labels": ["bug"],
+                "number": 10,
+                "title": "validateFunc credentials override session",
+                "url": "https://github.com/hapijs/cookie/issues/10"
+            }
+        ],
         "number": 4,
-        "title": "fix peerDependencies for hapi",
-        "url": "https://github.com/hapijs/cookie/issues/4"
-      }
-    ],
-    "number": 1,
-    "url": "https://github.com/hapijs/cookie/milestone/1",
-    "version": "1.0.2"
-  }
+        "url": "https://github.com/hapijs/cookie/milestone/4",
+        "version": "1.2.0"
+    },
+    {
+        "date": "2014-06-12T19:47:21Z",
+        "id": 665149,
+        "issues": [
+            {
+                "id": 35397852,
+                "labels": ["feature"],
+                "number": 9,
+                "title": "hapi 6.0",
+                "url": "https://github.com/hapijs/cookie/pull/9"
+            }
+        ],
+        "number": 3,
+        "url": "https://github.com/hapijs/cookie/milestone/3",
+        "version": "1.1.0"
+    },
+    {
+        "date": "2014-05-21T02:18:17Z",
+        "id": 605520,
+        "issues": [
+            {
+                "id": 33939248,
+                "labels": ["test"],
+                "number": 6,
+                "title": "Bring coverage back to 100%",
+                "url": "https://github.com/hapijs/cookie/issues/6"
+            }
+        ],
+        "number": 2,
+        "url": "https://github.com/hapijs/cookie/milestone/2",
+        "version": "1.0.3"
+    },
+    {
+        "date": "2014-03-21T20:29:24Z",
+        "id": 605519,
+        "issues": [
+            {
+                "id": 29934621,
+                "labels": ["test"],
+                "number": 5,
+                "title": "Bring coverage back to 100% after lab fix",
+                "url": "https://github.com/hapijs/cookie/issues/5"
+            },
+            {
+                "id": 29482823,
+                "labels": ["feature"],
+                "number": 4,
+                "title": "fix peerDependencies for hapi",
+                "url": "https://github.com/hapijs/cookie/issues/4"
+            }
+        ],
+        "number": 1,
+        "url": "https://github.com/hapijs/cookie/milestone/1",
+        "version": "1.0.2"
+    }
 ]

@@ -19,10 +19,10 @@ const Vision = require('@hapi/vision');
 const server = Hapi.Server({ port: 3000 });
 
 const provision = async () => {
-  await server.register(Vision);
-  await server.start();
+    await server.register(Vision);
+    await server.start();
 
-  console.log('Server running at:', server.info.uri);
+    console.log('Server running at:', server.info.uri);
 };
 
 provision();
@@ -80,25 +80,25 @@ const Vision = require('@hapi/vision');
 const server = Hapi.Server({ port: 3000 });
 
 const rootHandler = (request, h) => {
-  return h.view('index', {
-    title: 'examples/ejs/templates/basic | Hapi ' + request.server.version,
-    message: 'Hello Ejs!',
-  });
+    return h.view('index', {
+        title: 'examples/ejs/templates/basic | Hapi ' + request.server.version,
+        message: 'Hello Ejs!',
+    });
 };
 
 const provision = async () => {
-  await server.register(Vision);
+    await server.register(Vision);
 
-  server.views({
-    engines: { ejs: Ejs },
-    relativeTo: __dirname,
-    path: 'examples/ejs/templates/basic',
-  });
+    server.views({
+        engines: { ejs: Ejs },
+        relativeTo: __dirname,
+        path: 'examples/ejs/templates/basic',
+    });
 
-  server.route({ method: 'GET', path: '/', handler: rootHandler });
+    server.route({ method: 'GET', path: '/', handler: rootHandler });
 
-  await server.start();
-  console.log('Server running at:', server.info.uri);
+    await server.start();
+    console.log('Server running at:', server.info.uri);
 };
 
 provision();
@@ -114,26 +114,27 @@ const Vision = require('@hapi/vision');
 const server = Hapi.Server({ port: 3000 });
 
 const rootHandler = (request, h) => {
-  return h.view('index', {
-    title:
-      'examples/handlebars/templates/basic | hapi ' + request.server.version,
-    message: 'Hello Handlebars!',
-  });
+    return h.view('index', {
+        title:
+            'examples/handlebars/templates/basic | hapi ' +
+            request.server.version,
+        message: 'Hello Handlebars!',
+    });
 };
 
 const provision = async () => {
-  await server.register(Vision);
+    await server.register(Vision);
 
-  server.views({
-    engines: { html: Handlebars },
-    relativeTo: __dirname,
-    path: 'examples/handlebars/templates/basic',
-  });
+    server.views({
+        engines: { html: Handlebars },
+        relativeTo: __dirname,
+        path: 'examples/handlebars/templates/basic',
+    });
 
-  server.route({ method: 'GET', path: '/', handler: rootHandler });
+    server.route({ method: 'GET', path: '/', handler: rootHandler });
 
-  await server.start();
-  console.log('Server running at:', server.info.uri);
+    await server.start();
+    console.log('Server running at:', server.info.uri);
 };
 
 provision();
@@ -151,30 +152,30 @@ const Vision = require('@hapi/vision');
 const server = Hapi.Server({ port: 3000 });
 
 const rootHandler = (request, h) => {
-  return h.view('index', {
-    title: 'examples/pug/templates | Hapi ' + request.server.version,
-    message: 'Hello Pug!',
-  });
+    return h.view('index', {
+        title: 'examples/pug/templates | Hapi ' + request.server.version,
+        message: 'Hello Pug!',
+    });
 };
 
 const provision = async () => {
-  await server.register(Vision);
+    await server.register(Vision);
 
-  server.views({
-    engines: { pug: Pug },
-    relativeTo: __dirname,
-    path: 'examples/pug/templates',
-    compileOptions: {
-      // By default Pug uses relative paths (e.g. ../root.pug), when using absolute paths (e.g. include /root.pug), basedir is prepended.
-      // https://pugjs.org/language/includes.html
-      basedir: Path.join(__dirname, 'examples/pug/templates'),
-    },
-  });
+    server.views({
+        engines: { pug: Pug },
+        relativeTo: __dirname,
+        path: 'examples/pug/templates',
+        compileOptions: {
+            // By default Pug uses relative paths (e.g. ../root.pug), when using absolute paths (e.g. include /root.pug), basedir is prepended.
+            // https://pugjs.org/language/includes.html
+            basedir: Path.join(__dirname, 'examples/pug/templates'),
+        },
+    });
 
-  server.route({ method: 'GET', path: '/', handler: rootHandler });
+    server.route({ method: 'GET', path: '/', handler: rootHandler });
 
-  await server.start();
-  console.log('Server running at:', server.info.uri);
+    await server.start();
+    console.log('Server running at:', server.info.uri);
 };
 
 provision();
@@ -190,37 +191,40 @@ const Vision = require('@hapi/vision');
 const server = Hapi.Server({ port: 3000 });
 
 const rootHandler = (request, h) => {
-  return h.view('index', {
-    title: 'examples/marko/templates | Hapi ' + request.server.version,
-    message: 'Hello Marko!',
-  });
+    return h.view('index', {
+        title: 'examples/marko/templates | Hapi ' + request.server.version,
+        message: 'Hello Marko!',
+    });
 };
 
 const provision = async () => {
-  await server.register(Vision);
+    await server.register(Vision);
 
-  server.views({
-    engines: {
-      marko: {
-        compile: (src, options) => {
-          const opts = { preserveWhitespace: true, writeToDisk: false };
+    server.views({
+        engines: {
+            marko: {
+                compile: (src, options) => {
+                    const opts = {
+                        preserveWhitespace: true,
+                        writeToDisk: false,
+                    };
 
-          const template = Marko.load(options.filename, opts);
+                    const template = Marko.load(options.filename, opts);
 
-          return (context) => {
-            return template.renderToString(context);
-          };
+                    return (context) => {
+                        return template.renderToString(context);
+                    };
+                },
+            },
         },
-      },
-    },
-    relativeTo: __dirname,
-    path: 'examples/marko/templates',
-  });
+        relativeTo: __dirname,
+        path: 'examples/marko/templates',
+    });
 
-  server.route({ method: 'GET', path: '/', handler: rootHandler });
+    server.route({ method: 'GET', path: '/', handler: rootHandler });
 
-  await server.start();
-  console.log('Server running at:', server.info.uri);
+    await server.start();
+    console.log('Server running at:', server.info.uri);
 };
 
 provision();
@@ -236,35 +240,37 @@ const Vision = require('@hapi/vision');
 const server = Hapi.Server({ port: 3000 });
 
 const rootHandler = (request, h) => {
-  return h.view('index', {
-    title: 'examples/mustache/templates/basic | Hapi ' + request.server.version,
-    message: 'Hello Mustache!',
-  });
+    return h.view('index', {
+        title:
+            'examples/mustache/templates/basic | Hapi ' +
+            request.server.version,
+        message: 'Hello Mustache!',
+    });
 };
 
 const provision = async () => {
-  await server.register(Vision);
+    await server.register(Vision);
 
-  server.views({
-    engines: {
-      html: {
-        compile: (template) => {
-          Mustache.parse(template);
+    server.views({
+        engines: {
+            html: {
+                compile: (template) => {
+                    Mustache.parse(template);
 
-          return (context) => {
-            return Mustache.render(template, context);
-          };
+                    return (context) => {
+                        return Mustache.render(template, context);
+                    };
+                },
+            },
         },
-      },
-    },
-    relativeTo: __dirname,
-    path: 'examples/mustache/templates/basic',
-  });
+        relativeTo: __dirname,
+        path: 'examples/mustache/templates/basic',
+    });
 
-  server.route({ method: 'GET', path: '/', handler: rootHandler });
+    server.route({ method: 'GET', path: '/', handler: rootHandler });
 
-  await server.start();
-  console.log('Server running at:', server.info.uri);
+    await server.start();
+    console.log('Server running at:', server.info.uri);
 };
 
 provision();
@@ -280,44 +286,44 @@ const Vision = require('@hapi/vision');
 const server = Hapi.Server({ port: 3000 });
 
 const rootHandler = (request, h) => {
-  return h.view('index', {
-    title: 'examples/nunjucks/templates | Hapi ' + request.server.version,
-    message: 'Hello Nunjucks!',
-  });
+    return h.view('index', {
+        title: 'examples/nunjucks/templates | Hapi ' + request.server.version,
+        message: 'Hello Nunjucks!',
+    });
 };
 
 const provision = async () => {
-  await server.register(Vision);
+    await server.register(Vision);
 
-  server.views({
-    engines: {
-      html: {
-        compile: (src, options) => {
-          const template = Nunjucks.compile(src, options.environment);
+    server.views({
+        engines: {
+            html: {
+                compile: (src, options) => {
+                    const template = Nunjucks.compile(src, options.environment);
 
-          return (context) => {
-            return template.render(context);
-          };
+                    return (context) => {
+                        return template.render(context);
+                    };
+                },
+
+                prepare: (options, next) => {
+                    options.compileOptions.environment = Nunjucks.configure(
+                        options.path,
+                        { watch: false },
+                    );
+
+                    return next();
+                },
+            },
         },
+        relativeTo: __dirname,
+        path: 'examples/nunjucks/templates',
+    });
 
-        prepare: (options, next) => {
-          options.compileOptions.environment = Nunjucks.configure(
-            options.path,
-            { watch: false },
-          );
+    server.route({ method: 'GET', path: '/', handler: rootHandler });
 
-          return next();
-        },
-      },
-    },
-    relativeTo: __dirname,
-    path: 'examples/nunjucks/templates',
-  });
-
-  server.route({ method: 'GET', path: '/', handler: rootHandler });
-
-  await server.start();
-  console.log('Server running at:', server.info.uri);
+    await server.start();
+    console.log('Server running at:', server.info.uri);
 };
 
 provision();
@@ -333,35 +339,38 @@ const Vision = require('@hapi/vision');
 const server = Hapi.Server({ port: 3000 });
 
 const rootHandler = (request, h) => {
-  return h.view('index', {
-    title: 'examples/twig/templates | Hapi ' + request.server.version,
-    message: 'Hello Twig!',
-  });
+    return h.view('index', {
+        title: 'examples/twig/templates | Hapi ' + request.server.version,
+        message: 'Hello Twig!',
+    });
 };
 
 const provision = async () => {
-  await server.register(Vision);
+    await server.register(Vision);
 
-  server.views({
-    engines: {
-      twig: {
-        compile: (src, options) => {
-          const template = Twig.twig({ id: options.filename, data: src });
+    server.views({
+        engines: {
+            twig: {
+                compile: (src, options) => {
+                    const template = Twig.twig({
+                        id: options.filename,
+                        data: src,
+                    });
 
-          return (context) => {
-            return template.render(context);
-          };
+                    return (context) => {
+                        return template.render(context);
+                    };
+                },
+            },
         },
-      },
-    },
-    relativeTo: __dirname,
-    path: 'examples/twig/templates',
-  });
+        relativeTo: __dirname,
+        path: 'examples/twig/templates',
+    });
 
-  server.route({ method: 'GET', path: '/', handler: rootHandler });
+    server.route({ method: 'GET', path: '/', handler: rootHandler });
 
-  await server.start();
-  console.log('Server running at:', server.info.uri);
+    await server.start();
+    console.log('Server running at:', server.info.uri);
 };
 
 provision();
@@ -377,45 +386,45 @@ const Vision = require('@hapi/vision');
 const server = Hapi.Server({ port: 3000 });
 
 const rootHandler = (request, h) => {
-  return h.view('index', {
-    title: 'examples/eta/templates | Hapi ' + request.server.version,
-    message: 'Hello Eta!',
-  });
+    return h.view('index', {
+        title: 'examples/eta/templates | Hapi ' + request.server.version,
+        message: 'Hello Eta!',
+    });
 };
 
 const provision = async () => {
-  await server.register(Vision);
+    await server.register(Vision);
 
-  server.views({
-    engines: {
-      eta: {
-        compile: (src, options) => {
-          const compiled = Eta.compile(src, options);
+    server.views({
+        engines: {
+            eta: {
+                compile: (src, options) => {
+                    const compiled = Eta.compile(src, options);
 
-          return (context) => {
-            return Eta.render(compiled, context);
-          };
+                    return (context) => {
+                        return Eta.render(compiled, context);
+                    };
+                },
+            },
         },
-      },
-    },
-    /**
-     * This is the config object that gets passed to the compile function
-     * defined above. This should contain the eta configuration object
-     * described at https://eta.js.org/docs/api/configuration Only some of
-     * the configuration are relevant when using with hapijs.
-     */
-    compileOptions: {
-      autoEscape: true,
-      tags: ['{{', '}}'],
-    },
-    relativeTo: __dirname,
-    path: 'examples/eta/templates',
-  });
+        /**
+         * This is the config object that gets passed to the compile function
+         * defined above. This should contain the eta configuration object
+         * described at https://eta.js.org/docs/api/configuration Only some of
+         * the configuration are relevant when using with hapijs.
+         */
+        compileOptions: {
+            autoEscape: true,
+            tags: ['{{', '}}'],
+        },
+        relativeTo: __dirname,
+        path: 'examples/eta/templates',
+    });
 
-  server.route({ method: 'GET', path: '/', handler: rootHandler });
+    server.route({ method: 'GET', path: '/', handler: rootHandler });
 
-  await server.start();
-  console.log('Server running at:', server.info.uri);
+    await server.start();
+    console.log('Server running at:', server.info.uri);
 };
 
 provision();
@@ -458,28 +467,28 @@ The Views Manager is configured with [`registration options`](#registration) or 
 - `engines` - required object where each key is a file extension (e.g. 'html', 'hbr'), mapped
   to the npm module used for rendering the templates. Alternatively, the extension can be
   mapped to an object with the following options:
-  - `module` - the npm module used for rendering the templates. The module object must
-    contain the `compile()` function:
-    - `compile()` - the rendering function. The required function signature depends on the
-      `compileMode` settings (see below). If `compileMode` is `'sync'`, the signature is
-      `compile(template, options)`, the return value is a function with signature
-      `function(context, options)` (the compiled sync template), and the method is allowed to throw errors. If
-      `compileMode` is `'async'`, the signature is `compile(template, options, next)`
-      where `next` has the signature `function(err, compiled)`, `compiled` is a
-      function with signature `function(context, options, callback)` (the compiled async template) and `callback` has the
-      signature `function(err, rendered)`.
-    - `prepare(config, next)` - initializes additional engine state.
-      The `config` object is the engine configuration object allowing updates to be made.
-      This is useful for engines like Nunjucks that rely on additional state for rendering.
-      `next` has the signature `function(err)`.
-    - `registerPartial(name, src)` - registers a partial for use during template rendering.
-      The `name` is the partial path that templates should use to reference the partial and
-      `src` is the uncompiled template string for the partial.
-    - `registerHelper(name, helper)` - registers a helper for use during template rendering.
-      The `name` is the name that templates should use to reference the helper and `helper`
-      is the function that will be invoked when the helper is called.
-  - any of the `views` options listed below (except `defaultExtension`) to override the
-    defaults for a specific engine.
+    - `module` - the npm module used for rendering the templates. The module object must
+      contain the `compile()` function:
+        - `compile()` - the rendering function. The required function signature depends on the
+          `compileMode` settings (see below). If `compileMode` is `'sync'`, the signature is
+          `compile(template, options)`, the return value is a function with signature
+          `function(context, options)` (the compiled sync template), and the method is allowed to throw errors. If
+          `compileMode` is `'async'`, the signature is `compile(template, options, next)`
+          where `next` has the signature `function(err, compiled)`, `compiled` is a
+          function with signature `function(context, options, callback)` (the compiled async template) and `callback` has the
+          signature `function(err, rendered)`.
+        - `prepare(config, next)` - initializes additional engine state.
+          The `config` object is the engine configuration object allowing updates to be made.
+          This is useful for engines like Nunjucks that rely on additional state for rendering.
+          `next` has the signature `function(err)`.
+        - `registerPartial(name, src)` - registers a partial for use during template rendering.
+          The `name` is the partial path that templates should use to reference the partial and
+          `src` is the uncompiled template string for the partial.
+        - `registerHelper(name, helper)` - registers a helper for use during template rendering.
+          The `name` is the name that templates should use to reference the helper and `helper`
+          is the function that will be invoked when the helper is called.
+    - any of the `views` options listed below (except `defaultExtension`) to override the
+      defaults for a specific engine.
 
 - `compileMode` - specify whether the engine `compile()` method is `'sync'` or `'async'`.
   Defaults to `'sync'`.
@@ -570,9 +579,9 @@ Uses the server views manager to render a template where:
   no context (`{}`).
 - `options` - optional object used to override the views manager configuration.
 - callback - the callback function with signature function (err, rendered, config) where:
-  - `err` - the rendering error if any.
-  - `rendered` - the result view string.
-  - `config` - the configuration used to render the template.
+    - `err` - the rendering error if any.
+    - `rendered` - the result view string.
+    - `config` - the configuration used to render the template.
 
 If no `callback` is provided, a `Promise` object is returned. The returned promise is resolved with only the
 rendered content and not the configuration object.
@@ -584,19 +593,19 @@ const server = Hapi.Server({ port: 3000 });
 const internals = {};
 
 internals.provision = async () => {
-  await server.register(require('@hapi/vision'));
+    await server.register(require('@hapi/vision'));
 
-  server.views({
-    engines: { html: require('handlebars') },
-    path: __dirname + '/templates',
-  });
+    server.views({
+        engines: { html: require('handlebars') },
+        path: __dirname + '/templates',
+    });
 
-  const context = {
-    title: 'Views Example',
-    message: 'Hello, World',
-  };
+    const context = {
+        title: 'Views Example',
+        message: 'Hello, World',
+    };
 
-  return server.render('hello', context);
+    return server.render('hello', context);
 };
 
 internals.provision();
@@ -627,20 +636,20 @@ const server = Hapi.Server({ port: 3000 });
 const internals = {};
 
 internals.provision = async () => {
-  await server.register(require('@hapi/vision'));
+    await server.register(require('@hapi/vision'));
 
-  server.views({
-    engines: { html: require('handlebars') },
-    path: __dirname + '/templates',
-  });
+    server.views({
+        engines: { html: require('handlebars') },
+        path: __dirname + '/templates',
+    });
 
-  server.route({
-    method: 'GET',
-    path: '/view',
-    handler: function (request, h) {
-      return request.render('test', { message: 'hello' });
-    },
-  });
+    server.route({
+        method: 'GET',
+        path: '/view',
+        handler: function (request, h) {
+            return request.render('test', { message: 'hello' });
+        },
+    });
 };
 
 internals.provision();
@@ -677,26 +686,26 @@ const server = Hapi.Server({ port: 3000 });
 const internals = {};
 
 internals.provision = async () => {
-  await server.register(require('@hapi/vision'));
+    await server.register(require('@hapi/vision'));
 
-  server.views({
-    engines: { html: require('handlebars') },
-    path: __dirname + '/templates',
-  });
+    server.views({
+        engines: { html: require('handlebars') },
+        path: __dirname + '/templates',
+    });
 
-  server.route({
-    method: 'GET',
-    path: '/',
-    handler: {
-      view: {
-        template: 'hello',
-        context: {
-          title: 'Views Example',
-          message: 'Hello, World',
+    server.route({
+        method: 'GET',
+        path: '/',
+        handler: {
+            view: {
+                template: 'hello',
+                context: {
+                    title: 'Views Example',
+                    message: 'Hello, World',
+                },
+            },
         },
-      },
-    },
-  });
+    });
 };
 
 internals.provision();
@@ -729,23 +738,23 @@ const server = Hapi.Server({ port: 3000 });
 const internals = {};
 
 internals.provision = async () => {
-  await server.register(require('@hapi/vision'));
+    await server.register(require('@hapi/vision'));
 
-  server.views({
-    engines: { html: require('handlebars') },
-    path: __dirname + '/templates',
-  });
+    server.views({
+        engines: { html: require('handlebars') },
+        path: __dirname + '/templates',
+    });
 
-  const rootHandler = function (request, h) {
-    const context = {
-      title: 'Views Example',
-      message: 'Hello, World',
+    const rootHandler = function (request, h) {
+        const context = {
+            title: 'Views Example',
+            message: 'Hello, World',
+        };
+
+        return h.view('hello', context);
     };
 
-    return h.view('hello', context);
-  };
-
-  server.route({ method: 'GET', path: '/', handler: rootHandler });
+    server.route({ method: 'GET', path: '/', handler: rootHandler });
 };
 
 internals.provision();
@@ -761,14 +770,14 @@ Returns the closest [Views manager](#views-manager) to your `realm` (either on y
 
 ```html
 <html>
-  <head>
-    <title>{{title}}</title>
-  </head>
-  <body>
-    <div>
-      <h1>{{message}}</h1>
-    </div>
-  </body>
+    <head>
+        <title>{{title}}</title>
+    </head>
+    <body>
+        <div>
+            <h1>{{message}}</h1>
+        </div>
+    </body>
 </html>
 ```
 
@@ -778,16 +787,16 @@ If you'd like to type out the way Vision is used, you can do so with the followi
 
 ```typescript
 declare module '@hapi/vision' {
-  // User defined
-  type CustomTemplates = 'test' | 'hello' | 'temp1';
+    // User defined
+    type CustomTemplates = 'test' | 'hello' | 'temp1';
 
-  // User defined
-  type CustomLayout = 'auth' | 'unauth' | 'admin';
+    // User defined
+    type CustomLayout = 'auth' | 'unauth' | 'admin';
 
-  interface ViewTypes {
-    template: CustomTemplates;
-    layout: CustomLayout;
-  }
+    interface ViewTypes {
+        template: CustomTemplates;
+        layout: CustomLayout;
+    }
 }
 ```
 
@@ -810,26 +819,26 @@ If you'd like to also type check the decorated handlers, you can augment the fol
 
 ```typescript
 declare module '@hapi/vision' {
-  // User defined
-  type CustomTemplates = 'test' | 'hello' | 'temp1';
+    // User defined
+    type CustomTemplates = 'test' | 'hello' | 'temp1';
 
-  // User defined
-  type CustomLayout = 'auth' | 'unauth' | 'admin';
+    // User defined
+    type CustomLayout = 'auth' | 'unauth' | 'admin';
 
-  // server.render(...)
-  interface RenderMethod {
-    (template: CustomTemplates, context?: string): Promise<string>;
-  }
+    // server.render(...)
+    interface RenderMethod {
+        (template: CustomTemplates, context?: string): Promise<string>;
+    }
 
-  // { handler: (req) => req.render(...) }
-  interface RequestRenderMethod {
-    (template: CustomTemplates, context?: string): Promise<string>;
-  }
+    // { handler: (req) => req.render(...) }
+    interface RequestRenderMethod {
+        (template: CustomTemplates, context?: string): Promise<string>;
+    }
 
-  // { handler: (req, h) => h.view(...) }
-  interface ToolkitRenderMethod {
-    (template: CustomTemplates, context?: string): ResponseObject;
-  }
+    // { handler: (req, h) => h.view(...) }
+    interface ToolkitRenderMethod {
+        (template: CustomTemplates, context?: string): ResponseObject;
+    }
 }
 ```
 
@@ -838,8 +847,8 @@ This is useful for when you may want to make strict checks against template / co
 ```typescript
 // { handler: (req, h) => h.view(...) }
 interface ToolkitRenderMethod {
-  (template: 'test', context: { apples: 5 }): ResponseObject;
-  (template: 'hello', context: { oranges: true }): ResponseObject;
-  (template: 'temp1', context: { bananas: 'green' }): ResponseObject;
+    (template: 'test', context: { apples: 5 }): ResponseObject;
+    (template: 'hello', context: { oranges: true }): ResponseObject;
+    (template: 'temp1', context: { bananas: 'green' }): ResponseObject;
 }
 ```

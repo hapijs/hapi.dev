@@ -9,21 +9,21 @@ objects, as well as non-enumerable properties) where:
 
 - `obj` - the object to be cloned.
 - `options` - optional settings:
-  - `symbols` - clone symbol properties. Defaults to `true`.
-  - `shallow` - one of:
-    - an array of object key strings (dot-separated or array-based key paths) to shallow copy from `obj` instead of deep.
-    - `true` to shallow copy all object properties. Used to shallow copy an object with non-enumerable properties and prototype;
+    - `symbols` - clone symbol properties. Defaults to `true`.
+    - `shallow` - one of:
+        - an array of object key strings (dot-separated or array-based key paths) to shallow copy from `obj` instead of deep.
+        - `true` to shallow copy all object properties. Used to shallow copy an object with non-enumerable properties and prototype;
 
 ```javascript
 const nestedObj = {
-  w: /^something$/gi,
-  x: {
-    a: [1, 2, 3],
-    b: 123456,
-    c: new Date(),
-  },
-  y: 'y',
-  z: new Date(),
+    w: /^something$/gi,
+    x: {
+        a: [1, 2, 3],
+        b: 123456,
+        c: new Date(),
+    },
+    y: 'y',
+    z: new Date(),
 };
 
 const copy = Hoek.clone(nestedObj);
@@ -39,14 +39,14 @@ Clones an object or array excluding some keys which are shallow copied:
 
 ```javascript
 const nestedObj = {
-  w: /^something$/gi,
-  x: {
-    a: [1, 2, 3],
-    b: 123456,
-    c: new Date(),
-  },
-  y: 'y',
-  z: new Date(),
+    w: /^something$/gi,
+    x: {
+        a: [1, 2, 3],
+        b: 123456,
+        c: new Date(),
+    },
+    y: 'y',
+    z: new Date(),
 };
 
 const copy = Hoek.clone(nestedObj, { shallow: ['x'] });
@@ -65,11 +65,11 @@ Merge all the properties of source into target where:
 - `target` - the object onto which the properties of `source` are copied to.
 - `source` - the object copied onto `target`.
 - `options` - optional settings:
-  - `nullOverride` - if `true`, a `null` value in the source overrides any existing value in the `defaults`.
-    If `false`, `null` values in the `source` are ignored. Defaults to `true`.
-  - `mergeArrays` - if `true`, array values from `source` are appended to existing array values in `target`.
-    Defaults to `true`.
-  - `symbols` - clone symbol properties. Defaults to `true`.
+    - `nullOverride` - if `true`, a `null` value in the source overrides any existing value in the `defaults`.
+      If `false`, `null` values in the `source` are ignored. Defaults to `true`.
+    - `mergeArrays` - if `true`, array values from `source` are appended to existing array values in `target`.
+      Defaults to `true`.
+    - `symbols` - clone symbol properties. Defaults to `true`.
 
 Note that source wins in conflict, and by default null and undefined from source are applied.
 Merge is destructive where the target is modified. For non destructive merge, use `applyToDefaults`.
@@ -97,9 +97,9 @@ Apply source to a copy of the defaults where:
 - `defaults` - the default object to clone and then apply `source` onto.
 - `source` - the object applied to the `defaults`.
 - `options` - optional settings:
-  - `nullOverride` - if `true`, a `null` value in the source overrides any existing value in the `defaults`.
-    If `false`, `null` values in the `source` are ignored. Defaults to `false`.
-  - `shallow` - an array of dot-separated or array-based key paths to shallow copy values in `source`.
+    - `nullOverride` - if `true`, a `null` value in the source overrides any existing value in the `defaults`.
+      If `false`, `null` values in the `source` are ignored. Defaults to `false`.
+    - `shallow` - an array of dot-separated or array-based key paths to shallow copy values in `source`.
 
 ```javascript
 const defaults = { host: 'localhost', port: 8000 };
@@ -121,22 +121,22 @@ Apply source to a copy of the defaults where the shallow keys specified in the l
 
 ```javascript
 const defaults = {
-  db: {
-    server: {
-      host: 'localhost',
-      port: 8000,
+    db: {
+        server: {
+            host: 'localhost',
+            port: 8000,
+        },
+        name: 'example',
     },
-    name: 'example',
-  },
 };
 
 const source = { server: { port: 8080 } };
 
 const config = Hoek.applyToDefaults(defaults, source, {
-  shallow: ['db.server'],
+    shallow: ['db.server'],
 }); // results in { db: { server: { port: 8080 }, name: 'example' } }
 const config = Hoek.applyToDefaults(defaults, source, {
-  shallow: [['db', 'server']],
+    shallow: [['db', 'server']],
 }); // results in { db: { server: { port: 8080 }, name: 'example' } }
 ```
 
@@ -148,21 +148,21 @@ prototype, and enumerable properties, where:
 - `a` - the first value.
 - `b` - the second value.
 - `options` - optional settings:
-  - `deepFunction` - when `true`, function values are deep compared using their source code and
-    object properties. Defaults to `false`.
-  - `part` - when `true`, allows a partial match where some of `b` is present in `a`. Defaults to
-    `false`.
-  - `prototype` - when `false, prototype comparisons are skipped. Defaults to `true`.
-  - `skip` - an array of key name strings to skip comparing. The keys can be found in any level
-    of the object. Note that both values must contain the key - only the value comparison is
-    skipped. Only applies to plain objects and deep functions (not to map, sets, etc.). Defaults
-    to no skipping.
-  - `symbols` - when `false`, symbol properties are ignored. Defaults to `true`.
+    - `deepFunction` - when `true`, function values are deep compared using their source code and
+      object properties. Defaults to `false`.
+    - `part` - when `true`, allows a partial match where some of `b` is present in `a`. Defaults to
+      `false`.
+    - `prototype` - when `false, prototype comparisons are skipped. Defaults to `true`.
+    - `skip` - an array of key name strings to skip comparing. The keys can be found in any level
+      of the object. Note that both values must contain the key - only the value comparison is
+      skipped. Only applies to plain objects and deep functions (not to map, sets, etc.). Defaults
+      to no skipping.
+    - `symbols` - when `false`, symbol properties are ignored. Defaults to `true`.
 
 ```javascript
 Hoek.deepEqual(
-  { a: [1, 2], b: 'string', c: { d: true } },
-  { a: [1, 2], b: 'string', c: { d: true } },
+    { a: [1, 2], b: 'string', c: { d: true } },
+    { a: [1, 2], b: 'string', c: { d: true } },
 ); //results in true
 Hoek.deepEqual(Object.create(null), {}, { prototype: false }); //results in true
 Hoek.deepEqual(Object.create(null), {}); //results in false
@@ -175,7 +175,7 @@ Find the common unique items betwee two arrays where:
 - `array1` - the first array.
 - `array2` - the second array.
 - `options` - optional settings:
-  - `first` - if `true`, return only the first intersecting item. Defaults to `false`.
+    - `first` - if `true`, return only the first intersecting item. Defaults to `false`.
 
 ```javascript
 const array1 = [1, 2, 3];
@@ -192,11 +192,11 @@ Tests if the reference value contains the provided values where:
 - `values` - a single or array of values to find within the `ref` value. If `ref` is an object, `values` can be a key name,
   an array of key names, or an object with key-value pairs to compare.
 - `options` - an optional object with the following optional settings:
-  - `deep` - if `true`, performed a deep comparison of the values.
-  - `once` - if `true`, allows only one occurrence of each value.
-  - `only` - if `true`, does not allow values not explicitly listed.
-  - `part` - if `true`, allows partial match of the values (at least one must always match).
-  - `symbols` - clone symbol properties. Defaults to `true`.
+    - `deep` - if `true`, performed a deep comparison of the values.
+    - `once` - if `true`, allows only one occurrence of each value.
+    - `only` - if `true`, does not allow values not explicitly listed.
+    - `part` - if `true`, allows partial match of the values (at least one must always match).
+    - `symbols` - clone symbol properties. Defaults to `true`.
 
 Note: comparing a string to overlapping values will result in failed comparison (e.g. `contain('abc', ['ab', 'bc'])`).
 Also, if an object key's value does not match the provided value, `false` is returned even when `part` is specified.
@@ -228,15 +228,15 @@ flattenedArray = Hoek.flatten(array, target); // results in [4, [5], 1, 2, 3]
 Converts an object key chain string or array to reference
 
 - `options` - optional settings
-  - `separator` - string to split chain path on, defaults to '.'
-  - `default` - value to return if the path or value is not present, default is `undefined`
-  - `strict` - if `true`, will throw an error on missing member, default is `false`
-  - `functions` - if `true`, allow traversing functions for properties. `false` will throw an
-    error if a function is part of the chain. Defaults to `true`.
-  - `iterables` - if `true`, allows traversing Set and Map objects. `false` will result in
-    `undefined` return value is the chain contains any Set or Map objects. Note that enabling
-    `iterables` can impact performance by up to 10% for all calls regardless of the presence of
-    Set or Map objects. Defaults to `false`.
+    - `separator` - string to split chain path on, defaults to '.'
+    - `default` - value to return if the path or value is not present, default is `undefined`
+    - `strict` - if `true`, will throw an error on missing member, default is `false`
+    - `functions` - if `true`, allow traversing functions for properties. `false` will throw an
+      error if a function is part of the chain. Defaults to `true`.
+    - `iterables` - if `true`, allows traversing Set and Map objects. `false` will result in
+      `undefined` return value is the chain contains any Set or Map objects. Note that enabling
+      `iterables` can impact performance by up to 10% for all calls regardless of the presence of
+      Set or Map objects. Defaults to `false`.
 
 A chain can be a string that will be split into key names using `separator`,
 or an array containing each individual key name.
@@ -296,12 +296,12 @@ human-readable timestamps. More accurate for benchmarking or internal timers.
 
 ```javascript
 internals.htmlEscaped = {
-  '&': '&amp;',
-  '<': '&lt;',
-  '>': '&gt;',
-  '"': '&quot;',
-  "'": '&#x27;',
-  '`': '&#x60;',
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#x27;',
+    '`': '&#x60;',
 };
 ```
 
@@ -343,7 +343,7 @@ const a = Hoek.escapeRegex('4^f$s.4*5+-_?%=#!:@|~\\/`"(>)[<]d{}s,'); // returns 
 
 ```javascript
 const a = 1,
-  b = 2;
+    b = 2;
 
 Hoek.assert(a === b, 'a should equal b'); // Throws 'a should equal b'
 ```
@@ -352,7 +352,7 @@ Note that you may also pass an already created Error object as the second parame
 
 ```javascript
 const a = 1,
-  b = 2;
+    b = 2;
 
 Hoek.assert(a === b, new Error('a should equal b')); // Throws the given error object
 ```
@@ -365,7 +365,7 @@ Returns a new function that can be run multiple times, but makes sure `fn` is on
 
 ```javascript
 const myFn = function () {
-  console.log('Ran myFn');
+    console.log('Ran myFn');
 };
 
 const onceFn = Hoek.once(myFn);

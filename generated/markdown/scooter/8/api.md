@@ -8,19 +8,19 @@ const Hapi = require('@hapi/hapi');
 const Scooter = require('@hapi/scooter');
 
 const start = async () => {
-  const server = new Hapi.Server();
+    const server = new Hapi.Server();
 
-  server.route({
-    method: 'GET',
-    path: '/user-agent',
-    handler: (request, h) => {
-      return request.userAgent();
-    },
-  });
+    server.route({
+        method: 'GET',
+        path: '/user-agent',
+        handler: (request, h) => {
+            return request.userAgent();
+        },
+    });
 
-  await server.register(Scooter);
-  await server.start();
-  console.log(server.info.uri + '/user-agent');
+    await server.register(Scooter);
+    await server.start();
+    console.log(server.info.uri + '/user-agent');
 };
 
 start();

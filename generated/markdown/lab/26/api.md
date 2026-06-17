@@ -22,7 +22,7 @@ const { expect } = Code;
 const { it } = (exports.lab = Lab.script());
 
 it('returns true when 1 + 1 equals 2', () => {
-  expect(1 + 1).to.equal(2);
+    expect(1 + 1).to.equal(2);
 });
 ```
 
@@ -36,7 +36,7 @@ const { expect } = Code;
 const lab = (exports.lab = Lab.script());
 
 lab.test('returns true when 1 + 1 equals 2', () => {
-  expect(1 + 1).to.equal(2);
+    expect(1 + 1).to.equal(2);
 });
 ```
 
@@ -44,8 +44,8 @@ If a test is performing an asynchronous operation then it should use the `async`
 
 ```javascript
 lab.test('config file has correct value', async () => {
-  const file = await fs.readFile('config');
-  expect(file.toString()).to.contain('something');
+    const file = await fs.readFile('config');
+    expect(file.toString()).to.contain('something');
 });
 ```
 
@@ -53,9 +53,9 @@ Tests can be organized into experiments:
 
 ```javascript
 lab.experiment('math', () => {
-  lab.test('returns true when 1 + 1 equals 2', () => {
-    expect(1 + 1).to.equal(2);
-  });
+    lab.test('returns true when 1 + 1 equals 2', () => {
+        expect(1 + 1).to.equal(2);
+    });
 });
 ```
 
@@ -63,22 +63,22 @@ If you need to perform some setup operations before or after executing the tests
 
 ```javascript
 lab.experiment('math', () => {
-  lab.before(() => {
-    return new Promise((resolve) => {
-      // Wait 1 second
-      setTimeout(() => {
-        resolve();
-      }, 1000);
+    lab.before(() => {
+        return new Promise((resolve) => {
+            // Wait 1 second
+            setTimeout(() => {
+                resolve();
+            }, 1000);
+        });
     });
-  });
 
-  lab.beforeEach(() => {
-    // Run before every single test
-  });
+    lab.beforeEach(() => {
+        // Run before every single test
+    });
 
-  lab.test('returns true when 1 + 1 equals 2', () => {
-    expect(1 + 1).to.equal(2);
-  });
+    lab.test('returns true when 1 + 1 equals 2', () => {
+        expect(1 + 1).to.equal(2);
+    });
 });
 ```
 
@@ -86,15 +86,15 @@ lab.experiment('math', () => {
 
 ```javascript
 lab.experiment('math', () => {
-  lab.before(() => {
-    return aFunctionReturningAPromise();
-  });
-
-  lab.test('returns true when 1 + 1 equals 2', () => {
-    return aFunctionReturningAPromise().then((aValue) => {
-      expect(aValue).to.equal(expectedValue);
+    lab.before(() => {
+        return aFunctionReturningAPromise();
     });
-  });
+
+    lab.test('returns true when 1 + 1 equals 2', () => {
+        return aFunctionReturningAPromise().then((aValue) => {
+            expect(aValue).to.equal(expectedValue);
+        });
+    });
 });
 ```
 
@@ -108,11 +108,11 @@ You can also append `.only(…)` or `.skip(…)` to `test` and `experiment` inst
 
 ```javascript
 lab.experiment('with only', () => {
-  lab.test.only('only this test will run', () => {
-    expect(1 + 1).to.equal(2);
-  });
+    lab.test.only('only this test will run', () => {
+        expect(1 + 1).to.equal(2);
+    });
 
-  lab.test('another test that will not be executed', () => {});
+    lab.test('another test that will not be executed', () => {});
 });
 ```
 
@@ -128,13 +128,13 @@ const { expect } = Code;
 const { after, before, describe, it } = (exports.lab = Lab.script());
 
 describe('math', () => {
-  before(() => {});
+    before(() => {});
 
-  after(() => {});
+    after(() => {});
 
-  it('returns true when 1 + 1 equals 2', () => {
-    expect(1 + 1).to.equal(2);
-  });
+    it('returns true when 1 + 1 equals 2', () => {
+        expect(1 + 1).to.equal(2);
+    });
 });
 ```
 
@@ -150,9 +150,9 @@ const { expect } = Code;
 const { suite, test } = (exports.lab = Lab.script());
 
 suite('math', () => {
-  test('returns true when 1 + 1 equals 2', () => {
-    expect(1 + 1).to.equal(2);
-  });
+    test('returns true when 1 + 1 equals 2', () => {
+        expect(1 + 1).to.equal(2);
+    });
 });
 ```
 
@@ -162,13 +162,13 @@ suite('math', () => {
 
 ```json
 {
-  "devDependencies": {
-    "@hapi/lab": "21.x.x"
-  },
-  "scripts": {
-    "test": "lab -t 100",
-    "test-cov-html": "lab -r html -o coverage.html"
-  }
+    "devDependencies": {
+        "@hapi/lab": "21.x.x"
+    },
+    "scripts": {
+        "test": "lab -t 100",
+        "test-cov-html": "lab -r html -o coverage.html"
+    }
 }
 ```
 
@@ -188,13 +188,13 @@ $ npm test
 
 ```javascript
 lab.experiment('math', { timeout: 1000 }, () => {
-  lab.before({ timeout: 500 }, () => {
-    doSomething();
-  });
+    lab.before({ timeout: 500 }, () => {
+        doSomething();
+    });
 
-  lab.test('returns true when 1 + 1 equals 2', () => {
-    expect(1 + 1).to.equal(2);
-  });
+    lab.test('returns true when 1 + 1 equals 2', () => {
+        expect(1 + 1).to.equal(2);
+    });
 });
 ```
 
@@ -215,11 +215,11 @@ const { describe, it, before } = lab;
 export { lab };
 
 describe('experiment', () => {
-  before(() => {});
+    before(() => {});
 
-  it('verifies 1 equals 1', () => {
-    expect(1).to.equal(1);
-  });
+    it('verifies 1 equals 1', () => {
+        expect(1).to.equal(1);
+    });
 });
 ```
 
@@ -270,15 +270,15 @@ $ lab --typescript --require 'tsconfig-paths/register'
 - `-p`, `--default-plan-threshold` - sets the minimum number of assertions a test must run. Overridable with [`plan`](#plan).
 - `-P`, `--pattern` - only load files with the given pattern in the name.
 - `-r`, `--reporter` - the reporter used to generate the test results. Defaults to `console`. Options are:
-  - `console` - text report.
-  - `html` - HTML test and code coverage report (sets `-c`).
-  - `json` - output results in JSON format.
-  - `junit` - output results in JUnit XML format.
-  - `tap` - TAP protocol report.
-  - `lcov` - output to [lcov](http://ltp.sourceforge.net/coverage/lcov/geninfo.1.php) format.
-  - `clover` - output results in [Clover XML](https://confluence.atlassian.com/display/CLOVER) format.
-  - [Multiple Reporters](#multiple-reporters) - See Below
-  - [Custom Reporters](#custom-reporters) - See Below
+    - `console` - text report.
+    - `html` - HTML test and code coverage report (sets `-c`).
+    - `json` - output results in JSON format.
+    - `junit` - output results in JUnit XML format.
+    - `tap` - TAP protocol report.
+    - `lcov` - output to [lcov](http://ltp.sourceforge.net/coverage/lcov/geninfo.1.php) format.
+    - `clover` - output results in [Clover XML](https://confluence.atlassian.com/display/CLOVER) format.
+    - [Multiple Reporters](#multiple-reporters) - See Below
+    - [Custom Reporters](#custom-reporters) - See Below
 - `--req`, `--require` - dependencies to require and run before tests run (useful for things like `babel`, `tsconfig-paths`, test setup, etc).
 - `-R`, `--retries` - the number of times to retry a failing test that is explicitly marked with `retry`. Defaults to `5`.
 - `--shuffle` - randomize the order that test scripts are executed. Will not work with `--id`.
@@ -300,8 +300,8 @@ $ lab --typescript --require 'tsconfig-paths/register'
 Generates a test script interface which is used to add experiments and tests, where:
 
 - `options` - an optional object with the following optional keys:
-  - `schedule` - if `false`, an automatic execution of the script is disabled. Automatic execution allows running lab test scripts directly with Node.js without having to use the CLI (e.g. `node test/script.js`). When using **lab** programmatically, this behavior is undesired and can be turned off by setting `schedule` to `false`. If you need to see the output with schedule disabled you should set `output` to `process.stdout`. Defaults to `true`.
-  - `cli` - allows setting command line options within the script. Note that the last script file loaded wins and usage of this is recommended only for temporarily changing the execution of tests. This option is useful for code working with an automatic test engine that run tests on commits. Setting this option has no effect when not using the CLI runner. For example setting `cli` to `{ ids: [1] }` will only execute the first test loaded.
+    - `schedule` - if `false`, an automatic execution of the script is disabled. Automatic execution allows running lab test scripts directly with Node.js without having to use the CLI (e.g. `node test/script.js`). When using **lab** programmatically, this behavior is undesired and can be turned off by setting `schedule` to `false`. If you need to see the output with schedule disabled you should set `output` to `process.stdout`. Defaults to `true`.
+    - `cli` - allows setting command line options within the script. Note that the last script file loaded wins and usage of this is recommended only for temporarily changing the execution of tests. This option is useful for code working with an automatic test engine that run tests on commits. Setting this option has no effect when not using the CLI runner. For example setting `cli` to `{ ids: [1] }` will only execute the first test loaded.
 
 ### `script.after([options], action)`
 
@@ -309,7 +309,7 @@ Executes the provided action after the current experiment block is finished wher
 
 - `options` - optional flags as describe in [`script.test()`](#scripttesttitle-options-test).
 - `action` - a sync or async function using the signature `function(flags)` where:
-  - `flags` - see [Flags](#flags)
+    - `flags` - see [Flags](#flags)
 
 ### `script.afterEach()`
 
@@ -317,7 +317,7 @@ Executes the provided action after each test is executed in the current experime
 
 - `options` - optional flags as describe in [`script.test()`](#scripttesttitle-options-test).
 - `action` - a sync or async function using the signature `function(flags)` where:
-  - `flags` - see [Flags](#flags)
+    - `flags` - see [Flags](#flags)
 
 ### `script.before()`
 
@@ -325,7 +325,7 @@ Executes the provided action before the current experiment block is started wher
 
 - `options` - optional flags as describe in [`script.test()`](#scripttesttitle-options-test).
 - `action` - a sync or async function using the signature `function(flags)` where:
-  - `flags` - see [Flags](#flags)
+    - `flags` - see [Flags](#flags)
 
 ### `script.beforeEach()`
 
@@ -333,7 +333,7 @@ Executes the provided action before each test is executed in the current experim
 
 - `options` - optional flags as describe in [`script.test()`](#scripttesttitle-options-test).
 - `action` - a sync or async function using the signature `function(flags)` where:
-  - `flags` - see [Flags](#flags)
+    - `flags` - see [Flags](#flags)
 
 ### `script.describe(title, [options], content)`
 
@@ -345,9 +345,9 @@ Sets up an experiment (a group of tests) where:
 
 - `title` - the experiment description.
 - `options` - optional settings:
-  - `skip` - if `true`, sets the entire experiment content to be skipped during execution. Defaults to `false`.
-  - `only` - if `true`, sets all other experiments to `skip`. Default to `false`.
-  - `timeout` - overrides the default test timeout for tests and other timed operations. Defaults to `2000`.
+    - `skip` - if `true`, sets the entire experiment content to be skipped during execution. Defaults to `false`.
+    - `only` - if `true`, sets all other experiments to `skip`. Default to `false`.
+    - `timeout` - overrides the default test timeout for tests and other timed operations. Defaults to `2000`.
 - `content` - a function with signature `function()` which can setup other experiments or tests.
 
 ### `script.experiment.only(title, [options], content)`
@@ -372,22 +372,22 @@ Sets up a test where:
 
 - `title` - the test description.
 - `options` - optional settings:
-  - `skip` - if `true`, sets the entire experiment content to be skipped during execution. Defaults to `false`.
-  - `only` - if `true`, sets all other experiments to `skip`. Default to `false`.
-  - `timeout` - overrides the default test timeout for tests and other timed operations in milliseconds. Defaults to `2000`.
-  - `plan` - the expected number of assertions the test must execute. This setting should only be used with an assertion library that supports a `count()` function, like [**code**](https://hapi.dev/family/code).
-  - `retry` - when `true` or set to a number greater than `0`, if the test fails it will be retried `retries` (defaults to `5`) number of times until it passes.
+    - `skip` - if `true`, sets the entire experiment content to be skipped during execution. Defaults to `false`.
+    - `only` - if `true`, sets all other experiments to `skip`. Default to `false`.
+    - `timeout` - overrides the default test timeout for tests and other timed operations in milliseconds. Defaults to `2000`.
+    - `plan` - the expected number of assertions the test must execute. This setting should only be used with an assertion library that supports a `count()` function, like [**code**](https://hapi.dev/family/code).
+    - `retry` - when `true` or set to a number greater than `0`, if the test fails it will be retried `retries` (defaults to `5`) number of times until it passes.
 - `test` - a function with signature `function(flags)` where:
-  - the function can throw if the test failed.
-  - the function can return a Promise which either resolves (success) or rejects (fails).
-  - all other return value is ignored.
-  - `flags` - a set of test utilities described in [Flags](#flags).
+    - the function can throw if the test failed.
+    - the function can return a Promise which either resolves (success) or rejects (fails).
+    - all other return value is ignored.
+    - `flags` - a set of test utilities described in [Flags](#flags).
 
 ```javascript
 lab.experiment('my plan', () => {
-  lab.test('only a single assertion executes', { plan: 1 }, () => {
-    expect(1 + 1).to.equal(2);
-  });
+    lab.test('only a single assertion executes', { plan: 1 }, () => {
+        expect(1 + 1).to.equal(2);
+    });
 });
 ```
 
@@ -409,36 +409,36 @@ An object that is passed to `before` and `after` functions in addition to tests 
 
 ```javascript
 lab.experiment('my experiment', () => {
-  lab.before(({ context }) => {
-    context.foo = 'bar';
-  });
-
-  lab.test('contains context', ({ context }) => {
-    expect(context.foo).to.equal('bar');
-  });
-
-  lab.experiment('a nested experiment', () => {
     lab.before(({ context }) => {
-      context.foo = 'baz';
+        context.foo = 'bar';
     });
 
-    lab.test('has the correct context', ({ context }) => {
-      expect(context.foo).to.equal('baz');
-      // since this is a shallow clone, changes will not be carried to
-      // future tests or experiments
-      context.foo = 'fizzbuzz';
+    lab.test('contains context', ({ context }) => {
+        expect(context.foo).to.equal('bar');
     });
 
-    lab.test('receives a clean context', ({ context }) => {
-      expect(context.foo).to.equal('baz');
-    });
-  });
+    lab.experiment('a nested experiment', () => {
+        lab.before(({ context }) => {
+            context.foo = 'baz';
+        });
 
-  lab.experiment('another nested experiment', () => {
-    lab.test('maintains the original context', ({ context }) => {
-      expect(context.foo).to.equal('bar');
+        lab.test('has the correct context', ({ context }) => {
+            expect(context.foo).to.equal('baz');
+            // since this is a shallow clone, changes will not be carried to
+            // future tests or experiments
+            context.foo = 'fizzbuzz';
+        });
+
+        lab.test('receives a clean context', ({ context }) => {
+            expect(context.foo).to.equal('baz');
+        });
     });
-  });
+
+    lab.experiment('another nested experiment', () => {
+        lab.test('maintains the original context', ({ context }) => {
+            expect(context.foo).to.equal('bar');
+        });
+    });
 });
 ```
 
@@ -455,12 +455,12 @@ Below is an example demonstrating how to use `mustCall` to verify that `fn` is c
 
 ```javascript
 lab.test('fn must be called twice', async (flags) => {
-  const fn = () => {};
-  const wrapped = flags.mustCall(fn, 2);
-  wrapped();
+    const fn = () => {};
+    const wrapped = flags.mustCall(fn, 2);
+    wrapped();
 
-  await doSomeAsyncOperation();
-  wrapped();
+    await doSomeAsyncOperation();
+    wrapped();
 });
 ```
 
@@ -474,8 +474,8 @@ For example, if you would like to add a note with the current time, your test ca
 
 ```javascript
 lab.test('attaches notes', (flags) => {
-  expect(1 + 1).to.equal(2);
-  flags.note(`The current time is ${Date.now()}`);
+    expect(1 + 1).to.equal(2);
+    flags.note(`The current time is ${Date.now()}`);
 });
 ```
 
@@ -487,11 +487,11 @@ A property that can be assigned a cleanup function registered at runtime to be e
 
 ```javascript
 lab.test('cleanups after test', (flags) => {
-  flags.onCleanup = () => {
-    cleanup_logic();
-  };
+    flags.onCleanup = () => {
+        cleanup_logic();
+    };
 
-  expect(1 + 1).to.equal(2);
+    expect(1 + 1).to.equal(2);
 });
 ```
 
@@ -501,19 +501,21 @@ A property that can be assigned an override for global exception handling. This 
 
 ```javascript
 lab.test('leaves an uncaught rejection', (flags) => {
-  return new Promise((resolve) => {
-    flags.onUncaughtException = (err) => {
-      expect(err).to.be.an.error(
-        'I want this exception to remain uncaught in production',
-      );
-      resolve(); // finish the test
-    };
+    return new Promise((resolve) => {
+        flags.onUncaughtException = (err) => {
+            expect(err).to.be.an.error(
+                'I want this exception to remain uncaught in production',
+            );
+            resolve(); // finish the test
+        };
 
-    // sample production code
-    setTimeout(() => {
-      throw new Error('I want this exception to remain uncaught in production');
+        // sample production code
+        setTimeout(() => {
+            throw new Error(
+                'I want this exception to remain uncaught in production',
+            );
+        });
     });
-  });
 });
 ```
 
@@ -523,21 +525,23 @@ A property that can be assigned an override function for global rejection handli
 
 ```javascript
 lab.test('leaves an unhandled rejection', (flags) => {
-  return new Promise((resolve) => {
-    flags.onUnhandledRejection = (err) => {
-      expect(err).to.be.an.error(
-        'I want this rejection to remain unhandled in production',
-      );
-      resolve(); // finish the test
-    };
+    return new Promise((resolve) => {
+        flags.onUnhandledRejection = (err) => {
+            expect(err).to.be.an.error(
+                'I want this rejection to remain unhandled in production',
+            );
+            resolve(); // finish the test
+        };
 
-    // sample production code
-    setTimeout(() => {
-      Promise.reject(
-        new Error('I want this rejection to remain unhandled in production'),
-      );
+        // sample production code
+        setTimeout(() => {
+            Promise.reject(
+                new Error(
+                    'I want this rejection to remain unhandled in production',
+                ),
+            );
+        });
     });
-  });
 });
 ```
 
@@ -549,9 +553,9 @@ Below is an example of a `.labrc.js` file to enable linting and test coverage ch
 
 ```js
 module.exports = {
-  coverage: true,
-  threshold: 90,
-  lint: true,
+    coverage: true,
+    threshold: 90,
+    lint: true,
 };
 ```
 
@@ -561,8 +565,8 @@ The `.labrc.js` file will override the **lab** default settings. Any options pas
 
 ```js
 module.exports = {
-  coverage: true,
-  threshold: 100,
+    coverage: true,
+    threshold: 100,
 };
 ```
 
@@ -580,7 +584,7 @@ In addition, you can use the `paths` parameter to override the default test dire
 
 ```js
 module.exports = {
-  paths: ['test/lab'],
+    paths: ['test/lab'],
 };
 ```
 
@@ -605,10 +609,10 @@ and add an `ignores` rule containing paths to be ignored. Here is an example pre
 import HapiPlugin from '@hapi/eslint-plugin';
 
 export default [
-  {
-    ignores: ['node_modules/*', '**/vendor/*.js'],
-  },
-  ...HapiPlugin.configs.module,
+    {
+        ignores: ['node_modules/*', '**/vendor/*.js'],
+    },
+    ...HapiPlugin.configs.module,
 ];
 ```
 
@@ -633,13 +637,13 @@ const { describe, it } = lab;
 const { expect, fail } = require('@hapi/code');
 
 describe('expectation', () => {
-  it('should be able to expect', () => {
-    expect(true).to.be.true();
-  });
+    it('should be able to expect', () => {
+        expect(true).to.be.true();
+    });
 
-  it('should be able to fail (This test should fail)', () => {
-    fail('Should fail');
-  });
+    it('should be able to fail (This test should fail)', () => {
+        fail('Should fail');
+    });
 });
 ```
 
@@ -651,11 +655,11 @@ If you use the [Code](https://github.com/hapijs/code) assertion library Lab will
 
 ```js
 describe('expectation', () => {
-  it('Test should pass but get marked as having a missing expectation', () => {
-    // Invalid and missing assertion - false is a method, not a property!
-    // This test will pass.
-    Lab.expect(true).to.be.false;
-  });
+    it('Test should pass but get marked as having a missing expectation', () => {
+        // Invalid and missing assertion - false is a method, not a property!
+        // This test will pass.
+        Lab.expect(true).to.be.false;
+    });
 });
 ```
 
@@ -692,8 +696,8 @@ In a `.labrc.js` file, multiple reporters and their associated output paths woul
 
 ```javascript
 module.exports = {
-  reporter: ['console', 'html', 'lcov', 'json'],
-  output: ['stdout', 'coverage.html', 'lcov.info', 'data.json'],
+    reporter: ['console', 'html', 'lcov', 'json'],
+    output: ['stdout', 'coverage.html', 'lcov.info', 'data.json'],
 };
 ```
 
@@ -742,7 +746,7 @@ Sometimes you want to disable code coverage for specific lines, and have the cov
 // There is no way to cover this in node 0.10
 /* $lab:coverage:off$ */
 if (typeof value === 'symbol') {
-  // do something with value
+    // do something with value
 }
 /* $lab:coverage:on$ */
 ```
@@ -782,7 +786,7 @@ Semantics:
 
 - `$lab:coverage:push$` copies the current skip state to the top of the stack, and leaves it as the current state as well
 - `$lab:coverage:pop$` replaces the current skip state with the top of the stack, and removes the top of the stack
-  - if the stack is empty, `lab` will tell you by throwing the error `"unable to pop coverage bypass stack"`
+    - if the stack is empty, `lab` will tell you by throwing the error `"unable to pop coverage bypass stack"`
 
 ### Excluding paths from coverage reporting
 

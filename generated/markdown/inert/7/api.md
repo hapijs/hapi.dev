@@ -25,32 +25,32 @@ const Hapi = require('@hapi/hapi');
 const Inert = require('@hapi/inert');
 
 const server = new Hapi.Server({
-  port: 3000,
-  routes: {
-    files: {
-      relativeTo: Path.join(__dirname, 'public'),
+    port: 3000,
+    routes: {
+        files: {
+            relativeTo: Path.join(__dirname, 'public'),
+        },
     },
-  },
 });
 
 const provision = async () => {
-  await server.register(Inert);
+    await server.register(Inert);
 
-  server.route({
-    method: 'GET',
-    path: '/{param*}',
-    handler: {
-      directory: {
-        path: '.',
-        redirectToSlash: true,
-        index: true,
-      },
-    },
-  });
+    server.route({
+        method: 'GET',
+        path: '/{param*}',
+        handler: {
+            directory: {
+                path: '.',
+                redirectToSlash: true,
+                index: true,
+            },
+        },
+    });
 
-  await server.start();
+    await server.start();
 
-  console.log('Server running at:', server.info.uri);
+    console.log('Server running at:', server.info.uri);
 };
 
 provision();
@@ -62,11 +62,11 @@ You can serve specific files using the `file` handler:
 
 ```js
 server.route({
-  method: 'GET',
-  path: '/{path*}',
-  handler: {
-    file: 'page.html',
-  },
+    method: 'GET',
+    path: '/{path*}',
+    handler: {
+        file: 'page.html',
+    },
 });
 ```
 
@@ -76,25 +76,25 @@ If you need more control, the `h.file()` method is available to use inside handl
 
 ```js
 server.route({
-  method: 'GET',
-  path: '/file',
-  handler(request, h) {
-    let path = 'plain.txt';
-    if (request.headers['x-magic'] === 'sekret') {
-      path = 'awesome.png';
-    }
+    method: 'GET',
+    path: '/file',
+    handler(request, h) {
+        let path = 'plain.txt';
+        if (request.headers['x-magic'] === 'sekret') {
+            path = 'awesome.png';
+        }
 
-    return h.file(path).vary('x-magic');
-  },
+        return h.file(path).vary('x-magic');
+    },
 });
 
 server.ext('onPreResponse', (request, h) => {
-  const response = request.response;
-  if (response.isBoom && response.output.statusCode === 404) {
-    return h.file('404.html').code(404);
-  }
+    const response = request.response;
+    if (response.isBoom && response.output.statusCode === 404) {
+        return h.file('404.html').code(404);
+    }
 
-  return h.continue;
+    return h.continue;
 });
 ```
 
@@ -120,31 +120,31 @@ type based on filename extension.:
 
 - `path` - the file path.
 - `options` - optional settings:
-  - `confine` - serve file relative to this directory and returns `403 Forbidden` if the
-    `path` resolves outside the `confine` directory.
-    Defaults to `true` which uses the `relativeTo` route option as the `confine`.
-    Set to `false` to disable this security feature.
-  - `filename` - an optional filename to specify if sending a 'Content-Disposition' header,
-    defaults to the basename of `path`
-  - `mode` - specifies whether to include the 'Content-Disposition' header with the response.
-    Available values:
-    - `false` - header is not included. This is the default value.
-    - `'attachment'`
-    - `'inline'`
-  - `lookupCompressed` - if `true`, looks for for a pre-compressed version of the file with
-    the same filename with an extension, depending on the accepted encoding.
-    Defaults to `false`.
-  - `lookupMap` - an `object` which maps content encoding to expected file name extension.
-    Defaults to `{ gzip: '.gz' }`.
-  - `etagMethod` - specifies the method used to calculate the `ETag` header response.
-    Available values:
-    - `'hash'` - SHA1 sum of the file contents, suitable for distributed deployments.
-      Default value.
-    - `'simple'` - Hex encoded size and modification date, suitable when files are stored
-      on a single server.
-    - `false` - Disable ETag computation.
-  - `start` - offset in file to reading from, defaults to 0.
-  - `end` - offset in file to stop reading from. If not set, will read to end of file.
+    - `confine` - serve file relative to this directory and returns `403 Forbidden` if the
+      `path` resolves outside the `confine` directory.
+      Defaults to `true` which uses the `relativeTo` route option as the `confine`.
+      Set to `false` to disable this security feature.
+    - `filename` - an optional filename to specify if sending a 'Content-Disposition' header,
+      defaults to the basename of `path`
+    - `mode` - specifies whether to include the 'Content-Disposition' header with the response.
+      Available values:
+        - `false` - header is not included. This is the default value.
+        - `'attachment'`
+        - `'inline'`
+    - `lookupCompressed` - if `true`, looks for for a pre-compressed version of the file with
+      the same filename with an extension, depending on the accepted encoding.
+      Defaults to `false`.
+    - `lookupMap` - an `object` which maps content encoding to expected file name extension.
+      Defaults to `{ gzip: '.gz' }`.
+    - `etagMethod` - specifies the method used to calculate the `ETag` header response.
+      Available values:
+        - `'hash'` - SHA1 sum of the file contents, suitable for distributed deployments.
+          Default value.
+        - `'simple'` - Hex encoded size and modification date, suitable when files are stored
+          on a single server.
+        - `false` - Disable ETag computation.
+    - `start` - offset in file to reading from, defaults to 0.
+    - `end` - offset in file to stop reading from. If not set, will read to end of file.
 
 Returns a standard [response](https://github.com/hapijs/hapi/blob/master/API.md#response-object) object.
 
@@ -160,32 +160,32 @@ Generates a static file endpoint for serving a single file. `file` can be set to
 - a function with the signature `function(request)` which returns the relative or absolute
   file path.
 - an object with one or more of the following options:
-  - `path` - a path string or function as described above (required).
-  - `confine` - serve file relative to this directory and returns `403 Forbidden` if the
-    `path` resolves outside the `confine` directory.
-    Defaults to `true` which uses the `relativeTo` route option as the `confine`.
-    Set to `false` to disable this security feature.
-  - `filename` - an optional filename to specify if sending a 'Content-Disposition'
-    header, defaults to the basename of `path`
-  - `mode` - specifies whether to include the 'Content-Disposition' header with the
-    response. Available values:
-    - `false` - header is not included. This is the default value.
-    - `'attachment'`
-    - `'inline'`
-  - `lookupCompressed` - if `true`, looks for for a pre-compressed version of the file with
-    the same filename with an extension, depending on the accepted encoding.
-    Defaults to `false`.
-  - `lookupMap` - an `object` which maps content encoding to expected file name extension.
-    Defaults to `{ gzip: '.gz' }`.
-  - `etagMethod` - specifies the method used to calculate the `ETag` header response.
-    Available values:
-    - `'hash'` - SHA1 sum of the file contents, suitable for distributed deployments.
-      Default value.
-    - `'simple'` - Hex encoded size and modification date, suitable when files are stored
-      on a single server.
-    - `false` - Disable ETag computation.
-  - `start` - offset in file to reading from, defaults to 0.
-  - `end` - offset in file to stop reading from. If not set, will read to end of file.
+    - `path` - a path string or function as described above (required).
+    - `confine` - serve file relative to this directory and returns `403 Forbidden` if the
+      `path` resolves outside the `confine` directory.
+      Defaults to `true` which uses the `relativeTo` route option as the `confine`.
+      Set to `false` to disable this security feature.
+    - `filename` - an optional filename to specify if sending a 'Content-Disposition'
+      header, defaults to the basename of `path`
+    - `mode` - specifies whether to include the 'Content-Disposition' header with the
+      response. Available values:
+        - `false` - header is not included. This is the default value.
+        - `'attachment'`
+        - `'inline'`
+    - `lookupCompressed` - if `true`, looks for for a pre-compressed version of the file with
+      the same filename with an extension, depending on the accepted encoding.
+      Defaults to `false`.
+    - `lookupMap` - an `object` which maps content encoding to expected file name extension.
+      Defaults to `{ gzip: '.gz' }`.
+    - `etagMethod` - specifies the method used to calculate the `ETag` header response.
+      Available values:
+        - `'hash'` - SHA1 sum of the file contents, suitable for distributed deployments.
+          Default value.
+        - `'simple'` - Hex encoded size and modification date, suitable when files are stored
+          on a single server.
+        - `false` - Disable ETag computation.
+    - `start` - offset in file to reading from, defaults to 0.
+    - `end` - offset in file to stop reading from. If not set, will read to end of file.
 
 ### The `directory` handler
 
@@ -201,13 +201,13 @@ object with the following options:
 - `path` - (required) the directory root path (relative paths are resolved based on the
   route [`files`](https://github.com/hapijs/hapi/blob/master/API.md#route.config.files)
   configuration). Value can be:
-  - a single path string used as the prefix for any resources requested by appending the
-    request path parameter to the provided string.
-  - an array of path strings. Each path will be attempted in order until a match is
-    found (by following the same process as the single path string).
-  - a function with the signature `function(request)` which returns the path string or
-    an array of path strings. If the function returns an error, the error is passed back
-    to the client in the response.
+    - a single path string used as the prefix for any resources requested by appending the
+      request path parameter to the provided string.
+    - an array of path strings. Each path will be attempted in order until a match is
+      found (by following the same process as the single path string).
+    - a function with the signature `function(request)` which returns the path string or
+      an array of path strings. If the function returns an error, the error is passed back
+      to the client in the response.
 - `index` - optional boolean|string|string[], determines if an index file will be served
   if found in the folder when requesting a directory. The given string or strings specify
   the name(s) of the index file to look for. If `true`, looks for 'index.html'. Any falsy
@@ -228,11 +228,11 @@ object with the following options:
   Defaults to `{ gzip: '.gz' }`.
 - `etagMethod` - specifies the method used to calculate the `ETag` header response.
   Available values:
-  - `'hash'` - SHA1 sum of the file contents, suitable for distributed deployments.
-    Default value.
-  - `'simple'` - Hex encoded size and modification date, suitable when files are stored
-    on a single server.
-  - `false` - Disable ETag computation.
+    - `'hash'` - SHA1 sum of the file contents, suitable for distributed deployments.
+      Default value.
+    - `'simple'` - Hex encoded size and modification date, suitable when files are stored
+      on a single server.
+    - `false` - Disable ETag computation.
 - `defaultExtension` - optional string, appended to file requests if the requested file is
   not found. Defaults to no extension.
 

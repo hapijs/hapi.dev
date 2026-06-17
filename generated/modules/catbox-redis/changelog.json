@@ -1,566 +1,571 @@
 [
-  {
-    "date": "2023-08-04T14:08:43Z",
-    "id": 9742778,
-    "issues": [
-      {
-        "id": 1836786182,
-        "labels": ["types"],
-        "number": 128,
-        "title": "chore: enable lab type tests",
-        "url": "https://github.com/hapijs/catbox-redis/pull/128"
-      },
-      {
-        "id": 1728985300,
-        "labels": ["types"],
-        "number": 126,
-        "title": "feat: 🎸 add and improve typings from DT",
-        "url": "https://github.com/hapijs/catbox-redis/pull/126"
-      }
-    ],
-    "number": 33,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/33",
-    "version": "7.0.2"
-  },
-  {
-    "date": "2023-02-11T20:47:35Z",
-    "id": 8594995,
-    "issues": [
-      {
-        "id": 1551794468,
-        "labels": ["dependency"],
-        "number": 125,
-        "title": "chore: bump hoek",
-        "url": "https://github.com/hapijs/catbox-redis/pull/125"
-      }
-    ],
-    "number": 32,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/32",
-    "version": "7.0.1"
-  },
-  {
-    "date": "2022-10-29T20:22:54Z",
-    "id": 8572322,
-    "issues": [
-      {
-        "id": 1420078139,
-        "labels": ["feature", "breaking changes", "test", "dependency"],
-        "number": 123,
-        "title": "Support for node v18, ESM tests, upgrade ioredis",
-        "url": "https://github.com/hapijs/catbox-redis/pull/123"
-      }
-    ],
-    "number": 31,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/31",
-    "version": "7.0.0"
-  },
-  {
-    "date": "2020-09-26T17:17:28Z",
-    "id": 5639237,
-    "issues": [
-      {
-        "id": 684080446,
-        "labels": [],
-        "number": 117,
-        "title": "update deps and use travis templates",
-        "url": "https://github.com/hapijs/catbox-redis/pull/117"
-      }
-    ],
-    "number": 29,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/29",
-    "version": "6.0.2"
-  },
-  {
-    "date": "2020-07-10T03:45:28Z",
-    "id": 4973216,
-    "issues": [
-      {
-        "id": 625320892,
-        "labels": ["feature"],
-        "number": 115,
-        "title": "Redis Configuration Options",
-        "url": "https://github.com/hapijs/catbox-redis/issues/115"
-      }
-    ],
-    "number": 28,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/28",
-    "version": "6.0.1"
-  },
-  {
-    "date": "2020-01-05T00:09:14Z",
-    "id": 4724152,
-    "issues": [
-      {
-        "id": 545347365,
-        "labels": ["breaking changes", "dependency"],
-        "number": 112,
-        "title": "Only node 12",
-        "url": "https://github.com/hapijs/catbox-redis/issues/112"
-      }
-    ],
-    "number": 27,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/27",
-    "version": "6.0.0"
-  },
-  {
-    "date": "2019-10-05T16:44:57Z",
-    "id": 4655620,
-    "issues": [
-      {
-        "id": 500922253,
-        "labels": ["feature"],
-        "number": 109,
-        "title": "Use PSETEX instead of SET and PEXP",
-        "url": "https://github.com/hapijs/catbox-redis/pull/109"
-      }
-    ],
-    "number": 26,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/26",
-    "version": "5.0.5"
-  },
-  {
-    "date": "2019-09-12T23:28:30Z",
-    "id": 4574261,
-    "issues": [
-      {
-        "id": 493071343,
-        "labels": ["dependency"],
-        "number": 107,
-        "title": "Update joi",
-        "url": "https://github.com/hapijs/catbox-redis/issues/107"
-      },
-      {
-        "id": 477134554,
-        "labels": ["bug"],
-        "number": 103,
-        "title": "Example \"db\" parameter error",
-        "url": "https://github.com/hapijs/catbox-redis/issues/103"
-      }
-    ],
-    "number": 25,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/25",
-    "version": "5.0.4"
-  },
-  {
-    "date": "2019-09-12T23:19:33Z",
-    "id": 4328680,
-    "issues": [
-      {
-        "id": 480885699,
-        "labels": ["dependency"],
-        "number": 106,
-        "title": "Update deps",
-        "url": "https://github.com/hapijs/catbox-redis/issues/106"
-      }
-    ],
-    "number": 24,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/24",
-    "version": "5.0.3"
-  },
-  {
-    "date": "2019-05-19T17:35:25Z",
-    "id": 4260187,
-    "issues": [
-      {
-        "id": 444402134,
-        "labels": ["bug"],
-        "number": 102,
-        "title": "Allowing empty password",
-        "url": "https://github.com/hapijs/catbox-redis/issues/102"
-      }
-    ],
-    "number": 23,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/23",
-    "version": "5.0.2"
-  },
-  {
-    "date": "2019-04-25T17:09:05Z",
-    "id": 4245854,
-    "issues": [
-      {
-        "id": 437305546,
-        "labels": ["bug"],
-        "number": 100,
-        "title": "hotfix: redis tls opt is an object, not boolean",
-        "url": "https://github.com/hapijs/catbox-redis/pull/100"
-      }
-    ],
-    "number": 22,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/22",
-    "version": "5.0.1"
-  },
-  {
-    "date": "2019-04-21T21:08:14Z",
-    "id": 4245853,
-    "issues": [
-      {
-        "id": 435545762,
-        "labels": ["breaking changes"],
-        "number": 98,
-        "title": "Switch to use Redis pexpire",
-        "url": "https://github.com/hapijs/catbox-redis/issues/98"
-      },
-      {
-        "id": 435545706,
-        "labels": ["feature", "breaking changes"],
-        "number": 97,
-        "title": "Refactor options",
-        "url": "https://github.com/hapijs/catbox-redis/issues/97"
-      },
-      {
-        "id": 435450991,
-        "labels": ["dependency"],
-        "number": 96,
-        "title": "Change module namespace",
-        "url": "https://github.com/hapijs/catbox-redis/issues/96"
-      }
-    ],
-    "number": 21,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/21",
-    "version": "5.0.0"
-  },
-  {
-    "date": "2019-04-20T22:53:16Z",
-    "id": 2933425,
-    "issues": [
-      {
-        "id": 282086422,
-        "labels": [],
-        "number": 79,
-        "title": "Don't mess with provided clients",
-        "url": "https://github.com/hapijs/catbox-redis/pull/79"
-      }
-    ],
-    "number": 20,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/20",
-    "version": "v4.1.0"
-  },
-  {
-    "date": "2019-04-20T22:53:17Z",
-    "id": 2933423,
-    "issues": [
-      {
-        "id": 254894805,
-        "labels": ["feature"],
-        "number": 69,
-        "title": "added support for dropSegment",
-        "url": "https://github.com/hapijs/catbox-redis/pull/69"
-      }
-    ],
-    "number": 18,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/18",
-    "version": "v4.0.1"
-  },
-  {
-    "date": "2017-11-23T13:08:20Z",
-    "id": 2417006,
-    "issues": [
-      {
-        "id": 273219206,
-        "labels": ["breaking changes", "dependency"],
-        "number": 77,
-        "title": "Update to work with Catbox 10 (Hapi 17)",
-        "url": "https://github.com/hapijs/catbox-redis/pull/77"
-      }
-    ],
-    "number": 15,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/15",
-    "version": "v4.0.0"
-  },
-  {
-    "date": "2017-11-23T13:08:13Z",
-    "id": 2773636,
-    "issues": [],
-    "number": 16,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/16",
-    "version": "v3.2.0"
-  },
-  {
-    "date": "2017-11-23T13:08:10Z",
-    "id": 2814552,
-    "issues": [
-      {
-        "id": 262119827,
-        "labels": ["feature"],
-        "number": 74,
-        "title": "Ensure the client really is ready",
-        "url": "https://github.com/hapijs/catbox-redis/pull/74"
-      }
-    ],
-    "number": 17,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/17",
-    "version": "v3.1.1"
-  },
-  {
-    "date": "2017-09-18T10:32:27Z",
-    "id": 2417005,
-    "issues": [
-      {
-        "id": 258432110,
-        "labels": ["dependency"],
-        "number": 72,
-        "title": "Upgrade `ioredis` to `3.x.x`",
-        "url": "https://github.com/hapijs/catbox-redis/pull/72"
-      },
-      {
-        "id": 258432084,
-        "labels": ["dependency"],
-        "number": 71,
-        "title": "chore(package): update ioredis to v3",
-        "url": "https://github.com/hapijs/catbox-redis/pull/71"
-      }
-    ],
-    "number": 14,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/14",
-    "version": "v3.1.0"
-  },
-  {
-    "date": "2017-09-18T10:32:22Z",
-    "id": 2417004,
-    "issues": [],
-    "number": 13,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/13",
-    "version": "v3.0.3"
-  },
-  {
-    "date": "2017-03-28T15:36:28Z",
-    "id": 2393875,
-    "issues": [
-      {
-        "id": 217594881,
-        "labels": ["dependency"],
-        "number": 62,
-        "title": "update dependencies",
-        "url": "https://github.com/hapijs/catbox-redis/pull/62"
-      },
-      {
-        "id": 176389024,
-        "labels": ["feature", "support", "breaking changes", "dependency"],
-        "number": 53,
-        "title": "Move to `ioredis`",
-        "url": "https://github.com/hapijs/catbox-redis/pull/53"
-      }
-    ],
-    "number": 12,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/12",
-    "version": "v3.0.0"
-  },
-  {
-    "date": "2017-03-28T15:36:26Z",
-    "id": 1825498,
-    "issues": [
-      {
-        "id": 176373491,
-        "labels": ["dependency"],
-        "number": 52,
-        "title": "upgrade code@3 and lab@11",
-        "url": "https://github.com/hapijs/catbox-redis/pull/52"
-      },
-      {
-        "id": 172426851,
-        "labels": ["feature"],
-        "number": 51,
-        "title": "Add option to ignore startup failures",
-        "url": "https://github.com/hapijs/catbox-redis/pull/51"
-      }
-    ],
-    "number": 11,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/11",
-    "version": "v2.0.3"
-  },
-  {
-    "date": "2017-03-28T15:36:30Z",
-    "id": 1825461,
-    "issues": [
-      {
-        "id": 160135345,
-        "labels": ["bug"],
-        "number": 49,
-        "title": "Use `false` parameter to `client.end` in order to fail silently",
-        "url": "https://github.com/hapijs/catbox-redis/pull/49"
-      }
-    ],
-    "number": 10,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/10",
-    "version": "v2.0.2"
-  },
-  {
-    "date": "2016-06-14T09:23:43Z",
-    "id": 1825458,
-    "issues": [
-      {
-        "id": 157681181,
-        "labels": ["feature"],
-        "number": 47,
-        "title": "Adding flush parameter when calling client.end",
-        "url": "https://github.com/hapijs/catbox-redis/pull/47"
-      },
-      {
-        "id": 155617480,
-        "labels": ["test", "dependency"],
-        "number": 45,
-        "title": "Test on node v6, update dependencies",
-        "url": "https://github.com/hapijs/catbox-redis/pull/45"
-      }
-    ],
-    "number": 9,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/9",
-    "version": "v2.0.1"
-  },
-  {
-    "date": "2016-06-14T09:16:49Z",
-    "id": 1508610,
-    "issues": [
-      {
-        "id": 140637341,
-        "labels": ["feature", "breaking changes"],
-        "number": 36,
-        "title": "Ignore partition if not defined",
-        "url": "https://github.com/hapijs/catbox-redis/pull/36"
-      }
-    ],
-    "number": 7,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/7",
-    "version": "v1.1.0"
-  },
-  {
-    "date": "2016-06-14T09:16:51Z",
-    "id": 1645317,
-    "issues": [
-      {
-        "id": 140946716,
-        "labels": ["feature"],
-        "number": 40,
-        "title": "Allow passing a ready Redis client",
-        "url": "https://github.com/hapijs/catbox-redis/pull/40"
-      },
-      {
-        "id": 140937136,
-        "labels": [],
-        "number": 39,
-        "title": "Drop node 0.10 support",
-        "url": "https://github.com/hapijs/catbox-redis/pull/39"
-      },
-      {
-        "id": 114276738,
-        "labels": ["feature"],
-        "number": 30,
-        "title": "Add unix socket support",
-        "url": "https://github.com/hapijs/catbox-redis/pull/30"
-      }
-    ],
-    "number": 8,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/8",
-    "version": "v1.0.9"
-  },
-  {
-    "date": "2016-03-15T11:05:10Z",
-    "id": 1385571,
-    "issues": [
-      {
-        "id": 140653981,
-        "labels": ["test", "dependency"],
-        "number": 38,
-        "title": "Cleanup tests",
-        "url": "https://github.com/hapijs/catbox-redis/pull/38"
-      },
-      {
-        "id": 140648177,
-        "labels": ["bug"],
-        "number": 37,
-        "title": "Wait redis client to be ready in order to make sure that authentication has been done",
-        "url": "https://github.com/hapijs/catbox-redis/pull/37"
-      },
-      {
-        "id": 114343369,
-        "labels": ["dependency"],
+    {
+        "date": "2023-08-04T14:08:43Z",
+        "id": 9742778,
+        "issues": [
+            {
+                "id": 1836786182,
+                "labels": ["types"],
+                "number": 128,
+                "title": "chore: enable lab type tests",
+                "url": "https://github.com/hapijs/catbox-redis/pull/128"
+            },
+            {
+                "id": 1728985300,
+                "labels": ["types"],
+                "number": 126,
+                "title": "feat: 🎸 add and improve typings from DT",
+                "url": "https://github.com/hapijs/catbox-redis/pull/126"
+            }
+        ],
+        "number": 33,
+        "url": "https://github.com/hapijs/catbox-redis/milestone/33",
+        "version": "7.0.2"
+    },
+    {
+        "date": "2023-02-11T20:47:35Z",
+        "id": 8594995,
+        "issues": [
+            {
+                "id": 1551794468,
+                "labels": ["dependency"],
+                "number": 125,
+                "title": "chore: bump hoek",
+                "url": "https://github.com/hapijs/catbox-redis/pull/125"
+            }
+        ],
+        "number": 32,
+        "url": "https://github.com/hapijs/catbox-redis/milestone/32",
+        "version": "7.0.1"
+    },
+    {
+        "date": "2022-10-29T20:22:54Z",
+        "id": 8572322,
+        "issues": [
+            {
+                "id": 1420078139,
+                "labels": ["feature", "breaking changes", "test", "dependency"],
+                "number": 123,
+                "title": "Support for node v18, ESM tests, upgrade ioredis",
+                "url": "https://github.com/hapijs/catbox-redis/pull/123"
+            }
+        ],
         "number": 31,
-        "title": "Loosen dependency to redis 2.x.x to allow 2.3.0 to match",
-        "url": "https://github.com/hapijs/catbox-redis/pull/31"
-      }
-    ],
-    "number": 6,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/6",
-    "version": "v1.0.8"
-  },
-  {
-    "date": "2016-01-15T10:13:54Z",
-    "id": 1385386,
-    "issues": [
-      {
-        "id": 112578018,
-        "labels": ["dependency"],
+        "url": "https://github.com/hapijs/catbox-redis/milestone/31",
+        "version": "7.0.0"
+    },
+    {
+        "date": "2020-09-26T17:17:28Z",
+        "id": 5639237,
+        "issues": [
+            {
+                "id": 684080446,
+                "labels": [],
+                "number": 117,
+                "title": "update deps and use travis templates",
+                "url": "https://github.com/hapijs/catbox-redis/pull/117"
+            }
+        ],
+        "number": 29,
+        "url": "https://github.com/hapijs/catbox-redis/milestone/29",
+        "version": "6.0.2"
+    },
+    {
+        "date": "2020-07-10T03:45:28Z",
+        "id": 4973216,
+        "issues": [
+            {
+                "id": 625320892,
+                "labels": ["feature"],
+                "number": 115,
+                "title": "Redis Configuration Options",
+                "url": "https://github.com/hapijs/catbox-redis/issues/115"
+            }
+        ],
+        "number": 28,
+        "url": "https://github.com/hapijs/catbox-redis/milestone/28",
+        "version": "6.0.1"
+    },
+    {
+        "date": "2020-01-05T00:09:14Z",
+        "id": 4724152,
+        "issues": [
+            {
+                "id": 545347365,
+                "labels": ["breaking changes", "dependency"],
+                "number": 112,
+                "title": "Only node 12",
+                "url": "https://github.com/hapijs/catbox-redis/issues/112"
+            }
+        ],
         "number": 27,
-        "title": "Upgrade outdated node-redis dependency",
-        "url": "https://github.com/hapijs/catbox-redis/pull/27"
-      }
-    ],
-    "number": 5,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/5",
-    "version": "v1.0.6"
-  },
-  {
-    "date": "2014-08-03T05:36:05Z",
-    "id": 688935,
-    "issues": [
-      {
-        "id": 39363864,
-        "labels": ["documentation"],
-        "number": 8,
-        "title": "Rename spumko to hapijs",
-        "url": "https://github.com/hapijs/catbox-redis/issues/8"
-      }
-    ],
-    "number": 4,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/4",
-    "version": "1.0.4"
-  },
-  {
-    "date": "2014-06-12T06:23:22Z",
-    "id": 665053,
-    "issues": [
-      {
-        "id": 35553073,
-        "labels": ["test"],
+        "url": "https://github.com/hapijs/catbox-redis/milestone/27",
+        "version": "6.0.0"
+    },
+    {
+        "date": "2019-10-05T16:44:57Z",
+        "id": 4655620,
+        "issues": [
+            {
+                "id": 500922253,
+                "labels": ["feature"],
+                "number": 109,
+                "title": "Use PSETEX instead of SET and PEXP",
+                "url": "https://github.com/hapijs/catbox-redis/pull/109"
+            }
+        ],
+        "number": 26,
+        "url": "https://github.com/hapijs/catbox-redis/milestone/26",
+        "version": "5.0.5"
+    },
+    {
+        "date": "2019-09-12T23:28:30Z",
+        "id": 4574261,
+        "issues": [
+            {
+                "id": 493071343,
+                "labels": ["dependency"],
+                "number": 107,
+                "title": "Update joi",
+                "url": "https://github.com/hapijs/catbox-redis/issues/107"
+            },
+            {
+                "id": 477134554,
+                "labels": ["bug"],
+                "number": 103,
+                "title": "Example \"db\" parameter error",
+                "url": "https://github.com/hapijs/catbox-redis/issues/103"
+            }
+        ],
+        "number": 25,
+        "url": "https://github.com/hapijs/catbox-redis/milestone/25",
+        "version": "5.0.4"
+    },
+    {
+        "date": "2019-09-12T23:19:33Z",
+        "id": 4328680,
+        "issues": [
+            {
+                "id": 480885699,
+                "labels": ["dependency"],
+                "number": 106,
+                "title": "Update deps",
+                "url": "https://github.com/hapijs/catbox-redis/issues/106"
+            }
+        ],
+        "number": 24,
+        "url": "https://github.com/hapijs/catbox-redis/milestone/24",
+        "version": "5.0.3"
+    },
+    {
+        "date": "2019-05-19T17:35:25Z",
+        "id": 4260187,
+        "issues": [
+            {
+                "id": 444402134,
+                "labels": ["bug"],
+                "number": 102,
+                "title": "Allowing empty password",
+                "url": "https://github.com/hapijs/catbox-redis/issues/102"
+            }
+        ],
+        "number": 23,
+        "url": "https://github.com/hapijs/catbox-redis/milestone/23",
+        "version": "5.0.2"
+    },
+    {
+        "date": "2019-04-25T17:09:05Z",
+        "id": 4245854,
+        "issues": [
+            {
+                "id": 437305546,
+                "labels": ["bug"],
+                "number": 100,
+                "title": "hotfix: redis tls opt is an object, not boolean",
+                "url": "https://github.com/hapijs/catbox-redis/pull/100"
+            }
+        ],
+        "number": 22,
+        "url": "https://github.com/hapijs/catbox-redis/milestone/22",
+        "version": "5.0.1"
+    },
+    {
+        "date": "2019-04-21T21:08:14Z",
+        "id": 4245853,
+        "issues": [
+            {
+                "id": 435545762,
+                "labels": ["breaking changes"],
+                "number": 98,
+                "title": "Switch to use Redis pexpire",
+                "url": "https://github.com/hapijs/catbox-redis/issues/98"
+            },
+            {
+                "id": 435545706,
+                "labels": ["feature", "breaking changes"],
+                "number": 97,
+                "title": "Refactor options",
+                "url": "https://github.com/hapijs/catbox-redis/issues/97"
+            },
+            {
+                "id": 435450991,
+                "labels": ["dependency"],
+                "number": 96,
+                "title": "Change module namespace",
+                "url": "https://github.com/hapijs/catbox-redis/issues/96"
+            }
+        ],
+        "number": 21,
+        "url": "https://github.com/hapijs/catbox-redis/milestone/21",
+        "version": "5.0.0"
+    },
+    {
+        "date": "2019-04-20T22:53:16Z",
+        "id": 2933425,
+        "issues": [
+            {
+                "id": 282086422,
+                "labels": [],
+                "number": 79,
+                "title": "Don't mess with provided clients",
+                "url": "https://github.com/hapijs/catbox-redis/pull/79"
+            }
+        ],
+        "number": 20,
+        "url": "https://github.com/hapijs/catbox-redis/milestone/20",
+        "version": "v4.1.0"
+    },
+    {
+        "date": "2019-04-20T22:53:17Z",
+        "id": 2933423,
+        "issues": [
+            {
+                "id": 254894805,
+                "labels": ["feature"],
+                "number": 69,
+                "title": "added support for dropSegment",
+                "url": "https://github.com/hapijs/catbox-redis/pull/69"
+            }
+        ],
+        "number": 18,
+        "url": "https://github.com/hapijs/catbox-redis/milestone/18",
+        "version": "v4.0.1"
+    },
+    {
+        "date": "2017-11-23T13:08:20Z",
+        "id": 2417006,
+        "issues": [
+            {
+                "id": 273219206,
+                "labels": ["breaking changes", "dependency"],
+                "number": 77,
+                "title": "Update to work with Catbox 10 (Hapi 17)",
+                "url": "https://github.com/hapijs/catbox-redis/pull/77"
+            }
+        ],
+        "number": 15,
+        "url": "https://github.com/hapijs/catbox-redis/milestone/15",
+        "version": "v4.0.0"
+    },
+    {
+        "date": "2017-11-23T13:08:13Z",
+        "id": 2773636,
+        "issues": [],
+        "number": 16,
+        "url": "https://github.com/hapijs/catbox-redis/milestone/16",
+        "version": "v3.2.0"
+    },
+    {
+        "date": "2017-11-23T13:08:10Z",
+        "id": 2814552,
+        "issues": [
+            {
+                "id": 262119827,
+                "labels": ["feature"],
+                "number": 74,
+                "title": "Ensure the client really is ready",
+                "url": "https://github.com/hapijs/catbox-redis/pull/74"
+            }
+        ],
+        "number": 17,
+        "url": "https://github.com/hapijs/catbox-redis/milestone/17",
+        "version": "v3.1.1"
+    },
+    {
+        "date": "2017-09-18T10:32:27Z",
+        "id": 2417005,
+        "issues": [
+            {
+                "id": 258432110,
+                "labels": ["dependency"],
+                "number": 72,
+                "title": "Upgrade `ioredis` to `3.x.x`",
+                "url": "https://github.com/hapijs/catbox-redis/pull/72"
+            },
+            {
+                "id": 258432084,
+                "labels": ["dependency"],
+                "number": 71,
+                "title": "chore(package): update ioredis to v3",
+                "url": "https://github.com/hapijs/catbox-redis/pull/71"
+            }
+        ],
+        "number": 14,
+        "url": "https://github.com/hapijs/catbox-redis/milestone/14",
+        "version": "v3.1.0"
+    },
+    {
+        "date": "2017-09-18T10:32:22Z",
+        "id": 2417004,
+        "issues": [],
+        "number": 13,
+        "url": "https://github.com/hapijs/catbox-redis/milestone/13",
+        "version": "v3.0.3"
+    },
+    {
+        "date": "2017-03-28T15:36:28Z",
+        "id": 2393875,
+        "issues": [
+            {
+                "id": 217594881,
+                "labels": ["dependency"],
+                "number": 62,
+                "title": "update dependencies",
+                "url": "https://github.com/hapijs/catbox-redis/pull/62"
+            },
+            {
+                "id": 176389024,
+                "labels": [
+                    "feature",
+                    "support",
+                    "breaking changes",
+                    "dependency"
+                ],
+                "number": 53,
+                "title": "Move to `ioredis`",
+                "url": "https://github.com/hapijs/catbox-redis/pull/53"
+            }
+        ],
+        "number": 12,
+        "url": "https://github.com/hapijs/catbox-redis/milestone/12",
+        "version": "v3.0.0"
+    },
+    {
+        "date": "2017-03-28T15:36:26Z",
+        "id": 1825498,
+        "issues": [
+            {
+                "id": 176373491,
+                "labels": ["dependency"],
+                "number": 52,
+                "title": "upgrade code@3 and lab@11",
+                "url": "https://github.com/hapijs/catbox-redis/pull/52"
+            },
+            {
+                "id": 172426851,
+                "labels": ["feature"],
+                "number": 51,
+                "title": "Add option to ignore startup failures",
+                "url": "https://github.com/hapijs/catbox-redis/pull/51"
+            }
+        ],
+        "number": 11,
+        "url": "https://github.com/hapijs/catbox-redis/milestone/11",
+        "version": "v2.0.3"
+    },
+    {
+        "date": "2017-03-28T15:36:30Z",
+        "id": 1825461,
+        "issues": [
+            {
+                "id": 160135345,
+                "labels": ["bug"],
+                "number": 49,
+                "title": "Use `false` parameter to `client.end` in order to fail silently",
+                "url": "https://github.com/hapijs/catbox-redis/pull/49"
+            }
+        ],
+        "number": 10,
+        "url": "https://github.com/hapijs/catbox-redis/milestone/10",
+        "version": "v2.0.2"
+    },
+    {
+        "date": "2016-06-14T09:23:43Z",
+        "id": 1825458,
+        "issues": [
+            {
+                "id": 157681181,
+                "labels": ["feature"],
+                "number": 47,
+                "title": "Adding flush parameter when calling client.end",
+                "url": "https://github.com/hapijs/catbox-redis/pull/47"
+            },
+            {
+                "id": 155617480,
+                "labels": ["test", "dependency"],
+                "number": 45,
+                "title": "Test on node v6, update dependencies",
+                "url": "https://github.com/hapijs/catbox-redis/pull/45"
+            }
+        ],
+        "number": 9,
+        "url": "https://github.com/hapijs/catbox-redis/milestone/9",
+        "version": "v2.0.1"
+    },
+    {
+        "date": "2016-06-14T09:16:49Z",
+        "id": 1508610,
+        "issues": [
+            {
+                "id": 140637341,
+                "labels": ["feature", "breaking changes"],
+                "number": 36,
+                "title": "Ignore partition if not defined",
+                "url": "https://github.com/hapijs/catbox-redis/pull/36"
+            }
+        ],
         "number": 7,
-        "title": "Remove large ttl test",
-        "url": "https://github.com/hapijs/catbox-redis/issues/7"
-      }
-    ],
-    "number": 3,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/3",
-    "version": "1.0.3"
-  },
-  {
-    "date": "2014-05-20T21:41:20Z",
-    "id": 591591,
-    "issues": [
-      {
-        "id": 33931560,
-        "labels": ["test"],
+        "url": "https://github.com/hapijs/catbox-redis/milestone/7",
+        "version": "v1.1.0"
+    },
+    {
+        "date": "2016-06-14T09:16:51Z",
+        "id": 1645317,
+        "issues": [
+            {
+                "id": 140946716,
+                "labels": ["feature"],
+                "number": 40,
+                "title": "Allow passing a ready Redis client",
+                "url": "https://github.com/hapijs/catbox-redis/pull/40"
+            },
+            {
+                "id": 140937136,
+                "labels": [],
+                "number": 39,
+                "title": "Drop node 0.10 support",
+                "url": "https://github.com/hapijs/catbox-redis/pull/39"
+            },
+            {
+                "id": 114276738,
+                "labels": ["feature"],
+                "number": 30,
+                "title": "Add unix socket support",
+                "url": "https://github.com/hapijs/catbox-redis/pull/30"
+            }
+        ],
+        "number": 8,
+        "url": "https://github.com/hapijs/catbox-redis/milestone/8",
+        "version": "v1.0.9"
+    },
+    {
+        "date": "2016-03-15T11:05:10Z",
+        "id": 1385571,
+        "issues": [
+            {
+                "id": 140653981,
+                "labels": ["test", "dependency"],
+                "number": 38,
+                "title": "Cleanup tests",
+                "url": "https://github.com/hapijs/catbox-redis/pull/38"
+            },
+            {
+                "id": 140648177,
+                "labels": ["bug"],
+                "number": 37,
+                "title": "Wait redis client to be ready in order to make sure that authentication has been done",
+                "url": "https://github.com/hapijs/catbox-redis/pull/37"
+            },
+            {
+                "id": 114343369,
+                "labels": ["dependency"],
+                "number": 31,
+                "title": "Loosen dependency to redis 2.x.x to allow 2.3.0 to match",
+                "url": "https://github.com/hapijs/catbox-redis/pull/31"
+            }
+        ],
+        "number": 6,
+        "url": "https://github.com/hapijs/catbox-redis/milestone/6",
+        "version": "v1.0.8"
+    },
+    {
+        "date": "2016-01-15T10:13:54Z",
+        "id": 1385386,
+        "issues": [
+            {
+                "id": 112578018,
+                "labels": ["dependency"],
+                "number": 27,
+                "title": "Upgrade outdated node-redis dependency",
+                "url": "https://github.com/hapijs/catbox-redis/pull/27"
+            }
+        ],
         "number": 5,
-        "title": "Bring coverage back to 100%",
-        "url": "https://github.com/hapijs/catbox-redis/issues/5"
-      }
-    ],
-    "number": 2,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/2",
-    "version": "1.0.2"
-  },
-  {
-    "date": "2014-03-08T23:18:40Z",
-    "id": 591590,
-    "issues": [
-      {
-        "id": 29032479,
-        "labels": ["documentation"],
+        "url": "https://github.com/hapijs/catbox-redis/milestone/5",
+        "version": "v1.0.6"
+    },
+    {
+        "date": "2014-08-03T05:36:05Z",
+        "id": 688935,
+        "issues": [
+            {
+                "id": 39363864,
+                "labels": ["documentation"],
+                "number": 8,
+                "title": "Rename spumko to hapijs",
+                "url": "https://github.com/hapijs/catbox-redis/issues/8"
+            }
+        ],
+        "number": 4,
+        "url": "https://github.com/hapijs/catbox-redis/milestone/4",
+        "version": "1.0.4"
+    },
+    {
+        "date": "2014-06-12T06:23:22Z",
+        "id": 665053,
+        "issues": [
+            {
+                "id": 35553073,
+                "labels": ["test"],
+                "number": 7,
+                "title": "Remove large ttl test",
+                "url": "https://github.com/hapijs/catbox-redis/issues/7"
+            }
+        ],
         "number": 3,
-        "title": "Add example",
-        "url": "https://github.com/hapijs/catbox-redis/issues/3"
-      }
-    ],
-    "number": 1,
-    "url": "https://github.com/hapijs/catbox-redis/milestone/1",
-    "version": "1.0.1"
-  }
+        "url": "https://github.com/hapijs/catbox-redis/milestone/3",
+        "version": "1.0.3"
+    },
+    {
+        "date": "2014-05-20T21:41:20Z",
+        "id": 591591,
+        "issues": [
+            {
+                "id": 33931560,
+                "labels": ["test"],
+                "number": 5,
+                "title": "Bring coverage back to 100%",
+                "url": "https://github.com/hapijs/catbox-redis/issues/5"
+            }
+        ],
+        "number": 2,
+        "url": "https://github.com/hapijs/catbox-redis/milestone/2",
+        "version": "1.0.2"
+    },
+    {
+        "date": "2014-03-08T23:18:40Z",
+        "id": 591590,
+        "issues": [
+            {
+                "id": 29032479,
+                "labels": ["documentation"],
+                "number": 3,
+                "title": "Add example",
+                "url": "https://github.com/hapijs/catbox-redis/issues/3"
+            }
+        ],
+        "number": 1,
+        "url": "https://github.com/hapijs/catbox-redis/milestone/1",
+        "version": "1.0.1"
+    }
 ]

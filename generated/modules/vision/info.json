@@ -1,22 +1,22 @@
 {
-  "api": true,
-  "forks": 67,
-  "isPlugin": true,
-  "latestVersion": "7.x.x",
-  "link": "https://github.com/hapijs/vision",
-  "name": "vision",
-  "package": "@hapi/vision",
-  "slogan": "Template rendering support for hapi.js.",
-  "sloganHtml": "Template rendering support for hapi.js.",
-  "stars": 198,
-  "updated": "2024-10-23T21:57:52Z",
-  "versions": [
-    {
-      "branch": "v7.0.3",
-      "license": "BSD",
-      "name": "7.0.3",
-      "node": ">= 16"
-    }
-  ],
-  "versionsArray": ["7.0.3"]
+    "api": true,
+    "forks": 67,
+    "isPlugin": true,
+    "latestVersion": "7.x.x",
+    "link": "https://github.com/hapijs/vision",
+    "name": "vision",
+    "package": "@hapi/vision",
+    "slogan": "Template rendering support for hapi.js.",
+    "sloganHtml": "Template rendering support for hapi.js.",
+    "stars": 198,
+    "updated": "2024-10-23T21:57:52Z",
+    "versions": [
+        {
+            "branch": "v7.0.3",
+            "license": "BSD",
+            "name": "7.0.3",
+            "node": ">= 16"
+        }
+    ],
+    "versionsArray": ["7.0.3"]
 }

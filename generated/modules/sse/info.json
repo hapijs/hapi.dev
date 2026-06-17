@@ -1,22 +1,22 @@
 {
-  "api": true,
-  "forks": 0,
-  "isPlugin": true,
-  "latestVersion": "1.x.x",
-  "link": "https://github.com/hapijs/sse",
-  "name": "sse",
-  "package": "@hapi/sse",
-  "slogan": "Server-Sent Events plugin for hapi.",
-  "sloganHtml": "Server-Sent Events plugin for hapi.",
-  "stars": 0,
-  "updated": "2026-05-20T15:44:33Z",
-  "versions": [
-    {
-      "branch": "v1.1.0",
-      "license": "BSD",
-      "name": "1.1.0",
-      "node": ">= 22"
-    }
-  ],
-  "versionsArray": ["1.1.0"]
+    "api": true,
+    "forks": 0,
+    "isPlugin": true,
+    "latestVersion": "1.x.x",
+    "link": "https://github.com/hapijs/sse",
+    "name": "sse",
+    "package": "@hapi/sse",
+    "slogan": "Server-Sent Events plugin for hapi.",
+    "sloganHtml": "Server-Sent Events plugin for hapi.",
+    "stars": 0,
+    "updated": "2026-05-20T15:44:33Z",
+    "versions": [
+        {
+            "branch": "v1.1.0",
+            "license": "BSD",
+            "name": "1.1.0",
+            "node": ">= 22"
+        }
+    ],
+    "versionsArray": ["1.1.0"]
 }
