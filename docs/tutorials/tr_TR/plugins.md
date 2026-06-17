@@ -20,22 +20,22 @@ Eklenti yazmak çok kolay. Aslında yalnızca `register` (kaydet) özelliği ola
 'use strict';
 
 const myPlugin = {
-  name: 'myPlugin',
-  version: '1.0.0',
-  register: async function (server, options) {
-    // Örnek bir yol yaratalım
+    name: 'myPlugin',
+    version: '1.0.0',
+    register: async function (server, options) {
+        // Örnek bir yol yaratalım
 
-    server.route({
-      method: 'GET',
-      path: '/test',
-      handler: function (request, h) {
-        return 'hello, world';
-      },
-    });
+        server.route({
+            method: 'GET',
+            path: '/test',
+            handler: function (request, h) {
+                return 'hello, world';
+            },
+        });
 
-    // vesaire...
-    await someAsyncMethods();
-  },
+        // vesaire...
+        await someAsyncMethods();
+    },
 };
 ```
 
@@ -45,21 +45,21 @@ Ya da harici bir modül olarak yazıldıklarında `pkg` özelliği belirleyebili
 'use strict';
 
 exports.plugin = {
-  pkg: require('./package.json'),
-  register: async function (server, options) {
-    // Örnek bir yol yaratalım
+    pkg: require('./package.json'),
+    register: async function (server, options) {
+        // Örnek bir yol yaratalım
 
-    server.route({
-      method: 'GET',
-      path: '/test',
-      handler: function (request, h) {
-        return 'hello, world';
-      },
-    });
+        server.route({
+            method: 'GET',
+            path: '/test',
+            handler: function (request, h) {
+                return 'hello, world';
+            },
+        });
 
-    // vesaire...
-    await someAsyncMethods();
-  },
+        // vesaire...
+        await someAsyncMethods();
+    },
 };
 ```
 
@@ -87,13 +87,13 @@ Eklentiler `server.register()` yöntemiyle tek tek ya da bir grup olarak bir diz
 
 ```javascript
 const start = async function () {
-  // bir eklenti yükle
+    // bir eklenti yükle
 
-  await server.register(require('myplugin'));
+    await server.register(require('myplugin'));
 
-  // birden fazla eklenti yükle
+    // birden fazla eklenti yükle
 
-  await server.register([require('myplugin'), require('yourplugin')]);
+    await server.register([require('myplugin'), require('yourplugin')]);
 };
 ```
 
@@ -101,12 +101,12 @@ Eklentine seçenekler göndermek için, bunun yerine `plugin` (eklenti) ve `opti
 
 ```javascript
 const start = async function () {
-  await server.register({
-    plugin: require('myplugin'),
-    options: {
-      message: 'hello',
-    },
-  });
+    await server.register({
+        plugin: require('myplugin'),
+        options: {
+            message: 'hello',
+        },
+    });
 };
 ```
 
@@ -114,16 +114,16 @@ Bu nesneler bir dizi içinde de gönderilebilir:
 
 ```javascript
 const start = async function () {
-  await server.register([
-    {
-      plugin: require('plugin1'),
-      options: {},
-    },
-    {
-      plugin: require('plugin2'),
-      options: {},
-    },
-  ]);
+    await server.register([
+        {
+            plugin: require('plugin1'),
+            options: {},
+        },
+        {
+            plugin: require('plugin2'),
+            options: {},
+        },
+    ]);
 };
 ```
 
@@ -139,19 +139,19 @@ Farzı mahal şöyle bir eklentimiz olsun:
 'use strict';
 
 exports.plugin = {
-  pkg: require('./package.json'),
-  register: async function (server, options) {
-    server.route({
-      method: 'GET',
-      path: '/test',
-      handler: function (request, h) {
-        return 'test passed';
-      },
-    });
+    pkg: require('./package.json'),
+    register: async function (server, options) {
+        server.route({
+            method: 'GET',
+            path: '/test',
+            handler: function (request, h) {
+                return 'test passed';
+            },
+        });
 
-    // vesaire...
-    await someAsyncMethods();
-  },
+        // vesaire...
+        await someAsyncMethods();
+    },
 };
 ```
 
@@ -159,11 +159,11 @@ Normalde bu eklenti yüklendiğinde `/test`e bir `GET` yolu oluşturur. Ancak se
 
 ```javascript
 const start = async function () {
-  await server.register(require('myplugin'), {
-    routes: {
-      prefix: '/plugins',
-    },
-  });
+    await server.register(require('myplugin'), {
+        routes: {
+            prefix: '/plugins',
+        },
+    });
 };
 ```
 

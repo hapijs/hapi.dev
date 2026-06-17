@@ -40,32 +40,32 @@ Taking the server example from the Getting Started tutorial, we make a minor mod
 const Hapi = require('@hapi/hapi');
 
 const server = Hapi.server({
-  port: 3000,
-  host: 'localhost',
+    port: 3000,
+    host: 'localhost',
 });
 
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: function () {
-    return 'Hello World!';
-  },
+    method: 'GET',
+    path: '/',
+    handler: function () {
+        return 'Hello World!';
+    },
 });
 
 exports.init = async () => {
-  await server.initialize();
-  return server;
+    await server.initialize();
+    return server;
 };
 
 exports.start = async () => {
-  await server.start();
-  console.log(`Server running at: ${server.info.uri}`);
-  return server;
+    await server.start();
+    console.log(`Server running at: ${server.info.uri}`);
+    return server;
 };
 
 process.on('unhandledRejection', (err) => {
-  console.log(err);
-  process.exit(1);
+    console.log(err);
+    process.exit(1);
 });
 ```
 
@@ -100,23 +100,23 @@ const { afterEach, beforeEach, describe, it } = (exports.lab = Lab.script());
 const { init } = require('../lib/server');
 
 describe('GET /', () => {
-  let server;
+    let server;
 
-  beforeEach(async () => {
-    server = await init();
-  });
-
-  afterEach(async () => {
-    await server.stop();
-  });
-
-  it('responds with 200', async () => {
-    const res = await server.inject({
-      method: 'get',
-      url: '/',
+    beforeEach(async () => {
+        server = await init();
     });
-    expect(res.statusCode).to.equal(200);
-  });
+
+    afterEach(async () => {
+        await server.stop();
+    });
+
+    it('responds with 200', async () => {
+        const res = await server.inject({
+            method: 'get',
+            url: '/',
+        });
+        expect(res.statusCode).to.equal(200);
+    });
 });
 ```
 

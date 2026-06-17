@@ -24,18 +24,18 @@ Vamos observar um exemplo:
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/hello/{name}',
-  handler: function (request, reply) {
-    reply('Hello ' + request.params.name + '!');
-  },
-  options: {
-    validate: {
-      params: {
-        name: Joi.string().min(3).max(10),
-      },
+    method: 'GET',
+    path: '/hello/{name}',
+    handler: function (request, reply) {
+        reply('Hello ' + request.params.name + '!');
     },
-  },
+    options: {
+        validate: {
+            params: {
+                name: Joi.string().min(3).max(10),
+            },
+        },
+    },
 });
 ```
 
@@ -47,13 +47,13 @@ Com essa configuração, se nós fizermos uma requisição para `/hello/jennifer
 
 ```json
 {
-  "error": "Bad Request",
-  "message": "the length of name must be at least 3 characters long",
-  "statusCode": 400,
-  "validation": {
-    "keys": ["name"],
-    "source": "params"
-  }
+    "error": "Bad Request",
+    "message": "the length of name must be at least 3 characters long",
+    "statusCode": 400,
+    "validation": {
+        "keys": ["name"],
+        "source": "params"
+    }
 }
 ```
 
@@ -61,13 +61,13 @@ Da memsa forma, se nós fizermos uma requisição para `/hello/thisnameiswaytool
 
 ```json
 {
-  "error": "Bad Request",
-  "message": "the length of name must be less than or equal to 10 characters long",
-  "statusCode": 400,
-  "validation": {
-    "keys": ["name"],
-    "source": "params"
-  }
+    "error": "Bad Request",
+    "message": "the length of name must be less than or equal to 10 characters long",
+    "statusCode": 400,
+    "validation": {
+        "keys": ["name"],
+        "source": "params"
+    }
 }
 ```
 
@@ -79,18 +79,18 @@ Por exemplo, se você tem uma rota que lista todos os recursos e você gostaria 
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/list',
-  handler: function (request, reply) {
-    reply(resources.slice(0, request.query.limit));
-  },
-  options: {
-    validate: {
-      query: {
-        limit: Joi.number().integer().min(1).max(100).default(10),
-      },
+    method: 'GET',
+    path: '/list',
+    handler: function (request, reply) {
+        reply(resources.slice(0, request.query.limit));
     },
-  },
+    options: {
+        validate: {
+            query: {
+                limit: Joi.number().integer().min(1).max(100).default(10),
+            },
+        },
+    },
 });
 ```
 
@@ -98,13 +98,13 @@ Essa configuração garante que o parâmetro de query `limit` é sempre um intei
 
 ```json
 {
-  "error": "Bad Request",
-  "message": "the key offset is not allowed",
-  "statusCode": 400,
-  "validation": {
-    "keys": ["offset"],
-    "source": "query"
-  }
+    "error": "Bad Request",
+    "message": "the key offset is not allowed",
+    "statusCode": 400,
+    "validation": {
+        "keys": ["offset"],
+        "source": "query"
+    }
 }
 ```
 
@@ -174,31 +174,31 @@ Aqui está um exemplo da configuração de uma rota que retorna uma lista de liv
 
 ```javascript
 const bookSchema = Joi.object({
-  title: Joi.string().required(),
-  author: Joi.string().required(),
-  isbn: Joi.string().length(10),
-  pageCount: Joi.number(),
-  datePublished: Joi.date().iso(),
+    title: Joi.string().required(),
+    author: Joi.string().required(),
+    isbn: Joi.string().length(10),
+    pageCount: Joi.number(),
+    datePublished: Joi.date().iso(),
 });
 
 server.route({
-  method: 'GET',
-  path: '/books',
-  options: {
-    handler: function (request, reply) {
-      getBooks((err, books) => {
-        if (err) {
-          return reply(err);
-        }
+    method: 'GET',
+    path: '/books',
+    options: {
+        handler: function (request, reply) {
+            getBooks((err, books) => {
+                if (err) {
+                    return reply(err);
+                }
 
-        return reply(books);
-      });
+                return reply(books);
+            });
+        },
+        response: {
+            sample: 50,
+            schema: Joi.array().items(bookSchema),
+        },
     },
-    response: {
-      sample: 50,
-      schema: Joi.array().items(bookSchema),
-    },
-  },
 });
 ```
 

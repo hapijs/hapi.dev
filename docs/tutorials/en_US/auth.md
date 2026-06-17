@@ -64,9 +64,9 @@ The `name` parameter must be a string, and will be used later to identify this s
 
 ```js
 server.auth.strategy('session', 'cookie', {
-  name: 'sid-example',
-  password: '!wsYhFA*C2U6nz=Bu^%A@^F#SF3&kSR6',
-  isSecure: false,
+    name: 'sid-example',
+    password: '!wsYhFA*C2U6nz=Bu^%A@^F#SF3&kSR6',
+    isSecure: false,
 });
 ```
 
@@ -111,47 +111,47 @@ const Bcrypt = require('bcrypt');
 const Hapi = require('@hapi/hapi');
 
 const users = {
-  john: {
-    username: 'john',
-    password: '$2a$10$iqJSHD.BGr0E2IxQwYgJmeP3NvhPrXAeLSaGCj6IR/XU5QtjVu5Tm', // 'secret'
-    name: 'John Doe',
-    id: '2133d32a',
-  },
+    john: {
+        username: 'john',
+        password: '$2a$10$iqJSHD.BGr0E2IxQwYgJmeP3NvhPrXAeLSaGCj6IR/XU5QtjVu5Tm', // 'secret'
+        name: 'John Doe',
+        id: '2133d32a',
+    },
 };
 
 const validate = async (request, username, password) => {
-  const user = users[username];
-  if (!user) {
-    return { credentials: null, isValid: false };
-  }
+    const user = users[username];
+    if (!user) {
+        return { credentials: null, isValid: false };
+    }
 
-  const isValid = await Bcrypt.compare(password, user.password);
-  const credentials = { id: user.id, name: user.name };
+    const isValid = await Bcrypt.compare(password, user.password);
+    const credentials = { id: user.id, name: user.name };
 
-  return { isValid, credentials };
+    return { isValid, credentials };
 };
 
 const start = async () => {
-  const server = Hapi.server({ port: 4000 });
+    const server = Hapi.server({ port: 4000 });
 
-  await server.register(require('@hapi/basic'));
+    await server.register(require('@hapi/basic'));
 
-  server.auth.strategy('simple', 'basic', { validate });
+    server.auth.strategy('simple', 'basic', { validate });
 
-  server.route({
-    method: 'GET',
-    path: '/',
-    options: {
-      auth: 'simple',
-    },
-    handler: function (request, h) {
-      return 'welcome';
-    },
-  });
+    server.route({
+        method: 'GET',
+        path: '/',
+        options: {
+            auth: 'simple',
+        },
+        handler: function (request, h) {
+            return 'welcome';
+        },
+    });
 
-  await server.start();
+    await server.start();
 
-  console.log('server running at: ' + server.info.uri);
+    console.log('server running at: ' + server.info.uri);
 };
 
 start();
@@ -178,52 +178,52 @@ const Bcrypt = require('bcrypt');
 const Hapi = require('@hapi/hapi');
 
 const users = [
-  {
-    username: 'john',
-    password: '$2a$10$iqJSHD.BGr0E2IxQwYgJmeP3NvhPrXAeLSaGCj6IR/XU5QtjVu5Tm', // 'secret'
-    name: 'John Doe',
-    id: '2133d32a',
-  },
+    {
+        username: 'john',
+        password: '$2a$10$iqJSHD.BGr0E2IxQwYgJmeP3NvhPrXAeLSaGCj6IR/XU5QtjVu5Tm', // 'secret'
+        name: 'John Doe',
+        id: '2133d32a',
+    },
 ];
 
 const start = async () => {
-  const server = Hapi.server({ port: 4000 });
+    const server = Hapi.server({ port: 4000 });
 
-  await server.register(require('@hapi/cookie'));
+    await server.register(require('@hapi/cookie'));
 
-  server.auth.strategy('session', 'cookie', {
-    cookie: {
-      name: 'sid-example',
-      password: '!wsYhFA*C2U6nz=Bu^%A@^F#SF3&kSR6',
-      isSecure: false,
-    },
-    redirectTo: '/login',
-    validate: async (request, session) => {
-      const account = await users.find((user) => user.id === session.id);
+    server.auth.strategy('session', 'cookie', {
+        cookie: {
+            name: 'sid-example',
+            password: '!wsYhFA*C2U6nz=Bu^%A@^F#SF3&kSR6',
+            isSecure: false,
+        },
+        redirectTo: '/login',
+        validate: async (request, session) => {
+            const account = await users.find((user) => user.id === session.id);
 
-      if (!account) {
-        return { isValid: false };
-      }
+            if (!account) {
+                return { isValid: false };
+            }
 
-      return { isValid: true, credentials: account };
-    },
-  });
+            return { isValid: true, credentials: account };
+        },
+    });
 
-  server.auth.default('session');
+    server.auth.default('session');
 
-  server.route([
-    {
-      method: 'GET',
-      path: '/',
-      handler: function (request, h) {
-        return 'Welcome to the restricted home page!';
-      },
-    },
-    {
-      method: 'GET',
-      path: '/login',
-      handler: function (request, h) {
-        return ` <html>
+    server.route([
+        {
+            method: 'GET',
+            path: '/',
+            handler: function (request, h) {
+                return 'Welcome to the restricted home page!';
+            },
+        },
+        {
+            method: 'GET',
+            path: '/login',
+            handler: function (request, h) {
+                return ` <html>
                             <head>
                                 <title>Login page</title>
                             </head>
@@ -235,37 +235,37 @@ const start = async () => {
                                 <input type="submit" value="Login"></form>
                             </body>
                         </html>`;
-      },
-      options: {
-        auth: false,
-      },
-    },
-    {
-      method: 'POST',
-      path: '/login',
-      handler: async (request, h) => {
-        const { username, password } = request.payload;
-        const account = users.find((user) => user.username === username);
-
-        if (!account || !(await Bcrypt.compare(password, account.password))) {
-          return h.redirect('/login');
-        }
-
-        request.cookieAuth.set({ id: account.id });
-
-        return h.redirect('/');
-      },
-      options: {
-        auth: {
-          mode: 'try',
+            },
+            options: {
+                auth: false,
+            },
         },
-      },
-    },
-  ]);
+        {
+            method: 'POST',
+            path: '/login',
+            handler: async (request, h) => {
+                const { username, password } = request.payload;
+                const account = users.find((user) => user.username === username);
 
-  await server.start();
+                if (!account || !(await Bcrypt.compare(password, account.password))) {
+                    return h.redirect('/login');
+                }
 
-  console.log('server running at: ' + server.info.uri);
+                request.cookieAuth.set({ id: account.id });
+
+                return h.redirect('/');
+            },
+            options: {
+                auth: {
+                    mode: 'try',
+                },
+            },
+        },
+    ]);
+
+    await server.start();
+
+    console.log('server running at: ' + server.info.uri);
 };
 
 start();

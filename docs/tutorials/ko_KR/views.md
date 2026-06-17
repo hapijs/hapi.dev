@@ -24,15 +24,15 @@ const Hoek = require('@hapi/hoek');
 const server = Hapi.server();
 
 const start = async () => {
-  await server.register(require('@hapi/vision'));
+    await server.register(require('@hapi/vision'));
 
-  server.views({
-    engines: {
-      html: require('handlebars'),
-    },
-    relativeTo: __dirname,
-    path: 'templates',
-  });
+    server.views({
+        engines: {
+            html: require('handlebars'),
+        },
+        relativeTo: __dirname,
+        path: 'templates',
+    });
 };
 
 start();
@@ -52,13 +52,13 @@ hapi에서 view 엔진에 대한 여러가지 옵션이 있습니다. 전체 문
 
 ```javascript
 server.views({
-  engines: {
-    html: {
-      module: require('handlebars'),
-      compileMode: 'sync', // engine specific
+    engines: {
+        html: {
+            module: require('handlebars'),
+            compileMode: 'sync', // engine specific
+        },
     },
-  },
-  compileMode: 'async', // global setting
+    compileMode: 'async', // global setting
 });
 ```
 
@@ -108,13 +108,13 @@ templates\
 
 ```javascript
 server.views({
-  engines: {
-    html: require('handlebars'),
-  },
-  relativeTo: __dirname,
-  path: './templates',
-  layoutPath: './templates/layout',
-  helpersPath: './templates/helpers',
+    engines: {
+        html: require('handlebars'),
+    },
+    relativeTo: __dirname,
+    path: './templates',
+    layoutPath: './templates/layout',
+    helpersPath: './templates/helpers',
 });
 ```
 
@@ -128,11 +128,11 @@ view를 렌더링하는 첫 번째 방법은 `h.view()`입니다. 이 방법을 
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: function (request, h) {
-    return h.view('index');
-  },
+    method: 'GET',
+    path: '/',
+    handler: function (request, h) {
+        return h.view('index');
+    },
 });
 ```
 
@@ -148,11 +148,11 @@ view를 렌더링하는 두 번째 방법은 hapi의 내장 view 처리기를 �
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: {
-    view: 'index',
-  },
+    method: 'GET',
+    path: '/',
+    handler: {
+        view: 'index',
+    },
 });
 ```
 
@@ -177,17 +177,17 @@ view에 context를 직접 전달하는 방법을 살펴보았지만 모든 템�
 
 ```javascript
 const context = {
-  title: 'My personal site',
+    title: 'My personal site',
 };
 
 server.views({
-  engines: {
-    html: {
-      module: require('handlebars'),
-      compileMode: 'sync', // engine specific
+    engines: {
+        html: {
+            module: require('handlebars'),
+            compileMode: 'sync', // engine specific
+        },
     },
-  },
-  context,
+    context,
 });
 ```
 
@@ -201,21 +201,21 @@ server.views({
 
 ```javascript
 module.exports = function () {
-  const fortunes = [
-    'Heisenberg may have slept here...',
-    'Wanna buy a duck?',
-    'Say no, then negotiate.',
-    'Time and tide wait for no man.',
-    'To teach is to learn.',
-    'Never ask the barber if you need a haircut.',
-    'You will forget that you ever knew me.',
-    'You will be run over by a beer truck.',
-    'Fortune favors the lucky.',
-    'Have a nice day!',
-  ];
+    const fortunes = [
+        'Heisenberg may have slept here...',
+        'Wanna buy a duck?',
+        'Say no, then negotiate.',
+        'Time and tide wait for no man.',
+        'To teach is to learn.',
+        'Never ask the barber if you need a haircut.',
+        'You will forget that you ever knew me.',
+        'You will be run over by a beer truck.',
+        'Fortune favors the lucky.',
+        'Have a nice day!',
+    ];
 
-  const x = Math.floor(Math.random() * fortunes.length);
-  return fortunes[x];
+    const x = Math.floor(Math.random() * fortunes.length);
+    return fortunes[x];
 };
 ```
 
@@ -238,24 +238,24 @@ const Hapi = require('@hapi/hapi');
 const server = Hapi.server({ port: 8080 });
 
 const start = async () => {
-  await server.register(require('@hapi/vision'));
+    await server.register(require('@hapi/vision'));
 
-  server.views({
-    engines: {
-      html: require('handlebars'),
-    },
-    relativeTo: __dirname,
-    path: 'templates',
-    helpersPath: 'helpers',
-  });
+    server.views({
+        engines: {
+            html: require('handlebars'),
+        },
+        relativeTo: __dirname,
+        path: 'templates',
+        helpersPath: 'helpers',
+    });
 
-  server.route({
-    method: 'GET',
-    path: '/',
-    handler: function (request, h) {
-      return h.view('index');
-    },
-  });
+    server.route({
+        method: 'GET',
+        path: '/',
+        handler: function (request, h) {
+            return h.view('index');
+        },
+    });
 };
 
 start();
@@ -269,9 +269,9 @@ vision은 view 레이아웃에 대한 내장 지원을 가지고 있습니다. �
 
 ```javascript
 server.views({
-  // ...
-  layout: true,
-  layoutPath: 'templates/layout',
+    // ...
+    layout: true,
+    layoutPath: 'templates/layout',
 });
 ```
 
@@ -281,9 +281,9 @@ server.views({
 
 ```html
 <html>
-  <body>
-    &#123;&#123;&#123;content&#125;&#125;&#125;
-  </body>
+    <body>
+        &#123;&#123;&#123;content&#125;&#125;&#125;
+    </body>
 </html>
 ```
 
@@ -299,8 +299,8 @@ view를 렌더링할 때 `{{content}}`는 view 콘텐츠로 바뀔 것입니다.
 
 ```javascript
 server.views({
-  // ...
-  layout: 'another_default',
+    // ...
+    layout: 'another_default',
 });
 ```
 

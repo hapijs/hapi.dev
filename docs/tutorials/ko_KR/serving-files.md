@@ -20,19 +20,19 @@ _이 튜터리얼은 hapi v17과 호환됩니다._
 
 ```javascript
 const start = async () => {
-  await server.register(require('@hapi/inert'));
+    await server.register(require('@hapi/inert'));
 
-  server.route({
-    method: 'GET',
-    path: '/picture.jpg',
-    handler: function (request, h) {
-      return h.file('/path/to/picture.jpg');
-    },
-  });
+    server.route({
+        method: 'GET',
+        path: '/picture.jpg',
+        handler: function (request, h) {
+            return h.file('/path/to/picture.jpg');
+        },
+    });
 
-  await server.start();
+    await server.start();
 
-  console.log('Server running at:', server.info.uri);
+    console.log('Server running at:', server.info.uri);
 };
 
 start();
@@ -51,27 +51,27 @@ const Hapi = require('@hapi/hapi');
 const Path = require('path');
 
 const server = Hapi.server({
-  routes: {
-    files: {
-      relativeTo: Path.join(__dirname, 'public'),
+    routes: {
+        files: {
+            relativeTo: Path.join(__dirname, 'public'),
+        },
     },
-  },
 });
 
 const start = async () => {
-  await server.register(require('@hapi/inert'));
+    await server.register(require('@hapi/inert'));
 
-  server.route({
-    method: 'GET',
-    path: '/picture.jpg',
-    handler: function (request, h) {
-      return h.file('picture.jpg');
-    },
-  });
+    server.route({
+        method: 'GET',
+        path: '/picture.jpg',
+        handler: function (request, h) {
+            return h.file('picture.jpg');
+        },
+    });
 
-  await server.start();
+    await server.start();
 
-  console.log('Server running at:', server.info.uri);
+    console.log('Server running at:', server.info.uri);
 };
 
 start();
@@ -85,11 +85,11 @@ start();
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/picture.jpg',
-  handler: {
-    file: 'picture.jpg',
-  },
+    method: 'GET',
+    path: '/picture.jpg',
+    handler: {
+        file: 'picture.jpg',
+    },
 });
 ```
 
@@ -99,13 +99,13 @@ server.route({
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/{filename}',
-  handler: {
-    file: function (request) {
-      return request.params.filename;
+    method: 'GET',
+    path: '/{filename}',
+    handler: {
+        file: function (request) {
+            return request.params.filename;
+        },
     },
-  },
 });
 ```
 
@@ -113,16 +113,16 @@ server.route({
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/script.js',
-  handler: {
-    file: {
-      path: 'script.js',
-      filename: 'client.js', // override the filename in the Content-Disposition header
-      mode: 'attachment', // specify the Content-Disposition is an attachment
-      lookupCompressed: true, // allow looking for script.js.gz if the request allows it
+    method: 'GET',
+    path: '/script.js',
+    handler: {
+        file: {
+            path: 'script.js',
+            filename: 'client.js', // override the filename in the Content-Disposition header
+            mode: 'attachment', // specify the Content-Disposition is an attachment
+            lookupCompressed: true, // allow looking for script.js.gz if the request allows it
+        },
     },
-  },
 });
 ```
 
@@ -132,13 +132,13 @@ server.route({
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/{param*}',
-  handler: {
-    directory: {
-      path: 'directory-path-here',
+    method: 'GET',
+    path: '/{param*}',
+    handler: {
+        directory: {
+            path: 'directory-path-here',
+        },
     },
-  },
 });
 ```
 
@@ -148,14 +148,14 @@ server.route({
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/{param*}',
-  handler: {
-    directory: {
-      path: 'directory-path-here',
-      index: ['index.html', 'default.html'],
+    method: 'GET',
+    path: '/{param*}',
+    handler: {
+        directory: {
+            path: 'directory-path-here',
+            index: ['index.html', 'default.html'],
+        },
     },
-  },
 });
 ```
 
@@ -163,14 +163,14 @@ server.route({
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/{param*}',
-  handler: {
-    directory: {
-      path: 'directory-path-here',
-      listing: true,
+    method: 'GET',
+    path: '/{param*}',
+    handler: {
+        directory: {
+            path: 'directory-path-here',
+            listing: true,
+        },
     },
-  },
 });
 ```
 

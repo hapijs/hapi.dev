@@ -34,9 +34,9 @@ hapi sunucu nesnesi her bir günlükleme olayı için bir olay yayınlar. Standa
 
 ```javascript
 server.events.on('log', (event, tags) => {
-  if (tags.error) {
-    console.log(`Server error: ${event.error ? event.error.message : 'unknown'}`);
-  }
+    if (tags.error) {
+        console.log(`Server error: ${event.error ? event.error.message : 'unknown'}`);
+    }
 });
 ```
 
@@ -46,16 +46,16 @@ Bir istek ile ilgili tüm günlükleri `request.logs` kullanarak alabilirsin. G�
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/',
-  options: {
-    log: {
-      collect: true,
+    method: 'GET',
+    path: '/',
+    options: {
+        log: {
+            collect: true,
+        },
     },
-  },
-  handler: function (request, h) {
-    return 'hello';
-  },
+    handler: function (request, h) {
+        return 'hello';
+    },
 });
 ```
 

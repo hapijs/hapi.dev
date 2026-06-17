@@ -12,11 +12,11 @@ _该教程适用于 hapi v17版本_
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: function (request, h) {
-    return 'Hello!';
-  },
+    method: 'GET',
+    path: '/',
+    handler: function (request, h) {
+        return 'Hello!';
+    },
 });
 ```
 
@@ -26,11 +26,11 @@ server.route({
 
 ```javascript
 server.route({
-  method: ['PUT', 'POST'],
-  path: '/',
-  handler: function (request, h) {
-    return 'I did something!';
-  },
+    method: ['PUT', 'POST'],
+    path: '/',
+    handler: function (request, h) {
+        return 'I did something!';
+    },
 });
 ```
 
@@ -40,11 +40,11 @@ path 参数必须为一个字符串, 虽然他们可以包含一个命名的参�
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/hello/{user}',
-  handler: function (request, h) {
-    return `Hello ${encodeURIComponent(request.params.user)}!`;
-  },
+    method: 'GET',
+    path: '/hello/{user}',
+    handler: function (request, h) {
+        return `Hello ${encodeURIComponent(request.params.user)}!`;
+    },
 });
 ```
 
@@ -56,13 +56,13 @@ server.route({
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/hello/{user?}',
-  handler: function (request, h) {
-    const user = request.params.user ? encodeURIComponent(request.params.user) : 'stranger';
+    method: 'GET',
+    path: '/hello/{user?}',
+    handler: function (request, h) {
+        const user = request.params.user ? encodeURIComponent(request.params.user) : 'stranger';
 
-    return `Hello ${user}!`;
-  },
+        return `Hello ${user}!`;
+    },
 });
 ```
 
@@ -74,12 +74,12 @@ server.route({
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/hello/{user*2}',
-  handler: function (request, h) {
-    const userParts = request.params.user.split('/');
-    return `Hello ${encodeURIComponent(userParts[0])} ${encodeURIComponent(userParts[1])}!`;
-  },
+    method: 'GET',
+    path: '/hello/{user*2}',
+    handler: function (request, h) {
+        const userParts = request.params.user.split('/');
+        return `Hello ${encodeURIComponent(userParts[0])} ${encodeURIComponent(userParts[1])}!`;
+    },
 });
 ```
 
@@ -105,18 +105,18 @@ Handler 是一个接收两个参数的函数, `request` 和 `h`。
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/hello/{user?}',
-  handler: function (request, h) {
-    const user = request.params.user ? encodeURIComponent(request.params.user) : 'stranger';
+    method: 'GET',
+    path: '/hello/{user?}',
+    handler: function (request, h) {
+        const user = request.params.user ? encodeURIComponent(request.params.user) : 'stranger';
 
-    return `Hello ${user}!`;
-  },
-  options: {
-    description: 'Say hello!',
-    notes: "The user parameter defaults to 'stranger' if unspecified",
-    tags: ['api', 'greeting'],
-  },
+        return `Hello ${user}!`;
+    },
+    options: {
+        description: 'Say hello!',
+        notes: "The user parameter defaults to 'stranger' if unspecified",
+        tags: ['api', 'greeting'],
+    },
 });
 ```
 

@@ -41,13 +41,13 @@ hapi:
 const Hapi = require('@hapi/hapi');
 
 const init = async () => {
-  const server = Hapi.server({
-    port: 3000,
-    host: 'localhost',
-  });
+    const server = Hapi.server({
+        port: 3000,
+        host: 'localhost',
+    });
 
-  await server.start();
-  console.log('Server running on port 3000');
+    await server.start();
+    console.log('Server running on port 3000');
 };
 
 init();
@@ -65,7 +65,7 @@ Express:
 
 ```js
 app.get('/hello', function (req, res) {
-  res.send('Hello World!');
+    res.send('Hello World!');
 });
 ```
 
@@ -73,11 +73,11 @@ hapi:
 
 ```js
 server.route({
-  method: 'GET',
-  path: '/hello',
-  handler: (request, h) => {
-    return 'Hello World!';
-  },
+    method: 'GET',
+    path: '/hello',
+    handler: (request, h) => {
+        return 'Hello World!';
+    },
 });
 ```
 
@@ -89,11 +89,11 @@ server.route({
 
 ```js
 server.route({
-  method: ['PUT', 'POST'],
-  path: '/',
-  handler: function (request, h) {
-    return 'I did something!';
-  },
+    method: ['PUT', 'POST'],
+    path: '/',
+    handler: function (request, h) {
+        return 'I did something!';
+    },
 });
 ```
 
@@ -113,8 +113,8 @@ Express:
 
 ```js
 app.get('/hello/:name', function (req, res) {
-  const name = req.params.name;
-  res.send('Hello ' + name);
+    const name = req.params.name;
+    res.send('Hello ' + name);
 });
 ```
 
@@ -122,12 +122,12 @@ hapi:
 
 ```js
 server.route({
-  method: 'GET',
-  path: '/hello/{name}',
-  handler: function (request, h) {
-    const name = request.params.name;
-    return 'Hello ' + name;
-  },
+    method: 'GET',
+    path: '/hello/{name}',
+    handler: function (request, h) {
+        const name = request.params.name;
+        return 'Hello ' + name;
+    },
 });
 ```
 
@@ -143,7 +143,7 @@ Express:
 
 ```js
 app.get('/home', function (req, res) {
-  res.redirect('/');
+    res.redirect('/');
 });
 ```
 
@@ -151,11 +151,11 @@ hapi:
 
 ```js
 server.route({
-  method: 'GET',
-  path: '/home',
-  handler: function (request, h) {
-    return h.redirect('/');
-  },
+    method: 'GET',
+    path: '/home',
+    handler: function (request, h) {
+        return h.redirect('/');
+    },
 });
 ```
 
@@ -163,18 +163,18 @@ server.route({
 
 ```js
 server.route({
-  method: 'GET',
-  path: '/user',
-  handler: function (request, h) {
-    const user = {
-      firstName: 'John',
-      lastName: 'Doe',
-      userName: 'JohnDoe',
-      id: 123,
-    };
+    method: 'GET',
+    path: '/user',
+    handler: function (request, h) {
+        const user = {
+            firstName: 'John',
+            lastName: 'Doe',
+            userName: 'JohnDoe',
+            id: 123,
+        };
 
-    return user;
-  },
+        return user;
+    },
 });
 ```
 
@@ -194,8 +194,8 @@ hapi在请求周期内一共具有7个扩展点。 按顺序，它们分别都�
 
 ```js
 server.ext('onRequest', function (request, h) {
-  request.setUrl('/test');
-  return h.continue;
+    request.setUrl('/test');
+    return h.continue;
 });
 ```
 
@@ -209,12 +209,12 @@ Express:
 
 ```js
 const getDate = function (req, res, next) {
-  req.getDate = function () {
-    const date = new Date();
-    return date;
-  };
+    req.getDate = function () {
+        const date = new Date();
+        return date;
+    };
 
-  next();
+    next();
 };
 ```
 
@@ -222,16 +222,16 @@ hapi:
 
 ```js
 const getDate = {
-  name: 'getDate',
-  version: '1.0.0',
-  register: async function (server, options) {
-    const currentDate = function () {
-      const date = new Date();
-      return date;
-    };
+    name: 'getDate',
+    version: '1.0.0',
+    register: async function (server, options) {
+        const currentDate = function () {
+            const date = new Date();
+            return date;
+        };
 
-    server.decorate('toolkit', 'getDate', currentDate);
-  },
+        server.decorate('toolkit', 'getDate', currentDate);
+    },
 };
 ```
 
@@ -251,7 +251,7 @@ hapi:
 
 ```js
 await server.register({
-  plugin: getDate,
+    plugin: getDate,
 });
 ```
 
@@ -265,14 +265,14 @@ Express:
 
 ```js
 module.exports = function (options) {
-  return function getDate(req, res, next) {
-    req.getDate = function () {
-      const date = 'Hello ' + options.name + ', the date is ' + new Date();
-      return date;
-    };
+    return function getDate(req, res, next) {
+        req.getDate = function () {
+            const date = 'Hello ' + options.name + ', the date is ' + new Date();
+            return date;
+        };
 
-    next();
-  };
+        next();
+    };
 };
 ```
 
@@ -280,10 +280,10 @@ hapi:
 
 ```js
 server.register({
-  plugin: getDate,
-  options: {
-    name: 'Tom',
-  },
+    plugin: getDate,
+    options: {
+        name: 'Tom',
+    },
 });
 ```
 
@@ -301,16 +301,16 @@ hapi:
 
 ```js
 const getDate = {
-  name: 'getDate',
-  version: '1.0.0',
-  register: async function (server, options) {
-    const currentDate = function () {
-      const date = 'Hello ' + options.name + ', the date is ' + new Date();
-      return date;
-    };
+    name: 'getDate',
+    version: '1.0.0',
+    register: async function (server, options) {
+        const currentDate = function () {
+            const date = 'Hello ' + options.name + ', the date is ' + new Date();
+            return date;
+        };
 
-    server.decorate('toolkit', 'getDate', currentDate);
-  },
+        server.decorate('toolkit', 'getDate', currentDate);
+    },
 };
 ```
 
@@ -326,8 +326,8 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extend: true }));
 
 app.post('/hello', function (req, res) {
-  var name = req.body.name;
-  res.send('Hello ' + name);
+    var name = req.body.name;
+    res.send('Hello ' + name);
 });
 ```
 
@@ -335,12 +335,12 @@ hapi:
 
 ```js
 server.route({
-  method: 'POST',
-  path: '/hello',
-  handler: function (request, h) {
-    const name = request.payload.name;
-    return `Hello ` + name;
-  },
+    method: 'POST',
+    path: '/hello',
+    handler: function (request, h) {
+        const name = request.payload.name;
+        return `Hello ` + name;
+    },
 });
 ```
 
@@ -362,9 +362,9 @@ const Hapi = require('@hapi/hapi');
 const server = Hapi.server({ port: 8000 });
 
 server.state('data', {
-  ttl: null,
-  isSecure: true,
-  isHttpOnly: true,
+    ttl: null,
+    isSecure: true,
+    isHttpOnly: true,
 });
 ```
 
@@ -382,8 +382,8 @@ var cookieParser = require('cookie-parser');
 app.use(cookieParser());
 
 app.get('/', function (req, res) {
-  res.cookie('username', 'tom', { maxAge: null, secure: true, httpOnly: true });
-  res.send('Hello');
+    res.cookie('username', 'tom', { maxAge: null, secure: true, httpOnly: true });
+    res.send('Hello');
 });
 ```
 
@@ -395,18 +395,18 @@ const Hapi = require('@hapi/hapi');
 const server = Hapi.server({ port: 8000 });
 
 server.state('username', {
-  ttl: null,
-  isSecure: true,
-  isHttpOnly: true,
+    ttl: null,
+    isSecure: true,
+    isHttpOnly: true,
 });
 
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: function (request, h) {
-    h.state('username', 'tom');
-    return h.response('Hello');
-  },
+    method: 'GET',
+    path: '/',
+    handler: function (request, h) {
+        h.state('username', 'tom');
+        return h.response('Hello');
+    },
 });
 ```
 
@@ -440,18 +440,18 @@ const Hapi = require('@hapi/hapi');
 const server = Hapi.server({ port: 8000 });
 
 server.state('username', {
-  ttl: null,
-  isSecure: true,
-  isHttpOnly: true,
+    ttl: null,
+    isSecure: true,
+    isHttpOnly: true,
 });
 
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: async (request, h) => {
-    h.state('username', 'tom');
-    return h.response(request.state.username);
-  },
+    method: 'GET',
+    path: '/',
+    handler: async (request, h) => {
+        h.state('username', 'tom');
+        return h.response(request.state.username);
+    },
 });
 ```
 
@@ -516,34 +516,34 @@ const server = Hapi.server({ port: 8000 });
 await server.register(Bell);
 
 server.auth.strategy('twitter', 'bell', {
-  provider: 'twitter',
-  password: 'cookie_encryption_password_secure',
-  clientId: TWITTER_CONSUMER_KEY,
-  clientSecret: TWITTER_CONSUMER_SECRET,
-  isSecure: false,
+    provider: 'twitter',
+    password: 'cookie_encryption_password_secure',
+    clientId: TWITTER_CONSUMER_KEY,
+    clientSecret: TWITTER_CONSUMER_SECRET,
+    isSecure: false,
 });
 
 server.route({
-  method: '*',
-  path: '/auth/twitter', // The callback endpoint registered with the provider
-  handler: function (request, h) {
-    if (!request.auth.isAuthenticated) {
-      return `Authentication failed due to: ${request.auth.error.message}`;
-    }
+    method: '*',
+    path: '/auth/twitter', // The callback endpoint registered with the provider
+    handler: function (request, h) {
+        if (!request.auth.isAuthenticated) {
+            return `Authentication failed due to: ${request.auth.error.message}`;
+        }
 
-    // Perform any account lookup or registration, setup local session,
-    // and redirect to the application. The third-party credentials are
-    // stored in request.auth.credentials. Any query parameters from
-    // the initial request are passed back via request.auth.credentials.query.
+        // Perform any account lookup or registration, setup local session,
+        // and redirect to the application. The third-party credentials are
+        // stored in request.auth.credentials. Any query parameters from
+        // the initial request are passed back via request.auth.credentials.query.
 
-    return h.redirect('/home');
-  },
-  options: {
-    auth: {
-      strategy: 'twitter',
-      mode: 'try',
+        return h.redirect('/home');
     },
-  },
+    options: {
+        auth: {
+            strategy: 'twitter',
+            mode: 'try',
+        },
+    },
 });
 ```
 
@@ -584,14 +584,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(expressValidator());
 
 app.post('/post', function (req, res) {
-  req.check('post', 'Post too long').isLength({ max: 140 });
+    req.check('post', 'Post too long').isLength({ max: 140 });
 
-  let errors = req.validationErrors();
-  if (errors) {
-    res.status(400).send(errors);
-  } else {
-    res.send('Blog post added!');
-  }
+    let errors = req.validationErrors();
+    if (errors) {
+        res.status(400).send(errors);
+    } else {
+        res.send('Blog post added!');
+    }
 });
 ```
 
@@ -607,18 +607,18 @@ npm install joi
 const Joi = require('joi');
 
 server.route({
-  method: 'POST',
-  path: '/post',
-  handler: (request, h) => {
-    return 'Blog post added!';
-  },
-  options: {
-    validate: {
-      payload: Joi.object({
-        post: Joi.string().max(140),
-      }),
+    method: 'POST',
+    path: '/post',
+    handler: (request, h) => {
+        return 'Blog post added!';
     },
-  },
+    options: {
+        validate: {
+            payload: Joi.object({
+                post: Joi.string().max(140),
+            }),
+        },
+    },
 });
 ```
 
@@ -636,25 +636,25 @@ hapi:
 
 ```js
 const bookSchema = Joi.object({
-  title: Joi.string().required(),
-  author: Joi.string().required(),
-  isbn: Joi.string().length(10),
-  pageCount: Joi.number(),
-  datePublished: Joi.date().iso(),
+    title: Joi.string().required(),
+    author: Joi.string().required(),
+    isbn: Joi.string().length(10),
+    pageCount: Joi.number(),
+    datePublished: Joi.date().iso(),
 });
 
 server.route({
-  method: 'GET',
-  path: '/books',
-  handler: async function (request, h) {
-    return await getBooks();
-  },
-  options: {
-    response: {
-      schema: Joi.array().items(bookSchema),
-      failAction: 'log',
+    method: 'GET',
+    path: '/books',
+    handler: async function (request, h) {
+        return await getBooks();
     },
-  },
+    options: {
+        response: {
+            schema: Joi.array().items(bookSchema),
+            failAction: 'log',
+        },
+    },
 });
 ```
 
@@ -678,11 +678,11 @@ app.set('view engine', 'pug');
 await server.register(require('@hapi/vision'));
 
 server.views({
-  engines: {
-    pug: require('pug'),
-  },
-  relativeTo: __dirname,
-  path: 'views',
+    engines: {
+        pug: require('pug'),
+    },
+    relativeTo: __dirname,
+    path: 'views',
 });
 ```
 
@@ -699,7 +699,7 @@ hapi在 `server.views` 中有更多可配置的选项。要查看功能的完整
 
 ```js
 app.get('/', function (req, res) {
-  res.render('index', { title: 'Homepage', message: 'Welcome' });
+    res.render('index', { title: 'Homepage', message: 'Welcome' });
 });
 ```
 
@@ -707,11 +707,11 @@ Using `h.view` in hapi:
 
 ```js
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: function (request, h) {
-    return h.view('index', { title: 'Homepage', message: 'Welcome' });
-  },
+    method: 'GET',
+    path: '/',
+    handler: function (request, h) {
+        return h.view('index', { title: 'Homepage', message: 'Welcome' });
+    },
 });
 ```
 
@@ -719,17 +719,17 @@ server.route({
 
 ```js
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: {
-    view: {
-      template: 'index',
-      context: {
-        title: 'Homepage',
-        message: 'Welcome',
-      },
+    method: 'GET',
+    path: '/',
+    handler: {
+        view: {
+            template: 'index',
+            context: {
+                title: 'Homepage',
+                message: 'Welcome',
+            },
+        },
     },
-  },
 });
 ```
 
@@ -747,7 +747,7 @@ Express:
 
 ```js
 app.get('/image', function (req, res) {
-  res.sendFile('image.jpg', { root: './public' });
+    res.sendFile('image.jpg', { root: './public' });
 });
 ```
 
@@ -755,22 +755,22 @@ hapi with `h.file()`:
 
 ```js
 const server = new Hapi.Server({
-  port: 3000,
-  routes: {
-    files: {
-      relativeTo: Path.join(__dirname, 'public'),
+    port: 3000,
+    routes: {
+        files: {
+            relativeTo: Path.join(__dirname, 'public'),
+        },
     },
-  },
 });
 
 await server.register(require('@hapi/inert'));
 
 server.route({
-  method: 'GET',
-  path: '/image',
-  handler: function (request, h) {
-    return h.file('image.jpg');
-  },
+    method: 'GET',
+    path: '/image',
+    handler: function (request, h) {
+        return h.file('image.jpg');
+    },
 });
 ```
 
@@ -778,22 +778,22 @@ hapi with file handler:
 
 ```js
 const server = new Hapi.Server({
-  port: 3000,
-  routes: {
-    files: {
-      relativeTo: Path.join(__dirname, 'public'),
+    port: 3000,
+    routes: {
+        files: {
+            relativeTo: Path.join(__dirname, 'public'),
+        },
     },
-  },
 });
 
 await server.register(require('@hapi/inert'));
 
 server.route({
-  method: 'GET',
-  path: '/image',
-  handler: {
-    file: 'image.jpg',
-  },
+    method: 'GET',
+    path: '/image',
+    handler: {
+        file: 'image.jpg',
+    },
 });
 ```
 
@@ -813,24 +813,24 @@ hapi:
 
 ```js
 const server = new Hapi.Server({
-  port: 3000,
-  routes: {
-    files: {
-      relativeTo: Path.join(__dirname, 'public'),
+    port: 3000,
+    routes: {
+        files: {
+            relativeTo: Path.join(__dirname, 'public'),
+        },
     },
-  },
 });
 
 await server.register(require('@hapi/inert'));
 
 server.route({
-  method: 'GET',
-  path: '/{param*}',
-  handler: {
-    directory: {
-      path: '.',
+    method: 'GET',
+    path: '/{param*}',
+    handler: {
+        directory: {
+            path: '.',
+        },
     },
-  },
 });
 ```
 
@@ -851,9 +851,9 @@ hapi:
 
 ```json
 {
-  "statusCode": 404,
-  "error": "Not Found",
-  "message": "Not Found"
+    "statusCode": 404,
+    "error": "Not Found",
+    "message": "Not Found"
 }
 ```
 

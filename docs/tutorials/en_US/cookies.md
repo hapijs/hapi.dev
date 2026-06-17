@@ -24,12 +24,12 @@ Please note that the default settings for `options` is good for most cases and d
 
 ```javascript
 server.state('data', {
-  ttl: null,
-  isSecure: true,
-  isHttpOnly: true,
-  encoding: 'base64json',
-  clearInvalid: true,
-  strictHeader: true,
+    ttl: null,
+    isSecure: true,
+    isHttpOnly: true,
+    encoding: 'base64json',
+    clearInvalid: true,
+    strictHeader: true,
 });
 ```
 
@@ -53,12 +53,12 @@ Please note that configurations to cookies on the route-level are in addition to
 
 ```json5
 {
-  options: {
-    state: {
-      parse: true,
-      failAction: 'error',
+    options: {
+        state: {
+            parse: true,
+            failAction: 'error',
+        },
     },
-  },
 }
 ```
 
@@ -76,12 +76,12 @@ You set a cookie by calling [`h.state(name, value, [options]`](</api#h.state()>)
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: function (request, h) {
-    h.state('data', { firstVisit: false });
-    return h.response('Hello');
-  },
+    method: 'GET',
+    path: '/',
+    handler: function (request, h) {
+        h.state('data', { firstVisit: false });
+        return h.response('Hello');
+    },
 });
 ```
 

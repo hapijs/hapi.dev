@@ -18,18 +18,18 @@ _该教程适用于 hapi v17版本_
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/hello/{name}',
-  handler: function (request, h) {
-    return `Hello ${request.params.name}!`;
-  },
-  options: {
-    validate: {
-      params: {
-        name: Joi.string().min(3).max(10),
-      },
+    method: 'GET',
+    path: '/hello/{name}',
+    handler: function (request, h) {
+        return `Hello ${request.params.name}!`;
     },
-  },
+    options: {
+        validate: {
+            params: {
+                name: Joi.string().min(3).max(10),
+            },
+        },
+    },
 });
 ```
 
@@ -41,9 +41,9 @@ server.route({
 
 ```json
 {
-  "error": "Bad Request",
-  "message": "Invalid request params input",
-  "statusCode": 400
+    "error": "Bad Request",
+    "message": "Invalid request params input",
+    "statusCode": 400
 }
 ```
 
@@ -57,18 +57,18 @@ server.route({
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/posts',
-  handler: function (request, h) {
-    return posts.slice(0, request.query.limit);
-  },
-  options: {
-    validate: {
-      query: {
-        limit: Joi.number().integer().min(1).max(100).default(10),
-      },
+    method: 'GET',
+    path: '/posts',
+    handler: function (request, h) {
+        return posts.slice(0, request.query.limit);
     },
-  },
+    options: {
+        validate: {
+            query: {
+                limit: Joi.number().integer().min(1).max(100).default(10),
+            },
+        },
+    },
 });
 ```
 
@@ -137,25 +137,25 @@ hapi 可以通过不同的验证模式对此进行支持。`response.status` 是
 
 ```javascript
 const bookSchema = Joi.object({
-  title: Joi.string().required(),
-  author: Joi.string().required(),
-  isbn: Joi.string().length(10),
-  pageCount: Joi.number(),
-  datePublished: Joi.date().iso(),
+    title: Joi.string().required(),
+    author: Joi.string().required(),
+    isbn: Joi.string().length(10),
+    pageCount: Joi.number(),
+    datePublished: Joi.date().iso(),
 });
 
 server.route({
-  method: 'GET',
-  path: '/books',
-  handler: async function (request, h) {
-    return await getBooks();
-  },
-  options: {
-    response: {
-      sample: 50,
-      schema: Joi.array().items(bookSchema),
+    method: 'GET',
+    path: '/books',
+    handler: async function (request, h) {
+        return await getBooks();
     },
-  },
+    options: {
+        response: {
+            sample: 50,
+            schema: Joi.array().items(bookSchema),
+        },
+    },
 });
 ```
 

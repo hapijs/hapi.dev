@@ -22,23 +22,23 @@ Hadi bu başlığı hapi ile nasıl ayarlayabileceğimize bakalım:
 
 ```javascript
 server.route({
-  path: '/hapi/{ttl?}',
-  method: 'GET',
-  handler: function (request, h) {
-    const response = h.response({ be: 'hapi' });
+    path: '/hapi/{ttl?}',
+    method: 'GET',
+    handler: function (request, h) {
+        const response = h.response({ be: 'hapi' });
 
-    if (request.params.ttl) {
-      response.ttl(request.params.ttl);
-    }
+        if (request.params.ttl) {
+            response.ttl(request.params.ttl);
+        }
 
-    return response;
-  },
-  options: {
-    cache: {
-      expiresIn: 30 * 1000,
-      privacy: 'private',
+        return response;
     },
-  },
+    options: {
+        cache: {
+            expiresIn: 30 * 1000,
+            privacy: 'private',
+        },
+    },
 });
 ```
 
@@ -94,21 +94,21 @@ hapi varsayılan olarak [catbox memory](https://github.com/hapijs/catbox-memory)
 const Hapi = require('@hapi/hapi');
 
 const server = Hapi.server({
-  port: 8000,
-  cache: [
-    {
-      name: 'mongoCache',
-      engine: require('catbox-mongodb'),
-      host: '127.0.0.1',
-      partition: 'cache',
-    },
-    {
-      name: 'redisCache',
-      engine: require('catbox-redis'),
-      host: '127.0.0.1',
-      partition: 'cache',
-    },
-  ],
+    port: 8000,
+    cache: [
+        {
+            name: 'mongoCache',
+            engine: require('catbox-mongodb'),
+            host: '127.0.0.1',
+            partition: 'cache',
+        },
+        {
+            name: 'redisCache',
+            engine: require('catbox-redis'),
+            host: '127.0.0.1',
+            partition: 'cache',
+        },
+    ],
 });
 ```
 
@@ -120,36 +120,36 @@ Yukarıdaki örnekte, iki tane catbox istemcisi tanımladık: mongoCache ve redi
 
 ```javascript
 const start = async () => {
-  const add = async (a, b) => {
-    await Hoek.wait(1000); // Yavaş I/O simülasyonu
+    const add = async (a, b) => {
+        await Hoek.wait(1000); // Yavaş I/O simülasyonu
 
-    return Number(a) + Number(b);
-  };
+        return Number(a) + Number(b);
+    };
 
-  const sumCache = server.cache({
-    cache: 'mongoCache',
-    expiresIn: 10 * 1000,
-    segment: 'customSegment',
-    generateFunc: async (id) => {
-      return await add(id.a, id.b);
-    },
-    generateTimeout: 2000,
-  });
+    const sumCache = server.cache({
+        cache: 'mongoCache',
+        expiresIn: 10 * 1000,
+        segment: 'customSegment',
+        generateFunc: async (id) => {
+            return await add(id.a, id.b);
+        },
+        generateTimeout: 2000,
+    });
 
-  server.route({
-    path: '/add/{a}/{b}',
-    method: 'GET',
-    handler: async function (request, h) {
-      const { a, b } = request.params;
-      const id = `${a}:${b}`;
+    server.route({
+        path: '/add/{a}/{b}',
+        method: 'GET',
+        handler: async function (request, h) {
+            const { a, b } = request.params;
+            const id = `${a}:${b}`;
 
-      return await sumCache.get({ id, a, b });
-    },
-  });
+            return await sumCache.get({ id, a, b });
+        },
+    });
 
-  await server.start();
+    await server.start();
 
-  console.log('Server running at:', server.info.uri);
+    console.log('Server running at:', server.info.uri);
 };
 
 start();
@@ -171,28 +171,28 @@ Daha iyi olabilir! Yüzde doksan beş ihtimal önbellekleme için [sunucu yönte
 
 ```javascript
 const start = async () => {
-  // ...
+    // ...
 
-  server.method('sum', add, {
-    cache: {
-      cache: 'mongoCache',
-      expiresIn: 10 * 1000,
-      generateTimeout: 2000,
-    },
-  });
+    server.method('sum', add, {
+        cache: {
+            cache: 'mongoCache',
+            expiresIn: 10 * 1000,
+            generateTimeout: 2000,
+        },
+    });
 
-  server.route({
-    path: '/add/{a}/{b}',
-    method: 'GET',
-    handler: async function (request, h) {
-      const { a, b } = request.params;
-      return await server.methods.sum(a, b);
-    },
-  });
+    server.route({
+        path: '/add/{a}/{b}',
+        method: 'GET',
+        handler: async function (request, h) {
+            const { a, b } = request.params;
+            return await server.methods.sum(a, b);
+        },
+    });
 
-  await server.start();
+    await server.start();
 
-  // ...
+    // ...
 };
 
 start();
@@ -213,32 +213,32 @@ start();
 
 ```javascript
 const start = async () => {
-  //...
+    //...
 
-  server.method('sum', add, {
-    cache: {
-      cache: 'mongoCache',
-      expiresIn: 10 * 1000,
-      generateTimeout: 2000,
-      getDecoratedValue: true,
-    },
-  });
+    server.method('sum', add, {
+        cache: {
+            cache: 'mongoCache',
+            expiresIn: 10 * 1000,
+            generateTimeout: 2000,
+            getDecoratedValue: true,
+        },
+    });
 
-  server.route({
-    path: '/add/{a}/{b}',
-    method: 'GET',
-    handler: async function (request, h) {
-      const { a, b } = request.params;
-      const { value, cached } = await server.methods.sum(a, b);
-      const lastModified = cached ? new Date(cached.stored) : new Date();
+    server.route({
+        path: '/add/{a}/{b}',
+        method: 'GET',
+        handler: async function (request, h) {
+            const { a, b } = request.params;
+            const { value, cached } = await server.methods.sum(a, b);
+            const lastModified = cached ? new Date(cached.stored) : new Date();
 
-      return h.response(value).header('Last-modified', lastModified.toUTCString());
-    },
-  });
+            return h.response(value).header('Last-modified', lastModified.toUTCString());
+        },
+    });
 
-  await server.start();
+    await server.start();
 
-  // ...
+    // ...
 };
 ```
 

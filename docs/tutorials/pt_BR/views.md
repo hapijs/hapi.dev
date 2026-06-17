@@ -24,15 +24,15 @@ const Hoek = require('hoek');
 const server = new Hapi.Server();
 
 server.register(require('vision'), (err) => {
-  Hoek.assert(!err, err);
+    Hoek.assert(!err, err);
 
-  server.views({
-    engines: {
-      html: require('handlebars'),
-    },
-    relativeTo: __dirname,
-    path: 'templates',
-  });
+    server.views({
+        engines: {
+            html: require('handlebars'),
+        },
+        relativeTo: __dirname,
+        path: 'templates',
+    });
 });
 ```
 
@@ -52,13 +52,13 @@ Note que todas opções pode ser definidas de forma global, que configura todos 
 
 ```javascript
 server.views({
-  engines: {
-    html: {
-      module: require('handlebars'),
-      compileMode: 'sync', // motor específica
+    engines: {
+        html: {
+            module: require('handlebars'),
+            compileMode: 'sync', // motor específica
+        },
     },
-  },
-  compileMode: 'async', // configuração global
+    compileMode: 'async', // configuração global
 });
 ```
 
@@ -109,13 +109,13 @@ Sua configuração pode parecer isso:
 
 ```javascript
 server.views({
-  engines: {
-    html: require('handlebars'),
-  },
-  relativeTo: __dirname,
-  path: './views',
-  layoutPath: './views/layout',
-  helpersPath: './views/helpers',
+    engines: {
+        html: require('handlebars'),
+    },
+    relativeTo: __dirname,
+    path: './views',
+    layoutPath: './views/layout',
+    helpersPath: './views/helpers',
 });
 ```
 
@@ -129,11 +129,11 @@ O primeiro método que renderiza um view que vamos olhar é `reply.view()`. Aqui
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: function (request, reply) {
-    reply.view('index');
-  },
+    method: 'GET',
+    path: '/',
+    handler: function (request, reply) {
+        reply.view('index');
+    },
 });
 ```
 
@@ -149,11 +149,11 @@ O segundo método para renderizar a view, é usando um objeto com a propriedade 
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: {
-    view: 'index',
-  },
+    method: 'GET',
+    path: '/',
+    handler: {
+        view: 'index',
+    },
 });
 ```
 
@@ -178,17 +178,17 @@ O mais simplete caminho para alcançar isso é usando a opção `context` ao cha
 
 ```javascript
 const defaultContext = {
-  title: 'My personal site',
+    title: 'My personal site',
 };
 
 server.views({
-  engines: {
-    html: {
-      module: require('handlebars'),
-      compileMode: 'sync', // específico do motor
+    engines: {
+        html: {
+            module: require('handlebars'),
+            compileMode: 'sync', // específico do motor
+        },
     },
-  },
-  context: defaultContext,
+    context: defaultContext,
 });
 ```
 
@@ -203,20 +203,20 @@ O código a seguir é uma função helper que irá armazerna em um arquivo chama
 
 ```javascript
 module.exports = function () {
-  const fortunes = [
-    'Heisenberg may have slept here...',
-    'Wanna buy a duck?',
-    'Say no, then negotiate.',
-    'Time and tide wait for no man.',
-    'To teach is to learn.',
-    'Never ask the barber if you need a haircut.',
-    'You will forget that you ever knew me.',
-    'You will be run over by a beer truck.',
-    'Fortune favors the lucky.',
-    'Have a nice day!',
-  ];
-  const x = Math.floor(Math.random() * fortunes.length);
-  return fortunes[x];
+    const fortunes = [
+        'Heisenberg may have slept here...',
+        'Wanna buy a duck?',
+        'Say no, then negotiate.',
+        'Time and tide wait for no man.',
+        'To teach is to learn.',
+        'Never ask the barber if you need a haircut.',
+        'You will forget that you ever knew me.',
+        'You will be run over by a beer truck.',
+        'Fortune favors the lucky.',
+        'Have a nice day!',
+    ];
+    const x = Math.floor(Math.random() * fortunes.length);
+    return fortunes[x];
 };
 ```
 
@@ -239,29 +239,29 @@ const Hapi = require('hapi');
 const server = new Hapi.Server();
 
 server.connection({
-  port: Number(process.argv[2] || 8080),
-  host: 'localhost',
+    port: Number(process.argv[2] || 8080),
+    host: 'localhost',
 });
 
 server.register(require('vision'), (err) => {
-  Hoek.assert(!err, err);
+    Hoek.assert(!err, err);
 
-  server.views({
-    engines: {
-      html: require('handlebars'),
-    },
-    relativeTo: __dirname,
-    path: 'templates',
-    helpersPath: 'helpers',
-  });
+    server.views({
+        engines: {
+            html: require('handlebars'),
+        },
+        relativeTo: __dirname,
+        path: 'templates',
+        helpersPath: 'helpers',
+    });
 
-  server.route({
-    method: 'GET',
-    path: '/',
-    handler: function (request, reply) {
-      reply.view('index');
-    },
-  });
+    server.route({
+        method: 'GET',
+        path: '/',
+        handler: function (request, reply) {
+            reply.view('index');
+        },
+    });
 });
 
 server.start();
@@ -275,9 +275,9 @@ Podemos usar o sistema de layout embutido, primeiro configure a view:
 
 ```javascript
 server.views({
-  // ...
-  layout: true,
-  layoutPath: Path.join(__dirname, 'views/layout'),
+    // ...
+    layout: true,
+    layoutPath: Path.join(__dirname, 'views/layout'),
 });
 ```
 
@@ -287,9 +287,9 @@ Estabelecer uma área de conteúdo em seu `layout.html`:
 
 ```html
 <html>
-  <body>
-    &#123;&#123;&#123;content&#125;&#125;&#125;
-  </body>
+    <body>
+        &#123;&#123;&#123;content&#125;&#125;&#125;
+    </body>
 </html>
 ```
 
@@ -305,8 +305,8 @@ Se você quiser uma layout padrão diferente, você pode definir uma opção glo
 
 ```javascript
 server.views({
-  // ...
-  layout: 'another_default',
+    // ...
+    layout: 'another_default',
 });
 ```
 
