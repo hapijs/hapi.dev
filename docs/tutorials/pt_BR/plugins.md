@@ -18,14 +18,14 @@ Um plugin básico pode ser definido da seguinte forma:
 'use strict';
 
 const myPlugin = {
-  register: function (server, options, next) {
-    next();
-  },
+    register: function (server, options, next) {
+        next();
+    },
 };
 
 myPlugin.register.attributes = {
-  name: 'myPlugin',
-  version: '1.0.0',
+    name: 'myPlugin',
+    version: '1.0.0',
 };
 ```
 
@@ -35,11 +35,11 @@ Ou quando escrito como módulo externo:
 'use strict';
 
 exports.register = function (server, options, next) {
-  next();
+    next();
 };
 
 exports.register.attributes = {
-  pkg: require('./package.json'),
+    pkg: require('./package.json'),
 };
 ```
 
@@ -74,11 +74,11 @@ Por exemplo, para adicionar uma rota somente para as conexões com o label `'api
 const api = server.select('api');
 
 api.route({
-  method: 'GET',
-  path: '/',
-  handler: function (request, reply) {
-    reply('api index');
-  },
+    method: 'GET',
+    path: '/',
+    handler: function (request, reply) {
+        reply('api index');
+    },
 });
 ```
 
@@ -102,16 +102,16 @@ Plugins podem ser carregados individualmente, ou como parte de um grupo definido
 ```javascript
 // carrega um plugin
 server.register(require('myplugin'), (err) => {
-  if (err) {
-    console.error('Failed to load plugin:', err);
-  }
+    if (err) {
+        console.error('Failed to load plugin:', err);
+    }
 });
 
 // carrega múltiplos plugins
 server.register([require('myplugin'), require('yourplugin')], (err) => {
-  if (err) {
-    console.error('Failed to load a plugin:', err);
-  }
+    if (err) {
+        console.error('Failed to load a plugin:', err);
+    }
 });
 ```
 
@@ -119,17 +119,17 @@ Para passar opções para o seu plugin, cria-se um objeto com as chaves `registe
 
 ```javascript
 server.register(
-  {
-    register: require('myplugin'),
-    options: {
-      message: 'hello',
+    {
+        register: require('myplugin'),
+        options: {
+            message: 'hello',
+        },
     },
-  },
-  (err) => {
-    if (err) {
-      throw err;
-    }
-  },
+    (err) => {
+        if (err) {
+            throw err;
+        }
+    },
 );
 ```
 
@@ -137,21 +137,21 @@ Esses objetos podem também ser passados como itens de um array
 
 ```javascript
 server.register(
-  [
-    {
-      register: require('plugin1'),
-      options: {},
+    [
+        {
+            register: require('plugin1'),
+            options: {},
+        },
+        {
+            register: require('plugin2'),
+            options: {},
+        },
+    ],
+    (err) => {
+        if (err) {
+            throw err;
+        }
     },
-    {
-      register: require('plugin2'),
-      options: {},
-    },
-  ],
-  (err) => {
-    if (err) {
-      throw err;
-    }
-  },
 );
 ```
 
@@ -167,19 +167,19 @@ Por exemplo, vamos dizer que temos um plugin definido da seguinte forma:
 'use strict';
 
 exports.register = function (server, options, next) {
-  server.route({
-    method: 'GET',
-    path: '/test',
-    handler: function (request, reply) {
-      reply('test passed');
-    },
-  });
+    server.route({
+        method: 'GET',
+        path: '/test',
+        handler: function (request, reply) {
+            reply('test passed');
+        },
+    });
 
-  next();
+    next();
 };
 
 exports.register.attributes = {
-  pkg: require('./package.json'),
+    pkg: require('./package.json'),
 };
 ```
 
@@ -187,17 +187,17 @@ Normalmente, quando esse plugin é carregado ele cria uma rota `GET` em `/test`.
 
 ```javascript
 server.register(
-  { register: require('myplugin') },
-  {
-    routes: {
-      prefix: '/plugins',
+    { register: require('myplugin') },
+    {
+        routes: {
+            prefix: '/plugins',
+        },
     },
-  },
-  (err) => {
-    if (err) {
-      throw err;
-    }
-  },
+    (err) => {
+        if (err) {
+            throw err;
+        }
+    },
 );
 ```
 
@@ -209,15 +209,15 @@ O parâmetro `select` funciona exatamente do mesmo jeito que `server.select()` f
 
 ```javascript
 server.register(
-  { register: require('myplugin') },
-  {
-    select: ['webserver', 'admin'],
-  },
-  (err) => {
-    if (err) {
-      throw err;
-    }
-  },
+    { register: require('myplugin') },
+    {
+        select: ['webserver', 'admin'],
+    },
+    (err) => {
+        if (err) {
+            throw err;
+        }
+    },
 );
 ```
 

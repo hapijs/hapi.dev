@@ -1,192 +1,192 @@
 /* ---------- Fonts ---------- */
 @font-face {
-  font-family: 'IBM Plex Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('./fonts/IBMPlexSans-Regular.ttf') format('truetype');
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./fonts/IBMPlexSans-Regular.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'IBM Plex Sans';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url('./fonts/IBMPlexSans-Italic.ttf') format('truetype');
+    font-family: 'IBM Plex Sans';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./fonts/IBMPlexSans-Italic.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'IBM Plex Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('./fonts/IBMPlexSans-Medium.ttf') format('truetype');
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('./fonts/IBMPlexSans-Medium.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'IBM Plex Sans';
-  font-style: italic;
-  font-weight: 500;
-  font-display: swap;
-  src: url('./fonts/IBMPlexSans-MediumItalic.ttf') format('truetype');
+    font-family: 'IBM Plex Sans';
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url('./fonts/IBMPlexSans-MediumItalic.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'IBM Plex Sans';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('./fonts/IBMPlexSans-SemiBold.ttf') format('truetype');
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('./fonts/IBMPlexSans-SemiBold.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'IBM Plex Sans';
-  font-style: italic;
-  font-weight: 600;
-  font-display: swap;
-  src: url('./fonts/IBMPlexSans-SemiBoldItalic.ttf') format('truetype');
+    font-family: 'IBM Plex Sans';
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+    src: url('./fonts/IBMPlexSans-SemiBoldItalic.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'IBM Plex Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('./fonts/IBMPlexSans-Bold.ttf') format('truetype');
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('./fonts/IBMPlexSans-Bold.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'IBM Plex Sans';
-  font-style: italic;
-  font-weight: 700;
-  font-display: swap;
-  src: url('./fonts/IBMPlexSans-BoldItalic.ttf') format('truetype');
+    font-family: 'IBM Plex Sans';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url('./fonts/IBMPlexSans-BoldItalic.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'IBM Plex Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('./fonts/IBMPlexMono-Regular.ttf') format('truetype');
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./fonts/IBMPlexMono-Regular.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'IBM Plex Mono';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('./fonts/IBMPlexMono-SemiBold.ttf') format('truetype');
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('./fonts/IBMPlexMono-SemiBold.ttf') format('truetype');
 }
 
 :root {
-  --vp-font-family-base: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --vp-font-family-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --vp-font-family-base: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --vp-font-family-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
 /* ---------- Shared card ---------- */
 .card {
-  position: relative;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 14px;
-  padding: 22px 20px;
-  background: var(--vp-c-bg-soft);
-  box-shadow: var(--shadow-card);
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
-  overflow: hidden;
+    position: relative;
+    border: 1px solid var(--vp-c-divider);
+    border-radius: 14px;
+    padding: 22px 20px;
+    background: var(--vp-c-bg-soft);
+    box-shadow: var(--shadow-card);
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    overflow: hidden;
 }
 
 .card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 50%, var(--vp-c-brand-soft), transparent 70%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, var(--vp-c-brand-soft), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
 }
 
 .card:hover::after {
-  opacity: 1;
+    opacity: 1;
 }
 
 .card > * {
-  position: relative;
-  z-index: 1;
+    position: relative;
+    z-index: 1;
 }
 
 .card:hover {
-  transform: translateY(-2px);
-  border-color: var(--vp-c-brand-1);
-  box-shadow: var(--shadow-card-hover);
+    transform: translateY(-2px);
+    border-color: var(--vp-c-brand-1);
+    box-shadow: var(--shadow-card-hover);
 }
 
 /* ---------- Shared form controls ---------- */
 .form-control {
-  padding: 12px 16px;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 10px;
-  background: var(--vp-c-bg-soft);
-  font-family: var(--vp-font-family-base);
-  font-size: 0.95em;
-  color: var(--vp-c-text-1);
-  transition:
-    border-color 0.15s ease,
-    box-shadow 0.15s ease;
+    padding: 12px 16px;
+    border: 1px solid var(--vp-c-divider);
+    border-radius: 10px;
+    background: var(--vp-c-bg-soft);
+    font-family: var(--vp-font-family-base);
+    font-size: 0.95em;
+    color: var(--vp-c-text-1);
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
 }
 
 .form-control:focus {
-  outline: none;
-  border-color: var(--vp-c-brand-1);
-  box-shadow: 0 0 0 3px var(--vp-c-brand-soft);
+    outline: none;
+    border-color: var(--vp-c-brand-1);
+    box-shadow: 0 0 0 3px var(--vp-c-brand-soft);
 }
 
 /* Selects: appearance:none + custom chevron fixes native popup mispositioning
    on Chromium when selects carry custom padding/font. */
 select.form-control {
-  appearance: none;
-  -webkit-appearance: none;
-  padding-right: 40px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'><path d='M1 1.5L6 6.5L11 1.5' stroke='%23888' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/></svg>");
-  background-repeat: no-repeat;
-  background-position: right 14px center;
-  cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 40px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'><path d='M1 1.5L6 6.5L11 1.5' stroke='%23888' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    cursor: pointer;
 }
 
 /* ---------- Shared buttons ----------
  * Two styles used site-wide: .btn.btn-primary (gradient) and .btn.btn-ghost.
  */
 .btn {
-  display: inline-block;
-  border-radius: 10px;
-  padding: 12px 24px;
-  font-size: 0.95em;
-  font-weight: 700;
-  text-decoration: none;
-  border: 2px solid transparent;
-  cursor: pointer;
-  transition:
-    transform 0.15s ease,
-    box-shadow 0.2s ease,
-    border-color 0.2s ease,
-    color 0.2s ease;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-size: 0.95em;
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--vp-c-brand-1), var(--vp-c-brand-2));
-  color: #fff;
-  box-shadow: 0 8px 24px var(--vp-c-brand-soft);
+    background: linear-gradient(135deg, var(--vp-c-brand-1), var(--vp-c-brand-2));
+    color: #fff;
+    box-shadow: 0 8px 24px var(--vp-c-brand-soft);
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px var(--vp-c-brand-soft);
-  color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px var(--vp-c-brand-soft);
+    color: #fff;
 }
 
 .btn-ghost {
-  background: var(--vp-c-bg-soft);
-  border-color: var(--vp-c-divider);
-  color: var(--vp-c-text-1);
+    background: var(--vp-c-bg-soft);
+    border-color: var(--vp-c-divider);
+    color: var(--vp-c-text-1);
 }
 
 .btn-ghost:hover {
-  border-color: var(--vp-c-brand-1);
-  color: var(--vp-c-brand-1);
+    border-color: var(--vp-c-brand-1);
+    color: var(--vp-c-brand-1);
 }
 
 /* ---------- Doc typography ----------
@@ -197,65 +197,65 @@ select.form-control {
  * - h4-h6 uppercased
  */
 :root {
-  --vp-code-color: var(--vp-c-text-1);
-  --vp-code-bg: var(--vp-c-bg-soft);
-  --vp-code-link-color: var(--vp-c-brand-1);
+    --vp-code-color: var(--vp-c-text-1);
+    --vp-code-bg: var(--vp-c-bg-soft);
+    --vp-code-link-color: var(--vp-c-brand-1);
 }
 
 .vp-doc p {
-  line-height: 1.75;
-  margin: 20px 0;
+    line-height: 1.75;
+    margin: 20px 0;
 }
 .vp-doc ul,
 .vp-doc ol {
-  margin: 20px 0;
+    margin: 20px 0;
 }
 .vp-doc li + li,
 .vp-doc li > ol,
 .vp-doc li > ul {
-  margin-top: 16px;
+    margin-top: 16px;
 }
 .vp-doc h2 {
-  margin-top: 64px;
+    margin-top: 64px;
 }
 .vp-doc h3 {
-  margin-top: 40px;
+    margin-top: 40px;
 }
 .vp-doc h4,
 .vp-doc h5,
 .vp-doc h6 {
-  margin-top: 32px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+    margin-top: 32px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
 }
 .vp-doc h4 {
-  font-size: 15px;
+    font-size: 15px;
 }
 .vp-doc h5 {
-  font-size: 13px;
+    font-size: 13px;
 }
 .vp-doc h6 {
-  font-size: 12px;
-  color: var(--vp-c-text-2);
+    font-size: 12px;
+    color: var(--vp-c-text-2);
 }
 
 .vp-doc a {
-  text-decoration: none;
+    text-decoration: none;
 }
 .vp-doc a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 .vp-doc :not(pre) > code {
-  border: 1px solid color-mix(in srgb, var(--vp-code-color) 7%, transparent);
+    border: 1px solid color-mix(in srgb, var(--vp-code-color) 7%, transparent);
 }
 .vp-doc a > code {
-  background: var(--vp-c-brand-soft);
-  border-color: color-mix(in srgb, var(--vp-code-link-color) 7%, transparent);
+    background: var(--vp-c-brand-soft);
+    border-color: color-mix(in srgb, var(--vp-code-link-color) 7%, transparent);
 }
 
 .vp-doc pre {
-  max-width: 100%;
-  overflow-x: auto;
+    max-width: 100%;
+    overflow-x: auto;
 }
 
 /* ---------- Doc tables ----------
@@ -263,161 +263,161 @@ select.form-control {
  * without per-component overrides.
  */
 .vp-doc table {
-  display: table;
-  width: 100%;
-  max-width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  margin: 20px 0;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 12px;
-  overflow: hidden;
-  background: var(--vp-c-bg);
+    display: table;
+    width: 100%;
+    max-width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 20px 0;
+    border: 1px solid var(--vp-c-divider);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--vp-c-bg);
 }
 .vp-doc thead {
-  background: var(--vp-c-bg-soft);
+    background: var(--vp-c-bg-soft);
 }
 .vp-doc th {
-  padding: 10px 14px;
-  text-align: left;
-  font-size: 0.72em;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--vp-c-text-2);
-  border: none;
-  border-bottom: 1px solid var(--vp-c-divider);
-  background: var(--vp-c-bg-soft);
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 0.72em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--vp-c-text-2);
+    border: none;
+    border-bottom: 1px solid var(--vp-c-divider);
+    background: var(--vp-c-bg-soft);
 }
 .vp-doc tr {
-  background: transparent;
-  border: none;
+    background: transparent;
+    border: none;
 }
 .vp-doc tr:nth-child(2n) {
-  background: transparent;
+    background: transparent;
 }
 .vp-doc td {
-  padding: 10px 14px;
-  border: none;
-  border-bottom: 1px solid var(--vp-c-divider);
-  font-size: 0.95em;
+    padding: 10px 14px;
+    border: none;
+    border-bottom: 1px solid var(--vp-c-divider);
+    font-size: 0.95em;
 }
 .vp-doc tbody tr:last-child td {
-  border-bottom: none;
+    border-bottom: none;
 }
 
 .VPSidebar > .nav {
-  display: flex;
-  flex-direction: column;
-  min-height: calc(100vh - var(--vp-nav-height) - 128px);
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - var(--vp-nav-height) - 128px);
 }
 
 .breaking-badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 0 6px;
-  font-size: 11px;
-  font-weight: 600;
-  height: 18px;
-  line-height: 18px;
-  border-radius: 4px;
-  background-color: var(--vp-c-brand-1);
-  color: var(--vp-c-white);
-  text-transform: uppercase;
-  vertical-align: middle;
-  margin-left: 8px;
-  box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 6px;
+    font-size: 11px;
+    font-weight: 600;
+    height: 18px;
+    line-height: 18px;
+    border-radius: 4px;
+    background-color: var(--vp-c-brand-1);
+    color: var(--vp-c-white);
+    text-transform: uppercase;
+    vertical-align: middle;
+    margin-left: 8px;
+    box-sizing: border-box;
 }
 
 .breaking-badge::after {
-  content: 'breaking changes';
+    content: 'breaking changes';
 }
 
 .release-notes-link {
-  display: inline-flex;
-  align-items: center;
-  padding: 0 6px;
-  font-size: 11px;
-  font-weight: 600;
-  height: 18px;
-  line-height: 18px;
-  border-radius: 4px;
-  background-color: var(--release-notes-bg);
-  color: var(--vp-c-black) !important;
-  text-transform: uppercase;
-  vertical-align: middle;
-  margin-left: 8px;
-  text-decoration: none !important;
-  box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 6px;
+    font-size: 11px;
+    font-weight: 600;
+    height: 18px;
+    line-height: 18px;
+    border-radius: 4px;
+    background-color: var(--release-notes-bg);
+    color: var(--vp-c-black) !important;
+    text-transform: uppercase;
+    vertical-align: middle;
+    margin-left: 8px;
+    text-decoration: none !important;
+    box-sizing: border-box;
 }
 
 .release-notes-link::after {
-  content: 'release notes';
-  margin-left: 10px;
+    content: 'release notes';
+    margin-left: 10px;
 }
 
 .release-notes-link span {
-  margin-left: 10px;
+    margin-left: 10px;
 }
 
 .release-notes-link:hover {
-  opacity: 0.8;
+    opacity: 0.8;
 }
 
 .release-notes-img {
-  width: 12px;
-  height: 12px;
+    width: 12px;
+    height: 12px;
 }
 
 .atom-link {
-  display: inline-flex;
-  align-items: center;
-  vertical-align: middle;
-  color: var(--vp-c-text-2);
-  transition: color 0.2s;
-  text-decoration: none !important;
-  margin-left: 12px;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    color: var(--vp-c-text-2);
+    transition: color 0.2s;
+    text-decoration: none !important;
+    margin-left: 12px;
 }
 
 .atom-link:hover {
-  color: var(--vp-c-orange) !important;
+    color: var(--vp-c-orange) !important;
 }
 
 .atom-icon {
-  width: 24px;
-  height: 24px;
-  fill: currentColor;
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
 }
 
 .sponsors-page ul {
-  columns: 3;
-  list-style: none;
-  padding-left: 0;
+    columns: 3;
+    list-style: none;
+    padding-left: 0;
 }
 
 .sponsors-page ul li {
-  border-left: 3px solid var(--vp-c-brand-1);
-  padding-left: 15px;
-  margin-bottom: 8px;
-  break-inside: avoid;
+    border-left: 3px solid var(--vp-c-brand-1);
+    padding-left: 15px;
+    margin-bottom: 8px;
+    break-inside: avoid;
 }
 
 @media screen and (max-width: 900px) {
-  .sponsors-page ul {
-    columns: 2;
-  }
+    .sponsors-page ul {
+        columns: 2;
+    }
 }
 
 @media screen and (max-width: 500px) {
-  .sponsors-page ul {
-    columns: 1;
-  }
+    .sponsors-page ul {
+        columns: 1;
+    }
 }
 
 .vp-doc img.resources-book {
-  float: right;
-  height: 160px;
-  max-width: none;
-  border: 1px solid var(--vp-c-divider);
-  margin: 0 0 0 20px;
+    float: right;
+    height: 160px;
+    max-width: none;
+    border: 1px solid var(--vp-c-divider);
+    margin: 0 0 0 20px;
 }

@@ -28,12 +28,12 @@ For example:
 
 ```js
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: function (request, h) {
-    request.log('error', 'Event error');
-    return 'Hello World';
-  },
+    method: 'GET',
+    path: '/',
+    handler: function (request, h) {
+        request.log('error', 'Event error');
+        return 'Hello World';
+    },
 });
 ```
 
@@ -60,9 +60,9 @@ The hapi server object emits events for each log event. You can use the standard
 
 ```js
 server.events.on('log', (event, tags) => {
-  if (tags.error) {
-    console.log(`Server error: ${event.error ? event.error.message : 'unknown'}`);
-  }
+    if (tags.error) {
+        console.log(`Server error: ${event.error ? event.error.message : 'unknown'}`);
+    }
 });
 ```
 
@@ -72,16 +72,16 @@ You can retrieve all logs for a particular request at once via `request.logs`. T
 
 ```js
 server.route({
-  method: 'GET',
-  path: '/',
-  options: {
-    log: {
-      collect: true,
+    method: 'GET',
+    path: '/',
+    options: {
+        log: {
+            collect: true,
+        },
     },
-  },
-  handler: function (request, h) {
-    return 'hello';
-  },
+    handler: function (request, h) {
+        return 'hello';
+    },
 });
 ```
 

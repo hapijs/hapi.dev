@@ -34,9 +34,9 @@ hapi 服务器对象为每个日志事件都发出了事件。你可以通过标
 
 ```javascript
 server.events.on('log', (event, tags) => {
-  if (tags.error) {
-    console.log(`Server error: ${event.error ? event.error.message : 'unknown'}`);
-  }
+    if (tags.error) {
+        console.log(`Server error: ${event.error ? event.error.message : 'unknown'}`);
+    }
 });
 ```
 
@@ -46,16 +46,16 @@ server.events.on('log', (event, tags) => {
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/',
-  options: {
-    log: {
-      collect: true,
+    method: 'GET',
+    path: '/',
+    options: {
+        log: {
+            collect: true,
+        },
     },
-  },
-  handler: function (request, h) {
-    return 'hello';
-  },
+    handler: function (request, h) {
+        return 'hello';
+    },
 });
 ```
 

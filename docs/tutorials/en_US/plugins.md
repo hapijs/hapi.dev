@@ -22,22 +22,22 @@ A very simple plugin looks like:
 'use strict';
 
 const myPlugin = {
-  name: 'myPlugin',
-  version: '1.0.0',
-  register: async function (server, options) {
-    // Create a route for example
+    name: 'myPlugin',
+    version: '1.0.0',
+    register: async function (server, options) {
+        // Create a route for example
 
-    server.route({
-      method: 'GET',
-      path: '/test',
-      handler: function (request, h) {
-        return 'hello, world';
-      },
-    });
+        server.route({
+            method: 'GET',
+            path: '/test',
+            handler: function (request, h) {
+                return 'hello, world';
+            },
+        });
 
-    // etc ...
-    await someAsyncMethods();
-  },
+        // etc ...
+        await someAsyncMethods();
+    },
 };
 ```
 
@@ -49,21 +49,21 @@ To write a plugin as an external module, you can specify a `pkg` property:
 'use strict';
 
 exports.plugin = {
-  pkg: require('./package.json'),
-  register: async function (server, options) {
-    // Create a route for example
+    pkg: require('./package.json'),
+    register: async function (server, options) {
+        // Create a route for example
 
-    server.route({
-      method: 'GET',
-      path: '/test',
-      handler: function (request, h) {
-        return 'hello, world';
-      },
-    });
+        server.route({
+            method: 'GET',
+            path: '/test',
+            handler: function (request, h) {
+                return 'hello, world';
+            },
+        });
 
-    // etc...
-    await someAsyncMethods();
-  },
+        // etc...
+        await someAsyncMethods();
+    },
 };
 ```
 
@@ -89,22 +89,22 @@ The `options` parameter is simply whatever options the user passes to your plugi
 'use strict';
 
 exports.plugin = {
-  pkg: require('./package.json'),
-  register: async function (server, options) {
-    // Create a route for example
+    pkg: require('./package.json'),
+    register: async function (server, options) {
+        // Create a route for example
 
-    server.route({
-      method: 'GET',
-      path: '/test',
-      handler: function (request, h) {
-        const name = options.name;
-        return `Hello ${name}`;
-      },
-    });
+        server.route({
+            method: 'GET',
+            path: '/test',
+            handler: function (request, h) {
+                const name = options.name;
+                return `Hello ${name}`;
+            },
+        });
 
-    // etc...
-    await someAsyncMethods();
-  },
+        // etc...
+        await someAsyncMethods();
+    },
 };
 ```
 
@@ -112,12 +112,12 @@ Here, you grab a name from the `options` object via `options.name`. You then use
 
 ```javascript
 const start = async function () {
-  await server.register({
-    plugin: require('myplugin'),
-    options: {
-      name: 'Bob',
-    },
-  });
+    await server.register({
+        plugin: require('myplugin'),
+        options: {
+            name: 'Bob',
+        },
+    });
 };
 ```
 
@@ -129,15 +129,15 @@ Plugins can be loaded one at a time, or as a group in an array, by the `server.r
 
 ```javascript
 const start = async function () {
-  const server = Hapi.server();
+    const server = Hapi.server();
 
-  // load one plugin
+    // load one plugin
 
-  await server.register(require('myplugin'));
+    await server.register(require('myplugin'));
 
-  // load multiple plugins
+    // load multiple plugins
 
-  await server.register([require('myplugin'), require('yourplugin')]);
+    await server.register([require('myplugin'), require('yourplugin')]);
 };
 ```
 
@@ -145,14 +145,14 @@ To pass options to your plugin, we instead pass an object with `plugin` and `opt
 
 ```javascript
 const start = async function () {
-  const server = Hapi.server();
+    const server = Hapi.server();
 
-  await server.register({
-    plugin: require('myplugin'),
-    options: {
-      message: 'hello',
-    },
-  });
+    await server.register({
+        plugin: require('myplugin'),
+        options: {
+            message: 'hello',
+        },
+    });
 };
 ```
 
@@ -160,18 +160,18 @@ These objects can also be passed in an array:
 
 ```javascript
 const start = async function () {
-  const server = Hapi.server();
+    const server = Hapi.server();
 
-  await server.register([
-    {
-      plugin: require('plugin1'),
-      options: {},
-    },
-    {
-      plugin: require('plugin2'),
-      options: {},
-    },
-  ]);
+    await server.register([
+        {
+            plugin: require('plugin1'),
+            options: {},
+        },
+        {
+            plugin: require('plugin2'),
+            options: {},
+        },
+    ]);
 };
 ```
 
@@ -187,19 +187,19 @@ For example, let's say we have a plugin that looks like this:
 'use strict';
 
 exports.plugin = {
-  pkg: require('./package.json'),
-  register: async function (server, options) {
-    server.route({
-      method: 'GET',
-      path: '/test',
-      handler: function (request, h) {
-        return 'test passed';
-      },
-    });
+    pkg: require('./package.json'),
+    register: async function (server, options) {
+        server.route({
+            method: 'GET',
+            path: '/test',
+            handler: function (request, h) {
+                return 'test passed';
+            },
+        });
 
-    // etc...
-    await someAsyncMethods();
-  },
+        // etc...
+        await someAsyncMethods();
+    },
 };
 ```
 
@@ -207,13 +207,13 @@ Normally, when this plugin is loaded it will create a `GET` route at `/test`. Th
 
 ```javascript
 const start = async function () {
-  const server = Hapi.server();
+    const server = Hapi.server();
 
-  await server.register(require('myplugin'), {
-    routes: {
-      prefix: '/plugins',
-    },
-  });
+    await server.register(require('myplugin'), {
+        routes: {
+            prefix: '/plugins',
+        },
+    });
 };
 ```
 

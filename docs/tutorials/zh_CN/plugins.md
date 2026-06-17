@@ -20,22 +20,22 @@ hapi 拥有一个可扩展并且强健的插件系统，它允许你将应用分
 'use strict';
 
 const myPlugin = {
-  name: 'myPlugin',
-  version: '1.0.0',
-  register: async function (server, options) {
-    // 创建一个路由作为示例
+    name: 'myPlugin',
+    version: '1.0.0',
+    register: async function (server, options) {
+        // 创建一个路由作为示例
 
-    server.route({
-      method: 'GET',
-      path: '/test',
-      handler: function (request, h) {
-        return 'hello, world';
-      },
-    });
+        server.route({
+            method: 'GET',
+            path: '/test',
+            handler: function (request, h) {
+                return 'hello, world';
+            },
+        });
 
-    // etc ...
-    await someAsyncMethods();
-  },
+        // etc ...
+        await someAsyncMethods();
+    },
 };
 ```
 
@@ -45,21 +45,21 @@ const myPlugin = {
 'use strict';
 
 exports.plugin = {
-  pkg: require('./package.json'),
-  register: async function (server, options) {
-    // 创建一个路由作为示例
+    pkg: require('./package.json'),
+    register: async function (server, options) {
+        // 创建一个路由作为示例
 
-    server.route({
-      method: 'GET',
-      path: '/test',
-      handler: function (request, h) {
-        return 'hello, world';
-      },
-    });
+        server.route({
+            method: 'GET',
+            path: '/test',
+            handler: function (request, h) {
+                return 'hello, world';
+            },
+        });
 
-    // etc...
-    await someAsyncMethods();
-  },
+        // etc...
+        await someAsyncMethods();
+    },
 };
 ```
 
@@ -87,13 +87,13 @@ exports.plugin = {
 
 ```javascript
 const start = async function () {
-  // 载入一个插件
+    // 载入一个插件
 
-  await server.register(require('myplugin'));
+    await server.register(require('myplugin'));
 
-  // 载入多个插件
+    // 载入多个插件
 
-  await server.register([require('myplugin'), require('yourplugin')]);
+    await server.register([require('myplugin'), require('yourplugin')]);
 };
 ```
 
@@ -101,12 +101,12 @@ const start = async function () {
 
 ```javascript
 const start = async function () {
-  await server.register({
-    plugin: require('myplugin'),
-    options: {
-      message: 'hello',
-    },
-  });
+    await server.register({
+        plugin: require('myplugin'),
+        options: {
+            message: 'hello',
+        },
+    });
 };
 ```
 
@@ -114,16 +114,16 @@ const start = async function () {
 
 ```javascript
 const start = async function () {
-  await server.register([
-    {
-      plugin: require('plugin1'),
-      options: {},
-    },
-    {
-      plugin: require('plugin2'),
-      options: {},
-    },
-  ]);
+    await server.register([
+        {
+            plugin: require('plugin1'),
+            options: {},
+        },
+        {
+            plugin: require('plugin2'),
+            options: {},
+        },
+    ]);
 };
 ```
 
@@ -139,19 +139,19 @@ options 对象将被 hapi 使用，并且 _不会_ 传递到被装载的插件�
 'use strict';
 
 exports.plugin = {
-  pkg: require('./package.json'),
-  register: async function (server, options) {
-    server.route({
-      method: 'GET',
-      path: '/test',
-      handler: function (request, h) {
-        return 'test passed';
-      },
-    });
+    pkg: require('./package.json'),
+    register: async function (server, options) {
+        server.route({
+            method: 'GET',
+            path: '/test',
+            handler: function (request, h) {
+                return 'test passed';
+            },
+        });
 
-    // 其他...
-    await someAsyncMethods();
-  },
+        // 其他...
+        await someAsyncMethods();
+    },
 };
 ```
 
@@ -159,11 +159,11 @@ exports.plugin = {
 
 ```javascript
 const start = async function () {
-  await server.register(require('myplugin'), {
-    routes: {
-      prefix: '/plugins',
-    },
-  });
+    await server.register(require('myplugin'), {
+        routes: {
+            prefix: '/plugins',
+        },
+    });
 };
 ```
 

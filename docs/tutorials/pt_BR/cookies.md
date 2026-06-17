@@ -18,12 +18,12 @@ Para configurá-los, invoque `server.state(nome, opções)` onde `nome` é o nom
 
 ```javascript
 server.state('data', {
-  ttl: null,
-  isSecure: true,
-  isHttpOnly: true,
-  encoding: 'base64json',
-  clearInvalid: false, // remove cookies inválidos
-  strictHeader: true, // não permite violações da RFC 6265
+    ttl: null,
+    isSecure: true,
+    isHttpOnly: true,
+    encoding: 'base64json',
+    clearInvalid: false, // remove cookies inválidos
+    strictHeader: true, // não permite violações da RFC 6265
 });
 ```
 
@@ -33,12 +33,12 @@ Além disso, você pode passar dois parâmetros para o `options` ao adicionar um
 
 ```json5
 {
-  options: {
-    state: {
-      parse: true, // analisa e armazena em request.state
-      failAction: 'error', // também pode ser 'ignore' ou 'log'
+    options: {
+        state: {
+            parse: true, // analisa e armazena em request.state
+            failAction: 'error', // também pode ser 'ignore' ou 'log'
+        },
     },
-  },
 }
 ```
 

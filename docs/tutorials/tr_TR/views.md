@@ -24,15 +24,15 @@ const Hoek = require('@hapi/hoek');
 const server = Hapi.server();
 
 const start = async () => {
-  await server.register(require('@hapi/vision'));
+    await server.register(require('@hapi/vision'));
 
-  server.views({
-    engines: {
-      html: require('handlebars'),
-    },
-    relativeTo: __dirname,
-    path: 'templates',
-  });
+    server.views({
+        engines: {
+            html: require('handlebars'),
+        },
+        relativeTo: __dirname,
+        path: 'templates',
+    });
 };
 
 start();
@@ -52,13 +52,13 @@ Unutmayın ki tüm seçenekler kayıtlı tüm motorları yapılandıracak şekil
 
 ```javascript
 server.views({
-  engines: {
-    html: {
-      module: require('handlebars'),
-      compileMode: 'sync', // motora özel
+    engines: {
+        html: {
+            module: require('handlebars'),
+            compileMode: 'sync', // motora özel
+        },
     },
-  },
-  compileMode: 'async', // evrensel ayar
+    compileMode: 'async', // evrensel ayar
 });
 ```
 
@@ -108,13 +108,13 @@ Ayarların şöyle olabilir:
 
 ```javascript
 server.views({
-  engines: {
-    html: require('handlebars'),
-  },
-  relativeTo: __dirname,
-  path: './templates',
-  layoutPath: './templates/layout',
-  helpersPath: './templates/helpers',
+    engines: {
+        html: require('handlebars'),
+    },
+    relativeTo: __dirname,
+    path: './templates',
+    layoutPath: './templates/layout',
+    helpersPath: './templates/helpers',
 });
 ```
 
@@ -128,11 +128,11 @@ Bakacağımız ilk kullanıcı arayüzü yorumlayan yöntem `h.view()`. Hemen a�
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: function (request, h) {
-    return h.view('index');
-  },
+    method: 'GET',
+    path: '/',
+    handler: function (request, h) {
+        return h.view('index');
+    },
 });
 ```
 
@@ -148,11 +148,11 @@ Kullanıcı arayüzü işlemenin ikinci yöntemi, hapi'nin hazır gelen kullanı
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: {
-    view: 'index',
-  },
+    method: 'GET',
+    path: '/',
+    handler: {
+        view: 'index',
+    },
 });
 ```
 
@@ -177,17 +177,17 @@ Bunu yapmanın en kolay yolu `server.views()` yöntemini çağırırken `context
 
 ```javascript
 const context = {
-  title: 'Benim sitem',
+    title: 'Benim sitem',
 };
 
 server.views({
-  engines: {
-    html: {
-      module: require('handlebars'),
-      compileMode: 'sync', // motora özgü
+    engines: {
+        html: {
+            module: require('handlebars'),
+            compileMode: 'sync', // motora özgü
+        },
     },
-  },
-  context,
+    context,
 });
 ```
 
@@ -201,21 +201,21 @@ Aşağıdaki kod bloğu `fortune.js` içerisinde `helpers` dizininde saklayacağ
 
 ```javascript
 module.exports = function () {
-  const fortune = [
-    'Tolga burada uyumuş olabilir...',
-    'Ördek lazım mı?',
-    'Önce hayır de, sonra pazarlık yap.',
-    'Sona kalan dona kalır.',
-    'Öğretmek öğrenmektir.',
-    'Elinde çekiç olan her şeyi çivi sanır',
-    'Beni tanıdığın için kendini affedeceksin',
-    'Eller günahkar diller günahkar.',
-    'Talih şanslıdan yanadır.',
-    'İyi günler!',
-  ];
+    const fortune = [
+        'Tolga burada uyumuş olabilir...',
+        'Ördek lazım mı?',
+        'Önce hayır de, sonra pazarlık yap.',
+        'Sona kalan dona kalır.',
+        'Öğretmek öğrenmektir.',
+        'Elinde çekiç olan her şeyi çivi sanır',
+        'Beni tanıdığın için kendini affedeceksin',
+        'Eller günahkar diller günahkar.',
+        'Talih şanslıdan yanadır.',
+        'İyi günler!',
+    ];
 
-  const x = Math.floor(Math.random() * fortune.length);
-  return fortune[x];
+    const x = Math.floor(Math.random() * fortune.length);
+    return fortune[x];
 };
 ```
 
@@ -238,24 +238,24 @@ const Hapi = require('@hapi/hapi');
 const server = Hapi.server({ port: 8080 });
 
 const start = async () => {
-  await server.register(require('@hapi/vision'));
+    await server.register(require('@hapi/vision'));
 
-  server.views({
-    engines: {
-      html: require('handlebars'),
-    },
-    relativeTo: __dirname,
-    path: 'templates',
-    helpersPath: 'helpers',
-  });
+    server.views({
+        engines: {
+            html: require('handlebars'),
+        },
+        relativeTo: __dirname,
+        path: 'templates',
+        helpersPath: 'helpers',
+    });
 
-  server.route({
-    method: 'GET',
-    path: '/',
-    handler: function (request, h) {
-      return h.view('index');
-    },
-  });
+    server.route({
+        method: 'GET',
+        path: '/',
+        handler: function (request, h) {
+            return h.view('index');
+        },
+    });
 };
 
 start();
@@ -269,9 +269,9 @@ Yerleşik olarak gelen sayfa düzeni sistemini kullanmak için önce kullanıcı
 
 ```javascript
 server.views({
-  // ...
-  layout: true,
-  layoutPath: 'templates/layout',
+    // ...
+    layout: true,
+    layoutPath: 'templates/layout',
 });
 ```
 
@@ -281,9 +281,9 @@ Bu, yerleşik sayfa düzenlerini aktifleştiri ve varsayılan sayfa düzeni olar
 
 ```html
 <html>
-  <body>
-    &#123;&#123;&#123;content&#125;&#125;&#125;
-  </body>
+    <body>
+        &#123;&#123;&#123;content&#125;&#125;&#125;
+    </body>
 </html>
 ```
 
@@ -299,8 +299,8 @@ Varsayılan bir sayfa düzeni ayarlamak istersen bunu evrensel olarak yapabilirs
 
 ```javascript
 server.views({
-  // ...
-  layout: 'another_default',
+    // ...
+    layout: 'another_default',
 });
 ```
 

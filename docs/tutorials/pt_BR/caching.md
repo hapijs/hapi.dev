@@ -18,20 +18,20 @@ Vamos ver como nos podemos colocar estes cabeçalhos no hapi:
 
 ```javascript
 server.route({
-  path: '/hapi/{ttl?}',
-  method: 'GET',
-  handler: function (request, reply) {
-    const response = reply({ be: 'hapi' });
-    if (request.params.ttl) {
-      response.ttl(request.params.ttl);
-    }
-  },
-  options: {
-    cache: {
-      expiresIn: 30 * 1000,
-      privacy: 'private',
+    path: '/hapi/{ttl?}',
+    method: 'GET',
+    handler: function (request, reply) {
+        const response = reply({ be: 'hapi' });
+        if (request.params.ttl) {
+            response.ttl(request.params.ttl);
+        }
     },
-  },
+    options: {
+        cache: {
+            expiresIn: 30 * 1000,
+            privacy: 'private',
+        },
+    },
 });
 ```
 
@@ -89,24 +89,24 @@ hapi sempre incializa com um [client](http://github.com/hapijs/catbox#client) pa
 const Hapi = require('hapi');
 
 const server = new Hapi.Server({
-  cache: [
-    {
-      name: 'mongoCache',
-      engine: require('catbox-mongodb'),
-      host: '127.0.0.1',
-      partition: 'cache',
-    },
-    {
-      name: 'redisCache',
-      engine: require('catbox-redis'),
-      host: '127.0.0.1',
-      partition: 'cache',
-    },
-  ],
+    cache: [
+        {
+            name: 'mongoCache',
+            engine: require('catbox-mongodb'),
+            host: '127.0.0.1',
+            partition: 'cache',
+        },
+        {
+            name: 'redisCache',
+            engine: require('catbox-redis'),
+            host: '127.0.0.1',
+            partition: 'cache',
+        },
+    ],
 });
 
 server.connection({
-  port: 8000,
+    port: 8000,
 });
 ```
 
@@ -120,31 +120,31 @@ Na Listagem 4, nós definimos 2 catbox clients; mongoCache e redisCache. Incluin
 
 ```javascript
 const add = function (a, b, next) {
-  return next(null, Number(a) + Number(b));
+    return next(null, Number(a) + Number(b));
 };
 
 const sumCache = server.cache({
-  cache: 'mongoCache',
-  expiresIn: 20 * 1000,
-  segment: 'customSegment',
-  generateFunc: function (id, next) {
-    add(id.a, id.b, next);
-  },
-  generateTimeout: 100,
+    cache: 'mongoCache',
+    expiresIn: 20 * 1000,
+    segment: 'customSegment',
+    generateFunc: function (id, next) {
+        add(id.a, id.b, next);
+    },
+    generateTimeout: 100,
 });
 
 server.route({
-  path: '/add/{a}/{b}',
-  method: 'GET',
-  handler: function (request, reply) {
-    const id = request.params.a + ':' + request.params.b;
-    sumCache.get({ id: id, a: request.params.a, b: request.params.b }, (err, result) => {
-      if (err) {
-        return reply(err);
-      }
-      reply(result);
-    });
-  },
+    path: '/add/{a}/{b}',
+    method: 'GET',
+    handler: function (request, reply) {
+        const id = request.params.a + ':' + request.params.b;
+        sumCache.get({ id: id, a: request.params.a, b: request.params.b }, (err, result) => {
+            if (err) {
+                return reply(err);
+            }
+            reply(result);
+        });
+    },
 });
 ```
 
@@ -164,28 +164,28 @@ Mas ele pode ficar melhor que isto! Em 95% dos casos você pode user [server met
 
 ```javascript
 const add = function (a, b, next) {
-  return next(null, Number(a) + Number(b));
+    return next(null, Number(a) + Number(b));
 };
 
 server.method('sum', add, {
-  cache: {
-    cache: 'mongoCache',
-    expiresIn: 30 * 1000,
-    generateTimeout: 100,
-  },
+    cache: {
+        cache: 'mongoCache',
+        expiresIn: 30 * 1000,
+        generateTimeout: 100,
+    },
 });
 
 server.route({
-  path: '/add/{a}/{b}',
-  method: 'GET',
-  handler: function (request, reply) {
-    server.methods.sum(request.params.a, request.params.b, (err, result) => {
-      if (err) {
-        return reply(err);
-      }
-      reply(result);
-    });
-  },
+    path: '/add/{a}/{b}',
+    method: 'GET',
+    handler: function (request, reply) {
+        server.methods.sum(request.params.a, request.params.b, (err, result) => {
+            if (err) {
+                return reply(err);
+            }
+            reply(result);
+        });
+    },
 });
 ```
 
@@ -206,17 +206,17 @@ Neste caso nós usamos `cached.stored` timestamp para adicionar no header `last-
 
 ```javascript
 server.route({
-  path: '/add/{a}/{b}',
-  method: 'GET',
-  handler: function (request, reply) {
-    server.methods.sum(request.params.a, request.params.b, (err, result, cached, report) => {
-      if (err) {
-        return reply(err);
-      }
-      const lastModified = cached ? new Date(cached.stored) : new Date();
-      return reply(result).header('last-modified', lastModified.toUTCString());
-    });
-  },
+    path: '/add/{a}/{b}',
+    method: 'GET',
+    handler: function (request, reply) {
+        server.methods.sum(request.params.a, request.params.b, (err, result, cached, report) => {
+            if (err) {
+                return reply(err);
+            }
+            const lastModified = cached ? new Date(cached.stored) : new Date();
+            return reply(result).header('last-modified', lastModified.toUTCString());
+        });
+    },
 });
 ```
 

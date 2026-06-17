@@ -28,12 +28,12 @@ The first type of validation hapi can perform is input validation. This is defin
 
 ```json5
 {
-  headers: true,
-  params: true,
-  query: true,
-  payload: true,
-  state: true,
-  failAction: 'error',
+    headers: true,
+    params: true,
+    query: true,
+    payload: true,
+    state: true,
+    failAction: 'error',
 }
 ```
 
@@ -41,11 +41,11 @@ If a key has a value of `true`, there will be no validation. Keys can also be ei
 
 ```js
 options: {
-  validate: {
-    query: Joi.object({
-      limit: Joi.number().integer().min(1).max(100).default(10),
-    }).options({ stripUnknown: true });
-  }
+    validate: {
+        query: Joi.object({
+            limit: Joi.number().integer().min(1).max(100).default(10),
+        }).options({ stripUnknown: true });
+    }
 }
 ```
 
@@ -57,18 +57,18 @@ The first input type that `joi` can validate is path parameters. Consider the fo
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/hello/{name}',
-  handler: function (request, h) {
-    return `Hello ${request.params.name}!`;
-  },
-  options: {
-    validate: {
-      params: Joi.object({
-        name: Joi.string().min(3).max(10),
-      }),
+    method: 'GET',
+    path: '/hello/{name}',
+    handler: function (request, h) {
+        return `Hello ${request.params.name}!`;
     },
-  },
+    options: {
+        validate: {
+            params: Joi.object({
+                name: Joi.string().min(3).max(10),
+            }),
+        },
+    },
 });
 ```
 
@@ -78,9 +78,9 @@ With this configuration, if you make a request to `/hello/jennifer` you will get
 
 ```json
 {
-  "error": "Bad Request",
-  "message": "Invalid request params input",
-  "statusCode": 400
+    "error": "Bad Request",
+    "message": "Invalid request params input",
+    "statusCode": 400
 }
 ```
 
@@ -94,18 +94,18 @@ For example, if you have a route that returns a list of blog posts and you would
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/posts',
-  handler: function (request, h) {
-    return posts.slice(0, request.query.limit);
-  },
-  options: {
-    validate: {
-      query: Joi.object({
-        limit: Joi.number().integer().min(1).max(100).default(10),
-      }),
+    method: 'GET',
+    path: '/posts',
+    handler: function (request, h) {
+        return posts.slice(0, request.query.limit);
     },
-  },
+    options: {
+        validate: {
+            query: Joi.object({
+                limit: Joi.number().integer().min(1).max(100).default(10),
+            }),
+        },
+    },
 });
 ```
 
@@ -119,19 +119,19 @@ Also valid is the `validate.payload` option, which will validate payload data se
 
 ```js
 server.route({
-  method: 'POST',
-  path: '/post',
-  handler: function (request, h) {
-    return 'Blog post added';
-  },
-  options: {
-    validate: {
-      payload: Joi.object({
-        post: Joi.string().min(1).max(140),
-        date: Joi.date().required(),
-      }),
+    method: 'POST',
+    path: '/post',
+    handler: function (request, h) {
+        return 'Blog post added';
     },
-  },
+    options: {
+        validate: {
+            payload: Joi.object({
+                post: Joi.string().min(1).max(140),
+                date: Joi.date().required(),
+            }),
+        },
+    },
 });
 ```
 
@@ -141,9 +141,9 @@ If any of payload fails validation, the following error will be thrown:
 
 ```json
 {
-  "error": "Bad Request",
-  "message": "Invalid request payload input",
-  "statusCode": 400
+    "error": "Bad Request",
+    "message": "Invalid request payload input",
+    "statusCode": 400
 }
 ```
 
@@ -153,21 +153,21 @@ You may validate incoming headers as well, with a `validate.headers` option. For
 
 ```js
 server.route({
-  method: 'GET',
-  path: '/hello/{name}',
-  handler: (request, h) => {
-    return `Hello ${request.params.name}!`;
-  },
-  options: {
-    validate: {
-      headers: Joi.object({
-        cookie: Joi.string().required(),
-      }),
-      options: {
-        allowUnknown: true,
-      },
+    method: 'GET',
+    path: '/hello/{name}',
+    handler: (request, h) => {
+        return `Hello ${request.params.name}!`;
     },
-  },
+    options: {
+        validate: {
+            headers: Joi.object({
+                cookie: Joi.string().required(),
+            }),
+            options: {
+                allowUnknown: true,
+            },
+        },
+    },
 });
 ```
 
@@ -196,25 +196,25 @@ For example:
 
 ```js
 const bookSchema = Joi.object({
-  title: Joi.string().required(),
-  author: Joi.string().required(),
-  isbn: Joi.string().length(10),
-  pageCount: Joi.number(),
-  datePublished: Joi.date().iso(),
+    title: Joi.string().required(),
+    author: Joi.string().required(),
+    isbn: Joi.string().length(10),
+    pageCount: Joi.number(),
+    datePublished: Joi.date().iso(),
 });
 
 server.route({
-  method: 'GET',
-  path: '/books',
-  handler: async function (request, h) {
-    return await getBooks();
-  },
-  options: {
-    response: {
-      schema: Joi.array().items(bookSchema),
-      failAction: 'log',
+    method: 'GET',
+    path: '/books',
+    handler: async function (request, h) {
+        return await getBooks();
     },
-  },
+    options: {
+        response: {
+            schema: Joi.array().items(bookSchema),
+            failAction: 'log',
+        },
+    },
 });
 ```
 
@@ -226,25 +226,25 @@ If performance is a concern, hapi can be configured to validate only a percentag
 
 ```javascript
 const bookSchema = Joi.object({
-  title: Joi.string().required(),
-  author: Joi.string().required(),
-  isbn: Joi.string().length(10),
-  pageCount: Joi.number(),
-  datePublished: Joi.date().iso(),
+    title: Joi.string().required(),
+    author: Joi.string().required(),
+    isbn: Joi.string().length(10),
+    pageCount: Joi.number(),
+    datePublished: Joi.date().iso(),
 });
 
 server.route({
-  method: 'GET',
-  path: '/books',
-  handler: async function (request, h) {
-    return await getBooks();
-  },
-  options: {
-    response: {
-      sample: 50,
-      schema: Joi.array().items(bookSchema),
+    method: 'GET',
+    path: '/books',
+    handler: async function (request, h) {
+        return await getBooks();
     },
-  },
+    options: {
+        response: {
+            sample: 50,
+            schema: Joi.array().items(bookSchema),
+        },
+    },
 });
 ```
 

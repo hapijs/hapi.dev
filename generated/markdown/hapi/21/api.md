@@ -74,6 +74,7 @@ assigned one or more (array):
   will be created internally using this constructor.
 
 - a configuration object with the following:
+
     - `engine` - a **catbox** engine object instance.
 
     - `name` - an identifier used later when provisioning or configuring caching for
@@ -82,9 +83,11 @@ assigned one or more (array):
       includes a `name`, a default memory cache is provisioned as well.
 
     - `provider` - a class, a constructor function, or an object with the following:
+
         - `constructor` - a class or a prototype function.
 
         - `options` - (optional) a settings object passed as-is to the `constructor` with the following:
+
             - `partition` - (optional) string used to isolate cached data. Defaults to `'hapi-cache'`.
             - other constructor-specific options passed to the `constructor` on instantiation.
 
@@ -180,9 +183,11 @@ Default value: none.
 Options passed to the [**mimos**](https://hapi.dev/family/mimos/api) module when generating the mime database used by the server (and accessed via [`server.mime`](#server.mime)):
 
 - `override` - an object hash that is merged into the built in mime information specified [here](https://github.com/jshttp/mime-db). Each key value pair represents a single mime object. Each override value must contain:
+
     - `key` - the lower-cased mime-type string (e.g. `'application/javascript'`).
 
     - `value` - an object following the specifications outlined [here](https://github.com/jshttp/mime-db#data-structure). Additional values include:
+
         - `type` - specify the `type` value of result objects, defaults to `key`.
 
         - `predicate` - method with signature `function(mime)` when this mime type is found in the database, this function will execute to allows customizations.
@@ -643,6 +648,7 @@ An object containing information about the server where:
 - `started` - server start timestamp (`0` when stopped).
 
 - `port` - the connection port based on the following rules:
+
     - before the server has been started: the configured [`port`](#server.options.port) value.
     - after the server has been started: the actual port assigned when no port is configured or was
       set to `0`.
@@ -653,6 +659,7 @@ An object containing information about the server where:
   until the server has been started or when using a non TCP port (e.g. UNIX domain socket).
 
 - `protocol` - the protocol used:
+
     - `'http'` - HTTP.
     - `'https'` - HTTPS.
     - `'socket'` - UNIX domain socket or Windows named pipe.
@@ -796,7 +803,9 @@ The `server.realm` object contains:
 - `modifiers` - when the server object is provided as an argument to the plugin `register()`
   method, `modifiers` provides the registration preferences passed the
   [`server.register()`](#server.register()) method and includes:
+
     - `route` - routes preferences:
+
         - `prefix` - the route path prefix used by any calls to [`server.route()`](#server.route())
           from the server. Note that if a prefix is used and the route path is set to `'/'`, the
           resulting path will not include the trailing slash.
@@ -813,6 +822,7 @@ The `server.realm` object contains:
   state. `plugins` is an object where each key is a plugin name and the value is the plugin state.
 
 - `settings` - settings overrides:
+
     - `files.relativeTo`
     - `bind`
 
@@ -907,6 +917,7 @@ console.log(server.version); // '17.0.0'
 Sets a default strategy which is applied to every route where:
 
 - `options` - one of:
+
     - a string with the default strategy name
     - an authentication configuration object using the same format as the
       [route `auth` handler options](#route.options.auth).
@@ -1164,6 +1175,7 @@ exports.plugin = {
 Provisions a cache segment within the server cache facility where:
 
 - `options` - [**catbox** policy](https://hapi.dev/family/catbox/api#policy) configuration where:
+
     - `expiresIn` - relative expiration expressed in the number of milliseconds since the item was
       saved in the cache. Cannot be used together with `expiresAt`.
 
@@ -1173,10 +1185,10 @@ Provisions a cache segment within the server cache facility where:
     - `generateFunc` - a function used to generate a new cache item if one is not found in the
       cache when calling `get()`. The method's signature is `async function(id, flags)` where:
 
-                  - `id` - the `id` string or object provided to the `get()` method.
-                  - `flags` - an object used to pass back additional flags to the cache where:
-                      - `ttl` - the cache ttl value in milliseconds. Set to `0` to skip storing in the
-                        cache. Defaults to the cache global policy.
+              - `id` - the `id` string or object provided to the `get()` method.
+              - `flags` - an object used to pass back additional flags to the cache where:
+                  - `ttl` - the cache ttl value in milliseconds. Set to `0` to skip storing in the
+                    cache. Defaults to the cache global policy.
 
     - `staleIn` - number of milliseconds to mark an item stored in cache as stale and attempt to
       regenerate it when `generateFunc` is provided. Must be less than `expiresIn`.
@@ -1299,6 +1311,7 @@ server.decoder('special', (options) => Zlib.createGunzip(options));
 Extends various framework interfaces with custom methods where:
 
 - `type` - the interface being decorated. Supported types:
+
     - `'handler'` - adds a new handler type to be used in [routes handlers](#route.options.handler).
     - `'request'` - adds methods to the [Request object](#request).
     - `'response'` - adds methods to the [Response object](#response-object).
@@ -1416,7 +1429,7 @@ or started) where:
   registered and before the server starts. The function is only called if the server is initialized
   or started. The function signature is `async function(server)` where:
 
-              - `server` - the server the `dependency()` method was called on.
+          - `server` - the server the `dependency()` method was called on.
 
 Return value: none.
 
@@ -1490,9 +1503,11 @@ server.encoder('special', (options) => Zlib.createGzip(options));
 Register custom application events where:
 
 - `events` - must be one of:
+
     - an event name string.
 
     - an event options object with the following optional keys (unless noted otherwise):
+
         - `name` - the event name string (required).
 
         - `channels` - a string or array of strings specifying the event channels available. Defaults to no channel restrictions (event updates can specify a channel or not).
@@ -1525,6 +1540,7 @@ async function example() {
 Emits a custom application event to all the subscribed listeners where:
 
 - `criteria` - the event update criteria which must be one of:
+
     - the event name string.
     - an object with the following optional keys (unless noted otherwise):
         - `name` - the event name string (required).
@@ -1553,10 +1569,12 @@ async function example() {
 Subscribe to an event where:
 
 - `criteria` - the subscription criteria which must be one of:
+
     - event name string which can be any of the [built-in server events](#server.events) or a
       custom application event registered with [`server.event()`](#server.event()).
 
     - a criteria object with the following optional keys (unless noted otherwise):
+
         - `name` - (required) the event name string.
 
         - `channels` - a string or array of strings specifying the event channels to subscribe to.
@@ -1574,9 +1592,11 @@ Subscribe to an event where:
           calling `server.events.once()`. Defaults to no limit.
 
         - `filter` - the event tags (if present) to subscribe to which can be one of:
+
             - a tag string.
             - an array of tag strings.
             - an object with the following:
+
                 - `tags` - a tag string or array of tag strings.
                 - `all` - if `true`, all `tags` must be present for the event update to match the
                   subscription. Defaults to `false` (at least one matching tag).
@@ -1702,9 +1722,11 @@ Registers an extension function in one of the [request lifecycle](#request-lifec
 points where:
 
 - `events` - an object or array of objects with the following:
+
     - `type` - (required) the extension point event name. The available extension points include
       the [request extension points](#request-lifecycle) as well as the following server extension
       points:
+
         - `'onPreStart'` - called before the connection listeners are started.
         - `'onPostStart'` - called after the connection listeners are started.
         - `'onPreStop'` - called before the connection listeners are stopped.
@@ -1712,7 +1734,9 @@ points where:
 
     - `method` - (required) a function or an array of functions to be executed at a specified point
       during request processing. The required extension function signature is:
+
         - server extension points: `async function(server)` where:
+
             - `server` - the server object.
             - `this` - the object provided via `options.bind` or the current active context set
               with [`server.bind()`](#server.bind()).
@@ -1720,6 +1744,7 @@ points where:
         - request extension points: a [lifecycle method](#lifecycle-methods).
 
     - `options` - (optional) an object with the following:
+
         - `before` - a string or array of strings of plugin names this method must execute before
           (on the same event). Otherwise, extension methods are executed in the order added.
 
@@ -1824,6 +1849,7 @@ The method utilizes the [**shot**](https://hapi.dev/family/shot/api) module for 
 injections, with some additional options and response properties:
 
 - `options` - can be assigned a string with the requested URI, or an object with:
+
     - `method` - (optional) the request HTTP method (e.g. `'POST'`). Defaults to `'GET'`.
 
     - `url` - (required) the request URL. If the URI includes an authority
@@ -1843,6 +1869,7 @@ injections, with some additional options and response properties:
       processing defaults to `'application/json'` if no 'Content-Type' header provided.
 
     - `auth` - (optional) an object containing parsed authentication credentials where:
+
         - `strategy` - (required) the authentication strategy name matching the provided
           credentials.
 
@@ -1870,6 +1897,7 @@ injections, with some additional options and response properties:
 
     - `simulate` - (optional) an object with options used to simulate client request stream
       conditions for testing:
+
         - `error` - if `true`, emits an `'error'` event after payload transmission (if any).
           Defaults to `false`.
 
@@ -1896,6 +1924,7 @@ Return value: a response object with the following properties:
 - `rawPayload` - the raw response payload buffer.
 
 - `raw` - an object with the injection request and response objects:
+
     - `req` - the simulated node request object.
     - `res` - the simulated node response object.
 
@@ -2016,6 +2045,7 @@ Registers a [server method](#server.methods) where:
         - `ttl` - `0` if result is valid but cannot be cached. Defaults to cache policy.
 
 - `options` - (optional) configuration object:
+
     - `bind` - a context object passed back to the method function (via `this`) when called.
       Defaults to active context (set via [`server.bind()`](#server.bind()) when the method is
       registered. Ignored if the method is an arrow function.
@@ -2089,6 +2119,7 @@ Registers a server method function as described in [`server.method()`](#server.m
 configuration object where:
 
 - `methods` - an object or an array of objects where each one contains:
+
     - `name` - the method name.
     - `method` - the method function.
     - `options` - (optional) settings.
@@ -2147,6 +2178,7 @@ exports.plugin = {
 Registers a plugin where:
 
 - `plugins` - one or an array of:
+
     - a [plugin object](#plugins).
 
     - an object with the following:
@@ -2156,11 +2188,13 @@ Registers a plugin where:
 
 - `options` - (optional) registration options (different from the options passed to the
   registration function):
+
     - `once` - if `true`, subsequent registrations of the same plugin are skipped without error.
       Cannot be used with plugin options. Defaults to `false`.
       If not set to `true`, an error will be thrown the second time a plugin is registered on the server.
 
     - `routes` - modifiers applied to each route added by the plugin:
+
         - `prefix` - string added as prefix to any route path (must begin with `'/'`). If a plugin
           registers a child plugin the `prefix` is passed on to the child or is added in front of
           the child-specific prefix.
@@ -2184,6 +2218,7 @@ Adds a route where:
 
 - `route` - a route configuration object or an array of configuration objects where each object
   contains:
+
     - `path` - (required) the absolute path used to match incoming requests (must begin with '/').
       Incoming requests are compared to the configured paths based on the server's
       [`router`](#server.options.router) configuration. The path can include named parameters
@@ -2467,6 +2502,7 @@ across multiple requests. Registers a cookie definitions where:
 - `name` - the cookie name string.
 
 - `options` - are the optional cookie settings:
+
     - `ttl` - time-to-live in milliseconds. Defaults to `null` (session time-life - cookies are deleted when the browser is closed).
 
     - `isSecure` - sets the 'Secure' flag. Defaults to `true`.
@@ -2474,6 +2510,7 @@ across multiple requests. Registers a cookie definitions where:
     - `isHttpOnly` - sets the 'HttpOnly' flag. Defaults to `true`.
 
     - `isSameSite` - sets the ['SameSite' flag](https://www.owasp.org/index.php/SameSite). The value must be one of:
+
         - `false` - no flag.
         - `'Strict'` - sets the value to `'Strict'` (this is the default value).
         - `'Lax'` - sets the value to `'Lax'`.
@@ -2486,9 +2523,11 @@ across multiple requests. Registers a cookie definitions where:
     - `domain` - the domain scope. Defaults to `null` (no domain).
 
     - `autoValue` - if present and the cookie was not received from the client or explicitly set by the route handler, the cookie is automatically added to the response with the provided value. The value can be a function with signature `async function(request)` where:
+
         - `request` - the [request object](#request).
 
     - `encoding` - encoding performs on the provided value before serialization. Options are:
+
         - `'none'` - no encoding. When used, the cookie value must be a string. This is the default value.
         - `'base64'` - string value is encoded using Base64.
         - `'base64json'` - object value is JSON-stringified then encoded using Base64.
@@ -2496,6 +2535,7 @@ across multiple requests. Registers a cookie definitions where:
         - `'iron'` - Encrypts and sign the value using [**iron**](https://hapi.dev/family/iron/api).
 
     - `sign` - an object used to calculate an HMAC for cookie integrity validation. This does not provide privacy, only a mean to verify that the cookie value was generated by the server. Redundant when `'iron'` encoding is used. Options are:
+
         - `integrity` - algorithm options. Defaults to [`require('iron').defaults.integrity`](https://hapi.dev/family/iron/api/#options).
         - `password` - password used for HMAC key generation (must be at least 32 characters long).
 
@@ -2512,6 +2552,7 @@ across multiple requests. Registers a cookie definitions where:
     - `passThrough` - used by proxy plugins (e.g. [**h2o2**](https://hapi.dev/family/h2o2/api)).
 
     - `contextualize` - a function using the signature `async function(definition, request)` used to override a request-specific cookie settings where:
+
         - `definition` - a copy of the `options` to be used for formatting the cookie that can be manipulated by the function to customize the request cookie header. Note that changing the `definition.contextualize` property will be ignored.
         - `request` - the current request object.
 
@@ -2607,6 +2648,7 @@ Stops the server's listener by refusing to accept any new connections or request
 connections will continue until closed or timeout), where:
 
 - `options` - (optional) object with:
+
     - `timeout` - sets the timeout in millisecond before forcefully terminating any open
       connections that arrived before the server stopped accepting new connections. The timeout
       only applies to waiting for existing connections to close, and not to any
@@ -2788,6 +2830,7 @@ response. Caching can be customized using an object with the following options:
 
 - `privacy` - determines the privacy flag included in client-side caching using the 'Cache-Control'
   header. Values are:
+
     - `'default'` - no privacy flag.
     - `'public'` - mark the response as suitable for public caching.
     - `'private'` - mark the response as suitable only for private caching.
@@ -3007,9 +3050,11 @@ Overrides payload processing for multipart requests. Value can be one of:
 - `true` - enable multipart processing using the [`output`](#route.options.payload.output) value.
 
 - an object with the following required options:
+
     - `output` - same as the [`output`](#route.options.payload.output) option with an additional
       value option:
         - `annotated` - wraps each multipart part in an object with the following keys:
+
             - `headers` - the part headers.
             - `filename` - the part file name.
             - `payload` - the processed part payload.
@@ -3237,6 +3282,7 @@ The default response payload validation rules (for all non-error responses) expr
   the validation function.
 
 - a validation function using the signature `async function(value, options)` where:
+
     - `value` - the pending response payload.
     - `options` - The [`options`](#route.options.response.options) along with the request context
       (`{ headers, params, query, payload, state, app, auth }`).
@@ -3270,6 +3316,7 @@ Sets common security headers. To enable, set `security` to `true` or to an objec
 following options:
 
 - `hsts` - controls the 'Strict-Transport-Security' header, where:
+
     - `true` - the header will be set to `max-age=15768000`. This is the default value.
     - a number - the maxAge parameter will be set to the provided value.
 
@@ -3282,6 +3329,7 @@ following options:
           header.
 
 - `xframe` - controls the 'X-Frame-Options' header, where:
+
     - `true` - the header will be set to `'DENY'`. This is the default value.
     - `'deny'` - the headers will be set to `'DENY'`.
     - `'sameorigin'` - the headers will be set to `'SAMEORIGIN'`.
@@ -3296,6 +3344,7 @@ following options:
           rule will be automatically changed to `'sameorigin'`.
 
 - `xss` - controls the 'X-XSS-Protection' header, where:
+
     - `'disabled'` - the header will be set to `'0'`. This is the default value.
     - `'enabled'` - the header will be set to `'1; mode=block'`.
     - `false` - the header will be omitted.
@@ -3399,6 +3448,7 @@ Validation rules for incoming request headers:
 - a [**joi**](https://joi.dev/api) validation object.
 
 - a validation function using the signature `async function(value, options)` where:
+
     - `value` - the [`request.headers`](#request.headers) object containing the request headers.
     - `options` - [`options`](#route.options.validate.options).
     - if a value is returned, the value is used as the new [`request.headers`](#request.headers)
@@ -3443,6 +3493,7 @@ extracting any parameters, and storing them in [`request.params`](#request.param
 - a [**joi**](https://joi.dev/api) validation object.
 
 - a validation function using the signature `async function(value, options)` where:
+
     - `value` - the [`request.params`](#request.params) object containing the request path
       parameters.
     - `options` - [`options`](#route.options.validate.options).
@@ -3471,6 +3522,7 @@ Validation rules for incoming request payload (request body), where:
       `Joi.object({ /* keys here */ }).allow(null)`).
 
 - a validation function using the signature `async function(value, options)` where:
+
     - `value` - the [`request.payload`](#request.payload) object containing the request payload.
     - `options` - [`options`](#route.options.validate.options).
     - if a value is returned, the value is used as the new [`request.payload`](#request.payload)
@@ -3497,6 +3549,7 @@ Validation rules for incoming request URI query component (the key-value part of
 - a [**joi**](https://joi.dev/api) validation object.
 
 - a validation function using the signature `async function(value, options)` where:
+
     - `value` - the [`request.query`](#request.query) object containing the request query
       parameters.
     - `options` - [`options`](#route.options.validate.options).
@@ -3521,6 +3574,7 @@ Validation rules for incoming cookies. The `cookie` header is parsed and decoded
 - a [**joi**](https://joi.dev/api) validation object.
 
 - a validation function using the signature `async function(value, options)` where:
+
     - `value` - the [`request.state`](#request.state) object containing all parsed cookie values.
     - `options` - [`options`](#route.options.validate.options).
     - if a value is returned, the value is used as the new [`request.state`](#request.state) value
@@ -3814,6 +3868,7 @@ following properties:
 
 - `output` - the formatted response. Can be directly manipulated after object construction to
   return a custom error response. Allowed root keys:
+
     - `statusCode` - the HTTP status code (typically 4xx or 5xx).
 
     - `headers` - an object containing any HTTP headers where each key is a header name and value
@@ -3822,6 +3877,7 @@ following properties:
     - `payload` - the formatted object used as the response payload. Can be directly
       manipulated but any changes will be lost
       if `reformat()` is called. Any content allowed and by default includes the following content:
+
         - `statusCode` - the HTTP status code, derived from `error.output.statusCode`.
 
         - `error` - the HTTP status message (e.g. 'Bad Request', 'Internal Server Error') derived
@@ -3949,6 +4005,7 @@ The [request] object. This is a duplication of the `request` lifecycle method ar
 Used by the [authentication] method to pass back valid credentials where:
 
 - `data` - an object with:
+
     - `credentials` - (required) object representing the authenticated entity.
     - `artifacts` - (optional) authentication artifacts object specific to the authentication
       scheme.
@@ -4295,6 +4352,7 @@ Sets the representation [entity tag](https://tools.ietf.org/html/rfc7232#section
 - `tag` - the entity tag string without the double-quote.
 
 - `options` - (optional) settings where:
+
     - `weak` - if `true`, the tag will be prefixed with the `'W/'` weak signifier. Weak tags will
       fail to match identical tags for the purpose of determining 304 response status. Defaults to
       `false`.
@@ -4314,6 +4372,7 @@ Sets an HTTP header where:
 - `value` - the header value.
 
 - `options` - (optional) object where:
+
     - `append` - if `true`, the value is appended to any existing header value using `separator`.
       Defaults to `false`.
 
@@ -4883,6 +4942,7 @@ A plugin is an object with the following properties:
 
 - `register` - (required) the registration function with the signature
   `async function(server, options)` where:
+
     - `server` - the server object with a plugin-specific [`server.realm`](#server.realm).
     - `options` - any options passed to the plugin during registration via [`server.register()`](#server.register()).
 
@@ -4901,6 +4961,7 @@ A plugin is an object with the following properties:
   as setting dependencies via [`server.dependency()`](#server.dependency()).
 
 - `requirements` - (optional) object declaring the plugin supported [semver range](https://semver.org/) for:
+
     - `node` runtime [semver range](https://nodejs.org/en/about/releases/) string.
     - `hapi` framework [semver range](#server.version) string.
 

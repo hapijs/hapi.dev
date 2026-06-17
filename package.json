@@ -1,42 +1,42 @@
 {
-  "name": "hapi.dev",
-  "version": "1.0.0",
-  "private": true,
-  "description": "The hapi.dev developer portal",
-  "type": "module",
-  "packageManager": "pnpm@10.33.0",
-  "repository": "git://github.com/hapijs/hapi.dev",
-  "scripts": {
-    "dev": "vitepress dev",
-    "fetch-data": "tsx cli/getModuleInfo.ts",
-    "build": "vitepress build",
-    "preview": "vitepress preview",
-    "generate": "tsx cli/getModuleInfo.ts && vitepress build",
-    "lint": "oxlint",
-    "lint:fix": "oxlint --fix",
-    "fmt": "oxfmt --check",
-    "fmt:fix": "oxfmt",
-    "test": "pnpm run lint && pnpm run fmt && tsc --noEmit"
-  },
-  "license": "BSD-3-Clause",
-  "dependencies": {
-    "@vueuse/core": "^14.3.0",
-    "es-toolkit": "^1.47.1",
-    "feed": "^5.2.1",
-    "semver": "^7.8.4",
-    "vitepress-plugin-group-icons": "^1.7.5",
-    "vue": "^3.5.38"
-  },
-  "devDependencies": {
-    "@hapi/oxc-plugin": "^1.0.1",
-    "@octokit/plugin-throttling": "^11.0.3",
-    "@octokit/rest": "^22.0.1",
-    "@types/node": "^24.12.0",
-    "@types/semver": "^7.7.1",
-    "oxfmt": "^0.55.0",
-    "oxlint": "^1.70.0",
-    "tsx": "^4.22.4",
-    "typescript": "^6.0.3",
-    "vitepress": "2.0.0-alpha.17"
-  }
+    "name": "hapi.dev",
+    "version": "1.0.0",
+    "private": true,
+    "description": "The hapi.dev developer portal",
+    "license": "BSD-3-Clause",
+    "repository": "git://github.com/hapijs/hapi.dev",
+    "type": "module",
+    "scripts": {
+        "dev": "vitepress dev",
+        "fetch-data": "tsx cli/getModuleInfo.ts",
+        "build": "vitepress build",
+        "preview": "vitepress preview",
+        "generate": "tsx cli/getModuleInfo.ts && vitepress build",
+        "lint": "oxlint",
+        "lint:fix": "oxlint --fix",
+        "fmt": "oxfmt --check",
+        "fmt:fix": "oxfmt",
+        "test": "pnpm run lint && pnpm run fmt && tsc --noEmit"
+    },
+    "dependencies": {
+        "@vueuse/core": "^14.3.0",
+        "es-toolkit": "^1.47.1",
+        "feed": "^5.2.1",
+        "semver": "^7.8.4",
+        "vitepress-plugin-group-icons": "^1.7.5",
+        "vue": "^3.5.38"
+    },
+    "devDependencies": {
+        "@hapi/oxc-plugin": "^1.0.1",
+        "@octokit/plugin-throttling": "^11.0.3",
+        "@octokit/rest": "^22.0.1",
+        "@types/node": "^24.12.0",
+        "@types/semver": "^7.7.1",
+        "oxfmt": "^0.55.0",
+        "oxlint": "^1.70.0",
+        "tsx": "^4.22.4",
+        "typescript": "^6.0.3",
+        "vitepress": "2.0.0-alpha.17"
+    },
+    "packageManager": "pnpm@10.33.0"
 }

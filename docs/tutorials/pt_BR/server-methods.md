@@ -10,8 +10,8 @@ Métodos de servidor são uma maneira útil para compartilhar funções. Eles s�
 
 ```javascript
 const add = function (x, y, next) {
-  // note que a função 'next' é utilizada para retornar valores
-  next(null, x + y);
+    // note que a função 'next' é utilizada para retornar valores
+    next(null, x + y);
 };
 
 server.method('add', add, {});
@@ -21,13 +21,13 @@ Ou um objeto com os parâmetros `name`, `method`, and `options` (perceba que voc
 
 ```javascript
 const add = function (x, y, next) {
-  next(null, x + y);
+    next(null, x + y);
 };
 
 server.method({
-  name: 'add',
-  method: add,
-  options: {},
+    name: 'add',
+    method: add,
+    options: {},
 });
 ```
 
@@ -51,12 +51,12 @@ Falando de caching, outra grande vantagem dos métodos de servidor é que eles p
 
 ```javascript
 server.method('add', add, {
-  cache: {
-    expiresIn: 60000,
-    expiresAt: '30:22',
-    staleIn: 30000,
-    staleTimeout: 10000,
-  },
+    cache: {
+        expiresIn: 60000,
+        expiresAt: '30:22',
+        staleIn: 30000,
+        staleTimeout: 10000,
+    },
 });
 ```
 
@@ -78,19 +78,19 @@ Além das opções acima, você também pode passar uma função personalizada. 
 
 ```javascript
 const sum = function (array, next) {
-  let total = 0;
+    let total = 0;
 
-  array.forEach((item) => {
-    total += item;
-  });
+    array.forEach((item) => {
+        total += item;
+    });
 
-  next(null, total);
+    next(null, total);
 };
 
 server.method('sum', sum, {
-  generateKey: function (array) {
-    return array.join(',');
-  },
+    generateKey: function (array) {
+        return array.join(',');
+    },
 });
 ```
 
@@ -102,10 +102,10 @@ A última opção disponvível para métodos de servidor é o `bind`. Essa opç�
 
 ```javascript
 const lookup = function (id, next) {
-  // calls myDB.getOne
-  this.getOne({ id: id }, (err, value) => {
-    next(err, value);
-  });
+    // calls myDB.getOne
+    this.getOne({ id: id }, (err, value) => {
+        next(err, value);
+    });
 };
 
 server.method('lookup', lookup, { bind: myDB });

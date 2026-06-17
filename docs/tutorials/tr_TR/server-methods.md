@@ -12,7 +12,7 @@ Sunucu yöntemleri birden fazla yerde kullanılan modüllerin lazım olan her ta
 
 ```javascript
 const add = function (x, y) {
-  return x + y;
+    return x + y;
 };
 
 server.method('add', add, {});
@@ -22,13 +22,13 @@ server.method('add', add, {});
 
 ```javascript
 const add = function (x, y) {
-  return x + y;
+    return x + y;
 };
 
 server.method({
-  name: 'add',
-  method: add,
-  options: {},
+    name: 'add',
+    method: add,
+    options: {},
 });
 ```
 
@@ -48,8 +48,8 @@ Bu sunucu yöntemi `server.methods.math.add()` ile çağrılır.
 
 ```js
 const add = async function (x, y) {
-  const result = await someLongRunningFunction(x, y);
-  return result;
+    const result = await someLongRunningFunction(x, y);
+    return result;
 };
 
 server.method('add', add, {});
@@ -63,13 +63,13 @@ Sunucu yöntemlerinin başlıca avantajlarından biri hapinin ana önbelleklemes
 
 ```javascript
 server.method('add', add, {
-  cache: {
-    expiresIn: 60000,
-    expiresAt: '20:30',
-    staleIn: 30000,
-    staleTimeout: 10000,
-    generateTimeout: 100,
-  },
+    cache: {
+        expiresIn: 60000,
+        expiresAt: '20:30',
+        staleIn: 30000,
+        staleTimeout: 10000,
+        generateTimeout: 100,
+    },
 });
 ```
 
@@ -89,18 +89,18 @@ Bir sunucu yönteminin her bir çağrı sonucunun `ttl` (time-to-live (yaşanaca
 
 ```js
 const add = async function (x, y, flags) {
-  const result = await someLongRunningFunction(x, y);
+    const result = await someLongRunningFunction(x, y);
 
-  flags.ttl = 5 * 60 * 1000; // 5 mins
+    flags.ttl = 5 * 60 * 1000; // 5 mins
 
-  return result;
+    return result;
 };
 
 server.method('add', add, {
-  cache: {
-    expiresIn: 2000,
-    generateTimeout: 100,
-  },
+    cache: {
+        expiresIn: 2000,
+        generateTimeout: 100,
+    },
 });
 
 server.methods.add(5, 12);
@@ -114,17 +114,17 @@ Yukarıdaki seçeneklere ek olarak, yöntemine gönderilen değiştirgeleri kull
 
 ```javascript
 const sum = function (array) {
-  let total = 0;
+    let total = 0;
 
-  array.forEach((item) => {
-    total += item;
-  });
+    array.forEach((item) => {
+        total += item;
+    });
 
-  return total;
+    return total;
 };
 
 server.method('sum', sum, {
-  generateKey: (array) => array.join(','),
+    generateKey: (array) => array.join(','),
 });
 ```
 
@@ -136,9 +136,9 @@ Sunucu yöntemine gönderilen son isteğe bağlı yöntem `bind` (bağla)dır. `
 
 ```javascript
 const lookup = async function (id) {
-  // myDB.getOne çağrısı yapar
+    // myDB.getOne çağrısı yapar
 
-  return await this.getOne({ id });
+    return await this.getOne({ id });
 };
 
 server.method('lookup', lookup, { bind: myDB });

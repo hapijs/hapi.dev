@@ -28,18 +28,18 @@ En basit sunucu şöyle bir şeydir:
 const Hapi = require('@hapi/hapi');
 
 const server = Hapi.server({
-  port: 3000,
-  host: 'localhost',
+    port: 3000,
+    host: 'localhost',
 });
 
 const init = async () => {
-  await server.start();
-  console.log(`Server running at: ${server.info.uri}`);
+    await server.start();
+    console.log(`Server running at: ${server.info.uri}`);
 };
 
 process.on('unhandledRejection', (err) => {
-  console.log(err);
-  process.exit(1);
+    console.log(err);
+    process.exit(1);
 });
 
 init();
@@ -59,34 +59,34 @@ Artık sunucumuz olduğuna göre, bir iki güzergah eklemeliyiz ki gerçekten bi
 const Hapi = require('@hapi/hapi');
 
 const server = Hapi.server({
-  port: 3000,
-  host: 'localhost',
+    port: 3000,
+    host: 'localhost',
 });
 
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: (request, h) => {
-    return 'Hello, world!';
-  },
+    method: 'GET',
+    path: '/',
+    handler: (request, h) => {
+        return 'Hello, world!';
+    },
 });
 
 server.route({
-  method: 'GET',
-  path: '/{name}',
-  handler: (request, h) => {
-    return 'Hello, ' + encodeURIComponent(request.params.name) + '!';
-  },
+    method: 'GET',
+    path: '/{name}',
+    handler: (request, h) => {
+        return 'Hello, ' + encodeURIComponent(request.params.name) + '!';
+    },
 });
 
 const init = async () => {
-  await server.start();
-  console.log(`Server running at: ${server.info.uri}`);
+    await server.start();
+    console.log(`Server running at: ${server.info.uri}`);
 };
 
 process.on('unhandledRejection', (err) => {
-  console.log(err);
-  process.exit(1);
+    console.log(err);
+    process.exit(1);
 });
 
 init();
@@ -108,18 +108,18 @@ Hello world uygulamamızla basit bir hapi uygulaması başlatabildiğimizi kanı
 
 ```javascript
 const init = async () => {
-  await server.register(require('@hapi/inert'));
+    await server.register(require('@hapi/inert'));
 
-  server.route({
-    method: 'GET',
-    path: '/hello',
-    handler: (request, h) => {
-      return h.file('./public/hello.html');
-    },
-  });
+    server.route({
+        method: 'GET',
+        path: '/hello',
+        handler: (request, h) => {
+            return h.file('./public/hello.html');
+        },
+    });
 
-  await server.start();
-  console.log(`Server running at: ${server.info.uri}`);
+    await server.start();
+    console.log(`Server running at: ${server.info.uri}`);
 };
 ```
 
@@ -134,13 +134,13 @@ Ana dizininde içerisinde `hello.html` olan `public` diye bir dizin oluştur ve 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Hapi.js is awesome!</title>
-  </head>
-  <body>
-    <h1>Hello World.</h1>
-  </body>
+    <head>
+        <meta charset="utf-8" />
+        <title>Hapi.js is awesome!</title>
+    </head>
+    <body>
+        <h1>Hello World.</h1>
+    </body>
 </html>
 ```
 
@@ -172,46 +172,46 @@ Sonra `server.js` dosyasını güncelle:
 const Hapi = require('@hapi/hapi');
 
 const server = Hapi.server({
-  port: 3000,
-  host: 'localhost',
+    port: 3000,
+    host: 'localhost',
 });
 
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: (request, h) => {
-    return 'Hello, world!';
-  },
+    method: 'GET',
+    path: '/',
+    handler: (request, h) => {
+        return 'Hello, world!';
+    },
 });
 
 server.route({
-  method: 'GET',
-  path: '/{name}',
-  handler: (request, h) => {
-    // request.log(['a', 'name'], "Request name");
-    // or
-    request.logger.info('In handler %s', request.path);
+    method: 'GET',
+    path: '/{name}',
+    handler: (request, h) => {
+        // request.log(['a', 'name'], "Request name");
+        // or
+        request.logger.info('In handler %s', request.path);
 
-    return `Hello, ${encodeURIComponent(request.params.name)}!`;
-  },
+        return `Hello, ${encodeURIComponent(request.params.name)}!`;
+    },
 });
 
 const init = async () => {
-  await server.register({
-    plugin: require('hapi-pino'),
-    options: {
-      prettyPrint: false,
-      logEvents: ['response', 'onPostStart'],
-    },
-  });
+    await server.register({
+        plugin: require('hapi-pino'),
+        options: {
+            prettyPrint: false,
+            logEvents: ['response', 'onPostStart'],
+        },
+    });
 
-  await server.start();
-  console.log(`Server running at: ${server.info.uri}`);
+    await server.start();
+    console.log(`Server running at: ${server.info.uri}`);
 };
 
 process.on('unhandledRejection', (err) => {
-  console.log(err);
-  process.exit(1);
+    console.log(err);
+    process.exit(1);
 });
 
 init();

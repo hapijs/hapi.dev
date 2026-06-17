@@ -32,19 +32,19 @@ const Hapi = require('@hapi/hapi');
 const Hoek = require('@hapi/hoek');
 
 const start = async () => {
-  const server = Hapi.server();
+    const server = Hapi.server();
 
-  await server.register(require('@hapi/vision'));
+    await server.register(require('@hapi/vision'));
 
-  server.views({
-    engines: {
-      html: require('handlebars'),
-    },
-    relativeTo: __dirname,
-    path: 'templates',
-  });
+    server.views({
+        engines: {
+            html: require('handlebars'),
+        },
+        relativeTo: __dirname,
+        path: 'templates',
+    });
 
-  await server.start();
+    await server.start();
 };
 
 start();
@@ -64,13 +64,13 @@ Note that all options may be set either globally, which configures them for all 
 
 ```javascript
 server.views({
-  engines: {
-    html: {
-      module: require('handlebars'),
-      compileMode: 'sync', // engine specific
+    engines: {
+        html: {
+            module: require('handlebars'),
+            compileMode: 'sync', // engine specific
+        },
     },
-  },
-  compileMode: 'async', // global setting
+    compileMode: 'async', // global setting
 });
 ```
 
@@ -120,13 +120,13 @@ Your configuration might look like:
 
 ```javascript
 server.views({
-  engines: {
-    html: require('handlebars'),
-  },
-  relativeTo: __dirname,
-  path: './templates',
-  layoutPath: './templates/layout',
-  helpersPath: './templates/helpers',
+    engines: {
+        html: require('handlebars'),
+    },
+    relativeTo: __dirname,
+    path: './templates',
+    layoutPath: './templates/layout',
+    helpersPath: './templates/helpers',
 });
 ```
 
@@ -138,17 +138,17 @@ The simplest way to achieve this is by using the `context` option when calling `
 
 ```javascript
 const context = {
-  title: 'My personal site',
+    title: 'My personal site',
 };
 
 server.views({
-  engines: {
-    html: {
-      module: require('handlebars'),
-      compileMode: 'sync', // engine specific
+    engines: {
+        html: {
+            module: require('handlebars'),
+            compileMode: 'sync', // engine specific
+        },
     },
-  },
-  context,
+    context,
 });
 ```
 
@@ -162,21 +162,21 @@ The following snippet is the complete helper function which you will store in a 
 
 ```javascript
 module.exports = function () {
-  const fortunes = [
-    'Heisenberg may have slept here...',
-    'Wanna buy a duck?',
-    'Say no, then negotiate.',
-    'Time and tide wait for no man.',
-    'To teach is to learn.',
-    'Never ask the barber if you need a haircut.',
-    'You will forget that you ever knew me.',
-    'You will be run over by a beer truck.',
-    'Fortune favors the lucky.',
-    'Have a nice day!',
-  ];
+    const fortunes = [
+        'Heisenberg may have slept here...',
+        'Wanna buy a duck?',
+        'Say no, then negotiate.',
+        'Time and tide wait for no man.',
+        'To teach is to learn.',
+        'Never ask the barber if you need a haircut.',
+        'You will forget that you ever knew me.',
+        'You will be run over by a beer truck.',
+        'Fortune favors the lucky.',
+        'Have a nice day!',
+    ];
 
-  const x = Math.floor(Math.random() * fortunes.length);
-  return fortunes[x];
+    const x = Math.floor(Math.random() * fortunes.length);
+    return fortunes[x];
 };
 ```
 
@@ -197,28 +197,28 @@ For reference, here is a complete server script that uses the fortune view helpe
 const Hapi = require('@hapi/hapi');
 
 const start = async () => {
-  const server = Hapi.server({ port: 8080 });
+    const server = Hapi.server({ port: 8080 });
 
-  await server.register(require('@hapi/vision'));
+    await server.register(require('@hapi/vision'));
 
-  server.views({
-    engines: {
-      html: require('handlebars'),
-    },
-    relativeTo: __dirname,
-    path: 'templates',
-    helpersPath: 'helpers',
-  });
+    server.views({
+        engines: {
+            html: require('handlebars'),
+        },
+        relativeTo: __dirname,
+        path: 'templates',
+        helpersPath: 'helpers',
+    });
 
-  server.route({
-    method: 'GET',
-    path: '/',
-    handler: function (request, h) {
-      return h.view('index');
-    },
-  });
+    server.route({
+        method: 'GET',
+        path: '/',
+        handler: function (request, h) {
+            return h.view('index');
+        },
+    });
 
-  await server.start();
+    await server.start();
 };
 
 start();
@@ -232,9 +232,9 @@ In order to use the built-in layout system, first setup the view engine:
 
 ```javascript
 server.views({
-  // ...
-  layout: true,
-  layoutPath: 'templates/layout',
+    // ...
+    layout: true,
+    layoutPath: 'templates/layout',
 });
 ```
 
@@ -244,9 +244,9 @@ Setup a content area in your `layout.html`:
 
 ```html
 <html>
-  <body>
-    &#123;&#123;&#123;content&#125;&#125;&#125;
-  </body>
+    <body>
+        &#123;&#123;&#123;content&#125;&#125;&#125;
+    </body>
 </html>
 ```
 
@@ -262,8 +262,8 @@ If you want a different default layout, you can set the option globally:
 
 ```javascript
 server.views({
-  // ...
-  layout: 'another_default',
+    // ...
+    layout: 'another_default',
 });
 ```
 
@@ -283,11 +283,11 @@ The first method of rendering a view we'll look at is `h.view()`. Here's what a 
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: function (request, h) {
-    return h.view('index');
-  },
+    method: 'GET',
+    path: '/',
+    handler: function (request, h) {
+        return h.view('index');
+    },
 });
 ```
 
@@ -303,11 +303,11 @@ The second method of rendering a view, is using hapi's built in view handler. Th
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: {
-    view: 'index',
-  },
+    method: 'GET',
+    path: '/',
+    handler: {
+        view: 'index',
+    },
 });
 ```
 

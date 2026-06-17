@@ -20,22 +20,22 @@ hapi는 막대하고 강력한 플러그인 시스템을 가지고 있어 응용
 'use strict';
 
 const myPlugin = {
-  name: 'myPlugin',
-  version: '1.0.0',
-  register: async function (server, options) {
-    // Create a route for example
+    name: 'myPlugin',
+    version: '1.0.0',
+    register: async function (server, options) {
+        // Create a route for example
 
-    server.route({
-      method: 'GET',
-      path: '/test',
-      handler: function (request, h) {
-        return 'hello, world';
-      },
-    });
+        server.route({
+            method: 'GET',
+            path: '/test',
+            handler: function (request, h) {
+                return 'hello, world';
+            },
+        });
 
-    // etc ...
-    await someAsyncMethods();
-  },
+        // etc ...
+        await someAsyncMethods();
+    },
 };
 ```
 
@@ -45,21 +45,21 @@ const myPlugin = {
 'use strict';
 
 exports.plugin = {
-  pkg: require('./package.json'),
-  register: async function (server, options) {
-    // Create a route for example
+    pkg: require('./package.json'),
+    register: async function (server, options) {
+        // Create a route for example
 
-    server.route({
-      method: 'GET',
-      path: '/test',
-      handler: function (request, h) {
-        return 'hello, world';
-      },
-    });
+        server.route({
+            method: 'GET',
+            path: '/test',
+            handler: function (request, h) {
+                return 'hello, world';
+            },
+        });
 
-    // etc...
-    await someAsyncMethods();
-  },
+        // etc...
+        await someAsyncMethods();
+    },
 };
 ```
 
@@ -87,13 +87,13 @@ exports.plugin = {
 
 ```javascript
 const start = async function () {
-  // load one plugin
+    // load one plugin
 
-  await server.register(require('myplugin'));
+    await server.register(require('myplugin'));
 
-  // load multiple plugins
+    // load multiple plugins
 
-  await server.register([require('myplugin'), require('yourplugin')]);
+    await server.register([require('myplugin'), require('yourplugin')]);
 };
 ```
 
@@ -101,12 +101,12 @@ const start = async function () {
 
 ```javascript
 const start = async function () {
-  await server.register({
-    plugin: require('myplugin'),
-    options: {
-      message: 'hello',
-    },
-  });
+    await server.register({
+        plugin: require('myplugin'),
+        options: {
+            message: 'hello',
+        },
+    });
 };
 ```
 
@@ -114,16 +114,16 @@ const start = async function () {
 
 ```javascript
 const start = async function () {
-  await server.register([
-    {
-      plugin: require('plugin1'),
-      options: {},
-    },
-    {
-      plugin: require('plugin2'),
-      options: {},
-    },
-  ]);
+    await server.register([
+        {
+            plugin: require('plugin1'),
+            options: {},
+        },
+        {
+            plugin: require('plugin2'),
+            options: {},
+        },
+    ]);
 };
 ```
 
@@ -139,19 +139,19 @@ options 객체는 로드될 플러그인에 전달되지 _않고_ hapi에서 사
 'use strict';
 
 exports.plugin = {
-  pkg: require('./package.json'),
-  register: async function (server, options) {
-    server.route({
-      method: 'GET',
-      path: '/test',
-      handler: function (request, h) {
-        return 'test passed';
-      },
-    });
+    pkg: require('./package.json'),
+    register: async function (server, options) {
+        server.route({
+            method: 'GET',
+            path: '/test',
+            handler: function (request, h) {
+                return 'test passed';
+            },
+        });
 
-    // etc...
-    await someAsyncMethods();
-  },
+        // etc...
+        await someAsyncMethods();
+    },
 };
 ```
 
@@ -159,11 +159,11 @@ exports.plugin = {
 
 ```javascript
 const start = async function () {
-  await server.register(require('myplugin'), {
-    routes: {
-      prefix: '/plugins',
-    },
-  });
+    await server.register(require('myplugin'), {
+        routes: {
+            prefix: '/plugins',
+        },
+    });
 };
 ```
 

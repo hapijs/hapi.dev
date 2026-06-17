@@ -26,23 +26,23 @@ Let's see how you can set this header in hapi:
 
 ```javascript
 server.route({
-  path: '/hapi/{ttl?}',
-  method: 'GET',
-  handler: function (request, h) {
-    const response = h.response({ be: 'hapi' });
+    path: '/hapi/{ttl?}',
+    method: 'GET',
+    handler: function (request, h) {
+        const response = h.response({ be: 'hapi' });
 
-    if (request.params.ttl) {
-      response.ttl(request.params.ttl);
-    }
+        if (request.params.ttl) {
+            response.ttl(request.params.ttl);
+        }
 
-    return response;
-  },
-  options: {
-    cache: {
-      expiresIn: 30 * 1000,
-      privacy: 'private',
+        return response;
     },
-  },
+    options: {
+        cache: {
+            expiresIn: 30 * 1000,
+            privacy: 'private',
+        },
+    },
 });
 ```
 
@@ -104,22 +104,22 @@ const Hapi = require('@hapi/hapi');
 const CatboxRedis = require('@hapi/catbox-redis');
 
 const server = Hapi.server({
-  port: 8000,
-  cache: [
-    {
-      name: 'my_cache',
-      provider: {
-        constructor: CatboxRedis,
-        options: {
-          partition: 'my_cached_data',
-          host: 'redis-cluster.domain.com',
-          port: 6379,
-          database: 0,
-          tls: {},
+    port: 8000,
+    cache: [
+        {
+            name: 'my_cache',
+            provider: {
+                constructor: CatboxRedis,
+                options: {
+                    partition: 'my_cached_data',
+                    host: 'redis-cluster.domain.com',
+                    port: 6379,
+                    database: 0,
+                    tls: {},
+                },
+            },
         },
-      },
-    },
-  ],
+    ],
 });
 ```
 
@@ -131,38 +131,38 @@ In the above example, you defined a new catbox client, `my_cache`. Including the
 
 ```javascript
 const start = async () => {
-  const server = Hapi.server();
+    const server = Hapi.server();
 
-  const add = async (a, b) => {
-    await Hoek.wait(1000); // Simulate some slow I/O
+    const add = async (a, b) => {
+        await Hoek.wait(1000); // Simulate some slow I/O
 
-    return Number(a) + Number(b);
-  };
+        return Number(a) + Number(b);
+    };
 
-  const sumCache = server.cache({
-    cache: 'my_cache',
-    expiresIn: 10 * 1000,
-    segment: 'customSegment',
-    generateFunc: async (id) => {
-      return await add(id.a, id.b);
-    },
-    generateTimeout: 2000,
-  });
+    const sumCache = server.cache({
+        cache: 'my_cache',
+        expiresIn: 10 * 1000,
+        segment: 'customSegment',
+        generateFunc: async (id) => {
+            return await add(id.a, id.b);
+        },
+        generateTimeout: 2000,
+    });
 
-  server.route({
-    path: '/add/{a}/{b}',
-    method: 'GET',
-    handler: async function (request, h) {
-      const { a, b } = request.params;
-      const id = `${a}:${b}`;
+    server.route({
+        path: '/add/{a}/{b}',
+        method: 'GET',
+        handler: async function (request, h) {
+            const { a, b } = request.params;
+            const id = `${a}:${b}`;
 
-      return await sumCache.get({ id, a, b });
-    },
-  });
+            return await sumCache.get({ id, a, b });
+        },
+    });
 
-  await server.start();
+    await server.start();
 
-  console.log('Server running at:', server.info.uri);
+    console.log('Server running at:', server.info.uri);
 };
 
 start();
@@ -192,26 +192,26 @@ But it can get better than that! In 95% cases you will use server methods for ca
 
 ```javascript
 const start = async () => {
-  const server = Hapi.server();
+    const server = Hapi.server();
 
-  server.method('sum', add, {
-    cache: {
-      cache: 'my_cache',
-      expiresIn: 10 * 1000,
-      generateTimeout: 2000,
-    },
-  });
+    server.method('sum', add, {
+        cache: {
+            cache: 'my_cache',
+            expiresIn: 10 * 1000,
+            generateTimeout: 2000,
+        },
+    });
 
-  server.route({
-    path: '/add/{a}/{b}',
-    method: 'GET',
-    handler: async function (request, h) {
-      const { a, b } = request.params;
-      return await server.methods.sum(a, b);
-    },
-  });
+    server.route({
+        path: '/add/{a}/{b}',
+        method: 'GET',
+        handler: async function (request, h) {
+            const { a, b } = request.params;
+            return await server.methods.sum(a, b);
+        },
+    });
 
-  await server.start();
+    await server.start();
 };
 
 start();
@@ -227,30 +227,30 @@ An example of server-side and client-side caching working together is using the 
 
 ```javascript
 const start = async () => {
-  const server = Hapi.server();
+    const server = Hapi.server();
 
-  server.method('sum', add, {
-    cache: {
-      cache: 'my_cache',
-      expiresIn: 10 * 1000,
-      generateTimeout: 2000,
-      getDecoratedValue: true,
-    },
-  });
+    server.method('sum', add, {
+        cache: {
+            cache: 'my_cache',
+            expiresIn: 10 * 1000,
+            generateTimeout: 2000,
+            getDecoratedValue: true,
+        },
+    });
 
-  server.route({
-    path: '/add/{a}/{b}',
-    method: 'GET',
-    handler: async function (request, h) {
-      const { a, b } = request.params;
-      const { value, cached } = await server.methods.sum(a, b);
-      const lastModified = cached ? new Date(cached.stored) : new Date();
+    server.route({
+        path: '/add/{a}/{b}',
+        method: 'GET',
+        handler: async function (request, h) {
+            const { a, b } = request.params;
+            const { value, cached } = await server.methods.sum(a, b);
+            const lastModified = cached ? new Date(cached.stored) : new Date();
 
-      return h.response(value).header('Last-modified', lastModified.toUTCString());
-    },
-  });
+            return h.response(value).header('Last-modified', lastModified.toUTCString());
+        },
+    });
 
-  await server.start();
+    await server.start();
 };
 ```
 

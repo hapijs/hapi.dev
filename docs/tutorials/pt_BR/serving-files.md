@@ -20,25 +20,25 @@ Primeiro, para usar o método reply:
 
 ```javascript
 server.register(require('inert'), (err) => {
-  if (err) {
-    throw err;
-  }
-
-  server.route({
-    method: 'GET',
-    path: '/picture.jpg',
-    handler: function (request, reply) {
-      reply.file('/path/to/picture.jpg');
-    },
-  });
-
-  server.start((err) => {
     if (err) {
-      throw err;
+        throw err;
     }
 
-    console.log('Servidor rodando em:', server.info.uri);
-  });
+    server.route({
+        method: 'GET',
+        path: '/picture.jpg',
+        handler: function (request, reply) {
+            reply.file('/path/to/picture.jpg');
+        },
+    });
+
+    server.start((err) => {
+        if (err) {
+            throw err;
+        }
+
+        console.log('Servidor rodando em:', server.info.uri);
+    });
 });
 ```
 
@@ -55,35 +55,35 @@ const Path = require('path');
 const Hapi = require('hapi');
 
 const server = new Hapi.Server({
-  connections: {
-    routes: {
-      files: {
-        relativeTo: Path.join(__dirname, 'public'),
-      },
+    connections: {
+        routes: {
+            files: {
+                relativeTo: Path.join(__dirname, 'public'),
+            },
+        },
     },
-  },
 });
 
 server.register(require('inert'), (err) => {
-  if (err) {
-    throw err;
-  }
-
-  server.route({
-    method: 'GET',
-    path: '/picture.jpg',
-    handler: function (request, reply) {
-      reply.file('path/to/picture.jpg');
-    },
-  });
-
-  server.start((err) => {
     if (err) {
-      throw err;
+        throw err;
     }
 
-    console.log('Server running at:', server.info.uri);
-  });
+    server.route({
+        method: 'GET',
+        path: '/picture.jpg',
+        handler: function (request, reply) {
+            reply.file('path/to/picture.jpg');
+        },
+    });
+
+    server.start((err) => {
+        if (err) {
+            throw err;
+        }
+
+        console.log('Server running at:', server.info.uri);
+    });
 });
 ```
 
@@ -95,11 +95,11 @@ Uma alternativa para a rota acima seria o uso do manipulador `file`:
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/picture.jpg',
-  handler: {
-    file: 'picture.jpg',
-  },
+    method: 'GET',
+    path: '/picture.jpg',
+    handler: {
+        file: 'picture.jpg',
+    },
 });
 ```
 
@@ -109,13 +109,13 @@ Nós também podemos especificar o parâmetro como uma função que aceita o obj
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/{filename}',
-  handler: {
-    file: function (request) {
-      return request.params.filename;
+    method: 'GET',
+    path: '/{filename}',
+    handler: {
+        file: function (request) {
+            return request.params.filename;
+        },
     },
-  },
 });
 ```
 
@@ -124,16 +124,16 @@ nós podemos fazer algumas coisas adicionais, como o ajuste do cabeçalho `Conte
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/script.js',
-  handler: {
-    file: {
-      path: 'script.js',
-      filename: 'client.js', // sobreescreve o nome do arquivo no cabeçalho Content-Disposition
-      mode: 'attachment', // especifica o Content-Disposition com um anexo
-      lookupCompressed: true, // permite olhar para script.js.gz se a requisição permitir isso
+    method: 'GET',
+    path: '/script.js',
+    handler: {
+        file: {
+            path: 'script.js',
+            filename: 'client.js', // sobreescreve o nome do arquivo no cabeçalho Content-Disposition
+            mode: 'attachment', // especifica o Content-Disposition com um anexo
+            lookupCompressed: true, // permite olhar para script.js.gz se a requisição permitir isso
+        },
     },
-  },
 });
 ```
 
@@ -143,13 +143,13 @@ Além do manipulador `file`, inert também adiciona um manipulador de `directory
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/{param*}',
-  handler: {
-    directory: {
-      path: 'public',
+    method: 'GET',
+    path: '/{param*}',
+    handler: {
+        directory: {
+            path: 'public',
+        },
     },
-  },
 });
 ```
 
@@ -159,14 +159,14 @@ A rota acima responderá qualquer requisição procurando por um arquivo corresp
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/{param*}',
-  handler: {
-    directory: {
-      path: 'public',
-      listing: true,
+    method: 'GET',
+    path: '/{param*}',
+    handler: {
+        directory: {
+            path: 'public',
+            listing: true,
+        },
     },
-  },
 });
 ```
 

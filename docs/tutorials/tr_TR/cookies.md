@@ -18,12 +18,12 @@ Bir kurabiye kullanmak için önce [`server.state(name, [options])`](/api#-serve
 
 ```javascript
 server.state('data', {
-  ttl: null,
-  isSecure: true,
-  isHttpOnly: true,
-  encoding: 'base64json',
-  clearInvalid: false, // bozuk kurabiyeleri at
-  strictHeader: true, // RFC 6265 ihlallerine göz yumma
+    ttl: null,
+    isSecure: true,
+    isHttpOnly: true,
+    encoding: 'base64json',
+    clearInvalid: false, // bozuk kurabiyeleri at
+    strictHeader: true, // RFC 6265 ihlallerine göz yumma
 });
 ```
 
@@ -33,12 +33,12 @@ Buna ek olarak, `options.state` nesnesinde bulunan iki özelliği kullanarak kur
 
 ```json5
 {
-  options: {
-    state: {
-      parse: true, // kurabiyeleri ayristir ve request.state icerisinde tut
-      failAction: 'error', // 'ignore' ya da 'log' da olabilir
+    options: {
+        state: {
+            parse: true, // kurabiyeleri ayristir ve request.state icerisinde tut
+            failAction: 'error', // 'ignore' ya da 'log' da olabilir
+        },
     },
-  },
 }
 ```
 

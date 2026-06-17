@@ -18,12 +18,12 @@ hapi는 쿠키를 다룰 때 몇 가지 설정 가능한 옵션을 가지고 있
 
 ```javascript
 server.state('data', {
-  ttl: null,
-  isSecure: true,
-  isHttpOnly: true,
-  encoding: 'base64json',
-  clearInvalid: false, // remove invalid cookies
-  strictHeader: true, // don't allow violations of RFC 6265
+    ttl: null,
+    isSecure: true,
+    isHttpOnly: true,
+    encoding: 'base64json',
+    clearInvalid: false, // remove invalid cookies
+    strictHeader: true, // don't allow violations of RFC 6265
 });
 ```
 
@@ -33,12 +33,12 @@ server.state('data', {
 
 ```json5
 {
-  options: {
-    state: {
-      parse: true, // parse cookies and store in request.state
-      failAction: 'error', // may also be 'ignore' or 'log'
+    options: {
+        state: {
+            parse: true, // parse cookies and store in request.state
+            failAction: 'error', // may also be 'ignore' or 'log'
+        },
     },
-  },
 }
 ```
 

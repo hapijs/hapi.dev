@@ -14,11 +14,11 @@ When defining a route in hapi, you need three basic elements: the path, the meth
 
 ```js
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: function (request, h) {
-    return 'Hello World!';
-  },
+    method: 'GET',
+    path: '/',
+    handler: function (request, h) {
+        return 'Hello World!';
+    },
 });
 ```
 
@@ -28,11 +28,11 @@ The route above responds to a `GET` request to `/` with the string `Hello World!
 
 ```js
 server.route({
-  method: ['PUT', 'POST'],
-  path: '/',
-  handler: function (request, h) {
-    return 'I did something!';
-  },
+    method: ['PUT', 'POST'],
+    path: '/',
+    handler: function (request, h) {
+        return 'I did something!';
+    },
 });
 ```
 
@@ -42,11 +42,11 @@ The path option must be a string, though it can contain named parameters. To nam
 
 ```js
 server.route({
-  method: 'GET',
-  path: '/hello/{user}',
-  handler: function (request, h) {
-    return `Hello ${request.params.user}!`;
-  },
+    method: 'GET',
+    path: '/hello/{user}',
+    handler: function (request, h) {
+        return `Hello ${request.params.user}!`;
+    },
 });
 ```
 
@@ -64,13 +64,13 @@ In the above example, the user parameter is required: a request to `/hello/bob` 
 
 ```js
 server.route({
-  method: 'GET',
-  path: '/hello/{user?}',
-  handler: function (request, h) {
-    const user = request.params.user ? request.params.user : 'stranger';
+    method: 'GET',
+    path: '/hello/{user?}',
+    handler: function (request, h) {
+        const user = request.params.user ? request.params.user : 'stranger';
 
-    return `Hello ${user}!`;
-  },
+        return `Hello ${user}!`;
+    },
 });
 ```
 
@@ -82,13 +82,13 @@ Along with optional path parameters, you can also allow parameters that match mu
 
 ```js
 server.route({
-  method: 'GET',
-  path: '/hello/{user*2}',
-  handler: function (request, h) {
-    const userParts = request.params.user.split('/');
+    method: 'GET',
+    path: '/hello/{user*2}',
+    handler: function (request, h) {
+        const userParts = request.params.user.split('/');
 
-    return `Hello ${userParts[0]} ${userParts[1]}!`;
-  },
+        return `Hello ${userParts[0]} ${userParts[1]}!`;
+    },
 });
 ```
 
@@ -106,11 +106,11 @@ There are two query parameters here, `name=ferris` and `location=chicago`. In ha
 
 ```js
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: function (request, h) {
-    return `Hello ${request.query.name}!`;
-  },
+    method: 'GET',
+    path: '/',
+    handler: function (request, h) {
+        return `Hello ${request.query.name}!`;
+    },
 });
 ```
 
@@ -120,11 +120,11 @@ For more complex query structures, you may opt to use the `qs` module. Consider 
 
 ```js
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: function (request, h) {
-    return request.query;
-  },
+    method: 'GET',
+    path: '/',
+    handler: function (request, h) {
+        return request.query;
+    },
 });
 ```
 
@@ -137,29 +137,29 @@ const Hapi = require('@hapi/hapi');
 const Qs = require('qs');
 
 const server = Hapi.server({
-  port: 3000,
-  host: 'localhost',
-  query: {
-    parser: (query) => Qs.parse(query),
-  },
+    port: 3000,
+    host: 'localhost',
+    query: {
+        parser: (query) => Qs.parse(query),
+    },
 });
 
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: function (request, h) {
-    return request.query;
-  },
+    method: 'GET',
+    path: '/',
+    handler: function (request, h) {
+        return request.query;
+    },
 });
 
 const init = async () => {
-  await server.start();
-  console.log('Server running on %s', server.info.uri);
+    await server.start();
+    console.log('Server running on %s', server.info.uri);
 };
 
 process.on('unhandledRejection', (err) => {
-  console.log(err);
-  process.exit(1);
+    console.log(err);
+    process.exit(1);
 });
 
 init();
@@ -187,13 +187,13 @@ Anytime you send request data to your API, you will be able to access this data 
 
 ```js
 server.route({
-  method: 'POST',
-  path: '/signup',
-  handler: function (request, h) {
-    const payload = request.payload;
+    method: 'POST',
+    path: '/signup',
+    handler: function (request, h) {
+        const payload = request.payload;
 
-    return `Welcome ${payload.username}!`;
-  },
+        return `Welcome ${payload.username}!`;
+    },
 });
 ```
 
@@ -225,22 +225,22 @@ Here we will look at some options of validating with Joi.
 
 ```js
 server.route({
-  method: 'POST',
-  path: '/signup',
-  handler: function (request, h) {
-    const payload = request.payload;
+    method: 'POST',
+    path: '/signup',
+    handler: function (request, h) {
+        const payload = request.payload;
 
-    return `Welcome ${payload.username}!`;
-  },
-  options: {
-    auth: false,
-    validate: {
-      payload: {
-        username: Joi.string().min(1).max(20),
-        password: Joi.string().min(7),
-      },
+        return `Welcome ${payload.username}!`;
     },
-  },
+    options: {
+        auth: false,
+        validate: {
+            payload: {
+                username: Joi.string().min(1).max(20),
+                password: Joi.string().min(7),
+            },
+        },
+    },
 });
 ```
 
@@ -260,21 +260,21 @@ const Hapi = require('@hapi/hapi');
 const internals = {};
 
 const init = async () => {
-  const server = Hapi.server({
-    port: 3000,
-    host: 'localhost',
-  });
+    const server = Hapi.server({
+        port: 3000,
+        host: 'localhost',
+    });
 
-  server.route({
-    method: '*',
-    path: '/{any*}',
-    handler: function (request, h) {
-      return h.response('404 Error! Page Not Found!').code(404);
-    },
-  });
+    server.route({
+        method: '*',
+        path: '/{any*}',
+        handler: function (request, h) {
+            return h.response('404 Error! Page Not Found!').code(404);
+        },
+    });
 
-  await server.start();
-  console.log('Server running on %s', server.info.uri);
+    await server.start();
+    console.log('Server running on %s', server.info.uri);
 };
 
 init();

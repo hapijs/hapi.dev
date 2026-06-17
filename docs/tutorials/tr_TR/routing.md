@@ -12,11 +12,11 @@ Aynı diğer çatılarda (framework) olduğu gibi, hapide de bir yol tanımlarke
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: function (request, h) {
-    return 'Selam!';
-  },
+    method: 'GET',
+    path: '/',
+    handler: function (request, h) {
+        return 'Selam!';
+    },
 });
 ```
 
@@ -26,11 +26,11 @@ Yukarıdaki yol (route) `/` güzergahına yapılan bir `GET` isteğine `Selam!` 
 
 ```javascript
 server.route({
-  method: ['PUT', 'POST'],
-  path: '/',
-  handler: function (request, h) {
-    return 'Bir şey yaptım!';
-  },
+    method: ['PUT', 'POST'],
+    path: '/',
+    handler: function (request, h) {
+        return 'Bir şey yaptım!';
+    },
 });
 ```
 
@@ -40,11 +40,11 @@ Güzergah seçeneği bir metin olmalı. Bununla birlikte içerisinde adlandırı
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/selam/{user}',
-  handler: function (request, h) {
-    return `Selam ${encodeURIComponent(request.params.user)}!`;
-  },
+    method: 'GET',
+    path: '/selam/{user}',
+    handler: function (request, h) {
+        return `Selam ${encodeURIComponent(request.params.user)}!`;
+    },
 });
 ```
 
@@ -56,13 +56,13 @@ Yukarıdaki örnekte, user değiştirgesi gereklidir: `/selam/hilmi` ya da `/sel
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/selam/{user?}',
-  handler: function (request, h) {
-    const user = request.params.user ? encodeURIComponent(request.params.user) : 'yabancı';
+    method: 'GET',
+    path: '/selam/{user?}',
+    handler: function (request, h) {
+        const user = request.params.user ? encodeURIComponent(request.params.user) : 'yabancı';
 
-    return `Selam ${user}!`;
-  },
+        return `Selam ${user}!`;
+    },
 });
 ```
 
@@ -74,12 +74,12 @@ Seçime bağlı güzergah değiştirgelerinin yanı sıra, birden çok bölmeyle
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/selam/{user*2}',
-  handler: function (request, h) {
-    const userParts = request.params.user.split('/');
-    return `Selam ${encodeURIComponent(userParts[0])} ${encodeURIComponent(userParts[1])}!`;
-  },
+    method: 'GET',
+    path: '/selam/{user*2}',
+    handler: function (request, h) {
+        const userParts = request.params.user.split('/');
+        return `Selam ${encodeURIComponent(userParts[0])} ${encodeURIComponent(userParts[1])}!`;
+    },
 });
 ```
 
@@ -105,18 +105,18 @@ Burada dokümantasyon üretmek için tasarlanan bir kaç seçeneğe bakıyoruz:
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/selam/{user?}',
-  handler: function (request, h) {
-    const user = request.params.user ? encodeURIComponent(request.params.user) : 'stranger';
+    method: 'GET',
+    path: '/selam/{user?}',
+    handler: function (request, h) {
+        const user = request.params.user ? encodeURIComponent(request.params.user) : 'stranger';
 
-    return `Selam ${user}!`;
-  },
-  options: {
-    description: 'Say Selam!',
-    notes: "The user parameter defaults to 'stranger' if unspecified",
-    tags: ['api', 'greeting'],
-  },
+        return `Selam ${user}!`;
+    },
+    options: {
+        description: 'Say Selam!',
+        notes: "The user parameter defaults to 'stranger' if unspecified",
+        tags: ['api', 'greeting'],
+    },
 });
 ```
 

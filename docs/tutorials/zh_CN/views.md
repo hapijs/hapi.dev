@@ -24,15 +24,15 @@ const Hoek = require('@hapi/hoek');
 const server = Hapi.server();
 
 const start = async () => {
-  await server.register(require('@hapi/vision'));
+    await server.register(require('@hapi/vision'));
 
-  server.views({
-    engines: {
-      html: require('handlebars'),
-    },
-    relativeTo: __dirname,
-    path: 'templates',
-  });
+    server.views({
+        engines: {
+            html: require('handlebars'),
+        },
+        relativeTo: __dirname,
+        path: 'templates',
+    });
 };
 
 start();
@@ -53,13 +53,13 @@ hapi 的视图引擎有众多的选项。完整的文档可以在这里找到 [v
 
 ```javascript
 server.views({
-  engines: {
-    html: {
-      module: require('handlebars'),
-      compileMode: 'sync', // 引擎特定配置
+    engines: {
+        html: {
+            module: require('handlebars'),
+            compileMode: 'sync', // 引擎特定配置
+        },
     },
-  },
-  compileMode: 'async', // 全局配置
+    compileMode: 'async', // 全局配置
 });
 ```
 
@@ -108,13 +108,13 @@ templates\
 
 ```javascript
 server.views({
-  engines: {
-    html: require('handlebars'),
-  },
-  relativeTo: __dirname,
-  path: './templates',
-  layoutPath: './templates/layout',
-  helpersPath: './templates/helpers',
+    engines: {
+        html: require('handlebars'),
+    },
+    relativeTo: __dirname,
+    path: './templates',
+    layoutPath: './templates/layout',
+    helpersPath: './templates/helpers',
 });
 ```
 
@@ -128,11 +128,11 @@ server.views({
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: function (request, h) {
-    return h.view('index');
-  },
+    method: 'GET',
+    path: '/',
+    handler: function (request, h) {
+        return h.view('index');
+    },
 });
 ```
 
@@ -148,11 +148,11 @@ return h.view('index', { title: 'My home page' });
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: {
-    view: 'index',
-  },
+    method: 'GET',
+    path: '/',
+    handler: {
+        view: 'index',
+    },
 });
 ```
 
@@ -177,17 +177,17 @@ handler: {
 
 ```javascript
 const context = {
-  title: 'My personal site',
+    title: 'My personal site',
 };
 
 server.views({
-  engines: {
-    html: {
-      module: require('handlebars'),
-      compileMode: 'sync', // engine specific
+    engines: {
+        html: {
+            module: require('handlebars'),
+            compileMode: 'sync', // engine specific
+        },
     },
-  },
-  context,
+    context,
 });
 ```
 
@@ -201,21 +201,21 @@ server.views({
 
 ```javascript
 module.exports = function () {
-  const fortunes = [
-    'Heisenberg may have slept here...',
-    'Wanna buy a duck?',
-    'Say no, then negotiate.',
-    'Time and tide wait for no man.',
-    'To teach is to learn.',
-    'Never ask the barber if you need a haircut.',
-    'You will forget that you ever knew me.',
-    'You will be run over by a beer truck.',
-    'Fortune favors the lucky.',
-    'Have a nice day!',
-  ];
+    const fortunes = [
+        'Heisenberg may have slept here...',
+        'Wanna buy a duck?',
+        'Say no, then negotiate.',
+        'Time and tide wait for no man.',
+        'To teach is to learn.',
+        'Never ask the barber if you need a haircut.',
+        'You will forget that you ever knew me.',
+        'You will be run over by a beer truck.',
+        'Fortune favors the lucky.',
+        'Have a nice day!',
+    ];
 
-  const x = Math.floor(Math.random() * fortunes.length);
-  return fortunes[x];
+    const x = Math.floor(Math.random() * fortunes.length);
+    return fortunes[x];
 };
 ```
 
@@ -238,24 +238,24 @@ const Hapi = require('@hapi/hapi');
 const server = Hapi.server({ port: 8080 });
 
 const start = async () => {
-  await server.register(require('@hapi/vision'));
+    await server.register(require('@hapi/vision'));
 
-  server.views({
-    engines: {
-      html: require('handlebars'),
-    },
-    relativeTo: __dirname,
-    path: 'templates',
-    helpersPath: 'helpers',
-  });
+    server.views({
+        engines: {
+            html: require('handlebars'),
+        },
+        relativeTo: __dirname,
+        path: 'templates',
+        helpersPath: 'helpers',
+    });
 
-  server.route({
-    method: 'GET',
-    path: '/',
-    handler: function (request, h) {
-      return h.view('index');
-    },
-  });
+    server.route({
+        method: 'GET',
+        path: '/',
+        handler: function (request, h) {
+            return h.view('index');
+        },
+    });
 };
 
 start();
@@ -269,9 +269,9 @@ vision 对于视图布局有一些内建的支持，这个功能默认是关闭�
 
 ```javascript
 server.views({
-  // ...
-  layout: true,
-  layoutPath: 'templates/layout',
+    // ...
+    layout: true,
+    layoutPath: 'templates/layout',
 });
 ```
 
@@ -281,9 +281,9 @@ server.views({
 
 ```html
 <html>
-  <body>
-    &#123;&#123;&#123;content&#125;&#125;&#125;
-  </body>
+    <body>
+        &#123;&#123;&#123;content&#125;&#125;&#125;
+    </body>
 </html>
 ```
 
@@ -299,8 +299,8 @@ server.views({
 
 ```javascript
 server.views({
-  // ...
-  layout: 'another_default',
+    // ...
+    layout: 'another_default',
 });
 ```
 

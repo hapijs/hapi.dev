@@ -31,27 +31,27 @@ const Hapi = require('@hapi/hapi');
 const Path = require('path');
 
 const start = async () => {
-  const server = Hapi.server({
-    routes: {
-      files: {
-        relativeTo: Path.join(__dirname, 'public'),
-      },
-    },
-  });
+    const server = Hapi.server({
+        routes: {
+            files: {
+                relativeTo: Path.join(__dirname, 'public'),
+            },
+        },
+    });
 
-  await server.register(require('@hapi/inert'));
+    await server.register(require('@hapi/inert'));
 
-  server.route({
-    method: 'GET',
-    path: '/picture.jpg',
-    handler: function (request, h) {
-      return h.file('picture.jpg');
-    },
-  });
+    server.route({
+        method: 'GET',
+        path: '/picture.jpg',
+        handler: function (request, h) {
+            return h.file('picture.jpg');
+        },
+    });
 
-  await server.start();
+    await server.start();
 
-  console.log('Server running at:', server.info.uri);
+    console.log('Server running at:', server.info.uri);
 };
 
 start();
@@ -65,21 +65,21 @@ Now, let's see how to use the [`h.file()`](/module/inert/api#hfilepath-options) 
 
 ```javascript
 const start = async () => {
-  const server = Hapi.server();
+    const server = Hapi.server();
 
-  await server.register(require('@hapi/inert'));
+    await server.register(require('@hapi/inert'));
 
-  server.route({
-    method: 'GET',
-    path: '/picture.jpg',
-    handler: function (request, h) {
-      return h.file('/path/to/picture.jpg');
-    },
-  });
+    server.route({
+        method: 'GET',
+        path: '/picture.jpg',
+        handler: function (request, h) {
+            return h.file('/path/to/picture.jpg');
+        },
+    });
 
-  await server.start();
+    await server.start();
 
-  console.log('Server running at:', server.info.uri);
+    console.log('Server running at:', server.info.uri);
 };
 
 start();
@@ -93,11 +93,11 @@ An alternative to using the `h.file()` method would be to use the `file` handler
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/picture.jpg',
-  handler: {
-    file: 'picture.jpg',
-  },
+    method: 'GET',
+    path: '/picture.jpg',
+    handler: {
+        file: 'picture.jpg',
+    },
 });
 ```
 
@@ -107,13 +107,13 @@ You can also specify the parameter as a function that accepts the `request` obje
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/{filename}',
-  handler: {
-    file: function (request) {
-      return request.params.filename;
+    method: 'GET',
+    path: '/{filename}',
+    handler: {
+        file: function (request) {
+            return request.params.filename;
+        },
     },
-  },
 });
 ```
 
@@ -121,16 +121,16 @@ It can also be an object with a `path` property. When using the object form of t
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/script.js',
-  handler: {
-    file: {
-      path: 'script.js',
-      filename: 'client.js', // override the filename in the Content-Disposition header
-      mode: 'attachment', // specify the Content-Disposition is an attachment
-      lookupCompressed: true, // allow looking for script.js.gz if the request allows it
+    method: 'GET',
+    path: '/script.js',
+    handler: {
+        file: {
+            path: 'script.js',
+            filename: 'client.js', // override the filename in the Content-Disposition header
+            mode: 'attachment', // specify the Content-Disposition is an attachment
+            lookupCompressed: true, // allow looking for script.js.gz if the request allows it
+        },
     },
-  },
 });
 ```
 
@@ -140,13 +140,13 @@ In addition to the `file` handler, inert also adds a `directory` handler that al
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/{param*}',
-  handler: {
-    directory: {
-      path: 'directory-path-here',
+    method: 'GET',
+    path: '/{param*}',
+    handler: {
+        directory: {
+            path: 'directory-path-here',
+        },
     },
-  },
 });
 ```
 
@@ -156,14 +156,14 @@ The above route will respond to any request by looking for a matching filename i
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/{param*}',
-  handler: {
-    directory: {
-      path: 'directory-path-here',
-      index: ['index.html', 'default.html'],
+    method: 'GET',
+    path: '/{param*}',
+    handler: {
+        directory: {
+            path: 'directory-path-here',
+            index: ['index.html', 'default.html'],
+        },
     },
-  },
 });
 ```
 
@@ -171,14 +171,14 @@ A request to `/` will now first try to load `/index.html`, then `/default.html`.
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/{param*}',
-  handler: {
-    directory: {
-      path: 'directory-path-here',
-      listing: true,
+    method: 'GET',
+    path: '/{param*}',
+    handler: {
+        directory: {
+            path: 'directory-path-here',
+            listing: true,
+        },
     },
-  },
 });
 ```
 
@@ -194,31 +194,31 @@ const Hapi = require('@hapi/hapi');
 const Inert = require('@hapi/inert');
 
 const init = async () => {
-  const server = new Hapi.Server({
-    port: 3000,
-    routes: {
-      files: {
-        relativeTo: Path.join(__dirname, 'public'),
-      },
-    },
-  });
+    const server = new Hapi.Server({
+        port: 3000,
+        routes: {
+            files: {
+                relativeTo: Path.join(__dirname, 'public'),
+            },
+        },
+    });
 
-  await server.register(Inert);
+    await server.register(Inert);
 
-  server.route({
-    method: 'GET',
-    path: '/{param*}',
-    handler: {
-      directory: {
-        path: '.',
-        redirectToSlash: true,
-      },
-    },
-  });
+    server.route({
+        method: 'GET',
+        path: '/{param*}',
+        handler: {
+            directory: {
+                path: '.',
+                redirectToSlash: true,
+            },
+        },
+    });
 
-  await server.start();
+    await server.start();
 
-  console.log('Server running at:', server.info.uri);
+    console.log('Server running at:', server.info.uri);
 };
 
 init();

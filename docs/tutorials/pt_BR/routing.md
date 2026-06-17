@@ -10,11 +10,11 @@ Quando definimos uma rota no Hapi, assim como em outros frameworks, são necess�
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/',
-  handler: function (request, reply) {
-    reply('Hello!');
-  },
+    method: 'GET',
+    path: '/',
+    handler: function (request, reply) {
+        reply('Hello!');
+    },
 });
 ```
 
@@ -24,11 +24,11 @@ Está rota responde a um método `GET` com a `string` 'Hello!'. A opção `metho
 
 ```javascript
 server.route({
-  method: ['PUT', 'POST'],
-  path: '/',
-  handler: function (request, reply) {
-    reply('I did something!');
-  },
+    method: ['PUT', 'POST'],
+    path: '/',
+    handler: function (request, reply) {
+        reply('I did something!');
+    },
 });
 ```
 
@@ -38,11 +38,11 @@ A opção `path` deve ser uma `string` e também poderá conter parâmetros nome
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/hello/{user}',
-  handler: function (request, reply) {
-    reply('Hello ' + encodeURIComponent(request.params.user) + '!');
-  },
+    method: 'GET',
+    path: '/hello/{user}',
+    handler: function (request, reply) {
+        reply('Hello ' + encodeURIComponent(request.params.user) + '!');
+    },
 });
 ```
 
@@ -54,12 +54,12 @@ Neste exemplo, o parâmetro `user` é obrigatório: uma requisição a `/hello/b
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/hello/{user?}',
-  handler: function (request, reply) {
-    const user = request.params.user ? encodeURIComponent(request.params.user) : 'stranger';
-    reply('Hello ' + user + '!');
-  },
+    method: 'GET',
+    path: '/hello/{user?}',
+    handler: function (request, reply) {
+        const user = request.params.user ? encodeURIComponent(request.params.user) : 'stranger';
+        reply('Hello ' + user + '!');
+    },
 });
 ```
 
@@ -71,12 +71,12 @@ Junto com o parâmetro de caminho opcional, você também pode permitir que esse
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/hello/{user*2}',
-  handler: function (request, reply) {
-    const userParts = request.params.user.split('/');
-    reply('Hello ' + encodeURIComponent(userParts[0]) + ' ' + encodeURIComponent(userParts[1]) + '!');
-  },
+    method: 'GET',
+    path: '/hello/{user*2}',
+    handler: function (request, reply) {
+        const userParts = request.params.user.split('/');
+        reply('Hello ' + encodeURIComponent(userParts[0]) + ' ' + encodeURIComponent(userParts[1]) + '!');
+    },
 });
 ```
 
@@ -100,17 +100,17 @@ Aqui vamos exemplificar um par de opções concebidas para ajudar a gerar a docu
 
 ```javascript
 server.route({
-  method: 'GET',
-  path: '/hello/{user?}',
-  handler: function (request, reply) {
-    const user = request.params.user ? encodeURIComponent(request.params.user) : 'stranger';
-    reply('Hello ' + user + '!');
-  },
-  options: {
-    description: 'Say hello!',
-    notes: "The user parameter defaults to 'stranger' if unspecified",
-    tags: ['api', 'greeting'],
-  },
+    method: 'GET',
+    path: '/hello/{user?}',
+    handler: function (request, reply) {
+        const user = request.params.user ? encodeURIComponent(request.params.user) : 'stranger';
+        reply('Hello ' + user + '!');
+    },
+    options: {
+        description: 'Say hello!',
+        notes: "The user parameter defaults to 'stranger' if unspecified",
+        tags: ['api', 'greeting'],
+    },
 });
 ```
 
