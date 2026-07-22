@@ -127,7 +127,7 @@ In the above example, you defined a new catbox client, `my_cache`. Including the
 
 ### <a name="policy" /> Policy
 
-[Policy](/module/catbox/api#policy) is a more high-level interface than Client. The following is a simple example of caching the result of adding two numbers together. The principles of this simple example can be applied to any situation where you want to cache the result of a function call, async or otherwise. [server.cache(options)](/api#server.cache()) creates a new [policy](/module/catbox/api#policy), which is then used in the route handler.
+[Policy](/module/catbox/api#policy) is a more high-level interface than Client. The following is a simple example of caching the result of adding two numbers together. The principles of this simple example can be applied to any situation where you want to cache the result of a function call, async or otherwise. [server.cache(options)](</api#server.cache()>) creates a new [policy](/module/catbox/api#policy), which is then used in the route handler.
 
 ```javascript
 const start = async () => {

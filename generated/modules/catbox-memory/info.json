@@ -1,6 +1,6 @@
 {
     "api": true,
-    "forks": 29,
+    "forks": 30,
     "isPlugin": false,
     "latestVersion": "6.x.x",
     "link": "https://github.com/hapijs/catbox-memory",

@@ -20,23 +20,23 @@
     },
     "dependencies": {
         "@vueuse/core": "^14.3.0",
-        "es-toolkit": "^1.47.1",
-        "feed": "^5.2.1",
-        "semver": "^7.8.4",
+        "es-toolkit": "^1.49.0",
+        "feed": "^6.0.0",
+        "semver": "^7.8.5",
         "vitepress-plugin-group-icons": "^1.7.5",
-        "vue": "^3.5.38"
+        "vue": "^3.5.40"
     },
     "devDependencies": {
-        "@hapi/oxc-plugin": "^1.0.1",
+        "@hapi/oxc-plugin": "^1.0.2",
         "@octokit/plugin-throttling": "^11.0.3",
         "@octokit/rest": "^22.0.1",
-        "@types/node": "^24.12.0",
+        "@types/node": "^24.13.3",
         "@types/semver": "^7.7.1",
-        "oxfmt": "^0.55.0",
-        "oxlint": "^1.70.0",
+        "oxfmt": "^0.60.0",
+        "oxlint": "^1.75.0",
         "tsx": "^4.22.4",
         "typescript": "^6.0.3",
-        "vitepress": "2.0.0-alpha.17"
+        "vitepress": "2.0.0-alpha.18"
     },
     "packageManager": "pnpm@10.33.0"
 }

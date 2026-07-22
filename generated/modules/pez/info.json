@@ -1,6 +1,6 @@
 {
     "api": false,
-    "forks": 18,
+    "forks": 19,
     "isPlugin": false,
     "latestVersion": "6.x.x",
     "link": "https://github.com/hapijs/pez",
@@ -9,7 +9,7 @@
     "slogan": "Multipart parser.",
     "sloganHtml": "Multipart parser.",
     "stars": 34,
-    "updated": "2026-06-11T14:48:05Z",
+    "updated": "2026-07-02T07:47:05Z",
     "versions": [
         {
             "branch": "v6.1.1",

@@ -44,7 +44,7 @@ export const modules: Record<string, ModuleSpec> = {
         package: '@hapi/bounce',
     },
     bourne: {
-        compatibility: { 3: '>= 16' },
+        compatibility: { 3: '>= 16', 4: '>= 22' },
         hasApi: true,
         package: '@hapi/bourne',
     },

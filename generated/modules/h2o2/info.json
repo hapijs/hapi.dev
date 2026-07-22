@@ -1,6 +1,6 @@
 {
     "api": true,
-    "forks": 60,
+    "forks": 61,
     "isPlugin": true,
     "latestVersion": "10.x.x",
     "link": "https://github.com/hapijs/h2o2",

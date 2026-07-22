@@ -33,7 +33,7 @@
 
 - [#66](https://github.com/hapijs/catbox-memory/issues/66) Remove allowMixedContent option
 - [#65](https://github.com/hapijs/catbox-memory/issues/65) Change module namespace
-- [#64](https://github.com/hapijs/catbox-memory/issues/64) Typo \_timeDue vs \_timerDue
+- [#64](https://github.com/hapijs/catbox-memory/issues/64) Typo _timeDue vs _timerDue
 
 ### [4.0.1](https://github.com/hapijs/catbox-memory/milestone/16) {#4.0.1}
 

@@ -334,7 +334,7 @@
 ### [5.6.0](https://github.com/hapijs/wreck/milestone/19) {#5.6.0}
 
 - [#92](https://github.com/hapijs/wreck/pull/92) More robust baseUrl and uri merging
-- [#89](https://github.com/hapijs/wreck/pull/89) support for detecting/parsing +json suffix types i.e. application/\*+json
+- [#89](https://github.com/hapijs/wreck/pull/89) support for detecting/parsing +json suffix types i.e. application/*+json
 - [#88](https://github.com/hapijs/wreck/pull/88) Maintenance
 - [#87](https://github.com/hapijs/wreck/pull/87) Update license attribute
 - [#86](https://github.com/hapijs/wreck/pull/86) Add support for the `baseUrl` option
@@ -422,7 +422,7 @@
 
 ### [2.5.2](https://github.com/hapijs/wreck/milestone/5) {#2.5.2}
 
-- [#13](https://github.com/hapijs/wreck/pull/13) respect size in \_read for toReadableStream
+- [#13](https://github.com/hapijs/wreck/pull/13) respect size in _read for toReadableStream
 
 ### [2.5.1](https://github.com/hapijs/wreck/milestone/4) {#2.5.1}
 

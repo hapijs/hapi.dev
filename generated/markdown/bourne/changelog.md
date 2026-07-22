@@ -1,3 +1,22 @@
+## Version 4 {#v4}
+
+### [4.0.1](https://github.com/hapijs/bourne/milestone/14) <span class="breaking-badge"></span> {#4.0.1}
+
+- [#34](https://github.com/hapijs/bourne/pull/34) Revert "fix: strip leading UTF-8 BOM"
+
+### [4.0.0](https://github.com/hapijs/bourne/milestone/13) <a class="release-notes-link" href="https://github.com/hapijs/bourne/issues/33" target="_blank" title="View Release Notes"><img class="release-notes-img" src="/img/ui/release-notes.png" alt="" /></a> <span class="breaking-badge"></span> {#4.0.0}
+
+- [#33](https://github.com/hapijs/bourne/issues/33) 4.0.0 Release Notes
+- [#32](https://github.com/hapijs/bourne/pull/32) fix: strip leading UTF-8 BOM
+- [#30](https://github.com/hapijs/bourne/pull/30) chore: convert to esm + vitest + oxlint/oxfmt
+- [#28](https://github.com/hapijs/bourne/issues/28) Ignore BOM char
+
+## Version 3 {#v3}
+
+### [3.0.0](https://github.com/hapijs/bourne/milestone/11) <span class="breaking-badge"></span> {#3.0.0}
+
+- [#27](https://github.com/hapijs/bourne/pull/27) Support node v18, drop node v12
+
 ## Version 2 {#v2}
 
 ### [2.1.0](https://github.com/hapijs/bourne/milestone/9) {#2.1.0}

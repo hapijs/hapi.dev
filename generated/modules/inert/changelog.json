@@ -1,5 +1,37 @@
 [
     {
+        "date": "2026-06-17T16:55:57Z",
+        "id": 16399196,
+        "issues": [
+            {
+                "id": 4684463192,
+                "labels": ["bug"],
+                "number": 177,
+                "title": "fix: error on non-files",
+                "url": "https://github.com/hapijs/inert/pull/177"
+            }
+        ],
+        "number": 45,
+        "url": "https://github.com/hapijs/inert/milestone/45",
+        "version": "7.1.2"
+    },
+    {
+        "date": "2026-06-17T15:00:20Z",
+        "id": 16010835,
+        "issues": [
+            {
+                "id": 4487371536,
+                "labels": ["bug", "security"],
+                "number": 176,
+                "title": "fix: block sibling-prefix path traversal",
+                "url": "https://github.com/hapijs/inert/pull/176"
+            }
+        ],
+        "number": 44,
+        "url": "https://github.com/hapijs/inert/milestone/44",
+        "version": "7.1.1"
+    },
+    {
         "date": "2023-03-13T15:42:42Z",
         "id": 9153136,
         "issues": [

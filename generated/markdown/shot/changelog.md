@@ -62,7 +62,7 @@
 
 ### [4.1.0](https://github.com/hapijs/shot/milestone/40) {#4.1.0}
 
-- [#108](https://github.com/hapijs/shot/issues/108) Node V12 deprecation warning [DEP0066] OutgoingMessage.prototype.\_headers is deprecated
+- [#108](https://github.com/hapijs/shot/issues/108) Node V12 deprecation warning [DEP0066] OutgoingMessage.prototype._headers is deprecated
 - [#106](https://github.com/hapijs/shot/issues/106) Change module name
 
 ### [4.0.7](https://github.com/hapijs/shot/milestone/39) {#4.0.7}

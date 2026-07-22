@@ -40,7 +40,7 @@
 ### [1.0.1](https://github.com/hapijs/oppsy/milestone/2) {#1.0.1}
 
 - [#4](https://github.com/hapijs/oppsy/pull/4) Fixes #2.
-- [#3](https://github.com/hapijs/oppsy/pull/3) Bind networkMonitor to \_tasks.
+- [#3](https://github.com/hapijs/oppsy/pull/3) Bind networkMonitor to _tasks.
 - [#2](https://github.com/hapijs/oppsy/issues/2) TypeError: Cannot read property 'connections' of undefined
 
 ### [1.0.0](https://github.com/hapijs/oppsy/milestone/1) {#1.0.0}

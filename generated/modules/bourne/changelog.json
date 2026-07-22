@@ -1,5 +1,74 @@
 [
     {
+        "date": "2026-07-02T14:05:11Z",
+        "id": 16627927,
+        "issues": [
+            {
+                "id": 4795148091,
+                "labels": ["bug", "breaking changes"],
+                "number": 34,
+                "title": "Revert \"fix: strip leading UTF-8 BOM\"",
+                "url": "https://github.com/hapijs/bourne/pull/34"
+            }
+        ],
+        "number": 14,
+        "url": "https://github.com/hapijs/bourne/milestone/14",
+        "version": "4.0.1"
+    },
+    {
+        "date": "2026-07-01T12:47:05Z",
+        "id": 16607594,
+        "issues": [
+            {
+                "id": 4785608814,
+                "labels": ["breaking changes", "release notes"],
+                "number": 33,
+                "title": "4.0.0 Release Notes",
+                "url": "https://github.com/hapijs/bourne/issues/33"
+            },
+            {
+                "id": 4785530636,
+                "labels": ["feature"],
+                "number": 32,
+                "title": "fix: strip leading UTF-8 BOM",
+                "url": "https://github.com/hapijs/bourne/pull/32"
+            },
+            {
+                "id": 4540822963,
+                "labels": ["breaking changes"],
+                "number": 30,
+                "title": "chore: convert to esm + vitest + oxlint/oxfmt",
+                "url": "https://github.com/hapijs/bourne/pull/30"
+            },
+            {
+                "id": 1287992539,
+                "labels": ["feature"],
+                "number": 28,
+                "title": "Ignore BOM char",
+                "url": "https://github.com/hapijs/bourne/issues/28"
+            }
+        ],
+        "number": 13,
+        "url": "https://github.com/hapijs/bourne/milestone/13",
+        "version": "4.0.0"
+    },
+    {
+        "date": "2026-07-01T09:44:53Z",
+        "id": 7933535,
+        "issues": [
+            {
+                "id": 1222430178,
+                "labels": ["dependency", "breaking changes"],
+                "number": 27,
+                "title": "Support node v18, drop node v12",
+                "url": "https://github.com/hapijs/bourne/pull/27"
+            }
+        ],
+        "number": 11,
+        "url": "https://github.com/hapijs/bourne/milestone/11",
+        "version": "3.0.0"
+    },
+    {
         "date": "2022-04-08T15:01:04Z",
         "id": 4972543,
         "issues": [

@@ -1,6 +1,6 @@
 {
     "accept": {
-        "forks": 29,
+        "forks": 30,
         "isPlugin": false,
         "latestVersion": "6.x.x",
         "link": "https://github.com/hapijs/accept",
@@ -20,7 +20,7 @@
         "versionsArray": ["6.0.3"]
     },
     "ammo": {
-        "forks": 9,
+        "forks": 10,
         "isPlugin": false,
         "latestVersion": "6.x.x",
         "link": "https://github.com/hapijs/ammo",
@@ -40,7 +40,7 @@
         "versionsArray": ["6.0.1"]
     },
     "b64": {
-        "forks": 12,
+        "forks": 14,
         "isPlugin": false,
         "latestVersion": "6.x.x",
         "link": "https://github.com/hapijs/b64",
@@ -60,14 +60,14 @@
         "versionsArray": ["6.0.1"]
     },
     "basic": {
-        "forks": 64,
+        "forks": 65,
         "isPlugin": true,
         "latestVersion": "7.x.x",
         "link": "https://github.com/hapijs/basic",
         "package": "@hapi/basic",
         "slogan": "Basic authentication plugin.",
         "sloganHtml": "Basic authentication plugin.",
-        "stars": 146,
+        "stars": 147,
         "updated": "2024-10-23T14:42:22Z",
         "versions": [
             {
@@ -80,7 +80,7 @@
         "versionsArray": ["7.0.2"]
     },
     "bell": {
-        "forks": 209,
+        "forks": 210,
         "isPlugin": true,
         "latestVersion": "13.x.x",
         "link": "https://github.com/hapijs/bell",
@@ -100,7 +100,7 @@
         "versionsArray": ["13.1.0"]
     },
     "boom": {
-        "forks": 188,
+        "forks": 192,
         "isPlugin": false,
         "latestVersion": "10.x.x",
         "link": "https://github.com/hapijs/boom",
@@ -146,7 +146,7 @@
         "versionsArray": ["6.0.1", "5.1.1"]
     },
     "bounce": {
-        "forks": 13,
+        "forks": 14,
         "isPlugin": false,
         "latestVersion": "3.x.x",
         "link": "https://github.com/hapijs/bounce",
@@ -166,27 +166,33 @@
         "versionsArray": ["3.0.2"]
     },
     "bourne": {
-        "forks": 12,
+        "forks": 13,
         "isPlugin": false,
-        "latestVersion": "3.x.x",
+        "latestVersion": "4.x.x",
         "link": "https://github.com/hapijs/bourne",
         "package": "@hapi/bourne",
         "slogan": "JSON.parse() drop-in replacement with prototype poisoning protection.",
         "sloganHtml": "JSON.parse() drop-in replacement with prototype poisoning protection.",
         "stars": 180,
-        "updated": "2024-10-23T15:09:24Z",
+        "updated": "2026-07-02T14:04:44Z",
         "versions": [
             {
                 "branch": "v3.0.0",
                 "license": "BSD",
                 "name": "3.0.0",
                 "node": ">= 16"
+            },
+            {
+                "branch": "v4.0.1",
+                "license": "BSD",
+                "name": "4.0.1",
+                "node": ">= 22"
             }
         ],
-        "versionsArray": ["3.0.0"]
+        "versionsArray": ["4.0.1", "3.0.0"]
     },
     "call": {
-        "forks": 27,
+        "forks": 28,
         "isPlugin": false,
         "latestVersion": "9.x.x",
         "link": "https://github.com/hapijs/call",
@@ -206,7 +212,7 @@
         "versionsArray": ["9.0.1"]
     },
     "catbox": {
-        "forks": 72,
+        "forks": 75,
         "isPlugin": false,
         "latestVersion": "12.x.x",
         "link": "https://github.com/hapijs/catbox",
@@ -246,7 +252,7 @@
         "versionsArray": ["4.0.0"]
     },
     "catbox-memory": {
-        "forks": 29,
+        "forks": 30,
         "isPlugin": false,
         "latestVersion": "6.x.x",
         "link": "https://github.com/hapijs/catbox-memory",
@@ -326,7 +332,7 @@
         "versionsArray": ["9.0.3"]
     },
     "content": {
-        "forks": 13,
+        "forks": 14,
         "isPlugin": false,
         "latestVersion": "6.x.x",
         "link": "https://github.com/hapijs/content",
@@ -346,7 +352,7 @@
         "versionsArray": ["6.0.2"]
     },
     "cookie": {
-        "forks": 98,
+        "forks": 99,
         "isPlugin": true,
         "latestVersion": "12.x.x",
         "link": "https://github.com/hapijs/cookie",
@@ -366,7 +372,7 @@
         "versionsArray": ["12.0.1"]
     },
     "crumb": {
-        "forks": 48,
+        "forks": 47,
         "isPlugin": true,
         "latestVersion": "9.x.x",
         "link": "https://github.com/hapijs/crumb",
@@ -386,7 +392,7 @@
         "versionsArray": ["9.0.1"]
     },
     "cryptiles": {
-        "forks": 27,
+        "forks": 29,
         "isPlugin": false,
         "latestVersion": "6.x.x",
         "link": "https://github.com/hapijs/cryptiles",
@@ -432,7 +438,7 @@
         "versionsArray": ["7.0.0", "6.0.0"]
     },
     "file": {
-        "forks": 6,
+        "forks": 7,
         "isPlugin": false,
         "latestVersion": "3.x.x",
         "link": "https://github.com/hapijs/file",
@@ -472,7 +478,7 @@
         "versionsArray": ["9.0.1"]
     },
     "h2o2": {
-        "forks": 60,
+        "forks": 61,
         "isPlugin": true,
         "latestVersion": "10.x.x",
         "link": "https://github.com/hapijs/h2o2",
@@ -492,15 +498,15 @@
         "versionsArray": ["10.0.4"]
     },
     "hapi": {
-        "forks": 1358,
+        "forks": 1357,
         "isPlugin": false,
         "latestVersion": "21.x.x",
         "link": "https://github.com/hapijs/hapi",
         "package": "@hapi/hapi",
         "slogan": "The Simple, Secure Framework Developers Trust",
         "sloganHtml": "The Simple, Secure Framework Developers Trust",
-        "stars": 14789,
-        "updated": "2026-05-06T10:38:07Z",
+        "stars": 14793,
+        "updated": "2026-07-22T09:04:56Z",
         "versions": [
             {
                 "branch": "v20.3.0",
@@ -509,16 +515,16 @@
                 "node": ">= 16"
             },
             {
-                "branch": "v21.4.9",
+                "branch": "v21.4.10",
                 "license": "BSD",
-                "name": "21.4.9",
+                "name": "21.4.10",
                 "node": ">= 16"
             }
         ],
-        "versionsArray": ["21.4.9", "20.3.0"]
+        "versionsArray": ["21.4.10", "20.3.0"]
     },
     "heavy": {
-        "forks": 15,
+        "forks": 16,
         "isPlugin": false,
         "latestVersion": "8.x.x",
         "link": "https://github.com/hapijs/heavy",
@@ -538,7 +544,7 @@
         "versionsArray": ["8.0.1"]
     },
     "hoek": {
-        "forks": 178,
+        "forks": 179,
         "isPlugin": false,
         "latestVersion": "11.x.x",
         "link": "https://github.com/hapijs/hoek",
@@ -546,7 +552,7 @@
         "slogan": "Utility methods for the hapi ecosystem.",
         "sloganHtml": "Utility methods for the hapi ecosystem.",
         "stars": 483,
-        "updated": "2026-02-25T07:24:45Z",
+        "updated": "2026-07-01T18:39:32Z",
         "versions": [
             {
                 "branch": "v11.0.7",
@@ -558,7 +564,7 @@
         "versionsArray": ["11.0.7"]
     },
     "inert": {
-        "forks": 49,
+        "forks": 48,
         "isPlugin": true,
         "latestVersion": "7.x.x",
         "link": "https://github.com/hapijs/inert",
@@ -566,26 +572,26 @@
         "slogan": "Static file and directory handlers for hapi.js.",
         "sloganHtml": "Static file and directory handlers for hapi.js.",
         "stars": 236,
-        "updated": "2026-05-20T14:45:11Z",
+        "updated": "2026-06-17T21:13:55Z",
         "versions": [
             {
-                "branch": "v7.1.1",
+                "branch": "v7.1.2",
                 "license": "BSD",
-                "name": "7.1.1",
+                "name": "7.1.2",
                 "node": ">= 16"
             }
         ],
-        "versionsArray": ["7.1.1"]
+        "versionsArray": ["7.1.2"]
     },
     "iron": {
-        "forks": 54,
+        "forks": 56,
         "isPlugin": false,
         "latestVersion": "7.x.x",
         "link": "https://github.com/hapijs/iron",
         "package": "@hapi/iron",
         "slogan": "Encapsulated tokens (encrypted and mac'ed objects).",
         "sloganHtml": "Encapsulated tokens (encrypted and mac'ed objects).",
-        "stars": 629,
+        "stars": 628,
         "updated": "2024-10-23T15:37:19Z",
         "versions": [
             {
@@ -625,7 +631,7 @@
         "package": "@hapi/lab",
         "slogan": "Node test utility.",
         "sloganHtml": "Node test utility.",
-        "stars": 739,
+        "stars": 738,
         "updated": "2026-03-26T19:23:31Z",
         "versions": [
             {
@@ -664,7 +670,7 @@
         "versionsArray": ["2.0.1"]
     },
     "mimos": {
-        "forks": 13,
+        "forks": 14,
         "isPlugin": false,
         "latestVersion": "7.x.x",
         "link": "https://github.com/hapijs/mimos",
@@ -710,7 +716,7 @@
         "versionsArray": ["14.0.1", "13.0.1"]
     },
     "nigel": {
-        "forks": 10,
+        "forks": 11,
         "isPlugin": false,
         "latestVersion": "5.x.x",
         "link": "https://github.com/hapijs/nigel",
@@ -730,7 +736,7 @@
         "versionsArray": ["5.0.1"]
     },
     "oppsy": {
-        "forks": 19,
+        "forks": 20,
         "isPlugin": false,
         "latestVersion": "3.x.x",
         "link": "https://github.com/hapijs/oppsy",
@@ -758,19 +764,19 @@
         "slogan": "Oxlint & Oxfmt plugin containing hapi style guide rules and config.",
         "sloganHtml": "Oxlint &amp; Oxfmt plugin containing hapi style guide rules and config.",
         "stars": 0,
-        "updated": "2026-06-10T17:01:56Z",
+        "updated": "2026-07-01T15:36:35Z",
         "versions": [
             {
-                "branch": "v1.0.1",
+                "branch": "v1.0.2",
                 "license": "BSD",
-                "name": "1.0.1",
+                "name": "1.0.2",
                 "node": ">= 22"
             }
         ],
-        "versionsArray": ["1.0.1"]
+        "versionsArray": ["1.0.2"]
     },
     "pez": {
-        "forks": 18,
+        "forks": 19,
         "isPlugin": false,
         "latestVersion": "6.x.x",
         "link": "https://github.com/hapijs/pez",
@@ -778,7 +784,7 @@
         "slogan": "Multipart parser.",
         "sloganHtml": "Multipart parser.",
         "stars": 34,
-        "updated": "2026-06-11T14:48:05Z",
+        "updated": "2026-07-02T07:47:05Z",
         "versions": [
             {
                 "branch": "v6.1.1",
@@ -790,7 +796,7 @@
         "versionsArray": ["6.1.1"]
     },
     "podium": {
-        "forks": 21,
+        "forks": 22,
         "isPlugin": false,
         "latestVersion": "5.x.x",
         "link": "https://github.com/hapijs/podium",
@@ -810,7 +816,7 @@
         "versionsArray": ["5.0.2"]
     },
     "scooter": {
-        "forks": 24,
+        "forks": 25,
         "isPlugin": true,
         "latestVersion": "8.x.x",
         "link": "https://github.com/hapijs/scooter",
@@ -836,7 +842,7 @@
         "versionsArray": ["8.0.0", "7.0.0"]
     },
     "shot": {
-        "forks": 40,
+        "forks": 41,
         "isPlugin": false,
         "latestVersion": "6.x.x",
         "link": "https://github.com/hapijs/shot",
@@ -856,7 +862,7 @@
         "versionsArray": ["6.0.3"]
     },
     "somever": {
-        "forks": 10,
+        "forks": 11,
         "isPlugin": false,
         "latestVersion": "4.x.x",
         "link": "https://github.com/hapijs/somever",
@@ -896,7 +902,7 @@
         "versionsArray": ["1.1.0"]
     },
     "statehood": {
-        "forks": 26,
+        "forks": 27,
         "isPlugin": false,
         "latestVersion": "8.x.x",
         "link": "https://github.com/hapijs/statehood",
@@ -916,7 +922,7 @@
         "versionsArray": ["8.2.1"]
     },
     "subtext": {
-        "forks": 26,
+        "forks": 27,
         "isPlugin": false,
         "latestVersion": "8.x.x",
         "link": "https://github.com/hapijs/subtext",
@@ -936,7 +942,7 @@
         "versionsArray": ["8.1.3"]
     },
     "teamwork": {
-        "forks": 13,
+        "forks": 14,
         "isPlugin": false,
         "latestVersion": "6.x.x",
         "link": "https://github.com/hapijs/teamwork",
@@ -956,7 +962,7 @@
         "versionsArray": ["6.0.1"]
     },
     "topo": {
-        "forks": 26,
+        "forks": 27,
         "isPlugin": false,
         "latestVersion": "6.x.x",
         "link": "https://github.com/hapijs/topo",
@@ -976,7 +982,7 @@
         "versionsArray": ["6.0.2"]
     },
     "vise": {
-        "forks": 12,
+        "forks": 14,
         "isPlugin": false,
         "latestVersion": "5.x.x",
         "link": "https://github.com/hapijs/vise",
@@ -996,7 +1002,7 @@
         "versionsArray": ["5.0.1"]
     },
     "vision": {
-        "forks": 67,
+        "forks": 68,
         "isPlugin": true,
         "latestVersion": "7.x.x",
         "link": "https://github.com/hapijs/vision",
@@ -1016,7 +1022,7 @@
         "versionsArray": ["7.0.3"]
     },
     "wreck": {
-        "forks": 102,
+        "forks": 110,
         "isPlugin": false,
         "latestVersion": "18.x.x",
         "link": "https://github.com/hapijs/wreck",
@@ -1036,7 +1042,7 @@
         "versionsArray": ["18.1.2"]
     },
     "yar": {
-        "forks": 58,
+        "forks": 59,
         "isPlugin": true,
         "latestVersion": "11.x.x",
         "link": "https://github.com/hapijs/yar",

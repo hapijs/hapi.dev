@@ -28,7 +28,7 @@
 ### [12.0.5](https://github.com/hapijs/nes/milestone/83) {#12.0.5}
 
 - [#323](https://github.com/hapijs/nes/pull/323) Fix client reconnect retry attempts
-- [#318](https://github.com/hapijs/nes/pull/318) client - \_reconnect update, single reconnection timer
+- [#318](https://github.com/hapijs/nes/pull/318) client - _reconnect update, single reconnection timer
 
 ### [12.0.4](https://github.com/hapijs/nes/milestone/81) {#12.0.4}
 
@@ -246,7 +246,7 @@
 
 ### [6.0.1](https://github.com/hapijs/nes/milestone/35) {#6.0.1}
 
-- [#126](https://github.com/hapijs/nes/issues/126) Handle cases when client.\_ws is null
+- [#126](https://github.com/hapijs/nes/issues/126) Handle cases when client._ws is null
 
 ### [6.0.0](https://github.com/hapijs/nes/milestone/34) <span class="breaking-badge"></span> {#6.0.0}
 

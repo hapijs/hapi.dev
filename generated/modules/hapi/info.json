@@ -1,6 +1,6 @@
 {
     "api": true,
-    "forks": 1358,
+    "forks": 1357,
     "isPlugin": false,
     "latestVersion": "21.x.x",
     "link": "https://github.com/hapijs/hapi",
@@ -8,8 +8,8 @@
     "package": "@hapi/hapi",
     "slogan": "The Simple, Secure Framework Developers Trust",
     "sloganHtml": "The Simple, Secure Framework Developers Trust",
-    "stars": 14789,
-    "updated": "2026-05-06T10:38:07Z",
+    "stars": 14793,
+    "updated": "2026-07-22T09:04:56Z",
     "versions": [
         {
             "branch": "v20.3.0",
@@ -18,11 +18,11 @@
             "node": ">= 16"
         },
         {
-            "branch": "v21.4.9",
+            "branch": "v21.4.10",
             "license": "BSD",
-            "name": "21.4.9",
+            "name": "21.4.10",
             "node": ">= 16"
         }
     ],
-    "versionsArray": ["21.4.9", "20.3.0"]
+    "versionsArray": ["21.4.10", "20.3.0"]
 }
