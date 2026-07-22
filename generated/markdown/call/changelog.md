@@ -84,7 +84,7 @@
 
 ### [4.0.0](https://github.com/hapijs/call/milestone/9) <span class="breaking-badge"></span> {#4.0.0}
 
-- [#24](https://github.com/hapijs/call/issues/24) {path\*} segments disappear when empty
+- [#24](https://github.com/hapijs/call/issues/24) {path*} segments disappear when empty
 
 ## Version 3 {#v3}
 
@@ -124,7 +124,7 @@
 - [#10](https://github.com/hapijs/call/issues/10) Support route id
 - [#9](https://github.com/hapijs/call/issues/9) /a/{p}/{p*} conflicts with /a/{p*} (which is not reachable)
 - [#8](https://github.com/hapijs/call/issues/8) '/a/b/{p*}' is more specific than '/{p*5}'
-- [#7](https://github.com/hapijs/call/issues/7) /a/b/{p\*} is more specific than /a/{b}/{c}
+- [#7](https://github.com/hapijs/call/issues/7) /a/b/{p*} is more specific than /a/{b}/{c}
 - [#6](https://github.com/hapijs/call/issues/6) '/a/{b*}' is less specific than '/a/{b}/{c*}'
 - [#3](https://github.com/hapijs/call/issues/3) Support for flexible routes
 - [#2](https://github.com/hapijs/call/pull/2) Match case-insensitive paths with no params

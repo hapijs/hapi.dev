@@ -64,7 +64,7 @@
 ### [3.2.0](https://github.com/hapijs/accept/milestone/14) <span class="breaking-badge"></span> {#3.2.0}
 
 - [#39](https://github.com/hapijs/accept/issues/39) Change module namespace
-- [#34](https://github.com/hapijs/accept/issues/34) headerType() '\*' logic is incorrect.
+- [#34](https://github.com/hapijs/accept/issues/34) headerType() '*' logic is incorrect.
 
 ### [3.1.3](https://github.com/hapijs/accept/milestone/13) {#3.1.3}
 

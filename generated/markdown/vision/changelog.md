@@ -141,7 +141,7 @@
 ### [2.0.1](https://github.com/hapijs/vision/milestone/7) {#2.0.1}
 
 - [#25](https://github.com/hapijs/vision/pull/25) Update dependencies.
-- [#24](https://github.com/hapijs/vision/pull/24) Ensure \_loaderHelpers registers actual filenames
+- [#24](https://github.com/hapijs/vision/pull/24) Ensure _loaderHelpers registers actual filenames
 - [#22](https://github.com/hapijs/vision/pull/22) Helpful path location checked
 
 ### [2.0.0](https://github.com/hapijs/vision/milestone/5) <span class="breaking-badge"></span> {#2.0.0}

@@ -1,5 +1,49 @@
 [
     {
+        "date": "2026-07-22T09:07:44Z",
+        "id": 16924285,
+        "issues": [
+            {
+                "id": 4943165154,
+                "labels": ["bug"],
+                "number": 4586,
+                "title": "Fix cookie processing issues",
+                "url": "https://github.com/hapijs/hapi/pull/4586"
+            },
+            {
+                "id": 4431802858,
+                "labels": ["types"],
+                "number": 4578,
+                "title": "fix: broaden Query/Params/Headers ref defaults to `unknown`",
+                "url": "https://github.com/hapijs/hapi/pull/4578"
+            },
+            {
+                "id": 2492759307,
+                "labels": ["bug"],
+                "number": 4527,
+                "title": "The application crashes when setting an invalid cookie value",
+                "url": "https://github.com/hapijs/hapi/issues/4527"
+            },
+            {
+                "id": 1051280037,
+                "labels": ["support"],
+                "number": 4316,
+                "title": "Exception when using takeover response in onPreResponse and the server is configured with autoValue",
+                "url": "https://github.com/hapijs/hapi/issues/4316"
+            },
+            {
+                "id": 1019855143,
+                "labels": ["bug"],
+                "number": 4297,
+                "title": "Error responses include state",
+                "url": "https://github.com/hapijs/hapi/issues/4297"
+            }
+        ],
+        "number": 331,
+        "url": "https://github.com/hapijs/hapi/milestone/331",
+        "version": "21.4.10"
+    },
+    {
         "date": "2026-05-06T10:37:52Z",
         "id": 15814860,
         "issues": [

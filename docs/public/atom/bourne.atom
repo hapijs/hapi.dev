@@ -2,11 +2,35 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hapi.dev/module/bourne</id>
     <title>@hapi/bourne changelog</title>
-    <updated>2022-04-08T15:01:04.000Z</updated>
+    <updated>2026-07-02T14:05:11.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hapi.dev/module/bourne"/>
     <logo>https://hapi.dev/img/logo.png</logo>
     <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bourne v4.0.1]]></title>
+        <id>https://github.com/hapijs/bourne/milestone/14</id>
+        <link href="https://hapi.dev/module/bourne/changelog#4.0.1"/>
+        <updated>2026-07-02T14:05:11.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bourne v4.0.1]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bourne/pull/34">[#34]</a> Revert "fix: strip leading UTF-8 BOM"</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bourne v4.0.0]]></title>
+        <id>https://github.com/hapijs/bourne/milestone/13</id>
+        <link href="https://hapi.dev/module/bourne/changelog#4.0.0"/>
+        <updated>2026-07-01T12:47:05.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bourne v4.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bourne/issues/33">[#33]</a> 4.0.0 Release Notes</li><li><a href="https://github.com/hapijs/bourne/pull/32">[#32]</a> fix: strip leading UTF-8 BOM</li><li><a href="https://github.com/hapijs/bourne/pull/30">[#30]</a> chore: convert to esm + vitest + oxlint/oxfmt</li><li><a href="https://github.com/hapijs/bourne/issues/28">[#28]</a> Ignore BOM char</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bourne v3.0.0]]></title>
+        <id>https://github.com/hapijs/bourne/milestone/11</id>
+        <link href="https://hapi.dev/module/bourne/changelog#3.0.0"/>
+        <updated>2026-07-01T09:44:53.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bourne v3.0.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bourne/pull/27">[#27]</a> Support node v18, drop node v12</li></ul>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[@hapi/bourne v2.1.0]]></title>
         <id>https://github.com/hapijs/bourne/milestone/9</id>

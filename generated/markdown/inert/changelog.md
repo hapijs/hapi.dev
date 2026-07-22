@@ -1,5 +1,13 @@
 ## Version 7 {#v7}
 
+### [7.1.2](https://github.com/hapijs/inert/milestone/45) {#7.1.2}
+
+- [#177](https://github.com/hapijs/inert/pull/177) fix: error on non-files
+
+### [7.1.1](https://github.com/hapijs/inert/milestone/44) {#7.1.1}
+
+- [#176](https://github.com/hapijs/inert/pull/176) fix: block sibling-prefix path traversal
+
 ### [7.1.0](https://github.com/hapijs/inert/milestone/43) {#7.1.0}
 
 - [#169](https://github.com/hapijs/inert/pull/169) feat: import DT types

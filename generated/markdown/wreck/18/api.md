@@ -46,9 +46,7 @@ const wreckWithTimeout = wreck.defaults({
 const options = {
     baseUrl: 'https://www.example.com',
     payload: readableStream || 'foo=bar' || Buffer.from('foo=bar'),
-    headers: {
-        /* http headers */
-    },
+    headers: {/* http headers */},
     redirects: 3,
     beforeRedirect: (
         redirectMethod,

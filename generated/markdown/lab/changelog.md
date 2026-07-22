@@ -49,7 +49,7 @@
 
 - [#1059](https://github.com/hapijs/lab/pull/1059) Bump @types/node
 - [#1058](https://github.com/hapijs/lab/pull/1058) Deal with `Symbol(undici.globalDispatcher.1)` in Node.js 18+
-- [#1057](https://github.com/hapijs/lab/pull/1057) Enable linting of _.cjs and _.mjs files
+- [#1057](https://github.com/hapijs/lab/pull/1057) Enable linting of *.cjs and *.mjs files
 - [#1052](https://github.com/hapijs/lab/pull/1052) Add missing space after colon
 
 ### [25.0.1](https://github.com/hapijs/lab/milestone/192) {#25.0.1}
@@ -945,7 +945,7 @@
 
 - [#362](https://github.com/hapijs/lab/pull/362) Default both linting thresholds to 0.
 - [#361](https://github.com/hapijs/lab/issues/361) Lint option -L should fail test if any linting problems are found
-- [#360](https://github.com/hapijs/lab/pull/360) Use global handle for \_\_$$labCov for use strict.
+- [#360](https://github.com/hapijs/lab/pull/360) Use global handle for __$$labCov for use strict.
 - [#359](https://github.com/hapijs/lab/pull/359) Change afterEaches to run in more natural order
 - [#358](https://github.com/hapijs/lab/issues/358) unable to test when employing template strings
 - [#357](https://github.com/hapijs/lab/issues/357) afterEach's run in unnatural order
@@ -1169,7 +1169,7 @@
 ### [4.0.1](https://github.com/hapijs/lab/milestone/15) {#4.0.1}
 
 - [#144](https://github.com/hapijs/lab/pull/144) Fixing issue with missing labCov reference
-- [#143](https://github.com/hapijs/lab/issues/143) lab throws with ReferenceError: \_\_$$labCov is not defined when run with coverage enabled and no code to cover
+- [#143](https://github.com/hapijs/lab/issues/143) lab throws with ReferenceError: __$$labCov is not defined when run with coverage enabled and no code to cover
 - [#141](https://github.com/hapijs/lab/pull/141) Add test for while coverage
 - [#140](https://github.com/hapijs/lab/pull/140) Default to null for colors on cli for using tty capabilities
 - [#139](https://github.com/hapijs/lab/issues/139) CLI colors aren't defaulted to tty capabilities

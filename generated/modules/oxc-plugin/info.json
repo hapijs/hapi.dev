@@ -9,14 +9,14 @@
     "slogan": "Oxlint & Oxfmt plugin containing hapi style guide rules and config.",
     "sloganHtml": "Oxlint &amp; Oxfmt plugin containing hapi style guide rules and config.",
     "stars": 0,
-    "updated": "2026-06-10T17:01:56Z",
+    "updated": "2026-07-01T15:36:35Z",
     "versions": [
         {
-            "branch": "v1.0.1",
+            "branch": "v1.0.2",
             "license": "BSD",
-            "name": "1.0.1",
+            "name": "1.0.2",
             "node": ">= 22"
         }
     ],
-    "versionsArray": ["1.0.1"]
+    "versionsArray": ["1.0.2"]
 }

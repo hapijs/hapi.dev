@@ -1,5 +1,13 @@
 ## Version 21 {#v21}
 
+### [21.4.10](https://github.com/hapijs/hapi/milestone/331) {#21.4.10}
+
+- [#4586](https://github.com/hapijs/hapi/pull/4586) Fix cookie processing issues
+- [#4578](https://github.com/hapijs/hapi/pull/4578) fix: broaden Query/Params/Headers ref defaults to `unknown`
+- [#4527](https://github.com/hapijs/hapi/issues/4527) The application crashes when setting an invalid cookie value
+- [#4316](https://github.com/hapijs/hapi/issues/4316) Exception when using takeover response in onPreResponse and the server is configured with autoValue
+- [#4297](https://github.com/hapijs/hapi/issues/4297) Error responses include state
+
 ### [21.4.9](https://github.com/hapijs/hapi/milestone/330) {#21.4.9}
 
 - [#4577](https://github.com/hapijs/hapi/pull/4577) chore: bump dependencies
@@ -216,7 +224,7 @@
 ### [20.0.1](https://github.com/hapijs/hapi/milestone/287) {#20.0.1}
 
 - [#4162](https://github.com/hapijs/hapi/pull/4162) Use response instead of request when marshalling
-- [#4161](https://github.com/hapijs/hapi/pull/4161) fix: check if \_isPayloadSupported is set
+- [#4161](https://github.com/hapijs/hapi/pull/4161) fix: check if _isPayloadSupported is set
 - [#4156](https://github.com/hapijs/hapi/pull/4156) update handlebars dependency version
 
 ### [20.0.0](https://github.com/hapijs/hapi/milestone/286) <a class="release-notes-link" href="https://github.com/hapijs/hapi/issues/4138" target="_blank" title="View Release Notes"><img class="release-notes-img" src="/img/ui/release-notes.png" alt="" /></a> <span class="breaking-badge"></span> {#20.0.0}
@@ -1435,13 +1443,13 @@
 - [#2427](https://github.com/hapijs/hapi/issues/2427) Issue uploading file with io.js or node &gt; 0.11.6
 - [#2423](https://github.com/hapijs/hapi/pull/2423) Update mime-db to 1.7.0 from 1.6.1
 - [#2420](https://github.com/hapijs/hapi/issues/2420) Update hapijs/shot to 1.4.1 from 1.4.0
-- [#2418](https://github.com/hapijs/hapi/pull/2418) Add regex to allow leading $ and \_
+- [#2418](https://github.com/hapijs/hapi/pull/2418) Add regex to allow leading $ and _
 - [#2411](https://github.com/hapijs/hapi/issues/2411) Update jshttp/mime-db to 1.7.0 from 1.6.1
 - [#2405](https://github.com/hapijs/hapi/pull/2405) Support inline dependencies on plugins
 - [#2402](https://github.com/hapijs/hapi/pull/2402) Improved validation of route method label
 - [#2401](https://github.com/hapijs/hapi/issues/2401) Method name RegExp
 - [#2382](https://github.com/hapijs/hapi/pull/2382) Return explicit error when trying to stream a non-Readable stream
-- [#2368](https://github.com/hapijs/hapi/issues/2368) response.streamify assumes stream has attribute \_readableState
+- [#2368](https://github.com/hapijs/hapi/issues/2368) response.streamify assumes stream has attribute _readableState
 - [#2332](https://github.com/hapijs/hapi/issues/2332) Replacing plugin.dependency() with attributes key
 - [#2326](https://github.com/hapijs/hapi/issues/2326) request-error logged before `onPostHandler` or `onPreResponse`
 
@@ -1707,7 +1715,7 @@
 ### [6.11.0](https://github.com/hapijs/hapi/milestone/121) {#6.11.0}
 
 - [#2005](https://github.com/hapijs/hapi/pull/2005) Replace negotiator
-- [#2004](https://github.com/hapijs/hapi/issues/2004) Default accept-encoding '\*' to 'identity', not 'gzip'
+- [#2004](https://github.com/hapijs/hapi/issues/2004) Default accept-encoding '*' to 'identity', not 'gzip'
 - [#2001](https://github.com/hapijs/hapi/pull/2001) Keep the options of server.inject untouched #2000
 - [#1995](https://github.com/hapijs/hapi/issues/1995) Adding route with multiple methods overrides route config
 - [#1984](https://github.com/hapijs/hapi/issues/1984) All non 200 responses get cache-control=no-cache header
@@ -1790,7 +1798,7 @@
 - [#1835](https://github.com/hapijs/hapi/issues/1835) server.state ttl must be a number
 - [#1832](https://github.com/hapijs/hapi/issues/1832) Replace mime with mime-type
 - [#1822](https://github.com/hapijs/hapi/pull/1822) Added joi validation to manifest.
-- [#1795](https://github.com/hapijs/hapi/issues/1795) request.server.\_views in plugin
+- [#1795](https://github.com/hapijs/hapi/issues/1795) request.server._views in plugin
 - [#1722](https://github.com/hapijs/hapi/issues/1722) Validate compose manifest
 
 ### [6.4.0](https://github.com/hapijs/hapi/milestone/110) <span class="breaking-badge"></span> {#6.4.0}
@@ -1840,7 +1848,7 @@
 - [#1752](https://github.com/hapijs/hapi/pull/1752) Adding helpful error message when pack.register is missing a callback
 - [#1751](https://github.com/hapijs/hapi/issues/1751) Calling pack.register without a callback has an unfriendly error
 - [#1745](https://github.com/hapijs/hapi/pull/1745) Add joi validation of pack options
-- [#1733](https://github.com/hapijs/hapi/pull/1733) log function should only emit once if \_server object
+- [#1733](https://github.com/hapijs/hapi/pull/1733) log function should only emit once if _server object
 - [#1728](https://github.com/hapijs/hapi/issues/1728) 6.x breaks plugin modules exporting functions
 - [#1721](https://github.com/hapijs/hapi/issues/1721) Validate pack options
 - [#1676](https://github.com/hapijs/hapi/issues/1676) Problem serving precompressed files with directory handler
@@ -1951,7 +1959,7 @@
 
 ### [4.0.2](https://github.com/hapijs/hapi/milestone/94) {#4.0.2}
 
-- [#1598](https://github.com/hapijs/hapi/issues/1598) Throws when response does not have \_close()
+- [#1598](https://github.com/hapijs/hapi/issues/1598) Throws when response does not have _close()
 
 ### [4.0.1](https://github.com/hapijs/hapi/milestone/92) {#4.0.1}
 
@@ -2158,14 +2166,14 @@
 - [#1253](https://github.com/hapijs/hapi/pull/1253) in directory, fix the listing of subdirs that reside in a subdirs that have spaces
 - [#1252](https://github.com/hapijs/hapi/issues/1252) Protect response payload stream wrapper from multiple replays
 - [#1251](https://github.com/hapijs/hapi/issues/1251) Replace File from response type to reply.file() helper
-- [#1249](https://github.com/hapijs/hapi/issues/1249) Cleanup use of request.\_route.cache and request.route.cache
+- [#1249](https://github.com/hapijs/hapi/issues/1249) Cleanup use of request._route.cache and request.route.cache
 - [#1248](https://github.com/hapijs/hapi/issues/1248) Review proxy upstream ttl passing
 - [#1247](https://github.com/hapijs/hapi/issues/1247) Clean up postResponse in proxy config
 - [#1246](https://github.com/hapijs/hapi/issues/1246) Allow zero key helpers with cache
 - [#1242](https://github.com/hapijs/hapi/issues/1242) Remove server-side route caching
 - [#1241](https://github.com/hapijs/hapi/issues/1241) Add user/private flag to state variable
 - [#1239](https://github.com/hapijs/hapi/issues/1239) Disable cache when Authorization header is included
-- [#1238](https://github.com/hapijs/hapi/issues/1238) Special handling for '\*' Vary response header
+- [#1238](https://github.com/hapijs/hapi/issues/1238) Special handling for '*' Vary response header
 - [#1236](https://github.com/hapijs/hapi/issues/1236) Review lru-cache settings
 - [#1235](https://github.com/hapijs/hapi/issues/1235) Vary support in internal routes cache
 - [#1234](https://github.com/hapijs/hapi/issues/1234) Move client out to separate module
@@ -2180,7 +2188,7 @@
 - [#1216](https://github.com/hapijs/hapi/issues/1216) Remove support for `notFound` handler string
 - [#1215](https://github.com/hapijs/hapi/issues/1215) Content-type charset attribute not added to streams
 - [#1214](https://github.com/hapijs/hapi/issues/1214) Allow specifying a list of method in route config
-- [#1211](https://github.com/hapijs/hapi/issues/1211) Move all response payload processing to \_prepare
+- [#1211](https://github.com/hapijs/hapi/issues/1211) Move all response payload processing to _prepare
 - [#1209](https://github.com/hapijs/hapi/issues/1209) Duplicate parameter error is missing route information
 - [#1208](https://github.com/hapijs/hapi/issues/1208) Route error message does not include information about which route failed
 - [#1207](https://github.com/hapijs/hapi/issues/1207) Accessing the response stream.
@@ -2193,10 +2201,10 @@
 - [#1194](https://github.com/hapijs/hapi/issues/1194) Remove support for decorating request with reply()
 - [#1192](https://github.com/hapijs/hapi/issues/1192) Change pre type to always use handler mode
 - [#1191](https://github.com/hapijs/hapi/issues/1191) Cannot use multiple parallel pre methods in handler mode
-- [#1190](https://github.com/hapijs/hapi/issues/1190) Move Obj stringify step to \_prepare
+- [#1190](https://github.com/hapijs/hapi/issues/1190) Move Obj stringify step to _prepare
 - [#1189](https://github.com/hapijs/hapi/issues/1189) Attaching a websocket to a server in a pack
 - [#1187](https://github.com/hapijs/hapi/issues/1187) Change pre to use nested arrays instead of mode (serial, parallel)
-- [#1185](https://github.com/hapijs/hapi/pull/1185) be more careful about options in \_provisionCache
+- [#1185](https://github.com/hapijs/hapi/pull/1185) be more careful about options in _provisionCache
 - [#1183](https://github.com/hapijs/hapi/issues/1183) Remove use of removeAllListeners()
 - [#1182](https://github.com/hapijs/hapi/issues/1182) Error transformation does not work when serving static files
 - [#1178](https://github.com/hapijs/hapi/issues/1178) 2.0 Breaking Changes
@@ -2263,7 +2271,7 @@
 - [#1137](https://github.com/hapijs/hapi/issues/1137) generateView at 'onRequest' extension point
 - [#1126](https://github.com/hapijs/hapi/issues/1126) serve pre-compressed files when available
 - [#1102](https://github.com/hapijs/hapi/issues/1102) How to exclude views from layout
-- [#1070](https://github.com/hapijs/hapi/issues/1070) TypeError when validate.\* is set to false
+- [#1070](https://github.com/hapijs/hapi/issues/1070) TypeError when validate.* is set to false
 
 ### [1.16.1](https://github.com/hapijs/hapi/milestone/67) {#1.16.1}
 
@@ -2293,7 +2301,7 @@
 - [#1103](https://github.com/hapijs/hapi/pull/1103) allow arrays of scopes on routes
 - [#1101](https://github.com/hapijs/hapi/issues/1101) Multipart configuration options (upload dir, hash)
 - [#1094](https://github.com/hapijs/hapi/issues/1094) 404 not being caught by onPreResponse function
-- [#1091](https://github.com/hapijs/hapi/pull/1091) Only set access-control-allow-origin if the origin header value matches (or '\*' is allowed)
+- [#1091](https://github.com/hapijs/hapi/pull/1091) Only set access-control-allow-origin if the origin header value matches (or '*' is allowed)
 
 ### [1.14.0](https://github.com/hapijs/hapi/milestone/64) <span class="breaking-badge"></span> {#1.14.0}
 
@@ -2399,7 +2407,7 @@
 - [#973](https://github.com/hapijs/hapi/issues/973) Expose pack start/stop events
 - [#972](https://github.com/hapijs/hapi/issues/972) Add dtrace probes to hapi
 - [#959](https://github.com/hapijs/hapi/pull/959) Adding foundation for dtrace probe support
-- [#954](https://github.com/hapijs/hapi/issues/954) Question: Is it OK to use \_cache as general purpose cache?
+- [#954](https://github.com/hapijs/hapi/issues/954) Question: Is it OK to use _cache as general purpose cache?
 
 ### [1.8.3](https://github.com/hapijs/hapi/milestone/50) {#1.8.3}
 
@@ -2501,7 +2509,7 @@
 - [#873](https://github.com/hapijs/hapi/issues/873) using a plugin with a package in node_modules doesn't work if cwd other than the main directory
 - [#872](https://github.com/hapijs/hapi/issues/872) Test for invalid incoming path without leading '/'
 - [#870](https://github.com/hapijs/hapi/issues/870) Response treats objects as errors based on too trivial keys
-- [#869](https://github.com/hapijs/hapi/issues/869) Request.\_replyInterface called twice but does not share wasProcessed state
+- [#869](https://github.com/hapijs/hapi/issues/869) Request._replyInterface called twice but does not share wasProcessed state
 - [#868](https://github.com/hapijs/hapi/issues/868) Potential leak when aborting reading a payload if max size reached
 - [#857](https://github.com/hapijs/hapi/issues/857) pack.path sometimes not ending in a '/'
 
@@ -2510,14 +2518,14 @@
 - [#880](https://github.com/hapijs/hapi/pull/880) Performance and hawk options
 - [#879](https://github.com/hapijs/hapi/issues/879) Support all Hawk and Bewit options
 - [#878](https://github.com/hapijs/hapi/pull/878) Adding Client request socket timeout
-- [#871](https://github.com/hapijs/hapi/issues/871) \* allowed in path but used as special character in route fingerprint
+- [#871](https://github.com/hapijs/hapi/issues/871) * allowed in path but used as special character in route fingerprint
 - [#863](https://github.com/hapijs/hapi/pull/863) Absolute paths now work correctly with hapi command
 - [#862](https://github.com/hapijs/hapi/pull/862) Minor performance tweaks
 - [#861](https://github.com/hapijs/hapi/issues/861) hapi -p argument no longer supports absolute path to node_modules
 - [#860](https://github.com/hapijs/hapi/pull/860) Adding hapi bin test and fixing issue with no plugins
 - [#859](https://github.com/hapijs/hapi/pull/859) Fixing test
 - [#858](https://github.com/hapijs/hapi/pull/858) Added missing done() call in test
-- [#856](https://github.com/hapijs/hapi/issues/856) Remove \_log() wrapper
+- [#856](https://github.com/hapijs/hapi/issues/856) Remove _log() wrapper
 
 ### [1.2.0](https://github.com/hapijs/hapi/milestone/36) <span class="breaking-badge"></span> {#1.2.0}
 
@@ -2567,7 +2575,7 @@
 ### [1.0.2](https://github.com/hapijs/hapi/milestone/34) {#1.0.2}
 
 - [#815](https://github.com/hapijs/hapi/issues/815) Using TLS settings with Buffer
-- [#813](https://github.com/hapijs/hapi/issues/813) text/\* content-type always echo back the received content
+- [#813](https://github.com/hapijs/hapi/issues/813) text/* content-type always echo back the received content
 
 ### [1.0.1](https://github.com/hapijs/hapi/milestone/33) {#1.0.1}
 
@@ -2717,14 +2725,14 @@
 - [#633](https://github.com/hapijs/hapi/pull/633) pack interface cleanup
 - [#632](https://github.com/hapijs/hapi/pull/632) Adding example of cookie failAction
 - [#630](https://github.com/hapijs/hapi/pull/630) shot 0.1.0, Buffer response type, encoding
-- [#628](https://github.com/hapijs/hapi/issues/628) Support text/\* encoding for incoming payloads
+- [#628](https://github.com/hapijs/hapi/issues/628) Support text/* encoding for incoming payloads
 - [#627](https://github.com/hapijs/hapi/issues/627) Allow unknown content-type when not parsing
 - [#626](https://github.com/hapijs/hapi/issues/626) shot 0.1.0
 - [#625](https://github.com/hapijs/hapi/issues/625) Buffer response type
 - [#622](https://github.com/hapijs/hapi/issues/622) Document response object header method
 - [#621](https://github.com/hapijs/hapi/issues/621) Setting charset to UTF-8
-- [#619](https://github.com/hapijs/hapi/pull/619) hawk 0.10, payload cleanup, text/\* parse support
-- [#618](https://github.com/hapijs/hapi/issues/618) Support parsing text/\* mime types
+- [#619](https://github.com/hapijs/hapi/pull/619) hawk 0.10, payload cleanup, text/* parse support
+- [#618](https://github.com/hapijs/hapi/issues/618) Support parsing text/* mime types
 - [#617](https://github.com/hapijs/hapi/pull/617) Upgrade to Hawk 0.9.0
 - [#616](https://github.com/hapijs/hapi/pull/616) Cookie Max-Age is in seconds, not msec
 - [#615](https://github.com/hapijs/hapi/pull/615) Using path.join where possible
@@ -2838,7 +2846,7 @@
 
 - [#474](https://github.com/hapijs/hapi/pull/474) 0.13.2
 - [#472](https://github.com/hapijs/hapi/pull/472) Fix matching of wildcard path param with trailing /
-- [#471](https://github.com/hapijs/hapi/issues/471) /{p\*} doesn't match /path/
+- [#471](https://github.com/hapijs/hapi/issues/471) /{p*} doesn't match /path/
 - [#466](https://github.com/hapijs/hapi/pull/466) Directory listing at top level folders now link correctly
 - [#465](https://github.com/hapijs/hapi/issues/465) directory list using the directory handler produces wrong URLs
 - [#464](https://github.com/hapijs/hapi/issues/464) index option for directory module doesn't work on subdirs
@@ -2926,7 +2934,7 @@
 - [#322](https://github.com/hapijs/hapi/pull/322) Docs handler refactor
 - [#319](https://github.com/hapijs/hapi/issues/319) Doc configuration should let you set the auth mode
 - [#314](https://github.com/hapijs/hapi/pull/314) Multiple auth schemes
-- [#309](https://github.com/hapijs/hapi/issues/309) Bring monitor/\* to 100% test coverage
+- [#309](https://github.com/hapijs/hapi/issues/309) Bring monitor/* to 100% test coverage
 - [#303](https://github.com/hapijs/hapi/issues/303) Handle %-encoding of '/' in route and request paths
 - [#302](https://github.com/hapijs/hapi/issues/302) Consider object key name sizes in calculating object memory usage in memory cache
 - [#270](https://github.com/hapijs/hapi/issues/270) Multiple auth scheme support
@@ -2959,13 +2967,13 @@
 
 ### [0.9.1](https://github.com/hapijs/hapi/milestone/8) {#0.9.1}
 
-- [#277](https://github.com/hapijs/hapi/pull/277) Changed matching rule of {param\*}, Oz tests
+- [#277](https://github.com/hapijs/hapi/pull/277) Changed matching rule of {param*}, Oz tests
 - [#275](https://github.com/hapijs/hapi/pull/275) Prevent basic routes collision
 - [#268](https://github.com/hapijs/hapi/pull/268) Tests, extension auth schemes
-- [#265](https://github.com/hapijs/hapi/issues/265) Document new path option {param\*n}
+- [#265](https://github.com/hapijs/hapi/issues/265) Document new path option {param*n}
 - [#264](https://github.com/hapijs/hapi/issues/264) Bring all individual file test coverage to over 90%
 - [#263](https://github.com/hapijs/hapi/issues/263) Add tests to /test/unit/route.js
-- [#262](https://github.com/hapijs/hapi/pull/262) Support /path/{param\*} syntax
+- [#262](https://github.com/hapijs/hapi/pull/262) Support /path/{param*} syntax
 - [#260](https://github.com/hapijs/hapi/issues/260) Extension auth schemes
 - [#258](https://github.com/hapijs/hapi/pull/258) Adding support for etag and last-modified headers
 - [#256](https://github.com/hapijs/hapi/issues/256) Don't cache responses other than 200
