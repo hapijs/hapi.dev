@@ -68,7 +68,7 @@ components/           # Vue 3 components
 docs/                 # VitePress markdown pages and static assets
   ├── api/            # hapi core API docs (dynamic routes)
   ├── module/         # Module pages (install, API, changelog)
-  ├── tutorials/      # Tutorials in 5 languages (en_US, ko_KR, pt_BR, tr_TR, zh_CN)
+  ├── tutorials/      # Tutorials in 6 languages (en_US, es_ES, ko_KR, pt_BR, tr_TR, zh_CN)
   ├── policies/       # Policy pages
   ├── resources/      # Resources (changelog, status, books, etc.)
   └── public/         # Static assets (images, plugins.json)
@@ -81,7 +81,7 @@ generated/            # Auto-generated data (from pnpm fetch-data)
 
 ## Tutorials
 
-Tutorials live in `docs/tutorials/{locale}/` with one markdown file per tutorial. Available locales: `en_US`, `ko_KR`, `pt_BR`, `tr_TR`, `zh_CN`.
+Tutorials live in `docs/tutorials/{locale}/` with one markdown file per tutorial. Available locales: `en_US`, `es_ES`, `ko_KR`, `pt_BR`, `tr_TR`, `zh_CN`.
 
 To add a new translation, create a directory under `docs/tutorials/` with the locale code (e.g. `fr_FR`) and add markdown files matching the English tutorial filenames.
 

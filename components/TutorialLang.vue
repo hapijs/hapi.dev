@@ -24,6 +24,7 @@ const savedLang = useStorage('hapi-tutorial-lang', '');
 
 const languages = [
     { label: 'English', locale: 'en_US' },
+    { label: 'Español', locale: 'es_ES' },
     { label: '한국어', locale: 'ko_KR' },
     { label: 'Português', locale: 'pt_BR' },
     { label: 'Türkçe', locale: 'tr_TR' },
@@ -32,13 +33,13 @@ const languages = [
 
 const currentSlug = computed(() => {
     const { path } = route;
-    const match = path.match(/\/tutorials\/(?:en_US|ko_KR|pt_BR|tr_TR|zh_CN)\/(.+?)(?:\.html)?$/);
+    const match = path.match(/\/tutorials\/(?:en_US|es_ES|ko_KR|pt_BR|tr_TR|zh_CN)\/(.+?)(?:\.html)?$/);
     return match ? match[1] : 'getting-started';
 });
 
 const currentLocale = computed(() => {
     const { path } = route;
-    const match = path.match(/\/tutorials\/(en_US|ko_KR|pt_BR|tr_TR|zh_CN)\//);
+    const match = path.match(/\/tutorials\/(en_US|es_ES|ko_KR|pt_BR|tr_TR|zh_CN)\//);
     return match ? match[1] : 'en_US';
 });
 

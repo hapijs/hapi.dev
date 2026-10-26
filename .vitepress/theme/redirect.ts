@@ -52,7 +52,7 @@ export const getRedirectPath = (toPath: string) => {
     if (tutorialMatch) {
         const oldName = tutorialMatch.at(1)!;
         // If it's a locale code, skip (it's a directory)
-        if (['en_US', 'ko_KR', 'pt_BR', 'tr_TR', 'zh_CN'].includes(oldName)) {
+        if (['en_US', 'es_ES', 'ko_KR', 'pt_BR', 'tr_TR', 'zh_CN'].includes(oldName)) {
             return null;
         }
         const newName = tutorialRenames[oldName] ?? oldName;

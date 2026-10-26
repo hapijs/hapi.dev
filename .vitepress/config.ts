@@ -197,6 +197,7 @@ export default defineConfig({
                 },
             ],
             '/tutorials/en_US/': getTutorialSidebar('en_US'),
+            '/tutorials/es_ES/': getTutorialSidebar('es_ES'),
             '/tutorials/ko_KR/': getTutorialSidebar('ko_KR'),
             '/tutorials/pt_BR/': getTutorialSidebar('pt_BR'),
             '/tutorials/tr_TR/': getTutorialSidebar('tr_TR'),
