@@ -65,6 +65,7 @@ const tutorialItems = [
     { slug: 'routing', text: 'Routing' },
     { slug: 'server-methods', text: 'Server Methods' },
     { slug: 'serving-files', text: 'Serving Files' },
+    { slug: 'sse', text: 'Server-Sent Events' },
     { slug: 'testing', text: 'Testing' },
     { slug: 'validation', text: 'Validation' },
     { slug: 'views', text: 'Views' },
