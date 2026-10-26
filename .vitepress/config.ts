@@ -61,6 +61,7 @@ const tutorialItems = [
     { slug: 'lifecycle-hooks', text: 'Lifecycle Hooks' },
     { slug: 'logging', text: 'Logging' },
     { slug: 'plugins', text: 'Plugins' },
+    { slug: 'response-marshalling', text: 'Response Marshalling' },
     { slug: 'routing', text: 'Routing' },
     { slug: 'server-methods', text: 'Server Methods' },
     { slug: 'serving-files', text: 'Serving Files' },
