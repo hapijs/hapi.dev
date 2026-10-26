@@ -1,26 +1,31 @@
 ---
-title: Caching
+title: Önbellekleme
 ---
 
 <TutorialLang />
 
-## Önbellekleme
+# Önbellekleme
 
-_Bu kurs hapi v17 ile uyumludur_
+_Bu eğitim hapi v21 ve sonraki sürümlerle uyumludur_
 
-### İstemci taraflı önbellekleme
+## <a name="overview"></a> Genel Bakış
 
-HTTP protokolü, tarayıcı ve benzeri istemcilerin kaynakları önbelleklemeleri için bazı HTTP başlıkları tayin eder. Bu başlıklar hakkında daha fazla bilgi edinmek ve kullanım senaryonuza hangisinin yatkın olduğuna karar vermek için [Google tarafından oluşturulan bu rehbere](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching) bir göz atabilirsiniz.
+hapi iki düzeyde önbellekleme yapar ve çoğu uygulama ikisini de kullanır:
 
-Bu öğreticinin ilk bölümü, hapinin istemcilere bu başlıkları göndermek üzere nasıl yapılandırılacağını gösterir.
+| Düzey                          | Kopyanın tutulduğu yer                                        | Neyi kazandırır                                     | Nasıl yapılandırılır                                                                          |
+| ------------------------------ | ------------------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| [İstemci tarafı](#client-side) | tarayıcı ya da aradaki bir CDN veya proxy                     | isteğin tamamını: istemci hapi'ye hiç ulaşmaz       | HTTP header'ları: `Cache-Control`, `ETag`, `Last-Modified`                                    |
+| [Sunucu tarafı](#server-side)  | bellek, Redis ya da başka bir [catbox](/module/catbox) deposu | pahalı işi: bir veritabanı sorgusu, bir API çağrısı | `server.cache()` ya da önbelleğe alınmış bir [server method](/tutorials/tr_TR/server-methods) |
 
-#### Cache-Control
+## <a name="client-side"></a> İstemci Tarafında Önbellekleme
 
-`Cache-Control` başlığı tarayıcıya ve tüm ara önbelleklere bir kaynağın önbelleklenebilir olup olmadığını ve eğer öyleyse ne kadar süre önbelleklenmesi gerektiğini söyler. Örneğin, `Cache-Control:max-age=30, must-revalidate, private` ilgili kaynağın tarayıcı tarafından otuz saniye boyunca önbelleklenebileceğini ve `private` ara önbellekler tarafından değil yalnızca tarayıcı tarafından önbelleklenmesi gerektiği söyler. `must-revalidate` önbellek süresi dolduğunda sunucudan kaynağın yenisinin istenmesi gerektiği anlamına gelir.
+HTTP header'ları, istemcilere bir yanıtı yeniden kullanıp kullanamayacaklarını ve ne kadar süreyle kullanabileceklerini söyler. MDN'nin [HTTP önbellekleme rehberi](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching) bu header'ları ayrıntılı olarak açıklar. Bu bölüm hapi'nin onları nasıl ayarladığını gösterir.
 
-Hadi bu başlığı hapi ile nasıl ayarlayabileceğimize bakalım:
+### <a name="cache-control"></a> Cache-Control
 
-```javascript
+Route'un `cache` seçeneğini ayarla, `Cache-Control` header'ını hapi senin için yazsın:
+
+```ts
 server.route({
     path: '/hapi/{ttl?}',
     method: 'GET',
@@ -28,7 +33,7 @@ server.route({
         const response = h.response({ be: 'hapi' });
 
         if (request.params.ttl) {
-            response.ttl(request.params.ttl);
+            response.ttl(Number(request.params.ttl));
         }
 
         return response;
@@ -42,108 +47,146 @@ server.route({
 });
 ```
 
-Yukarıdaki örnek bir yol (route) üzerinde nasıl `cache` seçeneklerini ayarlayabileceğini gösteriyor. Burada `expiresIn` değerini 30 saniye ve `privacy` değerini `private` olarak ayarladık.
+`response.ttl(msec)`, tek bir yanıt için `expiresIn` değerini geçersiz kılar. hapi'nin gönderdiği header yanıta bağlıdır:
 
-Bu örnek aynı zamanda `expiresIn` değerinin üzerine [yanıt nesnesi](/api#response-object) arayüzünde bulunan `ttl(msec)` yöntemi ile yazılabileceğini gösteriyor.
+| İstek                                                        | `Cache-Control` header'ı                       |
+| ------------------------------------------------------------ | ---------------------------------------------- |
+| `GET /hapi`                                                  | `max-age=30, must-revalidate, private`         |
+| `GET /hapi/5000` (`response.ttl(5000)` çağırır)              | `max-age=5, must-revalidate, private`          |
+| 200 ya da 204 dışında bir yanıt durumu, örneğin 404 veya 500 | `no-cache` (route'un `cache.otherwise` değeri) |
 
-`/hapi`ye bir istekte bulunursak yanıt başlığı olarak `cache-control: max-age=30, must-revalidate, private` alırız. Eper isteği `/hapi/5000`e yaparsak bunun yerine şu başlık gelir: `cache-control: max-age=5, must-revalidate, private`.
+Bilmen gerekenler:
 
-[yol-secenekleri (route options)](/api#route-options) bağlantısından daha fazla genel `cache` yapılandırma seçeneği bulabilirsiniz.
+- İstek kimliği doğrulanmış bir istekse, route `privacy: 'public'` dese bile hapi her zaman `private` ekler. CDN gibi paylaşılan önbellekler `private` yanıtları asla saklamaz.
+- `h.state()` ile ayarlanan cookie'ler header'ı değiştirmez: hapi bunları `Cache-Control` oluşturulduktan sonra yazar. Cookie ayarlayan ve önbelleğe alınan route'larda `privacy: 'private'` değerini kendin ayarla.
+- Yalnızca route'un `cache.statuses` listesindeki durum kodları (varsayılan `[200, 204]`) `max-age` alır. Hata yanıtları yanlışlıkla önbelleğe alınmaz.
 
-#### Last-Modified
+Tüm `cache` ayarları için [route seçeneklerine](/api#route-options-cache) bak.
 
-Bazı durumlarda, sunucu bir kaynağın son düzenlendiği tarihi sağlayabilir. Durağan içerikler sunmak için [inert](https://github.com/hapijs/inert) eklentisini kullanırken otomatik olarak her yanıta `Last-Modified` başlığı eklenir.
+### <a name="last-modified"></a> Koşullu istekler: ETag ve Last-Modified
 
-Bir yanıtta `Last-Modified` başlığı ayarlandığında hapi bu bilgiyi istemciden gelen `If-Modified-Since` başlığıyla karşılaştırarak yanıt durum kodunun `304 Not Modified` olup olmayacağına karar verir. Bu olay anı zamanda koşullu GET isteği olarak da bilinir. Bu yanıtın güzel tarafı, `304` yanıtı alan tarayıcının aynı içeriği tekrar indirmesine gerek kalmamasıdır.
+Koşullu bir istek, istemcinin "bu, benim kopyamdan bu yana değişti mi?" diye sormasını ve tam gövde yerine boş bir `304 Not Modified` almasını sağlar:
 
-`lastModified` bilgsinin bir `Date` nesnesi olduğunu varsayarsak bu başlığı [yanıt nesnesi (response object)](/api#response-object) kullanarak şu şekilde ayarlayabilirsiniz:
-
-```javascript
-return h.response(result).header('Last-Modified', lastModified.toUTCString());
+```mermaid
+sequenceDiagram
+    participant B as Tarayıcı
+    participant S as hapi sunucusu
+    B->>S: GET /report
+    S-->>B: 200 gövdeyle, ETag "v42"
+    Note over B: gövdeyi ve ETag değerini saklar
+    B->>S: If-None-Match "v42" ile GET /report
+    Note over S: handler çalışır ve ETag "v42" değerini yeniden ayarlar,<br/>hapi eşleşmeyi görür
+    S-->>B: 304 Not Modified, gövde yok
 ```
 
-Bu yazının [son bölümünde](#istemci-ve-sunucu-önbellekleme) `Last-Modified` kullanan bir örnek daha var.
+`ETag` değerini [`response.etag()`](/api#response-object) ile ayarla; genellikle bir sürüm numarasından ya da içeriğin hash'inden:
 
-#### ETag
-
-ETag, zaman damgası paylaşan `Last-Modified` başlığına alternatif olarak sunucunun bir jeton (genellikle kaynağın sağlama toplamı (checksum)) paylaştığı başlıktır. Tarayıcı bu jetonu bir sonraki isteğinde `If-None-Match` başlığını ayarlamak için kullanır. Sunucu bu başlığın değerini güncel `ETag` sağlama toplamıyla karşılaştırarak aynı ise `304` döner.
-
-Başlığınızda `ETag` kullanmak için yalnızca `etag(tag, options)` işlevini kullanmanız yeterli:
-
-```javascript
-return h.response(result).etag('xxxxxxxxx');
+```ts
+return h.response(report).etag(String(report.version));
 ```
 
-Kullanılabilecek daha fazla argüman ve seçenek için [yanıt nesnesi (response object)](/api#response-object) altında bulunan `etag` dokümantasyonuna bir göz atabilirsin.
+Ya da `Last-Modified` ayarla; hapi bunu istemcinin `If-Modified-Since` header'ıyla karşılaştırır:
 
-### Sunucu taraflı önbellekleme
+```ts
+return h.response(report).header('Last-Modified', report.updatedAt.toUTCString());
+```
 
-hapi [catbox](https://www.github.com/hapijs/catbox) ile güçlü ve pratik sunucu taraflı önbellekleme sunar. Bu öğretici bölümü catbox'ı nasıl kullanman gerektiğini anlamana yardımcı olacaktır.
+Bilmen gerekenler:
 
-Catbox'ın iki arayüzü bulunur: istemci (client) ve politika (policy).
+- hapi `304` yanıtını yalnızca `GET` route'larında (ve metodu `*` olan route'larda) verir.
+- Handler yine her istekte çalışır. Koşullu istekler bant genişliğinden tasarruf sağlar, sunucu işinden değil. İkisinden de tasarruf etmek için bunları [sunucu tarafı önbelleklemeyle](#server-side) birlikte kullan.
+- [inert](/module/inert), statik dosyalar için `ETag` ve `Last-Modified` değerlerini otomatik olarak ayarlar.
 
-#### Client (Istemci)
+## <a name="server-side"></a> Sunucu Tarafında Önbellekleme
 
-[İstemci (client)](https://github.com/hapijs/catbox#client) anahtar-değer eşleri alıp-verebileceğin alt seviye bir arayüzdür. Şu adaptörlerden birisi ile başlatılır: ([Hafıza (memory)](https://github.com/hapijs/catbox-memory), [Redis](https://github.com/hapijs/catbox-redis), [mongoDB](https://github.com/hapijs/catbox-mongodb), [Memcached](https://github.com/hapijs/catbox-memcached), ya da [Riak](https://github.com/DanielBarnes/catbox-riak)).
+hapi değerleri sunucuda [catbox](/module/catbox) aracılığıyla önbelleğe alır. catbox, birbirinin yerine kullanılabilen depolama adaptörlerine sahip bir anahtar-değer deposudur: bellek (varsayılan), [Redis](/module/catbox-redis) ve [Memcached](/module/catbox-memcached).
 
-hapi varsayılan olarak [catbox memory](https://github.com/hapijs/catbox-memory) adaptörünü kullanarak bir [İstemci (client)](https://github.com/hapijs/catbox#client) başlatır. Nasıl daha fazla istemci başlatacağına bir bakalım:
+### <a name="catbox"></a> catbox
 
-```javascript
-'use strict';
+Önbelleğe alınan öğeler üç düzeyde düzenlenir:
 
-const Hapi = require('@hapi/hapi');
+```mermaid
+flowchart TD
+    C["<b>cache client</b><br/>Redis gibi tek bir depolama bağlantısı"] --> S1["<b>segment</b> '#sum'<br/>bir server method'un öğeleri"]
+    C --> S2["<b>segment</b> '!my-plugin'<br/>bir plugin'in öğeleri"]
+    S1 --> I1["öğe id '1:5'"]
+    S1 --> I2["öğe id '2:3'"]
+    S2 --> I3["öğe id 'user:42'"]
+```
+
+catbox bu öğelere iki arayüz sunar:
+
+- **[Client](/module/catbox#client)**: düşük seviyeli depolama bağlantısı. hapi senin için bir bellek client'ı oluşturur; diğerlerini sunucunun `cache` seçeneğinde eklersin.
+- **[Policy](/module/catbox#policy)**: bir client'ın, süre dolma kuralları ve eksik değerleri üreten isteğe bağlı bir fonksiyonu olan bir segment'i. Kodun policy'leri kullanır; bunlar [`server.cache()`](/api#server-cache-options) ile ya da bir [server method](#servermethods) önbelleğe alınarak oluşturulur.
+
+### <a name="client"></a> Client
+
+Varsayılan bellek client'ının yanına `my_cache` adında bir Redis client'ı ekle:
+
+```ts
+import Hapi from '@hapi/hapi';
+import { Engine as CatboxRedis } from '@hapi/catbox-redis';
 
 const server = Hapi.server({
     port: 8000,
     cache: [
         {
-            name: 'mongoCache',
-            engine: require('catbox-mongodb'),
-            host: '127.0.0.1',
-            partition: 'cache',
-        },
-        {
-            name: 'redisCache',
-            engine: require('catbox-redis'),
-            host: '127.0.0.1',
-            partition: 'cache',
+            name: 'my_cache',
+            provider: {
+                constructor: CatboxRedis,
+                options: {
+                    partition: 'my_cached_data',
+                    host: 'redis-cluster.domain.com',
+                    port: 6379,
+                    database: 0,
+                    tls: {},
+                },
+            },
         },
     ],
 });
 ```
 
-Yukarıdaki örnekte, iki tane catbox istemcisi tanımladık: mongoCache ve redisCache. hapi tarafından oluşturulan hafıza önbelleğini de sayarsak üç tane önbellek istemcisi oldu. Yeni bir önbellek istemcisi tanımlarken `name` özelliğini es geçerek varsayılan istemciyi değiştirebilirsiniz. `partition` adaptöre önbelleğin nasıl adlandırılacağını söyler (varsayılan olarak 'catbox'). [mongoDB](http://www.mongodb.org/)'de bu veri tabanı adı ve [redis](http://redis.io/)'te anahtar ön eki olarak karşımıza çıkar.
+- `name`, policy'lerin bu client'ı `cache: 'my_cache'` ile seçmesini sağlar. Bunun yerine varsayılan bellek client'ını değiştirmek için `name` değerini belirtme.
+- `partition`, bu uygulamanın anahtarlarını aynı Redis veritabanını paylaşan diğerlerinden ayrı tutar. Redis'te bir anahtar önekine dönüşür. Varsayılanı `'catbox'` değeridir.
+- Önbellek client'ları sunucu başlarken, [`server.initialize()`](/api#await-server-initialize) ya da [`server.start()`](/api#await-server-start) içinde bağlanır. Policy'ler bundan önce okuma veya yazma yapamaz.
 
-#### Policy (Politika)
+### <a name="policy" /> Policy
 
-[Politika (policy)](https://github.com/hapijs/catbox#policy) istemciye nazaran daha üst seviye bir arayüzdür. Aşağıda iki sayıyı birbirine ekleyip sonucu önbellekleyen basit bir örnek bulunuyor. Bu basit örneğin ortaya koyduğu prensipleri kullanarak bir fonksiyon çağrısının sonucunu, asenkron olsun olmasın önbellekleyebilirsin. [server.cache(options)](/api#-servercacheoptions) daha sonra yol işleyici (route handler) tarafından kullanılmak üzere yeni bir [politika (policy)](https://github.com/hapijs/catbox#policy) oluşturur.
+[`server.cache(options)`](/api#server-cache-options) bir policy oluşturur. Bu örnek yavaş bir toplama işleminin sonucunu on saniye boyunca önbellekte tutar:
 
-```javascript
+```ts
+import Hapi from '@hapi/hapi';
+import * as Hoek from '@hapi/hoek';
+
+const add = async (a: string, b: string) => {
+    await Hoek.wait(1000); // Simulates a slow database call
+
+    return Number(a) + Number(b);
+};
+
 const start = async () => {
-    const add = async (a, b) => {
-        await Hoek.wait(1000); // Yavaş I/O simülasyonu
-
-        return Number(a) + Number(b);
-    };
+    const server = Hapi.server({ port: 8000 });
 
     const sumCache = server.cache({
-        cache: 'mongoCache',
+        segment: 'sums',
         expiresIn: 10 * 1000,
-        segment: 'customSegment',
         generateFunc: async (id) => {
-            return await add(id.a, id.b);
+            const key = typeof id === 'string' ? id : id.id;
+            const [a, b] = key.split(':');
+
+            return await add(a, b);
         },
         generateTimeout: 2000,
     });
 
-    server.route({
+    server.route<{ Params: { a: string; b: string } }>({
         path: '/add/{a}/{b}',
         method: 'GET',
         handler: async function (request, h) {
             const { a, b } = request.params;
-            const id = `${a}:${b}`;
 
-            return await sumCache.get({ id, a, b });
+            return await sumCache.get(`${a}:${b}`);
         },
     });
 
@@ -155,76 +198,128 @@ const start = async () => {
 start();
 ```
 
-Eğer http://localhost:8000/add/1/5 adresine bir istekte bulunursan bir saniye sonra `6` yanıtı almalısın. İsteği tekrarlarsan sonuç anında gelir çünkü bu kez sonuç önbellek tarafından sunulmaktadır. Eğer on saniye bekleyip isteği tekrar etseydin yine biraz beklediğini görecektin çünkü önbellek değeri önbellekten silinmiş olacaktı.
+`GET /add/1/5` yaklaşık bir saniye sonra `6` yanıtını verir. On saniye içinde tekrarlarsan yanıt önbellekten anında gelir.
 
-`cache` seçeneği hapiye hangi [istemci (client)](https://github.com/hapijs/catbox#client)yi kullanacağını söyler.
+| Seçenek           | Anlamı                                                                                                                                                                                                  |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `segment`         | Bu policy'nin öğelerini adlandırır. Sunucu kökünde zorunludur. Bir plugin içinde varsayılanı `'!' + plugin name` (plugin adı) olur. İki policy, `shared: true` ayarlamadıkça aynı segment'i paylaşamaz. |
+| `cache`           | Kullanılacak client; örneğin `'my_cache'`. Varsayılanı bellek client'ıdır.                                                                                                                              |
+| `expiresIn`       | Bir öğenin saklandıktan sonra ne kadar yaşayacağı, milisaniye cinsinden. Bunun yerine `expiresAt: 'HH:MM'` her şeyin günün belirli bir saatinde dolmasını sağlar.                                       |
+| `generateFunc`    | `get()` hiçbir şey bulamadığında değeri oluşturur. catbox sonucu saklar.                                                                                                                                |
+| `generateTimeout` | `get()` fonksiyonunun `503 Service Unavailable` ile başarısız olmadan önce `generateFunc` için ne kadar bekleyeceği. `generateFunc` ile birlikte zorunludur; `false` sonsuza kadar bekler.              |
 
-`sumCache.get()` işlevinin ilk değiştirgesi `id` olarak kullanılmak üzere bir metin ya da içerisinde tekil tanımlayıcı olarak kullanılmak üzere `id` özelliği olan bir nesne olabilir.
+`get()` fonksiyonuna verilen id ya bir string ya da `id` string'i içeren bir nesnedir ve `generateFunc` onu değiştirilmeden alır. catbox bunun tipini `string | { id: string }` olarak belirler, bu yüzden örnek, onu yeniden `a` ve `b` olarak bölmeden önce tipini daraltır.
 
-**partitionlar**a ek olarak, bir [istemci (client)](https://github.com/hapijs/catbox#client) bölmelendirmesi içerisinde daha fazla izolasyon sağlayacak **segmentler** var. İki farklı yöntem sonucunu önbelleklemek isterseniz genelde bunları birbirine karıştırmak istemezsiniz. [mongoDB](http://www.mongodb.org/) adaptörlerinde `segment` bir koleksiyonu temsil ederken, [redis](http://redis.io/)'te `partition` için eklenen öneke ek olarak eklenen bir önektir.
+### <a name="stale"></a> Yeniden üretilirken bayat değerleri sunmak
 
-Bir eklenti içerisinden [server.cache()](/api#-servercacheoptions) çağırıldığında `segment`in varsayılan değeri `'!pluginName'` olur. [Sunucu yöntemleri (server methods)](/tutorials/servermethods) oluştururken `segment` değeri `'#methodName'` olur. Eğer bir segmenti paylaşan birden fazla politikanın olduğu bir durum varsa, bunun için de [paylasılan (shared)](/api#-servercacheoptions) seçeneği mevcut.
+Süresi dolmuş bir öğe, bir sonraki çağıranı `generateFunc` için bekletir. Bu beklemeden kaçınmak için öğeleri süreleri dolmadan önce `staleIn` ile bayat olarak işaretle. Bayat bir öğe sunulmaya devam ederken catbox onu arka planda yeniden üretir:
 
-#### Sunucu Yöntemi
+```mermaid
+flowchart TD
+    G["sumCache.get(id)"] --> Q{öğe önbellekte mi?}
+    Q -->|"taze: staleIn süresinden genç"| F[önbellekteki değeri döndür]
+    Q -->|"bayat: staleIn süresinden eski"| R["generateFunc çağır"]
+    R --> R1["staleTimeout içinde yeni değer:<br/>döndür ve sakla"]
+    R --> R2["staleTimeout süresinden yavaş:<br/>bayat değeri hemen döndür,<br/>yenisini geldiğinde sakla"]
+    Q -->|eksik ya da süresi dolmuş| M["generateFunc çağır"]
+    M --> M1["generateTimeout içinde değer:<br/>döndür ve sakla"]
+    M --> M2["generateTimeout süresinden yavaş:<br/>503 Service Unavailable"]
+```
 
-Daha iyi olabilir! Yüzde doksan beş ihtimal önbellekleme için [sunucu yöntemleri (server methods)](/tutorials/servermethods)ni kullanacaksınız çünkü daha az basmakalıp kullanmak gerekiyor. Hadi önceki örneği sunucu yöntemi ile tekrar yazalım:
+```ts
+const reportCache = server.cache({
+    segment: 'reports',
+    expiresIn: 60 * 60 * 1000,
+    staleIn: 10 * 60 * 1000,
+    staleTimeout: 100,
+    generateTimeout: 5000,
+    generateFunc: async (id) => await buildReport(id),
+});
+```
 
-```javascript
+catbox `staleIn < expiresIn` koşulunu zorunlu kılar, `staleIn` ayarlandığında `staleTimeout` ister ve `staleTimeout < expiresIn - staleIn` koşulunu gerektirir. Aynı id için eşzamanlı `get()` çağrıları tek bir `generateFunc` çağrısını paylaşır; böylece eksik bir öğe için gelen bir istek yığını veritabanını bir kez sorgular. `dropOnError` ve `generateOnReadError` gibi hata yönetimi ayarları için [policy seçeneklerine](/module/catbox#policy) bak.
+
+### <a name="servermethods"></a> Server method'lar
+
+Çoğu zaman önbelleğe alınmış bir [server method](/tutorials/tr_TR/server-methods), elle oluşturulmuş bir policy'den daha kısadır. hapi policy'yi oluşturur, segment'ini `'#sum'` olarak adlandırır ve öğe id'sini argümanlardan üretir:
+
+```ts
+import Hapi from '@hapi/hapi';
+import * as Hoek from '@hapi/hoek';
+
+declare module '@hapi/hapi' {
+    interface ServerMethods {
+        sum: (a: string, b: string) => Promise<number>;
+    }
+}
+
+const add = async (a: string, b: string) => {
+    await Hoek.wait(1000);
+
+    return Number(a) + Number(b);
+};
+
 const start = async () => {
-    // ...
+    const server = Hapi.server({ port: 8000 });
 
     server.method('sum', add, {
         cache: {
-            cache: 'mongoCache',
             expiresIn: 10 * 1000,
             generateTimeout: 2000,
         },
     });
 
-    server.route({
+    server.route<{ Params: { a: string; b: string } }>({
         path: '/add/{a}/{b}',
         method: 'GET',
         handler: async function (request, h) {
             const { a, b } = request.params;
+
             return await server.methods.sum(a, b);
         },
     });
 
     await server.start();
-
-    // ...
 };
 
 start();
 ```
 
-[server.method()](/api#-servermethodname-method-options) otomatik olarak `segment: '#sum'` kesitiyle yeni bir [politika (policy)](https://github.com/hapijs/catbox#policy) oluşturdu. Ayrıca değiştirgelerle tekil bir `id`(önbellek anahtarı)'de oluşturuldu. Varsayılan olarak, `string`, `number` ve `boolean` değiştirgelerle çalışabilir. Daha kompleks değiştirgeler için değiştirgeleri kullanarak nasıl tekil tanımlayıcılar üretileceğini belirleyen bir `generateKey` işlevi tanımlamalısın. - [Sunucu yöntemleri](/tutorials/servermethods) öğreticisinden daha fazla bilgi alabilirsin.
+- `declare module` bloğu hapi'nin `ServerMethods` arayüzüne `sum` ekler, böylece `server.methods.sum` bir tipe sahip olur.
+- hapi öğe id'sini `string`, `number` ve `boolean` argümanlarından üretir; örneğin `'1:5'`. Diğer argüman tipleri bir [`generateKey`](/tutorials/tr_TR/server-methods#key) fonksiyonu gerektirir.
 
-#### Sırada ne var?
+## <a name="clientandserver"></a> İstemci ve Sunucu Önbellekleme
 
-- catbox politikasının [seçenekler](https://github.com/hapijs/catbox#policy)inin içine bakarak ve catbox önbelleklemenin tüm potansiyelinden faydalanmak için `staleIn`, `staleTimeout`, `generateTimeout` kısımlarına özellikle dikkat etmelisiniz.
-- Daha fazla örnek için [sunucu yöntemleri (server methods)](http://hapijs.com/tutorials/servermethods) öğreticisine göz atabilirsin.
+İki düzeyi birleştir: sunucu önbelleği her değeri ne zaman sakladığını kaydeder ve bu zaman, yanıt için doğru `Last-Modified` değeridir. `getDecoratedValue: true` ayarla; önbelleğe alınan metot çıplak değer yerine `{ value, cached, report }` döndürür. Değer yeni üretildiyse `cached` değeri `null` olur:
 
-### İstemci ve Sunucu önbellekleme
+```ts
+import Hapi from '@hapi/hapi';
+import * as Hoek from '@hapi/hoek';
 
-İsteğe bağlı olarak, [Catbox Politikası (Catbox Policy)](https://github.com/hapijs/catbox#policy) önbellekten döndürülen değer hakkında daha fazla bilgi verebilir. Bunun için politikayı yaratırken `getDecoratedValue` seçeneği true olarak ayarlanır. Bu şekilde sunucu yönteminden dönen tüm değerler `{ value, cached, report }` şeklinde birer nesne olur. `value` önbellekten dönen değeri barındırırken, `cached` ve `report` değeri önbellek durumu hakkında daha fazla bilgi sunar.
+declare module '@hapi/hapi' {
+    interface ServerMethods {
+        sum: (a: string, b: string) => Promise<{ value: number; cached: { stored: number } | null }>;
+    }
+}
 
-`cached.stored` zaman damgasının `last-modified` başlığını ayarlamak için beraber çalışan kullanışı güzel bir sunucu taraflı-istemci taraflı önbellekleme örneğidir.
+const add = async (a: string, b: string) => {
+    await Hoek.wait(1000);
 
-```javascript
+    return Number(a) + Number(b);
+};
+
 const start = async () => {
-    //...
+    const server = Hapi.server({ port: 8000 });
 
-    server.method('sum', add, {
-        cache: {
-            cache: 'mongoCache',
-            expiresIn: 10 * 1000,
-            generateTimeout: 2000,
-            getDecoratedValue: true,
-        },
-    });
+    const cache = {
+        expiresIn: 10 * 1000,
+        generateTimeout: 2000,
+        getDecoratedValue: true,
+    };
 
-    server.route({
+    server.method('sum', add, { cache });
+
+    server.route<{ Params: { a: string; b: string } }>({
         path: '/add/{a}/{b}',
         method: 'GET',
         handler: async function (request, h) {
@@ -232,14 +327,14 @@ const start = async () => {
             const { value, cached } = await server.methods.sum(a, b);
             const lastModified = cached ? new Date(cached.stored) : new Date();
 
-            return h.response(value).header('Last-modified', lastModified.toUTCString());
+            return h.response({ sum: value }).header('Last-Modified', lastModified.toUTCString());
         },
     });
 
     await server.start();
-
-    // ...
 };
+
+start();
 ```
 
-`cached` ve `report` hakkında daha fazlasını [Catbox Politika API dokümanları (Catbox Policy API docs)](https://github.com/hapijs/catbox#api-1)nda bulabilirsin.
+`cached` ve `report` değerlerinin neler içerdiğini görmek için [policy API](/module/catbox#api-1) sayfasına bak.
