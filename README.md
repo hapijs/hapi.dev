@@ -85,6 +85,8 @@ Tutorials live in `docs/tutorials/{locale}/` with one markdown file per tutorial
 
 To add a new translation, create a directory under `docs/tutorials/` with the locale code (e.g. `fr_FR`) and add markdown files matching the English tutorial filenames.
 
+A ` ```mermaid ` code block renders as a diagram (`components/Mermaid.vue`), loaded only on pages that have one; clicking a diagram opens it in a zoomable viewer. Mark key flowchart nodes with `class A,B highlight` instead of inline styles, so they follow the site theme in light and dark mode, and say in the text which nodes are highlighted and why, since color alone carries no meaning for every reader.
+
 ## Plugins
 
 hapi.dev maintains a list of community-created plugins at [hapi.dev/plugins](http://hapi.dev/plugins). The plugin data lives in `docs/public/lib/plugins.json`. To add a plugin, send a [pull request](https://github.com/hapijs/hapi.dev/blob/master/docs/public/lib/plugins.json) with your addition. Please keep plugins in alphabetical order within their category.

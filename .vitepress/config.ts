@@ -88,6 +88,17 @@ export default defineConfig({
     markdown: {
         config(md) {
             md.use(groupIconMdPlugin);
+
+            // ```mermaid fences render client-side through components/Mermaid.vue.
+            const fence = md.renderer.rules.fence!;
+            md.renderer.rules.fence = (tokens, idx, options, env, self) => {
+                const token = tokens[idx];
+                if (token.info.trim() !== 'mermaid') {
+                    return fence(tokens, idx, options, env, self);
+                }
+
+                return `<Mermaid code="${encodeURIComponent(token.content)}" />`;
+            };
         },
         lineNumbers: true,
         theme: {
@@ -204,6 +215,8 @@ export default defineConfig({
     title: 'hapi.dev',
     titleTemplate: 'hapi.dev - :title',
     vite: {
+        // Pre-bundled at startup; otherwise the first page with a diagram triggers a re-optimization and full reload.
+        optimizeDeps: { include: ['mermaid'] },
         plugins: [groupIconVitePlugin()],
     },
 });

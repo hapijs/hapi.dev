@@ -6,6 +6,7 @@ import './variables.css';
 import './main.css';
 import 'virtual:group-icons.css';
 
+import { setupMermaidZoom } from './mermaid-zoom.js';
 import { getRedirectPath } from './redirect.js';
 
 import type { Theme } from 'vitepress';
@@ -13,6 +14,7 @@ import type { Theme } from 'vitepress';
 const ApiOutline = defineAsyncComponent(() => import('../../components/ApiOutline.vue'));
 const CarbonAds = defineAsyncComponent(() => import('../../components/CarbonAds.vue'));
 const HomeContent = defineAsyncComponent(() => import('../../components/HomeContent.vue'));
+const Mermaid = defineAsyncComponent(() => import('../../components/Mermaid.vue'));
 const ModuleIndex = defineAsyncComponent(() => import('../../components/ModuleIndex.vue'));
 const PluginsDirectory = defineAsyncComponent(() => import('../../components/PluginsDirectory.vue'));
 const StatusContent = defineAsyncComponent(() => import('../../components/StatusContent.vue'));
@@ -27,12 +29,15 @@ export default {
     enhanceApp({ app, router }) {
         app.component('ApiOutline', ApiOutline);
         app.component('HomeContent', HomeContent);
+        app.component('Mermaid', Mermaid);
         app.component('ModuleIndex', ModuleIndex);
         app.component('PluginsDirectory', PluginsDirectory);
         app.component('StatusContent', StatusContent);
         app.component('TutorialLang', TutorialLang);
 
         if (typeof window !== 'undefined') {
+            setupMermaidZoom();
+
             router.onBeforeRouteChange = (to) => {
                 const target = getRedirectPath(to);
                 if (target) {
