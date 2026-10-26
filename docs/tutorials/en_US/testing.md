@@ -6,101 +6,110 @@ title: Testing
 
 # Testing
 
-_This tutorial is compatible with hapi v17 and newer_
+_This tutorial is compatible with hapi v21 and newer_
 
 ## <a name="overview"></a> Overview
 
-Hapi is designed for creating robust, testable applications. To this end, Hapi includes the ability to test routes without having to actually start a server, completely avoiding the time overheads and added complexity of the TCP protocol.
+hapi can test routes without opening a port. `server.inject()` sends a fake request through the full request lifecycle (routing, authentication, validation, the handler, and the response) and hands you the response, with no network involved. Tests run fast and never collide over ports.
 
-This tutorial goes into a basic setup for testing routes, and outlines one possible setup for a testable application using [lab](/module/lab) and [code](/module/code).
+This tutorial uses [lab](/module/lab) as the test runner and [code](/module/code) for assertions, but `server.inject()` works the same from [Mocha](https://mochajs.org/), [Jest](https://jestjs.io/), [Vitest](https://vitest.dev/), or the Node.js test runner.
 
-## <a name="lab"></a> lab
-
-`lab` is a simple test utility for Node.js. Unlike other test utilities, lab uses only async/await features and includes everything you should expect from a modern Node.js test utility. `lab` works with any assertion library that throws an error when a condition isn't met. For this tutorial, you will be using the `code` assertion library.
-
-To install `lab`, type the following in your terminal:
-
-`npm install --save-dev @hapi/lab`
-
-## <a name="code"></a> code
-
-`code` is based on the `chai` assertions library. It was created to be a small, simple, and intuitive assertions library that could be run without plugins, extensions, and have low overhead.
-
-To install `code`, type the following in your terminal:
-
-`npm install --save-dev @hapi/code`
+```sh
+npm install --save-dev @hapi/lab @hapi/code
+```
 
 ## <a name="server"></a> Server Setup
 
-Taking the server example from the Getting Started tutorial, we make a minor modification to it, such that it doesn't automatically start when referenced from our tests. You might call this file `server.js` and place it in the `lib` directory of your project:
+Keep the code that builds the server apart from the code that starts it. Production starts the server on a port; tests only initialize it and send requests with `server.inject()`:
 
-```js
-'use strict';
+```
+myproject/
+├── index.ts            # production entry point: calls start()
+├── lib/
+│   └── server.ts       # builds the server, exports init() and start()
+├── test/
+│   └── example.test.ts # calls init() and server.inject()
+└── package.json
+```
 
-const Hapi = require('@hapi/hapi');
+`lib/server.ts` builds a new server on every call, so each test gets its own server with no state left over from the previous test:
 
-const server = Hapi.server({
-    port: 3000,
-    host: 'localhost',
-});
+```ts
+import Hapi from '@hapi/hapi';
 
-server.route({
-    method: 'GET',
-    path: '/',
-    handler: function () {
-        return 'Hello World!';
-    },
-});
+const createServer = () => {
+    const server = Hapi.server({
+        port: 3000,
+        host: 'localhost',
+    });
 
-exports.init = async () => {
+    server.route({
+        method: 'GET',
+        path: '/',
+        handler: function () {
+            return 'Hello World!';
+        },
+    });
+
+    return server;
+};
+
+export const init = async () => {
+    const server = createServer();
     await server.initialize();
     return server;
 };
 
-exports.start = async () => {
+export const start = async () => {
+    const server = createServer();
     await server.start();
     console.log(`Server running at: ${server.info.uri}`);
     return server;
 };
+```
+
+The production entry point only starts the server:
+
+```ts
+import { start } from './lib/server.ts';
 
 process.on('unhandledRejection', (err) => {
     console.log(err);
     process.exit(1);
 });
-```
-
-You now export, but do not call, `init()` and `start()`. This will allow you to initialize and start the server from different files. The `init()` function will initialize the server (starts the caches, finalizes plugin registration) but does not start the server. This is what you will use in your tests. The `start()` function will actually start the server. This is what you will use in our main entry-point for the server:
-
-```js
-`use strict`;
-
-const { start } = require('lib/server');
 
 start();
 ```
 
-What you've created here is a way of starting the server normally by calling its start function in our entry-point, and exposing a port for external HTTP traffic, but you've also got a module which doesn't do anything by default, which you can use in our tests.
+The difference between the two functions:
+
+|                                     | [`server.initialize()`](/api#await-server-initialize) | [`server.start()`](/api#await-server-start) |
+| ----------------------------------- | ----------------------------------------------------- | ------------------------------------------- |
+| Checks plugin dependencies          | yes                                                   | yes                                         |
+| Starts caches                       | yes                                                   | yes                                         |
+| Runs `onPreStart` extensions        | yes                                                   | yes                                         |
+| Listens on the port                 | no                                                    | yes                                         |
+| Emits `'start'`, runs `onPostStart` | no                                                    | yes                                         |
+
+Tests use `initialize()` so caches and `onPreStart` setup run exactly as in production, without binding a port.
 
 ## <a name="writingTest"></a> Writing a Route Test
 
-In this example you'll use [lab](/module/lab), but the same method can be used for any testing tool such as [Mocha](https://mochajs.org/), [Jest](https://jestjs.io/), [Tap](https://www.node-tap.org/), [Ava](https://github.com/avajs) etc.
+Create `test/example.test.ts`:
 
-By default, `lab` loads all the '\*.js' files inside the local `test` directory and executes the tests found. To use different directories or files, pass the file or directories as arguments:
+```ts
+import Lab from '@hapi/lab';
+import { expect } from '@hapi/code';
 
-`$  lab unit.js`
+import { init } from '../lib/server.ts';
 
-To get started, create a file called `example.test.js` in the `test` directory:
+import type { Server } from '@hapi/hapi';
 
-```js
-'use strict';
-
-const Lab = require('@hapi/lab');
-const { expect } = require('@hapi/code');
-const { afterEach, beforeEach, describe, it } = (exports.lab = Lab.script());
-const { init } = require('../lib/server');
+export const lab = Lab.script();
+const { afterEach, beforeEach, describe, it } = lab;
 
 describe('GET /', () => {
-    let server;
+    let server: Server;
 
     beforeEach(async () => {
         server = await init();
@@ -115,23 +124,52 @@ describe('GET /', () => {
             method: 'get',
             url: '/',
         });
+
         expect(res.statusCode).to.equal(200);
+        expect(res.payload).to.equal('Hello World!');
     });
 });
 ```
 
-Here you are testing whether or not our `'GET'` route will respond with a `200` status code. You first call `describe()` to provide the structure of your test. `describe()` takes two parameters, a description of the test, and the function that will setup the test.
+- lab finds the tests through the exported `lab` script.
+- `describe()` groups tests, and `it()` defines one test. `beforeEach()` and `afterEach()` run around every test.
+- `server` is typed with hapi's `Server` type because it is assigned later, in `beforeEach()`.
+- `server.stop()` after each test stops caches and runs `onPreStop` and `onPostStop` extensions, so nothing leaks between tests.
 
-Note that you call `init` rather than `start` to set up the server, which means that the server starts, but does not listen on a socket. After each test you call `stop` to cleanup and stop the server.
+### What `server.inject()` gives you
 
-The `it()` function is what will run your test. `it()` takes two parameters, a description of a successful test, and a function to run the test.
+`server.inject()` takes the request as an object and returns the response:
 
-You will note the use of `inject` on the server. `inject` uses [Shot](/module/shot) to `inject` a request directly into hapi's route handler. This is the magic which allows us to test HTTP methods.
+| Request option  | Use it for                                                                                                  |
+| --------------- | ----------------------------------------------------------------------------------------------------------- |
+| `method`, `url` | The route to call.                                                                                          |
+| `payload`       | The request body. Objects are sent as JSON.                                                                 |
+| `headers`       | Request headers, such as `authorization` or `cookie`.                                                       |
+| `auth`          | `{ strategy, credentials }` to skip the authentication strategy and test a protected route as a given user. |
 
-To run the tests, you can modify the `package.json` of your project to run your test runner:
+| Response property | Contains                                                                                 |
+| ----------------- | ---------------------------------------------------------------------------------------- |
+| `statusCode`      | The HTTP status code.                                                                    |
+| `headers`         | The response headers.                                                                    |
+| `payload`         | The response body as a string, exactly as a client would receive it.                     |
+| `result`          | The value the handler returned, before it was serialized. Compare objects with this one. |
+| `request`         | The hapi request object, for checking `request.auth`, `request.app`, and so on.          |
+
+See [`server.inject()`](/api#await-server-inject-options) for every option.
+
+## <a name="running"></a> Running the Tests
+
+lab only discovers `.js`, `.mjs`, and `.cjs` files on its own, so pass the TypeScript test files as arguments. Add a script to `package.json`:
 
 ```json
-  "scripts": {
-    "test": "lab -v **/*.test.js"
-  }
+{
+    "scripts": {
+        "test": "lab -v test/*.test.ts"
+    }
+}
 ```
+
+Then run `npm test`. Node.js strips the types when lab imports the files, so there is no build step.
+
+- Run lab without `--typescript`, `-t`, or `-c`; Node.js already handles the TypeScript.
+- To measure coverage, install [c8](https://github.com/bcoe/c8) with `npm install --save-dev c8`, and run lab under it: `c8 lab test/*.test.ts`.
