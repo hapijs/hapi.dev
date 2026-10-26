@@ -46,7 +46,7 @@ export default {
                 }
             };
 
-            const initialTarget = getRedirectPath(window.location.pathname);
+            const initialTarget = getRedirectPath(window.location.pathname + window.location.hash);
             if (initialTarget) {
                 router.go(initialTarget);
             }
