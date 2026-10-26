@@ -6,135 +6,139 @@ title: Routing
 
 # Routing
 
-_This tutorial is compatible with hapi v17 and newer_
+_This tutorial is compatible with hapi v21 and newer_
 
 ## <a name="overview"></a> Overview
 
-When defining a route in hapi, you need three basic elements: the path, the method, and a handler. These are passed to your server as an object, and can be as simple as the following:
+A route needs three things: a `method`, a `path`, and a `handler`. You add it with [`server.route()`](/api#server-route-route):
 
-```js
+```ts
 server.route({
     method: 'GET',
     path: '/',
-    handler: function (request, h) {
+    handler: (request, h) => {
         return 'Hello World!';
     },
 });
 ```
 
+`server.route()` also accepts an array of route objects, so you can register many routes in one call.
+
 ## <a name="methods"></a> Methods
 
-The route above responds to a `GET` request to `/` with the string `Hello World!`. The method option can be any valid HTTP method, or an array of methods. Let's say you want the same response when your user sends either a `PUT` or a `POST` request, you could do that with the following:
+`method` is any HTTP method except `HEAD` (GET routes answer HEAD requests), an array of methods, or `'*'` for all of them:
 
-```js
+```ts
 server.route({
     method: ['PUT', 'POST'],
     path: '/',
-    handler: function (request, h) {
+    handler: (request, h) => {
         return 'I did something!';
     },
 });
 ```
 
+A route for `GET` also answers `HEAD` requests, so you never need a separate `HEAD` route.
+
 ## <a name="path"></a> Path
 
-The path option must be a string, though it can contain named parameters. To name a parameter in a path, simply wrap it with `{}`. For example:
+Wrap a path segment in `{}` to capture it as a named parameter. Its value is available on `request.params`:
 
-```js
-server.route({
+```ts
+import * as Hoek from '@hapi/hoek';
+
+server.route<{ Params: { user: string } }>({
     method: 'GET',
     path: '/hello/{user}',
-    handler: function (request, h) {
-        return `Hello ${request.params.user}!`;
+    handler: (request, h) => {
+        return `Hello ${Hoek.escapeHtml(request.params.user)}!`;
     },
 });
 ```
 
-Note: It is best practice to always return escaped and validated user inputs such as query/path parameters. This is done to prevent echo or XSS attacks. One way to do this is to use [Hoek](/module/hoek) `escapeHtml()` method. With escaping in place, the above example would look like the following:
+A request to `/hello/ferris` replies `Hello ferris!`.
 
-```js
-return `Hello ${Hoek.escapeHtml(request.params.user)}!`;
-```
+- hapi URI-decodes parameter values, so `/hello/a%20b` gives `request.params.user === 'a b'`.
+- The value comes straight from the URL. Escape it before you put it in HTML, as the [Hoek](/module/hoek) `escapeHtml()` call does above, or validate it with [joi](/tutorials/en_US/validation).
+- Since hapi 21.4.10, `request.params` values are typed `unknown` by default. The type argument `server.route<{ Params: { user: string } }>()` declares the shape, so `request.params.user` is a `string` in the handler. The same type argument accepts `Query`, `Payload`, `Headers`, and the other request parts below.
 
-As you can see above, you have the string `{user}` in your path, which means you're asking for that segment of the path to be assigned to a named parameter. These parameters are stored in the object `request.params` within the handler. Since you named your parameter user, you are able to access the value with the property `request.params.user`, after URI encoding it so as to prevent content injection attacks. For example, going to `/hello/ferris` in your browser, you will see `Hello ferris!`.
+### <a name="optionalParameters"></a> Parameter types
 
-## <a name="optionalParameters"></a> Optional Parameters
+| Path                | Matches                                  | `request.params`                    |
+| ------------------- | ---------------------------------------- | ----------------------------------- |
+| `/hello/{user}`     | `/hello/ferris`                          | `{ user: 'ferris' }`                |
+| `/hello/{user?}`    | `/hello`, `/hello/ferris`                | `{}` or `{ user: 'ferris' }`        |
+| `/hello/{user*2}`   | `/hello/john/doe` (exactly two segments) | `{ user: 'john/doe' }`              |
+| `/files/{path*}`    | `/files`, `/files/a`, `/files/a/b/c`     | `{}` or `{ path: 'a/b/c' }`         |
+| `/{filename}.{ext}` | `/photo.jpg`                             | `{ filename: 'photo', ext: 'jpg' }` |
 
-In the above example, the user parameter is required: a request to `/hello/bob` or `/hello/susan` will work, but a request to `/hello` will not. In order to make a parameter optional, put a question mark at the end of the parameter's name. Here is the same route, but updated to make the `user` parameter optional:
+Rules hapi enforces when you add the route:
 
-```js
-server.route({
-    method: 'GET',
-    path: '/hello/{user?}',
-    handler: function (request, h) {
-        const user = request.params.user ? request.params.user : 'stranger';
+- `{user*}` and a whole-segment optional `{user?}` must be the last segment of the path. `{user*2}` and a partial-segment optional such as `/a{user?}/b` can appear anywhere.
+- Two parameters in one segment need a literal separator between them: `{filename}.{ext}` is valid, `{filename}{ext}` is not.
+- A parameter name can appear only once per path.
+- Two routes with the same method and an equivalent path conflict, and `server.route()` throws. `/{name}` and `/{other}` are equivalent.
 
-        return `Hello ${user}!`;
-    },
-});
-```
+### <a name="multiParameters"></a> Multi-segment parameters
 
-Now a request to `/hello/sloan` will reply with `Hello sloan!` and a request to just `/hello` will reply with `Hello stranger!`. It is important to be aware that only the last named parameter in a path can be optional. That means that `/{one?}/{two}/` is an invalid path, since in this case there is another parameter after the optional one. You may also have a named parameter covering only part of a segment of the path for instance `/{filename}.jpg` is valid. You may also have multiple parameters per segment provided there is non-parameter separator between them, meaning `/{filename}.{ext}` is valid whereas `/{filename}{ext}` is not.
+A multi-segment parameter holds the matched segments joined with `/`, so split it to get the parts:
 
-## <a name="multiParameters"></a> Multi-Segment Parameters
-
-Along with optional path parameters, you can also allow parameters that match multiple segments. In order to do this, you use an asterisk and a number. For example:
-
-```js
-server.route({
+```ts
+server.route<{ Params: { user: string } }>({
     method: 'GET',
     path: '/hello/{user*2}',
-    handler: function (request, h) {
-        const userParts = request.params.user.split('/');
+    handler: (request, h) => {
+        const [first, last] = request.params.user.split('/');
 
-        return `Hello ${userParts[0]} ${userParts[1]}!`;
+        return `Hello ${first} ${last}!`;
     },
 });
 ```
 
-With this configuration, a request to `/hello/john/doe` will reply with the string `Hello john doe!`. The important thing to note here is that the parameter is actually the string `"john/doe"`. That's why you did a split on that character to get the two separate parts. The number after the asterisk represents how many path segments should be assigned to the parameter. You can also omit the number entirely, and the parameter will match any number of segments available. Like the optional parameters, a wildcard parameter (for example `/{files*}`) may only appear as the last parameter in your path.
+A request to `/hello/john/doe` replies `Hello john doe!`.
 
-When determining what handler to use for a particular request, hapi searches paths in order from most specific to least specific. That means if you have two routes, one with the path `/filename.jpg` and a second route `/filename.{ext}` a request to `/filename.jpg` will match the first route, and not the second. This also means that a route with the path `/{files*}` will be the last route tested, and will only match if all other routes fail.
+### <a name="specificity"></a> Which route wins
 
-## <a name="query"></a> Query Parameters
+hapi does not try routes in the order you added them. For each path segment it tries the kinds of match from most to least specific, and falls back to the next kind when the rest of the path does not match:
 
-Query parameters are common way of sending data to the server. Query parameters are sent via the URL in a `key=value` format. For example:
+```mermaid
+flowchart TD
+    L["1. literal<br/>/filename.jpg"] -->|no match| M["2. mixed<br/>/{name}.jpg"]
+    M -->|no match| P["3. parameter<br/>/{name}"]
+    P -->|no match| W["4. wildcard<br/>/{any*}"]
+    W -->|no match| N[404 Not Found]
+```
 
-`localhost:3000?name=ferris&location=chicago`
+With these four routes registered:
 
-There are two query parameters here, `name=ferris` and `location=chicago`. In hapi, you can access query parameters by the `request.query` object.
+| Request         | Route that answers |
+| --------------- | ------------------ |
+| `/filename.jpg` | `/filename.jpg`    |
+| `/photo.jpg`    | `/{name}.jpg`      |
+| `/photo`        | `/{name}`          |
+| `/a/b`          | `/{any*}`          |
 
-```js
-server.route({
+Paths are case-sensitive by default: with the routes above, `/Filename.jpg` is answered by `/{name}.jpg`. Set [`router.isCaseSensitive`](/api#server-options-router) to `false` on the server to change that.
+
+## <a name="query"></a> Query parameters
+
+`request.query` holds the parsed query string. For `/?name=ferris&location=chicago`:
+
+```ts
+server.route<{ Query: { name: string } }>({
     method: 'GET',
     path: '/',
-    handler: function (request, h) {
+    handler: (request, h) => {
         return `Hello ${request.query.name}!`;
     },
 });
 ```
 
-Here, you simply access the `name` query parameter and return it in the handler, which would read `Hello ferris!`.
+hapi's built-in parser does not understand nested keys: `/?foo[bar]=baz` gives `{ 'foo[bar]': 'baz' }`. To parse nested keys, set the server's `query.parser` to a parser such as [qs](https://github.com/ljharb/qs):
 
-For more complex query structures, you may opt to use the `qs` module. Consider the following:
-
-```js
-server.route({
-    method: 'GET',
-    path: '/',
-    handler: function (request, h) {
-        return request.query;
-    },
-});
-```
-
-If you sent the request `localhost:3000?foo[bar]=baz`, hapi, by default would return `{ "foo[bar]": "baz" }`.
-
-With the [qs](https://github.com/ljharb/qs) module, you can parse the query string out. An example:
-
-```js
-const Hapi = require('@hapi/hapi');
-const Qs = require('qs');
+```ts
+import Hapi from '@hapi/hapi';
+import Qs from 'qs';
 
 const server = Hapi.server({
     port: 3000,
@@ -147,141 +151,103 @@ const server = Hapi.server({
 server.route({
     method: 'GET',
     path: '/',
-    handler: function (request, h) {
+    handler: (request, h) => {
         return request.query;
     },
 });
 
-const init = async () => {
-    await server.start();
-    console.log('Server running on %s', server.info.uri);
-};
-
-process.on('unhandledRejection', (err) => {
-    console.log(err);
-    process.exit(1);
-});
-
-init();
+await server.start();
+console.log('Server running on %s', server.info.uri);
 ```
 
-Here, you first require the [qs](https://github.com/ljharb/qs) module.
+Now `/?foo[bar]=baz` replies `{ "foo": { "bar": "baz" } }`. The parser receives the query hapi already parsed, such as `{ 'foo[bar]': 'baz' }`, not the raw string. Any function works, as long as it returns an object of parameter names to values.
 
-Second, you set the query parameters parser method by setting the `server.options.query.parser` value. In this case, you use the `Qs.parse()` method where `query` is an object containing the incoming `request.query` parameters. Now, anything coming into `request.query` will be parsed with `Qs.parse()`.
+## <a name="requestpayload"></a> Request payload
 
-Lastly, you returned the parsed query string, which would now be:
+The parsed request body is on `request.payload`. hapi parses JSON, form-encoded, and text bodies based on the `Content-Type` header. Multipart bodies need the route option `payload: { multipart: true }`; without it they get `415 Unsupported Media Type`:
 
-```
-{
-    "foo": {
-        "bar": "baz"
-    }
-}
-```
-
-Note: In the above example, you used the [qs](https://github.com/ljharb/qs) module to handle our parsing, but any parser will do, be it from `npm` or even custom. Just be aware that the method must return an object where each key is a parameter and matching value is the parameter value.
-
-## <a name="requestpayload"></a> Request Payload
-
-Anytime you send request data to your API, you will be able to access this data in the route handler with `request.payload`. See the following:
-
-```js
-server.route({
+```ts
+server.route<{ Payload: { username: string; password: string } }>({
     method: 'POST',
     path: '/signup',
-    handler: function (request, h) {
-        const payload = request.payload;
-
-        return `Welcome ${payload.username}!`;
+    handler: (request, h) => {
+        return `Welcome ${request.payload.username}!`;
     },
 });
 ```
 
-In the above example, the handler receives data via `request.payload`. In this case, the `request.payload` contains an object that stores user sign up data:
-
-`{ username: 'ferris', password: 'password' }`
-
-Note: It's always best practice to validate the incoming payload, as it may contain unsafe data. See validation tutorial for more info.
+The type argument only tells TypeScript the shape. Nothing checks it at runtime until you add [payload validation](/tutorials/en_US/validation).
 
 ## <a name="handler"></a> Handler
 
-The handler option is a function that accepts two parameters, `request`, and `h`.
+The handler receives two arguments:
 
-The `request` parameter is an object with details about the end user's request, such as path [parameters](#parameters), an [associated payload](#requestpayload), [query parameters](#query), authentication information, headers, etc. Full documentation on what the `request` object contains can be found in the [API reference](/api#request-properties).
+- `request` holds everything about the incoming request: `params`, `query`, `payload`, `headers`, `auth`, and more. See the [request object](/api#request).
+- `h` is the [response toolkit](/api#response-toolkit), with methods such as `h.response()` and `h.redirect()`.
 
-The second parameter, `h`, is the response toolkit, an object with several methods used to respond to the request. As you've seen in the previous examples, if you wish to respond to a request with some value, you simply return it from the handler. The payload may be a string, a buffer, a JSON serializable object, a stream or a promise.
+What the handler returns becomes the response:
 
-Alternatively you may pass the same value to `h.response(value)` and return that from the handler. The result of this call is a response object, that can be chained with additional methods to alter the response before it is sent. For example `h.response('created').code(201)` will send a payload of created with an HTTP status code of 201. You may also set headers, content type, content length, send a redirection response, and many other things that are documented in the [API reference](/api#response-toolkit).
+| Handler returns                        | Response                                                           |
+| -------------------------------------- | ------------------------------------------------------------------ |
+| a string                               | `200`, `text/html; charset=utf-8`                                  |
+| an object or array                     | `200`, `application/json; charset=utf-8`                           |
+| a `Buffer`                             | `200`, `application/octet-stream`                                  |
+| a readable stream                      | `200`, the stream piped to the client                              |
+| `h.response(value)` with chained calls | full control, for example `h.response('created').code(201)`        |
+| a thrown error                         | an error response, `500` unless it is a [boom](/module/boom) error |
 
-The `handler` option must return a value, a promise, or throw an error.
+A handler must return a value, a promise, or throw. [Response Marshalling](/tutorials/en_US/response-marshalling) covers how hapi turns these values into the bytes it sends.
 
-Note: handlers using a fat arrow style function cannot be bound to any `server.bind()` property. Instead, the bound context is available under [`h.context`](/api#h.context).
+Arrow functions cannot use `this`, so a handler written as an arrow function reads the value set by [`server.bind()`](/api#server-bind-context) from [`h.context`](/api#h-context) instead.
 
 ## <a name="options"></a> Options
 
-Aside from these three basic elements, you may also specify an `options` parameter for each route. This is where you configure things like validation, authentication, prerequisites, payload processing, and caching options. More details can be found in the linked tutorials, as well as the [API reference](/api#route-options).
+Everything beyond method, path, and handler goes in the route's `options`:
 
-Here we will look at some options of validating with Joi.
+```ts
+import Joi from 'joi';
 
-```js
-server.route({
+server.route<{ Payload: { username: string; password: string } }>({
     method: 'POST',
     path: '/signup',
-    handler: function (request, h) {
-        const payload = request.payload;
-
-        return `Welcome ${payload.username}!`;
-    },
     options: {
         auth: false,
         validate: {
-            payload: {
-                username: Joi.string().min(1).max(20),
-                password: Joi.string().min(7),
-            },
+            payload: Joi.object({
+                username: Joi.string().min(1).max(20).required(),
+                password: Joi.string().min(7).required(),
+            }),
         },
+    },
+    handler: (request, h) => {
+        return `Welcome ${request.payload.username}!`;
     },
 });
 ```
 
-The first property under `options` is `auth`. `auth` will set the authentication configuration for the route. Since this route is for a new user signing up, you will disable authentication.
+| Option     | What it controls                          | Learn more                                          |
+| ---------- | ----------------------------------------- | --------------------------------------------------- |
+| `auth`     | which authentication strategy applies     | [Authentication](/tutorials/en_US/auth)             |
+| `validate` | checks on params, query, payload, headers | [Validation](/tutorials/en_US/validation)           |
+| `cache`    | `Cache-Control` headers for the response  | [Caching](/tutorials/en_US/caching)                 |
+| `payload`  | body parsing, size limits, uploads        | [route payload options](/api#route-options-payload) |
+| `pre`      | methods that run before the handler       | [route pre options](/api#route-options-pre)         |
+| `ext`      | lifecycle hooks for this route only       | [Lifecycle Hooks](/tutorials/en_US/lifecycle-hooks) |
 
-The second property is `validate`. This allows you to set validation rules for various request components, such as `headers`, `params`, `payload`, and `failAction`. You use the [joi](https://joi.dev) package to validate the `request.payload`. For more info, please check the validation tutorial.
+The full list is in the [route options reference](/api#route-options).
 
-## <a name="missing"></a> 404 Handling
+## <a name="missing"></a> 404 handling
 
-404 errors will happen whenever your server can't find what was the resource that was requested. It is best practice to handle these errors the proper way. This is easy to do in hapi, by just employing a route that will catch everything your other routes will not. The following example shows how to setup a route to return a custom `404` response.
+When no route matches, hapi replies with a `404` JSON error. To send your own response instead, add a catch-all route. The `{any*}` wildcard is the least specific match, so it only answers requests no other route takes:
 
-```js
-'use strict';
-
-const Hapi = require('@hapi/hapi');
-
-const internals = {};
-
-const init = async () => {
-    const server = Hapi.server({
-        port: 3000,
-        host: 'localhost',
-    });
-
-    server.route({
-        method: '*',
-        path: '/{any*}',
-        handler: function (request, h) {
-            return h.response('404 Error! Page Not Found!').code(404);
-        },
-    });
-
-    await server.start();
-    console.log('Server running on %s', server.info.uri);
-};
-
-init();
+```ts
+server.route({
+    method: '*',
+    path: '/{any*}',
+    handler: (request, h) => {
+        return h.response('404 Error! Page Not Found!').code(404);
+    },
+});
 ```
 
-First, you configure our server.
-
-Next, you setup your route that return your custom 404 response. You use a wildcard, `*`, for the method, so it covers all available methods. Then, you use a very broad, generic path, `'/{any*}`. This will catch any route that our other routes do not. hapi routes will go the the most specific path first, then get broader, till it finds a match. For example, `localhost:3000/login` will go to the `/login` route and not the `/{any*}` route.
-
-Lastly, you return a custom 404 response in your handler, letting your users know that the resource they are asking for could not be found.
+The catch-all route only covers unmatched paths. A `404` thrown by a matched route, such as a handler that throws `Boom.notFound()`, never reaches it. To customize every `404`, whatever produced it, change the response in an `onPreResponse` hook; see [Lifecycle Hooks](/tutorials/en_US/lifecycle-hooks).

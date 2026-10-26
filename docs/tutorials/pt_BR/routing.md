@@ -1,117 +1,253 @@
 ---
-title: Routing
+title: Roteamento
 ---
 
 <TutorialLang />
 
-## Rotas
+# Roteamento
 
-Quando definimos uma rota no Hapi, assim como em outros frameworks, são necessários três elementos básicos: o caminho, o método e o manipulador. Estes elementos são passados para o servidor como um objeto, e pode ser tão simples quanto o exemplo seguinte:
+_Este tutorial é compatível com o hapi v21 e versões mais recentes_
 
-```javascript
+## <a name="overview"></a> Visão geral
+
+Uma rota precisa de três coisas: um `method`, um `path` e um `handler`. Você a adiciona com [`server.route()`](/api#server-route-route):
+
+```ts
 server.route({
     method: 'GET',
     path: '/',
-    handler: function (request, reply) {
-        reply('Hello!');
+    handler: (request, h) => {
+        return 'Hello World!';
     },
 });
 ```
 
-## Métodos
+`server.route()` também aceita um array de objetos de rota, então você pode registrar várias rotas em uma única chamada.
 
-Está rota responde a um método `GET` com a `string` 'Hello!'. A opção `method` pode ser qualquer qualquer método http válido, ou uma `array` de métodos. Você dizer que você deseja a mesma resposta quando o usuário envia tanto um pedido `PUT` quanto o `POST`, você poderia fazer isso da seguinte forma:
+## <a name="methods"></a> Métodos
 
-```javascript
+`method` é qualquer método HTTP exceto `HEAD` (rotas GET respondem a requisições HEAD), um array de métodos, ou `'*'` para todos eles:
+
+```ts
 server.route({
     method: ['PUT', 'POST'],
     path: '/',
-    handler: function (request, reply) {
-        reply('I did something!');
+    handler: (request, h) => {
+        return 'I did something!';
     },
 });
 ```
 
-## Caminho
+Uma rota `GET` também responde a requisições `HEAD`, então você nunca precisa de uma rota `HEAD` separada.
 
-A opção `path` deve ser uma `string` e também poderá conter parâmetros nomeados. Para indicar o parâmetro na `string` basta involve-lo com `{}`. Por exemplo:
+## <a name="path"></a> Caminho
 
-```javascript
-server.route({
+Envolva um segmento do caminho com `{}` para capturá-lo como um parâmetro nomeado. O valor fica disponível em `request.params`:
+
+```ts
+import * as Hoek from '@hapi/hoek';
+
+server.route<{ Params: { user: string } }>({
     method: 'GET',
     path: '/hello/{user}',
-    handler: function (request, reply) {
-        reply('Hello ' + encodeURIComponent(request.params.user) + '!');
+    handler: (request, h) => {
+        return `Hello ${Hoek.escapeHtml(request.params.user)}!`;
     },
 });
 ```
 
-Como você pode ver acima, temos o parâmetro `{user}` no nosso caminho, isso significa que estamos atribuindo este segmento do caminho a um parâmetro nomeado. Estes parâmetros são armazenados no objeto `request.params` junto com o manipulador. Desde que nomeamos nosso parâmetro `user` podemos acessar seu valor com a propriedade `request.params.user` depois da codificação da URI de modo a evitar ataques de injeção de conteúdo.
+Uma requisição para `/hello/ferris` responde `Hello ferris!`.
 
-### Parâmetros Opcionais
+- O hapi faz o URI-decode dos valores dos parâmetros, então `/hello/a%20b` resulta em `request.params.user === 'a b'`.
+- O valor vem direto da URL. Faça o escape antes de colocá-lo em HTML, como a chamada `escapeHtml()` do [Hoek](/module/hoek) faz acima, ou valide-o com [joi](/tutorials/pt_BR/validation).
+- Desde o hapi 21.4.10, os valores de `request.params` têm o tipo `unknown` por padrão. O argumento de tipo `server.route<{ Params: { user: string } }>()` declara o formato, então `request.params.user` é uma `string` no handler. O mesmo argumento de tipo aceita `Query`, `Payload`, `Headers` e as outras partes da requisição mostradas abaixo.
 
-Neste exemplo, o parâmetro `user` é obrigatório: uma requisição a `/hello/bob` ou `/hello/susan` irá funcionar, porém uma requisição a `/hello` não funcionará. Para criar um parâmetro opcional, basta colocar um ponto de interrogação no final do nome do parâmetro. Veja o mesmo exemplo anterior alterado para o parâmetro `user` ser adicional:
+### <a name="optionalParameters"></a> Tipos de parâmetro
 
-```javascript
-server.route({
-    method: 'GET',
-    path: '/hello/{user?}',
-    handler: function (request, reply) {
-        const user = request.params.user ? encodeURIComponent(request.params.user) : 'stranger';
-        reply('Hello ' + user + '!');
-    },
-});
-```
+| Caminho             | Corresponde a                                 | `request.params`                    |
+| ------------------- | --------------------------------------------- | ----------------------------------- |
+| `/hello/{user}`     | `/hello/ferris`                               | `{ user: 'ferris' }`                |
+| `/hello/{user?}`    | `/hello`, `/hello/ferris`                     | `{}` ou `{ user: 'ferris' }`        |
+| `/hello/{user*2}`   | `/hello/john/doe` (exatamente dois segmentos) | `{ user: 'john/doe' }`              |
+| `/files/{path*}`    | `/files`, `/files/a`, `/files/a/b/c`          | `{}` ou `{ path: 'a/b/c' }`         |
+| `/{filename}.{ext}` | `/photo.jpg`                                  | `{ filename: 'photo', ext: 'jpg' }` |
 
-Agora uma requisição para `/hello/mary` irá responder com `Hello mary!` e a requisição para `/hello` irá responder com `Hello stranger!`. É importante estar ciente que apenas o _último_ parâmetro em um caminho pode ser opcional. Isso significa que `/{one?}/{two}/` é um caminho inválido, isso porque existe outro parâmetro após um opcional. Você também pode ter um parâmetro nomeado parcial em um segmento do caminho, mas você só pode ter um parâmetro por segmento. Isso significa que `/{filename}.jpg` é valido, enquando `/{filename}.{ext}` é inválido.
+Regras que o hapi aplica quando você adiciona a rota:
 
-### Parâmetros de multisegmentos
+- `{user*}` e um opcional de segmento inteiro `{user?}` precisam ser o último segmento do caminho. `{user*2}` e um opcional de segmento parcial, como `/a{user?}/b`, podem aparecer em qualquer lugar.
+- Dois parâmetros no mesmo segmento precisam de um separador literal entre eles: `{filename}.{ext}` é válido, `{filename}{ext}` não é.
+- O nome de um parâmetro só pode aparecer uma vez por caminho.
+- Duas rotas com o mesmo método e um caminho equivalente entram em conflito, e `server.route()` lança um erro. `/{name}` e `/{other}` são equivalentes.
 
-Junto com o parâmetro de caminho opcional, você também pode permitir que esses parâmetros correspodam com vários segmentos. Para fazer isso, utilizamos um asterisco e um número. Por Exemplo:
+### <a name="multiParameters"></a> Parâmetros de múltiplos segmentos
 
-```javascript
-server.route({
+Um parâmetro de múltiplos segmentos guarda os segmentos correspondentes unidos por `/`, então divida-o para obter as partes:
+
+```ts
+server.route<{ Params: { user: string } }>({
     method: 'GET',
     path: '/hello/{user*2}',
-    handler: function (request, reply) {
-        const userParts = request.params.user.split('/');
-        reply('Hello ' + encodeURIComponent(userParts[0]) + ' ' + encodeURIComponent(userParts[1]) + '!');
+    handler: (request, h) => {
+        const [first, last] = request.params.user.split('/');
+
+        return `Hello ${first} ${last}!`;
     },
 });
 ```
 
-Com essa configuração, uma requisição para `/hello/john/doe` responderá com a string `Hello john doe!`. É importante notar que o parâmetro possui uma sequencia de caracteres com `/`. E por isso que fizemos um split no parâmetro para obter o usuário em duas partes separadas. O número após o asterisco indica quantos segmentos de caminho deve ser atribuído ao parâmetro. Você também pode omitir o numero, nesse caso o parâmetro irá coincidir com qualquer numero de segmentos. Como os parâmetros opcionais, um parâmetro curinga pode apenas aparecer no último parâmetro em seu caminho.
+Uma requisição para `/hello/john/doe` responde `Hello john doe!`.
 
-Ao determinar o manipulador a ser utilizado em um requisição em particular, o hapi pesquisa caminhos do menos específico para o mais específico. Isso significa que caso você tenha duas rotas, uma com o caminho `/filename.jpg` e a outra com o caminho `/filename.{ext}` a requisição para `/filename.jpg` irá coincidir com o primeiro caminho e não o segundo. Da mesma forma que uma rota para `/{files*}` será a ultima rota testada, e só corresponderá se todas as outras rotas falharem.
+### <a name="specificity"></a> Qual rota vence
 
-## Método manipulador
+O hapi não testa as rotas na ordem em que você as adicionou. Para cada segmento do caminho, ele testa os tipos de correspondência do mais específico para o menos específico, e passa para o próximo tipo quando o resto do caminho não corresponde:
 
-A opção `handler` é uma função que aceita dois parâmetros, `request` e `reply`.
+```mermaid
+flowchart TD
+    L["1. literal<br/>/filename.jpg"] -->|sem correspondência| M["2. misto<br/>/{name}.jpg"]
+    M -->|sem correspondência| P["3. parâmetro<br/>/{name}"]
+    P -->|sem correspondência| W["4. curinga<br/>/{any*}"]
+    W -->|sem correspondência| N[404 Not Found]
+```
 
-O parâmetro `request` é um objeto com detalhes sobre a solicitação do usuário final, como parâmetros de caminho, carga associada, informações de autenticação, cabeçalhos, etc... Toda a documentação sobre o que o objeto `request` contem pode ser encontrado na [referência de API](/api#request-properties).
+Com estas quatro rotas registradas:
 
-O segundo parâmetro, `reply`, é um método usado para responder as requisições. Como você viu nos exemplos anteriores, se você deseja responder com uma carga útil, você precisa simplesmente passar como um parâmetro para o `reply`. A resposta pode ser uma string, um buffer um objeto serializado em json ou uma stream. O resultado de `reply` é um objeto de resposta, que pode ser encadeado com métodos adicionais para alterar a resposta antes de serem enviados. Por exemplo `reply('created').code(201)` enviará uma carga de trabalho `created` com um código de status `201`. Você também pode atribuir valores aos `header`, `content-type`, `content-lenght`, enviar uma resposta direta, e muitas outras coisas que são documentadas na [referência de API](/api#response-object).
+| Requisição      | Rota que responde |
+| --------------- | ----------------- |
+| `/filename.jpg` | `/filename.jpg`   |
+| `/photo.jpg`    | `/{name}.jpg`     |
+| `/photo`        | `/{name}`         |
+| `/a/b`          | `/{any*}`         |
 
-## Configuração
+Os caminhos diferenciam maiúsculas de minúsculas por padrão: com as rotas acima, `/Filename.jpg` é respondido por `/{name}.jpg`. Defina [`router.isCaseSensitive`](/api#server-options-router) como `false` no servidor para mudar isso.
 
-Além desses três elementos basicos, você também pode especificar um parâmetro `options` para cada rota. É onde você configura coisas como [validação](/tutorials/validation), [autenticação](/tutorials/auth), pré-requisitos, processo de carga, e opções de `cache`. Mais detalhes podem ser encontrados nos tutoriais, assim como na [referência de API](/api#route-options).
+## <a name="query"></a> Parâmetros de query
 
-Aqui vamos exemplificar um par de opções concebidas para ajudar a gerar a documentação:
+`request.query` contém a query string já interpretada. Para `/?name=ferris&location=chicago`:
 
-```javascript
+```ts
+server.route<{ Query: { name: string } }>({
+    method: 'GET',
+    path: '/',
+    handler: (request, h) => {
+        return `Hello ${request.query.name}!`;
+    },
+});
+```
+
+O parser embutido do hapi não entende chaves aninhadas: `/?foo[bar]=baz` resulta em `{ 'foo[bar]': 'baz' }`. Para interpretar chaves aninhadas, defina o `query.parser` do servidor com um parser como o [qs](https://github.com/ljharb/qs):
+
+```ts
+import Hapi from '@hapi/hapi';
+import Qs from 'qs';
+
+const server = Hapi.server({
+    port: 3000,
+    host: 'localhost',
+    query: {
+        parser: (query) => Qs.parse(query),
+    },
+});
+
 server.route({
     method: 'GET',
-    path: '/hello/{user?}',
-    handler: function (request, reply) {
-        const user = request.params.user ? encodeURIComponent(request.params.user) : 'stranger';
-        reply('Hello ' + user + '!');
+    path: '/',
+    handler: (request, h) => {
+        return request.query;
     },
-    options: {
-        description: 'Say hello!',
-        notes: "The user parameter defaults to 'stranger' if unspecified",
-        tags: ['api', 'greeting'],
+});
+
+await server.start();
+console.log('Server running on %s', server.info.uri);
+```
+
+Agora `/?foo[bar]=baz` responde `{ "foo": { "bar": "baz" } }`. O parser recebe a query que o hapi já interpretou, como `{ 'foo[bar]': 'baz' }`, e não a string bruta. Qualquer função serve, desde que retorne um objeto que mapeie nomes de parâmetros para valores.
+
+## <a name="requestpayload"></a> Payload da requisição
+
+O corpo da requisição, já interpretado, fica em `request.payload`. O hapi interpreta corpos JSON, form-encoded e de texto com base no header `Content-Type`. Corpos multipart precisam da opção de rota `payload: { multipart: true }`; sem ela, recebem `415 Unsupported Media Type`:
+
+```ts
+server.route<{ Payload: { username: string; password: string } }>({
+    method: 'POST',
+    path: '/signup',
+    handler: (request, h) => {
+        return `Welcome ${request.payload.username}!`;
     },
 });
 ```
 
-Em aspecto de funcionalidades isso não tem nenhum efeito, entretando eles podem ser muito valiosos ao utilizar plugins como [lout](https://github.com/hapijs/lout) para gerar a documentação de sua API. O `metadate` é associado com esta rota, e logo depois se torna disponível para inspeção ou visualização.
+O argumento de tipo só informa o formato ao TypeScript. Nada é verificado em tempo de execução até você adicionar a [validação do payload](/tutorials/pt_BR/validation).
+
+## <a name="handler"></a> Handler
+
+O handler recebe dois argumentos:
+
+- `request` contém tudo sobre a requisição recebida: `params`, `query`, `payload`, `headers`, `auth` e mais. Veja o [objeto de requisição](/api#request).
+- `h` é o [response toolkit](/api#response-toolkit), com métodos como `h.response()` e `h.redirect()`.
+
+O que o handler retorna vira a resposta:
+
+| O handler retorna                           | Resposta                                                                     |
+| ------------------------------------------- | ---------------------------------------------------------------------------- |
+| uma string                                  | `200`, `text/html; charset=utf-8`                                            |
+| um objeto ou array                          | `200`, `application/json; charset=utf-8`                                     |
+| um `Buffer`                                 | `200`, `application/octet-stream`                                            |
+| um readable stream                          | `200`, o stream encaminhado ao cliente                                       |
+| `h.response(value)` com chamadas encadeadas | controle total, por exemplo `h.response('created').code(201)`                |
+| um erro lançado                             | uma resposta de erro, `500` a menos que seja um erro do [boom](/module/boom) |
+
+Um handler precisa retornar um valor, uma promise, ou lançar um erro. [Marshalling de respostas](/tutorials/pt_BR/response-marshalling) explica como o hapi transforma esses valores nos bytes que envia.
+
+Arrow functions não podem usar `this`, então um handler escrito como arrow function lê o valor definido por [`server.bind()`](/api#server-bind-context) a partir de [`h.context`](/api#h-context).
+
+## <a name="options"></a> Opções
+
+Tudo além de method, path e handler vai nas `options` da rota:
+
+```ts
+import Joi from 'joi';
+
+server.route<{ Payload: { username: string; password: string } }>({
+    method: 'POST',
+    path: '/signup',
+    options: {
+        auth: false,
+        validate: {
+            payload: Joi.object({
+                username: Joi.string().min(1).max(20).required(),
+                password: Joi.string().min(7).required(),
+            }),
+        },
+    },
+    handler: (request, h) => {
+        return `Welcome ${request.payload.username}!`;
+    },
+});
+```
+
+| Opção      | O que controla                                      | Saiba mais                                              |
+| ---------- | --------------------------------------------------- | ------------------------------------------------------- |
+| `auth`     | qual strategy de autenticação se aplica             | [Autenticação](/tutorials/pt_BR/auth)                   |
+| `validate` | verificações de params, query, payload e headers    | [Validação](/tutorials/pt_BR/validation)                |
+| `cache`    | headers `Cache-Control` da resposta                 | [Cache](/tutorials/pt_BR/caching)                       |
+| `payload`  | interpretação do corpo, limites de tamanho, uploads | [opções de payload da rota](/api#route-options-payload) |
+| `pre`      | métodos que rodam antes do handler                  | [opções pre da rota](/api#route-options-pre)            |
+| `ext`      | lifecycle hooks só para esta rota                   | [Lifecycle hooks](/tutorials/pt_BR/lifecycle-hooks)     |
+
+A lista completa está na [referência de opções de rota](/api#route-options).
+
+## <a name="missing"></a> Tratamento de 404
+
+Quando nenhuma rota corresponde, o hapi responde com um erro `404` em JSON. Para enviar sua própria resposta, adicione uma rota pega-tudo. O curinga `{any*}` é a correspondência menos específica, então ele só responde às requisições que nenhuma outra rota atende:
+
+```ts
+server.route({
+    method: '*',
+    path: '/{any*}',
+    handler: (request, h) => {
+        return h.response('404 Error! Page Not Found!').code(404);
+    },
+});
+```
+
+A rota pega-tudo só cobre caminhos sem correspondência. Um `404` lançado por uma rota que correspondeu, como um handler que lança `Boom.notFound()`, nunca chega até ela. Para personalizar todo `404`, seja qual for a origem, altere a resposta em um hook `onPreResponse`; veja [Lifecycle hooks](/tutorials/pt_BR/lifecycle-hooks).
