@@ -6,30 +6,30 @@ title: Getting Started
 
 # Getting Started
 
-_This tutorial is compatible with hapi v17 and newer_
+_This tutorial is compatible with hapi v21 and newer_
 
 ## <a name="overview"></a> Overview
 
-This tutorial will show how to set up a basic hapi server that displays "Hello World!" in your browser.
+This tutorial sets up a basic hapi server that displays "Hello World!" in your browser.
 
 ## <a name="installing"></a> Installing hapi
 
-Create a new directory `myproject`, and from there:
+```sh
+mkdir myproject
+cd myproject
+npm init -y               # creates package.json
+npm pkg set type=module   # makes Node.js treat your files as ES modules
+npm install @hapi/hapi
+```
 
-- Run: `cd myproject`, this goes into the created project folder.
-
-- Run: `npm init` and follow the prompts. This will generate a package.json file for you.
-
-- Run: `npm install @hapi/hapi`, this will install the latest version of hapi as a dependency in your package.json.
+The examples in these tutorials are written in TypeScript, but TypeScript is optional. hapi works the same from plain JavaScript: remove the type annotations, `import type` lines, `interface` and `declare module` blocks, and type arguments such as `server.route<...>` from an example, and save it as a `.js` file. See [Using TypeScript](#typescript) to set up type checking.
 
 ## <a name="server"></a> Creating a Server
 
 A very basic hapi server looks like the following:
 
-```js
-'use strict';
-
-const Hapi = require('@hapi/hapi');
+```ts
+import Hapi from '@hapi/hapi';
 
 const init = async () => {
     const server = Hapi.server({
@@ -49,20 +49,24 @@ process.on('unhandledRejection', (err) => {
 init();
 ```
 
-First, you require hapi. Then you initialize a new `Hapi.server()` with connection details containing a port number to listen on and the host information. After that you start the server and log that it's running.
+`Hapi.server()` creates the server, and `server.start()` starts listening. The `unhandledRejection` handler stops the process if `init()` fails, for example when the port is already in use.
 
-When creating a server, you can provide a hostname, IP address, a Unix socket file, or Windows named pipe to bind the server to. For more details, see the API reference.
+`host` decides which network interface the server listens on:
 
-The `host` property set to `localhost` is likely the safest choice. In a docker container, however, the localhost may not be accessible outside of the container and using `host: '0.0.0.0'` may be needed.
+| `host`        | Reachable from                                        |
+| ------------- | ----------------------------------------------------- |
+| `'localhost'` | this machine only; the safest default for development |
+| `'0.0.0.0'`   | every interface; needed inside a Docker container     |
+| omitted       | every interface (hapi's default)                      |
+
+You can also listen on a Unix socket or a Windows named pipe; see [`server.options.port`](/api#server-options-port).
 
 ## <a name="routes"></a> Adding Routes
 
-After you get the server up and running, its time to add a route that will display "Hello World!" in your browser.
+Add a route that returns "Hello World!":
 
-```js
-'use strict';
-
-const Hapi = require('@hapi/hapi');
+```ts
+import Hapi from '@hapi/hapi';
 
 const init = async () => {
     const server = Hapi.server({
@@ -90,14 +94,69 @@ process.on('unhandledRejection', (err) => {
 init();
 ```
 
-Save the above as `index.js` and start the server with the command `node index.js`. Now you'll find that if you visit `http://localhost:3000` in your browser, you'll see the text 'Hello, World!'.
+Save the above as `index.ts` and start the server:
 
-The `method` property can be any valid HTTP method, array of HTTP methods, or an asterisk to allow any method.
+```sh
+node index.ts
+```
 
-The `path` property defines the path including parameters. It can contain optional parameters, numbered parameters, and even wildcards. For more details, see the routing tutorial.
+Node.js 22.18 and newer run `.ts` files directly, with no build step. This example has no type annotations, so saving it as `index.js` and running `node index.js` works too. Visit `http://localhost:3000` and you'll see `Hello World!`.
 
-The `handler` function performs the main business logic of the route and sets the response. The `handler` must return a value, a promise, or throw an error.
+A route has three required properties:
+
+| Property  | What it does                                                                                                         |
+| --------- | -------------------------------------------------------------------------------------------------------------------- |
+| `method`  | The HTTP method: `'GET'`, `'POST'`, an array such as `['GET', 'POST']`, or `'*'` for any method.                     |
+| `path`    | The URL path. It can contain parameters such as `/users/{id}`; see the [routing tutorial](/tutorials/en_US/routing). |
+| `handler` | The function that produces the response. It returns a value, returns a promise, or throws an error.                  |
+
+## <a name="typescript"></a> Using TypeScript
+
+This section is optional. hapi ships its own TypeScript types, so there is no `@types/hapi__hapi` package to install.
+
+Node.js runs the examples by stripping the types, which only removes them; it does not check them. To check them, install the TypeScript compiler and the Node.js types:
+
+```sh
+npm install --save-dev typescript @types/node
+```
+
+Then add a `tsconfig.json`:
+
+```json
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "nodenext",
+        "strict": true,
+        "noEmit": true,
+        "erasableSyntaxOnly": true,
+        "verbatimModuleSyntax": true,
+        "allowImportingTsExtensions": true
+    }
+}
+```
+
+Run `npx tsc` whenever you want to check your types. `erasableSyntaxOnly` and `verbatimModuleSyntax` reject the TypeScript features that Node.js cannot strip, such as `enum` and type imports written without the `type` keyword.
+
+In the route above, `request` and `h` need no type annotations: TypeScript infers them as hapi's `Request` and `ResponseToolkit` from the `server.route()` signature. Annotate them only when you write a handler outside of a route config, using the types exported by `@hapi/hapi`:
+
+```ts
+import type { Request, ResponseToolkit } from '@hapi/hapi';
+
+const hello = (request: Request, h: ResponseToolkit) => {
+    return 'Hello World!';
+};
+```
 
 ## <a name="everything"></a> Everything Else
 
-hapi has many, many other capabilities and only a select few are documented in tutorials here. This tutorial was intentionally minimal, we highly recommend you to check out the plugins tutorial. It will give some more knowledge to better organize your hapi project. We also have other tutorials of interest, please use the list to your left to check them out. Everything else is documented in the [API reference](/api) and, as always, feel free to ask questions on [github](https://github.com/hapijs/hapi/issues) or just visit us on [slack](https://join.slack.com/t/hapihour/shared_invite/zt-g5ortpsk-ErlnRA2rUcPIWES21oXBOg).
+This tutorial was intentionally minimal. Good next steps:
+
+- [Plugins](/tutorials/en_US/plugins): split your application into reusable pieces.
+- [Routing](/tutorials/en_US/routing): path parameters, methods, and route options.
+- [Lifecycle Hooks](/tutorials/en_US/lifecycle-hooks): run code at each step of a request, and at server startup and shutdown.
+- [Decorators](/tutorials/en_US/decorators): add your own methods to the server, the request, and the response toolkit.
+- [Response Marshalling](/tutorials/en_US/response-marshalling): how a handler's return value becomes an HTTP response.
+- [Testing](/tutorials/en_US/testing): test routes without opening a port.
+
+Everything else is documented in the [API reference](/api). Ask questions on [GitHub](https://github.com/hapijs/hapi/issues) or in the [hapi Slack](https://join.slack.com/t/hapihour/shared_invite/zt-g5ortpsk-ErlnRA2rUcPIWES21oXBOg).
