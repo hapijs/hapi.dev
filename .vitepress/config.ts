@@ -69,6 +69,7 @@ const tutorialItems = [
     { slug: 'testing', text: 'Testing' },
     { slug: 'validation', text: 'Validation' },
     { slug: 'views', text: 'Views' },
+    { slug: 'websockets', text: 'WebSockets' },
     { slug: 'community', text: 'Community' },
     { slug: 'express-to-hapi', text: 'Express to hapi' },
 ];
