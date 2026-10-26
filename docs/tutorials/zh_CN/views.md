@@ -1,206 +1,187 @@
 ---
-title: Views
+title: 视图
 ---
 
 <TutorialLang />
 
-## 视图
+# <a name="views"></a> 视图
 
-_该教程适用于 hapi v17版本_
+_本教程适用于 hapi v21 及更高版本_
 
-hapi 对模板渲染有广泛的支持，包括加载以及使用多个模板引擎、部分渲染、辅助工具 (模板中用于操作数据的函数)以及布局功能。这些功能由 [vision](https://github.com/hapijs/vision) 插件提供。
+## <a name="overview"></a> 概述
 
-## 配置服务器
+hapi 通过 [vision](/module/vision) 插件渲染 HTML 模板。vision 支持任何带有 `compile` 函数的模板引擎，包括 handlebars、pug 和 ejs（`compile` 签名不同的引擎，例如 nunjucks，需要用[引擎](#engines)一节介绍的小包装器），并支持 partial、helper 和布局。
 
-如果要使用视图，首先需要在服务器上配置一个模板引擎。 这可以通过 vision 提供的 [`server.views()`](https://github.com/hapijs/vision/blob/master/API.md#serverviewsoptions) 方法来完成:
+## <a name="vision"></a> Vision
 
-```javascript
-'use strict';
+安装 vision 和一个模板引擎：
 
-const Path = require('path');
-const Hapi = require('@hapi/hapi');
-const Hoek = require('@hapi/hoek');
-
-const server = Hapi.server();
-
-const start = async () => {
-    await server.register(require('@hapi/vision'));
-
-    server.views({
-        engines: {
-            html: require('handlebars'),
-        },
-        relativeTo: __dirname,
-        path: 'templates',
-    });
-};
-
-start();
+```sh
+npm install @hapi/vision handlebars
 ```
 
-我们在这里做了许多工作：
-首先，我们加载 [vision](https://github.com/hapijs/vision) 插件，它可以为hapi提供模板渲染引擎。
+注册 vision 后会多出：
 
-其次，我们注册 `handlebars` 模块为引擎提供渲染 `.html` 文件的能力。
+| 内容                                  | 用途                             |
+| ------------------------------------- | -------------------------------- |
+| `server.views(options)`               | 配置引擎、模板文件夹和布局       |
+| `h.view(template, context)`           | 在 handler 中渲染模板            |
+| `view` handler                        | 只渲染模板的路由                 |
+| `server.render()`、`request.render()` | 把模板渲染成字符串，例如用于邮件 |
 
-最后，我们告诉服务器我们的模板在 `templates` 目录下。我们可以通过 `relativeTo` 选项指定相对路径，默认情况下 hapi 在当前工作目录下查找模板文件。
+导入 `@hapi/vision` 也会把这些内容加入 hapi 的 TypeScript 类型。完整 API 见 [vision API 参考](/module/vision)。
 
-### 视图选项
+## <a name="server"></a> 配置服务器
 
-hapi 的视图引擎有众多的选项。完整的文档可以在这里找到 [vision API reference](https://github.com/hapijs/vision/blob/master/API.md#serverviewsoptions)，我们这里只示例一部分。
+```ts
+import Hapi from '@hapi/hapi';
+import Vision from '@hapi/vision';
+import Handlebars from 'handlebars';
 
-这些选项可以全局配置，也可以配置给指定的引擎，例如：
+const server = Hapi.server({ port: 3000 });
 
-```javascript
+await server.register(Vision);
+
 server.views({
     engines: {
-        html: {
-            module: require('handlebars'),
-            compileMode: 'sync', // 引擎特定配置
-        },
+        html: Handlebars,
     },
-    compileMode: 'async', // 全局配置
+    relativeTo: import.meta.dirname,
+    path: 'templates',
 });
-```
 
-### 引擎
-
-如果需要在 hapi 中使用视图，你需要在服务器中至少注册一个模板引擎。引擎可以是同步的也可以是异步的，并且这个对象需要以 `compile` 为名导出。
-
-同步引擎 `compile` 方法的签名为 `function (template, options)`。 并且这个方法需要返回一个签名为 `function (context, options)` 的函数，在函数内或者抛出错误或者返回编译后的 html 文件。
-
-异步引擎 `compile` 方法的签名为 `function (template, options, callback)` 它以标准错误优先格式调用 `callback` 并返回一个带有签名`function (context，options，callback)` 的新方法。返回的方法也应该以错误优先格式调用 `callback`，而编译的 html 是第二个参数。
-
-默认情况下 hapi 认为所有的模板引擎都是同步的 (例如 `compileMode` 默认是 `sync`), 如果使用异步引擎你需要将 `compileMode` 设置为 `async`。
-
-想要修改两种 `compile` 方法中的 `options` 参数或者返回方法，可以通过 `compileOptions` 和 `runtimeOptions`设置来完成。这两个选项都默认为空对象 `{}`。
-`compileOptions` 是作为第二个参数传递给 `compile` 的对象, 而 `runtimeOptions` 传递给 `compile` 返回的方法。
-
-如果只注册了一个模板引擎，他将自动成为默认值，允许在渲染视图的时候不使用文件扩展名。但是如果过注册了多个模板引擎，则必须使用文件扩展名，或者将 `defaultExtension` 设置为最常用的引擎。对于不使用默认引擎的任何视图，依然需要指定文件扩展名。
-
-另外一个有用的选项是 `isCached`。如果设置为 `false` ， hapi 将不会缓存模板引擎渲染的结果，而是每次都去读取模板文件并渲染。 在开发你的应用时, 这个设置非常方便，它可以防止您在处理模板时重新启动应用程序。 我们建议在生产环境中将 `isCached` 的值设置为 `true` 。
-
-### 路径
-
-由于视图可以包含多个不同位置的文件, 因为hapi 提供了一些选项帮助你配置多个路径用于内容查找:
-
-- `path` : 包含你主要模板的路径
-- `partialsPath` : 部分内容的路径
-- `helpersPath` : 模板辅助工具的路径
-- `layoutPath` : 布局模板的路径
-- `relativeTo` : 用于指定其他路径的前缀。当指定后，其余路径则都可以相对于此路径
-
-此外, 还有两个设置可以改变 hapi 允许你使用路径的方式。默认情况下，不允许使用绝对路径和遍历 `path` 目录，但是可以通过将 `allowAbsolutePaths` 和 `allowInsecureAccess` 设置为 true 来开启这些功能。
-
-例如你的目录结构如下:
-
-```
-templates\
-  index.html
-  layout\
-    layout.html
-  helpers\
-    getUser.js
-    fortune.js
-```
-
-你可以如下去配置:
-
-```javascript
-server.views({
-    engines: {
-        html: require('handlebars'),
-    },
-    relativeTo: __dirname,
-    path: './templates',
-    layoutPath: './templates/layout',
-    helpersPath: './templates/helpers',
-});
-```
-
-## 渲染一个视图
-
-渲染一个视图有两种选择：你可以使用 `h.view()` 方法，这里的 `h` 是 [response toolkit](/api#response-toolkit) 。而另一种方法是通过视图 handler。
-
-### [`h.view()`](https://github.com/hapijs/vision/blob/master/API.md#hviewtemplate-context-options)
-
-首先我们来看一下如何使用 `h.view()` 渲染视图。 使用这种方法的路由配置如下:
-
-```javascript
 server.route({
     method: 'GET',
     path: '/',
-    handler: function (request, h) {
-        return h.view('index');
+    handler: (request, h) => {
+        return h.view('index', { title: 'My home page' });
     },
+});
+
+await server.start();
+```
+
+- `engines` 把文件扩展名映射到引擎：以 `.html` 结尾的文件用 handlebars 渲染。
+- `path` 是存放模板的文件夹，从 `relativeTo` 开始解析。ES 模块中没有 `__dirname`；`import.meta.dirname` 就是当前文件所在的文件夹。
+- `h.view('index', ...)` 渲染 `templates/index.html`。只注册了一个引擎时，可以省略扩展名。
+
+### <a name="lifecycle"></a> 视图是如何渲染的
+
+`h.view()` 不会立即渲染任何内容。它返回一个视图响应，由 vision 在 hapi 发送响应时进行渲染：
+
+```mermaid
+flowchart TD
+    A["handler 返回 h.view('index', context)"] --> B["vision 查找并编译<br/>templates/index.html（有缓存）"]
+    B --> C[onPreResponse 钩子]
+    C --> D["把全局上下文<br/>与视图的上下文合并"]
+    D --> E[渲染模板]
+    E --> F[套上布局]
+    F --> G["以 text/html 发送"]
+```
+
+这个顺序在实际中意味着：
+
+- 模板不存在时，handler 一返回就会以 `500` 失败，早于任何 `onPreResponse` 钩子。
+- `onPreResponse` 钩子在渲染之前运行，所以它仍然可以把视图替换成其他响应，例如错误页。参见下文的[错误页](#errors)。
+- [响应编组](/tutorials/zh_CN/response-marshalling)介绍了所有响应类型都遵循的这种先准备、后渲染的划分。
+
+## <a name="options"></a> server.views() 选项
+
+| 选项                  | 默认值         | 作用                                                              |
+| --------------------- | -------------- | ----------------------------------------------------------------- |
+| `engines`             | 必填           | 扩展名到引擎的映射，例如 `{ html: Handlebars, pug: Pug }`         |
+| `path`                | 无             | 存放模板的文件夹（或文件夹数组）                                  |
+| `relativeTo`          | 工作目录       | 其他所有路径选项的基准文件夹                                      |
+| `partialsPath`        | 无             | 存放 partial 的文件夹                                             |
+| `helpersPath`         | 无             | 存放 helper 模块的文件夹                                          |
+| `layout`              | `false`        | `true` 表示使用 `layout.html`，也可以是其他布局文件的名称         |
+| `layoutPath`          | 无             | 存放布局的文件夹                                                  |
+| `context`             | 无             | 合并到每个视图中的上下文；可以是对象，也可以是接收 request 的函数 |
+| `isCached`            | `true`         | `false` 表示每个请求都重新读取并编译模板；在开发时很方便          |
+| `defaultExtension`    | 唯一的那个引擎 | `h.view()` 收到不带扩展名的名称时使用的扩展名                     |
+| `compileMode`         | `'sync'`       | 对于 `compile` 接收回调的引擎，使用 `'async'`                     |
+| `allowAbsolutePaths`  | `false`        | 允许使用绝对路径的模板名                                          |
+| `allowInsecureAccess` | `false`        | 允许模板名中出现 `../`                                            |
+
+在 `server.views()` 上设置的选项会应用到所有引擎：
+
+```ts
+server.views({
+    engines: { html: Handlebars },
+    relativeTo: import.meta.dirname,
+    path: 'templates',
+    isCached: process.env.NODE_ENV === 'production',
 });
 ```
 
-你可以通过第二个参数向 `h.view()` 传递要渲染的内容，如:
+这里模板从 `templates/` 加载，在非生产环境中 vision 每个请求都会重新读取并编译模板，因此修改模板后无需重启就能看到效果。
 
-```javascript
-return h.view('index', { title: 'My home page' });
+### <a name="engines"></a> 引擎
+
+引擎是任何带有 `compile` 函数的对象：
+
+| `compileMode`    | `compile` 签名                                | 返回                                                                                                   |
+| ---------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `'sync'`（默认） | `compile(template, compileOptions)`           | `render(context, runtimeOptions)`，它返回 HTML                                                         |
+| `'async'`        | `compile(template, compileOptions, callback)` | 调用 `callback(err, render)`；`render(context, runtimeOptions, callback)` 会调用 `callback(err, html)` |
+
+`compileOptions` 和 `runtimeOptions` 是透传给引擎的 `server.views()` 选项。API 不匹配的引擎可以包装成一个带有这种 `compile` 函数的对象。
+
+注册了多个引擎时，`h.view()` 需要带上扩展名（`h.view('index.pug')`），除非你把 `defaultExtension` 设为最常用的那个。
+
+### <a name="paths"></a> 路径
+
+对于这样的文件夹结构：
+
+```
+templates/
+    index.html
+    layout/
+        layout.html
+    helpers/
+        fortune.js
 ```
 
-### 视图 handler
+配置如下：
 
-第二种是可以通过使用 hapi 内建的视图 handler 来渲染。 这种方式的路由如下配置:
-
-```javascript
-server.route({
-    method: 'GET',
-    path: '/',
-    handler: {
-        view: 'index',
-    },
-});
-```
-
-当使用视图 handler 时,内容作为 `context` 的值传入, 如:
-
-```json5
-handler: {
-    view: {
-        template: 'index',
-        context: {
-            title: 'My home page'
-        }
-    }
-}
-```
-
-### 全局内容
-
-我们已经知道了如何传递内容去一个视图，但是我们有一些默认的内容 _都必须_ 显示在所有的模板上该如何呢?
-
-最简单的方式是在调用 `server.views()` 使用 `context` 选项 :
-
-```javascript
-const context = {
-    title: 'My personal site',
-};
-
+```ts
 server.views({
     engines: {
-        html: {
-            module: require('handlebars'),
-            compileMode: 'sync', // engine specific
-        },
+        html: Handlebars,
     },
-    context,
+    relativeTo: import.meta.dirname,
+    path: 'templates',
+    layoutPath: 'templates/layout',
+    helpersPath: 'templates/helpers',
 });
 ```
 
-这个默认的全局内容将会以最低的优先级合并到你所有的视图中。
+### <a name="global"></a> 全局上下文
 
-### 视图辅助工具
+`context` 会合并到每个视图的上下文中，两者设置了同一个键时，以视图自己的上下文为准。传入函数可以按请求计算上下文，例如在每个页面上显示已登录的用户：
 
-位于定义在 `helpersPath` 中的 JavaScript 模块可以在模板中使用。在这个例子中，我们将创建一个视图 helper `fortune`，当在模板中使用时，它将从字符串数组中挑选并打印出一个元素。
+```ts
+server.views({
+    engines: {
+        html: Handlebars,
+    },
+    relativeTo: import.meta.dirname,
+    path: 'templates',
+    context: (request) => ({
+        siteName: 'My personal site',
+        user: request?.auth.credentials?.user ?? null,
+    }),
+});
+```
 
-下面的代码片段是完整的帮助函数，我们将它存储在 `helpers` 目录中名为 `fortune.js` 的文件中。
+在请求之外用 `server.render()` 渲染时，`request` 为 undefined，所以函数中要先检查它。
 
-```javascript
-module.exports = function () {
+### <a name="helpers"></a> 视图 helper
+
+对于支持 helper 的引擎，例如 handlebars，`helpersPath` 中的每个模块都会成为一个以文件名命名的 helper。下面这个 helper 保存为 `templates/helpers/fortune.js`，它会随机返回一句签语：
+
+```js
+export default function () {
     const fortunes = [
         'Heisenberg may have slept here...',
         'Wanna buy a duck?',
@@ -216,96 +197,114 @@ module.exports = function () {
 
     const x = Math.floor(Math.random() * fortunes.length);
     return fortunes[x];
-};
+}
 ```
 
-现在我们可以在模板中使用刚刚创建的视图助手。 这里是一个在 `templates/index.html` 使用 handlebars 作为渲染引擎的代码示例:
+helper 仍然是 JavaScript 文件：vision 用 `require()` 加载它们，并且会跳过扩展名没有在 Node.js 的 `require.extensions` 中注册的文件，而其中不包括 `.ts`。
+
+在 `templates/index.html` 中使用它：
 
 ```html
 <h1>Your fortune</h1>
-<p>&#123;&#123;fortune&#125;&#125;</p>
+<p>{{fortune}}</p>
 ```
 
-现在，当我们启动服务器并用浏览器访问使用我们模板的路径（使用我们的视图helper）时，我们应该会在标题下方看到一个随机显示的段落。
+### <a name="layouts"></a> 布局
 
-作为参考，这是一个完整的服务器代码，它将在模板中使用 fortune 视图 helper 方法。
+vision 的布局功能默认关闭，因为很多引擎有自己的布局系统。两者选其一即可。要开启 vision 的布局：
 
-```javascript
-'use strict';
-
-const Hapi = require('@hapi/hapi');
-
-const server = Hapi.server({ port: 8080 });
-
-const start = async () => {
-    await server.register(require('@hapi/vision'));
-
-    server.views({
-        engines: {
-            html: require('handlebars'),
-        },
-        relativeTo: __dirname,
-        path: 'templates',
-        helpersPath: 'helpers',
-    });
-
-    server.route({
-        method: 'GET',
-        path: '/',
-        handler: function (request, h) {
-            return h.view('index');
-        },
-    });
-};
-
-start();
-```
-
-### 布局
-
-vision 对于视图布局有一些内建的支持，这个功能默认是关闭的，因为它可能会和一些特定的模板引擎冲突，因此我们建议只使用一种布局系统。
-
-如果要使用内建的布局系统，首先需要设置视图引擎:
-
-```javascript
+```ts
 server.views({
-    // ...
+    engines: {
+        html: Handlebars,
+    },
+    relativeTo: import.meta.dirname,
+    path: 'templates',
     layout: true,
     layoutPath: 'templates/layout',
 });
 ```
 
-这将开启内建的布局系统，并且将默认的布局页定义在 `templates/layout/layout.html` (或者你正在使用的其他扩展名)。
-
-在你的 `layout.html` 中设置一块内容区域:
+`templates/layout/layout.html` 用 `content` 标出每个视图插入的位置：
 
 ```html
 <html>
     <body>
-        &#123;&#123;&#123;content&#125;&#125;&#125;
+        {{{content}}}
     </body>
 </html>
 ```
 
-之后你的视图应该只包含有:
+而视图只包含它自己的那部分：
 
 ```html
 <div>Content</div>
 ```
 
-当渲染这个视图时 `&#123;&#123;&#123;content&#125;&#125;&#125;` 将会被视图中的内容替换。
+| 目的                     | 做法                                                      |
+| ------------------------ | --------------------------------------------------------- |
+| 使用另一个默认布局       | 在 `server.views()` 中设置 `layout: 'another_default'`    |
+| 为某个视图使用另一个布局 | `h.view('myview', context, { layout: 'another_layout' })` |
+| 渲染某个视图时不使用布局 | `h.view('myview', context, { layout: false })`            |
 
-你可以通过全局配置来修改这个默认布局:
+开启布局时，你的上下文中不能有 `content` 键；vision 用这个名字存放渲染后的视图，冲突时会以 `500` 失败。可以用 `layoutKeyword` 选项修改这个名字。
 
-```javascript
-server.views({
-    // ...
-    layout: 'another_default',
+## <a name="render"></a> 渲染视图
+
+### <a name="hview"></a> h.view()
+
+当 handler 需要先做一些工作，例如加载数据时，使用 [`h.view()`](/module/vision#h-view-template-context-options)：
+
+```ts
+server.route({
+    method: 'GET',
+    path: '/',
+    handler: (request, h) => {
+        return h.view('index', { title: 'My home page' });
+    },
 });
 ```
 
-你也可以为每一个视图指定一个布局:
+`h.view()` 返回一个普通的响应对象，所以你可以链式调用 `.code()`、`.header()` 以及其他[响应对象](/api#response-object)方法。
 
-```javascript
-return h.view('myview', null, { layout: 'another_layout' });
+### <a name="viewhandler"></a> View handler
+
+当路由只渲染模板时，使用 `view` handler：
+
+```ts
+server.route({
+    method: 'GET',
+    path: '/',
+    handler: {
+        view: {
+            template: 'index',
+            context: {
+                title: 'My home page',
+            },
+        },
+    },
+});
 ```
+
+`handler: { view: 'index' }` 是简写形式。view handler 总是会把 `params`、`payload`、`query` 和 `pre` 加入上下文，所以 `/users/{id}` 上的模板无需任何 handler 代码就能输出 `params.id`。
+
+## <a name="errors"></a> 错误页
+
+hapi 用 JSON 响应错误。渲染 HTML 的网站通常希望改用 HTML 错误页。由于渲染发生在 `onPreResponse` 之后，在这里注册的钩子可以把任何错误换成一个视图：
+
+```ts
+import Boom from '@hapi/boom';
+
+server.ext('onPreResponse', (request, h) => {
+    const response = request.response;
+    if (!Boom.isBoom(response)) {
+        return h.continue;
+    }
+
+    const { statusCode, payload } = response.output;
+
+    return h.view('error', { statusCode, message: payload.message }).code(statusCode);
+});
+```
+
+现在请求一个不存在的页面会得到 `templates/error.html`，它在布局中渲染，状态码为 `404`。这个钩子也会捕获 handler 抛出的错误以及验证失败。关于 `onPreResponse` 的更多内容，请参阅[生命周期钩子](/tutorials/zh_CN/lifecycle-hooks)。
