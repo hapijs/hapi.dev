@@ -58,6 +58,7 @@ const tutorialItems = [
     { slug: 'caching', text: 'Caching' },
     { slug: 'cookies', text: 'Cookies' },
     { slug: 'decorators', text: 'Decorators' },
+    { slug: 'lifecycle-hooks', text: 'Lifecycle Hooks' },
     { slug: 'logging', text: 'Logging' },
     { slug: 'plugins', text: 'Plugins' },
     { slug: 'routing', text: 'Routing' },
