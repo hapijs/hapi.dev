@@ -6,27 +6,34 @@ title: Plugins
 
 # Plugins
 
-_This tutorial is compatible with hapi v17 and newer_
+_This tutorial is compatible with hapi v21 and newer_
 
 ## <a name="overview"></a> Overview
 
-hapi has an extensive and powerful plugin system that allows you to very easily break your application up into isolated pieces of business logic, and reusable utilities. You can either add an existing plugin to your application, or create your own.
+A plugin is a piece of a hapi application packaged so it can be registered on a server: a set of routes, an authentication scheme, a logger, a template engine. Most of the hapi ecosystem is published as plugins ([inert](/module/inert), [vision](/module/vision), [@hapi/basic](/module/basic)), and splitting your own application into plugins keeps each part isolated and testable.
+
+A plugin receives the server in its `register` function and changes it through the normal server API. The ones that matter most for plugin authors:
+
+| Server API                                                               | What the plugin adds                                                   | Tutorial                                            |
+| ------------------------------------------------------------------------ | ---------------------------------------------------------------------- | --------------------------------------------------- |
+| [`server.route()`](/api#server-route-route)                              | routes                                                                 | [Routing](/tutorials/en_US/routing)                 |
+| [`server.ext()`](/api#server-ext-events)                                 | code that runs at a step of every request, or at server start and stop | [Lifecycle Hooks](/tutorials/en_US/lifecycle-hooks) |
+| [`server.decorate()`](/api#server-decorate-type-property-method-options) | new methods on `server`, `request`, or `h`                             | [Decorators](/tutorials/en_US/decorators)           |
+| [`server.auth.scheme()`](/api#server-auth-scheme-name-scheme)            | an authentication scheme                                               | [Authentication](/tutorials/en_US/auth)             |
+| [`server.method()`](/api#server-method-name-method-options)              | shared, cacheable functions                                            | [Server Methods](/tutorials/en_US/server-methods)   |
+| [`server.expose()`](/api#server-expose-key-value-options)                | values other plugins read from `server.plugins[name]`                  |                                                     |
 
 ## <a name="create"></a> Creating a plugin
 
-Plugins are very simple to write. At their core they are an object with a `register` property, that is a function with the signature `async function (server, options)`. Additionally the plugin object has a required `name` property and several optional properties including `version`.
+A plugin is an object with a `name` and an async `register(server, options)` function:
 
-A very simple plugin looks like:
+```ts
+import type { Plugin } from '@hapi/hapi';
 
-```javascript
-'use strict';
-
-const myPlugin = {
+const myPlugin: Plugin<void> = {
     name: 'myPlugin',
     version: '1.0.0',
     register: async function (server, options) {
-        // Create a route for example
-
         server.route({
             method: 'GET',
             path: '/test',
@@ -34,25 +41,39 @@ const myPlugin = {
                 return 'hello, world';
             },
         });
-
-        // etc ...
-        await someAsyncMethods();
     },
 };
 ```
 
-Once this plugin is registered, the server will display `'hello, world'` when the user goes to route `/test`.
+Once registered, `GET /test` answers `'hello, world'`.
 
-To write a plugin as an external module, you can specify a `pkg` property:
+`Plugin<T>` takes the type of the plugin's options. This plugin has none, so it is `Plugin<void>`. With the plugin typed, TypeScript infers `server` and `options` in `register`, and checks that the plugin has a `name` or a `pkg`.
 
-```javascript
-'use strict';
+The plugin object's properties:
 
-exports.plugin = {
-    pkg: require('./package.json'),
+| Property       | Meaning                                                                                                   |
+| -------------- | --------------------------------------------------------------------------------------------------------- |
+| `register`     | Required. Sets the plugin up. Registration waits for it, and fails if it throws.                          |
+| `name`         | Required unless `pkg` is set. Must be unique on the server. Published plugins use their npm package name. |
+| `version`      | Informational. Other plugins can read it, and [dependencies](#dependencies) can require a version range.  |
+| `pkg`          | Your `package.json`, used for `name` and `version` instead of setting them by hand.                       |
+| `dependencies` | Plugins that must also be registered. See [dependencies](#dependencies).                                  |
+| `requirements` | Supported `node` and `hapi` version ranges, such as `{ hapi: '>=21' }`. Registration fails outside them.  |
+| `multiple`     | `true` allows registering the plugin more than once on the same server.                                   |
+| `once`         | `true` makes repeated registrations a silent no-op instead of an error.                                   |
+
+### <a name="module"></a> Publishing a plugin as a module
+
+A plugin module exports the plugin object, either as the default export or as a named `plugin` export. `pkg` reads the name and version from `package.json`:
+
+```ts
+import Pkg from './package.json' with { type: 'json' };
+
+import type { Plugin } from '@hapi/hapi';
+
+export const plugin: Plugin<void> = {
+    pkg: Pkg,
     register: async function (server, options) {
-        // Create a route for example
-
         server.route({
             method: 'GET',
             path: '/test',
@@ -60,156 +81,86 @@ exports.plugin = {
                 return 'hello, world';
             },
         });
-
-        // etc...
-        await someAsyncMethods();
     },
 };
 ```
 
-Note that in the first example, we set the `name` and `version` properties explicitly, however in the second we set a `pkg` parameter with the contents of package.json as its value. Either method is acceptable.
+hapi accepts either export shape: `server.register()` takes a plugin object, or a module whose `plugin` property is one.
 
-When written as a module, a plugin can either be top-level module export i.e `module.exports = { register, name, version }` or if you want your module to export more than a hapi plugin, it can be exported as `exports.plugin = { register, name, version }`.
+### <a name="register"></a> Plugin options
 
-Additionally, the plugin object may contain the property `multiple` that when set to `true` tells hapi that it is safe to register your plugin more than once in the same server.
+`options` is whatever the caller passes at registration, unchanged. Type it with `Plugin<Options>`:
 
-Another available property is `once`. When set to `true` will mean hapi ignores subsequent registers of the same plugin without throwing an error.
+```ts
+import Pkg from './package.json' with { type: 'json' };
 
-### <a name="register"></a> The register method
+import type { Plugin } from '@hapi/hapi';
 
-As we've seen above, the `register` method accepts two parameters, `server` and `options`.
+interface Options {
+    name: string;
+}
 
-`register` should be an async function that returns once your plugin has completed whatever steps are necessary for it to be registered. Alternatively your register plugin should throw an error if an error occurred while registering your plugin.
-
-The `server` object is a reference to the `server` your plugin is being loaded in.
-
-The `options` parameter is simply whatever options the user passes to your plugin when calling `server.register(plugins, [options])`. No changes are made and the object is passed directly to your `register` method. Here is an example:
-
-```javascript
-'use strict';
-
-exports.plugin = {
-    pkg: require('./package.json'),
+export const plugin: Plugin<Options> = {
+    pkg: Pkg,
     register: async function (server, options) {
-        // Create a route for example
-
         server.route({
             method: 'GET',
             path: '/test',
             handler: function (request, h) {
-                const name = options.name;
-                return `Hello ${name}`;
+                return `Hello ${options.name}`;
             },
         });
-
-        // etc...
-        await someAsyncMethods();
     },
 };
 ```
 
-Here, you grab a name from the `options` object via `options.name`. You then use that name to return a message to the user. Lets see how you pass that name to the plugin:
+`options.name` is a `string`, and TypeScript flags a `server.register()` call whose options don't match `Options`; hapi does not check them at runtime.
 
-```javascript
+## <a name="loading"></a> Loading a plugin
+
+Register plugins with [`server.register()`](/api#await-server-register-plugins-options). Pass the plugin itself, or an object with `plugin` and `options`, or an array of either:
+
+```ts
+import Hapi from '@hapi/hapi';
+import { plugin as MyPlugin } from 'myplugin';
+import { plugin as YourPlugin } from 'yourplugin';
+
 const start = async function () {
+    const server = Hapi.server();
+
+    await server.register(YourPlugin);
+
     await server.register({
-        plugin: require('myplugin'),
+        plugin: MyPlugin,
         options: {
             name: 'Bob',
         },
     });
+
+    await server.register([{ plugin: YourPlugin }, { plugin: MyPlugin, options: { name: 'Bob' } }]);
 };
 ```
 
-When you register the plugin, you can pass whatever options to it with `server.register(plugins, [options])`. Here you are passing `{  name: "Bob" }` to your plugin, which as you see above, can be accessed with the `options` object when you create the plugin.
-
-## <a name="loading"></a> Loading a plugin
-
-Plugins can be loaded one at a time, or as a group in an array, by the `server.register(plugins, [options])` method, for example:
-
-```javascript
-const start = async function () {
-    const server = Hapi.server();
-
-    // load one plugin
-
-    await server.register(require('myplugin'));
-
-    // load multiple plugins
-
-    await server.register([require('myplugin'), require('yourplugin')]);
-};
-```
-
-To pass options to your plugin, we instead pass an object with `plugin` and `options` keys, such as:
-
-```javascript
-const start = async function () {
-    const server = Hapi.server();
-
-    await server.register({
-        plugin: require('myplugin'),
-        options: {
-            message: 'hello',
-        },
-    });
-};
-```
-
-These objects can also be passed in an array:
-
-```javascript
-const start = async function () {
-    const server = Hapi.server();
-
-    await server.register([
-        {
-            plugin: require('plugin1'),
-            options: {},
-        },
-        {
-            plugin: require('plugin2'),
-            options: {},
-        },
-    ]);
-};
-```
+Plugins in an array register one after another, in order. Each `register` function finishes before the next one starts.
 
 ### <a name="registration"></a> Registration options
 
-You may also pass a second optional parameter to `server.register()`. Documentation for this object can be found in the [API reference](</api#server.register()>).
+The second argument to `server.register()` configures how hapi registers the plugin. It is _not_ passed to the plugin:
 
-The options object is used by hapi and is _not_ passed to the plugin(s) being loaded. It allows you to apply `vhost` or `prefix` modifiers to any routes that your plugins register.
+| Option          | Effect                                                                           |
+| --------------- | -------------------------------------------------------------------------------- |
+| `routes.prefix` | Prepends a path to every route the plugin adds. `/test` becomes `/plugins/test`. |
+| `routes.vhost`  | Applies a virtual host to every route the plugin adds.                           |
+| `once`          | `true` skips the plugin if it is already registered, instead of throwing.        |
 
-For example, let's say we have a plugin that looks like this:
+```ts
+import Hapi from '@hapi/hapi';
+import { plugin as MyPlugin } from 'myplugin';
 
-```javascript
-'use strict';
-
-exports.plugin = {
-    pkg: require('./package.json'),
-    register: async function (server, options) {
-        server.route({
-            method: 'GET',
-            path: '/test',
-            handler: function (request, h) {
-                return 'test passed';
-            },
-        });
-
-        // etc...
-        await someAsyncMethods();
-    },
-};
-```
-
-Normally, when this plugin is loaded it will create a `GET` route at `/test`. This can be changed by using the `prefix` setting in the options, which will prepend a string to all routes created in the plugin:
-
-```javascript
 const start = async function () {
     const server = Hapi.server();
 
-    await server.register(require('myplugin'), {
+    await server.register(MyPlugin, {
         routes: {
             prefix: '/plugins',
         },
@@ -217,6 +168,64 @@ const start = async function () {
 };
 ```
 
-Now when the plugin is loaded, because of the `prefix` option the `GET` route will be created at `/plugins/test`.
+Prefixes nest: if a plugin registered with prefix `/api` registers a child plugin with prefix `/v1`, the child's routes start with `/api/v1`. See [`server.register()`](/api#await-server-register-plugins-options) for the full list.
 
-Similarly the `options.routes.vhost` property will assign a default `vhost` configuration to any routes created by the plugins being loaded. More detail about the `vhost` configuration can be found in the [API reference](</api#server.route()>).
+## <a name="scope"></a> What a plugin can and cannot affect
+
+Each plugin gets its own [`server.realm`](/api#server-realm): a container for settings that stay inside the plugin. Everything else a plugin does changes the whole server:
+
+| Change                                                                                               | Scope                                                |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| route prefix and vhost from registration options                                                     | the plugin's routes and its child plugins            |
+| [`server.bind()`](/api#server-bind-context), [`server.path()`](/api#server-path-relativeto)          | routes, handlers, and extensions added by the plugin |
+| request [lifecycle hooks](/tutorials/en_US/lifecycle-hooks) with `options.sandbox: 'plugin'`         | the plugin's routes                                  |
+| request lifecycle hooks without `sandbox`                                                            | **every route on the server**                        |
+| [decorations](/tutorials/en_US/decorators), server methods, auth strategies, `server.auth.default()` | **the whole server**                                 |
+
+A plugin that adds an `onPreResponse` hook to format its own errors should pass `sandbox: 'plugin'`, or it will reformat every other plugin's errors too.
+
+## <a name="dependencies"></a> Dependencies
+
+A plugin that needs another plugin declares it, instead of relying on registration order:
+
+```ts
+import type { Plugin } from '@hapi/hapi';
+
+declare module '@hapi/hapi' {
+    interface PluginProperties {
+        database: { migrate: () => Promise<void> };
+    }
+}
+
+export const plugin: Plugin<void> = {
+    name: 'dashboard',
+    dependencies: ['@hapi/vision', 'auth'],
+    register: async function (server, options) {
+        server.dependency('database', async (server) => {
+            await server.plugins.database.migrate();
+        });
+    },
+};
+```
+
+hapi checks dependencies when the server initializes, not when the plugin registers, so plugins can be registered in any order:
+
+```mermaid
+sequenceDiagram
+    participant A as your app
+    participant S as server
+    A->>S: register(dashboard)
+    Note over S: records: dashboard needs @hapi/vision, auth, database
+    A->>S: register(vision, auth, database)
+    A->>S: initialize() or start()
+    Note over S: 1. fails here if a dependency is missing
+    Note over S: 2. starts the cache clients
+    Note over S: 3. onPreStart: runs the server.dependency() callback
+    Note over S: 4. start() only: the server begins listening
+```
+
+- `dependencies` is a list of names, or an object of names to version ranges such as `{ '@hapi/vision': '7.x' }`.
+- [`server.dependency(names, after)`](/api#server-dependency-dependencies-after) declares the same thing from inside `register`, and accepts an `after` function. hapi runs `after` during server start, once every listed plugin is registered. Use it for setup that needs another plugin's API.
+- hapi throws on circular `after` dependencies.
+
+`server.plugins.database` is what the `database` plugin published with [`server.expose()`](/api#server-expose-key-value-options). hapi cannot know its shape, so the `declare module` block adds it to hapi's `PluginProperties` interface.

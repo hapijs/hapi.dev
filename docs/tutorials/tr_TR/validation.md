@@ -1,148 +1,214 @@
 ---
-title: Validation
+title: Doğrulama
 ---
 
 <TutorialLang />
 
-## Doğrulama
+# Doğrulama
 
-_Bu kurs hapi v17 ile uyumludur_
+_Bu eğitim hapi v21 ve sonraki sürümlerle, joi v16 ve sonraki sürümlerle uyumludur_
 
-Verileri doğrulamak, uygulamanın istikrarlı ve güvenli olmasına yardımcı olur. hapi bu fonksiyonelliği doğrulamalarını basit ve anlaşılır bir nesne söz dizimi kullanarak yapabileceğin [Joi](https://github.com/hapijs/joi) modülünü kullanarak sağlar.
+## <a name="overview"></a> Genel Bakış
 
-## Girdi (input)
+hapi, handler'ın çalışmadan önce bir isteğin header'larını, path parametrelerini, query'sini, payload'unu ve cookie'lerini kontrol eder; yanıtı da gönderilmeden önce kontrol edebilir. Neyin izinli olduğunu genellikle bir [joi](https://joi.dev) şemasıyla tanımlarsın, hapi de geri kalan her şeyi reddeder.
 
-hapinin icra ettiği doğrulamanın ilk çeşidi girdi doğrulamasıdır. Bu, bir yola (route) gönderilen `options` (seçenekler) nesnesinde tanımlanır ve başlıkları, güzergah değiştirgelerini, sorgu değiştirgelerini ve yararlı yük verisini doğrulamakta kullanılır.
+## <a name="joi"></a> Joi
 
-Haydi bir örneğe bakalım:
+joi'yi kur ve import et:
 
-```javascript
-server.route({
+```sh
+npm install joi
+```
+
+```ts
+import Joi from 'joi';
+```
+
+joi kendi TypeScript tiplerini içerir, bu yüzden ayrıca kurman gereken bir `@types` paketi yoktur.
+
+## <a name="input"></a> Girdi doğrulama
+
+Girdi kuralları route'un `options.validate` alanına yazılır. hapi bunları kimlik doğrulamadan sonra ve handler'dan önce şu sırayla çalıştırır ve başarısız olan ilk kuralda durur (bkz. [failAction](#failaction)):
+
+```mermaid
+flowchart TD
+    A[onPostAuth] --> H[validate.headers]
+    H --> P[validate.params]
+    P --> Q[validate.query]
+    Q --> B[validate.payload]
+    B --> S[validate.state]
+    S --> X[onPreHandler, handler]
+```
+
+| Anahtar   | Doğruladığı                  | Başarılı olunca yerine konan |
+| --------- | ---------------------------- | ---------------------------- |
+| `headers` | `request.headers`            | `request.headers`            |
+| `params`  | `request.params`             | `request.params`             |
+| `query`   | `request.query`              | `request.query`              |
+| `payload` | `request.payload`            | `request.payload`            |
+| `state`   | `request.state` (cookie'ler) | `request.state`              |
+
+Her anahtar şunları kabul eder:
+
+| Değer                                  | Anlamı                                                                                           |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| `true` ya da ayarlanmamış (varsayılan) | her şeye izin verilir                                                                            |
+| `false`                                | hiçbir değere izin verilmez                                                                      |
+| bir joi şeması                         | değer şemaya uymalıdır                                                                           |
+| bir fonksiyon                          | kendi doğrulayıcın, bkz. [Özel doğrulayıcılar](#alternatives)                                    |
+| joi şemalarından oluşan düz bir nesne  | yalnızca `server.validator(Joi)` sonrasında izinlidir; aksi halde `server.route()` hata fırlatır |
+
+Doğrulama, istekteki değeri doğrulanmış değerle değiştirir; böylece joi'nin tip dönüşümleri ve varsayılan değerleri handler'ına ulaşır. `?limit=5` query'si `'5'` string'i olarak gelir ve `Joi.number()` sonrasında handler `5` sayısını görür. Orijinal değer [`request.orig`](/api#request-orig) üzerinde kalır.
+
+### <a name="pathparams"></a> Path parametreleri
+
+```ts
+server.route<{ Params: { name: string } }>({
     method: 'GET',
-    path: '/selam/{name}',
-    handler: function (request, h) {
-        return `Selam ${request.params.name}!`;
+    path: '/hello/{name}',
+    handler: (request, h) => {
+        return `Hello ${request.params.name}!`;
     },
     options: {
         validate: {
-            params: {
+            params: Joi.object({
                 name: Joi.string().min(3).max(10),
-            },
+            }),
         },
     },
 });
 ```
 
-### Guzergah degistirgeleri
-
-Burada görüldüğü üzere `options` (seçenekler) nesnesine `validate.params` (değiştirgeleri doğrula) seçeneği gönderdik. Hapiye istenilen güzergahta bulunan adlandırılmış değiştirgelerin doğrulanması gerektiğini böyle söylüyoruz. Joi'nin döz dizimi çok basit ve okuması da kolay. Burada gönderdiğimiz doğrulama değiştirgenin en az 3 en fazla 10 karakterden oluşan bir metin olduğunu kontrol ediyor.
-
-Eğer bu yapılandırma ile `/selam/aylin` adresine bir istekte bulunursak beklediğimiz üzere `Selam aylin!` yanıtını alırız. Ancak isteği `/selam/a`ya yaparsak aşağıdaki gibi bir HTTP `400` yanıtı alırız.
+`/hello/jennifer` isteği `Hello jennifer!` yanıtını döner. `/hello/a` ve `/hello/thisnameiswaytoolong` ise şu yanıtı alır:
 
 ```json
 {
+    "statusCode": 400,
     "error": "Bad Request",
-    "message": "Invalid request params input",
-    "statusCode": 400
+    "message": "Invalid request params input"
 }
 ```
 
-Benzeri şekilde, eğer isteği `/selam/adimokadaruzunkianlatamam` adresine yapmış olsaydık da aynı hatayı alacaktık.
+### <a name="queryparams"></a> Query parametreleri
 
-### Sorgu degistirgeleri
-
-Sorgu değiştirgelerini doğrulamak için `validate.query` (sorguyu doğrula) seçeneğini gönderiyoruz ve benzeri sonuçlar elde ediyoruz. Varsayılan olarak hapi hiç bir şeyi doğrulamaz. Eğer değiştirgelerden biri için bile doğrulayıcı belirlersen bu demektir ki kabul etmek istediğin mümkün olan tüm sorgu değiştirgileri için doğrulayıcı sağlamak _zorundasın_.
-
-Örneğin, eğer kullanıcı blog yazılarının listesini dönen bir güzergahın varsa ve kullanıcıların sonuç kümesine sayı sınırı uygulamasını istiyorsan aşağıdaki yapılandırmayı kullanabilirsin:
-
-```javascript
-server.route({
+```ts
+server.route<{ Query: { limit: number } }>({
     method: 'GET',
     path: '/posts',
-    handler: function (request, h) {
+    handler: (request, h) => {
         return posts.slice(0, request.query.limit);
     },
     options: {
         validate: {
-            query: {
+            query: Joi.object({
                 limit: Joi.number().integer().min(1).max(100).default(10),
+            }),
+        },
+    },
+});
+```
+
+- `limit` 1 ile 100 arasında bir tam sayı olmalıdır; istemci onu göndermezse varsayılan değer 10'dur.
+- `/posts?limit=15&offset=15` isteği `400` ile başarısız olur: bir `Joi.object()` şeması listelemediği anahtarları reddeder. Kabul ettiğin her parametreyi listele ya da diğer anahtarları geçirmek için şemaya `.unknown()` ekle.
+- `Query: { limit: number }` tip argümanı TypeScript'e handler'ın ne alacağını söyler. hapi bunu joi şemasından çıkarmaz, bu yüzden ikisini senkron tutmak sana kalır.
+
+### <a name="payloadparams"></a> Payload
+
+```ts
+server.route({
+    method: 'POST',
+    path: '/post',
+    handler: (request, h) => {
+        return 'Blog post added';
+    },
+    options: {
+        validate: {
+            payload: Joi.object({
+                post: Joi.string().min(1).max(140),
+                date: Joi.date().required(),
+            }),
+        },
+    },
+});
+```
+
+`post` 1 ile 140 karakter arasında olmalıdır; `date` zorunludur ve JavaScript'in tarih olarak ayrıştırabileceği bir değer olmalıdır, örneğin `'2026-10-25'`. joi onu dönüştürür, böylece handler bir `Date` nesnesi alır. Başarısız olursa `Invalid request payload input` mesajıyla `400` döner.
+
+### <a name="headers"></a> Header'lar
+
+```ts
+server.route({
+    method: 'GET',
+    path: '/hello/{name}',
+    handler: (request, h) => {
+        return `Hello ${request.params.name}!`;
+    },
+    options: {
+        validate: {
+            headers: Joi.object({
+                cookie: Joi.string().required(),
+            }),
+            options: {
+                allowUnknown: true,
             },
         },
     },
 });
 ```
 
-Bu `limit` sorgu değiştirgesinin değerinin her zaman 1 ila 100 arasında bir tamsayı olmasını güvence altına alır, ve eğer sağlanmazsa varsayılan olarak 10 kullanır. Ancak eğer `/posts?limit=15&offset=15` adresine istekte bulunursak bir başka `400` yanıtı ve hatası alırız.
+Tarayıcılar ve proxy'ler çok sayıda header ekler, bu yüzden header şemaları neredeyse her zaman `allowUnknown: true` gerektirir. `validate.options`, joi seçeneklerini route'taki tüm girdi şemalarına aktarır. Header adları `request.headers` içinde küçük harflidir, bu yüzden onları şemada da küçük harfle yaz.
 
-Hata aldık çünkü `offset` değiştirgesine izin verilmiyor. Bunun da sebebi `limit` değiştirgesi için bir doğrulama yaparken diğeri için hiç bir şey tanımlamamış olmamız.
+### <a name="failaction"></a> Doğrulama başarısız olduğunda
 
-### Basliklar
+Ne olacağına `validate.failAction` karar verir:
 
-Gelen başlıkları da aynı şekilde doğrulayabilirsin. `validate.headers` (başlıkları doğrula) kullan.
+| `failAction`           | Sonuç                                                                                                       |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `'error'` (varsayılan) | `Invalid request query input` gibi genel bir mesajla `400`                                                  |
+| `'log'`                | `validation`, `error` ve kaynak tag'lerini taşıyan bir `request` olayını loglar, sonra handler'ı çalıştırır |
+| `'ignore'`             | handler'ı çalıştırır                                                                                        |
+| bir fonksiyon          | `(request, h, err)`: bir hata fırlat ya da bir takeover yanıtı döndür                                       |
 
-### Yararli yuk (payload) degistirgeleri
+`'log'` ve `'ignore'` ile handler orijinal, doğrulanmamış değeri alır: `?limit=500` sayı olarak değil `'500'` string'i olarak gelir.
 
-`validate.payload` (yararlı yükü doğrula) seçeneği de geçerlidir ve kullanıcı tarafından yola gönderilen yararlı yükü doğrular. Aynı sorgu değiştirgelerinde çalıştığı gibi çalışır ve evet: bir anahtarı doğruluyorsan hepsini doğrulamalısın.
+Varsayılan `400`, hangi alanın başarısız olduğunu gizler; böylece istemciler şemalarını yoklayamaz. Geliştirme sırasında ya da istemcilerin ayrıntılara ihtiyaç duyduğu bir API'de, ayrıntılı hatayı bir `failAction` fonksiyonundan yeniden fırlat:
 
-## Çıktı
+```ts
+server.route({
+    method: 'GET',
+    path: '/posts',
+    handler: (request, h) => posts,
+    options: {
+        validate: {
+            query: Joi.object({
+                limit: Joi.number().integer().max(100),
+            }),
+            failAction: (request, h, err) => {
+                throw err;
+            },
+        },
+    },
+});
+```
 
-hapi istemciye göndermeden önce yanıtı da doğrulayabilir.
-Bu doğrulama seçenekler nesnesinin `response` (yanıt) özelliğinde tanımlanır.
+Artık `/posts?limit=500` isteği joi'nin mesajı ve başarısız anahtarlarla yanıt verir:
 
-Eğer bir yanıt, yanıt doğrulamasını geçemezse istemci varsayılan olarak 500, iç sunucu hatası (Internal Server Error) alır (aşağıda bulunan `response.failAction` kısmına bakın).
-
-Çıktı doğrulama, APIının dokümantasyon ya da kontratında belirtilen maddelere uygun şekilde veri sunduğunundan emin olmak için çok elverişlidir.
-
-Buna ek olarak, [hapi-swagger](https://github.com/glennjones/hapi-swagger) ve [lout](https://github.com/hapijs/lout) çıktı doğrulama şemasını otomatik olarak çıktı noktalarını dokümante etmek için kullandığından, dokümantasyonunun her zaman güncel olduğundan emin olmanı da sağlar.
-
-hapi çıktı doğrulamasına ince ayar yapmak için bir çok seçenek sunar. İşte bir kaçı:
-
----
-
-### response.failAction
-
-`response.failAction`ı aşağıdakilerden birine ayarlayarak yanıt doğrulama başarısız olduğunda ne olacağına karar verebilirsin:
-
-- `error`: bir İç Sunucu Hatası (500) gönder (varsayılan)
-- `log`: Sıkıntıyı günlükle ve yanıtı olduğu gibi gönder
-- `ignore`: görmezden gel ve isteği işlemeye devam et
-- İmzası `async function(request, h, err)` olan bir yaşam göngüsü yöntemi. İmzada bulunan değiştirgelerden `request` istek nesnesi, `h` yanıt alet takımı ve `err` doğrulama hatası olarak gelir
-
-### response.sample
-
-Eğer performans kaygın varsa, hapi yanıtların yalnızca bir kısmını doğrulamak için ayarlanabilir. Bunun için yol (route) yapılandırmasında bununan `response.sample` özelliği kullanılmalıdır. Doğrulanması gereken yanıtların yüzde ne kadarının doğrulanacağını temsil eden `0` ile `100` arasında bir değer verilmelidir.
-
-### response.status
-
-Bazen bir uç noktada (endpoint) birden fazla yanıt nesnesi sunulur.
-Örneğin bir `POST` yolu (route) aşağıdakilerden birini dönebilir:
-
-- `201` durum kodu ile birlikte yeni yaratılan kaynak
-- `202` durum kodu ile birlikte güncellenen kaynağın eski ve yeni değerleri
-
-hapi bunun üstesinden her yanıt durum kodu (response status code) için farklı bir doğrulama şeması vermeni sağlayarak gelir.
-`response.status` anahtarları sayısal durum kodları olan bir nesnedir ve özellikleri joi şemalarıdır.
-
-```json5
+```json
 {
-    response: {
-        status: {
-            201: dataSchema,
-            202: Joi.object({ original: dataSchema, updated:  dataSchema })
-        }
-    }
+    "statusCode": 400,
+    "error": "Bad Request",
+    "message": "\"limit\" must be less than or equal to 100",
+    "validation": { "source": "query", "keys": ["limit"] }
 }
 ```
 
-### response.options
+Tek bir `failAction`'ı tüm route'lara uygulamak için onu sunucunun `routes.validate` seçeneğinde ayarla. API referansındaki [`failAction`](/api#failaction-configuration) bölümüne bak.
 
-joiye doğrulama sırasında gönderilecek seçenekler. Detaylı bilgi için [API dokümantasyonu](/api#-routeoptionsresponseoptions)na bak.
+## <a name="output"></a> Yanıt doğrulama
 
-### Örnek
+`options.response`, handler'ın döndürdüğü değeri handler'dan sonra ve `onPreResponse`'tan önce kontrol eder. Bir endpoint'in belgelenmiş sözleşmesine uyduğundan emin olmak için bunu kullan. [hapi-swagger](https://github.com/glennjones/hapi-swagger) gibi plugin'ler de her endpoint'in çıktısını belgelemek için bu şemaları okur.
 
-Burada örnek olarak kitap listesi dönen bir yol (route) yapılandırması var:
-
-```javascript
+```ts
 const bookSchema = Joi.object({
     title: Joi.string().required(),
     author: Joi.string().required(),
@@ -154,30 +220,80 @@ const bookSchema = Joi.object({
 server.route({
     method: 'GET',
     path: '/books',
-    handler: async function (request, h) {
+    handler: async (request, h) => {
         return await getBooks();
     },
     options: {
         response: {
-            sample: 50,
             schema: Joi.array().items(bookSchema),
+            failAction: 'log',
         },
     },
 });
 ```
 
-Yanıtların yarısını (`sample: 50`) doğrulayacak.
-`response.failAction` vermediğimizden, eğer kitaplardan biri `bookSchema`ya (kitap şeması) uymazsa hapi `500` hata kodu verir.
-Hata yanıtı hatanın sebebini _göstermez_.
-Eğer günlükleme yapılandırdıysan, yanıt doğrulamanın hata vermesine neyin sebep oılduğunu inceleyebilirsin.
-Eğer `response.failAction` `log` olarak ayarlansaydı, hapi orjinal yanıtla cevap verirken doğrulama hatasını da günlükleyebilirdi.
+| Seçenek      | Ne yapar                                                                                                                   |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------- |
+| `schema`     | her yanıt için kural; girdi kurallarıyla aynı değerleri alır                                                               |
+| `status`     | durum kodu başına kurallar, örneğin `{ 201: created, 202: Joi.object({ original, updated }) }`; `schema`'yı geçersiz kılar |
+| `failAction` | `'error'` (varsayılan) `500` yanıtı verir; ayrıca `'log'`, `'ignore'` ya da bir fonksiyon olabilir                         |
+| `sample`     | yoğun route'larda CPU'dan tasarruf etmek için doğrulanacak yanıtların yüzdesi, `0` ile `100` arası                         |
+| `modify`     | `true` olduğunda doğrulanmış değer yanıtın yerine geçer, böylece joi dönüşümleri ve `stripUnknown` uygulanır               |
+| `options`    | bu şemalar için joi seçenekleri, örneğin `stripUnknown`                                                                    |
 
-### Joi Alternatifleri
+Yanıt doğrulamanın atladıkları ya da reddettikleri:
 
-Doğrulama için Joi kullanmanızı tavsiye ediyoruz ancak hapinin sunduğu her doğrulama seçeneği aynı zamanda bir kaç farklı seçenek de kabul eder.
+- Hata yanıtları (`400` ve üzeri durum kodları), `status` o kod için bir şema içermedikçe doğrulanmaz.
+- Yalnızca düz değerler (nesneler, diziler, string'ler) doğrulanabilir. Yanıt şeması olan bir stream ya da dosya yanıtı `500` ile başarısız olur.
 
-En basitinden her seçenek bir mantıksal operatörle ayarlanabilir. Varsayılan olarak var olan tüm doğrulayıcılar `true` olarak ayarlanmıştır ki bu durumda hiç bir doğrulama yapılmaz.
+`modify: true` ile `stripUnknown: true` birlikte, parola hash'leri gibi alanların bir endpoint'ten dışarı sızmasını engellemenin pratik bir yoludur:
 
-Doğrulama değiştirgeleri `false` olarak ayarlanırsa bu ayarlanan değiştirgelerin hiç bir değer almasına izin verilmediği anlamına gelir.
+```ts
+server.route({
+    method: 'GET',
+    path: '/me',
+    handler: (request, h) => {
+        return { id: '2133d32a', name: 'John Doe', passwordHash: '$2a$10$...' };
+    },
+    options: {
+        response: {
+            schema: Joi.object({
+                id: Joi.string(),
+                name: Joi.string(),
+            }).options({ stripUnknown: true }),
+            modify: true,
+        },
+    },
+});
+```
 
-Bu değiştirgeler aynı zamanda `value`su (değeri) doğrulanacak veri ve `options`ı (seçenekleri) sunucu nesnesinde belirlenen doğrulama seçenekleri olan `async function (value, options)` imzasına sahip özel bir işlev de olabilir. Eğer bu işlev bir değer dönerse, doğrulanan orjinal nesneyi değiştirir. Örneğin, `request.headers`ı doğruluyorsan dönen değer `request.headers`ı ve `request.orig.headers`i değiştirir. Değer dönmezsen hiç birine dokunulmaz. Eğer bir hata fırlatılırsa hata `failAction`da belirtildiği üzere işlenir.
+İstemci `{ "id": "2133d32a", "name": "John Doe" }` alır.
+
+## <a name="alternatives"></a> Özel doğrulayıcılar
+
+Her kural, joi şeması yerine `async (value, options)` biçiminde bir fonksiyon olabilir:
+
+- Doğrulamayı başarısız kılmak için bir hata fırlat. Onu `failAction` ele alır.
+- Doğrulanan değerin yerine geçecek bir değer döndür. Orijinal değer `request.orig` üzerinde kalır.
+- Değeri değiştirmeden bırakmak için hiçbir şey döndürme.
+
+```ts
+server.route({
+    method: 'GET',
+    path: '/items',
+    handler: (request, h) => request.query,
+    options: {
+        validate: {
+            query: async (value) => {
+                if (typeof value !== 'object' || value === null || !('ids' in value) || typeof value.ids !== 'string') {
+                    throw new Error('ids is required');
+                }
+
+                return { ids: value.ids.split(',') };
+            },
+        },
+    },
+});
+```
+
+`/items?ids=1,2,3` isteği `{ "ids": ["1", "2", "3"] }` yanıtını döner. Fırlatılan bir hata, joi hatasında olduğu gibi `400`'e dönüştürülür.

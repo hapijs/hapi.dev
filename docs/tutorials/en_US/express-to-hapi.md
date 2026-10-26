@@ -6,39 +6,55 @@ title: Express to hapi
 
 # Express Migration
 
-_This guide is compatible with hapi v17 and newer_
+_This guide is compatible with hapi v21 and newer_
 
 ## <a name="overview" ></a> Overview
 
-This Express to hapi guide will show you how to take what you know how to do in Express, and do it in hapi. While Express relies heavily on middleware for much of its functionality, hapi has more built into the core. Body parsing, cookie handling, input/output validation, and HTTP-friendly error objects are already built-in to the hapi framework. For additional functionality, hapi has a robust selection of plugins in its core ecosystem. hapi is also the only framework that doesn't rely on outside dependencies. Every dependency is managed by the core hapi team, which makes security and reliability some of hapi's greatest strengths.
+This guide shows how to take what you do in Express and do it in hapi. The examples use Express 5.
+
+The biggest difference: Express adds features through middleware you install and order with `app.use()`, while hapi builds most of them into its core and configures them per route. Where hapi does need a plugin, the plugin comes from the hapi team. hapi's own runtime dependencies are all `@hapi/*` packages maintained by the same team.
+
+| In Express you use              | In hapi you use                                                                                                                                              |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `express.json()`, `body-parser` | built in: [payload parsing](#bodyparser)                                                                                                                     |
+| `cookie-parser`                 | built in: [`server.state()`](#config)                                                                                                                        |
+| `express-validator`             | built in: route [`validate`](#joi) with [joi](https://joi.dev)                                                                                               |
+| `passport`                      | auth framework built in; schemes from plugins such as `@hapi/basic`, `@hapi/cookie`, `@hapi/jwt`, and [bell](#bell) ([auth tutorial](/tutorials/en_US/auth)) |
+| `cors`                          | built in: route [`cors`](/api#route-options-cors) option                                                                                                     |
+| `helmet`                        | partly built in: route [`security`](/api#route-options-security) option (no Content-Security-Policy)                                                         |
+| `compression`                   | built in, on by default                                                                                                                                      |
+| `app.set('view engine')`        | [vision](#vision) plugin                                                                                                                                     |
+| `express.static()`              | [inert](#inert) plugin                                                                                                                                       |
+| custom middleware               | [extension points](#extension) and [plugins](#creating)                                                                                                      |
+| error-handling middleware       | an `onPreResponse` [extension](#extension); throw [boom](#boom) errors in place of `next(err)`                                                               |
 
 ## <a name="setup" ></a> Setup
 
 ### <a name="installation" ></a> Installation
 
-Express:
-`npm install express`
-
-hapi:
-`npm install @hapi/hapi`
+|                  | Express                                 | hapi                     |
+| ---------------- | --------------------------------------- | ------------------------ |
+| Install          | `npm install express`                   | `npm install @hapi/hapi` |
+| TypeScript types | `npm install --save-dev @types/express` | included                 |
 
 ### <a name="server" ></a> Creating a Server
 
 Express:
 
-```js
-var express = require('express');
-var app = express();
+```ts
+import express from 'express';
+
+const app = express();
 
 app.listen(3000, function () {
-  console.log('Server is running on port 3000');
-}));
+    console.log('Server is running on port 3000');
+});
 ```
 
 hapi:
 
-```js
-const Hapi = require('@hapi/hapi');
+```ts
+import Hapi from '@hapi/hapi';
 
 const init = async () => {
     const server = Hapi.server({
@@ -53,17 +69,13 @@ const init = async () => {
 init();
 ```
 
-Unlike Express, in hapi you create a server object that will be the focal point of your application. The properties set in the server object will determine how your application behaves. Once you create your server object, you can start your server by calling `server.start()`.
+In hapi, the `server` object is the center of the application. Its options (port, host, default route settings) decide how the server behaves, and routes, plugins, and extensions are all added to it. `server.start()` returns a promise.
 
 ## <a name="routes" ></a> Routes
 
-Routes in hapi get called in a specific order, so you will never have an issue where two routes are conflicting with one another. Routes are called from most specific to least specific. For example, a route with a path `'/home'` will be called before `'/{any*}'`.
-
-Lets look at how to set up a basic route in hapi:
-
 Express:
 
-```js
+```ts
 app.get('/hello', function (req, res) {
     res.send('Hello World!');
 });
@@ -71,7 +83,7 @@ app.get('/hello', function (req, res) {
 
 hapi:
 
-```js
+```ts
 server.route({
     method: 'GET',
     path: '/hello',
@@ -81,13 +93,25 @@ server.route({
 });
 ```
 
-To create a route, Express has the structure of `app.METHOD(PATH, HANDLER)` and hapi has the structure `server.route({METHOD, PATH, HANDLER})`. The method, path, and handler are passed to the hapi server as an object. As you can see, to return a string in Express, you call `res.send()`, whereas in hapi, you simply return the string.
+|                    | Express                                 | hapi                                                     |
+| ------------------ | --------------------------------------- | -------------------------------------------------------- |
+| Define a route     | `app.METHOD(path, handler)`             | `server.route({ method, path, handler })`                |
+| Send a response    | call `res.send()`                       | return the value                                         |
+| Which route runs   | the first registered route that matches | the most specific match, whatever the registration order |
+| Overlapping routes | both registered; the first one wins     | `server.route()` throws when two routes conflict         |
+
+Because hapi picks the most specific route, `'/home'` always wins over `'/{any*}'`, and registration order never decides which route answers. See the [routing tutorial](/tutorials/en_US/routing) for the rules.
 
 ### <a name="methods" ></a> Methods
 
-hapi can use all the route methods that Express can, except `HEAD`. hapi also has the ability to use multiple methods on a single route object. For example:
+| Express               | hapi                                          |
+| --------------------- | --------------------------------------------- |
+| `app.get(path, ...)`  | `method: 'GET'`                               |
+| one route per method  | `method: ['PUT', 'POST']`                     |
+| `app.all(path, ...)`  | `method: '*'`                                 |
+| `app.head(path, ...)` | not allowed: every `GET` route answers `HEAD` |
 
-```js
+```ts
 server.route({
     method: ['PUT', 'POST'],
     path: '/',
@@ -97,21 +121,23 @@ server.route({
 });
 ```
 
-To use all available methods, like in Express `app.all()`, use `method: '*'`.
-
 ### <a name="path" ></a> Path
 
-Like in Express, the path option in hapi must be a string, which can also contain parameters. Parameters in Express are preceded by `:`, such as: `'/users/:userId'`. In hapi, you would put the parameter in curly braces, like: `path: '/users/{userId}'`.
+Parameters go in curly braces in hapi:
+
+|                    | Express 5        | hapi              |
+| ------------------ | ---------------- | ----------------- |
+| Parameter          | `/users/:userId` | `/users/{userId}` |
+| Optional parameter | `/hello{/:user}` | `/hello/{user?}`  |
+| Wildcard           | `/files/*path`   | `/files/{path*}`  |
+
+In hapi, `{user*}` and a whole-segment `{user?}` must be the last segment; `{user*2}` and a partial-segment optional such as `/a{user?}/b` can appear anywhere.
 
 ### <a name="parameters" ></a> Parameters
 
-You saw above how hapi handles simple parameters as compared to Express. Both hapi and Express handle optional parameters the same way. Just like Express, to make a parameter optional in hapi, just include a `?` after the parameter: `path: '/hello/{user?}`.
-
-Accessing the parameters in hapi is very similar to Express. As you know, in Express, the parameters are populated in the `req.params` object. In hapi, the parameters are available via the `request.params` object. Here is an example of both:
-
 Express:
 
-```js
+```ts
 app.get('/hello/:name', function (req, res) {
     const name = req.params.name;
     res.send('Hello ' + name);
@@ -120,7 +146,7 @@ app.get('/hello/:name', function (req, res) {
 
 hapi:
 
-```js
+```ts
 server.route({
     method: 'GET',
     path: '/hello/{name}',
@@ -131,84 +157,116 @@ server.route({
 });
 ```
 
-Query parameters are also similar in both frameworks. In Express, they are available via `req.query` and hapi they are available via `request.query`.
+| Express      | hapi              |
+| ------------ | ----------------- |
+| `req.params` | `request.params`  |
+| `req.query`  | `request.query`   |
+| `req.body`   | `request.payload` |
 
 ### <a name="handler" ></a> Handler
 
-There are differences in the way Express and hapi structure their route handlers. Unlike Express, which has a handler with parameters of `req` and `res`, hapi has a handler with parameters of `request` and `h`. The second parameter, `h` is the response toolkit, which is an object with several methods used to respond to the request.
+An Express handler receives `req` and `res`, and calls methods on `res` to respond. A hapi handler receives `request` and `h`, the [response toolkit](/api#response-toolkit), and returns the response:
 
-Here is an example of route with a handler that redirects to another route in Express and hapi:
+| Express                        | hapi                                                     |
+| ------------------------------ | -------------------------------------------------------- |
+| `res.send('text')`             | `return 'text'`                                          |
+| `res.json(object)`             | `return object`                                          |
+| `res.status(201).send(object)` | `return h.response(object).code(201)`                    |
+| `res.set('x-name', 'value')`   | `return h.response(object).header('x-name', 'value')`    |
+| `res.redirect('/')`            | `return h.redirect('/')`                                 |
+| `res.cookie('name', 'value')`  | `h.state('name', 'value')`, see [cookies](#config)       |
+| `res.sendFile(file)`           | `return h.file(file)`, see [inert](#inert)               |
+| `res.render('index', context)` | `return h.view('index', context)`, see [vision](#vision) |
+| `next(err)`                    | `throw Boom.notFound()`, see [boom](#boom)               |
 
-Express:
+When the handler needs to set a status code or headers, it wraps the value in `h.response()`:
 
-```js
-app.get('/home', function (req, res) {
-    res.redirect('/');
-});
-```
-
-hapi:
-
-```js
+```ts
 server.route({
-    method: 'GET',
-    path: '/home',
-    handler: function (request, h) {
-        return h.redirect('/');
-    },
-});
-```
-
-Both routes will redirect to the `'/'` route. Express uses the response method `res.redirect` whereas hapi uses `h.redirect` which is part of the response toolkit. There are Express response methods that hapi can accomplish by just using `return`. Some of these methods include `res.send` and `res.json`. Here is an example of how hapi will respond with JSON data:
-
-```js
-server.route({
-    method: 'GET',
+    method: 'POST',
     path: '/user',
     handler: function (request, h) {
         const user = {
             firstName: 'John',
             lastName: 'Doe',
-            userName: 'JohnDoe',
             id: 123,
         };
 
-        return user;
+        return h.response(user).code(201).header('location', '/user/123');
     },
 });
 ```
 
-hapi has the functionality to respond with JSON data by default. The only thing you have to do is just return a valid JavaScript object and hapi will take care of the rest for you.
+hapi serializes the returned object as JSON and sets the `content-type`. See the [response marshalling tutorial](/tutorials/en_US/response-marshalling) for how hapi turns a returned value into a response.
 
 ## <a name="plugins" ></a> Middleware vs Plugins and Extensions
 
-To extend its functionality, Express uses middleware. Middleware essentially is a sequence of functions using callbacks to execute the next function. The issue with this is as your application grows in size and complexity, the order at which middleware executes becomes more crucial and more difficult to maintain. Having a middleware execute before one it is dependant on will cause your application to fail. hapi fixes this issue with its robust plugin and extension system.
+Express runs middleware in the order you call `app.use()`. If one middleware depends on another, you keep them in the right order by hand, and a wrong order fails at request time.
 
-Plugins allow you to break your application logic into isolated pieces of business logic, and reusable utilities. Each plugin comes with its own dependencies which are explicitly specified in the plugins themselves. This means you don't have to install dependencies yourself to make your plugins work. You can either add an existing hapi plugin, or write your own. For a more extensive tutorial on plugins, please see the [plugins](/tutorials/plugins/?lang=en_US) tutorial.
+hapi runs every request through a fixed sequence of steps, the [request lifecycle](/api#request-lifecycle). Instead of ordering middleware, you attach code to a named step. Each step below also shows the Express middleware whose job it does:
 
-Each request in hapi follows a predefined path, the request lifecycle. hapi has extension points that let you create custom functionality along the lifecycle. Extension points in hapi let you know the precise order at which your application will run. For more info, please see the hapi [request lifecycle](/api/#request-lifecycle).
+| hapi step                    | Extension point                  | Express equivalent           |
+| ---------------------------- | -------------------------------- | ---------------------------- |
+| request received             | `onRequest`                      | `app.use()` before routing   |
+| route lookup, cookie parsing |                                  | `app.get()`, `cookie-parser` |
+| before authentication        | `onPreAuth`                      |                              |
+| authentication               |                                  | `passport`                   |
+| payload parsing              |                                  | `express.json()`             |
+| after authentication         | `onCredentials`, `onPostAuth`    |                              |
+| validation                   |                                  | `express-validator`          |
+| before the handler           | `onPreHandler`                   |                              |
+| handler                      |                                  | route callback               |
+| after the handler            | `onPostHandler`, `onPreResponse` | error-handling middleware    |
+| after the response is sent   | `onPostResponse`                 |                              |
+
+The extension points are where you add your own code with `server.ext()`. hapi runs the other steps from each route's configuration.
+
+Plugins replace reusable middleware. A plugin is a named unit that registers routes, extensions, and decorations on the server. A plugin can declare the other plugins it needs in its `dependencies` property, and hapi refuses to start when one is missing, instead of failing at request time. See the [plugins tutorial](/tutorials/en_US/plugins).
 
 ### <a name="extension" ></a> Extension Points
 
-hapi has 7 extension points along the request lifecycle. In order, they are `onRequest`, `onPreAuth`, `onCredentials`, `onPostAuth`, `onPreHandler`, `onPostHandler`, and `onPreResponse`. To add a function to an extension point, you call `server.ext()`. Lets look at an example:
+A middleware that runs for every request becomes an extension:
 
-```js
+Express:
+
+```ts
+app.use(function (req, res, next) {
+    console.log(req.method, req.url);
+    next();
+});
+```
+
+hapi:
+
+```ts
 server.ext('onRequest', function (request, h) {
-    request.setUrl('/test');
+    console.log(request.method, request.path);
     return h.continue;
 });
 ```
 
-This function will run at `onRequest`, which is the first extension point. `onRequest` is run just after the server receives the request object, before the route lookup. What this function will do is reroute all requests to the `'/test'` route.
+`return h.continue` plays the role of `next()`: the request moves on to the next step. Returning a takeover response (`h.response(...).takeover()`), or throwing an error, ends the request there instead.
+
+hapi has eight request extension points: `onRequest`, `onPreAuth`, `onCredentials`, `onPostAuth`, `onPreHandler`, `onPostHandler`, `onPreResponse`, and `onPostResponse`. The [lifecycle hooks tutorial](/tutorials/en_US/lifecycle-hooks) covers when to use each one, and [`server.ext()`](/api#server-ext-events) lists the options.
 
 ### <a name="creating" ></a> Creating a Plugin
 
-As you know, you can write your own middleware in Express. The same is true with hapi plugins. A plugin is an object with required `name` and `register` properties. The `register` property is a function with the signature of `async function (server, option)`. Lets look at how to create a basic plugin:
+A middleware that adds a helper to every request becomes a plugin that adds a [decoration](/tutorials/en_US/decorators). A plugin is an object with a `name` (or `pkg`) and an `async register(server, options)` function.
 
 Express:
 
-```js
-const getDate = function (req, res, next) {
+```ts
+import type { NextFunction, Request, Response } from 'express';
+
+declare global {
+    namespace Express {
+        interface Request {
+            getDate(): Date;
+        }
+    }
+}
+
+const getDate = function (req: Request, res: Response, next: NextFunction) {
     req.getDate = function () {
         const date = new Date();
         return date;
@@ -220,8 +278,16 @@ const getDate = function (req, res, next) {
 
 hapi:
 
-```js
-const getDate = {
+```ts
+import type { Plugin } from '@hapi/hapi';
+
+declare module '@hapi/hapi' {
+    interface ResponseToolkit {
+        getDate(): Date;
+    }
+}
+
+const getDate: Plugin<void> = {
     name: 'getDate',
     version: '1.0.0',
     register: async function (server, options) {
@@ -235,37 +301,44 @@ const getDate = {
 };
 ```
 
-The hapi plugin will save the current date in `h.getDate()`. We can then use this in any of our route handlers.
+- The Express middleware sets `req.getDate` again on every request. The hapi plugin calls `server.decorate()` once, at registration, and every handler then has `h.getDate()`.
+- TypeScript only knows about the new method once you declare it: Express through its global `Express.Request` interface, hapi by adding it to the `ResponseToolkit` interface of `@hapi/hapi`.
 
 ### <a name="load" ></a> Loading a Plugin
 
-In Express, you load middleware by calling the `app.use()` method. In hapi, you call the `server.register()` method. Lets load the plugin we created in the previous section:
-
 Express:
 
-```js
+```ts
 app.use(getDate);
 ```
 
 hapi:
 
-```js
+```ts
 await server.register({
     plugin: getDate,
 });
 ```
 
-You can also provide options to your plugin by setting the `options` property on `server.register()`.
-
 ### <a name="options" ></a> Options
 
-You can add options to Express middleware by exporting a function that accepts an options parameter, which then returns the middleware. In hapi, you set the options when you register the plugin. Lets have a look:
+An Express middleware takes options by being a function that returns the middleware. A hapi plugin receives its options as the second argument of `register`.
 
 Express:
 
-```js
-module.exports = function (options) {
-    return function getDate(req, res, next) {
+```ts
+import type { NextFunction, Request, Response } from 'express';
+
+declare global {
+    namespace Express {
+        interface Request {
+            getDate(): string;
+        }
+    }
+}
+
+export default function (options: { name: string }) {
+    return function getDate(req: Request, res: Response, next: NextFunction) {
         req.getDate = function () {
             const date = 'Hello ' + options.name + ', the date is ' + new Date();
             return date;
@@ -273,13 +346,21 @@ module.exports = function (options) {
 
         next();
     };
-};
+}
 ```
 
 hapi:
 
-```js
-const getDate = {
+```ts
+import type { Plugin } from '@hapi/hapi';
+
+declare module '@hapi/hapi' {
+    interface ResponseToolkit {
+        getDate(): string;
+    }
+}
+
+const getDate: Plugin<{ name: string }> = {
     name: 'getDate',
     version: '1.0.0',
     register: async function (server, options) {
@@ -293,20 +374,20 @@ const getDate = {
 };
 ```
 
-To get access to the options in hapi, you simply refer to the `options` object when you create the plugin:
+You pass the options when you register the plugin. The type argument of `Plugin<{ name: string }>` types `options` inside `register`, and TypeScript flags a `server.register()` call whose options don't match it; hapi does not check them at runtime:
 
 Express:
 
-```js
-const getDate = require('./mw/getDate.js');
+```ts
+import getDate from './mw/getDate.ts';
 
 app.use(getDate({ name: 'Tom' }));
 ```
 
 hapi:
 
-```js
-server.register({
+```ts
+await server.register({
     plugin: getDate,
     options: {
         name: 'Tom',
@@ -314,83 +395,84 @@ server.register({
 });
 ```
 
-## <a name="bodyParser" ></a> body-parser
+## <a name="bodyparser" ></a> body-parser
 
-hapi has parsing abilities built into its core. Unlike Express, you do not need middleware to parse payload data. In fact, you may need to install up to four additional middlewares in Express depending on what kind of data you would like to parse. In hapi the payload data, whether its JSON or plain text, is readily available in the `request.payload` object. Here is a side by side comparison of parsing simple payload data:
+hapi parses the request payload before the handler runs, with no middleware. The result is in `request.payload`.
+
+| Content type                        | Express                              | hapi                                        |
+| ----------------------------------- | ------------------------------------ | ------------------------------------------- |
+| `application/json`                  | `app.use(express.json())`            | parsed by default                           |
+| `application/x-www-form-urlencoded` | `app.use(express.urlencoded())`      | parsed by default                           |
+| `text/*`                            | `app.use(express.text())`            | parsed by default                           |
+| `multipart/form-data`               | a separate package, such as `multer` | route option `payload: { multipart: true }` |
 
 Express:
 
-```js
-var bodyParser = require('body-parser');
+```ts
+import express from 'express';
 
-app.use(bodyParser.urlencoded({ extend: true }));
+const app = express();
+
+app.use(express.urlencoded());
 
 app.post('/hello', function (req, res) {
-    var name = req.body.name;
+    const name = req.body.name;
     res.send('Hello ' + name);
 });
 ```
 
 hapi:
 
-```js
-server.route({
+```ts
+server.route<{ Payload: { name: string } }>({
     method: 'POST',
     path: '/hello',
     handler: function (request, h) {
         const name = request.payload.name;
-        return `Hello ` + name;
+        return 'Hello ' + name;
     },
 });
 ```
 
-To parse a JSON object in express, you have to specify it:
-
-```js
-app.use(bodyParser.json());
-```
-
-JSON parsing is built into hapi, so there are no further steps needed.
+`request.payload` has no fixed shape, since hapi can't know what clients will send. The type argument `server.route<{ Payload: { name: string } }>()` tells TypeScript what the handler receives. It is a type only: to check the payload at runtime, add [validation](#joi). Size limits, timeouts, and file uploads are set with the route's [`payload` options](/api#route-options-payload).
 
 ## <a name="config" ></a> cookie-parser
 
-Setting and parsing cookies in Express require you to install the `cookie-parser` middleware. hapi has cookie functionality built right into the core, so there is no need to install additional middleware. To use cookies in hapi, you first configure the cookie with `server.state()`. Lets have a look:
+hapi reads and writes cookies without middleware. Where Express takes cookie options on every `res.cookie()` call, hapi defines each cookie once with `server.state()`, and every route then sets it by name.
 
-```js
-const Hapi = require('@hapi/hapi');
+| Option          | Express `res.cookie()`     | hapi `server.state()`               |
+| --------------- | -------------------------- | ----------------------------------- |
+| Secure flag     | `secure`, off by default   | `isSecure`, on by default           |
+| HttpOnly flag   | `httpOnly`, off by default | `isHttpOnly`, on by default         |
+| SameSite        | `sameSite`                 | `isSameSite`, `'Strict'` by default |
+| Lifetime        | `maxAge` (ms)              | `ttl` (ms)                          |
+| Signed value    | `signed`                   | `sign: { password }`                |
+| Encrypted value | not built in               | `encoding: 'iron'`                  |
 
-const server = Hapi.server({ port: 8000 });
-
-server.state('data', {
-    ttl: null,
-    isSecure: true,
-    isHttpOnly: true,
-});
-```
+See [`server.state()`](/api#server-state-name-options) for every option, and the [cookies tutorial](/tutorials/en_US/cookies).
 
 ### <a name="setCookie" ></a> Setting a Cookie
 
-Once the cookie is configured, you can now set the cookie with `h.state()`. Here is an example:
-
 Express:
 
-```js
-var express = require('express');
-var app = express();
-var cookieParser = require('cookie-parser');
+```ts
+import express from 'express';
+import cookieParser from 'cookie-parser';
+
+const app = express();
 
 app.use(cookieParser());
 
 app.get('/', function (req, res) {
-    res.cookie('username', 'tom', { maxAge: null, secure: true, httpOnly: true });
+    res.cookie('username', 'tom', { secure: true, httpOnly: true });
     res.send('Hello');
 });
 ```
 
 hapi:
 
-```js
-const Hapi = require('@hapi/hapi');
+```ts
+import Hapi from '@hapi/hapi';
 
 const server = Hapi.server({ port: 8000 });
 
@@ -405,59 +487,60 @@ server.route({
     path: '/',
     handler: function (request, h) {
         h.state('username', 'tom');
-        return h.response('Hello');
+        return 'Hello';
     },
 });
 ```
 
-In express, you configure cookie with the `options` object in `res.cookie`. In hapi, the cookie config is saved to the server object with `server.state`. You then use `h.state()` to attach data to the cookie.
-
 ### <a name="getCookie" ></a> Getting a Cookie Value
-
-To get a cookie value in hapi, you call `request.state`. Lets have look:
 
 Express:
 
-```js
-var express = require('express');
-var app = express();
-var cookieParser = require('cookie-parser);
-
-app.use(cookieParser());
-
-app.get('/', (req, res) => {
-
-    res.cookie('username', 'tom', { maxAge: null, secure: true, httpOnly: true })
+```ts
+app.get('/whoami', (req, res) => {
     res.send(req.cookies.username);
 });
 ```
 
 hapi:
 
-```js
-const Hapi = require('@hapi/hapi');
-
-const server = Hapi.server({ port: 8000 });
-
-server.state('username', {
-    ttl: null,
-    isSecure: true,
-    isHttpOnly: true,
-});
-
+```ts
 server.route({
     method: 'GET',
-    path: '/',
-    handler: async (request, h) => {
-        h.state('username', 'tom');
-        return h.response(request.state.username);
+    path: '/whoami',
+    handler: (request, h) => {
+        const username = request.state.username;
+        if (typeof username !== 'string') {
+            return 'No username cookie';
+        }
+
+        return username;
     },
 });
 ```
 
+`request.state` holds whatever cookies the client sent, so hapi types each value as `unknown`. Check the type before you use it.
+
 ## <a name="bell" ></a> Passport -> bell
 
-In Express, third party authentication is handled with Passport. In hapi, you use the [bell](/module/bell) module for third party authentication. `bell` has over 30 predefined configurations for OAuth providers including Twitter, Facebook, Google, GitHub, and more. It will also allow you to set up your own custom provider. For a complete list, please see the [bell providers documentation](https://github.com/hapijs/bell/blob/master/Providers.md). `bell` was developed and is maintained by the core hapi team, so you know stability and reliability won't be an issue. Lets look how to authenticate using your Twitter credentials:
+Express handles third-party login with Passport. hapi uses [bell](/module/bell), which has built-in configurations for over 30 OAuth providers, including Twitter, Facebook, Google, and GitHub, and supports custom providers. See the [bell providers list](/module/bell/providers).
+
+Passport needs two routes, one to start the login and one for the provider's callback. bell uses one route for both:
+
+```mermaid
+sequenceDiagram
+    participant B as Browser
+    participant S as hapi server
+    participant P as Twitter
+    B->>S: GET /auth/twitter
+    Note over S: no OAuth response in the query,<br/>so bell starts the login
+    S-->>B: 302 redirect to Twitter
+    B->>P: log in and approve
+    P-->>B: 302 redirect to /auth/twitter?oauth_token=...
+    B->>S: GET /auth/twitter?oauth_token=...
+    Note over S: bell exchanges the token with Twitter<br/>and sets request.auth.credentials
+    S-->>B: handler response
+```
 
 Express:
 
@@ -465,51 +548,50 @@ Express:
 npm install passport passport-twitter
 ```
 
-<br />
+If you use TypeScript, also run `npm install --save-dev @types/passport @types/passport-twitter`.
 
-```js
-var passport = require('passport');
-var TwitterStrategy = require('passport-twitter').Strategy
+```ts
+import passport from 'passport';
+import { Strategy as TwitterStrategy } from 'passport-twitter';
 
-passport.use(new TwitterStrategy({
-    consumerKey: TWITTER_CONSUMER_KEY,
-    consumerSecret: TWITTER_CONSUMER_SECRET,
-    callbackURL: '/auth/twitter/callback'
-},
-    function(token, tokenSecret, profile, cb) {
-        User.findOrCreate({ twitterId: profile.id }, function (err, user) {
-            return cb(err, user);
-        }
-    }
-));
+passport.use(
+    new TwitterStrategy(
+        {
+            consumerKey: TWITTER_CONSUMER_KEY,
+            consumerSecret: TWITTER_CONSUMER_SECRET,
+            callbackURL: '/auth/twitter/callback',
+        },
+        function (token, tokenSecret, profile, cb) {
+            User.findOrCreate({ twitterId: profile.id }, function (err, user) {
+                return cb(err, user);
+            });
+        },
+    ),
+);
 
-passport.seralizeUser(function(user, cb) {
+passport.serializeUser(function (user, cb) {
     cb(null, user);
-})
+});
 
-passport.deserializeUser(function(user, cb) {
-    cb(null, obj);
-})
+passport.deserializeUser(function (user: Express.User, cb) {
+    cb(null, user);
+});
 
 app.get('/auth/twitter', passport.authenticate('twitter'));
-app.get('/auth/twitter/callback', passport.authenticate('twitter', { failureRedirect: '/login'}),
-    function(req, res) {
-
-        res.redirect('/');
-    });
+app.get('/auth/twitter/callback', passport.authenticate('twitter', { failureRedirect: '/login' }), function (req, res) {
+    res.redirect('/');
+});
 ```
 
 hapi:
 
 ```
-npm install '@hapi/bell'
+npm install @hapi/bell
 ```
 
-<br />
-
-```js
-const Hapi = require('@hapi/hapi');
-const Bell = require('@hapi/bell');
+```ts
+import Hapi from '@hapi/hapi';
+import Bell from '@hapi/bell';
 
 const server = Hapi.server({ port: 8000 });
 
@@ -531,10 +613,8 @@ server.route({
             return `Authentication failed due to: ${request.auth.error.message}`;
         }
 
-        // Perform any account lookup or registration, setup local session,
-        // and redirect to the application. The third-party credentials are
-        // stored in request.auth.credentials. Any query parameters from
-        // the initial request are passed back via request.auth.credentials.query.
+        // Look up or register the account, start a local session, and redirect.
+        // request.auth.credentials holds the provider's profile and tokens.
 
         return h.redirect('/home');
     },
@@ -547,25 +627,21 @@ server.route({
 });
 ```
 
-To use bell, simply register the plugin and configure the strategy with `server.auth.strategy`.
+| Option         | What it is                                                                                                 |
+| -------------- | ---------------------------------------------------------------------------------------------------------- |
+| `provider`     | the name of the built-in provider configuration                                                            |
+| `password`     | encrypts the temporary cookie bell keeps between the two requests; at least 32 characters                  |
+| `clientId`     | the OAuth client ID from the provider                                                                      |
+| `clientSecret` | the OAuth client secret from the provider                                                                  |
+| `isSecure`     | the cookie's Secure flag. `false` allows plain HTTP in development; leave the default `true` in production |
 
-`provider` is the name of the third-party provider.
-
-`password` is the cookie encryption password.
-
-`clientId` is the OAuth client identifier, which is available from the provider.
-
-`clientSecret` is the OAuth client secret, which is available from the provider.
-
-`isSecure` sets the cookie secure flag. For production, this should be set to `true`, which is the default value.
+`mode: 'try'` lets the handler run when the login fails, so it can show the error instead of a bare 401. Query parameters from the request that started the login come back on `request.auth.credentials.query`, so you can carry a return URL through the provider round trip.
 
 ## <a name="joi" ></a> express-validator -> joi
 
-To validate data in Express, you make use of the `express-validator` plugin. One of the biggest drawbacks to `express-validator` is that while you can validate a request, there is no clear way of validating a response. In hapi, you use the [joi](https://joi.dev) module, which can validate requests and responses with ease. Joi allows you to create your own validations with a simple and clean object syntax. For a more in-depth look at validation in hapi, please see the [validation](/tutorials/validation/?lang=en_US) tutorial.
+hapi validates requests and responses from the route's configuration, using [joi](https://joi.dev) schemas. express-validator checks requests only; hapi can also check what your handler returns. See the [validation tutorial](/tutorials/en_US/validation) for more.
 
 ### <a name="input" ></a> Input Validation
-
-Input validation allows you to validate any input data coming into the server, whether its parameters, payload, etc. Here is a look at how to validate a blog post entry in Express and hapi:
 
 Express:
 
@@ -573,22 +649,17 @@ Express:
 npm install express-validator
 ```
 
-<br />
+```ts
+import express from 'express';
+import { body, validationResult } from 'express-validator';
 
-```js
-const bodyParser = require('body-parser');
-const expressValidator = require('express-validator');
+app.use(express.json());
+app.use(express.urlencoded());
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(expressValidator());
-
-app.post('/post', function (req, res) {
-    req.check('post', 'Post too long').isLength({ max: 140 });
-
-    let errors = req.validationErrors();
-    if (errors) {
-        res.status(400).send(errors);
+app.post('/post', body('post', 'Post too long').isLength({ max: 140 }), function (req, res) {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        res.status(400).send(errors.array());
     } else {
         res.send('Blog post added!');
     }
@@ -601,10 +672,8 @@ hapi:
 npm install joi
 ```
 
-<br />
-
-```js
-const Joi = require('joi');
+```ts
+import Joi from 'joi';
 
 server.route({
     method: 'POST',
@@ -622,19 +691,13 @@ server.route({
 });
 ```
 
-First you install `joi`, then require it in your project. To validate the input data, you specify what data type you are expecting, then set rules on that data. In this case, `post` will be a `string` with a maximum number of characters of 140. In `joi` you can string rules together like:
-
-```js
-Joi.string().min(1).max(140).
-```
+- The handler only runs when the payload passes. Otherwise hapi responds with a 400 on its own, so the handler has no error branch.
+- Rules chain, such as `Joi.string().min(1).max(140)`.
+- `validate` also accepts `params`, `query`, `headers`, and `state` schemas.
 
 ### <a name="output" ></a> Output Validation
 
-As stated above, there is no clear way of doing response validation with `express-validator`. With `joi`, response validation is fast and simple. Lets have a look:
-
-hapi:
-
-```js
+```ts
 const bookSchema = Joi.object({
     title: Joi.string().required(),
     author: Joi.string().required(),
@@ -658,52 +721,52 @@ server.route({
 });
 ```
 
-This route will return a list of books. In the `options` route property, we can specify what rules the list of books should follow. By setting the `failAction` to `log`, if there is an error, the server will log the error.
+`response.schema` checks the list of books the handler returns. With `failAction: 'log'`, a response that fails the schema is still sent and the failure is logged; the default, `'error'`, replaces it with a 500.
 
 ## <a name="vision" ></a> app.set('view engine') -> vision
 
-hapi has extensive support for template rendering, including the ability to load and leverage multiple templating engines, partials, helpers (functions used in templates to manipulate data), and layouts. Express enables views capabilities by using `app.set('view engine')`, where hapi's capabilities are provided by the [vision](/module/vision) plugin. For a more extensive tutorial on views in hapi, please see the [views](/tutorials/views/?lang=en_US) tutorial.
+hapi renders templates through the [vision](/module/vision) plugin. It supports several template engines at once, plus partials, helpers, and layouts. See the [views tutorial](/tutorials/en_US/views) for more.
 
 ### <a name="viewengine" ></a> Setting the View Engine
 
-Setting the views engine in express looks like the following:
+Express:
 
-```js
+```ts
 app.set('view engine', 'pug');
 ```
 
-To set the views engine in hapi, you first must register the vision plugin, then configure `server.views`:
+hapi:
 
-```js
-await server.register(require('@hapi/vision'));
+```ts
+import Vision from '@hapi/vision';
+import Pug from 'pug';
+
+await server.register(Vision);
 
 server.views({
     engines: {
-        pug: require('pug'),
+        pug: Pug,
     },
-    relativeTo: __dirname,
+    relativeTo: import.meta.dirname,
     path: 'views',
 });
 ```
 
-By default, Express will look for views or templates in the `views` folder. In hapi, you specify where the views are located using the `relativeTo` and `path` properties. Like Express, hapi supports a wide variety of templating engines, such as pug, ejs, handlebars, etc.
-
-hapi has many more configurable options in `server.views`. To see the full list of capabilities, please go to the [views](/tutorials/views/?lang=en_US) tutorial.
+Express looks for templates in `./views` by default. In hapi, you set the folder with `relativeTo` and `path`.
 
 ### <a name="view" ></a> Rendering a View
 
-To render a view in Express, you would call `res.render()`. hapi, by way of vision, has two methods for rendering views, `h.view` and the view handler. Lets look at how to do both.
-First, rendering a view in Express:
+Express:
 
-```js
+```ts
 app.get('/', function (req, res) {
     res.render('index', { title: 'Homepage', message: 'Welcome' });
 });
 ```
 
-Using `h.view` in hapi:
+hapi, with `h.view()`:
 
-```js
+```ts
 server.route({
     method: 'GET',
     path: '/',
@@ -713,9 +776,9 @@ server.route({
 });
 ```
 
-And using the view handler in hapi:
+hapi, with the `view` handler, when the route only renders a template:
 
-```js
+```ts
 server.route({
     method: 'GET',
     path: '/',
@@ -731,38 +794,42 @@ server.route({
 });
 ```
 
-To pass context in `h.view`, you pass an object as the second parameter. To pass context in the view handler, you use the `context` key.
-
 ## <a name="inert" ></a> express.static() -> inert
 
-hapi gets its ability to serve static content from a plugin called [inert](/module/inert). inert provides new handler methods for serving static files and directories, as well as adding a `h.file()` method to the response toolkit. For a more in-depth tutorial of server static files in hapi, please see the [serving static files](/tutorials/servingfiles/?lang=en_US) tutorial.
+hapi serves static files through the [inert](/module/inert) plugin. It adds the `file` and `directory` handlers and the `h.file()` method. See the [serving files tutorial](/tutorials/en_US/serving-files) for more.
+
+Both examples below use this setup, which registers inert and sets the folder that file paths are relative to:
+
+```ts
+import Path from 'node:path';
+import Hapi from '@hapi/hapi';
+import Inert from '@hapi/inert';
+
+const server = Hapi.server({
+    port: 3000,
+    routes: {
+        files: {
+            relativeTo: Path.join(import.meta.dirname, 'public'),
+        },
+    },
+});
+
+await server.register(Inert);
+```
 
 ### <a name="single" ></a> Serving Single Files
 
-In Express, you would use the `res.sendFile` method to return a single file. In hapi, you can either use the `h.file()` method or the file handler, which is available via [inert](/module/inert). Once you register the inert plugin, you will be able to serve your static files:
-
 Express:
 
-```js
+```ts
 app.get('/image', function (req, res) {
     res.sendFile('image.jpg', { root: './public' });
 });
 ```
 
-hapi with `h.file()`:
+hapi, with `h.file()`:
 
-```js
-const server = new Hapi.Server({
-    port: 3000,
-    routes: {
-        files: {
-            relativeTo: Path.join(__dirname, 'public'),
-        },
-    },
-});
-
-await server.register(require('@hapi/inert'));
-
+```ts
 server.route({
     method: 'GET',
     path: '/image',
@@ -772,20 +839,9 @@ server.route({
 });
 ```
 
-hapi with file handler:
+hapi, with the `file` handler:
 
-```js
-const server = new Hapi.Server({
-    port: 3000,
-    routes: {
-        files: {
-            relativeTo: Path.join(__dirname, 'public'),
-        },
-    },
-});
-
-await server.register(require('@hapi/inert'));
-
+```ts
 server.route({
     method: 'GET',
     path: '/image',
@@ -795,32 +851,17 @@ server.route({
 });
 ```
 
-To serve static files in hapi, you first must tell hapi where the static files are located. You do this by configuring the `server.options.routes` object. You set the `relativeTo` to the folder where the files are located, much like you do in the options object of the `res.sendFile` in Express. Next, you need to register the inert plugin. This will give you access to the methods that allows you to serve static files. Now in your route handler, you can use the `h.file()` method or the file handler to server your static file.
-
 ### <a name="static" ></a> Static File Server
-
-To set up a static file server in Express, you would use the `express.static()` middleware. In hapi, you use the file handler made available by the [inert](/module/inert) plugin. You would setup the server in the same way as you did to serve a single static file, by telling where the files are located. You then would setup a route to catch all of the requests and return the correct files. Lets have a look:
 
 Express:
 
-```js
-app.use(express.static('/public'));
+```ts
+app.use(express.static('public'));
 ```
 
 hapi:
 
-```js
-const server = new Hapi.Server({
-    port: 3000,
-    routes: {
-        files: {
-            relativeTo: Path.join(__dirname, 'public'),
-        },
-    },
-});
-
-await server.register(require('@hapi/inert'));
-
+```ts
 server.route({
     method: 'GET',
     path: '/{param*}',
@@ -832,15 +873,15 @@ server.route({
 });
 ```
 
-Now, you can access any static files by going to `localhost:3000/filename`. [inert](/module/inert) has many other options and capabilities. To see what all it can do, please see the [serving static files](/tutorials/servingfiles/?lang=en_US) tutorial.
+The `{param*}` wildcard matches any path, and the `directory` handler serves the matching file from the `public` folder, so `/logo.png` returns `public/logo.png`. Because hapi picks the most specific route, your other routes still win over this catch-all.
 
 ## <a name="boom" ></a> Error Handling -> boom
 
-hapi uses the [boom](/module/boom) module to handle errors. By default, boom will return the errors in JSON format. Express on the other hand will return a text response by default, which is suboptimal with a JSON API. Lets look a 404 error response with the default settings by submitting a `GET` request to `'/hello'`, which does not exists:
+hapi responds to errors with JSON, built from [boom](/module/boom) error objects. Express responds with an HTML page. For a `GET /hello` that matches no route:
 
 Express:
 
-```js
+```text
 Cannot GET /hello
 ```
 
@@ -856,18 +897,26 @@ hapi:
 
 ### <a name="custom" ></a> Custom Messages
 
-`boom` allows you to easily change the error message for any status code. Lets take the 404 error above and return a new message:
-
 Express:
 
-```js
-res.status(400).send({ status: 404, error: 'Page not found' });
+```ts
+res.status(404).send({ status: 404, error: 'Page not found' });
 ```
 
 hapi:
 
-```js
+```ts
 throw Boom.notFound('Page not found');
 ```
 
-In Express, you set the status code, then send the error message body. In this case we return a JSON object with the status code and the error message. In `boom`, there is no need to return a JSON object with the status code, it does this by default. In the example above, you throw `Boom.notFound()` to set the error message. `boom` has a long list of 4xx and 5xx errors, such as `Boom.unauthorized()`, `Boom.badRequest()`, `Boom.badImplementation()`, etc. For a complete list, please see the [boom](/module/boom) documentation.
+The thrown error becomes this response:
+
+```json
+{
+    "statusCode": 404,
+    "error": "Not Found",
+    "message": "Page not found"
+}
+```
+
+boom has a function for the common 4xx and 5xx statuses, such as `Boom.badRequest()`, `Boom.unauthorized()`, and `Boom.badImplementation()`. Throw one anywhere in a handler, extension, or plugin, and hapi turns it into the response. Errors that are not boom errors become a 500, and their message is hidden from the client. See the [boom documentation](/module/boom) for the full list.

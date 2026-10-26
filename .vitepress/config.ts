@@ -57,14 +57,19 @@ const tutorialItems = [
     { slug: 'auth', text: 'Authentication' },
     { slug: 'caching', text: 'Caching' },
     { slug: 'cookies', text: 'Cookies' },
+    { slug: 'decorators', text: 'Decorators' },
+    { slug: 'lifecycle-hooks', text: 'Lifecycle Hooks' },
     { slug: 'logging', text: 'Logging' },
     { slug: 'plugins', text: 'Plugins' },
+    { slug: 'response-marshalling', text: 'Response Marshalling' },
     { slug: 'routing', text: 'Routing' },
     { slug: 'server-methods', text: 'Server Methods' },
     { slug: 'serving-files', text: 'Serving Files' },
+    { slug: 'sse', text: 'Server-Sent Events' },
     { slug: 'testing', text: 'Testing' },
     { slug: 'validation', text: 'Validation' },
     { slug: 'views', text: 'Views' },
+    { slug: 'websockets', text: 'WebSockets' },
     { slug: 'community', text: 'Community' },
     { slug: 'express-to-hapi', text: 'Express to hapi' },
 ];
@@ -88,6 +93,17 @@ export default defineConfig({
     markdown: {
         config(md) {
             md.use(groupIconMdPlugin);
+
+            // ```mermaid fences render client-side through components/Mermaid.vue.
+            const fence = md.renderer.rules.fence!;
+            md.renderer.rules.fence = (tokens, idx, options, env, self) => {
+                const token = tokens[idx];
+                if (token.info.trim() !== 'mermaid') {
+                    return fence(tokens, idx, options, env, self);
+                }
+
+                return `<Mermaid code="${encodeURIComponent(token.content)}" />`;
+            };
         },
         lineNumbers: true,
         theme: {
@@ -186,6 +202,7 @@ export default defineConfig({
                 },
             ],
             '/tutorials/en_US/': getTutorialSidebar('en_US'),
+            '/tutorials/es_ES/': getTutorialSidebar('es_ES'),
             '/tutorials/ko_KR/': getTutorialSidebar('ko_KR'),
             '/tutorials/pt_BR/': getTutorialSidebar('pt_BR'),
             '/tutorials/tr_TR/': getTutorialSidebar('tr_TR'),
@@ -204,6 +221,8 @@ export default defineConfig({
     title: 'hapi.dev',
     titleTemplate: 'hapi.dev - :title',
     vite: {
+        // Pre-bundled at startup; otherwise the first page with a diagram triggers a re-optimization and full reload.
+        optimizeDeps: { include: ['mermaid'] },
         plugins: [groupIconVitePlugin()],
     },
 });

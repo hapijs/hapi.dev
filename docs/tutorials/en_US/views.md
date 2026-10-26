@@ -6,162 +6,182 @@ title: Views
 
 # Views
 
-_This tutorial is compatible with hapi v17 and newer_
+_This tutorial is compatible with hapi v21 and newer_
 
 ## <a name="overview"></a> Overview
 
-hapi has extensive support for template rendering, including the ability to load and leverage multiple templating engines, partials, helpers (functions used in templates to manipulate data), and layouts. These capabilities are provided by the [vision](/module/vision) plugin.
+hapi renders HTML templates through the [vision](/module/vision) plugin. Vision works with any template engine that has a `compile` function, including handlebars, pug, and ejs (engines with a different `compile`, such as nunjucks, need the small wrapper described under [Engines](#engines)), and supports partials, helpers, and layouts.
 
 ## <a name="vision"></a> Vision
 
-[Vision](/module/vision) is a templates rendering plugin for hapi.js. `Vision` decorates the `server`, `request`, and `h` response toolkit interfaces with additional methods for managing view engines that can be used to render templated responses. `Vision` also provides a built-in handler implementation for creating templated responses.
+Install vision and an engine:
 
-`Vision` is compatible with most major templating engines out of the box, such as ejs, handlebars, pug, twig, etc. Engines that don't follow the normal API pattern can still be used by mapping their API to the [vision API](/module/vision).
+```sh
+npm install @hapi/vision handlebars
+```
 
-For more info, please see [here](/module/vision).
+Registering vision adds:
+
+| What                                  | Use it for                                                 |
+| ------------------------------------- | ---------------------------------------------------------- |
+| `server.views(options)`               | configuring engines, template folders, layouts             |
+| `h.view(template, context)`           | rendering a template from a handler                        |
+| `view` handler                        | a route that only renders a template                       |
+| `server.render()`, `request.render()` | rendering a template to a string, for example for an email |
+
+Importing `@hapi/vision` also adds these to hapi's TypeScript types. The full API is in the [vision API reference](/module/vision).
 
 ## <a name="server"></a> Configuring the server
 
-To get started with views, first you have to configure at least one templating engine on the server. This is done by using the [`server.views()`](/module/vision/api#serverviewsoptions) method provided by `vision`:
+```ts
+import Hapi from '@hapi/hapi';
+import Vision from '@hapi/vision';
+import Handlebars from 'handlebars';
 
-```javascript
-'use strict';
+const server = Hapi.server({ port: 3000 });
 
-const Path = require('path');
-const Hapi = require('@hapi/hapi');
-const Hoek = require('@hapi/hoek');
+await server.register(Vision);
 
-const start = async () => {
-    const server = Hapi.server();
-
-    await server.register(require('@hapi/vision'));
-
-    server.views({
-        engines: {
-            html: require('handlebars'),
-        },
-        relativeTo: __dirname,
-        path: 'templates',
-    });
-
-    await server.start();
-};
-
-start();
-```
-
-You're doing several things here. First, you load the [vision](/module/vision) module as a plugin. It adds template rendering support to hapi.
-
-Secondly, you register the `handlebars` module as the engine responsible for rendering templates with an extension of `.html`.
-
-Next, you tell the server that your templates are located in the `templates` directory. You indicate that this directory should be taken relative to the current directory by providing a `relativeTo` option. By default, hapi will look for templates relative to the current working directory.
-
-## <a name="options"></a> server.views() Options
-
-There are many options available to the views engine in hapi. Full documentation can be found in the [vision API reference](/module/vision/api#serverviewsoptions), but we'll go over some of them here as well.
-
-Note that all options may be set either globally, which configures them for all registered engines, or local to one specific engine, for example:
-
-```javascript
 server.views({
     engines: {
-        html: {
-            module: require('handlebars'),
-            compileMode: 'sync', // engine specific
-        },
+        html: Handlebars,
     },
-    compileMode: 'async', // global setting
+    relativeTo: import.meta.dirname,
+    path: 'templates',
+});
+
+server.route({
+    method: 'GET',
+    path: '/',
+    handler: (request, h) => {
+        return h.view('index', { title: 'My home page' });
+    },
+});
+
+await server.start();
+```
+
+- `engines` maps a file extension to an engine: files ending in `.html` render with handlebars.
+- `path` is the folder that holds the templates, resolved from `relativeTo`. ES modules have no `__dirname`; `import.meta.dirname` is the folder of the current file.
+- `h.view('index', ...)` renders `templates/index.html`. With one engine registered, you can leave off the extension.
+
+### <a name="lifecycle"></a> How a view is rendered
+
+`h.view()` does not render anything right away. It returns a view response, and vision renders it as hapi sends the response:
+
+```mermaid
+flowchart TD
+    A["handler returns h.view('index', context)"] --> B["vision finds and compiles<br/>templates/index.html (cached)"]
+    B --> C[onPreResponse hooks]
+    C --> D["merge the global context<br/>with the view's context"]
+    D --> E[render the template]
+    E --> F[wrap it in the layout]
+    F --> G["send as text/html"]
+```
+
+What this order means in practice:
+
+- A missing template fails with a `500` as soon as the handler returns, before any `onPreResponse` hook.
+- An `onPreResponse` hook runs before rendering, so it can still replace a view with a different response, such as an error page. See [Error pages](#errors) below.
+- [Response Marshalling](/tutorials/en_US/response-marshalling) covers this prepare and render split for every response type.
+
+## <a name="options"></a> server.views() options
+
+| Option                | Default           | Effect                                                                      |
+| --------------------- | ----------------- | --------------------------------------------------------------------------- |
+| `engines`             | required          | extension to engine, such as `{ html: Handlebars, pug: Pug }`               |
+| `path`                | none              | folder (or array of folders) with the templates                             |
+| `relativeTo`          | working directory | base folder for every other path option                                     |
+| `partialsPath`        | none              | folder with partials                                                        |
+| `helpersPath`         | none              | folder with helper modules                                                  |
+| `layout`              | `false`           | `true` to use `layout.html`, or the name of another layout file             |
+| `layoutPath`          | none              | folder with layouts                                                         |
+| `context`             | none              | context merged into every view; an object, or a function of the request     |
+| `isCached`            | `true`            | `false` reads and compiles templates on every request; handy in development |
+| `defaultExtension`    | the only engine   | extension used when `h.view()` gets a name without one                      |
+| `compileMode`         | `'sync'`          | `'async'` for engines whose `compile` takes a callback                      |
+| `allowAbsolutePaths`  | `false`           | allow absolute template names                                               |
+| `allowInsecureAccess` | `false`           | allow `../` in template names                                               |
+
+Options set on `server.views()` apply to every engine:
+
+```ts
+server.views({
+    engines: { html: Handlebars },
+    relativeTo: import.meta.dirname,
+    path: 'templates',
+    isCached: process.env.NODE_ENV === 'production',
 });
 ```
 
+Here templates load from `templates/`, and outside production vision reads and compiles them again on every request, so template edits show up without a restart.
+
 ### <a name="engines"></a> Engines
 
-In order to use views in hapi, you must register at least one templating engine with the server. Templating engines may be either synchronous, or asynchronous, and should be an object with an export named `compile`.
+An engine is any object with a `compile` function:
 
-The signature of the `compile` method for synchronous engines is `function (template, options)` and that method should return a function with the signature `function (context, options)` which should either throw an error, or return the compiled html.
+| `compileMode`      | `compile` signature                           | Returns                                                                                                |
+| ------------------ | --------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `'sync'` (default) | `compile(template, compileOptions)`           | `render(context, runtimeOptions)`, which returns the HTML                                              |
+| `'async'`          | `compile(template, compileOptions, callback)` | calls `callback(err, render)`; `render(context, runtimeOptions, callback)` calls `callback(err, html)` |
 
-Asynchronous template engines should have a `compile` method with the signature `function (template, options, callback)` which calls `callback` in standard error first format and returns a new method with the signature `function (context, options, callback)`. The returned method should also call `callback` in error first format, with the compiled html being the second parameter.
+`compileOptions` and `runtimeOptions` are `server.views()` options passed through to your engine. An engine whose API does not match can be wrapped in an object with this `compile` function.
 
-By default, hapi assumes that template engines are synchronous (i.e. `compileMode` defaults to `sync`), to use an asynchronous engine you must set `compileMode` to `async`.
-
-Leveraging the `options` parameter in both the `compile` method, and the method it returns, is done via the `compileOptions` and `runtimeOptions` settings. Both of these options default to the empty object `{}`.
-
-`compileOptions` is the object passed as the second parameter to `compile`, while `runtimeOptions` is passed to the method that `compile` returns.
-
-If only one templating engine is registered, it automatically becomes the default allowing you to leave off the file extension when requesting a view. However, if more than one engine is registered, you must either append the file extension, or set the `defaultExtension` to the engine you use most frequently. For any views that do not use the default engine, you'll still need to specify a file extension.
-
-Another useful options is `isCached`. If set to `false`, hapi will not cache the result of templates and will instead read the template from file on each use. When developing your application, this can be very handy as it prevents you from having to restart your app while working on templates. It is recommended that you leave `isCached` to its default value of `true` in production, however.
+With more than one engine registered, `h.view()` needs the extension (`h.view('index.pug')`), unless you set `defaultExtension` to the one you use most.
 
 ### <a name="paths"></a> Paths
 
-Since views can have files in several different locations, hapi allows you to configure several paths to help find things. Those options are:
-
-- `path`: the directory that contains your main templates
-- `partialsPath`: the directory that contains your partials
-- `helpersPath`: the directory that contains your template helpers
-- `layoutPath`: the directory that contains layout templates
-- `relativeTo`: used as a prefix for other path types, if specified other paths can be relative to this directory
-
-Additionally, there are two settings that alter how hapi will allow you to use paths. By default, absolute paths and traversing outside of the `path` directory is not allowed. This behavior can be changed by setting the `allowAbsolutePaths` and `allowInsecureAccess` settings to true.
-
-For example, if you have a directory structure like:
+With this folder layout:
 
 ```
-templates\
-  index.html
-  layout\
-    layout.html
-  helpers\
-    getUser.js
-    fortune.js
+templates/
+    index.html
+    layout/
+        layout.html
+    helpers/
+        fortune.js
 ```
 
-Your configuration might look like:
+the configuration is:
 
-```javascript
+```ts
 server.views({
     engines: {
-        html: require('handlebars'),
+        html: Handlebars,
     },
-    relativeTo: __dirname,
-    path: './templates',
-    layoutPath: './templates/layout',
-    helpersPath: './templates/helpers',
+    relativeTo: import.meta.dirname,
+    path: 'templates',
+    layoutPath: 'templates/layout',
+    helpersPath: 'templates/helpers',
 });
 ```
 
 ### <a name="global"></a> Global context
 
-In the [rendering a view](#render) tutorial, you saw how to pass context directly into a view, but what if you have some default context that should _always_ be available on all templates?
+`context` is merged into every view's context, and the view's own context wins when both set the same key. Pass a function to compute it per request, for example to show the logged-in user on every page:
 
-The simplest way to achieve this is by using the `context` option when calling `server.views()`:
-
-```javascript
-const context = {
-    title: 'My personal site',
-};
-
+```ts
 server.views({
     engines: {
-        html: {
-            module: require('handlebars'),
-            compileMode: 'sync', // engine specific
-        },
+        html: Handlebars,
     },
-    context,
+    relativeTo: import.meta.dirname,
+    path: 'templates',
+    context: (request) => ({
+        siteName: 'My personal site',
+        user: request?.auth.credentials?.user ?? null,
+    }),
 });
 ```
 
-The default global context will be merged with any local context passed taking the lowest precedence and applied to your view.
+`request` is undefined when you render outside a request with `server.render()`, which is why the function checks it.
 
 ### <a name="helpers"></a> View helpers
 
-JavaScript modules located in the defined `helpersPath` are available in templates. For this example, you will create a view helper `fortune` which will pick and print out one element out of an array of strings, when used in a template.
+For engines that support helpers, such as handlebars, each module in `helpersPath` becomes a helper named after its file. This helper, saved as `templates/helpers/fortune.js`, returns a random fortune:
 
-The following snippet is the complete helper function which you will store in a file called `fortune.js` in the `helpers` directory.
-
-```javascript
-module.exports = function () {
+```js
+export default function () {
     const fortunes = [
         'Heisenberg may have slept here...',
         'Wanna buy a duck?',
@@ -177,149 +197,114 @@ module.exports = function () {
 
     const x = Math.floor(Math.random() * fortunes.length);
     return fortunes[x];
-};
+}
 ```
 
-Now you can use the view helper in your templates. Here's a code snippet that show's the helper function in `templates/index.html` using handlebars as a rendering engine:
+Helpers stay JavaScript files: vision loads them with `require()`, and skips any file whose extension Node.js has not registered with `require.extensions`, which does not include `.ts`.
+
+Use it in `templates/index.html`:
 
 ```html
 <h1>Your fortune</h1>
-<p>&#123;&#123;fortune&#125;&#125;</p>
-```
-
-Now when you start the server and point your browser to the route which uses your template (which uses your view helper), you should see a paragraph with a randomly selected fortune right below the header.
-
-For reference, here is a complete server script that uses the fortune view helper method in a template.
-
-```javascript
-'use strict';
-
-const Hapi = require('@hapi/hapi');
-
-const start = async () => {
-    const server = Hapi.server({ port: 8080 });
-
-    await server.register(require('@hapi/vision'));
-
-    server.views({
-        engines: {
-            html: require('handlebars'),
-        },
-        relativeTo: __dirname,
-        path: 'templates',
-        helpersPath: 'helpers',
-    });
-
-    server.route({
-        method: 'GET',
-        path: '/',
-        handler: function (request, h) {
-            return h.view('index');
-        },
-    });
-
-    await server.start();
-};
-
-start();
+<p>{{fortune}}</p>
 ```
 
 ### <a name="layouts"></a> Layouts
 
-`Vision` includes built-in support for view layouts. It comes disabled by default, because it may conflict with other layout systems that specific view engines may provide. We recommend choosing only one layout system.
+Vision's layouts are off by default, because many engines have their own layout system. Use one or the other. To turn vision's on:
 
-In order to use the built-in layout system, first setup the view engine:
-
-```javascript
+```ts
 server.views({
-    // ...
+    engines: {
+        html: Handlebars,
+    },
+    relativeTo: import.meta.dirname,
+    path: 'templates',
     layout: true,
     layoutPath: 'templates/layout',
 });
 ```
 
-This enables the built-in layouts and defines the default layout page to `templates/layout/layout.html` (or whatever other extension you're using).
-
-Setup a content area in your `layout.html`:
+`templates/layout/layout.html` marks where each view goes with `content`:
 
 ```html
 <html>
     <body>
-        &#123;&#123;&#123;content&#125;&#125;&#125;
+        {{{content}}}
     </body>
 </html>
 ```
 
-And your view should be just the content:
+and a view holds only its own part:
 
 ```html
 <div>Content</div>
 ```
 
-When rendering the view, the `&#123;&#123;&#123;content&#125;&#125;&#125;` will be replaced by the view contents.
+| To                               | Do                                                        |
+| -------------------------------- | --------------------------------------------------------- |
+| use another default layout       | `layout: 'another_default'` in `server.views()`           |
+| use another layout for one view  | `h.view('myview', context, { layout: 'another_layout' })` |
+| render one view without a layout | `h.view('myview', context, { layout: false })`            |
 
-If you want a different default layout, you can set the option globally:
-
-```javascript
-server.views({
-    // ...
-    layout: 'another_default',
-});
-```
-
-You can also specify a different layout per view:
-
-```javascript
-return h.view('myview', null, { layout: 'another_layout' });
-```
+Your context cannot have a `content` key while layouts are on; vision uses that name for the rendered view, and fails with a `500`. Change the name with the `layoutKeyword` option.
 
 ## <a name="render"></a> Rendering a view
 
-There are two options for rendering a view, you can use either the [`h.view()`](/module/vision/api#hviewtemplate-context-options) method, where `h` is the [response toolkit](/api#response-toolkit) or the view handler.
-
 ### <a name="hview"></a> h.view()
 
-The first method of rendering a view we'll look at is `h.view()`. Here's what a route using this method would look like:
+Use [`h.view()`](/module/vision#h-view-template-context-options) when the handler has work to do first, such as loading data:
 
-```javascript
+```ts
 server.route({
     method: 'GET',
     path: '/',
-    handler: function (request, h) {
-        return h.view('index');
+    handler: (request, h) => {
+        return h.view('index', { title: 'My home page' });
     },
 });
 ```
 
-In order to pass context to `h.view()`, you pass an object as the second parameter, for example:
-
-```javascript
-return h.view('index', { title: 'My home page' });
-```
+`h.view()` returns a normal response object, so you can chain `.code()`, `.header()`, and the other [response object](/api#response-object) methods.
 
 ### <a name="viewhandler"></a> View handler
 
-The second method of rendering a view, is using hapi's built in view handler. That route would look like:
+When a route only renders a template, use the `view` handler:
 
-```javascript
+```ts
 server.route({
     method: 'GET',
     path: '/',
     handler: {
-        view: 'index',
+        view: {
+            template: 'index',
+            context: {
+                title: 'My home page',
+            },
+        },
     },
 });
 ```
 
-When using the view handler, context is passed in the key `context`, for example:
+`handler: { view: 'index' }` is the short form. The view handler always adds `params`, `payload`, `query`, and `pre` to the context, so a template on `/users/{id}` can print `params.id` with no handler code.
 
-```json5
-handler: {
-    view: {
-        template: 'index',
-        context: {
-            title: 'My home page'
-        }
+## <a name="errors"></a> Error pages
+
+hapi replies to errors with JSON. A site that renders HTML usually wants an HTML error page instead. Because rendering happens after `onPreResponse`, a hook there can swap any error for a view:
+
+```ts
+import Boom from '@hapi/boom';
+
+server.ext('onPreResponse', (request, h) => {
+    const response = request.response;
+    if (!Boom.isBoom(response)) {
+        return h.continue;
     }
-}
+
+    const { statusCode, payload } = response.output;
+
+    return h.view('error', { statusCode, message: payload.message }).code(statusCode);
+});
 ```
+
+A request for a missing page now gets `templates/error.html`, rendered in the layout, with status `404`. The hook also catches errors thrown by handlers and failed validation. See [Lifecycle Hooks](/tutorials/en_US/lifecycle-hooks) for more on `onPreResponse`.

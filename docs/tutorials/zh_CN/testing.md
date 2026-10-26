@@ -1,106 +1,115 @@
 ---
-title: Testing
+title: 测试
 ---
 
 <TutorialLang />
 
-# Testing
+# <a name="testing"></a> 测试
 
-此教程兼容hapi v17以及更高版本.
+_本教程适用于 hapi v21 及更高版本_
 
-## <a name="overview"></a> Overview
+## <a name="overview"></a> 概述
 
-Hapi设计理念是创建健壮的、可测试的应用.为此,Hapi具备不用启动服务就可以测试路由的功能, 减少了TCP协议连接的时间成本,降低了复杂度.
+hapi 可以在不打开端口的情况下测试路由。`server.inject()` 会让一个模拟请求走完整个请求生命周期（路由匹配、身份认证、验证、handler 和响应），然后把响应交给你，整个过程不涉及网络。测试运行得很快，也不会因为端口冲突而出问题。
 
-此教程带你进行路由测试的基本设置, 并提出了一种通过[lab](/module/lab)和[code](/module/code)创建可测试应用的一种可能.
+本教程使用 [lab](/module/lab) 作为测试运行器，使用 [code](/module/code) 做断言，不过在 [Mocha](https://mochajs.org/)、[Jest](https://jestjs.io/)、[Vitest](https://vitest.dev/) 或 Node.js 自带的测试运行器中，`server.inject()` 的用法完全一样。
 
-## <a name="lab"></a> lab
+```sh
+npm install --save-dev @hapi/lab @hapi/code
+```
 
-`lab` 是Node.js的一个简单的测试套件. 区别于其他测试套件, lab 只使用 async/await 特性,并且包含了所有你在现代化Node.js测试套件里所需要的工具. `lab` 可以和任何其他的断言库兼容,在条件不符合时候掏出错误. 在本教程中,你将使用 `code` 断言库.
+## <a name="server"></a> 服务器设置
 
-首先安装 `lab`, 在terminal里面输入:
+把构建服务器的代码和启动服务器的代码分开。生产环境在某个端口上启动服务器；测试只初始化服务器，并用 `server.inject()` 发送请求：
 
-`npm install --save-dev @hapi/lab`
+```
+myproject/
+├── index.ts            # production entry point: calls start()
+├── lib/
+│   └── server.ts       # builds the server, exports init() and start()
+├── test/
+│   └── example.test.ts # calls init() and server.inject()
+└── package.json
+```
 
-## <a name="code"></a> code
+`lib/server.ts` 每次调用都会构建一个新的服务器，因此每个测试都有自己的服务器，不会残留上一个测试的状态：
 
-`code` 建立在 `chai` 断言库基础上,被设计成小巧,简单且直观的断言库. 可以不通需要任何插件,拓展库直接运行,并且开销很小.
+```ts
+import Hapi from '@hapi/hapi';
 
-然后安装 `code`, 在terminal里输入:
+const createServer = () => {
+    const server = Hapi.server({
+        port: 3000,
+        host: 'localhost',
+    });
 
-`npm install --save-dev @hapi/code`
+    server.route({
+        method: 'GET',
+        path: '/',
+        handler: function () {
+            return 'Hello World!';
+        },
+    });
 
-## <a name="server"></a> Server Setup
+    return server;
+};
 
-从Getting Started教程中拿到例子的服务代码, 我们对它进行一下小修改, 比如让它在被我们的测试用例引用的时候不自动重启服务. 你可以把这个文件保存为`server.js`,然后放在工程的 `lib`目录下:
-
-```js
-'use strict';
-
-const Hapi = require('@hapi/hapi');
-
-const server = Hapi.server({
-    port: 3000,
-    host: 'localhost',
-});
-
-server.route({
-    method: 'GET',
-    path: '/',
-    handler: function () {
-        return 'Hello World!';
-    },
-});
-
-exports.init = async () => {
+export const init = async () => {
+    const server = createServer();
     await server.initialize();
     return server;
 };
 
-exports.start = async () => {
+export const start = async () => {
+    const server = createServer();
     await server.start();
     console.log(`Server running at: ${server.info.uri}`);
     return server;
 };
+```
+
+生产环境的入口文件只负责启动服务器：
+
+```ts
+import { start } from './lib/server.ts';
 
 process.on('unhandledRejection', (err) => {
     console.log(err);
     process.exit(1);
 });
-```
-
-现在用导出 `init()` 和 `start()`方法代替原来的调用这两个方法. 这样我们可以在别的文件中来初始化、启动服务. `init()` 方法可以初始化 (开启缓存, 完成插件注册) 但是并未启动服务. 接下来要在测试用例中启动服务. `start()` 会自动启动服务. 我们将要在入口文件中调用:
-
-```js
-`use strict`;
-
-const { start } = require('lib/server');
 
 start();
 ```
 
-你在这里创建的,是通常启动服务时候使用的,在入口文件通过调用start方法来启动服务的一种方式, 这种方式对外暴露出一个外部HTTP端口, 此外你也可以在我们的测试用例中使用一个什么都不做的模块.
+两个函数的区别：
 
-## <a name="writingTest"></a> Writing a Route Test
+|                                    | [`server.initialize()`](/api#await-server-initialize) | [`server.start()`](/api#await-server-start) |
+| ---------------------------------- | ----------------------------------------------------- | ------------------------------------------- |
+| 检查插件依赖                       | 是                                                    | 是                                          |
+| 启动缓存                           | 是                                                    | 是                                          |
+| 运行 `onPreStart` 扩展             | 是                                                    | 是                                          |
+| 监听端口                           | 否                                                    | 是                                          |
+| 触发 `'start'`，运行 `onPostStart` | 否                                                    | 是                                          |
 
-在这个例子中你将使用 [lab](/module/lab), 同样的方法也可以在任何测试工具中使用,例如 [Mocha](https://mochajs.org/), [Jest](https://jestjs.io/), [Tap](https://www.node-tap.org/), [Ava](https://github.com/avajs) 等.
+测试使用 `initialize()`，这样缓存和 `onPreStart` 中的初始化逻辑会和生产环境完全一样地运行，但不会绑定端口。
 
-默认情况下, `lab` 加载所有文件'\*.js' 在本地的 `test` 目录里,并执行所有发现的测试用例. 如果想设置其他的文件夹或者文件, 需要将文件或者文件夹路径作为参数传入:
+## <a name="writingTest"></a> 编写路由测试
 
-`$  lab unit.js`
+创建 `test/example.test.ts`：
 
-准备开始,创建一个 `example.test.js` 在 `test` 目录里:
+```ts
+import Lab from '@hapi/lab';
+import { expect } from '@hapi/code';
 
-```js
-'use strict';
+import { init } from '../lib/server.ts';
 
-const Lab = require('@hapi/lab');
-const { expect } = require('@hapi/code');
-const { afterEach, beforeEach, describe, it } = (exports.lab = Lab.script());
-const { init } = require('../lib/server');
+import type { Server } from '@hapi/hapi';
+
+export const lab = Lab.script();
+const { afterEach, beforeEach, describe, it } = lab;
 
 describe('GET /', () => {
-    let server;
+    let server: Server;
 
     beforeEach(async () => {
         server = await init();
@@ -115,23 +124,52 @@ describe('GET /', () => {
             method: 'get',
             url: '/',
         });
+
         expect(res.statusCode).to.equal(200);
+        expect(res.payload).to.equal('Hello World!');
     });
 });
 ```
 
-这里你将要测试我们的 `'GET'` 路由是否会响应 `200` 状态码. 首先调用 `describe()` 来给你的测试用例提供一个构造函数. `describe()` 接受2个参数, 一个是测试用例的描述, 另一个是设置测试用例的方法.
+- lab 通过导出的 `lab` 脚本找到测试。
+- `describe()` 用于给测试分组，`it()` 定义一个测试。`beforeEach()` 和 `afterEach()` 在每个测试前后运行。
+- `server` 使用 hapi 的 `Server` 类型声明，因为它要稍后在 `beforeEach()` 中才被赋值。
+- 每个测试结束后调用 `server.stop()` 会停止缓存，并运行 `onPreStop` 和 `onPostStop` 扩展，这样测试之间不会互相影响。
 
-请注意 `init` 代替 `start` 来设置服务, 意味着我们启动了服务, 但是没有监听任何端口. 每个测试用例后都会调用 `stop` 来清理和停止服务.
+### <a name="what-server-inject-gives-you"></a> `server.inject()` 提供了什么
 
-`it()` 方法将会运行你的测试用例. `it()` 接受2个参数, 一个是测试用例通过的描述语句, 另一个是运行测试用例的方法.
+`server.inject()` 以对象形式接收请求，并返回响应：
 
-你需要了解服务器上的 `inject`. `inject` 使用 [Shot](/module/shot) 来 `inject` 直接向hapi的hanlder注入请求. 这就是让我们能够测试HTTP方法的关键所在.
+| 请求选项        | 用途                                                                                       |
+| --------------- | ------------------------------------------------------------------------------------------ |
+| `method`、`url` | 要调用的路由。                                                                             |
+| `payload`       | 请求的 payload。对象会以 JSON 发送。                                                       |
+| `headers`       | 请求头，例如 `authorization` 或 `cookie`。                                                 |
+| `auth`          | `{ strategy, credentials }`，用于跳过身份认证 strategy，以指定用户的身份测试受保护的路由。 |
 
-为了让我们的测试用例运行, 你可以修改项目中的 `package.json` 来测试你的测试用例:
+| 响应属性     | 内容                                                         |
+| ------------ | ------------------------------------------------------------ |
+| `statusCode` | HTTP 状态码。                                                |
+| `headers`    | 响应头。                                                     |
+| `payload`    | 字符串形式的响应体，与客户端收到的完全一致。                 |
+| `result`     | handler 返回的值，尚未序列化。比较对象时用这个属性。         |
+| `request`    | hapi 的请求对象，用于检查 `request.auth`、`request.app` 等。 |
+
+所有选项请参阅 [`server.inject()`](/api#await-server-inject-options)。
+
+## <a name="running"></a> 运行测试
+
+lab 只会自动发现 `.js`、`.mjs` 和 `.cjs` 文件，所以要把 TypeScript 测试文件作为参数传给它。在 `package.json` 中添加一个脚本：
 
 ```json
-  "scripts": {
-    "test": "lab -v **/*.test.js"
-  }
+{
+    "scripts": {
+        "test": "lab -v test/*.test.ts"
+    }
+}
 ```
+
+然后运行 `npm test`。lab 导入这些文件时，Node.js 会剥离类型，所以不需要构建步骤。
+
+- 运行 lab 时不要加 `--typescript`、`-t` 或 `-c`；Node.js 已经处理了 TypeScript。
+- 要统计覆盖率，请用 `npm install --save-dev c8` 安装 [c8](https://github.com/bcoe/c8)，然后在它下面运行 lab：`c8 lab test/*.test.ts`。

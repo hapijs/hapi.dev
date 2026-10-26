@@ -4,120 +4,250 @@ title: Routing
 
 <TutorialLang />
 
-## Yol Tayin Etmek (routing)
+# Routing
 
-_Bu kurs hapi v17 ile uyumludur_
+_Bu eğitim hapi v21 ve sonraki sürümlerle uyumludur_
 
-Aynı diğer çatılarda (framework) olduğu gibi, hapide de bir yol tanımlarken üç değiştirgeye ihtiyacın var: path (güzergah), method (yöntem) ve handler (işleç). Bunlar sunucuna bir nesne olarak gönderilir ve bu kadar da basittir:
+## <a name="overview"></a> Genel Bakış
 
-```javascript
+Bir route'un üç şeye ihtiyacı vardır: bir `method`, bir `path` ve bir `handler`. Route'u [`server.route()`](/api#server-route-route) ile eklersin:
+
+```ts
 server.route({
     method: 'GET',
     path: '/',
-    handler: function (request, h) {
-        return 'Selam!';
+    handler: (request, h) => {
+        return 'Hello World!';
     },
 });
 ```
 
-## Yöntemler (method)
+`server.route()` bir route nesneleri dizisini de kabul eder, böylece tek çağrıda birçok route kaydedebilirsin.
 
-Yukarıdaki yol (route) `/` güzergahına yapılan bir `GET` isteğine `Selam!` metinyla cevap verir. method (yöntem) seçeneği geçerli bir HTTP yöntemi ya da bir yöntem dizisi olabilir. Diyelim ki kullanıcıların `PUT` yöntemiyle de `POST` yöntemiyle de istekte bulunsa aynı cevabı vermek istiyorsun. Öyleyse şöyle yapabilirsin:
+## <a name="methods"></a> Metotlar
 
-```javascript
+`method`, `HEAD` dışındaki herhangi bir HTTP metodu (GET route'ları HEAD isteklerine de yanıt verir), bir metot dizisi ya da hepsi için `'*'` olabilir:
+
+```ts
 server.route({
     method: ['PUT', 'POST'],
     path: '/',
-    handler: function (request, h) {
-        return 'Bir şey yaptım!';
+    handler: (request, h) => {
+        return 'I did something!';
     },
 });
 ```
 
-## Güzergah (path)
+`GET` için tanımlanan bir route `HEAD` isteklerine de yanıt verir, bu yüzden ayrı bir `HEAD` route'una hiç ihtiyacın olmaz.
 
-Güzergah seçeneği bir metin olmalı. Bununla birlikte içerisinde adlandırılmış değiştirgeler bulundurabilir. Bir güzergahtaki bir değiştirgeyi adlandırmak için onu `{}` içerisine alman yeterli. Örneğin:
+## <a name="path"></a> Path
 
-```javascript
-server.route({
+Bir path segmentini adlandırılmış bir parametre olarak yakalamak için onu `{}` içine al. Değeri `request.params` üzerinden erişilebilir olur:
+
+```ts
+import * as Hoek from '@hapi/hoek';
+
+server.route<{ Params: { user: string } }>({
     method: 'GET',
-    path: '/selam/{user}',
-    handler: function (request, h) {
-        return `Selam ${encodeURIComponent(request.params.user)}!`;
+    path: '/hello/{user}',
+    handler: (request, h) => {
+        return `Hello ${Hoek.escapeHtml(request.params.user)}!`;
     },
 });
 ```
 
-Yukarıda gördüğün üzere, güzergahımızda `{user}` metin bulunuyor. Bu da demek oluyor ki güzergahın bu kısmında adlandırılmış bir değiştirge istiyoruz. Bu değiştirgeler işleyicide `request.params` içerisinde tutulur. `user` değiştirgemizi adlandırdığımız için `request.params.user`dan erişebiliriz. Tabi içerik yerleştirme saldırılarına karşı URI kodlamadan geçirdikten sonra.
+`/hello/ferris` isteği `Hello ferris!` yanıtını döner.
 
-### Secime bagli degistirgeler
+- hapi parametre değerlerinin URI kodlamasını çözer, yani `/hello/a%20b` için `request.params.user === 'a b'` olur.
+- Değer doğrudan URL'den gelir. HTML'e koymadan önce, yukarıdaki [Hoek](/module/hoek) `escapeHtml()` çağrısında olduğu gibi escape et ya da [joi](/tutorials/tr_TR/validation) ile doğrula.
+- hapi 21.4.10'dan itibaren `request.params` değerleri varsayılan olarak `unknown` tipindedir. `server.route<{ Params: { user: string } }>()` tip argümanı yapıyı bildirir, böylece handler içinde `request.params.user` bir `string` olur. Aynı tip argümanı `Query`, `Payload`, `Headers` ve aşağıdaki diğer istek parçalarını da kabul eder.
 
-Yukarıdaki örnekte, user değiştirgesi gereklidir: `/selam/hilmi` ya da `/selam/erdem` çalışır ancak `/Selam` çalışmaz. Bir değiştirgeyi seçime bağlı kılmak için; değiştirge adının sonuna bir soru işareti koyman yeterli olur. Aşağıda aynı yol, bu kez `user` değiştirgesi seçime bağlı olarak gösteriliyor:
+### <a name="optionalParameters"></a> Parametre tipleri
 
-```javascript
-server.route({
+| Path                | Eşleşir                                    | `request.params`                    |
+| ------------------- | ------------------------------------------ | ----------------------------------- |
+| `/hello/{user}`     | `/hello/ferris`                            | `{ user: 'ferris' }`                |
+| `/hello/{user?}`    | `/hello`, `/hello/ferris`                  | `{}` ya da `{ user: 'ferris' }`     |
+| `/hello/{user*2}`   | `/hello/john/doe` (tam olarak iki segment) | `{ user: 'john/doe' }`              |
+| `/files/{path*}`    | `/files`, `/files/a`, `/files/a/b/c`       | `{}` ya da `{ path: 'a/b/c' }`      |
+| `/{filename}.{ext}` | `/photo.jpg`                               | `{ filename: 'photo', ext: 'jpg' }` |
+
+Route'u eklediğinde hapi'nin uyguladığı kurallar:
+
+- `{user*}` ve tüm segmenti kaplayan isteğe bağlı `{user?}` path'in son segmenti olmalıdır. `{user*2}` ve `/a{user?}/b` gibi segmentin bir kısmını kaplayan isteğe bağlı parametreler her yerde bulunabilir.
+- Aynı segmentteki iki parametrenin arasında sabit bir ayırıcı olmalıdır: `{filename}.{ext}` geçerlidir, `{filename}{ext}` değildir.
+- Bir parametre adı bir path içinde yalnızca bir kez kullanılabilir.
+- Aynı metoda ve eşdeğer bir path'e sahip iki route çakışır ve `server.route()` hata fırlatır. `/{name}` ve `/{other}` eşdeğerdir.
+
+### <a name="multiParameters"></a> Çok segmentli parametreler
+
+Çok segmentli bir parametre, eşleşen segmentleri `/` ile birleştirilmiş olarak tutar; parçaları almak için onu böl:
+
+```ts
+server.route<{ Params: { user: string } }>({
     method: 'GET',
-    path: '/selam/{user?}',
-    handler: function (request, h) {
-        const user = request.params.user ? encodeURIComponent(request.params.user) : 'yabancı';
+    path: '/hello/{user*2}',
+    handler: (request, h) => {
+        const [first, last] = request.params.user.split('/');
 
-        return `Selam ${user}!`;
+        return `Hello ${first} ${last}!`;
     },
 });
 ```
 
-Bu kez `/selam/keren` adresine yapılan bir istek `Selam keren!` olarak, `/Selam` adresine yapılan bir istekse; `Selam yabancı!` olarak cevaplanacaktır. Yalnız farkında olunması önemli bir husus var: yalnızca yolun sonundaki değiştirge seçime bağlı olabilir. Yani `/{bir?}/{iki}/` şeklindeki bir güzergah geçerli olmayacaktır çünkü bu durumda seçime bağlı olandan sonra bir değiştirge daha var. Bölmenin yalnızca bir kısmını etkileyen adlandırılmış bir değiştirgen olması da `/{dosyaadi}.jpg` uygundur. Hatta aralarında değiştirge olmayan bir ayraç olduğu sürece bir bölme içerisinde birden fazla adlandırılmış değiştirge de kullanabilirsin. Yani `/{dosyaadi}.{uzanti}` geçerliyken `/{dosyaadi}{uzanti}` geçersizdir.
+`/hello/john/doe` isteği `Hello john doe!` yanıtını döner.
 
-### Cok bolmeli degistirgeler
+### <a name="specificity"></a> Hangi route kazanır
 
-Seçime bağlı güzergah değiştirgelerinin yanı sıra, birden çok bölmeyle eşleşen değiştirgelerin de olabilir. Bunun için bir yıldız imi ve bir de sayı kullanıyoruz. Örneğin:
+hapi route'ları eklediğin sırayla denemez. Her path segmenti için eşleşme türlerini en özelden en genele doğru dener ve path'in geri kalanı eşleşmediğinde bir sonraki türe geçer:
 
-```javascript
-server.route({
+```mermaid
+flowchart TD
+    L["1. sabit<br/>/filename.jpg"] -->|eşleşme yok| M["2. karma<br/>/{name}.jpg"]
+    M -->|eşleşme yok| P["3. parametre<br/>/{name}"]
+    P -->|eşleşme yok| W["4. joker<br/>/{any*}"]
+    W -->|eşleşme yok| N[404 Not Found]
+```
+
+Bu dört route kayıtlıyken:
+
+| İstek           | Yanıt veren route |
+| --------------- | ----------------- |
+| `/filename.jpg` | `/filename.jpg`   |
+| `/photo.jpg`    | `/{name}.jpg`     |
+| `/photo`        | `/{name}`         |
+| `/a/b`          | `/{any*}`         |
+
+Path'ler varsayılan olarak büyük/küçük harfe duyarlıdır: yukarıdaki route'larla `/Filename.jpg` isteğine `/{name}.jpg` yanıt verir. Bunu değiştirmek için sunucuda [`router.isCaseSensitive`](/api#server-options-router) değerini `false` yap.
+
+## <a name="query"></a> Query parametreleri
+
+`request.query`, ayrıştırılmış query string'i tutar. `/?name=ferris&location=chicago` için:
+
+```ts
+server.route<{ Query: { name: string } }>({
     method: 'GET',
-    path: '/selam/{user*2}',
-    handler: function (request, h) {
-        const userParts = request.params.user.split('/');
-        return `Selam ${encodeURIComponent(userParts[0])} ${encodeURIComponent(userParts[1])}!`;
+    path: '/',
+    handler: (request, h) => {
+        return `Hello ${request.query.name}!`;
     },
 });
 ```
 
-Bu yapılandırmayla, `/selam/ali/veli` güzergahına yapılan bir istek `Selam ali veli!` metinyla cevaplanır. Burada önemli olan değişgenin `"ali/veli"` metinnın tamamı olmasıdır. Bu yüzden metinna ayrıştırma uygulayarak iki parça elde ettik. Yıldız içinden sonraki sayı değiştirgeye kaç bölme atanacağını belirler. Numarayı hiç yazmaya da bilirsin. Bu durumda değiştirge var olan bütün bölmelerle eşlenir.
+hapi'nin yerleşik ayrıştırıcısı iç içe anahtarları anlamaz: `/?foo[bar]=baz` sonucu `{ 'foo[bar]': 'baz' }` olur. İç içe anahtarları ayrıştırmak için sunucunun `query.parser` ayarına [qs](https://github.com/ljharb/qs) gibi bir ayrıştırıcı ver:
 
-Belirli bir istek için hangi işleç kullanılacağına karar vermek için hapi, en kesin olandan en az kesin olana doğru güzergahları arar. Örneğin `/dosyaadi.jpg` ve `/dosyaadi.{uzanti}` şeklinde iki güzergah tanımlarsanız; `/dosyaadi.jpg`ye yapılan bir istek ilk güzergahla eşleşecek, ikincisi ile eşleşmeyecektir. Bu aynı zamanda `/{dosyalar*}` şeklinde tanımlanmış bir güzergahın denenen _son_ güzergah olacağı ve yalnızca diğer güzergahların eşleşme denemeleri sonuçsuz kaldığında eşleşeceği anlamına gelir.
+```ts
+import Hapi from '@hapi/hapi';
+import Qs from 'qs';
 
-## Islec yöntem
+const server = Hapi.server({
+    port: 3000,
+    host: 'localhost',
+    query: {
+        parser: (query) => Qs.parse(query),
+    },
+});
 
-İşleç seçeneği iki değiştirge kabul eden bir işlevdir: `request` ve `h`.
-
-`request` değiştirgesi son kullanıcının isteğinin güzergah değiştirgesi, iliştirilen yararlı veri, kimlik doğrulama bilgisi, başlık ve benzeri detaylarını taşıyan bir nesnedir. `request` (istek) nesnesinin içeriğinin ne olduğuna dair tam bir dokümantasyon [API referansı](/api#request-properties)nda bulunabilir.
-
-İkinci değiştirge olan `h` ise isteğe cevap vermekte kullanılan bir çok yöntem barındıran yanıt alet takımıdır. Önceki örneklerde gördüğün üzere, eğer bir isteğe bir değerle cevap vereceksen işleçten onu dönmen yeter. Yararlı yük bir metin, tampon (buffer), JSON'a çevrilebilen bir nesne, akan bir veri (stream) ya da söz (promise) olabilir.
-
-Alternatif olarak aynı değerleri `h.response(value)` içerisine gönderek burdan gelen sonucu işleçten dönebilirsin. Bu çağrının sonucunda gönderilmeden önce üzerinde zincir çağrılar yapılarak içeriği değiştirebilen bir yanıt (response) nesnesi olur. Örneğin `h.response('created').code(201)` çağrısının yararlı verisi HTTP durum kodu `201` olan `created` (oluşturuldu) olur. Eğer istersen başlıkları, içerik tipini (content type), içerik uzunluğunu değiştirebilir; yönlendirme yanıtı verebilir ve [API referansı](/api#response-toolkit)nda dokümante edilen daha bir çok şey yapabilirsin.
-
-## Yapilandirma
-
-Bu üç basit elemanın yanında her bir yola (route) bir de `options` (yapılandırma) değiştirgesi gönderebilirsin. Burada [veri doğrulama (validation)](/tutorials/validation), [kimlik doğrulama (authentication)](/tutorials/auth), ön gereksinimler, yararlı yük işlemleri, ve önbellekleme seçeneklerini ayarlayabilirsin. Bağlantıları verilen öğreticiler ve [API referansı](/api#route-options)nda daha fazla bilgi bulabilirsin.
-
-Burada dokümantasyon üretmek için tasarlanan bir kaç seçeneğe bakıyoruz:
-
-```javascript
 server.route({
     method: 'GET',
-    path: '/selam/{user?}',
-    handler: function (request, h) {
-        const user = request.params.user ? encodeURIComponent(request.params.user) : 'stranger';
-
-        return `Selam ${user}!`;
+    path: '/',
+    handler: (request, h) => {
+        return request.query;
     },
+});
+
+await server.start();
+console.log('Server running on %s', server.info.uri);
+```
+
+Artık `/?foo[bar]=baz` isteği `{ "foo": { "bar": "baz" } }` yanıtını döner. Ayrıştırıcı ham string'i değil, hapi'nin zaten ayrıştırdığı query'yi alır; örneğin `{ 'foo[bar]': 'baz' }`. Parametre adlarını değerlere eşleyen bir nesne döndürdüğü sürece herhangi bir fonksiyon iş görür.
+
+## <a name="requestpayload"></a> İstek payload'u
+
+Ayrıştırılmış istek gövdesi `request.payload` üzerindedir. hapi, `Content-Type` header'ına göre JSON, form-encoded ve metin gövdelerini ayrıştırır. Multipart gövdeler için `payload: { multipart: true }` route seçeneği gerekir; bu seçenek yoksa `415 Unsupported Media Type` alırlar:
+
+```ts
+server.route<{ Payload: { username: string; password: string } }>({
+    method: 'POST',
+    path: '/signup',
+    handler: (request, h) => {
+        return `Welcome ${request.payload.username}!`;
+    },
+});
+```
+
+Tip argümanı yalnızca TypeScript'e yapıyı söyler. [Payload doğrulama](/tutorials/tr_TR/validation) ekleyene kadar çalışma zamanında hiçbir şey onu kontrol etmez.
+
+## <a name="handler"></a> Handler
+
+Handler iki argüman alır:
+
+- `request`, gelen istekle ilgili her şeyi tutar: `params`, `query`, `payload`, `headers`, `auth` ve daha fazlası. [Request nesnesi](/api#request) referansına bak.
+- `h`, `h.response()` ve `h.redirect()` gibi metotları olan [response toolkit](/api#response-toolkit)'tir.
+
+Handler'ın döndürdüğü değer yanıt olur:
+
+| Handler'ın döndürdüğü                     | Yanıt                                                      |
+| ----------------------------------------- | ---------------------------------------------------------- |
+| bir string                                | `200`, `text/html; charset=utf-8`                          |
+| bir nesne ya da dizi                      | `200`, `application/json; charset=utf-8`                   |
+| bir `Buffer`                              | `200`, `application/octet-stream`                          |
+| bir readable stream                       | `200`, stream istemciye aktarılır                          |
+| zincirleme çağrılarla `h.response(value)` | tam kontrol, örneğin `h.response('created').code(201)`     |
+| fırlatılan bir hata                       | bir hata yanıtı; [boom](/module/boom) hatası değilse `500` |
+
+Bir handler bir değer ya da promise döndürmeli veya hata fırlatmalıdır. hapi'nin bu değerleri gönderdiği baytlara nasıl dönüştürdüğü [Yanıt Hazırlama](/tutorials/tr_TR/response-marshalling) eğitiminde anlatılıyor.
+
+Arrow function'lar `this` kullanamaz; bu yüzden arrow function olarak yazılmış bir handler, [`server.bind()`](/api#server-bind-context) ile ayarlanan değeri bunun yerine [`h.context`](/api#h-context) üzerinden okur.
+
+## <a name="options"></a> Seçenekler
+
+Method, path ve handler dışındaki her şey route'un `options` alanına girer:
+
+```ts
+import Joi from 'joi';
+
+server.route<{ Payload: { username: string; password: string } }>({
+    method: 'POST',
+    path: '/signup',
     options: {
-        description: 'Say Selam!',
-        notes: "The user parameter defaults to 'stranger' if unspecified",
-        tags: ['api', 'greeting'],
+        auth: false,
+        validate: {
+            payload: Joi.object({
+                username: Joi.string().min(1).max(20).required(),
+                password: Joi.string().min(7).required(),
+            }),
+        },
+    },
+    handler: (request, h) => {
+        return `Welcome ${request.payload.username}!`;
     },
 });
 ```
 
-Fonksiyonel olarak bu yapılandırmanın hiç bir etkisi yok ancak eğer [lout](https://github.com/hapijs/lout) gibi bir eklenti ile API dokümantasyonu oluştururken bu bilgiler çok değerli oluyor. Bu yardımcı veriler yol (route) hakkında bilgi veriyor ve daha sonra kontrol ederken ve görüntülerken kullanıma hazır oluyor.
+| Seçenek    | Neyi kontrol eder                                 | Daha fazlası                                                |
+| ---------- | ------------------------------------------------- | ----------------------------------------------------------- |
+| `auth`     | hangi kimlik doğrulama stratejisinin uygulanacağı | [Kimlik Doğrulama](/tutorials/tr_TR/auth)                   |
+| `validate` | params, query, payload ve header kontrolleri      | [Doğrulama](/tutorials/tr_TR/validation)                    |
+| `cache`    | yanıtın `Cache-Control` header'ları               | [Önbellekleme](/tutorials/tr_TR/caching)                    |
+| `payload`  | gövde ayrıştırma, boyut sınırları, yüklemeler     | [route payload seçenekleri](/api#route-options-payload)     |
+| `pre`      | handler'dan önce çalışan metotlar                 | [route pre seçenekleri](/api#route-options-pre)             |
+| `ext`      | yalnızca bu route için yaşam döngüsü hook'ları    | [Yaşam Döngüsü Hook'ları](/tutorials/tr_TR/lifecycle-hooks) |
+
+Tam liste [route seçenekleri referansında](/api#route-options).
+
+## <a name="missing"></a> 404 yönetimi
+
+Hiçbir route eşleşmediğinde hapi bir `404` JSON hatasıyla yanıt verir. Bunun yerine kendi yanıtını göndermek için her şeyi yakalayan bir route ekle. `{any*}` jokeri en genel eşleşmedir, bu yüzden yalnızca başka hiçbir route'un almadığı isteklere yanıt verir:
+
+```ts
+server.route({
+    method: '*',
+    path: '/{any*}',
+    handler: (request, h) => {
+        return h.response('404 Error! Page Not Found!').code(404);
+    },
+});
+```
+
+Her şeyi yakalayan route yalnızca eşleşmeyen path'leri kapsar. Eşleşen bir route'un fırlattığı bir `404`, örneğin `Boom.notFound()` fırlatan bir handler, ona hiç ulaşmaz. Hangi kaynaktan gelirse gelsin her `404`'ü özelleştirmek için yanıtı bir `onPreResponse` hook'unda değiştir; [Yaşam Döngüsü Hook'ları](/tutorials/tr_TR/lifecycle-hooks) eğitimine bak.

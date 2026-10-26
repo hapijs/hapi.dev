@@ -1,29 +1,54 @@
 ---
-title: Server Methods
+title: Server Method'lar
 ---
 
 <TutorialLang />
 
-## Sunucu yöntemleri
+# Server Method'lar
 
-_Bu kurs hapi v17 ile uyumludur_
+_Bu eğitim hapi v21 ve sonraki sürümlerle uyumludur_
 
-Sunucu yöntemleri birden fazla yerde kullanılan modüllerin lazım olan her talep edilmesindense sunucu nesnene iliştirebildiğin kullanışlı bir yol sunar. Bir sunucu yöntemi kaydetmek için [`server.method()`](<https://hapijs.com/api#server.method()>) çağrısı yap. Bu yöntemi çağırmanın iki farklı yöntemi var. `server.method(name, method, [options])` imzasıyla çağırabilirsin. Örneğin:
+## <a name="overview"></a> Genel Bakış
 
-```javascript
-const add = function (x, y) {
-    return x + y;
-};
+Server method, sunucuya [`server.method()`](/api#server-method-name-method-options) ile kaydettiğin ve sunucuya erişimi olan her yerden çağırabildiğin bir fonksiyondur: route handler'ları, plugin'ler, extension'lar. Şu durumlarda kullan:
 
-server.method('add', add, {});
+- birkaç route ya da plugin aynı fonksiyona ihtiyaç duyuyor ve her birinin onu ayrı ayrı import etmesini istemiyorsun.
+- fonksiyon pahalı ve sonucu önbelleğe alınabilir. Tek bir seçenek, onun için hapi'nin [önbelleğini](/tutorials/tr_TR/caching) açar.
+
+```ts
+import Hapi from '@hapi/hapi';
+
+declare module '@hapi/hapi' {
+    interface ServerMethods {
+        add: (x: number, y: number) => number;
+    }
+}
+
+const server = Hapi.server({ port: 3000 });
+
+server.method('add', (x: number, y: number) => x + y);
+
+server.route({
+    method: 'GET',
+    path: '/',
+    handler: (request, h) => {
+        return { sum: request.server.methods.add(1, 2) };
+    },
+});
+
+await server.start();
 ```
 
-`server.method(method)` imzasıyla da çağırabilirsin. Burada `method` (yöntem) `name` (isim), `method` (yöntem) ve `options` (seçenekler) değiştirgelerine sahip bir nesnedir (Ayrıca bu nesnelerden oluşan bir dizi de gönderebilirsin).
+- `server.methods.add` kaydedilen fonksiyondur. Bir handler içinde `request.server.methods` ile, kapsamda `server` değişkeni olmadan ona ulaşırsın.
+- hapi hangi metotları kaydettiğini bilmez, bu yüzden TypeScript'in onları hapi'nin `ServerMethods` arayüzünde görmesi gerekir. `declare module` bloğu projendeki herhangi bir modülde olabilir.
+- Metotlar sunucu genelindedir: bir plugin içinde kaydedilen bir metot diğer tüm plugin'ler ve route'lar tarafından kullanılabilir.
 
-```javascript
-const add = function (x, y) {
-    return x + y;
-};
+## <a name="server.method"></a> server.method()
+
+`server.method()` ya sıralı argümanlar ya da tek bir nesne alır (birden fazlasını aynı anda kaydetmek için bir nesne dizisi de olabilir):
+
+```ts
+server.method('add', add, {});
 
 server.method({
     name: 'add',
@@ -32,114 +57,161 @@ server.method({
 });
 ```
 
-### Isim
+### <a name="name"></a> Ad
 
-`name` (isim) değiştirgesi daha sonra sunucudan yöntemi `server.methods[name]` yöntemi ile çağırmak için kullanılacak bir metindır. Eğer `name` (isim) değiştirgesini bir `.` (nokta) karakteri ile gönderirsen; bir metin yerine aşağıda olduğu gibi iç içe bir nesne olarak kaydedilir.
+Nokta içeren bir ad, iç içe bir metot kaydeder:
 
-```javascript
+```ts
 server.method('math.add', add);
+
+server.methods.math.add(1, 2);
 ```
 
-Bu sunucu yöntemi `server.methods.math.add()` ile çağrılır.
+Bunu `ServerMethods` içinde iç içe bir nesne olarak bildir: `math: { add: (x: number, y: number) => number }`. Adın her segmenti geçerli bir JavaScript tanımlayıcısı olmalıdır.
 
-### Islev
+### <a name="method"></a> Metot
 
-`method` (yöntem) değiştirgesi yöntem çağrısı yapıldığında gerçekten çağırılacak olan işlevdir. İstediği kadar argüman alabilir. `async` (asenkron) bir fonksiyon olabilir. Örneğin:
+Metot herhangi bir argüman alabilir ve `async` olabilir. Sonucu döndür ya da bir hata fırlat.
 
-```js
-const add = async function (x, y) {
-    const result = await someLongRunningFunction(x, y);
-    return result;
-};
-
-server.method('add', add, {});
+```ts
+server.method('user.get', async (id: string) => {
+    return await db.users.findById(id);
+});
 ```
 
-Sunucu yöntem işlevin geçerli bir sonuç dönmeli ya da bir hata oluştu ise fırlatmalıdır.
+## <a name="options"></a> Seçenekler
 
-## Onbellekleme
+| Seçenek               | Ne için kullanılır                                                                 |
+| --------------------- | ---------------------------------------------------------------------------------- |
+| [`cache`](#cache)     | metodun sonuçlarını önbelleğe almak                                                |
+| [`generateKey`](#key) | argümanlar string, number ya da boolean olmadığında önbellek anahtarını oluşturmak |
+| [`bind`](#bind)       | metot içinde `this` değerini ayarlamak                                             |
 
-Sunucu yöntemlerinin başlıca avantajlarından biri hapinin ana önbelleklemesini geliştirebilmeleridir. Varsayılan olarak önbellekleme yapmaz ancak yöntem kaydedilirken geçerli bir yapılandırma verildiğinde dönen sonuç önbelleklenecek ve her çağrıldığında yöntemini tekrar çalıştırmak yerine önbellekten sunulacaktır. Yapılandırma şuna benzer:
+### <a name="cache"></a> Önbellek
 
-```javascript
-server.method('add', add, {
+`cache` seçeneği varsa metodu çağırmak önce bir önbellekten geçer:
+
+```mermaid
+flowchart TD
+    A["server.methods.user.get('42')"] --> K["generateKey('42') '42' döndürür<br/>'#user.get' segmentinde ara"]
+    K --> C{önbellekte mi?}
+    C -->|evet| R[önbellekteki değeri döndür]
+    C -->|hayır| M["metodunu çalıştır"]
+    M --> S[sonucu sakla, sonra döndür]
+```
+
+```ts
+server.method('user.get', getUser, {
     cache: {
-        expiresIn: 60000,
-        expiresAt: '20:30',
-        staleIn: 30000,
-        staleTimeout: 10000,
-        generateTimeout: 100,
+        expiresIn: 60 * 1000,
+        staleIn: 30 * 1000,
+        staleTimeout: 100,
+        generateTimeout: 2000,
     },
 });
 ```
 
-değiştirgelerin anlamları:
+Bilmen gerekenler:
 
-- `expiresIn`: öğe son kez önbelleklendiği andan itibaren süresinin dolması için geçmesi gereken milisaniye cinsinden süre. `expiresAt` ile birlikte kullanılamaz.
-- `expiresAt`: Yol (route) ile ilgili önbelleklerin süresinin dolması için 24 saatlik gösterimle 'HH:MM' formatında ifade edilen günün saati. Yerel zamanı kullanır. `expiresIn` ile birlikte kullanılamaz.
-- `staleIn`: Önbellekteki bir öğenin bayat olarak işaretlenerek yeniden oluşturmaya kalkışmadan önce geçmesi gerek milisaniye cinsinden süre. En az `expiresIn` kadar olmalıdır.
-- `staleTimeout`: Bayatlamış bir öğeyi dönmeden önce generateFunc oluşturma fonksiyonunun taze bir değer üretmesi için beklenilecek maksimum süre.
-- `generateTimeout`: Bir değeri üretmek uzun sürdüğünde zaman aşımı hatası vermeden önce beklenecek milisaniye cinsinden süre. Değer gerçekten döndüğünde gelecek istekler için önbelleklenir.
-- `segment`: Önbellek öğelerini ayrıştırmak (isolate) için kullanılan isteğe bağlı bölme adı
-- `cache`: Sunucuda kullanılmak için yapılandırılmış bir önbellek bağlantı adını taşıyan isteğe bağlı bir metin
+- `generateTimeout` zorunludur. Çağıranın `503` almadan önce metodunu ne kadar bekleyeceğini belirler.
+- Önbelleğe alınan bir metot, metodun kendisi senkron olsa bile her zaman bir promise döndürür. Onu `ServerMethods` içinde `Promise` dönüş tipiyle bildir ve `await` ile çağır.
+- hapi öğeleri `'#'` ile metot adının birleşiminden oluşan bir segmentte saklar. Varsayılan bellek önbelleği yerine [adlandırılmış bir önbellek client'ı](/tutorials/tr_TR/caching#client) kullanmak için `cache: 'my_cache'` ayarla.
+- Diğer seçenekler (`expiresAt`, `staleIn`, `staleTimeout`, `segment`) [`server.cache()`](/api#server-cache-options) ile aynıdır. Bayat değerlerin nasıl sunulduğunu [Önbellekleme](/tutorials/tr_TR/caching#stale) eğitimi gösteriyor.
 
-Önbellekleme hakkında daha fazla bilgi [catbox](https://github.com/hapijs/catbox#policy) dokümantasyonu ve [API referansında](/api#servermethodmethod) bulunabilir.
+#### <a name="changing-the-ttl-per-result"></a> TTL'i sonuç bazında değiştirmek
 
-Bir sunucu yönteminin her bir çağrı sonucunun `ttl` (time-to-live (yaşanacak zaman))inin üzerine `ttl` bayrağını ayarlayarak yazabilirsiniz. Önceki örnekte bu nasıl olurdu bir bakalım:
+hapi seninkilerden sonra fazladan bir argüman geçer: bir `flags` nesnesi. Bu tek sonucun ne kadar süre önbellekte kalacağını değiştirmek için `flags.ttl` değerini ayarla; hiç önbelleğe alınmasın istiyorsan `0` yap:
 
-```js
-const add = async function (x, y, flags) {
-    const result = await someLongRunningFunction(x, y);
+```ts
+const getUser = async function (id: string, flags: { ttl: number }) {
+    const user = await db.users.findById(id);
+    if (!user) {
+        flags.ttl = 0; // don't cache "not found"
+    }
 
-    flags.ttl = 5 * 60 * 1000; // 5 mins
-
-    return result;
+    return user;
 };
-
-server.method('add', add, {
-    cache: {
-        expiresIn: 2000,
-        generateTimeout: 100,
-    },
-});
-
-server.methods.add(5, 12);
 ```
 
-Burada sunucu yöntem işlevimizi normalde göndermeyi planladığımızdan bir fazla değiştirge alacak şekilde tanımlayarak hapi tarafından gönderilecek `flags` (bayraklar) değiştirgesine yer açtık. Daha sonra `ttl` bayrağının üzerine sonucun (milisaniye cinsinden) ne kadar önbelleklenmesini istiyorsak onu yazdık. Eğer yazdığımız değer `0` olsaydı bu değer asla önbelleklenmeyecekti. Eğer bayrak ayarlamasaydık önbellek yapılandırmasındaki `ttl` kullanılacaktı.
+hapi `flags` için bir tip export etmez, bu yüzden örnek onu satır içinde tipliyor.
 
-### Ozel bir anahtar uretmek
+#### <a name="removing-a-cached-result"></a> Önbellekteki bir sonucu kaldırmak
 
-Yukarıdaki seçeneklere ek olarak, yöntemine gönderilen değiştirgeleri kullanarak önbellek anahtarı üretmek için kullanılacak özel bir işlev de tanımlayabilirsin. Eğer yöntemin yalnızca metin, sayı ve mantıksal içeriyorsa hapi senin için akıllı bir anahtar üretecektir. Ancak yönteminin değiştirgesi bir nesneyse önbellek anahtarını üretecek aşağıdaki gibi bir işlem sağlaman gerekir:
+Önbelleğe alınan her metot bir `cache.drop()` fonksiyonu alır. O sonucu kaldırmak için onu aynı argümanlarla çağır; örneğin bir güncellemeden sonra:
 
-```javascript
-const sum = function (array) {
-    let total = 0;
+```ts
+await db.users.update(id, changes);
+await server.methods.user.get.cache?.drop(id);
+```
 
-    array.forEach((item) => {
-        total += item;
-    });
+Önbelleksiz metotlarda olmadığı için hapi `cache`'i isteğe bağlı olarak tipler; `?.` bu yüzden var.
 
-    return total;
+### <a name="key"></a> Özel bir anahtar üretmek
+
+hapi önbellek anahtarını argümanları `:` ile birleştirerek oluşturur; bu yalnızca string, number ve boolean için işe yarar. Önbelleğe alınan bir metodu başka tipte bir argümanla çağırmak `500` hatasıyla sonuçlanır. Diğer argümanlar için `generateKey` ver:
+
+```ts
+const sum = function (numbers: number[]) {
+    return numbers.reduce((total, item) => total + item, 0);
 };
 
 server.method('sum', sum, {
-    generateKey: (array) => array.join(','),
+    cache: {
+        expiresIn: 60 * 1000,
+        generateTimeout: 100,
+    },
+    generateKey: (numbers: number[]) => numbers.join(','),
 });
 ```
 
-Yöntemine gönderdiğin tüm argümanlar `generateKey` yöntemi tarafından kullanılabilir.
+`generateKey` metotla aynı argümanları alır ve bir string döndürmelidir.
 
-### Bagla (bind)
+### <a name="bind"></a> Bind
 
-Sunucu yöntemine gönderilen son isteğe bağlı yöntem `bind` (bağla)dır. `bind` seçeneği yöntem içerisinde geçerli olan `this` (bu) kapsamını değiştirir. Varsayılan olarak bu yöntem eklendiği andaki aktif kapsamdır. Bu özellik kullanılarak, ayrıca bir değiştirge olarak gönderilen veritabanı istemcisi sebebiyle bir de `generateKey` (anahtar üret) işlevi tanımlama sorununu ortadan kaldırabilir. Örneğin:
+`bind`, metot içinde `this` değerini ayarlar. Bunu metoda, örneğin bir veritabanı client'ı gibi bir bağımlılığı, argümanlara eklemeden vermek için kullan (argümanlara eklersen önbellek anahtarının da parçası olur):
 
-```javascript
-const lookup = async function (id) {
-    // myDB.getOne çağrısı yapar
-
-    return await this.getOne({ id });
+```ts
+const lookup = async function (this: typeof db, id: string) {
+    return await this.users.findById(id);
 };
 
-server.method('lookup', lookup, { bind: myDB });
+server.method('lookup', lookup, { bind: db });
+```
+
+- TypeScript'in `this` parametresi `this`'in tipini bildirir. Derleme sırasında silinir ve metodun argümanlarından biri değildir.
+- `bind`, kendi `this` değerini koruyan arrow function'larda etkisizdir.
+- `bind` yoksa `this`, mevcut plugin ya da sunucuda [`server.bind()`](/api#server-bind-context) ile ayarlanan context'tir.
+
+## <a name="server.methods"></a> server.methods
+
+Kaydedilen tüm metotlar [`server.methods`](/api#server-methods) üzerindedir; handler'larda bu `request.server.methods` olarak da erişilebilir:
+
+```ts
+server.route<{ Params: { id: string } }>({
+    method: 'GET',
+    path: '/users/{id}',
+    handler: async (request, h) => {
+        return await request.server.methods.user.get(request.params.id);
+    },
+});
+```
+
+Bu eğitimde kullanılan her metodun `ServerMethods` içinde bir girdisi olmalı. Önbelleğe alınan metotları, `cache.drop()` ve `cache.stats` ekleyen hapi'nin `CachedServerMethod` tipiyle sarmala:
+
+```ts
+import type { CachedServerMethod } from '@hapi/hapi';
+
+declare module '@hapi/hapi' {
+    interface ServerMethods {
+        add: (x: number, y: number) => number;
+        math: {
+            add: (x: number, y: number) => number;
+        };
+        lookup: (id: string) => Promise<User | null>;
+        sum: CachedServerMethod<(numbers: number[]) => Promise<number>>;
+        user: {
+            get: CachedServerMethod<(id: string) => Promise<User | null>>;
+        };
+    }
+}
 ```

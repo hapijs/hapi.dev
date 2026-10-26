@@ -6,71 +6,117 @@ title: Logging
 
 # Logging
 
-_This tutorial is compatible with hapi v17 and newer_
+_This tutorial is compatible with hapi v21 and newer_
 
 ## <a name="overview"></a> Overview
 
-As with any server software, logging is very important. hapi has some built in logging methods, as well as some basic capabilities for displaying these logs.
+Apart from the [`debug`](#debug) default, which prints errors from your own code to the console, hapi does not write logs anywhere. It turns every log call into an event on `server.events`, and you decide what to do with those events: print them, ship them to a logging service, or collect them per request.
+
+```mermaid
+flowchart TD
+    A["server.log()"] --> L["'log' event"]
+    B["request.log()"] --> R["'request' event"]
+    H["hapi's internal events"] --> L
+    H --> R
+    L --> D["debug option<br/>prints matching tags"]
+    R --> D
+    L --> Y["your listeners<br/>server.events.on()"]
+    R --> Y
+    R --> C["request.logs<br/>when the route sets log.collect"]
+
+    class L,R highlight
+```
 
 ## <a name="methods"></a> Built-in Methods
 
-There are two nearly identical logging methods, `server.log(tags, [data, [timestamp]])`, and `request.log(tags, [data])`, which are to be called whenever you want to log an event in your application.
+There are two logging methods. Pick the one that matches where your code runs:
+
+| Method                                                            | Use it when                                                    | Emits       |
+| ----------------------------------------------------------------- | -------------------------------------------------------------- | ----------- |
+| [`request.log(tags, [data])`](/api#request-log-tags-data)         | a request is in scope: a handler, an extension, an auth scheme | `'request'` |
+| [`server.log(tags, [data])`](/api#server-log-tags-data-timestamp) | no request is in scope: startup, a plugin's `register()`       | `'log'`     |
+
+Both take the same two main arguments:
+
+- `tags`: a string or an array of strings, such as `['error', 'database', 'read']`. hapi uses tags instead of log levels, so you can filter on any combination: everything tagged `database`, or only `error` and `database` together.
+- `data`: optional. A message, an object, or an `Error`. Pass a function instead, and hapi calls it only when a listener receives the event, so expensive data costs nothing when nobody is listening.
 
 ### <a name="request.log"></a> request.log()
 
-You want to call `request.log()` whenever you want to log something in the context of a request, such as a route handler, request lifecycle extension, or authentication scheme. The method takes two argument:
-
-`tags`: a string or an array of strings (e.g. `['error', 'database', 'read']`) used to identify the event. Tags are used instead of log levels and provide a much more expressive mechanism for describing and filtering events.
-
-`data`: (optional) a message string or object with the application data being logged. If data is a function, the function signature is `function()` and it called once to generate (return value) the actual data emitted to the listeners.
-
-For example:
-
-```js
+```ts
 server.route({
     method: 'GET',
-    path: '/',
-    handler: function (request, h) {
-        request.log('error', 'Event error');
-        return 'Hello World';
+    path: '/users/{id}',
+    handler: async (request, h) => {
+        request.log(['users', 'read'], { id: request.params.id });
+
+        return { id: request.params.id };
     },
 });
 ```
 
-In this example, if there is a request-specific event with a tag of `error`, the event will get logged. You also send a `data` parameter of `Event error`. This can be anything you want, such as an error message or any other details.
+Every event logged this way carries the request's id, so you can group the events of one request together.
 
 ### <a name="server.log"></a> server.log()
 
-`server.log()` is used when you have no specific request in scope, for instance, just after your server has started or inside a plugin's `register()` method.
+```ts
+import Hapi from '@hapi/hapi';
 
-`server.log()` takes three parameters, `(tags, data, timestamp)`. The `tags` and `data` parameters are exactly the same as in `request.logs()`. The `timestamp` parameter defaults to `Date.now()` and should only be passed in if you need to override the default for some reason.
+const server = Hapi.server({ port: 3000 });
 
-```js
-const Hapi = require('@hapi/hapi');
-const server = Hapi.server({ port: 80 });
+await server.start();
 
-server.log(['test', 'error'], 'Test event');
+server.log(['startup'], `Server running at ${server.info.uri}`);
 ```
-
-In this example, you'll see that server will log an event with `tags` `'test'` and `'error'`. Since there is no specific request in scope in this example, you use `server.log()`.
 
 ## <a name="display"></a> Retrieving and Displaying Logs
 
-The hapi server object emits events for each log event. You can use the standard EventEmitter API to listen for such events and display them however you wish.
+Listen on [`server.events`](/api#server-events). Besides your own calls, hapi emits its own events on the same channels:
 
-```js
+| Event        | `event.channel` | Comes from                                                     |
+| ------------ | --------------- | -------------------------------------------------------------- |
+| `'log'`      | `'app'`         | your `server.log()` calls                                      |
+| `'log'`      | `'internal'`    | hapi: server load rejections, client connection errors         |
+| `'request'`  | `'app'`         | your `request.log()` calls                                     |
+| `'request'`  | `'internal'`    | hapi: authentication failures, handler errors, invalid headers |
+| `'request'`  | `'error'`       | hapi: once per request that ended with a 500                   |
+| `'response'` | none            | hapi: once per request, after the response is sent             |
+
+The full list of internal tags is in the API reference under the [`'log'`](/api#log-event) and [`'request'`](/api#request-event) events.
+
+A typical setup prints application events, reports 500s, and writes one access-log line per request:
+
+```ts
 server.events.on('log', (event, tags) => {
-    if (tags.error) {
-        console.log(`Server error: ${event.error ? event.error.message : 'unknown'}`);
-    }
+    console.log(event.timestamp, event.tags, event.data ?? event.error);
+});
+
+server.events.on({ name: 'request', channels: 'app' }, (request, event, tags) => {
+    console.log(request.info.id, event.tags, event.data ?? event.error);
+});
+
+server.events.on({ name: 'request', channels: 'error' }, (request, event, tags) => {
+    console.error(`Request ${request.info.id} failed:`, event.error);
+});
+
+server.events.on('response', (request) => {
+    const duration = request.info.completed - request.info.received;
+
+    console.log(`${request.method.toUpperCase()} ${request.path} ${request.raw.res.statusCode} ${duration}ms`);
 });
 ```
 
-In this example, you call `server.events.on()` to listen for any `log` event, in this case anything logged with `server.log()`. Events logged with `server.log()` will emit a `log` event and events logged with `request.log()` will emit a `request` event.
+- `tags` is an object with one `true` key per tag, so `if (tags.error)` is a quick check.
+- `event.data` and `event.error` never appear together: an `Error` passed as `data` arrives as `event.error`.
+- The criteria object `{ name: 'request', channels: 'error' }` subscribes to one channel. Without it you get all three.
 
-You can retrieve all logs for a particular request at once via `request.logs`. This will be an array containing all the logged request events. You must first set the `log.collect` option to `true` on the route, otherwise this array will be empty.
+hapi emits `'response'` after the response is sent, and does not wait on promises a listener returns. For async work that hapi should await in order, use an `onPostResponse` extension; see [Lifecycle Hooks](/tutorials/en_US/lifecycle-hooks).
 
-```js
+### Collecting the logs of one request
+
+To read a request's events from inside the request, set `log.collect` on the route. Every event logged for that request then lands in `request.logs`:
+
+```ts
 server.route({
     method: 'GET',
     path: '/',
@@ -80,21 +126,34 @@ server.route({
         },
     },
     handler: function (request, h) {
-        return 'hello';
+        request.log(['step'], 'loaded user');
+        request.log(['step'], 'loaded orders');
+
+        return { steps: request.logs.length };
     },
 });
 ```
 
+Without `log.collect`, `request.logs` stays empty.
+
 ## <a name="debug"></a> Debug Mode (development only)
 
-hapi has a debug mode, which is a pain-free way to have your log events printed to the console, without configuring additional plugins or writing logging code yourself.
+The [`debug`](/api#server-options-debug) server option prints matching events to the console with `console.error()`, with no listener code. It changes only what is printed, not what is emitted.
 
-By default, the only errors debug mode will print to console are uncaught errors in user code, and runtime errors from incorrect implementation of hapi's API. You can configure your server to print request events based on tag, however. For example, if you wanted to print any error in a request you would configure your server as follows:
+| Option          | Default              | Prints                                                                                          |
+| --------------- | -------------------- | ----------------------------------------------------------------------------------------------- |
+| `debug.request` | `['implementation']` | `'request'` events with any of these tags. The default prints 500s caused by bugs in your code. |
+| `debug.log`     | none                 | `'log'` events with any of these tags.                                                          |
+| `debug: false`  |                      | nothing                                                                                         |
 
-`const server = Hapi.server({ debug: { request: ['error'] } });`
+Each list takes tags, `'*'` for every event, or `false` for none. To print every request error while developing:
 
-You can find more information on debug mode in the [API documentation](/api#server.options.debug).
+```ts
+import Hapi from '@hapi/hapi';
 
-## <a name="plugins"></a>Logging Plugins
+const server = Hapi.server({ debug: { request: ['error'] } });
+```
 
-The built-in methods provided by hapi for retrieving and printing logs are fairly minimal. For a more feature-rich logging experience, you can look into using a plugin like [hapi-pino](https://www.npmjs.com/package/hapi-pino), [New Relic](https://newrelic.com/instant-observability/hapi/2124da5b-0174-457a-be5a-e0068673b2b5) or any of the other [hapi logging plugins](/plugins#logging).
+## <a name="plugins"></a> Logging Plugins
+
+For production logging, use a plugin that listens to these events for you, such as [hapi-pino](https://www.npmjs.com/package/hapi-pino) for structured JSON logs, [New Relic](https://newrelic.com/instant-observability/hapi/2124da5b-0174-457a-be5a-e0068673b2b5), or any of the other [hapi logging plugins](/plugins#logging).

@@ -1,206 +1,187 @@
 ---
-title: Views
+title: 뷰
 ---
 
 <TutorialLang />
 
-## Views
+# 뷰
 
-_이 튜터리얼은 hapi v17과 호환됩니다._
+_이 튜토리얼은 hapi v21 이상과 호환됩니다_
 
-hapi는 다양한 템플릿 엔진, 부분, 헬퍼 (데이터를 조작하는 템플릿에서 사용되는 함수들) 그리고 레이아웃을 읽어 들여 활용하는 기능을 포함하여 템플릿 렌더링을 광범위하게 지원합니다. 이런 기능들은 [vision](https://github.com/hapijs/vision) 플러그인에서 제공됩니다.
+## <a name="overview"></a> 개요
 
-## 서버 설정하기
+hapi는 [vision](/module/vision) 플러그인으로 HTML 템플릿을 렌더링합니다. vision은 handlebars, pug, ejs를 포함해 `compile` 함수가 있는 모든 템플릿 엔진과 함께 동작하며(nunjucks처럼 `compile`이 다른 엔진은 [엔진](#engines)에서 설명하는 작은 래퍼가 필요합니다), partial, 헬퍼, 레이아웃을 지원합니다.
 
-view를 시작하려면 먼저 서버에 최소한 하나의 템플릿 엔진을 설정해야 합니다. vision에서 제공하는 [`server.views()`](https://github.com/hapijs/vision/blob/master/API.md#serverviewsoptions) 메소드를 사용하여 설정합니다.:
+## <a name="vision"></a> Vision
 
-```javascript
-'use strict';
+vision과 엔진을 설치하세요:
 
-const Path = require('path');
-const Hapi = require('@hapi/hapi');
-const Hoek = require('@hapi/hoek');
-
-const server = Hapi.server();
-
-const start = async () => {
-    await server.register(require('@hapi/vision'));
-
-    server.views({
-        engines: {
-            html: require('handlebars'),
-        },
-        relativeTo: __dirname,
-        path: 'templates',
-    });
-};
-
-start();
+```sh
+npm install @hapi/vision handlebars
 ```
 
-여기에서 몇 가지 작업을 하고 있습니다. 먼저 플러그인으로 [`vision`](https://github.com/hapijs/vision) 모듈을 읽어들입니다. hapi에 템플릿 렌더링 지원을 추가합니다.
+vision을 등록하면 다음이 추가됩니다:
 
-두 번째 `handlebars` 모듈을 `.html` 확장자를 가진 템플릿을 렌더링을 담당하는 엔진으로 등록합니다.
+| 기능                                  | 용도                                           |
+| ------------------------------------- | ---------------------------------------------- |
+| `server.views(options)`               | 엔진, 템플릿 폴더, 레이아웃 설정               |
+| `h.view(template, context)`           | 핸들러에서 템플릿 렌더링                       |
+| `view` 핸들러                         | 템플릿만 렌더링하는 라우트                     |
+| `server.render()`, `request.render()` | 이메일 등에 쓰기 위해 템플릿을 문자열로 렌더링 |
 
-그 다음 현재 경로의 `templates` 디렉터리에 템플릿이 있음을 서버에게 알립니다. `relativeTo` 옵션을 제공하여 현재 디렉터리의 상대 경로로 이 디렉터리를 가리킬 수 있습니다. 기본적으로 hapi는 현재 작업 디렉터리에서 템플릿을 찾습니다.
+`@hapi/vision`을 import하면 hapi의 TypeScript 타입에도 이들이 추가됩니다. 전체 API는 [vision API 레퍼런스](/module/vision)에 있습니다.
 
-### View options
+## <a name="server"></a> 서버 설정
 
-hapi에서 view 엔진에 대한 여러가지 옵션이 있습니다. 전체 문서는 [vision API reference](https://github.com/hapijs/vision/blob/master/API.md#serverviewsoptions)에서 찾을 수 있으나 여기에서 그중 일부를 살펴보겠습니다.
+```ts
+import Hapi from '@hapi/hapi';
+import Vision from '@hapi/vision';
+import Handlebars from 'handlebars';
 
-모든 옵션은 모든 등록된 엔진에 대해 전역적으로 설정할 수 있거나 특정 엔진에 지역적으로 설정할 수 있습니다. 예제:
+const server = Hapi.server({ port: 3000 });
 
-```javascript
+await server.register(Vision);
+
 server.views({
     engines: {
-        html: {
-            module: require('handlebars'),
-            compileMode: 'sync', // engine specific
-        },
+        html: Handlebars,
     },
-    compileMode: 'async', // global setting
+    relativeTo: import.meta.dirname,
+    path: 'templates',
 });
-```
 
-### 엔진
-
-hapi에서 view를 사용하려면 서버에 최소한 하나의 템플릿 엔진을 등록해야 합니다. 템플릿 엔진은 동기적 또는 비동기적일 수 있으며 외부 공개된 `compile` 이름을 가진 객체이어야 합니다.
-
-동기적 엔진을 위한 `compile` 메소드는 `function (template, options)`이며 에러를 던지거나 컴파일된 html을 반환하는 `function (context, option)` 형태의 함수를 반환합니다.
-
-비동기적 템플릿 엔진은 `function (template, options, callback)` 형태의 `compile` 메소드를 가지고 있습니다. 이 메소드는 표준 에러를 첫 인자로 가지는 `callback`을 호출하고 `function(context, options, callback)` 형태의 새로운 메소드를 반환합니다. 반환된 메소드는 역시 에러를 첫 인자로, 컴파일된 html을 두 번째 인자로 가지는 콜백을 호출합니다.
-
-기본으로 hapi는 템플릿 엔진을 동기로 가정합니다. (즉 `compileMode`가 기본으로 `sync`) 비동기적 엔진을 사용하려면 `complieMode`를 `async`로 설정해야 합니다.
-
-`compileOptions`와 `runtimeOptions` 설정을 통해 `compile` 메소드와 그 메소드가 반환하는 두 곳에서 `options` 인자를 사용합니다. 이 두 옵션의 기본 값은 빈 객체 `{}`입니다.
-
-`compileOptions`는 `compile`에 두 번째 인자로 전달되는 객체이고 `runtimeOptions`는 `compile` 반환하는 메소드에 전달됩니다.
-
-하나의 템플릿 엔진만 등록되어 있으면 자동으로 기본이 되어 view를 요청할 때 파일 확장자를 생략할 수 있습니다. 그러나 둘 이상의 엔진이 등록되어 있다면 파일 확장자를 붙이거나 가장 자주 사용하는 엔진에 `defaultExtenstion`을 설정해야 합니다. 기본 엔진을 사용하지 않는 view의 경우 여전히 파일 확장자를 지정해야 합니다.
-
-다른 유용한 옵션은 `isCached`입니다. `false`로 설정되면 hapi는 템플릿의 결과를 캐시 하지 않을 것이고 대신에 매 사용 시 파일로부터 템플릿을 읽어 들일것 입니다. 응용프로그램을 개발할 때 템플릿을 사용하는 동안 앱을 다시 시작하지 않아도 되기 때문에 매우 유용할 수 있습니다. 그러나 프로덕션에서는 `isCached`을 기본값인 `true`로 두는 것이 좋습니다.
-
-### 경로
-
-view는 여러 다른 위치에 파일들을 가질 수 있기 때문에 hapi는 파일들을 찾는 데 도움이 되게 여러 경로를 설정할 수 있습니다. 여기에 옵션이 있습니다.:
-
-- `path`: 기본 템플릿을 포함한 디렉터리
-- `partialsPath`: 부분을 담고 있는 디렉터리
-- `helpersPath`: 템플릿 헬퍼를 담고 있는 디렉터리
-- `layoutPath`: 레이아웃 템플릿을 담고 있는 디렉터리
-- `relativeTo`: 다른 경로에 대한 접두어로 사용. 만약 지정되었다면 다른 경로는 이 디렉터리의 상대 경로입니다.
-
-또한 hapi가 경로를 사용하는 방법을 변경하는 두 가지 설정이 있습니다. 기본으로 절대 경로와 `path` 디렉터리의 외부로 이동은 허용되지 않습니다. 이 동작은 `allowAbsolutePaths`와 `allowInsecureAccess`를 true로 설정하여 변경할 수 있습니다.
-
-예를 들면 다음과 같은 디렉터리 구조로 되어 있다면:
-
-```
-templates\
-  index.html
-  layout\
-    layout.html
-  helpers\
-    getUser.js
-    fortune.js
-```
-
-설정은 다음과 같을 것입니다.:
-
-```javascript
-server.views({
-    engines: {
-        html: require('handlebars'),
-    },
-    relativeTo: __dirname,
-    path: './templates',
-    layoutPath: './templates/layout',
-    helpersPath: './templates/helpers',
-});
-```
-
-## view 렌더링
-
-view를 렌더링하는데 두 가지 옵션이 있습니다. [응답 도구](/api#response-toolkit)인 `h`로 `h.view()` 또는 view 처리기를 사용하는 것입니다.
-
-### [`h.view()`](https://github.com/hapijs/vision/blob/master/API.md#hviewtemplate-context-options)
-
-view를 렌더링하는 첫 번째 방법은 `h.view()`입니다. 이 방법을 사용하는 route는 다음과 같습니다.:
-
-```javascript
 server.route({
     method: 'GET',
     path: '/',
-    handler: function (request, h) {
-        return h.view('index');
+    handler: (request, h) => {
+        return h.view('index', { title: 'My home page' });
     },
+});
+
+await server.start();
+```
+
+- `engines`는 파일 확장자를 엔진에 매핑합니다. `.html`로 끝나는 파일은 handlebars로 렌더링됩니다.
+- `path`는 템플릿이 있는 폴더이며 `relativeTo`를 기준으로 해석됩니다. ES 모듈에는 `__dirname`이 없습니다. `import.meta.dirname`이 현재 파일의 폴더입니다.
+- `h.view('index', ...)`는 `templates/index.html`을 렌더링합니다. 엔진이 하나만 등록되어 있으면 확장자를 생략할 수 있습니다.
+
+### <a name="lifecycle"></a> 뷰가 렌더링되는 과정
+
+`h.view()`는 즉시 무언가를 렌더링하지 않습니다. 뷰 응답을 반환하고, hapi가 응답을 보낼 때 vision이 렌더링합니다:
+
+```mermaid
+flowchart TD
+    A["핸들러가 h.view('index', context)를 반환"] --> B["vision이 templates/index.html을<br/>찾아 컴파일 (캐시됨)"]
+    B --> C["onPreResponse 훅"]
+    C --> D["전역 컨텍스트를<br/>뷰의 컨텍스트와 병합"]
+    D --> E["템플릿 렌더링"]
+    E --> F["레이아웃으로 감싸기"]
+    F --> G["text/html로 전송"]
+```
+
+이 순서가 실제로 의미하는 것:
+
+- 템플릿이 없으면 핸들러가 반환하는 즉시, 어떤 `onPreResponse` 훅보다도 먼저 `500`으로 실패합니다.
+- `onPreResponse` 훅은 렌더링 전에 실행되므로 뷰를 에러 페이지 같은 다른 응답으로 교체할 수 있습니다. 아래의 [에러 페이지](#errors)를 참고하세요.
+- 모든 응답 타입에 대한 이 준비 단계와 렌더링 단계의 구분은 [응답 마샬링](/tutorials/ko_KR/response-marshalling)에서 다룹니다.
+
+## <a name="options"></a> server.views() 옵션
+
+| 옵션                  | 기본값        | 효과                                                                   |
+| --------------------- | ------------- | ---------------------------------------------------------------------- |
+| `engines`             | 필수          | 확장자에서 엔진으로의 매핑. 예: `{ html: Handlebars, pug: Pug }`       |
+| `path`                | 없음          | 템플릿이 있는 폴더(또는 폴더의 배열)                                   |
+| `relativeTo`          | 작업 디렉터리 | 다른 모든 경로 옵션의 기준 폴더                                        |
+| `partialsPath`        | 없음          | partial이 있는 폴더                                                    |
+| `helpersPath`         | 없음          | 헬퍼 모듈이 있는 폴더                                                  |
+| `layout`              | `false`       | `true`이면 `layout.html`을 사용. 다른 레이아웃 파일의 이름도 지정 가능 |
+| `layoutPath`          | 없음          | 레이아웃이 있는 폴더                                                   |
+| `context`             | 없음          | 모든 뷰에 병합되는 컨텍스트. 객체 또는 요청을 받는 함수                |
+| `isCached`            | `true`        | `false`이면 요청마다 템플릿을 읽고 컴파일. 개발 중에 편리함            |
+| `defaultExtension`    | 유일한 엔진   | `h.view()`가 확장자 없는 이름을 받을 때 사용할 확장자                  |
+| `compileMode`         | `'sync'`      | `compile`이 콜백을 받는 엔진에는 `'async'`                             |
+| `allowAbsolutePaths`  | `false`       | 절대 경로 템플릿 이름 허용                                             |
+| `allowInsecureAccess` | `false`       | 템플릿 이름에 `../` 허용                                               |
+
+`server.views()`에 설정한 옵션은 모든 엔진에 적용됩니다:
+
+```ts
+server.views({
+    engines: { html: Handlebars },
+    relativeTo: import.meta.dirname,
+    path: 'templates',
+    isCached: process.env.NODE_ENV === 'production',
 });
 ```
 
-context를 `h.view()`에 전달하려면 두 번째 인자로 겍체를 전달합니다. 예제입니다.:
+여기서는 템플릿을 `templates/`에서 불러오고, 프로덕션이 아닐 때는 vision이 요청마다 템플릿을 다시 읽고 컴파일하므로 재시작하지 않아도 템플릿 수정이 반영됩니다.
 
-```javascript
-return h.view('index', { title: 'My home page' });
+### <a name="engines"></a> 엔진
+
+엔진은 `compile` 함수가 있는 객체라면 무엇이든 됩니다:
+
+| `compileMode`     | `compile` 시그니처                            | 반환                                                                                                       |
+| ----------------- | --------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `'sync'` (기본값) | `compile(template, compileOptions)`           | HTML을 반환하는 `render(context, runtimeOptions)`                                                          |
+| `'async'`         | `compile(template, compileOptions, callback)` | `callback(err, render)`를 호출. `render(context, runtimeOptions, callback)`은 `callback(err, html)`을 호출 |
+
+`compileOptions`와 `runtimeOptions`는 엔진에 그대로 전달되는 `server.views()` 옵션입니다. API가 맞지 않는 엔진은 이런 `compile` 함수를 가진 객체로 감싸면 됩니다.
+
+엔진이 둘 이상 등록되어 있으면 가장 많이 쓰는 엔진을 `defaultExtension`으로 설정하지 않는 한 `h.view()`에 확장자가 필요합니다(`h.view('index.pug')`).
+
+### <a name="paths"></a> 경로
+
+다음과 같은 폴더 구조라면:
+
+```
+templates/
+    index.html
+    layout/
+        layout.html
+    helpers/
+        fortune.js
 ```
 
-### View 핸들러
+설정은 다음과 같습니다:
 
-view를 렌더링하는 두 번째 방법은 hapi의 내장 view 처리기를 사용하는 것입니다. route는 다음과 같습니다.
-
-```javascript
-server.route({
-    method: 'GET',
-    path: '/',
-    handler: {
-        view: 'index',
-    },
-});
-```
-
-view 처리기를 사용할 때 context는 `context` 키로 전달 됩니다. 예제입니다.:
-
-```json5
-handler: {
-    view: {
-        template: 'index',
-        context: {
-            title: 'My home page'
-        }
-    }
-}
-```
-
-### 전역 context
-
-view에 context를 직접 전달하는 방법을 살펴보았지만 모든 템플릿에 _항상_ 사용가능한 기본 context가 있다면 어떻할까요?
-
-가장 간단한 방법은 `server.view()`를 호출할 때 `context` 옵션을 사용하는 것입니다.
-
-```javascript
-const context = {
-    title: 'My personal site',
-};
-
+```ts
 server.views({
     engines: {
-        html: {
-            module: require('handlebars'),
-            compileMode: 'sync', // engine specific
-        },
+        html: Handlebars,
     },
-    context,
+    relativeTo: import.meta.dirname,
+    path: 'templates',
+    layoutPath: 'templates/layout',
+    helpersPath: 'templates/helpers',
 });
 ```
 
-기본 전역 context는 낮은 우선순위로 전달되는 지역 context와 합쳐지고 view에 적용될 것입니다.
+### <a name="global"></a> 전역 컨텍스트
 
-### View helpers
+`context`는 모든 뷰의 컨텍스트에 병합되며, 둘 다 같은 키를 설정하면 뷰 자신의 컨텍스트가 우선합니다. 요청마다 계산하려면 함수를 넘기세요. 예를 들어 모든 페이지에 로그인한 사용자를 표시할 수 있습니다:
 
-`helpersPath`에 위치한 javascript 모듈은 템플릿에서 사용할 수 있습니다. 이 예제에서 템플릿에서 사용될 때 문자열 배열에서 하나의 원소를 골라서 출력하는 `fortune`이라는 view 헬퍼를 만들 것입니다.
+```ts
+server.views({
+    engines: {
+        html: Handlebars,
+    },
+    relativeTo: import.meta.dirname,
+    path: 'templates',
+    context: (request) => ({
+        siteName: 'My personal site',
+        user: request?.auth.credentials?.user ?? null,
+    }),
+});
+```
 
-다음 작은 코드는 `helpers` 디렉터리에 `fortune.js` 파일에 저장된 완전한 헬퍼 함수입니다.
+`server.render()`로 요청 밖에서 렌더링하면 `request`가 undefined이므로 함수에서 이를 확인합니다.
 
-```javascript
-module.exports = function () {
+### <a name="helpers"></a> 뷰 헬퍼
+
+handlebars처럼 헬퍼를 지원하는 엔진에서는 `helpersPath`의 각 모듈이 파일 이름을 딴 헬퍼가 됩니다. `templates/helpers/fortune.js`로 저장한 다음 헬퍼는 무작위 운세를 반환합니다:
+
+```js
+export default function () {
     const fortunes = [
         'Heisenberg may have slept here...',
         'Wanna buy a duck?',
@@ -216,96 +197,114 @@ module.exports = function () {
 
     const x = Math.floor(Math.random() * fortunes.length);
     return fortunes[x];
-};
+}
 ```
 
-이제 view 헬퍼를 템플릿에서 사용할 수 있습니다. 여기에 handlebar를 템플릿 엔진으로 사용하는 `templates/index.html`에서 헬퍼 함수를 보여주는 작은 코드가 있습니다.
+헬퍼는 JavaScript 파일로 둡니다. vision은 헬퍼를 `require()`로 불러오고, Node.js가 `require.extensions`에 등록하지 않은 확장자의 파일은 건너뛰는데, 여기에는 `.ts`가 포함되지 않습니다.
+
+`templates/index.html`에서 사용하세요:
 
 ```html
 <h1>Your fortune</h1>
-<p>&#123;&#123;fortune&#125;&#125;</p>
+<p>{{fortune}}</p>
 ```
 
-이제 서버를 시작하고 브라우저가 템플릿을 (view 헬퍼를 사용한) 사용하는 route에 접근하면 헤더 바로 아래에 무작위로 선택된 행운을 가진 단락을 볼 것입니다.
+### <a name="layouts"></a> 레이아웃
 
-참고로 여기 템플릿에서 fortune 헬퍼 메소드를 사용하는 완전한 서버 스크립트가 있습니다.
+많은 엔진이 자체 레이아웃 시스템을 갖고 있기 때문에 vision의 레이아웃은 기본적으로 꺼져 있습니다. 둘 중 하나만 사용하세요. vision의 레이아웃을 켜려면:
 
-```javascript
-'use strict';
-
-const Hapi = require('@hapi/hapi');
-
-const server = Hapi.server({ port: 8080 });
-
-const start = async () => {
-    await server.register(require('@hapi/vision'));
-
-    server.views({
-        engines: {
-            html: require('handlebars'),
-        },
-        relativeTo: __dirname,
-        path: 'templates',
-        helpersPath: 'helpers',
-    });
-
-    server.route({
-        method: 'GET',
-        path: '/',
-        handler: function (request, h) {
-            return h.view('index');
-        },
-    });
-};
-
-start();
-```
-
-### Layouts
-
-vision은 view 레이아웃에 대한 내장 지원을 가지고 있습니다. 특정 view 엔진에서 제공하는 레이아웃 시스템과 충돌을 일으킬 수 있기 때문에 기본으로 비활성 상태입니다. 단 하나의 레이아웃 시스템 선택을 추천합니다.
-
-내장 레이아웃 시스템을 사용하려면 먼저 view 엔진을 설정합니다.:
-
-```javascript
+```ts
 server.views({
-    // ...
+    engines: {
+        html: Handlebars,
+    },
+    relativeTo: import.meta.dirname,
+    path: 'templates',
     layout: true,
     layoutPath: 'templates/layout',
 });
 ```
 
-내장 레이아웃을 활성화하고 기본 레이아웃 페이지를 `templates/layout/layout.html`로 정의합니다. (또는 사용 중인 다른 확장)
-
-`laylout.html`에서 콘텐츠 영역 설정:
+`templates/layout/layout.html`은 `content`로 각 뷰가 들어갈 자리를 표시합니다:
 
 ```html
 <html>
     <body>
-        &#123;&#123;&#123;content&#125;&#125;&#125;
+        {{{content}}}
     </body>
 </html>
 ```
 
-그리고 view는 콘텐츠가 될 것입니다:
+그리고 뷰에는 자신의 부분만 들어갑니다:
 
 ```html
 <div>Content</div>
 ```
 
-view를 렌더링할 때 `{{content}}`는 view 콘텐츠로 바뀔 것입니다.
+| 하려는 것                    | 방법                                                      |
+| ---------------------------- | --------------------------------------------------------- |
+| 다른 기본 레이아웃 사용      | `server.views()`에 `layout: 'another_default'`            |
+| 한 뷰에만 다른 레이아웃 사용 | `h.view('myview', context, { layout: 'another_layout' })` |
+| 한 뷰를 레이아웃 없이 렌더링 | `h.view('myview', context, { layout: false })`            |
 
-다른 기본 레이아웃을 원한다면 옵션을 전역으로 설정하세요.:
+레이아웃이 켜져 있는 동안에는 컨텍스트에 `content` 키를 둘 수 없습니다. vision이 렌더링된 뷰에 그 이름을 쓰기 때문이며, 이 경우 `500`으로 실패합니다. 이름은 `layoutKeyword` 옵션으로 바꿀 수 있습니다.
 
-```javascript
-server.views({
-    // ...
-    layout: 'another_default',
+## <a name="render"></a> 뷰 렌더링
+
+### <a name="hview"></a> h.view()
+
+데이터 로딩처럼 핸들러에서 먼저 할 일이 있을 때는 [`h.view()`](/module/vision#h-view-template-context-options)를 사용하세요:
+
+```ts
+server.route({
+    method: 'GET',
+    path: '/',
+    handler: (request, h) => {
+        return h.view('index', { title: 'My home page' });
+    },
 });
 ```
 
-view 별로 다른 레이아웃을 지정할 수도 있습니다.:
+`h.view()`는 일반 응답 객체를 반환하므로 `.code()`, `.header()` 등 [응답 객체](/api#response-object) 메서드를 체이닝할 수 있습니다.
 
-```javascript
-return h.view('myview', null, { layout: 'another_layout' });
+### <a name="viewhandler"></a> 뷰 핸들러
+
+라우트가 템플릿만 렌더링한다면 `view` 핸들러를 사용하세요:
+
+```ts
+server.route({
+    method: 'GET',
+    path: '/',
+    handler: {
+        view: {
+            template: 'index',
+            context: {
+                title: 'My home page',
+            },
+        },
+    },
+});
 ```
+
+`handler: { view: 'index' }`가 짧은 형태입니다. 뷰 핸들러는 항상 컨텍스트에 `params`, `payload`, `query`, `pre`를 추가하므로 `/users/{id}`의 템플릿은 핸들러 코드 없이도 `params.id`를 출력할 수 있습니다.
+
+## <a name="errors"></a> 에러 페이지
+
+hapi는 에러에 JSON으로 응답합니다. HTML을 렌더링하는 사이트는 보통 HTML 에러 페이지를 원합니다. 렌더링은 `onPreResponse` 이후에 일어나므로, 그 훅에서 어떤 에러든 뷰로 바꿀 수 있습니다:
+
+```ts
+import Boom from '@hapi/boom';
+
+server.ext('onPreResponse', (request, h) => {
+    const response = request.response;
+    if (!Boom.isBoom(response)) {
+        return h.continue;
+    }
+
+    const { statusCode, payload } = response.output;
+
+    return h.view('error', { statusCode, message: payload.message }).code(statusCode);
+});
+```
+
+이제 없는 페이지를 요청하면 레이아웃 안에 렌더링된 `templates/error.html`을 상태 `404`와 함께 받습니다. 이 훅은 핸들러가 던진 에러와 검증 실패도 잡습니다. `onPreResponse`에 대해서는 [라이프사이클 훅](/tutorials/ko_KR/lifecycle-hooks)을 참고하세요.

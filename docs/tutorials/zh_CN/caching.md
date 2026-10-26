@@ -1,26 +1,31 @@
 ---
-title: Caching
+title: 缓存
 ---
 
 <TutorialLang />
 
-## 缓存
+# 缓存
 
-_该教程适用于 hapi v17版本_
+_本教程适用于 hapi v21 及更新版本_
 
-### 客户端缓存
+## <a name="overview"></a> 概述
 
-HTTP 协议定义了许多 HTTP 头部（headers）信息，方便如浏览器等客户端使用缓存资源。想要更多的了解这些信息，并决定哪些适用与你的用例，可以访问这里 [Google 指南](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching)。
+hapi 在两个层面进行缓存，大多数应用两者都会用到：
 
-这份教程的第一部分展示了 hapi 如何简单的为客户端配置头部信息。
+| 层面                     | 副本存放位置                                     | 节省了什么                                  | 配置方式                                                                 |
+| ------------------------ | ------------------------------------------------ | ------------------------------------------- | ------------------------------------------------------------------------ |
+| [客户端](#client-side)   | 浏览器，或位于中间的 CDN、代理                   | 整个请求：客户端根本不会访问 hapi           | HTTP 响应头：`Cache-Control`、`ETag`、`Last-Modified`                    |
+| [服务器端](#server-side) | 内存、Redis 或其他 [catbox](/module/catbox) 存储 | 开销大的工作：一次数据库查询、一次 API 调用 | `server.cache()` 或带缓存的[服务器方法](/tutorials/zh_CN/server-methods) |
 
-#### Cache-Control
+## <a name="client-side"></a> 客户端缓存
 
-`Cache-Control` header 控制缓存的条件以及可以缓存多久。 例如, `Cache-Control:max-age=30, must-revalidate, private` 意味这浏览器可以缓存相关的资源 30 秒，`private` 意味这资源只能被浏览器缓存而不是任何中间缓存，`must-revalidate` 意思是一旦过期客户端就必须向服务器重新请求资源。
+HTTP 响应头告诉客户端能否复用某个响应，以及可以复用多久。MDN 的 [HTTP 缓存指南](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching)对这些响应头有深入的讲解。本节介绍 hapi 如何设置它们。
 
-让我们看一下 hapi 如何设置这个头部信息:
+### <a name="cache-control"></a> Cache-Control
 
-```javascript
+设置路由的 `cache` 选项，hapi 就会为你写入 `Cache-Control` 响应头：
+
+```ts
 server.route({
     path: '/hapi/{ttl?}',
     method: 'GET',
@@ -28,7 +33,7 @@ server.route({
         const response = h.response({ be: 'hapi' });
 
         if (request.params.ttl) {
-            response.ttl(request.params.ttl);
+            response.ttl(Number(request.params.ttl));
         }
 
         return response;
@@ -42,107 +47,146 @@ server.route({
 });
 ```
 
-以上的例子显示了如何为路由设置 `cache` 选项。 这里我们设置 `expiresIn` 为 30 秒，以及 `privacy` 为私有。
-该示例还说明了 `expiresIn` 值可以使用 [response 对象](/api#response-object) 接口提供的 `ttl(毫秒)`值改写。
+`response.ttl(msec)` 会为单个响应覆盖 `expiresIn`。hapi 发送的响应头取决于具体响应：
 
-如果我们向 `/hapi` 发出请求，我们将收到响应头信息 `cache-control: max-age=30, must-revalidate, private`。 如果我们发送请求 `/hapi/5000` 我们则收到响应头信息 `cache-control: max-age=5, must-revalidate, private`。
+| 请求                                            | `Cache-Control` 响应头                 |
+| ----------------------------------------------- | -------------------------------------- |
+| `GET /hapi`                                     | `max-age=30, must-revalidate, private` |
+| `GET /hapi/5000`（调用了 `response.ttl(5000)`） | `max-age=5, must-revalidate, private`  |
+| 状态码不是 200 或 204 的响应，例如 404 或 500   | `no-cache`（路由的 `cache.otherwise`） |
 
-参考 [route-options](/api#route-options) 可以获得更多关于 `cache` 配置的信息。
+需要注意：
 
-#### Last-Modified
+- 如果请求已通过认证，hapi 总会加上 `private`，即使路由设置了 `privacy: 'public'`。CDN 这类共享缓存永远不会存储 `private` 响应。
+- 用 `h.state()` 设置的 cookie 不会改变这个响应头：hapi 在构建 `Cache-Control` 之后才写入 cookie。对于设置 cookie 的缓存路由，请自行设置 `privacy: 'private'`。
+- 只有路由的 `cache.statuses`（默认为 `[200, 204]`）中列出的状态码才会带上 `max-age`。错误响应永远不会被意外缓存。
 
-在一些情况中，服务器可以提供关于一个资源最后被修改的信息。当使用 [inert](https://github.com/hapijs/inert) 插件来处理静态内容时， 一个 `Last-Modified` header 将在每个响应中自动添加。
+所有 `cache` 设置请参见[路由选项](/api#route-options-cache)。
 
-当响应中设置了 `Last-Modified` header 时, hapi 通过与客户端发来的 `If-Modified-Since` header 比较之后才来决定响应的返回码是否该为 `304 Not Modified`。 这个做法通常也被称之为条件 GET 请求，它的好处就是告知浏览器当收到一个 `304` 响应时，不需要重新去下载资源。
+### <a name="last-modified"></a> 条件请求：ETag 与 Last-Modified
 
-假设 `lastModified` 是一个 `Date` 对象，你可以通过 [response 对象](/api#response-object) 设置这个头部信息。
+条件请求让客户端可以询问 "自从我拿到副本以来，它变过吗？"，并得到一个空的 `304 Not Modified`，而不是完整的响应体：
 
-```javascript
-return h.response(result).header('Last-Modified', lastModified.toUTCString());
+```mermaid
+sequenceDiagram
+    participant B as 浏览器
+    participant S as hapi 服务器
+    B->>S: GET /report
+    S-->>B: 200 带响应体，ETag "v42"
+    Note over B: 保存响应体和 ETag
+    B->>S: GET /report，携带 If-None-Match "v42"
+    Note over S: handler 运行并再次设置 ETag "v42"，<br/>hapi 发现匹配
+    S-->>B: 304 Not Modified，无响应体
 ```
 
-这个示例展示了使用 `Last-Modified` 在本教程的 [最后一节](#客户端和服务器端缓存) 中。
+使用 [`response.etag()`](/api#response-object) 设置 `ETag`，其值通常来自版本号或内容的哈希：
 
-#### ETag
-
-ETag header 是除 `Last-Modified` 之外的另一种选择。这里服务器将会提供一个令牌(token) (通常是资源的校验和) 来代替上次改动的时间戳。浏览器将会在下个请求中使用这个令牌去设置 `If-None-Match` header 信息。服务器将会拿这个头部的值与新 `ETag` 的校验和进行比较来决定要不要返回 `304` 响应。
-
-在你的 handler 中你只需通过 `etag(tag, options)` 函数来设置 `ETag`:
-
-```javascript
-return h.response(result).etag('xxxxxxxxx');
+```ts
+return h.response(report).etag(String(report.version));
 ```
 
-关于 `etag` 的更多细节如参数和选项等信息，可以在[response 对象](/api#response-object) 中找到。
+或者设置 `Last-Modified`，hapi 会将它与客户端的 `If-Modified-Since` 请求头进行比较：
 
-### 服务端缓存
+```ts
+return h.response(report).header('Last-Modified', report.updatedAt.toUTCString());
+```
 
-hapi 通过 [catbox](https://www.github.com/hapijs/catbox) 提供强健易用的服务端缓存技术，这份教程接下来的部分将会告诉你如何使用 catbox。
+需要注意：
 
-Catbox有两个接口： client 和 policy。
+- hapi 只在 `GET` 路由（以及方法为 `*` 的路由）上返回 `304`。
+- handler 在每个请求上仍然会运行。条件请求节省的是带宽，而不是服务器的工作量。将它与[服务器端缓存](#server-side)结合使用，两者都能节省。
+- [inert](/module/inert) 会为静态文件自动设置 `ETag` 和 `Last-Modified`。
 
-#### Client
+## <a name="server-side"></a> 服务器端缓存
 
-[Client](https://github.com/hapijs/catbox#client) 是一个低级别的接口，允许你设置和获取键值对。它通过以下可用的适配器来初始化: ([Memory](https://github.com/hapijs/catbox-memory), [Redis](https://github.com/hapijs/catbox-redis), [mongoDB](https://github.com/hapijs/catbox-mongodb), [Memcached](https://github.com/hapijs/catbox-memcached), or [Riak](https://github.com/DanielBarnes/catbox-riak))。
+hapi 通过 [catbox](/module/catbox) 在服务器上缓存值。catbox 是一个键值存储，存储适配器可以互换：内存（默认）、[Redis](/module/catbox-redis) 和 [Memcached](/module/catbox-memcached)。
 
-hapi 通过 [catbox memory](https://github.com/hapijs/catbox-memory) 适配器来初始化一个默认的 [client](https://github.com/hapijs/catbox#client)。让我们看一下如何定义更多的 client。
+### <a name="catbox"></a> catbox
 
-```javascript
-'use strict';
+缓存项按三个层级组织：
 
-const Hapi = require('@hapi/hapi');
+```mermaid
+flowchart TD
+    C["<b>cache client</b><br/>一个存储连接，例如 Redis"] --> S1["<b>segment</b> '#sum'<br/>某个服务器方法的缓存项"]
+    C --> S2["<b>segment</b> '!my-plugin'<br/>某个插件的缓存项"]
+    S1 --> I1["item id '1:5'"]
+    S1 --> I2["item id '2:3'"]
+    S2 --> I3["item id 'user:42'"]
+```
+
+catbox 通过两种接口访问这些缓存项：
+
+- **[Client](/module/catbox#client)**：底层的存储连接。hapi 会为你创建一个内存 client，其他 client 可以在服务器的 `cache` 选项中添加。
+- **[Policy](/module/catbox#policy)**：client 中的一个 segment，带有过期规则和一个可选的函数，用于生成缺失的值。你的代码使用 policy，它通过 [`server.cache()`](/api#server-cache-options) 创建，或者通过缓存[服务器方法](#servermethods)创建。
+
+### <a name="client"></a> Client
+
+在默认的内存 client 之外，添加一个名为 `my_cache` 的 Redis client：
+
+```ts
+import Hapi from '@hapi/hapi';
+import { Engine as CatboxRedis } from '@hapi/catbox-redis';
 
 const server = Hapi.server({
     port: 8000,
     cache: [
         {
-            name: 'mongoCache',
-            engine: require('catbox-mongodb'),
-            host: '127.0.0.1',
-            partition: 'cache',
-        },
-        {
-            name: 'redisCache',
-            engine: require('catbox-redis'),
-            host: '127.0.0.1',
-            partition: 'cache',
+            name: 'my_cache',
+            provider: {
+                constructor: CatboxRedis,
+                options: {
+                    partition: 'my_cached_data',
+                    host: 'redis-cluster.domain.com',
+                    port: 6379,
+                    database: 0,
+                    tls: {},
+                },
+            },
         },
     ],
 });
 ```
 
-在上面的例子中我们定义了两个 catbox client: mongoCache 与 redisCache。包括 hapi 默认创建的 memory catbox 在内，一共有三个可用的缓存 client。注册新的缓存 client时，可以通过省略 `name` 属性来替换默认的 client 。 `partition` 告诉适配器如何命名缓存( 默认为 'catbox')。在 [mongoDB](http://www.mongodb.org/) 这个值将变成数据库的名称，而在 [redis](http://redis.io/) 中它将会变成键的前缀。
+- policy 通过 `cache: 'my_cache'` 按 `name` 选择这个 client。省略 `name` 则会替换默认的内存 client。
+- `partition` 让本应用的键与共用同一 Redis 数据库的其他应用分开。在 Redis 中它会成为键的前缀，默认值为 `'catbox'`。
+- 缓存 client 在服务器启动时连接，即在 [`server.initialize()`](/api#await-server-initialize) 或 [`server.start()`](/api#await-server-start) 中。在此之前，policy 无法读写。
 
-#### Policy
+### <a name="policy" /> Policy
 
-[Policy](https://github.com/hapijs/catbox#policy) 是比 Client 更高一级别的接口。接下来展示了如何缓存两个数之和的例子，这个示例的原理也可以应用于其余的缓存情况。如函数的回调结果，async或者是别的内容。[server.cache(options)](/api#-servercacheoptions) 创建一个新的[policy](https://github.com/hapijs/catbox#policy), 这个可以在路由 handler 中使用。
+[`server.cache(options)`](/api#server-cache-options) 创建一个 policy。下面的示例将一次缓慢加法运算的结果缓存十秒：
 
-```javascript
+```ts
+import Hapi from '@hapi/hapi';
+import * as Hoek from '@hapi/hoek';
+
+const add = async (a: string, b: string) => {
+    await Hoek.wait(1000); // Simulates a slow database call
+
+    return Number(a) + Number(b);
+};
+
 const start = async () => {
-    const add = async (a, b) => {
-        await Hoek.wait(1000); // 模拟一些慢的 I/O 操作
-
-        return Number(a) + Number(b);
-    };
+    const server = Hapi.server({ port: 8000 });
 
     const sumCache = server.cache({
-        cache: 'mongoCache',
+        segment: 'sums',
         expiresIn: 10 * 1000,
-        segment: 'customSegment',
         generateFunc: async (id) => {
-            return await add(id.a, id.b);
+            const key = typeof id === 'string' ? id : id.id;
+            const [a, b] = key.split(':');
+
+            return await add(a, b);
         },
         generateTimeout: 2000,
     });
 
-    server.route({
+    server.route<{ Params: { a: string; b: string } }>({
         path: '/add/{a}/{b}',
         method: 'GET',
         handler: async function (request, h) {
             const { a, b } = request.params;
-            const id = `${a}:${b}`;
 
-            return await sumCache.get({ id, a, b });
+            return await sumCache.get(`${a}:${b}`);
         },
     });
 
@@ -154,76 +198,128 @@ const start = async () => {
 start();
 ```
 
-如果发送一个请求到 http://localhost:8000/add/1/5, 你将在一秒后得到一个响应 `6`。 如果你再次请求的时候，因为被缓存了，将会立刻得到结果。如果你等待10秒后再次请求, 你会发现它需要等待一段时间，因为缓存的值现在已从缓存中移除了。
+`GET /add/1/5` 大约一秒后返回 `6`。十秒内再次请求，会立即从缓存中返回结果。
 
-`cache` 选项告诉 hapi 哪个 [client](https://github.com/hapijs/catbox#client) 该被使用。
+| 选项              | 含义                                                                                                                                                |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `segment`         | 为该 policy 的缓存项命名。在服务器根级别为必填项。在插件内部默认为 `'!' + plugin name`。除非设置 `shared: true`，两个 policy 不能共用一个 segment。 |
+| `cache`           | 要使用的 client，例如 `'my_cache'`。默认为内存 client。                                                                                             |
+| `expiresIn`       | 缓存项存入后的存活时间，单位为毫秒。也可以改用 `expiresAt: 'HH:MM'`，在每天的某个时刻让所有缓存项过期。                                             |
+| `generateFunc`    | 当 `get()` 没有找到值时生成该值。catbox 会存储结果。                                                                                                |
+| `generateTimeout` | `get()` 等待 `generateFunc` 的时长，超时后以 `503 Service Unavailable` 失败。使用 `generateFunc` 时必填；设为 `false` 则无限等待。                  |
 
-`sumCache.get()` 函数的第一个参数是一个 id, 这可以为一个字符串或者一个拥有 `id` 属性的对象，这个属性是用来在缓存中标识对象。
+传给 `get()` 的 id 可以是字符串，也可以是带有 `id` 字符串的对象，`generateFunc` 会原样收到它。catbox 将其类型定义为 `string | { id: string }`，所以示例在将其拆分回 `a` 和 `b` 之前先收窄了类型。
 
-除了 **分区(partitions)** 之外, 还有 **分段(segments)** ，它允许你在一个 [client](https://github.com/hapijs/catbox#client) 分区中进一步隔离缓存。如果需要缓存来自两种不同方法的结果，你通常不希望结果混在一起。在 [mongoDB](http://www.mongodb.org/) 适配器中, `segment` 代表一个集合，而在 [redis](http://redis.io/) 中它则是一个额外的拥有 `partition` 选项的前缀。
+### <a name="stale"></a> 重新生成期间提供过期值
 
-当在插件内部调用 [server.cache()](/api#-servercacheoptions) 时，`segment` 的默认值为 `'!pluginName'`。当创建[server methods](/tutorials/servermethods) 时, `segment` 值将会是 `'#methodName'`。 如果你需要一个用于共享一个分段或者多个分段的用例，可以使用 [shared](/api#-servercacheoptions) 选项。
+缓存项过期后，下一个调用者需要等待 `generateFunc`。为了避免等待，可以用 `staleIn` 在缓存项过期之前将其标记为陈旧。陈旧的缓存项仍然会被返回，同时 catbox 在后台重新生成它：
 
-#### 服务器方法
+```mermaid
+flowchart TD
+    G["sumCache.get(id)"] --> Q{缓存中有该项？}
+    Q -->|"新鲜：存在时间短于 staleIn"| F[返回缓存值]
+    Q -->|"陈旧：存在时间超过 staleIn"| R["调用 generateFunc"]
+    R --> R1["在 staleTimeout 内得到新值：<br/>返回并存储"]
+    R --> R2["慢于 staleTimeout：<br/>立即返回陈旧值，<br/>新值到达后再存储"]
+    Q -->|缺失或已过期| M["调用 generateFunc"]
+    M --> M1["在 generateTimeout 内得到值：<br/>返回并存储"]
+    M --> M2["慢于 generateTimeout：<br/>503 Service Unavailable"]
+```
 
-除此之外我们可以做的更好！在 95% 的情况下，可以通过使用 [server methods](/tutorials/servermethods) 进行缓存, 可以将样本代码减少到最小。让我们使用服务器方法重写前面的示例：
+```ts
+const reportCache = server.cache({
+    segment: 'reports',
+    expiresIn: 60 * 60 * 1000,
+    staleIn: 10 * 60 * 1000,
+    staleTimeout: 100,
+    generateTimeout: 5000,
+    generateFunc: async (id) => await buildReport(id),
+});
+```
 
-```javascript
+catbox 要求 `staleIn < expiresIn`，设置了 `staleIn` 时必须设置 `staleTimeout`，并且要求 `staleTimeout < expiresIn - staleIn`。针对同一 id 的并发 `get()` 调用会共享同一次 `generateFunc` 调用，因此对某个缺失缓存项的一大波请求只会查询一次数据库。`dropOnError`、`generateOnReadError` 等错误处理设置，请参见 [policy 选项](/module/catbox#policy)。
+
+### <a name="servermethods"></a> 服务器方法
+
+大多数情况下，带缓存的[服务器方法](/tutorials/zh_CN/server-methods)比手写 policy 更简洁。hapi 会创建 policy，将其 segment 命名为 `'#sum'`，并根据参数构建缓存项 id：
+
+```ts
+import Hapi from '@hapi/hapi';
+import * as Hoek from '@hapi/hoek';
+
+declare module '@hapi/hapi' {
+    interface ServerMethods {
+        sum: (a: string, b: string) => Promise<number>;
+    }
+}
+
+const add = async (a: string, b: string) => {
+    await Hoek.wait(1000);
+
+    return Number(a) + Number(b);
+};
+
 const start = async () => {
-    // ...
+    const server = Hapi.server({ port: 8000 });
 
     server.method('sum', add, {
         cache: {
-            cache: 'mongoCache',
             expiresIn: 10 * 1000,
             generateTimeout: 2000,
         },
     });
 
-    server.route({
+    server.route<{ Params: { a: string; b: string } }>({
         path: '/add/{a}/{b}',
         method: 'GET',
         handler: async function (request, h) {
             const { a, b } = request.params;
+
             return await server.methods.sum(a, b);
         },
     });
 
     await server.start();
-
-    // ...
 };
 
 start();
 ```
 
-[server.method()](/api#-servermethodname-method-options) 创建一个新的包含 `segment: '#sum'` 的 [policy](https://github.com/hapijs/catbox#policy)，以及通过参数自动生成的唯一的 `id` (缓存的键)。 默认来说它只处理 `string`， `number` 以及 `boolean` 参数。对于更复杂的参数，需要提供 `generateKey` 函数去创建一个基于参数的唯一id。 - 请参阅教程的这部分内容 [服务器方法](/tutorials/servermethods) 。
+- `declare module` 代码块将 `sum` 添加到 hapi 的 `ServerMethods` 接口中，这样 `server.methods.sum` 就有了类型。
+- hapi 根据 `string`、`number` 和 `boolean` 类型的参数构建缓存项 id，例如 `'1:5'`。其他类型的参数需要提供 [`generateKey`](/tutorials/zh_CN/server-methods#key) 函数。
 
-#### 接下来呢?
+## <a name="clientandserver"></a> 客户端与服务器端缓存
 
-- 更深入的了解 catbox policy [options](https://github.com/hapijs/catbox#policy) ，了解更多关于 `staleIn`, `staleTimeout`, `generateTimeout`的信息, 以充分利用 catbox 缓存的潜力。
-- 阅读服务器方法的教程 [服务器方法](http://hapijs.com/tutorials/servermethods) 了解更多示例。
+将两个层面结合起来：服务器缓存会记录每个值的存储时间，这个时间正适合作为响应的 `Last-Modified`。设置 `getDecoratedValue: true` 后，带缓存的方法会返回 `{ value, cached, report }`，而不是单纯的值。如果值是刚生成的，`cached` 为 `null`：
 
-### 客户端和服务器端缓存
+```ts
+import Hapi from '@hapi/hapi';
+import * as Hoek from '@hapi/hoek';
 
-通常作为可选项，[Catbox Policy](https://github.com/hapijs/catbox#policy) 可以提供从缓存中检索的值的更多信息。若要开启此选项，需要在创建 policy 时将 `getDecoratedValue` 的值设置为 true 。这样，从服务器方法返回的任何值都将是一个对象 `{ value, cached, report }`。 `value` 只是缓存中的项目, `cached` 和 `report` 提供了有关项目缓存状态的一些额外细节。
+declare module '@hapi/hapi' {
+    interface ServerMethods {
+        sum: (a: string, b: string) => Promise<{ value: number; cached: { stored: number } | null }>;
+    }
+}
 
-服务器端和客户端缓存协同工作的一个例子是使用 `cached.stored` 时间戳设置 `last-modified` 头信息来实现的：
+const add = async (a: string, b: string) => {
+    await Hoek.wait(1000);
 
-```javascript
+    return Number(a) + Number(b);
+};
+
 const start = async () => {
-    //...
+    const server = Hapi.server({ port: 8000 });
 
-    server.method('sum', add, {
-        cache: {
-            cache: 'mongoCache',
-            expiresIn: 10 * 1000,
-            generateTimeout: 2000,
-            getDecoratedValue: true,
-        },
-    });
+    const cache = {
+        expiresIn: 10 * 1000,
+        generateTimeout: 2000,
+        getDecoratedValue: true,
+    };
 
-    server.route({
+    server.method('sum', add, { cache });
+
+    server.route<{ Params: { a: string; b: string } }>({
         path: '/add/{a}/{b}',
         method: 'GET',
         handler: async function (request, h) {
@@ -231,14 +327,14 @@ const start = async () => {
             const { value, cached } = await server.methods.sum(a, b);
             const lastModified = cached ? new Date(cached.stored) : new Date();
 
-            return h.response(value).header('Last-modified', lastModified.toUTCString());
+            return h.response({ sum: value }).header('Last-Modified', lastModified.toUTCString());
         },
     });
 
     await server.start();
-
-    // ...
 };
+
+start();
 ```
 
-关于`cached` 和 `report` 的更多信息可以在 [Catbox Policy API docs](https://github.com/hapijs/catbox#api-1) 的文档中找到。
+`cached` 和 `report` 的内容请参见 [policy API](/module/catbox#api-1)。

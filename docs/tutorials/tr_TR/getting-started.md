@@ -1,40 +1,44 @@
 ---
-title: Getting Started
+title: Başlarken
 ---
 
 <TutorialLang />
 
-## Başlarken
+# Başlarken
 
-_Bu kurs hapi v17 ile uyumludur_
+_Bu eğitim hapi v21 ve sonraki sürümlerle uyumludur_
 
-### hapi kurulumu
+## <a name="overview"></a> Genel Bakış
 
-`projem` adında yeni bir dizin oluştur ve sonra:
+Bu eğitimde, tarayıcında "Hello World!" gösteren basit bir hapi sunucusu kuracağız.
 
-- `cd myproject` komutunu çalıştırarak proje dizinine gir.
-- `npm init` komutunu çalıştırarak yönergeleri izle, bu komut senin için package.json dosyası oluşturur.
-- `npm install --save @hapi/hapi@17.x.x` komutunu çalıştır. Bu komut hapiyi kurar ve package.json dosyasına gereksinim olarak kaydeder.
+## <a name="installing"></a> hapi Kurulumu
 
-Hepsi bu kadar! Artık hapi kullanarak bir sunucu oluşturmak için ihtiyacın olan herşeye sahipsin.
+```sh
+mkdir myproject
+cd myproject
+npm init -y               # creates package.json
+npm pkg set type=module   # makes Node.js treat your files as ES modules
+npm install @hapi/hapi
+```
 
-### Bir sunucu olusturmak
+Bu eğitimlerdeki örnekler TypeScript ile yazılmıştır, ama TypeScript zorunlu değildir. hapi düz JavaScript ile de aynı şekilde çalışır: bir örnekten tip açıklamalarını, `import type` satırlarını, `interface` ve `declare module` bloklarını ve `server.route<...>` gibi tip argümanlarını çıkar, sonra dosyayı `.js` uzantısıyla kaydet. Tip denetimini kurmak için [TypeScript Kullanımı](#typescript) bölümüne bak.
 
-En basit sunucu şöyle bir şeydir:
+## <a name="server"></a> Sunucu Oluşturma
 
-```javascript
-'use strict';
+Çok basit bir hapi sunucusu şöyle görünür:
 
-const Hapi = require('@hapi/hapi');
-
-const server = Hapi.server({
-    port: 3000,
-    host: 'localhost',
-});
+```ts
+import Hapi from '@hapi/hapi';
 
 const init = async () => {
+    const server = Hapi.server({
+        port: 3000,
+        host: 'localhost',
+    });
+
     await server.start();
-    console.log(`Server running at: ${server.info.uri}`);
+    console.log('Server running on %s', server.info.uri);
 };
 
 process.on('unhandledRejection', (err) => {
@@ -45,168 +49,41 @@ process.on('unhandledRejection', (err) => {
 init();
 ```
 
-Önce, hapiyi talep ediyoruz. Sonra dinlenecek konak (host) ve bağlantı noktası (port number) bilgilerini içeren bir yapılandırma nesnesi kullanarak yeni bir hapi sunucu nesnesi oluşturuyoruz. Daha sonra sunucuyu başlatarak çalıştığını günlüklüyoruz.
+`Hapi.server()` sunucuyu oluşturur, `server.start()` ise dinlemeye başlar. `unhandledRejection` handler'ı, `init()` başarısız olursa (örneğin port zaten kullanımdaysa) süreci durdurur.
 
-Bir sunucu oluştururken, konak adı, IP adresi ve hatta bir Unix soket dosyası ya da bağlanılacak Windows adlı veri yolu (Windows named pipe) bile sağlayabiliriz. Daha fazla detay için bkz: [API Referansı](/api/#-server-options).
+`host`, sunucunun hangi ağ arayüzünü dinleyeceğini belirler:
 
-### Güzergah eklemek
+| `host`        | Nereden erişilebilir                                         |
+| ------------- | ------------------------------------------------------------ |
+| `'localhost'` | yalnızca bu makineden; geliştirme için en güvenli varsayılan |
+| `'0.0.0.0'`   | tüm arayüzlerden; Docker container içinde gereklidir         |
+| belirtilmezse | tüm arayüzlerden (hapi'nin varsayılanı)                      |
 
-Artık sunucumuz olduğuna göre, bir iki güzergah eklemeliyiz ki gerçekten bir şeyler yapsın. Bakalım nasıl olacak:
+Bir Unix soketini veya Windows named pipe'ı da dinleyebilirsin; bkz. [`server.options.port`](/api#server-options-port).
 
-```javascript
-'use strict';
+## <a name="routes"></a> Route Ekleme
 
-const Hapi = require('@hapi/hapi');
+"Hello World!" döndüren bir route ekle:
 
-const server = Hapi.server({
-    port: 3000,
-    host: 'localhost',
-});
-
-server.route({
-    method: 'GET',
-    path: '/',
-    handler: (request, h) => {
-        return 'Hello, world!';
-    },
-});
-
-server.route({
-    method: 'GET',
-    path: '/{name}',
-    handler: (request, h) => {
-        return 'Hello, ' + encodeURIComponent(request.params.name) + '!';
-    },
-});
+```ts
+import Hapi from '@hapi/hapi';
 
 const init = async () => {
-    await server.start();
-    console.log(`Server running at: ${server.info.uri}`);
-};
-
-process.on('unhandledRejection', (err) => {
-    console.log(err);
-    process.exit(1);
-});
-
-init();
-```
-
-Yukarıdakilerin tamamını `server.js` olarak kaydet ve `node server.js` komutunu çalıştırarak sunucuyu çalıştır. Artık tarayıcından [http://localhost:3000](http://localhost:3000) adresini ziyaret ettiğinde `Hello, world!` ve [http://localhost:3000/stimpy](http://localhost:3000/stimpy) adresini ziyaret ettiğinde `Hello, stimpy!` yazdığını göreceksin.
-
-name değiştirgesini URI encode (URI kodladığımıza) ettiğimize dikkat et, bu işlem içerik yerleştirme saldırılarının (content injection attack) önüne geçer. Unutma, kullanıcı tarafından sağlanan verileri çıktılarını kodlamadan önce yorumlamak asla iyi bir fikir değildir!
-
-`method` değiştirgesi herhangi bir geçerli HTTP yöntemi, HTTP yöntem dizisi ya da herhangi bir yönetmi kabul etmek üzere yıldız işareti olabilir. `path` değiştirgesi değiştirgeleri ile birlikte yolu tanımlar. Seçmeli değiştirgeler, numaralanmış değiştirgeler ve hatta özel semboller (wildcard) bile içerebilir. Daha fazla detay için, bkz: [Yol Atama (routing) Eğitimi](/tutorials/routing).
-
-### Duragan sayfalar ve içerikler yaratmak
-
-Hello world uygulamamızla basit bir hapi uygulaması başlatabildiğimizi kanıtladık. Şimdi, **inert** denen bir eklenti kullarak durağan bir sayfa sunacağız. Başlamadan önce, **CTRL + C** tuşlarına basarak sunucuyu durdur.
-
-[inert](https://github.com/hapijs/inert)i kurmak için komut satırında `npm install --save @hapi/inert` komutunu çalıştır. Bu, [inert](https://github.com/hapijs/inert)i indirerek hangi paketlerin kurulu olduğunu dokümante eden `package.json` dosyana ekleyecek.
-
-`server.js` dosyasını açarak `init` işlevini şu şekilde güncelle:
-
-```javascript
-const init = async () => {
-    await server.register(require('@hapi/inert'));
+    const server = Hapi.server({
+        port: 3000,
+        host: 'localhost',
+    });
 
     server.route({
         method: 'GET',
-        path: '/hello',
+        path: '/',
         handler: (request, h) => {
-            return h.file('./public/hello.html');
+            return 'Hello World!';
         },
     });
 
     await server.start();
-    console.log(`Server running at: ${server.info.uri}`);
-};
-```
-
-Yukarıdaki `server.register()` komutu [inert](https://github.com/hapijs/inert) eklentisini hapi uygulamana ekler.
-
-`server.route()` komutu `/hello` yolunu kaydeder ve sunucuna `/hello` yolundan gelen GET isteklerini kabul ederek `hello.html` dosyası ile cevap vermesini söyler. Yol Atama işlemini `inert` eklentisini kaydettikten sonra yaptık. Bir eklenti kullanarak çalışan bir kodu eklentiyi kaydettikten sonra çalıştırmak genellikle bilgece bir harekettir. Böylece kod çalıştığında eklentinin yüklü olduğu kesinleşmiş olur.
-
-`node server.js` komutunu çalıştırarak sunucu çalıştır ve tarayıcından [`http://localhost:3000/hello`](http://localhost:3000/hello) adresine git. Olamaz! `hello.html` dosyasını oluşturmadığımız için hata alıyoruz. Bu hatadan kurtulmak için hello.html dosyasını oluşturman gerekecek.
-
-Ana dizininde içerisinde `hello.html` olan `public` diye bir dizin oluştur ve içine şu HTMLi göm:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Hapi.js is awesome!</title>
-    </head>
-    <body>
-        <h1>Hello World.</h1>
-    </body>
-</html>
-```
-
-Bu basit bir HTML5 dokümanı.
-
-Şimdi tarayıcını yenile. Hello world yazan bir başlık görmelisin.
-
-[Inert](https://github.com/hapijs/inert) istek yapıldığında diskinde ne varsa onu sunar. Bu canlı yenileme olayına sebep olan da bu. `/hello` yolunu zevkine göre düzenle.
-
-Durağan içeriklerin nasıl sunulduğu [Durağan İçerik Sunmak](/tutorials/servingfiles) adresinde detaylandırılıyor. Bu teknik genelde resim, biçem sayfaları (stylesheet) ve durağan sayfaları sunmak için kullanırılır.
-
----
-
-### Eklentileri Kullanmak
-
-Herhangi bir web uygulaması oluştururken genelde erişim günlükleri istenir. Hadi uygulamamıza basit bir günlükleme özelliği eklemek için [hapi pino](https://github.com/pinojs/hapi-pino) eklentisini yükleyelim.
-
-Modülü kurarak başla:
-
-```bash
-npm install hapi-pino
-```
-
-Sonra `server.js` dosyasını güncelle:
-
-```javascript
-'use strict';
-
-const Hapi = require('@hapi/hapi');
-
-const server = Hapi.server({
-    port: 3000,
-    host: 'localhost',
-});
-
-server.route({
-    method: 'GET',
-    path: '/',
-    handler: (request, h) => {
-        return 'Hello, world!';
-    },
-});
-
-server.route({
-    method: 'GET',
-    path: '/{name}',
-    handler: (request, h) => {
-        // request.log(['a', 'name'], "Request name");
-        // or
-        request.logger.info('In handler %s', request.path);
-
-        return `Hello, ${encodeURIComponent(request.params.name)}!`;
-    },
-});
-
-const init = async () => {
-    await server.register({
-        plugin: require('hapi-pino'),
-        options: {
-            prettyPrint: false,
-            logEvents: ['response', 'onPostStart'],
-        },
-    });
-
-    await server.start();
-    console.log(`Server running at: ${server.info.uri}`);
+    console.log('Server running on %s', server.info.uri);
 };
 
 process.on('unhandledRejection', (err) => {
@@ -217,26 +94,69 @@ process.on('unhandledRejection', (err) => {
 init();
 ```
 
-Artık sunucu başladığında şöyle bir şey göreceksin:
+Yukarıdaki kodu `index.ts` olarak kaydet ve sunucuyu başlat:
 
 ```sh
-[2017-12-03T17:15:45.114Z] INFO (10412 on box): server started
-    created: 1512321345014
-    started: 1512321345092
-    host: "localhost"
-    port: 3000
-    protocol: "http"
-    id: "box:10412:jar12y2e"
-    uri: "http://localhost:3000"
-    address: "127.0.0.1"
+node index.ts
 ```
 
-Ve eğer [http://localhost:3000/](http://localhost:3000/) adresini ziyaret edersek, istek ile ilgili günlüklerin terminale yazıldığını görebiliriz.
+Node.js 22.18 ve sonrası `.ts` dosyalarını derleme adımı olmadan doğrudan çalıştırır. Bu örnekte tip açıklaması olmadığı için dosyayı `index.js` olarak kaydedip `node index.js` ile çalıştırmak da işe yarar. `http://localhost:3000` adresini açtığında `Hello World!` yazısını göreceksin.
 
-Günlükleyicinin davranışları kayıt fonksiyonuna gönderilen `options` altında düzenlenir.
+Bir route'un üç zorunlu özelliği vardır:
 
-Güzel! Bu yalnızca eklentilerin neler yapabildiğini gösteren kısa bir örnekti. Daha fazla bilgi için [plugins tutorial](/tutorials/plugins) adresine göz at.
+| Özellik   | Ne yapar                                                                                                |
+| --------- | ------------------------------------------------------------------------------------------------------- |
+| `method`  | HTTP metodu: `'GET'`, `'POST'`, `['GET', 'POST']` gibi bir dizi ya da herhangi bir metot için `'*'`.    |
+| `path`    | URL yolu. `/users/{id}` gibi parametreler içerebilir; bkz. [Routing](/tutorials/tr_TR/routing) eğitimi. |
+| `handler` | Yanıtı üreten fonksiyon. Bir değer döndürür, bir promise döndürür ya da hata fırlatır.                  |
 
-### Geriye kalan her sey
+## <a name="typescript"></a> TypeScript Kullanımı
 
-Buradaki örneklerde hapi'nin başlıca birkaç kabiliyeti dokümante edilmiş olsada, onun daha bir çok yeteneği var. Bunlara ulaşmak için sağındaki listeyi kullanabilirsin. Geriye kalan her şey [API reference](/api) altında dökümante ediliyor. Her zaman olduğu gibi, [github](https://github.com/hapijs/discuss/issues)'ı soru sormak için kullanabilir ya da bizi [slack](https://join.slack.com/t/hapihour/shared_invite/zt-g5ortpsk-ErlnRA2rUcPIWES21oXBOg) üzerinde ziyaret edebilirsin.
+Bu bölüm isteğe bağlıdır. hapi kendi TypeScript tiplerini içerir, yani kurulması gereken bir `@types/hapi__hapi` paketi yoktur.
+
+Node.js örnekleri tipleri ayıklayarak çalıştırır; bu işlem tipleri yalnızca siler, denetlemez. Tipleri denetlemek için TypeScript derleyicisini ve Node.js tiplerini kur:
+
+```sh
+npm install --save-dev typescript @types/node
+```
+
+Ardından bir `tsconfig.json` ekle:
+
+```json
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "nodenext",
+        "strict": true,
+        "noEmit": true,
+        "erasableSyntaxOnly": true,
+        "verbatimModuleSyntax": true,
+        "allowImportingTsExtensions": true
+    }
+}
+```
+
+Tiplerini denetlemek istediğinde `npx tsc` komutunu çalıştır. `erasableSyntaxOnly` ve `verbatimModuleSyntax`, Node.js'in ayıklayamadığı TypeScript özelliklerini reddeder; örneğin `enum` ve `type` anahtar sözcüğü olmadan yazılmış tip import'ları.
+
+Yukarıdaki route'ta `request` ve `h` için tip açıklaması gerekmez: TypeScript bunları `server.route()` imzasından hapi'nin `Request` ve `ResponseToolkit` tipleri olarak çıkarır. Bunları yalnızca bir handler'ı route yapılandırmasının dışında yazdığında, `@hapi/hapi` paketinin dışa aktardığı tiplerle açıkla:
+
+```ts
+import type { Request, ResponseToolkit } from '@hapi/hapi';
+
+const hello = (request: Request, h: ResponseToolkit) => {
+    return 'Hello World!';
+};
+```
+
+## <a name="everything"></a> Geri Kalan Her Şey
+
+Bu eğitim bilerek kısa tutuldu. Sonraki adımlar için iyi seçenekler:
+
+- [Plugin'ler](/tutorials/tr_TR/plugins): uygulamanı yeniden kullanılabilir parçalara böl.
+- [Routing](/tutorials/tr_TR/routing): yol parametreleri, metotlar ve route seçenekleri.
+- [Yaşam Döngüsü Hook'ları](/tutorials/tr_TR/lifecycle-hooks): bir isteğin her adımında, ayrıca sunucu başlarken ve kapanırken kod çalıştır.
+- [Decorator'lar](/tutorials/tr_TR/decorators): sunucuya, isteğe ve response toolkit'e kendi metotlarını ekle.
+- [Yanıt Hazırlama](/tutorials/tr_TR/response-marshalling): bir handler'ın dönüş değerinin nasıl HTTP yanıtına dönüştüğü.
+- [Test](/tutorials/tr_TR/testing): route'ları port açmadan test et.
+
+Geri kalan her şey [API referansında](/api) belgelenmiştir. Sorularını [GitHub](https://github.com/hapijs/hapi/issues) üzerinden ya da [hapi Slack](https://join.slack.com/t/hapihour/shared_invite/zt-g5ortpsk-ErlnRA2rUcPIWES21oXBOg) kanalında sorabilirsin.

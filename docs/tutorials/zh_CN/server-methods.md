@@ -1,29 +1,54 @@
 ---
-title: Server Methods
+title: 服务器方法
 ---
 
 <TutorialLang />
 
-## 服务器方法
+# <a name="server-methods"></a> 服务器方法
 
-_该教程适用于 hapi v17版本_
+_本教程适用于 hapi v21 及更高版本_
 
-服务器方法是一种非常有用的函数共享方式，与引入公用的模块不同，它只需附加在服务器对象上。注册一个服务器方法，你只需调用 [`server.method()`](<https://hapijs.com/api#server.method()>)。 有两种方式调用这个函数，你可以通过方法 `server.method(name, method, [options])` 调用, 如:
+## <a name="overview"></a> 概述
 
-```javascript
-const add = function (x, y) {
-    return x + y;
-};
+服务器方法是用 [`server.method()`](/api#server-method-name-method-options) 注册到服务器上的函数，凡是能拿到服务器的地方都可以调用它：路由 handler、插件、扩展。以下情况适合使用服务器方法：
 
-server.method('add', add, {});
+- 多个路由或插件需要同一个函数，而你不想让每个地方都去导入它。
+- 函数开销较大，其结果可以缓存。只需一个选项就能为它启用 hapi 的[缓存](/tutorials/zh_CN/caching)。
+
+```ts
+import Hapi from '@hapi/hapi';
+
+declare module '@hapi/hapi' {
+    interface ServerMethods {
+        add: (x: number, y: number) => number;
+    }
+}
+
+const server = Hapi.server({ port: 3000 });
+
+server.method('add', (x: number, y: number) => x + y);
+
+server.route({
+    method: 'GET',
+    path: '/',
+    handler: (request, h) => {
+        return { sum: request.server.methods.add(1, 2) };
+    },
+});
+
+await server.start();
 ```
 
-又或者你可以通过方法 `server.method(method)`调用, 这里 `method` 是一个拥有 `name`, `method` 以及 `options` 参数的对象 (注意你也可以传递以上对象的数组):
+- `server.methods.add` 就是注册的函数。在 handler 中，通过 `request.server.methods` 就能访问它，无需在作用域内持有 `server` 变量。
+- hapi 不知道你注册了哪些方法，所以 TypeScript 需要在 hapi 的 `ServerMethods` 接口中声明它们。`declare module` 代码块可以放在项目的任意模块中。
+- 方法对整个服务器是全局的：在某个插件中注册的方法，其他所有插件和路由都能使用。
 
-```javascript
-const add = function (x, y) {
-    return x + y;
-};
+## <a name="server.method"></a> server.method()
+
+`server.method()` 既可以接收位置参数，也可以接收一个对象（或对象数组，用于一次注册多个方法）：
+
+```ts
+server.method('add', add, {});
 
 server.method({
     name: 'add',
@@ -32,114 +57,161 @@ server.method({
 });
 ```
 
-### 名称
+### <a name="name"></a> 名称
 
-`name` 参数是一个字符串，用于之后在服务器中通过 `server.methods[name]` 访问这个方法。注意如果你指定了一个 `name` 含有一个 `.` 字符, 它注册了一个内嵌对象，而不是一个字符串字面值，如:
+名称中带点号会注册一个嵌套方法：
 
-```javascript
+```ts
 server.method('math.add', add);
+
+server.methods.math.add(1, 2);
 ```
 
-这个服务器方法可以通过 `server.methods.math.add()` 来调用。
+在 `ServerMethods` 中把它声明为嵌套对象：`math: { add: (x: number, y: number) => number }`。名称的每一段都必须是合法的 JavaScript 标识符。
 
-### 函数
+### <a name="method"></a> 方法
 
-`method` 参数是当服务器方法被执行时实际调用的函数，它可以携带任意数量的参数，也可以是一个 `async` 函数，例如:
+方法可以接收任意参数，也可以是 `async` 函数。返回结果，或者抛出错误。
 
-```js
-const add = async function (x, y) {
-    const result = await someLongRunningFunction(x, y);
-    return result;
-};
-
-server.method('add', add, {});
+```ts
+server.method('user.get', async (id: string) => {
+    return await db.users.findById(id);
+});
 ```
 
-你的服务器方法函数应该返回一个有效的结果，又或者当异常发生时抛出一个错误。
+## <a name="options"></a> 选项
 
-## 缓存
+| 选项                  | 用途                                             |
+| --------------------- | ------------------------------------------------ |
+| [`cache`](#cache)     | 缓存方法的结果                                   |
+| [`generateKey`](#key) | 当参数不是字符串、数字或布尔值时，用它构建缓存键 |
+| [`bind`](#bind)       | 设置方法内部的 `this`                            |
 
-服务器方法的一个主要优点是它们可以利用 hapi 的本机缓存。默认情况下不缓存，但是如果在注册方法时传递了相应的配置，则返回值将会被缓存。返回的结果将从缓存中获取这个值，而不是每次调用时重新运行方法。配置如下所示:
+### <a name="cache"></a> 缓存
 
-```javascript
-server.method('add', add, {
+设置了 `cache` 选项后，调用方法时会先经过缓存：
+
+```mermaid
+flowchart TD
+    A["server.methods.user.get('42')"] --> K["generateKey('42') 返回 '42'<br/>在 segment '#user.get' 中查找"]
+    K --> C{已缓存？}
+    C -->|是| R[返回缓存的值]
+    C -->|否| M["运行你的方法"]
+    M --> S[保存结果，然后返回]
+```
+
+```ts
+server.method('user.get', getUser, {
     cache: {
-        expiresIn: 60000,
-        expiresAt: '20:30',
-        staleIn: 30000,
-        staleTimeout: 10000,
-        generateTimeout: 100,
+        expiresIn: 60 * 1000,
+        staleIn: 30 * 1000,
+        staleTimeout: 100,
+        generateTimeout: 2000,
     },
 });
 ```
 
-参数可以是：
+需要了解的几点：
 
-- `expiresIn`: 以项目保存在缓存中的时间起，超过这个时间将失效。其中时间以毫秒数表示，不能与 `expiresAt`一同使用。
-- `expiresAt`: 使用以 'HH:MM' 格式以24小时为指定时间, 这个时间之后路由所有的缓存记录都将失效。这个时间使用本地时间，不能与 `expiresIn` 一同使用。
-- `staleIn`: 缓存失效时，尝试重新生成它毫秒数，必须小于 `expiresIn`。
-- `staleTimeout`: 在 generateFunc 生成新值时返回之前，可以允许返回过期值的毫秒数。
-- `generateTimeout`: 当返回时间太长时，如返回超时错误之前，等待的毫秒数。但当这个值最终被返回时，它将储存在缓存中以便将来的请求使用。
-- `segment`: 用于隔离缓存项的可选分段名称。
-- `cache`: 一个可选字符串，其中包含要使用的服务器上配置的缓存连接的名称。
+- `generateTimeout` 是必填项。它是调用方等待你的方法的时长，超时后会得到 `503`。
+- 带缓存的方法总是返回 promise，即使方法本身是同步的。在 `ServerMethods` 中把它的返回类型声明为 `Promise`，并用 `await` 调用。
+- hapi 把缓存项存放在名为 `'#'` 加方法名的 segment 中。设置 `cache: 'my_cache'` 可以改用[具名缓存客户端](/tutorials/zh_CN/caching#client)，而不是默认的内存缓存。
+- 其他选项（`expiresAt`、`staleIn`、`staleTimeout`、`segment`）与 [`server.cache()`](/api#server-cache-options) 相同。[缓存教程](/tutorials/zh_CN/caching#stale)介绍了过期值是如何提供的。
 
-更多关于缓存的选项的信息可以通过 [API Reference](/api#servermethodmethod) 以及 [catbox](https://github.com/hapijs/catbox#policy) 中找到。
+#### <a name="changing-the-ttl-per-result"></a> 按结果修改 TTL
 
-通过设置 `ttl` 标记，可以修改每次调用服务器方法结果的 `ttl` (生存时间)。我们来看一下如何让它与之前的例子工作:
+hapi 会在你的参数之后多传一个参数：`flags` 对象。设置 `flags.ttl` 可以修改这一个结果的缓存时长，设为 `0` 则完全不缓存：
 
-```js
-const add = async function (x, y, flags) {
-    const result = await someLongRunningFunction(x, y);
+```ts
+const getUser = async function (id: string, flags: { ttl: number }) {
+    const user = await db.users.findById(id);
+    if (!user) {
+        flags.ttl = 0; // don't cache "not found"
+    }
 
-    flags.ttl = 5 * 60 * 1000; // 5 mins
-
-    return result;
+    return user;
 };
-
-server.method('add', add, {
-    cache: {
-        expiresIn: 2000,
-        generateTimeout: 100,
-    },
-});
-
-server.methods.add(5, 12);
 ```
 
-这里，我们定义了我们的服务器方法函数，这里多传递了一个参数，这个额外的 `flags` 参数由 hapi 提供。然后，只需将 `ttl` 标记的值设置为我们希望结果被缓存的时间 (以毫秒为单位)即可。 如果这个值被设为 `0` 那么返回的结果将永远不会被缓存。如果我们没有设置，那么 `ttl` 将从缓存的配置中获取。
+hapi 没有导出 `flags` 的类型，所以示例中直接内联声明了类型。
 
-### 自定义缓存键
+#### <a name="removing-a-cached-result"></a> 移除缓存的结果
 
-除上述选项外，你还可以指定一个自定义函数，用于根据方法的参数来生成缓存的键。如果你的方法参数是由字符串、数字和布尔值构成的组合，那么 hapi 将会为你生成适用的键。但是，如果你的方法接受对象参数，则你需要指定一个如下类似用于生产键的函数:
+每个带缓存的方法都有一个 `cache.drop()` 函数。用相同的参数调用它即可移除对应的结果，例如在更新数据之后：
 
-```javascript
-const sum = function (array) {
-    let total = 0;
+```ts
+await db.users.update(id, changes);
+await server.methods.user.get.cache?.drop(id);
+```
 
-    array.forEach((item) => {
-        total += item;
-    });
+hapi 把 `cache` 定义为可选属性，因为不带缓存的方法没有它，所以这里要用 `?.`。
 
-    return total;
+### <a name="key"></a> 生成自定义键
+
+hapi 通过用 `:` 连接各个参数来构建缓存键，这只对字符串、数字和布尔值有效。用其他类型的参数调用带缓存的方法会以 `500` 错误失败。对于其他参数，请提供 `generateKey`：
+
+```ts
+const sum = function (numbers: number[]) {
+    return numbers.reduce((total, item) => total + item, 0);
 };
 
 server.method('sum', sum, {
-    generateKey: (array) => array.join(','),
+    cache: {
+        expiresIn: 60 * 1000,
+        generateTimeout: 100,
+    },
+    generateKey: (numbers: number[]) => numbers.join(','),
 });
 ```
 
-这样传递给方法的任何参数都可用于 `generateKey` 方法。
+`generateKey` 接收与方法相同的参数，并且必须返回字符串。
 
-### 绑定
+### <a name="bind"></a> 绑定
 
-服务器方法可用的最后一个选项是 `bind`。`bind` 选项可以修改方法中的 `this` 上下文。添加方法时，它默认为当前上下文。这对于传入数据库数据库客户端非常有用，因为无需将其作为参数传递，并且不用自定义 `generateKey` 函数，如下:
+`bind` 设置方法内部的 `this`。用它可以把数据库客户端之类的依赖交给方法，而不必把它加到参数里（放在参数里它还会成为缓存键的一部分）：
 
-```javascript
-const lookup = async function (id) {
-    // 调用 myDB.getOne
-
-    return await this.getOne({ id });
+```ts
+const lookup = async function (this: typeof db, id: string) {
+    return await this.users.findById(id);
 };
 
-server.method('lookup', lookup, { bind: myDB });
+server.method('lookup', lookup, { bind: db });
+```
+
+- TypeScript 的 `this` 参数声明了 `this` 的类型。它在编译时会被擦除，不属于方法的参数。
+- `bind` 对箭头函数无效，箭头函数保留自己的 `this`。
+- 不设置 `bind` 时，`this` 是当前插件或服务器中用 [`server.bind()`](/api#server-bind-context) 设置的上下文。
+
+## <a name="server.methods"></a> server.methods
+
+所有已注册的方法都在 [`server.methods`](/api#server-methods) 上，在 handler 中也可以通过 `request.server.methods` 访问：
+
+```ts
+server.route<{ Params: { id: string } }>({
+    method: 'GET',
+    path: '/users/{id}',
+    handler: async (request, h) => {
+        return await request.server.methods.user.get(request.params.id);
+    },
+});
+```
+
+本教程中用到的每个方法都需要在 `ServerMethods` 中有对应条目。带缓存的方法要用 hapi 的 `CachedServerMethod` 类型包装，它会加上 `cache.drop()` 和 `cache.stats`：
+
+```ts
+import type { CachedServerMethod } from '@hapi/hapi';
+
+declare module '@hapi/hapi' {
+    interface ServerMethods {
+        add: (x: number, y: number) => number;
+        math: {
+            add: (x: number, y: number) => number;
+        };
+        lookup: (id: string) => Promise<User | null>;
+        sum: CachedServerMethod<(numbers: number[]) => Promise<number>>;
+        user: {
+            get: CachedServerMethod<(id: string) => Promise<User | null>>;
+        };
+    }
+}
 ```

@@ -1,123 +1,253 @@
 ---
-title: Routing
+title: 라우팅
 ---
 
 <TutorialLang />
 
-## Routing
+# 라우팅
 
-_이 튜터리얼은 hapi v17과 호환됩니다._
+_이 튜토리얼은 hapi v21 이상과 호환됩니다_
 
-hapi에서 라우트를 정의할 때 다른 프레임워크와 마찬가지로 3개의 기본 요소가 필요합니다.: 경로, 메소드, 처리기. 서버에 객체로 전달되고 다음처럼 간단할 수 있습니다.:
+## <a name="overview"></a> 개요
 
-```javascript
+라우트에는 `method`, `path`, `handler` 세 가지가 필요합니다. 라우트는 [`server.route()`](/api#server-route-route)로 추가합니다:
+
+```ts
 server.route({
     method: 'GET',
     path: '/',
-    handler: function (request, h) {
-        return 'Hello!';
+    handler: (request, h) => {
+        return 'Hello World!';
     },
 });
 ```
 
-## 메소드
+`server.route()`는 라우트 객체의 배열도 받으므로 한 번의 호출로 여러 라우트를 등록할 수 있습니다.
 
-이 라우트는 문자열 `Hello!`로 `/`에 `GET` 요청에 응답합니다. 메소드 옵션은 유효한 HTTP 메소드 또는 메소드의 배열일 수 있습니다. 사용자가 `PUT` 또는 `POST` 요청에 같은 응답을 원한다고 가정하면 다음과 같이 할 수 있습니다.:
+## <a name="methods"></a> 메서드
 
-```javascript
+`method`는 `HEAD`를 제외한 HTTP 메서드(GET 라우트가 HEAD 요청에 응답합니다), 메서드의 배열, 또는 모든 메서드를 뜻하는 `'*'`입니다:
+
+```ts
 server.route({
     method: ['PUT', 'POST'],
     path: '/',
-    handler: function (request, h) {
+    handler: (request, h) => {
         return 'I did something!';
     },
 });
 ```
 
-## 경로
+`GET` 라우트는 `HEAD` 요청에도 응답하므로 별도의 `HEAD` 라우트는 필요 없습니다.
 
-경로 옵션은 문자열이어야 하지만 명명된 인자를 포함할 수 있습니다. 경로 안에 인자에 이름을 주기 위해서는 단순히 `{}`로 감싸주면 됩니다. 예:
+## <a name="path"></a> 경로
 
-```javascript
-server.route({
+경로 세그먼트를 `{}`로 감싸면 이름 있는 파라미터로 캡처됩니다. 값은 `request.params`에서 사용할 수 있습니다:
+
+```ts
+import * as Hoek from '@hapi/hoek';
+
+server.route<{ Params: { user: string } }>({
     method: 'GET',
     path: '/hello/{user}',
-    handler: function (request, h) {
-        return `Hello ${encodeURIComponent(request.params.user)}!`;
+    handler: (request, h) => {
+        return `Hello ${Hoek.escapeHtml(request.params.user)}!`;
     },
 });
 ```
 
-위에서 볼수 있듯이 경로에 `{user}` 문자열이 있습니다. 경로의 해당 부분을 명명된 인자에 할당하도록 요청하는 것입니다. 이 인자는 처리기 안에 `request.params` 객체에 저장됩니다. 인자를 `user`라 이름 붙였기 때문에 콘텐츠 주입 공격을 막기 위한 URI 인코딩 후 `request.params.user` 속성에 값에 접근할 수 있습니다.
+`/hello/ferris`로 요청하면 `Hello ferris!`로 응답합니다.
 
-### 선택적 인자
+- hapi는 파라미터 값을 URI 디코딩하므로 `/hello/a%20b`는 `request.params.user === 'a b'`가 됩니다.
+- 값은 URL에서 그대로 옵니다. HTML에 넣기 전에 위의 [Hoek](/module/hoek) `escapeHtml()` 호출처럼 이스케이프하거나, [joi](/tutorials/ko_KR/validation)로 검증하세요.
+- hapi 21.4.10부터 `request.params` 값의 타입은 기본적으로 `unknown`입니다. 타입 인자 `server.route<{ Params: { user: string } }>()`로 형태를 선언하면 핸들러에서 `request.params.user`가 `string`이 됩니다. 같은 타입 인자에 `Query`, `Payload`, `Headers`와 아래에 나오는 다른 요청 부분도 지정할 수 있습니다.
 
-이 예에서 user 인자가 필요합니다.: `/hello/bob` 또는 `/hello/susan`에 대한 요청은 잘 동작하지만 `/hello`에 대한 요청은 동작하지 않습니다. 인자를 선택적으로 만들려면 인자 이름 끝에 물음표를 붙여줍니다. 여기에 같은 라우트이지만 `user` 인자를 선택적으로 만들기 위해 수정했습니다.:
+### <a name="optionalParameters"></a> 파라미터 종류
 
-```javascript
-server.route({
-    method: 'GET',
-    path: '/hello/{user?}',
-    handler: function (request, h) {
-        const user = request.params.user ? encodeURIComponent(request.params.user) : 'stranger';
+| 경로                | 일치하는 요청                          | `request.params`                    |
+| ------------------- | -------------------------------------- | ----------------------------------- |
+| `/hello/{user}`     | `/hello/ferris`                        | `{ user: 'ferris' }`                |
+| `/hello/{user?}`    | `/hello`, `/hello/ferris`              | `{}` 또는 `{ user: 'ferris' }`      |
+| `/hello/{user*2}`   | `/hello/john/doe` (정확히 두 세그먼트) | `{ user: 'john/doe' }`              |
+| `/files/{path*}`    | `/files`, `/files/a`, `/files/a/b/c`   | `{}` 또는 `{ path: 'a/b/c' }`       |
+| `/{filename}.{ext}` | `/photo.jpg`                           | `{ filename: 'photo', ext: 'jpg' }` |
 
-        return `Hello ${user}!`;
-    },
-});
-```
+라우트를 추가할 때 hapi가 강제하는 규칙:
 
-이제 `/hello/mary`에 대한 요청은 `Hello mary!`로 응답하고 `/hello`에 대한 요청은 `Hello stranger!`로 응답할 것입니다. 경로에서 _마지막_ 명명된 인자만이 선택적으로 될 수 있습니다. 선택적 인자 뒤에 다른 인자가 있기 때문에 `/{one?}/{two}`는 무효한 경로임을 의미합니다. 경로의 부분에서 일부분을 다루는 명명된 인자를 가질 수 있습니다. 예를 들어 `/{filename}.jpg`는 유효합니다. 한 부분에서 인자 사이에 인자가 아닌 구분자가 제공되면 여러 인자를 가질 수 있습니다. 이는 `/{filename}.{ext}`는 유효하지만 `/{filename}{ext}`는 유효하지 않음을 의미합니다.
+- `{user*}`와 세그먼트 전체를 차지하는 선택적 파라미터 `{user?}`는 경로의 마지막 세그먼트여야 합니다. `{user*2}`와 `/a{user?}/b` 같은 세그먼트 일부의 선택적 파라미터는 어디에나 올 수 있습니다.
+- 한 세그먼트에 파라미터가 두 개 있으면 그 사이에 리터럴 구분자가 있어야 합니다. `{filename}.{ext}`는 유효하지만 `{filename}{ext}`는 유효하지 않습니다.
+- 파라미터 이름은 경로당 한 번만 쓸 수 있습니다.
+- 메서드가 같고 경로가 동등한 두 라우트는 충돌하며 `server.route()`가 예외를 던집니다. `/{name}`과 `/{other}`는 동등합니다.
 
-### 복수 부분 인자
+### <a name="multiParameters"></a> 여러 세그먼트 파라미터
 
-선택적 경로 인자와 함께 복수 부분에 일치하는 인자를 사용할 수 있습니다. 그렇게 하려면 별표와 숫자를 사용합니다. 예:
+여러 세그먼트 파라미터에는 일치한 세그먼트가 `/`로 이어진 값이 들어 있으므로, 나눠서 각 부분을 얻습니다:
 
-```javascript
-server.route({
+```ts
+server.route<{ Params: { user: string } }>({
     method: 'GET',
     path: '/hello/{user*2}',
-    handler: function (request, h) {
-        const userParts = request.params.user.split('/');
-        return `Hello ${encodeURIComponent(userParts[0])} ${encodeURIComponent(userParts[1])}!`;
+    handler: (request, h) => {
+        const [first, last] = request.params.user.split('/');
+
+        return `Hello ${first} ${last}!`;
     },
 });
 ```
 
-이 설정으로 `/hello/john/doe`에 대한 요청은 문자열 `Hello john doe!` 응답을 받을 것입니다. 중요한 것은 인자는 `"john/doe"` 문자열이라는 것입니다. 그래서 두 개의 분리된 부분을 얻기 위해 그 글자로 나누었습니다. 별표 뒤에 숫자는 인자에 할당될 경로 부분의 개수를 나타냅니다. 숫자를 생략할 수도 있습니다. 그러면 인자는 가능한 부분의 개수와 일치합니다. 선택적 인자같이 복수 부분 인자는(예 `/{files*}`) _오직_ 경로의 마지막 인자로만 나타날 수 있습니다.
+`/hello/john/doe`로 요청하면 `Hello john doe!`로 응답합니다.
 
-특정 요청에 대한 처리기를 결정할 때 hapi는 가장 구체적인 것부터 덜 구체적인 순서로 경로를 찾습니다. 만약 하나는 `/filename.jpg`와 다른 하나는 `/filename.{ext}` 이렇게 2개의 라우트를 가지고 있다면 `filename.jpg`에 대한 요청은 첫 번째 라우트에 일치하고 두 번째 라우트에는 일치하지 않습니다. `/{files*}` 경로의 라우트는 테스트 되는 _마지막_ 라우트가 될 것이고 다른 라우트가 모두 실패할 경우에만 일치한다는 것을 의미합니다.
+### <a name="specificity"></a> 어떤 라우트가 선택되는가
 
-## Handler 메소드
+hapi는 라우트를 추가한 순서대로 시도하지 않습니다. 경로 세그먼트마다 가장 구체적인 종류의 일치부터 가장 덜 구체적인 종류까지 시도하고, 나머지 경로가 일치하지 않으면 다음 종류로 넘어갑니다:
 
-handler 옵션은 `request`와 `h` 2개의 인자를 받습니다.
+```mermaid
+flowchart TD
+    L["1. 리터럴<br/>/filename.jpg"] -->|불일치| M["2. 혼합<br/>/{name}.jpg"]
+    M -->|불일치| P["3. 파라미터<br/>/{name}"]
+    P -->|불일치| W["4. 와일드카드<br/>/{any*}"]
+    W -->|불일치| N[404 Not Found]
+```
 
-`request` 인자는 경로 인자,연관된 페이로드, 인증 정보, 헤더 같은 최종 사용자에 대한 자세한 정보를 가진 객체입니다. `request` 객체에 대한 전체 문서는 [API reference](/api#request-properties)에서 찾을 수 있습니다.
+이 네 라우트가 등록되어 있을 때:
 
-두 번째 인자인 `h`는 요청에 응답하기 위해 사용하는 몇 가지 메소드를 가지고 있는 객체인 응답 도구입니다. 앞의 예제에서 본 것처럼 요청에 어떤 값으로 응답하기를 원하면 처리기에서 단순히 그 값을 반환하면 됩니다. payload는 문자열, 버퍼, 직렬화된 JSON 객체, 스트림 또는 Promise 이어야 합니다.
+| 요청            | 응답하는 라우트 |
+| --------------- | --------------- |
+| `/filename.jpg` | `/filename.jpg` |
+| `/photo.jpg`    | `/{name}.jpg`   |
+| `/photo`        | `/{name}`       |
+| `/a/b`          | `/{any*}`       |
 
-또는 같은 값을 `h.response(value)`에 전달하고 처리기에서 반환하면 됩니다. 이 호출의 결과는 응답 객체이고 이 객체는 응답을 전송하기 전에 응답을 변경하는 추가적인 메소드로 연결될 수 있습니다. 예를 들어 `h.response('created').code(201)`은 HTTP 상태 코드 `201`과 함께 `created`의 payload를 전송할 것입니다. 헤더, 내용물 종류, 내용물 길이를 설정하거나 리다이렉션 응답을 전송할 수 있습니다. 많은 다른 것들에 대해서는 [API reference](/api#response-toolkit)에 정리되어 있습니다.
+경로는 기본적으로 대소문자를 구분합니다. 위 라우트에서 `/Filename.jpg`는 `/{name}.jpg`가 응답합니다. 이를 바꾸려면 서버의 [`router.isCaseSensitive`](/api#server-options-router)를 `false`로 설정하세요.
 
-## 설정
+## <a name="query"></a> 쿼리 파라미터
 
-이 세가지 기본 요소를 제외하고 각 라우트에 `options` 인자를 지정할 수 있습니다. 이 인자로 [validation](/tutorials/validation), [authentication](/tutorials/auth), 전처리, 페이로드 처리, 캐시 옵션 같은 것을 설정합니다. 더 자세한 것은 연결된 튜터리얼 및 [API reference](/api#route-options)에서 찾을 수 있습니다.
+`request.query`에는 파싱된 쿼리 문자열이 들어 있습니다. `/?name=ferris&location=chicago`의 경우:
 
-여기에서는 문서를 생성하는데 도움이 되는 몇 가지 옵션을 살펴봅니다.
+```ts
+server.route<{ Query: { name: string } }>({
+    method: 'GET',
+    path: '/',
+    handler: (request, h) => {
+        return `Hello ${request.query.name}!`;
+    },
+});
+```
 
-```javascript
+hapi의 내장 파서는 중첩 키를 이해하지 못합니다. `/?foo[bar]=baz`는 `{ 'foo[bar]': 'baz' }`가 됩니다. 중첩 키를 파싱하려면 서버의 `query.parser`를 [qs](https://github.com/ljharb/qs) 같은 파서로 설정하세요:
+
+```ts
+import Hapi from '@hapi/hapi';
+import Qs from 'qs';
+
+const server = Hapi.server({
+    port: 3000,
+    host: 'localhost',
+    query: {
+        parser: (query) => Qs.parse(query),
+    },
+});
+
 server.route({
     method: 'GET',
-    path: '/hello/{user?}',
-    handler: function (request, h) {
-        const user = request.params.user ? encodeURIComponent(request.params.user) : 'stranger';
-
-        return `Hello ${user}!`;
+    path: '/',
+    handler: (request, h) => {
+        return request.query;
     },
-    options: {
-        description: 'Say hello!',
-        notes: "The user parameter defaults to 'stranger' if unspecified",
-        tags: ['api', 'greeting'],
+});
+
+await server.start();
+console.log('Server running on %s', server.info.uri);
+```
+
+이제 `/?foo[bar]=baz`는 `{ "foo": { "bar": "baz" } }`로 응답합니다. 파서는 원본 문자열이 아니라 hapi가 이미 파싱한 쿼리(예: `{ 'foo[bar]': 'baz' }`)를 받습니다. 파라미터 이름과 값의 객체를 반환하기만 하면 어떤 함수든 쓸 수 있습니다.
+
+## <a name="requestpayload"></a> 요청 페이로드
+
+파싱된 요청 본문은 `request.payload`에 있습니다. hapi는 `Content-Type` 헤더에 따라 JSON, 폼 인코딩, 텍스트 본문을 파싱합니다. 멀티파트 본문에는 라우트 옵션 `payload: { multipart: true }`가 필요하며, 이 옵션이 없으면 `415 Unsupported Media Type`을 받습니다:
+
+```ts
+server.route<{ Payload: { username: string; password: string } }>({
+    method: 'POST',
+    path: '/signup',
+    handler: (request, h) => {
+        return `Welcome ${request.payload.username}!`;
     },
 });
 ```
 
-이 옵션에 대해 기능적으로 말하자면 아무런 효과가 없지만 API에 대한 문서를 생성하는 [lout](https://github.com/hapijs/lout)같은 플러그인을 사용할 때는 매우 유용할 수 있습니다. 라우트와 관련된 메타데이는 나중에 검사 또는 표시가 가능해집니다.
+타입 인자는 TypeScript에게 형태를 알려 줄 뿐입니다. [페이로드 검증](/tutorials/ko_KR/validation)을 추가하기 전까지 런타임에는 아무것도 검사하지 않습니다.
+
+## <a name="handler"></a> 핸들러
+
+핸들러는 두 인자를 받습니다:
+
+- `request`에는 `params`, `query`, `payload`, `headers`, `auth` 등 들어온 요청에 대한 모든 정보가 들어 있습니다. [요청 객체](/api#request)를 참고하세요.
+- `h`는 `h.response()`, `h.redirect()` 같은 메서드를 가진 [응답 툴킷](/api#response-toolkit)입니다.
+
+핸들러가 반환한 값이 응답이 됩니다:
+
+| 핸들러 반환 값                         | 응답                                                |
+| -------------------------------------- | --------------------------------------------------- |
+| 문자열                                 | `200`, `text/html; charset=utf-8`                   |
+| 객체 또는 배열                         | `200`, `application/json; charset=utf-8`            |
+| `Buffer`                               | `200`, `application/octet-stream`                   |
+| readable 스트림                        | `200`, 스트림을 클라이언트로 파이프                 |
+| 체이닝 호출을 붙인 `h.response(value)` | 완전한 제어. 예: `h.response('created').code(201)`  |
+| 던진 에러                              | 에러 응답. [boom](/module/boom) 에러가 아니면 `500` |
+
+핸들러는 값이나 프로미스를 반환하거나 예외를 던져야 합니다. hapi가 이 값을 전송할 바이트로 바꾸는 과정은 [응답 마샬링](/tutorials/ko_KR/response-marshalling)에서 다룹니다.
+
+화살표 함수는 `this`를 쓸 수 없으므로, 화살표 함수로 작성한 핸들러는 [`server.bind()`](/api#server-bind-context)로 설정한 값을 [`h.context`](/api#h-context)에서 읽습니다.
+
+## <a name="options"></a> 옵션
+
+메서드, 경로, 핸들러 외의 모든 것은 라우트의 `options`에 들어갑니다:
+
+```ts
+import Joi from 'joi';
+
+server.route<{ Payload: { username: string; password: string } }>({
+    method: 'POST',
+    path: '/signup',
+    options: {
+        auth: false,
+        validate: {
+            payload: Joi.object({
+                username: Joi.string().min(1).max(20).required(),
+                password: Joi.string().min(7).required(),
+            }),
+        },
+    },
+    handler: (request, h) => {
+        return `Welcome ${request.payload.username}!`;
+    },
+});
+```
+
+| 옵션       | 제어하는 것                            | 자세히 보기                                         |
+| ---------- | -------------------------------------- | --------------------------------------------------- |
+| `auth`     | 적용할 인증 전략                       | [인증](/tutorials/ko_KR/auth)                       |
+| `validate` | 파라미터, 쿼리, 페이로드, 헤더 검사    | [검증](/tutorials/ko_KR/validation)                 |
+| `cache`    | 응답의 `Cache-Control` 헤더            | [캐싱](/tutorials/ko_KR/caching)                    |
+| `payload`  | 본문 파싱, 크기 제한, 업로드           | [라우트 페이로드 옵션](/api#route-options-payload)  |
+| `pre`      | 핸들러보다 먼저 실행되는 메서드        | [라우트 pre 옵션](/api#route-options-pre)           |
+| `ext`      | 이 라우트에만 적용되는 라이프사이클 훅 | [라이프사이클 훅](/tutorials/ko_KR/lifecycle-hooks) |
+
+전체 목록은 [라우트 옵션 레퍼런스](/api#route-options)에 있습니다.
+
+## <a name="missing"></a> 404 처리
+
+일치하는 라우트가 없으면 hapi는 `404` JSON 에러로 응답합니다. 대신 직접 만든 응답을 보내려면 모든 경로를 받는 라우트를 추가하세요. `{any*}` 와일드카드는 가장 덜 구체적인 일치이므로 다른 라우트가 받지 않는 요청에만 응답합니다:
+
+```ts
+server.route({
+    method: '*',
+    path: '/{any*}',
+    handler: (request, h) => {
+        return h.response('404 Error! Page Not Found!').code(404);
+    },
+});
+```
+
+이 라우트는 일치하지 않는 경로만 처리합니다. 일치한 라우트가 던진 `404`(예: `Boom.notFound()`를 던지는 핸들러)는 여기에 도달하지 않습니다. 어디서 생겼든 모든 `404`를 바꾸려면 `onPreResponse` 훅에서 응답을 변경하세요. [라이프사이클 훅](/tutorials/ko_KR/lifecycle-hooks)을 참고하세요.
