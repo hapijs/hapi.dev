@@ -6,92 +6,82 @@ title: Serving Files
 
 # Serving Static Content
 
-_This tutorial is compatible with hapi v17 and newer_
+_This tutorial is compatible with hapi v21 and newer_
 
 ## <a name="overview"></a> Overview
 
-Inevitably while building any web application, the need arises to serve a simple file from disk. There is a hapi plugin called [inert](/module/inert) that adds this functionality to hapi through the use of additional handlers.
+hapi serves files from disk through the [inert](/module/inert) plugin. Install it:
 
-First you need to install and add `inert` as a dependency to your project:
-
-`npm install @hapi/inert`
+```sh
+npm install @hapi/inert
+```
 
 ## <a name="inert"></a> Inert
 
-The `inert` plugin provides new handler methods for serving static files and directories, as well as adding a `h.file()` method to the toolkit, which can respond with file based resources.
+Registering inert adds three ways to send files:
+
+| What                | Use it for                                                 |
+| ------------------- | ---------------------------------------------------------- |
+| `h.file(path)`      | sending a file from inside a handler, after your own logic |
+| `file` handler      | a route that always serves one file                        |
+| `directory` handler | a route that serves every file in a folder                 |
+
+Importing `@hapi/inert` also adds these to hapi's TypeScript types, so `h.file()` and the `file` and `directory` handlers type-check.
 
 ## <a name="path"></a> Relative paths
 
-To simplify things, especially if you have multiple routes that respond with files, you can configure a base path in your server and only pass relative paths to `h.file()`:
+Set `routes.files.relativeTo` on the server once, and every file path in your routes is resolved from that folder:
 
-```javascript
-'use strict';
+```ts
+import Path from 'node:path';
+import Hapi from '@hapi/hapi';
+import Inert from '@hapi/inert';
 
-const Hapi = require('@hapi/hapi');
-const Path = require('path');
-
-const start = async () => {
-    const server = Hapi.server({
-        routes: {
-            files: {
-                relativeTo: Path.join(__dirname, 'public'),
-            },
+const server = Hapi.server({
+    routes: {
+        files: {
+            relativeTo: Path.join(import.meta.dirname, 'public'),
         },
-    });
+    },
+});
 
-    await server.register(require('@hapi/inert'));
+await server.register(Inert);
 
-    server.route({
-        method: 'GET',
-        path: '/picture.jpg',
-        handler: function (request, h) {
-            return h.file('picture.jpg');
-        },
-    });
+server.route({
+    method: 'GET',
+    path: '/picture.jpg',
+    handler: (request, h) => {
+        return h.file('picture.jpg');
+    },
+});
 
-    await server.start();
-
-    console.log('Server running at:', server.info.uri);
-};
-
-start();
+await server.start();
+console.log('Server running at:', server.info.uri);
 ```
 
-When you set an option under `server.options.routes`, such as above, it will apply to _all_ routes. You can also set these options, including the `relativeTo` option on a per-route level.
+`routes.files.relativeTo` defaults to the process's working directory. Any option under the server's `routes` applies to every route, and a route can override it in its own `options.files`.
 
 ## <a name="hfile"></a> `h.file(path, [options])`
 
-Now, let's see how to use the [`h.file()`](/module/inert/api#hfilepath-options) method:
+[`h.file()`](/module/inert#h-file-path-options) sends a file as the response. Paths are confined to the `relativeTo` folder: a path that resolves outside it, such as `'../secrets.json'` or an absolute path elsewhere on disk, replies `403 Forbidden`. That stops a request parameter from reading arbitrary files:
 
-```javascript
-const start = async () => {
-    const server = Hapi.server();
-
-    await server.register(require('@hapi/inert'));
-
-    server.route({
-        method: 'GET',
-        path: '/picture.jpg',
-        handler: function (request, h) {
-            return h.file('/path/to/picture.jpg');
-        },
-    });
-
-    await server.start();
-
-    console.log('Server running at:', server.info.uri);
-};
-
-start();
+```ts
+server.route<{ Params: { filename: string } }>({
+    method: 'GET',
+    path: '/download/{filename}',
+    handler: (request, h) => {
+        return h.file(request.params.filename, { mode: 'attachment' });
+    },
+});
 ```
 
-By requiring the `inert` plugin, you get access `h.file()` method. Here, you tell `h.file()` the path of the image you want to return. In this case, `'/path/to/picture.jpg'`.
+`/download/report.pdf` sends `public/report.pdf` as a download, and `/download/..%2Fserver.ts` gets `403`. To send a file from outside the folder on purpose, pass `confine: false`, and never with a path built from user input.
 
 ## <a name="filehandler"></a> File handler
 
-An alternative to using the `h.file()` method would be to use the `file` handler:
+When a route always serves the same file, use the `file` handler instead of writing a handler function:
 
-```javascript
+```ts
 server.route({
     method: 'GET',
     path: '/picture.jpg',
@@ -103,42 +93,39 @@ server.route({
 
 ### <a name="fileoptions"></a> File handler options
 
-You can also specify the parameter as a function that accepts the `request` object and returns a string representing the file's path (absolute or relative):
+The object form takes the same options as `h.file()`:
 
-```javascript
-server.route({
-    method: 'GET',
-    path: '/{filename}',
-    handler: {
-        file: function (request) {
-            return request.params.filename;
-        },
-    },
-});
-```
-
-It can also be an object with a `path` property. When using the object form of the handler, you can do a few additional things, like setting the `Content-Disposition` header and allowing compressed files like so:
-
-```javascript
+```ts
 server.route({
     method: 'GET',
     path: '/script.js',
     handler: {
         file: {
             path: 'script.js',
-            filename: 'client.js', // override the filename in the Content-Disposition header
-            mode: 'attachment', // specify the Content-Disposition is an attachment
-            lookupCompressed: true, // allow looking for script.js.gz if the request allows it
+            filename: 'client.js',
+            mode: 'attachment',
+            lookupCompressed: true,
         },
     },
 });
 ```
 
+| Option             | Effect                                                                                                                                                                                                                                                                       |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `path`             | the file to send; also accepts a function `(request) => path`                                                                                                                                                                                                                |
+| `mode`             | `'attachment'` (download) or `'inline'`; sets the `Content-Disposition` header                                                                                                                                                                                               |
+| `filename`         | the file name in `Content-Disposition`, here `client.js` instead of `script.js`                                                                                                                                                                                              |
+| `lookupCompressed` | serves `script.js.gz` when it exists and the client accepts gzip; `lookupMap` replaces the default `{ gzip: '.gz' }`, so list every encoding, such as `{ gzip: '.gz', br: '.br' }` (`br` also needs [`server.encoder()`](/tutorials/en_US/response-marshalling#compression)) |
+| `confine`          | `true` (default) keeps paths inside `relativeTo`; `false` allows any path                                                                                                                                                                                                    |
+| `etagMethod`       | `'hash'` (default), `'simple'` (size and modified time, cheaper), or `false`                                                                                                                                                                                                 |
+
+The full list is in the [inert API](/module/inert#the-file-handler).
+
 ## <a name="directoryhandler"></a> Directory handler
 
-In addition to the `file` handler, inert also adds a `directory` handler that allows you to specify one route to serve multiple files. In order to use it, you must specify a route path with a parameter. The name of the parameter does not matter, however. You can use the asterisk extension on the parameter to restrict file depth as well. The most basic usage of the directory handler looks like:
+The `directory` handler serves a whole folder from one route. The path must end with a parameter, and the parameter's value is the file to look up. The parameter sets how deep the route serves: `{param}` serves one level, `{param?}` also serves the folder root, `{param*}` serves any depth, and `{param*2}` serves exactly two levels:
 
-```javascript
+```ts
 server.route({
     method: 'GET',
     path: '/{param*}',
@@ -152,80 +139,72 @@ server.route({
 
 ### <a name="directoryoptions"></a> Directory handler options
 
-The above route will respond to any request by looking for a matching filename in the `directory-path-here` directory. Note that a request to `/` in this configuration will reply with an HTTP `403` response. You can fix this by adding an index file. By default hapi will search in the directory for a file called `index.html`. You can disable serving an index file by setting the index option to `false`, or alternatively you can specify an array of files that inert should look for as index files:
+For each request, inert resolves the file like this:
 
-```javascript
-server.route({
-    method: 'GET',
-    path: '/{param*}',
-    handler: {
-        directory: {
-            path: 'directory-path-here',
-            index: ['index.html', 'default.html'],
-        },
-    },
-});
+```mermaid
+flowchart TD
+    R["request /docs"] --> F{"is it a file?"}
+    F -->|yes| S[send the file]
+    F -->|"not found"| E{"defaultExtension set?"}
+    E -->|yes| X["try /docs.html"]
+    E -->|no| N[404]
+    F -->|"a directory"| T{"trailing slash?"}
+    T -->|no| RD["302 to /docs/"]
+    T -->|yes| I{"index file exists?"}
+    I -->|yes| SI[send index.html]
+    I -->|no| L{"listing: true?"}
+    L -->|yes| HL[send HTML listing]
+    L -->|no| FB[403]
 ```
 
-A request to `/` will now first try to load `/index.html`, then `/default.html`. When there is no index file available, inert can display the contents of the directory as a listing page. You can enable that by setting the `listing` property to `true` like so:
+| Option             | Default  | Effect                                                                                             |
+| ------------------ | -------- | -------------------------------------------------------------------------------------------------- |
+| `path`             | required | the folder, an array of folders tried in order, or a function `(request) => path`                  |
+| `index`            | `true`   | serve `index.html` for a directory; a string or array names other index files; `false` disables it |
+| `listing`          | `false`  | show an HTML listing for a directory with no index file                                            |
+| `showHidden`       | `false`  | include hidden files in listings and serve them                                                    |
+| `redirectToSlash`  | `true`   | redirect `/docs` to `/docs/` when `docs` is a directory                                            |
+| `defaultExtension` | none     | when `/about` is not found, try `/about.html`                                                      |
+| `lookupCompressed` | `false`  | serve precompressed `.gz` files, same as the `file` handler option                                 |
 
-```javascript
-server.route({
-    method: 'GET',
-    path: '/{param*}',
-    handler: {
-        directory: {
-            path: 'directory-path-here',
-            listing: true,
-        },
-    },
-});
-```
-
-Now a request to `/` will reply with HTML showing the contents of the directory. When using the directory handler with listing enabled, by default hidden files will not be shown in the listing. That can be changed by setting the `showHidden` option to `true`. Like the file handler, the directory handler also has a `lookupCompressed` option to serve precompressed files when possible. You can also set a `defaultExtension` that will be appended to requests if the original path is not found. This means that a request for `/bacon` will also try the file `/bacon.html`.
+With `index: ['index.html', 'default.html']`, a directory request tries `index.html` first, then `default.html`.
 
 ## <a name="fileserver"></a> Static file server
 
-One common case for serving static content is setting up a file server. The following example shows how to setup a basic file serve in hapi:
+A complete server that serves the `public` folder at the site root:
 
-```js
-const Path = require('path');
-const Hapi = require('@hapi/hapi');
-const Inert = require('@hapi/inert');
+```ts
+import Path from 'node:path';
+import Hapi from '@hapi/hapi';
+import Inert from '@hapi/inert';
 
-const init = async () => {
-    const server = new Hapi.Server({
-        port: 3000,
-        routes: {
-            files: {
-                relativeTo: Path.join(__dirname, 'public'),
-            },
+const server = Hapi.server({
+    port: 3000,
+    routes: {
+        files: {
+            relativeTo: Path.join(import.meta.dirname, 'public'),
         },
-    });
+    },
+});
 
-    await server.register(Inert);
+await server.register(Inert);
 
-    server.route({
-        method: 'GET',
-        path: '/{param*}',
-        handler: {
-            directory: {
-                path: '.',
-                redirectToSlash: true,
-            },
+server.route({
+    method: 'GET',
+    path: '/{param*}',
+    handler: {
+        directory: {
+            path: '.',
+            defaultExtension: 'html',
         },
-    });
+    },
+});
 
-    await server.start();
-
-    console.log('Server running at:', server.info.uri);
-};
-
-init();
+await server.start();
+console.log('Server running at:', server.info.uri);
 ```
 
-The first thing you do is require both `inert` and `path`. As you will see, you will need both of these to get our file server up and running.
-
-Next, you configure `server.options.routes`. You set the location the server will look for the static files by setting the `relativeTo` option.
-
-After your server is configured, you then register the `inert` plugin. This will allow you to have access to the `directory` handler, which will enable you to server your files. In the `directory` handler, you configure `path`, which is required, to look in the entire `public` directory which you specified in the `relativeTo` option. The second option is the `redirectToSlash` option. By setting this to `true`, you tell the server to redirect requests without trailing slashes to the same path with those with the trailing slash.
+- `path: '.'` points the handler at `relativeTo`, the `public` folder.
+- `/` serves `public/index.html`, and `/docs` redirects to `/docs/`, which serves `public/docs/index.html`.
+- `defaultExtension: 'html'` lets `/about` serve `public/about.html`, so your URLs need no `.html`.
+- Because `/{param*}` is the least specific path possible, any other route you add, such as `/api/users`, still answers its own requests. See [which route wins](/tutorials/en_US/routing#specificity).

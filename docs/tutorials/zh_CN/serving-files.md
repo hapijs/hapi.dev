@@ -1,89 +1,87 @@
 ---
-title: Serving Files
+title: 静态文件服务
 ---
 
 <TutorialLang />
 
-## 静态内容
+# <a name="serving-static-content"></a> 静态文件服务
 
-_该教程适用于 hapi v17版本_
+_本教程适用于 hapi v21 及更高版本_
 
-在构建任意一个 web 应用时，不可避免的需要从磁盘提供一些静态文件。有一个名为 [inert](https://github.com/hapijs/inert) 的 hapi 插件可以完成这个操作。
+## <a name="overview"></a> 概述
 
-首先你需要安装它，并且将 inert 作为依赖添加到你的项目中:
+hapi 通过 [inert](/module/inert) 插件提供磁盘上的文件。先安装它：
 
-`npm install --save @hapi/inert`
-
-## `h.file(path, [options])`
-
-首先我们看如何使用 [`h.file()`](https://github.com/hapijs/inert#hfilepath-options) 方法:
-
-```javascript
-const start = async () => {
-    await server.register(require('@hapi/inert'));
-
-    server.route({
-        method: 'GET',
-        path: '/picture.jpg',
-        handler: function (request, h) {
-            return h.file('/path/to/picture.jpg');
-        },
-    });
-
-    await server.start();
-
-    console.log('Server running at:', server.info.uri);
-};
-
-start();
+```sh
+npm install @hapi/inert
 ```
 
-如上所示，这就是你返回 `h.file(path)` 的基本方式。
+## <a name="inert"></a> Inert
 
-### 相对路径
+注册 inert 后会多出三种发送文件的方式：
 
-为了简化操作，特别是如果有多个需要返回文件的路由，你可以在服务器中配置基本路径，之后只将相对路径传递给 `h.file()`:
+| 方式                | 适用场景                                    |
+| ------------------- | ------------------------------------------- |
+| `h.file(path)`      | 在 handler 中执行完自己的逻辑后发送一个文件 |
+| `file` handler      | 一个始终提供同一文件的路由                  |
+| `directory` handler | 一个提供某个文件夹中所有文件的路由          |
 
-```javascript
-'use strict';
+导入 `@hapi/inert` 也会把这些内容加入 hapi 的 TypeScript 类型，因此 `h.file()` 以及 `file` 和 `directory` handler 都能通过类型检查。
 
-const Hapi = require('@hapi/hapi');
-const Path = require('path');
+## <a name="path"></a> 相对路径
+
+在服务器上设置一次 `routes.files.relativeTo`，路由中的所有文件路径都会从这个文件夹开始解析：
+
+```ts
+import Path from 'node:path';
+import Hapi from '@hapi/hapi';
+import Inert from '@hapi/inert';
 
 const server = Hapi.server({
     routes: {
         files: {
-            relativeTo: Path.join(__dirname, 'public'),
+            relativeTo: Path.join(import.meta.dirname, 'public'),
         },
     },
 });
 
-const start = async () => {
-    await server.register(require('@hapi/inert'));
+await server.register(Inert);
 
-    server.route({
-        method: 'GET',
-        path: '/picture.jpg',
-        handler: function (request, h) {
-            return h.file('picture.jpg');
-        },
-    });
+server.route({
+    method: 'GET',
+    path: '/picture.jpg',
+    handler: (request, h) => {
+        return h.file('picture.jpg');
+    },
+});
 
-    await server.start();
-
-    console.log('Server running at:', server.info.uri);
-};
-
-start();
+await server.start();
+console.log('Server running at:', server.info.uri);
 ```
 
-当在 `server.options.routes` 中设置一个选项时，如上所述，它将应用于 _所有的_ 路由。你还可以修改这些选项，包括每个路由级别的 `relativeTo` 选项。
+`routes.files.relativeTo` 默认是进程的工作目录。服务器 `routes` 下的任何选项都会应用到所有路由，单个路由可以在自己的 `options.files` 中覆盖它。
 
-## 文件 handler
+## <a name="hfile"></a> `h.file(path, [options])`
 
-上述路由的替代方法是使用 `file` handler:
+[`h.file()`](/module/inert#h-file-path-options) 把一个文件作为响应发送。路径被限制在 `relativeTo` 文件夹内：解析到文件夹之外的路径，例如 `'../secrets.json'` 或磁盘上其他位置的绝对路径，会返回 `403 Forbidden`。这样请求参数就无法读取任意文件：
 
-```javascript
+```ts
+server.route<{ Params: { filename: string } }>({
+    method: 'GET',
+    path: '/download/{filename}',
+    handler: (request, h) => {
+        return h.file(request.params.filename, { mode: 'attachment' });
+    },
+});
+```
+
+`/download/report.pdf` 会把 `public/report.pdf` 作为下载文件发送，而 `/download/..%2Fserver.ts` 得到 `403`。如果确实要发送文件夹之外的文件，请传入 `confine: false`，并且绝不要配合由用户输入拼出来的路径使用。
+
+## <a name="filehandler"></a> File handler
+
+如果一个路由始终提供同一个文件，可以使用 `file` handler，而不必编写 handler 函数：
+
+```ts
 server.route({
     method: 'GET',
     path: '/picture.jpg',
@@ -93,85 +91,120 @@ server.route({
 });
 ```
 
-### 文件 handler 选项
+### <a name="fileoptions"></a> File handler 选项
 
-我们还可以将参数指定为接受 `request` 对象，并返回表示文件路径字符串的函数 (绝对路径或者相对路径):
+对象形式接受与 `h.file()` 相同的选项：
 
-```javascript
-server.route({
-    method: 'GET',
-    path: '/{filename}',
-    handler: {
-        file: function (request) {
-            return request.params.filename;
-        },
-    },
-});
-```
-
-它也可以是具有 `path` 属性的对象。当在 handler 中使用对象时，我们可以附加一些别的东西，如设 `Content-Disposition` 头并允许压缩文件。如下:
-
-```javascript
+```ts
 server.route({
     method: 'GET',
     path: '/script.js',
     handler: {
         file: {
             path: 'script.js',
-            filename: 'client.js', // 修改 Content-Disposition 头中的文件名
-            mode: 'attachment', // 指定 Content-Disposition 是一个附件
-            lookupCompressed: true, // 如果请求允许，将允许查找 script.js.gz
+            filename: 'client.js',
+            mode: 'attachment',
+            lookupCompressed: true,
         },
     },
 });
 ```
 
-## 目录 handler
+| 选项               | 作用                                                                                                                                                                                                                                       |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `path`             | 要发送的文件；也接受函数 `(request) => path`                                                                                                                                                                                               |
+| `mode`             | `'attachment'`（下载）或 `'inline'`；设置 `Content-Disposition` 响应头                                                                                                                                                                     |
+| `filename`         | `Content-Disposition` 中的文件名，这里是 `client.js` 而不是 `script.js`                                                                                                                                                                    |
+| `lookupCompressed` | 当 `script.js.gz` 存在且客户端接受 gzip 时提供它；`lookupMap` 会替换默认的 `{ gzip: '.gz' }`，所以要列出所有编码，例如 `{ gzip: '.gz', br: '.br' }`（`br` 还需要 [`server.encoder()`](/tutorials/zh_CN/response-marshalling#compression)） |
+| `confine`          | `true`（默认）把路径限制在 `relativeTo` 内；`false` 允许任意路径                                                                                                                                                                           |
+| `etagMethod`       | `'hash'`（默认）、`'simple'`（基于大小和修改时间，开销更小）或 `false`                                                                                                                                                                     |
 
-除 `file` handler 之外，inert 也有一个额外的 `directory` handler 允许一个路由提供多份文件。要使用它，必须使用参数指定路径。 参数的名称无关紧要，你也可以在参数上使用星号扩展名来限制文件的深度。目录 handler 的基本用法如下:
+完整列表见 [inert API](/module/inert#the-file-handler)。
 
-```javascript
+## <a name="directoryhandler"></a> Directory handler
+
+`directory` handler 用一个路由提供整个文件夹。路径必须以参数结尾，参数的值就是要查找的文件。参数决定了路由能提供多深的层级：`{param}` 提供一层，`{param?}` 还会提供文件夹根目录，`{param*}` 提供任意深度，`{param*2}` 恰好提供两层：
+
+```ts
 server.route({
     method: 'GET',
     path: '/{param*}',
     handler: {
         directory: {
-            path: 'public',
+            path: 'directory-path-here',
         },
     },
 });
 ```
 
-### 目录 handler 选项
+### <a name="directoryoptions"></a> Directory handler 选项
 
-上述路由将通过在 `public` 目录中查找匹配的文件名来响应任何请求。这里需要注意的是，在此配置中对 `/` 的请求将会使用 HTTP `403` 响应进行回复。我们可以通过添加索引文件的方式来解决这个问题。默认情况下，hapi 会在目录中搜索名为 `index.html` 的文件。我们可以通过将 index 选项设置为 `false` 来禁用提供索引文件，或者我们可以指定 inert 可以查找的索引文件数组:
+对每个请求，inert 按以下方式解析文件：
 
-```javascript
+```mermaid
+flowchart TD
+    R["请求 /docs"] --> F{"是文件吗？"}
+    F -->|是| S[发送该文件]
+    F -->|"未找到"| E{"设置了 defaultExtension？"}
+    E -->|是| X["尝试 /docs.html"]
+    E -->|否| N[404]
+    F -->|"是目录"| T{"有结尾斜杠？"}
+    T -->|否| RD["302 跳转到 /docs/"]
+    T -->|是| I{"存在索引文件？"}
+    I -->|是| SI[发送 index.html]
+    I -->|否| L{"listing: true？"}
+    L -->|是| HL[发送 HTML 目录列表]
+    L -->|否| FB[403]
+```
+
+| 选项               | 默认值  | 作用                                                                      |
+| ------------------ | ------- | ------------------------------------------------------------------------- |
+| `path`             | 必填    | 文件夹、按顺序尝试的文件夹数组，或函数 `(request) => path`                |
+| `index`            | `true`  | 对目录提供 `index.html`；字符串或数组可指定其他索引文件；`false` 表示禁用 |
+| `listing`          | `false` | 对没有索引文件的目录显示 HTML 目录列表                                    |
+| `showHidden`       | `false` | 在目录列表中包含隐藏文件，并提供这些文件                                  |
+| `redirectToSlash`  | `true`  | 当 `docs` 是目录时，把 `/docs` 重定向到 `/docs/`                          |
+| `defaultExtension` | 无      | 找不到 `/about` 时，尝试 `/about.html`                                    |
+| `lookupCompressed` | `false` | 提供预压缩的 `.gz` 文件，与 `file` handler 的同名选项相同                 |
+
+使用 `index: ['index.html', 'default.html']` 时，目录请求会先尝试 `index.html`，再尝试 `default.html`。
+
+## <a name="fileserver"></a> 静态文件服务器
+
+一个在站点根路径提供 `public` 文件夹的完整服务器：
+
+```ts
+import Path from 'node:path';
+import Hapi from '@hapi/hapi';
+import Inert from '@hapi/inert';
+
+const server = Hapi.server({
+    port: 3000,
+    routes: {
+        files: {
+            relativeTo: Path.join(import.meta.dirname, 'public'),
+        },
+    },
+});
+
+await server.register(Inert);
+
 server.route({
     method: 'GET',
     path: '/{param*}',
     handler: {
         directory: {
-            path: 'public',
-            index: ['index.html', 'default.html'],
+            path: '.',
+            defaultExtension: 'html',
         },
     },
 });
+
+await server.start();
+console.log('Server running at:', server.info.uri);
 ```
 
-一个发往 `/` 的请求首先尝试去加载 `/index.html`, 之后再加载 `/default.html`。当没有可用的索引文件时, inert 可以以列表的形式显示这个目录下的内容。你可以通过设置 `listing` 属性为 `true` 来开启这个选项，如:
-
-```javascript
-server.route({
-    method: 'GET',
-    path: '/{param*}',
-    handler: {
-        directory: {
-            path: 'public',
-            listing: true,
-        },
-    },
-});
-```
-
-现在，对 `/` 的请求将会回复一个显示目录内容的 HTML。使用启用了列表的目录 handler 时，默认情况下隐藏文件不会显示在列表中，可以通过将 `showHidden` 选项设置为 `true` 来显示。与文件 handler 一样，目录 handler 也有一个 `lookupCompressed` 的选项用于提供预压缩文件。你还可以设置一个 `defaultExtension`，如果找不到原始路径，它将附加到请求中。这意味着对 `/bacon` 的请求也会尝试文件 `/bacon.html`。
+- `path: '.'` 让 handler 指向 `relativeTo`，也就是 `public` 文件夹。
+- `/` 提供 `public/index.html`，`/docs` 会重定向到 `/docs/`，后者提供 `public/docs/index.html`。
+- `defaultExtension: 'html'` 让 `/about` 提供 `public/about.html`，这样你的 URL 不需要带 `.html`。
+- 由于 `/{param*}` 是最不具体的路径，你添加的其他路由，例如 `/api/users`，仍然会响应各自的请求。请参阅[哪个路由胜出](/tutorials/zh_CN/routing#specificity)。

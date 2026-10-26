@@ -1,99 +1,87 @@
 ---
-title: Serving Files
+title: Servindo arquivos
 ---
 
 <TutorialLang />
 
-## Servindo arquivos estáticos
+# Servindo conteúdo estático
 
-_Este tutorial é compatível com hapi v16_
+_Este tutorial é compatível com o hapi v21 e versões mais recentes_
 
-Inevitavelmente quando desenvolvemos algumas aplicações web, surge a necessidade de servir simples arquivos do disco. Há um plugin chamado [inert](https://github.com/hapijs/inert) que adiciona essa funcionalidade para o hapi atráves de manipuladores adicionais.
+## <a name="overview"></a> Visão geral
 
-Primeiro você precisa instalar e adicinar o inert como uma dependência para seu projeto:
+O hapi serve arquivos do disco por meio do plugin [inert](/module/inert). Instale-o:
 
-`npm install --save inert`
-
-## reply.file()
-
-Primeiro, para usar o método reply:
-
-```javascript
-server.register(require('inert'), (err) => {
-    if (err) {
-        throw err;
-    }
-
-    server.route({
-        method: 'GET',
-        path: '/picture.jpg',
-        handler: function (request, reply) {
-            reply.file('/path/to/picture.jpg');
-        },
-    });
-
-    server.start((err) => {
-        if (err) {
-            throw err;
-        }
-
-        console.log('Servidor rodando em:', server.info.uri);
-    });
-});
+```sh
+npm install @hapi/inert
 ```
 
-Como eu tenho certeza que você adivinhou, em sua forma mais simples você passa um caminho para `reply.file()` e está feito.
+## <a name="inert"></a> Inert
 
-### Caminhos relativos
+Registrar o inert adiciona três formas de enviar arquivos:
 
-Para simplificar as coisas, especialmente se você tiver várias rotas que respondem com arquivos, você pode configurar um caminho base no seu servidor e passar apenas os caminhos relativos para `reply.file()`
+| O quê               | Use para                                                        |
+| ------------------- | --------------------------------------------------------------- |
+| `h.file(path)`      | enviar um arquivo de dentro de um handler, depois da sua lógica |
+| handler `file`      | uma rota que sempre serve um único arquivo                      |
+| handler `directory` | uma rota que serve todos os arquivos de uma pasta               |
 
-```javascript
-'use strict';
+Importar `@hapi/inert` também adiciona esses recursos aos tipos TypeScript do hapi, então `h.file()` e os handlers `file` e `directory` passam na verificação de tipos.
 
-const Path = require('path');
-const Hapi = require('hapi');
+## <a name="path"></a> Caminhos relativos
 
-const server = new Hapi.Server({
-    connections: {
-        routes: {
-            files: {
-                relativeTo: Path.join(__dirname, 'public'),
-            },
+Defina `routes.files.relativeTo` uma vez no servidor, e todo caminho de arquivo nas suas rotas é resolvido a partir dessa pasta:
+
+```ts
+import Path from 'node:path';
+import Hapi from '@hapi/hapi';
+import Inert from '@hapi/inert';
+
+const server = Hapi.server({
+    routes: {
+        files: {
+            relativeTo: Path.join(import.meta.dirname, 'public'),
         },
     },
 });
 
-server.register(require('inert'), (err) => {
-    if (err) {
-        throw err;
-    }
+await server.register(Inert);
 
-    server.route({
-        method: 'GET',
-        path: '/picture.jpg',
-        handler: function (request, reply) {
-            reply.file('path/to/picture.jpg');
-        },
-    });
+server.route({
+    method: 'GET',
+    path: '/picture.jpg',
+    handler: (request, h) => {
+        return h.file('picture.jpg');
+    },
+});
 
-    server.start((err) => {
-        if (err) {
-            throw err;
-        }
+await server.start();
+console.log('Server running at:', server.info.uri);
+```
 
-        console.log('Server running at:', server.info.uri);
-    });
+O padrão de `routes.files.relativeTo` é o diretório de trabalho do processo. Qualquer opção em `routes` do servidor se aplica a todas as rotas, e uma rota pode sobrescrevê-la nas suas próprias `options.files`.
+
+## <a name="hfile"></a> `h.file(path, [options])`
+
+[`h.file()`](/module/inert#h-file-path-options) envia um arquivo como resposta. Os caminhos ficam confinados à pasta `relativeTo`: um caminho que resolve para fora dela, como `'../secrets.json'` ou um caminho absoluto em outro lugar do disco, responde `403 Forbidden`. Isso impede que um parâmetro da requisição leia arquivos arbitrários:
+
+```ts
+server.route<{ Params: { filename: string } }>({
+    method: 'GET',
+    path: '/download/{filename}',
+    handler: (request, h) => {
+        return h.file(request.params.filename, { mode: 'attachment' });
+    },
 });
 ```
 
-Como você pode ter adivinhado pela opção passada para o servidor, o parâmetro `relativeTo` também pode ser definido em um nível por conexão ou por rota.
+`/download/report.pdf` envia `public/report.pdf` como download, e `/download/..%2Fserver.ts` recebe `403`. Para enviar de propósito um arquivo de fora da pasta, passe `confine: false`, e nunca com um caminho montado a partir de entrada do usuário.
 
-## Manipulador de arquivo
+## <a name="filehandler"></a> Handler de arquivo
 
-Uma alternativa para a rota acima seria o uso do manipulador `file`:
+Quando uma rota sempre serve o mesmo arquivo, use o handler `file` em vez de escrever uma função handler:
 
-```javascript
+```ts
 server.route({
     method: 'GET',
     path: '/picture.jpg',
@@ -103,73 +91,120 @@ server.route({
 });
 ```
 
-### Opções do manipulador de arquivo
+### <a name="fileoptions"></a> Opções do handler de arquivo
 
-Nós também podemos especificar o parâmetro como uma função que aceita o objeto `request` e retorna uma string que representa o caminho do arquivo (absoluto ou relativo):
+A forma de objeto aceita as mesmas opções de `h.file()`:
 
-```javascript
-server.route({
-    method: 'GET',
-    path: '/{filename}',
-    handler: {
-        file: function (request) {
-            return request.params.filename;
-        },
-    },
-});
-```
-
-Isso também pode ser um objeto com a propriedade `path`. Ao usar o objeto formulário do manipulador,
-nós podemos fazer algumas coisas adicionais, como o ajuste do cabeçalho `Content-Disposition` e permitir arquivos compactados, como:
-
-```javascript
+```ts
 server.route({
     method: 'GET',
     path: '/script.js',
     handler: {
         file: {
             path: 'script.js',
-            filename: 'client.js', // sobreescreve o nome do arquivo no cabeçalho Content-Disposition
-            mode: 'attachment', // especifica o Content-Disposition com um anexo
-            lookupCompressed: true, // permite olhar para script.js.gz se a requisição permitir isso
+            filename: 'client.js',
+            mode: 'attachment',
+            lookupCompressed: true,
         },
     },
 });
 ```
 
-## Diretório de manipuladores
+| Opção              | Efeito                                                                                                                                                                                                                                                                                  |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `path`             | o arquivo a enviar; também aceita uma função `(request) => path`                                                                                                                                                                                                                        |
+| `mode`             | `'attachment'` (download) ou `'inline'`; define o header `Content-Disposition`                                                                                                                                                                                                          |
+| `filename`         | o nome do arquivo em `Content-Disposition`, aqui `client.js` em vez de `script.js`                                                                                                                                                                                                      |
+| `lookupCompressed` | serve `script.js.gz` quando ele existe e o cliente aceita gzip; `lookupMap` substitui o padrão `{ gzip: '.gz' }`, então liste todas as codificações, como `{ gzip: '.gz', br: '.br' }` (`br` também precisa de [`server.encoder()`](/tutorials/pt_BR/response-marshalling#compression)) |
+| `confine`          | `true` (padrão) mantém os caminhos dentro de `relativeTo`; `false` permite qualquer caminho                                                                                                                                                                                             |
+| `etagMethod`       | `'hash'` (padrão), `'simple'` (tamanho e data de modificação, mais barato) ou `false`                                                                                                                                                                                                   |
 
-Além do manipulador `file`, inert também adiciona um manipulador de `directory` que permite que você especifique um caminho para servir multiplos arquivos. Para usá-lo, você deve especificar um caminho como um parâmetro. O nome do paramâmetro não importa, no entanto. Você pode usar a extensão asterísco para restringir a profundidade do arquivo também. O uso mais básico do manipulador de diretório se parece com:
+A lista completa está na [API do inert](/module/inert#the-file-handler).
 
-```javascript
+## <a name="directoryhandler"></a> Handler de diretório
+
+O handler `directory` serve uma pasta inteira a partir de uma única rota. O caminho precisa terminar com um parâmetro, e o valor do parâmetro é o arquivo a procurar. O parâmetro define a profundidade que a rota serve: `{param}` serve um nível, `{param?}` também serve a raiz da pasta, `{param*}` serve qualquer profundidade e `{param*2}` serve exatamente dois níveis:
+
+```ts
 server.route({
     method: 'GET',
     path: '/{param*}',
     handler: {
         directory: {
-            path: 'public',
+            path: 'directory-path-here',
         },
     },
 });
 ```
 
-### Opções do manipulador de diretório
+### <a name="directoryoptions"></a> Opções do handler de diretório
 
-A rota acima responderá qualquer requisição procurando por um arquivo correspondente no diretório `public`. Note que a requisição para `/` nessa configuração, responderá com um HTTP `403` por que, por padrão, o manipulador não permitirá uma lista de arquivos. Você pode alterar isso definindo a propriedade `listing` para `true`, assim:
+Para cada requisição, o inert resolve o arquivo assim:
 
-```javascript
+```mermaid
+flowchart TD
+    R["requisição /docs"] --> F{"é um arquivo?"}
+    F -->|sim| S[envia o arquivo]
+    F -->|"não encontrado"| E{"defaultExtension definida?"}
+    E -->|sim| X["tenta /docs.html"]
+    E -->|não| N[404]
+    F -->|"um diretório"| T{"barra no final?"}
+    T -->|não| RD["302 para /docs/"]
+    T -->|sim| I{"o arquivo index existe?"}
+    I -->|sim| SI[envia index.html]
+    I -->|não| L{"listing: true?"}
+    L -->|sim| HL[envia a listagem HTML]
+    L -->|não| FB[403]
+```
+
+| Opção              | Padrão      | Efeito                                                                                                   |
+| ------------------ | ----------- | -------------------------------------------------------------------------------------------------------- |
+| `path`             | obrigatório | a pasta, um array de pastas testadas em ordem, ou uma função `(request) => path`                         |
+| `index`            | `true`      | serve `index.html` para um diretório; uma string ou array define outros arquivos index; `false` desativa |
+| `listing`          | `false`     | mostra uma listagem HTML para um diretório sem arquivo index                                             |
+| `showHidden`       | `false`     | inclui arquivos ocultos nas listagens e os serve                                                         |
+| `redirectToSlash`  | `true`      | redireciona `/docs` para `/docs/` quando `docs` é um diretório                                           |
+| `defaultExtension` | nenhum      | quando `/about` não é encontrado, tenta `/about.html`                                                    |
+| `lookupCompressed` | `false`     | serve arquivos `.gz` pré-comprimidos, igual à opção do handler `file`                                    |
+
+Com `index: ['index.html', 'default.html']`, uma requisição de diretório tenta primeiro `index.html` e depois `default.html`.
+
+## <a name="fileserver"></a> Servidor de arquivos estáticos
+
+Um servidor completo que serve a pasta `public` na raiz do site:
+
+```ts
+import Path from 'node:path';
+import Hapi from '@hapi/hapi';
+import Inert from '@hapi/inert';
+
+const server = Hapi.server({
+    port: 3000,
+    routes: {
+        files: {
+            relativeTo: Path.join(import.meta.dirname, 'public'),
+        },
+    },
+});
+
+await server.register(Inert);
+
 server.route({
     method: 'GET',
     path: '/{param*}',
     handler: {
         directory: {
-            path: 'public',
-            listing: true,
+            path: '.',
+            defaultExtension: 'html',
         },
     },
 });
+
+await server.start();
+console.log('Server running at:', server.info.uri);
 ```
 
-Agora a requisição para `\` responderá com um HTML exbindo com o conteúdo do diretório. Nós podemos aproveitar esse servidor estático e ir um passo adiante definindo a opção `index` para `true`, o que siginifica que uma requisição para `/` vai tentar carregar primeiro `index.html`. A opção `index` também aceita uma string ou um array de strings para especificar o arquivo(s) padrão. Por definição, a opção `index` para `['index.html', 'default.html']`, uma requisição para `/` primeiramente tenta carregar `/index.html` e então `default.html`. Isso nos dá, em uma rota, um servidor web estático muito básico e simples.
-
-Quando usamos um manipulador de diretório com a listagem habilitada, por padrão, arquivos ocultos não serão exibidos na lista. Isso pode ser alterado definindo a opção `showHidden` para `true`. Como o manipulador de arquivo, o manipulador de diretório também tem uma opção `lookupCompressed` para servir arquivos pré compactados, quando possível. Você também pode definir um `defaultExtension` que será anexado as requisições se o caminho do arquivo original não for encontrado. Isso significa que a requisição para `/bacon` também tentará o arquivo `/bacon.html`.
+- `path: '.'` aponta o handler para `relativeTo`, a pasta `public`.
+- `/` serve `public/index.html`, e `/docs` redireciona para `/docs/`, que serve `public/docs/index.html`.
+- `defaultExtension: 'html'` faz `/about` servir `public/about.html`, então suas URLs não precisam de `.html`.
+- Como `/{param*}` é o caminho menos específico possível, qualquer outra rota que você adicionar, como `/api/users`, continua respondendo às próprias requisições. Veja [qual rota vence](/tutorials/pt_BR/routing#specificity).
