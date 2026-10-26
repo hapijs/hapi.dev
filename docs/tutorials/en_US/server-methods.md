@@ -6,32 +6,49 @@ title: Server Methods
 
 # Server Methods
 
-_This tutorial is compatible with hapi v17 and newer_
+_This tutorial is compatible with hapi v21 and newer_
 
 ## <a name="overview"></a> Overview
 
-Server methods are a useful way of sharing functions by attaching them to your server object rather than requiring a common module everywhere it is needed. Server methods are also used heavily for caching purposes. Since server methods leverage hapi's native caching, they can help reduce your boilerplate to a minimum. See the caching tutorial for more. To register a server method, you call [`server.method()`](</api#server.method()>). There are two different ways to call this function. You can call it with the signature `server.method(name, method, [options])`, or you can call it with the signature `server.method(method)`, where `method` is an object with `name`, `method`, and `options` parameters (note that you may also pass an array of these objects).
+A server method is a function you register on the server with [`server.method()`](/api#server-method-name-method-options), and call from anywhere that has the server: route handlers, plugins, extensions. Use one when:
+
+- several routes or plugins need the same function, and you don't want each to import it.
+- the function is expensive, and its result can be cached. One option turns on hapi's [caching](/tutorials/en_US/caching) for it.
+
+```ts
+import Hapi from '@hapi/hapi';
+
+declare module '@hapi/hapi' {
+    interface ServerMethods {
+        add: (x: number, y: number) => number;
+    }
+}
+
+const server = Hapi.server({ port: 3000 });
+
+server.method('add', (x: number, y: number) => x + y);
+
+server.route({
+    method: 'GET',
+    path: '/',
+    handler: (request, h) => {
+        return { sum: request.server.methods.add(1, 2) };
+    },
+});
+
+await server.start();
+```
+
+- `server.methods.add` is the registered function. In a handler, `request.server.methods` reaches it without needing the `server` variable in scope.
+- hapi does not know which methods you register, so TypeScript needs them in hapi's `ServerMethods` interface. The `declare module` block can live in any module of your project.
+- Methods are global to the server: a method registered inside a plugin is available to every other plugin and route.
 
 ## <a name="server.method"></a> server.method()
 
-The first way to call `server.method()` is with the signature `server.method(name, method, [options])`:
+`server.method()` takes either positional arguments, or one object (or an array of objects, to register several at once):
 
-```js
-const add = function (x, y) {
-    return x + y;
-};
-
+```ts
 server.method('add', add, {});
-```
-
-Here, you create a function called `add`, which takes two parameters and adds them together. Then you call `server.method()` with the name of the method being `add`, the method you are using, the one we just created called `add`, and no options.
-
-The second way to call `server.method()` is with the signature `server.method(method)`:
-
-```js
-const add = function (x, y) {
-    return x + y;
-};
 
 server.method({
     name: 'add',
@@ -39,141 +56,162 @@ server.method({
     options: {},
 });
 ```
-
-You create the same function again, called `add`. When you register it this time, configure the `method` object. This case, `name` is the name of the method, `method` is the method you are using, and `options` is an object to configure various options.
 
 ### <a name="name"></a> Name
 
-The `name` parameter is a string used to retrieve the method from the server later, via [`server.methods[name]`](#server.methods). Note that if you specify a `name` with a `.` character, it is registered as a nested object rather than the literal string. As in:
+A name with dots registers a nested method:
 
-```javascript
+```ts
 server.method('math.add', add);
+
+server.methods.math.add(1, 2);
 ```
 
-This server method can then be called via `server.methods.math.add()`.
+Declare it as a nested object in `ServerMethods`: `math: { add: (x: number, y: number) => number }`. Each segment of the name must be a valid JavaScript identifier.
 
 ### <a name="method"></a> Method
 
-The `method` parameter is the actual function to call when the method is invoked. It can take any number of arguments. It can be an `async` function, for example:
+The method can take any arguments, and can be `async`. Return the result, or throw an error.
 
-```js
-const add = async function (x, y) {
-    const result = await someLongRunningFunction(x, y);
-    return result;
-};
-
-server.method('add', add, {});
+```ts
+server.method('user.get', async (id: string) => {
+    return await db.users.findById(id);
+});
 ```
-
-Your server method function should return a valid result or throw an error if one occurs.
 
 ## <a name="options"></a> Options
 
-When registering `server.method()`, you can configure three `options`: `cache`, `generateKey`, and `bind`.
+| Option                | Use it to                                                                    |
+| --------------------- | ---------------------------------------------------------------------------- |
+| [`cache`](#cache)     | cache the method's results                                                   |
+| [`generateKey`](#key) | build the cache key when the arguments are not strings, numbers, or booleans |
+| [`bind`](#bind)       | set `this` inside the method                                                 |
 
 ### <a name="cache"></a> Cache
 
-A major advantage of server methods is that they may leverage hapi's native caching. The default is to not cache, however if a valid configuration is passed when registering the method, the return value will be cached and served from the cache instead of re-running your method every time it is called. The configuration looks like the following:
+With a `cache` option, calling the method goes through a cache first:
 
-```javascript
-server.method('add', add, {
+```mermaid
+flowchart TD
+    A["server.methods.user.get('42')"] --> K["generateKey('42') returns '42'<br/>look it up in segment '#user.get'"]
+    K --> C{cached?}
+    C -->|yes| R[return the cached value]
+    C -->|no| M["run your method"]
+    M --> S[store the result, then return it]
+```
+
+```ts
+server.method('user.get', getUser, {
     cache: {
-        expiresIn: 60000,
-        expiresAt: '20:30',
-        staleIn: 30000,
-        staleTimeout: 10000,
-        generateTimeout: 100,
+        expiresIn: 60 * 1000,
+        staleIn: 30 * 1000,
+        staleTimeout: 100,
+        generateTimeout: 2000,
     },
 });
 ```
 
-The parameters mean:
+What to know:
 
-- `expiresIn`: relative expiration expressed in the number of milliseconds since the item was saved in the cache. Cannot be used together with `expiresAt`.
-- `expiresAt`: time of day expressed in 24h notation using the 'HH:MM' format, at which point all cache records for the route expire. Uses local time. Cannot be used together with `expiresIn`.
-- `staleIn`: number of milliseconds to mark an item stored in cache as stale and attempt to regenerate it. Must be less than `expiresIn`.
-- `staleTimeout`: number of milliseconds to wait before returning a stale value while generateFunc is generating a fresh value.
-- `generateTimeout`: number of milliseconds to wait before returning a timeout error when it takes too long to return a value. When the value is eventually returned, it is stored in the cache for future requests.
-- `segment`: an optional segment name used to isolate cache items.
-- `cache`: an optional string with the name of the cache connection configured on your server to use
+- `generateTimeout` is required. It is how long a caller waits for your method before getting a `503`.
+- A cached method always returns a promise, even when the method itself is synchronous. Declare it in `ServerMethods` with a `Promise` return type, and `await` it.
+- hapi stores the items in a segment named `'#'` plus the method name. Set `cache: 'my_cache'` to use a [named cache client](/tutorials/en_US/caching#client) instead of the default memory cache.
+- The other options (`expiresAt`, `staleIn`, `staleTimeout`, `segment`) are the same as for [`server.cache()`](/api#server-cache-options). The [caching tutorial](/tutorials/en_US/caching#stale) shows how stale values are served.
 
-More information on the caching options can be found in the [API Reference](/api#server.methods) as well as the documentation for [catbox](/module/catbox#policy).
+#### Changing the TTL per result
 
-You can override the `ttl` (time-to-live) of a server method result per-invocation by setting the `ttl` flag. Let's see how this works with the earlier example:
+hapi passes one extra argument after yours: a `flags` object. Set `flags.ttl` to change how long this one result is cached, or to `0` to not cache it at all:
 
-```js
-const add = async function (x, y, flags) {
-    const result = await someLongRunningFunction(x, y);
+```ts
+const getUser = async function (id: string, flags: { ttl: number }) {
+    const user = await db.users.findById(id);
+    if (!user) {
+        flags.ttl = 0; // don't cache "not found"
+    }
 
-    flags.ttl = 5 * 60 * 1000; // 5 mins
-
-    return result;
+    return user;
 };
-
-server.method('add', add, {
-    cache: {
-        expiresIn: 2000,
-        generateTimeout: 100,
-    },
-});
 ```
 
-Here you defined your server method function to have one more parameter than you're expecting to pass to it, the additional `flags` parameter is passed by hapi. You then simply set the `ttl` flag to however long you want the result to be cached for (in milliseconds); if it is set to `0` then the value will never be cached. If you set no flag then the `ttl` will be taken from the cache configuration.
+hapi does not export a type for `flags`, so the example types it inline.
+
+#### Removing a cached result
+
+Every cached method gets a `cache.drop()` function. Call it with the same arguments to remove that result, for example after an update:
+
+```ts
+await db.users.update(id, changes);
+await server.methods.user.get.cache?.drop(id);
+```
+
+hapi types `cache` as optional because uncached methods don't have it, hence the `?.`.
 
 ### <a name="key"></a> Generate a Custom Key
 
-In addition to the above options, you may also define a custom function used to generate a cache key based on the parameters passed to your method. If your method only accepts some combination of string, number, and boolean values hapi will generate a sane key for you. However, if your method accepts an object parameter, you should specify a function that will generate a cache key similar to the following:
+hapi builds the cache key by joining the arguments with `:`, which only works for strings, numbers, and booleans. Calling a cached method with any other argument type fails with a `500` error. Provide `generateKey` for other arguments:
 
-```javascript
-const sum = function (array) {
-    let total = 0;
-
-    array.forEach((item) => {
-        total += item;
-    });
-
-    return total;
+```ts
+const sum = function (numbers: number[]) {
+    return numbers.reduce((total, item) => total + item, 0);
 };
 
 server.method('sum', sum, {
-    generateKey: (array) => array.join(','),
+    cache: {
+        expiresIn: 60 * 1000,
+        generateTimeout: 100,
+    },
+    generateKey: (numbers: number[]) => numbers.join(','),
 });
 ```
 
-Any arguments that you pass to your method are available to the `generateKey` method.
+`generateKey` receives the same arguments as the method, and must return a string.
 
 ### <a name="bind"></a> Bind
 
-The last option available to server methods is `bind`. The `bind` option changes the `this` context within the method. It defaults to the current active context when the method is added. This can be useful for passing in a database client without needing to pass it as a parameter and requiring a custom `generateKey` function, as in:
+`bind` sets `this` inside the method. Use it to hand the method a dependency, such as a database client, without adding it to the arguments (where it would also become part of the cache key):
 
-```javascript
-const lookup = async function (id) {
-    // calls myDB.getOne
-
-    return await this.getOne({ id });
+```ts
+const lookup = async function (this: typeof db, id: string) {
+    return await this.users.findById(id);
 };
 
-server.method('lookup', lookup, { bind: myDB });
+server.method('lookup', lookup, { bind: db });
 ```
+
+- The TypeScript `this` parameter declares the type of `this`. It is erased at compile time and is not one of the method's arguments.
+- `bind` has no effect on arrow functions, which keep their own `this`.
+- Without `bind`, `this` is the context set with [`server.bind()`](/api#server-bind-context) in the current plugin or server.
 
 ## <a name="server.methods"></a> server.methods
 
-To call the server methods we registered above, you would use `server.methods()`. Consider our add function:
+All registered methods are on [`server.methods`](/api#server-methods), which is also available as `request.server.methods` in handlers:
 
-```js
-const add = function (x, y) {
-    return x + y;
-};
-
-server.method({
-    name: 'add',
-    method: add,
-    options: {},
+```ts
+server.route<{ Params: { id: string } }>({
+    method: 'GET',
+    path: '/users/{id}',
+    handler: async (request, h) => {
+        return await request.server.methods.user.get(request.params.id);
+    },
 });
 ```
 
-To use this method, simply call `server.methods()`
+Each method used in this tutorial needs an entry in `ServerMethods`. Wrap cached methods in hapi's `CachedServerMethod` type, which adds `cache.drop()` and `cache.stats`:
 
-```js
-server.methods.add(1, 2); // 3
+```ts
+import type { CachedServerMethod } from '@hapi/hapi';
+
+declare module '@hapi/hapi' {
+    interface ServerMethods {
+        add: (x: number, y: number) => number;
+        math: {
+            add: (x: number, y: number) => number;
+        };
+        lookup: (id: string) => Promise<User | null>;
+        sum: CachedServerMethod<(numbers: number[]) => Promise<number>>;
+        user: {
+            get: CachedServerMethod<(id: string) => Promise<User | null>>;
+        };
+    }
+}
 ```
