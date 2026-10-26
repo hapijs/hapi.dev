@@ -6,60 +6,67 @@ title: Validation
 
 # Validation
 
-_This tutorial is compatible with hapi v17 and newer; and joi v16 and newer_
+_This tutorial is compatible with hapi v21 and newer; and joi v16 and newer_
 
 ## <a name="overview"></a> Overview
 
-Validating data can be very helpful in making sure that your application is stable and secure. hapi allows this functionality by using the module [Joi](https://joi.dev), which allows you to create your validations with a simple and clear object syntax.
+hapi checks a request's headers, path parameters, query, payload, and cookies before your handler runs, and can check the response before it is sent. You describe what is allowed, usually with a [joi](https://joi.dev) schema, and hapi rejects anything else.
 
 ## <a name="joi"></a> Joi
 
-[Joi](https://joi.dev) is an object schema description language and validator for JavaScript objects. Joi allows you to create blueprints or schemas for JavaScript objects to ensure validation of key information. To get started with joi, you must first install and add it as a dependency to your project:
+Install joi and import it:
 
-`npm install joi`
-
-Then, you must import it to your project:
-
-`const Joi = require('joi');`
-
-## <a name="input"></a> Input Validation
-
-The first type of validation hapi can perform is input validation. This is defined in the `options` object on a route, and is able to validate headers, path parameters, query parameters, and payload data. Note: In the below examples, you'll see that we give a JS object to `route.options.validate`. The `validate` option has a default value of:
-
-```json5
-{
-    headers: true,
-    params: true,
-    query: true,
-    payload: true,
-    state: true,
-    failAction: 'error',
-}
+```sh
+npm install joi
 ```
 
-If a key has a value of `true`, there will be no validation. Keys can also be either a validation function using the signature `async function(value, options)` or a `joi` validation object for its properties. The latter allows you to set `joi` options for that particular schema. Here is a partial rewrite of the [Query Parameters](#queryparams) example:
-
-```js
-options: {
-    validate: {
-        query: Joi.object({
-            limit: Joi.number().integer().min(1).max(100).default(10),
-        }).options({ stripUnknown: true });
-    }
-}
+```ts
+import Joi from 'joi';
 ```
 
-Look [here](https://joi.dev) for details about such options.
+joi includes its own TypeScript types, so there is no separate `@types` package to install.
+
+## <a name="input"></a> Input validation
+
+Input rules go in the route's `options.validate`. hapi runs them in this order, after authentication and before the handler, and stops at the first one that fails (see [failAction](#failaction)):
+
+```mermaid
+flowchart TD
+    A[onPostAuth] --> H[validate.headers]
+    H --> P[validate.params]
+    P --> Q[validate.query]
+    Q --> B[validate.payload]
+    B --> S[validate.state]
+    S --> X[onPreHandler, handler]
+```
+
+| Key       | Validates                 | Replaced on success |
+| --------- | ------------------------- | ------------------- |
+| `headers` | `request.headers`         | `request.headers`   |
+| `params`  | `request.params`          | `request.params`    |
+| `query`   | `request.query`           | `request.query`     |
+| `payload` | `request.payload`         | `request.payload`   |
+| `state`   | `request.state` (cookies) | `request.state`     |
+
+Each key accepts:
+
+| Value                         | Meaning                                                                       |
+| ----------------------------- | ----------------------------------------------------------------------------- |
+| `true` or not set (default)   | anything is allowed                                                           |
+| `false`                       | no value is allowed                                                           |
+| a joi schema                  | the value must match the schema                                               |
+| a function                    | your own validator, see [Custom validators](#alternatives)                    |
+| a plain object of joi schemas | allowed only after `server.validator(Joi)`; otherwise `server.route()` throws |
+
+Validation replaces the request value with the validated one, so joi's type conversions and defaults reach your handler. A query of `?limit=5` arrives as the string `'5'`, and after `Joi.number()` the handler sees the number `5`. The original value stays on [`request.orig`](/api#request-orig).
 
 ### <a name="pathparams"></a> Path parameters
 
-The first input type that `joi` can validate is path parameters. Consider the following:
-
-```javascript
-server.route({
+```ts
+server.route<{ Params: { name: string } }>({
     method: 'GET',
     path: '/hello/{name}',
-    handler: function (request, h) {
+    handler: (request, h) => {
         return `Hello ${request.params.name}!`;
     },
     options: {
@@ -72,31 +79,23 @@ server.route({
 });
 ```
 
-As you can see here, you've passed a `validate.params` option to the `options` object, this is how you tell hapi that the named parameter specified in the path should be validated. Joi's syntax is very simple and clear to read, the validator you passed here makes sure that the parameter is a string with a minimum length of 3 and a maximum length of 10.
-
-With this configuration, if you make a request to `/hello/jennifer` you will get the expected `Hello jennifer!` reply, however if you make a request to `/hello/a` you will get an HTTP `400` response that looks like the following:
+`/hello/jennifer` replies `Hello jennifer!`. `/hello/a` and `/hello/thisnameiswaytoolong` reply:
 
 ```json
 {
+    "statusCode": 400,
     "error": "Bad Request",
-    "message": "Invalid request params input",
-    "statusCode": 400
+    "message": "Invalid request params input"
 }
 ```
 
-Likewise, if you were to make a request to `/hello/thisnameiswaytoolong`, you'd also get the same error.
-
 ### <a name="queryparams"></a> Query parameters
 
-To validate query parameters, you simply specify a `validate.query` option in the route's options, and you will get similar effects. By default hapi will not validate anything. If you specify a validator for even one query parameter, that means you _must_ specify a validator for all possible query parameters that you would like to accept.
-
-For example, if you have a route that returns a list of blog posts and you would like the user to limit their result set by count, you could use the following configuration:
-
-```javascript
-server.route({
+```ts
+server.route<{ Query: { limit: number } }>({
     method: 'GET',
     path: '/posts',
-    handler: function (request, h) {
+    handler: (request, h) => {
         return posts.slice(0, request.query.limit);
     },
     options: {
@@ -109,19 +108,17 @@ server.route({
 });
 ```
 
-This makes sure that the `limit` query parameter is always an integer between 1 and 100, and if unspecified defaults to 10. However, if you make a request to `/posts?limit=15&offset=15` you get another HTTP `400` response and error.
+- `limit` must be an integer from 1 to 100, and defaults to 10 when the client leaves it out.
+- `/posts?limit=15&offset=15` fails with `400`: a `Joi.object()` schema rejects keys it does not list. List every parameter you accept, or add `.unknown()` to the schema to let other keys through.
+- The `Query: { limit: number }` type argument tells TypeScript what the handler receives. hapi does not infer it from the joi schema, so keep the two in sync yourself.
 
-You get an error because the `offset` parameter is not allowed. That's because you didn't provide a validator for it, but you did provide one for the `limit` parameter.
+### <a name="payloadparams"></a> Payload
 
-### <a name="payloadparams"></a> Payload parameters
-
-Also valid is the `validate.payload` option, which will validate payload data sent to a route by the user. It works exactly the same way as query parameters, in that if you validate one key, you must validate them all. Here is an example:
-
-```js
+```ts
 server.route({
     method: 'POST',
     path: '/post',
-    handler: function (request, h) {
+    handler: (request, h) => {
         return 'Blog post added';
     },
     options: {
@@ -135,23 +132,11 @@ server.route({
 });
 ```
 
-The above example is a very basic route that handles an incoming blog post. The user submits the blog post and date in the `request.payload` object. Typically, this would then be stored to a database. Before that can happen though, we must validate the payload. First, `joi` states that `post` must be a minimum of 1 character, and a maximum of 140 characters. It also states that `date` must be a valid date in the MM-DD-YYYY format and is required.
-
-If any of payload fails validation, the following error will be thrown:
-
-```json
-{
-    "error": "Bad Request",
-    "message": "Invalid request payload input",
-    "statusCode": 400
-}
-```
+`post` must be 1 to 140 characters, and `date` is required and must be something JavaScript can parse as a date, such as `'2026-10-25'`. joi converts it, so the handler receives a `Date` object. A failure replies `400` with the message `Invalid request payload input`.
 
 ### <a name="headers"></a> Headers
 
-You may validate incoming headers as well, with a `validate.headers` option. For example:
-
-```js
+```ts
 server.route({
     method: 'GET',
     path: '/hello/{name}',
@@ -171,30 +156,59 @@ server.route({
 });
 ```
 
-Here, you are validating the cookie header as a string and making sure it is required. The `allowUnknown` option allows other incoming headers to be accepted without being validated.
+Browsers and proxies add many headers, so header schemas almost always need `allowUnknown: true`. `validate.options` passes joi options to every input schema on the route. Header names are lowercase in `request.headers`, so write them lowercase in the schema.
 
-## <a name="output"></a> Output
+### <a name="failaction"></a> When validation fails
 
-hapi can also validate responses before they are sent back to the client. This validation is defined in the `response` property of the route `options` object.
+`validate.failAction` decides what happens:
 
-If a response does not pass the response validation, the client will receive an Internal Server Error (500) response by default (see `response.failAction` below).
+| `failAction`        | Result                                                                                     |
+| ------------------- | ------------------------------------------------------------------------------------------ |
+| `'error'` (default) | `400` with a generic message such as `Invalid request query input`                         |
+| `'log'`             | logs a `request` event tagged `validation`, `error`, and the source, then runs the handler |
+| `'ignore'`          | runs the handler                                                                           |
+| a function          | `(request, h, err)`: throw an error or return a takeover response                          |
 
-Output validation is useful for ensuring that your API is serving data that is consistent with its documentation/contract. Additionally, plugins like [hapi-swagger](https://github.com/glennjones/hapi-swagger) can use the response-validation schemas to automatically document each endpoint's output format, thus ensuring that your documentation is always up to date.
+With `'log'` and `'ignore'` the handler receives the original, unvalidated value: `?limit=500` arrives as the string `'500'`, not a number.
 
-hapi supports quite a few options to fine-tune output validation. Here are a few of them:
+The default `400` hides which field failed, so clients cannot probe your schemas. During development, or on an API where clients need the details, rethrow the detailed error from a `failAction` function:
 
-### <a name="failaction"></a> response.failAction
+```ts
+server.route({
+    method: 'GET',
+    path: '/posts',
+    handler: (request, h) => posts,
+    options: {
+        validate: {
+            query: Joi.object({
+                limit: Joi.number().integer().max(100),
+            }),
+            failAction: (request, h, err) => {
+                throw err;
+            },
+        },
+    },
+});
+```
 
-You can choose what to do when response validation fails by setting `response.failAction` to one of the following:
+`/posts?limit=500` now replies with joi's message and the failing keys:
 
-- `error`: send an Internal Server Error (500) response (default)
-- `log`: just log the offense and send the response as-is
-- `ignore`: take no action and continue processing the request
-- A lifecycle method with signature `async function(request, h, err)` where `request` is the request object, `h` is the response toolkit and `err` is the validation error.
+```json
+{
+    "statusCode": 400,
+    "error": "Bad Request",
+    "message": "\"limit\" must be less than or equal to 100",
+    "validation": { "source": "query", "keys": ["limit"] }
+}
+```
 
-For example:
+To apply one `failAction` to every route, set it in the server's `routes.validate` option. See [`failAction`](/api#failaction-configuration) in the API reference.
 
-```js
+## <a name="output"></a> Response validation
+
+`options.response` checks what the handler returns, after the handler and before `onPreResponse`. Use it to make sure an endpoint matches its documented contract. Plugins like [hapi-swagger](https://github.com/glennjones/hapi-swagger) also read these schemas to document each endpoint's output.
+
+```ts
 const bookSchema = Joi.object({
     title: Joi.string().required(),
     author: Joi.string().required(),
@@ -206,7 +220,7 @@ const bookSchema = Joi.object({
 server.route({
     method: 'GET',
     path: '/books',
-    handler: async function (request, h) {
+    handler: async (request, h) => {
         return await getBooks();
     },
     options: {
@@ -218,68 +232,68 @@ server.route({
 });
 ```
 
-This is a route that will return a list of books. We can see that since `failAction` is set to `log`, the server will just log the error and send the response as-is.
+| Option       | What it does                                                                                                  |
+| ------------ | ------------------------------------------------------------------------------------------------------------- |
+| `schema`     | rule for every response, same values as input rules                                                           |
+| `status`     | rules per status code, such as `{ 201: created, 202: Joi.object({ original, updated }) }`; overrides `schema` |
+| `failAction` | `'error'` (default) replies `500`; also `'log'`, `'ignore'`, or a function                                    |
+| `sample`     | percentage of responses to validate, `0` to `100`, to save CPU on busy routes                                 |
+| `modify`     | when `true`, the validated value replaces the response, so joi conversions and `stripUnknown` apply           |
+| `options`    | joi options for these schemas, such as `stripUnknown`                                                         |
 
-### <a name="sample"></a> response.sample
+What response validation skips or rejects:
 
-If performance is a concern, hapi can be configured to validate only a percentage of response. This can be achieved with the `response.sample` property of the route `options`. It should be set to a number between `0`-`100`, representing the percentage of responses that should be validated. Consider the following:
+- Error responses (status `400` and up) are not validated, unless `status` has a schema for that code.
+- Only plain values (objects, arrays, strings) can be validated. A stream or file response with a response schema fails with `500`.
 
-```javascript
-const bookSchema = Joi.object({
-    title: Joi.string().required(),
-    author: Joi.string().required(),
-    isbn: Joi.string().length(10),
-    pageCount: Joi.number(),
-    datePublished: Joi.date().iso(),
-});
+`modify: true` with `stripUnknown: true` is a practical way to keep fields like password hashes from leaking out of an endpoint:
 
+```ts
 server.route({
     method: 'GET',
-    path: '/books',
-    handler: async function (request, h) {
-        return await getBooks();
+    path: '/me',
+    handler: (request, h) => {
+        return { id: '2133d32a', name: 'John Doe', passwordHash: '$2a$10$...' };
     },
     options: {
         response: {
-            sample: 50,
-            schema: Joi.array().items(bookSchema),
+            schema: Joi.object({
+                id: Joi.string(),
+                name: Joi.string(),
+            }).options({ stripUnknown: true }),
+            modify: true,
         },
     },
 });
 ```
 
-Looking at your book route again, you can see, the `sample` value is set to `50`. This means the server will validate one half of the responses.
+The client receives `{ "id": "2133d32a", "name": "John Doe" }`.
 
-### <a name="status"></a> response.status
+## <a name="alternatives"></a> Custom validators
 
-Sometimes one endpoint can serve different response objects. For instance, a `POST` route may return one of the following:
+Any rule can be a function `async (value, options)` instead of a joi schema:
 
-- `201` with the newly created resource if a new resource is created.
-- `202` with the old and new values if an existing resource was updated.
+- Throw an error to fail validation. `failAction` handles it.
+- Return a value to replace the one being validated. The original stays on `request.orig`.
+- Return nothing to keep the value unchanged.
 
-hapi supports this by allowing you to specify a different validation schema for each response status code. `response.status` is an object with keys that are numeric status codes, and properties that are joi schemas:
+```ts
+server.route({
+    method: 'GET',
+    path: '/items',
+    handler: (request, h) => request.query,
+    options: {
+        validate: {
+            query: async (value) => {
+                if (typeof value !== 'object' || value === null || !('ids' in value) || typeof value.ids !== 'string') {
+                    throw new Error('ids is required');
+                }
 
-```json5
-{
-    response: {
-        status: {
-            201: dataSchema,
-            202: Joi.object({ original: dataSchema, updated:  dataSchema })
-        }
-    }
-}
+                return { ids: value.ids.split(',') };
+            },
+        },
+    },
+});
 ```
 
-### <a name="options"></a> response.options
-
-Options to pass to joi during validation. Useful to set global options such as `stripUnknown` or `abortEarly`. If a custom validation function is defined via `schema` or `status` then `options` can an arbitrary object that will be passed to this function as the second argument.
-
-## <a name="alternatives"></a> Alternatives to Joi
-
-We suggest using Joi for your validation, however each of the validation options hapi provides also accepts a few different options.
-
-Most simply, you can specify a boolean for any of the options. By default, all available validators are set to `true` which means that no validation will be performed.
-
-If the validation parameter is set to `false` it signifies that no value is allowed for that parameter.
-
-You may also pass a custom function with the signature `async function (value, options)` where `value` is the data to be validated and `options` is the validation options as defined on the server object. If a value is returned, the value will replace the original object being validated. For example, if you're validating `request.headers`, the returned value will replace `request.headers` and the original value is stored in `request.orig.headers`. Otherwise, the headers are left unchanged. If an error is thrown, the error is handled according to `failAction`.
+`/items?ids=1,2,3` replies `{ "ids": ["1", "2", "3"] }`. A thrown error is turned into a `400`, the same as a joi failure.
