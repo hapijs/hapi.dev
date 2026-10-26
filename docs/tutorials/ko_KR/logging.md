@@ -1,50 +1,122 @@
 ---
-title: Logging
+title: 로깅
 ---
 
 <TutorialLang />
 
-## Logging
+# 로깅
 
-_이 튜터리얼은 hapi v17에 호환됩니다._
+_이 튜토리얼은 hapi v21 이상과 호환됩니다_
 
-다른 서버 소프트웨어와 마찬가지로 로깅은 매우 중요합니다. hapi는 이러한 로그를 볼수 있는 기본 기능뿐만 아니라 내장 로깅 메소드를 가지고 있습니다.
+## <a name="overview"></a> 개요
 
-### 내장 메소드
+여러분 코드에서 발생한 에러를 콘솔에 출력하는 [`debug`](#debug) 기본 설정을 제외하면, hapi는 로그를 어디에도 기록하지 않습니다. 대신 모든 로그 호출을 `server.events`의 이벤트로 바꾸고, 그 이벤트로 무엇을 할지는 여러분이 정합니다. 출력하거나, 로깅 서비스로 보내거나, 요청별로 모을 수 있습니다.
 
-거의 동일한 두 가지 로깅 방법인 [`server.log(tags, [data, [timestamp]])`](/api#-serverlogtags-data-timestamp)와 [`request.log(tags, [data])`](https://hapijs.com/api#-requestlogtags-data)가 있습니다. 이 둘은 응용프로그램에서 이벤트를 로깅할 때 호출될 수 있습니다. 경로 처리기(route handler), 요청 생애주기 확장(request lifecycle extension)또는 인증 스킴(authentication scheme)같은 request의 문맥 안에서 `request.log()`를 호출할 것입니다. 예를들어 서버가 시작한 직후 또는 플러그인의 `register()` 메소드 안에서 처럼 특별한 요청이 없는 그 밖에 다른 곳에서는 `server.log()`를 사용할 것입니다.
+```mermaid
+flowchart TD
+    A["server.log()"] --> L["'log' 이벤트"]
+    B["request.log()"] --> R["'request' 이벤트"]
+    H["hapi 내부 이벤트"] --> L
+    H --> R
+    L --> D["debug 옵션<br/>일치하는 태그를 출력"]
+    R --> D
+    L --> Y["여러분의 리스너<br/>server.events.on()"]
+    R --> Y
+    R --> C["request.logs<br/>라우트가 log.collect를 설정했을 때"]
 
-둘 모두 처음 2개의 동일한 인자를 받습니다. 순서대로 `tags`, `data`입니다.
-
-`tags`는 이벤트를 바로 식별하는 문자열 또는 문자열의 배열입니다. 로그 레벨 같지만 보다 표현적이라고 생각하세요. 예를 들어 다음과 같이 데이터베이스로부터 데이터를 받는 동안 에러를 태그할 수 있습니다.:
-
-```javascript
-server.log(['error', 'database', 'read']);
+    class L,R highlight
 ```
 
-hapi가 내부에서 생성하는 로그 이벤트는 항상 그 이벤트와 연관된 `hapi` 태그를 가지고 있습니다.
+## <a name="methods"></a> 내장 메서드
 
-두 번째 인자 `data`는 이벤트와 함께 기록할 선택적인 문자열 또는 객체입니다. 이 인자는 에러 메시지 같은 것 또는 태그를 붙이고 싶은 다른 구체적인 것이 저장되는 곳입니다.
+로깅 메서드는 두 가지입니다. 코드가 실행되는 위치에 맞는 것을 고르세요.
 
-추가적으로 `server.log()`는 세번째 `timestamp`인자를 받습니다. 기본 값은 `Date.now()`이고 어떤 이유로 기본 값을 덮어쓸 필요가 있을 경우만 전달합니다.
+| 메서드                                                            | 사용할 때                                          | 발생 이벤트 |
+| ----------------------------------------------------------------- | -------------------------------------------------- | ----------- |
+| [`request.log(tags, [data])`](/api#request-log-tags-data)         | 요청이 있는 곳: 핸들러, 확장, 인증 스킴            | `'request'` |
+| [`server.log(tags, [data])`](/api#server-log-tags-data-timestamp) | 요청이 없는 곳: 서버 시작, 플러그인의 `register()` | `'log'`     |
 
-### 로그 가져오기와 표시하기
+두 메서드는 같은 두 가지 주요 인자를 받습니다.
 
-hapi 서버 객체는 각 로그 이벤트마다 이벤트를 생성합니다. 표준 EventEmitter API를 사용하여 그 이벤트를 수신하고 원하는 대로 표시할 수 있습니다.
+- `tags`: `['error', 'database', 'read']` 같은 문자열 또는 문자열 배열입니다. hapi는 로그 레벨 대신 태그를 사용하므로 어떤 조합으로든 필터링할 수 있습니다. `database` 태그가 붙은 모든 것, 또는 `error`와 `database`가 함께 붙은 것만 고를 수 있습니다.
+- `data`: 선택 사항입니다. 메시지, 객체, 또는 `Error`입니다. 대신 함수를 전달하면 hapi는 리스너가 이벤트를 받을 때만 그 함수를 호출하므로, 아무도 듣고 있지 않을 때 비용이 큰 데이터는 아무 비용도 들지 않습니다.
 
-```javascript
-server.events.on('log', (event, tags) => {
-    if (tags.error) {
-        console.log(`Server error: ${event.error ? event.error.message : 'unknown'}`);
-    }
+### <a name="request.log"></a> request.log()
+
+```ts
+server.route({
+    method: 'GET',
+    path: '/users/{id}',
+    handler: async (request, h) => {
+        request.log(['users', 'read'], { id: request.params.id });
+
+        return { id: request.params.id };
+    },
 });
 ```
 
-`server.log()`로 로깅된 이벤트는 `log` 이벤트로 생성되고 `request.log()`로 로깅된 이벤트는 `request` 이벤트로 샌성됩니다.
+이렇게 기록한 이벤트에는 모두 요청 id가 붙어 있으므로, 한 요청의 이벤트를 묶어서 볼 수 있습니다.
 
-`request.logs`를 통해 특정 요청에 대한 모든 로그들을 가져올 수 있습니다. 이는 로깅된 모든 이벤트들을 포함하고 있는 배열일 것입니다. 먼저 경로 설정에서 `logs.collect` 옵션을 `true`로 설정해야 합니다. 그렇지 않으면 배열은 비어있을 것입니다.
+### <a name="server.log"></a> server.log()
 
-```javascript
+```ts
+import Hapi from '@hapi/hapi';
+
+const server = Hapi.server({ port: 3000 });
+
+await server.start();
+
+server.log(['startup'], `Server running at ${server.info.uri}`);
+```
+
+## <a name="display"></a> 로그 받기와 출력하기
+
+[`server.events`](/api#server-events)를 구독하세요. 여러분의 호출 외에도 hapi는 같은 채널에 자체 이벤트를 발생시킵니다.
+
+| 이벤트       | `event.channel` | 출처                                              |
+| ------------ | --------------- | ------------------------------------------------- |
+| `'log'`      | `'app'`         | 여러분의 `server.log()` 호출                      |
+| `'log'`      | `'internal'`    | hapi: 서버 부하로 인한 거부, 클라이언트 연결 에러 |
+| `'request'`  | `'app'`         | 여러분의 `request.log()` 호출                     |
+| `'request'`  | `'internal'`    | hapi: 인증 실패, 핸들러 에러, 잘못된 헤더         |
+| `'request'`  | `'error'`       | hapi: 500으로 끝난 요청마다 한 번                 |
+| `'response'` | 없음            | hapi: 응답을 보낸 뒤 요청마다 한 번               |
+
+내부 태그의 전체 목록은 API 레퍼런스의 [`'log'`](/api#log-event)와 [`'request'`](/api#request-event) 이벤트에 있습니다.
+
+일반적인 설정은 애플리케이션 이벤트를 출력하고, 500 에러를 보고하고, 요청마다 접근 로그 한 줄을 기록합니다.
+
+```ts
+server.events.on('log', (event, tags) => {
+    console.log(event.timestamp, event.tags, event.data ?? event.error);
+});
+
+server.events.on({ name: 'request', channels: 'app' }, (request, event, tags) => {
+    console.log(request.info.id, event.tags, event.data ?? event.error);
+});
+
+server.events.on({ name: 'request', channels: 'error' }, (request, event, tags) => {
+    console.error(`Request ${request.info.id} failed:`, event.error);
+});
+
+server.events.on('response', (request) => {
+    const duration = request.info.completed - request.info.received;
+
+    console.log(`${request.method.toUpperCase()} ${request.path} ${request.raw.res.statusCode} ${duration}ms`);
+});
+```
+
+- `tags`는 태그마다 `true` 키를 하나씩 가진 객체이므로, `if (tags.error)`로 간단히 확인할 수 있습니다.
+- `event.data`와 `event.error`는 함께 나타나지 않습니다. `data`로 전달한 `Error`는 `event.error`로 도착합니다.
+- 조건 객체 `{ name: 'request', channels: 'error' }`는 채널 하나만 구독합니다. 이 객체가 없으면 세 채널을 모두 받습니다.
+
+hapi는 응답을 보낸 뒤에 `'response'`를 발생시키며, 리스너가 반환한 promise를 기다리지 않습니다. hapi가 순서대로 기다려야 하는 비동기 작업에는 `onPostResponse` 확장을 사용하세요. [라이프사이클 훅](/tutorials/ko_KR/lifecycle-hooks)을 참고하세요.
+
+### <a name="collecting-the-logs-of-one-request"></a> 한 요청의 로그 모으기
+
+요청 안에서 그 요청의 이벤트를 읽으려면 라우트에 `log.collect`를 설정하세요. 그러면 그 요청에 대해 기록된 모든 이벤트가 `request.logs`에 쌓입니다.
+
+```ts
 server.route({
     method: 'GET',
     path: '/',
@@ -54,23 +126,34 @@ server.route({
         },
     },
     handler: function (request, h) {
-        return 'hello';
+        request.log(['step'], 'loaded user');
+        request.log(['step'], 'loaded orders');
+
+        return { steps: request.logs.length };
     },
 });
 ```
 
-### 디버그 모드(개발에서만)
+`log.collect`가 없으면 `request.logs`는 비어 있습니다.
 
-추가적인 플러그인 설정하거나 로깅 코드를 작성없이 로그 이벤트를 콘솔에 출력하는 고통없는 방법인 hapi는 디버그 모드를 가지고 있습니다.
+## <a name="debug"></a> 디버그 모드 (개발 전용)
 
-기본적으로 디버그 모드에서 코드에서 잡히지 않은 에러와 hapi API의 잘못 구현으로 인한 실행시간 에러만 콘솔에 출력될 것입니다. 그러나 태그에 기반한 요청 이벤트가 출력되도록 설정할 수 있습니다. 예를들면 요청에서 에러를 출력하려고 한다면 다음처럼 서버를 설정하세요.:
+[`debug`](/api#server-options-debug) 서버 옵션은 리스너 코드 없이 일치하는 이벤트를 `console.error()`로 콘솔에 출력합니다. 출력되는 것만 바뀔 뿐, 발생하는 이벤트는 바뀌지 않습니다.
 
-```javascript
+| 옵션            | 기본값               | 출력                                                                                      |
+| --------------- | -------------------- | ----------------------------------------------------------------------------------------- |
+| `debug.request` | `['implementation']` | 이 태그 중 하나라도 붙은 `'request'` 이벤트. 기본값은 코드 버그로 생긴 500 에러를 출력함. |
+| `debug.log`     | 없음                 | 이 태그 중 하나라도 붙은 `'log'` 이벤트.                                                  |
+| `debug: false`  |                      | 출력하지 않음                                                                             |
+
+각 목록에는 태그, 모든 이벤트를 뜻하는 `'*'`, 또는 아무것도 출력하지 않는 `false`를 지정합니다. 개발 중에 모든 요청 에러를 출력하려면 다음과 같이 합니다.
+
+```ts
+import Hapi from '@hapi/hapi';
+
 const server = Hapi.server({ debug: { request: ['error'] } });
 ```
 
-디버그 모드에 대한 더 많은 정보는 [API 문서](https://hapijs.com/api#-serveroptionsdebug)에서 찾을 수 있습니다.
+## <a name="plugins"></a> 로깅 플러그인
 
-## 로깅 플러그인
-
-hapi에서 로그 검색 및 출력을 위햇 제공하는 내장 메소드는 매우 적습니다. 보다 풍부한 로깅 경험을 위해서 [hapi-pino](https://www.npmjs.com/package/hapi-pino) 같은 플러그인 사용법을 실제로 봐야 합니다.
+프로덕션 로깅에는 이 이벤트들을 대신 구독해 주는 플러그인을 사용하세요. 구조화된 JSON 로그를 위한 [hapi-pino](https://www.npmjs.com/package/hapi-pino), [New Relic](https://newrelic.com/instant-observability/hapi/2124da5b-0174-457a-be5a-e0068673b2b5), 또는 그 밖의 [hapi 로깅 플러그인](/plugins#logging)이 있습니다.

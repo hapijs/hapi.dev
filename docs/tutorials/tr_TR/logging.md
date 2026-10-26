@@ -1,50 +1,122 @@
 ---
-title: Logging
+title: Loglama
 ---
 
 <TutorialLang />
 
-## Gunlukleme
+# Loglama
 
-_Bu kurs hapi v17 ile uyumludur_
+_Bu eğitim hapi v21 ve sonraki sürümlerle uyumludur_
 
-Her sunucu yazılımında olduğu gibi, günlükleme çok önemlidir. hapinin hazır gelen bazı günlükleme ve bu günlükleri görüntüleme yöntemleri bulunur.
+## <a name="overview"></a> Genel Bakış
 
-### Hazir gelen yontemler
+Kendi kodundaki hataları konsola yazdıran varsayılan [`debug`](#debug) ayarı dışında hapi hiçbir yere log yazmaz. Her log çağrısını `server.events` üzerinde bir olaya dönüştürür ve bu olaylarla ne yapılacağına sen karar verirsin: yazdırmak, bir loglama servisine göndermek ya da istek başına toplamak.
 
-Neredeyse aynı çalışan iki günlükleme yöntemi var: [`server.log(tags, [data, [timestamp]])`](/api#-serverlogtags-data-timestamp), and [`request.log(tags, [data])`](https://hapijs.com/api#-requestlogtags-data). Her ikisi de uygulamandaki bir olayı günlüklemek için kullanılıyor. İstek işleyici, istek yaşam döngüsü uzatması ya da kimlik doğrulama şeması gibi istek kapsamında bulunan yerlerde `request.log()` kullanmak uygunken; geri kalan yerlerde, kapsamında belli bir istek yokken, örneğin, sunucun başlar başlamaz ya da bir eklentinin `register()` yönteminde, `server.log()` kullanmak daha uygundur.
+```mermaid
+flowchart TD
+    A["server.log()"] --> L["'log' olayı"]
+    B["request.log()"] --> R["'request' olayı"]
+    H["hapi'nin iç olayları"] --> L
+    H --> R
+    L --> D["debug seçeneği<br/>eşleşen tag'leri yazdırır"]
+    R --> D
+    L --> Y["senin dinleyicilerin<br/>server.events.on()"]
+    R --> Y
+    R --> C["request.logs<br/>route log.collect ayarladığında"]
 
-Her ikisi de ilk iki değiştirge olarak `tags` (etiketler) ve `data` (veri) kabul eder.
-
-`tags` olayı açıkça adlandıran bir metin ya da metin dizisi olabilir. Bunları günlükleme seviyeleri (log level) olarak düşünebilirsin ancak bir farkla: bunlar daha açıklayıcılar. Örneğin, veritabanından veri alırken meydana gelen bir hatayı şöyle etiketleyebilirsin:
-
-```javascript
-server.log(['error', 'database', 'read']);
+    class L,R highlight
 ```
 
-hapinin oluşturduğu her günlükleme olayında kendiğinden `hapi` etiketi bulunur.
+## <a name="methods"></a> Yerleşik Metotlar
 
-İkinci değiştirge olan `data` (veri) değiştirgesi olayla birlikte günlüklenecek seçime bağlı bir metin ya da nesnedir. Hata mesajı ya da etiketle birlikte günlüklenmesini istediğin bilgileri buraya koyacaksın.
+İki loglama metodu vardır. Kodunun çalıştığı yere uyanı seç:
 
-Ek olarak `server.log()` yönteminin üçüncü bir `timestamp` (zaman damgası) değiştirgesi bulunur. Bunun varsayılanı `Date.now()`dır ve yalnızca bir sebeple üstüne yazmak istenirse kullanılmalıdır.
+| Metot                                                             | Ne zaman kullanılır                                                    | Yaydığı olay |
+| ----------------------------------------------------------------- | ---------------------------------------------------------------------- | ------------ |
+| [`request.log(tags, [data])`](/api#request-log-tags-data)         | bir istek kapsamdayken: bir handler, bir extension, bir auth şeması    | `'request'`  |
+| [`server.log(tags, [data])`](/api#server-log-tags-data-timestamp) | kapsamda istek yokken: başlatma, bir plugin'in `register()` fonksiyonu | `'log'`      |
 
-### Hataları okumak ve görüntülemek
+İkisi de aynı iki ana argümanı alır:
 
-hapi sunucu nesnesi her bir günlükleme olayı için bir olay yayınlar. Standart EventEmitter API (olay yayınlayıcı uygulama programa arayüzü)nü kullanarak bu olayları dinleyebilir ve istediğin gibi gösterebilirsin.
+- `tags`: `['error', 'database', 'read']` gibi bir string ya da string dizisi. hapi log seviyeleri yerine tag'ler kullanır, böylece herhangi bir kombinasyona göre filtreleyebilirsin: `database` tag'li her şey ya da yalnızca `error` ve `database` birlikte olanlar.
+- `data`: isteğe bağlı. Bir mesaj, bir nesne ya da bir `Error`. Bunun yerine bir fonksiyon verirsen hapi onu yalnızca bir dinleyici olayı aldığında çağırır; böylece kimse dinlemiyorsa pahalı verinin hiçbir maliyeti olmaz.
 
-```javascript
-server.events.on('log', (event, tags) => {
-    if (tags.error) {
-        console.log(`Server error: ${event.error ? event.error.message : 'unknown'}`);
-    }
+### <a name="request.log"></a> request.log()
+
+```ts
+server.route({
+    method: 'GET',
+    path: '/users/{id}',
+    handler: async (request, h) => {
+        request.log(['users', 'read'], { id: request.params.id });
+
+        return { id: request.params.id };
+    },
 });
 ```
 
-`server.log()` kullanılarak günlüklenen olaylar bir `log` (günlükleme) olayı, `request.log()` kullanılarak günlüklenen olaylar ise bir `request` (istek) olayı yayınlar.
+Bu şekilde loglanan her olay isteğin id'sini taşır, böylece bir isteğe ait olayları bir arada gruplayabilirsin.
 
-Bir istek ile ilgili tüm günlükleri `request.logs` kullanarak alabilirsin. Günlüklenen tüm istek olaylarını içeren bir dizi döner. Önce yol (route) üzerinde `log.collect` seçeneğini `true` olarak ayarlamalısın, yoksa dizi boş gelir.
+### <a name="server.log"></a> server.log()
 
-```javascript
+```ts
+import Hapi from '@hapi/hapi';
+
+const server = Hapi.server({ port: 3000 });
+
+await server.start();
+
+server.log(['startup'], `Server running at ${server.info.uri}`);
+```
+
+## <a name="display"></a> Logları Almak ve Göstermek
+
+[`server.events`](/api#server-events) üzerinde dinle. hapi senin çağrılarının yanında aynı kanallarda kendi olaylarını da yayar:
+
+| Olay         | `event.channel` | Kaynağı                                                                    |
+| ------------ | --------------- | -------------------------------------------------------------------------- |
+| `'log'`      | `'app'`         | senin `server.log()` çağrıların                                            |
+| `'log'`      | `'internal'`    | hapi: sunucu yükü nedeniyle reddedilen istekler, istemci bağlantı hataları |
+| `'request'`  | `'app'`         | senin `request.log()` çağrıların                                           |
+| `'request'`  | `'internal'`    | hapi: kimlik doğrulama hataları, handler hataları, geçersiz header'lar     |
+| `'request'`  | `'error'`       | hapi: 500 ile sonuçlanan her istek için bir kez                            |
+| `'response'` | yok             | hapi: her istek için bir kez, yanıt gönderildikten sonra                   |
+
+İç tag'lerin tam listesi API referansında [`'log'`](/api#log-event) ve [`'request'`](/api#request-event) olayları altında yer alır.
+
+Tipik bir kurulum uygulama olaylarını yazdırır, 500'leri raporlar ve her istek için bir satır erişim logu yazar:
+
+```ts
+server.events.on('log', (event, tags) => {
+    console.log(event.timestamp, event.tags, event.data ?? event.error);
+});
+
+server.events.on({ name: 'request', channels: 'app' }, (request, event, tags) => {
+    console.log(request.info.id, event.tags, event.data ?? event.error);
+});
+
+server.events.on({ name: 'request', channels: 'error' }, (request, event, tags) => {
+    console.error(`Request ${request.info.id} failed:`, event.error);
+});
+
+server.events.on('response', (request) => {
+    const duration = request.info.completed - request.info.received;
+
+    console.log(`${request.method.toUpperCase()} ${request.path} ${request.raw.res.statusCode} ${duration}ms`);
+});
+```
+
+- `tags`, her tag için bir `true` anahtarı olan bir nesnedir; bu yüzden `if (tags.error)` hızlı bir denetimdir.
+- `event.data` ve `event.error` hiçbir zaman birlikte gelmez: `data` olarak verilen bir `Error`, `event.error` olarak gelir.
+- `{ name: 'request', channels: 'error' }` ölçüt nesnesi tek bir kanala abone olur. Bu olmadan üç kanalın hepsini alırsın.
+
+hapi `'response'` olayını yanıt gönderildikten sonra yayar ve bir dinleyicinin döndürdüğü promise'leri beklemez. hapi'nin sırayla beklemesi gereken asenkron işler için bir `onPostResponse` extension'ı kullan; bkz. [Yaşam Döngüsü Hook'ları](/tutorials/tr_TR/lifecycle-hooks).
+
+### <a name="collecting-the-logs-of-one-request"></a> Tek bir isteğin loglarını toplamak
+
+Bir isteğin olaylarını isteğin içinden okumak için route'ta `log.collect` ayarla. O istek için loglanan her olay `request.logs` içine düşer:
+
+```ts
 server.route({
     method: 'GET',
     path: '/',
@@ -54,23 +126,34 @@ server.route({
         },
     },
     handler: function (request, h) {
-        return 'hello';
+        request.log(['step'], 'loaded user');
+        request.log(['step'], 'loaded orders');
+
+        return { steps: request.logs.length };
     },
 });
 ```
 
-### Hata ayiklama modu (yalnizca gelistirme sirasinda)
+`log.collect` olmadan `request.logs` boş kalır.
 
-hapinin ekstra bir eklenti ya da kendi yazdığın bir günlükleme koduna gerek olmaksızın günlükleme olaylarını konsola döktüğü bir hata ayıklama modu var.
+## <a name="debug"></a> Debug Modu (yalnızca geliştirme için)
 
-Varsayılan olarak, konsola yalnızca kullanıcı kodu içerisinde yakalanmayan ve hapi API içerisindeki hatalı donatılardan kaynaklanan hatalar ekrana dökülür. Ancak istersen sunucunu etiketlere dayalı olarak istek (request) olaylarını yazdırmak üzere de ayarlayabilirsin. Örneğin, istekler sırasında oluşan tüm hataları yazdırmak için sunucunu şu şekilde ayarlayabilirsin:
+[`debug`](/api#server-options-debug) sunucu seçeneği, eşleşen olayları dinleyici kodu yazmadan `console.error()` ile konsola yazdırır. Yalnızca neyin yazdırıldığını değiştirir, neyin yayıldığını değil.
 
-```javascript
+| Seçenek         | Varsayılan           | Yazdırdığı                                                                                                                  |
+| --------------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `debug.request` | `['implementation']` | bu tag'lerden herhangi birini taşıyan `'request'` olayları. Varsayılan, kodundaki hataların neden olduğu 500'leri yazdırır. |
+| `debug.log`     | yok                  | bu tag'lerden herhangi birini taşıyan `'log'` olayları.                                                                     |
+| `debug: false`  |                      | hiçbir şey                                                                                                                  |
+
+Her liste tag'ler, her olay için `'*'` ya da hiçbiri için `false` alır. Geliştirme sırasında her istek hatasını yazdırmak için:
+
+```ts
+import Hapi from '@hapi/hapi';
+
 const server = Hapi.server({ debug: { request: ['error'] } });
 ```
 
-Hata ayıklama modu hakkında daha fazla bilgili [API dokümantasyonu](https://hapijs.com/api#-serveroptionsdebug)nda bulabilirsin.
+## <a name="plugins"></a> Loglama Plugin'leri
 
-## Gunlukleme eklentileri
-
-hapi tarafından hataları okumak ve yazdırmak için sunulan yöntemler gerçekten minimalisttir. Daha çok özellik bulunduran bir günlükleme deneyimi için [hapi-pino](https://www.npmjs.com/package/hapi-pino).
+Production'da loglama için bu olayları senin yerine dinleyen bir plugin kullan; örneğin yapılandırılmış JSON loglar için [hapi-pino](https://www.npmjs.com/package/hapi-pino), [New Relic](https://newrelic.com/instant-observability/hapi/2124da5b-0174-457a-be5a-e0068673b2b5) ya da diğer [hapi loglama plugin'lerinden](/plugins#logging) herhangi biri.
