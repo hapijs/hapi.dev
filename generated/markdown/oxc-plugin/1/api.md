@@ -6,8 +6,8 @@ The oxlint configuration containing hapi style guide rules and config. To use in
 [`@hapi/oxc-plugin`](https://github.com/hapijs/oxc-plugin) to your `package.json`, then in your `oxlint.config.ts` add:
 
 ```ts
-import { defineConfig } from 'oxlint';
 import DefaultOxlintConfig from '@hapi/oxc-plugin/oxlint';
+import { defineConfig } from 'oxlint';
 
 export default defineConfig({
     extends: [DefaultOxlintConfig],
@@ -23,8 +23,8 @@ The [oxfmt](https://oxc.rs/docs/guide/usage/formatter/oxfmt.html) configuration 
 [`@hapi/oxc-plugin`](https://github.com/hapijs/oxc-plugin) to your `package.json`, then in your `oxfmt.config.ts` add:
 
 ```ts
-import { defineConfig } from 'oxfmt';
 import DefaultOxfmtConfig from '@hapi/oxc-plugin/oxfmt';
+import { defineConfig } from 'oxfmt';
 
 export default defineConfig({
     ...DefaultOxfmtConfig,
@@ -94,8 +94,8 @@ To use it, add [`@hapi/oxc-plugin`](https://github.com/hapijs/oxc-plugin) to you
 in your `vitest.config.js` add:
 
 ```js
-import { defineConfig } from 'vitest/config';
 import oxc from '@hapi/oxc-plugin/vitest';
+import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
     plugins: [oxc()],

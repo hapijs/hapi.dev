@@ -207,8 +207,8 @@ To use source transforms, you must specify a file with the `-T` command line opt
 A TypeScript definition file is included with **lab** to make it easier to use inside of an existing TypeScript project. To enable running test files written in TypeScript use the `--typescript` CLI option.
 
 ```typescript
-import * as Lab from '@hapi/lab';
 import { expect } from '@hapi/code';
+import * as Lab from '@hapi/lab';
 
 const lab = Lab.script();
 const { describe, it, before } = lab;
