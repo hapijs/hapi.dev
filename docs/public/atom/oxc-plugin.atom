@@ -2,11 +2,35 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hapi.dev/module/oxc-plugin</id>
     <title>@hapi/oxc-plugin changelog</title>
-    <updated>2026-06-10T16:59:41.000Z</updated>
+    <updated>2026-08-01T08:55:44.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hapi.dev/module/oxc-plugin"/>
     <logo>https://hapi.dev/img/logo.png</logo>
     <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/oxc-plugin v1.0.4]]></title>
+        <id>https://github.com/hapijs/oxc-plugin/milestone/5</id>
+        <link href="https://hapi.dev/module/oxc-plugin/changelog#1.0.4"/>
+        <updated>2026-08-01T08:55:44.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/oxc-plugin v1.0.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/oxc-plugin/pull/7">[#7]</a> chore: bump dependencies</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/oxc-plugin v1.0.3]]></title>
+        <id>https://github.com/hapijs/oxc-plugin/milestone/4</id>
+        <link href="https://hapi.dev/module/oxc-plugin/changelog#1.0.3"/>
+        <updated>2026-08-01T08:47:41.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/oxc-plugin v1.0.3]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/oxc-plugin/pull/6">[#6]</a> chore: ignore err in .d.ts files</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[@hapi/oxc-plugin v1.0.2]]></title>
+        <id>https://github.com/hapijs/oxc-plugin/milestone/3</id>
+        <link href="https://hapi.dev/module/oxc-plugin/changelog#1.0.2"/>
+        <updated>2026-08-01T08:47:40.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/oxc-plugin v1.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/oxc-plugin/pull/5">[#5]</a> fix: disable unicorn/no-new-array</li></ul>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[@hapi/oxc-plugin v1.0.1]]></title>
         <id>https://github.com/hapijs/oxc-plugin/milestone/2</id>

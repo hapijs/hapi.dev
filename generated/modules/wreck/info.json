@@ -8,8 +8,8 @@
     "package": "@hapi/wreck",
     "slogan": "HTTP client utilities.",
     "sloganHtml": "HTTP client utilities.",
-    "stars": 378,
-    "updated": "2026-05-20T10:27:17Z",
+    "stars": 375,
+    "updated": "2026-08-02T12:27:45Z",
     "versions": [
         {
             "branch": "v18.1.2",

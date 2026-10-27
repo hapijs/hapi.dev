@@ -8,8 +8,8 @@
     "package": "@hapi/hoek",
     "slogan": "Utility methods for the hapi ecosystem.",
     "sloganHtml": "Utility methods for the hapi ecosystem.",
-    "stars": 483,
-    "updated": "2026-07-01T18:39:32Z",
+    "stars": 482,
+    "updated": "2026-07-31T15:23:03Z",
     "versions": [
         {
             "branch": "v11.0.7",

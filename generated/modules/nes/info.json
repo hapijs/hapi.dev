@@ -1,6 +1,6 @@
 {
     "api": true,
-    "forks": 86,
+    "forks": 85,
     "isPlugin": true,
     "latestVersion": "14.x.x",
     "link": "https://github.com/hapijs/nes",
@@ -8,8 +8,8 @@
     "package": "@hapi/nes",
     "slogan": "WebSocket adapter plugin for hapi routes.",
     "sloganHtml": "WebSocket adapter plugin for hapi routes.",
-    "stars": 501,
-    "updated": "2025-01-08T21:42:46Z",
+    "stars": 502,
+    "updated": "2026-10-17T12:04:48Z",
     "versions": [
         {
             "branch": "v13.0.1",
@@ -18,11 +18,11 @@
             "node": ">= 16"
         },
         {
-            "branch": "v14.0.1",
+            "branch": "v14.0.2",
             "license": "BSD",
-            "name": "14.0.1",
+            "name": "14.0.2",
             "node": ">= 16"
         }
     ],
-    "versionsArray": ["14.0.1", "13.0.1"]
+    "versionsArray": ["14.0.2", "13.0.1"]
 }

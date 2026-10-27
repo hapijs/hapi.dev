@@ -1,5 +1,9 @@
 ## Version 7 {#v7}
 
+### [7.1.3](https://github.com/hapijs/inert/milestone/46) {#7.1.3}
+
+- [#178](https://github.com/hapijs/inert/pull/178) fix: reject encoded separators in directory handler
+
 ### [7.1.2](https://github.com/hapijs/inert/milestone/45) {#7.1.2}
 
 - [#177](https://github.com/hapijs/inert/pull/177) fix: error on non-files

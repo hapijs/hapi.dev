@@ -2,11 +2,19 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hapi.dev/module/catbox-redis</id>
     <title>@hapi/catbox-redis changelog</title>
-    <updated>2023-08-04T14:08:43.000Z</updated>
+    <updated>2026-09-09T13:40:31.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hapi.dev/module/catbox-redis"/>
     <logo>https://hapi.dev/img/logo.png</logo>
     <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/catbox-redis v7.1.0]]></title>
+        <id>https://github.com/hapijs/catbox-redis/milestone/34</id>
+        <link href="https://hapi.dev/module/catbox-redis/changelog#7.1.0"/>
+        <updated>2026-09-09T13:40:31.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/catbox-redis v7.1.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/catbox-redis/pull/134">[#134]</a> feat: support username</li></ul>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[@hapi/catbox-redis v7.0.2]]></title>
         <id>https://github.com/hapijs/catbox-redis/milestone/33</id>

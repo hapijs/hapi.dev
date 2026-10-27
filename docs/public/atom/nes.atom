@@ -2,11 +2,19 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hapi.dev/module/nes</id>
     <title>@hapi/nes changelog</title>
-    <updated>2025-01-08T21:42:26.000Z</updated>
+    <updated>2026-10-17T12:04:59.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hapi.dev/module/nes"/>
     <logo>https://hapi.dev/img/logo.png</logo>
     <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/nes v14.0.2]]></title>
+        <id>https://github.com/hapijs/nes/milestone/87</id>
+        <link href="https://hapi.dev/module/nes/changelog#14.0.2"/>
+        <updated>2026-10-17T12:04:59.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/nes v14.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/342">[#342]</a> A client reauth over the same socket should not count against their max connections</li><li><a href="https://github.com/hapijs/nes/pull/341">[#341]</a> Keep the per-user index in sync on reauthentication</li></ul>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[@hapi/nes v14.0.1]]></title>
         <id>https://github.com/hapijs/nes/milestone/86</id>
@@ -398,13 +406,5 @@
         <updated>2016-05-25T19:57:18.000Z</updated>
         <summary type="html"><![CDATA[@hapi/nes v6.1.1]]></summary>
         <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/131">[#131]</a> Incorrectly reports wasRequested when internally disconnects</li></ul>]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[@hapi/nes v6.1.0]]></title>
-        <id>https://github.com/hapijs/nes/milestone/37</id>
-        <link href="https://hapi.dev/module/nes/changelog#6.1.0"/>
-        <updated>2016-05-21T00:14:49.000Z</updated>
-        <summary type="html"><![CDATA[@hapi/nes v6.1.0]]></summary>
-        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/nes/issues/129">[#129]</a> Include reason disconnected in log object</li></ul>]]></content>
     </entry>
 </feed>

@@ -8,15 +8,15 @@
     "package": "@hapi/sse",
     "slogan": "Server-Sent Events plugin for hapi.",
     "sloganHtml": "Server-Sent Events plugin for hapi.",
-    "stars": 0,
-    "updated": "2026-05-20T15:44:33Z",
+    "stars": 1,
+    "updated": "2026-10-21T21:21:35Z",
     "versions": [
         {
-            "branch": "v1.1.0",
+            "branch": "v1.2.0",
             "license": "BSD",
-            "name": "1.1.0",
+            "name": "1.2.0",
             "node": ">= 22"
         }
     ],
-    "versionsArray": ["1.1.0"]
+    "versionsArray": ["1.2.0"]
 }

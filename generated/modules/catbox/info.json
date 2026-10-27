@@ -1,6 +1,6 @@
 {
     "api": true,
-    "forks": 75,
+    "forks": 74,
     "isPlugin": false,
     "latestVersion": "12.x.x",
     "link": "https://github.com/hapijs/catbox",
@@ -8,7 +8,7 @@
     "package": "@hapi/catbox",
     "slogan": "Multi-strategy object caching service.",
     "sloganHtml": "Multi-strategy object caching service.",
-    "stars": 494,
+    "stars": 492,
     "updated": "2024-10-23T15:27:54Z",
     "versions": [
         {

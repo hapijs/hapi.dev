@@ -8,7 +8,7 @@
     "package": "@hapi/bounce",
     "slogan": "Selective error catching and rewrite rules.",
     "sloganHtml": "Selective error catching and rewrite rules.",
-    "stars": 176,
+    "stars": 177,
     "updated": "2024-10-23T15:47:48Z",
     "versions": [
         {

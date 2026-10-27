@@ -1,5 +1,9 @@
 ## Version 6 {#v6}
 
+### [6.0.2](https://github.com/hapijs/topo/milestone/33) {#6.0.2}
+
+- [#71](https://github.com/hapijs/topo/pull/71) chore: use standard require instead of exports
+
 ### [6.0.1](https://github.com/hapijs/topo/milestone/32) {#6.0.1}
 
 - [#70](https://github.com/hapijs/topo/pull/70) chore: bump hoek

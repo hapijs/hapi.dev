@@ -2,11 +2,19 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hapi.dev/module/bell</id>
     <title>@hapi/bell changelog</title>
-    <updated>2025-03-12T12:11:47.000Z</updated>
+    <updated>2026-09-09T12:43:38.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hapi.dev/module/bell"/>
     <logo>https://hapi.dev/img/logo.png</logo>
     <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/bell v13.2.0]]></title>
+        <id>https://github.com/hapijs/bell/milestone/93</id>
+        <link href="https://hapi.dev/module/bell/changelog#13.2.0"/>
+        <updated>2026-09-09T12:43:38.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/bell v13.2.0]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/503">[#503]</a> feat: support functions for auth, token and temporary URIs</li><li><a href="https://github.com/hapijs/bell/pull/502">[#502]</a> feat: pass the request to the profile</li><li><a href="https://github.com/hapijs/bell/pull/501">[#501]</a> chore: upgrade dependencies</li><li><a href="https://github.com/hapijs/bell/pull/499">[#499]</a> Support asynchronous `tokenParams`</li><li><a href="https://github.com/hapijs/bell/issues/461">[#461]</a> Support functions for `provider.auth` and `provider.token`</li></ul>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[@hapi/bell v13.1.0]]></title>
         <id>https://github.com/hapijs/bell/milestone/91</id>
@@ -398,13 +406,5 @@
         <updated>2016-04-16T15:22:07.000Z</updated>
         <summary type="html"><![CDATA[@hapi/bell v7.5.0]]></summary>
         <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/204">[#204]</a> WordPress Provider</li></ul>]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[@hapi/bell v7.4.0]]></title>
-        <id>https://github.com/hapijs/bell/milestone/40</id>
-        <link href="https://hapi.dev/module/bell/changelog#7.4.0"/>
-        <updated>2016-04-10T03:33:48.000Z</updated>
-        <summary type="html"><![CDATA[@hapi/bell v7.4.0]]></summary>
-        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/bell/pull/202">[#202]</a> Office365 provider</li></ul>]]></content>
     </entry>
 </feed>

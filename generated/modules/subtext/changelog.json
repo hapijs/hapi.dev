@@ -1,5 +1,21 @@
 [
     {
+        "date": "2026-10-21T08:49:56Z",
+        "id": 18773883,
+        "issues": [
+            {
+                "id": 5957347683,
+                "labels": ["bug"],
+                "number": 108,
+                "title": "fix: don't rely on payload own hasOwnProperty",
+                "url": "https://github.com/hapijs/subtext/pull/108"
+            }
+        ],
+        "number": 60,
+        "url": "https://github.com/hapijs/subtext/milestone/60",
+        "version": "8.1.4"
+    },
+    {
         "date": "2026-05-06T10:28:10Z",
         "id": 15814787,
         "issues": [

@@ -1,5 +1,9 @@
 ## Version 6 {#v6}
 
+### [6.0.3](https://github.com/hapijs/content/milestone/19) {#6.0.3}
+
+- [#42](https://github.com/hapijs/content/pull/42) fix: prevent quadratic disposition parsing
+
 ### [6.0.2](https://github.com/hapijs/content/milestone/18) {#6.0.2}
 
 - [#39](https://github.com/hapijs/content/pull/39) fix: error on duplicate parameters

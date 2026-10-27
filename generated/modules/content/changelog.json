@@ -1,5 +1,21 @@
 [
     {
+        "date": "2026-10-21T16:20:16Z",
+        "id": 18785315,
+        "issues": [
+            {
+                "id": 5964171034,
+                "labels": ["bug"],
+                "number": 42,
+                "title": "fix: prevent quadratic disposition parsing",
+                "url": "https://github.com/hapijs/content/pull/42"
+            }
+        ],
+        "number": 19,
+        "url": "https://github.com/hapijs/content/milestone/19",
+        "version": "6.0.3"
+    },
+    {
         "date": "2026-05-06T08:40:35Z",
         "id": 15813735,
         "issues": [

@@ -2,11 +2,19 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hapi.dev/module/topo</id>
     <title>@hapi/topo changelog</title>
-    <updated>2023-02-11T18:39:18.000Z</updated>
+    <updated>2026-08-01T11:33:39.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hapi.dev/module/topo"/>
     <logo>https://hapi.dev/img/logo.png</logo>
     <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/topo v6.0.2]]></title>
+        <id>https://github.com/hapijs/topo/milestone/33</id>
+        <link href="https://hapi.dev/module/topo/changelog#6.0.2"/>
+        <updated>2026-08-01T11:33:39.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/topo v6.0.2]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/topo/pull/71">[#71]</a> chore: use standard require instead of exports</li></ul>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[@hapi/topo v6.0.1]]></title>
         <id>https://github.com/hapijs/topo/milestone/32</id>

@@ -1,5 +1,28 @@
 [
     {
+        "date": "2026-10-17T12:04:59Z",
+        "id": 18385884,
+        "issues": [
+            {
+                "id": 5670649099,
+                "labels": ["bug"],
+                "number": 342,
+                "title": "A client reauth over the same socket should not count against their max connections",
+                "url": "https://github.com/hapijs/nes/issues/342"
+            },
+            {
+                "id": 5651743076,
+                "labels": ["bug"],
+                "number": 341,
+                "title": "Keep the per-user index in sync on reauthentication",
+                "url": "https://github.com/hapijs/nes/pull/341"
+            }
+        ],
+        "number": 87,
+        "url": "https://github.com/hapijs/nes/milestone/87",
+        "version": "14.0.2"
+    },
+    {
         "date": "2025-01-08T21:42:26Z",
         "id": 12139848,
         "issues": [
