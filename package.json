@@ -19,24 +19,24 @@
         "test": "pnpm run lint && pnpm run fmt && tsc --noEmit"
     },
     "dependencies": {
-        "@vueuse/core": "^14.3.0",
-        "es-toolkit": "^1.49.0",
+        "@vueuse/core": "^15.0.0",
+        "es-toolkit": "^1.53.0",
         "feed": "^6.0.0",
         "semver": "^7.8.5",
-        "vitepress-plugin-group-icons": "^1.7.5",
-        "vue": "^3.5.40"
+        "vitepress-plugin-group-icons": "^1.8.1",
+        "vue": "^3.5.44"
     },
     "devDependencies": {
-        "@hapi/oxc-plugin": "^1.0.2",
-        "@octokit/plugin-throttling": "^11.0.3",
+        "@hapi/oxc-plugin": "^1.0.4",
+        "@octokit/plugin-throttling": "^11.0.5",
         "@octokit/rest": "^22.0.1",
         "@types/node": "^26.6.5",
-        "@types/semver": "^7.7.1",
-        "oxfmt": "^0.60.0",
-        "oxlint": "^1.75.0",
-        "tsx": "^4.22.4",
+        "@types/semver": "^7.8.0",
+        "oxfmt": "^0.74.0",
+        "oxlint": "^1.89.0",
+        "tsx": "^4.23.15",
         "typescript": "^6.0.3",
         "vitepress": "2.0.0-alpha.18"
     },
-    "packageManager": "pnpm@10.33.0"
+    "packageManager": "pnpm@12.15.0"
 }

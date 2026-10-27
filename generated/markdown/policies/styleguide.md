@@ -202,9 +202,7 @@ exports.get = function () {
 };
 // 1
 // 2
-/**
- * jsDoc comment
- */
+/** JsDoc comment */
 internals.utility = function () {
     //Some code
 };
