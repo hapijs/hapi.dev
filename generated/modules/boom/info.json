@@ -1,6 +1,6 @@
 {
     "api": true,
-    "forks": 192,
+    "forks": 191,
     "isPlugin": false,
     "latestVersion": "10.x.x",
     "link": "https://github.com/hapijs/boom",
@@ -8,8 +8,8 @@
     "package": "@hapi/boom",
     "slogan": "HTTP-friendly error objects.",
     "sloganHtml": "HTTP-friendly error objects.",
-    "stars": 2923,
-    "updated": "2024-10-23T14:38:54Z",
+    "stars": 2922,
+    "updated": "2026-08-02T11:59:34Z",
     "versions": [
         {
             "branch": "v10.0.1",

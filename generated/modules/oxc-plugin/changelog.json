@@ -1,5 +1,53 @@
 [
     {
+        "date": "2026-08-01T08:55:44Z",
+        "id": 17086377,
+        "issues": [
+            {
+                "id": 5036257397,
+                "labels": ["dependency"],
+                "number": 7,
+                "title": "chore: bump dependencies",
+                "url": "https://github.com/hapijs/oxc-plugin/pull/7"
+            }
+        ],
+        "number": 5,
+        "url": "https://github.com/hapijs/oxc-plugin/milestone/5",
+        "version": "1.0.4"
+    },
+    {
+        "date": "2026-08-01T08:47:41Z",
+        "id": 17086302,
+        "issues": [
+            {
+                "id": 5036221820,
+                "labels": ["bug"],
+                "number": 6,
+                "title": "chore: ignore err in .d.ts files",
+                "url": "https://github.com/hapijs/oxc-plugin/pull/6"
+            }
+        ],
+        "number": 4,
+        "url": "https://github.com/hapijs/oxc-plugin/milestone/4",
+        "version": "1.0.3"
+    },
+    {
+        "date": "2026-08-01T08:47:40Z",
+        "id": 16612203,
+        "issues": [
+            {
+                "id": 4786990830,
+                "labels": ["bug"],
+                "number": 5,
+                "title": "fix: disable unicorn/no-new-array",
+                "url": "https://github.com/hapijs/oxc-plugin/pull/5"
+            }
+        ],
+        "number": 3,
+        "url": "https://github.com/hapijs/oxc-plugin/milestone/3",
+        "version": "1.0.2"
+    },
+    {
         "date": "2026-06-10T16:59:41Z",
         "id": 16292283,
         "issues": [

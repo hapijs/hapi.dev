@@ -8,15 +8,15 @@
     "package": "@hapi/bell",
     "slogan": "Third-party login plugin for hapi.js.",
     "sloganHtml": "Third-party login plugin for hapi.js.",
-    "stars": 620,
-    "updated": "2025-03-12T12:09:23Z",
+    "stars": 615,
+    "updated": "2026-09-09T12:41:52Z",
     "versions": [
         {
-            "branch": "v13.1.0",
+            "branch": "v13.2.0",
             "license": "BSD",
-            "name": "13.1.0",
+            "name": "13.2.0",
             "node": ">= 16"
         }
     ],
-    "versionsArray": ["13.1.0"]
+    "versionsArray": ["13.2.0"]
 }

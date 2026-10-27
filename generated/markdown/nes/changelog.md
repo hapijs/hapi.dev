@@ -1,5 +1,10 @@
 ## Version 14 {#v14}
 
+### [14.0.2](https://github.com/hapijs/nes/milestone/87) {#14.0.2}
+
+- [#342](https://github.com/hapijs/nes/issues/342) A client reauth over the same socket should not count against their max connections
+- [#341](https://github.com/hapijs/nes/pull/341) Keep the per-user index in sync on reauthentication
+
 ### [14.0.1](https://github.com/hapijs/nes/milestone/86) {#14.0.1}
 
 - [#338](https://github.com/hapijs/nes/pull/338) Declare correct `ws` options type

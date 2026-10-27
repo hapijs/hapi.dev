@@ -1,5 +1,9 @@
 ## Version 8 {#v8}
 
+### [8.1.4](https://github.com/hapijs/subtext/milestone/60) {#8.1.4}
+
+- [#108](https://github.com/hapijs/subtext/pull/108) fix: don't rely on payload own hasOwnProperty
+
 ### [8.1.3](https://github.com/hapijs/subtext/milestone/59) {#8.1.3}
 
 - [#106](https://github.com/hapijs/subtext/pull/106) chore: bump dependencies

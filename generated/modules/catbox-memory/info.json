@@ -8,7 +8,7 @@
     "package": "@hapi/catbox-memory",
     "slogan": "Memory adaptor for [catbox](https://github.com/hapijs/catbox).",
     "sloganHtml": "Memory adaptor for <a href=\"https://github.com/hapijs/catbox\" target=\"_blank\" rel=\"noreferrer\">catbox</a>.",
-    "stars": 33,
+    "stars": 32,
     "updated": "2024-10-23T15:27:21Z",
     "versions": [
         {

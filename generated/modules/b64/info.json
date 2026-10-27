@@ -8,7 +8,7 @@
     "package": "@hapi/b64",
     "slogan": "Base64 streaming encoder and decoder.",
     "sloganHtml": "Base64 streaming encoder and decoder.",
-    "stars": 42,
+    "stars": 40,
     "updated": "2024-10-23T15:42:49Z",
     "versions": [
         {

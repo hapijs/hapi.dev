@@ -1,5 +1,13 @@
 ## Version 13 {#v13}
 
+### [13.2.0](https://github.com/hapijs/bell/milestone/93) {#13.2.0}
+
+- [#503](https://github.com/hapijs/bell/pull/503) feat: support functions for auth, token and temporary URIs
+- [#502](https://github.com/hapijs/bell/pull/502) feat: pass the request to the profile
+- [#501](https://github.com/hapijs/bell/pull/501) chore: upgrade dependencies
+- [#499](https://github.com/hapijs/bell/pull/499) Support asynchronous `tokenParams`
+- [#461](https://github.com/hapijs/bell/issues/461) Support functions for `provider.auth` and `provider.token`
+
 ### [13.1.0](https://github.com/hapijs/bell/milestone/91) <span class="breaking-badge"></span> {#13.1.0}
 
 - [#497](https://github.com/hapijs/bell/pull/497) Add tokenParams option

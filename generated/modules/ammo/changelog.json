@@ -1,5 +1,21 @@
 [
     {
+        "date": "2026-10-21T08:42:35Z",
+        "id": 18773612,
+        "issues": [
+            {
+                "id": 5957194382,
+                "labels": ["bug"],
+                "number": 58,
+                "title": "fix: clamp suffix range to representation start",
+                "url": "https://github.com/hapijs/ammo/pull/58"
+            }
+        ],
+        "number": 23,
+        "url": "https://github.com/hapijs/ammo/milestone/23",
+        "version": "6.0.2"
+    },
+    {
         "date": "2023-02-11T19:39:49Z",
         "id": 7955838,
         "issues": [

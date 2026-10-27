@@ -1,5 +1,49 @@
 [
     {
+        "date": "2026-09-09T12:43:38Z",
+        "id": 17750756,
+        "issues": [
+            {
+                "id": 5398518484,
+                "labels": ["feature"],
+                "number": 503,
+                "title": "feat: support functions for auth, token and temporary URIs",
+                "url": "https://github.com/hapijs/bell/pull/503"
+            },
+            {
+                "id": 5397704937,
+                "labels": ["feature"],
+                "number": 502,
+                "title": "feat: pass the request to the profile",
+                "url": "https://github.com/hapijs/bell/pull/502"
+            },
+            {
+                "id": 5397253141,
+                "labels": ["dependency"],
+                "number": 501,
+                "title": "chore: upgrade dependencies",
+                "url": "https://github.com/hapijs/bell/pull/501"
+            },
+            {
+                "id": 4581525615,
+                "labels": ["feature"],
+                "number": 499,
+                "title": "Support asynchronous `tokenParams`",
+                "url": "https://github.com/hapijs/bell/pull/499"
+            },
+            {
+                "id": 628102741,
+                "labels": ["feature"],
+                "number": 461,
+                "title": "Support functions for `provider.auth` and `provider.token`",
+                "url": "https://github.com/hapijs/bell/issues/461"
+            }
+        ],
+        "number": 93,
+        "url": "https://github.com/hapijs/bell/milestone/93",
+        "version": "13.2.0"
+    },
+    {
         "date": "2025-03-12T12:11:47Z",
         "id": 12500794,
         "issues": [

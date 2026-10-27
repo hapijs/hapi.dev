@@ -9,14 +9,14 @@
     "slogan": "HTTP Range processing utilities.",
     "sloganHtml": "HTTP Range processing utilities.",
     "stars": 1,
-    "updated": "2024-10-23T15:38:18Z",
+    "updated": "2026-10-21T08:44:38Z",
     "versions": [
         {
-            "branch": "v6.0.1",
+            "branch": "v6.0.2",
             "license": "BSD",
-            "name": "6.0.1",
+            "name": "6.0.2",
             "node": ">= 16"
         }
     ],
-    "versionsArray": ["6.0.1"]
+    "versionsArray": ["6.0.2"]
 }

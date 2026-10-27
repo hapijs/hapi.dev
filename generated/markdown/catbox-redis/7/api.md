@@ -24,13 +24,14 @@ Or:
 
 Other supported Redis options:
 
+- `username` - the Redis ACL username when required. Only supported by Redis 6 and above.
 - `password` - the Redis authentication password when required.
 - `db` - a Redis database name or number.
 - `sentinels` - an array of `{ host, port }` sentinel address pairs.
 - `sentinelName` - the name of the sentinel master (when `sentinels` is specified).
 - `tls` - an object representing TLS config options for **ioredis**.
 
-The plugin also accepts other `redis` options not mentioned above.
+The plugin also accepts other `redis` options not mentioned above. It should work with `redis`, `dragonflydb`, and `valkey`— any Redis-compatible datastores should work with this plugin.
 
 ### Usage
 

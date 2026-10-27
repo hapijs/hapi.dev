@@ -2,11 +2,19 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hapi.dev/module/subtext</id>
     <title>@hapi/subtext changelog</title>
-    <updated>2026-05-06T10:28:10.000Z</updated>
+    <updated>2026-10-21T08:49:56.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hapi.dev/module/subtext"/>
     <logo>https://hapi.dev/img/logo.png</logo>
     <icon>https://hapi.dev/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[@hapi/subtext v8.1.4]]></title>
+        <id>https://github.com/hapijs/subtext/milestone/60</id>
+        <link href="https://hapi.dev/module/subtext/changelog#8.1.4"/>
+        <updated>2026-10-21T08:49:56.000Z</updated>
+        <summary type="html"><![CDATA[@hapi/subtext v8.1.4]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/pull/108">[#108]</a> fix: don't rely on payload own hasOwnProperty</li></ul>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[@hapi/subtext v8.1.3]]></title>
         <id>https://github.com/hapijs/subtext/milestone/59</id>
@@ -398,13 +406,5 @@
         <updated>2015-11-03T06:12:07.000Z</updated>
         <summary type="html"><![CDATA[@hapi/subtext v3.0.0]]></summary>
         <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/22">[#22]</a> ES6 style changes and node v4</li></ul>]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[@hapi/subtext v2.0.2]]></title>
-        <id>https://github.com/hapijs/subtext/milestone/7</id>
-        <link href="https://hapi.dev/module/subtext/changelog#2.0.2"/>
-        <updated>2015-10-30T10:37:25.000Z</updated>
-        <summary type="html"><![CDATA[@hapi/subtext v2.0.2]]></summary>
-        <content type="html"><![CDATA[<ul><li><a href="https://github.com/hapijs/subtext/issues/21">[#21]</a> Missing dependency qs@4.x.x?</li><li><a href="https://github.com/hapijs/subtext/issues/20">[#20]</a> 2.0.2 tag</li></ul>]]></content>
     </entry>
 </feed>

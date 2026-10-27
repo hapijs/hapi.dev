@@ -30,7 +30,7 @@
         "@hapi/oxc-plugin": "^1.0.2",
         "@octokit/plugin-throttling": "^11.0.3",
         "@octokit/rest": "^22.0.1",
-        "@types/node": "^24.13.3",
+        "@types/node": "^26.6.5",
         "@types/semver": "^7.7.1",
         "oxfmt": "^0.60.0",
         "oxlint": "^1.75.0",

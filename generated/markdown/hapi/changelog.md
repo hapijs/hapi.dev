@@ -1,5 +1,13 @@
 ## Version 21 {#v21}
 
+### [21.4.11](https://github.com/hapijs/hapi/milestone/332) {#21.4.11}
+
+- [#4600](https://github.com/hapijs/hapi/pull/4600) chore: bump dependencies
+- [#4599](https://github.com/hapijs/hapi/pull/4599) fix: close connection when error response fails
+- [#4598](https://github.com/hapijs/hapi/pull/4598) fix: properly check host headers
+- [#4597](https://github.com/hapijs/hapi/pull/4597) fix: retry failed error response transmission
+- [#4588](https://github.com/hapijs/hapi/pull/4588) fix(types): add QUERY http method
+
 ### [21.4.10](https://github.com/hapijs/hapi/milestone/331) {#21.4.10}
 
 - [#4586](https://github.com/hapijs/hapi/pull/4586) Fix cookie processing issues

@@ -1,6 +1,6 @@
 {
     "api": true,
-    "forks": 62,
+    "forks": 61,
     "isPlugin": true,
     "latestVersion": "7.x.x",
     "link": "https://github.com/hapijs/catbox-redis",
@@ -9,14 +9,14 @@
     "slogan": "Redis adapter for [catbox](https://github.com/hapijs/catbox).",
     "sloganHtml": "Redis adapter for <a href=\"https://github.com/hapijs/catbox\" target=\"_blank\" rel=\"noreferrer\">catbox</a>.",
     "stars": 70,
-    "updated": "2024-10-23T15:26:12Z",
+    "updated": "2026-09-09T13:39:34Z",
     "versions": [
         {
-            "branch": "v7.0.2",
+            "branch": "v7.1.0",
             "license": "BSD",
-            "name": "7.0.2",
+            "name": "7.1.0",
             "node": ">= 16"
         }
     ],
-    "versionsArray": ["7.0.2"]
+    "versionsArray": ["7.1.0"]
 }

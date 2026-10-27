@@ -1,5 +1,9 @@
 ## Version 6 {#v6}
 
+### [6.0.2](https://github.com/hapijs/ammo/milestone/23) {#6.0.2}
+
+- [#58](https://github.com/hapijs/ammo/pull/58) fix: clamp suffix range to representation start
+
 ### [6.0.1](https://github.com/hapijs/ammo/milestone/22) {#6.0.1}
 
 - [#54](https://github.com/hapijs/ammo/pull/54) chore: bump hoek

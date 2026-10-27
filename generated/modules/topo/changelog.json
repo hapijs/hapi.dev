@@ -1,5 +1,21 @@
 [
     {
+        "date": "2026-08-01T11:33:39Z",
+        "id": 9147009,
+        "issues": [
+            {
+                "id": 1619968357,
+                "labels": [],
+                "number": 71,
+                "title": "chore: use standard require instead of exports",
+                "url": "https://github.com/hapijs/topo/pull/71"
+            }
+        ],
+        "number": 33,
+        "url": "https://github.com/hapijs/topo/milestone/33",
+        "version": "6.0.2"
+    },
+    {
         "date": "2023-02-11T18:39:18Z",
         "id": 7933522,
         "issues": [

@@ -1,5 +1,9 @@
 ## Version 7 {#v7}
 
+### [7.1.0](https://github.com/hapijs/catbox-redis/milestone/34) {#7.1.0}
+
+- [#134](https://github.com/hapijs/catbox-redis/pull/134) feat: support username
+
 ### [7.0.2](https://github.com/hapijs/catbox-redis/milestone/33) {#7.0.2}
 
 - [#128](https://github.com/hapijs/catbox-redis/pull/128) chore: enable lab type tests

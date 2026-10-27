@@ -9,14 +9,14 @@
     "slogan": "HTTP payload parser.",
     "sloganHtml": "HTTP payload parser.",
     "stars": 24,
-    "updated": "2026-05-06T10:24:33Z",
+    "updated": "2026-10-21T08:50:26Z",
     "versions": [
         {
-            "branch": "v8.1.3",
+            "branch": "v8.1.4",
             "license": "BSD",
-            "name": "8.1.3",
+            "name": "8.1.4",
             "node": ">= 16"
         }
     ],
-    "versionsArray": ["8.1.3"]
+    "versionsArray": ["8.1.4"]
 }

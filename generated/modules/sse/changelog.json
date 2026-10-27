@@ -1,5 +1,28 @@
 [
     {
+        "date": "2026-10-21T21:21:31Z",
+        "id": 18772620,
+        "issues": [
+            {
+                "id": 5716778162,
+                "labels": ["bug"],
+                "number": 9,
+                "title": "fix: end the stream when replay fails instead of leaking",
+                "url": "https://github.com/hapijs/sse/pull/9"
+            },
+            {
+                "id": 5713914820,
+                "labels": ["bug"],
+                "number": 7,
+                "title": "fix: return SSE responses through hapi's lifecycle",
+                "url": "https://github.com/hapijs/sse/pull/7"
+            }
+        ],
+        "number": 4,
+        "url": "https://github.com/hapijs/sse/milestone/4",
+        "version": "1.2.0"
+    },
+    {
         "date": "2026-05-20T15:45:22Z",
         "id": 16011977,
         "issues": [

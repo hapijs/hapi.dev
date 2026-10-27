@@ -1,5 +1,49 @@
 [
     {
+        "date": "2026-10-21T16:29:30Z",
+        "id": 17889190,
+        "issues": [
+            {
+                "id": 5963803490,
+                "labels": ["dependency"],
+                "number": 4600,
+                "title": "chore: bump dependencies",
+                "url": "https://github.com/hapijs/hapi/pull/4600"
+            },
+            {
+                "id": 5959345899,
+                "labels": ["bug"],
+                "number": 4599,
+                "title": "fix: close connection when error response fails",
+                "url": "https://github.com/hapijs/hapi/pull/4599"
+            },
+            {
+                "id": 5958131157,
+                "labels": ["bug"],
+                "number": 4598,
+                "title": "fix: properly check host headers",
+                "url": "https://github.com/hapijs/hapi/pull/4598"
+            },
+            {
+                "id": 5957574338,
+                "labels": ["bug"],
+                "number": 4597,
+                "title": "fix: retry failed error response transmission",
+                "url": "https://github.com/hapijs/hapi/pull/4597"
+            },
+            {
+                "id": 5242344251,
+                "labels": ["types"],
+                "number": 4588,
+                "title": "fix(types): add QUERY http method",
+                "url": "https://github.com/hapijs/hapi/pull/4588"
+            }
+        ],
+        "number": 332,
+        "url": "https://github.com/hapijs/hapi/milestone/332",
+        "version": "21.4.11"
+    },
+    {
         "date": "2026-07-22T09:07:44Z",
         "id": 16924285,
         "issues": [
