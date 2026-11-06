@@ -118,6 +118,11 @@
                 "name": "apitraffic-hapi",
                 "link": "https://github.com/apitraffic/apitraffic-hapi",
                 "description": "Seamlessly integrate with over 240 external systems"
+            },
+            {
+                "name": "hapi-ai-chatbot",
+                "link": "https://asyntai.com/documentation/integrations/hapi/",
+                "description": "Add the Asyntai AI chat assistant to every HTML page, answering visitors from your own content"
             }
         ]
     },
